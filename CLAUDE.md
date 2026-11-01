@@ -85,14 +85,14 @@ US / Math / Grade 4（Common Core）
 8. place-value-rounding ✓
 9. add-subtract-multi-digit ✓
 10. factors-multiples-prime ✓
-11. multiplicative-comparison-word-problems（4.OA.A.1-3）
+11. multiplicative-comparison-word-problems ✓
 12. measurement-conversions ✓
-13. area-perimeter-formulas（4.MD.A.3）
-14. measuring-angles（4.MD.C.5-7）
-15. lines-angles-shapes（4.G.A.1-2）
-16. line-symmetry（4.G.A.3）
-17. number-shape-patterns（4.OA.C.5）
-18. line-plots-fractions（4.MD.B.4）
+13. area-perimeter-formulas ✓
+14. measuring-angles ✓
+15. lines-angles-shapes ✓
+16. line-symmetry ✓
+17. number-shape-patterns ✓
+18. line-plots-fractions ✓
 
 Grade 4 からは 1,000 以上の数にカンマを付ける（例: 4,536）。
 
