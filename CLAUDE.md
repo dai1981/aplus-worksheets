@@ -86,7 +86,7 @@ US / Math / Grade 4（Common Core）
 9. add-subtract-multi-digit ✓
 10. factors-multiples-prime（4.OA.B.4）
 11. multiplicative-comparison-word-problems（4.OA.A.1-3）
-12. measurement-conversions（4.MD.A.1-2）
+12. measurement-conversions ✓
 13. area-perimeter-formulas（4.MD.A.3）
 14. measuring-angles（4.MD.C.5-7）
 15. lines-angles-shapes（4.G.A.1-2）
