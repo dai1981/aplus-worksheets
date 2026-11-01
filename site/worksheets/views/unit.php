@@ -113,6 +113,13 @@ $lr = array('@context' => 'https://schema.org', '@type' => 'LearningResource',
     'author' => array('@type' => 'Organization', 'name' => SITE_NAME),
     'publisher' => array('@type' => 'Organization', 'name' => SITE_NAME, 'url' => SITE_HOME),
     'dateModified' => $u['updated']);
+// what the page teaches, who it is for (helps search engines and AI answers)
+$lr['about'] = array(array('@type' => 'Thing', 'name' => $u['short_title']), array('@type' => 'Thing', 'name' => $subject['name']));
+if ($u['key_big']) $lr['teaches'] = $u['key_big'];
+$lr['audience'] = array('@type' => 'EducationalAudience', 'educationalRole' => array('student', 'teacher', 'parent'));
+if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'us') {
+    $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);
+}
 if ($u['standard_code']) {
     $al = array('@type' => 'AlignmentObject', 'alignmentType' => 'teaches',
                 'educationalFramework' => $country['standard'], 'targetName' => $u['standard_code'],
