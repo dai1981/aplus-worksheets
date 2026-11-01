@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* Aplus worksheets: printable sheets. 4 pages (Letter or A4).
+   On screen: white sheets in a row. In print: one sheet per page.
+   Low ink: lines and light gray only. */
+
+:root{--ink:#1a1a1a;--sub:#555;--line:#111;--thin:#bbb;--fill:#f2f2f2;--acc:#0b5ca8;
+ --pw:210mm;--ph:297mm;}
+body.paper-letter{--pw:8.5in;--ph:11in;}
+*{box-sizing:border-box;}
+body.prbody{margin:0;padding:0;background:#e9ecef;color:var(--ink);
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+ -webkit-print-color-adjust:exact;print-color-adjust:exact;}
+
+/* ---------- toolbar (screen only) ---------- */
+.pr-bar{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:10px 16px;
+ background:#fff;border-bottom:2px solid #d0d5da;font-size:14px;}
+.pr-bar a{color:var(--acc);text-decoration:none;}
+.pr-bar a:hover{text-decoration:underline;}
+.pr-bar .sp{flex:1 1 auto;}
+.pr-note{color:var(--sub);font-size:13px;}
+.pr-print{appearance:none;border:2px solid var(--acc);border-radius:8px;background:var(--acc);color:#fff;font:inherit;font-size:15px;
+ font-weight:700;padding:9px 20px;cursor:pointer;line-height:1.2;display:inline-flex;align-items:center;gap:8px;}
+.pr-print:hover{background:#094a89;border-color:#094a89;}
+.pr-print svg,.pr-dl svg{width:17px;height:17px;fill:currentColor;}
+.pr-dl{display:inline-flex;align-items:center;gap:7px;border:2px solid #b9c2cb;border-radius:8px;background:#fff;
+ color:#33404d !important;font-size:14px;font-weight:700;padding:8px 15px;line-height:1.2;text-decoration:none !important;}
+
+/* ---------- sheet ---------- */
+.pr-sheet{width:var(--pw);min-height:var(--ph);margin:18px auto;padding:12mm 12mm 9mm;background:#fff;position:relative;
+ box-shadow:0 2px 10px rgba(0,0,0,.18);display:flex;flex-direction:column;}
+
+.pr-head{display:flex;align-items:flex-end;gap:8mm;border-bottom:3px solid var(--line);padding-bottom:2.5mm;}
+.pr-ttl{flex:1 1 auto;min-width:0;}
+.pr-kind{font-size:9.5pt;color:var(--sub);letter-spacing:.04em;margin:0 0 1mm;text-transform:uppercase;}
+.pr-kind b{color:var(--ink);font-size:10.5pt;}
+.pr-h1{font-size:18pt;font-weight:800;line-height:1.2;margin:0;}
+.pr-name{flex:0 0 auto;font-size:9.5pt;}
+.pr-name div{border-bottom:1px solid var(--thin);padding:0 2mm 1mm;margin-bottom:1.6mm;min-width:48mm;}
+.pr-name div:last-child{margin-bottom:0;}
+.pr-name span{color:var(--sub);font-size:8.5pt;margin-right:2mm;}
+.pr-mark{flex:0 0 auto;font-size:9.5pt;font-weight:700;border:1.6px solid var(--line);border-radius:2mm;padding:1.5mm 4mm;}
+
+.pr-key{border:2.5px solid var(--line);border-radius:3mm;padding:3mm 4mm;margin:4mm 0 0;background:var(--fill);}
+.pr-key p{margin:0;}
+.pr-key .k1{font-size:13pt;font-weight:800;line-height:1.35;}
+.pr-key .k2{font-size:9.5pt;line-height:1.5;margin-top:1.5mm;color:#333;}
+
+.pr-lead{font-size:10pt;margin:4mm 0 2mm;font-weight:700;}
+.pr-lead span{font-weight:400;color:var(--sub);margin-left:2mm;font-size:9pt;}
+
+/* questions: short ones in 2 columns, long ones full width */
+.pr-qs{flex:1 1 auto;display:grid;grid-template-columns:1fr 1fr;column-gap:8mm;grid-auto-rows:auto;align-content:space-between;}
+.pr-q{grid-column:1 / -1;display:flex;flex-direction:column;border-bottom:1px dotted var(--thin);padding:calc(2mm * var(--fs,1)) 0;break-inside:avoid;}
+.pr-q.half{grid-column:auto;}
+.pr-qh{display:flex;align-items:baseline;gap:2.5mm;}
+.pr-n{flex:0 0 auto;width:8mm;text-align:right;font-size:9pt;color:var(--sub);font-weight:700;}
+.pr-t{flex:1 1 auto;font-size:calc(12pt * var(--fs,1));line-height:1.4;min-width:0;}
+.pr-t .qfig{display:block;text-align:left;margin:0 0 1.5mm;}
+.pr-t .qfig svg{max-height:calc(27mm * var(--fs,1));max-width:52mm;width:auto;height:auto;display:block;}
+.pr-ch{display:flex;flex-wrap:wrap;gap:1.2mm 6mm;margin:1.6mm 0 0 10.5mm;counter-reset:ch;}
+.pr-ch > span{font-size:calc(11pt * var(--fs,1));line-height:1.4;counter-increment:ch;display:inline-flex;align-items:baseline;gap:1.5mm;}
+.pr-ch > span::before{content:counter(ch) ")";font-weight:700;font-size:.95em;}
+.pr-ch.col1{flex-direction:column;gap:1mm;}
+
+/* answers */
+.pr-ans{flex:1 1 auto;}
+.pr-ans h3{font-size:10.5pt;margin:5mm 0 1.5mm;padding-left:2mm;border-left:4px solid var(--line);}
+.pr-agrid{display:grid;grid-template-columns:repeat(3,1fr);column-gap:5mm;}
+.pr-a{display:flex;align-items:baseline;gap:2mm;font-size:10pt;line-height:1.45;border-bottom:1px dotted var(--thin);padding:1mm 0;}
+.pr-a b{flex:0 0 auto;color:var(--sub);font-weight:700;width:8mm;text-align:right;font-size:8.5pt;}
+.pr-a .an{font-style:normal;font-weight:700;margin-right:1.2mm;}
+
+.pr-foot{flex:0 0 auto;margin-top:4mm;padding-top:2mm;border-top:1px solid var(--thin);display:flex;align-items:flex-end;gap:5mm;
+ font-size:8pt;color:var(--sub);line-height:1.5;}
+.pr-foot .f1{flex:1 1 auto;}
+.pr-foot .f1 b{color:var(--ink);font-size:8.5pt;}
+.pr-qr{flex:0 0 auto;width:16mm;height:16mm;}
+.pr-qr svg{width:16mm;height:16mm;display:block;}
+.pr-pg{flex:0 0 auto;font-size:9pt;font-weight:700;color:var(--ink);}
+
+@media print{
+  body.prbody{background:#fff;}
+  .pr-bar{display:none;}
+  body.prbody > *:not(.pr-sheet){display:none !important;}
+  .pr-sheet ins.adsbygoogle,.pr-sheet iframe,.pr-sheet .google-auto-placed{display:none !important;}
+  .pr-sheet{width:auto;min-height:0;height:var(--ph);margin:0;box-shadow:none;overflow:hidden;}
+  .pr-sheet ~ .pr-sheet{break-before:page;page-break-before:always;}
+  a{color:inherit;text-decoration:none;}
+}
+
+/* fractions (stacked) */
+.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 .12em;line-height:1.05;}
+.fr .fn,.fr .fd{display:block;padding:0 .2em;}
+.fr .fd{border-top:1.4px solid currentColor;}
+.pr-a .fr{font-size:.92em;}
+
+/* clocks and other square pictures print larger so every minute mark is readable */
+.pr-t .qfig svg[data-sq]{max-height:calc(34mm * var(--fs,1));max-width:34mm;}
