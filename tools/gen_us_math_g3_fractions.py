@@ -154,8 +154,8 @@ def set_shaded(rnd):
         kind = kinds[i % 3]
         if kind == "grid" and n not in GRIDS:
             kind = "bar"
-        e = ("The whole has <b>%d equal parts</b>, so the bottom number is %d. <b>%d parts</b> are shaded, "
-             "so the top number is %d. The shaded part is %s." % (n, n, k, k, fr(k, n)))
+        e = ("The whole has <b>%d equal parts</b>, so the bottom number is %d. <b>%s shaded, "
+             "so the top number is %d. The shaded part is %s." % (n, n, "1 part</b> is" if k == 1 else "%d parts</b> are" % k, k, fr(k, n)))
         its.append(mcq(fig(shape_svg(n, k, kind)) + "What fraction of the shape is shaded?",
                        fr(k, n), frac_cands(k, n), e, rnd))
 
@@ -212,7 +212,7 @@ def set_line(rnd):
     pts = pts[:11] + [(4, 5, 2), (3, 4, 2), (2, 3, 2)]
     for d, k, wh in pts:
         e = ("Count the <b>spaces</b>, not the tick marks. From 0 to 1 there are <b>%d equal spaces</b>, so each space is %s. "
-             "The dot is <b>%d spaces</b> from 0, so it is at %s." % (d, fr(1, d), k, fr(k, d)))
+             "The dot is <b>%d %s</b> from 0, so it is at %s." % (d, fr(1, d), k, "space" if k == 1 else "spaces", fr(k, d)))
         if k > d:
             e += " It is past 1 because %s is more than %s." % (fr(k, d), fr(d, d))
         cands = [fr(k, d + 1), fr(k + 1, d), fr(k - 1, d) if k > 1 else None, fr(d, k), fr(k, wh * d + 1)]
@@ -347,8 +347,8 @@ def set_words(rnd):
         else:
             q = ("There are two %ss of the same size. %s %s %s of one %s. %s %s %s of the other. Who %s more?"
                  % (thing, p1, v, fr(a, b), thing, p2, v, fr(a, d), v))
-        e = ("Both have <b>%d pieces</b>. %s pieces are bigger than %s pieces, so %s is more than %s. <b>%s</b> %s more."
-             % (a, fr(1, b), fr(1, d), fr(a, b), fr(a, d), p1, v))
+        e = ("Both have <b>%d %s</b>. %s pieces are bigger than %s pieces, so %s is more than %s. <b>%s</b> %s more."
+             % (a, "piece" if a == 1 else "pieces", fr(1, b), fr(1, d), fr(a, b), fr(a, d), p1, v))
         its.append(mcq(q, p1, [p2, "They are the same", "You can’t tell"], e, rnd))
 
     # same denominator comparisons

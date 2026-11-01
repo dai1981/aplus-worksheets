@@ -142,6 +142,8 @@ def unit(slug, sort, **kw):
 def mult_tip(a, b):
     """Short strategy text for a x b (b is the 'fact family' number)."""
     p = a * b
+    if a == 1:
+        return "1 group of %d is %d." % (b, p)
     if b == 2:
         return "%d × 2 is a double: %d + %d = %d." % (a, a, a, p)
     if b == 5:

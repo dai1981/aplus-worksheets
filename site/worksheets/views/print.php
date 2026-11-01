@@ -34,12 +34,17 @@ function fig_mm($html) {                       // height of the picture as print
     if (!preg_match("/<svg[^>]*viewBox='0 0 ([\d.]+) ([\d.]+)'/", $html, $m)) return 0;
     $w = (float)$m[1]; $h = (float)$m[2];
     if ($w <= 0) return 0;
+    if (strpos($html, "data-pf='lg'") !== false) {   // graphs, rulers, A-D pictures: print larger so labels stay readable
+        $fw = min($w * 0.2646, 75);
+        return min($fw * $h / $w, 38) + 2;
+    }
     $fw = min($w * 0.2646, 52);
     $cap = (abs($w - $h) < 1) ? 34 : 27;         // square pictures (clocks) print larger
     return min($fw * $h / $w, $cap) + 2;
 }
 function sq_mark($html) {                       // tag square pictures so CSS can print them larger
     return preg_replace_callback("/<svg([^>]*viewBox='0 0 ([\\d.]+) ([\\d.]+)')/", function ($m) {
+        if (strpos($m[1], 'data-pf') !== false) return $m[0];       // large pictures have their own size
         return abs((float)$m[2] - (float)$m[3]) < 1 ? '<svg data-sq="1"' . $m[1] : $m[0];
     }, $html);
 }

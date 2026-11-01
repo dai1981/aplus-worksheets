@@ -66,13 +66,13 @@ US / Math / Grade 3（Common Core）
 7. perimeter ✓
 8. add-subtract-within-1000 ✓
 9. two-step-word-problems ✓
-10. picture-and-bar-graphs（3.MD.B.3）
-11. line-plots-measurement（3.MD.B.4）
-12. quadrilaterals（3.G.A.1）
-13. mass-and-volume（3.MD.A.2）
+10. picture-and-bar-graphs ✓
+11. line-plots-measurement ✓
+12. quadrilaterals ✓
+13. mass-and-volume ✓
 14. multiply-by-multiples-of-10 ✓
-15. properties-of-multiplication（3.OA.B.5）
-16. partition-shapes（3.G.A.2）
+15. properties-of-multiplication ✓
+16. partition-shapes ✓
 
 その後: US Grade 4 → Grade 2 → Grade 5、UK / Australia / Canada …（新しい学年・国は `catalog.json` に追加）
 
