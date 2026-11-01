@@ -75,15 +75,15 @@ US / Math / Grade 3（Common Core）
 16. partition-shapes ✓
 
 US / Math / Grade 4（Common Core）
-1. multi-digit-multiplication（4.NBT.B.5）
-2. long-division（4.NBT.B.6）
-3. equivalent-fractions（4.NF.A.1）
-4. compare-fractions（4.NF.A.2）
-5. add-subtract-fractions（4.NF.B.3）
-6. multiply-fractions-by-whole-numbers（4.NF.B.4）
-7. decimals-tenths-hundredths（4.NF.C.5-7）
-8. place-value-rounding（4.NBT.A.1-3）
-9. add-subtract-multi-digit（4.NBT.B.4）
+1. multi-digit-multiplication ✓
+2. long-division ✓
+3. equivalent-fractions ✓
+4. compare-fractions ✓
+5. add-subtract-fractions ✓
+6. multiply-fractions-by-whole-numbers ✓
+7. decimals-tenths-hundredths ✓
+8. place-value-rounding ✓
+9. add-subtract-multi-digit ✓
 10. factors-multiples-prime（4.OA.B.4）
 11. multiplicative-comparison-word-problems（4.OA.A.1-3）
 12. measurement-conversions（4.MD.A.1-2）

@@ -57,8 +57,8 @@ function q_mm($it, $half) {
     $h = 4.5 + $lines * $line;                                   // question text + padding
     $clen = 0;
     foreach ($it['c'] as $c) $clen += mb_strlen(strip_tags($c)) + 4;
-    if (q_long_choices($it)) $h += 4 * 5.6;                      // one choice per line
-    else $h += ($frac ? 8 : 6) * max(1, (int)ceil($clen / ($half ? 40 : 88)));
+    if (q_long_choices($it)) $h += 4 * ($frac ? 8.5 : 5.6);      // one choice per line (stacked fractions are taller)
+    else $h += ($frac ? 8 : 6) * max(1, (int)ceil(($frac ? $clen * 1.6 : $clen) / ($half ? 40 : 88)));   // stacked fractions are wider than their digits
     if (has_fig($it['q'])) $h += fig_mm($it['q']);
     return $h;
 }
@@ -94,6 +94,7 @@ function fill_sheet($sets, $sources, $cap, $max_each) {
 }
 
 $small = $letter ? 0 : 12;                     // A4 is 12mm taller than Letter
+$small -= (mb_strlen($u['title']) > 34) ? 9 : 0;   // a long title takes two lines
 $plan = array(
     array('label' => T('p_warmup'), 'src' => array(0),    'cap' => 182 + $small, 'max' => 8),
     array('label' => T('p_prac1'),  'src' => array(1, 2), 'cap' => 210 + $small, 'max' => 9),
