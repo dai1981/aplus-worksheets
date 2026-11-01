@@ -25,9 +25,15 @@ $raw = file_get_contents('php://input');
 if (!ctype_digit($t) || abs(time() - (int)$t) > 300) out(401, array('ok' => false, 'error' => 'time'));
 if (!hash_equals(hash_hmac('sha256', $t . "\n" . $raw, WS_SYNC_KEY), $sig)) out(401, array('ok' => false, 'error' => 'signature'));
 
-// --- 本文は base64(gzip(JSON))。WAF に HTML/SVG を誤検知させないため
-$bin  = base64_decode($raw, true);
-$json = ($bin === false) ? false : @gzdecode($bin);
+// --- データ本体は FTP で inc/queue/sync.json.gz に置かれている（WAF を通さないため）
+//     リクエスト本文は {"file":"sync.json.gz","sha256":"..."} だけ。中身のハッシュが一致したときだけ取り込む
+$req = json_decode($raw, true);
+if (!is_array($req) || !isset($req['file'], $req['sha256']) || $req['file'] !== 'sync.json.gz') out(400, array('ok' => false, 'error' => 'request'));
+$qf = __DIR__ . '/../inc/queue/sync.json.gz';
+$bin = is_file($qf) ? file_get_contents($qf) : false;
+if ($bin === false) out(400, array('ok' => false, 'error' => 'queue file missing'));
+if (!hash_equals(hash('sha256', $bin), (string)$req['sha256'])) out(409, array('ok' => false, 'error' => 'queue file hash mismatch'));
+$json = @gzdecode($bin);
 $data = ($json === false) ? null : json_decode($json, true);
 if (!is_array($data)) out(400, array('ok' => false, 'error' => 'payload'));
 
