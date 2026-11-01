@@ -84,7 +84,7 @@ US / Math / Grade 4（Common Core）
 7. decimals-tenths-hundredths ✓
 8. place-value-rounding ✓
 9. add-subtract-multi-digit ✓
-10. factors-multiples-prime（4.OA.B.4）
+10. factors-multiples-prime ✓
 11. multiplicative-comparison-word-problems（4.OA.A.1-3）
 12. measurement-conversions ✓
 13. area-perimeter-formulas（4.MD.A.3）
