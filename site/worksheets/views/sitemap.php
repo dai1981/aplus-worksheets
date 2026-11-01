@@ -7,6 +7,7 @@ $urls = array(array('', null));
 foreach (qa('SELECT code FROM ws_country ORDER BY sort') as $c) $urls[] = array($c['code'] . '/', null);
 foreach (qa('SELECT country, slug FROM ws_subject ORDER BY sort') as $s) $urls[] = array($s['country'] . '/' . $s['slug'] . '/', null);
 foreach (qa('SELECT g.country, g.subject, g.slug, (SELECT MAX(u.updated) FROM ws_unit u WHERE u.country=g.country AND u.subject=g.subject AND u.grade=g.slug) AS up FROM ws_grade g ORDER BY g.sort') as $g) {
+    if ($g['up'] === null) continue;            // no units yet
     $urls[] = array($g['country'] . '/' . $g['subject'] . '/' . $g['slug'] . '/', $g['up']);
 }
 foreach (qa('SELECT country, subject, grade, slug, updated FROM ws_unit ORDER BY country, subject, grade, sort') as $u) {

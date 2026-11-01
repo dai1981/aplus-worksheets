@@ -5,6 +5,7 @@ if (!$subject) not_found();
 T(array($country['lang']));
 $grades = qa('SELECT g.*, (SELECT COUNT(*) FROM ws_unit u WHERE u.country=g.country AND u.subject=g.subject AND u.grade=g.slug) AS n
               FROM ws_grade g WHERE g.country=? AND g.subject=? ORDER BY g.sort', array($seg[0], $seg[1]));
+$grades = array_values(array_filter($grades, function ($g) { return $g['n'] > 0; }));   // hide grades with no units yet
 $base = $seg[0] . '/' . $seg[1] . '/';
 $crumbs = array(array(T('worksheets'), ''), array($country['name'], $seg[0] . '/'),
                 array($subject['name'], $base));

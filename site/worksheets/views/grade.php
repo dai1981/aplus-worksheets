@@ -5,6 +5,7 @@ $grade = $subject ? get_grade($seg[0], $seg[1], $seg[2]) : null;
 if (!$grade) not_found();
 T(array($country['lang']));
 $units = list_units($seg[0], $seg[1], $seg[2]);
+if (!$units) not_found();                       // a grade with no units yet is not shown
 $base = $seg[0] . '/' . $seg[1] . '/' . $seg[2] . '/';
 $gkey = prog_key($seg[0], $seg[1], $seg[2]);
 $crumbs = array(array(T('worksheets'), ''), array($country['name'], $seg[0] . '/'),

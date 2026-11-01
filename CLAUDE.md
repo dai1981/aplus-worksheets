@@ -74,7 +74,29 @@ US / Math / Grade 3（Common Core）
 15. properties-of-multiplication ✓
 16. partition-shapes ✓
 
-その後: US Grade 4 → Grade 2 → Grade 5、UK / Australia / Canada …（新しい学年・国は `catalog.json` に追加）
+US / Math / Grade 4（Common Core）
+1. multi-digit-multiplication（4.NBT.B.5）
+2. long-division（4.NBT.B.6）
+3. equivalent-fractions（4.NF.A.1）
+4. compare-fractions（4.NF.A.2）
+5. add-subtract-fractions（4.NF.B.3）
+6. multiply-fractions-by-whole-numbers（4.NF.B.4）
+7. decimals-tenths-hundredths（4.NF.C.5-7）
+8. place-value-rounding（4.NBT.A.1-3）
+9. add-subtract-multi-digit（4.NBT.B.4）
+10. factors-multiples-prime（4.OA.B.4）
+11. multiplicative-comparison-word-problems（4.OA.A.1-3）
+12. measurement-conversions（4.MD.A.1-2）
+13. area-perimeter-formulas（4.MD.A.3）
+14. measuring-angles（4.MD.C.5-7）
+15. lines-angles-shapes（4.G.A.1-2）
+16. line-symmetry（4.G.A.3）
+17. number-shape-patterns（4.OA.C.5）
+18. line-plots-fractions（4.MD.B.4）
+
+Grade 4 からは 1,000 以上の数にカンマを付ける（例: 4,536）。
+
+その後: US Grade 2 → Grade 5、UK / Australia / Canada …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
