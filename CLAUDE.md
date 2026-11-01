@@ -65,7 +65,7 @@ US / Math / Grade 3（Common Core）
 1. multiplication-facts ✓ 2. division-facts ✓ 3. rounding ✓ 4. fractions ✓ 5. telling-time ✓ 6. area ✓
 7. perimeter ✓
 8. add-subtract-within-1000 ✓
-9. two-step-word-problems（3.OA.D.8）
+9. two-step-word-problems ✓
 10. picture-and-bar-graphs（3.MD.B.3）
 11. line-plots-measurement（3.MD.B.4）
 12. quadrilaterals（3.G.A.1）
