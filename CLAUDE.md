@@ -70,7 +70,7 @@ US / Math / Grade 3（Common Core）
 11. line-plots-measurement（3.MD.B.4）
 12. quadrilaterals（3.G.A.1）
 13. mass-and-volume（3.MD.A.2）
-14. multiply-by-multiples-of-10（3.NBT.A.3）
+14. multiply-by-multiples-of-10 ✓
 15. properties-of-multiplication（3.OA.B.5）
 16. partition-shapes（3.G.A.2）
 
