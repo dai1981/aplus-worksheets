@@ -1,0 +1,61 @@
+name: Deploy worksheets (apu2.com)
+
+on:
+  workflow_dispatch:
+    inputs:
+      db_all:
+        description: "DB: send every unit (not only changed ones)"
+        type: boolean
+        default: false
+  push:
+    branches: [ main ]
+    paths:
+      - "site/**"
+      - "content/**"
+      - ".github/workflows/deploy.yml"
+
+concurrency:
+  group: deploy-worksheets
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # 変わった単元を git diff で探すため
+
+      - name: Python を準備
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 問題データをチェック（エラーがあればここで止まる）
+        run: python3 tools/check.py
+
+      # アップロード（上書き）のみ。--delete を付けないので、サーバー上のファイルは1つも削除しない。
+      # 送るのは site/worksheets/ の中身だけ。/aplus/worksheets/ の外や inc/secret.php は触らない。
+      - name: ロリポップへ FTP アップロード（/aplus/worksheets/ へ上書きのみ・削除なし）
+        env:
+          FTP_SERVER:   ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q lftp
+          lftp -c "set ftp:ssl-allow true; set net:max-retries 3; set net:timeout 30;
+                   open -u \"$FTP_USERNAME\",\"$FTP_PASSWORD\" \"$FTP_SERVER\";
+                   mirror -R --no-perms --parallel=4 --verbose=1 ./site/worksheets/ /aplus/worksheets/"
+
+      - name: DB を更新（変わった単元だけ）
+        env:
+          WS_SYNC_KEY: ${{ secrets.WS_SYNC_KEY }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.db_all }}" = "true" ]; then
+            python3 tools/sync_db.py --all
+          elif [ "${{ github.event_name }}" = "push" ]; then
+            python3 tools/sync_db.py --since "${{ github.event.before }}"
+          else
+            python3 tools/sync_db.py --since HEAD~1
+          fi

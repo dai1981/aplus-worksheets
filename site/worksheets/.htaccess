@@ -1,0 +1,35 @@
+# apu2.com /worksheets/（公開フォルダ /aplus/ の中）
+# このファイルで RewriteEngine を宣言すると親 /aplus/.htaccess の Rewrite は効かなくなるため、
+# 親の 1・2（eigo-duke.com からの転送、https://www.apu2.com への統一）をここにも書いている。
+# 親のエラーページ・MIME・gzip 設定はそのまま引き継がれる。
+
+Options -Indexes
+RewriteEngine On
+RewriteBase /worksheets/
+
+# === 1. eigo-duke.com/aplus/worksheets/ から見られないようにする（apu2.comへ301）
+RewriteCond %{HTTP_HOST} ^(www\.)?eigo-duke\.com$ [NC]
+RewriteRule ^(.*)$ https://www.apu2.com/worksheets/$1 [R=301,L]
+
+# === 2. https://www.apu2.com へ統一（301）
+RewriteCond %{HTTP_HOST} ^apu2\.com$ [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.apu2.com/worksheets/$1 [R=301,L]
+
+# === 3. 設定・型枠ファイルは直接見せない
+RewriteRule ^(inc|views)(/|$) - [F,L]
+# GitHub の自動アップロードが置く記録ファイルも見せない
+RewriteRule ^\.ftp-deploy - [F,L]
+
+# === 4. 実在するファイル（CSS・JS）はそのまま返す
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# === 5. それ以外のページはすべて index.php で作る
+RewriteRule ^(.*)$ index.php?p=$1 [QSA,L]
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 30 days"
+  ExpiresByType application/javascript "access plus 30 days"
+</IfModule>
