@@ -5,6 +5,7 @@ main に push すると、GitHub Actions が次の3つを自動で行います�
 1. 問題データのチェック（`tools/check.py`）。エラーがあればここで止まり、本番は変わりません
 2. `site/worksheets/` をロリポップの `/aplus/worksheets/` へ FTP アップロード（上書きのみ・削除なし）
 3. 変わった単元だけを DB（ws_ テーブル）へ反映（`tools/sync_db.py` → `api/sync.php`）
+   - データは FTP で `inc/queue/sync.json.gz` に置いて取り込みます（ロリポップのWAFに止められないため）。毎回同じ名前で上書きするので、ファイルは増えません
 
 ## 初回設定（1回だけ）
 
@@ -40,7 +41,7 @@ main に push すると、GitHub Actions が次の3つを自動で行います�
 |------|------|
 | `HTTP 403 ... secret.php missing` | 手順1の場所を確認 |
 | `HTTP 401 signature` | `WS_SYNC_KEY` と `secret.php` の文字列が同じか確認 |
-| `Not JSON (WAF?)` | ロリポップ管理画面 → セキュリティ → WAF で apu2.com のログを確認し、該当を除外 |
+| `queue file hash mismatch` | もう一度 Run workflow |
 | FTP で失敗 | deploy.yml の `set ftp:ssl-allow true;` を `false` に変えて再実行 |
 
 ## 手作業で入れたいとき（予備）
