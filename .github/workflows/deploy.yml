@@ -51,6 +51,12 @@ jobs:
                    open -u \"$FTP_USERNAME\",\"$FTP_PASSWORD\" \"$FTP_SERVER\";
                    mirror -R --no-perms --parallel=4 --verbose=1 ./site/worksheets/ /aplus/worksheets/"
 
+      - name: 受け口の接続確認
+        run: |
+          echo "page GET: $(curl -s -o /dev/null -w '%{http_code}' https://www.apu2.com/worksheets/us/math/grade-3/)"
+          echo "sync GET: $(curl -s -w ' [%{http_code}]' https://www.apu2.com/worksheets/api/sync.php | head -c 200)"
+          echo "sync POST: $(curl -s -X POST -H 'Content-Type: text/plain' --data 'test' -w ' [%{http_code}]' https://www.apu2.com/worksheets/api/sync.php | head -c 200)"
+
       - name: DB を更新（変わった単元だけ）
         env:
           WS_SYNC_KEY: ${{ secrets.WS_SYNC_KEY }}
