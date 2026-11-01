@@ -647,7 +647,7 @@ def gen_area():
         {"q": "How do you find the area of an L-shaped figure?",
          "a": "Split it into two rectangles, find the area of each, and add the two areas together."},
     ]
-    return unit("area", 4,
+    return unit("area", 6,
                 title="Area of Rectangles",
                 seo_title="Grade 3 Area Worksheets: Unit Squares, Length × Width and Composite Shapes",
                 short_title="Area",

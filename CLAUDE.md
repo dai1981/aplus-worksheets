@@ -63,7 +63,7 @@ FTP は上書きのみ（`--delete` を絶対に付けない）。DB は ws_ の
 
 US / Math / Grade 3（Common Core）
 1. multiplication-facts ✓ 2. division-facts ✓ 3. rounding ✓ 4. fractions ✓ 5. telling-time ✓ 6. area ✓
-7. perimeter（3.MD.D.8）
+7. perimeter ✓
 8. add-subtract-within-1000（3.NBT.A.2）
 9. two-step-word-problems（3.OA.D.8）
 10. picture-and-bar-graphs（3.MD.B.3）

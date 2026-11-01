@@ -90,9 +90,9 @@ function fill_sheet($sets, $sources, $cap, $max_each) {
 
 $small = $letter ? 0 : 12;                     // A4 is 12mm taller than Letter
 $plan = array(
-    array('label' => T('p_warmup'), 'src' => array(0),    'cap' => 168 + $small, 'max' => 8),
-    array('label' => T('p_prac1'),  'src' => array(1, 2), 'cap' => 198 + $small, 'max' => 9),
-    array('label' => T('p_prac2'),  'src' => array(3, 4), 'cap' => 198 + $small, 'max' => 9),
+    array('label' => T('p_warmup'), 'src' => array(0),    'cap' => 182 + $small, 'max' => 8),
+    array('label' => T('p_prac1'),  'src' => array(1, 2), 'cap' => 210 + $small, 'max' => 9),
+    array('label' => T('p_prac2'),  'src' => array(3, 4), 'cap' => 210 + $small, 'max' => 9),
 );
 $pages = array();
 $no = 0;
