@@ -55,6 +55,14 @@ jobs:
         run: |
           echo "page GET: $(curl -s -o /dev/null -w '%{http_code}' https://www.apu2.com/worksheets/us/math/grade-3/)"
           echo "sync GET: $(curl -s -w ' [%{http_code}]' https://www.apu2.com/worksheets/api/sync.php | head -c 200)"
+          U=https://www.apu2.com/worksheets/api/sync.php
+          python3 -c "import json,gzip,base64;print(base64.b64encode(gzip.compress(open('content/catalog.json','rb').read())).decode())" > /tmp/cat.b64
+          python3 -c "import gzip,base64;print(base64.b64encode(gzip.compress(open('content/us/math/grade-3/area.json','rb').read())).decode())" > /tmp/unit.b64
+          echo "probe UA: $(curl -s -o /dev/null -w '%{http_code}' -X POST -A 'aplus-worksheets-sync/1' --data 'test' $U)"
+          echo "probe hdr: $(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'X-WS-Time: 1' -H 'X-WS-Sig: abc' --data 'test' $U)"
+          echo "probe cat: $(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'Content-Type: text/plain' --data-binary @/tmp/cat.b64 $U)"
+          echo "probe unit: $(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'Content-Type: text/plain' --data-binary @/tmp/unit.b64 $U)"
+          echo "probe octet: $(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'Content-Type: application/octet-stream' --data-binary @/tmp/cat.b64 $U)"
           echo "sync POST: $(curl -s -X POST -H 'Content-Type: text/plain' --data 'test' -w ' [%{http_code}]' https://www.apu2.com/worksheets/api/sync.php | head -c 200)"
 
       - name: DB を更新（変わった単元だけ）
