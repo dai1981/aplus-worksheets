@@ -214,8 +214,8 @@ function site_footer($lang = 'en', $with_js = true) {
 }
 
 function brand_svg() {
-    return '<svg class="ws-logo" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true"><rect width="30" height="30" rx="6" fill="#006633"/>'
-         . '<path d="M15 5.5 23.5 10.25v9.5L15 24.5 6.5 19.75v-9.5Z M6.5 10.25 15 15 23.5 10.25 M15 15v9.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>';
+    return '<svg class="ws-logo" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">'
+         . '<path d="M12 2.5 20.2 7.2v9.6L12 21.5 3.8 16.8V7.2Z M3.8 7.2 12 11.9 20.2 7.2 M12 11.9v9.6" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>';
 }
 function arrow_svg() {
     return '<svg class="ar" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
