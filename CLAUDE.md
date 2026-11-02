@@ -393,7 +393,51 @@ AU / Maths / Year 1（とても短い文、ほぼ全問に絵）
 12. data-and-tally-marks ✓
 13. chance ✓
 
-その後: AU Foundation、Canada …（新しい学年・国は `catalog.json` に追加）
+CA / Math（Ontario Curriculum 2020）— country `ca`、subject `math`、grade `grade-N`、Letter。
+カナダ英語（colour, metre, centre, math, grade, students, trapezoid, counterclockwise, bar graph）。お金は $ と ¢（nickel 5¢・dime・quarter・loonie・toonie、ペニーなし）。
+数は 4 桁はそのまま、5 桁以上はノーブレークスペース区切り。standard_code は「Grade 3: B2.2」形式。EQAO は Grade 3・6
+
+CA / Math / Grade 3（EQAO の学年）
+1. multiplication-facts-for-2-5-and-10
+2. numbers-to-1000
+3. adding-and-subtracting-to-1000
+4. multiplication-and-division
+5. fractions-and-fair-shares
+6. rounding-and-estimating
+7. patterns
+8. equations-and-equivalence
+9. money-and-making-change
+10. telling-time
+11. length-and-perimeter
+12. mass-and-capacity
+13. area
+14. 2d-shapes-and-3d-objects
+15. location-and-movement
+16. data-and-graphs
+17. probability
+
+CA / Math / Grade 6（EQAO の学年）
+1. fractions-decimals-and-percents
+2. integers
+3. large-numbers-and-decimals
+4. adding-and-subtracting-fractions
+5. adding-and-subtracting-decimals
+6. multiplying-and-dividing-decimals
+7. multiplying-and-dividing-with-fractions
+8. factors-primes-and-divisibility
+9. ratios-rates-and-percents
+10. patterns-and-expressions
+11. equations-and-inequalities
+12. area-of-polygons
+13. measuring-angles
+14. cartesian-plane-and-transformations
+15. quadrilaterals-and-congruence
+16. metric-units-and-time
+17. data-and-graphs
+18. probability
+19. financial-literacy
+
+その後: CA Grade 4 / 5 / 2 / 1、AU Foundation …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
