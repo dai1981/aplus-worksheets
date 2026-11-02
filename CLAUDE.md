@@ -442,40 +442,40 @@ Ontario と同じカナダ英語・お金・数の書き方。税は GST 5% + PS
 standard_code は「Grade 4: Number」形式、standard_text は BC の Content 原文、standard_url は https://curriculum.gov.bc.ca/curriculum/mathematics/N/core
 
 CA-BC / Math / Grade 4（FSA の学年）
-1. multiplication-and-division-facts-to-100
-2. numbers-to-10000
-3. adding-and-subtracting-to-10000
-4. multiplying-and-dividing-by-one-digit-numbers
-5. comparing-and-ordering-fractions
-6. decimals-to-hundredths
-7. adding-and-subtracting-decimals
-8. one-step-equations
-9. increasing-and-decreasing-patterns
-10. 12-and-24-hour-time
-11. regular-and-irregular-polygons
-12. perimeter
-13. line-symmetry
-14. bar-graphs-and-pictographs
-15. probability-experiments
-16. money-and-making-change
+1. multiplication-and-division-facts-to-100 ✓
+2. numbers-to-10000 ✓
+3. adding-and-subtracting-to-10000 ✓
+4. multiplying-and-dividing-by-one-digit-numbers ✓
+5. comparing-and-ordering-fractions ✓
+6. decimals-to-hundredths ✓
+7. adding-and-subtracting-decimals ✓
+8. one-step-equations ✓
+9. increasing-and-decreasing-patterns ✓
+10. 12-and-24-hour-time ✓
+11. regular-and-irregular-polygons ✓
+12. perimeter ✓
+13. line-symmetry ✓
+14. bar-graphs-and-pictographs ✓
+15. probability-experiments ✓
+16. money-and-making-change ✓
 
 CA-BC / Math / Grade 7（FSA の学年）
-1. adding-and-subtracting-integers
-2. multiplying-and-dividing-integers
-3. order-of-operations
-4. adding-and-subtracting-decimals
-5. multiplying-and-dividing-decimals
-6. fractions-decimals-and-percents
-7. ratios
-8. two-step-equations
-9. linear-relations
-10. circumference-and-area-of-circles
-11. volume-of-prisms-and-cylinders
-12. cartesian-coordinates-and-graphing
-13. combinations-of-transformations
-14. circle-graphs
-15. probability-of-two-independent-events
-16. financial-percentages
+1. adding-and-subtracting-integers ✓
+2. multiplying-and-dividing-integers ✓
+3. order-of-operations ✓
+4. adding-and-subtracting-decimals ✓
+5. multiplying-and-dividing-decimals ✓
+6. fractions-decimals-and-percents ✓
+7. ratios ✓
+8. two-step-equations ✓
+9. linear-relations ✓
+10. circumference-and-area-of-circles ✓
+11. volume-of-prisms-and-cylinders ✓
+12. cartesian-coordinates-and-graphing ✓
+13. combinations-of-transformations ✓
+14. circle-graphs ✓
+15. probability-of-two-independent-events ✓
+16. financial-percentages ✓
 
 その後: CA-ON Grade 4 / 5 / 2 / 1、CA-BC の他の学年、AU Foundation …（新しい学年・国は `catalog.json` に追加）
 
