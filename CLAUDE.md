@@ -114,7 +114,26 @@ US / Math / Grade 2（Common Core）— 1000 まで（カンマなし。Grade 3 
 15. shapes-and-attributes（2.G.A.1）
 16. halves-thirds-fourths（2.G.A.2-3）
 
-その後: US Grade 5、UK / Australia / Canada …（新しい学年・国は `catalog.json` に追加）
+US / Math / Grade 5（Common Core）— 1,000 以上はカンマ付き
+1. add-subtract-fractions-unlike（5.NF.A.1-2）
+2. multiply-fractions（5.NF.B.4, B.6）
+3. divide-fractions（5.NF.B.7）
+4. add-subtract-decimals（5.NBT.B.7）
+5. multiply-divide-decimals（5.NBT.B.7）
+6. volume（5.MD.C.3-5）
+7. numerical-expressions（5.OA.A.1-2）
+8. coordinate-plane（5.G.A.1-2）
+9. multi-digit-multiplication（5.NBT.B.5）
+10. long-division-two-digit-divisors（5.NBT.B.6）
+11. decimal-place-value-rounding（5.NBT.A.1-4）
+12. fractions-as-division（5.NF.B.3）
+13. multiplication-as-scaling（5.NF.B.5）
+14. measurement-conversions（5.MD.A.1）
+15. classify-two-dimensional-figures（5.G.B.3-4）
+16. patterns-and-relationships（5.OA.B.3）
+17. line-plots-fractions（5.MD.B.2）
+
+その後: UK / Australia / Canada …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
