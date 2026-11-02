@@ -13,7 +13,7 @@ KEY = re.compile(r"^[a-z0-9-]{1,80}$")
 NEED = ["country", "subject", "grade", "slug", "title", "short_title", "domain",
         "meta_desc", "key_big", "body_html", "sets"]
 # 過去に実際に出た文法ミス
-BAD = [(re.compile(r"\b1 (minutes|hours|pencils|marks|apples|books|days|cups)\b"), "singular after 1"),
+BAD = [(re.compile(r"(?<![\d.,/])\b1 (minutes|hours|pencils|marks|apples|books|days|cups)\b"), "singular after 1"),
        (re.compile(r"\.\.(?!\.)"), "double period"),
        (re.compile(r"\b\d{1,2}:6\d\b"), "time like 9:60")]
 
