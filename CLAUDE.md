@@ -229,7 +229,7 @@ UK / Maths / Year 5 — Year 4 と同じルール
 11. multiplying-fractions ✓
 12. decimals-and-percentages ✓
 13. converting-units ✓
-14. area-and-perimeter
+14. area-and-perimeter ✓
 15. measuring-angles ✓
 16. reflection-and-translation ✓
 17. line-graphs-and-tables ✓
