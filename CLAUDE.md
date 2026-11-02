@@ -215,7 +215,42 @@ UK / Maths / Year 6（KS2 SATs の学年）— Year 4 と同じルール
 19. pie-charts-and-line-graphs ✓
 20. mean ✓
 
-その後: UK Year 3 / 5 / 2 / 1、Australia / Canada …（新しい学年・国は `catalog.json` に追加）
+UK / Maths / Year 5 — Year 4 と同じルール
+1. place-value-to-a-million
+2. rounding
+3. roman-numerals-to-1000
+4. column-addition-and-subtraction
+5. factors-multiples-and-primes
+6. multiplication
+7. short-division
+8. multiply-and-divide-by-10-100-1000
+9. equivalent-fractions-and-mixed-numbers
+10. adding-and-subtracting-fractions
+11. multiplying-fractions
+12. decimals-and-percentages
+13. converting-units
+14. area-and-perimeter
+15. measuring-angles
+16. reflection-and-translation
+17. line-graphs-and-tables
+
+UK / Maths / Year 3 — 1,000 まで。文は短く、絵を多く
+1. place-value
+2. mental-addition-and-subtraction
+3. column-addition-and-subtraction
+4. 3-4-and-8-times-tables
+5. multiplication-and-division
+6. fractions
+7. tenths-and-adding-fractions
+8. measuring-length-mass-and-capacity
+9. perimeter
+10. money
+11. telling-the-time
+12. angles-and-lines
+13. 2d-and-3d-shapes
+14. bar-charts-and-pictograms
+
+その後: UK Year 2 / 1、Australia / Canada …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
