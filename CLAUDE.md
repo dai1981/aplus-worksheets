@@ -145,7 +145,7 @@ US / Math / Grade 6（Common Core）— 1,000 以上はカンマ付き。負の�
 9. one-step-equations ✓
 10. writing-evaluating-expressions ✓
 11. equivalent-expressions ✓
-12. area-of-polygons
+12. area-of-polygons ✓
 13. absolute-value-and-ordering ✓
 14. coordinate-plane-four-quadrants ✓
 15. inequalities ✓
