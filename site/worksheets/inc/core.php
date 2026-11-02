@@ -162,6 +162,7 @@ function page_head($o) {
     echo '<meta property="og:url" content="' . h($can) . "\">\n";
     echo "<meta name=\"twitter:card\" content=\"summary\">\n";
     $css = isset($o['css']) ? $o['css'] : 'ws.css';
+    echo '<link rel="icon" type="image/svg+xml" href="' . url('assets/logo.svg') . "\">\n";
     echo '<link rel="stylesheet" href="' . url('assets/' . $css) . '?v=' . ASSET_VER . "\">\n";
     if (!empty($o['head'])) echo $o['head'];
     if (GA_ID) {
@@ -213,8 +214,8 @@ function site_footer($lang = 'en', $with_js = true) {
 }
 
 function brand_svg() {
-    return '<svg class="ws-logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#fff"/>'
-         . '<path d="M9 23 L16 8 L23 23 M11.6 18 H20.4" fill="none" stroke="#006633" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    return '<svg class="ws-logo" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true"><rect width="30" height="30" rx="6" fill="#006633"/>'
+         . '<path d="M15 5.5 23.5 10.25v9.5L15 24.5 6.5 19.75v-9.5Z M6.5 10.25 15 15 23.5 10.25 M15 15v9.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>';
 }
 function arrow_svg() {
     return '<svg class="ar" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
