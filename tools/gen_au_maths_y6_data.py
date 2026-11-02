@@ -27,7 +27,7 @@ GRID = "#d5ddd8"
 GRID2 = "#9fb0a5"
 FONT = "Arial, Helvetica, sans-serif"
 MINUS = "−"
-NBSP = " "
+NBSP = "\u00a0"
 
 
 # ------------------------------------------------------------ helpers

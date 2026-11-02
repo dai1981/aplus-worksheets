@@ -24,7 +24,7 @@ FONT = "Arial, Helvetica, sans-serif"
 GIRLS = ["Olivia", "Emma", "Maya", "Zoe", "Amira", "Mei", "Chloe", "Priya", "Leah", "Hana", "Ava", "Sofia"]
 BOYS = ["Liam", "Noah", "Aiden", "Lucas", "Owen", "Arjun", "Ethan", "Jayden", "Benjamin", "Mateo", "Nathan", "Kai"]
 SQ = {"cm": "cm²", "m": "m²"}
-NBSP = " "
+NBSP = "\u00a0"
 
 
 

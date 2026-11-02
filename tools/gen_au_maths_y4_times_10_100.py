@@ -364,7 +364,7 @@ def set_missing():
         "Work backwards: 380 ÷ 10 = <b>38</b>. Check: 38 × 10 = 380.", 38 * 10 == 380)
     add("%s × 100 = 4500" % B, 45, [450, 450000, 4400],
         "Work backwards: 4500 ÷ 100 moves the digits 2 places to the right, so the missing number is <b>45</b>. "
-        "450 × 100 would be 45 000.", 45 * 100 == 4500)
+        "450 × 100 would be 45 000.", 45 * 100 == 4500)
     add("72 × %s = 7200" % B, 100, [10, 1000, 7128],
         "The 7 tens became 7 thousands, so the digits moved 2 places to the left. That is × <b>100</b>.", 72 * 100 == 7200)
     add("640 = 64 × %s" % B, 10, [100, 1000, 576],
@@ -410,7 +410,7 @@ def set_missing():
         "× 100 moves the digits 2 places to the left: <b>45 × 100 = 4500</b>. 45 × 10 = 450, 450 ÷ 10 = 45 and "
         "4500 ÷ 100 = 45.", 45 * 100 == 4500 and 45 * 10 != 4500 and 450 // 10 != 4500 and 4500 // 100 != 450)
     add("Which is equal to 2700?", "27 × 100", ["27 × 10", "270 × 100", "2700 ÷ 10"],
-        "27 hundreds = 2700, so <b>27 × 100</b> = 2700. 27 × 10 = 270, 270 × 100 = 27 000 and 2700 ÷ 10 = 270.",
+        "27 hundreds = 2700, so <b>27 × 100</b> = 2700. 27 × 10 = 270, 270 × 100 = 27 000 and 2700 ÷ 10 = 270.",
         27 * 100 == 2700 and 27 * 10 != 2700 and 270 * 100 != 2700 and 2700 // 10 != 2700)
     assert len(its) == 20, len(its)
     order = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 18, 19, 16, 17, 10, 11, 12, 13, 14, 15]

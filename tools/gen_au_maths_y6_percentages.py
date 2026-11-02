@@ -23,7 +23,7 @@ THIN = "#8a8a8a"
 RED = "#c0392b"
 FONT = "Arial, Helvetica, sans-serif"
 MINUS = "−"
-NBSP = " "
+NBSP = "\u00a0"
 GIRLS = ["Charlotte", "Isla", "Mia", "Amelia", "Ava", "Harper", "Chloe", "Ruby", "Mei", "Zara", "Matilda", "Sienna", "Grace"]
 BOYS = ["Oliver", "Jack", "Noah", "William", "Leo", "Lachlan", "Liam", "Aarav", "Kai", "Cooper", "Ethan"]
 

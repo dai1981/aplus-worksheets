@@ -23,7 +23,7 @@ INK = "#2b2b2b"
 GRAY = "#8a8f8c"
 FONT = "Arial, Helvetica, sans-serif"
 M = "−"
-NBSP = " "
+NBSP = "\u00a0"
 GIRLS = ["Charlotte", "Isla", "Mia", "Amelia", "Ava", "Harper", "Chloe", "Ruby", "Mei", "Zara", "Matilda", "Sienna", "Grace"]
 BOYS = ["Oliver", "Jack", "Noah", "William", "Leo", "Lachlan", "Liam", "Aarav", "Kai", "Cooper", "Ethan"]
 

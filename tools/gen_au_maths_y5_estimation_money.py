@@ -726,7 +726,7 @@ FAQ = [
      "a": "Cash totals are rounded because there are no 1c or 2c coins. Totals ending in 1 or 2 round down to 0, "
           "3 or 4 round up to 5, 6 or 7 round down to 5, and 8 or 9 round up to 10. Card payments are not rounded."},
     {"q": "How can my child check if an answer is reasonable?",
-     "a": "Round the numbers, work out an estimate in your head and compare. If 412 × 9 gives 37 080 but 400 × 9 = 3600, "
+     "a": "Round the numbers, work out an estimate in your head and compare. If 412 × 9 gives 37 080 but 400 × 9 = 3600, "
           "the answer is too big and should be checked."},
 ]
 
@@ -759,7 +759,7 @@ def gen():
         "standard_url": "https://v9.australiancurriculum.edu.au/f-10-curriculum/learning-areas/mathematics",
         "standard_text": "Check and explain the reasonableness of solutions to problems including financial contexts using estimation strategies appropriate to the context",
         "meta_desc": "Free Year 5 maths worksheets on estimation and money, aligned to the Australian Curriculum (AC9M5N08, AC9M5N09): round to estimate, front-end estimation, check if answers are reasonable, round prices to the nearest dollar, round cash to the nearest 5c, and solve budget and best-buy problems. 100 questions with an answer key, great for NAPLAN practice.",
-        "key_big": "Estimate first, then check: if 412 × 9 gives 37 080 but 400 × 9 = 3600, the answer is not reasonable.",
+        "key_big": "Estimate first, then check: if 412 × 9 gives 37 080 but 400 × 9 = 3600, the answer is not reasonable.",
         "key_sub": "Round prices to the nearest dollar to estimate a total. When you pay cash, round the total to the nearest 5c first: $8.62 becomes $8.60, so the change from $10 is $1.40.",
         "body_html": body_html(), "faq": FAQ, "sets": sets,
     }

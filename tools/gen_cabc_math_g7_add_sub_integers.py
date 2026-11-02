@@ -27,7 +27,7 @@ YEL = "#f4c430"
 TRED = "#d6453b"
 FONT = "Arial, Helvetica, sans-serif"
 M = "−"
-NBSP = " "
+NBSP = "\u00a0"
 GIRLS = ["Olivia", "Ava", "Chloe", "Simran", "Jasleen", "Mei", "Ji-woo", "Hana", "Sofia", "Emma", "Leah", "Zara", "Nadia"]
 BOYS = ["Liam", "Ethan", "Noah", "Arjun", "Harjot", "Wei", "Mateo", "Lucas", "Kai", "Owen", "Ryan"]
 
