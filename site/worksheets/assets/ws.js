@@ -294,17 +294,23 @@
       if (!reached) h += '<p class="lv-rest">' + t("more", { n: fmt(top - m.total), t: name(goal) }) + "</p>";
       else if (goal + 1 < TIERS.length) h += '<button type="button" class="lv-up">' + t("reachedBtn") + "</button>";
       else h += '<p class="lv-rest"><b>' + t("allDone") + "</b></p>";
-      return h + ladderHTML(ctx, m, got);
+      return h + ladderHTML(ctx, m, got, goal);
     }
 
     // ---------- ranking ladder: top rank first, "You" row where you stand
-    function ladderHTML(ctx, m, got) {
+    //  Only the ranks up to the next goal are shown; higher ones stay locked until you get close.
+    var LOCK = '<svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="34" r="22" fill="#ece7df"/>'
+      + '<rect x="21" y="31" width="22" height="16" rx="3" fill="#b3aa9e"/><path d="M25 31v-5a7 7 0 0 1 14 0v5" fill="none" stroke="#b3aa9e" stroke-width="4"/></svg>';
+    function ladderHTML(ctx, m, got, goal) {
       var h = '<div class="lv-ladder"><p class="lv-lh">' + t("ranks") + "</p><ol>", you = false, nextShown = false;
+      var top = Math.min(TIERS.length - 1, Math.max(FIRST_GOAL, got + 1, goal || 0)), hid = TIERS.length - 1 - top;
+      if (hid > 0) h += '<li class="lock"><span class="md">' + LOCK + '</span><span class="n">' + t("locked", { n: hid })
+        + "<small>" + t("lockedHint") + '</small></span><span class="r"></span><span class="s"></span></li>';
       function youRow() {
         return '<li class="you"><span class="md"><span class="dot"></span></span><span class="n">' + t("you") + '</span><span class="r">'
           + fmt(m.total) + "</span><span class=\"s\"></span></li>";
       }
-      for (var i = TIERS.length - 1; i >= 0; i--) {
+      for (var i = top; i >= 0; i--) {
         var done = i < got;
         if (done && !you) { h += youRow(); you = true; }
         var cls = done ? "done" : "", tag = "";
