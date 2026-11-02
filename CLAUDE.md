@@ -317,48 +317,48 @@ AU / Maths / Year 5（NAPLAN の学年）
 17. chance ✓
 
 AU / Maths / Year 4
-1. multiplication-facts-to-10-x-10
-2. decimals-tenths-and-hundredths
-3. equivalent-fractions
-4. multiplication-and-division-strategies
-5. adding-and-subtracting-large-numbers
-6. multiplying-and-dividing-by-10-and-100
-7. counting-by-fractions-and-mixed-numerals
-8. rounding-and-estimation
-9. money-and-financial-problems
-10. odd-and-even-numbers
-11. number-sentences-addition-and-subtraction
-12. reading-scales-and-temperature
-13. perimeter-and-area
-14. time-am-pm-and-duration
-15. comparing-angles
-16. grid-references-and-maps
-17. symmetry
-18. shapes-and-composite-objects
-19. data-and-graphs
-20. chance
+1. multiplication-facts-to-10-x-10 ✓
+2. decimals-tenths-and-hundredths ✓
+3. equivalent-fractions ✓
+4. multiplication-and-division-strategies ✓
+5. adding-and-subtracting-large-numbers ✓
+6. multiplying-and-dividing-by-10-and-100 ✓
+7. counting-by-fractions-and-mixed-numerals ✓
+8. rounding-and-estimation ✓
+9. money-and-financial-problems ✓
+10. odd-and-even-numbers ✓
+11. number-sentences-addition-and-subtraction ✓
+12. reading-scales-and-temperature ✓
+13. perimeter-and-area ✓
+14. time-am-pm-and-duration ✓
+15. comparing-angles ✓
+16. grid-references-and-maps ✓
+17. symmetry ✓
+18. shapes-and-composite-objects ✓
+19. data-and-graphs ✓
+20. chance ✓
 
 AU / Maths / Year 6（高校準備の学年。NAPLAN はない）
-1. integers-and-negative-numbers
-2. prime-composite-and-square-numbers
-3. comparing-and-ordering-fractions
-4. adding-and-subtracting-fractions
-5. adding-and-subtracting-decimals
-6. multiplying-and-dividing-decimals-by-powers-of-10
-7. percentages-of-quantities
-8. estimation-and-financial-problems
-9. multiplying-and-dividing-larger-numbers
-10. number-patterns
-11. order-of-operations-and-equations
-12. converting-metric-units
-13. area-of-rectangles
-14. timetables-and-itineraries
-15. angles-on-a-line-and-at-a-point
-16. prisms-and-cross-sections
-17. cartesian-plane-four-quadrants
-18. transformations-and-tessellations
-19. interpreting-data
-20. probability
+1. integers-and-negative-numbers ✓
+2. prime-composite-and-square-numbers ✓
+3. comparing-and-ordering-fractions ✓
+4. adding-and-subtracting-fractions ✓
+5. adding-and-subtracting-decimals ✓
+6. multiplying-and-dividing-decimals-by-powers-of-10 ✓
+7. percentages-of-quantities ✓
+8. estimation-and-financial-problems ✓
+9. multiplying-and-dividing-larger-numbers ✓
+10. number-patterns ✓
+11. order-of-operations-and-equations ✓
+12. converting-metric-units ✓
+13. area-of-rectangles ✓
+14. timetables-and-itineraries ✓
+15. angles-on-a-line-and-at-a-point ✓
+16. prisms-and-cross-sections ✓
+17. cartesian-plane-four-quadrants ✓
+18. transformations-and-tessellations ✓
+19. interpreting-data ✓
+20. probability ✓
 
 その後: AU Year 2 / 1 / Foundation、Canada …（新しい学年・国は `catalog.json` に追加）
 
