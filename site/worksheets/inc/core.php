@@ -69,8 +69,16 @@ function T($key = null) {
             'worksheets' => 'Worksheets', 'grade_ws' => '%s %s Worksheets',
             'notfound' => 'Page not found', 'back_home' => 'Back to all worksheets',
             'skills_count' => '%d skills', 'free' => 'Free · no sign-up',
+            'by_grade' => 'by Grade',
         ),
     );
+    // British English (UK pages): same as 'en' except these words
+    if (!isset($T['en-GB'])) {
+        $T['en-GB'] = array_merge($T['en'], array(
+            'grades' => 'Years', 'pick_grade' => 'Choose a year', 'clear_grade' => 'Clear scores for this year',
+            'hook_go' => 'Start practising', 'by_grade' => 'by Year',
+        ));
+    }
     static $lang = 'en';
     if (is_array($key)) { $lang = isset($T[$key[0]]) ? $key[0] : 'en'; return null; } // set language
     if ($key === null) return $T[$lang];
@@ -115,6 +123,12 @@ function js_text($lang) {
             'goFor' => 'Go for it', 'later' => 'Later', 'notStarted' => 'Not started',
         ),
     );
+    $J['en-GB'] = array_merge($J['en'], array(
+        'confirm' => 'Clear all saved scores for this year?',
+        'tier' => array('above' => 'Above Average', 'sight' => 'Top in Sight', 'class' => 'Top of the Class',
+                        'grade' => 'Top of the Year', 'state' => 'Top in the County',
+                        'nation' => 'Top in the Country', 'world' => 'Top in the World'),
+    ));
     return isset($J[$lang]) ? $J[$lang] : $J['en'];
 }
 

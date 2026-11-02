@@ -12,7 +12,7 @@ $crumbs = array(array(T('worksheets'), ''), array($country['name'], $seg[0] . '/
 
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
-    'title' => 'Free ' . $subject['name'] . ' Worksheets by Grade (' . $country['standard'] . ') | ' . SITE_NAME,
+    'title' => 'Free ' . $subject['name'] . ' Worksheets ' . T('by_grade') . ' (' . $country['standard'] . ') | ' . SITE_NAME,
     'desc' => $subject['intro'],
     'canonical' => $base,
 ));

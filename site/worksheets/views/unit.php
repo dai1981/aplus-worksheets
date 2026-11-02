@@ -119,6 +119,8 @@ if ($u['key_big']) $lr['teaches'] = $u['key_big'];
 $lr['audience'] = array('@type' => 'EducationalAudience', 'educationalRole' => array('student', 'teacher', 'parent'));
 if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'us') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);
+} elseif (preg_match('/^year-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'uk') {
+    $lr['typicalAgeRange'] = ((int)$gm[1] + 4) . '-' . ((int)$gm[1] + 5);   // England: Year 4 = age 8-9
 }
 if ($u['standard_code']) {
     $al = array('@type' => 'AlignmentObject', 'alignmentType' => 'teaches',

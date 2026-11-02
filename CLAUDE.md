@@ -173,7 +173,27 @@ US / Math / Grade 1（Common Core）— 120 まで（カンマなし）。文は
 15. shapes-and-attributes ✓
 16. halves-and-fourths ✓
 
-その後: UK / Australia / Canada …（新しい学年・国は `catalog.json` に追加）
+UK / Maths / Year 4（National Curriculum in England）— country `uk`、subject `maths`、grade `year-N`、A4。
+イギリス英語（colour, metre, maths, pupils, £/p, trapezium, exchange）。1,000 以上はカンマ。standard_code は「Year 4: 分野名」
+1. times-tables ✓
+2. place-value ✓
+3. rounding ✓
+4. roman-numerals ✓
+5. column-addition-and-subtraction ✓
+6. mental-multiplication-and-division ✓
+7. short-multiplication ✓
+8. fractions ✓
+9. decimals ✓
+10. money ✓
+11. converting-units ✓
+12. area-and-perimeter ✓
+13. time-12-and-24-hour-clock ✓
+14. angles-and-shapes ✓
+15. lines-of-symmetry ✓
+16. coordinates ✓
+17. bar-charts-and-time-graphs ✓
+
+その後: UK Year 6 / 3 / 5 / 2 / 1、Australia / Canada …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
