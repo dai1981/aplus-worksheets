@@ -80,6 +80,7 @@ function T($key = null) {
         ));
     }
     if (!isset($T['en-AU'])) $T['en-AU'] = $T['en-GB'];   // Australian English: same words as British
+    if (!isset($T['en-CA'])) $T['en-CA'] = array_merge($T['en'], array('hook_go' => 'Start practising'));   // Canada: grades like the US, British -ise verbs
     static $lang = 'en';
     if (is_array($key)) { $lang = isset($T[$key[0]]) ? $key[0] : 'en'; return null; } // set language
     if ($key === null) return $T[$lang];
@@ -134,6 +135,11 @@ function js_text($lang) {
         'confirm' => 'Clear all saved scores for this year?',
         'tier' => array('above' => 'Above Average', 'sight' => 'Top in Sight', 'class' => 'Top of the Class',
                         'grade' => 'Top of the Year', 'state' => 'Top in the State',
+                        'nation' => 'Top in the Country', 'world' => 'Top in the World'),
+    ));
+    $J['en-CA'] = array_merge($J['en'], array(
+        'tier' => array('above' => 'Above Average', 'sight' => 'Top in Sight', 'class' => 'Top of the Class',
+                        'grade' => 'Top of the Grade', 'state' => 'Top in the Province',
                         'nation' => 'Top in the Country', 'world' => 'Top in the World'),
     ));
     return isset($J[$lang]) ? $J[$lang] : $J['en'];
