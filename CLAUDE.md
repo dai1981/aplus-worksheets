@@ -437,6 +437,83 @@ CA-ON / Math / Grade 6（EQAO の学年）
 18. probability ✓
 19. financial-literacy ✓
 
+CA-ON / Math / Grade 4（EQAO なし）
+1. multiplication-facts-to-10-x-10 ✓
+2. numbers-to-10000 ✓
+3. rounding-and-estimating ✓
+4. adding-and-subtracting-to-10000 ✓
+5. multiplying-by-one-digit-numbers ✓
+6. dividing-by-one-digit-numbers ✓
+7. fractions ✓
+8. decimal-tenths ✓
+9. patterns ✓
+10. equations-and-inequalities ✓
+11. data-and-graphs ✓
+12. probability ✓
+13. angles-and-rectangles ✓
+14. coordinates-and-transformations ✓
+15. mass-capacity-and-metric-units ✓
+16. elapsed-time ✓
+17. area-of-rectangles ✓
+18. money-and-financial-literacy ✓
+
+CA-ON / Math / Grade 5（EQAO なし。HST 13% は financial-literacy のみ）
+1. multiplication-facts-to-12-x-12 ✓
+2. numbers-to-100000 ✓
+3. adding-and-subtracting-whole-numbers-and-decimals ✓
+4. multiplying-two-digit-numbers ✓
+5. dividing-by-two-digit-numbers ✓
+6. equivalent-fractions-and-mixed-numbers ✓
+7. decimals-to-hundredths ✓
+8. fractions-decimals-and-percents ✓
+9. multiplying-and-dividing-with-unit-fractions ✓
+10. ratios-and-rates ✓
+11. patterns ✓
+12. expressions-equations-and-inequalities ✓
+13. data-and-graphs ✓
+14. probability ✓
+15. triangles-and-congruence ✓
+16. coordinates-and-transformations ✓
+17. measuring-angles ✓
+18. area-of-parallelograms-and-triangles ✓
+19. metric-conversions ✓
+20. financial-literacy ✓
+
+CA-ON / Math / Grade 2（200 まで。文は短く、絵を多く）
+1. numbers-to-200 ✓
+2. counting-to-200 ✓
+3. odd-and-even-numbers ✓
+4. addition-and-subtraction-facts-to-20 ✓
+5. adding-and-subtracting-to-100 ✓
+6. equal-groups-and-sharing ✓
+7. fractions-and-fair-shares ✓
+8. patterns ✓
+9. equality-and-missing-numbers ✓
+10. data-and-graphs ✓
+11. probability ✓
+12. 2d-shapes-and-symmetry ✓
+13. maps-and-directions ✓
+14. measuring-length ✓
+15. time ✓
+16. money ✓
+
+CA-ON / Math / Grade 1（50 まで。とても短い文、ほぼ全問に絵）
+1. numbers-to-50 ✓
+2. counting-and-estimating-to-50 ✓
+3. addition-and-subtraction-facts-to-10 ✓
+4. adding-and-subtracting-to-20 ✓
+5. word-problems-to-50 ✓
+6. equal-groups-and-fair-shares ✓
+7. patterns ✓
+8. equal-and-not-equal ✓
+9. sorting-and-graphs ✓
+10. probability ✓
+11. 2d-shapes-and-3d-objects ✓
+12. position-and-directions ✓
+13. comparing-length-mass-and-capacity ✓
+14. calendar-days-weeks-and-months ✓
+15. money ✓
+
 CA-BC / Math（BC Mathematics Curriculum K–9）— country `ca-bc`（name「British Columbia, Canada」）、subject `math`、grade `grade-N`、Letter。生成スクリプトは `gen_cabc_math_*`。
 Ontario と同じカナダ英語・お金・数の書き方。税は GST 5% + PST 7%（HST・13% は使わない）。評価は FSA（Grade 4・7）。
 standard_code は「Grade 4: Number」形式、standard_text は BC の Content 原文、standard_url は https://curriculum.gov.bc.ca/curriculum/mathematics/N/core
@@ -477,7 +554,7 @@ CA-BC / Math / Grade 7（FSA の学年）
 15. probability-of-two-independent-events ✓
 16. financial-percentages ✓
 
-その後: CA-ON Grade 4 / 5 / 2 / 1、CA-BC の他の学年、AU Foundation …（新しい学年・国は `catalog.json` に追加）
+その後: CA-ON Grade 7 / 8、CA-BC の他の学年、AU Foundation …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
