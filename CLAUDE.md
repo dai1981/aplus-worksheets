@@ -155,6 +155,24 @@ US / Math / Grade 6（Common Core）— 1,000 以上はカンマ付き。負の�
 19. decimal-operations ✓
 20. converting-units-with-ratios ✓
 
+US / Math / Grade 1（Common Core）— 120 まで（カンマなし）。文はとても短く、6〜7歳が読める英語で。絵（SVG）を多く
+1. addition-subtraction-within-20
+2. word-problems-within-20
+3. add-three-numbers
+4. place-value-tens-ones
+5. count-to-120
+6. compare-two-digit-numbers
+7. add-within-100
+8. ten-more-ten-less
+9. subtract-multiples-of-10
+10. telling-time-hour-half-hour
+11. measuring-length
+12. equal-sign-missing-numbers
+13. addition-subtraction-strategies
+14. organize-data
+15. shapes-and-attributes
+16. halves-and-fourths
+
 その後: UK / Australia / Canada …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
