@@ -81,7 +81,7 @@ def fig(svg):
 
 def svg_wrap(w, h, body, label):
     return ("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 %d %d' width='%d' height='%d' "
-            "role='img' aria-label='%s'><g font-family='%s'>%s</g></svg>" % (w, h, w, h, label, FONT, body))
+            "role='img' aria-label='%s'><g font-family='%s'>%s</g></svg>" % (w, h, w, h, label.replace("'", "’"), FONT, body))
 
 
 def tw(t, fs, bold=False):
