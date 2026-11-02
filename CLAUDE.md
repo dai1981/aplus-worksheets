@@ -97,14 +97,14 @@ US / Math / Grade 4（Common Core）
 Grade 4 からは 1,000 以上の数にカンマを付ける（例: 4,536）。
 
 US / Math / Grade 2（Common Core）— 1000 まで（カンマなし。Grade 3 と同じ）。文は短く、7〜8歳が読める英語で
-1. addition-subtraction-facts（2.OA.B.2）
-2. add-subtract-within-100（2.NBT.B.5-6）
-3. word-problems-within-100（2.OA.A.1）
-4. place-value（2.NBT.A.1, A.3）
-5. counting-money（2.MD.C.8）
-6. telling-time-5-minutes（2.MD.C.7）
-7. add-subtract-within-1000（2.NBT.B.7-8）
-8. compare-three-digit-numbers（2.NBT.A.4）
+1. addition-subtraction-facts ✓
+2. add-subtract-within-100 ✓
+3. word-problems-within-100 ✓
+4. place-value ✓
+5. counting-money ✓
+6. telling-time-5-minutes ✓
+7. add-subtract-within-1000 ✓
+8. compare-three-digit-numbers ✓
 9. skip-counting（2.NBT.A.2）
 10. odd-and-even（2.OA.C.3）
 11. arrays-repeated-addition（2.OA.C.4）
