@@ -193,7 +193,29 @@ UK / Maths / Year 4（National Curriculum in England）— country `uk`、subjec
 16. coordinates ✓
 17. bar-charts-and-time-graphs ✓
 
-その後: UK Year 6 / 3 / 5 / 2 / 1、Australia / Canada …（新しい学年・国は `catalog.json` に追加）
+UK / Maths / Year 6（KS2 SATs の学年）— Year 4 と同じルール
+1. place-value-and-rounding ✓
+2. long-multiplication ✓
+3. long-division ✓
+4. order-of-operations ✓
+5. factors-multiples-and-primes ✓
+6. simplifying-and-comparing-fractions ✓
+7. adding-and-subtracting-fractions ✓
+8. multiplying-and-dividing-fractions ✓
+9. fractions-decimals-and-percentages ✓
+10. decimal-calculations ✓
+11. percentages-of-amounts ✓
+12. ratio-and-proportion ✓
+13. algebra ✓
+14. converting-units ✓
+15. area-perimeter-and-volume ✓
+16. angles ✓
+17. circles-and-nets ✓
+18. coordinates-and-transformations ✓
+19. pie-charts-and-line-graphs ✓
+20. mean ✓
+
+その後: UK Year 3 / 5 / 2 / 1、Australia / Canada …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
