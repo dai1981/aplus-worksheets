@@ -277,7 +277,46 @@ UK / Maths / Year 1（KS1）— 100 まで（計算は 20 まで）。とても�
 9. 2d-and-3d-shapes ✓
 10. position-and-direction ✓
 
-その後: Australia / Canada …（新しい学年・国は `catalog.json` に追加）
+AU / Maths（Australian Curriculum v9.0）— country `au`、subject `maths`、grade `year-N`、A4。
+オーストラリア英語（colour, metre, maths, analog, mixed numeral, column graph, students）。お金は $ と c（1c・2c 硬貨なし）。
+数は 4 桁はそのまま（4536）、5 桁以上は空白区切り（10 000、ノーブレークスペース）。standard_code は v9 のコード（例: AC9M3N01）
+
+AU / Maths / Year 3（NAPLAN の学年）
+1. place-value-to-10000
+2. adding-and-subtracting
+3. mental-strategies-and-number-sentences
+4. multiplication-facts-3-4-5-and-10
+5. multiplying-and-dividing
+6. fractions
+7. money
+8. measuring-length-mass-and-capacity
+9. telling-the-time
+10. angles-as-turns
+11. 3d-objects
+12. maps-and-locations
+13. data-and-graphs
+14. chance
+
+AU / Maths / Year 5（NAPLAN の学年）
+1. decimals
+2. factors-and-multiples
+3. comparing-fractions
+4. percentages
+5. adding-and-subtracting-fractions
+6. multiplication
+7. division
+8. estimation-and-money-problems
+9. number-sentences-multiplication-and-division
+10. metric-units
+11. perimeter-and-area
+12. 12-and-24-hour-time
+13. measuring-angles
+14. nets
+15. coordinates-and-transformations
+16. line-graphs-and-data
+17. chance
+
+その後: AU Year 4 / 6 / 2 / 1 / Foundation、Canada …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 

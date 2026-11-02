@@ -79,6 +79,7 @@ function T($key = null) {
             'hook_go' => 'Start practising', 'by_grade' => 'by Year',
         ));
     }
+    if (!isset($T['en-AU'])) $T['en-AU'] = $T['en-GB'];   // Australian English: same words as British
     static $lang = 'en';
     if (is_array($key)) { $lang = isset($T[$key[0]]) ? $key[0] : 'en'; return null; } // set language
     if ($key === null) return $T[$lang];
@@ -127,6 +128,12 @@ function js_text($lang) {
         'confirm' => 'Clear all saved scores for this year?',
         'tier' => array('above' => 'Above Average', 'sight' => 'Top in Sight', 'class' => 'Top of the Class',
                         'grade' => 'Top of the Year', 'state' => 'Top in the County',
+                        'nation' => 'Top in the Country', 'world' => 'Top in the World'),
+    ));
+    $J['en-AU'] = array_merge($J['en'], array(
+        'confirm' => 'Clear all saved scores for this year?',
+        'tier' => array('above' => 'Above Average', 'sight' => 'Top in Sight', 'class' => 'Top of the Class',
+                        'grade' => 'Top of the Year', 'state' => 'Top in the State',
                         'nation' => 'Top in the Country', 'world' => 'Top in the World'),
     ));
     return isset($J[$lang]) ? $J[$lang] : $J['en'];
