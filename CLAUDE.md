@@ -134,26 +134,26 @@ US / Math / Grade 5（Common Core）— 1,000 以上はカンマ付き
 17. line-plots-fractions ✓
 
 US / Math / Grade 6（Common Core）— 1,000 以上はカンマ付き。負の数は「−」（U+2212）
-1. ratios
-2. unit-rates
-3. ratio-tables
-4. percents
-5. divide-fractions-by-fractions
-6. gcf-and-lcm
-7. negative-numbers
-8. exponents-order-of-operations
-9. one-step-equations
-10. writing-evaluating-expressions
-11. equivalent-expressions
+1. ratios ✓
+2. unit-rates ✓
+3. ratio-tables ✓
+4. percents ✓
+5. divide-fractions-by-fractions ✓
+6. gcf-and-lcm ✓
+7. negative-numbers ✓
+8. exponents-order-of-operations ✓
+9. one-step-equations ✓
+10. writing-evaluating-expressions ✓
+11. equivalent-expressions ✓
 12. area-of-polygons
-13. absolute-value-and-ordering
-14. coordinate-plane-four-quadrants
-15. inequalities
-16. mean-median-mode-range
-17. surface-area-nets
-18. volume-fractional-edges
-19. decimal-operations
-20. converting-units-with-ratios
+13. absolute-value-and-ordering ✓
+14. coordinate-plane-four-quadrants ✓
+15. inequalities ✓
+16. mean-median-mode-range ✓
+17. surface-area-nets ✓
+18. volume-fractional-edges ✓
+19. decimal-operations ✓
+20. converting-units-with-ratios ✓
 
 その後: UK / Australia / Canada …（新しい学年・国は `catalog.json` に追加）
 

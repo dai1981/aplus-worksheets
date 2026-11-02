@@ -159,7 +159,7 @@ page_head(array(
     $cls = 'pr-q' . (q_half($it) ? ' half' : '') . ($fig ? ' wf' : '');
     $long = q_long_choices($it);
 ?>
-  <div class="<?= $cls ?>"><div class="pr-qh"><span class="pr-n">(<?= $it['no'] ?>)</span><span class="pr-t"><?= sq_mark($it['q']) ?></span></div><div class="pr-ch<?= $long ? ' col1' : '' ?>"><?php foreach ($it['c'] as $c): ?><span><?= $c ?></span><?php endforeach; ?></div></div>
+  <div class="<?= $cls ?>"><div class="pr-qh"><span class="pr-n">(<?= $it['no'] ?>)</span><span class="pr-t"><?= sq_mark($it['q']) ?></span></div><div class="pr-ch<?= $long ? ' col1' : '' ?>"><?php foreach ($it['c'] as $c): ?><span><span><?= $c ?></span></span><?php endforeach; ?></div></div>
 <?php endforeach; ?>
 </div>
 <?php sheet_foot($u, $kind, $upath, $pi + 1); ?>
