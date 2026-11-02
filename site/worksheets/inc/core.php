@@ -80,6 +80,9 @@ function T($key = null) {
         ));
     }
     if (!isset($T['en-AU'])) $T['en-AU'] = $T['en-GB'];   // Australian English: same words as British
+    if (!isset($T['en-SG'])) $T['en-SG'] = array_merge($T['en-GB'], array(   // Singapore: British spelling, Primary 1-6 levels
+        'grades' => 'Levels', 'pick_grade' => 'Choose a level', 'clear_grade' => 'Clear scores for this level', 'by_grade' => 'by Level',
+    ));
     if (!isset($T['en-CA'])) $T['en-CA'] = array_merge($T['en'], array('hook_go' => 'Start practising'));   // Canada: grades like the US, British -ise verbs
     static $lang = 'en';
     if (is_array($key)) { $lang = isset($T[$key[0]]) ? $key[0] : 'en'; return null; } // set language
@@ -137,6 +140,12 @@ function js_text($lang) {
                         'grade' => 'Top of the Year', 'state' => 'Top in the State',
                         'nation' => 'Top in the Country', 'world' => 'Top in the World'),
     ));
+    $J['en-SG'] = array_merge($J['en'], array(
+        'confirm' => 'Clear all saved scores for this level?',
+        'tier' => array('above' => 'Above Average', 'sight' => 'Top in Sight', 'class' => 'Top of the Class',
+                        'grade' => 'Top of the Level', 'state' => 'Top of the School',
+                        'nation' => 'Top in Singapore', 'world' => 'Top in the World'),
+    ));
     $J['en-CA'] = array_merge($J['en'], array(
         'tier' => array('above' => 'Above Average', 'sight' => 'Top in Sight', 'class' => 'Top of the Class',
                         'grade' => 'Top of the Grade', 'state' => 'Top in the Province',
@@ -147,7 +156,7 @@ function js_text($lang) {
 
 /* ---------------------------------------------------------------- layout */
 function page_head($o) {
-    // $o: lang, title, desc, canonical(path), og_type, hreflang, body_class, noindex
+    // $o: lang, title, desc, canonical(path), og_type, hreflang, body_class, noindex, image(path)
     $lang = isset($o['lang']) ? $o['lang'] : 'en';
     $can = abs_url($o['canonical']);
     if (PAGE_MAX_AGE > 0) header('Cache-Control: public, max-age=' . PAGE_MAX_AGE);
@@ -166,7 +175,16 @@ function page_head($o) {
     echo '<meta property="og:title" content="' . h($o['title']) . "\">\n";
     echo '<meta property="og:description" content="' . h($o['desc']) . "\">\n";
     echo '<meta property="og:url" content="' . h($can) . "\">\n";
-    echo "<meta name=\"twitter:card\" content=\"summary\">\n";
+    if (!empty($o['image'])) {                       // preview picture (inc/preview.php)
+        $img = abs_url($o['image']);
+        echo '<meta property="og:image" content="' . h($img) . "\">\n";
+        echo "<meta property=\"og:image:width\" content=\"1200\">\n<meta property=\"og:image:height\" content=\"630\">\n";
+        echo '<meta property="og:image:alt" content="' . h($o['title']) . "\">\n";
+        echo "<meta name=\"twitter:card\" content=\"summary_large_image\">\n";
+        echo '<meta name="twitter:image" content="' . h($img) . "\">\n";
+    } else {
+        echo "<meta name=\"twitter:card\" content=\"summary\">\n";
+    }
     $css = isset($o['css']) ? $o['css'] : 'ws.css';
     echo '<link rel="icon" type="image/svg+xml" href="' . url('assets/logo.svg') . "\">\n";
     echo '<link rel="stylesheet" href="' . url('assets/' . $css) . '?v=' . ASSET_VER . "\">\n";
@@ -251,6 +269,13 @@ function list_units($c, $s, $g, $full = false) {
     return qa("SELECT $cols FROM ws_unit WHERE country=? AND subject=? AND grade=? ORDER BY sort, slug",
               array($c, $s, $g));
 }
+/* path of the preview picture for a page path ('' when this server cannot draw it) */
+function preview_path($page_path) {
+    static $ok = null;
+    if ($ok === null) $ok = function_exists('imagecreatetruecolor') && function_exists('imagettftext');
+    return $ok ? rtrim($page_path, '/') . '/preview.png' : '';
+}
+
 /* rank block: <div data-lv=...>. mode = card | mini | tile */
 function rank_attrs($c, $s, $g, $units, $name, $mode) {
     $list = array();

@@ -34,7 +34,7 @@ define('GA_ID', '');             // 例 G-XXXXXXXXXX
 define('ADSENSE_CLIENT', '');    // 例 ca-pub-3234684892462480
 
 // --- CSS/JS を更新したら数字を変える（ブラウザのキャッシュ対策）
-define('ASSET_VER', '20261102g');
+define('ASSET_VER', '20261103a');
 
 // --- ページのキャッシュ（秒）。0 で無効
 define('PAGE_MAX_AGE', 3600);

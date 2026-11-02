@@ -23,12 +23,20 @@ foreach ($siblings as $i => $s) {
 $crumbs = array(array(T('worksheets'), ''), array($country['name'], $seg[0] . '/'),
                 array($subject['name'], $seg[0] . '/' . $seg[1] . '/'),
                 array($grade['name'], $gbase), array($u['short_title'], $path));
+require_once __DIR__ . '/../inc/topics.php';
+$utopics = array();                              // topic hubs this skill belongs to
+$tall = topics_for($seg[0], $seg[1]);
+$tdefs = topic_defs();
+foreach (unit_topic_slugs($u['slug']) as $tk) {
+    if (isset($tall[$tk])) $utopics[$tk] = topic_name($tdefs[$tk], $seg[0]) . ' worksheets: ' . topic_range($tall[$tk]);
+}
 $JF = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG;
 
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
     'title' => $u['seo_title'] . ' | ' . SITE_NAME,
     'desc' => $u['meta_desc'], 'canonical' => $path, 'og_type' => 'article',
+    'image' => preview_path($path),
 ));
 site_header($crumbs);
 ?>
@@ -93,6 +101,9 @@ site_header($crumbs);
   <ul class="sn-links">
     <li><a href="<?= url($path . 'print/') ?>"><?= h(T('printable_of')) ?></a></li>
     <li><a href="<?= url($gbase) ?>"><?= h(T('all_units')) ?> <?= h($grade['name'] . ' ' . $subject['name']) ?></a></li>
+<?php foreach ($utopics as $tk => $tn): ?>
+    <li><a href="<?= url($seg[0] . '/' . $seg[1] . '/topics/' . $tk . '/') ?>"><?= h($tn) ?></a></li>
+<?php endforeach; ?>
   </ul>
   <h3><?= h($grade['name'] . ' ' . $subject['name']) ?></h3>
   <ul class="sn-links">
@@ -113,6 +124,7 @@ $lr = array('@context' => 'https://schema.org', '@type' => 'LearningResource',
     'author' => array('@type' => 'Organization', 'name' => SITE_NAME),
     'publisher' => array('@type' => 'Organization', 'name' => SITE_NAME, 'url' => SITE_HOME),
     'dateModified' => $u['updated']);
+if (preview_path($path)) $lr['image'] = abs_url(preview_path($path));
 // what the page teaches, who it is for (helps search engines and AI answers)
 $lr['about'] = array(array('@type' => 'Thing', 'name' => $u['short_title']), array('@type' => 'Thing', 'name' => $subject['name']));
 if ($u['key_big']) $lr['teaches'] = $u['key_big'];

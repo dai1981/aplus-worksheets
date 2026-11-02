@@ -133,7 +133,7 @@ page_head(array(
     'desc' => 'Free printable ' . $grade['name'] . ' ' . strtolower($u['short_title']) . ' worksheet'
               . ($u['standard_code'] ? ' (' . $u['standard_code'] . ')' : '')
               . ': ' . $QN . ' questions on 3 pages plus an answer key. Print it or save it as a PDF.',
-    'canonical' => $path, 'og_type' => 'article', 'css' => 'ws-print.css',
+    'canonical' => $path, 'og_type' => 'article', 'css' => 'ws-print.css', 'image' => preview_path($upath),
     'body_class' => 'prbody ' . ($letter ? 'paper-letter' : 'paper-a4'),
     'head' => '<style>@page{size:' . ($letter ? 'letter' : 'A4') . " portrait;margin:0}</style>\n",
 ));

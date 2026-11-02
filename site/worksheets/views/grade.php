@@ -26,7 +26,7 @@ page_head(array(
     'desc' => 'Free ' . $grade['name'] . ' ' . strtolower($subject['name']) . ' worksheets aligned to the '
               . $country['standard'] . ': ' . implode(', ', array_slice($names, 0, 6))
               . '. 100 practice questions per skill and printable answer keys.',
-    'canonical' => $base,
+    'canonical' => $base, 'image' => preview_path($base),
 ));
 site_header($crumbs);
 ?>
@@ -49,6 +49,21 @@ site_header($crumbs);
 <?php endforeach; ?>
 
 <p class="lv-clear"><button type="button" class="sp-clear" data-prog-clear="<?= h($gkey) ?>"><span class="sp-clear-t"><?= h(T('clear_grade')) ?></span></button></p>
+
+<?php
+require_once __DIR__ . '/../inc/topics.php';
+$gtopics = array(); $tdefs = topic_defs();
+foreach (topics_for($seg[0], $seg[1]) as $tk => $tu) {
+    foreach ($tu as $x) { if ($x['grade'] === $seg[2]) { $gtopics[$tk] = topic_name($tdefs[$tk], $seg[0]); break; } }
+}
+if ($gtopics): ?>
+<h2 id="topics">Topics across all <?= h(strtolower(T('grades'))) ?></h2>
+<ul class="tp-chips">
+<?php foreach ($gtopics as $tk => $tn): ?>
+  <li><a href="<?= url($seg[0] . '/' . $seg[1] . '/topics/' . $tk . '/') ?>"><?= h($tn) ?></a></li>
+<?php endforeach; ?>
+</ul>
+<?php endif; ?>
 
 <h2 id="print"><?= h(T('print_sheets')) ?></h2>
 <div class="sx-hero"><p><?= h(T('print_note')) ?>. <?= h(T('license')) ?></p></div>

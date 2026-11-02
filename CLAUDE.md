@@ -29,6 +29,14 @@ FTP は上書きのみ（`--delete` を絶対に付けない）。DB は ws_ の
 6. ユーザーには短く日本語で、作った単元と確認URLを伝える
    - 例: https://www.apu2.com/worksheets/us/math/grade-3/perimeter/
 
+## トピック別ページとプレビュー画像（毎回あわせて強くする）
+
+- トピック別ページ `/{国}/{教科}/topics/{topic}/` は `site/worksheets/inc/topics.php` の正規表現（単元 slug に一致）で自動で集まる。3単元以上で公開
+- 新しい単元を作ったら、どのトピックに入るか確認する（`unit_topic_slugs()`）。どれにも入らない・違うトピックに入るときは `in`/`out` の正規表現を直す
+- 新しい分野が3単元以上たまったら、`topic_defs()` に新しいトピックを足す（name・blurb、英国式は name_gb/blurb_gb）
+- プレビュー画像 `.../preview.png`（1200×630、og:image・サイトマップ）は単元・学年・トピックで自動。ファイルは作らない（毎回 PHP の GD で描く）
+- 新しい国は `topic_gb()`（英国式の綴り）と core.php の UI 文言を確認する
+
 ## 単元JSONの形
 
 ```json
