@@ -117,7 +117,7 @@ function js_text($lang) {
             'more' => '<b>{n}</b> more correct answers to reach {t}',
             'toGo' => '{n} more to {t}', 'reachedBtn' => 'Reached! See your next goal',
             'allDone' => 'You reached every rank!', 'lap' => '{n} lap', 'laps' => '{n} laps',
-            'ranks' => 'Ranks', 'locked' => '{n} more ranks above', 'lockedHint' => 'Unlocks as you climb', 'reached' => 'Reached', 'toGoShort' => '{n} to go', 'you' => 'You',
+            'ranks' => 'Ranks', 'moreAfter' => 'More ranks after {t}', 'unlocksAfter' => 'unlocks after {t}', 'reached' => 'Reached', 'toGoShort' => '{n} to go', 'you' => 'You',
             'how' => '1 lap = every {name} question answered correctly once ({n} answers). Each skill counts up to the lap you are on, so keep every skill going.',
             'levelUp' => 'Level up!', 'keepGoing' => 'Keep going to {t}', 'yay' => 'Awesome',
             'achieved' => 'Goal reached!', 'ask' => 'Go for <b>{t}</b> next ({l})?',
