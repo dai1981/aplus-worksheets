@@ -251,31 +251,31 @@ UK / Maths / Year 3 — 1,000 まで。文は短く、絵を多く
 14. bar-charts-and-pictograms ✓
 
 UK / Maths / Year 2（KS1）— 100 まで。文はとても短く、絵を多く
-1. place-value-to-100
-2. counting-in-2s-3s-5s-and-10s
-3. number-bonds-to-20-and-100
-4. adding-and-subtracting-2-digit-numbers
-5. 2-5-and-10-times-tables
-6. multiplication-and-division
-7. fractions
-8. money
-9. telling-the-time-to-5-minutes
-10. measuring
-11. 2d-and-3d-shapes
-12. position-and-direction
-13. pictograms-and-tally-charts
+1. place-value-to-100 ✓
+2. counting-in-2s-3s-5s-and-10s ✓
+3. number-bonds-to-20-and-100 ✓
+4. adding-and-subtracting-2-digit-numbers ✓
+5. 2-5-and-10-times-tables ✓
+6. multiplication-and-division ✓
+7. fractions ✓
+8. money ✓
+9. telling-the-time-to-5-minutes ✓
+10. measuring ✓
+11. 2d-and-3d-shapes ✓
+12. position-and-direction ✓
+13. pictograms-and-tally-charts ✓
 
 UK / Maths / Year 1（KS1）— 100 まで（計算は 20 まで）。とても短い文、ほぼ全問に絵
-1. counting-to-100
-2. number-bonds-to-10-and-20
-3. addition-and-subtraction-within-20
-4. counting-in-2s-5s-and-10s
-5. halves-and-quarters
-6. length-height-mass-and-capacity
-7. money
-8. time
-9. 2d-and-3d-shapes
-10. position-and-direction
+1. counting-to-100 ✓
+2. number-bonds-to-10-and-20 ✓
+3. addition-and-subtraction-within-20 ✓
+4. counting-in-2s-5s-and-10s ✓
+5. halves-and-quarters ✓
+6. length-height-mass-and-capacity ✓
+7. money ✓
+8. time ✓
+9. 2d-and-3d-shapes ✓
+10. position-and-direction ✓
 
 その後: Australia / Canada …（新しい学年・国は `catalog.json` に追加）
 
