@@ -514,6 +514,49 @@ CA-ON / Math / Grade 1（50 まで。とても短い文、ほぼ全問に絵）
 14. calendar-days-weeks-and-months ✓
 15. money ✓
 
+CA-ON / Math / Grade 7（EQAO なし。10億まで、負の数は −）
+1. powers-and-large-numbers ✓
+2. perfect-squares-and-square-roots ✓
+3. comparing-fractions-and-decimals ✓
+4. fractions-decimals-and-percents ✓
+5. adding-and-subtracting-integers ✓
+6. adding-and-subtracting-fractions ✓
+7. gcf-and-lcm ✓
+8. multiplying-and-dividing-fractions ✓
+9. multiplying-and-dividing-decimals ✓
+10. proportional-reasoning ✓
+11. order-of-operations ✓
+12. linear-growing-patterns ✓
+13. algebraic-expressions ✓
+14. equations-and-inequalities ✓
+15. circle-graphs-and-data ✓
+16. probability-of-independent-and-dependent-events ✓
+17. transformations-and-dilations ✓
+18. circles ✓
+19. surface-area-and-volume ✓
+20. exchange-rates-and-interest ✓
+
+CA-ON / Math / Grade 8（EQAO なし。次は Grade 9）
+1. scientific-notation ✓
+2. square-roots-and-real-numbers ✓
+3. percents ✓
+4. adding-and-subtracting-integers ✓
+5. multiplying-and-dividing-integers ✓
+6. operations-with-fractions ✓
+7. order-of-operations-with-rational-numbers ✓
+8. proportional-relationships ✓
+9. linear-relations ✓
+10. expressions-and-binomials ✓
+11. equations-and-inequalities ✓
+12. scatter-plots-and-data ✓
+13. probability-venn-and-tree-diagrams ✓
+14. tessellations-and-transformations ✓
+15. scale-drawings ✓
+16. angle-properties ✓
+17. pythagorean-theorem ✓
+18. composite-area-and-volume ✓
+19. interest-and-credit ✓
+
 CA-BC / Math（BC Mathematics Curriculum K–9）— country `ca-bc`（name「British Columbia, Canada」）、subject `math`、grade `grade-N`、Letter。生成スクリプトは `gen_cabc_math_*`。
 Ontario と同じカナダ英語・お金・数の書き方。税は GST 5% + PST 7%（HST・13% は使わない）。評価は FSA（Grade 4・7）。
 standard_code は「Grade 4: Number」形式、standard_text は BC の Content 原文、standard_url は https://curriculum.gov.bc.ca/curriculum/mathematics/N/core
@@ -554,7 +597,7 @@ CA-BC / Math / Grade 7（FSA の学年）
 15. probability-of-two-independent-events ✓
 16. financial-percentages ✓
 
-その後: CA-ON Grade 7 / 8、CA-BC の他の学年、AU Foundation …（新しい学年・国は `catalog.json` に追加）
+その後: CA-BC の他の学年、AU Foundation …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
