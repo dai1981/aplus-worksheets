@@ -393,51 +393,91 @@ AU / Maths / Year 1（とても短い文、ほぼ全問に絵）
 12. data-and-tally-marks ✓
 13. chance ✓
 
-CA / Math（Ontario Curriculum 2020）— country `ca`、subject `math`、grade `grade-N`、Letter。
+CA-ON / Math（Ontario Curriculum 2020）— country `ca-on`（name「Ontario, Canada」）、subject `math`、grade `grade-N`、Letter。生成スクリプトは `gen_caon_math_*`。
 カナダ英語（colour, metre, centre, math, grade, students, trapezoid, counterclockwise, bar graph）。お金は $ と ¢（nickel 5¢・dime・quarter・loonie・toonie、ペニーなし）。
 数は 4 桁はそのまま、5 桁以上はノーブレークスペース区切り。standard_code は「Grade 3: B2.2」形式。EQAO は Grade 3・6
 
-CA / Math / Grade 3（EQAO の学年）
-1. multiplication-facts-for-2-5-and-10
-2. numbers-to-1000
-3. adding-and-subtracting-to-1000
-4. multiplication-and-division
-5. fractions-and-fair-shares
-6. rounding-and-estimating
-7. patterns
-8. equations-and-equivalence
-9. money-and-making-change
-10. telling-time
-11. length-and-perimeter
-12. mass-and-capacity
-13. area
-14. 2d-shapes-and-3d-objects
-15. location-and-movement
-16. data-and-graphs
-17. probability
+CA-ON / Math / Grade 3（EQAO の学年）
+1. multiplication-facts-for-2-5-and-10 ✓
+2. numbers-to-1000 ✓
+3. adding-and-subtracting-to-1000 ✓
+4. multiplication-and-division ✓
+5. fractions-and-fair-shares ✓
+6. rounding-and-estimating ✓
+7. patterns ✓
+8. equations-and-equivalence ✓
+9. money-and-making-change ✓
+10. telling-time ✓
+11. length-and-perimeter ✓
+12. mass-and-capacity ✓
+13. area ✓
+14. 2d-shapes-and-3d-objects ✓
+15. location-and-movement ✓
+16. data-and-graphs ✓
+17. probability ✓
 
-CA / Math / Grade 6（EQAO の学年）
-1. fractions-decimals-and-percents
-2. integers
-3. large-numbers-and-decimals
-4. adding-and-subtracting-fractions
-5. adding-and-subtracting-decimals
-6. multiplying-and-dividing-decimals
-7. multiplying-and-dividing-with-fractions
-8. factors-primes-and-divisibility
-9. ratios-rates-and-percents
-10. patterns-and-expressions
-11. equations-and-inequalities
-12. area-of-polygons
-13. measuring-angles
-14. cartesian-plane-and-transformations
-15. quadrilaterals-and-congruence
-16. metric-units-and-time
-17. data-and-graphs
-18. probability
-19. financial-literacy
+CA-ON / Math / Grade 6（EQAO の学年）
+1. fractions-decimals-and-percents ✓
+2. integers ✓
+3. large-numbers-and-decimals ✓
+4. adding-and-subtracting-fractions ✓
+5. adding-and-subtracting-decimals ✓
+6. multiplying-and-dividing-decimals ✓
+7. multiplying-and-dividing-with-fractions ✓
+8. factors-primes-and-divisibility ✓
+9. ratios-rates-and-percents ✓
+10. patterns-and-expressions ✓
+11. equations-and-inequalities ✓
+12. area-of-polygons ✓
+13. measuring-angles ✓
+14. cartesian-plane-and-transformations ✓
+15. quadrilaterals-and-congruence ✓
+16. metric-units-and-time ✓
+17. data-and-graphs ✓
+18. probability ✓
+19. financial-literacy ✓
 
-その後: CA Grade 4 / 5 / 2 / 1、AU Foundation …（新しい学年・国は `catalog.json` に追加）
+CA-BC / Math（BC Mathematics Curriculum K–9）— country `ca-bc`（name「British Columbia, Canada」）、subject `math`、grade `grade-N`、Letter。生成スクリプトは `gen_cabc_math_*`。
+Ontario と同じカナダ英語・お金・数の書き方。税は GST 5% + PST 7%（HST・13% は使わない）。評価は FSA（Grade 4・7）。
+standard_code は「Grade 4: Number」形式、standard_text は BC の Content 原文、standard_url は https://curriculum.gov.bc.ca/curriculum/mathematics/N/core
+
+CA-BC / Math / Grade 4（FSA の学年）
+1. multiplication-and-division-facts-to-100
+2. numbers-to-10000
+3. adding-and-subtracting-to-10000
+4. multiplying-and-dividing-by-one-digit-numbers
+5. comparing-and-ordering-fractions
+6. decimals-to-hundredths
+7. adding-and-subtracting-decimals
+8. one-step-equations
+9. increasing-and-decreasing-patterns
+10. 12-and-24-hour-time
+11. regular-and-irregular-polygons
+12. perimeter
+13. line-symmetry
+14. bar-graphs-and-pictographs
+15. probability-experiments
+16. money-and-making-change
+
+CA-BC / Math / Grade 7（FSA の学年）
+1. adding-and-subtracting-integers
+2. multiplying-and-dividing-integers
+3. order-of-operations
+4. adding-and-subtracting-decimals
+5. multiplying-and-dividing-decimals
+6. fractions-decimals-and-percents
+7. ratios
+8. two-step-equations
+9. linear-relations
+10. circumference-and-area-of-circles
+11. volume-of-prisms-and-cylinders
+12. cartesian-coordinates-and-graphing
+13. combinations-of-transformations
+14. circle-graphs
+15. probability-of-two-independent-events
+16. financial-percentages
+
+その後: CA-ON Grade 4 / 5 / 2 / 1、CA-BC の他の学年、AU Foundation …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
