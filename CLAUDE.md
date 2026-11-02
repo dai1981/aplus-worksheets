@@ -123,15 +123,15 @@ US / Math / Grade 5（Common Core）— 1,000 以上はカンマ付き
 6. volume ✓
 7. numerical-expressions ✓
 8. coordinate-plane ✓
-9. multi-digit-multiplication（5.NBT.B.5）
-10. long-division-two-digit-divisors（5.NBT.B.6）
-11. decimal-place-value-rounding（5.NBT.A.1-4）
-12. fractions-as-division（5.NF.B.3）
-13. multiplication-as-scaling（5.NF.B.5）
-14. measurement-conversions（5.MD.A.1）
-15. classify-two-dimensional-figures（5.G.B.3-4）
-16. patterns-and-relationships（5.OA.B.3）
-17. line-plots-fractions（5.MD.B.2）
+9. multi-digit-multiplication ✓
+10. long-division-two-digit-divisors ✓
+11. decimal-place-value-rounding ✓
+12. fractions-as-division ✓
+13. multiplication-as-scaling ✓
+14. measurement-conversions ✓
+15. classify-two-dimensional-figures ✓
+16. patterns-and-relationships ✓
+17. line-plots-fractions ✓
 
 その後: UK / Australia / Canada …（新しい学年・国は `catalog.json` に追加）
 
