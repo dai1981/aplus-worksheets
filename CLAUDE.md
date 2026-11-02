@@ -597,7 +597,113 @@ CA-BC / Math / Grade 7（FSA の学年）
 15. probability-of-two-independent-events ✓
 16. financial-percentages ✓
 
-その後: CA-BC の他の学年、AU Foundation …（新しい学年・国は `catalog.json` に追加）
+CA-BC / Math / Grade 1（文はとても短く、絵を多く）
+1. numbers-to-20 ✓
+2. ways-to-make-10 ✓
+3. addition-and-subtraction-to-20 ✓
+4. change-in-quantity ✓
+5. equal-and-not-equal ✓
+6. repeating-patterns ✓
+7. measuring-with-non-standard-units ✓
+8. 2d-shapes-and-3d-objects ✓
+9. concrete-graphs ✓
+10. likelihood ✓
+11. coins-and-money ✓
+
+CA-BC / Math / Grade 2（文は短く、絵を多く）
+1. numbers-to-100 ✓
+2. benchmarks-25-50-and-100 ✓
+3. addition-and-subtraction-facts-to-20 ✓
+4. adding-and-subtracting-to-100 ✓
+5. change-in-quantity ✓
+6. equality-and-inequality ✓
+7. repeating-and-increasing-patterns ✓
+8. measuring-length ✓
+9. 2d-shapes-and-3d-objects ✓
+10. pictographs ✓
+11. likelihood ✓
+12. coins-to-100-cents ✓
+
+CA-BC / Math / Grade 3
+1. numbers-to-1000 ✓
+2. fractions ✓
+3. adding-and-subtracting-to-1000 ✓
+4. multiplication-and-division ✓
+5. one-step-equations ✓
+6. increasing-and-decreasing-patterns ✓
+7. measuring-length-mass-and-capacity ✓
+8. time ✓
+9. 3d-objects ✓
+10. bar-graphs-and-pictographs ✓
+11. likelihood-of-simulated-events ✓
+12. money-to-100-dollars ✓
+
+CA-BC / Math / Grade 5
+1. numbers-to-1000000 ✓
+2. decimals-to-thousandths ✓
+3. equivalent-fractions ✓
+4. benchmarks-and-estimation ✓
+5. adding-and-subtracting-whole-numbers ✓
+6. multiplication-to-three-digits ✓
+7. division-with-remainders ✓
+8. adding-and-subtracting-decimals ✓
+9. one-step-equations-with-variables ✓
+10. pattern-rules ✓
+11. area-and-perimeter ✓
+12. duration-of-time ✓
+13. prisms-and-pyramids ✓
+14. single-transformations ✓
+15. double-bar-graphs ✓
+16. probability-experiments ✓
+17. money-and-financial-plans ✓
+
+CA-BC / Math / Grade 6
+1. thousandths-to-billions ✓
+2. gcf-and-lcm ✓
+3. improper-fractions-and-mixed-numbers ✓
+4. ratios ✓
+5. percents-and-discounts ✓
+6. order-of-operations ✓
+7. multiplying-and-dividing-decimals ✓
+8. one-step-equations ✓
+9. patterns-tables-and-graphs ✓
+10. perimeter-of-complex-shapes ✓
+11. area-of-triangles-parallelograms-and-trapezoids ✓
+12. angles ✓
+13. volume-and-capacity ✓
+14. triangles ✓
+15. combinations-of-transformations ✓
+16. line-graphs ✓
+17. probability ✓
+18. budgeting-and-consumer-math ✓
+
+CA-BC / Math / Grade 8
+1. squares-cubes-and-roots ✓
+2. percents-less-than-1-and-greater-than-100 ✓
+3. proportional-reasoning ✓
+4. adding-and-subtracting-fractions ✓
+5. multiplying-and-dividing-fractions ✓
+6. expressions-and-substitution ✓
+7. two-step-equations ✓
+8. linear-relations ✓
+9. surface-area-and-volume ✓
+10. pythagorean-theorem ✓
+11. views-and-nets ✓
+12. central-tendency ✓
+13. probability-of-two-independent-events ✓
+14. best-buys ✓
+
+CA-BC / Math / Grade 9（Mathematics 9）
+1. exponent-laws ✓
+2. operations-with-rational-numbers ✓
+3. adding-and-subtracting-polynomials ✓
+4. multiplying-and-dividing-polynomials ✓
+5. linear-equations ✓
+6. linear-relations-and-graphs ✓
+7. similar-shapes-and-scale-diagrams ✓
+8. statistics-in-society ✓
+9. budgets-and-transactions ✓
+その後: AU Foundation、CA-BC Kindergarten …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
