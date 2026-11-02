@@ -26,7 +26,7 @@ FONT = "Arial, Helvetica, sans-serif"
 GIRLS = ["Olivia", "Emma", "Maya", "Zoe", "Amira", "Mei", "Chloe", "Priya", "Leah", "Hana", "Ava", "Sofia"]
 BOYS = ["Liam", "Noah", "Aiden", "Lucas", "Owen", "Arjun", "Ethan", "Jayden", "Benjamin", "Mateo", "Nathan", "Kai"]
 BOX = "□"
-NB = " "
+NB = "\u00a0"
 LETTERS = "abcdefghijklmnopqrstuvwxyz"
 
 

@@ -27,7 +27,7 @@ RED = "#c0392b"
 INK = "#2b2b2b"
 FONT = "Arial, Helvetica, sans-serif"
 M = "−"
-NB = " "
+NB = "\u00a0"
 GIRLS = ["Olivia", "Emma", "Maya", "Zoe", "Amira", "Mei", "Chloe", "Priya", "Leah", "Hana", "Ava", "Sofia"]
 BOYS = ["Liam", "Noah", "Aiden", "Lucas", "Owen", "Arjun", "Ethan", "Jayden", "Benjamin", "Mateo", "Nathan", "Kai"]
 

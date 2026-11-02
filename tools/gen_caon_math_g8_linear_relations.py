@@ -27,7 +27,7 @@ GRID = "#c9d6cd"
 STICK = "#a0522d"
 FONT = "Arial, Helvetica, sans-serif"
 MINUS = "−"
-NB = " "
+NB = "\u00a0"
 
 
 # ------------------------------------------------------------ numbers

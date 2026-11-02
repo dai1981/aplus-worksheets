@@ -25,7 +25,7 @@ INK = "#2b2b2b"
 GRAY = "#8a8f8c"
 FONT = "Arial, Helvetica, sans-serif"
 M = "−"
-NB = " "
+NB = "\u00a0"
 
 
 # ------------------------------------------------------------ numbers
