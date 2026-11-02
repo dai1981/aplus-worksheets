@@ -703,7 +703,102 @@ CA-BC / Math / Grade 9（Mathematics 9）
 7. similar-shapes-and-scale-diagrams ✓
 8. statistics-in-society ✓
 9. budgets-and-transactions ✓
-その後: AU Foundation、CA-BC Kindergarten …（新しい学年・国は `catalog.json` に追加）
+
+SG / Maths（MOE 2021 Primary Mathematics Syllabus, Standard）— country `sg`（name「Singapore」）、subject `maths`、grade `primary-N`（表示は「Primary N」/「PN」）、A4。生成スクリプトは `gen_sg_maths_pN_*`。
+イギリス英語（colour, metre, maths, cuboid, trapezium, renaming, picture graph, multiplication tables）。単位は ℓ と ml、時刻は「7.30 am」（ドット・ピリオドなし）、24時間制は「1930」。お金は $ と ¢（5¢・10¢・20¢・50¢・$1 硬貨、1¢ は使わない）。GST 9% は P5 のみ。
+数は 4 桁はそのまま、5 桁以上はノーブレークスペース区切り（MOE シラバスと同じ）。文章題は bar model（units）を使う。standard_code は「Primary 4: Fractions」形式、standard_url は https://www.moe.gov.sg/primary/curriculum/syllabus
+
+SG / Maths / Primary 6（PSLE の学年。PSLE はここだけタイトルに入れる）
+1. dividing-fractions ✓
+2. fraction-word-problems ✓
+3. percentage ✓
+4. ratio ✓
+5. ratio-word-problems ✓
+6. algebra ✓
+7. area-and-circumference-of-circles ✓
+8. volume-of-cubes-and-cuboids ✓
+9. angles-in-composite-figures ✓
+10. average ✓
+
+SG / Maths / Primary 5
+1. numbers-to-10-million ✓
+2. multiplying-and-dividing-by-10-100-1000 ✓
+3. order-of-operations ✓
+4. fractions-and-division ✓
+5. adding-and-subtracting-mixed-numbers ✓
+6. multiplying-fractions ✓
+7. decimals-and-measurement ✓
+8. percentage ✓
+9. discount-gst-and-interest ✓
+10. rate ✓
+11. area-of-triangles ✓
+12. volume-of-cubes-and-cuboids ✓
+13. angles ✓
+14. triangles ✓
+15. parallelograms-rhombuses-and-trapeziums ✓
+
+SG / Maths / Primary 4
+1. numbers-to-100000 ✓
+2. rounding-and-estimation ✓
+3. factors-and-multiples ✓
+4. multiplication ✓
+5. division ✓
+6. mixed-numbers-and-improper-fractions ✓
+7. fraction-of-a-set ✓
+8. adding-and-subtracting-fractions ✓
+9. decimals ✓
+10. adding-and-subtracting-decimals ✓
+11. multiplying-and-dividing-decimals ✓
+12. area-and-perimeter ✓
+13. angles ✓
+14. rectangles-and-squares ✓
+15. line-symmetry ✓
+16. nets ✓
+17. tables-line-graphs-and-pie-charts ✓
+
+SG / Maths / Primary 3
+1. numbers-to-10000 ✓
+2. addition-and-subtraction ✓
+3. multiplication-tables-6-7-8-and-9 ✓
+4. multiplication-and-division ✓
+5. equivalent-fractions ✓
+6. adding-and-subtracting-fractions ✓
+7. money ✓
+8. length-mass-and-volume ✓
+9. time ✓
+10. area-and-perimeter ✓
+11. angles ✓
+12. perpendicular-and-parallel-lines ✓
+13. bar-graphs ✓
+
+SG / Maths / Primary 2（文は短く、絵を多く）
+1. numbers-to-1000 ✓
+2. odd-and-even-numbers ✓
+3. addition-and-subtraction ✓
+4. multiplication-tables-2-3-4-5-and-10 ✓
+5. multiplication-and-division ✓
+6. fractions ✓
+7. adding-and-subtracting-fractions ✓
+8. money ✓
+9. length-mass-and-volume ✓
+10. time ✓
+11. 2d-shapes-and-patterns ✓
+12. 3d-shapes ✓
+13. picture-graphs ✓
+
+SG / Maths / Primary 1（とても短い文、ほぼ全問に絵）
+1. numbers-to-100 ✓
+2. ordinal-numbers ✓
+3. number-bonds ✓
+4. addition-and-subtraction-within-20 ✓
+5. addition-and-subtraction-within-100 ✓
+6. multiplication-and-division ✓
+7. money ✓
+8. length ✓
+9. time ✓
+10. 2d-shapes ✓
+11. picture-graphs ✓
+その後: AU Foundation、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
