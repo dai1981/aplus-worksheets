@@ -564,7 +564,13 @@
     this.eQ.innerHTML = it.q;
     this.eC.className = "sn-choices" + cols(it.c);
     this.eC.innerHTML = "";
-    this.opts = shuffle(it.c.map(function (s, k) { return { t: s, ok: k === it.a }; }));
+    var opts = it.c.map(function (s, k) { return { t: s, ok: k === it.a }; });
+    // choices that are picture labels (A-D, Net 1, Mix B) stay in order so they match the picture
+    var labels = it.c.every(function (s) { return /^\s*(?:[A-H]|[A-Za-z]+ [A-H1-9])\s*$/.test(String(s).replace(/<[^>]+>/g, "")); });
+    this.opts = labels ? opts.sort(function (x, y) {
+      var a = String(x.t).replace(/<[^>]+>/g, "").trim(), b = String(y.t).replace(/<[^>]+>/g, "").trim();
+      return a.localeCompare(b, "en", { numeric: true });
+    }) : shuffle(opts);
     this.opts.forEach(function (o) {
       var b = document.createElement("button");
       b.type = "button";
