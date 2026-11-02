@@ -360,7 +360,40 @@ AU / Maths / Year 6（高校準備の学年。NAPLAN はない）
 19. interpreting-data ✓
 20. probability ✓
 
-その後: AU Year 2 / 1 / Foundation、Canada …（新しい学年・国は `catalog.json` に追加）
+AU / Maths / Year 2（文は短く、絵を多く。NAPLAN はない）
+1. place-value-to-1000
+2. addition-and-subtraction-facts-to-20
+3. adding-and-subtracting-2-digit-numbers
+4. word-problems-and-number-sentences
+5. twos-doubling-and-halving
+6. multiplying-and-dividing-with-groups
+7. money
+8. halves-quarters-and-eighths
+9. number-patterns
+10. telling-the-time-to-the-quarter-hour
+11. calendars-and-dates
+12. measuring-length-mass-and-capacity
+13. turns
+14. 2d-shapes
+15. maps-and-directions
+16. data-tables-and-graphs
+
+AU / Maths / Year 1（とても短い文、ほぼ全問に絵）
+1. numbers-to-120
+2. tens-and-ones
+3. addition-and-subtraction-within-20
+4. skip-counting-by-2s-5s-and-10s
+5. word-problems-and-money
+6. sharing-and-grouping
+7. repeating-patterns
+8. measuring-and-comparing
+9. days-weeks-months-and-time
+10. shapes-and-objects
+11. position-and-directions
+12. data-and-tally-marks
+13. chance
+
+その後: AU Foundation、Canada …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
