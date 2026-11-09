@@ -54,7 +54,7 @@ function topic_defs() {
             'blurb' => 'Negative numbers on the number line, comparing integers, absolute value, and adding, subtracting, multiplying and dividing integers.'),
         'algebra' => array('name' => 'Algebra, Equations and Patterns',
             'in' => '/pattern|algebra|expression|equation|inequalit|equal-sign|equality|equal-and-not|number-sentences|relation|polynomial|missing-numbers/',
-            'out' => '/order-of-operations-and/',
+            'out' => '/order-of-operations-and|angle-relationships/',
             'blurb' => 'Number and shape patterns, the equal sign, missing numbers, expressions, one- and two-step equations, inequalities and linear relations.'),
         'money' => array('name' => 'Money and Financial Literacy',
             'in' => '/money|coins|financial|budget|best-buys|interest|exchange|discount-gst/', 'out' => '/^$/',
