@@ -59,6 +59,7 @@ site_header($crumbs);
     <div class="sn-key-b"><span class="big"><?= h($u['key_big']) ?></span>
     <p class="sub"><?= h($u['key_sub']) ?></p></div>
   </div>
+  <p class="ws-share"><?= pin_link($path, 'Free ' . $grade['name'] . ' ' . strtolower($subject['name']) . ' ' . strtolower($u['short_title']) . ' worksheet: short lesson, 100 practice questions and a printable answer key.') ?></p>
 
   <?php if ($u['standard_code']): ?>
   <p class="ws-std"><span><?= h($country['standard']) ?></span>

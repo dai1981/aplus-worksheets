@@ -69,7 +69,7 @@ function T($key = null) {
             'worksheets' => 'Worksheets', 'grade_ws' => '%s %s Worksheets',
             'notfound' => 'Page not found', 'back_home' => 'Back to all worksheets',
             'skills_count' => '%d skills', 'free' => 'Free · no sign-up',
-            'by_grade' => 'by Grade',
+            'by_grade' => 'by Grade', 'pin_save' => 'Save to Pinterest',
         ),
     );
     // British English (UK pages): same as 'en' except these words
@@ -269,6 +269,18 @@ function list_units($c, $s, $g, $full = false) {
     return qa("SELECT $cols FROM ws_unit WHERE country=? AND subject=? AND grade=? ORDER BY sort, slug",
               array($c, $s, $g));
 }
+/* "Save to Pinterest" link for a page: the tall pin.png picture, the page URL and a short description.
+   A plain link (no Pinterest script), so nothing is loaded until someone clicks it. */
+function pin_link($page_path, $desc, $class = 'ws-pin') {
+    $img = preview_path($page_path);
+    if (!$img) return '';
+    $href = 'https://www.pinterest.com/pin/create/button/?url=' . rawurlencode(abs_url($page_path))
+          . '&media=' . rawurlencode(abs_url(preg_replace('#preview\.png$#', 'pin.png', $img)))
+          . '&description=' . rawurlencode($desc);
+    return '<a class="' . $class . '" href="' . h($href) . '" target="_blank" rel="noopener nofollow">'
+         . '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a6.5 6.5 0 0 0-6.5 6.5c0 4.6 6.5 13.5 6.5 13.5s6.5-8.9 6.5-13.5A6.5 6.5 0 0 0 12 2zm0 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>' . h(T('pin_save')) . '</a>';
+}
+
 /* path of the preview picture for a page path ('' when this server cannot draw it) */
 function preview_path($page_path) {
     static $ok = null;

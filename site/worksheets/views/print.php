@@ -144,6 +144,7 @@ page_head(array(
   <span class="sp"></span>
   <span class="pr-note"><?= h(T('print_note')) ?></span>
   <?php if ($u['pdf_url']): ?><a class="pr-dl" href="<?= h($u['pdf_url']) ?>" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4 3.6 3.6V3h2zM4 19h16v2H4v-2z"/></svg><?= h(T('pdf_btn')) ?></a><?php endif; ?>
+  <?= pin_link($upath, 'Free printable ' . $grade['name'] . ' ' . strtolower($u['short_title']) . ' worksheet with answer key.', 'pr-pin') ?>
   <button class="pr-print" type="button" onclick="window.print()"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v4H7V3zm-3 6h16a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2v-4H6v4H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1zm4 8h8v4H8v-4z"/></svg><?= h(T('print_btn')) ?></button>
 </div>
 <?php foreach ($pages as $pi => $pg): ?>

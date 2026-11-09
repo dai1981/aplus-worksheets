@@ -1,8 +1,10 @@
 <?php
-/* Preview images (1200 x 630 PNG) for search results, social cards and Pinterest.
-   /worksheets/{c}/{s}/{g}/{unit}/preview.png   one skill
-   /worksheets/{c}/{s}/{g}/preview.png          one grade
-   /worksheets/{c}/{s}/topics/{t}/preview.png   one topic
+/* Preview images for search results, social cards and Pinterest.
+   preview.png  1200 x 630   (og:image, sitemap)
+   pin.png      1000 x 1500  (Pinterest: tall pictures get more space in the feed)
+   /worksheets/{c}/{s}/{g}/{unit}/preview.png   one skill   (also pin.png)
+   /worksheets/{c}/{s}/{g}/preview.png          one grade   (also pin.png)
+   /worksheets/{c}/{s}/topics/{t}/preview.png   one topic   (also pin.png)
    Drawn with GD on each request (no files are written to the server) and cached by browsers and CDNs. */
 
 function preview_supported() {
@@ -173,9 +175,104 @@ function preview_render($c) {
     imagedestroy($im);
 }
 
+/* tall picture for Pinterest: big title on top, a worksheet page below, a clear "free" band at the bottom */
+function pin_render($c) {
+    $W = 1000; $H = 1500;
+    $im = imagecreatetruecolor($W, $H);
+    imagealphablending($im, true);
+    $bg = pv_color($im, '#f7f3ea'); $green = pv_color($im, '#006633'); $ink = pv_color($im, '#1f2522');
+    $muted = pv_color($im, '#6f675d'); $white = pv_color($im, '#ffffff'); $line = pv_color($im, '#e3dccf');
+    $soft = pv_color($im, '#e6f0ea');
+    imagefilledrectangle($im, 0, 0, $W, $H, $bg);
+    imagefilledrectangle($im, 0, 0, $W, 16, $green);
+
+    $lx = 70;
+    pv_logo($im, $lx + 20, 86, 20, $green);
+    imagettftext($im, 26, 0, $lx + 54, 96, $green, pv_font('b'), SITE_NAME . ' Worksheets');
+    $y = 178;
+    foreach (pv_wrap(strtoupper($c['label']), 20, pv_font('b'), $W - 2 * $lx, 2) as $l) {
+        imagettftext($im, 20, 0, $lx, $y, $muted, pv_face($l, 'b'), $l); $y += 30;
+    }
+    $y += 20;
+    $size = 88; $tl = pv_wrap($c['title'], $size, pv_font('b'), $W - 2 * $lx, 3);
+    while ($size > 52 && (count($tl) > 2 || substr(end($tl), -3) === '…')) {
+        $size -= 6; $tl = pv_wrap($c['title'], $size, pv_font('b'), $W - 2 * $lx, 3);
+    }
+    foreach ($tl as $l) { imagettftext($im, $size, 0, $lx, $y + $size, $ink, pv_face($l, 'b'), $l); $y += (int)($size * 1.2); }
+    $y += 34;
+    $cx = $lx;
+    foreach ($c['chips'] as $chip) {
+        $w = pv_width(22, pv_font('b'), $chip) + 44;
+        if ($cx + $w > $W - $lx) { $cx = $lx; $y += 66; }
+        pv_rrect($im, $cx, $y, $cx + $w, $y + 52, 26, $soft);
+        imagettftext($im, 22, 0, $cx + 22, $y + 35, $green, pv_font('b'), $chip);
+        $cx += $w + 14;
+    }
+    $y += 92;
+
+    // a worksheet page
+    $px1 = $lx; $py1 = $y; $px2 = $W - $lx; $py2 = $H - 190;
+    $sh = imagecolorallocatealpha($im, 70, 55, 30, 122);
+    for ($i = 10; $i >= 1; $i--) pv_rrect($im, $px1 + $i, $py1 + 2 + $i, $px2 + $i, $py2 + $i, 14, $sh);
+    pv_rrect($im, $px1, $py1, $px2, $py2, 12, $white);
+    $x = $px1 + 40; $yy = $py1 + 52;
+    imagettftext($im, 17, 0, $x, $yy, $muted, pv_font('r'), 'Name ____________________    Date __________');
+    $yy += 30;
+    imagesetthickness($im, 2); imageline($im, $x, $yy, $px2 - 40, $yy, $line); imagesetthickness($im, 1);
+    $yy += 52;
+    $n = 0;
+    foreach ($c['lines'] as $ln) {
+        $txt = $ln[0];
+        if ($c['mode'] === 'quiz') {
+            $rows = pv_wrap($txt, 22, pv_face($txt, 'r'), $px2 - $x - 80, 2);
+            $need = count($rows) * 32 + (!empty($ln[1]) ? 34 : 0) + 30;
+            if ($yy + $need > $py2 - 20) break;
+            $n++;
+            imagettftext($im, 22, 0, $x, $yy, $green, pv_font('b'), $n . '.');
+            foreach ($rows as $r) { imagettftext($im, 22, 0, $x + 42, $yy, $ink, pv_face($r, 'r'), $r); $yy += 32; }
+            if (!empty($ln[1])) {
+                $ch = pv_wrap($ln[1], 18, pv_face($ln[1], 'r'), $px2 - $x - 80, 1);
+                imagettftext($im, 18, 0, $x + 42, $yy, $muted, pv_face($ch[0], 'r'), $ch[0]); $yy += 34;
+            }
+            $yy += 30;
+        } else {
+            if ($yy > $py2 - 50) break;
+            imagerectangle($im, $x, $yy - 20, $x + 22, $yy + 2, $green);
+            $rows = pv_wrap($txt, 24, pv_face($txt, 'b'), $px2 - $x - 90, 1);
+            imagettftext($im, 24, 0, $x + 40, $yy, $ink, pv_face($rows[0], 'b'), $rows[0]);
+            $yy += 54;
+        }
+    }
+
+    // bottom band
+    pv_rrect($im, $lx, $H - 150, $W - $lx, $H - 60, 45, $green);
+    $cta = $c['cta'];
+    $fs = 30;
+    while ($fs > 20 && pv_width($fs, pv_font('b'), $cta) > $W - 2 * $lx - 60) $fs -= 2;
+    imagettftext($im, $fs, 0, (int)(($W - pv_width($fs, pv_font('b'), $cta)) / 2), $H - 93, $white, pv_font('b'), $cta);
+    $ft = 'apu2.com/worksheets';
+    imagettftext($im, 18, 0, (int)(($W - pv_width(18, pv_font('r'), $ft)) / 2), $H - 22, $muted, pv_font('r'), $ft);
+
+    header('Content-Type: image/png');
+    header('Cache-Control: public, max-age=604800');
+    imagepng($im, null, 6);
+    imagedestroy($im);
+}
+
+/* draw the picture of the kind that was asked for */
+function pv_out($kind, $c) {
+    if ($kind === 'pin') {
+        if (!isset($c['cta'])) $c['cta'] = 'FREE · Lesson + 100 questions + answer key';
+        pin_render($c);
+    } else {
+        preview_render($c);
+    }
+}
+
 /* the ETag only changes when the data behind the picture changes */
 function preview_cache_check($tag) {
-    $etag = '"pv-' . md5($tag . '|v3') . '"';
+    global $PV_KIND;
+    $etag = '"pv-' . md5($tag . '|v3|' . $PV_KIND) . '"';
     header('ETag: ' . $etag);
     if (isset($_SERVER['HTTP_IF_NONE_MATCH']) && trim($_SERVER['HTTP_IF_NONE_MATCH']) === $etag) {
         http_response_code(304);
@@ -183,7 +280,9 @@ function preview_cache_check($tag) {
     }
 }
 
-function preview_route($seg) {
+function preview_route($seg, $kind = 'preview') {
+    global $PV_KIND;
+    $PV_KIND = $kind;
     if (!preview_supported()) { http_response_code(404); exit; }
     $country = get_country($seg[0]);
     $subject = $country ? get_subject($seg[0], $seg[1]) : null;
@@ -202,7 +301,8 @@ function preview_route($seg) {
         $name = topic_name($defs[$seg[3]], $seg[0]);
         $lines = array();
         foreach ($units as $u) $lines[] = array($u['short_title'], $u['grade_name']);
-        preview_render(array(
+        pv_out($kind, array(
+            'cta' => 'FREE · ' . count($units) . ' skills with answer keys',
             'label' => topic_range($units) . ' · ' . $country['standard'],
             'title' => $name . ' Worksheets',
             'chips' => array(count($units) . ' skills', 'Lessons', 'Answer keys'),
@@ -220,7 +320,8 @@ function preview_route($seg) {
         preview_cache_check(json_encode($units));
         $lines = array();
         foreach ($units as $u) $lines[] = array($u['short_title'], '');
-        preview_render(array(
+        pv_out($kind, array(
+            'cta' => 'FREE · ' . count($units) . ' printable worksheets',
             'label' => $country['standard'] . ' · ' . $country['name'],
             'title' => $grade['name'] . ' ' . $subject['name'] . ' Worksheets',
             'chips' => array(count($units) . ' skills', '100 questions each', 'Answer keys'),
@@ -241,10 +342,10 @@ function preview_route($seg) {
             $ch = array();
             foreach ($it['c'] as $k => $cc) $ch[] = ($k + 1) . ') ' . pv_text($cc);
             $lines[] = array($q, implode('   ', $ch));
-            if (count($lines) >= 6) break 2;
+            if (count($lines) >= ($kind === 'pin' ? 10 : 6)) break 2;
         }
     }
-    preview_render(array(
+    pv_out($kind, array(
         'label' => $grade['name'] . ' ' . $subject['name']
                    . ($u['standard_code'] ? ' · ' . preg_replace('/^' . preg_quote($grade['name'], '/') . ':\s*/', '', $u['standard_code']) : ''),
         'title' => $u['short_title'],
