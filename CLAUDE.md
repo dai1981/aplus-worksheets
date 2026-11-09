@@ -806,7 +806,36 @@ SG / Maths / Primary 1（とても短い文、ほぼ全問に絵）
 9. time ✓
 10. 2d-shapes ✓
 11. picture-graphs ✓
-その後: AU Foundation、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
+US / Math / Grade 7（Common Core）— 1,000 以上はカンマ付き。負の数は「−」（U+2212）。共通部品は `tools/ws_common.py`
+1. adding-and-subtracting-integers ✓
+2. multiplying-and-dividing-integers
+3. two-step-equations
+4. proportional-relationships
+5. percent-problems
+6. simplifying-expressions
+7. circles-area-and-circumference
+8. angle-relationships
+9. probability
+10. two-step-inequalities
+11. unit-rates-with-fractions
+12. rational-number-word-problems
+13. converting-fractions-to-decimals
+14. scale-drawings
+15. area-surface-area-volume
+16. compound-probability
+17. random-sampling
+18. comparing-data-distributions
+19. constructing-triangles-and-cross-sections
+
+US / Math / Grade 8（Common Core）
+1. linear-equations 2. systems-of-equations 3. slope 4. functions 5. linear-functions 6. exponent-rules
+7. scientific-notation 8. square-and-cube-roots 9. rational-and-irrational-numbers 10. pythagorean-theorem
+11. transformations 12. congruence-and-similarity 13. angle-relationships-parallel-lines
+14. volume-of-cylinders-cones-spheres 15. scatter-plots 16. two-way-tables 17. distance-on-coordinate-plane
+
+US / Math / Kindergarten（Common Core）— 次に作る
+
+その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
 ## 触ってはいけないもの
 
