@@ -819,7 +819,7 @@ US / Math / Grade 7（Common Core）— 1,000 以上はカンマ付き。負の�
 10. two-step-inequalities ✓
 11. unit-rates-with-fractions ✓
 12. rational-number-word-problems ✓
-13. converting-fractions-to-decimals
+13. converting-fractions-to-decimals ✓
 14. scale-drawings
 15. area-surface-area-volume
 16. compound-probability
