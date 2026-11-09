@@ -1,0 +1,28 @@
+# apu2.com /japanese/（公開フォルダ /aplus/ の中）
+# このファイルで RewriteEngine を宣言すると親 /aplus/.htaccess の Rewrite は効かなくなるため、
+# 親の 1・2（eigo-duke.com からの転送、https://www.apu2.com への統一）をここにも書いている。
+# 親のエラーページ・MIME・gzip 設定はそのまま引き継がれる。
+
+RewriteEngine On
+RewriteBase /japanese/
+
+# === 1. eigo-duke.com/aplus/japanese/ から見られないようにする（apu2.comへ301）
+RewriteCond %{HTTP_HOST} ^(www\.)?eigo-duke\.com$ [NC]
+RewriteRule ^(.*)$ https://www.apu2.com/japanese/$1 [R=301,L]
+
+# === 2. https://www.apu2.com へ統一（301）
+RewriteCond %{HTTP_HOST} ^apu2\.com$ [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.apu2.com/japanese/$1 [R=301,L]
+
+# === 3. 辞書の型枠・文言ファイルは直接見せない
+RewriteRule ^_dict/inc(/|$) - [F,L]
+
+# === 4. ロシア語版は削除済み：英語版の同じページへ（恒久的な転送）
+RewriteRule ^ru/word/(.*)$ https://www.apu2.com/japanese/en/word/$1 [R=301,L]
+
+# === 5. 単語ページは DB から作る（PHP）
+# いまはサーバーに .html があればそれを返し、無いときだけ PHP が作る（移行中）。
+# 単語の .html を削除し終えたら、この下の RewriteCond の行を消して PHP に一本化する。
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(en|vi|zh|tw|ko|id|es|pt|fr|de|th|ar)/word/([a-z0-9-]+)\.html$ _dict/word.php?l=$1&s=$2 [QSA,L]

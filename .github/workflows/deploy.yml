@@ -7,11 +7,16 @@ on:
         description: "DB: send every unit (not only changed ones)"
         type: boolean
         default: false
+      jd_all:
+        description: "Japanese dictionary: send every word and every /japanese/ file"
+        type: boolean
+        default: false
   push:
     branches: [ main ]
     paths:
       - "site/**"
       - "content/**"
+      - "jdict/**"
       - ".github/workflows/deploy.yml"
 
 concurrency:
@@ -65,4 +70,48 @@ jobs:
             python3 tools/sync_db.py --since "${{ github.event.before }}"
           else
             python3 tools/sync_db.py --since HEAD~1
+          fi
+
+      # 日本語辞書の型枠・一覧ページ（site/japanese/ → /aplus/japanese/）。変わったファイルだけを put（上書きのみ・削除なし）。
+      # /aplus/japanese/ には単語の .html が十数万あるので、フォルダ全体を比べる mirror は使わない。
+      - name: 日本語辞書のファイルを FTP アップロード（変わったものだけ・削除なし）
+        env:
+          FTP_SERVER:   ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.jd_all }}" = "true" ]; then
+            git ls-files site/japanese > /tmp/jd_files.txt
+          elif [ "${{ github.event_name }}" = "push" ] && [ -n "${{ github.event.before }}" ] && ! echo "${{ github.event.before }}" | grep -q '^0*$'; then
+            git diff --name-only --diff-filter=AM "${{ github.event.before }}" HEAD -- site/japanese > /tmp/jd_files.txt
+          else
+            git diff --name-only --diff-filter=AM HEAD~1 HEAD -- site/japanese > /tmp/jd_files.txt
+          fi
+          if [ ! -s /tmp/jd_files.txt ]; then echo "no /japanese/ files changed"; exit 0; fi
+          python3 - <<'PY' > /tmp/jd.lftp
+          import json, os
+          print("set ftp:ssl-allow true; set ssl:verify-certificate no; set net:max-retries 2; set net:timeout 30;")
+          print("open -u %s,%s %s" % (json.dumps(os.environ["FTP_USERNAME"]), json.dumps(os.environ["FTP_PASSWORD"]), json.dumps(os.environ["FTP_SERVER"])))
+          for f in open("/tmp/jd_files.txt").read().split():
+              d = "/aplus/" + os.path.dirname(f)[len("site/"):]
+              print("mkdir -p -f %s" % json.dumps(d))
+              print("put %s -o %s" % (json.dumps(f), json.dumps(d + "/" + os.path.basename(f))))
+          PY
+          echo "files: $(wc -l < /tmp/jd_files.txt)"
+          lftp -f /tmp/jd.lftp
+          rm -f /tmp/jd.lftp
+
+      - name: 日本語辞書の DB を更新（jd_word テーブルのみ・変わった語だけ）
+        env:
+          WS_SYNC_KEY:  ${{ secrets.WS_SYNC_KEY }}
+          FTP_SERVER:   ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.jd_all }}" = "true" ]; then
+            python3 tools/sync_jd.py --all
+          elif [ "${{ github.event_name }}" = "push" ]; then
+            python3 tools/sync_jd.py --since "${{ github.event.before }}"
+          else
+            python3 tools/sync_jd.py --since HEAD~1
           fi
