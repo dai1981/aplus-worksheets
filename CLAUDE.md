@@ -839,8 +839,8 @@ US / Math / Kindergarten（Common Core）— 次に作る
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
-- 単語ページは `site/japanese/_dict/word.php` が DB の **jd_word**（1語1行、12言語の訳を JSON）から作る。ルーティングは `site/japanese/.htaccess`
-- 言語: en vi zh tw ko id es pt fr de th ar（ru は削除済み。`/japanese/ru/word/*` は英語版へ 301）
+- 単語ページは `site/japanese/_dict/word.php` が DB の **jd_word**（1語1行、13言語の訳を JSON）から作る。ルーティングは `site/japanese/.htaccess`
+- 言語: en vi zh tw ko id es pt fr de ru th ar（13言語。単語ページは PHP なのでファイルは増えない）
 - データ: `python3 tools/build_jdict.py`（元データは build/jdict の make_jdict.py・data・tr）→ `jdict/words/*.json`（200語ずつ）、`site/japanese/_dict/inc/ju.json`（文言）、
   `site/japanese/{言語}/word/index.html・row-*.html・index.json`（一覧は静的のまま）、`site/japanese/sitemap-{言語}.xml`
 - 反映: push で Actions が `site/japanese/` の変わったファイルだけを `/aplus/japanese/` へ put（mirror は使わない。単語の .html が多いため）、`tools/sync_jd.py` → `worksheets/api/jd_sync.php` が jd_word へ書く

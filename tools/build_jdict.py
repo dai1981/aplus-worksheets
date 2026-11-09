@@ -9,14 +9,13 @@
   site/japanese/{L}/word/index.html, row-*.html, index.json   辞書トップ・五十音の一覧・検索候補（静的のまま）
   site/japanese/sitemap-{L}.xml   単語ページのサイトマップ（言語ごと。/aplus/sitemap.php のインデックスに載せる）
   jdict/lastmod.json              語ごとの中身のハッシュと、最後に中身が変わった日（サイトマップの lastmod）
-ロシア語（ru）は削除済みのため出力しない。
 単語ページの HTML はここでは作らない（サーバーの PHP が DB から作る）。
 """
 import datetime, hashlib, json, os, random, sys
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 JD = sys.argv[1] if len(sys.argv) > 1 else "/home/claude/build/jdict"
-LANGS = ['en', 'vi', 'zh', 'tw', 'ko', 'id', 'es', 'pt', 'fr', 'de', 'th', 'ar']
+LANGS = ['en', 'vi', 'zh', 'tw', 'ko', 'id', 'es', 'pt', 'fr', 'de', 'ru', 'th', 'ar']
 PER_FILE = 200
 
 # make_jdict.py のデータ読み込み・ファイル名づけ・一覧ページを、そのまま使う（ページ生成の最後の部分は実行しない）
@@ -24,17 +23,17 @@ src = open(os.path.join(JD, "make_jdict.py"), encoding="utf-8").read()
 src = src.split("\nonly = sys.argv")[0]
 g = {"__file__": os.path.join(JD, "make_jdict.py"), "__name__": "jdict"}
 exec(compile(src, "make_jdict.py", "exec"), g)
-g["LANGS"][:] = LANGS                                   # ru を外す（hreflang・言語切り替えからも消える）
+g["LANGS"][:] = LANGS
 g["ROOT"] = os.path.join(REPO, "site")                  # 一覧ページの出力先
 WORDS, slug, JU, BATCH, WIDX = g["WORDS"], g["slug"], g["JU"], g["BATCH"], g["WIDX"]
 
 Q_EX = {'en': 'What does this sentence mean?', 'vi': 'Câu này có nghĩa là gì?', 'zh': '这句话是什么意思？', 'tw': '這句話是什麼意思？',
         'ko': '이 문장은 무슨 뜻일까요?', 'id': 'Apa arti kalimat ini?', 'es': '¿Qué significa esta oración?', 'pt': 'O que significa esta frase?',
-        'fr': 'Que signifie cette phrase ?', 'de': 'Was bedeutet dieser Satz?', 'th': 'ประโยคนี้หมายความว่าอะไร', 'ar': 'ما معنى هذه الجملة؟'}
+        'fr': 'Que signifie cette phrase ?', 'de': 'Was bedeutet dieser Satz?', 'ru': 'Что означает это предложение?', 'th': 'ประโยคนี้หมายความว่าอะไร', 'ar': 'ما معنى هذه الجملة؟'}
 PREV = {'en': 'Previous', 'vi': 'Từ trước', 'zh': '上一个', 'tw': '上一個', 'ko': '이전 단어', 'id': 'Sebelumnya', 'es': 'Anterior', 'pt': 'Anterior',
-        'fr': 'Précédent', 'de': 'Vorheriges', 'th': 'ก่อนหน้า', 'ar': 'السابق'}
+        'fr': 'Précédent', 'de': 'Vorheriges', 'ru': 'Предыдущее', 'th': 'ก่อนหน้า', 'ar': 'السابق'}
 NEXT = {'en': 'Next', 'vi': 'Từ tiếp theo', 'zh': '下一个', 'tw': '下一個', 'ko': '다음 단어', 'id': 'Berikutnya', 'es': 'Siguiente', 'pt': 'Próxima',
-        'fr': 'Suivant', 'de': 'Nächstes', 'th': 'ถัดไป', 'ar': 'التالي'}
+        'fr': 'Suivant', 'de': 'Nächstes', 'ru': 'Следующее', 'th': 'ถัดไป', 'ar': 'التالي'}
 
 
 def quiz_data(w, L):
@@ -138,7 +137,7 @@ def main():
     os.makedirs(inc, exist_ok=True)
     json.dump({"ui": ui, "meta": meta}, open(os.path.join(inc, "ju.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
 
-    for L in LANGS:                                     # 辞書トップ・五十音の一覧・検索候補（ru なし）
+    for L in LANGS:                                     # 辞書トップ・五十音の一覧・検索候補
         g["index_pages"](L)
     print("index pages:", len(LANGS), "languages")
 

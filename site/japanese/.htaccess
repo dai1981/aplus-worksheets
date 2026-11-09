@@ -18,11 +18,8 @@ RewriteRule ^(.*)$ https://www.apu2.com/japanese/$1 [R=301,L]
 # === 3. 辞書の型枠・文言ファイルは直接見せない
 RewriteRule ^_dict/inc(/|$) - [F,L]
 
-# === 4. ロシア語版は削除済み：英語版の同じページへ（恒久的な転送）
-RewriteRule ^ru/word/(.*)$ https://www.apu2.com/japanese/en/word/$1 [R=301,L]
-
-# === 5. 単語ページは DB から作る（PHP）
+# === 4. 単語ページは DB から作る（PHP）
 # いまはサーバーに .html があればそれを返し、無いときだけ PHP が作る（移行中）。
 # 単語の .html を削除し終えたら、この下の RewriteCond の行を消して PHP に一本化する。
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(en|vi|zh|tw|ko|id|es|pt|fr|de|th|ar)/word/([a-z0-9-]+)\.html$ _dict/word.php?l=$1&s=$2 [QSA,L]
+RewriteRule ^(en|vi|zh|tw|ko|id|es|pt|fr|de|ru|th|ar)/word/([a-z0-9-]+)\.html$ _dict/word.php?l=$1&s=$2 [QSA,L]
