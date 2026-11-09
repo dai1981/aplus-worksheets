@@ -813,7 +813,7 @@ US / Math / Grade 7（Common Core）— 1,000 以上はカンマ付き。負の�
 4. proportional-relationships ✓
 5. percent-problems ✓
 6. simplifying-expressions ✓
-7. circles-area-and-circumference
+7. circles-area-and-circumference ✓
 8. angle-relationships
 9. probability
 10. two-step-inequalities
