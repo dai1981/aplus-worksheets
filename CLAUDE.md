@@ -809,7 +809,7 @@ SG / Maths / Primary 1（とても短い文、ほぼ全問に絵）
 US / Math / Grade 7（Common Core）— 1,000 以上はカンマ付き。負の数は「−」（U+2212）。共通部品は `tools/ws_common.py`
 1. adding-and-subtracting-integers ✓
 2. multiplying-and-dividing-integers ✓
-3. two-step-equations
+3. two-step-equations ✓
 4. proportional-relationships
 5. percent-problems
 6. simplifying-expressions
