@@ -65,7 +65,7 @@ function topic_defs() {
             'blurb' => 'Telling time on analog and digital clocks, a.m. and p.m., the 24-hour clock, elapsed time and calendars.',
             'blurb_gb' => 'Telling the time on analogue and digital clocks, the 12- and 24-hour clock, how long things take, and calendars.'),
         'measurement' => array('name' => 'Measurement',
-            'in' => '/measur|length|mass|capacity|metric|convert|scales|conversion/', 'out' => '/angle/',
+            'in' => '/measur|length|mass|capacity|metric|convert|scales|conversion/', 'out' => '/angle|converting-fractions/',
             'blurb' => 'Measuring length, mass and capacity, reading scales, and converting between units.'),
         'area-and-perimeter' => array('name' => 'Area and Perimeter',
             'in' => '/area|perimeter/', 'out' => '/surface-area-nets/',
