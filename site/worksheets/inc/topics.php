@@ -50,7 +50,7 @@ function topic_defs() {
             'in' => '/exponent|square-root|squares-cubes|perfect-square|cube-root|scientific|powers|square-numbers/', 'out' => '/powers-of-10/',
             'blurb' => 'Powers and exponents, perfect squares, square roots and cube roots, and scientific notation.'),
         'integers' => array('name' => 'Integers and Negative Numbers',
-            'in' => '/integer|negative|absolute|rational-numbers/', 'out' => '/^$/',
+            'in' => '/integer|negative|absolute|rational-number/', 'out' => '/^$/',
             'blurb' => 'Negative numbers on the number line, comparing integers, absolute value, and adding, subtracting, multiplying and dividing integers.'),
         'algebra' => array('name' => 'Algebra, Equations and Patterns',
             'in' => '/pattern|algebra|expression|equation|inequalit|equal-sign|equality|equal-and-not|number-sentences|relation|polynomial|missing-numbers/',
