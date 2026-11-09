@@ -823,7 +823,7 @@ US / Math / Grade 7（Common Core）— 1,000 以上はカンマ付き。負の�
 14. scale-drawings ✓
 15. area-surface-area-volume ✓
 16. compound-probability ✓
-17. random-sampling
+17. random-sampling ✓
 18. comparing-data-distributions
 19. constructing-triangles-and-cross-sections
 
