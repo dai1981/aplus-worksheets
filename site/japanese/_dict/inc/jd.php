@@ -7,7 +7,7 @@
 if (!defined('DB_DSN')) require __DIR__ . '/../../../worksheets/inc/config.php';   // DB の接続情報（worksheets と共通）
 
 define('JD_BASE', 'https://www.apu2.com');
-define('JD_TEMPLATE', '2026-11-09a');                       // 型枠を変えたら上げる（ETag が変わる）
+define('JD_TEMPLATE', '2026-11-12a');                       // 型枠を変えたら上げる（ETag が変わる）
 
 $__ju = json_decode(file_get_contents(__DIR__ . '/ju.json'), true);
 $JU   = $__ju['ui'];
@@ -142,6 +142,12 @@ const JD_CSS = <<<'X'
 .jpn a{flex:1;max-width:49%;background:#fff;border:1px solid var(--hairline);border-radius:10px;padding:9px 12px;text-decoration:none;color:var(--brand);font-weight:700;font-size:14px}
 .jpn a.nx{text-align:right;margin-left:auto}
 .jpn small{display:block;color:var(--ink-sub);font-weight:600;font-size:11.5px}
+.jdc{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.jdc svg{flex:none;width:40px;height:40px}
+.jdc div{flex:1;min-width:200px}
+.jdc b{display:block;font-size:16px;margin-bottom:2px}
+.jdc p{margin:0;color:var(--ink-sub);font-size:14px}
+.jdc a{flex:none;background:#5865F2;color:#fff;text-decoration:none;font-weight:700;border-radius:10px;padding:10px 16px;font-size:14px}
 .quiz-blank .qx{display:block;margin:6px 0;font-size:17px;line-height:2}
 .quiz-blank .qo{display:block;margin:3px 0}
 </style>
@@ -375,6 +381,8 @@ function jd_word_page($w, $L, $O, $qz) {
     ' . jd_quiz($w, $L, $O, $qz) . '
     <div class="quiz-score" style="display:none"></div>
   </div>
+
+  ' . (!empty($JM['discord']) ? '<div class="info-card jdc"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#EEF0FE"/><path d="M11 13.5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-7l-5 4v-4h0a3 3 0 0 1-3-3z" fill="#5865F2"/><circle cx="16" cy="17.5" r="1.4" fill="#fff"/><circle cx="20" cy="17.5" r="1.4" fill="#fff"/><circle cx="24" cy="17.5" r="1.4" fill="#fff"/></svg><div><b>' . e(str_replace('{w}', $w['w'], $t['dc_h'])) . '</b><p>' . e($t['dc_p']) . '</p></div><a href="' . e($JM['discord']) . '" target="_blank" rel="noopener">' . e($t['dc_b']) . '</a></div>' : '') . '
 
   <div class="info-card">
     <span class="card-label">' . $t['faq'] . '</span>

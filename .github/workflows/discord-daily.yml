@@ -1,0 +1,21 @@
+name: discord-daily-word
+
+# 毎朝 9:07（日本時間）に Discord の #daily-word へ「今日の単語」を1つ投稿する
+on:
+  schedule:
+    - cron: '7 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            jdict/words
+            tools
+      - name: 今日の単語を投稿
+        env:
+          DISCORD_WEBHOOK_DAILY: ${{ secrets.DISCORD_WEBHOOK_DAILY }}
+        run: python3 tools/discord_daily.py

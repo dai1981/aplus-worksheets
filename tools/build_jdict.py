@@ -75,6 +75,24 @@ PREV = {'en': 'Previous', 'vi': 'Từ trước', 'zh': '上一个', 'tw': '上�
 NEXT = {'en': 'Next', 'vi': 'Từ tiếp theo', 'zh': '下一个', 'tw': '下一個', 'ko': '다음 단어', 'id': 'Berikutnya', 'es': 'Siguiente', 'pt': 'Próxima',
         'fr': 'Suivant', 'de': 'Nächstes', 'ru': 'Следующее', 'th': 'ถัดไป', 'ar': 'التالي'}
 
+# Discord コミュニティへの案内（単語ページ）
+DISCORD = "https://discord.gg/6sNvy7xpDw"
+DC = {
+ 'en': ['Questions about {w}?', 'Ask in our free Discord community. Learners from around the world help each other there.', 'Ask on Discord'],
+ 'vi': ['Bạn có câu hỏi về {w}?', 'Hãy hỏi trong cộng đồng Discord miễn phí. Người học khắp thế giới cùng giúp nhau.', 'Hỏi trên Discord'],
+ 'zh': ['关于「{w}」有疑问吗？', '来我们的免费 Discord 社区提问吧，世界各地的学习者互相帮助。', '在 Discord 提问'],
+ 'tw': ['關於「{w}」有疑問嗎？', '來我們的免費 Discord 社群提問吧，世界各地的學習者互相幫忙。', '在 Discord 提問'],
+ 'ko': ['「{w}」에 대해 궁금한 점이 있나요?', '무료 Discord 커뮤니티에서 물어보세요. 전 세계 학습자들이 서로 도와줘요.', 'Discord에서 질문하기'],
+ 'id': ['Ada pertanyaan tentang {w}?', 'Tanyakan di komunitas Discord gratis kami. Pelajar dari seluruh dunia saling membantu.', 'Tanya di Discord'],
+ 'es': ['¿Tienes dudas sobre {w}?', 'Pregunta en nuestra comunidad gratuita de Discord. Estudiantes de todo el mundo se ayudan.', 'Preguntar en Discord'],
+ 'pt': ['Tem dúvidas sobre {w}?', 'Pergunte na nossa comunidade gratuita no Discord. Estudantes do mundo todo se ajudam.', 'Perguntar no Discord'],
+ 'fr': ['Une question sur {w} ?', 'Posez-la dans notre communauté Discord gratuite. Des apprenants du monde entier s’entraident.', 'Demander sur Discord'],
+ 'de': ['Fragen zu {w}?', 'Frag in unserer kostenlosen Discord-Community. Lernende aus aller Welt helfen sich gegenseitig.', 'Auf Discord fragen'],
+ 'ru': ['Есть вопросы о {w}?', 'Спросите в нашем бесплатном сообществе Discord. Там помогают друг другу ученики со всего мира.', 'Спросить в Discord'],
+ 'th': ['มีคำถามเกี่ยวกับ {w} ไหม', 'ถามได้ในชุมชน Discord ฟรีของเรา ผู้เรียนจากทั่วโลกช่วยเหลือกัน', 'ถามใน Discord'],
+ 'ar': ['هل لديك سؤال عن {w}؟', 'اسأل في مجتمعنا المجاني على Discord، حيث يساعد المتعلمون من كل العالم بعضهم بعضًا.', 'اسأل على Discord'],
+}
+
 
 def quiz_data(w, L):
     """The same two questions as the old static pages (same random choices), plus a new third question
@@ -170,9 +188,10 @@ def main():
     ui = {}
     for L in LANGS:
         t = dict(JU[L]); t['q_ex'] = Q_EX[L]; t['prev'] = PREV[L]; t['next'] = NEXT[L]
+        t['dc_h'], t['dc_p'], t['dc_b'] = DC[L]
         ui[L] = t
     meta = {"langs": LANGS, "hl": {k: g["HL"][k] for k in LANGS}, "og": {k: g["OG"][k] for k in LANGS}, "name": {k: g["NAME"][k] for k in LANGS},
-            "hub": sorted(g["HUB"]), "jlearn": sorted(g["JLEARN"]), "priv": sorted(g["PRIV"]), "cat_en": JU['en']['cat'], "v": g["V"]}
+            "hub": sorted(g["HUB"]), "jlearn": sorted(g["JLEARN"]), "priv": sorted(g["PRIV"]), "cat_en": JU['en']['cat'], "v": g["V"], "discord": DISCORD}
     inc = os.path.join(REPO, "site", "japanese", "_dict", "inc")
     os.makedirs(inc, exist_ok=True)
     json.dump({"ui": ui, "meta": meta}, open(os.path.join(inc, "ju.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
