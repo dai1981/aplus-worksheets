@@ -844,6 +844,7 @@ US / Math / Kindergarten（Common Core）— 次に作る
 - データ: `python3 tools/build_jdict.py`（元データは build/jdict の make_jdict.py・data・tr）→ `jdict/words/*.json`（200語ずつ）、`site/japanese/_dict/inc/ju.json`（文言）、
   `site/japanese/{言語}/word/index.html・row-*.html・index.json`（一覧は静的のまま）、`site/japanese/sitemap-{言語}.xml`
 - 反映: push で Actions が `site/japanese/` の変わったファイルだけを `/aplus/japanese/` へ put（mirror は使わない。単語の .html が多いため）、`tools/sync_jd.py` → `worksheets/api/jd_sync.php` が jd_word へ書く
+- 公開済みの語の URL（slug）は build_jdict.py が jdict/words から読んで固定する。作成途中のバッチがあっても、いつでも公開してよい
 - jd_word は追加・上書きだけ（INSERT … ON DUPLICATE KEY UPDATE）。DELETE・DROP・ALTER は書かない
 - 移行中: サーバーに単語の .html が残っている間はそちらが優先。削除し終えたら `.htaccess` の `RewriteCond %{REQUEST_FILENAME} !-f` を消す
 

@@ -27,6 +27,46 @@ g["LANGS"][:] = LANGS
 g["ROOT"] = os.path.join(REPO, "site")                  # 一覧ページの出力先
 WORDS, slug, JU, BATCH, WIDX = g["WORDS"], g["slug"], g["JU"], g["BATCH"], g["WIDX"]
 
+
+def pin_slugs():
+    """公開済みの語の URL（slug）は変えない。新しい語だけ、空いている名前を make_jdict と同じ規則で付ける。
+    これで、作成途中で公開しても、あとから足した語が既存の URL を押しのけることはない。"""
+    import glob, re
+    pinned = {}
+    for f in glob.glob(os.path.join(REPO, "jdict", "words", "*.json")):
+        for r in json.load(open(f, encoding="utf-8")):
+            pinned[(r['w'], r['k'])] = r['s']
+    S = g["SLUGS"]
+    old = dict(S)
+    used = {'index'} | {'row-' + r[0] for r in g["ROWS"]}
+    new = {}
+    for k, v in old.items():
+        if k in pinned:
+            new[k] = pinned[k]; used.add(pinned[k])
+    sl = g["sl"]
+    for w in sorted(WORDS, key=lambda x: (g["batch_order"](x['_b']), WIDX[id(x)])):
+        k = (w['w'], w['kana'])
+        if k in new:
+            continue
+        s0 = sl(w['romaji']) or 'w'; s = s0
+        if s in used:
+            gg = re.split(r'[,;/]', re.sub(r'\(.*?\)', '', w['senses'][0]['en']))[0]
+            gg = re.sub(r'^(to|a|an|the) ', '', gg.strip().lower())
+            gg = sl(' '.join(gg.split()[:2]))
+            if not gg or gg == s0 or gg.startswith(s0 + '-'):
+                gg = {'name': 'name', 'place': 'place', 'works': 'anime', 'anime': 'anime', 'slang': 'slang', 'culture': 'japan',
+                      'grammar': 'grammar', 'brand': 'brand'}.get(w.get('cat'), 'w')
+            s = f"{s0}-{gg}"
+        n = 2
+        while s in used:
+            s = f'{s0}-{n}'; n += 1
+        used.add(s); new[k] = s
+    S.clear(); S.update(new)
+    print("slugs: pinned", sum(1 for k in new if k in pinned), "new", sum(1 for k in new if k not in pinned))
+
+
+pin_slugs()
+
 Q_EX = {'en': 'What does this sentence mean?', 'vi': 'Câu này có nghĩa là gì?', 'zh': '这句话是什么意思？', 'tw': '這句話是什麼意思？',
         'ko': '이 문장은 무슨 뜻일까요?', 'id': 'Apa arti kalimat ini?', 'es': '¿Qué significa esta oración?', 'pt': 'O que significa esta frase?',
         'fr': 'Que signifie cette phrase ?', 'de': 'Was bedeutet dieser Satz?', 'ru': 'Что означает это предложение?', 'th': 'ประโยคนี้หมายความว่าอะไร', 'ar': 'ما معنى هذه الجملة؟'}

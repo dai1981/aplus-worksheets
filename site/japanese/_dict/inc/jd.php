@@ -45,7 +45,7 @@ function jd_fmt($tpl, $v) {
     foreach ($v as $k => $x) $r['{' . $k . '}'] = $x;
     return strtr($tpl, $r);
 }
-define('JD_RUBY', '/([\x{3400}-\x{9FFF}\x{F900}-\x{FAFF}々〆ヶ0-9０-９]+)\[([^\]]+)\]/u');
+define('JD_RUBY', '/([\x{3400}-\x{9FFF}\x{F900}-\x{FAFF}々〆ヶケ0-9０-９]+)\[([^\]]+)\]/u');
 function jd_ruby($s) {
     $s = htmlspecialchars((string)$s, ENT_COMPAT | ENT_HTML5, 'UTF-8');
     return preg_replace(JD_RUBY, '<ruby>$1<rt>$2</rt></ruby>', $s);
