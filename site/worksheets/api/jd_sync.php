@@ -45,15 +45,34 @@ try {
         hash    CHAR(32)     NOT NULL,
         updated DATE         NOT NULL
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci');
-    // 中身が変わった語だけ updated を今日にする（updated を hash より先に書く）
-    $st = $pdo->prepare('INSERT INTO jd_word (slug, data, hash, updated) VALUES (?, ?, ?, CURDATE())
-        ON DUPLICATE KEY UPDATE updated = IF(hash <> VALUES(hash), CURDATE(), updated), data = VALUES(data), hash = VALUES(hash)');
+    // updated（Last-Modified）は、その語自身の中身が変わったときだけ今日にする。
+    // 近くの語・前後の語・クイズの選択肢は、ほかの語を足しただけで変わるので比べない。
+    $own = function ($w) {
+        unset($w['near'], $w['prev'], $w['next'], $w['quiz']);
+        return md5(json_encode($w, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+    };
+    $words = $data['words'];
+    foreach ($words as $w) {
+        if (!isset($w['s']) || !preg_match('/^[a-z0-9-]{1,100}$/', $w['s']) || empty($w['w']) || empty($w['sen'])) throw new Exception('bad word');
+    }
+    $old = array();
+    foreach (array_chunk(array_map(function ($w) { return $w['s']; }, $words), 200) as $ch) {
+        $q = $pdo->prepare('SELECT slug, data, updated FROM jd_word WHERE slug IN (' . implode(',', array_fill(0, count($ch), '?')) . ')');
+        $q->execute($ch);
+        foreach ($q->fetchAll(PDO::FETCH_ASSOC) as $r) {
+            $o = json_decode($r['data'], true);
+            $old[$r['slug']] = array(is_array($o) ? $own($o) : '', $r['updated']);
+        }
+    }
+    $today = date('Y-m-d');
+    $st = $pdo->prepare('INSERT INTO jd_word (slug, data, hash, updated) VALUES (?, ?, ?, ?)
+        ON DUPLICATE KEY UPDATE data = VALUES(data), hash = VALUES(hash), updated = VALUES(updated)');
     $pdo->beginTransaction();
     $n = 0;
-    foreach ($data['words'] as $w) {
-        if (!isset($w['s']) || !preg_match('/^[a-z0-9-]{1,100}$/', $w['s']) || empty($w['w']) || empty($w['sen'])) throw new Exception('bad word');
+    foreach ($words as $w) {
         $d = json_encode($w, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-        $st->execute(array($w['s'], $d, md5($d)));
+        $up = (isset($old[$w['s']]) && $old[$w['s']][0] === $own($w)) ? $old[$w['s']][1] : $today;
+        $st->execute(array($w['s'], $d, md5($d), $up));
         $n++;
     }
     $pdo->commit();

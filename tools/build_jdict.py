@@ -168,14 +168,19 @@ def main():
             f.write("\n")
     print("words:", len(recs), "files:", (len(recs) + PER_FILE - 1) // PER_FILE)
 
-    # lastmod: 中身が変わった語だけ今日の日付にする
+    # lastmod: その語自身の中身が変わったときだけ今日にする（近くの語・前後・クイズは比べない）
+    # __v=2 より前の lastmod.json は全体のハッシュだったので、一度だけ日付をそのまま引き継ぐ
     lm_path = os.path.join(REPO, "jdict", "lastmod.json")
     old = json.load(open(lm_path)) if os.path.exists(lm_path) else {}
+    legacy = old.get('__v') != 2
     today = datetime.date.today().isoformat()
-    lm = {}
+    lm = {'__v': 2}
     for r in recs:
-        h = hashlib.md5(json.dumps(r, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
-        lm[r['s']] = [h, old[r['s']][1] if r['s'] in old and old[r['s']][0] == h else today]
+        own = {k: v for k, v in r.items() if k not in ('near', 'prev', 'next', 'quiz')}
+        h = hashlib.md5(json.dumps(own, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
+        o = old.get(r['s'])
+        keep = o and (legacy or o[0] == h)
+        lm[r['s']] = [h, o[1] if keep else today]
     json.dump(lm, open(lm_path, "w"), separators=(",", ":"), sort_keys=True)
     for L in LANGS:
         rows = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

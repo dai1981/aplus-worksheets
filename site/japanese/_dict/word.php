@@ -25,7 +25,9 @@ if (!is_array($w)) jd_not_found($L);
 // --- キャッシュ（中身・型枠・言語が同じなら 304）
 $etag = '"jd-' . md5($row['hash'] . '|' . $L . '|' . JD_TEMPLATE) . '"';
 header('ETag: ' . $etag);
-header('Cache-Control: public, max-age=3600');
+header('Cache-Control: public, max-age=86400');
+// ロリポップ（LiteSpeed）のサーバー側キャッシュ：同じページは1日 PHP・DB を通さずに返す
+header('X-LiteSpeed-Cache-Control: public,max-age=86400');
 if (!empty($row['updated'])) header('Last-Modified: ' . gmdate('D, d M Y H:i:s', strtotime($row['updated'] . ' 00:00:00')) . ' GMT');
 if (isset($_SERVER['HTTP_IF_NONE_MATCH']) && trim($_SERVER['HTTP_IF_NONE_MATCH']) === $etag) { http_response_code(304); exit; }
 

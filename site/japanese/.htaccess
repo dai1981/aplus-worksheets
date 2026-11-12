@@ -3,6 +3,11 @@
 # 親の 1・2（eigo-duke.com からの転送、https://www.apu2.com への統一）をここにも書いている。
 # 親のエラーページ・MIME・gzip 設定はそのまま引き継がれる。
 
+# サーバー側キャッシュ（LiteSpeed）。単語ページは PHP が出す X-LiteSpeed-Cache-Control で1日保存される
+<IfModule LiteSpeed>
+CacheLookup on
+</IfModule>
+
 RewriteEngine On
 RewriteBase /japanese/
 
