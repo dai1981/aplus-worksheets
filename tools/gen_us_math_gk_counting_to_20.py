@@ -48,7 +48,8 @@ def picture(n, kind, how, rnd):
     if how == "row":
         assert n <= 12
         svg = row_svg(n, kind, per_row=max(n, 1), gap5=False)
-        e = "Touch each one and count: %s. The last number you say tells how many. There are <b>%d</b> %s." % (lst(1, n), n, k)
+        e = "Touch each one and count: %s. The last number you say tells how many. There %s <b>%d</b> %s." % (
+            lst(1, n), "is" if n == 1 else "are", n, k)
     elif how == "row5":
         assert 6 <= n <= 10
         svg = row_svg(n, kind)

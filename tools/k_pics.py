@@ -280,3 +280,38 @@ def rods_svg(t, o=0, u=9):
                  % (x + (k // 5) * (u + 6), m + F - u - 2 - (k % 5) * (u + 6), u + 2, u + 2, CUBE, GREEN))
     right = x + ((o - 1) // 5 + 1) * (u + 6) if o else x - gap
     return svg_wrap(right + m, F + 2 * m, "".join(s), "ten rods and cubes")
+
+
+def plate_svg(n, kind, per_row=5):
+    """A plate with n objects on it (n can be 0: an empty plate)."""
+    rows = max(1, (n + per_row - 1) // per_row)
+    cols = per_row if n >= per_row else max(n, 3)
+    w = cols * CELL + 40
+    h = rows * CELL + 34
+    W, H = w + 2 * M, h + 2 * M
+    s = ["<ellipse cx='%.1f' cy='%.1f' rx='%.1f' ry='%.1f' fill='#f7f7f2' stroke='#8a8a80' stroke-width='2'/>"
+         % (W / 2, H / 2, w / 2, h / 2),
+         "<ellipse cx='%.1f' cy='%.1f' rx='%.1f' ry='%.1f' fill='none' stroke='#c9c9bf' stroke-width='1.4'/>"
+         % (W / 2, H / 2, w / 2 - 9, h / 2 - 8)]
+    x0 = W / 2 - min(n, per_row) * CELL / 2
+    y0 = H / 2 - rows * CELL / 2
+    for i in range(n):
+        s.append(obj(kind, x0 + CELL / 2 + (i % per_row) * CELL, y0 + CELL / 2 + (i // per_row) * CELL))
+    return svg_wrap(W, H, "".join(s), "a plate with %s" % ("nothing on it" if n == 0 else name(kind, n)))
+
+
+DICE = {1: [(1, 1)], 2: [(0, 0), (2, 2)], 3: [(0, 0), (1, 1), (2, 2)], 4: [(0, 0), (2, 0), (0, 2), (2, 2)],
+        5: [(0, 0), (2, 0), (1, 1), (0, 2), (2, 2)], 6: [(0, 0), (2, 0), (0, 1), (2, 1), (0, 2), (2, 2)]}
+
+
+def dice_svg(values):
+    """One or more dot cubes (number cubes) side by side."""
+    size, gap = 74, 14
+    s = []
+    for k, v in enumerate(values):
+        x0 = M + k * (size + gap)
+        s.append("<rect x='%d' y='%d' width='%d' height='%d' rx='12' fill='#ffffff' stroke='%s' stroke-width='2.4'/>"
+                 % (x0, M, size, size, INK))
+        for cx, cy in DICE[v]:
+            s.append("<circle cx='%.1f' cy='%.1f' r='7' fill='%s'/>" % (x0 + 16 + cx * 21, M + 16 + cy * 21, INK))
+    return svg_wrap(2 * M + len(values) * size + (len(values) - 1) * gap, size + 2 * M, "".join(s), "dot cube")

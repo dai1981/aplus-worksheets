@@ -837,7 +837,7 @@ US / Math / Kindergarten（Common Core）— grade `kindergarten`（name「Kinde
 20 まで（数えるのは 100 まで）。文はとても短く、5〜6歳が読める英語で。ほぼ全問に絵。standard_code は「K.CC.B.5」形式
 1. counting-to-20 ✓
 2. counting-to-100 ✓
-3. writing-numbers-0-to-20
+3. writing-numbers-0-to-20 ✓
 4. comparing-numbers
 5. addition-within-10
 6. subtraction-within-10
