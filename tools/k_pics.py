@@ -237,3 +237,46 @@ def cards_svg(items, w=50, h=56):
                  % (x, M, w, h, FILL if q else "#ffffff", GREEN))
         s.append(text(x + w / 2, M + h / 2 + 9, t, 26, col=RED if q else INK))
     return svg_wrap(W, h + 2 * M, "".join(s), "number cards")
+
+
+CW, CH = 50, 38
+
+
+def chart_svg(tl, nrows, ncols, target=None, hide=()):
+    """A piece of the hundred chart. tl = top-left number. target (r, c) shows a red ?, hide = blank cells."""
+    assert (tl - 1) % 10 + ncols <= 10, "piece must stay inside one row of the chart"
+    assert tl + 10 * (nrows - 1) + ncols - 1 <= 100
+    m = 4
+    W, H = 2 * m + ncols * CW, 2 * m + nrows * CH
+    s = []
+    for r in range(nrows):
+        for c in range(ncols):
+            x, y = m + c * CW, m + r * CH
+            isT = (r, c) == target
+            s.append("<rect x='%d' y='%d' width='%d' height='%d' fill='%s' stroke='%s' stroke-width='1.6'/>"
+                     % (x, y, CW, CH, FILL if isT else "#ffffff", GREEN))
+            if isT:
+                s.append(text(x + CW / 2, y + 26, "?", 20, col=RED))
+            elif (r, c) not in hide:
+                s.append(text(x + CW / 2, y + 26, str(tl + 10 * r + c), 18))
+    return svg_wrap(W, H, "".join(s), "piece of a hundred chart")
+
+
+def rods_svg(t, o=0, u=9):
+    """t ten rods (10 cubes each, standing up) and o single cubes."""
+    m, gap = 6, 8
+    F = 10 * u
+    s = []
+    x = m
+    for k in range(t):
+        s.append("<rect x='%d' y='%d' width='%d' height='%d' fill='%s' stroke='%s' stroke-width='1.6'/>"
+                 % (x, m, u + 2, F, FILL, GREEN))
+        for i in range(1, 10):
+            s.append("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='%s' stroke-width='0.8'/>" % (x, m + i * u, x + u + 2, m + i * u, GREEN))
+        x += u + 2 + gap
+    x += 10 if o else 0
+    for k in range(o):
+        s.append("<rect x='%d' y='%d' width='%d' height='%d' fill='%s' stroke='%s' stroke-width='1.6'/>"
+                 % (x + (k // 5) * (u + 6), m + F - u - 2 - (k % 5) * (u + 6), u + 2, u + 2, CUBE, GREEN))
+    right = x + ((o - 1) // 5 + 1) * (u + 6) if o else x - gap
+    return svg_wrap(right + m, F + 2 * m, "".join(s), "ten rods and cubes")
