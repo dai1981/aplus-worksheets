@@ -841,8 +841,11 @@ US / Math / Kindergarten（Common Core）— 次に作る
 
 - 単語ページは `site/japanese/_dict/word.php` が DB の **jd_word**（1語1行、13言語の訳を JSON）から作る。ルーティングは `site/japanese/.htaccess`
 - 言語: en vi zh tw ko id es pt fr de ru th ar（13言語。単語ページは PHP なのでファイルは増えない）
-- データ: `python3 tools/build_jdict.py`（元データは build/jdict の make_jdict.py・data・tr）→ `jdict/words/*.json`（200語ずつ）、`site/japanese/_dict/inc/ju.json`（文言）、
-  `site/japanese/{言語}/word/index.html・row-*.html・index.json`（一覧は静的のまま）、`site/japanese/sitemap-{言語}.xml`
+- 正本は `jdict/words/*.json`（公開済みの全語・13言語）。外のフォルダには頼らない（作業環境が消えても作り直せる）
+- 語を増やす: `jdict/todo/BATCH.json`（40語の一覧）→ キュー `jdict/queue.txt`（`tools/jdict_next.sh` で1つ取り出す）→
+  書き手が `jdict/BRIEF.md` のとおり `jdict/batches/BATCH/`（base.json＋8言語）を作る → `python3 tools/jdict_check.py BATCH` でエラー0 →
+  `python3 tools/build_jdict.py`（そろったバッチを取り込み、words・一覧ページ・index.json・サイトマップ・lastmod を作る。tw は zh から OpenCC）→ コミット・push
+- `build_jdict.py` は新しい語がないとき公開済みのファイルを1文字も変えない（変わったら不具合）
 - 反映: push で Actions が `site/japanese/` の変わったファイルだけを `/aplus/japanese/` へ put（mirror は使わない。単語の .html が多いため）、`tools/sync_jd.py` → `worksheets/api/jd_sync.php` が jd_word へ書く
 - 公開済みの語の URL（slug）は build_jdict.py が jdict/words から読んで固定する。作成途中のバッチがあっても、いつでも公開してよい
 - jd_word は追加・上書きだけ（INSERT … ON DUPLICATE KEY UPDATE）。DELETE・DROP・ALTER は書かない

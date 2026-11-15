@@ -1,119 +1,158 @@
 # -*- coding: utf-8 -*-
 """
-日本語辞書（/japanese/{L}/word/）を PHP + DB 方式にするためのデータを作る。
-  python3 tools/build_jdict.py [JDICT_DIR]
-入力: JDICT_DIR（既定 /home/claude/build/jdict）の make_jdict.py と data/ tr/（語のデータと各言語の訳）
+日本語辞書（/japanese/{L}/word/）のデータを作る。元データはこのリポジトリの中だけ（外のフォルダに頼らない）。
+
+  python3 tools/build_jdict.py            公開済みの語 + 完成した新しいバッチ をまとめて書き出す
+  python3 tools/build_jdict.py --check    書き出さずに、完成したバッチの数と語数だけ表示
+
+入力:
+  jdict/words/NNN.json                   公開済みの全語（13言語）。これが正本
+  jdict/batches/BATCH/base.json          新しいバッチ（ja・en・vi・zh・ko）。作り方は jdict/BRIEF.md
+  jdict/batches/BATCH/{id,es,pt,fr,de,ru,th,ar}.json   同じバッチの8言語の訳
+    → 9ファイルがそろったバッチだけ取り込む。tw は zh から OpenCC（s2twp）で作る
 出力:
-  jdict/words/NNN.json            1ファイル 200語。DB の jd_word に入る（1語1行）
-  site/japanese/_dict/inc/ju.json 画面の文言（12言語）
-  site/japanese/{L}/word/index.html, row-*.html, index.json   辞書トップ・五十音の一覧・検索候補（静的のまま）
-  site/japanese/sitemap-{L}.xml   単語ページのサイトマップ（言語ごと。/aplus/sitemap.php のインデックスに載せる）
-  jdict/lastmod.json              語ごとの中身のハッシュと、最後に中身が変わった日（サイトマップの lastmod）
-単語ページの HTML はここでは作らない（サーバーの PHP が DB から作る）。
+  jdict/words/NNN.json（200語ずつ・五十音順）、jdict/lastmod.json
+  site/japanese/{L}/word/index.json・index.html・row-*.html（語の一覧。既存のページの中身だけ差し替える）
+  site/japanese/sitemap-{L}.xml、site/japanese/_dict/inc/ju.json の検索データの版（meta.v）
+
+決まり:
+  ・公開済みの語の URL（slug）と並び順は変えない。新しい語は五十音の位置に差し込む
+  ・同じ見出し語＋読みがすでにあれば新しい方は取り込まない
+  ・lastmod はその語自身の中身が変わったときだけ今日になる（近くの語・前後・クイズは比べない）
 """
-import datetime, hashlib, json, os, random, sys
+import bisect, datetime, glob, hashlib, html, json, os, random, re, sys
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-JD = sys.argv[1] if len(sys.argv) > 1 else "/home/claude/build/jdict"
+WDIR = os.path.join(REPO, "jdict", "words")
+BDIR = os.path.join(REPO, "jdict", "batches")
+SITE = os.path.join(REPO, "site", "japanese")
 LANGS = ['en', 'vi', 'zh', 'tw', 'ko', 'id', 'es', 'pt', 'fr', 'de', 'ru', 'th', 'ar']
+TR_LANGS = ['id', 'es', 'pt', 'fr', 'de', 'ru', 'th', 'ar']
+BASE_LANGS = ['en', 'vi', 'zh', 'ko']
 PER_FILE = 200
-
-# make_jdict.py のデータ読み込み・ファイル名づけ・一覧ページを、そのまま使う（ページ生成の最後の部分は実行しない）
-src = open(os.path.join(JD, "make_jdict.py"), encoding="utf-8").read()
-src = src.split("\nonly = sys.argv")[0]
-g = {"__file__": os.path.join(JD, "make_jdict.py"), "__name__": "jdict"}
-exec(compile(src, "make_jdict.py", "exec"), g)
-g["LANGS"][:] = LANGS
-g["ROOT"] = os.path.join(REPO, "site")                  # 一覧ページの出力先
-WORDS, slug, JU, BATCH, WIDX = g["WORDS"], g["slug"], g["JU"], g["BATCH"], g["WIDX"]
+ROWS = [('a', 'あいうえおぁぃぅぇぉゔっ'), ('ka', 'かきくけこがぎぐげごゕゖ'), ('sa', 'さしすせそざじずぜぞ'),
+        ('ta', 'たちつてとだぢづでど'), ('na', 'なにぬねの'), ('ha', 'はひふへほばびぶべぼぱぴぷぺぽ'),
+        ('ma', 'まみむめも'), ('ya', 'やゆよゃゅょ'), ('ra', 'らりるれろ'), ('wa', 'わをんゎゐゑ')]
+CAT_KEYS = ['anime', 'works', 'slang', 'place', 'name', 'culture', 'onoma', 'phrase', 'proverb', 'business',
+            'everyday', 'grammar', 'brand']
 
 
-def pin_slugs():
-    """公開済みの語の URL（slug）は変えない。新しい語だけ、空いている名前を make_jdict と同じ規則で付ける。
-    これで、作成途中で公開しても、あとから足した語が既存の URL を押しのけることはない。"""
-    import glob, re
-    pinned = {}
-    for f in glob.glob(os.path.join(REPO, "jdict", "words", "*.json")):
-        for r in json.load(open(f, encoding="utf-8")):
-            pinned[(r['w'], r['k'])] = r['s']
-    S = g["SLUGS"]
-    old = dict(S)
-    used = {'index'} | {'row-' + r[0] for r in g["ROWS"]}
-    new = {}
-    for k, v in old.items():
-        if k in pinned:
-            new[k] = pinned[k]; used.add(pinned[k])
-    sl = g["sl"]
-    for w in sorted(WORDS, key=lambda x: (g["batch_order"](x['_b']), WIDX[id(x)])):
-        k = (w['w'], w['kana'])
-        if k in new:
-            continue
-        s0 = sl(w['romaji']) or 'w'; s = s0
-        if s in used:
-            gg = re.split(r'[,;/]', re.sub(r'\(.*?\)', '', w['senses'][0]['en']))[0]
-            gg = re.sub(r'^(to|a|an|the) ', '', gg.strip().lower())
-            gg = sl(' '.join(gg.split()[:2]))
-            if not gg or gg == s0 or gg.startswith(s0 + '-'):
-                gg = {'name': 'name', 'place': 'place', 'works': 'anime', 'anime': 'anime', 'slang': 'slang', 'culture': 'japan',
-                      'grammar': 'grammar', 'brand': 'brand'}.get(w.get('cat'), 'w')
-            s = f"{s0}-{gg}"
-        n = 2
-        while s in used:
-            s = f'{s0}-{n}'; n += 1
-        used.add(s); new[k] = s
-    S.clear(); S.update(new)
-    print("slugs: pinned", sum(1 for k in new if k in pinned), "new", sum(1 for k in new if k not in pinned))
+def hira(s):
+    return ''.join(chr(ord(c) - 0x60) if 'ァ' <= c <= 'ヶ' else c for c in s)
 
 
-pin_slugs()
-
-Q_EX = {'en': 'What does this sentence mean?', 'vi': 'Câu này có nghĩa là gì?', 'zh': '这句话是什么意思？', 'tw': '這句話是什麼意思？',
-        'ko': '이 문장은 무슨 뜻일까요?', 'id': 'Apa arti kalimat ini?', 'es': '¿Qué significa esta oración?', 'pt': 'O que significa esta frase?',
-        'fr': 'Que signifie cette phrase ?', 'de': 'Was bedeutet dieser Satz?', 'ru': 'Что означает это предложение?', 'th': 'ประโยคนี้หมายความว่าอะไร', 'ar': 'ما معنى هذه الجملة؟'}
-PREV = {'en': 'Previous', 'vi': 'Từ trước', 'zh': '上一个', 'tw': '上一個', 'ko': '이전 단어', 'id': 'Sebelumnya', 'es': 'Anterior', 'pt': 'Anterior',
-        'fr': 'Précédent', 'de': 'Vorheriges', 'ru': 'Предыдущее', 'th': 'ก่อนหน้า', 'ar': 'السابق'}
-NEXT = {'en': 'Next', 'vi': 'Từ tiếp theo', 'zh': '下一个', 'tw': '下一個', 'ko': '다음 단어', 'id': 'Berikutnya', 'es': 'Siguiente', 'pt': 'Próxima',
-        'fr': 'Suivant', 'de': 'Nächstes', 'ru': 'Следующее', 'th': 'ถัดไป', 'ar': 'التالي'}
-
-# Discord コミュニティへの案内（単語ページ）
-DISCORD = "https://discord.gg/6sNvy7xpDw"
-DC = {
- 'en': ['Questions about {w}?', 'Ask in our free Discord community. Learners from around the world help each other there.', 'Ask on Discord'],
- 'vi': ['Bạn có câu hỏi về {w}?', 'Hãy hỏi trong cộng đồng Discord miễn phí. Người học khắp thế giới cùng giúp nhau.', 'Hỏi trên Discord'],
- 'zh': ['关于「{w}」有疑问吗？', '来我们的免费 Discord 社区提问吧，世界各地的学习者互相帮助。', '在 Discord 提问'],
- 'tw': ['關於「{w}」有疑問嗎？', '來我們的免費 Discord 社群提問吧，世界各地的學習者互相幫忙。', '在 Discord 提問'],
- 'ko': ['「{w}」에 대해 궁금한 점이 있나요?', '무료 Discord 커뮤니티에서 물어보세요. 전 세계 학습자들이 서로 도와줘요.', 'Discord에서 질문하기'],
- 'id': ['Ada pertanyaan tentang {w}?', 'Tanyakan di komunitas Discord gratis kami. Pelajar dari seluruh dunia saling membantu.', 'Tanya di Discord'],
- 'es': ['¿Tienes dudas sobre {w}?', 'Pregunta en nuestra comunidad gratuita de Discord. Estudiantes de todo el mundo se ayudan.', 'Preguntar en Discord'],
- 'pt': ['Tem dúvidas sobre {w}?', 'Pergunte na nossa comunidade gratuita no Discord. Estudantes do mundo todo se ajudam.', 'Perguntar no Discord'],
- 'fr': ['Une question sur {w} ?', 'Posez-la dans notre communauté Discord gratuite. Des apprenants du monde entier s’entraident.', 'Demander sur Discord'],
- 'de': ['Fragen zu {w}?', 'Frag in unserer kostenlosen Discord-Community. Lernende aus aller Welt helfen sich gegenseitig.', 'Auf Discord fragen'],
- 'ru': ['Есть вопросы о {w}?', 'Спросите в нашем бесплатном сообществе Discord. Там помогают друг другу ученики со всего мира.', 'Спросить в Discord'],
- 'th': ['มีคำถามเกี่ยวกับ {w} ไหม', 'ถามได้ในชุมชน Discord ฟรีของเรา ผู้เรียนจากทั่วโลกช่วยเหลือกัน', 'ถามใน Discord'],
- 'ar': ['هل لديك سؤال عن {w}؟', 'اسأل في مجتمعنا المجاني على Discord، حيث يساعد المتعلمون من كل العالم بعضهم بعضًا.', 'اسأل على Discord'],
-}
+def row_of(k):
+    c = hira(k)[:1]
+    for r, cs in ROWS:
+        if c in cs:
+            return r
+    return 'a'
 
 
-def quiz_data(w, L):
-    """The same two questions as the old static pages (same random choices), plus a new third question
-    about the meaning of the first example sentence. Choices are stored as word slugs (or kana for the
-    reading question), so the page shows each word's meaning in the reader's language."""
-    rnd = random.Random(w['w'] + w['kana'])
-    others = [x for x in BATCH[w['_b']] if x is not w]
-    if len(others) < 6:
-        others = [x for x in WORDS[max(0, WIDX[id(w)] - 30):WIDX[id(w)] + 30] if x is not w]
+def sl(r):
+    return re.sub(r'[^a-z0-9]+', '-', r.lower()).strip('-')
+
+
+def own_hash(r):
+    own = {k: v for k, v in r.items() if k not in ('near', 'prev', 'next', 'quiz')}
+    return hashlib.md5(json.dumps(own, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
+
+
+# ---------------------------------------------------------------- 読み込み
+def load_words():
+    out = []
+    for f in sorted(glob.glob(os.path.join(WDIR, "*.json"))):
+        out.extend(json.load(open(f, encoding="utf-8")))
+    return out
+
+
+def complete_batches():
+    """9ファイルがそろったバッチ名（名前順）"""
+    out = []
+    for d in sorted(glob.glob(os.path.join(BDIR, "*"))):
+        if os.path.isfile(os.path.join(d, "base.json")) and all(os.path.isfile(os.path.join(d, L + ".json")) for L in TR_LANGS):
+            out.append(os.path.basename(d))
+    return out
+
+
+def load_batch(name, to_tw):
+    d = os.path.join(BDIR, name)
+    base = json.load(open(os.path.join(d, "base.json"), encoding="utf-8"))
+    tr = {L: json.load(open(os.path.join(d, L + ".json"), encoding="utf-8")) for L in TR_LANGS}
+    recs = []
+    for b in base:
+        key = b['w'] + '|' + b['k']
+        t = {L: tr[L].get(key) for L in TR_LANGS}
+        miss = [L for L in TR_LANGS if not t[L]]
+        if miss:
+            raise SystemExit("%s: %s has no translation in %s" % (name, key, ",".join(miss)))
+        def merge(items, part, with_r=False):
+            res = []
+            for i, x in enumerate(items):
+                y = {L: x[L] for L in BASE_LANGS}
+                y['tw'] = to_tw(x['zh'])
+                for L in TR_LANGS:
+                    y[L] = t[L][part][i]
+                res.append(y)
+            return res
+        sen = merge(b['sen'], 'sen')
+        ex = merge(b['ex'], 'ex')
+        for i, x in enumerate(b['ex']):
+            ex[i]['ja'] = x['ja']; ex[i]['r'] = x['r']
+        ph = merge(b['ph'], 'ph')
+        for i, x in enumerate(b['ph']):
+            ph[i]['ja'] = x['ja']
+        note = {L: b['note'][L] for L in BASE_LANGS}
+        note['tw'] = to_tw(b['note']['zh'])
+        for L in TR_LANGS:
+            note[L] = t[L]['note']
+        recs.append({
+            "s": None, "w": b['w'], "k": b['k'], "r": b['r'], "jlpt": b.get('jlpt', ''), "cat": b.get('cat', ''),
+            "pos": b['pos'], "forms": b.get('forms', ''), "row": row_of(b['k']),
+            "sen": [{L: x[L] for L in LANGS} for x in sen],
+            "ex": [dict({L: x[L] for L in LANGS}, ja=x['ja'], r=x['r']) for x in ex],
+            "ph": [dict({L: x[L] for L in LANGS}, ja=x['ja']) for x in ph],
+            "note": {L: note[L] for L in LANGS},
+            "kj": [list(k) for k in b.get('kj', [])],
+            "syn": [[x, None] for x in b.get('syn', [])], "ant": [[x, None] for x in b.get('ant', [])],
+            "near": [], "prev": None, "next": None, "quiz": None, "_new": True,
+        })
+    return recs
+
+
+# ---------------------------------------------------------------- 新しい語の slug・クイズ
+def new_slug(r, used):
+    s0 = sl(r['r']) or 'w'
+    s = s0
+    if s in used:
+        gg = re.split(r'[,;/]', re.sub(r'\(.*?\)', '', r['sen'][0]['en']))[0]
+        gg = re.sub(r'^(to|a|an|the) ', '', gg.strip().lower())
+        gg = sl(' '.join(gg.split()[:2]))
+        if not gg or gg == s0 or gg.startswith(s0 + '-'):
+            gg = {'name': 'name', 'place': 'place', 'works': 'anime', 'anime': 'anime', 'slang': 'slang',
+                  'culture': 'japan', 'grammar': 'grammar', 'brand': 'brand'}.get(r.get('cat'), 'w')
+        s = "%s-%s" % (s0, gg)
+    n = 2
+    while s in used:
+        s = "%s-%d" % (s0, n); n += 1
+    used.add(s)
+    return s
+
+
+def quiz_for(w, others, L):
+    """意味（m）・読み（r）・例文の意味（x）の3問。選択肢は近くの語から（固定の乱数で毎回同じ）"""
+    rnd = random.Random(w['w'] + w['k'])
     out = {}
-    pool = [x for x in others if x['senses'][0][L] != w['senses'][0][L]]
+    pool = [x for x in others if x['sen'][0][L] != w['sen'][0][L]]
     opts = [w] + rnd.sample(pool, 3)
     order = list(range(4)); rnd.shuffle(order)
-    out['m'] = [[slug(opts[order[i]]) for i in range(4)], 'ABCD'[order.index(0)]]
-    if w['w'] != w['kana']:
-        pool = sorted({x['kana'] for x in others if x['kana'] != w['kana']})
-        opts = [w['kana']] + rnd.sample(pool, 3)
+    out['m'] = [[opts[order[i]]['s'] for i in range(4)], 'ABCD'[order.index(0)]]
+    if w['w'] != w['k']:
+        kp = sorted({x['k'] for x in others if x['k'] != w['k']})
+        opts = [w['k']] + rnd.sample(kp, 3)
         order = list(range(4)); rnd.shuffle(order)
         out['r'] = [[opts[order[i]] for i in range(4)], 'ABCD'[order.index(0)]]
-    # 新しい3問目：例文の意味（他の語の1つ目の例文の訳から3つ）
-    r3 = random.Random('ex|' + w['w'] + w['kana'])
+    r3 = random.Random('ex|' + w['w'] + w['k'])
     seen, pool = {w['ex'][0][L]}, []
     for x in others:
         if x['ex'] and x['ex'][0][L] not in seen:
@@ -121,89 +160,146 @@ def quiz_data(w, L):
     if len(pool) >= 3:
         opts = [w] + r3.sample(pool, 3)
         order = list(range(4)); r3.shuffle(order)
-        out['x'] = [[slug(opts[order[i]]) for i in range(4)], 'ABCD'[order.index(0)]]
+        out['x'] = [[opts[order[i]]['s'] for i in range(4)], 'ABCD'[order.index(0)]]
     return out
 
 
-def quiz_all(w):
-    """Quiz for every language. Stored once under '*' plus only the languages whose choices differ."""
-    qs = {L: quiz_data(w, L) for L in LANGS}
-    out = {'*': qs['en']}
+# ---------------------------------------------------------------- 一覧ページ（既存ページの中身だけ差し替え）
+def grp(r):
+    return r['jlpt'] or r['cat']
+
+
+def mean(r, L):
+    return '; '.join(x[L] for x in r['sen'][:2])
+
+
+def esc(t):
+    return html.escape(t)
+
+
+def li(L, r):
+    k = '<small lang="ja">%s</small>' % esc(r['k']) if r['k'] != r['w'] else ''
+    return ('<li data-lv="%s"><a href="/japanese/%s/word/%s.html"><b lang="ja">%s%s</b><span>%s</span></a></li>'
+            % (grp(r), L, r['s'], esc(r['w']), k, esc(mean(r, L))))
+
+
+def write_lists(words, ver, cat_label):
     for L in LANGS:
-        if qs[L] != qs['en']:
-            out[L] = qs[L]
-    return out
+        d = os.path.join(SITE, L, "word")
+        idx = [[r['w'], r['s'], mean(r, L), r['k'], r['r']] for r in words]
+        with open(os.path.join(d, "index.json"), "w", encoding="utf-8") as f:
+            json.dump(idx, f, ensure_ascii=False, separators=(",", ":"))
+        by_row = {}
+        for r in words:
+            by_row.setdefault(r['row'], []).append(r)
+        for rw, _ in ROWS:
+            p = os.path.join(d, "row-%s.html" % rw)
+            if not os.path.exists(p):
+                continue
+            s = open(p, encoding="utf-8").read()
+            items = by_row.get(rw, [])
+            s = re.sub(r'(<div class="info-card"><ul class="wl">).*?(</ul>)', lambda m: m.group(1) + ''.join(li(L, r) for r in items) + m.group(2), s, count=1, flags=re.S)
+            s = re.sub(r'(<div class="dict-hero"><h1>.*?</h1><p>)(\d+)', lambda m: m.group(1) + str(len(items)), s, count=1, flags=re.S)
+            s = re.sub(r'data-v="\d+[a-z]?"', 'data-v="%s"' % ver, s)
+            open(p, "w", encoding="utf-8").write(s)
+        p = os.path.join(d, "index.html")
+        s = open(p, encoding="utf-8").read()
+        for rw, _ in ROWS:
+            s = re.sub(r'(<a href="/japanese/%s/word/row-%s\.html"><b lang="ja">.</b><span>)(\d+)' % (L, rw),
+                       lambda m: m.group(1) + str(len(by_row.get(rw, []))), s)
+        cnt = {}
+        for r in words:
+            cnt[grp(r)] = cnt.get(grp(r), 0) + 1
+        def jc(m):
+            lab = html.unescape(m.group(1))
+            g = lab[5:] if lab.startswith('JLPT N') else cat_label.get(L, {}).get(lab)
+            return m.group(0) if g is None else '<span class="jcount">%s: %d</span>' % (m.group(1), cnt.get(g, 0))
+        s = re.sub(r'<span class="jcount">(.*?): \d+</span>', jc, s)
+        s = re.sub(r'data-v="\d+[a-z]?"', 'data-v="%s"' % ver, s)
+        open(p, "w", encoding="utf-8").write(s)
 
 
-def record(w, i):
-    s = slug(w)
-    def pick(d, keys):
-        return {k: d[k] for k in keys if k in d}
-    rel = lambda lst: [[x, slug(g["WMAP"][x]) if x in g["WMAP"] else None] for x in (lst or [])]
-    near = [WORDS[j] for j in range(max(0, i - 3), min(len(WORDS), i + 4)) if WORDS[j] is not w][:6]
-    return {
-        "s": s, "w": w['w'], "k": w['kana'], "r": w['romaji'], "jlpt": w['jlpt'], "cat": w.get('cat') or '', "pos": w['pos'],
-        "forms": w.get('forms') or '', "row": g["row_of"](w['kana']),
-        "sen": [pick(x, ['en'] + LANGS) for x in w['senses']],
-        "ex": [dict(pick(x, LANGS), ja=x['ja'], r=x['romaji']) for x in w['ex']],
-        "ph": [dict(pick(x, LANGS), ja=x['ja']) for x in w['ph']],
-        "note": pick(w['note'], LANGS),
-        "kj": [[k['k'], k.get('on') or '', k.get('kun') or ''] for k in w.get('kanji', [])],
-        "syn": rel(w.get('syn')), "ant": rel(w.get('ant')),
-        "near": [slug(x) for x in near],
-        "prev": slug(WORDS[i - 1]) if i > 0 else None, "next": slug(WORDS[i + 1]) if i + 1 < len(WORDS) else None,
-        "quiz": quiz_all(w),
-    }
-
-
+# ---------------------------------------------------------------- 本体
 def main():
-    out_dir = os.path.join(REPO, "jdict", "words")
-    os.makedirs(out_dir, exist_ok=True)
-    recs = [record(w, i) for i, w in enumerate(WORDS)]
-    assert len({r['s'] for r in recs}) == len(recs)
-    for k in range(0, len(recs), PER_FILE):
-        path = os.path.join(out_dir, "%03d.json" % (k // PER_FILE + 1))
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(recs[k:k + PER_FILE], f, ensure_ascii=False, separators=(",", ":"))
-            f.write("\n")
-    print("words:", len(recs), "files:", (len(recs) + PER_FILE - 1) // PER_FILE)
+    check = '--check' in sys.argv
+    words = load_words()
+    have = {(r['w'], r['k']) for r in words}
+    names = complete_batches()
+    new = []
+    if names:
+        import opencc
+        cc = opencc.OpenCC('s2twp')
+        for n in names:
+            for r in load_batch(n, cc.convert):
+                if (r['w'], r['k']) in have:
+                    continue
+                have.add((r['w'], r['k'])); new.append(r)
+    print("published:", len(words), " complete batches:", len(names), " new words:", len(new))
+    if check:
+        return
 
-    # lastmod: その語自身の中身が変わったときだけ今日にする（近くの語・前後・クイズは比べない）
-    # __v=2 より前の lastmod.json は全体のハッシュだったので、一度だけ日付をそのまま引き継ぐ
+    # 新しい語を五十音の位置に差し込む（公開済みの語どうしの並びは変えない）
+    keys = [hira(r['k']) for r in words]
+    for r in sorted(new, key=lambda x: (hira(x['k']), x['w'])):
+        i = bisect.bisect_right(keys, hira(r['k']))
+        words.insert(i, r); keys.insert(i, hira(r['k']))
+    used = {r['s'] for r in words if r['s']} | {'index'} | {'row-' + x for x, _ in ROWS}
+    for r in words:
+        if not r['s']:
+            r['s'] = new_slug(r, used)
+    wmap = {}
+    for r in words:
+        wmap.setdefault(r['w'], r['s'])
+    for i, r in enumerate(words):
+        r['near'] = [words[j]['s'] for j in range(max(0, i - 3), min(len(words), i + 4)) if j != i][:6]
+        r['prev'] = words[i - 1]['s'] if i > 0 else None
+        r['next'] = words[i + 1]['s'] if i + 1 < len(words) else None
+        for k in ('syn', 'ant'):
+            r[k] = [[x[0], x[1] or wmap.get(x[0])] for x in r[k]]
+    for i, r in enumerate(words):
+        if r.pop('_new', False):
+            others = [x for x in words[max(0, i - 30):i + 31] if x is not r]
+            qs = {L: quiz_for(r, others, L) for L in LANGS}
+            r['quiz'] = {'*': qs['en']}
+            for L in LANGS:
+                if qs[L] != qs['en']:
+                    r['quiz'][L] = qs[L]
+    assert len({r['s'] for r in words}) == len(words)
+
+    for f in glob.glob(os.path.join(WDIR, "*.json")):
+        os.remove(f)
+    for k in range(0, len(words), PER_FILE):
+        with open(os.path.join(WDIR, "%03d.json" % (k // PER_FILE + 1)), "w", encoding="utf-8") as f:
+            json.dump(words[k:k + PER_FILE], f, ensure_ascii=False, separators=(",", ":"))
+            f.write("\n")
+
     lm_path = os.path.join(REPO, "jdict", "lastmod.json")
-    old = json.load(open(lm_path)) if os.path.exists(lm_path) else {}
-    legacy = old.get('__v') != 2
+    old = json.load(open(lm_path))
     today = datetime.date.today().isoformat()
     lm = {'__v': 2}
-    for r in recs:
-        own = {k: v for k, v in r.items() if k not in ('near', 'prev', 'next', 'quiz')}
-        h = hashlib.md5(json.dumps(own, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
+    for r in words:
+        h = own_hash(r)
         o = old.get(r['s'])
-        keep = o and (legacy or o[0] == h)
-        lm[r['s']] = [h, o[1] if keep else today]
+        lm[r['s']] = [h, o[1] if o and o[0] == h else today]
     json.dump(lm, open(lm_path, "w"), separators=(",", ":"), sort_keys=True)
     for L in LANGS:
         rows = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-        for r in sorted(recs, key=lambda x: x['s']):
-            rows.append("  <url><loc>https://www.apu2.com/japanese/%s/word/%s.html</loc><lastmod>%s</lastmod></url>" % (L, r['s'], lm[r['s']][1]))
+        for s in sorted(r['s'] for r in words):
+            rows.append("  <url><loc>https://www.apu2.com/japanese/%s/word/%s.html</loc><lastmod>%s</lastmod></url>" % (L, s, lm[s][1]))
         rows.append("</urlset>")
-        open(os.path.join(REPO, "site", "japanese", "sitemap-%s.xml" % L), "w").write("\n".join(rows) + "\n")
-    print("sitemaps:", len(LANGS))
+        open(os.path.join(SITE, "sitemap-%s.xml" % L), "w").write("\n".join(rows) + "\n")
 
-    ui = {}
-    for L in LANGS:
-        t = dict(JU[L]); t['q_ex'] = Q_EX[L]; t['prev'] = PREV[L]; t['next'] = NEXT[L]
-        t['dc_h'], t['dc_p'], t['dc_b'] = DC[L]
-        ui[L] = t
-    meta = {"langs": LANGS, "hl": {k: g["HL"][k] for k in LANGS}, "og": {k: g["OG"][k] for k in LANGS}, "name": {k: g["NAME"][k] for k in LANGS},
-            "hub": sorted(g["HUB"]), "jlearn": sorted(g["JLEARN"]), "priv": sorted(g["PRIV"]), "cat_en": JU['en']['cat'], "v": g["V"], "discord": DISCORD}
-    inc = os.path.join(REPO, "site", "japanese", "_dict", "inc")
-    os.makedirs(inc, exist_ok=True)
-    json.dump({"ui": ui, "meta": meta}, open(os.path.join(inc, "ju.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
-
-    for L in LANGS:                                     # 辞書トップ・五十音の一覧・検索候補
-        g["index_pages"](L)
-    print("index pages:", len(LANGS), "languages")
+    ju_path = os.path.join(SITE, "_dict", "inc", "ju.json")
+    ju = json.load(open(ju_path, encoding="utf-8"))
+    ver = datetime.date.today().strftime("%Y%m%d") + "a"
+    if new:
+        ju['meta']['v'] = ver
+        json.dump(ju, open(ju_path, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    else:
+        ver = ju['meta']['v']
+    cat_label = {L: {html.unescape(v): k for k, v in ju['ui'][L]['cat'].items()} for L in LANGS}
+    write_lists(words, ver, cat_label)
+    print("words:", len(words), " files:", (len(words) + PER_FILE - 1) // PER_FILE, " new:", len(new))
 
 
 if __name__ == "__main__":
