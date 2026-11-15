@@ -132,6 +132,8 @@ if ($u['key_big']) $lr['teaches'] = $u['key_big'];
 $lr['audience'] = array('@type' => 'EducationalAudience', 'educationalRole' => array('student', 'teacher', 'parent'));
 if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 'us' || strpos($country['code'], 'ca') === 0)) {   // Canada: Grade 3 = age 8-9, like the US
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);
+} elseif ($grade['slug'] === 'kindergarten') {
+    $lr['typicalAgeRange'] = '5-6';
 } elseif (preg_match('/^year-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'uk') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 4) . '-' . ((int)$gm[1] + 5);   // England: Year 4 = age 8-9
 } elseif (preg_match('/^year-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'au') {

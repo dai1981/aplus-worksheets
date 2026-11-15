@@ -833,7 +833,23 @@ US / Math / Grade 8（Common Core）
 11. transformations 12. congruence-and-similarity 13. angle-relationships-parallel-lines
 14. volume-of-cylinders-cones-spheres 15. scatter-plots 16. two-way-tables 17. distance-on-coordinate-plane
 
-US / Math / Kindergarten（Common Core）— 次に作る
+US / Math / Kindergarten（Common Core）— grade `kindergarten`（name「Kindergarten」、sort 0、5〜6歳）。生成スクリプトは `gen_us_math_gk_*`、絵の部品は `tools/k_pics.py`。
+20 まで（数えるのは 100 まで）。文はとても短く、5〜6歳が読める英語で。ほぼ全問に絵。standard_code は「K.CC.B.5」形式
+1. counting-to-20 ✓
+2. counting-to-100
+3. writing-numbers-0-to-20
+4. comparing-numbers
+5. addition-within-10
+6. subtraction-within-10
+7. make-10
+8. decompose-numbers-to-10
+9. add-and-subtract-within-5
+10. teen-numbers-tens-and-ones
+11. compare-length-and-weight
+12. sort-and-count
+13. 2d-and-3d-shapes
+14. positions
+15. build-and-compose-shapes
 
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
