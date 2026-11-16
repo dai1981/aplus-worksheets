@@ -420,3 +420,24 @@ def box_svg(n, kind, per_row=5):
     s.append("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='#8a6233' stroke-width='2'/>" % (bx, M + 14, bx + 70, M + 14))
     s.append(text(bx + 35, M + bh / 2 + 16, "?", 26, col=RED))
     return svg_wrap(bx + 70 + M, bh + 2 * M, "".join(s), "%s and a closed box" % name(kind))
+
+
+def hop_line_svg(start, hops, lo=0, hi=10, sp=40):
+    """Number line lo..hi with a red dot at start and `hops` equal hops of 1 (right if hops > 0, left if < 0)."""
+    m = 22
+    W = 2 * m + (hi - lo) * sp
+    y = 58
+    X = lambda v: m + (v - lo) * sp
+    s = ["<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='%s' stroke-width='2.5'/>" % (4, y, W - 4, y, INK)]
+    for v in range(lo, hi + 1):
+        s.append("<line x1='%.1f' y1='%d' x2='%.1f' y2='%d' stroke='%s' stroke-width='2'/>" % (X(v), y - 7, X(v), y + 7, INK))
+        s.append(text(X(v), y + 28, str(v), 17))
+    d = 1 if hops > 0 else -1
+    for k in range(abs(hops)):
+        a, b = start + d * k, start + d * (k + 1)
+        xa, xb = X(a), X(b)
+        s.append("<path d='M%.1f %d Q%.1f %d %.1f %d' fill='none' stroke='#1f5fa8' stroke-width='2.5'/>"
+                 % (xa, y - 4, (xa + xb) / 2, y - 46, xb, y - 4))
+        s.append("<path d='M%.1f %d L%.1f %d L%.1f %d Z' fill='#1f5fa8'/>" % (xb, y - 3, xb - 8 * d, y - 12, xb - 2 * d, y - 13))
+    s.append("<circle cx='%.1f' cy='%d' r='7' fill='%s'/>" % (X(start), y, RED))
+    return svg_wrap(W, y + 38, "".join(s), "number line from %d to %d with hops" % (lo, hi))
