@@ -441,3 +441,31 @@ def hop_line_svg(start, hops, lo=0, hi=10, sp=40):
         s.append("<path d='M%.1f %d L%.1f %d L%.1f %d Z' fill='#1f5fa8'/>" % (xb, y - 3, xb - 8 * d, y - 12, xb - 2 * d, y - 13))
     s.append("<circle cx='%.1f' cy='%d' r='7' fill='%s'/>" % (X(start), y, RED))
     return svg_wrap(W, y + 38, "".join(s), "number line from %d to %d with hops" % (lo, hi))
+
+
+def bond_svg(whole, a, b):
+    """Number bond: whole on top, two parts below. Any of them can be '?'."""
+    W, H = 230, 150
+    s = ["<line x1='115' y1='42' x2='55' y2='112' stroke='%s' stroke-width='3'/>" % INK,
+         "<line x1='115' y1='42' x2='175' y2='112' stroke='%s' stroke-width='3'/>" % INK]
+    for (cx, cy), t in [((115, 38), whole), ((55, 112), a), ((175, 112), b)]:
+        t = str(t)
+        q = t == "?"
+        s.append("<circle cx='%d' cy='%d' r='30' fill='%s' stroke='%s' stroke-width='2.5'/>" % (cx, cy, FILL if q else "#ffffff", GREEN))
+        s.append(text(cx, cy + 10, t, 28, col=RED if q else INK))
+    return svg_wrap(W, H, "".join(s), "number bond")
+
+
+def mixed_svg(counts, seed, cols=6, rows=4):
+    """Several kinds mixed together and scattered: counts = [(kind, n), ...]."""
+    total = sum(n for _, n in counts)
+    assert total <= cols * rows
+    rnd = random.Random(seed)
+    cells = rnd.sample([(r, c) for r in range(rows) for c in range(cols)], total)
+    kinds = [k for k, n in counts for _ in range(n)]
+    rnd.shuffle(kinds)
+    sp = CELL + 8
+    s = []
+    for (r, c), k in zip(cells, kinds):
+        s.append(obj(k, M + sp / 2 + c * sp + rnd.uniform(-5, 5), M + sp / 2 + r * sp + rnd.uniform(-5, 5)))
+    return svg_wrap(2 * M + cols * sp, 2 * M + rows * sp, "".join(s), "a mix of " + ", ".join(name(k) for k, _ in counts))
