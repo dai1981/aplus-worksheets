@@ -58,6 +58,39 @@ def mcq(q, correct, cands, e):
         pick.append(c)
         if len(pick) == 3:
             break
+    if len(pick) < 3:
+        # 足りないときは、答えの数字を ±1、±2、×10 した近い数で補う（単位などの文字はそのまま）
+        import re as _re
+        m = _re.match(r"^(.*?)(\d[\d,]*(?:\.\d+)?)([^\d]*)$", correct)
+        if m and "<" not in correct:
+            from decimal import Decimal as _D
+            v = _D(m.group(2).replace(",", ""))
+            places = len(m.group(2).split(".")[1]) if "." in m.group(2) else 0
+            step = _D(1).scaleb(-places)
+            for d in (1, -1, 2, -2, 3):
+                nv = v + step * d
+                if nv <= 0:
+                    continue
+                c = "%s%s%s" % (m.group(1), num(int(nv)) if places == 0 else format(nv, "f"), m.group(3))
+                if c not in seen:
+                    seen.add(c)
+                    pick.append(c)
+                if len(pick) == 3:
+                    break
+    if len(pick) < 3 and "class='fn'" in correct:
+        # 分數の答え：分子を ±1、±2 した分數で補う（分母はそのまま）
+        import re as _re
+        m = _re.search(r"<span class='fn'>(\d+)</span>", correct)
+        v = int(m.group(1))
+        for d in (1, -1, 2, -2, 3):
+            if v + d <= 0:
+                continue
+            c = correct[:m.start(1)] + str(v + d) + correct[m.end(1):]
+            if c not in seen:
+                seen.add(c)
+                pick.append(c)
+            if len(pick) == 3:
+                break
     assert len(pick) == 3, (q, correct, cands)
     return {"q": q, "c": [correct] + pick, "a": 0, "e": e}
 
@@ -214,3 +247,15 @@ def wan(n):
     if not w:
         return str(r)
     return "%d萬%s" % (w, r if r else "")
+
+
+def ff(v, mixed=True):
+    """Fraction を最簡分數で：7/4 → 1又3/4（mixed=False なら 7/4）、整数はそのまま"""
+    from fractions import Fraction as _F
+    v = _F(v)
+    if v.denominator == 1:
+        return num(v.numerator)
+    w, r = divmod(v.numerator, v.denominator)
+    if mixed and w:
+        return mx(w, r, v.denominator)
+    return fr(v.numerator, v.denominator)
