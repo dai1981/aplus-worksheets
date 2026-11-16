@@ -105,12 +105,12 @@ def set_sentences(rnd, K):
 def set_stories(rnd, K):
     its = []
 
-    def story(a, b, kind, text):
+    def story(a, b, kind, text, unit=None):
         p = K.next()
         t = text.format(a=a, b=b, **p)
         d = a - b
         svg = crossed_row_svg(a, kind, b)
-        u1, u = name(kind, 1), name(kind)
+        u1, u = unit or (name(kind, 1), name(kind))
         e = "%d take away %d is %d. %d − %d = %d. The answer is <b>%d %s</b>." % (a, b, d, a, b, d, d, u1 if d == 1 else u)
         unit = lambda v: "%d %s" % (v, u1 if v == 1 else u)
         its.append(mcq(fig(svg) + t, unit(d), [unit(w) for w in wrongs(a, b) if w and w > 0], e))
@@ -120,7 +120,8 @@ def set_stories(rnd, K):
     story(5, 1, "ball", "{n} has {a} balls. {He} gives {b} to a friend. How many balls does {he} have now?")
     story(5, 3, "bug", "{a} ladybugs sit on a leaf. {b} fly away. How many ladybugs are left?")
     story(6, 2, "cup", "There are {a} cups. {n} breaks {b}. How many cups are not broken?")
-    story(6, 4, "star", "{n} has {a} stickers. {He} uses {b}. How many stickers are left?")
+    story(6, 4, "star", "{n} has {a} star stickers. {He} uses {b}. How many stickers are left?",
+          unit=("sticker", "stickers"))
     story(7, 3, "fish", "{a} fish are in a tank. {n} moves {b} to a new tank. How many fish are in the first tank now?")
     story(7, 1, "flower", "{n} picks {a} flowers. {He} gives {b} to {his} mom. How many flowers does {he} have now?")
     story(8, 2, "heart", "{n} draws {a} hearts. {He} erases {b}. How many hearts are left?")
@@ -133,7 +134,8 @@ def set_stories(rnd, K):
     story(8, 4, "star", "There are {a} stars on a chart. {n} takes off {b}. How many stars are still on the chart?")
     story(10, 7, "fish", "{n} catches {a} fish. {He} lets {b} go. How many fish does {he} keep?")
     story(9, 8, "flower", "{a} flowers are in a vase. {b} are taken out. How many flowers are left in the vase?")
-    story(7, 4, "heart", "{n} has {a} heart stickers. {He} gives away {b}. How many does {he} have left?")
+    story(7, 4, "heart", "{n} has {a} heart stickers. {He} gives away {b}. How many does {he} have left?",
+          unit=("sticker", "stickers"))
     story(10, 5, "button", "A shirt has {a} buttons. {b} come off. How many buttons are still on the shirt?")
     return {"title": "Take-away stories", "items": its}
 
