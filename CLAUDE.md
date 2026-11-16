@@ -827,11 +827,24 @@ US / Math / Grade 7（Common Core）— 1,000 以上はカンマ付き。負の�
 18. comparing-data-distributions ✓
 19. constructing-triangles-and-cross-sections ✓
 
-US / Math / Grade 8（Common Core）
-1. linear-equations 2. systems-of-equations 3. slope 4. functions 5. linear-functions 6. exponent-rules
-7. scientific-notation 8. square-and-cube-roots 9. rational-and-irrational-numbers 10. pythagorean-theorem
-11. transformations 12. congruence-and-similarity 13. angle-relationships-parallel-lines
-14. volume-of-cylinders-cones-spheres 15. scatter-plots 16. two-way-tables 17. distance-on-coordinate-plane
+US / Math / Grade 8（Common Core）— 1,000 以上はカンマ付き。負の数は「−」。生成スクリプトは `gen_us_math_g8_*`（共通部品は `tools/ws_common.py`）
+1. linear-equations ✓
+2. systems-of-equations
+3. slope
+4. functions
+5. linear-functions
+6. exponent-rules
+7. scientific-notation
+8. square-and-cube-roots
+9. rational-and-irrational-numbers
+10. pythagorean-theorem
+11. transformations
+12. congruence-and-similarity
+13. angle-relationships-parallel-lines
+14. volume-of-cylinders-cones-spheres
+15. scatter-plots
+16. two-way-tables
+17. distance-on-coordinate-plane
 
 US / Math / Kindergarten（Common Core）— grade `kindergarten`（name「Kindergarten」、sort 0、5〜6歳）。生成スクリプトは `gen_us_math_gk_*`、絵の部品は `tools/k_pics.py`。
 20 まで（数えるのは 100 まで）。文はとても短く、5〜6歳が読める英語で。ほぼ全問に絵。standard_code は「K.CC.B.5」形式
