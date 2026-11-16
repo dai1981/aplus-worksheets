@@ -849,7 +849,7 @@ US / Math / Kindergarten（Common Core）— grade `kindergarten`（name「Kinde
 12. sort-and-count ✓
 13. 2d-and-3d-shapes ✓
 14. positions ✓
-15. build-and-compose-shapes
+15. build-and-compose-shapes ✓
 
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
