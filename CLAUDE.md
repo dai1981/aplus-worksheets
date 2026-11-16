@@ -844,7 +844,7 @@ US / Math / Grade 8（Common Core）— 1,000 以上はカンマ付き。負の�
 14. volume-of-cylinders-cones-spheres ✓
 15. scatter-plots ✓
 16. two-way-tables ✓
-17. distance-on-coordinate-plane
+17. distance-on-coordinate-plane ✓
 
 US / Math / Kindergarten（Common Core）— grade `kindergarten`（name「Kindergarten」、sort 0、5〜6歳）。生成スクリプトは `gen_us_math_gk_*`、絵の部品は `tools/k_pics.py`。
 20 まで（数えるのは 100 まで）。文はとても短く、5〜6歳が読める英語で。ほぼ全問に絵。standard_code は「K.CC.B.5」形式
