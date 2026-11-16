@@ -112,3 +112,12 @@ def xy_table(xs, ys, xname="x", yname="y"):
     h = "<tr><th><i>%s</i></th>%s</tr>" % (xname, "".join("<td>%s</td>" % x for x in xs))
     b = "<tr><th><i>%s</i></th>%s</tr>" % (yname, "".join("<td>%s</td>" % y for y in ys))
     return "<div class='sn-tw'><table class='sn-table'><tbody>%s%s</tbody></table></div>" % (h, b)
+
+
+def sl(v):
+    """A slope or rate as an improper fraction: 5/2 rather than 2 1/2."""
+    from ws_common import fr
+    v = F(v)
+    if v.denominator == 1:
+        return num(v)
+    return (MINUS if v < 0 else "") + fr(abs(v.numerator), v.denominator)
