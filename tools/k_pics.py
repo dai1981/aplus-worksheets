@@ -469,3 +469,68 @@ def mixed_svg(counts, seed, cols=6, rows=4):
     for (r, c), k in zip(cells, kinds):
         s.append(obj(k, M + sp / 2 + c * sp + rnd.uniform(-5, 5), M + sp / 2 + r * sp + rnd.uniform(-5, 5)))
     return svg_wrap(2 * M + cols * sp, 2 * M + rows * sp, "".join(s), "a mix of " + ", ".join(name(k) for k, _ in counts))
+
+
+PENCIL_COLS = ["#e74c3c", "#3498db", "#f1c40f", "#27ae60", "#9b59b6", "#e67e22"]
+
+
+def pencils_svg(lengths, labels=None, unit=34, colors=None, offsets=None):
+    """Pencils one above the other, lined up at the left (unless offsets are given). lengths in units."""
+    labels = labels or ["ABCD"[i] for i in range(len(lengths))]
+    colors = colors or PENCIL_COLS
+    offsets = offsets or [0] * len(lengths)
+    lw, rowh = (34 if max(len(x) for x in labels) <= 1 else 64), 40
+    W = 2 * M + lw + max(l + o for l, o in zip(lengths, offsets)) * unit + 6
+    H = 2 * M + len(lengths) * rowh
+    s = []
+    for i, (l, lab) in enumerate(zip(lengths, labels)):
+        y = M + i * rowh + 8
+        x0 = M + lw + offsets[i] * unit
+        body = l * unit - 22
+        c = colors[i % len(colors)]
+        s.append(text(M + 8 if len(lab) == 1 else M, y + 18, lab, 18 if len(lab) == 1 else 16, col=GREEN,
+                      anchor="middle" if len(lab) == 1 else "start"))
+        s.append("<rect x='%d' y='%d' width='8' height='22' fill='#f2b8c6' stroke='%s' stroke-width='1.5'/>" % (x0, y, INK))
+        s.append("<rect x='%d' y='%d' width='%d' height='22' fill='%s' stroke='%s' stroke-width='1.5'/>" % (x0 + 8, y, body - 8, c, INK))
+        tip = x0 + body
+        s.append("<polygon points='%d,%d %d,%d %d,%d' fill='#f5deb3' stroke='%s' stroke-width='1.5'/>" % (tip, y, tip + 22, y + 11, tip, y + 22, INK))
+        s.append("<polygon points='%d,%d %d,%d %d,%d' fill='%s'/>" % (tip + 15, y + 7, tip + 22, y + 11, tip + 15, y + 15, INK))
+    return svg_wrap(int(W), H, "".join(s), "pencils to compare")
+
+
+def towers_svg(heights, labels=None, u=22):
+    """Towers of cubes standing on one line, with a letter under each."""
+    labels = labels or ["ABCD"[i] for i in range(len(heights))]
+    gap = 34 if max(len(x) for x in labels) <= 1 else 50
+    top = M
+    base = M + max(heights) * u
+    W = 2 * M + len(heights) * (u + 6) + (len(heights) - 1) * gap
+    s = ["<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='%s' stroke-width='2.5'/>" % (2, base, W - 2, base, INK)]
+    for i, h in enumerate(heights):
+        x = M + i * (u + 6 + gap)
+        for k in range(h):
+            s.append("<rect x='%d' y='%d' width='%d' height='%d' fill='%s' stroke='%s' stroke-width='1.5'/>"
+                     % (x, base - (k + 1) * u, u + 6, u, PENCIL_COLS[i % len(PENCIL_COLS)], INK))
+        s.append(text(x + (u + 6) / 2, base + 24, labels[i], 18, col=GREEN))
+    return svg_wrap(W, base + 32, "".join(s), "cube towers")
+
+
+def balance_svg(left, right, tilt):
+    """A pan balance. left/right = (kind, n). tilt: 'left' (left side down = heavier), 'right' or 'equal'."""
+    W, H = 300, 170
+    cx, py = 150, 50
+    d = {"left": 18, "right": -18, "equal": 0}[tilt]
+    lx, rx = 50, 250
+    ly, ry = py + d, py - d
+    s = ["<polygon points='%d,%d %d,%d %d,%d' fill='#8a8a80'/>" % (cx, py, cx - 28, H - 14, cx + 28, H - 14),
+         "<rect x='%d' y='%d' width='120' height='8' rx='3' fill='#8a8a80'/>" % (cx - 60, H - 14),
+         "<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='%s' stroke-width='5' stroke-linecap='round'/>" % (lx, ly, rx, ry, INK),
+         "<circle cx='%d' cy='%d' r='6' fill='%s'/>" % (cx, py, INK)]
+    for (x, y), (kind, n) in [((lx, ly), left), ((rx, ry), right)]:
+        s.append("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='%s' stroke-width='1.5'/>" % (x, y, x - 30, y + 46, INK))
+        s.append("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='%s' stroke-width='1.5'/>" % (x, y, x + 30, y + 46, INK))
+        s.append("<path d='M%d %d Q%d %d %d %d Z' fill='#d9d9cf' stroke='%s' stroke-width='1.5'/>" % (x - 40, y + 46, x, y + 66, x + 40, y + 46, INK))
+        for k in range(n):
+            ox = x - (n - 1) * 13 + k * 26
+            s.append(obj(kind, ox, y + 32, 12))
+    return svg_wrap(W, H, "".join(s), "pan balance")
