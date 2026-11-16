@@ -315,3 +315,108 @@ def dice_svg(values):
         for cx, cy in DICE[v]:
             s.append("<circle cx='%.1f' cy='%.1f' r='7' fill='%s'/>" % (x0 + 16 + cx * 21, M + 16 + cy * 21, INK))
     return svg_wrap(2 * M + len(values) * size + (len(values) - 1) * gap, size + 2 * M, "".join(s), "dot cube")
+
+
+BLUE_DOT = "#1f5fa8"
+
+
+def match_svg(rows, label_w=None):
+    """Rows lined up one under the other so they can be matched one to one.
+    rows = [(n, kind, label or '', spacing)], spacing = space per object (default CELL)."""
+    lw = label_w if label_w is not None else (70 if any(r[2] for r in rows) else 0)
+    W = 0
+    s = []
+    for i, (n, kind, lab, sp) in enumerate(rows):
+        sp = sp or CELL
+        y = M + CELL / 2 + i * (CELL + 8)
+        if lab:
+            s.append(text(M, y + 6, lab, 16, anchor="start", col=GREEN))
+        for k in range(n):
+            s.append(obj(kind, M + lw + sp / 2 + k * sp, y))
+        W = max(W, M + lw + n * sp + M)
+    H = 2 * M + len(rows) * (CELL + 8) - 8
+    return svg_wrap(int(W), int(H), "".join(s), "rows to compare")
+
+
+def cross(cx, cy, r=14):
+    return ("<line x1='%.1f' y1='%.1f' x2='%.1f' y2='%.1f' stroke='%s' stroke-width='3' stroke-linecap='round'/>"
+            "<line x1='%.1f' y1='%.1f' x2='%.1f' y2='%.1f' stroke='%s' stroke-width='3' stroke-linecap='round'/>"
+            % (cx - r, cy - r, cx + r, cy + r, INK, cx - r, cy + r, cx + r, cy - r, INK))
+
+
+def crossed_row_svg(n, kind, k, per_row=5):
+    """n objects in rows of per_row; the last k are crossed out (taken away)."""
+    rows = (n + per_row - 1) // per_row
+    W = 2 * M + min(n, per_row) * CELL
+    H = 2 * M + rows * CELL
+    s = []
+    for i in range(n):
+        cx, cy = M + CELL / 2 + (i % per_row) * CELL, M + CELL / 2 + (i // per_row) * CELL
+        s.append(obj(kind, cx, cy))
+        if i >= n - k:
+            s.append(cross(cx, cy))
+    return svg_wrap(W, H, "".join(s), "%s, %d crossed out" % (name(kind), k))
+
+
+def tenframe_mix_svg(cells, frames=None):
+    """Ten-frame(s) from a list of cell marks: 'r' red dot, 'b' blue dot, 'x' red dot crossed out, '' empty."""
+    n = len(cells)
+    frames = frames or (1 if n <= 10 else 2)
+    gap = 18
+    W = 2 * M + frames * 5 * TF + (frames - 1) * gap
+    H = 2 * M + 2 * TF
+    s = []
+    for f in range(frames):
+        x0 = M + f * (5 * TF + gap)
+        s.append("<rect x='%d' y='%d' width='%d' height='%d' fill='#ffffff' stroke='%s' stroke-width='2.2'/>"
+                 % (x0, M, 5 * TF, 2 * TF, GREEN))
+        for i in range(1, 5):
+            s.append("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='%s' stroke-width='1.4'/>" % (x0 + i * TF, M, x0 + i * TF, M + 2 * TF, GREEN))
+        s.append("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='%s' stroke-width='1.4'/>" % (x0, M + TF, x0 + 5 * TF, M + TF, GREEN))
+        for i in range(10):
+            j = f * 10 + i
+            if j >= n or not cells[j]:
+                continue
+            cx, cy = x0 + (i % 5) * TF + TF / 2, M + (i // 5) * TF + TF / 2
+            col = BLUE_DOT if cells[j] == "b" else RED
+            s.append("<circle cx='%.1f' cy='%.1f' r='11' fill='%s'/>" % (cx, cy, col))
+            if cells[j] == "x":
+                s.append(cross(cx, cy, 12))
+    return svg_wrap(W, H, "".join(s), "ten-frame")
+
+
+def two_groups_svg(a, ka, b, kb=None, word="and"):
+    """Two groups side by side with a word or sign between them (each group in rows of up to 5)."""
+    kb = kb or ka
+    s = []
+    x = M
+    hmax = 0
+    for idx, (n, kind) in enumerate([(a, ka), (b, kb)]):
+        cols = min(5, max(1, n))
+        rows = max(1, (n + 4) // 5)
+        for i in range(n):
+            s.append(obj(kind, x + CELL / 2 + (i % 5) * CELL, M + CELL / 2 + (i // 5) * CELL))
+        x += cols * CELL
+        hmax = max(hmax, rows * CELL)
+        if idx == 0:
+            s.append("<!--mid-->")
+            mid_x = x + 26
+            x += 52
+    H = hmax + 2 * M
+    s = [t if t != "<!--mid-->" else text(mid_x, H / 2 + 7, word, 20 if len(word) == 1 else 16, col=GREEN) for t in s]
+    return svg_wrap(int(x + M), int(H), "".join(s), "%d %s %s %d %s" % (a, name(ka, a), word, b, name(kb, b)))
+
+
+def box_svg(n, kind, per_row=5):
+    """n objects next to a closed box with a ? on it (some are hidden in the box)."""
+    rows = max(1, (n + per_row - 1) // per_row)
+    cols = min(n, per_row)
+    s = []
+    for i in range(n):
+        s.append(obj(kind, M + CELL / 2 + (i % per_row) * CELL, M + CELL / 2 + (i // per_row) * CELL))
+    bx = M + cols * CELL + 18
+    bh = max(rows * CELL, 56)
+    s.append("<rect x='%d' y='%d' width='70' height='%d' rx='6' fill='#d9b27c' stroke='#8a6233' stroke-width='2'/>" % (bx, M, bh))
+    s.append("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='#8a6233' stroke-width='2'/>" % (bx, M + 14, bx + 70, M + 14))
+    s.append(text(bx + 35, M + bh / 2 + 16, "?", 26, col=RED))
+    return svg_wrap(bx + 70 + M, bh + 2 * M, "".join(s), "%s and a closed box" % name(kind))
