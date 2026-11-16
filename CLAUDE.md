@@ -903,7 +903,14 @@ TW / Math / Grade 7（國中七年級）— 負數は「－」（全角）、負
 19. ratio-and-proportion ✓ 20. direct-and-inverse-proportion ✓ 21. linear-inequalities ✓ 22. geometry-symbols-and-perpendicular ✓
 23. three-views ✓ 24. line-symmetry ✓ 25. statistical-charts ✓ 26. mean-median-mode ✓
 
-TW / Math / 國中八年級（次）— grade `grade-8`、課綱 N-8-*・A-8-*・G-8-*・S-8-*・D-8-*。乘法公式・平方根・畢氏定理から
+TW / Math / Grade 8（國中八年級）— 根式は `tools/tw_g8.py`（poly・pmul・rt・simp・qroots）、線分は `<span class='ov'>AB</span>`
+1. multiplication-formulas ✓ 2. polynomials ✓ 3. polynomial-multiplication-and-division ✓ 4. square-roots ✓ 5. operations-with-radicals ✓
+6. approximating-square-roots ✓ 7. pythagorean-theorem ✓ 8. distance-formula ✓ 9. factoring ✓ 10. cross-method ✓ 11. quadratic-equations ✓
+12. quadratic-formula ✓ 13. cumulative-relative-frequency ✓ 14. arithmetic-sequences ✓ 15. arithmetic-series ✓ 16. geometric-sequences ✓
+17. linear-functions ✓ 18. parallel-lines ✓ 19. polygon-angle-sums ✓ 20. congruent-triangles ✓ 21. triangle-properties ✓
+22. equilateral-triangle-area ✓ 23. parallelograms ✓ 24. special-quadrilaterals ✓
+
+TW / Math / 國中九年級（次）— grade `grade-9`、課綱 N-9-*・A-9-*・F-9-*・S-9-*・D-9-*。相似形・圓・二次函數から
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
