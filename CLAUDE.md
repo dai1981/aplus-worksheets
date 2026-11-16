@@ -840,7 +840,7 @@ US / Math / Kindergarten（Common Core）— grade `kindergarten`（name「Kinde
 3. writing-numbers-0-to-20 ✓
 4. comparing-numbers ✓
 5. addition-within-10 ✓
-6. subtraction-within-10
+6. subtraction-within-10 ✓
 7. make-10
 8. decompose-numbers-to-10
 9. add-and-subtract-within-5
