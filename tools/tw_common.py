@@ -10,7 +10,7 @@ import os
 from ws_common import (fig, svg_wrap, text, line, balance, write_unit, fr,   # noqa: F401
                        GREEN, FILL, GRAY, INK, RED, BLUE, FONT)
 
-UPDATED = "2026-11-16"
+UPDATED = "2026-11-17"
 STD_URL = ("https://www.naer.edu.tw/upload/1/16/doc/815/"
            "十二年國民基本教育課程綱要國民中小學暨普通型高級中等學校-數學領域.pdf")
 GIRLS = ["小美", "小芳", "怡君", "佳穎", "雅婷", "心怡", "詩涵", "欣妤", "宜蓁", "品妍"]
