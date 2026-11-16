@@ -836,7 +836,7 @@ US / Math / Grade 8（Common Core）— 1,000 以上はカンマ付き。負の�
 6. exponent-rules ✓
 7. scientific-notation ✓
 8. square-and-cube-roots ✓
-9. rational-and-irrational-numbers
+9. rational-and-irrational-numbers ✓
 10. pythagorean-theorem
 11. transformations
 12. congruence-and-similarity
