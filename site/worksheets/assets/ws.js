@@ -684,7 +684,7 @@
   //  The code is one shared file on the server: https://www.eigo-duke.com/common/js/mq.js
   //  (it calls /worksheets/api/mq.php). Set MQ_ON to false to hide it everywhere.
   var MQ_ON = true;
-  var MQ_SRC = "https://www.eigo-duke.com/common/js/mq.js?v=20261116c";
+  var MQ_SRC = "https://www.eigo-duke.com/common/js/mq.js?v=20261116d";
   function loadMQ() {
     if (!MQ_ON || window.MQ || !document.querySelector(".sn-quiz[data-quiz]")) return;
     var sc = document.createElement("script");
