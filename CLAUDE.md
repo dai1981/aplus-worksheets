@@ -847,7 +847,7 @@ US / Math / Kindergarten（Common Core）— grade `kindergarten`（name「Kinde
 10. teen-numbers-tens-and-ones ✓
 11. compare-length-and-weight ✓
 12. sort-and-count ✓
-13. 2d-and-3d-shapes
+13. 2d-and-3d-shapes ✓
 14. positions
 15. build-and-compose-shapes
 

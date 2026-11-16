@@ -590,3 +590,71 @@ def objects_row_svg(kinds):
         s.append(obj(k, cx, M + 26, 20))
         s.append(text(cx, M + 74, "ABCD"[i], 18, col=GREEN))
     return svg_wrap(2 * M + len(kinds) * sp, M + 84, "".join(s), "objects A to %s" % "ABCD"[len(kinds) - 1])
+
+
+def shape_rot(kind, cx, cy, r, color, rot):
+    return "<g transform='rotate(%d %.1f %.1f)'>%s</g>" % (rot, cx, cy, shape(kind, cx, cy, r, color))
+
+
+def one_shape_svg(kind, color="blue", r=40, rot=0):
+    W = int(2 * r * 1.4 + 2 * M)
+    return svg_wrap(W, W, shape_rot(kind, W / 2, W / 2, r, color, rot), "a flat shape")
+
+
+def solid(kind, cx, cy, r=34, color="yellow"):
+    f, st = SHAPE_COL.get(color, (color, INK))
+    if kind == "sphere":
+        return ("<circle cx='%.1f' cy='%.1f' r='%.1f' fill='%s' stroke='%s' stroke-width='2'/>"
+                "<path d='M%.1f %.1f A%.1f %.1f 0 0 0 %.1f %.1f' fill='none' stroke='%s' stroke-width='1.4'/>"
+                "<path d='M%.1f %.1f A%.1f %.1f 0 0 1 %.1f %.1f' fill='none' stroke='%s' stroke-width='1.2' stroke-dasharray='4 3'/>"
+                "<ellipse cx='%.1f' cy='%.1f' rx='%.1f' ry='%.1f' fill='#ffffff' opacity='0.45'/>"
+                % (cx, cy, r, f, st, cx - r, cy, r, r * 0.3, cx + r, cy, st, cx - r, cy, r, r * 0.3, cx + r, cy, st,
+                   cx - r * 0.35, cy - r * 0.4, r * 0.22, r * 0.14))
+    if kind == "cube":
+        a, d = r * 1.3, r * 0.5
+        x0, y0 = cx - a / 2 - d / 2, cy - a / 2 + d / 2
+        return ("<rect x='%.1f' y='%.1f' width='%.1f' height='%.1f' fill='%s' stroke='%s' stroke-width='2'/>"
+                "<polygon points='%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f' fill='#ffffff' fill-opacity='0.45' stroke='%s' stroke-width='2'/>"
+                "<polygon points='%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f' fill='%s' stroke='%s' stroke-width='2'/>"
+                "<polygon points='%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f' fill='#000000' fill-opacity='0.18'/>"
+                "<polygon points='%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f' fill='%s' fill-opacity='0.6' stroke='%s' stroke-width='2'/>"
+                % (x0, y0, a, a, f, st,
+                   x0, y0, x0 + d, y0 - d, x0 + a + d, y0 - d, x0 + a, y0, st,
+                   x0 + a, y0, x0 + a + d, y0 - d, x0 + a + d, y0 + a - d, x0 + a, y0 + a, f, st,
+                   x0 + a, y0, x0 + a + d, y0 - d, x0 + a + d, y0 + a - d, x0 + a, y0 + a,
+                   x0, y0, x0 + d, y0 - d, x0 + a + d, y0 - d, x0 + a, y0, f, st))
+    if kind == "cylinder":
+        w, h, e = r * 1.3, r * 1.7, r * 0.3
+        x0, top, bot = cx - w / 2, cy - h / 2, cy + h / 2
+        return ("<path d='M%.1f %.1f L%.1f %.1f A%.1f %.1f 0 0 0 %.1f %.1f L%.1f %.1f Z' fill='%s' stroke='%s' stroke-width='2'/>"
+                "<ellipse cx='%.1f' cy='%.1f' rx='%.1f' ry='%.1f' fill='#ffffff' fill-opacity='0.5' stroke='%s' stroke-width='2'/>"
+                "<ellipse cx='%.1f' cy='%.1f' rx='%.1f' ry='%.1f' fill='%s' fill-opacity='0.6' stroke='%s' stroke-width='2'/>"
+                % (x0, top, x0, bot, w / 2, e, x0 + w, bot, x0 + w, top, f, st,
+                   cx, top, w / 2, e, st, cx, top, w / 2, e, f, st))
+    if kind == "cone":
+        w, h, e = r * 1.4, r * 1.8, r * 0.3
+        apex, base = cy - h / 2, cy + h / 2
+        return ("<path d='M%.1f %.1f L%.1f %.1f A%.1f %.1f 0 0 0 %.1f %.1f Z' fill='%s' stroke='%s' stroke-width='2'/>"
+                "<path d='M%.1f %.1f A%.1f %.1f 0 0 1 %.1f %.1f' fill='none' stroke='%s' stroke-width='1.2' stroke-dasharray='4 3'/>"
+                % (cx, apex, cx - w / 2, base, w / 2, e, cx + w / 2, base, f, st,
+                   cx - w / 2, base, w / 2, e, cx + w / 2, base, st))
+    raise ValueError(kind)
+
+
+def one_solid_svg(kind, color="yellow", r=40):
+    W = int(r * 2.6 + 2 * M)
+    return svg_wrap(W, W, solid(kind, W / 2, W / 2, r, color), "a solid shape")
+
+
+def lettered_mix_svg(items, size=24):
+    """Flat or solid shapes in a row with A-D under them. items = [('flat'|'solid', kind, color, rot)]."""
+    sp = 100
+    s = []
+    for i, (t, k, col, rot) in enumerate(items):
+        cx = M + sp / 2 + i * sp
+        if t == "flat":
+            s.append(shape_rot(k, cx, M + 42, size, col, rot))
+        else:
+            s.append(solid(k, cx, M + 42, size, col))
+        s.append(text(cx, M + 104, "ABCD"[i], 18, col=GREEN))
+    return svg_wrap(2 * M + len(items) * sp, M + 114, "".join(s), "shapes A to %s" % "ABCD"[len(items) - 1])
