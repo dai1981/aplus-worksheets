@@ -831,7 +831,7 @@ US / Math / Grade 8（Common Core）— 1,000 以上はカンマ付き。負の�
 1. linear-equations ✓
 2. systems-of-equations ✓
 3. slope ✓
-4. functions
+4. functions ✓
 5. linear-functions
 6. exponent-rules
 7. scientific-notation
