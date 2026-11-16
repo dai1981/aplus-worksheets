@@ -829,7 +829,7 @@ US / Math / Grade 7（Common Core）— 1,000 以上はカンマ付き。負の�
 
 US / Math / Grade 8（Common Core）— 1,000 以上はカンマ付き。負の数は「−」。生成スクリプトは `gen_us_math_g8_*`（共通部品は `tools/ws_common.py`）
 1. linear-equations ✓
-2. systems-of-equations
+2. systems-of-equations ✓
 3. slope
 4. functions
 5. linear-functions

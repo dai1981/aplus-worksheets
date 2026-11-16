@@ -6,9 +6,18 @@ from ws_common import num, par, svg_wrap, text, line, INK, RED, BLUE, GREEN, GRA
 PURPLE = "#7d3c98"
 
 
-def term(a, var=X, st="d"):
+def _st(v, st):
+    if st == "auto":
+        return "d" if F(v).denominator == 1 else "f"
+    if st == "d" and num(v, "d") is None:
+        return "f"
+    return st
+
+
+def term(a, var=X, st="auto"):
     """a·x with 1 and −1 written as x and −x (no leading sign handling for 0)."""
     a = F(a)
+    st = _st(a, st)
     if a == 1:
         return var
     if a == -1:
@@ -16,21 +25,22 @@ def term(a, var=X, st="d"):
     return num(a, st) + var
 
 
-def lin(a, b, var=X, st="d"):
+def lin(a, b, var=X, st="auto"):
     """a x + b written nicely: 3x − 4, −x + 2, 5, x."""
     a, b = F(a), F(b)
     if a == 0:
-        return num(b, st)
+        return num(b, _st(b, st))
     s = term(a, var, st)
     if b > 0:
-        s += " + " + num(b, st)
+        s += " + " + num(b, _st(b, st))
     elif b < 0:
-        s += " − " + num(-b, st)
+        s += " − " + num(-b, _st(b, st))
     return s
 
 
-def plus(b, st="d"):
+def plus(b, st="auto"):
     b = F(b)
+    st = _st(b, st)
     return (" + " + num(b, st)) if b >= 0 else (" − " + num(-b, st))
 
 
