@@ -23,7 +23,7 @@ def s1(seen):
         if k == "write":
             q = "%s 表示什麼？" % pw(b, e)
             ans = " × ".join([str(b)] * e)
-            return mcq(q, ans, ["%d × %d" % (b, e), " ＋ ".join([str(b)] * e), " × ".join([str(e)] * b) if b <= 6 else "%d × %d" % (e, b)], "%s 是 %d 個 %d 相乘，%d 是底數，%d 是指數。" % (pw(b, e), e, b, b, e))
+            return mcq(q, ans, ["%d × %d" % (b, e), " ＋ ".join([str(b)] * e), " × ".join([str(e)] * b) if b <= 6 else "%d ＋ %d" % (b, e)], "%s 是 %d 個 %d 相乘，%d 是底數，%d 是指數。" % (pw(b, e), e, b, b, e))
         return mcq("%s ＝ ？" % pw(b, e), num(b ** e), [num(b * e), num(e ** b) if e ** b != b ** e and e ** b < 10 ** 6 else num(b ** (e + 1)), num(b ** (e - 1))], "%s ＝ %s ＝ %s。" % (pw(b, e), " × ".join([str(b)] * e), num(b ** e)))
     return pick_unique(R, mk, 20, seen)
 

@@ -895,7 +895,15 @@ TW / Math / Grade 6（國小六年級）— 圓周率は 3.14
 12. area-of-circles ✓ 13. volume-of-prisms-and-cylinders ✓ 14. calculation-rules ✓ 15. quantity-relationships ✓
 16. classic-word-problems ✓ 17. counting ✓ 18. pie-charts ✓ 19. likelihood ✓
 
-TW / Math / 國中七年級（次）— grade `grade-7`、課綱 n-IV・N-7-*・A-7-*・S-7-*・D-7-*。負の數・一元一次方程式から
+TW / Math / Grade 7（國中七年級）— 負數は「－」（全角）、負數は（－5）とかっこ、式の部品は `tools/tw_g7.py`（sn・par・opv・lin・tidy_sets）
+1. positive-and-negative-numbers ✓ 2. number-line-and-absolute-value ✓ 3. adding-and-subtracting-integers ✓
+4. multiplying-and-dividing-integers ✓ 5. mixed-operations ✓ 6. laws-of-operations ✓ 7. exponents ✓ 8. scientific-notation ✓
+9. primes ✓ 10. standard-factorization ✓ 11. algebraic-expressions ✓ 12. solving-linear-equations ✓ 13. equation-word-problems ✓
+14. exponent-laws ✓ 15. systems-of-equations ✓ 16. solving-systems ✓ 17. coordinate-plane ✓ 18. graphs-of-linear-equations ✓
+19. ratio-and-proportion ✓ 20. direct-and-inverse-proportion ✓ 21. linear-inequalities ✓ 22. geometry-symbols-and-perpendicular ✓
+23. three-views ✓ 24. line-symmetry ✓ 25. statistical-charts ✓ 26. mean-median-mode ✓
+
+TW / Math / 國中八年級（次）— grade `grade-8`、課綱 N-8-*・A-8-*・G-8-*・S-8-*・D-8-*。乘法公式・平方根・畢氏定理から
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
