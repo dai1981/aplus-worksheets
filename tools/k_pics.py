@@ -658,3 +658,68 @@ def lettered_mix_svg(items, size=24):
             s.append(solid(k, cx, M + 42, size, col))
         s.append(text(cx, M + 104, "ABCD"[i], 18, col=GREEN))
     return svg_wrap(2 * M + len(items) * sp, M + 114, "".join(s), "shapes A to %s" % "ABCD"[len(items) - 1])
+
+
+WOOD, WOOD_D = "#c8935a", "#7a5230"
+
+
+def table_scene_svg(kind, rel):
+    """A table and one object: rel = above, below, beside."""
+    W, H = 260, 190
+    tx, ty, tw = 70, 92, 120
+    s = ["<line x1='0' y1='%d' x2='%d' y2='%d' stroke='#9e9e9e' stroke-width='2'/>" % (H - 10, W, H - 10),
+         "<rect x='%d' y='%d' width='%d' height='12' rx='3' fill='%s' stroke='%s' stroke-width='1.6'/>" % (tx, ty, tw, WOOD, WOOD_D),
+         "<rect x='%d' y='%d' width='10' height='%d' fill='%s' stroke='%s' stroke-width='1.4'/>" % (tx + 8, ty + 12, H - 10 - ty - 12, WOOD, WOOD_D),
+         "<rect x='%d' y='%d' width='10' height='%d' fill='%s' stroke='%s' stroke-width='1.4'/>" % (tx + tw - 18, ty + 12, H - 10 - ty - 12, WOOD, WOOD_D)]
+    pos = {"above": (tx + tw / 2, 34), "below": (tx + tw / 2, H - 32), "beside": (tx + tw + 34, H - 32),
+           "beside-left": (tx - 36, H - 32)}[rel]
+    s.append(obj(kind, pos[0], pos[1], 18))
+    return svg_wrap(W, H, "".join(s), "a table and a %s" % name(kind, 1))
+
+
+def box_scene_svg(kind, rel):
+    """A big box and one object: rel = front, behind, beside, above."""
+    W, H = 240, 170
+    bx, by, bw, bh = 70, 70, 100, 90
+    box = ("<rect x='%d' y='%d' width='%d' height='%d' fill='#d9b27c' stroke='#8a6233' stroke-width='2'/>"
+           "<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='#8a6233' stroke-width='2'/>" % (bx, by, bw, bh, bx, by + 18, bx + bw, by + 18))
+    ground = "<line x1='0' y1='%d' x2='%d' y2='%d' stroke='#9e9e9e' stroke-width='2'/>" % (by + bh, W, by + bh)
+    if rel == "behind":
+        o = obj(kind, bx + bw - 4, by + 24, 30)                # partly hidden by the box
+        body = ground + o + box
+    elif rel == "front":
+        o = obj(kind, bx + bw / 2, by + bh - 20, 24)
+        body = ground + box + o
+    elif rel == "beside":
+        body = ground + box + obj(kind, bx + bw + 34, by + bh - 22, 22)
+    elif rel == "above":
+        body = ground + box + obj(kind, bx + bw / 2, 26, 20)
+    else:
+        raise ValueError(rel)
+    return svg_wrap(W, H, body, "a box and a %s" % name(kind, 1))
+
+
+def shelf_svg(kinds):
+    """Shelves from top to bottom, one object on each."""
+    W, rowh = 150, 62
+    H = 2 * M + len(kinds) * rowh
+    s = ["<rect x='%d' y='%d' width='8' height='%d' fill='%s'/>" % (M, M, H - 2 * M, WOOD_D),
+         "<rect x='%d' y='%d' width='8' height='%d' fill='%s'/>" % (W - M - 8, M, H - 2 * M, WOOD_D)]
+    for i, k in enumerate(kinds):
+        y = M + (i + 1) * rowh
+        s.append("<rect x='%d' y='%d' width='%d' height='8' fill='%s'/>" % (M, y - 8, W - 2 * M, WOOD))
+        s.append(obj(k, W / 2, y - 30, 19))
+    return svg_wrap(W, H, "".join(s), "shelves with " + ", ".join(name(k, 1) for k in kinds))
+
+
+def kinds_row_svg(kinds):
+    sp = 62
+    s = [obj(k, M + sp / 2 + i * sp, M + 28, 20) for i, k in enumerate(kinds)]
+    return svg_wrap(2 * M + len(kinds) * sp, 2 * M + 56, "".join(s), "a row of " + ", ".join(name(k, 1) for k in kinds))
+
+
+def shapes_scene_svg(placed):
+    """Flat shapes placed on a 3 x 3 grid: placed = [(kind, color, col, row)]."""
+    sp = 70
+    s = [shape(k, M + sp / 2 + c * sp, M + sp / 2 + r * sp, 24, col) for k, col, c, r in placed]
+    return svg_wrap(2 * M + 3 * sp, 2 * M + 3 * sp, "".join(s), "shapes in a picture")
