@@ -881,7 +881,16 @@ TW / Math / Grade 4（國小四年級）
 13. area-and-perimeter ✓ 14. volume ✓ 15. time ✓ 16. perpendicular-and-parallel ✓ 17. congruent-figures ✓ 18. triangles ✓
 19. quadrilaterals ✓ 20. order-of-operations ✓ 21. calculation-rules ✓ 22. formulas ✓ 23. patterns-odd-and-even ✓ 24. bar-and-line-graphs ✓
 
-TW / Math / Grade 5（次）— 課綱 N-5-*・S-5-*・R-5-*・D-5-* の順に作る。約分・通分はここから
+TW / Math / Grade 5（國小五年級）
+1. place-value ✓ 2. multi-step-word-problems ✓ 3. factors-and-multiples ✓ 4. simplifying-fractions ✓ 5. adding-and-subtracting-fractions ✓
+6. multiplying-fractions ✓ 7. fractions-as-division ✓ 8. dividing-fractions ✓ 9. multiplying-decimals ✓ 10. dividing-decimals ✓ 11. percentages ✓
+12. rounding-decimals ✓ 13. area-units ✓ 14. metric-tons ✓ 15. volume-and-capacity ✓ 16. time-calculations ✓
+17. triangle-and-quadrilateral-properties ✓ 18. area-of-triangles-and-quadrilaterals ✓ 19. sectors ✓ 20. line-symmetry ✓
+21. volume-and-surface-area ✓ 22. faces-parallel-and-perpendicular ✓ 23. solids ✓ 24. three-step-problems-and-averages ✓
+25. distributive-property ✓ 26. formulas-with-symbols ✓ 27. making-line-graphs ✓
+
+TW / Math / Grade 6（次）— 課綱 N-6-*・S-6-*・R-6-*・D-6-* の順に作る。圓形圖・比與比值・速度はここ
+グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 

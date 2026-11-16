@@ -34,7 +34,7 @@ def bar_svg(title, cats, vals, step, u):
         s.append("<rect x='%d' y='%.1f' width='%d' height='%.1f' fill='%s' stroke='%s' stroke-width='1.5'/>" % (x, 30 + H - h, BW, h, FILL, GREEN))
         s.append(text(x + BW / 2, 30 + H + 16, c, 11))
     s.append(line(W0, 30, W0, 30 + H, INK, 1.5))
-    return fig(svg_wrap(int(W), H + 56, "".join(s), title + "長條圖"))
+    return fig(svg_wrap(int(W), H + 56, "".join(s), title + "長條圖").replace("<svg ", "<svg data-pf='lg' ", 1))
 
 
 def line_svg(title, labels, vals, lo, step, u):
@@ -59,7 +59,7 @@ def line_svg(title, labels, vals, lo, step, u):
     s.append(line(W0, 30, W0, 30 + H, INK, 1.5))
     if lo:
         s.append(text(W0 - 6, 30 + H + 16, "≈", 12, anchor="end"))
-    return fig(svg_wrap(int(W), H + 56, "".join(s), title + "折線圖"))
+    return fig(svg_wrap(int(W), H + 56, "".join(s), title + "折線圖").replace("<svg ", "<svg data-pf='lg' ", 1))
 
 
 def bar_data():
