@@ -534,3 +534,59 @@ def balance_svg(left, right, tilt):
             ox = x - (n - 1) * 13 + k * 26
             s.append(obj(kind, ox, y + 32, 12))
     return svg_wrap(W, H, "".join(s), "pan balance")
+
+
+SHAPE_COL = {"red": ("#e74c3c", "#922b21"), "blue": ("#3498db", "#1f5f8b"), "yellow": ("#f4d03f", "#a57c00"),
+             "green": ("#27ae60", "#196f3d")}
+
+
+def shape(kind, cx, cy, r=16, color="blue", stroke=None, sw=1.6):
+    """A flat shape centred at (cx, cy), about 2r across."""
+    f, st = SHAPE_COL.get(color, (color, INK))
+    st = stroke or st
+    a = "fill='%s' stroke='%s' stroke-width='%s'" % (f, st, sw)
+    if kind == "circle":
+        return "<circle cx='%.1f' cy='%.1f' r='%.1f' %s/>" % (cx, cy, r, a)
+    if kind == "square":
+        return "<rect x='%.1f' y='%.1f' width='%.1f' height='%.1f' %s/>" % (cx - r * 0.9, cy - r * 0.9, r * 1.8, r * 1.8, a)
+    if kind == "rectangle":
+        return "<rect x='%.1f' y='%.1f' width='%.1f' height='%.1f' %s/>" % (cx - r * 1.25, cy - r * 0.7, r * 2.5, r * 1.4, a)
+    if kind == "triangle":
+        return "<polygon points='%.1f,%.1f %.1f,%.1f %.1f,%.1f' %s/>" % (cx, cy - r, cx - r * 1.1, cy + r * 0.85, cx + r * 1.1, cy + r * 0.85, a)
+    if kind == "hexagon":
+        pts = " ".join("%.1f,%.1f" % (cx + r * math.cos(math.pi / 3 * k), cy + r * math.sin(math.pi / 3 * k)) for k in range(6))
+        return "<polygon points='%s' %s/>" % (pts, a)
+    raise ValueError(kind)
+
+
+def shapes_mix_svg(items, seed, cols=5, rows=3):
+    """items = [(kind, color), ...] scattered on a grid."""
+    rnd = random.Random(seed)
+    cells = rnd.sample([(r, c) for r in range(rows) for c in range(cols)], len(items))
+    sp = 52
+    s = []
+    for (r, c), (k, col) in zip(cells, items):
+        s.append(shape(k, M + sp / 2 + c * sp + rnd.uniform(-4, 4), M + sp / 2 + r * sp + rnd.uniform(-4, 4), 17, col))
+    return svg_wrap(2 * M + cols * sp, 2 * M + rows * sp, "".join(s), "shapes of different colors")
+
+
+def lettered_shapes_svg(items, size=26):
+    """Shapes in a row with A, B, C, D under them. items = [(kind, color), ...]."""
+    sp = 92
+    s = []
+    for i, (k, col) in enumerate(items):
+        cx = M + sp / 2 + i * sp
+        s.append(shape(k, cx, M + 36, size, col))
+        s.append(text(cx, M + 92, "ABCD"[i], 18, col=GREEN))
+    return svg_wrap(2 * M + len(items) * sp, M + 102, "".join(s), "shapes A to %s" % "ABCD"[len(items) - 1])
+
+
+def objects_row_svg(kinds):
+    """Different objects in a row with A, B, C, D under them."""
+    sp = 70
+    s = []
+    for i, k in enumerate(kinds):
+        cx = M + sp / 2 + i * sp
+        s.append(obj(k, cx, M + 26, 20))
+        s.append(text(cx, M + 74, "ABCD"[i], 18, col=GREEN))
+    return svg_wrap(2 * M + len(kinds) * sp, M + 84, "".join(s), "objects A to %s" % "ABCD"[len(kinds) - 1])
