@@ -684,7 +684,8 @@
   //  The code is one shared file on the server: https://www.eigo-duke.com/common/js/mq.js
   //  (it calls /worksheets/api/mq.php). Set MQ_ON to false to hide it everywhere.
   var MQ_ON = true;
-  var MQ_SRC = "https://www.eigo-duke.com/common/js/mq.js?v=20261116d";
+  // the hour number makes browsers fetch a fresh copy at least once an hour
+  var MQ_SRC = "https://www.eigo-duke.com/common/js/mq.js?h=" + Math.floor(Date.now() / 3600000);
   function loadMQ() {
     if (!MQ_ON || window.MQ || !document.querySelector(".sn-quiz[data-quiz]")) return;
     var sc = document.createElement("script");
