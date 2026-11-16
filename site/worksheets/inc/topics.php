@@ -133,6 +133,7 @@ define('TOPIC_MIN_UNITS', 3);   // a topic with fewer skills gets no page (too t
 
 /* topic => list of units, only topics with enough units, in definition order */
 function topics_for($c, $s) {
+    if (in_array($c, array('tw'), true)) return array();   // topic hubs are English only for now
     $all = subject_units($c, $s);
     $res = array();
     foreach (topic_defs() as $k => $t) {

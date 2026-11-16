@@ -15,14 +15,14 @@ $crumbs = array(array(T('worksheets'), ''), array($country['name'], $seg[0] . '/
 
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
-    'title' => 'Free ' . $subject['name'] . ' Worksheets ' . T('by_grade') . ' (' . $country['standard'] . ') | ' . SITE_NAME,
+    'title' => sprintf(T('subj_title'), $subject['name'], T('by_grade'), $country['standard']) . ' | ' . SITE_NAME,
     'desc' => $subject['intro'],
     'canonical' => $base,
 ));
 site_header($crumbs);
 ?>
 <main class="sn-wrap">
-<h1><?= h($subject['name']) ?> Worksheets</h1>
+<h1><?= h(sprintf(T('subj_h1'), $subject['name'])) ?></h1>
 <div class="sx-hero"><p><?= h($subject['intro']) ?></p></div>
 <h2><?= h(T('pick_grade')) ?></h2>
 <ul class="sx-grades">
@@ -31,7 +31,7 @@ site_header($crumbs);
 <?php endforeach; ?>
 </ul>
 <?php if ($topics): ?>
-<h2 id="topics"><a href="<?= url($base . 'topics/') ?>">Browse by topic</a></h2>
+<h2 id="topics"><a href="<?= url($base . 'topics/') ?>"><?= h(T('browse_topic')) ?></a></h2>
 <ul class="tp-chips">
 <?php foreach ($topics as $tk => $tu): ?>
   <li><a href="<?= url($base . 'topics/' . $tk . '/') ?>"><?= h(topic_name($tdefs[$tk], $seg[0])) ?><span class="n"><?= count($tu) ?></span></a></li>

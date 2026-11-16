@@ -864,6 +864,19 @@ US / Math / Kindergarten（Common Core）— grade `kindergarten`（name「Kinde
 14. positions ✓
 15. build-and-compose-shapes ✓
 
+TW / Math（十二年國教課綱・108課綱）— country `tw`（name「台灣」、lang `zh-TW`）、subject `math`（數學）、grade `grade-N`（國小N年級）、A4。生成スクリプトは `gen_tw_math_gN_*`、共通部品は `tools/tw_common.py`（num・mcq・lesson・make_unit・clock など）。
+繁體中文・台灣用語（公分、毫米、公升、毫升、公斤、公克、元、直式、餘數、驗算）。時刻は「上午 9 時 40 分」、時間量は「1 小時 45 分鐘」。4 桁まではそのまま、10,000 以上はカンマ。餘數は「29 ÷ 4 ＝ 7……1」。
+standard_code は課綱の學習內容コード（例: N-3-1）、standard_text は課綱の原文。domain は 數與量／空間與形狀／關係／資料與不確定性。body_html は「怎麼想 → 例題 → 常見錯誤」。
+UI 文言は core.php の 'zh-TW'。プレビュー画像は Noto Sans TC のサブセットを使うので、**tw の単元を足したら `python3 tools/build_cjk_font.py` を実行してフォントもコミット**する（使う文字だけを入れる）。
+
+TW / Math / Grade 3（國小三年級）
+1. numbers-to-10000 ✓ 2. add-subtract-within-10000 ✓ 3. multiply-by-one-digit ✓ 4. division ✓ 5. divide-by-one-digit ✓
+6. two-step-word-problems ✓ 7. estimation ✓ 8. fractions ✓ 9. decimals ✓ 10. number-line ✓ 11. millimeters ✓
+12. angles ✓ 13. area-square-centimeters ✓ 14. liters-and-milliliters ✓ 15. kilograms-and-grams ✓ 16. time ✓
+17. squares-and-rectangles ✓ 18. circles ✓ 19. nets ✓ 20. tables ✓ 21. multiplication-division-relationship ✓ 22. patterns ✓
+
+TW / Math / Grade 4（次）— 課綱 N-4-*・S-4-*・R-4-*・D-4-* の順に作る
+
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB

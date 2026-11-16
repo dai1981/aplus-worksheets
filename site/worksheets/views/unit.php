@@ -28,7 +28,7 @@ $utopics = array();                              // topic hubs this skill belong
 $tall = topics_for($seg[0], $seg[1]);
 $tdefs = topic_defs();
 foreach (unit_topic_slugs($u['slug']) as $tk) {
-    if (isset($tall[$tk])) $utopics[$tk] = topic_name($tdefs[$tk], $seg[0]) . ' worksheets: ' . topic_range($tall[$tk]);
+    if (isset($tall[$tk])) $utopics[$tk] = sprintf(T('topic_ws'), topic_name($tdefs[$tk], $seg[0]), topic_range($tall[$tk]));
 }
 $JF = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG;
 
@@ -59,7 +59,7 @@ site_header($crumbs);
     <div class="sn-key-b"><span class="big"><?= h($u['key_big']) ?></span>
     <p class="sub"><?= h($u['key_sub']) ?></p></div>
   </div>
-  <p class="ws-share"><?= pin_link($path, 'Free ' . $grade['name'] . ' ' . strtolower($subject['name']) . ' ' . strtolower($u['short_title']) . ' worksheet: short lesson, 100 practice questions and a printable answer key.') ?></p>
+  <p class="ws-share"><?= pin_link($path, sprintf(T('pin_unit'), $grade['name'], strtolower($subject['name']), strtolower($u['short_title']))) ?></p>
 
   <?php if ($u['standard_code']): ?>
   <p class="ws-std"><span><?= h($country['standard']) ?></span>
@@ -88,7 +88,7 @@ site_header($crumbs);
   </section>
 <?php endif; ?>
 
-  <p class="sn-byline sn-byline-b"><?= h(T('by')) ?> <?= h(SITE_NAME) ?> | <?= h(T('updated')) ?> <time datetime="<?= h($u['updated']) ?>"><?= h(date('F j, Y', strtotime($u['updated']))) ?></time></p>
+  <p class="sn-byline sn-byline-b"><?= h(T('by')) ?> <?= h(SITE_NAME) ?> | <?= h(T('updated')) ?> <time datetime="<?= h($u['updated']) ?>"><?= h(date(T('date_fmt'), strtotime($u['updated']))) ?></time></p>
 </article>
 
 <nav class="sn-related">
@@ -130,7 +130,7 @@ if (preview_path($path)) $lr['image'] = abs_url(preview_path($path));
 $lr['about'] = array(array('@type' => 'Thing', 'name' => $u['short_title']), array('@type' => 'Thing', 'name' => $subject['name']));
 if ($u['key_big']) $lr['teaches'] = $u['key_big'];
 $lr['audience'] = array('@type' => 'EducationalAudience', 'educationalRole' => array('student', 'teacher', 'parent'));
-if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 'us' || strpos($country['code'], 'ca') === 0)) {   // Canada: Grade 3 = age 8-9, like the US
+if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 'us' || $country['code'] === 'tw' || strpos($country['code'], 'ca') === 0)) {   // Canada and Taiwan: Grade 3 = age 8-9, like the US
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);
 } elseif ($grade['slug'] === 'kindergarten') {
     $lr['typicalAgeRange'] = '5-6';

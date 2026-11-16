@@ -8,14 +8,14 @@ $crumbs = array(array(T('worksheets'), ''), array($country['name'], $base));
 
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
-    'title' => 'Free ' . $country['name'] . ' Worksheets (' . $country['standard'] . ') | ' . SITE_NAME,
+    'title' => sprintf(T('country_title'), $country['name'], $country['standard']) . ' | ' . SITE_NAME,
     'desc' => $country['intro'],
     'canonical' => $base,
 ));
 site_header($crumbs);
 ?>
 <main class="sn-wrap">
-<h1><?= h($country['name']) ?> Worksheets</h1>
+<h1><?= h(sprintf(T('country_h1'), $country['name'])) ?></h1>
 <div class="sx-hero"><p><?= h($country['intro']) ?></p></div>
 <h2><?= h(T('pick_subject')) ?></h2>
 <ul class="sx-grades">

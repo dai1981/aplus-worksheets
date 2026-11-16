@@ -34,10 +34,16 @@ function pv_text($html) {
 
 function pv_font($w) {
     $d = __DIR__ . '/../assets/fonts/';
+    if (!empty($GLOBALS['PV_CJK'])) {           // Chinese pages: Noto Sans TC (subset made by tools/build_cjk_font.py)
+        return $d . ($w === 'b' ? 'NotoSansTC-Bold.otf' : 'NotoSansTC-Regular.otf');
+    }
     return $d . ($w === 'b' ? 'Inter-Bold.otf' : ($w === 'm' ? 'DejaVuSans.ttf' : 'Inter-Regular.otf'));
 }
+/* Chinese has no spaces between words: wrap at any character */
+function pv_is_cjk($s) { return preg_match('/[\x{3000}-\x{9fff}\x{ff00}-\x{ffef}]/u', $s) === 1; }
 /* Inter has no glyph for a few maths signs: use DejaVu for those lines */
 function pv_face($s, $w) {
+    if (!empty($GLOBALS['PV_CJK'])) return pv_font($w);
     return preg_match('/[∛∠∡⊥∥]/u', $s) ? pv_font('m') : pv_font($w);
 }
 function pv_width($size, $font, $s) {
@@ -46,10 +52,12 @@ function pv_width($size, $font, $s) {
 }
 /* wrap text into lines no wider than $max; the last allowed line ends with … if cut */
 function pv_wrap($s, $size, $font, $max, $lines) {
-    $words = preg_split('/ /u', $s);
+    $cjk = pv_is_cjk($s);
+    $sep = $cjk ? '' : ' ';
+    $words = $cjk ? preg_split('//u', $s, -1, PREG_SPLIT_NO_EMPTY) : preg_split('/ /u', $s);
     $out = array(); $cur = '';
     foreach ($words as $w) {
-        $try = $cur === '' ? $w : $cur . ' ' . $w;
+        $try = $cur === '' ? $w : $cur . $sep . $w;
         if (pv_width($size, $font, $try) <= $max || $cur === '') { $cur = $try; continue; }
         $out[] = $cur; $cur = $w;
         if (count($out) === $lines) break;
@@ -59,7 +67,7 @@ function pv_wrap($s, $size, $font, $max, $lines) {
         $out = array_slice($out, 0, $lines);
         $last = $out[$lines - 1];
         while ($last !== '' && pv_width($size, $font, $last . '…') > $max) {
-            $last = preg_replace('/\s*\S+$/u', '', $last);
+            $last = $cjk ? mb_substr($last, 0, -1, 'UTF-8') : preg_replace('/\s*\S+$/u', '', $last);
         }
         $out[$lines - 1] = rtrim($last, ' ,;:') . '…';
     }
@@ -109,7 +117,7 @@ function preview_render($c) {
     for ($i = 8; $i >= 1; $i--) pv_rrect($im, $px1 + $i, $py1 + 2 + $i, $px2 + $i, $py2 + $i, 12, $sh);
     pv_rrect($im, $px1, $py1, $px2, $py2, 10, $white);
     $x = $px1 + 30; $y = $py1 + 44;
-    imagettftext($im, 13, 0, $x, $y, $muted, pv_font('r'), 'Name ______________   Date ________');
+    imagettftext($im, 13, 0, $x, $y, $muted, pv_font('r'), T('pv_name1'));
     $y += 40;
     foreach (pv_wrap($c['paper_title'], 22, pv_font('b'), $px2 - $px1 - 60, 2) as $l) {
         imagettftext($im, 22, 0, $x, $y, $ink, pv_face($l, 'b'), $l); $y += 32;
@@ -146,7 +154,7 @@ function preview_render($c) {
     // ---- left: what this is
     $lx = 64;
     pv_logo($im, $lx + 18, 74, 18, $green);
-    imagettftext($im, 22, 0, $lx + 48, 83, $green, pv_font('b'), SITE_NAME . ' Worksheets');
+    imagettftext($im, 22, 0, $lx + 48, 83, $green, pv_font('b'), sprintf(T('pv_brand'), SITE_NAME));
     $y = 150;
     foreach (pv_wrap(strtoupper($c['label']), 15, pv_font('b'), 580, 2) as $l) {
         imagettftext($im, 15, 0, $lx, $y, $muted, pv_face($l, 'b'), $l); $y += 24;
@@ -188,7 +196,7 @@ function pin_render($c) {
 
     $lx = 70;
     pv_logo($im, $lx + 20, 86, 20, $green);
-    imagettftext($im, 26, 0, $lx + 54, 96, $green, pv_font('b'), SITE_NAME . ' Worksheets');
+    imagettftext($im, 26, 0, $lx + 54, 96, $green, pv_font('b'), sprintf(T('pv_brand'), SITE_NAME));
     $y = 178;
     foreach (pv_wrap(strtoupper($c['label']), 20, pv_font('b'), $W - 2 * $lx, 2) as $l) {
         imagettftext($im, 20, 0, $lx, $y, $muted, pv_face($l, 'b'), $l); $y += 30;
@@ -216,7 +224,7 @@ function pin_render($c) {
     for ($i = 10; $i >= 1; $i--) pv_rrect($im, $px1 + $i, $py1 + 2 + $i, $px2 + $i, $py2 + $i, 14, $sh);
     pv_rrect($im, $px1, $py1, $px2, $py2, 12, $white);
     $x = $px1 + 40; $yy = $py1 + 52;
-    imagettftext($im, 17, 0, $x, $yy, $muted, pv_font('r'), 'Name ____________________    Date __________');
+    imagettftext($im, 17, 0, $x, $yy, $muted, pv_font('r'), T('pv_name2'));
     $yy += 30;
     imagesetthickness($im, 2); imageline($im, $x, $yy, $px2 - 40, $yy, $line); imagesetthickness($im, 1);
     $yy += 52;
@@ -262,7 +270,7 @@ function pin_render($c) {
 /* draw the picture of the kind that was asked for */
 function pv_out($kind, $c) {
     if ($kind === 'pin') {
-        if (!isset($c['cta'])) $c['cta'] = 'FREE · Lesson + 100 questions + answer key';
+        if (!isset($c['cta'])) $c['cta'] = T('pv_cta_unit');
         pin_render($c);
     } else {
         preview_render($c);
@@ -288,8 +296,9 @@ function preview_route($seg, $kind = 'preview') {
     $subject = $country ? get_subject($seg[0], $seg[1]) : null;
     if (!$subject) { http_response_code(404); exit; }
     T(array($country['lang']));
+    $GLOBALS['PV_CJK'] = strpos($country['lang'], 'zh') === 0;
     $paper = strtoupper($country['paper']);
-    $foot = 'Free · apu2.com/worksheets';
+    $foot = T('pv_foot');
 
     if (count($seg) === 4 && $seg[2] === 'topics') {                  // topic
         require_once __DIR__ . '/topics.php';
@@ -302,10 +311,10 @@ function preview_route($seg, $kind = 'preview') {
         $lines = array();
         foreach ($units as $u) $lines[] = array($u['short_title'], $u['grade_name']);
         pv_out($kind, array(
-            'cta' => 'FREE · ' . count($units) . ' skills with answer keys',
+            'cta' => sprintf(T('pv_cta_topic'), count($units)),
             'label' => topic_range($units) . ' · ' . $country['standard'],
             'title' => $name . ' Worksheets',
-            'chips' => array(count($units) . ' skills', 'Lessons', 'Answer keys'),
+            'chips' => array(sprintf(T('pv_skills'), count($units)), T('pv_lessons'), T('pv_keys')),
             'paper_title' => $name, 'paper_sub' => $subject['name'] . ' · ' . $country['name'],
             'lines' => $lines, 'mode' => 'list', 'foot' => $foot));
         exit;
@@ -321,11 +330,11 @@ function preview_route($seg, $kind = 'preview') {
         $lines = array();
         foreach ($units as $u) $lines[] = array($u['short_title'], '');
         pv_out($kind, array(
-            'cta' => 'FREE · ' . count($units) . ' printable worksheets',
+            'cta' => sprintf(T('pv_cta_grade'), count($units)),
             'label' => $country['standard'] . ' · ' . $country['name'],
-            'title' => $grade['name'] . ' ' . $subject['name'] . ' Worksheets',
-            'chips' => array(count($units) . ' skills', '100 questions each', 'Answer keys'),
-            'paper_title' => $grade['name'] . ' ' . $subject['name'], 'paper_sub' => count($units) . ' skills',
+            'title' => sprintf(T('grade_ws'), $grade['name'], $subject['name']),
+            'chips' => array(sprintf(T('pv_skills'), count($units)), T('pv_100each'), T('pv_keys')),
+            'paper_title' => $grade['name'] . ' ' . $subject['name'], 'paper_sub' => sprintf(T('pv_skills'), count($units)),
             'lines' => $lines, 'mode' => 'list', 'foot' => $foot));
         exit;
     }
@@ -349,8 +358,8 @@ function preview_route($seg, $kind = 'preview') {
         'label' => $grade['name'] . ' ' . $subject['name']
                    . ($u['standard_code'] ? ' · ' . preg_replace('/^' . preg_quote($grade['name'], '/') . ':\s*/', '', $u['standard_code']) : ''),
         'title' => $u['short_title'],
-        'chips' => array('Lesson', '100 questions', 'Printable ' . ($paper === 'LETTER' ? 'Letter' : $paper), 'Answer key'),
-        'paper_title' => $u['short_title'], 'paper_sub' => 'Practice · ' . $grade['name'],
+        'chips' => array(T('pv_lesson'), T('pv_100'), sprintf(T('pv_print'), $paper === 'LETTER' ? 'Letter' : $paper), T('pv_key')),
+        'paper_title' => $u['short_title'], 'paper_sub' => sprintf(T('pv_practice'), $grade['name']),
         'lines' => $lines, 'mode' => 'quiz', 'foot' => $foot));
     exit;
 }

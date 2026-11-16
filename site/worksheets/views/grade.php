@@ -22,16 +22,15 @@ foreach ($units as $u) { $names[] = $u['short_title']; }
 
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
-    'title' => sprintf(T('grade_ws'), $grade['name'], $subject['name']) . ': Free Printable + Online Practice | ' . SITE_NAME,
-    'desc' => 'Free ' . $grade['name'] . ' ' . strtolower($subject['name']) . ' worksheets aligned to the '
-              . $country['standard'] . ': ' . implode(', ', array_slice($names, 0, 6))
-              . '. 100 practice questions per skill and printable answer keys.',
+    'title' => sprintf(T('grade_ws'), $grade['name'], $subject['name']) . T('grade_title_sfx') . ' | ' . SITE_NAME,
+    'desc' => sprintf(T('grade_desc'), $grade['name'], strtolower($subject['name']), $country['standard'],
+                      implode(T('list_sep'), array_slice($names, 0, 6))),
     'canonical' => $base, 'image' => preview_path($base),
 ));
 site_header($crumbs);
 ?>
 <main class="sn-wrap">
-<h1><?= h($grade['name'] . ' ' . $subject['name']) ?> Worksheets</h1>
+<h1><?= h(sprintf(T('grade_ws'), $grade['name'], $subject['name'])) ?></h1>
 <div class="sx-hero"><p><?= h($grade['intro']) ?></p></div>
 
 <section class="lv" aria-label="Rank"<?= rank_attrs($seg[0], $seg[1], $seg[2], $units, $grade['name'] . ' ' . $subject['name'], 'card') ?>></section>
@@ -57,7 +56,7 @@ foreach (topics_for($seg[0], $seg[1]) as $tk => $tu) {
     foreach ($tu as $x) { if ($x['grade'] === $seg[2]) { $gtopics[$tk] = topic_name($tdefs[$tk], $seg[0]); break; } }
 }
 if ($gtopics): ?>
-<h2 id="topics">Topics across all <?= h(strtolower(T('grades'))) ?></h2>
+<h2 id="topics"><?= h(sprintf(T('topics_all'), strtolower(T('grades')))) ?></h2>
 <ul class="tp-chips">
 <?php foreach ($gtopics as $tk => $tn): ?>
   <li><a href="<?= url($seg[0] . '/' . $seg[1] . '/topics/' . $tk . '/') ?>"><?= h($tn) ?></a></li>
@@ -69,7 +68,7 @@ if ($gtopics): ?>
 <div class="sx-hero"><p><?= h(T('print_note')) ?>. <?= h(T('license')) ?></p></div>
 <ul class="pg">
 <?php foreach ($units as $u): ?>
-  <li><a href="<?= url($base . $u['slug'] . '/print/') ?>"><span class="pg-doc" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="t"><?= h($u['short_title']) ?></span><span class="d"><?= h($u['standard_code']) ?></span><span class="f"><?= h(strtoupper($country['paper'])) ?> · 4 pages</span></a></li>
+  <li><a href="<?= url($base . $u['slug'] . '/print/') ?>"><span class="pg-doc" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="t"><?= h($u['short_title']) ?></span><span class="d"><?= h($u['standard_code']) ?></span><span class="f"><?= h(strtoupper($country['paper'])) ?> · <?= h(T('pages4')) ?></span></a></li>
 <?php endforeach; ?>
 </ul>
 </main>
@@ -81,7 +80,7 @@ foreach ($units as $i => $u) {
                      'url' => abs_url($base . $u['slug'] . '/'));
 }
 echo jsonld(array('@context' => 'https://schema.org', '@type' => 'CollectionPage',
-    'name' => $grade['name'] . ' ' . $subject['name'] . ' Worksheets', 'url' => abs_url($base),
+    'name' => sprintf(T('grade_ws'), $grade['name'], $subject['name']), 'url' => abs_url($base),
     'inLanguage' => $country['hreflang'],
     'mainEntity' => array('@type' => 'ItemList', 'itemListElement' => $items)));
 site_footer($country['lang']);
