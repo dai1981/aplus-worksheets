@@ -73,3 +73,24 @@ def simp(n):
 def pq(a, b, v="x"):
     """（ax ＋ b）"""
     return "（%s）" % lin(a, b, v)
+
+
+def qroots(a, b, c):
+    """ax²＋bx＋c＝0 の解の文字列（「x ＝ …」）。D＜0 なら None"""
+    from math import gcd, isqrt
+    D = b * b - 4 * a * c
+    if D < 0:
+        return None
+    r = isqrt(D)
+    if r * r == D:
+        x1, x2 = sorted([F(-b + r, 2 * a), F(-b - r, 2 * a)])
+        return "x ＝ %s（重根）" % sn(x1) if x1 == x2 else "x ＝ %s 或 %s" % (sn(x1), sn(x2))
+    k, m = simp(D)
+    p, q, d = -b, k, 2 * a
+    if d < 0:
+        p, d = -p, -d
+    g = gcd(gcd(abs(p), q), d)
+    p, q, d = p // g, q // g, d // g
+    rad = "√%d" % m if q == 1 else "%d√%d" % (q, m)
+    top = ("±" + rad) if p == 0 else "%s ± %s" % (sn(p), rad)
+    return "x ＝ " + (top if d == 1 else fr(top, d))
