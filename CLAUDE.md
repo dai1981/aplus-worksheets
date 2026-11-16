@@ -840,7 +840,7 @@ US / Math / Grade 8（Common Core）— 1,000 以上はカンマ付き。負の�
 10. pythagorean-theorem ✓
 11. transformations ✓
 12. congruence-and-similarity ✓
-13. angle-relationships-parallel-lines
+13. angle-relationships-parallel-lines ✓
 14. volume-of-cylinders-cones-spheres
 15. scatter-plots
 16. two-way-tables
