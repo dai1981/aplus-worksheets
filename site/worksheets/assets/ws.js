@@ -677,8 +677,25 @@
     });
     bindClear();
     redraw();
+    loadMQ();
   }
-  window.WS = { config: CONFIG, redraw: redraw, get: get, put: put, rank: Rank };
+  // ------------------------------------------------------------ Quiz together (small QR on each quiz)
+  //  The QR opens a room that classmates or friends join from their phones.
+  //  The code is one shared file on the server: https://www.eigo-duke.com/common/js/mq.js
+  //  (it calls /worksheets/api/mq.php). Set MQ_ON to false to hide it everywhere.
+  var MQ_ON = true;
+  var MQ_SRC = "https://www.eigo-duke.com/common/js/mq.js?v=20261116b";
+  function loadMQ() {
+    if (!MQ_ON || window.MQ || !document.querySelector(".sn-quiz[data-quiz]")) return;
+    var sc = document.createElement("script");
+    sc.src = MQ_SRC; sc.async = true;
+    document.head.appendChild(sc);
+  }
+
+  FX.svg = svgMark;
+  window.WS = { config: CONFIG, redraw: redraw, get: get, put: put, rank: Rank, fx: FX,
+                // a finished set from Quiz together: same record as a normal set
+                rec: function (key, grade, ok, n) { put(key, ok, n); record(key, grade, ok, n); redraw(); } };
   window.addEventListener("pageshow", function (e) { if (e.persisted) redraw(); });
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();

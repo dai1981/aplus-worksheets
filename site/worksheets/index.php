@@ -11,6 +11,7 @@
    /worksheets/us/math/grade-3/area/preview.png -> preview picture (also grade and topic pages)
    /worksheets/us/math/grade-3/area/pin.png     -> tall picture for Pinterest (also grade and topic pages)
    /worksheets/sitemap.xml                    -> sitemap
+   /worksheets/join/                          -> Quiz together: enter a room code
 */
 require __DIR__ . '/inc/core.php';
 
@@ -39,6 +40,13 @@ if (preg_match('#^([a-z0-9/-]{1,200})/(preview|pin)\.png$#', $p, $m)) {
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 if ($p !== '' && substr($uri, -1) !== '/') {
     header('Location: ' . url($p . '/'), true, 301);
+    exit;
+}
+
+// Quiz together: type the 6-digit code from the host's screen
+if ($p === 'join') {
+    try { require __DIR__ . '/views/join.php'; }
+    catch (PDOException $e) { http_response_code(503); }
     exit;
 }
 
