@@ -160,3 +160,57 @@ def clock(h, m, size=180, label=None):
     s.append("</g>")
     s.append("<circle cx='%.1f' cy='%.1f' r='%.1f' fill='%s'/>" % (cx, cy, max(6 * k, 2), INK))
     return fig(svg_wrap(int(size), int(size), "".join(s), label or "時鐘 %d時%d分" % (h, m)))
+
+
+def mx(w, n, d):
+    """帶分數：2 又 3/4（整數と分數を並べる）"""
+    return "%d%s" % (w, fr(n, d)) if w else fr(n, d)
+
+
+DIG = "零一二三四五六七八九"
+
+
+def zh4(n):
+    """0〜9999 の國字（先頭の「一十」は「十」）"""
+    if n == 0:
+        return "零"
+    s = str(n)
+    out, zero = "", False
+    L = len(s)
+    for i, ch in enumerate(s):
+        d = int(ch)
+        p = L - 1 - i
+        if d == 0:
+            zero = True
+            continue
+        if zero and out:
+            out += "零"
+        zero = False
+        if p == 1 and d == 1 and out == "":
+            out += "十"
+        else:
+            out += DIG[d] + ("" if p == 0 else ["", "十", "百", "千"][p])
+    return out
+
+
+def zh(n):
+    """一億まで：32050400 → 三千二百零五萬零四百"""
+    if n == 100000000:
+        return "一億"
+    w, r = divmod(n, 10000)
+    if not w:
+        return zh4(r)
+    s = zh4(w) + "萬"
+    if r:
+        if r < 1000:
+            s += "零"
+        s += zh4(r) if not (r >= 10 and r < 20) else "一" + zh4(r)
+    return s
+
+
+def wan(n):
+    """萬を使った書き方：32050400 → 3205萬400"""
+    w, r = divmod(n, 10000)
+    if not w:
+        return str(r)
+    return "%d萬%s" % (w, r if r else "")

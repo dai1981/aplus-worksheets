@@ -875,7 +875,13 @@ TW / Math / Grade 3（國小三年級）
 12. angles ✓ 13. area-square-centimeters ✓ 14. liters-and-milliliters ✓ 15. kilograms-and-grams ✓ 16. time ✓
 17. squares-and-rectangles ✓ 18. circles ✓ 19. nets ✓ 20. tables ✓ 21. multiplication-division-relationship ✓ 22. patterns ✓
 
-TW / Math / Grade 4（次）— 課綱 N-4-*・S-4-*・R-4-*・D-4-* の順に作る
+TW / Math / Grade 4（國小四年級）
+1. numbers-to-100-million ✓ 2. multi-digit-multiplication ✓ 3. multi-digit-division ✓ 4. two-step-word-problems ✓ 5. rounding ✓
+6. fractions ✓ 7. equivalent-fractions ✓ 8. decimals ✓ 9. number-line ✓ 10. kilometers ✓ 11. angles ✓ 12. rotation ✓
+13. area-and-perimeter ✓ 14. volume ✓ 15. time ✓ 16. perpendicular-and-parallel ✓ 17. congruent-figures ✓ 18. triangles ✓
+19. quadrilaterals ✓ 20. order-of-operations ✓ 21. calculation-rules ✓ 22. formulas ✓ 23. patterns-odd-and-even ✓ 24. bar-and-line-graphs ✓
+
+TW / Math / Grade 5（次）— 課綱 N-5-*・S-5-*・R-5-*・D-5-* の順に作る。約分・通分はここから
 
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
