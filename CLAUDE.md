@@ -889,7 +889,13 @@ TW / Math / Grade 5（國小五年級）
 21. volume-and-surface-area ✓ 22. faces-parallel-and-perpendicular ✓ 23. solids ✓ 24. three-step-problems-and-averages ✓
 25. distributive-property ✓ 26. formulas-with-symbols ✓ 27. making-line-graphs ✓
 
-TW / Math / Grade 6（次）— 課綱 N-6-*・S-6-*・R-6-*・D-6-* の順に作る。圓形圖・比與比值・速度はここ
+TW / Math / Grade 6（國小六年級）— 圓周率は 3.14
+1. prime-factorization ✓ 2. gcf-and-lcm ✓ 3. dividing-fractions ✓ 4. dividing-decimals ✓ 5. word-problems ✓ 6. ratios ✓
+7. speed ✓ 8. base-and-compared-quantities ✓ 9. enlargement-and-reduction ✓ 10. map-scales ✓ 11. circumference ✓
+12. area-of-circles ✓ 13. volume-of-prisms-and-cylinders ✓ 14. calculation-rules ✓ 15. quantity-relationships ✓
+16. classic-word-problems ✓ 17. counting ✓ 18. pie-charts ✓ 19. likelihood ✓
+
+TW / Math / 國中七年級（次）— grade `grade-7`、課綱 n-IV・N-7-*・A-7-*・S-7-*・D-7-*。負の數・一元一次方程式から
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
