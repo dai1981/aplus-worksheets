@@ -289,10 +289,10 @@ UK / Maths / Year 7–9（KS3。National Curriculum の KS3 は 3 学年まと�
 生成スクリプトは `gen_uk_maths_y7_*`、共通部品は `tools/uk_ks3.py`（ws_common の上に UK の名前・£・make）。負の数は「−」。standard_code は「KS3: Number」形式（Number／Algebra／Ratio, proportion and rates of change／Geometry and measures／Probability／Statistics）
 
 UK / Maths / Year 7
-1. place-value-and-ordering 2. negative-numbers 3. order-of-operations 4. factors-multiples-and-primes 5. powers-and-roots
-6. rounding-and-estimation 7. fractions-decimals-and-percentages 8. adding-and-subtracting-fractions 9. multiplying-and-dividing-fractions
-10. percentages-of-amounts 11. algebraic-notation-and-substitution 12. simplifying-expressions 13. solving-equations 14. sequences
-15. ratio-and-proportion 16. angles 17. perimeter-and-area 18. coordinates-and-straight-line-graphs 19. averages-and-range 20. probability
+1. place-value-and-ordering ✓ 2. negative-numbers ✓ 3. order-of-operations ✓ 4. factors-multiples-and-primes ✓ 5. powers-and-roots ✓
+6. rounding-and-estimation ✓ 7. fractions-decimals-and-percentages ✓ 8. adding-and-subtracting-fractions ✓ 9. multiplying-and-dividing-fractions ✓
+10. percentages-of-amounts ✓ 11. algebraic-notation-and-substitution ✓ 12. simplifying-expressions ✓ 13. solving-equations ✓ 14. sequences ✓
+15. ratio-and-proportion ✓ 16. angles ✓ 17. perimeter-and-area ✓ 18. coordinates-and-straight-line-graphs ✓ 19. averages-and-range ✓ 20. probability ✓
 
 UK / Maths / Year 8
 1. indices 2. standard-form 3. expanding-and-factorising 4. equations-with-unknowns-on-both-sides 5. inequalities
