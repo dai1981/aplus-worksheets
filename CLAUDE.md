@@ -898,6 +898,12 @@ US / Math / Kindergarten（Common Core）— grade `kindergarten`（name「Kinde
 14. positions ✓
 15. build-and-compose-shapes ✓
 
+US / Math / Algebra 1（Common Core 高校）— grade `algebra-1`（name「Algebra 1」、sort 9、14〜15歳）。1,000 以上はカンマ付き。負の数は「−」。生成スクリプトは `gen_us_math_a1_*`、共通部品は `tools/us_hs.py`（au_hs と同じ API。make は CCSS の高校コード「A-REI.B.3」から standard_url を作る。domain は引数で指定）。トピック `quadratics` あり
+1. multi-step-equations ✓ 2. literal-equations ✓ 3. multi-step-and-compound-inequalities ✓ 4. absolute-value-equations-and-inequalities ✓ 5. function-notation ✓
+6. domain-and-range ✓ 7. forms-of-linear-equations ✓ 8. systems-of-linear-equations ✓ 9. systems-of-linear-inequalities ✓ 10. rational-exponents ✓
+11. simplifying-radicals ✓ 12. exponential-growth-and-decay ✓ 13. arithmetic-and-geometric-sequences ✓ 14. polynomial-operations ✓ 15. factoring-polynomials ✓
+16. solving-quadratics-by-factoring ✓ 17. quadratic-formula-and-completing-the-square ✓ 18. graphing-quadratic-functions ✓ 19. box-plots-and-standard-deviation ✓ 20. correlation-and-residuals ✓
+
 TW / Math（十二年國教課綱・108課綱）— country `tw`（name「台灣」、lang `zh-TW`）、subject `math`（數學）、grade `grade-N`（國小N年級）、A4。生成スクリプトは `gen_tw_math_gN_*`、共通部品は `tools/tw_common.py`（num・mcq・lesson・make_unit・clock など）。
 繁體中文・台灣用語（公分、毫米、公升、毫升、公斤、公克、元、直式、餘數、驗算）。時刻は「上午 9 時 40 分」、時間量は「1 小時 45 分鐘」。4 桁まではそのまま、10,000 以上はカンマ。餘數は「29 ÷ 4 ＝ 7……1」。
 standard_code は課綱の學習內容コード（例: N-3-1）、standard_text は課綱の原文。domain は 數與量／空間與形狀／關係／資料與不確定性。body_html は「怎麼想 → 例題 → 常見錯誤」。
