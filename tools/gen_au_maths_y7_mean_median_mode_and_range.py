@@ -132,7 +132,7 @@ def problems():
     for q, a, w, e in data:
         its.append(QN(q, a, [x for x in w if F(x).denominator <= 2], e))
     texts = [
-        ("Which measure should a shop use for shoe sizes when ordering stock for a shop?", "The mode", ["The mean", "The range", "The median"],
+        ("Which measure should be used for shoe sizes when ordering stock for a shop?", "The mode", ["The mean", "The range", "The median"],
          "The shop wants the size sold most often: <b>the mode</b>. A mean such as 5.7 is not a real shoe size."),
         ("House prices in a street are $650 000, $680 000, $700 000, $720 000 and $3 200 000. Which measure best represents a typical price?", "The median", ["The mean", "The mode", "The range"],
          "The $3 200 000 is an outlier that pulls the mean up. <b>The median</b> ($700 000) is more typical."),
