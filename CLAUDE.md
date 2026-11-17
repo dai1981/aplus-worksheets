@@ -295,10 +295,10 @@ UK / Maths / Year 7
 15. ratio-and-proportion ✓ 16. angles ✓ 17. perimeter-and-area ✓ 18. coordinates-and-straight-line-graphs ✓ 19. averages-and-range ✓ 20. probability ✓
 
 UK / Maths / Year 8
-1. indices 2. standard-form 3. expanding-and-factorising 4. equations-with-unknowns-on-both-sides 5. inequalities
-6. changing-the-subject-of-a-formula 7. linear-graphs 8. percentage-change-and-interest 9. direct-and-inverse-proportion
-10. speed-distance-and-time 11. circles 12. volume-and-surface-area-of-prisms 13. angles-in-parallel-lines-and-polygons
-14. transformations 15. probability-of-combined-events 16. frequency-tables-and-charts 17. units-and-scale-drawings
+1. indices ✓ 2. standard-form ✓ 3. expanding-and-factorising ✓ 4. equations-with-unknowns-on-both-sides ✓ 5. inequalities ✓
+6. changing-the-subject-of-a-formula ✓ 7. linear-graphs ✓ 8. percentage-change-and-interest ✓ 9. direct-and-inverse-proportion ✓
+10. speed-distance-and-time ✓ 11. circles ✓ 12. volume-and-surface-area-of-prisms ✓ 13. angles-in-parallel-lines-and-polygons ✓
+14. transformations ✓ 15. probability-of-combined-events ✓ 16. frequency-tables-and-charts ✓ 17. units-and-scale-drawings ✓
 
 UK / Maths / Year 9
 1. pythagoras-theorem 2. trigonometry 3. similarity-and-congruence 4. expanding-and-factorising-quadratics 5. simultaneous-equations
