@@ -916,7 +916,12 @@ TW / Math / Grade 9（國中九年級）— 図の部品は `tools/tw_g9.py`（p
 12. quadratic-functions ✓ 13. graphs-of-quadratic-functions ✓ 14. maximum-and-minimum ✓ 15. box-plots ✓ 16. probability ✓
 17. lines-and-planes-in-space ✓ 18. surface-area-and-volume ✓ 19. geometric-proofs ✓
 
-TW / Math / 國小一、二年級（次）— grade `grade-1`・`grade-2`、課綱 N-1-*・N-2-* など。とても短い文、ほぼ全問に絵
+TW / Math / Grade 1（國小一年級）— 絵は `tools/tw_pics.py`（k_pics の絵に中國語の aria-label、台灣の硬幣・紙鈔 money_svg）。とても短い文、ほぼ全問に絵
+1. numbers-to-100 ✓ 2. addition-meaning ✓ 3. subtraction-meaning ✓ 4. addition-facts-to-18 ✓ 5. subtraction-facts-to-18 ✓
+6. add-subtract-within-100 ✓ 7. number-sentences ✓ 8. money ✓ 9. comparing-length ✓ 10. dates-and-time ✓ 11. shapes ✓
+12. sorting-and-counting ✓
+
+TW / Math / 國小二年級（次）— grade `grade-2`、課綱 N-2-*・S-2-*・R-2-*・D-2-*。1000 以內の數・直式加減・九九乘法・公分から。短い文、絵を多く
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
