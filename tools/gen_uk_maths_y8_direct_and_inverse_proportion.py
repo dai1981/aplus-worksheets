@@ -102,14 +102,16 @@ def one_inverse(r):
         ans = F(w1 * d1, w2)
         q = "%d builders take %d days to build a wall. How long would %d builders take, working at the same rate?" % (w1, d1, w2)
         e = "Total work = %d × %d = %d builder-days. %d ÷ %d = <b>%s days</b>." % (w1, d1, w1 * d1, w1 * d1, w2, num(ans))
-        return QN(q, ans, [F(d1 * w2, w1), d1 + w1 - w2 if d1 + w1 - w2 > 0 else None, w1 * d1], e, unit=" days")
+        return QN(q, ans, [F(d1 * w2, w1), d1 + w1 - w2 if d1 + w1 - w2 > 0 else None, w1 * d1], e,
+                  fmt=lambda v: num(v) + (" day" if v == 1 else " days"), near=(1, 2, -1, 3))
     if kind == 1:
         s1, t1 = r.choice([(60, 3), (40, 6), (50, 4), (30, 8), (80, 3)])
         s2 = r.choice([x for x in [20, 30, 40, 45, 60, 80, 90, 120] if x != s1 and (s1 * t1) % x == 0])
         ans = F(s1 * t1, s2)
         q = "A journey takes %d hours at %d mph. How long would it take at %d mph?" % (t1, s1, s2)
         e = "Distance = %d × %d = %d miles. %d ÷ %d = <b>%s hours</b>." % (s1, t1, s1 * t1, s1 * t1, s2, num(ans))
-        return QN(q, ans, [F(t1 * s2, s1), s1 * t1, t1 + (s1 - s2) // 10], e, unit=" hours")
+        return QN(q, ans, [w for w in [F(t1 * s2, s1), s1 * t1, t1 + (s1 - s2) // 10] if w > 0], e,
+                  fmt=lambda v: num(v) + (" hour" if v == 1 else " hours"), near=(1, 2, -1, F(1, 2)))
     n1, each1 = r.choice([(4, 15), (6, 10), (5, 12), (8, 9), (3, 20)])
     n2 = r.choice([x for x in [2, 3, 4, 5, 6, 10, 12] if x != n1 and (n1 * each1) % x == 0])
     ans = F(n1 * each1, n2)

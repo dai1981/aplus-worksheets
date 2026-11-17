@@ -136,7 +136,12 @@ def QN(q, ans, wrongs, e, fmt=None, unit="", near=(1, -1, 2, -2, 10, -10)):
     f = fmt or num
     ans = F(ans)
     ws = [F(w) for w in wrongs if w is not None] + [ans + d for d in near]
-    cands = [(f(w) + unit, w) for w in ws if w != ans and f(w) is not None]
+    def safe(w):
+        try:
+            return f(w)
+        except (TypeError, AssertionError):
+            return None
+    cands = [(safe(w) + unit, w) for w in ws if w != ans and safe(w) is not None]
     return mcq(q, (f(ans) + unit, ans), cands, e)
 
 
