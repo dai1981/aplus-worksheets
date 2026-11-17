@@ -9,6 +9,7 @@ only the visible cubes, and confusing the plan with an elevation.
 """
 import math
 import random
+import uk_ks3
 from uk_ks3 import num, B, S, make, lesson, collect, T, svg_wrap, line, text, fig, INK, RED, BLUE
 
 R = random.Random(91301)
@@ -141,6 +142,14 @@ def rand_solid(r, need_gap=False):
     return None
 
 
+_POS = [0]
+
+
+def next_pos():
+    _POS[0] += 1
+    return [0, 2, 1, 3, 2, 0, 3, 1][_POS[0] % 8]
+
+
 def mcq_views(r, correct, cands, kinds_of, title, q, e, h):
     wr = []
     for cv in cands:
@@ -149,9 +158,9 @@ def mcq_views(r, correct, cands, kinds_of, title, q, e, h):
     if len(wr) < 3:
         return None
     wr = wr[:3]
-    allv = [correct] + wr
-    r.shuffle(allv)
-    idx = allv.index(correct)
+    r.shuffle(wr)
+    idx = next_pos()
+    allv = wr[:idx] + [correct] + wr[idx:]
     svg = options_svg(h, allv, [kinds_of(v) for v in allv], title)
     others = [LET[i] for i in range(4) if i != idx]
     return T(fig(svg) + q, LET[idx], others, e)
@@ -225,9 +234,10 @@ def one_numbered(r):
             wr.append(cv)
     if len(wr) < 3:
         return None
-    allv = [fv] + wr[:3]
-    r.shuffle(allv)
-    idx = allv.index(fv)
+    wr = wr[:3]
+    r.shuffle(wr)
+    idx = next_pos()
+    allv = wr[:idx] + [fv] + wr[idx:]
     out, W, Hh = numbered_plan_svg(h)
     s16, cellw = 16, 86
     maxh = max(max(rw for rw, _ in v) + 1 for v in allv)
@@ -306,6 +316,20 @@ def body():
          "Drawing a view the wrong way round (mirrored).",
          "Showing the heights on a plan drawing. A plan only shows the outline from above.",
          "Counting only the cubes you can see when a numbered plan gives the heights."])
+
+
+def letters_in_order(sets, rnd, _orig=uk_ks3.balance):
+    """Balance as usual, then put A, B, C, D choices back in order (the letters name the drawings)."""
+    _orig(sets, rnd)
+    for st in sets:
+        for it in st["items"]:
+            if sorted(it["c"]) == list(LET):
+                ans = it["c"][it["a"]]
+                it["c"] = list(LET)
+                it["a"] = LET.index(ans)
+
+
+uk_ks3.balance = letters_in_order
 
 
 def main():
