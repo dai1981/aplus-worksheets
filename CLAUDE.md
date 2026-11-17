@@ -422,6 +422,19 @@ AU / Maths / Year 1（とても短い文、ほぼ全問に絵）
 12. data-and-tally-marks ✓
 13. chance ✓
 
+AU / Maths / Year 7–8（高校。生成スクリプトは `gen_au_maths_y7_*`・`gen_au_maths_y8_*`、共通部品は `tools/au_hs.py`（ws_common の上に AU の数の書き方・$・make）。負の数は「−」。standard_code は v9 のコード（例: AC9M8N04）、standard_url は v9 の Mathematics ページ）
+
+AU / Maths / Year 7
+1. square-numbers-and-square-roots ✓ 2. prime-factorisation-and-index-notation ✓ 3. fractions-decimals-and-percentages ✓ 4. rounding-and-estimation ✓ 5. adding-and-subtracting-fractions ✓ 6. multiplying-and-dividing-fractions ✓
+7. percentages-and-discounts ✓ 8. adding-and-subtracting-integers ✓ 9. ratios ✓ 10. formulas-and-substitution ✓ 11. algebraic-expressions ✓ 12. solving-linear-equations ✓
+13. area-of-triangles-and-parallelograms ✓ 14. volume-of-prisms ✓ 15. circumference-and-pi ✓ 16. angles-and-parallel-lines ✓ 17. angle-sum-of-triangles-and-polygons ✓ 18. transformations-on-the-cartesian-plane ✓
+19. mean-median-mode-and-range ✓ 20. stem-and-leaf-plots ✓ 21. probability ✓
+
+AU / Maths / Year 8
+1. irrational-numbers-and-recurring-decimals ✓ 2. index-laws ✓ 3. integers-and-rational-numbers ✓ 4. percentages-profit-and-loss ✓ 5. expanding-and-factorising ✓ 6. linear-equations ✓
+7. linear-inequalities ✓ 8. graphing-linear-relations ✓ 9. area-and-perimeter-of-composite-shapes ✓ 10. volume-and-capacity ✓ 11. circumference-and-area-of-circles ✓ 12. time-zones-and-duration ✓
+13. rates ✓ 14. pythagoras-theorem ✓ 15. congruent-and-similar-triangles ✓ 16. properties-of-quadrilaterals ✓ 17. sampling-and-data ✓ 18. probability-of-two-events ✓
+
 CA-ON / Math（Ontario Curriculum 2020）— country `ca-on`（name「Ontario, Canada」）、subject `math`、grade `grade-N`、Letter。生成スクリプトは `gen_caon_math_*`。
 カナダ英語（colour, metre, centre, math, grade, students, trapezoid, counterclockwise, bar graph）。お金は $ と ¢（nickel 5¢・dime・quarter・loonie・toonie、ペニーなし）。
 数は 4 桁はそのまま、5 桁以上はノーブレークスペース区切り。standard_code は「Grade 3: B2.2」形式。EQAO は Grade 3・6
@@ -952,7 +965,7 @@ TW / Math は國小一年級〜國中九年級まで完了。次は下の「そ�
 tw のトピック別ページは `topic_defs_tw()`（topics.php、中国語の name・blurb、tw の slug 用の正規表現）。tw の単元を足したらどのトピックに入るか確認する
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
-その後: AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
+その後: AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
