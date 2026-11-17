@@ -53,7 +53,7 @@ def collect(make_one, n, rnd, tries=4000):
     for _ in range(tries):
         try:
             it = make_one(rnd)
-        except AssertionError:
+        except (AssertionError, TypeError):
             continue
         if it is None:
             continue
