@@ -160,3 +160,9 @@ def expr(terms):
             continue
         out += term(c, var, first=(out == ""))
     return out or "0"
+
+
+def ordinal(n):
+    n = int(n)
+    suf = "th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return "%d%s" % (n, suf)
