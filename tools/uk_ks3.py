@@ -138,3 +138,25 @@ def QN(q, ans, wrongs, e, fmt=None, unit="", near=(1, -1, 2, -2, 10, -10)):
     ws = [F(w) for w in wrongs if w is not None] + [ans + d for d in near]
     cands = [(f(w) + unit, w) for w in ws if w != ans and f(w) is not None]
     return mcq(q, (f(ans) + unit, ans), cands, e)
+
+
+def term(c, var, first=False):
+    """One signed term: (3, 'x') -> ' + 3x'; (-1, 'x') -> ' − x'; (5, '') -> ' + 5'."""
+    c = F(c)
+    if c == 0:
+        return ""
+    mag = abs(c)
+    body = (num(mag) if (mag != 1 or not var) else "") + var
+    if first:
+        return (MINUS if c < 0 else "") + body
+    return (" %s " % (MINUS if c < 0 else "+")) + body
+
+
+def expr(terms):
+    """[(3,'<i>x</i>'), (-2,'')] -> '3x − 2'. Zero terms dropped; empty gives 0."""
+    out = ""
+    for c, var in terms:
+        if F(c) == 0:
+            continue
+        out += term(c, var, first=(out == ""))
+    return out or "0"
