@@ -105,7 +105,7 @@ def problems():
         ("If every edge of a rectangular prism is doubled, what happens to the volume?", "It is multiplied by 8", ["It doubles", "It is multiplied by 4", "It is multiplied by 6"], "2 × 2 × 2 = 8, so the volume is <b>multiplied by 8</b>."),
         ("A rectangular prism has a square base of side 4 cm and a volume of 112 cm³. How high is it?", "7 cm", ["28 cm", "14 cm", "104 cm"], "Base area = 16 cm². 112 ÷ 16 = <b>7 cm</b>."),
         ("Which units are used for volume?", "cm³ or m³", ["cm² or m²", "cm or m", "kg or g"], "Volume is measured in <b>cubic units</b>."),
-        ("Which two prisms have the same volume?", "2 × 3 × 10 and 5 × 4 × 3", ["2 × 3 × 10 and 5 × 5 × 2", "4 × 4 × 4 and 8 × 8 × 1", "6 × 1 × 1 and 3 × 3 × 3"],
+        ("Which two prisms have the same volume?", "2 × 3 × 10 and 5 × 4 × 3", ["2 × 3 × 10 and 5 × 5 × 2", "4 × 4 × 4 and 8 × 4 × 1", "6 × 1 × 1 and 3 × 3 × 3"],
          "2 × 3 × 10 = 60 and 5 × 4 × 3 = 60, so <b>2 × 3 × 10 and 5 × 4 × 3</b>."),
         ("A box is 20 cm by 10 cm by 10 cm. How many boxes fit in a carton 40 cm by 40 cm by 20 cm?", "16", ["8", "32", "4"], "Along each edge: 2 × 4 × 2 = <b>16</b> boxes."),
         ("A concrete path is 10 m long, 1.2 m wide and 0.1 m thick. What volume of concrete is needed?", "1.2 m³", ["12 m³", "11.3 m³", "0.12 m³"], "10 × 1.2 × 0.1 = <b>1.2 m³</b>."),
