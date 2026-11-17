@@ -285,6 +285,27 @@ UK / Maths / Year 1（KS1）— 100 まで（計算は 20 まで）。とても�
 9. 2d-and-3d-shapes ✓
 10. position-and-direction ✓
 
+UK / Maths / Year 7–9（KS3。National Curriculum の KS3 は 3 学年まとめての内容なので、White Rose 等の一般的な配分で学年に分ける）— Year 4 と同じルール。
+生成スクリプトは `gen_uk_maths_y7_*`、共通部品は `tools/uk_ks3.py`（ws_common の上に UK の名前・£・make）。負の数は「−」。standard_code は「KS3: Number」形式（Number／Algebra／Ratio, proportion and rates of change／Geometry and measures／Probability／Statistics）
+
+UK / Maths / Year 7
+1. place-value-and-ordering 2. negative-numbers 3. order-of-operations 4. factors-multiples-and-primes 5. powers-and-roots
+6. rounding-and-estimation 7. fractions-decimals-and-percentages 8. adding-and-subtracting-fractions 9. multiplying-and-dividing-fractions
+10. percentages-of-amounts 11. algebraic-notation-and-substitution 12. simplifying-expressions 13. solving-equations 14. sequences
+15. ratio-and-proportion 16. angles 17. perimeter-and-area 18. coordinates-and-straight-line-graphs 19. averages-and-range 20. probability
+
+UK / Maths / Year 8
+1. indices 2. standard-form 3. expanding-and-factorising 4. equations-with-unknowns-on-both-sides 5. inequalities
+6. changing-the-subject-of-a-formula 7. linear-graphs 8. percentage-change-and-interest 9. direct-and-inverse-proportion
+10. speed-distance-and-time 11. circles 12. volume-and-surface-area-of-prisms 13. angles-in-parallel-lines-and-polygons
+14. transformations 15. probability-of-combined-events 16. frequency-tables-and-charts 17. units-and-scale-drawings
+
+UK / Maths / Year 9
+1. pythagoras-theorem 2. trigonometry 3. similarity-and-congruence 4. expanding-and-factorising-quadratics 5. simultaneous-equations
+6. quadratic-graphs 7. arithmetic-and-geometric-sequences 8. compound-interest-and-growth 9. volume-of-cylinders-cones-and-spheres
+10. arcs-and-sectors 11. bearings-and-loci 12. scatter-graphs-and-correlation 13. plans-and-elevations 14. real-life-graphs
+15. rounding-and-error-intervals 16. ratio-problems-and-best-buys
+
 AU / Maths（Australian Curriculum v9.0）— country `au`、subject `maths`、grade `year-N`、A4。
 オーストラリア英語（colour, metre, maths, analog, mixed numeral, column graph, students）。お金は $ と c（1c・2c 硬貨なし）。
 数は 4 桁はそのまま（4536）、5 桁以上は空白区切り（10 000、ノーブレークスペース）。standard_code は v9 のコード（例: AC9M3N01）
@@ -931,7 +952,7 @@ TW / Math は國小一年級〜國中九年級まで完了。次は下の「そ�
 tw のトピック別ページは `topic_defs_tw()`（topics.php、中国語の name・blurb、tw の slug 用の正規表現）。tw の単元を足したらどのトピックに入るか確認する
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
-その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
+その後: AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
