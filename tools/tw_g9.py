@@ -59,3 +59,36 @@ def pi(c):
     if c.denominator == 1:
         return neg + ("π" if c == 1 else "%dπ" % c.numerator)
     return neg + fr("%sπ" % ("" if c.numerator == 1 else c.numerator), c.denominator)
+
+
+def vform(a, h, k):
+    """y ＝ a（x － h）² ＋ k（a は int/Fraction）"""
+    from tw_g7 import sn
+    from fractions import Fraction as F
+    a = F(a)
+    if a == 1:
+        co = ""
+    elif a == -1:
+        co = "－"
+    elif a.denominator == 1:
+        co = sn(a)
+    else:
+        from tw_common import fr
+        co = ("－" if a < 0 else "") + fr(abs(a.numerator), a.denominator)
+    if h == 0:
+        core = "x<sup>2</sup>"
+    else:
+        core = "（x %s %d）<sup>2</sup>" % ("－" if h > 0 else "＋", abs(h))
+    tail = "" if k == 0 else (" ＋ %d" % k if k > 0 else " － %d" % -k)
+    return "y ＝ " + co + core + tail
+
+
+def parab(a, h, k, n=6, col="#1f5fa8"):
+    """plane() 用の線分リスト"""
+    segs = []
+    xs = [h - n * 2 + i * 0.1 for i in range(int(n * 40) + 1)]
+    pts = [(x, float(a) * (x - h) ** 2 + k) for x in xs]
+    for (x1, y1), (x2, y2) in zip(pts, pts[1:]):
+        if -n <= x1 <= n and -n <= x2 <= n and -n <= y1 <= n and -n <= y2 <= n:
+            segs.append(((x1, y1), (x2, y2), col))
+    return segs
