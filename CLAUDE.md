@@ -301,10 +301,10 @@ UK / Maths / Year 8
 14. transformations ✓ 15. probability-of-combined-events ✓ 16. frequency-tables-and-charts ✓ 17. units-and-scale-drawings ✓
 
 UK / Maths / Year 9
-1. pythagoras-theorem 2. trigonometry 3. similarity-and-congruence 4. expanding-and-factorising-quadratics 5. simultaneous-equations
-6. quadratic-graphs 7. arithmetic-and-geometric-sequences 8. compound-interest-and-growth 9. volume-of-cylinders-cones-and-spheres
-10. arcs-and-sectors 11. bearings-and-loci 12. scatter-graphs-and-correlation 13. plans-and-elevations 14. real-life-graphs
-15. rounding-and-error-intervals 16. ratio-problems-and-best-buys
+1. pythagoras-theorem ✓ 2. trigonometry ✓ 3. similarity-and-congruence ✓ 4. expanding-and-factorising-quadratics ✓ 5. simultaneous-equations ✓
+6. quadratic-graphs ✓ 7. arithmetic-and-geometric-sequences ✓ 8. compound-interest-and-growth ✓ 9. volume-of-cylinders-cones-and-spheres ✓
+10. arcs-and-sectors ✓ 11. bearings-and-loci ✓ 12. scatter-graphs-and-correlation ✓ 13. plans-and-elevations ✓ 14. real-life-graphs ✓
+15. rounding-and-error-intervals ✓ 16. ratio-problems-and-best-buys ✓
 
 AU / Maths（Australian Curriculum v9.0）— country `au`、subject `maths`、grade `year-N`、A4。
 オーストラリア英語（colour, metre, maths, analog, mixed numeral, column graph, students）。お金は $ と c（1c・2c 硬貨なし）。

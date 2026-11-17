@@ -79,7 +79,7 @@ function topic_defs($country = null) {
             'in' => '/decimal|thousandths/', 'out' => '/^$/',
             'blurb' => 'Tenths and hundredths first, then place value, comparing and rounding decimals, and adding, subtracting, multiplying and dividing with decimals.'),
         'percents' => array('name' => 'Percents', 'name_gb' => 'Percentages',
-            'in' => '/percent|discount/', 'out' => '/^$/',
+            'in' => '/percent|discount|compound-interest/', 'out' => '/^$/',
             'blurb' => 'What percent means, converting between fractions, decimals and percents, finding a percent of an amount, discounts and percent change.',
             'blurb_gb' => 'What percentage means, converting between fractions, decimals and percentages, finding a percentage of an amount, discounts and percentage change.'),
         'ratios-and-rates' => array('name' => 'Ratios and Rates',
