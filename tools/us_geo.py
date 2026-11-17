@@ -5,6 +5,7 @@ Coordinates are screen pixels (y grows downward). Build a figure with Canvas, ad
 svg(label); the viewBox is fitted to everything that was added.
 """
 import math
+import re
 from ws_common import INK, GREEN, RED, BLUE, FILL, FONT
 
 SOFT = "#eef6f0"
@@ -72,9 +73,12 @@ class Canvas:
         self._p(*pts)
 
     def text(self, p, t, fs=16, col=INK, anchor="middle", italic=False, weight=700):
+        plain = re.sub("<[^>]+>", "", t)
+        t = t.replace("<i>", "<tspan font-style='italic'>").replace("</i>", "</tspan>")
+        t = t.replace("<sup>", "<tspan font-size='%d' dy='-%d'>" % (fs * 0.7, fs * 0.35)).replace("</sup>", "</tspan>")
         self.el.append("<text x='%.1f' y='%.1f' font-size='%d' font-weight='%d' fill='%s' text-anchor='%s'%s>%s</text>" % (
             p[0], p[1] + fs * 0.35, fs, weight, col, anchor, " font-style='italic'" if italic else "", t))
-        w = fs * 0.6 * len(t.replace("&lt;", "<"))
+        w = fs * 0.6 * len(plain.replace("&lt;", "<"))
         x0 = p[0] - (w / 2 if anchor == "middle" else (w if anchor == "end" else 0))
         self._p((x0, p[1] - fs * 0.6), (x0 + w, p[1] + fs * 0.6))
 
