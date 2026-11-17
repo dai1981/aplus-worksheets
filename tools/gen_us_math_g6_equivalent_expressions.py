@@ -934,7 +934,7 @@ def gen():
         "standard_text": "Apply the properties of operations to generate equivalent expressions. For example, apply the distributive property to the expression 3 (2 + x) to produce the equivalent expression 6 + 3x; apply the distributive property to the expression 24x + 18y to produce the equivalent expression 6 (4x + 3y); apply properties of operations to y + y + y to produce the equivalent expression 3y.",
         "meta_desc": "Free Grade 6 equivalent expressions worksheets: combine like terms, expand with the distributive property, factor using the GCF, and test whether two expressions are equivalent. 100 practice questions with an answer key and step-by-step explanations.",
         "key_big": "Equivalent expressions are equal for every value of the variable. The number outside the parentheses multiplies every term inside.",
-        "key_sub": "3(2 + <i>x</i>) = 6 + 3<i>x</i>, not 6 + <i>x</i>. 24<i>x</i> + 18<i>y</i> = 6(4<i>x</i> + 3<i>y</i>). <i>y</i> + <i>y</i> + <i>y</i> = 3<i>y</i>, but <i>y</i> · <i>y</i> = <i>y</i><sup>2</sup>.",
+        "key_sub": "3(2 + x) = 6 + 3x, not 6 + x. 24x + 18y = 6(4x + 3y). y + y + y = 3y, but y · y = y².",
         "body_html": body_html(), "faq": FAQ, "sets": sets,
     }
     return u

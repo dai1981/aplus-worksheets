@@ -910,7 +910,13 @@ TW / Math / Grade 8（國中八年級）— 根式は `tools/tw_g8.py`（poly・
 17. linear-functions ✓ 18. parallel-lines ✓ 19. polygon-angle-sums ✓ 20. congruent-triangles ✓ 21. triangle-properties ✓
 22. equilateral-triangle-area ✓ 23. parallelograms ✓ 24. special-quadrilaterals ✓
 
-TW / Math / 國中九年級（次）— grade `grade-9`、課綱 N-9-*・A-9-*・F-9-*・S-9-*・D-9-*。相似形・圓・二次函數から
+TW / Math / Grade 9（國中九年級）— 図の部品は `tools/tw_g9.py`（poly_svg・pi・vform・parab）。四分位數は前半・後半の中位數（資料の個數は 4 で割って 1 余る數を避ける）
+1. continued-ratios ✓ 2. similar-figures ✓ 3. similar-triangles ✓ 4. proportional-segments ✓ 5. special-right-triangles ✓
+6. arc-length-and-sector-area ✓ 7. points-lines-and-circles ✓ 8. inscribed-angles ✓ 9. circumcenter ✓ 10. incenter ✓ 11. centroid ✓
+12. quadratic-functions ✓ 13. graphs-of-quadratic-functions ✓ 14. maximum-and-minimum ✓ 15. box-plots ✓ 16. probability ✓
+17. lines-and-planes-in-space ✓ 18. surface-area-and-volume ✓ 19. geometric-proofs ✓
+
+TW / Math / 國小一、二年級（次）— grade `grade-1`・`grade-2`、課綱 N-1-*・N-2-* など。とても短い文、ほぼ全問に絵
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）

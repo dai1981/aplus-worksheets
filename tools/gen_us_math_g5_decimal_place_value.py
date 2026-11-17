@@ -785,7 +785,7 @@ def gen():
         "standard_text": "Recognize that in a multi-digit number, a digit in one place represents 10 times as much as it represents in the place to its right and 1/10 of what it represents in the place to its left. Explain patterns in the number of zeros of the product when multiplying a number by powers of 10, and explain patterns in the placement of the decimal point when a decimal is multiplied or divided by a power of 10. Use whole-number exponents to denote powers of 10. Read, write, and compare decimals to thousandths. Use place value understanding to round decimals to any place.",
         "meta_desc": "Free Grade 5 decimal place value worksheets: value of a digit to thousandths, 10 times and 1/10 as much, powers of 10 with exponents, word form and expanded form, comparing and ordering decimals, and rounding with number lines. 100 practice questions with answers.",
         "key_big": "Each place is worth 10 times the place to its right. Line up the decimal points to compare, and look one place to the right to round.",
-        "key_sub": "0.7 is 10 times 0.07. 10<sup>3</sup> = 1,000 moves the point 3 places. 0.5 &gt; 0.125 even with fewer digits, and 3.995 rounds to 4.00 at the nearest hundredth.",
+        "key_sub": "0.7 is 10 times 0.07. 10³ = 1,000 moves the point 3 places. 0.5 > 0.125 even with fewer digits, and 3.995 rounds to 4.00 at the nearest hundredth.",
         "body_html": body_html(), "faq": FAQ, "sets": sets,
     }
     return mark_large(u, "(place-value chart|number line)")

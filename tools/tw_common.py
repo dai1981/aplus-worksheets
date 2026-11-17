@@ -1,3 +1,4 @@
+import re
 # -*- coding: utf-8 -*-
 """
 台灣（國小數學・108課綱）の単元生成の共通部品。
@@ -121,6 +122,21 @@ def lesson(think, examples, mist, extra=""):
     return h
 
 
+SUP = str.maketrans("0123456789n－", "⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁻")
+SUB = str.maketrans("0123456789n", "₀₁₂₃₄₅₆₇₈₉ₙ")
+
+
+def plain_text(t):
+    """見出し・key_big などはプレーンテキストで表示されるので HTML を文字に直す"""
+    t = re.sub(r"<sup>([^<]*)</sup>", lambda m: m.group(1).translate(SUP), t)
+    t = re.sub(r"<sub>([^<]*)</sub>", lambda m: m.group(1).translate(SUB), t)
+    t = re.sub(r"<span class='fr'><span class='fn'>(.*?)</span><span class='fd'>([^<]*)</span></span>",
+               lambda m: (m.group(1) if len(m.group(1)) <= 3 else "（%s）" % m.group(1)) + "/" + (m.group(2) if m.group(2).isdigit() else "（%s）" % m.group(2)), t)
+    t = re.sub(r"<span class='ov'>([^<]*)</span>", r"\1", t)
+    assert "<" not in t, t
+    return t
+
+
 def make_unit(rnd, grade, slug, code, std_text, title, seo_title, short_title, meta_desc,
               key_big, key_sub, body_html, faq, sets, sort):
     """sets: [(セット名, [items x20])] を balance して書き出す"""
@@ -128,6 +144,7 @@ def make_unit(rnd, grade, slug, code, std_text, title, seo_title, short_title, m
     for s in sets:
         assert len(s["items"]) == 20, (slug, s["title"], len(s["items"]))
     balance(sets, rnd)
+    title, seo_title, short_title, meta_desc, key_big, key_sub = map(plain_text, (title, seo_title, short_title, meta_desc, key_big, key_sub))
     write_unit("tw", "math", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
         "domain": DOMAIN[code[0]], "standard_code": code, "standard_url": STD_URL,

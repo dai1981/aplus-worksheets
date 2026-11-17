@@ -38,6 +38,9 @@ def main():
         for k in NEED:
             if not u.get(k):
                 errs.append("%s: missing %s" % (rel, k))
+        for k in ("title", "seo_title", "short_title", "meta_desc", "key_big", "key_sub"):
+            if re.search(r"</?(sup|sub|span|b|i|br|em|strong)\b", u.get(k) or ""):
+                errs.append("%s: HTML tag in %s (shown as plain text)" % (rel, k))
         for k in ("country", "subject", "grade", "slug"):
             if not KEY.match(str(u.get(k, ""))):
                 errs.append("%s: bad %s" % (rel, k))
