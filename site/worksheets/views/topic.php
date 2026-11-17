@@ -5,7 +5,7 @@ $country = get_country($seg[0]);
 $subject = $country ? get_subject($seg[0], $seg[1]) : null;
 if (!$subject) not_found();
 T(array($country['lang']));
-$defs = topic_defs();
+$defs = topic_defs($seg[0]);
 $all = topics_for($seg[0], $seg[1]);
 if (!isset($all[$seg[3]])) not_found();
 $tk = $seg[3];
@@ -27,33 +27,54 @@ $titles = array();
 foreach ($units as $u) $titles[] = $u['short_title'];
 $first = $units[0]; $last = $units[count($units) - 1];
 
-$faq = array(
-    array('q' => 'What ' . $lc . ' worksheets are on this page?',
-          'a' => 'There are ' . count($units) . ' ' . $lc . ' skills from ' . $range . ': '
-               . implode(', ', array_slice($titles, 0, 6)) . (count($titles) > 6 ? ', and more' : '') . '.'),
-    array('q' => 'When do students learn ' . $lc . ' in the ' . $country['standard'] . '?',
-          'a' => $name . ' starts in ' . $first['grade_name'] . ' with ' . $first['short_title']
-               . ($first['grade'] === $last['grade'] ? '.' : ' and goes up to ' . $last['grade_name'] . ' with ' . $last['short_title'] . '.')),
-    array('q' => 'How should my child use these ' . $lc . ' worksheets?',
-          'a' => 'Pick the skill for their ' . strtolower(rtrim(T('grades'), 's')) . ', read the short lesson, then do the 5 practice sets of 20 questions. '
-               . 'Each answer is checked right away. Print the ' . $paper . ' worksheet for extra practice; the answer key is on the last page.'),
-    array('q' => 'Are these ' . $lc . ' worksheets free?',
-          'a' => 'Yes. The lessons, the online practice and the printable worksheets with answer keys are free for home and classroom use. No sign-up is needed.'),
-);
+$zh = $country['lang'] === 'zh-TW';
+if ($zh) {
+    $faq = array(
+        array('q' => '這一頁有哪些' . $name . '學習單？',
+              'a' => '共有 ' . count($units) . ' 個' . $name . '單元，從' . $range . '：'
+                   . implode('、', array_slice($titles, 0, 6)) . (count($titles) > 6 ? '等' : '') . '。'),
+        array('q' => $name . '在' . $country['standard'] . '中從幾年級開始學？',
+              'a' => $name . '從' . $first['grade_name'] . '的「' . $first['short_title'] . '」開始'
+                   . ($first['grade'] === $last['grade'] ? '。' : '，一直學到' . $last['grade_name'] . '的「' . $last['short_title'] . '」。')),
+        array('q' => '孩子要怎麼使用這些' . $name . '學習單？',
+              'a' => '選擇孩子所在年級的單元，先讀簡短的說明，再做 5 組、每組 20 題的練習，每題作答後立刻知道對錯。'
+                   . '也可以列印 ' . $paper . ' 學習單多練習，最後一頁是解答。'),
+        array('q' => '這些' . $name . '學習單免費嗎？',
+              'a' => '免費。說明、線上練習和附解答的列印學習單，在家裡和教室都可以免費使用，不需要註冊。'),
+    );
+} else {
+    $faq = array(
+        array('q' => 'What ' . $lc . ' worksheets are on this page?',
+              'a' => 'There are ' . count($units) . ' ' . $lc . ' skills from ' . $range . ': '
+                   . implode(', ', array_slice($titles, 0, 6)) . (count($titles) > 6 ? ', and more' : '') . '.'),
+        array('q' => 'When do students learn ' . $lc . ' in the ' . $country['standard'] . '?',
+              'a' => $name . ' starts in ' . $first['grade_name'] . ' with ' . $first['short_title']
+                   . ($first['grade'] === $last['grade'] ? '.' : ' and goes up to ' . $last['grade_name'] . ' with ' . $last['short_title'] . '.')),
+        array('q' => 'How should my child use these ' . $lc . ' worksheets?',
+              'a' => 'Pick the skill for their ' . strtolower(rtrim(T('grades'), 's')) . ', read the short lesson, then do the 5 practice sets of 20 questions. '
+                   . 'Each answer is checked right away. Print the ' . $paper . ' worksheet for extra practice; the answer key is on the last page.'),
+        array('q' => 'Are these ' . $lc . ' worksheets free?',
+              'a' => 'Yes. The lessons, the online practice and the printable worksheets with answer keys are free for home and classroom use. No sign-up is needed.'),
+    );
+}
 
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
-    'title' => $name . ' Worksheets: Free ' . $range . ' ' . $subject['name'] . ' Practice with Answers | ' . SITE_NAME,
-    'desc' => 'Free ' . $lc . ' worksheets for ' . $range . ', aligned to the ' . $country['standard'] . ': '
-              . count($units) . ' skills, each with a lesson, 100 practice questions and a printable answer key.',
+    'title' => $zh ? $name . '學習單｜' . $range . '免費練習（附解答）| ' . SITE_NAME
+                   : $name . ' Worksheets: Free ' . $range . ' ' . $subject['name'] . ' Practice with Answers | ' . SITE_NAME,
+    'desc' => $zh ? '免費' . $name . '學習單，依照' . $country['standard'] . '，從' . $range . '共 ' . count($units)
+                    . ' 個單元，每個單元都有說明、100 題練習和可列印的解答。'
+                  : 'Free ' . $lc . ' worksheets for ' . $range . ', aligned to the ' . $country['standard'] . ': '
+                    . count($units) . ' skills, each with a lesson, 100 practice questions and a printable answer key.',
     'canonical' => $path, 'image' => preview_path($path),
 ));
 site_header($crumbs);
 ?>
 <main class="sn-wrap">
 <span class="sn-grade"><?= h($range . ' · ' . $country['standard']) ?></span>
-<h1><?= h($name) ?> Worksheets</h1>
-<div class="sx-hero"><p><?= h(topic_blurb($defs[$tk], $seg[0])) ?> Every skill below has a short lesson, 100 practice questions with instant feedback and a printable <?= h($paper) ?> worksheet with an answer key. Free, no sign-up.</p></div>
+<h1><?= h($zh ? $name . '學習單' : $name . ' Worksheets') ?></h1>
+<div class="sx-hero"><p><?= h(topic_blurb($defs[$tk], $seg[0])) ?><?= $zh ? h('每個單元都有簡短的說明、100 題立即對答的練習，以及附解答的 ' . $paper . ' 列印學習單。免費，不需要註冊。')
+  : ' Every skill below has a short lesson, 100 practice questions with instant feedback and a printable ' . h($paper) . ' worksheet with an answer key. Free, no sign-up.' ?></p></div>
 
 <?php if (count($groups) > 1): ?>
 <ul class="tp-grades" aria-label="<?= h(T('grades')) ?>">
@@ -64,7 +85,7 @@ site_header($crumbs);
 <?php endif; ?>
 
 <?php foreach ($groups as $g => $list): $gbase = $sbase . $g . '/'; ?>
-<h2 id="<?= h($g) ?>"><?= h($gnames[$g] . ' ' . $name) ?></h2>
+<h2 id="<?= h($g) ?>"><?= h($gnames[$g] . ($zh ? '' : ' ') . $name) ?></h2>
 <ul class="sx-list">
 <?php foreach ($list as $u): $up = $gbase . $u['slug'] . '/'; ?>
 <li><div class="m"><span class="t"><?= h($u['title']) ?></span>
@@ -83,7 +104,7 @@ site_header($crumbs);
 <?php endforeach; ?>
 </section>
 
-<h2>More <?= h(strtolower($subject['name'])) ?> topics</h2>
+<h2><?= h($zh ? '其他' . $subject['name'] . '主題' : 'More ' . strtolower($subject['name']) . ' topics') ?></h2>
 <ul class="tp-chips">
 <?php foreach ($all as $ok => $ou): if ($ok === $tk) continue; ?>
   <li><a href="<?= url($sbase . 'topics/' . $ok . '/') ?>"><?= h(topic_name($defs[$ok], $seg[0])) ?><span class="n"><?= count($ou) ?></span></a></li>
@@ -98,7 +119,7 @@ foreach ($units as $i => $u) {
                      'url' => abs_url($sbase . $u['grade'] . '/' . $u['slug'] . '/'));
 }
 $cp = array('@context' => 'https://schema.org', '@type' => 'CollectionPage',
-    'name' => $name . ' Worksheets', 'description' => topic_blurb($defs[$tk], $seg[0]), 'url' => abs_url($path),
+    'name' => $zh ? $name . '學習單' : $name . ' Worksheets', 'description' => topic_blurb($defs[$tk], $seg[0]), 'url' => abs_url($path),
     'inLanguage' => $country['hreflang'], 'isAccessibleForFree' => true,
     'about' => array('@type' => 'Thing', 'name' => $name),
     'mainEntity' => array('@type' => 'ItemList', 'numberOfItems' => count($items), 'itemListElement' => $items));

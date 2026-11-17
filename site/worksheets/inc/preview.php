@@ -303,7 +303,7 @@ function preview_route($seg, $kind = 'preview') {
     if (count($seg) === 4 && $seg[2] === 'topics') {                  // topic
         require_once __DIR__ . '/topics.php';
         $all = topics_for($seg[0], $seg[1]);
-        $defs = topic_defs();
+        $defs = topic_defs($seg[0]);
         if (!isset($all[$seg[3]])) { http_response_code(404); exit; }
         $units = $all[$seg[3]];
         preview_cache_check(json_encode(array_map(function ($u) { return $u['slug'] . $u['updated']; }, $units)));
@@ -313,7 +313,7 @@ function preview_route($seg, $kind = 'preview') {
         pv_out($kind, array(
             'cta' => sprintf(T('pv_cta_topic'), count($units)),
             'label' => topic_range($units) . ' · ' . $country['standard'],
-            'title' => $name . ' Worksheets',
+            'title' => $GLOBALS['PV_CJK'] ? $name . '學習單' : $name . ' Worksheets',
             'chips' => array(sprintf(T('pv_skills'), count($units)), T('pv_lessons'), T('pv_keys')),
             'paper_title' => $name, 'paper_sub' => $subject['name'] . ' · ' . $country['name'],
             'lines' => $lines, 'mode' => 'list', 'foot' => $foot));

@@ -9,7 +9,7 @@ $grades = array_values(array_filter($grades, function ($g) { return $g['n'] > 0;
 $base = $seg[0] . '/' . $seg[1] . '/';
 require_once __DIR__ . '/../inc/topics.php';
 $topics = topics_for($seg[0], $seg[1]);
-$tdefs = topic_defs();
+$tdefs = topic_defs($seg[0]);
 $crumbs = array(array(T('worksheets'), ''), array($country['name'], $seg[0] . '/'),
                 array($subject['name'], $base));
 

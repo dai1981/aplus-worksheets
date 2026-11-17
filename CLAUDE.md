@@ -928,6 +928,7 @@ TW / Math / Grade 2（國小二年級）— 直式・積木・尺・分數の絵
 17. comparing-and-number-properties ✓ 18. sorting-and-tables ✓
 
 TW / Math は國小一年級〜國中九年級まで完了。次は下の「その後」から
+tw のトピック別ページは `topic_defs_tw()`（topics.php、中国語の name・blurb、tw の slug 用の正規表現）。tw の単元を足したらどのトピックに入るか確認する
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）

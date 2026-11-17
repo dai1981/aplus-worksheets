@@ -27,7 +27,7 @@ def chars():
     for code in codes:
         for p in glob.glob(os.path.join(ROOT, "content", code, "**", "*.json"), recursive=True):
             text += open(p, encoding="utf-8").read()
-    for p in ("inc/core.php", "inc/preview.php"):
+    for p in ("inc/core.php", "inc/preview.php", "inc/topics.php"):
         text += open(os.path.join(ROOT, "site", "worksheets", p), encoding="utf-8").read()
     text = re.sub(r"<[^>]+>", " ", text)
     s = set(text)

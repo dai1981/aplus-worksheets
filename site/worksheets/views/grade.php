@@ -51,7 +51,7 @@ site_header($crumbs);
 
 <?php
 require_once __DIR__ . '/../inc/topics.php';
-$gtopics = array(); $tdefs = topic_defs();
+$gtopics = array(); $tdefs = topic_defs($seg[0]);
 foreach (topics_for($seg[0], $seg[1]) as $tk => $tu) {
     foreach ($tu as $x) { if ($x['grade'] === $seg[2]) { $gtopics[$tk] = topic_name($tdefs[$tk], $seg[0]); break; } }
 }
