@@ -92,7 +92,7 @@ def lesson(think, examples, mistakes, extra=""):
     return h
 
 
-DOMAIN = {"N": "Number & Quantity", "A": "Algebra", "F": "Functions", "S": "Statistics & Probability"}
+DOMAIN = {"N": "Number & Quantity", "A": "Algebra", "F": "Functions", "S": "Statistics & Probability", "G": "Geometry"}
 
 
 def std_url(code):
@@ -102,7 +102,7 @@ def std_url(code):
     return "https://www.thecorestandards.org/Math/Content/HS%s/%s/" % (cat, "/".join(parts))
 
 
-def make(slug, sort, code, title, seo_title, short_title, std_text, meta, key_big, key_sub, body, faq, sets, rnd, domain=None):
+def make(slug, sort, code, title, seo_title, short_title, std_text, meta, key_big, key_sub, body, faq, sets, rnd, domain=None, grade="algebra-1"):
     for s in sets:
         assert len(s["items"]) == 20, s["title"]
     assert len(sets) == 5
@@ -114,7 +114,7 @@ def make(slug, sort, code, title, seo_title, short_title, std_text, meta, key_bi
         "body_html": body, "faq": [{"q": q, "a": a} for q, a in faq], "sets": sets,
         "pdf_url": "", "sort": sort, "updated": UPDATED,
     }
-    write_unit("us", "math", "algebra-1", unit)
+    write_unit("us", "math", grade, unit)
 
 
 def opts(correct, wrongs, fmt=None):
