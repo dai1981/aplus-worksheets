@@ -921,7 +921,13 @@ TW / Math / Grade 1（國小一年級）— 絵は `tools/tw_pics.py`（k_pics �
 6. add-subtract-within-100 ✓ 7. number-sentences ✓ 8. money ✓ 9. comparing-length ✓ 10. dates-and-time ✓ 11. shapes ✓
 12. sorting-and-counting ✓
 
-TW / Math / 國小二年級（次）— grade `grade-2`、課綱 N-2-*・S-2-*・R-2-*・D-2-*。1000 以內の數・直式加減・九九乘法・公分から。短い文、絵を多く
+TW / Math / Grade 2（國小二年級）— 直式・積木・尺・分數の絵は `tools/tw_pics.py`（col・blocks・ruler・frac・array）。短い文、絵を多く
+1. numbers-to-1000 ✓ 2. column-addition ✓ 3. column-subtraction ✓ 4. addition-subtraction-word-problems ✓ 5. estimation ✓ 6. money ✓
+7. meaning-of-multiplication ✓ 8. multiplication-tables ✓ 9. sharing-and-grouping ✓ 10. two-step-problems ✓ 11. unit-fractions ✓
+12. centimeters-and-meters ✓ 13. capacity-weight-and-area ✓ 14. telling-time ✓ 15. years-months-and-days ✓ 16. shapes ✓
+17. comparing-and-number-properties ✓ 18. sorting-and-tables ✓
+
+TW / Math は國小一年級〜國中九年級まで完了。次は下の「その後」から
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
 その後: UK Year 7–9（KS3）、AU Year 7–8、AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
