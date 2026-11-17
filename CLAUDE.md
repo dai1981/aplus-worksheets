@@ -904,6 +904,13 @@ US / Math / Algebra 1（Common Core 高校）— grade `algebra-1`（name「Alge
 11. simplifying-radicals ✓ 12. exponential-growth-and-decay ✓ 13. arithmetic-and-geometric-sequences ✓ 14. polynomial-operations ✓ 15. factoring-polynomials ✓
 16. solving-quadratics-by-factoring ✓ 17. quadratic-formula-and-completing-the-square ✓ 18. graphing-quadratic-functions ✓ 19. box-plots-and-standard-deviation ✓ 20. correlation-and-residuals ✓
 
+US / Math / Geometry（Common Core 高校）— grade `geometry`（name「Geometry」、sort 10、15〜16歳）。生成スクリプトは `gen_us_math_ge_*`、共通部品は `tools/us_hs.py`（make に grade="geometry"）と図の部品 `tools/us_geo.py`（Canvas: poly・angle・right・ticks・chevrons・side_label など）。domain は引数で指定。トピック `circles`・`congruence-and-similarity` あり
+1. points-lines-and-planes ✓ 2. segment-addition-and-midpoints ✓ 3. distance-and-midpoint-formulas ✓ 4. angle-pairs ✓ 5. conditional-statements-and-proof ✓
+6. parallel-lines-and-transversals ✓ 7. slopes-of-parallel-and-perpendicular-lines ✓ 8. rigid-transformations ✓ 9. triangle-angle-theorems ✓ 10. congruent-triangles ✓
+11. midsegments-and-triangle-centers ✓ 12. polygons-and-quadrilaterals ✓ 13. dilations-and-similarity ✓ 14. similar-triangles ✓ 15. pythagorean-theorem-and-special-right-triangles ✓
+16. right-triangle-trigonometry ✓ 17. law-of-sines-and-cosines ✓ 18. circle-angles-and-arcs ✓ 19. arc-length-and-sector-area ✓ 20. equations-of-circles ✓
+21. volume-of-solids ✓ 22. cross-sections-and-solids-of-revolution ✓ 23. conditional-probability ✓
+
 TW / Math（十二年國教課綱・108課綱）— country `tw`（name「台灣」、lang `zh-TW`）、subject `math`（數學）、grade `grade-N`（國小N年級）、A4。生成スクリプトは `gen_tw_math_gN_*`、共通部品は `tools/tw_common.py`（num・mcq・lesson・make_unit・clock など）。
 繁體中文・台灣用語（公分、毫米、公升、毫升、公斤、公克、元、直式、餘數、驗算）。時刻は「上午 9 時 40 分」、時間量は「1 小時 45 分鐘」。4 桁まではそのまま、10,000 以上はカンマ。餘數は「29 ÷ 4 ＝ 7……1」。
 standard_code は課綱の學習內容コード（例: N-3-1）、standard_text は課綱の原文。domain は 數與量／空間與形狀／關係／資料與不確定性。body_html は「怎麼想 → 例題 → 常見錯誤」。
