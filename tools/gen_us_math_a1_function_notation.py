@@ -31,7 +31,7 @@ def p(v):
 # ------------------------------------------------------------ set 1: evaluate
 def one_eval(r):
     if r.random() < 0.4:
-        m, b = r.choice([2, 3, 4, 5, -2, -3, -4]), r.randint(-9, 9)
+        m, b = r.choice([2, 3, 4, 5, -2, -3, -4]), r.choice([n for n in range(-9, 10) if n])
         x = r.randint(-6, 6)
         name = r.choice(["f", "g", "h"])
         q = "If %s, find %s." % (B("<i>%s</i>(<i>x</i>) = %s" % (name, expr([(m, X), (b, "")]))), B("<i>%s</i>(%s)" % (name, num(x))))
