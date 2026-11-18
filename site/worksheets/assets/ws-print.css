@@ -108,3 +108,8 @@ table.sn-table{border-collapse:collapse;margin:4px 0 2px;font-size:12px;}
 table.sn-table th,table.sn-table td{border:1px solid #888;padding:2px 4px;text-align:center;font-weight:400;}
 table.sn-table th{background:#eee;font-weight:700;}
 table.sn-table td:first-child,table.sn-table th:first-child{text-align:left;font-weight:700;}
+
+/* matrices and determinants: <span class='mx m2'><span>1</span><span>2</span>...</span> */
+.mx{display:inline-grid;vertical-align:middle;column-gap:.8em;padding:.1em .45em;margin:0 .15em;line-height:1.3;text-align:center;border-left:2px solid currentColor;border-right:2px solid currentColor;}
+.mx:not(.det){border-radius:0;background:linear-gradient(currentColor,currentColor) left top/.4em 2px no-repeat,linear-gradient(currentColor,currentColor) left bottom/.4em 2px no-repeat,linear-gradient(currentColor,currentColor) right top/.4em 2px no-repeat,linear-gradient(currentColor,currentColor) right bottom/.4em 2px no-repeat;}
+.mx.m1{grid-template-columns:auto;}.mx.m2{grid-template-columns:repeat(2,auto);}.mx.m3{grid-template-columns:repeat(3,auto);}
