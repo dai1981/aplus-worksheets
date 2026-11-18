@@ -55,7 +55,7 @@ def one_ar(r):
     if kind == "given":
         q = "Find the sum of the first %d terms of the arithmetic sequence with <i>a</i><sub>1</sub> = %s and <i>d</i> = %s." % (n, sf(a1), sf(d))
     else:
-        q = "Find the sum of the first %d terms of the arithmetic series %s, %s, %s, ..." % (n, sf(a1), sf(a1 + d), sf(a1 + 2 * d))
+        q = "Find the sum of the first %d terms of the arithmetic series %s, %s, %s, …" % (n, sf(a1), sf(a1 + d), sf(a1 + 2 * d))
     wr = [n * (a1 + an + d) // 2 if (n * (a1 + an + d)) % 2 == 0 else Sn + d, (n - 1) * (a1 + an) // 2 if ((n - 1) * (a1 + an)) % 2 == 0 else Sn - an, an, n * (a1 + an)]
     return T(q, sf(Sn), [sf(w) for w in dict.fromkeys(wr) if w != Sn][:3],
              "Last term: <i>a</i><sub>%d</sub> = %s + (%d %s 1)(%s) = %s. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = %d(%s + %s)/2 = <b>%s</b>." % (
@@ -73,7 +73,7 @@ def one_geo(r):
     Sn = a1 * (1 - rr ** n) / (1 - rr)
     if Sn.denominator > 128:
         return None
-    q = "Find the sum of the first %d terms of the geometric series %s + %s + %s + ..." % (n, sf(a1), sf(a1 * rr), sf(a1 * rr * rr))
+    q = "Find the sum of the first %d terms of the geometric series %s + %s + %s + …" % (n, sf(a1), sf(a1 * rr), sf(a1 * rr * rr))
     wr = [a1 * rr ** (n - 1), a1 * (1 - rr ** (n - 1)) / (1 - rr), a1 * (1 - rr ** (n + 1)) / (1 - rr), a1 / (1 - rr) if abs(rr) < 1 else a1 * n * rr]
     return T(q, sf(Sn), [sf(w) for w in dict.fromkeys(wr) if w != Sn][:3],
              "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 %s <i>r</i><sup><i>n</i></sup>)/(1 %s <i>r</i>) with <i>a</i><sub>1</sub> = %s, <i>r</i> = %s and <i>n</i> = %d: <b>%s</b>." % (
@@ -89,7 +89,7 @@ def one_inf(r):
         rr = F(r.choice([3, 5, 4, -3]), 2)
     if abs(rr) >= 1 and not big:
         return None
-    q = "Find the sum of the infinite geometric series %s + %s + %s + ..., if it exists." % (sf(a1), sf(a1 * rr), sf(a1 * rr * rr))
+    q = "Find the sum of the infinite geometric series %s + %s + %s + …, if it exists." % (sf(a1), sf(a1 * rr), sf(a1 * rr * rr))
     if big:
         right = "The sum does not exist"
         return T(q, right, [sf(F(a1) / (1 - rr)), sf(F(a1) / (1 + rr)), sf(a1 * rr * 10)],
@@ -142,10 +142,10 @@ def one_word(r):
         return T(q, "$" + num(Sn), ["$" + num(an), "$" + num(n * a1 + n * d), "$" + num(n * (a1 + an))],
                  "Arithmetic series: the last week is %s + %d(%s) = %s. Sum: %d(%s + %s)/2 = <b>%s</b>." % (num(a1), n - 1, num(d), "$" + num(an), n, num(a1), num(an), "$" + num(Sn)))
     dgt = r.choice([3, 6, 7, 2, 4, 5, 8])
-    q = "Write the repeating decimal 0.%d%d%d... as a fraction, using an infinite geometric series." % (dgt, dgt, dgt)
+    q = "Write the repeating decimal 0.%d%d%d… as a fraction, using an infinite geometric series." % (dgt, dgt, dgt)
     v = F(dgt, 9)
     return T(q, sf(v), [sf(F(dgt, 10)), sf(F(dgt, 99)), sf(F(dgt, 100))],
-             "0.%d%d%d... = %s + %s + ... with <i>r</i> = 1/10. Sum = (%d/10) ÷ (9/10) = <b>%s</b>." % (dgt, dgt, dgt, fr(dgt, 10), fr(dgt, 100), dgt, sf(v)))
+             "0.%d%d%d… = %s + %s + … with <i>r</i> = 1/10. Sum = (%d/10) ÷ (9/10) = <b>%s</b>." % (dgt, dgt, dgt, fr(dgt, 10), fr(dgt, 100), dgt, sf(v)))
 
 
 def build():
@@ -159,8 +159,8 @@ def build():
         "<ul><li><b>Arithmetic series</b>: <i>S</i><sub><i>n</i></sub> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2, where <i>a</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub> + (<i>n</i> %s 1)<i>d</i>.</li>"
         "<li><b>Geometric series</b>: <i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 %s <i>r</i><sup><i>n</i></sup>)/(1 %s <i>r</i>).</li>"
         "<li><b>Infinite geometric series</b>: if |<i>r</i>| &lt; 1, the sum is <i>a</i><sub>1</sub>/(1 %s <i>r</i>). If |<i>r</i>| ≥ 1, there is no sum.</li></ul>" % (MINUS, MINUS, MINUS, MINUS),
-        [("Find 3 + 7 + 11 + ... for 20 terms.", ["<i>a</i><sub>20</sub> = 3 + 19(4) = 79", "<i>S</i> = 20(3 + 79)/2"], "820"),
-         ("Find 12 + 6 + 3 + ...", ["<i>r</i> = 1/2", "12 ÷ (1 %s 1/2)" % MINUS], "24")],
+        [("Find 3 + 7 + 11 + … for 20 terms.", ["<i>a</i><sub>20</sub> = 3 + 19(4) = 79", "<i>S</i> = 20(3 + 79)/2"], "820"),
+         ("Find 12 + 6 + 3 + …", ["<i>r</i> = 1/2", "12 ÷ (1 %s 1/2)" % MINUS], "24")],
         ["Counting terms wrong: <i>k</i> = 3 to 8 has 6 terms, not 5.",
          "Using the last term instead of the number of terms for <i>n</i>.",
          "Giving the <i>n</i>th term when the question asks for the sum.",
