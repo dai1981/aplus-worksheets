@@ -1,0 +1,1165 @@
+{
+ "slug": "binomial-theorem",
+ "title": "The Binomial Theorem",
+ "seo_title": "Binomial Theorem Worksheet: Pascal's Triangle and Expansions | 100 Questions with Answers",
+ "short_title": "Binomial Theorem",
+ "domain": "Polynomials",
+ "standard_code": "A-APR.C.5",
+ "standard_url": "https://www.thecorestandards.org/Math/Content/HSA/APR/C/5/",
+ "standard_text": "Know and apply the Binomial Theorem for the expansion of (x + y)ⁿ in powers of x and y for a positive integer n, where x and y are any numbers, with coefficients determined for example by Pascal's Triangle.",
+ "meta_desc": "Free precalculus worksheet on the binomial theorem: binomial coefficients, Pascal's triangle, finding a term, full expansions and coin-flip probabilities. 100 questions.",
+ "key_big": "(x + y)ⁿ has n + 1 terms with coefficients nCk from Pascal's triangle.",
+ "key_sub": "Raise the whole term, sign included, to each power.",
+ "body_html": "<h2>How it works</h2><ul><li><b>Binomial theorem</b>: (<i>x</i> + <i>y</i>)<sup><i>n</i></sup> = Σ <sub><i>n</i></sub>C<sub><i>k</i></sub> <i>x</i><sup><i>n</i>−<i>k</i></sup><i>y</i><sup><i>k</i></sup>, for <i>k</i> = 0 to <i>n</i>.</li><li><sub><i>n</i></sub>C<sub><i>k</i></sub> = <i>n</i>! / (<i>k</i>!(<i>n</i> − <i>k</i>)!), the numbers in row <i>n</i> of Pascal's triangle.</li><li>There are <i>n</i> + 1 terms. In each term, the exponents add to <i>n</i>.</li><li>For (<i>ax</i> + <i>b</i>)<sup><i>n</i></sup>, raise the <b>whole</b> first term and the <b>whole</b> second term (with its sign) to their powers.</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>Find the coefficient of <i>x</i>³ in (2<i>x</i> − 1)<sup>5</sup>.</p><p class='sn-ex-s'>The term is <sub>5</sub>C<sub>2</sub>(2<i>x</i>)³(−1)²</p><p class='sn-ex-s'>= 10 · 8 · 1</p><p class='sn-ex-a'>Answer: 80</p></div><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>Expand (<i>x</i> + 2)³.</p><p class='sn-ex-s'>Row 3: 1, 3, 3, 1</p><p class='sn-ex-s'><i>x</i>³ + 3<i>x</i>²(2) + 3<i>x</i>(4) + 8</p><p class='sn-ex-a'>Answer: <i>x</i>³ + 6<i>x</i>² + 12<i>x</i> + 8</p></div><h2>Common mistakes</h2><ul><li>Forgetting to raise the coefficient: (2<i>x</i>)³ = 8<i>x</i>³, not 2<i>x</i>³.</li><li>Losing the sign: (−1)² = 1 but (−1)³ = −1.</li><li>Using the wrong row or position in Pascal's triangle.</li><li>Counting <i>n</i> terms. (<i>x</i> + <i>y</i>)<sup><i>n</i></sup> has <i>n</i> + 1 terms.</li></ul>",
+ "faq": [
+  {
+   "q": "What is the binomial theorem?",
+   "a": "It expands (x + y)ⁿ as a sum of terms nCk · xⁿ⁻ᵏ · yᵏ for k = 0, 1, …, n."
+  },
+  {
+   "q": "How is Pascal's triangle related to the binomial theorem?",
+   "a": "Row n of Pascal's triangle gives the coefficients of (x + y)ⁿ. Each entry is the sum of the two entries above it."
+  },
+  {
+   "q": "How do you find one term without expanding everything?",
+   "a": "Choose k so the powers match, then compute nCk times the first term to the power n − k times the second term to the power k."
+  },
+  {
+   "q": "How do you find the sum of the coefficients?",
+   "a": "Substitute x = 1 (and y = 1) into the binomial. For (2x − 1)⁵, the sum is (2 − 1)⁵ = 1."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Binomial coefficients and Pascal's triangle",
+   "items": [
+    {
+     "q": "Which list is row 7 of Pascal's triangle (the row that starts 1, 7)?",
+     "c": [
+      "1, 8, 22, 36, 36, 22, 8, 1",
+      "1, 7, 21, 35, 35, 21, 7, 1",
+      "1, 6, 15, 20, 15, 6, 1",
+      "1, 8, 28, 56, 70, 56, 28, 8, 1"
+     ],
+     "a": 1,
+     "e": "Each entry is <sub>n</sub>C<sub>k</sub>, the sum of the two entries above it. <b>1, 7, 21, 35, 35, 21, 7, 1</b>."
+    },
+    {
+     "q": "Find <sub>9</sub>C<sub>3</sub>.",
+     "c": [
+      "84",
+      "27",
+      "36",
+      "56"
+     ],
+     "a": 0,
+     "e": "<sub>9</sub>C<sub>3</sub> = 9! / (3! · 6!) = <b>84</b>. It is entry 3 in row 9 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Find <sub>8</sub>C<sub>4</sub>.",
+     "c": [
+      "32",
+      "56",
+      "35",
+      "70"
+     ],
+     "a": 3,
+     "e": "<sub>8</sub>C<sub>4</sub> = 8! / (4! · 4!) = <b>70</b>. It is entry 4 in row 8 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Which list is row 10 of Pascal's triangle (the row that starts 1, 10)?",
+     "c": [
+      "1, 11, 46, 121, 211, 253, 211, 121, 46, 11, 1",
+      "1, 9, 36, 84, 126, 126, 84, 36, 9, 1",
+      "1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1",
+      "1, 11, 55, 165, 330, 462, 462, 330, 165, 55, 11, 1"
+     ],
+     "a": 2,
+     "e": "Each entry is <sub>n</sub>C<sub>k</sub>, the sum of the two entries above it. <b>1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1</b>."
+    },
+    {
+     "q": "Find <sub>4</sub>C<sub>3</sub>.",
+     "c": [
+      "4",
+      "6",
+      "1",
+      "12"
+     ],
+     "a": 0,
+     "e": "<sub>4</sub>C<sub>3</sub> = 4! / (3! · 1!) = <b>4</b>. It is entry 3 in row 4 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Find <sub>6</sub>C<sub>4</sub>.",
+     "c": [
+      "15",
+      "20",
+      "5",
+      "24"
+     ],
+     "a": 0,
+     "e": "<sub>6</sub>C<sub>4</sub> = 6! / (4! · 2!) = <b>15</b>. It is entry 4 in row 6 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Find <sub>7</sub>C<sub>4</sub>.",
+     "c": [
+      "28",
+      "21",
+      "15",
+      "35"
+     ],
+     "a": 3,
+     "e": "<sub>7</sub>C<sub>4</sub> = 7! / (4! · 3!) = <b>35</b>. It is entry 4 in row 7 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Find <sub>9</sub>C<sub>4</sub>.",
+     "c": [
+      "70",
+      "84",
+      "36",
+      "126"
+     ],
+     "a": 3,
+     "e": "<sub>9</sub>C<sub>4</sub> = 9! / (4! · 5!) = <b>126</b>. It is entry 4 in row 9 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Find <sub>6</sub>C<sub>2</sub>.",
+     "c": [
+      "15",
+      "10",
+      "12",
+      "6"
+     ],
+     "a": 0,
+     "e": "<sub>6</sub>C<sub>2</sub> = 6! / (2! · 4!) = <b>15</b>. It is entry 2 in row 6 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Which list is row 4 of Pascal's triangle (the row that starts 1, 4)?",
+     "c": [
+      "1, 4, 6, 4, 1",
+      "1, 5, 7, 5, 1",
+      "1, 5, 10, 10, 5, 1",
+      "1, 3, 3, 1"
+     ],
+     "a": 0,
+     "e": "Each entry is <sub>n</sub>C<sub>k</sub>, the sum of the two entries above it. <b>1, 4, 6, 4, 1</b>."
+    },
+    {
+     "q": "Find <sub>9</sub>C<sub>8</sub>.",
+     "c": [
+      "1",
+      "9",
+      "72",
+      "36"
+     ],
+     "a": 1,
+     "e": "<sub>9</sub>C<sub>8</sub> = 9! / (8! · 1!) = <b>9</b>. It is entry 8 in row 9 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Find <sub>10</sub>C<sub>3</sub>.",
+     "c": [
+      "84",
+      "45",
+      "120",
+      "30"
+     ],
+     "a": 2,
+     "e": "<sub>10</sub>C<sub>3</sub> = 10! / (3! · 7!) = <b>120</b>. It is entry 3 in row 10 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Find <sub>5</sub>C<sub>4</sub>.",
+     "c": [
+      "20",
+      "5",
+      "10",
+      "1"
+     ],
+     "a": 1,
+     "e": "<sub>5</sub>C<sub>4</sub> = 5! / (4! · 1!) = <b>5</b>. It is entry 4 in row 5 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Find <sub>5</sub>C<sub>3</sub>.",
+     "c": [
+      "15",
+      "5",
+      "10",
+      "4"
+     ],
+     "a": 2,
+     "e": "<sub>5</sub>C<sub>3</sub> = 5! / (3! · 2!) = <b>10</b>. It is entry 3 in row 5 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Find <sub>10</sub>C<sub>7</sub>.",
+     "c": [
+      "70",
+      "120",
+      "36",
+      "210"
+     ],
+     "a": 1,
+     "e": "<sub>10</sub>C<sub>7</sub> = 10! / (7! · 3!) = <b>120</b>. It is entry 7 in row 10 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Find <sub>8</sub>C<sub>2</sub>.",
+     "c": [
+      "16",
+      "8",
+      "28",
+      "21"
+     ],
+     "a": 2,
+     "e": "<sub>8</sub>C<sub>2</sub> = 8! / (2! · 6!) = <b>28</b>. It is entry 2 in row 8 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Which list is row 6 of Pascal's triangle (the row that starts 1, 6)?",
+     "c": [
+      "1, 5, 10, 10, 5, 1",
+      "1, 7, 21, 35, 35, 21, 7, 1",
+      "1, 7, 16, 21, 16, 7, 1",
+      "1, 6, 15, 20, 15, 6, 1"
+     ],
+     "a": 3,
+     "e": "Each entry is <sub>n</sub>C<sub>k</sub>, the sum of the two entries above it. <b>1, 6, 15, 20, 15, 6, 1</b>."
+    },
+    {
+     "q": "Find <sub>10</sub>C<sub>9</sub>.",
+     "c": [
+      "90",
+      "10",
+      "45",
+      "1"
+     ],
+     "a": 1,
+     "e": "<sub>10</sub>C<sub>9</sub> = 10! / (9! · 1!) = <b>10</b>. It is entry 9 in row 10 of Pascal's triangle (starting from 0)."
+    },
+    {
+     "q": "Which list is row 9 of Pascal's triangle (the row that starts 1, 9)?",
+     "c": [
+      "1, 8, 28, 56, 70, 56, 28, 8, 1",
+      "1, 10, 37, 85, 127, 127, 85, 37, 10, 1",
+      "1, 9, 36, 84, 126, 126, 84, 36, 9, 1",
+      "1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1"
+     ],
+     "a": 2,
+     "e": "Each entry is <sub>n</sub>C<sub>k</sub>, the sum of the two entries above it. <b>1, 9, 36, 84, 126, 126, 84, 36, 9, 1</b>."
+    },
+    {
+     "q": "Which list is row 8 of Pascal's triangle (the row that starts 1, 8)?",
+     "c": [
+      "1, 9, 36, 84, 126, 126, 84, 36, 9, 1",
+      "1, 9, 29, 57, 71, 57, 29, 9, 1",
+      "1, 7, 21, 35, 35, 21, 7, 1",
+      "1, 8, 28, 56, 70, 56, 28, 8, 1"
+     ],
+     "a": 3,
+     "e": "Each entry is <sub>n</sub>C<sub>k</sub>, the sum of the two entries above it. <b>1, 8, 28, 56, 70, 56, 28, 8, 1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Coefficients in (x + y)ⁿ",
+   "items": [
+    {
+     "q": "In the expansion of (<i>x</i> + <i>y</i>)<sup>7</sup>, what is the sum of the exponents in each term?",
+     "c": [
+      "7",
+      "8",
+      "14",
+      "It changes from term to term"
+     ],
+     "a": 0,
+     "e": "In each term <i>x</i><sup><i>a</i></sup><i>y</i><sup><i>b</i></sup>, <i>a</i> + <i>b</i> = <b>7</b>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>³<i>y</i>⁶ in the expansion of (<i>x</i> + <i>y</i>)<sup>9</sup>?",
+     "c": [
+      "18",
+      "126",
+      "9",
+      "84"
+     ],
+     "a": 3,
+     "e": "The term is <sub>9</sub>C<sub>6</sub> <i>x</i>³<i>y</i>⁶, and <sub>9</sub>C<sub>6</sub> = <b>84</b>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>³<i>y</i>³ in the expansion of (<i>x</i> + <i>y</i>)<sup>6</sup>?",
+     "c": [
+      "15",
+      "20",
+      "9",
+      "6"
+     ],
+     "a": 1,
+     "e": "The term is <sub>6</sub>C<sub>3</sub> <i>x</i>³<i>y</i>³, and <sub>6</sub>C<sub>3</sub> = <b>20</b>."
+    },
+    {
+     "q": "How many terms are in the expansion of (<i>x</i> + <i>y</i>)<sup>6</sup>?",
+     "c": [
+      "7",
+      "6",
+      "64",
+      "12"
+     ],
+     "a": 0,
+     "e": "The powers of <i>x</i> go from 6 down to 0, which is <b>7</b> terms."
+    },
+    {
+     "q": "How many terms are in the expansion of (<i>x</i> + <i>y</i>)<sup>9</sup>?",
+     "c": [
+      "10",
+      "9",
+      "18",
+      "512"
+     ],
+     "a": 0,
+     "e": "The powers of <i>x</i> go from 9 down to 0, which is <b>10</b> terms."
+    },
+    {
+     "q": "In the expansion of (<i>x</i> + <i>y</i>)<sup>9</sup>, what is the sum of the exponents in each term?",
+     "c": [
+      "It changes from term to term",
+      "18",
+      "9",
+      "10"
+     ],
+     "a": 2,
+     "e": "In each term <i>x</i><sup><i>a</i></sup><i>y</i><sup><i>b</i></sup>, <i>a</i> + <i>b</i> = <b>9</b>."
+    },
+    {
+     "q": "How many terms are in the expansion of (<i>x</i> + <i>y</i>)<sup>7</sup>?",
+     "c": [
+      "7",
+      "8",
+      "14",
+      "128"
+     ],
+     "a": 1,
+     "e": "The powers of <i>x</i> go from 7 down to 0, which is <b>8</b> terms."
+    },
+    {
+     "q": "How many terms are in the expansion of (<i>x</i> + <i>y</i>)<sup>8</sup>?",
+     "c": [
+      "8",
+      "256",
+      "16",
+      "9"
+     ],
+     "a": 3,
+     "e": "The powers of <i>x</i> go from 8 down to 0, which is <b>9</b> terms."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>²<i>y</i>⁶ in the expansion of (<i>x</i> + <i>y</i>)<sup>8</sup>?",
+     "c": [
+      "28",
+      "12",
+      "8",
+      "56"
+     ],
+     "a": 0,
+     "e": "The term is <sub>8</sub>C<sub>6</sub> <i>x</i>²<i>y</i>⁶, and <sub>8</sub>C<sub>6</sub> = <b>28</b>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>⁵<i>y</i>⁴ in the expansion of (<i>x</i> + <i>y</i>)<sup>9</sup>?",
+     "c": [
+      "126",
+      "84",
+      "20",
+      "9"
+     ],
+     "a": 0,
+     "e": "The term is <sub>9</sub>C<sub>4</sub> <i>x</i>⁵<i>y</i>⁴, and <sub>9</sub>C<sub>4</sub> = <b>126</b>."
+    },
+    {
+     "q": "How many terms are in the expansion of (<i>x</i> + <i>y</i>)<sup>5</sup>?",
+     "c": [
+      "10",
+      "6",
+      "32",
+      "5"
+     ],
+     "a": 1,
+     "e": "The powers of <i>x</i> go from 5 down to 0, which is <b>6</b> terms."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i><i>y</i>⁶ in the expansion of (<i>x</i> + <i>y</i>)<sup>7</sup>?",
+     "c": [
+      "6",
+      "64",
+      "7",
+      "21"
+     ],
+     "a": 2,
+     "e": "The term is <sub>7</sub>C<sub>6</sub> <i>x</i><i>y</i>⁶, and <sub>7</sub>C<sub>6</sub> = <b>7</b>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>³<i>y</i>² in the expansion of (<i>x</i> + <i>y</i>)<sup>5</sup>?",
+     "c": [
+      "5",
+      "10",
+      "4",
+      "6"
+     ],
+     "a": 1,
+     "e": "The term is <sub>5</sub>C<sub>2</sub> <i>x</i>³<i>y</i>², and <sub>5</sub>C<sub>2</sub> = <b>10</b>."
+    },
+    {
+     "q": "How many terms are in the expansion of (<i>x</i> + <i>y</i>)<sup>4</sup>?",
+     "c": [
+      "16",
+      "4",
+      "8",
+      "5"
+     ],
+     "a": 3,
+     "e": "The powers of <i>x</i> go from 4 down to 0, which is <b>5</b> terms."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>²<i>y</i>³ in the expansion of (<i>x</i> + <i>y</i>)<sup>5</sup>?",
+     "c": [
+      "6",
+      "10",
+      "5",
+      "8"
+     ],
+     "a": 1,
+     "e": "The term is <sub>5</sub>C<sub>3</sub> <i>x</i>²<i>y</i>³, and <sub>5</sub>C<sub>3</sub> = <b>10</b>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i><i>y</i>³ in the expansion of (<i>x</i> + <i>y</i>)<sup>4</sup>?",
+     "c": [
+      "3",
+      "8",
+      "4",
+      "6"
+     ],
+     "a": 2,
+     "e": "The term is <sub>4</sub>C<sub>3</sub> <i>x</i><i>y</i>³, and <sub>4</sub>C<sub>3</sub> = <b>4</b>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i><i>y</i><sup>7</sup> in the expansion of (<i>x</i> + <i>y</i>)<sup>8</sup>?",
+     "c": [
+      "128",
+      "7",
+      "28",
+      "8"
+     ],
+     "a": 3,
+     "e": "The term is <sub>8</sub>C<sub>7</sub> <i>x</i><i>y</i><sup>7</sup>, and <sub>8</sub>C<sub>7</sub> = <b>8</b>."
+    },
+    {
+     "q": "In the expansion of (<i>x</i> + <i>y</i>)<sup>5</sup>, what is the sum of the exponents in each term?",
+     "c": [
+      "It changes from term to term",
+      "10",
+      "5",
+      "6"
+     ],
+     "a": 2,
+     "e": "In each term <i>x</i><sup><i>a</i></sup><i>y</i><sup><i>b</i></sup>, <i>a</i> + <i>b</i> = <b>5</b>."
+    },
+    {
+     "q": "In the expansion of (<i>x</i> + <i>y</i>)<sup>6</sup>, what is the sum of the exponents in each term?",
+     "c": [
+      "It changes from term to term",
+      "12",
+      "7",
+      "6"
+     ],
+     "a": 3,
+     "e": "In each term <i>x</i><sup><i>a</i></sup><i>y</i><sup><i>b</i></sup>, <i>a</i> + <i>b</i> = <b>6</b>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i><sup>8</sup><i>y</i> in the expansion of (<i>x</i> + <i>y</i>)<sup>9</sup>?",
+     "c": [
+      "8",
+      "2",
+      "9",
+      "1"
+     ],
+     "a": 2,
+     "e": "The term is <sub>9</sub>C<sub>1</sub> <i>x</i><sup>8</sup><i>y</i>, and <sub>9</sub>C<sub>1</sub> = <b>9</b>."
+    }
+   ]
+  },
+  {
+   "title": "Finding a term",
+   "items": [
+    {
+     "q": "What is the coefficient of <i>x</i>⁴ in the expansion of (−2<i>x</i> + 4)<sup>5</sup>?",
+     "c": [
+      "320",
+      "5",
+      "−2,560",
+      "−40"
+     ],
+     "a": 0,
+     "e": "The term with <i>x</i>⁴ is <sub>5</sub>C<sub>1</sub>(−2<i>x</i>)<sup>4</sup>(4)<sup>1</sup> = 5 · 16 · 4 = <b>320</b><i>x</i>⁴."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i> in the expansion of (−2<i>x</i> + 2)<sup>3</sup>?",
+     "c": [
+      "24",
+      "−12",
+      "−24",
+      "3"
+     ],
+     "a": 2,
+     "e": "The term with <i>x</i> is <sub>3</sub>C<sub>2</sub>(−2<i>x</i>)<sup>1</sup>(2)<sup>2</sup> = 3 · (−2) · 4 = <b>−24</b><i>x</i>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>⁵ in the expansion of (−2<i>x</i> − 3)<sup>7</sup>?",
+     "c": [
+      "21",
+      "−20,412",
+      "−6,048",
+      "126"
+     ],
+     "a": 2,
+     "e": "The term with <i>x</i>⁵ is <sub>7</sub>C<sub>2</sub>(−2<i>x</i>)<sup>5</sup>(−3)<sup>2</sup> = 21 · (−32) · 9 = <b>−6,048</b><i>x</i>⁵."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>⁴ in the expansion of (<i>x</i> + 3)<sup>6</sup>?",
+     "c": [
+      "45",
+      "15",
+      "1,215",
+      "135"
+     ],
+     "a": 3,
+     "e": "The term with <i>x</i>⁴ is <sub>6</sub>C<sub>2</sub>(<i>x</i>)<sup>4</sup>(3)<sup>2</sup> = 15 · 1 · 9 = <b>135</b><i>x</i>⁴."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i> in the expansion of (3<i>x</i> − 1)<sup>5</sup>?",
+     "c": [
+      "5",
+      "15",
+      "−15",
+      "−405"
+     ],
+     "a": 1,
+     "e": "The term with <i>x</i> is <sub>5</sub>C<sub>4</sub>(3<i>x</i>)<sup>1</sup>(−1)<sup>4</sup> = 5 · 3 · 1 = <b>15</b><i>x</i>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i> in the expansion of (−2<i>x</i> − 2)<sup>3</sup>?",
+     "c": [
+      "−24",
+      "3",
+      "12",
+      "24"
+     ],
+     "a": 0,
+     "e": "The term with <i>x</i> is <sub>3</sub>C<sub>2</sub>(−2<i>x</i>)<sup>1</sup>(−2)<sup>2</sup> = 3 · (−2) · 4 = <b>−24</b><i>x</i>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i> in the expansion of (3<i>x</i> − 3)<sup>3</sup>?",
+     "c": [
+      "81",
+      "−81",
+      "3",
+      "−27"
+     ],
+     "a": 0,
+     "e": "The term with <i>x</i> is <sub>3</sub>C<sub>2</sub>(3<i>x</i>)<sup>1</sup>(−3)<sup>2</sup> = 3 · 3 · 9 = <b>81</b><i>x</i>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>² in the expansion of (−<i>x</i> + 3)<sup>7</sup>?",
+     "c": [
+      "−63",
+      "−189",
+      "21",
+      "5,103"
+     ],
+     "a": 3,
+     "e": "The term with <i>x</i>² is <sub>7</sub>C<sub>5</sub>(−<i>x</i>)<sup>2</sup>(3)<sup>5</sup> = 21 · 1 · 243 = <b>5,103</b><i>x</i>²."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>² in the expansion of (−2<i>x</i> + 4)<sup>3</sup>?",
+     "c": [
+      "−24",
+      "3",
+      "48",
+      "−96"
+     ],
+     "a": 2,
+     "e": "The term with <i>x</i>² is <sub>3</sub>C<sub>1</sub>(−2<i>x</i>)<sup>2</sup>(4)<sup>1</sup> = 3 · 4 · 4 = <b>48</b><i>x</i>²."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>² in the expansion of (3<i>x</i> − 2)<sup>4</sup>?",
+     "c": [
+      "24",
+      "−36",
+      "6",
+      "216"
+     ],
+     "a": 3,
+     "e": "The term with <i>x</i>² is <sub>4</sub>C<sub>2</sub>(3<i>x</i>)<sup>2</sup>(−2)<sup>2</sup> = 6 · 9 · 4 = <b>216</b><i>x</i>²."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i> in the expansion of (−2<i>x</i> + 3)<sup>6</sup>?",
+     "c": [
+      "6",
+      "−576",
+      "−36",
+      "−2,916"
+     ],
+     "a": 3,
+     "e": "The term with <i>x</i> is <sub>6</sub>C<sub>5</sub>(−2<i>x</i>)<sup>1</sup>(3)<sup>5</sup> = 6 · (−2) · 243 = <b>−2,916</b><i>x</i>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i> in the expansion of (2<i>x</i> + 2)<sup>7</sup>?",
+     "c": [
+      "448",
+      "896",
+      "28",
+      "7"
+     ],
+     "a": 1,
+     "e": "The term with <i>x</i> is <sub>7</sub>C<sub>6</sub>(2<i>x</i>)<sup>1</sup>(2)<sup>6</sup> = 7 · 2 · 64 = <b>896</b><i>x</i>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i> in the expansion of (−<i>x</i> + 2)<sup>4</sup>?",
+     "c": [
+      "−32",
+      "32",
+      "−8",
+      "4"
+     ],
+     "a": 0,
+     "e": "The term with <i>x</i> is <sub>4</sub>C<sub>3</sub>(−<i>x</i>)<sup>1</sup>(2)<sup>3</sup> = 4 · (−1) · 8 = <b>−32</b><i>x</i>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>² in the expansion of (2<i>x</i> − 1)<sup>6</sup>?",
+     "c": [
+      "15",
+      "−30",
+      "60",
+      "240"
+     ],
+     "a": 2,
+     "e": "The term with <i>x</i>² is <sub>6</sub>C<sub>4</sub>(2<i>x</i>)<sup>2</sup>(−1)<sup>4</sup> = 15 · 4 · 1 = <b>60</b><i>x</i>²."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i> in the expansion of (<i>x</i> − 3)<sup>3</sup>?",
+     "c": [
+      "27",
+      "−9",
+      "−27",
+      "3"
+     ],
+     "a": 0,
+     "e": "The term with <i>x</i> is <sub>3</sub>C<sub>2</sub>(<i>x</i>)<sup>1</sup>(−3)<sup>2</sup> = 3 · 1 · 9 = <b>27</b><i>x</i>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>² in the expansion of (3<i>x</i> + 4)<sup>3</sup>?",
+     "c": [
+      "144",
+      "108",
+      "3",
+      "36"
+     ],
+     "a": 1,
+     "e": "The term with <i>x</i>² is <sub>3</sub>C<sub>1</sub>(3<i>x</i>)<sup>2</sup>(4)<sup>1</sup> = 3 · 9 · 4 = <b>108</b><i>x</i>²."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i> in the expansion of (3<i>x</i> + 4)<sup>6</sup>?",
+     "c": [
+      "72",
+      "5,832",
+      "6",
+      "18,432"
+     ],
+     "a": 3,
+     "e": "The term with <i>x</i> is <sub>6</sub>C<sub>5</sub>(3<i>x</i>)<sup>1</sup>(4)<sup>5</sup> = 6 · 3 · 1,024 = <b>18,432</b><i>x</i>."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>² in the expansion of (<i>x</i> + 2)<sup>3</sup>?",
+     "c": [
+      "−6",
+      "6",
+      "12",
+      "3"
+     ],
+     "a": 1,
+     "e": "The term with <i>x</i>² is <sub>3</sub>C<sub>1</sub>(<i>x</i>)<sup>2</sup>(2)<sup>1</sup> = 3 · 1 · 2 = <b>6</b><i>x</i>²."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>³ in the expansion of (2<i>x</i> − 3)<sup>5</sup>?",
+     "c": [
+      "−60",
+      "720",
+      "10",
+      "−1,080"
+     ],
+     "a": 1,
+     "e": "The term with <i>x</i>³ is <sub>5</sub>C<sub>2</sub>(2<i>x</i>)<sup>3</sup>(−3)<sup>2</sup> = 10 · 8 · 9 = <b>720</b><i>x</i>³."
+    },
+    {
+     "q": "What is the coefficient of <i>x</i>² in the expansion of (3<i>x</i> + 4)<sup>4</sup>?",
+     "c": [
+      "6",
+      "96",
+      "864",
+      "72"
+     ],
+     "a": 2,
+     "e": "The term with <i>x</i>² is <sub>4</sub>C<sub>2</sub>(3<i>x</i>)<sup>2</sup>(4)<sup>2</sup> = 6 · 9 · 16 = <b>864</b><i>x</i>²."
+    }
+   ]
+  },
+  {
+   "title": "Full expansions",
+   "items": [
+    {
+     "q": "Expand (<i>x</i> − 1)<sup>4</sup>.",
+     "c": [
+      "<i>x</i>⁴ − 4<i>x</i>³ + 6<i>x</i>² − 4<i>x</i> + 1",
+      "<i>x</i>⁴ + 1",
+      "<i>x</i>⁴ − <i>x</i>³ + <i>x</i>² − <i>x</i> + 1",
+      "<i>x</i>⁴ + 4<i>x</i>³ + 6<i>x</i>² + 4<i>x</i> + 1"
+     ],
+     "a": 0,
+     "e": "Use row 4 of Pascal's triangle (1, 4, 6, 4, 1) with powers of <i>x</i> going down and powers of −1 going up. <b><i>x</i>⁴ − 4<i>x</i>³ + 6<i>x</i>² − 4<i>x</i> + 1</b>."
+    },
+    {
+     "q": "Expand (3<i>x</i> + 3)<sup>3</sup>.",
+     "c": [
+      "27<i>x</i>³ + 27<i>x</i>² + 27<i>x</i> + 27",
+      "9<i>x</i>³ + 9<i>x</i>² + 27<i>x</i> + 27",
+      "27<i>x</i>³ + 81<i>x</i>² + 81<i>x</i> + 27",
+      "27<i>x</i>³ + 27"
+     ],
+     "a": 2,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of 3<i>x</i> going down and powers of 3 going up. <b>27<i>x</i>³ + 81<i>x</i>² + 81<i>x</i> + 27</b>."
+    },
+    {
+     "q": "Expand (3<i>x</i> − 2)<sup>2</sup>.",
+     "c": [
+      "9<i>x</i>² + 4",
+      "9<i>x</i>² + 12<i>x</i> + 4",
+      "9<i>x</i>² − 12<i>x</i> + 4",
+      "9<i>x</i>² − 6<i>x</i> + 4"
+     ],
+     "a": 2,
+     "e": "Use row 2 of Pascal's triangle (1, 2, 1) with powers of 3<i>x</i> going down and powers of −2 going up. <b>9<i>x</i>² − 12<i>x</i> + 4</b>."
+    },
+    {
+     "q": "Expand (<i>x</i> + 3)<sup>2</sup>.",
+     "c": [
+      "3<i>x</i>² + 6<i>x</i> + 9",
+      "<i>x</i>² + 9",
+      "<i>x</i>² + 3<i>x</i> + 9",
+      "<i>x</i>² + 6<i>x</i> + 9"
+     ],
+     "a": 3,
+     "e": "Use row 2 of Pascal's triangle (1, 2, 1) with powers of <i>x</i> going down and powers of 3 going up. <b><i>x</i>² + 6<i>x</i> + 9</b>."
+    },
+    {
+     "q": "Expand (<i>x</i> + 3)<sup>4</sup>.",
+     "c": [
+      "<i>x</i>⁴ + 12<i>x</i>³ + 54<i>x</i>² + 108<i>x</i> + 81",
+      "<i>x</i>⁴ + 3<i>x</i>³ + 9<i>x</i>² + 27<i>x</i> + 81",
+      "<i>x</i>⁴ + 81",
+      "3<i>x</i>⁴ + 12<i>x</i>³ + 54<i>x</i>² + 108<i>x</i> + 81"
+     ],
+     "a": 0,
+     "e": "Use row 4 of Pascal's triangle (1, 4, 6, 4, 1) with powers of <i>x</i> going down and powers of 3 going up. <b><i>x</i>⁴ + 12<i>x</i>³ + 54<i>x</i>² + 108<i>x</i> + 81</b>."
+    },
+    {
+     "q": "Expand (<i>x</i> − 3)<sup>2</sup>.",
+     "c": [
+      "<i>x</i>² + 6<i>x</i> + 9",
+      "<i>x</i>² + 9",
+      "<i>x</i>² − 6<i>x</i> + 9",
+      "<i>x</i>² − 3<i>x</i> + 9"
+     ],
+     "a": 2,
+     "e": "Use row 2 of Pascal's triangle (1, 2, 1) with powers of <i>x</i> going down and powers of −3 going up. <b><i>x</i>² − 6<i>x</i> + 9</b>."
+    },
+    {
+     "q": "Expand (2<i>x</i> + 3)<sup>3</sup>.",
+     "c": [
+      "6<i>x</i>³ + 9<i>x</i>² + 27<i>x</i> + 27",
+      "8<i>x</i>³ + 36<i>x</i>² + 54<i>x</i> + 27",
+      "8<i>x</i>³ + 27",
+      "8<i>x</i>³ + 12<i>x</i>² + 18<i>x</i> + 27"
+     ],
+     "a": 1,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of 2<i>x</i> going down and powers of 3 going up. <b>8<i>x</i>³ + 36<i>x</i>² + 54<i>x</i> + 27</b>."
+    },
+    {
+     "q": "Expand (<i>x</i> − 3)<sup>3</sup>.",
+     "c": [
+      "<i>x</i>³ − 3<i>x</i>² + 9<i>x</i> − 27",
+      "<i>x</i>³ − 27",
+      "<i>x</i>³ − 9<i>x</i>² + 27<i>x</i> − 27",
+      "<i>x</i>³ + 9<i>x</i>² + 27<i>x</i> + 27"
+     ],
+     "a": 2,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of <i>x</i> going down and powers of −3 going up. <b><i>x</i>³ − 9<i>x</i>² + 27<i>x</i> − 27</b>."
+    },
+    {
+     "q": "Expand (<i>x</i> − 1)<sup>3</sup>.",
+     "c": [
+      "<i>x</i>³ − 1",
+      "<i>x</i>³ + 3<i>x</i>² + 3<i>x</i> + 1",
+      "<i>x</i>³ − <i>x</i>² + <i>x</i> − 1",
+      "<i>x</i>³ − 3<i>x</i>² + 3<i>x</i> − 1"
+     ],
+     "a": 3,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of <i>x</i> going down and powers of −1 going up. <b><i>x</i>³ − 3<i>x</i>² + 3<i>x</i> − 1</b>."
+    },
+    {
+     "q": "Expand (<i>x</i> + 3)<sup>3</sup>.",
+     "c": [
+      "3<i>x</i>³ + 9<i>x</i>² + 27<i>x</i> + 27",
+      "<i>x</i>³ + 27",
+      "<i>x</i>³ + 9<i>x</i>² + 27<i>x</i> + 27",
+      "<i>x</i>³ + 3<i>x</i>² + 9<i>x</i> + 27"
+     ],
+     "a": 2,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of <i>x</i> going down and powers of 3 going up. <b><i>x</i>³ + 9<i>x</i>² + 27<i>x</i> + 27</b>."
+    },
+    {
+     "q": "Expand (2<i>x</i> − 3)<sup>3</sup>.",
+     "c": [
+      "8<i>x</i>³ − 12<i>x</i>² + 18<i>x</i> − 27",
+      "8<i>x</i>³ − 27",
+      "8<i>x</i>³ + 36<i>x</i>² + 54<i>x</i> + 27",
+      "8<i>x</i>³ − 36<i>x</i>² + 54<i>x</i> − 27"
+     ],
+     "a": 3,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of 2<i>x</i> going down and powers of −3 going up. <b>8<i>x</i>³ − 36<i>x</i>² + 54<i>x</i> − 27</b>."
+    },
+    {
+     "q": "Expand (3<i>x</i> − 3)<sup>2</sup>.",
+     "c": [
+      "9<i>x</i>² + 9",
+      "9<i>x</i>² − 18<i>x</i> + 9",
+      "9<i>x</i>² + 18<i>x</i> + 9",
+      "9<i>x</i>² − 9<i>x</i> + 9"
+     ],
+     "a": 1,
+     "e": "Use row 2 of Pascal's triangle (1, 2, 1) with powers of 3<i>x</i> going down and powers of −3 going up. <b>9<i>x</i>² − 18<i>x</i> + 9</b>."
+    },
+    {
+     "q": "Expand (3<i>x</i> − 2)<sup>3</sup>.",
+     "c": [
+      "27<i>x</i>³ − 8",
+      "27<i>x</i>³ − 54<i>x</i>² + 36<i>x</i> − 8",
+      "27<i>x</i>³ − 18<i>x</i>² + 12<i>x</i> − 8",
+      "27<i>x</i>³ + 54<i>x</i>² + 36<i>x</i> + 8"
+     ],
+     "a": 1,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of 3<i>x</i> going down and powers of −2 going up. <b>27<i>x</i>³ − 54<i>x</i>² + 36<i>x</i> − 8</b>."
+    },
+    {
+     "q": "Expand (2<i>x</i> + 1)<sup>3</sup>.",
+     "c": [
+      "8<i>x</i>³ + 12<i>x</i>² + 6<i>x</i> + 1",
+      "8<i>x</i>³ + 1",
+      "8<i>x</i>³ + 4<i>x</i>² + 2<i>x</i> + 1",
+      "2<i>x</i>³ + 3<i>x</i>² + 3<i>x</i> + 1"
+     ],
+     "a": 0,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of 2<i>x</i> going down and powers of 1 going up. <b>8<i>x</i>³ + 12<i>x</i>² + 6<i>x</i> + 1</b>."
+    },
+    {
+     "q": "Expand (<i>x</i> − 3)<sup>4</sup>.",
+     "c": [
+      "<i>x</i>⁴ + 12<i>x</i>³ + 54<i>x</i>² + 108<i>x</i> + 81",
+      "<i>x</i>⁴ − 12<i>x</i>³ + 54<i>x</i>² − 108<i>x</i> + 81",
+      "<i>x</i>⁴ + 81",
+      "<i>x</i>⁴ − 3<i>x</i>³ + 9<i>x</i>² − 27<i>x</i> + 81"
+     ],
+     "a": 1,
+     "e": "Use row 4 of Pascal's triangle (1, 4, 6, 4, 1) with powers of <i>x</i> going down and powers of −3 going up. <b><i>x</i>⁴ − 12<i>x</i>³ + 54<i>x</i>² − 108<i>x</i> + 81</b>."
+    },
+    {
+     "q": "Expand (3<i>x</i> + 1)<sup>3</sup>.",
+     "c": [
+      "3<i>x</i>³ + 3<i>x</i>² + 3<i>x</i> + 1",
+      "27<i>x</i>³ + 9<i>x</i>² + 3<i>x</i> + 1",
+      "27<i>x</i>³ + 1",
+      "27<i>x</i>³ + 27<i>x</i>² + 9<i>x</i> + 1"
+     ],
+     "a": 3,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of 3<i>x</i> going down and powers of 1 going up. <b>27<i>x</i>³ + 27<i>x</i>² + 9<i>x</i> + 1</b>."
+    },
+    {
+     "q": "Expand (3<i>x</i> − 1)<sup>2</sup>.",
+     "c": [
+      "9<i>x</i>² − 3<i>x</i> + 1",
+      "9<i>x</i>² + 6<i>x</i> + 1",
+      "9<i>x</i>² + 1",
+      "9<i>x</i>² − 6<i>x</i> + 1"
+     ],
+     "a": 3,
+     "e": "Use row 2 of Pascal's triangle (1, 2, 1) with powers of 3<i>x</i> going down and powers of −1 going up. <b>9<i>x</i>² − 6<i>x</i> + 1</b>."
+    },
+    {
+     "q": "Expand (3<i>x</i> + 2)<sup>3</sup>.",
+     "c": [
+      "6<i>x</i>³ + 6<i>x</i>² + 12<i>x</i> + 8",
+      "27<i>x</i>³ + 54<i>x</i>² + 36<i>x</i> + 8",
+      "27<i>x</i>³ + 18<i>x</i>² + 12<i>x</i> + 8",
+      "27<i>x</i>³ + 8"
+     ],
+     "a": 1,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of 3<i>x</i> going down and powers of 2 going up. <b>27<i>x</i>³ + 54<i>x</i>² + 36<i>x</i> + 8</b>."
+    },
+    {
+     "q": "Expand (<i>x</i> − 2)<sup>3</sup>.",
+     "c": [
+      "<i>x</i>³ − 6<i>x</i>² + 12<i>x</i> − 8",
+      "<i>x</i>³ − 8",
+      "<i>x</i>³ + 6<i>x</i>² + 12<i>x</i> + 8",
+      "<i>x</i>³ − 2<i>x</i>² + 4<i>x</i> − 8"
+     ],
+     "a": 0,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of <i>x</i> going down and powers of −2 going up. <b><i>x</i>³ − 6<i>x</i>² + 12<i>x</i> − 8</b>."
+    },
+    {
+     "q": "Expand (3<i>x</i> − 1)<sup>3</sup>.",
+     "c": [
+      "27<i>x</i>³ − 27<i>x</i>² + 9<i>x</i> − 1",
+      "27<i>x</i>³ − 1",
+      "27<i>x</i>³ − 9<i>x</i>² + 3<i>x</i> − 1",
+      "27<i>x</i>³ + 27<i>x</i>² + 9<i>x</i> + 1"
+     ],
+     "a": 0,
+     "e": "Use row 3 of Pascal's triangle (1, 3, 3, 1) with powers of 3<i>x</i> going down and powers of −1 going up. <b>27<i>x</i>³ − 27<i>x</i>² + 9<i>x</i> − 1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Applications",
+   "items": [
+    {
+     "q": "Use the first three terms of the binomial expansion of (1 − 0.01)<sup>6</sup> to estimate (0.99)<sup>6</sup>.",
+     "c": [
+      "0.99",
+      "0.94",
+      "0.9406",
+      "0.9415"
+     ],
+     "a": 3,
+     "e": "1 + 6(−0.01) + 15(−0.01)² = 1 − 0.06 + 0.0015 = <b>0.9415</b>."
+    },
+    {
+     "q": "A fair coin is flipped 10 times. What is the probability of exactly 8 heads?",
+     "c": [
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "There are <sub>10</sub>C<sub>8</sub> = 45 ways to place the heads among 1024 equally likely outcomes (2<sup>10</sup>). 45/1024 = <b><span class='fr'><span class='fn'>45</span><span class='fd'>1024</span></span></b>."
+    },
+    {
+     "q": "A fair coin is flipped 5 times. What is the probability of exactly 4 heads?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>"
+     ],
+     "a": 2,
+     "e": "There are <sub>5</sub>C<sub>4</sub> = 5 ways to place the heads among 32 equally likely outcomes (2<sup>5</sup>). 5/32 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "Use the first three terms of the binomial expansion of (1 + 0.01)<sup>6</sup> to estimate (1.01)<sup>6</sup>.",
+     "c": [
+      "1.06",
+      "1.01",
+      "1.0615",
+      "1.0606"
+     ],
+     "a": 2,
+     "e": "1 + 6(0.01) + 15(0.01)² = 1 + 0.06 + 0.0015 = <b>1.0615</b>."
+    },
+    {
+     "q": "Use the first three terms of the binomial expansion of (1 + 0.01)<sup>10</sup> to estimate (1.01)<sup>10</sup>.",
+     "c": [
+      "1.101",
+      "1.01",
+      "1.1",
+      "1.1045"
+     ],
+     "a": 3,
+     "e": "1 + 10(0.01) + 45(0.01)² = 1 + 0.1 + 0.0045 = <b>1.1045</b>."
+    },
+    {
+     "q": "What is the sum of all the coefficients in the expansion of (3<i>x</i> − 2)<sup>3</sup>?",
+     "c": [
+      "19",
+      "8",
+      "125",
+      "1"
+     ],
+     "a": 3,
+     "e": "Put <i>x</i> = 1: (3 + (−2))<sup>3</sup> = (1)<sup>3</sup> = <b>1</b>."
+    },
+    {
+     "q": "Use the first three terms of the binomial expansion of (1 + 0.02)<sup>4</sup> to estimate (1.02)<sup>4</sup>.",
+     "c": [
+      "1.0824",
+      "1.02",
+      "1.08",
+      "1.0816"
+     ],
+     "a": 0,
+     "e": "1 + 4(0.02) + 6(0.02)² = 1 + 0.08 + 0.0024 = <b>1.0824</b>."
+    },
+    {
+     "q": "What is the sum of all the coefficients in the expansion of (3<i>x</i> − 2)<sup>4</sup>?",
+     "c": [
+      "16",
+      "1",
+      "625",
+      "97"
+     ],
+     "a": 1,
+     "e": "Put <i>x</i> = 1: (3 + (−2))<sup>4</sup> = (1)<sup>4</sup> = <b>1</b>."
+    },
+    {
+     "q": "Use the first three terms of the binomial expansion of (1 − 0.02)<sup>6</sup> to estimate (0.98)<sup>6</sup>.",
+     "c": [
+      "0.88",
+      "0.886",
+      "0.8824",
+      "0.98"
+     ],
+     "a": 1,
+     "e": "1 + 6(−0.02) + 15(−0.02)² = 1 − 0.12 + 0.006 = <b>0.886</b>."
+    },
+    {
+     "q": "Use the first three terms of the binomial expansion of (1 − 0.02)<sup>5</sup> to estimate (0.98)<sup>5</sup>.",
+     "c": [
+      "0.902",
+      "0.904",
+      "0.98",
+      "0.9"
+     ],
+     "a": 1,
+     "e": "1 + 5(−0.02) + 10(−0.02)² = 1 − 0.1 + 0.004 = <b>0.904</b>."
+    },
+    {
+     "q": "Use the first three terms of the binomial expansion of (1 − 0.01)<sup>10</sup> to estimate (0.99)<sup>10</sup>.",
+     "c": [
+      "0.901",
+      "0.9",
+      "0.99",
+      "0.9045"
+     ],
+     "a": 3,
+     "e": "1 + 10(−0.01) + 45(−0.01)² = 1 − 0.1 + 0.0045 = <b>0.9045</b>."
+    },
+    {
+     "q": "Use the first three terms of the binomial expansion of (1 + 0.03)<sup>5</sup> to estimate (1.03)<sup>5</sup>.",
+     "c": [
+      "1.03",
+      "1.15",
+      "1.159",
+      "1.1545"
+     ],
+     "a": 2,
+     "e": "1 + 5(0.03) + 10(0.03)² = 1 + 0.15 + 0.009 = <b>1.159</b>."
+    },
+    {
+     "q": "What is the sum of all the coefficients in the expansion of (<i>x</i> − 2)<sup>4</sup>?",
+     "c": [
+      "81",
+      "16",
+      "1",
+      "17"
+     ],
+     "a": 2,
+     "e": "Put <i>x</i> = 1: (1 + (−2))<sup>4</sup> = (−1)<sup>4</sup> = <b>1</b>."
+    },
+    {
+     "q": "A fair coin is flipped 10 times. What is the probability of exactly 7 heads?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "6",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>128</span></span>"
+     ],
+     "a": 3,
+     "e": "There are <sub>10</sub>C<sub>7</sub> = 120 ways to place the heads among 1024 equally likely outcomes (2<sup>10</sup>). 120/1024 = <b><span class='fr'><span class='fn'>15</span><span class='fd'>128</span></span></b>."
+    },
+    {
+     "q": "What is the sum of all the coefficients in the expansion of (3<i>x</i> − 2)<sup>6</sup>?",
+     "c": [
+      "64",
+      "15,625",
+      "1",
+      "793"
+     ],
+     "a": 2,
+     "e": "Put <i>x</i> = 1: (3 + (−2))<sup>6</sup> = (1)<sup>6</sup> = <b>1</b>."
+    },
+    {
+     "q": "What is the sum of all the coefficients in the expansion of (3<i>x</i> − 1)<sup>5</sup>?",
+     "c": [
+      "33",
+      "32",
+      "1,024",
+      "242"
+     ],
+     "a": 1,
+     "e": "Put <i>x</i> = 1: (3 + (−1))<sup>5</sup> = (2)<sup>5</sup> = <b>32</b>."
+    },
+    {
+     "q": "A fair coin is flipped 6 times. What is the probability of exactly 5 heads?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>"
+     ],
+     "a": 0,
+     "e": "There are <sub>6</sub>C<sub>5</sub> = 6 ways to place the heads among 64 equally likely outcomes (2<sup>6</sup>). 6/64 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "A fair coin is flipped 8 times. What is the probability of exactly 2 heads?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "There are <sub>8</sub>C<sub>2</sub> = 28 ways to place the heads among 256 equally likely outcomes (2<sup>8</sup>). 28/256 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "What is the sum of all the coefficients in the expansion of (3<i>x</i> − 1)<sup>6</sup>?",
+     "c": [
+      "64",
+      "4,096",
+      "65",
+      "730"
+     ],
+     "a": 0,
+     "e": "Put <i>x</i> = 1: (3 + (−1))<sup>6</sup> = (2)<sup>6</sup> = <b>64</b>."
+    },
+    {
+     "q": "A fair coin is flipped 4 times. What is the probability of exactly 2 heads?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "There are <sub>4</sub>C<sub>2</sub> = 6 ways to place the heads among 16 equally likely outcomes (2<sup>4</sup>). 6/16 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 12,
+ "updated": "2026-11-18",
+ "country": "us",
+ "subject": "math",
+ "grade": "precalculus"
+}
