@@ -1022,7 +1022,16 @@ TW / Math は國小一年級〜國中九年級まで完了。次は下の「そ�
 tw のトピック別ページは `topic_defs_tw()`（topics.php、中国語の name・blurb、tw の slug 用の正規表現）。tw の単元を足したらどのトピックに入るか確認する
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
-その後: US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math（Texas Essential Knowledge and Skills, TEKS §111.5 など）— country `us-tx`（name「Texas, USA」、lang en）、subject `math`、grade `grade-N`、Letter。生成スクリプトは `gen_ustx_math_gN_*`、共通部品は `tools/tx_common.py`（Texas の名前・地名、US の綴りと文法の自動修正 us_text、1,000 以上のカンマ自動付与、他国の生成スクリプトの問題関数を使う adopt・run・run_many、Kid・mcq・collect・letters・finish（他国の語の混入を LEAKS で検出）・make、strip_svg（strip diagram）・pv_chart_svg・words）。
+US 英語・お金は $ と ¢（ペニーあり、$1・$5・$10・$20 札）。standard_code は TEKS のコード（例: 3.4F、複数は「3.3F, 3.3G」）、standard_text は TEKS 原文、standard_url は TEA の Chapter 111 Subchapter A。STAAR は Grade 3 から。重さは weight（mass と言わない）。多くの単元は US Common Core・Ontario・Australia の問題関数を Texas 向けに再利用（別の seed で別の問題になる）
+
+US-TX / Math / Grade 3（STAAR の最初の学年）
+1. place-value-to-100000 ✓ 2. comparing-and-ordering-numbers ✓ 3. rounding-and-estimating ✓ 4. adding-and-subtracting-within-1000 ✓ 5. multiplication-facts ✓
+6. division-facts ✓ 7. multiplying-two-digit-by-one-digit ✓ 8. multiplication-and-division-word-problems ✓ 9. missing-factors-and-input-output-tables ✓ 10. odd-and-even-numbers ✓
+11. fractions ✓ 12. fractions-on-a-number-line ✓ 13. equivalent-and-comparing-fractions ✓ 14. value-of-coins-and-bills ✓ 15. area ✓ 16. perimeter ✓
+17. time-intervals ✓ 18. liquid-volume-and-weight ✓ 19. 2d-and-3d-figures ✓ 20. frequency-tables-dot-plots-and-bar-graphs ✓ 21. personal-financial-literacy ✓
+
+その後: US-TX Grade 4（STAAR）、US-TX Grade 5 …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
