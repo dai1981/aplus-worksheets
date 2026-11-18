@@ -422,6 +422,10 @@ AU / Maths / Year 1（とても短い文、ほぼ全問に絵）
 12. data-and-tally-marks ✓
 13. chance ✓
 
+AU / Maths / Foundation（最初の学年。州ごとに Kindergarten・Prep・Pre-primary・Reception・Transition と呼ぶ。5〜6歳）— grade `foundation`（name「Foundation」、sort 0）。生成スクリプトは `gen_au_maths_f_*`、共通部品は `tools/f_common.py`（k_pics・k_common の上にオーストラリア英語・AU の名前・sky_svg・days_svg・pictograph_svg・pattern_svg・glasses_svg・make）。とても短い文、ほぼ全問に絵。unit.php で educationalLevel に州ごとの呼び名を入れる
+1. numbers-to-20 ✓ 2. subitising-to-5 ✓ 3. counting-and-comparing-collections ✓ 4. part-part-whole-to-10 ✓ 5. adding-and-taking-away ✓ 6. sharing-and-grouping ✓
+7. repeating-patterns ✓ 8. comparing-length-mass-and-capacity ✓ 9. days-and-times-of-day ✓ 10. shapes ✓ 11. position-and-location ✓ 12. sorting-and-data ✓
+
 AU / Maths / Year 7–8（高校。生成スクリプトは `gen_au_maths_y7_*`・`gen_au_maths_y8_*`、共通部品は `tools/au_hs.py`（ws_common の上に AU の数の書き方・$・make）。負の数は「−」。standard_code は v9 のコード（例: AC9M8N04）、standard_url は v9 の Mathematics ページ）
 
 AU / Maths / Year 7
@@ -990,7 +994,7 @@ TW / Math は國小一年級〜國中九年級まで完了。次は下の「そ�
 tw のトピック別ページは `topic_defs_tw()`（topics.php、中国語の name・blurb、tw の slug 用の正規表現）。tw の単元を足したらどのトピックに入るか確認する
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
-その後: AU Foundation、SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
+その後: SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
