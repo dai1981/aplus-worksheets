@@ -213,7 +213,7 @@ def build():
          "Free precalculus worksheet on complex numbers in polar form: modulus and argument, converting forms, multiplying, dividing, De Moivre's theorem and the complex plane. 100 questions.",
          "z = r(cos θ + i sin θ)",
          "Multiply: multiply the moduli and add the angles. Powers: rⁿ and nθ.",
-         body, faq, sets, R, domain="Complex Numbers", grade=GRADE)
+         body, faq, sets, R, domain="Complex Numbers and Polar Coordinates", grade=GRADE)
 
 
 if __name__ == "__main__":
