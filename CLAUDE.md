@@ -1070,7 +1070,13 @@ US-TX / Math / Grade 2（STAAR なし。1,200 まで。文は短く、絵を多�
 11. equal-groups-multiplication-and-division ✓ 12. halves-fourths-and-eighths ✓ 13. 2d-shapes-and-polygons ✓ 14. 3d-solids ✓ 15. measuring-length ✓ 16. length-word-problems ✓
 17. area-with-square-units ✓ 18. telling-time-to-the-minute ✓ 19. pictographs-and-bar-graphs ✓ 20. personal-financial-literacy ✓
 
-その後: US-TX Grade 1・Kindergarten、US-TX Algebra I …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Grade 1（120 まで。とても短い文、絵を多く）— 生成スクリプトは `gen_ustx_math_g1_*`（US Grade 1・2、AU Year 1、Ontario、TX Grade 2 の問題関数を build_sets で再利用、ほかは自前）。AU の問題関数はオーストラリアの語（kookaburra・c の硬貨など）を keep で落とす
+1. numbers-to-120 ✓ 2. comparing-and-ordering-numbers ✓ 3. adding-tens-and-ones ✓ 4. making-10 ✓ 5. addition-and-subtraction-facts-to-20 ✓
+6. addition-and-subtraction-strategies ✓ 7. word-problems-within-20 ✓ 8. counting-coins ✓ 9. counting-to-120 ✓ 10. skip-counting-by-2s-5s-and-10s ✓
+11. 10-more-and-10-less ✓ 12. equal-sign-and-missing-numbers ✓ 13. adding-three-numbers ✓ 14. 2d-shapes ✓ 15. 3d-solids ✓ 16. halves-and-fourths ✓
+17. measuring-length ✓ 18. telling-time-to-the-hour-and-half-hour ✓ 19. tally-marks-and-graphs ✓ 20. personal-financial-literacy ✓
+
+その後: US-TX Kindergarten、US-TX Algebra I …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
