@@ -1064,7 +1064,13 @@ US-TX / Math / Grade 8（STAAR の学年）— 生成スクリプトは `gen_ust
 17. volume-of-cylinders-cones-and-spheres ✓ 18. surface-area-of-prisms-and-cylinders ✓ 19. mean-absolute-deviation ✓ 20. random-samples-and-simulations ✓
 21. cost-of-credit-and-loans ✓ 22. saving-and-investing-over-time ✓ 23. payment-methods-and-financial-responsibility ✓ 24. paying-for-college ✓
 
-その後: US-TX Grade 2、US-TX Grade 1・Kindergarten、US-TX Algebra I …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Grade 2（STAAR なし。1,200 まで。文は短く、絵を多く）— 生成スクリプトは `gen_ustx_math_g2_*`（US Grade 2・3、Ontario、AU の問題関数を build_sets で再利用、ほかは自前）。他国の A〜D の絵の問題（`build`・`_abcd`）は生成スクリプトの中で絵を作ってから渡す
+1. place-value-to-1200 ✓ 2. comparing-and-ordering-numbers ✓ 3. number-lines ✓ 4. 10-more-10-less-100-more-100-less ✓ 5. addition-and-subtraction-facts-to-20 ✓
+6. adding-and-subtracting-two-digit-numbers ✓ 7. adding-and-subtracting-within-1000 ✓ 8. word-problems-and-number-sentences ✓ 9. odd-and-even-numbers ✓ 10. counting-coins ✓
+11. equal-groups-multiplication-and-division ✓ 12. halves-fourths-and-eighths ✓ 13. 2d-shapes-and-polygons ✓ 14. 3d-solids ✓ 15. measuring-length ✓ 16. length-word-problems ✓
+17. area-with-square-units ✓ 18. telling-time-to-the-minute ✓ 19. pictographs-and-bar-graphs ✓ 20. personal-financial-literacy ✓
+
+その後: US-TX Grade 1・Kindergarten、US-TX Algebra I …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
