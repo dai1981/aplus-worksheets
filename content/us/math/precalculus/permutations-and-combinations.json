@@ -1,0 +1,1165 @@
+{
+ "slug": "permutations-and-combinations",
+ "title": "Permutations and Combinations",
+ "seo_title": "Permutations and Combinations Worksheet with Probability | 100 Questions with Answers",
+ "short_title": "Permutations and Combinations",
+ "domain": "Probability",
+ "standard_code": "S-CP.B.9",
+ "standard_url": "https://www.thecorestandards.org/Math/Content/HSS/CP/B/9/",
+ "standard_text": "Use permutations and combinations to compute probabilities of compound events and solve problems.",
+ "meta_desc": "Free precalculus worksheet on permutations and combinations: the counting principle, nPr, nCr, arrangements with repeated letters and probability by counting. 100 questions.",
+ "key_big": "Order matters: permutation. Order does not matter: combination.",
+ "key_sub": "nPr = n!/(n − r)!, nCr = n!/(r!(n − r)!).",
+ "body_html": "<h2>How it works</h2><ul><li><b>Counting principle</b>: if one choice has <i>m</i> options and another has <i>n</i>, together there are <i>m</i> × <i>n</i>.</li><li><b>Permutation</b> (order matters): <sub><i>n</i></sub>P<sub><i>r</i></sub> = <i>n</i>! / (<i>n</i> − <i>r</i>)!. Use it for rankings, roles, arrangements.</li><li><b>Combination</b> (order does not matter): <sub><i>n</i></sub>C<sub><i>r</i></sub> = <i>n</i>! / (<i>r</i>!(<i>n</i> − <i>r</i>)!). Use it for groups, committees, hands.</li><li>Arranging letters with repeats: divide <i>n</i>! by the factorial of each repeat count.</li><li>Probability = (number of favorable outcomes) / (total outcomes), counted the same way.</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>How many ways can a president and a treasurer be chosen from 10 people?</p><p class='sn-ex-s'>Order matters (different roles)</p><p class='sn-ex-s'>10 × 9</p><p class='sn-ex-a'>Answer: 90</p></div><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>How many 3-person teams can be chosen from 10 people?</p><p class='sn-ex-s'>Order does not matter</p><p class='sn-ex-s'><sub>10</sub>C<sub>3</sub> = 720 ÷ 6</p><p class='sn-ex-a'>Answer: 120</p></div><h2>Common mistakes</h2><ul><li>Adding the choices instead of multiplying.</li><li>Using a permutation for a group with no order. That counts each group several times.</li><li>Forgetting to divide by repeated letters.</li><li>Allowing repeats when the problem says no repeats.</li></ul>",
+ "faq": [
+  {
+   "q": "What is the difference between a permutation and a combination?",
+   "a": "In a permutation the order matters (like first, second and third place). In a combination it does not (like choosing a committee)."
+  },
+  {
+   "q": "What is the formula for nCr?",
+   "a": "nCr = n! / (r!(n − r)!). It equals nPr divided by r!, because each group of r can be ordered in r! ways."
+  },
+  {
+   "q": "How do you count arrangements of a word with repeated letters?",
+   "a": "Divide the factorial of the number of letters by the factorial of each letter's count. BANANA has 6!/(3! · 2!) = 60 arrangements."
+  },
+  {
+   "q": "How do you use counting in probability?",
+   "a": "Count the favorable outcomes and the total outcomes the same way, then divide."
+  }
+ ],
+ "sets": [
+  {
+   "title": "The counting principle",
+   "items": [
+    {
+     "q": "Mateo has 6 shirts, 5 pairs of pants and 4 pairs of shoes. How many different outfits can he make?",
+     "c": [
+      "15",
+      "455",
+      "34",
+      "120"
+     ],
+     "a": 3,
+     "e": "Multiply the choices: 6 × 5 × 4 = <b>120</b>."
+    },
+    {
+     "q": "Lucas has 6 shirts, 6 pairs of pants and 5 pairs of shoes. How many different outfits can he make?",
+     "c": [
+      "180",
+      "680",
+      "41",
+      "17"
+     ],
+     "a": 0,
+     "e": "Multiply the choices: 6 × 6 × 5 = <b>180</b>."
+    },
+    {
+     "q": "A license plate has 2 letters followed by 3 digits. Letters and digits may repeat. How many plates are possible?",
+     "c": [
+      "468,000",
+      "1,676",
+      "676,000",
+      "82"
+     ],
+     "a": 2,
+     "e": "26<sup>2</sup> × 10<sup>3</sup> = <b>676,000</b>."
+    },
+    {
+     "q": "A license plate has 3 letters followed by 3 digits. Letters and digits may repeat. How many plates are possible?",
+     "c": [
+      "17,576,000",
+      "108",
+      "18,576",
+      "11,232,000"
+     ],
+     "a": 0,
+     "e": "26<sup>3</sup> × 10<sup>3</sup> = <b>17,576,000</b>."
+    },
+    {
+     "q": "A lock code uses 4 digits (0–9) with no digit repeated. How many codes are possible?",
+     "c": [
+      "40",
+      "5,040",
+      "10,000",
+      "210"
+     ],
+     "a": 1,
+     "e": "10 × 9 × … (4 factors) = <sub>10</sub>P<sub>4</sub> = <b>5,040</b>."
+    },
+    {
+     "q": "Mateo has 6 shirts, 4 pairs of pants and 2 pairs of shoes. How many different outfits can he make?",
+     "c": [
+      "26",
+      "48",
+      "12",
+      "220"
+     ],
+     "a": 1,
+     "e": "Multiply the choices: 6 × 4 × 2 = <b>48</b>."
+    },
+    {
+     "q": "A lock code uses 5 digits (0–9) with no digit repeated. How many codes are possible?",
+     "c": [
+      "252",
+      "100,000",
+      "30,240",
+      "50"
+     ],
+     "a": 2,
+     "e": "10 × 9 × … (5 factors) = <sub>10</sub>P<sub>5</sub> = <b>30,240</b>."
+    },
+    {
+     "q": "A restaurant offers 4 appetizers, 6 main dishes and 2 desserts. How many meals with one of each are possible?",
+     "c": [
+      "48",
+      "1,320",
+      "12",
+      "24"
+     ],
+     "a": 0,
+     "e": "4 × 6 × 2 = <b>48</b>."
+    },
+    {
+     "q": "A lock code uses 3 digits (0–9) with no digit repeated. How many codes are possible?",
+     "c": [
+      "120",
+      "1,000",
+      "720",
+      "30"
+     ],
+     "a": 2,
+     "e": "10 × 9 × … (3 factors) = <sub>10</sub>P<sub>3</sub> = <b>720</b>."
+    },
+    {
+     "q": "Maya has 3 shirts, 5 pairs of pants and 4 pairs of shoes. How many different outfits can she make?",
+     "c": [
+      "60",
+      "19",
+      "12",
+      "220"
+     ],
+     "a": 0,
+     "e": "Multiply the choices: 3 × 5 × 4 = <b>60</b>."
+    },
+    {
+     "q": "Diego has 4 shirts, 3 pairs of pants and 3 pairs of shoes. How many different outfits can he make?",
+     "c": [
+      "10",
+      "36",
+      "120",
+      "15"
+     ],
+     "a": 1,
+     "e": "Multiply the choices: 4 × 3 × 3 = <b>36</b>."
+    },
+    {
+     "q": "A restaurant offers 4 appetizers, 6 main dishes and 5 desserts. How many meals with one of each are possible?",
+     "c": [
+      "120",
+      "24",
+      "2,730",
+      "15"
+     ],
+     "a": 0,
+     "e": "4 × 6 × 5 = <b>120</b>."
+    },
+    {
+     "q": "A restaurant offers 4 appetizers, 4 main dishes and 5 desserts. How many meals with one of each are possible?",
+     "c": [
+      "1,716",
+      "80",
+      "16",
+      "13"
+     ],
+     "a": 1,
+     "e": "4 × 4 × 5 = <b>80</b>."
+    },
+    {
+     "q": "Owen has 7 shirts, 3 pairs of pants and 5 pairs of shoes. How many different outfits can he make?",
+     "c": [
+      "15",
+      "105",
+      "455",
+      "26"
+     ],
+     "a": 1,
+     "e": "Multiply the choices: 7 × 3 × 5 = <b>105</b>."
+    },
+    {
+     "q": "Emma has 7 shirts, 3 pairs of pants and 3 pairs of shoes. How many different outfits can she make?",
+     "c": [
+      "13",
+      "286",
+      "63",
+      "24"
+     ],
+     "a": 2,
+     "e": "Multiply the choices: 7 × 3 × 3 = <b>63</b>."
+    },
+    {
+     "q": "A restaurant offers 6 appetizers, 8 main dishes and 4 desserts. How many meals with one of each are possible?",
+     "c": [
+      "4,896",
+      "48",
+      "18",
+      "192"
+     ],
+     "a": 3,
+     "e": "6 × 8 × 4 = <b>192</b>."
+    },
+    {
+     "q": "A restaurant offers 3 appetizers, 8 main dishes and 5 desserts. How many meals with one of each are possible?",
+     "c": [
+      "16",
+      "3,360",
+      "24",
+      "120"
+     ],
+     "a": 3,
+     "e": "3 × 8 × 5 = <b>120</b>."
+    },
+    {
+     "q": "A lock code uses 3 digits (0–9). How many codes are possible?",
+     "c": [
+      "30",
+      "120",
+      "1,000",
+      "720"
+     ],
+     "a": 2,
+     "e": "10 choices for each digit: 10<sup>3</sup> = <b>1,000</b>."
+    },
+    {
+     "q": "A restaurant offers 6 appetizers, 5 main dishes and 5 desserts. How many meals with one of each are possible?",
+     "c": [
+      "3,360",
+      "16",
+      "30",
+      "150"
+     ],
+     "a": 3,
+     "e": "6 × 5 × 5 = <b>150</b>."
+    },
+    {
+     "q": "Diego has 8 shirts, 2 pairs of pants and 4 pairs of shoes. How many different outfits can he make?",
+     "c": [
+      "20",
+      "364",
+      "14",
+      "64"
+     ],
+     "a": 3,
+     "e": "Multiply the choices: 8 × 2 × 4 = <b>64</b>."
+    }
+   ]
+  },
+  {
+   "title": "Permutations",
+   "items": [
+    {
+     "q": "In how many ways can 6 students stand in a line?",
+     "c": [
+      "720",
+      "64",
+      "36",
+      "21"
+     ],
+     "a": 0,
+     "e": "6! = <b>720</b>."
+    },
+    {
+     "q": "Evaluate <sub>5</sub>P<sub>3</sub>.",
+     "c": [
+      "10",
+      "60",
+      "15",
+      "125"
+     ],
+     "a": 1,
+     "e": "<sub>5</sub>P<sub>3</sub> = 5!/(5 − 3)! = <b>60</b>."
+    },
+    {
+     "q": "In how many ways can 7 of 8 students sit in a row of 7 chairs?",
+     "c": [
+      "5,040",
+      "8",
+      "40,320",
+      "2,097,152"
+     ],
+     "a": 2,
+     "e": "<sub>8</sub>P<sub>7</sub> = <b>40,320</b>."
+    },
+    {
+     "q": "Evaluate 7! / 4!.",
+     "c": [
+      "5,040",
+      "6",
+      "210",
+      "21"
+     ],
+     "a": 2,
+     "e": "7! / 4! = 7 × 6 × 5 = <b>210</b>."
+    },
+    {
+     "q": "Evaluate <sub>7</sub>P<sub>3</sub>.",
+     "c": [
+      "35",
+      "343",
+      "210",
+      "21"
+     ],
+     "a": 2,
+     "e": "<sub>7</sub>P<sub>3</sub> = 7!/(7 − 3)! = <b>210</b>."
+    },
+    {
+     "q": "Evaluate 7! / 5!.",
+     "c": [
+      "5,040",
+      "2",
+      "42",
+      "14"
+     ],
+     "a": 2,
+     "e": "7! / 5! = 7 × 6 = <b>42</b>."
+    },
+    {
+     "q": "In how many ways can 6 of 8 students sit in a row of 6 chairs?",
+     "c": [
+      "20,160",
+      "262,144",
+      "28",
+      "720"
+     ],
+     "a": 0,
+     "e": "<sub>8</sub>P<sub>6</sub> = <b>20,160</b>."
+    },
+    {
+     "q": "Evaluate <sub>10</sub>P<sub>4</sub>.",
+     "c": [
+      "40",
+      "210",
+      "5,040",
+      "10,000"
+     ],
+     "a": 2,
+     "e": "<sub>10</sub>P<sub>4</sub> = 10!/(10 − 4)! = <b>5,040</b>."
+    },
+    {
+     "q": "9 runners are in a race. In how many ways can gold, silver and bronze be awarded?",
+     "c": [
+      "729",
+      "504",
+      "84",
+      "27"
+     ],
+     "a": 1,
+     "e": "Order matters: 9 × 8 × 7 = <b>504</b>."
+    },
+    {
+     "q": "In how many ways can 4 of 5 students sit in a row of 4 chairs?",
+     "c": [
+      "120",
+      "24",
+      "625",
+      "5"
+     ],
+     "a": 0,
+     "e": "<sub>5</sub>P<sub>4</sub> = <b>120</b>."
+    },
+    {
+     "q": "12 runners are in a race. In how many ways can gold, silver and bronze be awarded?",
+     "c": [
+      "1,320",
+      "1,728",
+      "220",
+      "36"
+     ],
+     "a": 0,
+     "e": "Order matters: 12 × 11 × 10 = <b>1,320</b>."
+    },
+    {
+     "q": "6 runners are in a race. In how many ways can gold, silver and bronze be awarded?",
+     "c": [
+      "120",
+      "18",
+      "20",
+      "216"
+     ],
+     "a": 0,
+     "e": "Order matters: 6 × 5 × 4 = <b>120</b>."
+    },
+    {
+     "q": "In how many ways can 3 of 4 students sit in a row of 3 chairs?",
+     "c": [
+      "4",
+      "64",
+      "6",
+      "24"
+     ],
+     "a": 3,
+     "e": "<sub>4</sub>P<sub>3</sub> = <b>24</b>."
+    },
+    {
+     "q": "10 runners are in a race. In how many ways can gold, silver and bronze be awarded?",
+     "c": [
+      "1,000",
+      "720",
+      "120",
+      "30"
+     ],
+     "a": 1,
+     "e": "Order matters: 10 × 9 × 8 = <b>720</b>."
+    },
+    {
+     "q": "Evaluate <sub>10</sub>P<sub>3</sub>.",
+     "c": [
+      "1,000",
+      "120",
+      "30",
+      "720"
+     ],
+     "a": 3,
+     "e": "<sub>10</sub>P<sub>3</sub> = 10!/(10 − 3)! = <b>720</b>."
+    },
+    {
+     "q": "In how many ways can 5 of 7 students sit in a row of 5 chairs?",
+     "c": [
+      "21",
+      "16,807",
+      "120",
+      "2,520"
+     ],
+     "a": 3,
+     "e": "<sub>7</sub>P<sub>5</sub> = <b>2,520</b>."
+    },
+    {
+     "q": "In how many ways can 8 students stand in a line?",
+     "c": [
+      "36",
+      "64",
+      "256",
+      "40,320"
+     ],
+     "a": 3,
+     "e": "8! = <b>40,320</b>."
+    },
+    {
+     "q": "In how many ways can 7 students stand in a line?",
+     "c": [
+      "28",
+      "5,040",
+      "49",
+      "128"
+     ],
+     "a": 1,
+     "e": "7! = <b>5,040</b>."
+    },
+    {
+     "q": "Evaluate <sub>9</sub>P<sub>4</sub>.",
+     "c": [
+      "126",
+      "3,024",
+      "6,561",
+      "36"
+     ],
+     "a": 1,
+     "e": "<sub>9</sub>P<sub>4</sub> = 9!/(9 − 4)! = <b>3,024</b>."
+    },
+    {
+     "q": "Evaluate <sub>8</sub>P<sub>3</sub>.",
+     "c": [
+      "512",
+      "56",
+      "24",
+      "336"
+     ],
+     "a": 3,
+     "e": "<sub>8</sub>P<sub>3</sub> = 8!/(8 − 3)! = <b>336</b>."
+    }
+   ]
+  },
+  {
+   "title": "Combinations",
+   "items": [
+    {
+     "q": "A club has 12 members. How many different 3-person committees can be chosen?",
+     "c": [
+      "66",
+      "36",
+      "1,320",
+      "220"
+     ],
+     "a": 3,
+     "e": "Order does not matter: <sub>12</sub>C<sub>3</sub> = <b>220</b>."
+    },
+    {
+     "q": "A class has 6 girls and 8 boys. How many ways can a group of 2 girls and 3 boys be chosen?",
+     "c": [
+      "840",
+      "2,002",
+      "10,080",
+      "71"
+     ],
+     "a": 0,
+     "e": "Choose each part and multiply: <sub>6</sub>C<sub>2</sub> × <sub>8</sub>C<sub>3</sub> = 15 × 56 = <b>840</b>."
+    },
+    {
+     "q": "A pizza shop has 13 toppings. How many pizzas with exactly 2 different toppings are possible?",
+     "c": [
+      "156",
+      "26",
+      "169",
+      "78"
+     ],
+     "a": 3,
+     "e": "Order of toppings does not matter: <sub>13</sub>C<sub>2</sub> = <b>78</b>."
+    },
+    {
+     "q": "A pizza shop has 11 toppings. How many pizzas with exactly 3 different toppings are possible?",
+     "c": [
+      "165",
+      "990",
+      "33",
+      "1,331"
+     ],
+     "a": 0,
+     "e": "Order of toppings does not matter: <sub>11</sub>C<sub>3</sub> = <b>165</b>."
+    },
+    {
+     "q": "A pizza shop has 11 toppings. How many pizzas with exactly 2 different toppings are possible?",
+     "c": [
+      "22",
+      "55",
+      "110",
+      "121"
+     ],
+     "a": 1,
+     "e": "Order of toppings does not matter: <sub>11</sub>C<sub>2</sub> = <b>55</b>."
+    },
+    {
+     "q": "A class has 7 girls and 8 boys. How many ways can a group of 2 girls and 2 boys be chosen?",
+     "c": [
+      "1,365",
+      "588",
+      "49",
+      "2,352"
+     ],
+     "a": 1,
+     "e": "Choose each part and multiply: <sub>7</sub>C<sub>2</sub> × <sub>8</sub>C<sub>2</sub> = 21 × 28 = <b>588</b>."
+    },
+    {
+     "q": "A coach chooses 5 starting players from 11 players. How many ways can the starters be chosen?",
+     "c": [
+      "55,440",
+      "330",
+      "462",
+      "55"
+     ],
+     "a": 2,
+     "e": "<sub>11</sub>C<sub>5</sub> = <b>462</b>."
+    },
+    {
+     "q": "A class has 6 girls and 6 boys. How many ways can a group of 3 girls and 3 boys be chosen?",
+     "c": [
+      "14,400",
+      "40",
+      "400",
+      "924"
+     ],
+     "a": 2,
+     "e": "Choose each part and multiply: <sub>6</sub>C<sub>3</sub> × <sub>6</sub>C<sub>3</sub> = 20 × 20 = <b>400</b>."
+    },
+    {
+     "q": "A class has 6 girls and 4 boys. How many ways can a group of 2 girls and 3 boys be chosen?",
+     "c": [
+      "19",
+      "252",
+      "60",
+      "720"
+     ],
+     "a": 2,
+     "e": "Choose each part and multiply: <sub>6</sub>C<sub>2</sub> × <sub>4</sub>C<sub>3</sub> = 15 × 4 = <b>60</b>."
+    },
+    {
+     "q": "A pizza shop has 10 toppings. How many pizzas with exactly 3 different toppings are possible?",
+     "c": [
+      "720",
+      "1,000",
+      "120",
+      "30"
+     ],
+     "a": 2,
+     "e": "Order of toppings does not matter: <sub>10</sub>C<sub>3</sub> = <b>120</b>."
+    },
+    {
+     "q": "A class has 7 girls and 4 boys. How many ways can a group of 3 girls and 3 boys be chosen?",
+     "c": [
+      "5,040",
+      "39",
+      "462",
+      "140"
+     ],
+     "a": 3,
+     "e": "Choose each part and multiply: <sub>7</sub>C<sub>3</sub> × <sub>4</sub>C<sub>3</sub> = 35 × 4 = <b>140</b>."
+    },
+    {
+     "q": "Evaluate <sub>6</sub>C<sub>3</sub>.",
+     "c": [
+      "18",
+      "20",
+      "120",
+      "15"
+     ],
+     "a": 1,
+     "e": "<sub>6</sub>C<sub>3</sub> = 6!/(3! · 3!) = <b>20</b>."
+    },
+    {
+     "q": "Evaluate <sub>12</sub>C<sub>5</sub>.",
+     "c": [
+      "495",
+      "95,040",
+      "60",
+      "792"
+     ],
+     "a": 3,
+     "e": "<sub>12</sub>C<sub>5</sub> = 12!/(5! · 7!) = <b>792</b>."
+    },
+    {
+     "q": "A club has 14 members. How many different 4-person committees can be chosen?",
+     "c": [
+      "56",
+      "364",
+      "1,001",
+      "24,024"
+     ],
+     "a": 2,
+     "e": "Order does not matter: <sub>14</sub>C<sub>4</sub> = <b>1,001</b>."
+    },
+    {
+     "q": "A class has 5 girls and 5 boys. How many ways can a group of 2 girls and 2 boys be chosen?",
+     "c": [
+      "100",
+      "210",
+      "20",
+      "400"
+     ],
+     "a": 0,
+     "e": "Choose each part and multiply: <sub>5</sub>C<sub>2</sub> × <sub>5</sub>C<sub>2</sub> = 10 × 10 = <b>100</b>."
+    },
+    {
+     "q": "A club has 11 members. How many different 4-person committees can be chosen?",
+     "c": [
+      "165",
+      "330",
+      "7,920",
+      "44"
+     ],
+     "a": 1,
+     "e": "Order does not matter: <sub>11</sub>C<sub>4</sub> = <b>330</b>."
+    },
+    {
+     "q": "A club has 15 members. How many different 3-person committees can be chosen?",
+     "c": [
+      "45",
+      "105",
+      "2,730",
+      "455"
+     ],
+     "a": 3,
+     "e": "Order does not matter: <sub>15</sub>C<sub>3</sub> = <b>455</b>."
+    },
+    {
+     "q": "A pizza shop has 12 toppings. How many pizzas with exactly 3 different toppings are possible?",
+     "c": [
+      "1,320",
+      "220",
+      "1,728",
+      "36"
+     ],
+     "a": 1,
+     "e": "Order of toppings does not matter: <sub>12</sub>C<sub>3</sub> = <b>220</b>."
+    },
+    {
+     "q": "A club has 8 members. How many different 3-person committees can be chosen?",
+     "c": [
+      "56",
+      "24",
+      "28",
+      "336"
+     ],
+     "a": 0,
+     "e": "Order does not matter: <sub>8</sub>C<sub>3</sub> = <b>56</b>."
+    },
+    {
+     "q": "A club has 14 members. How many different 3-person committees can be chosen?",
+     "c": [
+      "364",
+      "91",
+      "2,184",
+      "42"
+     ],
+     "a": 0,
+     "e": "Order does not matter: <sub>14</sub>C<sub>3</sub> = <b>364</b>."
+    }
+   ]
+  },
+  {
+   "title": "Order or no order",
+   "items": [
+    {
+     "q": "How many different arrangements of the letters in APPLE are there?",
+     "c": [
+      "180",
+      "24",
+      "120",
+      "60"
+     ],
+     "a": 3,
+     "e": "5 letters, with repeats: 5! / (2!) = <b>60</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in SCISSORS are there?",
+     "c": [
+      "1,680",
+      "120",
+      "40,320",
+      "3,360"
+     ],
+     "a": 0,
+     "e": "8 letters, with repeats: 8! / (4!) = <b>1,680</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in PEPPER are there?",
+     "c": [
+      "6",
+      "720",
+      "60",
+      "120"
+     ],
+     "a": 2,
+     "e": "6 letters, with repeats: 6! / (2! · 3!) = <b>60</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in LETTER are there?",
+     "c": [
+      "360",
+      "180",
+      "720",
+      "24"
+     ],
+     "a": 1,
+     "e": "6 letters, with repeats: 6! / (2! · 2!) = <b>180</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in TOMATO are there?",
+     "c": [
+      "720",
+      "360",
+      "24",
+      "180"
+     ],
+     "a": 3,
+     "e": "6 letters, with repeats: 6! / (2! · 2!) = <b>180</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in BOOK are there?",
+     "c": [
+      "24",
+      "36",
+      "12",
+      "6"
+     ],
+     "a": 2,
+     "e": "4 letters, with repeats: 4! / (2!) = <b>12</b>."
+    },
+    {
+     "q": "Is choosing a 4-book reading list from 10 books a permutation or a combination, and how many ways are there?",
+     "c": [
+      "Permutation; 210 ways",
+      "Combination; 210 ways",
+      "Permutation; 5,040 ways",
+      "Combination; 5,040 ways"
+     ],
+     "a": 1,
+     "e": "Combination, because the group has no order. <b>Combination; 210 ways</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in BALLOON are there?",
+     "c": [
+      "2,520",
+      "5,040",
+      "1,260",
+      "120"
+     ],
+     "a": 2,
+     "e": "7 letters, with repeats: 7! / (2! · 2!) = <b>1,260</b>."
+    },
+    {
+     "q": "Is choosing 3 class officers (president, vice president, secretary) from 20 students a permutation or a combination, and how many ways are there?",
+     "c": [
+      "Permutation; 6,840 ways",
+      "Combination; 1,140 ways",
+      "Combination; 6,840 ways",
+      "Permutation; 1,140 ways"
+     ],
+     "a": 0,
+     "e": "Permutation, because the roles are different. <b>Permutation; 6,840 ways</b>."
+    },
+    {
+     "q": "Is arranging 4 of 10 books on a shelf a permutation or a combination, and how many ways are there?",
+     "c": [
+      "Permutation; 5,040 ways",
+      "Permutation; 210 ways",
+      "Combination; 210 ways",
+      "Combination; 5,040 ways"
+     ],
+     "a": 0,
+     "e": "Permutation, because the order on the shelf matters. <b>Permutation; 5,040 ways</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in BANANA are there?",
+     "c": [
+      "120",
+      "60",
+      "6",
+      "720"
+     ],
+     "a": 1,
+     "e": "6 letters, with repeats: 6! / (3! · 2!) = <b>60</b>."
+    },
+    {
+     "q": "Is choosing 3 students from 20 to form a study group a permutation or a combination, and how many ways are there?",
+     "c": [
+      "Combination; 6,840 ways",
+      "Combination; 1,140 ways",
+      "Permutation; 6,840 ways",
+      "Permutation; 1,140 ways"
+     ],
+     "a": 1,
+     "e": "Combination, because the group has no order. <b>Combination; 1,140 ways</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in LEVEL are there?",
+     "c": [
+      "30",
+      "120",
+      "60",
+      "6"
+     ],
+     "a": 0,
+     "e": "5 letters, with repeats: 5! / (2! · 2!) = <b>30</b>."
+    },
+    {
+     "q": "Is choosing a captain and a co-captain from 12 players a permutation or a combination, and how many ways are there?",
+     "c": [
+      "Combination; 132 ways",
+      "Combination; 66 ways",
+      "Permutation; 66 ways",
+      "Permutation; 132 ways"
+     ],
+     "a": 3,
+     "e": "Permutation, because the roles are different. <b>Permutation; 132 ways</b>."
+    },
+    {
+     "q": "Is dealing a 5-card hand from 52 cards a permutation or a combination, and how many ways are there?",
+     "c": [
+      "Permutation; 2,598,960 ways",
+      "Permutation; 311,875,200 ways",
+      "Combination; 2,598,960 ways",
+      "Combination; 311,875,200 ways"
+     ],
+     "a": 2,
+     "e": "Combination, because the order of the cards in a hand does not matter. <b>Combination; 2,598,960 ways</b>."
+    },
+    {
+     "q": "Is choosing 2 co-captains from 12 players a permutation or a combination, and how many ways are there?",
+     "c": [
+      "Permutation; 132 ways",
+      "Permutation; 66 ways",
+      "Combination; 132 ways",
+      "Combination; 66 ways"
+     ],
+     "a": 3,
+     "e": "Combination, because the co-captains have the same role. <b>Combination; 66 ways</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in COFFEE are there?",
+     "c": [
+      "24",
+      "360",
+      "180",
+      "720"
+     ],
+     "a": 2,
+     "e": "6 letters, with repeats: 6! / (2! · 2!) = <b>180</b>."
+    },
+    {
+     "q": "Is awarding first, second and third prize among 15 entries a permutation or a combination, and how many ways are there?",
+     "c": [
+      "Combination; 2,730 ways",
+      "Permutation; 455 ways",
+      "Combination; 455 ways",
+      "Permutation; 2,730 ways"
+     ],
+     "a": 3,
+     "e": "Permutation, because the prizes are different. <b>Permutation; 2,730 ways</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in COOKIE are there?",
+     "c": [
+      "720",
+      "360",
+      "1,080",
+      "120"
+     ],
+     "a": 1,
+     "e": "6 letters, with repeats: 6! / (2!) = <b>360</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in TENNESSEE are there?",
+     "c": [
+      "3,780",
+      "362,880",
+      "24",
+      "7,560"
+     ],
+     "a": 0,
+     "e": "9 letters, with repeats: 9! / (4! · 2! · 2!) = <b>3,780</b>."
+    }
+   ]
+  },
+  {
+   "title": "Probability by counting",
+   "items": [
+    {
+     "q": "A group of 3 students is chosen at random from 6 girls and 4 boys. What is the probability that all are girls?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>120</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>125</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>6</sub>C<sub>3</sub> ÷ <sub>10</sub>C<sub>3</sub> = 20/120 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>. (Without replacement, the fractions are not all 6/10.)"
+    },
+    {
+     "q": "A group of 3 students is chosen at random from 6 girls and 5 boys. What is the probability that all are girls?",
+     "c": [
+      "<span class='fr'><span class='fn'>216</span><span class='fd'>1331</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>165</span></span>"
+     ],
+     "a": 2,
+     "e": "<sub>6</sub>C<sub>3</sub> ÷ <sub>11</sub>C<sub>3</sub> = 20/165 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>33</span></span></b>. (Without replacement, the fractions are not all 6/11.)"
+    },
+    {
+     "q": "In a lottery, you choose 3 different numbers from 1 to 20, in any order. What is the probability that your numbers match the winning numbers?",
+     "c": [
+      "1/1,140",
+      "1/6,840",
+      "3/20",
+      "1/8,000"
+     ],
+     "a": 0,
+     "e": "Order does not matter, so there are <sub>20</sub>C<sub>3</sub> = 1,140 equally likely sets. <b>1/1,140</b>."
+    },
+    {
+     "q": "A committee of 3 is chosen at random from 9 people, including Andre and Kai. What is the probability that both Andre and Kai are chosen?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>84</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "Ways that include both: <sub>7</sub>C<sub>1</sub> = 7. All committees: <sub>9</sub>C<sub>3</sub> = 84. 7/84 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "5 books, including a dictionary and an atlas, are placed on a shelf in random order. What is the probability that the dictionary is first and the atlas is second?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>120</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>"
+     ],
+     "a": 3,
+     "e": "Arrangements with those two fixed: 3! = 6. All arrangements: 5! = 120. <b><span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "A group of 3 students is chosen at random from 4 girls and 6 boys. What is the probability that all are girls?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>120</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>4</sub>C<sub>3</sub> ÷ <sub>10</sub>C<sub>3</sub> = 4/120 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span></b>. (Without replacement, the fractions are not all 4/10.)"
+    },
+    {
+     "q": "A group of 3 students is chosen at random from 5 girls and 4 boys. What is the probability that all are girls?",
+     "c": [
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>42</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>84</span></span>"
+     ],
+     "a": 2,
+     "e": "<sub>5</sub>C<sub>3</sub> ÷ <sub>9</sub>C<sub>3</sub> = 10/84 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>42</span></span></b>. (Without replacement, the fractions are not all 5/9.)"
+    },
+    {
+     "q": "6 books, including a dictionary and an atlas, are placed on a shelf in random order. What is the probability that the dictionary is first and the atlas is second?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>720</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "Arrangements with those two fixed: 4! = 24. All arrangements: 6! = 720. <b><span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span></b>."
+    },
+    {
+     "q": "A committee of 3 is chosen at random from 8 people, including Isabella and Olivia. What is the probability that both Isabella and Olivia are chosen?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "Ways that include both: <sub>6</sub>C<sub>1</sub> = 6. All committees: <sub>8</sub>C<sub>3</sub> = 56. 6/56 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "A committee of 3 is chosen at random from 9 people, including Priya and Zoe. What is the probability that both Priya and Zoe are chosen?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>84</span></span>"
+     ],
+     "a": 2,
+     "e": "Ways that include both: <sub>7</sub>C<sub>1</sub> = 7. All committees: <sub>9</sub>C<sub>3</sub> = 84. 7/84 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "A committee of 3 is chosen at random from 10 people, including Aaliyah and Mei. What is the probability that both Aaliyah and Mei are chosen?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>120</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "Ways that include both: <sub>8</sub>C<sub>1</sub> = 8. All committees: <sub>10</sub>C<sub>3</sub> = 120. 8/120 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "A committee of 3 is chosen at random from 8 people, including Caleb and Isabella. What is the probability that both Caleb and Isabella are chosen?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>"
+     ],
+     "a": 3,
+     "e": "Ways that include both: <sub>6</sub>C<sub>1</sub> = 6. All committees: <sub>8</sub>C<sub>3</sub> = 56. 6/56 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "A committee of 3 is chosen at random from 8 people, including Isabella and Diego. What is the probability that both Isabella and Diego are chosen?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>"
+     ],
+     "a": 0,
+     "e": "Ways that include both: <sub>6</sub>C<sub>1</sub> = 6. All committees: <sub>8</sub>C<sub>3</sub> = 56. 6/56 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "A group of 3 students is chosen at random from 7 girls and 4 boys. What is the probability that all are girls?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>1331</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>165</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>7</sub>C<sub>3</sub> ÷ <sub>11</sub>C<sub>3</sub> = 35/165 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>33</span></span></b>. (Without replacement, the fractions are not all 7/11.)"
+    },
+    {
+     "q": "A committee of 4 is chosen at random from 10 people, including Kai and Emma. What is the probability that both Kai and Emma are chosen?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>210</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "Ways that include both: <sub>8</sub>C<sub>2</sub> = 28. All committees: <sub>10</sub>C<sub>4</sub> = 210. 28/210 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "A group of 3 students is chosen at random from 5 girls and 7 boys. What is the probability that all are girls?",
+     "c": [
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>1728</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>220</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>5</sub>C<sub>3</sub> ÷ <sub>12</sub>C<sub>3</sub> = 10/220 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>22</span></span></b>. (Without replacement, the fractions are not all 5/12.)"
+    },
+    {
+     "q": "In a lottery, you choose 5 different numbers from 1 to 40, in any order. What is the probability that your numbers match the winning numbers?",
+     "c": [
+      "1/78,960,960",
+      "1/658,008",
+      "5/40",
+      "1/102,400,000"
+     ],
+     "a": 1,
+     "e": "Order does not matter, so there are <sub>40</sub>C<sub>5</sub> = 658,008 equally likely sets. <b>1/658,008</b>."
+    },
+    {
+     "q": "A group of 3 students is chosen at random from 4 girls and 7 boys. What is the probability that all are girls?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>165</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>1331</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>165</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>4</sub>C<sub>3</sub> ÷ <sub>11</sub>C<sub>3</sub> = 4/165 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>165</span></span></b>. (Without replacement, the fractions are not all 4/11.)"
+    },
+    {
+     "q": "A committee of 3 is chosen at random from 8 people, including Grace and Chloe. What is the probability that both Grace and Chloe are chosen?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>56</span></span>"
+     ],
+     "a": 0,
+     "e": "Ways that include both: <sub>6</sub>C<sub>1</sub> = 6. All committees: <sub>8</sub>C<sub>3</sub> = 56. 6/56 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "In a lottery, you choose 4 different numbers from 1 to 30, in any order. What is the probability that your numbers match the winning numbers?",
+     "c": [
+      "4/30",
+      "1/810,000",
+      "1/27,405",
+      "1/657,720"
+     ],
+     "a": 2,
+     "e": "Order does not matter, so there are <sub>30</sub>C<sub>4</sub> = 27,405 equally likely sets. <b>1/27,405</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 14,
+ "updated": "2026-11-18",
+ "country": "us",
+ "subject": "math",
+ "grade": "precalculus"
+}
