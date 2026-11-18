@@ -166,3 +166,32 @@ def curve_svg(fn, lo=-6, hi=6, ylo=None, yhi=None, unit=22, vasym=(), hasym=(), 
     for x, y in holes:
         add.append("<circle cx='%.1f' cy='%.1f' r='4.5' fill='#fff' stroke='%s' stroke-width='2.2'/>" % (X_(x), Y_(y), col))
     return base.replace("</g></svg>", "".join(add) + "</g></svg>")
+
+
+def surd(c, n, d=1):
+    """c·√n / d, simplified, as html (n ≥ 1 integer, c and d integers, d ≠ 0)"""
+    c, n, d = int(c), int(n), int(d)
+    if d < 0:
+        c, d = -c, -d
+    k = 2
+    while k * k <= n:
+        while n % (k * k) == 0:
+            c *= k
+            n //= k * k
+        k += 1
+    g = math.gcd(abs(c), d)
+    c, d = c // g, d // g
+    sign = MINUS if c < 0 else ""
+    c = abs(c)
+    if n == 1:
+        top = str(c)
+    else:
+        top = ("" if c == 1 else str(c)) + "√%d" % n
+    if d == 1:
+        return sign + top
+    return sign + fr(top, d)
+
+
+def surd_rat(c, n, d=1):
+    """c / (d·√n) rationalized: c√n / (d·n)"""
+    return surd(c, n, d * n) if n != 1 else surd(c, 1, d)
