@@ -17,6 +17,10 @@ from a2_common import X, poly, sf, lin
 R = random.Random(95601)
 
 
+def hrs(v):
+    return "%s hour%s" % (sf(v), "" if F(v) == 1 else "s")
+
+
 def xs(vals):
     vals = sorted(set(vals))
     return "<i>x</i> = " + ", ".join(sf(v) for v in vals) if vals else "No solution"
@@ -159,8 +163,8 @@ def one_word(r):
         a, b = r.choice([(3, 6), (4, 12), (6, 12), (2, 3), (5, 20), (10, 15), (6, 3), (12, 4)])
         t = F(a * b, a + b)
         q = "%s can paint a fence in %d hours, and %s can paint it in %d hours. How long will it take them working together?" % (n1, a, n2, b)
-        return T(q, "%s hours" % sf(t) if t != 1 else "1 hour", ["%s hours" % sf(F(a + b, 2)), "%s hours" % sf(a + b), "%s hours" % sf(abs(a - b)) if a != b else "2 hours"],
-                 "Add the rates: %s + %s = %s, which is %s of the job per hour. Time = 1 ÷ %s = <b>%s hours</b>." % (fr(1, a), fr(1, b), fr(1, X), sf(F(a + b, a * b)), sf(F(a + b, a * b)), sf(t)))
+        return T(q, hrs(t) if t != 1 else "1 hour", [hrs(F(a + b, 2)), hrs(a + b), hrs(abs(a - b)) if a != b else "2 hours"],
+                 "Add the rates: %s + %s = %s, which is %s of the job per hour. Time = 1 ÷ %s = <b>%s</b>." % (fr(1, a), fr(1, b), fr(1, X), sf(F(a + b, a * b)), sf(F(a + b, a * b)), hrs(t)))
     if kind == "find":
         a, b = r.choice([(6, 3), (12, 4), (10, 6), (20, 5), (15, 10), (12, 6)])
         t = F(a * b, a - b) if a > b else None
@@ -168,8 +172,8 @@ def one_word(r):
         tog, alone = b, a
         other = F(alone * tog, alone - tog)
         q = "Two pumps together drain a pool in %d hours. The first pump alone takes %d hours. How long would the second pump take alone?" % (tog, alone)
-        return T(q, "%s hours" % sf(other), ["%s hours" % sf(alone - tog), "%s hours" % sf(F(alone + tog, 2)), "%s hours" % sf(alone + tog)],
-                 "%s + %s = %s. So %s = %s, and <i>x</i> = <b>%s hours</b>." % (fr(1, alone), fr(1, X), fr(1, tog), fr(1, X), sf(F(1, tog) - F(1, alone)), sf(other)))
+        return T(q, hrs(other), [hrs(alone - tog), hrs(F(alone + tog, 2)), hrs(alone + tog)],
+                 "%s + %s = %s. So %s = %s, and <i>x</i> = <b>%s</b>." % (fr(1, alone), fr(1, X), fr(1, tog), fr(1, X), sf(F(1, tog) - F(1, alone)), hrs(other)))
     if kind == "boat":
         c = r.choice([2, 3, 4, 5])
         v = r.choice([8, 10, 12, 15, 18])
@@ -185,8 +189,8 @@ def one_word(r):
     if a <= b:
         return None
     t = F(a * b, a - b)
-    return T(q, "%s hours" % sf(t), ["%s hours" % sf(F(a * b, a + b)), "%s hours" % sf(a - b), "%s hours" % sf(a + b)],
-             "Net rate = %s %s %s = %s per hour. Time = <b>%s hours</b>." % (fr(1, b), MINUS, fr(1, a), sf(F(1, b) - F(1, a)), sf(t)))
+    return T(q, hrs(t), [hrs(F(a * b, a + b)), hrs(a - b), hrs(a + b)],
+             "Net rate = %s %s %s = %s per hour. Time = <b>%s</b>." % (fr(1, b), MINUS, fr(1, a), sf(F(1, b) - F(1, a)), hrs(t)))
 
 
 def build():
