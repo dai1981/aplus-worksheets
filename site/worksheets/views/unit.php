@@ -142,6 +142,8 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
     $lr['typicalAgeRange'] = '16-17';   // usually taken in Grade 11
 } elseif ($grade['slug'] === 'precalculus') {
     $lr['typicalAgeRange'] = '17-18';   // usually taken in Grade 12
+} elseif ($grade['slug'] === 'foundation') {
+    $lr['typicalAgeRange'] = '5-6';   // Australia: first year of school
 } elseif (preg_match('/^year-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'uk') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 4) . '-' . ((int)$gm[1] + 5);   // England: Year 4 = age 8-9
 } elseif (preg_match('/^year-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'au') {
