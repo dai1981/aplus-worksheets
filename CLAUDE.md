@@ -845,7 +845,7 @@ SG / Maths / Primary 1（とても短い文、ほぼ全問に絵）
 10. 2d-shapes ✓
 11. picture-graphs ✓
 
-SG / Maths / Secondary 1–2（MOE 2020 O-Level / G3 Mathematics。旧 Express）— grade `secondary-N`（表示は「Secondary N」、sort 7・8、12〜14歳）。生成スクリプトは `gen_sg_maths_s1_*`・`gen_sg_maths_s2_*`、共通部品は `tools/sg_sec.py`（uk_ks3 と同じ API。SG の名前・$・数の書き方、STD_TEXT（シラバス原文）、TITLES、seo_title は make が自動）。
+SG / Maths / Secondary 1–4（MOE 2020 O-Level / G3 Mathematics。旧 Express）— grade `secondary-N`（表示は「Secondary N」、sort 7〜10、12〜16歳。Sec 4 が O-Level の学年）。生成スクリプトは `gen_sg_maths_sN_*`、共通部品は `tools/sg_sec.py`（uk_ks3 と同じ API。SG の名前・$・数の書き方、STD_TEXT（シラバス原文）、TITLES、seo_title は make が自動。`adopt(mod, R)` で他国の生成スクリプトの問題関数を SG の名前・$・数の書き方のまま再利用できる）。Sec 3–4 は答えを 3 有効数字・角度は小数第 1 位（O-Level と同じ）。
 多くは UK KS3 の生成スクリプトを SG 式に移したもの（£→$、miles→km、VAT→GST 9%、stem-and-leaf diagram）。負の数は「−」。standard_code は「Secondary 1: Ratio and Proportion」形式（N1〜N7・G1〜G5・S1〜S2 の小項目名）、standard_url は MOE 2020 Express/N(A) シラバス PDF
 
 SG / Maths / Secondary 1
@@ -857,6 +857,16 @@ SG / Maths / Secondary 2
 1. expansion-and-factorisation ✓ 2. algebraic-fractions ✓ 3. changing-the-subject-of-a-formula ✓ 4. linear-inequalities ✓ 5. simultaneous-equations ✓
 6. quadratic-equations ✓ 7. quadratic-graphs ✓ 8. direct-and-inverse-proportion ✓ 9. map-scales ✓ 10. congruence-and-similarity ✓ 11. pythagoras-theorem ✓
 12. trigonometric-ratios ✓ 13. volume-of-cones-and-spheres ✓ 14. mean-median-and-mode ✓ 15. stem-and-leaf-diagrams ✓ 16. frequency-tables-and-grouped-data ✓ 17. probability ✓
+
+SG / Maths / Secondary 3
+1. indices ✓ 2. standard-form ✓ 3. quadratic-formula-and-completing-the-square ✓ 4. fractional-equations ✓ 5. quadratic-equation-word-problems ✓
+6. simultaneous-linear-inequalities ✓ 7. sketching-quadratic-graphs ✓ 8. power-and-exponential-graphs ✓ 9. coordinate-geometry ✓ 10. congruent-and-similar-triangles ✓
+11. area-and-volume-of-similar-figures ✓ 12. sine-and-cosine-rules ✓ 13. bearings-and-angles-of-elevation ✓ 14. arc-length-sector-area-and-radians ✓
+15. symmetry-properties-of-circles ✓ 16. angle-properties-of-circles ✓
+
+SG / Maths / Secondary 4（O-Level の学年）
+1. sets-and-venn-diagrams ✓ 2. matrices ✓ 3. vectors ✓ 4. vector-geometry ✓ 5. problems-in-three-dimensions ✓
+6. cumulative-frequency-and-box-plots ✓ 7. standard-deviation ✓ 8. probability-of-combined-events ✓
 
 US / Math / Grade 7（Common Core）— 1,000 以上はカンマ付き。負の数は「−」（U+2212）。共通部品は `tools/ws_common.py`
 1. adding-and-subtracting-integers ✓
@@ -1008,7 +1018,7 @@ TW / Math は國小一年級〜國中九年級まで完了。次は下の「そ�
 tw のトピック別ページは `topic_defs_tw()`（topics.php、中国語の name・blurb、tw の slug 用の正規表現）。tw の単元を足したらどのトピックに入るか確認する
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
-その後: SG Secondary 3–4、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
+その後: CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 

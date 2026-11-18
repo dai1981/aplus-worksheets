@@ -104,8 +104,9 @@ def lesson(think, examples, mistakes, extra=""):
 
 SUB = {"N1": "Numbers and their Operations", "N2": "Ratio and Proportion", "N3": "Percentage", "N4": "Rate and Speed",
        "N5": "Algebraic Expressions and Formulae", "N6": "Functions and Graphs", "N7": "Equations and Inequalities",
-       "G1": "Angles, Triangles and Polygons", "G2": "Congruence and Similarity", "G4": "Pythagoras' Theorem and Trigonometry",
-       "G5": "Mensuration", "S1": "Data Handling and Analysis", "S2": "Probability"}
+       "N8": "Set Language and Notation", "N9": "Matrices",
+       "G1": "Angles, Triangles and Polygons", "G2": "Congruence and Similarity", "G3": "Properties of Circles", "G4": "Pythagoras' Theorem and Trigonometry",
+       "G5": "Mensuration", "G6": "Coordinate Geometry", "G7": "Vectors in Two Dimensions", "S1": "Data Handling and Analysis", "S2": "Probability"}
 STRAND = {"N": "Number and Algebra", "G": "Geometry and Measurement", "S": "Statistics and Probability"}
 
 
@@ -144,6 +145,31 @@ STD_TEXT = {
     "stem-and-leaf-diagrams": "analysis and interpretation of dot diagrams, histograms and stem-and-leaf diagrams",
     "frequency-tables-and-grouped-data": "calculation of the mean for grouped data; analysis and interpretation of tables, bar graphs, pie charts and histograms",
     "probability": "probability as a measure of chance; probability of single events (including listing all the possible outcomes in a simple chance situation to calculate the probability)",
+    # Secondary 3 and 4 (MOE 2020 O-Level Mathematics, Secondary 3/4 content)
+    "indices": "positive, negative, zero and fractional indices; laws of indices",
+    "standard-form": "use of standard form A × 10ⁿ, where n is an integer, and 1 ≤ A < 10",
+    "quadratic-formula-and-completing-the-square": "solving quadratic equations in one variable by use of formula and by completing the square for y = x² + px + q",
+    "fractional-equations": "solving fractional equations that can be reduced to quadratic equations such as 6/(x + 4) = 3 + x and 1/(x − 2) + 2/(x − 3) = 5",
+    "quadratic-equation-word-problems": "formulating a quadratic equation in one variable to solve problems",
+    "simultaneous-linear-inequalities": "solving linear inequalities in one variable (including simultaneous inequalities) and representing the solution on the number line",
+    "sketching-quadratic-graphs": "sketching the graphs of quadratic functions given in the form y = (x − p)² + q, y = −(x − p)² + q, y = (x − a)(x − b) and y = −(x − a)(x − b); solving quadratic equations by the graphical method",
+    "power-and-exponential-graphs": "graphs of power functions y = axⁿ, where n = −2, −1, 0, 1, 2, 3, and simple sums of not more than three of these; graphs of exponential functions y = kaˣ, where a is a positive integer, a > 1; estimation of the gradient of a curve by drawing a tangent",
+    "coordinate-geometry": "finding the gradient of a straight line given the coordinates of two points on it; finding the length of a line segment given the coordinates of its end points; interpreting and finding the equation of a straight line graph in the form y = mx + c; geometric problems involving the use of coordinates",
+    "congruent-and-similar-triangles": "determining whether two triangles are congruent or similar",
+    "area-and-volume-of-similar-figures": "ratio of areas of similar plane figures; ratio of volumes of similar solids",
+    "sine-and-cosine-rules": "extending sine and cosine to obtuse angles; use of the formula area = ½ab sin C for the area of a triangle; use of sine rule and cosine rule for any triangle",
+    "bearings-and-angles-of-elevation": "problems in two dimensions including those involving angles of elevation and depression and bearings",
+    "arc-length-sector-area-and-radians": "arc length, sector area and area of a segment of a circle; use of radian measure of angle (including conversion between radians and degrees)",
+    "symmetry-properties-of-circles": "symmetry properties of circles: equal chords are equidistant from the centre; the perpendicular bisector of a chord passes through the centre; tangents from an external point are equal in length; the line joining an external point to the centre bisects the angle between the tangents",
+    "angle-properties-of-circles": "angle properties of circles: angle in a semicircle is a right angle; angle between tangent and radius is a right angle; angle at the centre is twice the angle at the circumference; angles in the same segment are equal; angles in opposite segments are supplementary",
+    "sets-and-venn-diagrams": "use of set language and notation (union, intersection, n(A), element, complement, empty set, universal set, subset and proper subset); union and intersection of two sets; Venn diagrams",
+    "matrices": "display of information in the form of a matrix of any order; interpreting the data in a given matrix; product of a scalar quantity and a matrix; problems involving addition, subtraction and multiplication of matrices",
+    "vectors": "use of vector notation; representing a vector as a directed line segment; translation by a vector; position vectors; magnitude of a vector as √(x² + y²); sum and difference of two vectors; multiplication of a vector by a scalar",
+    "vector-geometry": "use of sum and difference of two vectors to express given vectors in terms of two coplanar vectors; geometric problems involving the use of vectors",
+    "problems-in-three-dimensions": "problems in two and three dimensions including those involving angles of elevation and depression and bearings",
+    "cumulative-frequency-and-box-plots": "quartiles and percentiles; range and interquartile range as measures of spread; analysis and interpretation of cumulative frequency diagrams and box-and-whisker plots",
+    "standard-deviation": "range, interquartile range and standard deviation as measures of spread; calculation of the standard deviation for a set of data (grouped and ungrouped); using the mean and standard deviation to compare two sets of data",
+    "probability-of-combined-events": "probability of simple combined events (including using possibility diagrams and tree diagrams, where appropriate); addition and multiplication of probabilities (mutually exclusive events and independent events)",
 }
 # Singapore titles where the ported one used other names
 TITLES = {
@@ -255,3 +281,24 @@ def ordinal(n):
     n = int(n)
     suf = "th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
     return "%d%s" % (n, suf)
+
+
+def adopt(mod, rnd):
+    """Reuse question makers from another country's generator with Singapore names, money and numbers."""
+    ws_common.comma = comma
+    for name in ("gbp", "aud", "usd", "cad"):
+        if hasattr(mod, name):
+            setattr(mod, name, sgd)
+    if hasattr(mod, "comma"):
+        mod.comma = comma
+    if hasattr(mod, "People"):
+        mod.People = People
+    if hasattr(mod, "P"):
+        mod.P = People(rnd)
+    for name in ("PLACES", "CITIES", "TOWNS"):
+        if hasattr(mod, name):
+            setattr(mod, name, list(PLACES))
+    for name in ("GIRLS", "BOYS"):
+        if hasattr(mod, name):
+            setattr(mod, name, list(GIRLS if name == "GIRLS" else BOYS))
+    return mod
