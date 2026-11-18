@@ -1,0 +1,1165 @@
+{
+ "slug": "normal-distribution",
+ "title": "The Normal Distribution and z-Scores",
+ "seo_title": "Normal Distribution Worksheet: Empirical Rule and z-Scores (Algebra 2, S-ID.A.4) | 100 Questions",
+ "short_title": "Normal Distribution",
+ "domain": "Statistics and Probability",
+ "standard_code": "S-ID.A.4",
+ "standard_url": "https://www.thecorestandards.org/Math/Content/HSS/ID/A/4/",
+ "standard_text": "Use the mean and standard deviation of a data set to fit it to a normal distribution and to estimate population percentages. Recognize that there are data sets for which such a procedure is not appropriate. Use calculators, spreadsheets, and tables to estimate areas under the normal curve.",
+ "meta_desc": "Free Algebra 2 worksheet on the normal distribution: the 68-95-99.7 rule, z-scores, comparing values, areas under the curve and word problems. 100 questions with answers.",
+ "key_big": "68% within 1 SD, 95% within 2 SD, 99.7% within 3 SD.",
+ "key_sub": "z = (x − μ)/σ tells how many standard deviations x is from the mean.",
+ "body_html": "<h2>How it works</h2><p>A <b>normal distribution</b> is a symmetric, bell-shaped curve centered at the mean μ. Its spread is the standard deviation σ.</p><p><b>Empirical rule</b>: about 68% of the data is within 1σ of the mean, 95% within 2σ, and 99.7% within 3σ. Each tail outside 1σ holds 16%, and outside 2σ holds 2.5%.</p><p>A <b><i>z</i>-score</b> tells how many standard deviations a value is from the mean: <i>z</i> = (<i>x</i> − μ) ÷ σ. Use <i>z</i>-scores to compare values from different distributions, and a normal CDF or <i>z</i>-table to find areas.</p><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>IQ scores: μ = 100, σ = 15. What percent are above 130?</p><p class='sn-ex-s'>130 is 2σ above the mean</p><p class='sn-ex-s'>Outside 2σ is 5%, half in each tail</p><p class='sn-ex-a'>Answer: 2.5%</p></div><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>Find the <i>z</i>-score of 82 when μ = 70 and σ = 8.</p><p class='sn-ex-s'>(82 − 70) ÷ 8</p><p class='sn-ex-a'>Answer: 1.5</p></div><h2>Common mistakes</h2><ul><li>Using 68% for 2 standard deviations. 68% is for 1, 95% is for 2.</li><li>Forgetting to split the outside percent between the two tails.</li><li>Dividing by the variance σ² instead of σ.</li><li>Comparing raw scores from different tests instead of <i>z</i>-scores.</li></ul>",
+ "faq": [
+  {
+   "q": "What is the empirical rule?",
+   "a": "In a normal distribution, about 68% of values are within 1 standard deviation of the mean, 95% within 2, and 99.7% within 3."
+  },
+  {
+   "q": "How do you find a z-score?",
+   "a": "Subtract the mean from the value and divide by the standard deviation: z = (x − μ)/σ."
+  },
+  {
+   "q": "What does a negative z-score mean?",
+   "a": "The value is below the mean. For example, z = −1.5 is 1.5 standard deviations below the mean."
+  },
+  {
+   "q": "How do you find the probability from a z-score?",
+   "a": "Use a z-table or a calculator's normal CDF to find the area to the left; subtract from 1 for the area to the right."
+  }
+ ],
+ "sets": [
+  {
+   "title": "The 68-95-99.7 rule",
+   "items": [
+    {
+     "q": "A normal distribution has mean 70 and standard deviation 5. What percent of the data is above 80?",
+     "c": [
+      "2.5%",
+      "95%",
+      "47.5%",
+      "5%"
+     ],
+     "a": 0,
+     "e": "80 is 2 SD above the mean. 95% is within 2 SD, so 5% is outside, split equally between the two tails: <b>2.5%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 50 and standard deviation 10. What percent of the data is between 40 and 70?",
+     "c": [
+      "81.5%",
+      "95%",
+      "68%",
+      "47.5%"
+     ],
+     "a": 0,
+     "e": "From −1 SD to the mean: 34%. From the mean to +2 SD: 47.5%. Total: <b>81.5%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 200 and standard deviation 25. What percent of the data is above 225?",
+     "c": [
+      "32%",
+      "34%",
+      "68%",
+      "16%"
+     ],
+     "a": 3,
+     "e": "225 is 1 SD above the mean. 68% is within 1 SD, so 32% is outside, split equally between the two tails: <b>16%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 68 and standard deviation 3. What percent of the data is above 71?",
+     "c": [
+      "68%",
+      "32%",
+      "16%",
+      "34%"
+     ],
+     "a": 2,
+     "e": "71 is 1 SD above the mean. 68% is within 1 SD, so 32% is outside, split equally between the two tails: <b>16%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 500 and standard deviation 100. What percent of the data is between 400 and 700?",
+     "c": [
+      "95%",
+      "68%",
+      "47.5%",
+      "81.5%"
+     ],
+     "a": 3,
+     "e": "From −1 SD to the mean: 34%. From the mean to +2 SD: 47.5%. Total: <b>81.5%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 70 and standard deviation 5. What percent of the data is between 55 and 85?",
+     "c": [
+      "95%",
+      "99.7%",
+      "68%",
+      "34%"
+     ],
+     "a": 1,
+     "e": "55 and 85 are 3 standard deviations from the mean, so the rule gives <b>99.7%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 12 and standard deviation 2. What percent of the data is between 10 and 16?",
+     "c": [
+      "95%",
+      "81.5%",
+      "68%",
+      "47.5%"
+     ],
+     "a": 1,
+     "e": "From −1 SD to the mean: 34%. From the mean to +2 SD: 47.5%. Total: <b>81.5%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 70 and standard deviation 5. What percent of the data is between 65 and 80?",
+     "c": [
+      "68%",
+      "81.5%",
+      "95%",
+      "47.5%"
+     ],
+     "a": 1,
+     "e": "From −1 SD to the mean: 34%. From the mean to +2 SD: 47.5%. Total: <b>81.5%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 100 and standard deviation 15. What percent of the data is below 115?",
+     "c": [
+      "16%",
+      "34%",
+      "84%",
+      "68%"
+     ],
+     "a": 2,
+     "e": "Half the data (50%) is below the mean, and 34% between the mean and 115. Total: <b>84%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 68 and standard deviation 3. What percent of the data is between 65 and 74?",
+     "c": [
+      "81.5%",
+      "68%",
+      "95%",
+      "47.5%"
+     ],
+     "a": 0,
+     "e": "From −1 SD to the mean: 34%. From the mean to +2 SD: 47.5%. Total: <b>81.5%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 68 and standard deviation 3. What percent of the data is below 71?",
+     "c": [
+      "34%",
+      "16%",
+      "68%",
+      "84%"
+     ],
+     "a": 3,
+     "e": "Half the data (50%) is below the mean, and 34% between the mean and 71. Total: <b>84%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 68 and standard deviation 3. What percent of the data is above 74?",
+     "c": [
+      "95%",
+      "5%",
+      "2.5%",
+      "47.5%"
+     ],
+     "a": 2,
+     "e": "74 is 2 SD above the mean. 95% is within 2 SD, so 5% is outside, split equally between the two tails: <b>2.5%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 100 and standard deviation 15. What percent of the data is between 85 and 115?",
+     "c": [
+      "99.7%",
+      "95%",
+      "68%",
+      "34%"
+     ],
+     "a": 2,
+     "e": "85 and 115 are 1 standard deviation from the mean, so the rule gives <b>68%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 100 and standard deviation 15. What percent of the data is between 85 and 130?",
+     "c": [
+      "81.5%",
+      "47.5%",
+      "68%",
+      "95%"
+     ],
+     "a": 0,
+     "e": "From −1 SD to the mean: 34%. From the mean to +2 SD: 47.5%. Total: <b>81.5%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 50 and standard deviation 10. What percent of the data is below 70?",
+     "c": [
+      "2.5%",
+      "97.5%",
+      "47.5%",
+      "95%"
+     ],
+     "a": 1,
+     "e": "Half the data (50%) is below the mean, and 47.5% between the mean and 70. Total: <b>97.5%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 70 and standard deviation 5. What percent of the data is below 75?",
+     "c": [
+      "68%",
+      "34%",
+      "16%",
+      "84%"
+     ],
+     "a": 3,
+     "e": "Half the data (50%) is below the mean, and 34% between the mean and 75. Total: <b>84%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 12 and standard deviation 2. What percent of the data is below 14?",
+     "c": [
+      "34%",
+      "68%",
+      "16%",
+      "84%"
+     ],
+     "a": 3,
+     "e": "Half the data (50%) is below the mean, and 34% between the mean and 14. Total: <b>84%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 68 and standard deviation 3. What percent of the data is below 74?",
+     "c": [
+      "47.5%",
+      "95%",
+      "97.5%",
+      "2.5%"
+     ],
+     "a": 2,
+     "e": "Half the data (50%) is below the mean, and 47.5% between the mean and 74. Total: <b>97.5%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 100 and standard deviation 15. What percent of the data is below 130?",
+     "c": [
+      "2.5%",
+      "97.5%",
+      "47.5%",
+      "95%"
+     ],
+     "a": 1,
+     "e": "Half the data (50%) is below the mean, and 47.5% between the mean and 130. Total: <b>97.5%</b>."
+    },
+    {
+     "q": "A normal distribution has mean 30 and standard deviation 4. What percent of the data is between 26 and 38?",
+     "c": [
+      "81.5%",
+      "95%",
+      "68%",
+      "47.5%"
+     ],
+     "a": 0,
+     "e": "From −1 SD to the mean: 34%. From the mean to +2 SD: 47.5%. Total: <b>81.5%</b>."
+    }
+   ]
+  },
+  {
+   "title": "z-scores",
+   "items": [
+    {
+     "q": "A data set has mean 50 and standard deviation 10. Find the <i>z</i>-score of 65.",
+     "c": [
+      "−1.5",
+      "15",
+      "1.5",
+      "0.15"
+     ],
+     "a": 2,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (65 − 50) ÷ 10 = <b>1.5</b>."
+    },
+    {
+     "q": "A data set has mean 200 and standard deviation 25. Find the <i>z</i>-score of 162.5.",
+     "c": [
+      "−1.5",
+      "−0.06",
+      "1.5",
+      "−37.5"
+     ],
+     "a": 0,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (162.5 − 200) ÷ 25 = <b>−1.5</b>."
+    },
+    {
+     "q": "A data set has mean 500 and standard deviation 100. Find the <i>z</i>-score of 350.",
+     "c": [
+      "−150",
+      "−0.015",
+      "−1.5",
+      "1.5"
+     ],
+     "a": 2,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (350 − 500) ÷ 100 = <b>−1.5</b>."
+    },
+    {
+     "q": "A data set has mean 80 and standard deviation 8. Which value has a <i>z</i>-score of −2?",
+     "c": [
+      "96",
+      "64",
+      "−16",
+      "78"
+     ],
+     "a": 1,
+     "e": "<i>x</i> = μ + <i>z</i>σ = 80 + (−2)(8) = <b>64</b>."
+    },
+    {
+     "q": "A data set has mean 70 and standard deviation 5. Which value has a <i>z</i>-score of 1?",
+     "c": [
+      "5",
+      "65",
+      "71",
+      "75"
+     ],
+     "a": 3,
+     "e": "<i>x</i> = μ + <i>z</i>σ = 70 + (1)(5) = <b>75</b>."
+    },
+    {
+     "q": "A data set has mean 500 and standard deviation 100. Find the <i>z</i>-score of 800.",
+     "c": [
+      "−3",
+      "300",
+      "3",
+      "0.03"
+     ],
+     "a": 2,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (800 − 500) ÷ 100 = <b>3</b>."
+    },
+    {
+     "q": "A data set has mean 100 and standard deviation 15. Find the <i>z</i>-score of 145.",
+     "c": [
+      "0.2",
+      "3",
+      "45",
+      "−3"
+     ],
+     "a": 1,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (145 − 100) ÷ 15 = <b>3</b>."
+    },
+    {
+     "q": "A data set has mean 30 and standard deviation 4. Find the <i>z</i>-score of 26.",
+     "c": [
+      "−1",
+      "−4",
+      "1",
+      "−0.25"
+     ],
+     "a": 0,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (26 − 30) ÷ 4 = <b>−1</b>."
+    },
+    {
+     "q": "A data set has mean 68 and standard deviation 3. Find the <i>z</i>-score of 63.5.",
+     "c": [
+      "−1.5",
+      "−0.5",
+      "1.5",
+      "−4.5"
+     ],
+     "a": 0,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (63.5 − 68) ÷ 3 = <b>−1.5</b>."
+    },
+    {
+     "q": "A data set has mean 50 and standard deviation 10. Find the <i>z</i>-score of 20.",
+     "c": [
+      "−3",
+      "−30",
+      "3",
+      "−0.3"
+     ],
+     "a": 0,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (20 − 50) ÷ 10 = <b>−3</b>."
+    },
+    {
+     "q": "A data set has mean 500 and standard deviation 100. Find the <i>z</i>-score of 1,100.",
+     "c": [
+      "0.06",
+      "−6",
+      "600",
+      "6"
+     ],
+     "a": 3,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (1,100 − 500) ÷ 100 = <b>6</b>."
+    },
+    {
+     "q": "A data set has mean 70 and standard deviation 5. Find the <i>z</i>-score of 82.5.",
+     "c": [
+      "0.5",
+      "2.5",
+      "12.5",
+      "−2.5"
+     ],
+     "a": 1,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (82.5 − 70) ÷ 5 = <b>2.5</b>."
+    },
+    {
+     "q": "A data set has mean 68 and standard deviation 3. Find the <i>z</i>-score of 70.25.",
+     "c": [
+      "0.25",
+      "2.25",
+      "−0.75",
+      "0.75"
+     ],
+     "a": 3,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (70.25 − 68) ÷ 3 = <b>0.75</b>."
+    },
+    {
+     "q": "A data set has mean 100 and standard deviation 15. Which value has a <i>z</i>-score of −5?",
+     "c": [
+      "−75",
+      "175",
+      "25",
+      "95"
+     ],
+     "a": 2,
+     "e": "<i>x</i> = μ + <i>z</i>σ = 100 + (−5)(15) = <b>25</b>."
+    },
+    {
+     "q": "A data set has mean 30 and standard deviation 4. Which value has a <i>z</i>-score of −2.5?",
+     "c": [
+      "40",
+      "−10",
+      "27.5",
+      "20"
+     ],
+     "a": 3,
+     "e": "<i>x</i> = μ + <i>z</i>σ = 30 + (−2.5)(4) = <b>20</b>."
+    },
+    {
+     "q": "A data set has mean 80 and standard deviation 8. Find the <i>z</i>-score of 72.",
+     "c": [
+      "−0.125",
+      "−8",
+      "1",
+      "−1"
+     ],
+     "a": 3,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (72 − 80) ÷ 8 = <b>−1</b>."
+    },
+    {
+     "q": "A data set has mean 70 and standard deviation 5. Find the <i>z</i>-score of 65.",
+     "c": [
+      "−5",
+      "−0.2",
+      "−1",
+      "1"
+     ],
+     "a": 2,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (65 − 70) ÷ 5 = <b>−1</b>."
+    },
+    {
+     "q": "A data set has mean 30 and standard deviation 4. Find the <i>z</i>-score of 28.",
+     "c": [
+      "−2",
+      "−0.5",
+      "−0.125",
+      "0.5"
+     ],
+     "a": 1,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (28 − 30) ÷ 4 = <b>−0.5</b>."
+    },
+    {
+     "q": "A data set has mean 200 and standard deviation 25. Find the <i>z</i>-score of 275.",
+     "c": [
+      "−3",
+      "3",
+      "0.12",
+      "75"
+     ],
+     "a": 1,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (275 − 200) ÷ 25 = <b>3</b>."
+    },
+    {
+     "q": "A data set has mean 30 and standard deviation 4. Find the <i>z</i>-score of 36.",
+     "c": [
+      "1.5",
+      "0.375",
+      "6",
+      "−1.5"
+     ],
+     "a": 0,
+     "e": "<i>z</i> = (<i>x</i> − μ) ÷ σ = (36 − 30) ÷ 4 = <b>1.5</b>."
+    }
+   ]
+  },
+  {
+   "title": "Compare with z-scores",
+   "items": [
+    {
+     "q": "Priya scored 74 on a test with mean 70 and standard deviation 8. Sofia scored 655 on a different test with mean 480 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "Sofia",
+      "They did equally well",
+      "The tests cannot be compared",
+      "Priya"
+     ],
+     "a": 0,
+     "e": "Compare <i>z</i>-scores: Priya has <i>z</i> = 0.5 and Sofia has <i>z</i> = 1.75. The larger <i>z</i>-score is relatively better. <b>Sofia</b>."
+    },
+    {
+     "q": "Kai scored 85 on a test with mean 75 and standard deviation 10. Diego scored 530 on a different test with mean 480 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "Kai",
+      "Diego",
+      "They did equally well",
+      "Diego, because 530 is the larger score"
+     ],
+     "a": 0,
+     "e": "Compare <i>z</i>-scores: Kai has <i>z</i> = 1 and Diego has <i>z</i> = 0.5. The larger <i>z</i>-score is relatively better. <b>Kai</b>."
+    },
+    {
+     "q": "Diego scored 80 on a test with mean 75 and standard deviation 10. Ethan scored 595 on a different test with mean 520 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "Diego",
+      "Ethan",
+      "The tests cannot be compared",
+      "They did equally well"
+     ],
+     "a": 1,
+     "e": "Compare <i>z</i>-scores: Diego has <i>z</i> = 0.5 and Ethan has <i>z</i> = 0.75. The larger <i>z</i>-score is relatively better. <b>Ethan</b>."
+    },
+    {
+     "q": "Kai scored 80 on a test with mean 70 and standard deviation 10. Priya scored 550 on a different test with mean 500 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "Priya, because 550 is the larger score",
+      "Kai",
+      "Priya",
+      "They did equally well"
+     ],
+     "a": 1,
+     "e": "Compare <i>z</i>-scores: Kai has <i>z</i> = 1 and Priya has <i>z</i> = 0.5. The larger <i>z</i>-score is relatively better. <b>Kai</b>."
+    },
+    {
+     "q": "Andre scored 87 on a test with mean 75 and standard deviation 8. Chloe scored 550 on a different test with mean 500 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "Chloe",
+      "Andre",
+      "They did equally well",
+      "Chloe, because 550 is the larger score"
+     ],
+     "a": 1,
+     "e": "Compare <i>z</i>-scores: Andre has <i>z</i> = 1.5 and Chloe has <i>z</i> = 0.5. The larger <i>z</i>-score is relatively better. <b>Andre</b>."
+    },
+    {
+     "q": "Kai scored 83 on a test with mean 75 and standard deviation 8. Isabella scored 575 on a different test with mean 500 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "Kai",
+      "Isabella",
+      "Isabella, because 575 is the larger score",
+      "They did equally well"
+     ],
+     "a": 0,
+     "e": "Compare <i>z</i>-scores: Kai has <i>z</i> = 1 and Isabella has <i>z</i> = 0.75. The larger <i>z</i>-score is relatively better. <b>Kai</b>."
+    },
+    {
+     "q": "Marcus scored 85 on a test with mean 80 and standard deviation 5. Chloe scored 655 on a different test with mean 480 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "The tests cannot be compared",
+      "They did equally well",
+      "Chloe",
+      "Marcus"
+     ],
+     "a": 2,
+     "e": "Compare <i>z</i>-scores: Marcus has <i>z</i> = 1 and Chloe has <i>z</i> = 1.75. The larger <i>z</i>-score is relatively better. <b>Chloe</b>."
+    },
+    {
+     "q": "Owen scored 83 on a test with mean 75 and standard deviation 8. Ava scored 650 on a different test with mean 500 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "They did equally well",
+      "Owen",
+      "The tests cannot be compared",
+      "Ava"
+     ],
+     "a": 3,
+     "e": "Compare <i>z</i>-scores: Owen has <i>z</i> = 1 and Ava has <i>z</i> = 1.5. The larger <i>z</i>-score is relatively better. <b>Ava</b>."
+    },
+    {
+     "q": "Mei scored 79 on a test with mean 75 and standard deviation 8. Sofia scored 645 on a different test with mean 480 and standard deviation 110. Who did better compared with the other students who took the same test?",
+     "c": [
+      "The tests cannot be compared",
+      "They did equally well",
+      "Mei",
+      "Sofia"
+     ],
+     "a": 3,
+     "e": "Compare <i>z</i>-scores: Mei has <i>z</i> = 0.5 and Sofia has <i>z</i> = 1.5. The larger <i>z</i>-score is relatively better. <b>Sofia</b>."
+    },
+    {
+     "q": "Olivia scored 81 on a test with mean 75 and standard deviation 8. Priya scored 655 on a different test with mean 480 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "Priya",
+      "The tests cannot be compared",
+      "They did equally well",
+      "Olivia"
+     ],
+     "a": 0,
+     "e": "Compare <i>z</i>-scores: Olivia has <i>z</i> = 0.75 and Priya has <i>z</i> = 1.75. The larger <i>z</i>-score is relatively better. <b>Priya</b>."
+    },
+    {
+     "q": "Owen scored 92 on a test with mean 80 and standard deviation 8. Kai scored 555 on a different test with mean 500 and standard deviation 110. Who did better compared with the other students who took the same test?",
+     "c": [
+      "Owen",
+      "They did equally well",
+      "Kai, because 555 is the larger score",
+      "Kai"
+     ],
+     "a": 0,
+     "e": "Compare <i>z</i>-scores: Owen has <i>z</i> = 1.5 and Kai has <i>z</i> = 0.5. The larger <i>z</i>-score is relatively better. <b>Owen</b>."
+    },
+    {
+     "q": "Ethan scored 80 on a test with mean 70 and standard deviation 8. Mei scored 620 on a different test with mean 520 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "Mei",
+      "They did equally well",
+      "Ethan",
+      "Mei, because 620 is the larger score"
+     ],
+     "a": 2,
+     "e": "Compare <i>z</i>-scores: Ethan has <i>z</i> = 1.25 and Mei has <i>z</i> = 1. The larger <i>z</i>-score is relatively better. <b>Ethan</b>."
+    },
+    {
+     "q": "Diego scored 76 on a test with mean 70 and standard deviation 8. Kai scored 630 on a different test with mean 520 and standard deviation 110. Who did better compared with the other students who took the same test?",
+     "c": [
+      "The tests cannot be compared",
+      "Diego",
+      "Kai",
+      "They did equally well"
+     ],
+     "a": 2,
+     "e": "Compare <i>z</i>-scores: Diego has <i>z</i> = 0.75 and Kai has <i>z</i> = 1. The larger <i>z</i>-score is relatively better. <b>Kai</b>."
+    },
+    {
+     "q": "Isabella scored 75 on a test with mean 70 and standard deviation 5. Diego scored 625 on a different test with mean 500 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "The tests cannot be compared",
+      "Diego",
+      "They did equally well",
+      "Isabella"
+     ],
+     "a": 1,
+     "e": "Compare <i>z</i>-scores: Isabella has <i>z</i> = 1 and Diego has <i>z</i> = 1.25. The larger <i>z</i>-score is relatively better. <b>Diego</b>."
+    },
+    {
+     "q": "Ethan scored 92 on a test with mean 80 and standard deviation 8. Priya scored 530 on a different test with mean 480 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "They did equally well",
+      "Ethan",
+      "Priya",
+      "Priya, because 530 is the larger score"
+     ],
+     "a": 1,
+     "e": "Compare <i>z</i>-scores: Ethan has <i>z</i> = 1.5 and Priya has <i>z</i> = 0.5. The larger <i>z</i>-score is relatively better. <b>Ethan</b>."
+    },
+    {
+     "q": "Diego scored 85 on a test with mean 75 and standard deviation 10. Ava scored 605 on a different test with mean 480 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "The tests cannot be compared",
+      "Diego",
+      "They did equally well",
+      "Ava"
+     ],
+     "a": 3,
+     "e": "Compare <i>z</i>-scores: Diego has <i>z</i> = 1 and Ava has <i>z</i> = 1.25. The larger <i>z</i>-score is relatively better. <b>Ava</b>."
+    },
+    {
+     "q": "Lucas scored 80 on a test with mean 70 and standard deviation 10. Zoe scored 570 on a different test with mean 520 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "Zoe, because 570 is the larger score",
+      "Zoe",
+      "They did equally well",
+      "Lucas"
+     ],
+     "a": 3,
+     "e": "Compare <i>z</i>-scores: Lucas has <i>z</i> = 1 and Zoe has <i>z</i> = 0.5. The larger <i>z</i>-score is relatively better. <b>Lucas</b>."
+    },
+    {
+     "q": "Sofia scored 79 on a test with mean 75 and standard deviation 8. Emma scored 625 on a different test with mean 500 and standard deviation 100. Who did better compared with the other students who took the same test?",
+     "c": [
+      "Sofia",
+      "The tests cannot be compared",
+      "Emma",
+      "They did equally well"
+     ],
+     "a": 2,
+     "e": "Compare <i>z</i>-scores: Sofia has <i>z</i> = 0.5 and Emma has <i>z</i> = 1.25. The larger <i>z</i>-score is relatively better. <b>Emma</b>."
+    },
+    {
+     "q": "Marcus scored 75 on a test with mean 70 and standard deviation 10. Ethan scored 685 on a different test with mean 520 and standard deviation 110. Who did better compared with the other students who took the same test?",
+     "c": [
+      "They did equally well",
+      "Marcus",
+      "The tests cannot be compared",
+      "Ethan"
+     ],
+     "a": 3,
+     "e": "Compare <i>z</i>-scores: Marcus has <i>z</i> = 0.5 and Ethan has <i>z</i> = 1.5. The larger <i>z</i>-score is relatively better. <b>Ethan</b>."
+    },
+    {
+     "q": "Noah scored 79 on a test with mean 75 and standard deviation 8. Jayden scored 610 on a different test with mean 500 and standard deviation 110. Who did better compared with the other students who took the same test?",
+     "c": [
+      "The tests cannot be compared",
+      "Noah",
+      "Jayden",
+      "They did equally well"
+     ],
+     "a": 2,
+     "e": "Compare <i>z</i>-scores: Noah has <i>z</i> = 0.5 and Jayden has <i>z</i> = 1. The larger <i>z</i>-score is relatively better. <b>Jayden</b>."
+    }
+   ]
+  },
+  {
+   "title": "Areas under the normal curve",
+   "items": [
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &lt; 0.5)? Round to four decimal places.",
+     "c": [
+      "0.6915",
+      "0.1915",
+      "0.3829",
+      "0.3085"
+     ],
+     "a": 0,
+     "e": "Use the normal CDF (or a <i>z</i>-table): the area to the left of 0.5 is <b>0.6915</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(−1.2 &lt; <i>z</i> &lt; 1.2)? Round to four decimal places.",
+     "c": [
+      "0.7699",
+      "0.8849",
+      "0.3849",
+      "0.2301"
+     ],
+     "a": 0,
+     "e": "Area between = 0.8849 − 0.1151 = <b>0.7699</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &gt; −0.5)? Round to four decimal places.",
+     "c": [
+      "0.6915",
+      "0.3085",
+      "0.1915",
+      "0.3457"
+     ],
+     "a": 0,
+     "e": "Area to the right = 1 − (area to the left) = 1 − 0.3085 = <b>0.6915</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &lt; 1.96)? Round to four decimal places.",
+     "c": [
+      "0.4750",
+      "0.9500",
+      "0.0250",
+      "0.9750"
+     ],
+     "a": 3,
+     "e": "Use the normal CDF (or a <i>z</i>-table): the area to the left of 1.96 is <b>0.9750</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &gt; 1.96)? Round to four decimal places.",
+     "c": [
+      "0.0125",
+      "0.0250",
+      "0.9750",
+      "0.4750"
+     ],
+     "a": 1,
+     "e": "Area to the right = 1 − (area to the left) = 1 − 0.9750 = <b>0.0250</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &gt; 0.5)? Round to four decimal places.",
+     "c": [
+      "0.1915",
+      "0.3085",
+      "0.6915",
+      "0.1543"
+     ],
+     "a": 1,
+     "e": "Area to the right = 1 − (area to the left) = 1 − 0.6915 = <b>0.3085</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(−1.96 &lt; <i>z</i> &lt; 1.96)? Round to four decimal places.",
+     "c": [
+      "0.4750",
+      "0.0500",
+      "0.9500",
+      "0.9750"
+     ],
+     "a": 2,
+     "e": "Area between = 0.9750 − 0.0250 = <b>0.9500</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &lt; 0.8)? Round to four decimal places.",
+     "c": [
+      "0.2881",
+      "0.2119",
+      "0.7881",
+      "0.5763"
+     ],
+     "a": 2,
+     "e": "Use the normal CDF (or a <i>z</i>-table): the area to the left of 0.8 is <b>0.7881</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(−0.5 &lt; <i>z</i> &lt; 0.5)? Round to four decimal places.",
+     "c": [
+      "0.6171",
+      "0.1915",
+      "0.6915",
+      "0.3829"
+     ],
+     "a": 3,
+     "e": "Area between = 0.6915 − 0.3085 = <b>0.3829</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &gt; −0.8)? Round to four decimal places.",
+     "c": [
+      "0.2881",
+      "0.7881",
+      "0.2119",
+      "0.3941"
+     ],
+     "a": 1,
+     "e": "Area to the right = 1 − (area to the left) = 1 − 0.2119 = <b>0.7881</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &lt; 1)? Round to four decimal places.",
+     "c": [
+      "0.8413",
+      "0.3413",
+      "0.6827",
+      "0.1587"
+     ],
+     "a": 0,
+     "e": "Use the normal CDF (or a <i>z</i>-table): the area to the left of 1 is <b>0.8413</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(−1.645 &lt; <i>z</i> &lt; 1.645)? Round to four decimal places.",
+     "c": [
+      "0.9500",
+      "0.1000",
+      "0.4500",
+      "0.9000"
+     ],
+     "a": 3,
+     "e": "Area between = 0.9500 − 0.0500 = <b>0.9000</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &gt; −1.5)? Round to four decimal places.",
+     "c": [
+      "0.4332",
+      "0.4666",
+      "0.9332",
+      "0.0668"
+     ],
+     "a": 2,
+     "e": "Area to the right = 1 − (area to the left) = 1 − 0.0668 = <b>0.9332</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(−1 &lt; <i>z</i> &lt; 1)? Round to four decimal places.",
+     "c": [
+      "0.8413",
+      "0.3173",
+      "0.3413",
+      "0.6827"
+     ],
+     "a": 3,
+     "e": "Area between = 0.8413 − 0.1587 = <b>0.6827</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(−0.8 &lt; <i>z</i> &lt; 0.8)? Round to four decimal places.",
+     "c": [
+      "0.2881",
+      "0.4237",
+      "0.5763",
+      "0.7881"
+     ],
+     "a": 2,
+     "e": "Area between = 0.7881 − 0.2119 = <b>0.5763</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &gt; 1)? Round to four decimal places.",
+     "c": [
+      "0.0793",
+      "0.8413",
+      "0.1587",
+      "0.3413"
+     ],
+     "a": 2,
+     "e": "Area to the right = 1 − (area to the left) = 1 − 0.8413 = <b>0.1587</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &gt; 2)? Round to four decimal places.",
+     "c": [
+      "0.0228",
+      "0.0114",
+      "0.4772",
+      "0.9772"
+     ],
+     "a": 0,
+     "e": "Area to the right = 1 − (area to the left) = 1 − 0.9772 = <b>0.0228</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &lt; 2)? Round to four decimal places.",
+     "c": [
+      "0.9545",
+      "0.4772",
+      "0.0228",
+      "0.9772"
+     ],
+     "a": 3,
+     "e": "Use the normal CDF (or a <i>z</i>-table): the area to the left of 2 is <b>0.9772</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &lt; −1.5)? Round to four decimal places.",
+     "c": [
+      "0.8664",
+      "0.0668",
+      "0.9332",
+      "0.4332"
+     ],
+     "a": 1,
+     "e": "Use the normal CDF (or a <i>z</i>-table): the area to the left of −1.5 is <b>0.0668</b>."
+    },
+    {
+     "q": "For a standard normal distribution, what is P(<i>z</i> &lt; 1.5)? Round to four decimal places.",
+     "c": [
+      "0.0668",
+      "0.9332",
+      "0.8664",
+      "0.4332"
+     ],
+     "a": 1,
+     "e": "Use the normal CDF (or a <i>z</i>-table): the area to the left of 1.5 is <b>0.9332</b>."
+    }
+   ]
+  },
+  {
+   "title": "Word problems",
+   "items": [
+    {
+     "q": "Adult heights in a group are normally distributed with mean 69 in. and standard deviation 3 in. About what percent are taller than 72 in.?",
+     "c": [
+      "34%",
+      "84%",
+      "32%",
+      "16%"
+     ],
+     "a": 3,
+     "e": "72 in. is 1 SD above the mean, so <b>16%</b> are taller."
+    },
+    {
+     "q": "Test scores are normally distributed with mean 100 and standard deviation 15. A student scores 115. About what percentile is this?",
+     "c": [
+      "About the 84th percentile",
+      "About the 50th percentile",
+      "About the 68th percentile",
+      "About the 16th percentile"
+     ],
+     "a": 0,
+     "e": "115 is 1 SD above the mean, and 84% of scores are below it. <b>About the 84th percentile</b>."
+    },
+    {
+     "q": "Light bulb lifetimes are normally distributed with mean 50 hours and standard deviation 5 hours. What is the probability that a bulb lasts less than 45 hours?",
+     "c": [
+      "About 0.68",
+      "About 0.16",
+      "About 0.32",
+      "About 0.34"
+     ],
+     "a": 1,
+     "e": "45 is 1 SD below the mean. 34% is between it and the mean, so 50% − 34% = 16% is below it. <b>About 0.16</b>."
+    },
+    {
+     "q": "Light bulb lifetimes are normally distributed with mean 800 hours and standard deviation 50 hours. What is the probability that a bulb lasts less than 750 hours?",
+     "c": [
+      "About 0.32",
+      "About 0.68",
+      "About 0.34",
+      "About 0.16"
+     ],
+     "a": 3,
+     "e": "750 is 1 SD below the mean. 34% is between it and the mean, so 50% − 34% = 16% is below it. <b>About 0.16</b>."
+    },
+    {
+     "q": "Exam scores are normal with mean 500 and standard deviation 100. The top 2.5% earn an award. What is the lowest score that earns it?",
+     "c": [
+      "700",
+      "800",
+      "300",
+      "600"
+     ],
+     "a": 0,
+     "e": "The top 2.5% is above 2 standard deviations over the mean: 500 + 2(100) = <b>700</b>."
+    },
+    {
+     "q": "Exam scores are normal with mean 70 and standard deviation 10. The top 2.5% earn an award. What is the lowest score that earns it?",
+     "c": [
+      "50",
+      "90",
+      "100",
+      "80"
+     ],
+     "a": 1,
+     "e": "The top 2.5% is above 2 standard deviations over the mean: 70 + 2(10) = <b>90</b>."
+    },
+    {
+     "q": "Test scores are normally distributed with mean 500 and standard deviation 100. A student scores 600. About what percentile is this?",
+     "c": [
+      "About the 50th percentile",
+      "About the 16th percentile",
+      "About the 84th percentile",
+      "About the 68th percentile"
+     ],
+     "a": 2,
+     "e": "600 is 1 SD above the mean, and 84% of scores are below it. <b>About the 84th percentile</b>."
+    },
+    {
+     "q": "A machine fills bottles with a mean of 250 mL and a standard deviation of 3 mL. Out of 5,000 bottles, about how many hold between 244 mL and 256 mL?",
+     "c": [
+      "4,750",
+      "3,400",
+      "2,375",
+      "4,985"
+     ],
+     "a": 0,
+     "e": "244 and 256 are 2 SD from the mean, so about 95% of the bottles: 0.95 × 5,000 = <b>4,750</b>."
+    },
+    {
+     "q": "Adult heights in a group are normally distributed with mean 69 in. and standard deviation 3 in. About what percent are taller than 75 in.?",
+     "c": [
+      "5%",
+      "47.5%",
+      "97.5%",
+      "2.5%"
+     ],
+     "a": 3,
+     "e": "75 in. is 2 SD above the mean, so <b>2.5%</b> are taller."
+    },
+    {
+     "q": "Test scores are normally distributed with mean 75 and standard deviation 8. A student scores 91. About what percentile is this?",
+     "c": [
+      "About the 50th percentile",
+      "About the 2.5th percentile",
+      "About the 97.5th percentile",
+      "About the 95th percentile"
+     ],
+     "a": 2,
+     "e": "91 is 2 SD above the mean, and 97.5% of scores are below it. <b>About the 97.5th percentile</b>."
+    },
+    {
+     "q": "Adult heights in a group are normally distributed with mean 64 in. and standard deviation 3 in. About what percent are taller than 67 in.?",
+     "c": [
+      "34%",
+      "16%",
+      "32%",
+      "84%"
+     ],
+     "a": 1,
+     "e": "67 in. is 1 SD above the mean, so <b>16%</b> are taller."
+    },
+    {
+     "q": "A machine fills bottles with a mean of 355 mL and a standard deviation of 2 mL. Out of 5,000 bottles, about how many hold between 351 mL and 359 mL?",
+     "c": [
+      "4,750",
+      "2,375",
+      "3,400",
+      "4,985"
+     ],
+     "a": 0,
+     "e": "351 and 359 are 2 SD from the mean, so about 95% of the bottles: 0.95 × 5,000 = <b>4,750</b>."
+    },
+    {
+     "q": "Exam scores are normal with mean 60 and standard deviation 8. The top 2.5% earn an award. What is the lowest score that earns it?",
+     "c": [
+      "84",
+      "68",
+      "76",
+      "44"
+     ],
+     "a": 2,
+     "e": "The top 2.5% is above 2 standard deviations over the mean: 60 + 2(8) = <b>76</b>."
+    },
+    {
+     "q": "Light bulb lifetimes are normally distributed with mean 1,000 hours and standard deviation 100 hours. What is the probability that a bulb lasts less than 900 hours?",
+     "c": [
+      "About 0.32",
+      "About 0.16",
+      "About 0.34",
+      "About 0.68"
+     ],
+     "a": 1,
+     "e": "900 is 1 SD below the mean. 34% is between it and the mean, so 50% − 34% = 16% is below it. <b>About 0.16</b>."
+    },
+    {
+     "q": "A machine fills bottles with a mean of 355 mL and a standard deviation of 2 mL. Out of 1,000 bottles, about how many hold between 351 mL and 359 mL?",
+     "c": [
+      "950",
+      "680",
+      "997",
+      "475"
+     ],
+     "a": 0,
+     "e": "351 and 359 are 2 SD from the mean, so about 95% of the bottles: 0.95 × 1,000 = <b>950</b>."
+    },
+    {
+     "q": "Test scores are normally distributed with mean 500 and standard deviation 100. A student scores 700. About what percentile is this?",
+     "c": [
+      "About the 2.5th percentile",
+      "About the 97.5th percentile",
+      "About the 95th percentile",
+      "About the 50th percentile"
+     ],
+     "a": 1,
+     "e": "700 is 2 SD above the mean, and 97.5% of scores are below it. <b>About the 97.5th percentile</b>."
+    },
+    {
+     "q": "Adult heights in a group are normally distributed with mean 66 in. and standard deviation 2 in. About what percent are taller than 68 in.?",
+     "c": [
+      "84%",
+      "32%",
+      "34%",
+      "16%"
+     ],
+     "a": 3,
+     "e": "68 in. is 1 SD above the mean, so <b>16%</b> are taller."
+    },
+    {
+     "q": "Adult heights in a group are normally distributed with mean 66 in. and standard deviation 2 in. About what percent are taller than 70 in.?",
+     "c": [
+      "47.5%",
+      "5%",
+      "2.5%",
+      "97.5%"
+     ],
+     "a": 2,
+     "e": "70 in. is 2 SD above the mean, so <b>2.5%</b> are taller."
+    },
+    {
+     "q": "Adult heights in a group are normally distributed with mean 64 in. and standard deviation 3 in. About what percent are taller than 70 in.?",
+     "c": [
+      "47.5%",
+      "5%",
+      "2.5%",
+      "97.5%"
+     ],
+     "a": 2,
+     "e": "70 in. is 2 SD above the mean, so <b>2.5%</b> are taller."
+    },
+    {
+     "q": "Test scores are normally distributed with mean 75 and standard deviation 8. A student scores 83. About what percentile is this?",
+     "c": [
+      "About the 16th percentile",
+      "About the 50th percentile",
+      "About the 68th percentile",
+      "About the 84th percentile"
+     ],
+     "a": 3,
+     "e": "83 is 1 SD above the mean, and 84% of scores are below it. <b>About the 84th percentile</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 15,
+ "updated": "2026-11-18",
+ "country": "us",
+ "subject": "math",
+ "grade": "algebra-2"
+}
