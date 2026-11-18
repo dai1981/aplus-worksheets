@@ -1,0 +1,1165 @@
+{
+ "slug": "expected-value",
+ "title": "Probability Distributions and Expected Value",
+ "seo_title": "Expected Value Worksheet: Probability Distributions, Games, Binomial | 100 Questions",
+ "short_title": "Expected Value",
+ "domain": "Probability",
+ "standard_code": "S-MD.A.2",
+ "standard_url": "https://www.thecorestandards.org/Math/Content/HSS/MD/A/2/",
+ "standard_text": "Calculate the expected value of a random variable; interpret it as the mean of the probability distribution.",
+ "meta_desc": "Free precalculus worksheet on probability distributions and expected value: tables, games, fair games, binomial probabilities, insurance and warranties. 100 questions.",
+ "key_big": "E(X) = Σ x · P(x), the long-run average.",
+ "key_sub": "Use net gain for games; a fair game has E(X) = 0.",
+ "body_html": "<h2>How it works</h2><ul><li>A <b>probability distribution</b> lists each value of <i>X</i> with its probability. Every probability is from 0 to 1, and they add to 1.</li><li><b>Expected value</b>: <i>E</i>(<i>X</i>) = Σ <i>x</i> · <i>P</i>(<i>x</i>), the long-run average.</li><li>For a game, use the <b>net gain</b> (prize minus cost). A game is <b>fair</b> when the expected net gain is 0.</li><li><b>Binomial</b>: in <i>n</i> independent trials with success probability <i>p</i>, <i>P</i>(<i>X</i> = <i>k</i>) = <sub><i>n</i></sub>C<sub><i>k</i></sub> <i>p</i><sup><i>k</i></sup>(1 − <i>p</i>)<sup><i>n</i>−<i>k</i></sup> and <i>E</i>(<i>X</i>) = <i>np</i>.</li><li>To decide between options, compare expected values (or expected costs).</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>A game costs $2. You win $10 with probability 0.15. Find the expected net gain.</p><p class='sn-ex-s'>Expected prize = 10 × 0.15 = $1.50</p><p class='sn-ex-s'>$1.50 − $2</p><p class='sn-ex-a'>Answer: −$0.50</p></div><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>A seed sprouts with probability 0.8. Find <i>P</i>(exactly 3 of 4 sprout).</p><p class='sn-ex-s'><sub>4</sub>C<sub>3</sub>(0.8)³(0.2)¹</p><p class='sn-ex-s'>= 4 × 0.512 × 0.2</p><p class='sn-ex-a'>Answer: 0.4096</p></div><h2>Common mistakes</h2><ul><li>Averaging the values without using the probabilities.</li><li>Forgetting to subtract the cost to play.</li><li>Leaving out <sub><i>n</i></sub>C<sub><i>k</i></sub> in a binomial probability.</li><li>Choosing an option by the size of the prize alone.</li></ul>",
+ "faq": [
+  {
+   "q": "How do you calculate expected value?",
+   "a": "Multiply each outcome by its probability and add the products: E(X) = Σ x · P(x)."
+  },
+  {
+   "q": "What is a fair game?",
+   "a": "A game whose expected net gain is 0, so on average you neither win nor lose money."
+  },
+  {
+   "q": "What is the expected value of a binomial distribution?",
+   "a": "E(X) = np, where n is the number of trials and p is the probability of success."
+  },
+  {
+   "q": "How is expected value used to make decisions?",
+   "a": "Compare the expected gain or cost of each choice, such as a warranty price against the expected cost of repairs."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Probability distributions",
+   "items": [
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>4</td><td>6</td><td>7</td><td>9</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.75</td><td>−0.1</td><td>0.05</td><td>0.1</td></tr></table>",
+     "c": [
+      "Yes, because there is one probability for each value",
+      "No, the values of <i>x</i> must add to 1",
+      "No, a probability cannot be negative",
+      "Yes, every probability is between 0 and 1 and they add to 1"
+     ],
+     "a": 2,
+     "e": "Each probability must be from 0 to 1, and the total must be exactly 1. <b>No, a probability cannot be negative</b>."
+    },
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>3</td><td>8</td><td>9</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.05</td><td>0.4</td><td>0.25</td><td>0.3</td></tr></table>",
+     "c": [
+      "Yes, every probability is between 0 and 1 and they add to 1",
+      "No, a probability cannot be a decimal",
+      "No, the probabilities must be equal",
+      "No, the values of <i>x</i> must add to 1"
+     ],
+     "a": 0,
+     "e": "<b>Yes, every probability is between 0 and 1 and they add to 1</b>."
+    },
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>3</td><td>6</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.3</td><td>0.6</td><td>0.05</td><td>0.05</td></tr></table>",
+     "c": [
+      "No, a probability cannot be a decimal",
+      "No, the probabilities must be equal",
+      "No, the values of <i>x</i> must add to 1",
+      "Yes, every probability is between 0 and 1 and they add to 1"
+     ],
+     "a": 3,
+     "e": "<b>Yes, every probability is between 0 and 1 and they add to 1</b>."
+    },
+    {
+     "q": "The table shows a probability distribution. What is <i>k</i>?<table class='sn-table'><tr><th><i>x</i></th><td>2</td><td>4</td><td>5</td><td>6</td><td>7</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.05</td><td>0.5</td><td><i>k</i></td><td>0.35</td><td>0.05</td></tr></table>",
+     "c": [
+      "0.05",
+      "0.95",
+      "0.15",
+      "0.2"
+     ],
+     "a": 0,
+     "e": "The probabilities must add to 1: <i>k</i> = 1 − 0.95 = <b>0.05</b>."
+    },
+    {
+     "q": "The table shows a probability distribution. What is <i>k</i>?<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>5</td><td>6</td><td>7</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.05</td><td><i>k</i></td><td>0.2</td><td>0.45</td></tr></table>",
+     "c": [
+      "0.4",
+      "0.3",
+      "0.7",
+      "0.25"
+     ],
+     "a": 1,
+     "e": "The probabilities must add to 1: <i>k</i> = 1 − 0.7 = <b>0.3</b>."
+    },
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>4</td><td>8</td><td>9</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.05</td><td>0.8</td><td>0.15</td></tr></table>",
+     "c": [
+      "No, the values of <i>x</i> must add to 1",
+      "No, the probabilities must be equal",
+      "No, a probability cannot be a decimal",
+      "Yes, every probability is between 0 and 1 and they add to 1"
+     ],
+     "a": 3,
+     "e": "<b>Yes, every probability is between 0 and 1 and they add to 1</b>."
+    },
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>2</td><td>7</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.5</td><td>−0.1</td><td>0.25</td></tr></table>",
+     "c": [
+      "Yes, because there is one probability for each value",
+      "Yes, every probability is between 0 and 1 and they add to 1",
+      "No, the values of <i>x</i> must add to 1",
+      "No, a probability cannot be negative"
+     ],
+     "a": 3,
+     "e": "Each probability must be from 0 to 1, and the total must be exactly 1. <b>No, a probability cannot be negative</b>."
+    },
+    {
+     "q": "The table shows a probability distribution. What is <i>k</i>?<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>2</td><td>3</td><td>7</td><td>8</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.05</td><td>0.35</td><td>0.05</td><td>0.5</td><td><i>k</i></td></tr></table>",
+     "c": [
+      "0.2",
+      "0.05",
+      "0.15",
+      "0.95"
+     ],
+     "a": 1,
+     "e": "The probabilities must add to 1: <i>k</i> = 1 − 0.95 = <b>0.05</b>."
+    },
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>9</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.55</td><td>0.05</td><td>0.4</td></tr></table>",
+     "c": [
+      "No, the probabilities must be equal",
+      "No, a probability cannot be a decimal",
+      "No, the values of <i>x</i> must add to 1",
+      "Yes, every probability is between 0 and 1 and they add to 1"
+     ],
+     "a": 3,
+     "e": "<b>Yes, every probability is between 0 and 1 and they add to 1</b>."
+    },
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>2</td><td>3</td><td>8</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.1</td><td>0.15</td><td>0.05</td><td>0.7</td></tr></table>",
+     "c": [
+      "No, a probability cannot be a decimal",
+      "Yes, every probability is between 0 and 1 and they add to 1",
+      "No, the values of <i>x</i> must add to 1",
+      "No, the probabilities must be equal"
+     ],
+     "a": 1,
+     "e": "<b>Yes, every probability is between 0 and 1 and they add to 1</b>."
+    },
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>3</td><td>4</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.2</td><td>0.45</td><td>0.3</td><td>0.05</td></tr></table>",
+     "c": [
+      "Yes, every probability is between 0 and 1 and they add to 1",
+      "No, a probability cannot be a decimal",
+      "No, the probabilities must be equal",
+      "No, the values of <i>x</i> must add to 1"
+     ],
+     "a": 0,
+     "e": "<b>Yes, every probability is between 0 and 1 and they add to 1</b>."
+    },
+    {
+     "q": "The table shows a probability distribution. What is <i>k</i>?<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>3</td><td>6</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td><i>k</i></td><td>0.25</td><td>0.05</td><td>0.35</td></tr></table>",
+     "c": [
+      "0.25",
+      "0.45",
+      "0.35",
+      "0.65"
+     ],
+     "a": 2,
+     "e": "The probabilities must add to 1: <i>k</i> = 1 − 0.65 = <b>0.35</b>."
+    },
+    {
+     "q": "The table shows a probability distribution. What is <i>k</i>?<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>3</td><td>4</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.1</td><td><i>k</i></td><td>0.2</td><td>0.65</td></tr></table>",
+     "c": [
+      "0.95",
+      "0.25",
+      "0.05",
+      "0.15"
+     ],
+     "a": 2,
+     "e": "The probabilities must add to 1: <i>k</i> = 1 − 0.95 = <b>0.05</b>."
+    },
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>3</td><td>8</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.15</td><td>0.55</td><td>0.15</td><td>0.15</td></tr></table>",
+     "c": [
+      "No, a probability cannot be a decimal",
+      "Yes, every probability is between 0 and 1 and they add to 1",
+      "No, the values of <i>x</i> must add to 1",
+      "No, the probabilities must be equal"
+     ],
+     "a": 1,
+     "e": "<b>Yes, every probability is between 0 and 1 and they add to 1</b>."
+    },
+    {
+     "q": "The table shows a probability distribution. What is <i>k</i>?<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>5</td><td>6</td><td>7</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td><i>k</i></td><td>0.1</td><td>0.65</td><td>0.05</td></tr></table>",
+     "c": [
+      "0.3",
+      "0.25",
+      "0.2",
+      "0.8"
+     ],
+     "a": 2,
+     "e": "The probabilities must add to 1: <i>k</i> = 1 − 0.8 = <b>0.2</b>."
+    },
+    {
+     "q": "The table shows a probability distribution. What is <i>k</i>?<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>4</td><td>6</td><td>7</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td><i>k</i></td><td>0.2</td><td>0.1</td><td>0.15</td></tr></table>",
+     "c": [
+      "0.55",
+      "0.45",
+      "0.25",
+      "0.65"
+     ],
+     "a": 0,
+     "e": "The probabilities must add to 1: <i>k</i> = 1 − 0.45 = <b>0.55</b>."
+    },
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>2</td><td>5</td><td>7</td><td>9</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.1</td><td>0.55</td><td>0.1</td><td>0.25</td></tr></table>",
+     "c": [
+      "No, the values of <i>x</i> must add to 1",
+      "No, the probabilities must be equal",
+      "Yes, every probability is between 0 and 1 and they add to 1",
+      "No, a probability cannot be a decimal"
+     ],
+     "a": 2,
+     "e": "<b>Yes, every probability is between 0 and 1 and they add to 1</b>."
+    },
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>2</td><td>5</td><td>6</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.05</td><td>0.35</td><td>0.35</td><td>0.25</td></tr></table>",
+     "c": [
+      "Yes, every probability is between 0 and 1 and they add to 1",
+      "No, the probabilities must be equal",
+      "No, the values of <i>x</i> must add to 1",
+      "No, a probability cannot be a decimal"
+     ],
+     "a": 0,
+     "e": "<b>Yes, every probability is between 0 and 1 and they add to 1</b>."
+    },
+    {
+     "q": "The table shows a probability distribution. What is <i>k</i>?<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>3</td><td>9</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.25</td><td>0.05</td><td>0.35</td><td><i>k</i></td></tr></table>",
+     "c": [
+      "0.45",
+      "0.35",
+      "0.65",
+      "0.25"
+     ],
+     "a": 1,
+     "e": "The probabilities must add to 1: <i>k</i> = 1 − 0.65 = <b>0.35</b>."
+    },
+    {
+     "q": "Is this a valid probability distribution?<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>4</td><td>5</td><td>6</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.35</td><td>0.25</td><td>0.15</td><td>0.25</td></tr></table>",
+     "c": [
+      "No, the values of <i>x</i> must add to 1",
+      "No, the probabilities must be equal",
+      "No, a probability cannot be a decimal",
+      "Yes, every probability is between 0 and 1 and they add to 1"
+     ],
+     "a": 3,
+     "e": "<b>Yes, every probability is between 0 and 1 and they add to 1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Expected value from a table",
+   "items": [
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>4</td><td>10</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.8</td><td>0.15</td><td>0.05</td></tr></table>",
+     "c": [
+      "1.9",
+      "10",
+      "8.65",
+      "5"
+     ],
+     "a": 0,
+     "e": "Multiply each value by its probability and add: 1(0.8) + 4(0.15) + 10(0.05) = <b>1.9</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>3</td><td>8</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.2</td><td>0.05</td><td>0.2</td><td>0.55</td></tr></table>",
+     "c": [
+      "3.5",
+      "5.3",
+      "2.7",
+      "8"
+     ],
+     "a": 1,
+     "e": "Multiply each value by its probability and add: 1(0.2) + 2(0.05) + 3(0.2) + 8(0.55) = <b>5.3</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>2</td><td>8</td><td>10</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.25</td><td>0.2</td><td>0.2</td><td>0.35</td></tr></table>",
+     "c": [
+      "5.5",
+      "5",
+      "4.5",
+      "10"
+     ],
+     "a": 0,
+     "e": "Multiply each value by its probability and add: 0(0.25) + 2(0.2) + 8(0.2) + 10(0.35) = <b>5.5</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>6</td><td>8</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.2</td><td>0.4</td><td>0.15</td><td>0.25</td></tr></table>",
+     "c": [
+      "4.25",
+      "8",
+      "3.9",
+      "4.55"
+     ],
+     "a": 2,
+     "e": "Multiply each value by its probability and add: 1(0.2) + 2(0.4) + 6(0.15) + 8(0.25) = <b>3.9</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>4</td><td>6</td><td>9</td><td>10</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.45</td><td>0.35</td><td>0.15</td><td>0.05</td></tr></table>",
+     "c": [
+      "10",
+      "5.75",
+      "7.25",
+      "8.75"
+     ],
+     "a": 1,
+     "e": "Multiply each value by its probability and add: 4(0.45) + 6(0.35) + 9(0.15) + 10(0.05) = <b>5.75</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>3</td><td>4</td><td>7</td><td>8</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.05</td><td>0.1</td><td>0.05</td><td>0.8</td></tr></table>",
+     "c": [
+      "7.3",
+      "8",
+      "3.7",
+      "5.5"
+     ],
+     "a": 0,
+     "e": "Multiply each value by its probability and add: 3(0.05) + 4(0.1) + 7(0.05) + 8(0.8) = <b>7.3</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>6</td><td>8</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.45</td><td>0.5</td><td>0.05</td></tr></table>",
+     "c": [
+      "6.65",
+      "5",
+      "3.85",
+      "8"
+     ],
+     "a": 2,
+     "e": "Multiply each value by its probability and add: 1(0.45) + 6(0.5) + 8(0.05) = <b>3.85</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>3</td><td>4</td><td>5</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.05</td><td>0.5</td><td>0.1</td><td>0.35</td></tr></table>",
+     "c": [
+      "3.25",
+      "2.9",
+      "3.7",
+      "5"
+     ],
+     "a": 2,
+     "e": "Multiply each value by its probability and add: 1(0.05) + 3(0.5) + 4(0.1) + 5(0.35) = <b>3.7</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>2</td><td>5</td><td>8</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.5</td><td>0.45</td><td>0.05</td></tr></table>",
+     "c": [
+      "5",
+      "6.35",
+      "8",
+      "3.65"
+     ],
+     "a": 3,
+     "e": "Multiply each value by its probability and add: 2(0.5) + 5(0.45) + 8(0.05) = <b>3.65</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>5</td><td>9</td><td>11</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.05</td><td>0.1</td><td>0.25</td><td>0.6</td></tr></table>",
+     "c": [
+      "11",
+      "9.4",
+      "3.3",
+      "6.5"
+     ],
+     "a": 1,
+     "e": "Multiply each value by its probability and add: 1(0.05) + 5(0.1) + 9(0.25) + 11(0.6) = <b>9.4</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>6</td><td>9</td><td>11</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.1</td><td>0.4</td><td>0.05</td><td>0.45</td></tr></table>",
+     "c": [
+      "7.8",
+      "5",
+      "6.5",
+      "11"
+     ],
+     "a": 0,
+     "e": "Multiply each value by its probability and add: 0(0.1) + 6(0.4) + 9(0.05) + 11(0.45) = <b>7.8</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>3</td><td>6</td><td>11</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.25</td><td>0.25</td><td>0.2</td><td>0.3</td></tr></table>",
+     "c": [
+      "5.25",
+      "5.5",
+      "5.15",
+      "11"
+     ],
+     "a": 1,
+     "e": "Multiply each value by its probability and add: 1(0.25) + 3(0.25) + 6(0.2) + 11(0.3) = <b>5.5</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>5</td><td>9</td><td>11</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.35</td><td>0.15</td><td>0.05</td><td>0.45</td></tr></table>",
+     "c": [
+      "6.25",
+      "11",
+      "5.45",
+      "6.15"
+     ],
+     "a": 3,
+     "e": "Multiply each value by its probability and add: 0(0.35) + 5(0.15) + 9(0.05) + 11(0.45) = <b>6.15</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>4</td><td>8</td><td>10</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.3</td><td>0.05</td><td>0.25</td><td>0.4</td></tr></table>",
+     "c": [
+      "4.8",
+      "10",
+      "5.75",
+      "6.5"
+     ],
+     "a": 3,
+     "e": "Multiply each value by its probability and add: 1(0.3) + 4(0.05) + 8(0.25) + 10(0.4) = <b>6.5</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>3</td><td>5</td><td>11</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.3</td><td>0.15</td><td>0.4</td><td>0.15</td></tr></table>",
+     "c": [
+      "4.75",
+      "11",
+      "5.25",
+      "4.1"
+     ],
+     "a": 3,
+     "e": "Multiply each value by its probability and add: 0(0.3) + 3(0.15) + 5(0.4) + 11(0.15) = <b>4.1</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>5</td><td>6</td><td>10</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.65</td><td>0.1</td><td>0.25</td></tr></table>",
+     "c": [
+      "7",
+      "10",
+      "8.35",
+      "6.35"
+     ],
+     "a": 3,
+     "e": "Multiply each value by its probability and add: 5(0.65) + 6(0.1) + 10(0.25) = <b>6.35</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>9</td><td>10</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.05</td><td>0.35</td><td>0.15</td><td>0.45</td></tr></table>",
+     "c": [
+      "10",
+      "5",
+      "6.2",
+      "3.8"
+     ],
+     "a": 2,
+     "e": "Multiply each value by its probability and add: 0(0.05) + 1(0.35) + 9(0.15) + 10(0.45) = <b>6.2</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>6</td><td>9</td><td>11</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.25</td><td>0.2</td><td>0.05</td><td>0.5</td></tr></table>",
+     "c": [
+      "11",
+      "7.4",
+      "5.35",
+      "6.75"
+     ],
+     "a": 1,
+     "e": "Multiply each value by its probability and add: 1(0.25) + 6(0.2) + 9(0.05) + 11(0.5) = <b>7.4</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>4</td><td>9</td><td>10</td><td>11</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.15</td><td>0.45</td><td>0.1</td><td>0.3</td></tr></table>",
+     "c": [
+      "8.25",
+      "8.5",
+      "8.95",
+      "11"
+     ],
+     "a": 2,
+     "e": "Multiply each value by its probability and add: 4(0.15) + 9(0.45) + 10(0.1) + 11(0.3) = <b>8.95</b>."
+    },
+    {
+     "q": "Find the expected value <i>E</i>(<i>X</i>) for this distribution.<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>7</td><td>11</td></tr><tr><th><i>P</i>(<i>x</i>)</th><td>0.15</td><td>0.25</td><td>0.6</td></tr></table>",
+     "c": [
+      "8.35",
+      "3.4",
+      "6",
+      "11"
+     ],
+     "a": 0,
+     "e": "Multiply each value by its probability and add: 0(0.15) + 7(0.25) + 11(0.6) = <b>8.35</b>."
+    }
+   ]
+  },
+  {
+   "title": "Games and fair games",
+   "items": [
+    {
+     "q": "A raffle sells 2,000 tickets for $5 each. One ticket wins a $500 prize. What is the expected value of buying one ticket?",
+     "c": [
+      "−$5",
+      "$495",
+      "−$4.75",
+      "$0.25"
+     ],
+     "a": 2,
+     "e": "<i>E</i>(<i>X</i>) = $500 × (1/2,000) − $5 = $0.25 − $5 = <b>−$4.75</b>."
+    },
+    {
+     "q": "A raffle sells 500 tickets for $2 each. One ticket wins a $500 prize. What is the expected value of buying one ticket?",
+     "c": [
+      "−$1",
+      "$1",
+      "−$2",
+      "$498"
+     ],
+     "a": 0,
+     "e": "<i>E</i>(<i>X</i>) = $500 × (1/500) − $2 = $1 − $2 = <b>−$1</b>."
+    },
+    {
+     "q": "A spinner pays $8, $2 or $0 with probabilities 0.2, 0.2 and 0.6. It costs $2 to spin. What is the expected net gain per spin?",
+     "c": [
+      "$1.33",
+      "$0",
+      "$1",
+      "$2"
+     ],
+     "a": 1,
+     "e": "Expected prize = 8(0.2) + 2(0.2) + 0(0.6) = $2. Subtract the cost: $2 − $2 = <b>$0</b>."
+    },
+    {
+     "q": "A game costs $2 to play. You roll a number cube and win $9 if you roll a 6; otherwise you win nothing. What is the expected value of your net gain?",
+     "c": [
+      "−$0.50",
+      "−$2",
+      "$1.50",
+      "$7"
+     ],
+     "a": 0,
+     "e": "Expected prize = $9 × 1/6 = $1.50. Subtract the cost to play: $1.50 − $2 = <b>−$0.50</b>."
+    },
+    {
+     "q": "A game costs $2 to play. You roll a number cube and win $12 if you roll a 6; otherwise you win nothing. What is the expected value of your net gain?",
+     "c": [
+      "−$2",
+      "$2",
+      "$0",
+      "$10"
+     ],
+     "a": 2,
+     "e": "Expected prize = $12 × 1/6 = $2. Subtract the cost to play: $2 − $2 = <b>$0</b>."
+    },
+    {
+     "q": "A game costs $1 to play. You roll a number cube and win $12 if you roll a 6; otherwise you win nothing. What is the expected value of your net gain?",
+     "c": [
+      "−$1",
+      "$11",
+      "$2",
+      "$1"
+     ],
+     "a": 3,
+     "e": "Expected prize = $12 × 1/6 = $2. Subtract the cost to play: $2 − $1 = <b>$1</b>."
+    },
+    {
+     "q": "A game costs $5. You win with probability 0.25. For the game to be fair (expected net gain of $0), what should the prize be?",
+     "c": [
+      "$20",
+      "$15",
+      "$1.25",
+      "$25"
+     ],
+     "a": 0,
+     "e": "Fair means expected prize = cost: prize × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = $5, so the prize is <b>$20</b>. (The net gain when you win is the prize minus the cost.)"
+    },
+    {
+     "q": "A spinner pays $8, $2 or $0 with probabilities 0.1, 0.3 and 0.6. It costs $4 to spin. What is the expected net gain per spin?",
+     "c": [
+      "−$0.67",
+      "$2.60",
+      "−$2.60",
+      "$1.40"
+     ],
+     "a": 2,
+     "e": "Expected prize = 8(0.1) + 2(0.3) + 0(0.6) = $1.40. Subtract the cost: $1.40 − $4 = <b>−$2.60</b>."
+    },
+    {
+     "q": "A game costs $2 to play. You roll a number cube and win $15 if you roll a 6; otherwise you win nothing. What is the expected value of your net gain?",
+     "c": [
+      "$13",
+      "$2.50",
+      "−$2",
+      "$0.50"
+     ],
+     "a": 3,
+     "e": "Expected prize = $15 × 1/6 = $2.50. Subtract the cost to play: $2.50 − $2 = <b>$0.50</b>."
+    },
+    {
+     "q": "A game costs $1 to play. You roll a number cube and win $18 if you roll a 6; otherwise you win nothing. What is the expected value of your net gain?",
+     "c": [
+      "$17",
+      "$2",
+      "$3",
+      "−$1"
+     ],
+     "a": 1,
+     "e": "Expected prize = $18 × 1/6 = $3. Subtract the cost to play: $3 − $1 = <b>$2</b>."
+    },
+    {
+     "q": "A raffle sells 2,000 tickets for $2 each. One ticket wins a $1,500 prize. What is the expected value of buying one ticket?",
+     "c": [
+      "$1,498",
+      "−$1.25",
+      "$0.75",
+      "−$2"
+     ],
+     "a": 1,
+     "e": "<i>E</i>(<i>X</i>) = $1,500 × (1/2,000) − $2 = $0.75 − $2 = <b>−$1.25</b>."
+    },
+    {
+     "q": "A game costs $3 to play. You roll a number cube and win $15 if you roll a 6; otherwise you win nothing. What is the expected value of your net gain?",
+     "c": [
+      "−$3",
+      "$2.50",
+      "−$0.50",
+      "$12"
+     ],
+     "a": 2,
+     "e": "Expected prize = $15 × 1/6 = $2.50. Subtract the cost to play: $2.50 − $3 = <b>−$0.50</b>."
+    },
+    {
+     "q": "A game costs $5. You win with probability 0.4. For the game to be fair (expected net gain of $0), what should the prize be?",
+     "c": [
+      "$2",
+      "$12.50",
+      "$17.50",
+      "$7.50"
+     ],
+     "a": 1,
+     "e": "Fair means expected prize = cost: prize × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = $5, so the prize is <b>$12.50</b>. (The net gain when you win is the prize minus the cost.)"
+    },
+    {
+     "q": "A game costs $3. You win with probability 0.4. For the game to be fair (expected net gain of $0), what should the prize be?",
+     "c": [
+      "$1.20",
+      "$4.50",
+      "$7.50",
+      "$10.50"
+     ],
+     "a": 2,
+     "e": "Fair means expected prize = cost: prize × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = $3, so the prize is <b>$7.50</b>. (The net gain when you win is the prize minus the cost.)"
+    },
+    {
+     "q": "A game costs $2 to play. You roll a number cube and win $18 if you roll a 6; otherwise you win nothing. What is the expected value of your net gain?",
+     "c": [
+      "$16",
+      "−$2",
+      "$3",
+      "$1"
+     ],
+     "a": 3,
+     "e": "Expected prize = $18 × 1/6 = $3. Subtract the cost to play: $3 − $2 = <b>$1</b>."
+    },
+    {
+     "q": "A raffle sells 2,000 tickets for $2 each. One ticket wins a $500 prize. What is the expected value of buying one ticket?",
+     "c": [
+      "−$1.75",
+      "−$2",
+      "$498",
+      "$0.25"
+     ],
+     "a": 0,
+     "e": "<i>E</i>(<i>X</i>) = $500 × (1/2,000) − $2 = $0.25 − $2 = <b>−$1.75</b>."
+    },
+    {
+     "q": "A game costs $2 to play. You roll a number cube and win $6 if you roll a 6; otherwise you win nothing. What is the expected value of your net gain?",
+     "c": [
+      "−$1",
+      "$4",
+      "−$2",
+      "$1"
+     ],
+     "a": 0,
+     "e": "Expected prize = $6 × 1/6 = $1. Subtract the cost to play: $1 − $2 = <b>−$1</b>."
+    },
+    {
+     "q": "A game costs $3 to play. You roll a number cube and win $6 if you roll a 6; otherwise you win nothing. What is the expected value of your net gain?",
+     "c": [
+      "$3",
+      "$1",
+      "−$3",
+      "−$2"
+     ],
+     "a": 3,
+     "e": "Expected prize = $6 × 1/6 = $1. Subtract the cost to play: $1 − $3 = <b>−$2</b>."
+    },
+    {
+     "q": "A game costs $1 to play. You roll a number cube and win $9 if you roll a 6; otherwise you win nothing. What is the expected value of your net gain?",
+     "c": [
+      "−$1",
+      "$8",
+      "$1.50",
+      "$0.50"
+     ],
+     "a": 3,
+     "e": "Expected prize = $9 × 1/6 = $1.50. Subtract the cost to play: $1.50 − $1 = <b>$0.50</b>."
+    },
+    {
+     "q": "A raffle sells 2,000 tickets for $5 each. One ticket wins a $300 prize. What is the expected value of buying one ticket?",
+     "c": [
+      "−$5",
+      "−$4.85",
+      "$0.15",
+      "$295"
+     ],
+     "a": 1,
+     "e": "<i>E</i>(<i>X</i>) = $300 × (1/2,000) − $5 = $0.15 − $5 = <b>−$4.85</b>."
+    }
+   ]
+  },
+  {
+   "title": "Binomial probabilities",
+   "items": [
+    {
+     "q": "A player makes each free throw with probability 0.1. What is the expected number made in 8 attempts?",
+     "c": [
+      "0.1",
+      "0.8",
+      "4",
+      "7.2"
+     ],
+     "a": 1,
+     "e": "For a binomial distribution, <i>E</i>(<i>X</i>) = <i>np</i> = 8 × 0.1 = <b>0.8</b>."
+    },
+    {
+     "q": "A player makes each free throw with probability 0.1. What is the expected number made in 6 attempts?",
+     "c": [
+      "5.4",
+      "0.6",
+      "3",
+      "0.1"
+     ],
+     "a": 1,
+     "e": "For a binomial distribution, <i>E</i>(<i>X</i>) = <i>np</i> = 6 × 0.1 = <b>0.6</b>."
+    },
+    {
+     "q": "A player makes each free throw with probability 0.1. What is the expected number made in 5 attempts?",
+     "c": [
+      "0.1",
+      "0.5",
+      "4.5",
+      "2.5"
+     ],
+     "a": 1,
+     "e": "For a binomial distribution, <i>E</i>(<i>X</i>) = <i>np</i> = 5 × 0.1 = <b>0.5</b>."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.25, independently. If 5 seeds are planted, what is the probability that exactly 1 sprouts? Round to three decimal places.",
+     "c": [
+      "0.015",
+      "0.25",
+      "0.079",
+      "0.396"
+     ],
+     "a": 3,
+     "e": "<i>P</i> = <sub>5</sub>C<sub>1</sub>(0.25)<sup>1</sup>(0.75)<sup>4</sup> ≈ <b>0.396</b>. Do not forget the <sub>5</sub>C<sub>1</sub> = 5 ways to choose which seeds sprout."
+    },
+    {
+     "q": "A player makes each free throw with probability 0.25. What is the expected number made in 8 attempts?",
+     "c": [
+      "2",
+      "6",
+      "0.25",
+      "4"
+     ],
+     "a": 0,
+     "e": "For a binomial distribution, <i>E</i>(<i>X</i>) = <i>np</i> = 8 × 0.25 = <b>2</b>."
+    },
+    {
+     "q": "A player makes each free throw with probability 0.2. What is the expected number made in 6 attempts?",
+     "c": [
+      "1.2",
+      "0.2",
+      "4.8",
+      "3"
+     ],
+     "a": 0,
+     "e": "For a binomial distribution, <i>E</i>(<i>X</i>) = <i>np</i> = 6 × 0.2 = <b>1.2</b>."
+    },
+    {
+     "q": "A player makes each free throw with probability 0.3. What is the expected number made in 10 attempts?",
+     "c": [
+      "7",
+      "5",
+      "0.3",
+      "3"
+     ],
+     "a": 3,
+     "e": "For a binomial distribution, <i>E</i>(<i>X</i>) = <i>np</i> = 10 × 0.3 = <b>3</b>."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.3, independently. If 6 seeds are planted, what is the probability that exactly 1 sprouts? Round to three decimal places.",
+     "c": [
+      "0.3",
+      "0.303",
+      "0.05",
+      "0.01"
+     ],
+     "a": 1,
+     "e": "<i>P</i> = <sub>6</sub>C<sub>1</sub>(0.3)<sup>1</sup>(0.7)<sup>5</sup> ≈ <b>0.303</b>. Do not forget the <sub>6</sub>C<sub>1</sub> = 6 ways to choose which seeds sprout."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.25, independently. If 6 seeds are planted, what is the probability that exactly 2 sprout? Round to three decimal places.",
+     "c": [
+      "0.02",
+      "0.033",
+      "0.297",
+      "0.062"
+     ],
+     "a": 2,
+     "e": "<i>P</i> = <sub>6</sub>C<sub>2</sub>(0.25)<sup>2</sup>(0.75)<sup>4</sup> ≈ <b>0.297</b>. Do not forget the <sub>6</sub>C<sub>2</sub> = 15 ways to choose which seeds sprout."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.4, independently. If 6 seeds are planted, what is the probability that exactly 2 sprout? Round to three decimal places.",
+     "c": [
+      "0.021",
+      "0.138",
+      "0.311",
+      "0.16"
+     ],
+     "a": 2,
+     "e": "<i>P</i> = <sub>6</sub>C<sub>2</sub>(0.4)<sup>2</sup>(0.6)<sup>4</sup> ≈ <b>0.311</b>. Do not forget the <sub>6</sub>C<sub>2</sub> = 15 ways to choose which seeds sprout."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.2, independently. If 10 seeds are planted, what is the probability that exactly 3 sprout? Round to three decimal places.",
+     "c": [
+      "0.201",
+      "0.002",
+      "0.001",
+      "0.008"
+     ],
+     "a": 0,
+     "e": "<i>P</i> = <sub>10</sub>C<sub>3</sub>(0.2)<sup>3</sup>(0.8)<sup>7</sup> ≈ <b>0.201</b>. Do not forget the <sub>10</sub>C<sub>3</sub> = 120 ways to choose which seeds sprout."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.1, independently. If 10 seeds are planted, what is the probability that exactly 1 sprouts? Round to three decimal places.",
+     "c": [
+      "0.1",
+      "0.039",
+      "0",
+      "0.387"
+     ],
+     "a": 3,
+     "e": "<i>P</i> = <sub>10</sub>C<sub>1</sub>(0.1)<sup>1</sup>(0.9)<sup>9</sup> ≈ <b>0.387</b>. Do not forget the <sub>10</sub>C<sub>1</sub> = 10 ways to choose which seeds sprout."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.4, independently. If 5 seeds are planted, what is the probability that exactly 2 sprout? Round to three decimal places.",
+     "c": [
+      "0.035",
+      "0.16",
+      "0.346",
+      "0.23"
+     ],
+     "a": 2,
+     "e": "<i>P</i> = <sub>5</sub>C<sub>2</sub>(0.4)<sup>2</sup>(0.6)<sup>3</sup> ≈ <b>0.346</b>. Do not forget the <sub>5</sub>C<sub>2</sub> = 10 ways to choose which seeds sprout."
+    },
+    {
+     "q": "A player makes each free throw with probability 0.3. What is the expected number made in 4 attempts?",
+     "c": [
+      "2",
+      "2.8",
+      "1.2",
+      "0.3"
+     ],
+     "a": 2,
+     "e": "For a binomial distribution, <i>E</i>(<i>X</i>) = <i>np</i> = 4 × 0.3 = <b>1.2</b>."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.2, independently. If 4 seeds are planted, what is the probability that exactly 3 sprout? Round to three decimal places.",
+     "c": [
+      "0.006",
+      "0.026",
+      "0.008",
+      "0.41"
+     ],
+     "a": 1,
+     "e": "<i>P</i> = <sub>4</sub>C<sub>3</sub>(0.2)<sup>3</sup>(0.8)<sup>1</sup> ≈ <b>0.026</b>. Do not forget the <sub>4</sub>C<sub>3</sub> = 4 ways to choose which seeds sprout."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.25, independently. If 10 seeds are planted, what is the probability that exactly 2 sprout? Round to three decimal places.",
+     "c": [
+      "0",
+      "0.062",
+      "0.006",
+      "0.282"
+     ],
+     "a": 3,
+     "e": "<i>P</i> = <sub>10</sub>C<sub>2</sub>(0.25)<sup>2</sup>(0.75)<sup>8</sup> ≈ <b>0.282</b>. Do not forget the <sub>10</sub>C<sub>2</sub> = 45 ways to choose which seeds sprout."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.25, independently. If 5 seeds are planted, what is the probability that exactly 2 sprout? Round to three decimal places.",
+     "c": [
+      "0.088",
+      "0.026",
+      "0.264",
+      "0.062"
+     ],
+     "a": 2,
+     "e": "<i>P</i> = <sub>5</sub>C<sub>2</sub>(0.25)<sup>2</sup>(0.75)<sup>3</sup> ≈ <b>0.264</b>. Do not forget the <sub>5</sub>C<sub>2</sub> = 10 ways to choose which seeds sprout."
+    },
+    {
+     "q": "A player makes each free throw with probability 0.25. What is the expected number made in 10 attempts?",
+     "c": [
+      "7.5",
+      "0.25",
+      "5",
+      "2.5"
+     ],
+     "a": 3,
+     "e": "For a binomial distribution, <i>E</i>(<i>X</i>) = <i>np</i> = 10 × 0.25 = <b>2.5</b>."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.2, independently. If 10 seeds are planted, what is the probability that exactly 1 sprouts? Round to three decimal places.",
+     "c": [
+      "0.268",
+      "0",
+      "0.027",
+      "0.2"
+     ],
+     "a": 0,
+     "e": "<i>P</i> = <sub>10</sub>C<sub>1</sub>(0.2)<sup>1</sup>(0.8)<sup>9</sup> ≈ <b>0.268</b>. Do not forget the <sub>10</sub>C<sub>1</sub> = 10 ways to choose which seeds sprout."
+    },
+    {
+     "q": "Each seed sprouts with probability 0.1, independently. If 6 seeds are planted, what is the probability that exactly 2 sprout? Round to three decimal places.",
+     "c": [
+      "0.098",
+      "0.01",
+      "0.007",
+      "0.001"
+     ],
+     "a": 0,
+     "e": "<i>P</i> = <sub>6</sub>C<sub>2</sub>(0.1)<sup>2</sup>(0.9)<sup>4</sup> ≈ <b>0.098</b>. Do not forget the <sub>6</sub>C<sub>2</sub> = 15 ways to choose which seeds sprout."
+    }
+   ]
+  },
+  {
+   "title": "Making decisions",
+   "items": [
+    {
+     "q": "An insurance company charges a $300 premium. It pays $10,000 with probability 0.005. What is the company's expected profit per policy?",
+     "c": [
+      "−$250",
+      "$250",
+      "$300",
+      "$50"
+     ],
+     "a": 1,
+     "e": "Expected profit = premium − expected payout = $300 − $10,000 × 0.005 = $300 − $50 = <b>$250</b>."
+    },
+    {
+     "q": "Olivia can buy a $40 warranty for a laptop. Without it, there is a 10% chance of a $300 repair. Based on expected cost, should she buy the warranty?",
+     "c": [
+      "Yes: $40 is less than $300",
+      "Yes: the expected repair cost is $30, more than $40",
+      "It makes no difference",
+      "No: the expected repair cost is $30, less than $40"
+     ],
+     "a": 3,
+     "e": "Expected repair cost = $300 × 0.1 = $30. Compare it with the warranty price $40. <b>No: the expected repair cost is $30, less than $40</b>."
+    },
+    {
+     "q": "Aaliyah can buy a $60 warranty for a laptop. Without it, there is a 15% chance of a $200 repair. Based on expected cost, should she buy the warranty?",
+     "c": [
+      "Yes: $60 is less than $200",
+      "Yes: the expected repair cost is $30, more than $60",
+      "It makes no difference",
+      "No: the expected repair cost is $30, less than $60"
+     ],
+     "a": 3,
+     "e": "Expected repair cost = $200 × 0.15 = $30. Compare it with the warranty price $60. <b>No: the expected repair cost is $30, less than $60</b>."
+    },
+    {
+     "q": "An insurance company charges a $200 premium. It pays $20,000 with probability 0.003. What is the company's expected profit per policy?",
+     "c": [
+      "$60",
+      "$140",
+      "$200",
+      "−$140"
+     ],
+     "a": 1,
+     "e": "Expected profit = premium − expected payout = $200 − $20,000 × 0.003 = $200 − $60 = <b>$140</b>."
+    },
+    {
+     "q": "Option A pays $200 with probability 0.25. Option B pays $40 with probability 0.9. Which option has the greater expected value?",
+     "c": [
+      "Option A ($50 vs. $36)",
+      "Option B, because it is more likely to pay",
+      "Option B ($36 vs. $50)",
+      "Option A, because its prize is larger"
+     ],
+     "a": 0,
+     "e": "<i>E</i>(<i>X</i>) for A: $200 × 0.25 = $50. For B: $40 × 0.9 = $36. <b>Option A ($50 vs. $36)</b>."
+    },
+    {
+     "q": "Owen can buy a $80 warranty for a laptop. Without it, there is a 10% chance of a $200 repair. Based on expected cost, should he buy the warranty?",
+     "c": [
+      "Yes: $80 is less than $200",
+      "It makes no difference",
+      "No: the expected repair cost is $20, less than $80",
+      "Yes: the expected repair cost is $20, more than $80"
+     ],
+     "a": 2,
+     "e": "Expected repair cost = $200 × 0.1 = $20. Compare it with the warranty price $80. <b>No: the expected repair cost is $20, less than $80</b>."
+    },
+    {
+     "q": "An insurance company charges a $500 premium. It pays $10,000 with probability 0.01. What is the company's expected profit per policy?",
+     "c": [
+      "−$400",
+      "$400",
+      "$500",
+      "$100"
+     ],
+     "a": 1,
+     "e": "Expected profit = premium − expected payout = $500 − $10,000 × 0.01 = $500 − $100 = <b>$400</b>."
+    },
+    {
+     "q": "Zoe can buy a $80 warranty for a laptop. Without it, there is a 15% chance of a $400 repair. Based on expected cost, should she buy the warranty?",
+     "c": [
+      "Yes: $80 is less than $400",
+      "It makes no difference",
+      "No: the expected repair cost is $60, less than $80",
+      "Yes: the expected repair cost is $60, more than $80"
+     ],
+     "a": 2,
+     "e": "Expected repair cost = $400 × 0.15 = $60. Compare it with the warranty price $80. <b>No: the expected repair cost is $60, less than $80</b>."
+    },
+    {
+     "q": "Noah can buy a $40 warranty for a laptop. Without it, there is a 25% chance of a $200 repair. Based on expected cost, should he buy the warranty?",
+     "c": [
+      "It makes no difference",
+      "No: the expected repair cost is $50, less than $40",
+      "No: $40 is less than $200",
+      "Yes: the expected repair cost is $50, more than $40"
+     ],
+     "a": 3,
+     "e": "Expected repair cost = $200 × 0.25 = $50. Compare it with the warranty price $40. <b>Yes: the expected repair cost is $50, more than $40</b>."
+    },
+    {
+     "q": "An insurance company charges a $500 premium. It pays $20,000 with probability 0.01. What is the company's expected profit per policy?",
+     "c": [
+      "$300",
+      "−$300",
+      "$500",
+      "$200"
+     ],
+     "a": 0,
+     "e": "Expected profit = premium − expected payout = $500 − $20,000 × 0.01 = $500 − $200 = <b>$300</b>."
+    },
+    {
+     "q": "Noah can buy a $100 warranty for a laptop. Without it, there is a 15% chance of a $200 repair. Based on expected cost, should he buy the warranty?",
+     "c": [
+      "Yes: $100 is less than $200",
+      "No: the expected repair cost is $30, less than $100",
+      "Yes: the expected repair cost is $30, more than $100",
+      "It makes no difference"
+     ],
+     "a": 1,
+     "e": "Expected repair cost = $200 × 0.15 = $30. Compare it with the warranty price $100. <b>No: the expected repair cost is $30, less than $100</b>."
+    },
+    {
+     "q": "Option A pays $60 with probability 0.75. Option B pays $300 with probability 0.2. Which option has the greater expected value?",
+     "c": [
+      "Option A ($45 vs. $60)",
+      "Option A, because it is more likely to pay",
+      "Option B ($60 vs. $45)",
+      "Option B, because its prize is larger"
+     ],
+     "a": 2,
+     "e": "<i>E</i>(<i>X</i>) for A: $60 × 0.75 = $45. For B: $300 × 0.2 = $60. <b>Option B ($60 vs. $45)</b>."
+    },
+    {
+     "q": "Ethan can buy a $80 warranty for a laptop. Without it, there is a 10% chance of a $400 repair. Based on expected cost, should he buy the warranty?",
+     "c": [
+      "It makes no difference",
+      "Yes: the expected repair cost is $40, more than $80",
+      "No: the expected repair cost is $40, less than $80",
+      "Yes: $80 is less than $400"
+     ],
+     "a": 2,
+     "e": "Expected repair cost = $400 × 0.1 = $40. Compare it with the warranty price $80. <b>No: the expected repair cost is $40, less than $80</b>."
+    },
+    {
+     "q": "Emma can buy a $40 warranty for a laptop. Without it, there is a 15% chance of a $300 repair. Based on expected cost, should she buy the warranty?",
+     "c": [
+      "It makes no difference",
+      "No: the expected repair cost is $45, less than $40",
+      "Yes: the expected repair cost is $45, more than $40",
+      "No: $40 is less than $300"
+     ],
+     "a": 2,
+     "e": "Expected repair cost = $300 × 0.15 = $45. Compare it with the warranty price $40. <b>Yes: the expected repair cost is $45, more than $40</b>."
+    },
+    {
+     "q": "An insurance company charges a $300 premium. It pays $20,000 with probability 0.01. What is the company's expected profit per policy?",
+     "c": [
+      "$100",
+      "$200",
+      "−$100",
+      "$300"
+     ],
+     "a": 0,
+     "e": "Expected profit = premium − expected payout = $300 − $20,000 × 0.01 = $300 − $200 = <b>$100</b>."
+    },
+    {
+     "q": "Option A pays $100 with probability 0.5. Option B pays $300 with probability 0.2. Which option has the greater expected value?",
+     "c": [
+      "Option A ($50 vs. $60)",
+      "Option A, because it is more likely to pay",
+      "Option B, because its prize is larger",
+      "Option B ($60 vs. $50)"
+     ],
+     "a": 3,
+     "e": "<i>E</i>(<i>X</i>) for A: $100 × 0.5 = $50. For B: $300 × 0.2 = $60. <b>Option B ($60 vs. $50)</b>."
+    },
+    {
+     "q": "Zoe can buy a $100 warranty for a laptop. Without it, there is a 15% chance of a $400 repair. Based on expected cost, should she buy the warranty?",
+     "c": [
+      "No: the expected repair cost is $60, less than $100",
+      "Yes: $100 is less than $400",
+      "Yes: the expected repair cost is $60, more than $100",
+      "It makes no difference"
+     ],
+     "a": 0,
+     "e": "Expected repair cost = $400 × 0.15 = $60. Compare it with the warranty price $100. <b>No: the expected repair cost is $60, less than $100</b>."
+    },
+    {
+     "q": "An insurance company charges a $500 premium. It pays $10,000 with probability 0.002. What is the company's expected profit per policy?",
+     "c": [
+      "$20",
+      "$500",
+      "−$480",
+      "$480"
+     ],
+     "a": 3,
+     "e": "Expected profit = premium − expected payout = $500 − $10,000 × 0.002 = $500 − $20 = <b>$480</b>."
+    },
+    {
+     "q": "Chloe can buy a $60 warranty for a laptop. Without it, there is a 25% chance of a $500 repair. Based on expected cost, should she buy the warranty?",
+     "c": [
+      "No: $60 is less than $500",
+      "Yes: the expected repair cost is $125, more than $60",
+      "No: the expected repair cost is $125, less than $60",
+      "It makes no difference"
+     ],
+     "a": 1,
+     "e": "Expected repair cost = $500 × 0.25 = $125. Compare it with the warranty price $60. <b>Yes: the expected repair cost is $125, more than $60</b>."
+    },
+    {
+     "q": "Option A pays $200 with probability 0.25. Option B pays $300 with probability 0.2. Which option has the greater expected value?",
+     "c": [
+      "Option B ($60 vs. $50)",
+      "Option B, because its prize is larger",
+      "Option A ($50 vs. $60)",
+      "Option A, because it is more likely to pay"
+     ],
+     "a": 0,
+     "e": "<i>E</i>(<i>X</i>) for A: $200 × 0.25 = $50. For B: $300 × 0.2 = $60. <b>Option B ($60 vs. $50)</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 15,
+ "updated": "2026-11-18",
+ "country": "us",
+ "subject": "math",
+ "grade": "precalculus"
+}
