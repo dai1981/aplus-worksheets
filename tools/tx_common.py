@@ -115,24 +115,28 @@ def run(fn, *args, seed=1, tries=60):
     raise AssertionError("set maker failed: %s %r" % (fn.__name__, last))
 
 
-def run_many(fn, *args, seed=1, n=20, keep=None, avoid=()):
-    """Like run, but gathers n different items over several seeds, keeping only items where keep(item) is true."""
+def run_many(fn, *args, seed=1, n=20, keep=None, avoid=(), _full=False):
+    """Like run, but gathers n different items over several seeds, keeping only items where keep(item) is true.
+    Questions are kept different by their text; if that gives too few, the choices count too."""
     out, seen = [], set()
+    key = (lambda x: x["q"] + "|" + "|".join(sorted(x["c"]))) if _full else (lambda x: x["q"])
     for a in avoid:
         for x in (a["items"] if isinstance(a, dict) else a):
-            seen.add(x["q"])
+            seen.add(key(x))
     for k in range(40):
         try:
             its = run(fn, *args, seed=seed * 100 + k)["items"]
         except AssertionError:
             continue
         for it in its:
-            if it["q"] in seen or (keep and not keep(it)):
+            if key(it) in seen or (keep and not keep(it)):
                 continue
-            seen.add(it["q"])
+            seen.add(key(it))
             out.append(it)
             if len(out) == n:
                 return out
+    if not _full:
+        return run_many(fn, *args, seed=seed, n=n, keep=keep, avoid=avoid, _full=True)
     raise AssertionError("run_many: only %d items from %s" % (len(out), fn.__name__))
 
 

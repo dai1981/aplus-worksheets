@@ -147,7 +147,7 @@ function topic_defs($country = null) {
             'in' => '/(^|-)angles?(-|$)|turns|transversal/', 'out' => '/^$/',
             'blurb' => 'Right, acute and obtuse angles, measuring with a protractor, angles on a line and at a point, and angles in shapes.'),
         'shapes' => array('name' => '2D and 3D Shapes',
-            'in' => '/shape|polygon|quadrilateral|triangle|circles|circumference|prism|3d|2d|nets|objects|parallelogram|rectangles-and-squares|lines-angles|perpendicular|congruence|classify-two|pythagor|trigonometr|arcs-and|elevations|law-of-sines|points-lines|cross-section/',
+            'in' => '/shape|polygon|quadrilateral|triangle|circles|circumference|prism|3d|2d|nets|objects|parallelogram|rectangles-and-squares|lines-angles|perpendicular|congruence|classify-two|classifying-two|pythagor|trigonometr|arcs-and|elevations|law-of-sines|points-lines|cross-section/',
             'out' => '/circle-graph|number-shape|composite-area|similar-shapes|area-of|trigonometric/',
             'blurb' => 'Naming and sorting 2D shapes and 3D objects, sides and vertices, triangles and quadrilaterals, circles, nets and solids.'),
         'circles' => array('name' => 'Circles',

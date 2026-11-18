@@ -1037,7 +1037,13 @@ US-TX / Math / Grade 4（STAAR の学年。1,000 以上はカンマ、10億ま�
 13. input-output-tables-and-number-patterns ✓ 14. decomposing-fractions ✓ 15. equivalent-and-comparing-fractions ✓ 16. adding-and-subtracting-fractions ✓ 17. area-and-perimeter-formulas ✓ 18. lines-angles-and-triangles ✓
 19. lines-of-symmetry ✓ 20. measuring-angles ✓ 21. measurement-conversions ✓ 22. measurement-word-problems ✓ 23. frequency-tables-dot-plots-and-stem-and-leaf-plots ✓ 24. personal-financial-literacy ✓
 
-その後: US-TX Grade 5（STAAR）、US-TX Grade 2 …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Grade 5（STAAR の学年。小数は 1000 分の 1 まで）— 生成スクリプトは `gen_ustx_math_g5_*`（US Grade 5・Grade 4 の問題関数を build_sets で再利用、ほかは自前）。メートル法は mass（STAAR の参考資料と同じ）、ヤード・ポンド法は weight
+1. decimal-place-value-to-thousandths ✓ 2. comparing-and-rounding-decimals ✓ 3. estimating ✓ 4. multiplying-three-digit-by-two-digit-numbers ✓ 5. dividing-by-two-digit-divisors ✓ 6. multiplying-decimals ✓
+7. dividing-decimals ✓ 8. adding-and-subtracting-fractions ✓ 9. adding-and-subtracting-decimals ✓ 10. multiplying-whole-numbers-and-fractions ✓ 11. dividing-with-unit-fractions ✓ 12. prime-and-composite-numbers ✓
+13. multi-step-problems-and-equations ✓ 14. numerical-patterns-and-graphs ✓ 15. order-of-operations ✓ 16. volume-of-rectangular-prisms ✓ 17. perimeter-area-and-volume-problems ✓ 18. classifying-two-dimensional-figures ✓
+19. measurement-conversions ✓ 20. coordinate-plane ✓ 21. data-and-scatterplots ✓ 22. personal-financial-literacy ✓
+
+その後: US-TX Grade 6、US-TX Grade 2 …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
