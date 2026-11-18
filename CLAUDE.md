@@ -917,6 +917,12 @@ US / Math / Algebra 2（Common Core 高校）— grade `algebra-2`（name「Alge
 11. exponential-and-logarithmic-equations ✓ 12. sequences-and-series ✓ 13. unit-circle-and-radians ✓ 14. graphs-of-sine-and-cosine ✓ 15. normal-distribution ✓
 16. statistical-studies-and-margin-of-error ✓
 
+US / Math / Precalculus（Common Core 高校の (+) 基準）— grade `precalculus`（name「Precalculus」、sort 12、17〜18歳）。生成スクリプトは `gen_us_math_pc_*`、共通部品は `tools/us_hs.py`（make に grade）と `tools/pc_common.py`（pis・trig・vhtml・surd・mat・det_h・vec・curve_svg など）。行列は `<span class='mx m2'>`（ws.css・ws-print.css）。トピック `vectors-and-matrices` あり
+1. rational-functions-and-asymptotes ✓ 2. six-trigonometric-functions ✓ 3. inverse-trigonometric-functions ✓ 4. trigonometric-identities ✓ 5. sum-and-difference-formulas ✓
+6. solving-trigonometric-equations ✓ 7. complex-numbers-in-polar-form ✓ 8. vectors ✓ 9. vector-operations ✓ 10. matrix-operations ✓
+11. determinants-and-inverse-matrices ✓ 12. binomial-theorem ✓ 13. conic-sections ✓ 14. permutations-and-combinations ✓ 15. expected-value ✓
+16. polar-coordinates ✓
+
 TW / Math（十二年國教課綱・108課綱）— country `tw`（name「台灣」、lang `zh-TW`）、subject `math`（數學）、grade `grade-N`（國小N年級）、A4。生成スクリプトは `gen_tw_math_gN_*`、共通部品は `tools/tw_common.py`（num・mcq・lesson・make_unit・clock など）。
 繁體中文・台灣用語（公分、毫米、公升、毫升、公斤、公克、元、直式、餘數、驗算）。時刻は「上午 9 時 40 分」、時間量は「1 小時 45 分鐘」。4 桁まではそのまま、10,000 以上はカンマ。餘數は「29 ÷ 4 ＝ 7……1」。
 standard_code は課綱の學習內容コード（例: N-3-1）、standard_text は課綱の原文。domain は 數與量／空間與形狀／關係／資料與不確定性。body_html は「怎麼想 → 例題 → 常見錯誤」。
