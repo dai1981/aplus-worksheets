@@ -1031,7 +1031,13 @@ US-TX / Math / Grade 3（STAAR の最初の学年）
 11. fractions ✓ 12. fractions-on-a-number-line ✓ 13. equivalent-and-comparing-fractions ✓ 14. value-of-coins-and-bills ✓ 15. area ✓ 16. perimeter ✓
 17. time-intervals ✓ 18. liquid-volume-and-weight ✓ 19. 2d-and-3d-figures ✓ 20. frequency-tables-dot-plots-and-bar-graphs ✓ 21. personal-financial-literacy ✓
 
-その後: US-TX Grade 4（STAAR）、US-TX Grade 5 …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Grade 4（STAAR の学年。1,000 以上はカンマ、10億まで）— 生成スクリプトは `gen_ustx_math_g4_*`（多くは US Grade 4 の問題関数を build_sets で再利用。他国の問題関数に People を渡すときはその生成スクリプトの People を使う）
+1. place-value-to-billions ✓ 2. comparing-and-rounding-whole-numbers ✓ 3. decimals-tenths-and-hundredths ✓ 4. comparing-decimals-and-number-lines ✓ 5. adding-and-subtracting-whole-numbers-and-decimals ✓ 6. multiplying-by-10-and-100 ✓
+7. multiplying-two-digit-numbers ✓ 8. multiplying-by-one-digit-numbers ✓ 9. long-division ✓ 10. estimating-with-rounding-and-compatible-numbers ✓ 11. multiplication-and-division-word-problems ✓ 12. multi-step-problems-and-strip-diagrams ✓
+13. input-output-tables-and-number-patterns ✓ 14. decomposing-fractions ✓ 15. equivalent-and-comparing-fractions ✓ 16. adding-and-subtracting-fractions ✓ 17. area-and-perimeter-formulas ✓ 18. lines-angles-and-triangles ✓
+19. lines-of-symmetry ✓ 20. measuring-angles ✓ 21. measurement-conversions ✓ 22. measurement-word-problems ✓ 23. frequency-tables-dot-plots-and-stem-and-leaf-plots ✓ 24. personal-financial-literacy ✓
+
+その後: US-TX Grade 5（STAAR）、US-TX Grade 2 …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 

@@ -27,7 +27,7 @@ US_WORDS = [("colour", "color"), ("Colour", "Color"), ("centimetre", "centimeter
             ("labelled", "labeled"), ("maths", "math"), ("Maths", "Math"), ("analogue", "analog"), ("cm²", "square centimeters"),
             ("m²", "square meters"), ("biscuit", "cookie"), ("lollies", "candies"), ("footy", "football"),
             ("tuck shop", "school store"), ("canteen", "cafeteria"), ("Year 4 ", "third-grade "), ("Year 3 ", "third-grade "), ("Grade 3 ", "third-grade "), ("Year 1 ", "first-grade "), ("Year 2 ", "second-grade "), ("Year 5 ", "fifth-grade "), ("Year 6 ", "sixth-grade "), ("Prep ", "kindergarten "), ("Wattle Street", "Pecan Street"), ("netball team has", "kickball team has"), ("on the court", "on the field"), ("$2 coins", "$2 bills"), ("$2 coin", "$2 bill"), ("money box", "piggy bank"), ("mobile phone", "cell phone"), ("petrol", "gas"), ("holidays", "vacation"), ("Hockey", "Volleyball"), ("hockey", "volleyball"), ("Canada geese", "wild geese"), ("Canada goose", "wild goose"), ("Ringette", "Snowboarding"), ("ringette", "snowboarding"), ("curling", "bowling"), ("Curling", "Bowling")]
-LEAKS = r"\b(Ontario|Toronto|Ottawa|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Brisbane|Perth|cricket|Year [1-9]\b|AUD|CAD|Tim Hortons|poutine|maple syrup|hockey|netball|Wattle|wattle|kangaroo|koala|footy|\$1 coin|\$2 coin|ute|lolly|lollies|biscuits?|trolley|fortnight|mum)\b"
+LEAKS = r"\b(Ontario|Toronto|Ottawa|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Brisbane|Perth|Year [1-9]\b|AUD|CAD|Tim Hortons|poutine|maple syrup|hockey|netball|Wattle|wattle|kangaroo|koala|footy|\$1 coin|\$2 coin|ute|lolly|lollies|biscuits?|trolley|fortnight|mum)\b"
 
 
 def _commas_plain(t):
@@ -47,6 +47,8 @@ def us_text(s):
     for a, b in US_WORDS:
         s = s.replace(a, b)
     s = re.sub(r"(?<![\d.,])\b1 were\b", "1 was", s)
+    sing = {"dimes": "dime", "pennies": "penny", "nickels": "nickel", "quarters": "quarter", "tenths": "tenth", "hundredths": "hundredth"}
+    s = re.sub(r"(?<![\d.,/])\b1 (dimes|pennies|nickels|quarters|tenths|hundredths)\b", lambda m: "1 " + sing[m.group(1)], s)
     s = re.sub(r"(?<![\d.,])\b1 square (centimeter|meter|inch|foot|unit)(e?s)\b", lambda m: "1 square " + m.group(1), s)
     s = re.sub(r"(?<![\d.,])(?<!and )\b1 are\b", "1 is", s)
     return add_commas(s)
@@ -104,7 +106,7 @@ def run(fn, *args, seed=1, tries=60):
                 a.append(x)
         try:
             s = fn(*a)
-        except (AssertionError, IndexError, ValueError) as e:
+        except (AssertionError, IndexError, ValueError, RuntimeError, KeyError, ZeroDivisionError) as e:
             last = e
             continue
         its = s["items"] if isinstance(s, dict) else s
@@ -268,7 +270,7 @@ def make(slug, sort, domain, code, std_text, title, short_title, meta, key_big, 
     unit = {
         "slug": slug, "sort": sort, "updated": "2026-11-18", "pdf_url": "",
         "title": title,
-        "seo_title": seo_title or "Grade 3 %s Worksheets: TEKS %s Practice with Answers (STAAR)" % (short_title, code.split(",")[0]),
+        "seo_title": seo_title or "Grade %s %s Worksheets: TEKS %s Practice with Answers (STAAR)" % (GRADE.split("-")[1], short_title, code.split(",")[0]),
         "short_title": short_title,
         "domain": domain,
         "standard_code": code,
@@ -364,3 +366,22 @@ def strip_svg(parts, total=None, compare=None, label="strip diagram"):
             x += w * unit
         H = y1 + h + 8
     return svg_wrap(int(x0 * 2 + 360), H, "".join(s), label)
+
+
+# ------------------------------------------------------------ sets from several makers
+def build_sets(specs, seed):
+    """specs: [(title, [part, ...]), ...]; part is ("run", fn, args, n[, keep]) for another generator's set maker
+    (several seeds, no question repeated in the unit) or ("collect", maker, n) for an item maker of this file."""
+    rnd = random.Random(seed)
+    sets = []
+    for si, (title, parts) in enumerate(specs):
+        items = []
+        for pi, p in enumerate(parts):
+            if p[0] == "run":
+                fn, args, n = p[1], p[2], p[3]
+                keep = p[4] if len(p) > 4 else None
+                items += run_many(fn, *args, seed=seed % 10000 + si * 10 + pi, n=n, keep=keep, avoid=sets + [items])
+            else:
+                items += collect(p[1], p[2], rnd, avoid=sets + [items])
+        sets.append(S(title, items))
+    return sets, rnd
