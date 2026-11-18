@@ -119,7 +119,7 @@ function topic_defs($country = null) {
             'in' => '/integer|negative|absolute|rational-number/', 'out' => '/irrational|absolute-value-equations/',
             'blurb' => 'Negative numbers on the number line, comparing integers, absolute value, and adding, subtracting, multiplying and dividing integers.'),
         'algebra' => array('name' => 'Algebra, Equations and Patterns',
-            'in' => '/pattern|algebra|expression|equation|inequalit|slope|function|equal-sign|equality|equal-and-not|number-sentences|relation|polynomial|missing-numbers|sequence|substitution|expanding|expansion|subject-of|simultaneous|quadratic|straight-line|linear-graphs|exponential-graphs|domain-and-range|logarithm|complex-numbers|binomial-theorem|input-output|multi-step-problems/',
+            'in' => '/pattern|algebra|independent-and-dependent-quantities|expression|equation|inequalit|slope|function|equal-sign|equality|equal-and-not|number-sentences|relation|polynomial|missing-numbers|sequence|substitution|expanding|expansion|subject-of|simultaneous|quadratic|straight-line|linear-graphs|exponential-graphs|domain-and-range|logarithm|complex-numbers|binomial-theorem|input-output|multi-step-problems/',
             'out' => '/order-of-operations-and|angle-relationships|correlation|equations-of-circles|trigonometric/',
             'blurb' => 'Number and shape patterns, the equal sign, missing numbers, expressions, one- and two-step equations, inequalities and linear relations.'),
         'quadratics' => array('name' => 'Quadratic Equations and Functions',

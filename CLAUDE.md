@@ -1043,7 +1043,14 @@ US-TX / Math / Grade 5（STAAR の学年。小数は 1000 分の 1 まで）— 
 13. multi-step-problems-and-equations ✓ 14. numerical-patterns-and-graphs ✓ 15. order-of-operations ✓ 16. volume-of-rectangular-prisms ✓ 17. perimeter-area-and-volume-problems ✓ 18. classifying-two-dimensional-figures ✓
 19. measurement-conversions ✓ 20. coordinate-plane ✓ 21. data-and-scatterplots ✓ 22. personal-financial-literacy ✓
 
-その後: US-TX Grade 6、US-TX Grade 2 …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Grade 6（STAAR の学年。負の数は「−」）— 生成スクリプトは `gen_ustx_math_g6_*`（US Grade 6・7 の問題関数を build_sets で再利用、ほかは自前）。standard_url は TEA の Chapter 111 Subchapter B（tx_common.make が Grade 6 以上で自動で切り替え）
+1. integers-and-rational-numbers ✓ 2. comparing-and-ordering-rational-numbers ✓ 3. adding-and-subtracting-integers ✓ 4. multiplying-and-dividing-integers ✓ 5. dividing-fractions ✓
+6. multiplying-and-dividing-decimals ✓ 7. ratios-and-rates ✓ 8. ratio-tables-and-graphs ✓ 9. fractions-decimals-and-percents ✓ 10. percent-problems ✓ 11. converting-units ✓
+12. independent-and-dependent-quantities ✓ 13. exponents-and-order-of-operations ✓ 14. expressions-and-equations ✓ 15. equivalent-expressions ✓ 16. triangle-properties ✓
+17. area-of-triangles-parallelograms-and-trapezoids ✓ 18. volume-of-rectangular-prisms ✓ 19. one-step-equations ✓ 20. one-step-inequalities ✓ 21. coordinate-plane ✓
+22. dot-plots-histograms-and-box-plots ✓ 23. mean-median-range-and-iqr ✓ 24. categorical-data-and-relative-frequency ✓ 25. personal-financial-literacy ✓
+
+その後: US-TX Grade 7、US-TX Grade 2 …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
