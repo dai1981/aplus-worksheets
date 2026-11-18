@@ -844,6 +844,20 @@ SG / Maths / Primary 1（とても短い文、ほぼ全問に絵）
 9. time ✓
 10. 2d-shapes ✓
 11. picture-graphs ✓
+
+SG / Maths / Secondary 1–2（MOE 2020 O-Level / G3 Mathematics。旧 Express）— grade `secondary-N`（表示は「Secondary N」、sort 7・8、12〜14歳）。生成スクリプトは `gen_sg_maths_s1_*`・`gen_sg_maths_s2_*`、共通部品は `tools/sg_sec.py`（uk_ks3 と同じ API。SG の名前・$・数の書き方、STD_TEXT（シラバス原文）、TITLES、seo_title は make が自動）。
+多くは UK KS3 の生成スクリプトを SG 式に移したもの（£→$、miles→km、VAT→GST 9%、stem-and-leaf diagram）。負の数は「−」。standard_code は「Secondary 1: Ratio and Proportion」形式（N1〜N7・G1〜G5・S1〜S2 の小項目名）、standard_url は MOE 2020 Express/N(A) シラバス PDF
+
+SG / Maths / Secondary 1
+1. primes-hcf-and-lcm ✓ 2. integers-and-the-number-line ✓ 3. approximation-and-estimation ✓ 4. ratio ✓ 5. percentage ✓ 6. rate-and-speed ✓
+7. algebraic-expressions-and-substitution ✓ 8. simplifying-linear-expressions ✓ 9. number-patterns ✓ 10. linear-equations ✓ 11. linear-graphs-and-gradient ✓
+12. angles-triangles-and-quadrilaterals ✓ 13. parallel-lines-and-polygons ✓ 14. perimeter-and-area ✓ 15. volume-and-surface-area-of-prisms-and-cylinders ✓
+
+SG / Maths / Secondary 2
+1. expansion-and-factorisation ✓ 2. algebraic-fractions ✓ 3. changing-the-subject-of-a-formula ✓ 4. linear-inequalities ✓ 5. simultaneous-equations ✓
+6. quadratic-equations ✓ 7. quadratic-graphs ✓ 8. direct-and-inverse-proportion ✓ 9. map-scales ✓ 10. congruence-and-similarity ✓ 11. pythagoras-theorem ✓
+12. trigonometric-ratios ✓ 13. volume-of-cones-and-spheres ✓ 14. mean-median-and-mode ✓ 15. stem-and-leaf-diagrams ✓ 16. frequency-tables-and-grouped-data ✓ 17. probability ✓
+
 US / Math / Grade 7（Common Core）— 1,000 以上はカンマ付き。負の数は「−」（U+2212）。共通部品は `tools/ws_common.py`
 1. adding-and-subtracting-integers ✓
 2. multiplying-and-dividing-integers ✓
@@ -994,7 +1008,7 @@ TW / Math は國小一年級〜國中九年級まで完了。次は下の「そ�
 tw のトピック別ページは `topic_defs_tw()`（topics.php、中国語の name・blurb、tw の slug 用の正規表現）。tw の単元を足したらどのトピックに入るか確認する
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
-その後: SG Secondary 1–2、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
+その後: SG Secondary 3–4、CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 

@@ -109,6 +109,56 @@ SUB = {"N1": "Numbers and their Operations", "N2": "Ratio and Proportion", "N3":
 STRAND = {"N": "Number and Algebra", "G": "Geometry and Measurement", "S": "Statistics and Probability"}
 
 
+
+# syllabus text (MOE 2020 O-Level Mathematics, Secondary 1 and 2 content) for each unit
+STD_TEXT = {
+    "primes-hcf-and-lcm": "primes and prime factorisation; finding highest common factor (HCF) and lowest common multiple (LCM), squares, cubes, square roots and cube roots by prime factorisation",
+    "integers-and-the-number-line": "negative numbers, integers, rational numbers, real numbers and their four operations; representation and ordering of numbers on the number line; use of <, >, ≤, ≥",
+    "approximation-and-estimation": "approximation and estimation (including rounding off numbers to a required number of decimal places or significant figures, and estimating the results of computation)",
+    "ratio": "ratios involving rational numbers; writing a ratio in its simplest form; problems involving ratio",
+    "percentage": "expressing one quantity as a percentage of another; comparing two quantities by percentage; percentages greater than 100%; increasing/decreasing a quantity by a given percentage; reverse percentages; problems involving percentages",
+    "rate-and-speed": "concepts of average rate, speed, constant speed and average speed; conversion of units (e.g. km/h to m/s); problems involving rate and speed",
+    "algebraic-expressions-and-substitution": "using letters to represent numbers; interpreting notations; evaluation of algebraic expressions and formulae; translation of simple real-world situations into algebraic expressions",
+    "simplifying-linear-expressions": "addition and subtraction of linear expressions; simplification of linear expressions; use brackets and extract common factors",
+    "number-patterns": "recognising and representing patterns/relationships by finding an algebraic expression for the nth term",
+    "linear-equations": "concept of equation; solving linear equations in one variable; solving simple fractional equations that can be reduced to linear equations; formulating a linear equation in one variable to solve problems",
+    "linear-graphs-and-gradient": "Cartesian coordinates in two dimensions; linear functions y = ax + b; graphs of linear functions; the gradient of a linear graph as the ratio of the vertical change to the horizontal change (positive and negative gradients)",
+    "angles-triangles-and-quadrilaterals": "right, acute, obtuse and reflex angles; vertically opposite angles, angles on a straight line, angles at a point; properties of triangles and special quadrilaterals",
+    "parallel-lines-and-polygons": "angles formed by two parallel lines and a transversal: corresponding angles, alternate angles, interior angles; properties of regular polygons; angle sum of interior and exterior angles of any convex polygon",
+    "perimeter-and-area": "area of parallelogram and trapezium; problems involving perimeter and area of composite plane figures",
+    "volume-and-surface-area-of-prisms-and-cylinders": "volume and surface area of prism and cylinder; conversion between cm² and m², and between cm³ and m³; problems involving volume and surface area of composite solids",
+    "expansion-and-factorisation": "expansion of the product of algebraic expressions; use of (a + b)² = a² + 2ab + b², (a − b)² = a² − 2ab + b² and a² − b² = (a + b)(a − b); factorisation of quadratic expressions",
+    "algebraic-fractions": "multiplication and division of simple algebraic fractions; addition and subtraction of algebraic fractions with linear or quadratic denominator",
+    "changing-the-subject-of-a-formula": "changing the subject of a formula; finding the value of an unknown quantity in a given formula",
+    "linear-inequalities": "concept of equation and inequality; solving simple inequalities in the form ax ≤ b, ax ≥ b, ax < b and ax > b, and representing the solution on the number line",
+    "simultaneous-equations": "graphs of linear equations in two variables (ax + by = c); solving simultaneous linear equations in two variables by substitution and elimination methods and the graphical method; formulating a pair of linear equations in two variables to solve problems",
+    "quadratic-equations": "solving quadratic equations in one variable by factorisation",
+    "quadratic-graphs": "quadratic functions y = ax² + bx + c; graphs of quadratic functions and their properties: positive or negative coefficient of x², maximum and minimum points, symmetry",
+    "direct-and-inverse-proportion": "direct and inverse proportion",
+    "map-scales": "map scales (distance and area)",
+    "congruence-and-similarity": "congruent figures; similar figures; properties of similar triangles and polygons: corresponding angles are equal, corresponding sides are proportional; enlargement and reduction of a plane figure; solving simple problems involving congruence and similarity",
+    "pythagoras-theorem": "use of Pythagoras' theorem; determining whether a triangle is right-angled given the lengths of three sides",
+    "trigonometric-ratios": "use of trigonometric ratios (sine, cosine and tangent) of acute angles to calculate unknown sides and angles in right-angled triangles",
+    "volume-of-cones-and-spheres": "volume and surface area of pyramid, cone and sphere",
+    "mean-median-and-mode": "mean, mode and median as measures of central tendency for a set of data; purposes and use of mean, mode and median",
+    "stem-and-leaf-diagrams": "analysis and interpretation of dot diagrams, histograms and stem-and-leaf diagrams",
+    "frequency-tables-and-grouped-data": "calculation of the mean for grouped data; analysis and interpretation of tables, bar graphs, pie charts and histograms",
+    "probability": "probability as a measure of chance; probability of single events (including listing all the possible outcomes in a simple chance situation to calculate the probability)",
+}
+# Singapore titles where the ported one used other names
+TITLES = {
+    "expansion-and-factorisation": ("Expansion and Factorisation of Quadratic Expressions", "Expansion and factorisation"),
+    "linear-inequalities": ("Linear Inequalities: Solving and the Number Line", "Linear inequalities"),
+    "trigonometric-ratios": ("Trigonometric Ratios: Sine, Cosine and Tangent", "Trigonometric ratios"),
+    "mean-median-and-mode": ("Mean, Median and Mode", "Mean, median and mode"),
+    "frequency-tables-and-grouped-data": ("Frequency Tables, Grouped Data and Pie Charts", "Frequency tables and grouped data"),
+    "congruence-and-similarity": ("Congruence and Similarity: Similar Triangles and Scale Factors", "Congruence and similarity"),
+    "volume-of-cones-and-spheres": ("Volume of Cylinders, Cones and Spheres", "Volume of cones and spheres"),
+    "quadratic-graphs": ("Graphs of Quadratic Functions", "Quadratic graphs"),
+    "simultaneous-equations": ("Simultaneous Linear Equations", "Simultaneous equations"),
+    "changing-the-subject-of-a-formula": ("Changing the Subject of a Formula", "Changing the subject of a formula"),
+}
+
 SG_WORDS = [("Year 7", "Secondary 1"), ("Year 8", "Secondary 2"), ("Year 9", "Secondary 2"), ("KS3 ", ""), ("Key Stage 3", "secondary school"),
             ("the National Curriculum", "the MOE syllabus"), ("National Curriculum", "MOE syllabus"), ("GCSE", "O-Level"), ("pupils", "students")]
 
@@ -121,6 +171,9 @@ def sgify(s):
 
 def make(level, slug, sort, code, title, seo_title, short_title, std_text, meta, key_big, key_sub, body, faq, sets, rnd):
     assert code in SUB, code
+    std_text = STD_TEXT[slug]
+    if slug in TITLES:
+        title, short_title = TITLES[slug]
     for s in sets:
         assert len(s["items"]) == 20, s["title"]
     assert len(sets) == 5
