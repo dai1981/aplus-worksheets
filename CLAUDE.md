@@ -643,6 +643,10 @@ CA-BC / Math / Grade 7（FSA の学年）
 15. probability-of-two-independent-events ✓
 16. financial-percentages ✓
 
+CA-BC / Math / Kindergarten（5〜6歳）— grade `kindergarten`（name「Kindergarten」、sort 0）。10 まで。とても短い文、ほぼ全問に絵。生成スクリプトは `gen_cabc_math_k_*`、共通部品は `tools/bck_common.py`（k_pics・k_common の上にカナダ英語・BC の名前・mcq（10 を超える誤答を落とす）・collect・letters・finish・make）。AU Foundation と BC Grade 1 の問題関数・絵を再利用。standard_code は「Kindergarten: Number」形式
+1. numbers-to-10 ✓ 2. ways-to-make-5 ✓ 3. comparing-quantities-to-10 ✓ 4. decomposing-numbers-to-10 ✓ 5. change-in-quantity-to-10 ✓ 6. repeating-patterns ✓
+7. equal-and-not-equal ✓ 8. comparing-length-mass-and-capacity ✓ 9. 2d-shapes-and-3d-objects ✓ 10. concrete-graphs ✓ 11. likelihood ✓ 12. canadian-coins ✓
+
 CA-BC / Math / Grade 1（文はとても短く、絵を多く）
 1. numbers-to-20 ✓
 2. ways-to-make-10 ✓
@@ -1018,7 +1022,7 @@ TW / Math は國小一年級〜國中九年級まで完了。次は下の「そ�
 tw のトピック別ページは `topic_defs_tw()`（topics.php、中国語の name・blurb、tw の slug 用の正規表現）。tw の単元を足したらどのトピックに入るか確認する
 グラフ・物差しなど印刷で大きく出したい図は `<svg data-pf='lg' ...>` にする
 
-その後: CA-BC Kindergarten、US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
+その後: US Texas (TEKS) …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
