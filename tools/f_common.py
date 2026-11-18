@@ -170,3 +170,19 @@ def choice_row_svg(cands):
             x += sp
         x += 20
     return svg_wrap(int(x + M), 48 + 2 * M, "".join(s), "answers A to D")
+
+
+def glasses_svg(items):
+    """Containers in a row with A-D under them. items = [(w, h, level 0..1)] in px; water is drawn blue."""
+    gap = 26
+    base = M + max(h for _, h, _ in items)
+    x = M
+    s = ["<line x1='2' y1='%d' x2='%d' y2='%d' stroke='%s' stroke-width='2'/>" % (base, 2 * M + sum(w for w, _, _ in items) + gap * (len(items) - 1) - 2, base, INK)]
+    for i, (w, h, lev) in enumerate(items):
+        wh = h * lev
+        if wh > 0:
+            s.append("<rect x='%d' y='%.1f' width='%d' height='%.1f' fill='#7fb8e6'/>" % (x + 2, base - wh, w - 4, wh))
+        s.append("<path d='M%d %d L%d %d L%d %d L%d %d' fill='none' stroke='%s' stroke-width='2.5'/>" % (x, base - h, x, base, x + w, base, x + w, base - h, INK))
+        s.append(text(x + w / 2, base + 22, "ABCD"[i], 18, col=GREEN))
+        x += w + gap
+    return svg_wrap(int(x - gap + M), int(base + 30), "".join(s), "containers A to %s" % "ABCD"[len(items) - 1])
