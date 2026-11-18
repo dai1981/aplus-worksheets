@@ -1,0 +1,1165 @@
+{
+ "slug": "sequences-and-series",
+ "title": "Arithmetic and Geometric Series",
+ "seo_title": "Arithmetic and Geometric Series Worksheet: Sigma Notation, Infinite Series (Algebra 2) | 100 Questions",
+ "short_title": "Sequences and Series",
+ "domain": "Sequences and Series",
+ "standard_code": "A-SSE.B.4",
+ "standard_url": "https://www.thecorestandards.org/Math/Content/HSA/SSE/B/4/",
+ "standard_text": "Derive the formula for the sum of a finite geometric series (when the common ratio is not 1), and use the formula to solve problems. For example, calculate mortgage payments.",
+ "meta_desc": "Free Algebra 2 worksheet on series: sigma notation, arithmetic series, finite and infinite geometric series and word problems like salaries and bouncing balls. 100 questions.",
+ "key_big": "Arithmetic: S = n(a₁ + aₙ)/2. Geometric: S = a₁(1 − rⁿ)/(1 − r).",
+ "key_sub": "An infinite geometric series has a sum a₁/(1 − r) only when |r| < 1.",
+ "body_html": "<h2>How it works</h2><p>A <b>series</b> is the sum of the terms of a sequence. Summation (sigma) notation lists the terms to add: write each term for <i>k</i> = the start value up to the end value.</p><ul><li><b>Arithmetic series</b>: <i>S</i><sub><i>n</i></sub> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2, where <i>a</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub> + (<i>n</i> − 1)<i>d</i>.</li><li><b>Geometric series</b>: <i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>).</li><li><b>Infinite geometric series</b>: if |<i>r</i>| &lt; 1, the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>). If |<i>r</i>| ≥ 1, there is no sum.</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>Find 3 + 7 + 11 + ... for 20 terms.</p><p class='sn-ex-s'><i>a</i><sub>20</sub> = 3 + 19(4) = 79</p><p class='sn-ex-s'><i>S</i> = 20(3 + 79)/2</p><p class='sn-ex-a'>Answer: 820</p></div><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>Find 12 + 6 + 3 + ...</p><p class='sn-ex-s'><i>r</i> = 1/2</p><p class='sn-ex-s'>12 ÷ (1 − 1/2)</p><p class='sn-ex-a'>Answer: 24</p></div><h2>Common mistakes</h2><ul><li>Counting terms wrong: <i>k</i> = 3 to 8 has 6 terms, not 5.</li><li>Using the last term instead of the number of terms for <i>n</i>.</li><li>Giving the <i>n</i>th term when the question asks for the sum.</li><li>Finding an infinite sum when |<i>r</i>| ≥ 1. It does not exist.</li></ul>",
+ "faq": [
+  {
+   "q": "What is the formula for an arithmetic series?",
+   "a": "S_n = n(a_1 + a_n)/2. Average the first and last terms and multiply by the number of terms."
+  },
+  {
+   "q": "What is the formula for a finite geometric series?",
+   "a": "S_n = a_1(1 − r^n)/(1 − r), where r is the common ratio and n is the number of terms."
+  },
+  {
+   "q": "When does an infinite geometric series have a sum?",
+   "a": "Only when |r| < 1. Then the sum is a_1/(1 − r)."
+  },
+  {
+   "q": "What does sigma notation mean?",
+   "a": "Σ means add. The numbers below and above the sigma give the first and last values of the index k."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Summation notation",
+   "items": [
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=1</sub><sup>6</sup> (<i>k</i>² − 2)</b>.",
+     "c": [
+      "45",
+      "79",
+      "113",
+      "34"
+     ],
+     "a": 1,
+     "e": "List the terms for <i>k</i> = 1 to 6: −1, 2, 7, 14, 23, 34. Add them: <b>79</b>. There are 6 terms, not 5."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=2</sub><sup>5</sup> 3 · 2<sup><i>k</i></sup></b>.",
+     "c": [
+      "84",
+      "180",
+      "276",
+      "96"
+     ],
+     "a": 1,
+     "e": "List the terms for <i>k</i> = 2 to 5: 12, 24, 48, 96. Add them: <b>180</b>. There are 4 terms, not 3."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=3</sub><sup>8</sup> 2<sup><i>k</i></sup></b>.",
+     "c": [
+      "504",
+      "248",
+      "760",
+      "256"
+     ],
+     "a": 0,
+     "e": "List the terms for <i>k</i> = 3 to 8: 8, 16, 32, 64, 128, 256. Add them: <b>504</b>. There are 6 terms, not 5."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=1</sub><sup>6</sup> (4<i>k</i> − 5)</b>.",
+     "c": [
+      "35",
+      "19",
+      "73",
+      "54"
+     ],
+     "a": 3,
+     "e": "List the terms for <i>k</i> = 1 to 6: −1, 3, 7, 11, 15, 19. Add them: <b>54</b>. There are 6 terms, not 5."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=1</sub><sup>4</sup> (<i>k</i>² − 2)</b>.",
+     "c": [
+      "8",
+      "14",
+      "22",
+      "36"
+     ],
+     "a": 2,
+     "e": "List the terms for <i>k</i> = 1 to 4: −1, 2, 7, 14. Add them: <b>22</b>. There are 4 terms, not 3."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=1</sub><sup>4</sup> (<i>k</i>² + 1)</b>.",
+     "c": [
+      "51",
+      "38",
+      "34",
+      "17"
+     ],
+     "a": 2,
+     "e": "List the terms for <i>k</i> = 1 to 4: 2, 5, 10, 17. Add them: <b>34</b>. There are 4 terms, not 3."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=3</sub><sup>7</sup> (<i>k</i>² − 1)</b>.",
+     "c": [
+      "130",
+      "82",
+      "48",
+      "178"
+     ],
+     "a": 0,
+     "e": "List the terms for <i>k</i> = 3 to 7: 8, 15, 24, 35, 48. Add them: <b>130</b>. There are 5 terms, not 4."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=1</sub><sup>4</sup> 3 · 2<sup><i>k</i></sup></b>.",
+     "c": [
+      "48",
+      "138",
+      "90",
+      "42"
+     ],
+     "a": 2,
+     "e": "List the terms for <i>k</i> = 1 to 4: 6, 12, 24, 48. Add them: <b>90</b>. There are 4 terms, not 3."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=1</sub><sup>5</sup> (5<i>k</i> − 1)</b>.",
+     "c": [
+      "70",
+      "46",
+      "24",
+      "94"
+     ],
+     "a": 0,
+     "e": "List the terms for <i>k</i> = 1 to 5: 4, 9, 14, 19, 24. Add them: <b>70</b>. There are 5 terms, not 4."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=1</sub><sup>5</sup> (<i>k</i>² + 3)</b>.",
+     "c": [
+      "42",
+      "98",
+      "70",
+      "28"
+     ],
+     "a": 2,
+     "e": "List the terms for <i>k</i> = 1 to 5: 4, 7, 12, 19, 28. Add them: <b>70</b>. There are 5 terms, not 4."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=3</sub><sup>6</sup> (3<i>k</i> − 1)</b>.",
+     "c": [
+      "67",
+      "33",
+      "17",
+      "50"
+     ],
+     "a": 3,
+     "e": "List the terms for <i>k</i> = 3 to 6: 8, 11, 14, 17. Add them: <b>50</b>. There are 4 terms, not 3."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=2</sub><sup>6</sup> (<i>k</i>² − 1)</b>.",
+     "c": [
+      "85",
+      "50",
+      "120",
+      "35"
+     ],
+     "a": 0,
+     "e": "List the terms for <i>k</i> = 2 to 6: 3, 8, 15, 24, 35. Add them: <b>85</b>. There are 5 terms, not 4."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=1</sub><sup>4</sup> (−2<i>k</i> − 4)</b>.",
+     "c": [
+      "−24",
+      "−12",
+      "−48",
+      "−36"
+     ],
+     "a": 3,
+     "e": "List the terms for <i>k</i> = 1 to 4: −6, −8, −10, −12. Add them: <b>−36</b>. There are 4 terms, not 3."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=3</sub><sup>8</sup> (−2<i>k</i> + 3)</b>.",
+     "c": [
+      "−61",
+      "−48",
+      "−13",
+      "−35"
+     ],
+     "a": 1,
+     "e": "List the terms for <i>k</i> = 3 to 8: −3, −5, −7, −9, −11, −13. Add them: <b>−48</b>. There are 6 terms, not 5."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=3</sub><sup>8</sup> (<i>k</i>² − 2)</b>.",
+     "c": [
+      "125",
+      "249",
+      "62",
+      "187"
+     ],
+     "a": 3,
+     "e": "List the terms for <i>k</i> = 3 to 8: 7, 14, 23, 34, 47, 62. Add them: <b>187</b>. There are 6 terms, not 5."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=3</sub><sup>6</sup> 2 · 2<sup><i>k</i></sup></b>.",
+     "c": [
+      "368",
+      "240",
+      "112",
+      "128"
+     ],
+     "a": 1,
+     "e": "List the terms for <i>k</i> = 3 to 6: 16, 32, 64, 128. Add them: <b>240</b>. There are 4 terms, not 3."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=2</sub><sup>6</sup> (−2<i>k</i> + 4)</b>.",
+     "c": [
+      "−12",
+      "−28",
+      "−8",
+      "−20"
+     ],
+     "a": 3,
+     "e": "List the terms for <i>k</i> = 2 to 6: 0, −2, −4, −6, −8. Add them: <b>−20</b>. There are 5 terms, not 4."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=3</sub><sup>6</sup> (5<i>k</i> − 3)</b>.",
+     "c": [
+      "105",
+      "51",
+      "78",
+      "27"
+     ],
+     "a": 2,
+     "e": "List the terms for <i>k</i> = 3 to 6: 12, 17, 22, 27. Add them: <b>78</b>. There are 4 terms, not 3."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=1</sub><sup>5</sup> (3<i>k</i> + 2)</b>.",
+     "c": [
+      "55",
+      "17",
+      "72",
+      "38"
+     ],
+     "a": 0,
+     "e": "List the terms for <i>k</i> = 1 to 5: 5, 8, 11, 14, 17. Add them: <b>55</b>. There are 5 terms, not 4."
+    },
+    {
+     "q": "Evaluate <b>Σ<sub><i>k</i>=1</sub><sup>4</sup> (3<i>k</i> + 0)</b>.",
+     "c": [
+      "18",
+      "30",
+      "42",
+      "12"
+     ],
+     "a": 1,
+     "e": "List the terms for <i>k</i> = 1 to 4: 3, 6, 9, 12. Add them: <b>30</b>. There are 4 terms, not 3."
+    }
+   ]
+  },
+  {
+   "title": "Arithmetic series",
+   "items": [
+    {
+     "q": "Find the sum of the first 12 terms of the arithmetic series 11, 13, 15, ...",
+     "c": [
+      "242",
+      "33",
+      "264",
+      "276"
+     ],
+     "a": 2,
+     "e": "Last term: <i>a</i><sub>12</sub> = 11 + (12 − 1)(2) = 33. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 12(11 + 33)/2 = <b>264</b>."
+    },
+    {
+     "q": "Find the sum of the first 10 terms of the arithmetic sequence with <i>a</i><sub>1</sub> = 18 and <i>d</i> = 8.",
+     "c": [
+      "90",
+      "540",
+      "580",
+      "486"
+     ],
+     "a": 1,
+     "e": "Last term: <i>a</i><sub>10</sub> = 18 + (10 − 1)(8) = 90. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 10(18 + 90)/2 = <b>540</b>."
+    },
+    {
+     "q": "Find the sum of the first 13 terms of the arithmetic series 11, 16, 21, ...",
+     "c": [
+      "533",
+      "71",
+      "492",
+      "538"
+     ],
+     "a": 0,
+     "e": "Last term: <i>a</i><sub>13</sub> = 11 + (13 − 1)(5) = 71. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 13(11 + 71)/2 = <b>533</b>."
+    },
+    {
+     "q": "Find the sum of the first 11 terms of the arithmetic sequence with <i>a</i><sub>1</sub> = 18 and <i>d</i> = −6.",
+     "c": [
+      "−42",
+      "−132",
+      "−165",
+      "−120"
+     ],
+     "a": 1,
+     "e": "Last term: <i>a</i><sub>11</sub> = 18 + (11 − 1)(−6) = −42. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 11(18 + (−42))/2 = <b>−132</b>."
+    },
+    {
+     "q": "Find the sum of the first 16 terms of the arithmetic series −4, 3, 10, ...",
+     "c": [
+      "776",
+      "832",
+      "101",
+      "675"
+     ],
+     "a": 0,
+     "e": "Last term: <i>a</i><sub>16</sub> = −4 + (16 − 1)(7) = 101. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 16(−4 + 101)/2 = <b>776</b>."
+    },
+    {
+     "q": "Find the sum of the first 22 terms of the arithmetic sequence with <i>a</i><sub>1</sub> = 4 and <i>d</i> = −6.",
+     "c": [
+      "−1,298",
+      "−122",
+      "−1,364",
+      "−1,239"
+     ],
+     "a": 0,
+     "e": "Last term: <i>a</i><sub>22</sub> = 4 + (22 − 1)(−6) = −122. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 22(4 + (−122))/2 = <b>−1,298</b>."
+    },
+    {
+     "q": "Find the sum of the first 37 terms of the arithmetic series 2, 4, 6, ...",
+     "c": [
+      "1,368",
+      "1,406",
+      "1,443",
+      "74"
+     ],
+     "a": 1,
+     "e": "Last term: <i>a</i><sub>37</sub> = 2 + (37 − 1)(2) = 74. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 37(2 + 74)/2 = <b>1,406</b>."
+    },
+    {
+     "q": "Find the sum of the first 17 terms of the arithmetic sequence with <i>a</i><sub>1</sub> = 12 and <i>d</i> = −2.",
+     "c": [
+      "−64",
+      "−85",
+      "−20",
+      "−68"
+     ],
+     "a": 3,
+     "e": "Last term: <i>a</i><sub>17</sub> = 12 + (17 − 1)(−2) = −20. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 17(12 + (−20))/2 = <b>−68</b>."
+    },
+    {
+     "q": "Find the sum of the first 35 terms of the arithmetic sequence with <i>a</i><sub>1</sub> = −1 and <i>d</i> = −2.",
+     "c": [
+      "−1,260",
+      "−69",
+      "−1,190",
+      "−1,225"
+     ],
+     "a": 3,
+     "e": "Last term: <i>a</i><sub>35</sub> = −1 + (35 − 1)(−2) = −69. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 35(−1 + (−69))/2 = <b>−1,225</b>."
+    },
+    {
+     "q": "Find the sum of the first 8 terms of the arithmetic series 15, 20, 25, ...",
+     "c": [
+      "50",
+      "280",
+      "210",
+      "260"
+     ],
+     "a": 3,
+     "e": "Last term: <i>a</i><sub>8</sub> = 15 + (8 − 1)(5) = 50. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 8(15 + 50)/2 = <b>260</b>."
+    },
+    {
+     "q": "Find the sum of the first 12 terms of the arithmetic series 17, 12, 7, ...",
+     "c": [
+      "−38",
+      "−126",
+      "−156",
+      "−88"
+     ],
+     "a": 1,
+     "e": "Last term: <i>a</i><sub>12</sub> = 17 + (12 − 1)(−5) = −38. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 12(17 + (−38))/2 = <b>−126</b>."
+    },
+    {
+     "q": "Find the sum of the first 13 terms of the arithmetic series −8, −3, 2, ...",
+     "c": [
+      "264",
+      "291",
+      "286",
+      "52"
+     ],
+     "a": 2,
+     "e": "Last term: <i>a</i><sub>13</sub> = −8 + (13 − 1)(5) = 52. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 13(−8 + 52)/2 = <b>286</b>."
+    },
+    {
+     "q": "Find the sum of the first 24 terms of the arithmetic sequence with <i>a</i><sub>1</sub> = 8 and <i>d</i> = −6.",
+     "c": [
+      "−1,536",
+      "−1,403",
+      "−130",
+      "−1,464"
+     ],
+     "a": 3,
+     "e": "Last term: <i>a</i><sub>24</sub> = 8 + (24 − 1)(−6) = −130. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 24(8 + (−130))/2 = <b>−1,464</b>."
+    },
+    {
+     "q": "Find the sum of the first 25 terms of the arithmetic sequence with <i>a</i><sub>1</sub> = −6 and <i>d</i> = 7.",
+     "c": [
+      "1,950",
+      "1,872",
+      "1,957",
+      "162"
+     ],
+     "a": 0,
+     "e": "Last term: <i>a</i><sub>25</sub> = −6 + (25 − 1)(7) = 162. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 25(−6 + 162)/2 = <b>1,950</b>."
+    },
+    {
+     "q": "Find the sum of the first 19 terms of the arithmetic sequence with <i>a</i><sub>1</sub> = 0 and <i>d</i> = 1.",
+     "c": [
+      "171",
+      "18",
+      "172",
+      "162"
+     ],
+     "a": 0,
+     "e": "Last term: <i>a</i><sub>19</sub> = 0 + (19 − 1)(1) = 18. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 19(0 + 18)/2 = <b>171</b>."
+    },
+    {
+     "q": "Find the sum of the first 20 terms of the arithmetic series −3, 1, 5, ...",
+     "c": [
+      "740",
+      "665",
+      "73",
+      "700"
+     ],
+     "a": 3,
+     "e": "Last term: <i>a</i><sub>20</sub> = −3 + (20 − 1)(4) = 73. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 20(−3 + 73)/2 = <b>700</b>."
+    },
+    {
+     "q": "Find the sum of the first 35 terms of the arithmetic sequence with <i>a</i><sub>1</sub> = −6 and <i>d</i> = 4.",
+     "c": [
+      "2,240",
+      "2,170",
+      "2,108",
+      "130"
+     ],
+     "a": 1,
+     "e": "Last term: <i>a</i><sub>35</sub> = −6 + (35 − 1)(4) = 130. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 35(−6 + 130)/2 = <b>2,170</b>."
+    },
+    {
+     "q": "Find the sum of the first 40 terms of the arithmetic series −3, −7, −11, ...",
+     "c": [
+      "−3,159",
+      "−159",
+      "−3,240",
+      "−3,320"
+     ],
+     "a": 2,
+     "e": "Last term: <i>a</i><sub>40</sub> = −3 + (40 − 1)(−4) = −159. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 40(−3 + (−159))/2 = <b>−3,240</b>."
+    },
+    {
+     "q": "Find the sum of the first 27 terms of the arithmetic series 19, 25, 31, ...",
+     "c": [
+      "175",
+      "2,522",
+      "2,619",
+      "2,700"
+     ],
+     "a": 2,
+     "e": "Last term: <i>a</i><sub>27</sub> = 19 + (27 − 1)(6) = 175. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 27(19 + 175)/2 = <b>2,619</b>."
+    },
+    {
+     "q": "Find the sum of the first 12 terms of the arithmetic sequence with <i>a</i><sub>1</sub> = −2 and <i>d</i> = 3.",
+     "c": [
+      "31",
+      "192",
+      "174",
+      "143"
+     ],
+     "a": 2,
+     "e": "Last term: <i>a</i><sub>12</sub> = −2 + (12 − 1)(3) = 31. Sum: <i>S</i> = <i>n</i>(<i>a</i><sub>1</sub> + <i>a</i><sub><i>n</i></sub>)/2 = 12(−2 + 31)/2 = <b>174</b>."
+    }
+   ]
+  },
+  {
+   "title": "Finite geometric series",
+   "items": [
+    {
+     "q": "Find the sum of the first 5 terms of the geometric series 10 + 20 + 40 + ...",
+     "c": [
+      "630",
+      "150",
+      "160",
+      "310"
+     ],
+     "a": 3,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 10, <i>r</i> = 2 and <i>n</i> = 5: <b>310</b>."
+    },
+    {
+     "q": "Find the sum of the first 6 terms of the geometric series 3 + <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> + ...",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>381</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>189</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>93</span><span class='fd'>16</span></span>"
+     ],
+     "a": 2,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 3, <i>r</i> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> and <i>n</i> = 6: <b><span class='fr'><span class='fn'>189</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "Find the sum of the first 5 terms of the geometric series 4 + 16 + 64 + ...",
+     "c": [
+      "340",
+      "1,364",
+      "5,460",
+      "1,024"
+     ],
+     "a": 1,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 4, <i>r</i> = 4 and <i>n</i> = 5: <b>1,364</b>."
+    },
+    {
+     "q": "Find the sum of the first 8 terms of the geometric series 10 + −20 + 40 + ...",
+     "c": [
+      "−850",
+      "−1,280",
+      "430",
+      "1,710"
+     ],
+     "a": 0,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 10, <i>r</i> = −2 and <i>n</i> = 8: <b>−850</b>."
+    },
+    {
+     "q": "Find the sum of the first 7 terms of the geometric series 5 + 10 + 20 + ...",
+     "c": [
+      "1,275",
+      "315",
+      "635",
+      "320"
+     ],
+     "a": 2,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 5, <i>r</i> = 2 and <i>n</i> = 7: <b>635</b>."
+    },
+    {
+     "q": "Find the sum of the first 4 terms of the geometric series 3 + 9 + 27 + ...",
+     "c": [
+      "39",
+      "81",
+      "120",
+      "363"
+     ],
+     "a": 2,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 3, <i>r</i> = 3 and <i>n</i> = 4: <b>120</b>."
+    },
+    {
+     "q": "Find the sum of the first 6 terms of the geometric series 6 + 18 + 54 + ...",
+     "c": [
+      "2,184",
+      "1,458",
+      "726",
+      "6,558"
+     ],
+     "a": 0,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 6, <i>r</i> = 3 and <i>n</i> = 6: <b>2,184</b>."
+    },
+    {
+     "q": "Find the sum of the first 6 terms of the geometric series 2 + 1 + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + ...",
+     "c": [
+      "<span class='fr'><span class='fn'>127</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>63</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>"
+     ],
+     "a": 2,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 2, <i>r</i> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> and <i>n</i> = 6: <b><span class='fr'><span class='fn'>63</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Find the sum of the first 8 terms of the geometric series 5 + <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span> + ...",
+     "c": [
+      "<span class='fr'><span class='fn'>2555</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>1275</span><span class='fd'>128</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>128</span></span>",
+      "<span class='fr'><span class='fn'>635</span><span class='fd'>64</span></span>"
+     ],
+     "a": 1,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 5, <i>r</i> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> and <i>n</i> = 8: <b><span class='fr'><span class='fn'>1275</span><span class='fd'>128</span></span></b>."
+    },
+    {
+     "q": "Find the sum of the first 5 terms of the geometric series 6 + −18 + 54 + ...",
+     "c": [
+      "486",
+      "−120",
+      "−1,092",
+      "366"
+     ],
+     "a": 3,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 6, <i>r</i> = −3 and <i>n</i> = 5: <b>366</b>."
+    },
+    {
+     "q": "Find the sum of the first 6 terms of the geometric series 3 + 12 + 48 + ...",
+     "c": [
+      "16,383",
+      "3,072",
+      "1,023",
+      "4,095"
+     ],
+     "a": 3,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 3, <i>r</i> = 4 and <i>n</i> = 6: <b>4,095</b>."
+    },
+    {
+     "q": "Find the sum of the first 6 terms of the geometric series 1 + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + ...",
+     "c": [
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>127</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>63</span><span class='fd'>32</span></span>"
+     ],
+     "a": 3,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 1, <i>r</i> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> and <i>n</i> = 6: <b><span class='fr'><span class='fn'>63</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "Find the sum of the first 4 terms of the geometric series 4 + 16 + 64 + ...",
+     "c": [
+      "340",
+      "256",
+      "84",
+      "1,364"
+     ],
+     "a": 0,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 4, <i>r</i> = 4 and <i>n</i> = 4: <b>340</b>."
+    },
+    {
+     "q": "Find the sum of the first 6 terms of the geometric series 2 + 8 + 32 + ...",
+     "c": [
+      "10,922",
+      "2,730",
+      "682",
+      "2,048"
+     ],
+     "a": 1,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 2, <i>r</i> = 4 and <i>n</i> = 6: <b>2,730</b>."
+    },
+    {
+     "q": "Find the sum of the first 4 terms of the geometric series 2 + −6 + 18 + ...",
+     "c": [
+      "−40",
+      "−54",
+      "122",
+      "14"
+     ],
+     "a": 0,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 2, <i>r</i> = −3 and <i>n</i> = 4: <b>−40</b>."
+    },
+    {
+     "q": "Find the sum of the first 5 terms of the geometric series 5 + 20 + 80 + ...",
+     "c": [
+      "1,705",
+      "425",
+      "6,825",
+      "1,280"
+     ],
+     "a": 0,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 5, <i>r</i> = 4 and <i>n</i> = 5: <b>1,705</b>."
+    },
+    {
+     "q": "Find the sum of the first 6 terms of the geometric series 1 + 3 + 9 + ...",
+     "c": [
+      "1,093",
+      "121",
+      "243",
+      "364"
+     ],
+     "a": 3,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 1, <i>r</i> = 3 and <i>n</i> = 6: <b>364</b>."
+    },
+    {
+     "q": "Find the sum of the first 5 terms of the geometric series 4 + 8 + 16 + ...",
+     "c": [
+      "60",
+      "124",
+      "64",
+      "252"
+     ],
+     "a": 1,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 4, <i>r</i> = 2 and <i>n</i> = 5: <b>124</b>."
+    },
+    {
+     "q": "Find the sum of the first 5 terms of the geometric series 2 + 6 + 18 + ...",
+     "c": [
+      "728",
+      "80",
+      "242",
+      "162"
+     ],
+     "a": 2,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 2, <i>r</i> = 3 and <i>n</i> = 5: <b>242</b>."
+    },
+    {
+     "q": "Find the sum of the first 6 terms of the geometric series 1 + 4 + 16 + ...",
+     "c": [
+      "1,024",
+      "1,365",
+      "341",
+      "5,461"
+     ],
+     "a": 1,
+     "e": "<i>S</i><sub><i>n</i></sub> = <i>a</i><sub>1</sub>(1 − <i>r</i><sup><i>n</i></sup>)/(1 − <i>r</i>) with <i>a</i><sub>1</sub> = 1, <i>r</i> = 4 and <i>n</i> = 6: <b>1,365</b>."
+    }
+   ]
+  },
+  {
+   "title": "Infinite geometric series",
+   "items": [
+    {
+     "q": "Find the sum of the infinite geometric series 5 + 10 + 20 + ..., if it exists.",
+     "c": [
+      "100",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "−5",
+      "The sum does not exist"
+     ],
+     "a": 3,
+     "e": "<i>r</i> = 2 and |<i>r</i>| ≥ 1, so the terms do not shrink and the series diverges. <b>The sum does not exist</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 2 + 1 + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + ..., if it exists.",
+     "c": [
+      "4",
+      "1",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "The sum does not exist"
+     ],
+     "a": 0,
+     "e": "|<i>r</i>| = |<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 2 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b>4</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 4 + <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span> + ..., if it exists.",
+     "c": [
+      "5",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "20",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "|<i>r</i>| = |<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 4 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>) = <b>5</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 10 + −15 + <span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span> + ..., if it exists.",
+     "c": [
+      "The sum does not exist",
+      "4",
+      "−150",
+      "−20"
+     ],
+     "a": 0,
+     "e": "<i>r</i> = −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> and |<i>r</i>| ≥ 1, so the terms do not shrink and the series diverges. <b>The sum does not exist</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 12 + 18 + 27 + ..., if it exists.",
+     "c": [
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>5</span></span>",
+      "The sum does not exist",
+      "180",
+      "−24"
+     ],
+     "a": 1,
+     "e": "<i>r</i> = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> and |<i>r</i>| ≥ 1, so the terms do not shrink and the series diverges. <b>The sum does not exist</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 9 + <span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span> + ..., if it exists.",
+     "c": [
+      "<span class='fr'><span class='fn'>36</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>4</span></span>",
+      "12",
+      "36"
+     ],
+     "a": 2,
+     "e": "|<i>r</i>| = |<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 9 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>) = <b>12</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 12 + −8 + <span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span> + ..., if it exists.",
+     "c": [
+      "20",
+      "−18",
+      "36",
+      "<span class='fr'><span class='fn'>36</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "|<i>r</i>| = |−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 12 ÷ (1 − (−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)) = <b><span class='fr'><span class='fn'>36</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 5 + <span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>45</span><span class='fd'>4</span></span> + ..., if it exists.",
+     "c": [
+      "2",
+      "The sum does not exist",
+      "75",
+      "−10"
+     ],
+     "a": 1,
+     "e": "<i>r</i> = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> and |<i>r</i>| ≥ 1, so the terms do not shrink and the series diverges. <b>The sum does not exist</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 4 + −2 + 1 + ..., if it exists.",
+     "c": [
+      "8",
+      "6",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "−8"
+     ],
+     "a": 2,
+     "e": "|<i>r</i>| = |−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 4 ÷ (1 − (−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)) = <b><span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 9 + <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span> + ..., if it exists.",
+     "c": [
+      "6",
+      "18",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "The sum does not exist"
+     ],
+     "a": 1,
+     "e": "|<i>r</i>| = |<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 9 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b>18</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 2 + <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span> + ..., if it exists.",
+     "c": [
+      "6",
+      "3",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "|<i>r</i>| = |<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 2 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>) = <b>3</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 5 + −1 + <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + ..., if it exists.",
+     "c": [
+      "−25",
+      "6",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "|<i>r</i>| = |−<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 5 ÷ (1 − (−<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)) = <b><span class='fr'><span class='fn'>25</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 5 + 1 + <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + ..., if it exists.",
+     "c": [
+      "4",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>6</span></span>",
+      "25",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "|<i>r</i>| = |<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 5 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>) = <b><span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 12 + −4 + <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> + ..., if it exists.",
+     "c": [
+      "9",
+      "16",
+      "−36",
+      "18"
+     ],
+     "a": 0,
+     "e": "|<i>r</i>| = |−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 12 ÷ (1 − (−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)) = <b>9</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 6 + 3 + <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> + ..., if it exists.",
+     "c": [
+      "12",
+      "The sum does not exist",
+      "3",
+      "4"
+     ],
+     "a": 0,
+     "e": "|<i>r</i>| = |<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 6 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b>12</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 20 + 10 + 5 + ..., if it exists.",
+     "c": [
+      "10",
+      "The sum does not exist",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span>",
+      "40"
+     ],
+     "a": 3,
+     "e": "|<i>r</i>| = |<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 20 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b>40</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 5 + <span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>45</span><span class='fd'>16</span></span> + ..., if it exists.",
+     "c": [
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "20"
+     ],
+     "a": 3,
+     "e": "|<i>r</i>| = |<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 5 ÷ (1 − <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>) = <b>20</b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 6 + <span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span> + ..., if it exists.",
+     "c": [
+      "5",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "30"
+     ],
+     "a": 2,
+     "e": "|<i>r</i>| = |<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 6 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>) = <b><span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 10 + <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> + ..., if it exists.",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span>",
+      "40",
+      "8"
+     ],
+     "a": 1,
+     "e": "|<i>r</i>| = |<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>| &lt; 1, so the sum is <i>a</i><sub>1</sub>/(1 − <i>r</i>) = 10 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>) = <b><span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Find the sum of the infinite geometric series 2 + 3 + <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> + ..., if it exists.",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "30",
+      "The sum does not exist",
+      "−4"
+     ],
+     "a": 2,
+     "e": "<i>r</i> = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> and |<i>r</i>| ≥ 1, so the terms do not shrink and the series diverges. <b>The sum does not exist</b>."
+    }
+   ]
+  },
+  {
+   "title": "Word problems",
+   "items": [
+    {
+     "q": "Write the repeating decimal 0.555... as a fraction, using an infinite geometric series.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>99</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "0.555... = <span class='fr'><span class='fn'>5</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>100</span></span> + ... with <i>r</i> = 1/10. Sum = (5/10) ÷ (9/10) = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "A theater has 24 seats in the first row, and each row has 2 more seats than the row in front. There are 30 rows. How many seats are there in all?",
+     "c": [
+      "82",
+      "3,180",
+      "780",
+      "1,590"
+     ],
+     "a": 3,
+     "e": "Last row: 24 + 29(2) = 82. Total: 30(24 + 82)/2 = <b>1,590</b>."
+    },
+    {
+     "q": "Owen saves $10 the first week and $2 more each week after that. How much has he saved after 12 weeks?",
+     "c": [
+      "$504",
+      "$252",
+      "$32",
+      "$144"
+     ],
+     "a": 1,
+     "e": "Arithmetic series: the last week is 10 + 11(2) = $32. Sum: 12(10 + 32)/2 = <b>$252</b>."
+    },
+    {
+     "q": "A theater has 15 seats in the first row, and each row has 4 more seats than the row in front. There are 12 rows. How many seats are there in all?",
+     "c": [
+      "888",
+      "444",
+      "59",
+      "228"
+     ],
+     "a": 1,
+     "e": "Last row: 15 + 11(4) = 59. Total: 12(15 + 59)/2 = <b>444</b>."
+    },
+    {
+     "q": "Write the repeating decimal 0.666... as a fraction, using an infinite geometric series.",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "0.666... = <span class='fr'><span class='fn'>6</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>6</span><span class='fd'>100</span></span> + ... with <i>r</i> = 1/10. Sum = (6/10) ÷ (9/10) = <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Write the repeating decimal 0.777... as a fraction, using an infinite geometric series.",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>99</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "0.777... = <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>100</span></span> + ... with <i>r</i> = 1/10. Sum = (7/10) ÷ (9/10) = <b><span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Write the repeating decimal 0.444... as a fraction, using an infinite geometric series.",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>99</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "0.444... = <span class='fr'><span class='fn'>4</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>100</span></span> + ... with <i>r</i> = 1/10. Sum = (4/10) ÷ (9/10) = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Lucas saves $5 the first week and $5 more each week after that. How much has he saved after 26 weeks?",
+     "c": [
+      "$130",
+      "$1,755",
+      "$3,510",
+      "$260"
+     ],
+     "a": 1,
+     "e": "Arithmetic series: the last week is 5 + 25(5) = $130. Sum: 26(5 + 130)/2 = <b>$1,755</b>."
+    },
+    {
+     "q": "Priya saves $1 the first week and $1 more each week after that. How much has she saved after 12 weeks?",
+     "c": [
+      "$24",
+      "$156",
+      "$12",
+      "$78"
+     ],
+     "a": 3,
+     "e": "Arithmetic series: the last week is 1 + 11(1) = $12. Sum: 12(1 + 12)/2 = <b>$78</b>."
+    },
+    {
+     "q": "Noah saves $5 the first week and $5 more each week after that. How much has he saved after 12 weeks?",
+     "c": [
+      "$780",
+      "$390",
+      "$120",
+      "$60"
+     ],
+     "a": 1,
+     "e": "Arithmetic series: the last week is 5 + 11(5) = $60. Sum: 12(5 + 60)/2 = <b>$390</b>."
+    },
+    {
+     "q": "A ball is dropped from 8 ft. Each bounce reaches <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> of the previous height. What total vertical distance does it travel before it comes to rest?",
+     "c": [
+      "56 ft",
+      "24 ft",
+      "64 ft",
+      "32 ft"
+     ],
+     "a": 0,
+     "e": "Down: 8 ÷ (1 − <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>) = 32. Up: 6 ÷ (1 − <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>) = 24. Total: <b>56 ft</b>."
+    },
+    {
+     "q": "A ball is dropped from 12 ft. Each bounce reaches <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> of the previous height. What total vertical distance does it travel before it comes to rest?",
+     "c": [
+      "36 ft",
+      "24 ft",
+      "48 ft",
+      "12 ft"
+     ],
+     "a": 0,
+     "e": "Down: 12 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = 24. Up: 6 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = 12. Total: <b>36 ft</b>."
+    },
+    {
+     "q": "A theater has 20 seats in the first row, and each row has 2 more seats than the row in front. There are 25 rows. How many seats are there in all?",
+     "c": [
+      "1,100",
+      "550",
+      "2,200",
+      "68"
+     ],
+     "a": 0,
+     "e": "Last row: 20 + 24(2) = 68. Total: 25(20 + 68)/2 = <b>1,100</b>."
+    },
+    {
+     "q": "Lucas's starting salary is $45,000 and rises 5% each year. What are his total earnings over 10 years, to the nearest dollar?",
+     "c": [
+      "$472,500",
+      "$69,810",
+      "$566,005",
+      "$639,305"
+     ],
+     "a": 2,
+     "e": "This is a geometric series with <i>a</i><sub>1</sub> = 45,000, <i>r</i> = 1.05 and <i>n</i> = 10: 45,000(1.05<sup>10</sup> − 1)/0.05 ≈ <b>$566,005</b>."
+    },
+    {
+     "q": "Emma saves $2 the first week and $3 more each week after that. How much has she saved after 20 weeks?",
+     "c": [
+      "$59",
+      "$100",
+      "$610",
+      "$1,220"
+     ],
+     "a": 2,
+     "e": "Arithmetic series: the last week is 2 + 19(3) = $59. Sum: 20(2 + 59)/2 = <b>$610</b>."
+    },
+    {
+     "q": "Write the repeating decimal 0.333... as a fraction, using an infinite geometric series.",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>33</span></span>"
+     ],
+     "a": 2,
+     "e": "0.333... = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>100</span></span> + ... with <i>r</i> = 1/10. Sum = (3/10) ÷ (9/10) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Chloe's starting salary is $52,000 and rises 4% each year. What are her total earnings over 5 years, to the nearest dollar?",
+     "c": [
+      "$281,649",
+      "$270,400",
+      "$60,833",
+      "$344,915"
+     ],
+     "a": 0,
+     "e": "This is a geometric series with <i>a</i><sub>1</sub> = 52,000, <i>r</i> = 1.04 and <i>n</i> = 5: 52,000(1.04<sup>5</sup> − 1)/0.04 ≈ <b>$281,649</b>."
+    },
+    {
+     "q": "A ball is dropped from 10 ft. Each bounce reaches <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> of the previous height. What total vertical distance does it travel before it comes to rest?",
+     "c": [
+      "40 ft",
+      "30 ft",
+      "10 ft",
+      "20 ft"
+     ],
+     "a": 1,
+     "e": "Down: 10 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = 20. Up: 5 ÷ (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = 10. Total: <b>30 ft</b>."
+    },
+    {
+     "q": "Aaliyah saves $5 the first week and $5 more each week after that. How much has she saved after 12 weeks?",
+     "c": [
+      "$120",
+      "$780",
+      "$60",
+      "$390"
+     ],
+     "a": 3,
+     "e": "Arithmetic series: the last week is 5 + 11(5) = $60. Sum: 12(5 + 60)/2 = <b>$390</b>."
+    },
+    {
+     "q": "Emma saves $2 the first week and $3 more each week after that. How much has she saved after 30 weeks?",
+     "c": [
+      "$2,730",
+      "$89",
+      "$1,365",
+      "$150"
+     ],
+     "a": 2,
+     "e": "Arithmetic series: the last week is 2 + 29(3) = $89. Sum: 30(2 + 89)/2 = <b>$1,365</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 12,
+ "updated": "2026-11-18",
+ "country": "us",
+ "subject": "math",
+ "grade": "algebra-2"
+}
