@@ -139,7 +139,11 @@ def pattern_svg(items, blanks=0):
     s = []
     for i, it in enumerate(items):
         cx, cy = M + sp / 2 + i * sp, M + 22
-        if it[0] == "obj":
+        if it[0] == "blank":
+            x = M + i * sp + 4
+            s.append("<rect x='%d' y='%d' width='%d' height='%d' rx='6' fill='%s' stroke='%s' stroke-width='2' stroke-dasharray='5 4'/>" % (x, M + 4, sp - 8, 36, FILL, GREEN))
+            s.append(text(x + (sp - 8) / 2, M + 30, "?", 22, col=RED))
+        elif it[0] == "obj":
             s.append(obj(it[1], cx, cy, 15))
         else:
             s.append(shape(it[1], cx, cy, 15, it[2]))
