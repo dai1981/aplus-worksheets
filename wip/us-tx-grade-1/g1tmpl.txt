@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+"""
+Texas Grade 1 Math: %(title)s (TEKS %(code)s)
+  python3 tools/gen_ustx_math_g1_%(fname)s.py
+%(doc)s
+"""
+import tx_common
+from tx_common import (finish, make, lesson, adopt, People, Kid, mcq, fig, figure, fr, comma, build_sets, example)
+%(imports)s
+tx_common.GRADE = "grade-1"
+
+%(extra)s
+
+def build():
+    sets, R = build_sets([
+%(specs)s
+    ], %(seed)d)
+    finish(sets, R)
+    body = lesson(%(think)r,
+        [%(examples)s],
+        %(mistakes)r)
+    faq = %(faq)r
+    make(%(slug)r, %(sort)d, %(domain)r, %(code)r,
+         %(std)r,
+         %(title)r, %(short)r,
+         %(meta)r,
+         %(kb)r, %(ks)r,
+         body, faq, sets, seo_title=%(seo)r)
+
+
+if __name__ == "__main__":
+    build()
