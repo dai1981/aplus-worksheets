@@ -19,9 +19,9 @@ TIMES = ["Morning", "Lunchtime", "Afternoon", "Night time"]
 def set_sky(rnd):
     K = Kids(rnd)
     its = []
-    desc = {"morning": "The sun is low in the sky and just coming up. It is <b>morning</b>.",
+    desc = {"morning": "The sun is low and coming up (the arrow points up). It is <b>morning</b>.",
             "lunchtime": "The sun is high in the middle of the sky. It is <b>lunchtime</b> (the middle of the day).",
-            "afternoon": "The sun is going down on the other side. It is <b>afternoon</b>.",
+            "afternoon": "The sun is going down (the arrow points down). It is <b>afternoon</b>.",
             "night": "It is dark, with the moon and stars. It is <b>night time</b>."}
     qs = ["What time of day is it?", "Look at the sky. Is it morning, lunchtime, afternoon or night time?", "{n} looks out of the window. What time of day is it?",
           "When could this picture be?", "Which time of day does the picture show?"]

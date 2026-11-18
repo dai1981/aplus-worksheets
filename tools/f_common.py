@@ -100,7 +100,12 @@ def sky_svg(when):
             s.append("<line x1='%.1f' y1='%.1f' x2='%.1f' y2='%.1f' stroke='#f2a900' stroke-width='3' stroke-linecap='round'/>"
                      % (cx + 22 * math.cos(a), cy + 22 * math.sin(a), cx + 30 * math.cos(a), cy + 30 * math.sin(a)))
         s.append("<circle cx='%d' cy='%d' r='16' fill='#ffcc33' stroke='#e09a00' stroke-width='2'/>" % (cx, cy))
-    return svg_wrap(W, H, "".join(s), "the sky at %s" % ("night time" if when == "night" else when))
+        if when == "morning":       # the sun is coming up: arrow going up
+            s.append("<path d='M70 70 L70 40' stroke='#c0392b' stroke-width='3' fill='none'/><path d='M62 48 L70 38 L78 48' stroke='#c0392b' stroke-width='3' fill='none'/>")
+        elif when == "afternoon":   # the sun is going down: arrow going down
+            s.append("<path d='M128 34 L128 64' stroke='#c0392b' stroke-width='3' fill='none'/><path d='M120 56 L128 66 L136 56' stroke='#c0392b' stroke-width='3' fill='none'/>")
+    lab = {"morning": "the sun coming up in the morning", "lunchtime": "the sun high in the sky", "afternoon": "the sun going down in the afternoon", "night": "the moon and stars at night"}[when]
+    return svg_wrap(W, H, "".join(s), lab)
 
 
 def days_svg(days, hide=None):
