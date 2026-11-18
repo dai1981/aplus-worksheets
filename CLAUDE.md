@@ -1057,7 +1057,14 @@ US-TX / Math / Grade 7（STAAR の学年）— 生成スクリプトは `gen_ust
 17. two-step-equations ✓ 18. two-step-inequalities ✓ 19. equations-with-angles-and-triangles ✓ 20. probability-and-predictions ✓ 21. sample-spaces-and-compound-events ✓
 22. random-samples-and-inferences ✓ 23. comparing-data-with-dot-plots-and-box-plots ✓ 24. sales-tax-income-tax-and-budgets ✓ 25. interest-net-worth-and-incentives ✓
 
-その後: US-TX Grade 8、US-TX Grade 2 …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Grade 8（STAAR の学年）— 生成スクリプトは `gen_ustx_math_g8_*`（US Grade 7・8 の問題関数を build_sets で再利用。Grade 7 と同じく R を新しい seed に入れ替える）。お金の教育（8.12）は 4 単元
+1. sets-of-real-numbers ✓ 2. approximating-irrational-numbers ✓ 3. scientific-notation ✓ 4. ordering-real-numbers ✓ 5. dilations ✓ 6. slope ✓
+7. proportional-and-non-proportional-relationships ✓ 8. writing-linear-equations ✓ 9. functions ✓ 10. scatterplots-and-trend-lines ✓ 11. equations-with-variables-on-both-sides ✓
+12. systems-of-equations ✓ 13. angle-relationships-and-parallel-lines ✓ 14. transformations ✓ 15. pythagorean-theorem ✓ 16. distance-on-the-coordinate-plane ✓
+17. volume-of-cylinders-cones-and-spheres ✓ 18. surface-area-of-prisms-and-cylinders ✓ 19. mean-absolute-deviation ✓ 20. random-samples-and-simulations ✓
+21. cost-of-credit-and-loans ✓ 22. saving-and-investing-over-time ✓ 23. payment-methods-and-financial-responsibility ✓ 24. paying-for-college ✓
+
+その後: US-TX Grade 2、US-TX Grade 1・Kindergarten、US-TX Algebra I …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
