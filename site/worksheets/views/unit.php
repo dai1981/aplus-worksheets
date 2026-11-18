@@ -152,6 +152,8 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Australia: Year 3 = age 8-9
 } elseif (preg_match('/^primary-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'sg') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Singapore: Primary 4 = age 9-10
+} elseif (preg_match('/^secondary-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'sg') {
+    $lr['typicalAgeRange'] = ((int)$gm[1] + 11) . '-' . ((int)$gm[1] + 12);   // Singapore: Secondary 1 = age 12-13
 }
 if ($u['standard_code']) {
     $al = array('@type' => 'AlignmentObject', 'alignmentType' => 'teaches',
