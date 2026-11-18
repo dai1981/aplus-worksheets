@@ -164,7 +164,7 @@ function topic_defs($country = null) {
             'in' => '/coordinat|cartesian|position|direction|maps|location|grid-ref|bearing|loci|distance-and-midpoint|equations-of-circles|conic-sections/', 'out' => '/composition/',
             'blurb' => 'Position and direction words, maps and grid references, plotting points and the coordinate plane.'),
         'data-and-graphs' => array('name' => 'Data and Graphs',
-            'in' => '/graph|chart|data|plot|stem-and-leaf|tally|pictogra|mean|median|average|statistic|central-tendency|sorting|sort-and-count|two-way|organize|sampling|distribution|correlation|statistical-studies|standard-deviation/',
+            'in' => '/graph|chart|data|plot|stem-and-leaf|tally|pictogra|mean|median|average|statistic|central-tendency|sorting|sort-and-count|two-way|organize|sampling|random-samples|distribution|correlation|statistical-studies|standard-deviation/',
             'out' => '/straight-line-graphs|linear-graphs|quadratic-graphs|graphing-|graphs-of-sine|exponential-graphs/',
             'blurb' => 'Tally charts, picture graphs and bar graphs, line plots and line graphs, pie charts, the mean, median and mode, and random samples.',
             'blurb_gb' => 'Tally charts, pictograms and bar charts, line graphs and pie charts, and the mean.'),
@@ -175,7 +175,7 @@ function topic_defs($country = null) {
             'in' => '/trigonometr|(^|-)sines?(-|$)|cosine|unit-circle|sum-and-difference-formulas|angles-of-elevation|three-dimensions/', 'out' => '/^$/',
             'blurb' => 'Sine, cosine and tangent in right triangles, the laws of sines and cosines, radians and the unit circle, and graphs of sine and cosine.'),
         'probability' => array('name' => 'Probability',  'name_au' => 'Chance and Probability',
-            'in' => '/probab|chance|likelihood|permutations-and-combinations|expected-value/', 'out' => '/^$/',
+            'in' => '/probab|chance|sample-spaces|likelihood|permutations-and-combinations|expected-value/', 'out' => '/^$/',
             'blurb' => 'Likelihood words, spinners and number cubes, probability as a fraction, experiments and tree diagrams.'),
     );
 }

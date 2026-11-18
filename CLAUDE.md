@@ -1050,7 +1050,14 @@ US-TX / Math / Grade 6（STAAR の学年。負の数は「−」）— 生成ス
 17. area-of-triangles-parallelograms-and-trapezoids ✓ 18. volume-of-rectangular-prisms ✓ 19. one-step-equations ✓ 20. one-step-inequalities ✓ 21. coordinate-plane ✓
 22. dot-plots-histograms-and-box-plots ✓ 23. mean-median-range-and-iqr ✓ 24. categorical-data-and-relative-frequency ✓ 25. personal-financial-literacy ✓
 
-その後: US-TX Grade 7、US-TX Grade 2 …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Grade 7（STAAR の学年）— 生成スクリプトは `gen_ustx_math_g7_*`（US Grade 6〜8 の問題関数を build_sets で再利用。US Grade 7・8 の生成スクリプトはモジュールの R を使うので、新しい seed で R を入れ替える）。他の TX 生成スクリプトを import するときは imports に書く（extra に書くと GRADE が上書きされる）。tx_common.us_text は「an $8」などの冠詞も直す
+1. sets-of-rational-numbers ✓ 2. adding-and-subtracting-rational-numbers ✓ 3. multiplying-and-dividing-rational-numbers ✓ 4. rational-number-word-problems ✓ 5. constant-rate-of-change ✓
+6. unit-rates-with-fractions ✓ 7. constant-of-proportionality ✓ 8. percent-increase-and-decrease ✓ 9. converting-between-measurement-systems ✓ 10. similar-figures ✓ 11. scale-drawings ✓
+12. circumference-and-area-of-circles ✓ 13. area-of-composite-figures ✓ 14. volume-of-prisms-and-pyramids ✓ 15. lateral-and-total-surface-area ✓ 16. linear-relationships ✓
+17. two-step-equations ✓ 18. two-step-inequalities ✓ 19. equations-with-angles-and-triangles ✓ 20. probability-and-predictions ✓ 21. sample-spaces-and-compound-events ✓
+22. random-samples-and-inferences ✓ 23. comparing-data-with-dot-plots-and-box-plots ✓ 24. sales-tax-income-tax-and-budgets ✓ 25. interest-net-worth-and-incentives ✓
+
+その後: US-TX Grade 8、US-TX Grade 2 …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 

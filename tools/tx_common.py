@@ -38,8 +38,17 @@ def _commas_plain(t):
 def add_commas(s):
     """1000 -> 1,000 in text, but not inside SVG pictures or HTML tags."""
     out = []
+    prev = ""
     for part in re.split(r"(<svg.*?</svg>|<[^>]+>)", s, flags=re.S):
-        out.append(part if part.startswith("<") else _commas_plain(part))
+        if part.startswith("<"):
+            out.append(part)
+        elif re.search(r"\d\.$", prev) and out and out[-1].startswith("<"):
+            # digits right after "1.<span ...>" are decimal places (repeating-decimal bars): no commas
+            out.append(part)
+        else:
+            out.append(_commas_plain(part))
+        if not part.startswith("<"):
+            prev = part
     return "".join(out)
 
 
@@ -51,6 +60,8 @@ def us_text(s):
     s = re.sub(r"(?<![\d.,/])\b1 (dimes|pennies|nickels|quarters|tenths|hundredths)\b", lambda m: "1 " + sing[m.group(1)], s)
     s = re.sub(r"(?<![\d.,])\b1 square (centimeter|meter|inch|foot|unit)(e?s)\b", lambda m: "1 square " + m.group(1), s)
     s = re.sub(r"(?<![\d.,])(?<!and )\b1 are\b", "1 is", s)
+    # "an" before amounts said with a vowel sound: an $8 snack, an $11 book, an $18 ticket
+    s = re.sub(r"\b([Aa]) (\$(?:8|11(?![\d,])|18(?![\d,])))", lambda m: m.group(1) + "n " + m.group(2), s)
     return add_commas(s)
 
 
