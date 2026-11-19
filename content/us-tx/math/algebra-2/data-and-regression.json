@@ -1,0 +1,1165 @@
+{
+ "slug": "data-and-regression",
+ "sort": 24,
+ "updated": "2026-11-18",
+ "pdf_url": "",
+ "title": "Choosing Linear, Quadratic and Exponential Models",
+ "seo_title": "Algebra II Data and Regression Models Worksheets (TEKS 2A.8A–2A.8C)",
+ "short_title": "Data and Regression",
+ "domain": "Data",
+ "standard_code": "2A.8A, 2A.8B, 2A.8C",
+ "standard_url": "https://tea.texas.gov/about-tea/laws-and-rules/sboe-rules-tac/sboe-tac-currently-in-effect/ch111c.pdf",
+ "standard_text": "2A.8A analyze data to select the appropriate model from among linear, quadratic, and exponential models; 2A.8B use regression methods available through technology to write a linear function, a quadratic function, and an exponential function from a given set of data; 2A.8C predict and make decisions and critical judgments from a given set of data using linear, quadratic, and exponential models",
+ "meta_desc": "Free Algebra II data worksheets for Texas TEKS 2A.8A to 2A.8C: choose linear, quadratic or exponential models, predict with regression, interpret models and judge fits. 100 questions with answers.",
+ "key_big": "Same differences: linear. Same second differences: quadratic. Same ratios: exponential.",
+ "key_sub": "r² close to 1 means a good fit.",
+ "body_html": "<h2>How to think about it</h2><ul><li><b>Linear</b>: the first differences are the same (a constant amount each step).</li><li><b>Quadratic</b>: the second differences are the same.</li><li><b>Exponential</b>: the ratios are the same (a constant factor or percent each step).</li><li>A calculator's regression gives the equation; <i>r</i><sup>2</sup> close to 1 means a good fit.</li><li>Predictions inside the data range are safer than predictions far outside it.</li></ul><h2>Examples</h2><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'><i>y</i>: 3, 6, 12, 24, 48</p><p class='sn-ex-s'>Ratios: 2, 2, 2, 2</p><p class='sn-ex-a'>Answer: Exponential: <i>y</i> = 3(2)<sup><i>x</i></sup></p></div><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'><i>y</i> = 1,200(1.04)<sup><i>x</i></sup></p><p class='sn-ex-s'>1.04 = 1 + 0.04</p><p class='sn-ex-a'>Answer: 4% growth each year</p></div><h2>Common mistakes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Mistake</th><th>What to do instead</th></tr></thead><tbody><tr><td>Looking only at first differences</td><td>Check second differences and ratios too.</td></tr><tr><td>Reading 1.06 as 106% growth</td><td>1.06 means 6% growth.</td></tr><tr><td>Trusting a prediction far outside the data</td><td>Extrapolation may not hold.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "What does TEKS 2A.8A ask?",
+   "a": "Analyze data to select the appropriate model from among linear, quadratic, and exponential models."
+  },
+  {
+   "q": "What does TEKS 2A.8B ask?",
+   "a": "Use regression methods available through technology to write a linear function, a quadratic function, and an exponential function from a given set of data."
+  },
+  {
+   "q": "What does TEKS 2A.8C ask?",
+   "a": "Predict and make decisions and critical judgments from a given set of data using linear, quadratic, and exponential models."
+  },
+  {
+   "q": "What does r² mean?",
+   "a": "The share of the variation in y that the model explains; closer to 1 is better."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Choose a model from a table",
+   "items": [
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th><i>y</i></th><td>8</td><td>32</td><td>128</td><td>512</td><td>2,048</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Exponential",
+      "None of these",
+      "Linear",
+      "Quadratic"
+     ],
+     "a": 0,
+     "e": "Each <i>y</i> is 4 times the one before (a constant ratio), so the model is <b>exponential</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th><i>y</i></th><td>−6</td><td>3</td><td>12</td><td>21</td><td>30</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Quadratic",
+      "None of these",
+      "Linear",
+      "Exponential"
+     ],
+     "a": 2,
+     "e": "The first differences are all 9, so the model is <b>linear</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th><i>y</i></th><td>−3</td><td>−3</td><td>−5</td><td>−9</td><td>−15</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Linear",
+      "None of these",
+      "Quadratic",
+      "Exponential"
+     ],
+     "a": 2,
+     "e": "The first differences change, but the second differences are all −2, so the model is <b>quadratic</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th><i>y</i></th><td>−5</td><td>1</td><td>9</td><td>19</td><td>31</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Exponential",
+      "None of these",
+      "Linear",
+      "Quadratic"
+     ],
+     "a": 3,
+     "e": "The first differences change, but the second differences are all 2, so the model is <b>quadratic</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th><i>y</i></th><td>15</td><td>15</td><td>17</td><td>21</td><td>27</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "None of these",
+      "Linear",
+      "Quadratic",
+      "Exponential"
+     ],
+     "a": 2,
+     "e": "The first differences change, but the second differences are all 2, so the model is <b>quadratic</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th><i>y</i></th><td>−27</td><td>−36</td><td>−45</td><td>−54</td><td>−63</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "None of these",
+      "Linear",
+      "Exponential",
+      "Quadratic"
+     ],
+     "a": 1,
+     "e": "The first differences are all −9, so the model is <b>linear</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><th><i>y</i></th><td>15</td><td>25</td><td>41</td><td>63</td><td>91</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "None of these",
+      "Linear",
+      "Quadratic",
+      "Exponential"
+     ],
+     "a": 2,
+     "e": "The first differences change, but the second differences are all 6, so the model is <b>quadratic</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th><i>y</i></th><td>243</td><td>729</td><td>2,187</td><td>6,561</td><td>19,683</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Linear",
+      "Quadratic",
+      "None of these",
+      "Exponential"
+     ],
+     "a": 3,
+     "e": "Each <i>y</i> is 3 times the one before (a constant ratio), so the model is <b>exponential</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th><i>y</i></th><td>13</td><td>21</td><td>29</td><td>37</td><td>45</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Exponential",
+      "Linear",
+      "None of these",
+      "Quadratic"
+     ],
+     "a": 1,
+     "e": "The first differences are all 8, so the model is <b>linear</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><th><i>y</i></th><td>22</td><td>42</td><td>68</td><td>100</td><td>138</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Quadratic",
+      "None of these",
+      "Linear",
+      "Exponential"
+     ],
+     "a": 0,
+     "e": "The first differences change, but the second differences are all 6, so the model is <b>quadratic</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><th><i>y</i></th><td>14</td><td>26</td><td>44</td><td>68</td><td>98</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Exponential",
+      "Quadratic",
+      "Linear",
+      "None of these"
+     ],
+     "a": 1,
+     "e": "The first differences change, but the second differences are all 6, so the model is <b>quadratic</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th><i>y</i></th><td>−15</td><td>−13</td><td>−11</td><td>−9</td><td>−7</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Linear",
+      "Exponential",
+      "None of these",
+      "Quadratic"
+     ],
+     "a": 0,
+     "e": "The first differences are all 2, so the model is <b>linear</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th><i>y</i></th><td>−4</td><td>−10</td><td>−16</td><td>−22</td><td>−28</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "None of these",
+      "Exponential",
+      "Quadratic",
+      "Linear"
+     ],
+     "a": 3,
+     "e": "The first differences are all −6, so the model is <b>linear</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th><i>y</i></th><td>10</td><td>14</td><td>22</td><td>34</td><td>50</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Linear",
+      "None of these",
+      "Exponential",
+      "Quadratic"
+     ],
+     "a": 3,
+     "e": "The first differences change, but the second differences are all 4, so the model is <b>quadratic</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th><i>y</i></th><td>384</td><td>1,152</td><td>3,456</td><td>10,368</td><td>31,104</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Exponential",
+      "Linear",
+      "Quadratic",
+      "None of these"
+     ],
+     "a": 0,
+     "e": "Each <i>y</i> is 3 times the one before (a constant ratio), so the model is <b>exponential</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th><i>y</i></th><td>25</td><td>28</td><td>31</td><td>34</td><td>37</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Quadratic",
+      "Linear",
+      "None of these",
+      "Exponential"
+     ],
+     "a": 1,
+     "e": "The first differences are all 3, so the model is <b>linear</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th><i>y</i></th><td>36</td><td>46</td><td>56</td><td>66</td><td>76</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Exponential",
+      "Quadratic",
+      "Linear",
+      "None of these"
+     ],
+     "a": 2,
+     "e": "The first differences are all 10, so the model is <b>linear</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th><i>y</i></th><td>−20</td><td>−28</td><td>−36</td><td>−44</td><td>−52</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Linear",
+      "Exponential",
+      "Quadratic",
+      "None of these"
+     ],
+     "a": 0,
+     "e": "The first differences are all −8, so the model is <b>linear</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><th><i>y</i></th><td>144</td><td>216</td><td>324</td><td>486</td><td>729</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Linear",
+      "Quadratic",
+      "None of these",
+      "Exponential"
+     ],
+     "a": 3,
+     "e": "Each <i>y</i> is <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> times the one before (a constant ratio), so the model is <b>exponential</b>."
+    },
+    {
+     "q": "<table class='sn-table'><tr><th><i>x</i></th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><th><i>y</i></th><td>−3</td><td>4</td><td>15</td><td>30</td><td>49</td></tr></table>Which type of model fits the data best?",
+     "c": [
+      "Linear",
+      "Quadratic",
+      "Exponential",
+      "None of these"
+     ],
+     "a": 1,
+     "e": "The first differences change, but the second differences are all 4, so the model is <b>quadratic</b>."
+    }
+   ]
+  },
+  {
+   "title": "Choose a model from a situation",
+   "items": [
+    {
+     "q": "Which type of model fits this situation best? Bacteria that double every 20 minutes.",
+     "c": [
+      "Linear",
+      "Exponential",
+      "Quadratic",
+      "None of these"
+     ],
+     "a": 1,
+     "e": "It changes by the same <b>percent</b> or factor each step: exponential."
+    },
+    {
+     "q": "Which type of model fits this situation best? The amount of a medicine left in the body when half is used up every 6 hours.",
+     "c": [
+      "Exponential",
+      "Quadratic",
+      "Linear",
+      "None of these"
+     ],
+     "a": 0,
+     "e": "It changes by the same <b>percent</b> or factor each step: exponential."
+    },
+    {
+     "q": "Which type of model fits this situation best? The gas left in a tank while driving at a steady speed.",
+     "c": [
+      "Quadratic",
+      "None of these",
+      "Linear",
+      "Exponential"
+     ],
+     "a": 2,
+     "e": "It changes by the same <b>amount</b> each step: linear."
+    },
+    {
+     "q": "Which type of model fits this situation best? The area of a square compared with its side length.",
+     "c": [
+      "Linear",
+      "Quadratic",
+      "None of these",
+      "Exponential"
+     ],
+     "a": 1,
+     "e": "It rises and falls (or grows with a square): quadratic."
+    },
+    {
+     "q": "Which type of model fits this situation best? The value of a car that loses 12% of its value each year.",
+     "c": [
+      "Linear",
+      "Quadratic",
+      "None of these",
+      "Exponential"
+     ],
+     "a": 3,
+     "e": "It changes by the same <b>percent</b> or factor each step: exponential."
+    },
+    {
+     "q": "Which type of model fits this situation best? The stopping distance of a car compared with its speed.",
+     "c": [
+      "None of these",
+      "Exponential",
+      "Quadratic",
+      "Linear"
+     ],
+     "a": 2,
+     "e": "It rises and falls (or grows with a square): quadratic."
+    },
+    {
+     "q": "Which type of model fits this situation best? A phone plan costs $30 a month plus $5 for each gigabyte.",
+     "c": [
+      "Exponential",
+      "None of these",
+      "Quadratic",
+      "Linear"
+     ],
+     "a": 3,
+     "e": "It changes by the same <b>amount</b> each step: linear."
+    },
+    {
+     "q": "Which type of model fits this situation best? A car travels at a steady 60 miles per hour.",
+     "c": [
+      "None of these",
+      "Quadratic",
+      "Exponential",
+      "Linear"
+     ],
+     "a": 3,
+     "e": "It changes by the same <b>amount</b> each step: linear."
+    },
+    {
+     "q": "Which type of model fits this situation best? A population grows by 3% each year.",
+     "c": [
+      "Exponential",
+      "Linear",
+      "Quadratic",
+      "None of these"
+     ],
+     "a": 0,
+     "e": "It changes by the same <b>percent</b> or factor each step: exponential."
+    },
+    {
+     "q": "Which type of model fits this situation best? The number of handshakes when everyone in a group shakes hands once, compared with the group size.",
+     "c": [
+      "Quadratic",
+      "Exponential",
+      "Linear",
+      "None of these"
+     ],
+     "a": 0,
+     "e": "It rises and falls (or grows with a square): quadratic."
+    },
+    {
+     "q": "Which type of model fits this situation best? An investment that doubles every 9 years.",
+     "c": [
+      "None of these",
+      "Quadratic",
+      "Exponential",
+      "Linear"
+     ],
+     "a": 2,
+     "e": "It changes by the same <b>percent</b> or factor each step: exponential."
+    },
+    {
+     "q": "Which type of model fits this situation best? The number of people who have heard a rumor when the number triples each day.",
+     "c": [
+      "Linear",
+      "Exponential",
+      "Quadratic",
+      "None of these"
+     ],
+     "a": 1,
+     "e": "It changes by the same <b>percent</b> or factor each step: exponential."
+    },
+    {
+     "q": "Which type of model fits this situation best? Savings that earn 5% interest compounded each year.",
+     "c": [
+      "Quadratic",
+      "None of these",
+      "Linear",
+      "Exponential"
+     ],
+     "a": 3,
+     "e": "It changes by the same <b>percent</b> or factor each step: exponential."
+    },
+    {
+     "q": "Which type of model fits this situation best? The height of a ball thrown into the air over time.",
+     "c": [
+      "None of these",
+      "Exponential",
+      "Quadratic",
+      "Linear"
+     ],
+     "a": 2,
+     "e": "It rises and falls (or grows with a square): quadratic."
+    },
+    {
+     "q": "Which type of model fits this situation best? The number of seats in rows when each row has 2 more seats than the row before, compared with the row number.",
+     "c": [
+      "Quadratic",
+      "Exponential",
+      "None of these",
+      "Linear"
+     ],
+     "a": 3,
+     "e": "It changes by the same <b>amount</b> each step: linear."
+    },
+    {
+     "q": "Which type of model fits this situation best? The total cost of tickets at $12 each.",
+     "c": [
+      "None of these",
+      "Linear",
+      "Quadratic",
+      "Exponential"
+     ],
+     "a": 1,
+     "e": "It changes by the same <b>amount</b> each step: linear."
+    },
+    {
+     "q": "Which type of model fits this situation best? A company's profit as the price rises: it goes up, peaks, then falls.",
+     "c": [
+      "Quadratic",
+      "Linear",
+      "Exponential",
+      "None of these"
+     ],
+     "a": 0,
+     "e": "It rises and falls (or grows with a square): quadratic."
+    },
+    {
+     "q": "Which type of model fits this situation best? A taxi charges $3 plus $2 per mile.",
+     "c": [
+      "Quadratic",
+      "Linear",
+      "None of these",
+      "Exponential"
+     ],
+     "a": 1,
+     "e": "It changes by the same <b>amount</b> each step: linear."
+    },
+    {
+     "q": "Which type of model fits this situation best? The amount of a radioactive substance that decays by 8% each year.",
+     "c": [
+      "Exponential",
+      "None of these",
+      "Linear",
+      "Quadratic"
+     ],
+     "a": 0,
+     "e": "It changes by the same <b>percent</b> or factor each step: exponential."
+    },
+    {
+     "q": "Which type of model fits this situation best? The path of water from a fountain.",
+     "c": [
+      "Exponential",
+      "Linear",
+      "Quadratic",
+      "None of these"
+     ],
+     "a": 2,
+     "e": "It rises and falls (or grows with a square): quadratic."
+    }
+   ]
+  },
+  {
+   "title": "Predict with a regression model",
+   "items": [
+    {
+     "q": "A regression on data gives <i>y</i> = 1.7<i>x</i> + 28 for monthly sales, in units, <i>x</i> months after opening. Predict <i>y</i> for <i>x</i> = 14.",
+     "c": [
+      "51.8",
+      "43.7",
+      "23.8",
+      "53.5"
+     ],
+     "a": 0,
+     "e": "1.7(14) + 28 = 51.8. <b>51.8</b>."
+    },
+    {
+     "q": "A regression on data gives <i>y</i> = 3.2<i>x</i> + 183 for monthly sales, in units, <i>x</i> months after opening. Predict <i>y</i> for <i>x</i> = 9.",
+     "c": [
+      "211.8",
+      "28.8",
+      "215",
+      "195.2"
+     ],
+     "a": 0,
+     "e": "3.2(9) + 183 = 211.8. <b>211.8</b>."
+    },
+    {
+     "q": "An exponential regression gives <i>y</i> = 4,000(1.08)<sup><i>x</i></sup>. Predict <i>y</i> for <i>x</i> = 8. Round to the nearest whole number.",
+     "c": [
+      "7,404",
+      "4,002",
+      "34,560",
+      "7,996"
+     ],
+     "a": 0,
+     "e": "4,000 × 1.08<sup>8</sup> ≈ 7,404. <b>7,404</b>."
+    },
+    {
+     "q": "A regression on data gives <i>y</i> = 3.2<i>x</i> + 261 for the number of students in a club <i>x</i> years after the club started. Predict <i>y</i> for <i>x</i> = 11.",
+     "c": [
+      "275.2",
+      "299.4",
+      "35.2",
+      "296.2"
+     ],
+     "a": 3,
+     "e": "3.2(11) + 261 = 296.2. <b>296.2</b>."
+    },
+    {
+     "q": "An exponential regression gives <i>y</i> = 1,500(0.9)<sup><i>x</i></sup>. Predict <i>y</i> for <i>x</i> = 3. Round to the nearest whole number.",
+     "c": [
+      "4,050",
+      "984",
+      "1,094",
+      "1,501"
+     ],
+     "a": 2,
+     "e": "1,500 × 0.9<sup>3</sup> ≈ 1,094. <b>1,094</b>."
+    },
+    {
+     "q": "An exponential regression gives <i>y</i> = 500(1.2)<sup><i>x</i></sup>. Predict <i>y</i> for <i>x</i> = 8. Round to the nearest whole number.",
+     "c": [
+      "2,150",
+      "504",
+      "4,800",
+      "2,580"
+     ],
+     "a": 0,
+     "e": "500 × 1.2<sup>8</sup> ≈ 2,150. <b>2,150</b>."
+    },
+    {
+     "q": "An exponential regression gives <i>y</i> = 500(0.9)<sup><i>x</i></sup>. Predict <i>y</i> for <i>x</i> = 10. Round to the nearest whole number.",
+     "c": [
+      "4,500",
+      "174",
+      "157",
+      "500"
+     ],
+     "a": 1,
+     "e": "500 × 0.9<sup>10</sup> ≈ 174. <b>174</b>."
+    },
+    {
+     "q": "A regression on data gives <i>y</i> = 7.7<i>x</i> + 247 for the number of students in a club <i>x</i> years after the club started. Predict <i>y</i> for <i>x</i> = 9.",
+     "c": [
+      "324",
+      "263.7",
+      "316.3",
+      "69.3"
+     ],
+     "a": 2,
+     "e": "7.7(9) + 247 = 316.3. <b>316.3</b>."
+    },
+    {
+     "q": "A quadratic regression of a toy's sales gives <i>y</i> = −1.1<i>x</i><sup>2</sup> + 4.9<i>x</i> + 12, where <i>x</i> is the price in dollars and <i>y</i> is sales in hundreds. Predict <i>y</i> when <i>x</i> = 3.",
+     "c": [
+      "23.4",
+      "16.8",
+      "7",
+      "36.6"
+     ],
+     "a": 1,
+     "e": "−1.1(3)<sup>2</sup> + 4.9(3) + 12 = −9.9 + 14.7 + 12 = 16.8. <b>16.8</b>."
+    },
+    {
+     "q": "A regression on data gives <i>y</i> = 3.1<i>x</i> + 109 for the number of students in a club <i>x</i> years after the club started. Predict <i>y</i> for <i>x</i> = 12.",
+     "c": [
+      "124.1",
+      "146.2",
+      "37.2",
+      "149.3"
+     ],
+     "a": 1,
+     "e": "3.1(12) + 109 = 146.2. <b>146.2</b>."
+    },
+    {
+     "q": "An exponential regression gives <i>y</i> = 1,000(1.1)<sup><i>x</i></sup>. Predict <i>y</i> for <i>x</i> = 7. Round to the nearest whole number.",
+     "c": [
+      "7,700",
+      "1,002",
+      "1,949",
+      "2,144"
+     ],
+     "a": 2,
+     "e": "1,000 × 1.1<sup>7</sup> ≈ 1,949. <b>1,949</b>."
+    },
+    {
+     "q": "A quadratic regression of a toy's sales gives <i>y</i> = −0.4<i>x</i><sup>2</sup> + 5.9<i>x</i> + 6, where <i>x</i> is the price in dollars and <i>y</i> is sales in hundreds. Predict <i>y</i> when <i>x</i> = 3.",
+     "c": [
+      "20.1",
+      "27.3",
+      "8.3",
+      "22.5"
+     ],
+     "a": 0,
+     "e": "−0.4(3)<sup>2</sup> + 5.9(3) + 6 = −3.6 + 17.7 + 6 = 20.1. <b>20.1</b>."
+    },
+    {
+     "q": "A quadratic regression of a toy's sales gives <i>y</i> = −0.9<i>x</i><sup>2</sup> + 3.1<i>x</i> + 33, where <i>x</i> is the price in dollars and <i>y</i> is sales in hundreds. Predict <i>y</i> when <i>x</i> = 8.",
+     "c": [
+      "115.4",
+      "−21.5",
+      "0.2",
+      "50.6"
+     ],
+     "a": 2,
+     "e": "−0.9(8)<sup>2</sup> + 3.1(8) + 33 = −57.6 + 24.8 + 33 = 0.2. <b>0.2</b>."
+    },
+    {
+     "q": "A quadratic regression of a toy's sales gives <i>y</i> = −1.3<i>x</i><sup>2</sup> + 4.4<i>x</i> + 40, where <i>x</i> is the price in dollars and <i>y</i> is sales in hundreds. Predict <i>y</i> when <i>x</i> = 7.",
+     "c": [
+      "134.5",
+      "61.7",
+      "−19.3",
+      "7.1"
+     ],
+     "a": 3,
+     "e": "−1.3(7)<sup>2</sup> + 4.4(7) + 40 = −63.7 + 30.8 + 40 = 7.1. <b>7.1</b>."
+    },
+    {
+     "q": "A regression on data gives <i>y</i> = 1.5<i>x</i> + 201 for the average price of a ticket, in dollars, <i>x</i> years after a stadium opened. Predict <i>y</i> for <i>x</i> = 13.",
+     "c": [
+      "215.5",
+      "19.5",
+      "222",
+      "220.5"
+     ],
+     "a": 3,
+     "e": "1.5(13) + 201 = 220.5. <b>220.5</b>."
+    },
+    {
+     "q": "An exponential regression gives <i>y</i> = 1,000(1.12)<sup><i>x</i></sup>. Predict <i>y</i> for <i>x</i> = 9. Round to the nearest whole number.",
+     "c": [
+      "3,106",
+      "10,080",
+      "1,003",
+      "2,773"
+     ],
+     "a": 3,
+     "e": "1,000 × 1.12<sup>9</sup> ≈ 2,773. <b>2,773</b>."
+    },
+    {
+     "q": "A regression on data gives <i>y</i> = 5.9<i>x</i> + 276 for the number of students in a club <i>x</i> years after the club started. Predict <i>y</i> for <i>x</i> = 12.",
+     "c": [
+      "352.7",
+      "293.9",
+      "70.8",
+      "346.8"
+     ],
+     "a": 3,
+     "e": "5.9(12) + 276 = 346.8. <b>346.8</b>."
+    },
+    {
+     "q": "An exponential regression gives <i>y</i> = 1,000(0.85)<sup><i>x</i></sup>. Predict <i>y</i> for <i>x</i> = 9. Round to the nearest whole number.",
+     "c": [
+      "7,650",
+      "197",
+      "232",
+      "1,000"
+     ],
+     "a": 2,
+     "e": "1,000 × 0.85<sup>9</sup> ≈ 232. <b>232</b>."
+    },
+    {
+     "q": "A quadratic regression of a toy's sales gives <i>y</i> = −0.2<i>x</i><sup>2</sup> + 7.1<i>x</i> + 24, where <i>x</i> is the price in dollars and <i>y</i> is sales in hundreds. Predict <i>y</i> when <i>x</i> = 6.",
+     "c": [
+      "73.8",
+      "59.4",
+      "65.4",
+      "23.9"
+     ],
+     "a": 1,
+     "e": "−0.2(6)<sup>2</sup> + 7.1(6) + 24 = −7.2 + 42.6 + 24 = 59.4. <b>59.4</b>."
+    },
+    {
+     "q": "A regression on data gives <i>y</i> = 1.7<i>x</i> + 164 for the number of students in a club <i>x</i> years after the club started. Predict <i>y</i> for <i>x</i> = 7.",
+     "c": [
+      "11.9",
+      "175.9",
+      "172.7",
+      "177.6"
+     ],
+     "a": 1,
+     "e": "1.7(7) + 164 = 175.9. <b>175.9</b>."
+    }
+   ]
+  },
+  {
+   "title": "Interpret a model",
+   "items": [
+    {
+     "q": "The value of a car is modeled by <i>y</i> = 18,000(0.80)<sup><i>x</i></sup> dollars after <i>x</i> years. What does 0.80 tell you?",
+     "c": [
+      "The value grows by 80% each year",
+      "The value drops by 80% each year",
+      "The value drops by $0.80 each year",
+      "The value drops by 20% each year"
+     ],
+     "a": 3,
+     "e": "<b>The value drops by 20% each year</b>."
+    },
+    {
+     "q": "The value of a car is modeled by <i>y</i> = 24,000(0.92)<sup><i>x</i></sup> dollars after <i>x</i> years. What does 0.92 tell you?",
+     "c": [
+      "The value drops by 92% each year",
+      "The value drops by $0.92 each year",
+      "The value drops by 8% each year",
+      "The value grows by 92% each year"
+     ],
+     "a": 2,
+     "e": "<b>The value drops by 8% each year</b>."
+    },
+    {
+     "q": "A model for a town's population is <i>y</i> = 800(1.06)<sup><i>x</i></sup>, where <i>x</i> is the number of years from now. What does 1.06 tell you?",
+     "c": [
+      "The population grows by 6 people each year",
+      "The population grows by 6% each year",
+      "The population grows by 1.06% each year",
+      "The population grows by 106% each year"
+     ],
+     "a": 1,
+     "e": "<b>The population grows by 6% each year</b>."
+    },
+    {
+     "q": "A model for a town's population is <i>y</i> = 5,000(1.06)<sup><i>x</i></sup>, where <i>x</i> is the number of years from now. What does 1.06 tell you?",
+     "c": [
+      "The population grows by 6 people each year",
+      "The population grows by 1.06% each year",
+      "The population grows by 106% each year",
+      "The population grows by 6% each year"
+     ],
+     "a": 3,
+     "e": "<b>The population grows by 6% each year</b>."
+    },
+    {
+     "q": "The value of a car is modeled by <i>y</i> = 24,000(0.85)<sup><i>x</i></sup> dollars after <i>x</i> years. What does 0.85 tell you?",
+     "c": [
+      "The value grows by 85% each year",
+      "The value drops by 85% each year",
+      "The value drops by 15% each year",
+      "The value drops by $0.85 each year"
+     ],
+     "a": 2,
+     "e": "<b>The value drops by 15% each year</b>."
+    },
+    {
+     "q": "A linear regression for the height of a plant is <i>y</i> = 8.5<i>x</i> + 22, with <i>x</i> in weeks and <i>y</i> in centimeters. What does 8.5 mean?",
+     "c": [
+      "The plant grows about 8.5 cm each week",
+      "The plant was 8.5 cm tall at the start",
+      "The plant grows 8.5% each week",
+      "The plant will be 8.5 cm tall after 1 week"
+     ],
+     "a": 0,
+     "e": "<b>The plant grows about 8.5 cm each week</b>."
+    },
+    {
+     "q": "A linear model for the number of members of an app is <i>y</i> = 26<i>x</i> + 269, where <i>x</i> is days since launch. What does 269 mean?",
+     "c": [
+      "The app grows by 269% each day",
+      "There were about 269 members at launch",
+      "The app gains 269 members each day",
+      "There will be 269 members after 1 day"
+     ],
+     "a": 1,
+     "e": "<b>There were about 269 members at launch</b>."
+    },
+    {
+     "q": "A linear model for the number of members of an app is <i>y</i> = 6<i>x</i> + 81, where <i>x</i> is days since launch. What does 81 mean?",
+     "c": [
+      "The app gains 81 members each day",
+      "There were about 81 members at launch",
+      "There will be 81 members after 1 day",
+      "The app grows by 81% each day"
+     ],
+     "a": 1,
+     "e": "<b>There were about 81 members at launch</b>."
+    },
+    {
+     "q": "The value of a car is modeled by <i>y</i> = 24,000(0.75)<sup><i>x</i></sup> dollars after <i>x</i> years. What does 0.75 tell you?",
+     "c": [
+      "The value grows by 75% each year",
+      "The value drops by 25% each year",
+      "The value drops by $0.75 each year",
+      "The value drops by 75% each year"
+     ],
+     "a": 1,
+     "e": "<b>The value drops by 25% each year</b>."
+    },
+    {
+     "q": "A linear model for the number of members of an app is <i>y</i> = 11<i>x</i> + 159, where <i>x</i> is days since launch. What does 159 mean?",
+     "c": [
+      "The app gains 159 members each day",
+      "There were about 159 members at launch",
+      "There will be 159 members after 1 day",
+      "The app grows by 159% each day"
+     ],
+     "a": 1,
+     "e": "<b>There were about 159 members at launch</b>."
+    },
+    {
+     "q": "A model for a town's population is <i>y</i> = 800(1.04)<sup><i>x</i></sup>, where <i>x</i> is the number of years from now. What does 1.04 tell you?",
+     "c": [
+      "The population grows by 1.04% each year",
+      "The population grows by 4 people each year",
+      "The population grows by 4% each year",
+      "The population grows by 104% each year"
+     ],
+     "a": 2,
+     "e": "<b>The population grows by 4% each year</b>."
+    },
+    {
+     "q": "The value of a car is modeled by <i>y</i> = 18,000(0.90)<sup><i>x</i></sup> dollars after <i>x</i> years. What does 0.90 tell you?",
+     "c": [
+      "The value drops by 10% each year",
+      "The value drops by 90% each year",
+      "The value grows by 90% each year",
+      "The value drops by $0.90 each year"
+     ],
+     "a": 0,
+     "e": "<b>The value drops by 10% each year</b>."
+    },
+    {
+     "q": "A model for a town's population is <i>y</i> = 2,500(1.04)<sup><i>x</i></sup>, where <i>x</i> is the number of years from now. What does 1.04 tell you?",
+     "c": [
+      "The population grows by 104% each year",
+      "The population grows by 4 people each year",
+      "The population grows by 4% each year",
+      "The population grows by 1.04% each year"
+     ],
+     "a": 2,
+     "e": "<b>The population grows by 4% each year</b>."
+    },
+    {
+     "q": "A model for a town's population is <i>y</i> = 2,500(1.12)<sup><i>x</i></sup>, where <i>x</i> is the number of years from now. What does 1.12 tell you?",
+     "c": [
+      "The population grows by 12 people each year",
+      "The population grows by 1.12% each year",
+      "The population grows by 112% each year",
+      "The population grows by 12% each year"
+     ],
+     "a": 3,
+     "e": "<b>The population grows by 12% each year</b>."
+    },
+    {
+     "q": "A linear model for the number of members of an app is <i>y</i> = 3<i>x</i> + 106, where <i>x</i> is days since launch. What does 106 mean?",
+     "c": [
+      "The app gains 106 members each day",
+      "There will be 106 members after 1 day",
+      "The app grows by 106% each day",
+      "There were about 106 members at launch"
+     ],
+     "a": 3,
+     "e": "<b>There were about 106 members at launch</b>."
+    },
+    {
+     "q": "A model for a town's population is <i>y</i> = 12,000(1.04)<sup><i>x</i></sup>, where <i>x</i> is the number of years from now. What does 1.04 tell you?",
+     "c": [
+      "The population grows by 4% each year",
+      "The population grows by 104% each year",
+      "The population grows by 4 people each year",
+      "The population grows by 1.04% each year"
+     ],
+     "a": 0,
+     "e": "<b>The population grows by 4% each year</b>."
+    },
+    {
+     "q": "A quadratic regression for daily profit is <i>y</i> = −5<i>x</i><sup>2</sup> + 50<i>x</i> + 202, where <i>x</i> is the price in dollars. What is the best price, and what profit does the model predict there?",
+     "c": [
+      "$5, with a profit of $327",
+      "$327, with a profit of $5",
+      "$50, with a profit of $327",
+      "$5, with a profit of $202"
+     ],
+     "a": 0,
+     "e": "The vertex is at <i>x</i> = −<i>b</i> ÷ (2<i>a</i>) = 50 ÷ 10 = 5. <i>y</i>(5) = 327. <b>$5, with a profit of $327</b>."
+    },
+    {
+     "q": "A quadratic regression for daily profit is <i>y</i> = −4<i>x</i><sup>2</sup> + 88<i>x</i> − 366, where <i>x</i> is the price in dollars. What is the best price, and what profit does the model predict there?",
+     "c": [
+      "$118, with a profit of $11",
+      "$88, with a profit of $118",
+      "$11, with a profit of $366",
+      "$11, with a profit of $118"
+     ],
+     "a": 3,
+     "e": "The vertex is at <i>x</i> = −<i>b</i> ÷ (2<i>a</i>) = 88 ÷ 8 = 11. <i>y</i>(11) = 118. <b>$11, with a profit of $118</b>."
+    },
+    {
+     "q": "A quadratic regression for daily profit is <i>y</i> = −4<i>x</i><sup>2</sup> + 72<i>x</i> + 8, where <i>x</i> is the price in dollars. What is the best price, and what profit does the model predict there?",
+     "c": [
+      "$9, with a profit of $332",
+      "$72, with a profit of $332",
+      "$9, with a profit of $8",
+      "$332, with a profit of $9"
+     ],
+     "a": 0,
+     "e": "The vertex is at <i>x</i> = −<i>b</i> ÷ (2<i>a</i>) = 72 ÷ 8 = 9. <i>y</i>(9) = 332. <b>$9, with a profit of $332</b>."
+    },
+    {
+     "q": "A linear model for the number of members of an app is <i>y</i> = 26<i>x</i> + 343, where <i>x</i> is days since launch. What does 343 mean?",
+     "c": [
+      "The app gains 343 members each day",
+      "There will be 343 members after 1 day",
+      "There were about 343 members at launch",
+      "The app grows by 343% each day"
+     ],
+     "a": 2,
+     "e": "<b>There were about 343 members at launch</b>."
+    }
+   ]
+  },
+  {
+   "title": "Judge models and predictions",
+   "items": [
+    {
+     "q": "Three regression models were fit to the same data. Linear: <i>r</i><sup>2</sup> = 0.79, Exponential: <i>r</i><sup>2</sup> = 0.88, Quadratic: <i>r</i><sup>2</sup> = 0.58. Which model fits the data best?",
+     "c": [
+      "None of these",
+      "Quadratic",
+      "Exponential",
+      "Linear"
+     ],
+     "a": 2,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Exponential</b>."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Exponential: <i>r</i><sup>2</sup> = 0.66, Linear: <i>r</i><sup>2</sup> = 0.74, Quadratic: <i>r</i><sup>2</sup> = 0.85. Which model fits the data best?",
+     "c": [
+      "None of these",
+      "Linear",
+      "Quadratic",
+      "Exponential"
+     ],
+     "a": 2,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Quadratic</b>."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Quadratic: <i>r</i><sup>2</sup> = 0.95, Exponential: <i>r</i><sup>2</sup> = 0.66, Linear: <i>r</i><sup>2</sup> = 0.89. Which model fits the data best?",
+     "c": [
+      "Quadratic",
+      "Linear",
+      "None of these",
+      "Exponential"
+     ],
+     "a": 0,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Quadratic</b>."
+    },
+    {
+     "q": "A model was made from data for <i>x</i> = 5 to <i>x</i> = 30. Which prediction is the least reliable?",
+     "c": [
+      "<i>x</i> = 31",
+      "<i>x</i> = 70",
+      "<i>x</i> = 15",
+      "<i>x</i> = 18"
+     ],
+     "a": 1,
+     "e": "Predicting far outside the data (extrapolation) is risky: the pattern may not continue. <b><i>x</i> = 70</b> is the farthest from the data."
+    },
+    {
+     "q": "A model was made from data for <i>x</i> = 0 to <i>x</i> = 20. Which prediction is the least reliable?",
+     "c": [
+      "<i>x</i> = 21",
+      "<i>x</i> = 13",
+      "<i>x</i> = 45",
+      "<i>x</i> = 12"
+     ],
+     "a": 2,
+     "e": "Predicting far outside the data (extrapolation) is risky: the pattern may not continue. <b><i>x</i> = 45</b> is the farthest from the data."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Linear: <i>r</i><sup>2</sup> = 0.67, Quadratic: <i>r</i><sup>2</sup> = 0.90, Exponential: <i>r</i><sup>2</sup> = 0.96. Which model fits the data best?",
+     "c": [
+      "Exponential",
+      "Linear",
+      "Quadratic",
+      "None of these"
+     ],
+     "a": 0,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Exponential</b>."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Exponential: <i>r</i><sup>2</sup> = 0.74, Linear: <i>r</i><sup>2</sup> = 0.96, Quadratic: <i>r</i><sup>2</sup> = 0.91. Which model fits the data best?",
+     "c": [
+      "Exponential",
+      "Quadratic",
+      "Linear",
+      "None of these"
+     ],
+     "a": 2,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Linear</b>."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Linear: <i>r</i><sup>2</sup> = 0.89, Quadratic: <i>r</i><sup>2</sup> = 0.85, Exponential: <i>r</i><sup>2</sup> = 0.77. Which model fits the data best?",
+     "c": [
+      "Linear",
+      "Exponential",
+      "Quadratic",
+      "None of these"
+     ],
+     "a": 0,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Linear</b>."
+    },
+    {
+     "q": "A model was made from data for <i>x</i> = 0 to <i>x</i> = 8. Which prediction is the least reliable?",
+     "c": [
+      "<i>x</i> = 2",
+      "<i>x</i> = 4",
+      "<i>x</i> = 9",
+      "<i>x</i> = 33"
+     ],
+     "a": 3,
+     "e": "Predicting far outside the data (extrapolation) is risky: the pattern may not continue. <b><i>x</i> = 33</b> is the farthest from the data."
+    },
+    {
+     "q": "A model was made from data for <i>x</i> = 1 to <i>x</i> = 12. Which prediction is the least reliable?",
+     "c": [
+      "<i>x</i> = 37",
+      "<i>x</i> = 2",
+      "<i>x</i> = 4",
+      "<i>x</i> = 13"
+     ],
+     "a": 0,
+     "e": "Predicting far outside the data (extrapolation) is risky: the pattern may not continue. <b><i>x</i> = 37</b> is the farthest from the data."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Linear: <i>r</i><sup>2</sup> = 0.76, Exponential: <i>r</i><sup>2</sup> = 0.84, Quadratic: <i>r</i><sup>2</sup> = 0.55. Which model fits the data best?",
+     "c": [
+      "Quadratic",
+      "Linear",
+      "None of these",
+      "Exponential"
+     ],
+     "a": 3,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Exponential</b>."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Quadratic: <i>r</i><sup>2</sup> = 0.58, Exponential: <i>r</i><sup>2</sup> = 0.68, Linear: <i>r</i><sup>2</sup> = 0.96. Which model fits the data best?",
+     "c": [
+      "Linear",
+      "None of these",
+      "Exponential",
+      "Quadratic"
+     ],
+     "a": 0,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Linear</b>."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Quadratic: <i>r</i><sup>2</sup> = 0.72, Exponential: <i>r</i><sup>2</sup> = 0.74, Linear: <i>r</i><sup>2</sup> = 0.96. Which model fits the data best?",
+     "c": [
+      "None of these",
+      "Quadratic",
+      "Exponential",
+      "Linear"
+     ],
+     "a": 3,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Linear</b>."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Linear: <i>r</i><sup>2</sup> = 0.69, Exponential: <i>r</i><sup>2</sup> = 0.75, Quadratic: <i>r</i><sup>2</sup> = 0.63. Which model fits the data best?",
+     "c": [
+      "Linear",
+      "Quadratic",
+      "None of these",
+      "Exponential"
+     ],
+     "a": 3,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Exponential</b>."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Quadratic: <i>r</i><sup>2</sup> = 0.81, Exponential: <i>r</i><sup>2</sup> = 0.84, Linear: <i>r</i><sup>2</sup> = 0.93. Which model fits the data best?",
+     "c": [
+      "None of these",
+      "Linear",
+      "Quadratic",
+      "Exponential"
+     ],
+     "a": 1,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Linear</b>."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Quadratic: <i>r</i><sup>2</sup> = 0.74, Exponential: <i>r</i><sup>2</sup> = 0.55, Linear: <i>r</i><sup>2</sup> = 0.86. Which model fits the data best?",
+     "c": [
+      "None of these",
+      "Linear",
+      "Quadratic",
+      "Exponential"
+     ],
+     "a": 1,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Linear</b>."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Quadratic: <i>r</i><sup>2</sup> = 0.68, Exponential: <i>r</i><sup>2</sup> = 0.81, Linear: <i>r</i><sup>2</sup> = 0.66. Which model fits the data best?",
+     "c": [
+      "Quadratic",
+      "Exponential",
+      "None of these",
+      "Linear"
+     ],
+     "a": 1,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Exponential</b>."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Linear: <i>r</i><sup>2</sup> = 0.55, Quadratic: <i>r</i><sup>2</sup> = 0.81, Exponential: <i>r</i><sup>2</sup> = 0.84. Which model fits the data best?",
+     "c": [
+      "Quadratic",
+      "Exponential",
+      "None of these",
+      "Linear"
+     ],
+     "a": 1,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Exponential</b>."
+    },
+    {
+     "q": "A model was made from data for <i>x</i> = 0 to <i>x</i> = 10. Which prediction is the least reliable?",
+     "c": [
+      "<i>x</i> = 3",
+      "<i>x</i> = 11",
+      "<i>x</i> = 2",
+      "<i>x</i> = 25"
+     ],
+     "a": 3,
+     "e": "Predicting far outside the data (extrapolation) is risky: the pattern may not continue. <b><i>x</i> = 25</b> is the farthest from the data."
+    },
+    {
+     "q": "Three regression models were fit to the same data. Linear: <i>r</i><sup>2</sup> = 0.74, Exponential: <i>r</i><sup>2</sup> = 0.88, Quadratic: <i>r</i><sup>2</sup> = 0.62. Which model fits the data best?",
+     "c": [
+      "Linear",
+      "Quadratic",
+      "Exponential",
+      "None of these"
+     ],
+     "a": 2,
+     "e": "The model with <i>r</i><sup>2</sup> closest to 1 explains the most variation in the data: <b>Exponential</b>."
+    }
+   ]
+  }
+ ],
+ "country": "us-tx",
+ "subject": "math",
+ "grade": "algebra-2"
+}

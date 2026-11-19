@@ -1095,7 +1095,13 @@ US-TX / Math / Geometry（TEKS §111.41。高校）— grade `geometry`（name�
 22. surface-area ✓ 23. volume ✓ 24. circle-angles-chords-tangents-and-secants ✓ 25. arc-length-sector-area-and-radians ✓ 26. equations-of-circles ✓ 27. permutations-and-combinations ✓
 28. geometric-probability ✓ 29. independent-and-conditional-probability ✓
 
-その後: US-TX Algebra II …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Algebra II（TEKS §111.40。高校）— grade `algebra-2`（name「Algebra II」、sort 11）。standard_url は Subchapter C。生成スクリプトは `gen_ustx_math_a2_*`（US Algebra 1・Algebra 2・Precalculus の問題関数を build_sets で再利用、ほかは自前）。TX Algebra I で使った US の固定の文章題（problems()）は使わない。親関数の変形は `fam(tr.one_x, "sqrt")` で US Algebra 2 の PARENTS を絞り、1/x・∛x・b^x・log_b x（b は 2・10・e）は自前の `tf(kind)`、f(bx) は自前の `one_bx_maker`。domain は TEKS の分野名（Attributes of Functions and Their Inverses／Systems of Equations and Inequalities／Quadratic and Square Root Functions, Equations, and Inequalities／Exponential and Logarithmic Functions and Equations／Cubic, Cube Root, Absolute Value, and Rational Functions, Equations, and Inequalities／Number and Algebraic Methods／Data）。年（2015 など）は自動でカンマが付くので文章題に書かない
+1. parent-functions ✓ 2. inverse-functions ✓ 3. domain-and-range-notation ✓ 4. systems-of-three-equations ✓ 5. linear-quadratic-systems ✓ 6. systems-of-linear-inequalities ✓
+7. quadratic-through-three-points ✓ 8. parabolas-focus-and-directrix ✓ 9. completing-the-square-and-vertex-form ✓ 10. quadratic-equations-and-inequalities ✓ 11. square-root-functions-and-equations ✓ 12. exponential-and-logarithmic-functions ✓
+13. logarithms ✓ 14. exponential-and-logarithmic-equations ✓ 15. cubic-and-cube-root-functions ✓ 16. absolute-value-functions-equations-and-inequalities ✓ 17. rational-functions ✓ 18. rational-equations-and-inverse-variation ✓
+19. complex-numbers ✓ 20. polynomial-operations-and-division ✓ 21. factoring-polynomials ✓ 22. rational-expressions ✓ 23. radicals-and-rational-exponents ✓ 24. data-and-regression ✓
+
+その後: US-TX Precalculus …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 

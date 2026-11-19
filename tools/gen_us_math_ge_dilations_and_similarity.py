@@ -148,7 +148,7 @@ def one_word(r):
         d = r.choice([F(3, 2), F(5, 2), 3, 4, F(7, 2), 6])
         q = "On a map, 1 inch represents %d miles. Two cities are %s inches apart on the map. How far apart are they?" % (sc, num(d))
         ans = sc * d
-        return T(q, "%s miles" % num(ans), ["%s miles" % num(x) for x in dict.fromkeys([sc + d, F(sc, 1) / d, ans * 2]) if x != ans][:3],
+        return T(q, "%s miles" % num(ans), ["%s miles" % (num(x) or num(x, "f")) for x in dict.fromkeys([sc + d, F(sc, 1) / d, ans * 2]) if x != ans][:3],
                  "Multiply by the scale: %s × %d = <b>%s miles</b>." % (num(d), sc, num(ans)))
     if kind == "model":
         k = r.choice([24, 48, 64, 72, 100])

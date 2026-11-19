@@ -211,7 +211,7 @@ def one_check(r):
     rate, fee = r.choice([(15, 20), (12, 30), (25, 10), (18, 25), (40, 15)])
     q = ("A tutor charges %s per hour plus a %s booking fee, so C(<i>h</i>) = %d<i>h</i> + %d. %s paid %s. Use the inverse to find how many hours %s booked." % (
         "$" + num(rate), "$" + num(fee), rate, fee, nm, "$" + num(rate * 3 + fee), he))
-    return T(q, "3 hours", ["%s hours" % num(F(rate * 3 + fee, rate)), "%s hours" % num(rate * 3 + fee - fee + 1) if False else "4 hours", "%s hours" % num(F(rate * 3, fee)) if num(F(rate * 3, fee)) else "2 hours"],
+    return T(q, "3 hours", ["%s hours" % (num(F(rate * 3 + fee, rate)) or num(F(rate * 3 + fee, rate), "f")), "%s hours" % num(rate * 3 + fee - fee + 1) if False else "4 hours", "%s hours" % num(F(rate * 3, fee)) if num(F(rate * 3, fee)) else "2 hours"],
              "The inverse is <i>h</i> = (C %s %d) ÷ %d. (%d %s %d) ÷ %d = <b>3 hours</b>." % (MINUS, fee, rate, rate * 3 + fee, MINUS, fee, rate))
 
 
