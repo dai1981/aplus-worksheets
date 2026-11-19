@@ -1109,6 +1109,20 @@ US-TX / Math / Precalculus（TEKS §111.42。高校）— grade `precalculus`（
 
 US-TX / Math は Kindergarten〜Precalculus まで完了。ws_common.num は割り切れない小数で None を返すので、選択肢の文字列に入れるときは `num(x) or num(x, "f")` にする
 
+PH / Math（DepEd MATATAG Curriculum, Mathematics）— country `ph`（name「Philippines」、lang en、hreflang en-ph）、subject `math`、grade `grade-N`、Letter。生成スクリプトは `gen_ph_math_gN_*`、共通部品は `tools/ph_common.py`（tx_common と同じ API。フィリピンの名前・地名、localize で他国の生成スクリプトの名前をフィリピンの名前に置き換え、us_text で US の綴り（round→around、ml→mL、a.m.. の重複も直す）、LEAKS で $・¢・£・inch・miles・Texas などの混入を落とす、peso（₱25、₱1,250、₱45.50）、make）。
+US 英語・メートル法だけ・お金は ₱ と centavos（25 centavos 硬貨・₱1 硬貨・₱50〜₱1,000 札）。時刻は「9:30 a.m.」。1,000 以上はカンマ（DepEd の CG は空白区切りだがカンマを使う）。場面はフィリピン（sari-sari store、jeepney、pandesal、Carabao mango、Cebu、Davao）。
+standard_code は MATATAG の分野名「Grade 4: Number and Algebra」／「Grade 4: Measurement and Geometry」／「Grade 4: Data and Probability」、standard_text は CG の learning competency の原文、standard_url は Grade 1・4・7 は CG の PDF（ph_common.STD_URLS）。年齢は US と同じ（Grade N = N+5〜N+6 歳、unit.php）。
+Grade 4 の分数は CG のとおり分母 10 まで（他国の問題関数は keep の den10・den_q10 で絞る）
+
+PH / Math / Grade 4（MATATAG。Q1〜Q4 の順）
+1. angles ✓ 2. triangles-and-quadrilaterals ✓ 3. perimeter ✓ 4. numbers-up-to-1000000 ✓ 5. rounding-and-estimating ✓ 6. adding-and-subtracting-to-1000000 ✓
+7. multiplying-whole-numbers ✓ 8. dividing-whole-numbers ✓ 9. multi-step-word-problems-and-money ✓ 10. order-of-operations-mdas ✓ 11. proper-improper-fractions-and-mixed-numbers ✓
+12. adding-and-subtracting-similar-fractions ✓ 13. converting-units-of-length-mass-and-capacity ✓ 14. converting-time-and-elapsed-time ✓ 15. comparing-and-ordering-dissimilar-fractions ✓
+16. equivalent-fractions-and-simplest-form ✓ 17. factors-and-multiples ✓ 18. adding-and-subtracting-dissimilar-fractions ✓ 19. line-symmetry ✓ 20. reflection-and-glide-reflection ✓
+21. decimal-numbers-to-hundredths ✓ 22. comparing-ordering-and-rounding-decimals ✓ 23. patterns ✓ 24. number-sentences-properties-and-equivalent-facts ✓ 25. tables-and-line-graphs ✓
+
+PH の次: Grade 7（MATATAG の CG が出ている学年）→ Grade 1 → Grades 2・3・5・6（CG が出たら）。catalog.json に学年を足す
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
