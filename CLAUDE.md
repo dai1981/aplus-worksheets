@@ -1076,7 +1076,12 @@ US-TX / Math / Grade 1（120 まで。とても短い文、絵を多く）— �
 11. 10-more-and-10-less ✓ 12. equal-sign-and-missing-numbers ✓ 13. adding-three-numbers ✓ 14. 2d-shapes ✓ 15. 3d-solids ✓ 16. halves-and-fourths ✓
 17. measuring-length ✓ 18. telling-time-to-the-hour-and-half-hour ✓ 19. tally-marks-and-graphs ✓ 20. personal-financial-literacy ✓
 
-その後: US-TX Kindergarten、US-TX Algebra I …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Kindergarten（5〜6歳。20 まで、数えるのは 100 まで。とても短い文、ほぼ全問に絵）— grade `kindergarten`（sort 0）。生成スクリプトは `gen_ustx_math_gk_*`（US Kindergarten・AU Foundation・US Grade 2・TX Grade 1 の問題関数を build_sets で再利用、ほかは自前）。自前の問題は pick() で場面を1回ずつ使い、名前だけ違う問題を作らない。tx_common.us_text は ladybird→ladybug、kookaburra→robin も直す
+1. counting-to-20 ✓ 2. reading-and-writing-numbers-0-to-20 ✓ 3. subitizing ✓ 4. one-more-and-one-less ✓ 5. comparing-numbers-to-20 ✓ 6. composing-and-decomposing-numbers-to-10 ✓
+7. addition-within-10 ✓ 8. subtraction-within-10 ✓ 9. addition-and-subtraction-strategies ✓ 10. counting-to-100-by-ones-and-tens ✓ 11. naming-coins ✓ 12. 2d-shapes ✓
+13. 3d-solids ✓ 14. comparing-length-capacity-and-weight ✓ 15. sorting-and-picture-graphs ✓ 16. personal-financial-literacy ✓
+
+その後: US-TX Algebra I …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
