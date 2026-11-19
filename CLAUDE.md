@@ -1101,7 +1101,15 @@ US-TX / Math / Algebra II（TEKS §111.40。高校）— grade `algebra-2`（nam
 13. logarithms ✓ 14. exponential-and-logarithmic-equations ✓ 15. cubic-and-cube-root-functions ✓ 16. absolute-value-functions-equations-and-inequalities ✓ 17. rational-functions ✓ 18. rational-equations-and-inverse-variation ✓
 19. complex-numbers ✓ 20. polynomial-operations-and-division ✓ 21. factoring-polynomials ✓ 22. rational-expressions ✓ 23. radicals-and-rational-exponents ✓ 24. data-and-regression ✓
 
-その後: US-TX Precalculus …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Precalculus（TEKS §111.42。高校）— grade `precalculus`（name「Precalculus」、sort 12）。standard_code は「P.2A」形式。生成スクリプトは `gen_ustx_math_pc_*`（US Algebra 2・Precalculus・Geometry の問題関数を build_sets で再利用、ほかは自前）。TX Algebra II・Geometry で使った問題関数は、できるだけ別の問題関数か自前に替える。domain は TEKS の分野名（Functions／Relations and Geometric Reasoning／Number and Measure／Algebraic Reasoning）。不等式の区間表記は自前の `solve_ineq`（pc の生成スクリプト内）
+1. composition-of-functions ✓ 2. even-odd-and-inverse-functions ✓ 3. piecewise-and-step-functions ✓ 4. transformations-of-functions ✓ 5. key-features-of-polynomial-functions ✓ 6. end-behavior ✓ 7. asymptotes-of-rational-functions ✓
+8. discontinuities ✓ 9. modeling-with-functions ✓ 10. trigonometric-values-of-special-angles ✓ 11. degrees-radians-and-reference-angles ✓ 12. linear-and-angular-velocity ✓ 13. graphs-of-trigonometric-functions ✓ 14. sinusoidal-models ✓
+15. inverse-trigonometric-functions ✓ 16. trigonometric-identities ✓ 17. trigonometric-equations ✓ 18. bearings-and-angles-of-elevation ✓ 19. law-of-sines-and-law-of-cosines ✓ 20. vectors ✓ 21. parametric-equations ✓
+22. polar-coordinates-and-graphs ✓ 23. conic-sections ✓ 24. ellipses-and-hyperbolas ✓ 25. sequences-series-and-sigma-notation ✓ 26. logarithmic-and-exponential-equations ✓ 27. polynomial-equations-and-inequalities ✓ 28. rational-inequalities ✓
+
+US-TX / Math は Kindergarten〜Precalculus まで完了。ws_common.num は割り切れない小数で None を返すので、選択肢の文字列に入れるときは `num(x) or num(x, "f")` にする
+
+その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 

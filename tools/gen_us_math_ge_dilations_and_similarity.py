@@ -101,7 +101,7 @@ def one_scale(r):
         A = r.randint(3, 30) * k.denominator ** 2
         q = "A polygon has area %d square units. It is dilated by a scale factor of %s. What is the area of the image?" % (A, kf(k))
         ans = k * k * A
-        return T(q, "%s square units" % num(ans), ["%s square units" % num(w) for w in dict.fromkeys([k * A, 2 * k * A, A + k * k]) if w != ans][:3],
+        return T(q, "%s square units" % num(ans), ["%s square units" % (num(w) or num(w, "f")) for w in dict.fromkeys([k * A, 2 * k * A, A + k * k]) if w != ans][:3],
                  "Area is multiplied by the square of the scale factor: (%s)² × %d = %s × %d = <b>%s square units</b>." % (kf(k), A, kf(k * k), A, num(ans)))
     a, b = r.sample([2, 3, 4, 5, 6, 7], 2)
     if __import__("math").gcd(a, b) > 1:
@@ -141,7 +141,7 @@ def one_word(r):
         W = w * r.choice([2, 3, F(5, 2), 4])
         H = W * F(h, w)
         q = "%s enlarges a %d in. by %d in. photo so that the short side is %s in. How long is the long side?" % (nm, w, h, num(W))
-        return T(q, "%s in." % num(H), ["%s in." % num(x) for x in dict.fromkeys([h + W - w, W * F(w, h), H + 2]) if x != H][:3],
+        return T(q, "%s in." % num(H), ["%s in." % (num(x) or num(x, "f")) for x in dict.fromkeys([h + W - w, W * F(w, h), H + 2]) if x != H][:3],
                  "The scale factor is %s ÷ %d = %s. Long side = %s × %d = <b>%s in.</b>" % (num(W), w, num(F(W, w)), num(F(W, w)), h, num(H)))
     if kind == "map":
         sc = r.choice([2, 5, 10, 20, 25])

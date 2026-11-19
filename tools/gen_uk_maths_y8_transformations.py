@@ -132,7 +132,7 @@ def one_enlarge(r):
         q = "A rectangle %d cm by %d cm is enlarged by scale factor %s. What are the new side lengths?" % (sides[0], sides[1], num(k))
         right = "%s cm by %s cm" % (num(sides[0] * k), num(sides[1] * k))
         wr = ["%s cm by %s cm" % (num(sides[0] + k), num(sides[1] + k)), "%s cm by %s cm" % (num(sides[0] * k * k), num(sides[1] * k * k)),
-              "%s cm by %s cm" % (num(F(sides[0]) / k), num(F(sides[1]) / k))]
+              "%s cm by %s cm" % (num(F(sides[0]) / k) or num(F(sides[0]) / k, "f"), num(F(sides[1]) / k) or num(F(sides[1]) / k, "f"))]
         return T(q, right, [w for w in wr if w != right], "Multiply every length by %s: <b>%s</b>. (A scale factor below 1 makes the shape smaller.)" % (num(k), right))
     if kind == 1:
         k = r.choice([2, 3, F(1, 2)])

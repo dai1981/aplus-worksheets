@@ -211,11 +211,11 @@ def one_word(r):
          "What is <i>C</i>(%s)%s?" % (num(a), num(b), num(t), "" if r.random() < 0.6 else ", and what happens to C in the long run"))
     if q.endswith("long run?"):
         right = "%s mg per liter, and it approaches 0" % num(cv)
-        return T(q, right, ["%s mg per liter, and it approaches %s" % (num(cv), num(a)), "%s mg per liter, and it approaches 0" % num(F(a * t, t + b)) if F(a * t, t + b) != cv else "%s mg per liter, and it approaches 0" % num(cv + 1),
+        return T(q, right, ["%s mg per liter, and it approaches %s" % (num(cv), num(a)), "%s mg per liter, and it approaches 0" % (num(F(a * t, t + b)) or num(F(a * t, t + b), "f")) if F(a * t, t + b) != cv else "%s mg per liter, and it approaches 0" % num(cv + 1),
                             "%s mg per liter, and it keeps growing" % num(cv)],
                  "<i>C</i>(%s) = %s ÷ %s = %s. The denominator has the higher degree, so the horizontal asymptote is <i>y</i> = 0. <b>%s</b>." % (num(t), num(a * t), num(t * t + b), num(cv), right))
     right = "%s mg per liter" % num(cv)
-    return T(q, right, ["%s mg per liter" % num(F(a * t, t + b)) if F(a * t, t + b) != cv else "%s mg per liter" % num(cv + 2), "%s mg per liter" % num(F(a, t * t + b) if F(a, t * t + b) != cv else cv + 1), "%s mg per liter" % num(a * t)],
+    return T(q, right, ["%s mg per liter" % (num(F(a * t, t + b)) or num(F(a * t, t + b), "f")) if F(a * t, t + b) != cv else "%s mg per liter" % num(cv + 2), "%s mg per liter" % (num(F(a, t * t + b) if F(a, t * t + b) != cv else cv + 1) or num(F(a, t * t + b), "f")), "%s mg per liter" % num(a * t)],
              "<i>C</i>(%s) = %s × %s ÷ (%s² + %s) = %s ÷ %s = <b>%s</b>." % (num(t), num(a), num(t), num(t), num(b), num(a * t), num(t * t + b), right))
 
 
