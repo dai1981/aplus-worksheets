@@ -1081,7 +1081,13 @@ US-TX / Math / Kindergarten（5〜6歳。20 まで、数えるのは 100 まで�
 7. addition-within-10 ✓ 8. subtraction-within-10 ✓ 9. addition-and-subtraction-strategies ✓ 10. counting-to-100-by-ones-and-tens ✓ 11. naming-coins ✓ 12. 2d-shapes ✓
 13. 3d-solids ✓ 14. comparing-length-capacity-and-weight ✓ 15. sorting-and-picture-graphs ✓ 16. personal-financial-literacy ✓
 
-その後: US-TX Algebra I …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Algebra I（TEKS §111.39、STAAR Algebra I の科目。高校）— grade `algebra-1`（name「Algebra I」、sort 9）。standard_url は TEA の Chapter 111 Subchapter C（tx_common.make が algebra で自動で切り替え）。生成スクリプトは `gen_ustx_math_a1_*`（US Algebra 1・Algebra 2・Geometry・Grade 8 の問題関数を build_sets で再利用、ほかは自前）。US の固定の文章題（problems()）は半分（10問）だけ使い、残りは別の問題関数で埋める。domain は TEKS の分野名（Linear Functions, Equations, and Inequalities／Quadratic Functions and Equations／Exponential Functions and Equations／Number and Algebraic Methods／Algebraic Reasoning）
+1. functions-and-function-notation ✓ 2. domain-and-range ✓ 3. slope-and-rate-of-change ✓ 4. graphing-linear-functions ✓ 5. writing-linear-equations ✓ 6. parallel-and-perpendicular-lines ✓
+7. direct-variation ✓ 8. solving-linear-equations ✓ 9. linear-inequalities ✓ 10. systems-of-linear-equations ✓ 11. systems-of-linear-inequalities ✓ 12. correlation-and-lines-of-fit ✓
+13. transformations-of-linear-functions ✓ 14. polynomial-operations ✓ 15. dividing-polynomials ✓ 16. factoring ✓ 17. graphing-quadratic-functions ✓ 18. writing-quadratic-functions ✓
+19. transformations-of-quadratic-functions ✓ 20. solving-quadratic-equations ✓ 21. exponential-functions ✓ 22. exponents-and-radicals ✓ 23. arithmetic-and-geometric-sequences ✓ 24. literal-equations-and-formulas ✓
+
+その後: US-TX Geometry、US-TX Algebra II …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
