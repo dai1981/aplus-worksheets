@@ -1087,7 +1087,15 @@ US-TX / Math / Algebra I（TEKS §111.39、STAAR Algebra I の科目。高校）
 13. transformations-of-linear-functions ✓ 14. polynomial-operations ✓ 15. dividing-polynomials ✓ 16. factoring ✓ 17. graphing-quadratic-functions ✓ 18. writing-quadratic-functions ✓
 19. transformations-of-quadratic-functions ✓ 20. solving-quadratic-equations ✓ 21. exponential-functions ✓ 22. exponents-and-radicals ✓ 23. arithmetic-and-geometric-sequences ✓ 24. literal-equations-and-formulas ✓
 
-その後: US-TX Geometry、US-TX Algebra II …（新しい学年・国は `catalog.json` に追加）
+US-TX / Math / Geometry（TEKS §111.41。高校）— grade `geometry`（name「Geometry」、sort 10）。standard_url は Subchapter C（tx_common.make は grade- 以外を ch111c にする）。生成スクリプトは `gen_ustx_math_ge_*`（US Geometry・Precalculus・Grade 7、TX Grade 8、AU Year 8 の問題関数を build_sets で再利用、ほかは自前）。domain は TEKS の分野名（Coordinate and Transformational Geometry／Logical Argument and Constructions／Proof and Congruence／Similarity, Proof, and Trigonometry／Two-Dimensional and Three-Dimensional Figures／Circles／Probability）。tx_common.us_text は trapezium→trapezoid も直す
+1. points-lines-planes-and-definitions ✓ 2. conditional-statements-and-counterexamples ✓ 3. segments-midpoints-and-partitions ✓ 4. distance-slope-and-midpoint-formulas ✓ 5. equations-of-parallel-and-perpendicular-lines ✓
+6. angles-and-parallel-lines ✓ 7. transformations ✓ 8. reflectional-and-rotational-symmetry ✓ 9. triangle-angle-theorems ✓ 10. triangle-inequality-theorem ✓ 11. proving-triangles-congruent ✓
+12. midsegments-bisectors-and-medians ✓ 13. quadrilaterals-and-polygon-angles ✓ 14. dilations-and-similar-figures ✓ 15. similar-triangles-and-proportionality ✓ 16. right-triangle-similarity-and-geometric-mean ✓
+17. pythagorean-theorem-and-special-right-triangles ✓ 18. trigonometric-ratios ✓ 19. cross-sections-and-solids-of-revolution ✓ 20. dimensional-change ✓ 21. area-of-regular-polygons-and-composite-figures ✓
+22. surface-area ✓ 23. volume ✓ 24. circle-angles-chords-tangents-and-secants ✓ 25. arc-length-sector-area-and-radians ✓ 26. equations-of-circles ✓ 27. permutations-and-combinations ✓
+28. geometric-probability ✓ 29. independent-and-conditional-probability ✓
+
+その後: US-TX Algebra II …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
