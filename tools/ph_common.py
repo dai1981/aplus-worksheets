@@ -36,7 +36,7 @@ US_WORDS = [("colour", "color"), ("Colour", "Color"), ("centimetre", "centimeter
             ("labelled", "labeled"), ("maths", "math"), ("Maths", "Math"), ("analogue", "analog"), ("cm²", "square centimeters"),
             ("m²", "square meters"), ("biscuit", "cookie"), ("lollies", "candies"), ("footy", "football"),
             ("tuck shop", "canteen"), ("cafeteria", "canteen"), ("Year 4 ", "Grade 4 "), ("Year 3 ", "Grade 3 "), ("Year 1 ", "Grade 1 "), ("Year 2 ", "Grade 2 "), ("Year 5 ", "Grade 5 "), ("Year 6 ", "Grade 6 "), ("Primary 4 ", "Grade 4 "), ("P4 ", "Grade 4 "), ("Wattle Street", "Rizal Street"), ("baseball", "basketball"), ("Baseball", "Basketball"), ("pupils", "learners"), ("students", "learners"), ("Students", "Learners"), ("all the way round", "all the way around"), (" round the ", " around the "), ("right-angled", "right"), ("Right-angled", "Right"), ("renamed", "regrouped"), ("renaming", "regrouping"), ("anticlockwise", "counterclockwise"), ("Anticlockwise", "Counterclockwise"), ("clockwise or counterclockwise", "clockwise or counterclockwise"), ("netball team has", "kickball team has"), ("on the court", "on the field"), ("$2 coins", "$2 bills"), ("$2 coin", "$2 bill"), ("money box", "piggy bank"), ("mobile phone", "cell phone"), ("petrol", "gas"), ("holidays", "vacation"), ("Hockey", "Volleyball"), ("hockey", "volleyball"), ("Canada geese", "wild geese"), ("Canada goose", "wild goose"), ("Ringette", "Snowboarding"), ("ringette", "snowboarding"), ("curling", "bowling"), ("Curling", "Bowling"), ("kookaburras", "robins"), ("Kookaburras", "Robins"), ("kookaburra", "robin"), ("Kookaburra", "Robin"), ("trapeziums", "trapezoids"), ("Trapeziums", "Trapezoids"), ("trapezium", "trapezoid"), ("Trapezium", "Trapezoid"), ("ladybird", "ladybug"), ("Ladybird", "Ladybug"), ("subitising", "subitizing"), ("Subitising", "Subitizing")]
-LEAKS = r"(\$|¢|£|°F|\b(Texas|TEKS|STAAR|Common Core|PSLE|MOE|Ontario|Toronto|Ottawa|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Brisbane|Perth|Singapore|Year [1-9]|Primary [1-6]|AUD|CAD|SGD|Tim Hortons|Tobermory|Fort St|Huron|Mississauga|Collingwood|Duluth|Grouse|Smithers|Canadians|Ferries|Superior|ski|skis|skiing|Skiing|skating|Skating|sledding|Sledding|snowboarding|Snowboarding|igloo|blizzard|frostbite|Mexico|Vernon|Squamish|Prince [A-Z]\w+|Kelowna|Kamloops|Whistler|Victoria|Vancouver|Nanaimo|Surrey|Burnaby|Okanagan|Fraser|Yukon|Banff|Calgary|Edmonton|Winnipeg|Halifax|Muskoka|Sudbury|Thunder Bay|Montreal|Quebec|Alberta|Manitoba|Nunavut|Kingston|Hamilton|Niagara|Ottawa|Regina|Saskatoon|Brisbane|Adelaide|Darwin|Hobart|Canberra|Cairns|Uluru|London|Manchester|Birmingham|Leeds|Glasgow|Edinburgh|Cardiff|Bristol|Liverpool|Texas|Houston|Dallas|Austin|Chicago|Boston|Seattle|Denver|Miami|Ohio|Iowa|Utah|Orchard Road|Sentosa|Jurong|Tampines|Changi|poutine|maple syrup|hockey|netball|Wattle|wattle|kangaroo|koala|footy|ute|lolly|lollies|biscuits?|trolley|fortnight|mum|wombats?|ladybirds?|dollars?|cents?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4)\b)"
+LEAKS = r"(\$|¢|£|°F|\b(Texas|TEKS|STAAR|Common Core|PSLE|MOE|Ontario|Toronto|Ottawa|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Brisbane|Perth|Singapore|Year [1-9]|Primary [1-6]|AUD|CAD|SGD|Tim Hortons|pucks?|Pucks?|Tobermory|Fort St|Huron|Mississauga|Collingwood|Duluth|Grouse|Smithers|Canadians|Ferries|Superior|ski|skis|skiing|Skiing|skating|Skating|sledding|Sledding|snowboarding|Snowboarding|igloo|blizzard|frostbite|Mexico|Vernon|Squamish|Prince [A-Z]\w+|Kelowna|Kamloops|Whistler|Victoria|Vancouver|Nanaimo|Surrey|Burnaby|Okanagan|Fraser|Yukon|Banff|Calgary|Edmonton|Winnipeg|Halifax|Muskoka|Sudbury|Thunder Bay|Montreal|Quebec|Alberta|Manitoba|Nunavut|Kingston|Hamilton|Niagara|Ottawa|Regina|Saskatoon|Brisbane|Adelaide|Darwin|Hobart|Canberra|Cairns|Uluru|London|Manchester|Birmingham|Leeds|Glasgow|Edinburgh|Cardiff|Bristol|Liverpool|Texas|Houston|Dallas|Austin|Chicago|Boston|Seattle|Denver|Miami|Ohio|Iowa|Utah|Orchard Road|Sentosa|Jurong|Tampines|Changi|poutine|maple syrup|hockey|netball|Wattle|wattle|kangaroo|koala|footy|ute|lolly|lollies|biscuits?|trolley|fortnight|mum|wombats?|ladybirds?|dollars?|cents?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4)\b)"
 
 
 IMPERIAL = "inch|inches|in\\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|mph"
@@ -84,9 +84,11 @@ def localize(it):
 
 def ph_ok(it):
     """True when an item fits the Philippines (no dollars, inches, STAAR, ...)."""
+    if not it.get("q", "").strip() or "_abcd" in it:
+        return False
     plain = re.sub(r"<svg.*?</svg>", " ", it["q"] + " " + it["e"] + " " + " ".join(it["c"]), flags=re.S)
     t = re.sub(r"<[^>]+>", " ", us_text(plain))
-    return not re.search(_leaks(), t) and not re.search(r"\d+c\b", t) and (ALLOW_IMPERIAL or not re.search(INCH, t))
+    return not re.search(_leaks(), t) and not re.search(r"\d+[cp]\b", t) and (ALLOW_IMPERIAL or not re.search(INCH, t))
 
 
 def _commas_plain(t):
@@ -121,6 +123,9 @@ def us_text(s):
     s = re.sub(r"\b([ap])\.m\.\.(?!\.)", r"\1.m.", s)
     s = re.sub(r"\b([Aa]) coach (travels|leaves|takes|drives|goes)", r"\1 bus \2", s)
     s = s.replace("in standard form", "in decimal form").replace("In standard form", "In decimal form")
+    s = re.sub(r"(?<![\d.,])\b1 tens\b", "1 ten", s)
+    s = re.sub(r"(?<![\d.,])\b1 ones\b", "1 one", s)
+    s = s.replace("sweets", "candies").replace("Sweets", "Candies").replace("in the queue", "in the line").replace("queue", "line")
     s = s.replace("ξ", "U")
     s = re.sub(r"(\d)\xa0(\d{3})(?!\d)", r"\1,\2", s)
     s = re.sub(r"(\d)\xa0(\d{3})(?!\d)", r"\1,\2", s)
@@ -216,7 +221,9 @@ def run_many(fn, *args, seed=1, n=20, keep=None, avoid=(), _full=False):
         except AssertionError:
             continue
         for it in its:
-            if key(it) in seen or (keep and not keep(it)) or not ph_ok(it):
+            if "build" in it:          # letter questions (A–D pictures) built for a chosen answer position
+                it = it["build"](random.Random(seed * 1000 + k * 50 + len(out)).randrange(4))
+            if "q" not in it or not ph_ok(it) or key(it) in seen or (keep and not keep(it)):
                 continue
             seen.add(key(it))
             out.append(it)

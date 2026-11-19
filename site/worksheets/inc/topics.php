@@ -131,7 +131,7 @@ function topic_defs($country = null) {
             'blurb' => 'Counting coins and bills, making change, budgets, discounts and tax, saving and interest.',
             'blurb_gb' => 'Counting coins and notes, giving change, budgets, discounts, saving and interest.'),
         'time' => array('name' => 'Time',
-            'in' => '/time|clock|calendar|days-weeks|timetables|duration|elapsed/', 'out' => '/times-table|speed-distance|over-time/',
+            'in' => '/time|clock|calendar|days-weeks|days-of-the-week|timetables|duration|elapsed/', 'out' => '/times-table|speed-distance|over-time/',
             'blurb' => 'Telling time on analog and digital clocks, a.m. and p.m., the 24-hour clock, elapsed time and calendars.',
             'blurb_gb' => 'Telling the time on analogue and digital clocks, the 12- and 24-hour clock, how long things take, and calendars.'),
         'measurement' => array('name' => 'Measurement',

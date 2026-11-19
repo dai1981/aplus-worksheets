@@ -1131,7 +1131,16 @@ LEAKS にカナダ・オーストラリア・英国・米国の地名と雪の�
 21. integers-and-absolute-value ✓ 22. adding-and-subtracting-integers ✓ 23. multiplying-and-dividing-integers ✓ 24. order-of-operations-gemdas ✓
 25. algebraic-expressions ✓ 26. properties-of-equality-and-solving-equations ✓ 27. formulas-and-solving-for-a-variable ✓ 28. scientific-notation ✓ 29. probability-experiments-and-outcomes ✓
 
-PH の次: Grade 1（CG が出ている学年）→ Grades 2・3・5・6・8（CG が出たら）。catalog.json に学年を足す
+PH / Math / Grade 1（MATATAG。100 まで、計算は 20 まで・100 までは繰り上がり／繰り下がりなし。とても短い文、ほぼ全問に絵）— 生成スクリプトは `gen_ph_math_g1_*`。US Grade 1・AU Year 1／Foundation・UK Year 1・SG Primary 1・Ontario・BC・TX Grade 1・AU Year 2（turns・time）の問題関数を再利用。
+120 までの問題関数は keep の le100 で絞る。足し算の単元は add20（引き算の話を落とす）。お金は自前の money_svg（₱1・₱5・₱10・₱20 硬貨、₱20・₱50・₱100 札、centavo なし）。
+ph_common.run_many は A〜D の絵の問題（"build"）を組み立ててから使う。pence（5p）・puck も LEAKS
+1. 2d-shapes ✓ 2. composing-and-decomposing-shapes ✓ 3. counting-to-100 ✓ 4. reading-and-writing-numbers-to-100 ✓ 5. comparing-and-ordering-numbers-to-20 ✓ 6. ordinal-numbers ✓
+7. composing-and-decomposing-numbers-to-10 ✓ 8. addition-within-20 ✓ 9. addition-word-problems-within-20 ✓ 10. measuring-length-with-non-standard-units ✓ 11. ordering-numbers-to-100 ✓
+12. skip-counting-by-2s-5s-and-10s ✓ 13. tens-and-ones ✓ 14. adding-within-100-without-regrouping ✓ 15. pictographs ✓ 16. subtraction-within-20 ✓
+17. missing-numbers-and-equivalent-expressions ✓ 18. subtracting-within-100-without-regrouping ✓ 19. repeating-patterns ✓ 20. halves-and-quarters ✓
+21. philippine-money ✓ 22. half-turns-and-quarter-turns ✓ 23. telling-time ✓ 24. days-of-the-week-and-months-of-the-year ✓
+
+PH の次: MATATAG の CG が出ている学年（1・4・7）は完了。Grades 2・3・5・6・8 は CG が公開されたら（DepEd の MATATAG ページを確認）。catalog.json に学年を足す
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
