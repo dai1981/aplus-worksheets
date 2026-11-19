@@ -36,7 +36,20 @@ US_WORDS = [("colour", "color"), ("Colour", "Color"), ("centimetre", "centimeter
             ("labelled", "labeled"), ("maths", "math"), ("Maths", "Math"), ("analogue", "analog"), ("cm²", "square centimeters"),
             ("m²", "square meters"), ("biscuit", "cookie"), ("lollies", "candies"), ("footy", "football"),
             ("tuck shop", "canteen"), ("cafeteria", "canteen"), ("Year 4 ", "Grade 4 "), ("Year 3 ", "Grade 3 "), ("Year 1 ", "Grade 1 "), ("Year 2 ", "Grade 2 "), ("Year 5 ", "Grade 5 "), ("Year 6 ", "Grade 6 "), ("Primary 4 ", "Grade 4 "), ("P4 ", "Grade 4 "), ("Wattle Street", "Rizal Street"), ("baseball", "basketball"), ("Baseball", "Basketball"), ("pupils", "learners"), ("students", "learners"), ("Students", "Learners"), ("all the way round", "all the way around"), (" round the ", " around the "), ("right-angled", "right"), ("Right-angled", "Right"), ("renamed", "regrouped"), ("renaming", "regrouping"), ("anticlockwise", "counterclockwise"), ("Anticlockwise", "Counterclockwise"), ("clockwise or counterclockwise", "clockwise or counterclockwise"), ("netball team has", "kickball team has"), ("on the court", "on the field"), ("$2 coins", "$2 bills"), ("$2 coin", "$2 bill"), ("money box", "piggy bank"), ("mobile phone", "cell phone"), ("petrol", "gas"), ("holidays", "vacation"), ("Hockey", "Volleyball"), ("hockey", "volleyball"), ("Canada geese", "wild geese"), ("Canada goose", "wild goose"), ("Ringette", "Snowboarding"), ("ringette", "snowboarding"), ("curling", "bowling"), ("Curling", "Bowling"), ("kookaburras", "robins"), ("Kookaburras", "Robins"), ("kookaburra", "robin"), ("Kookaburra", "Robin"), ("trapeziums", "trapezoids"), ("Trapeziums", "Trapezoids"), ("trapezium", "trapezoid"), ("Trapezium", "Trapezoid"), ("ladybird", "ladybug"), ("Ladybird", "Ladybug"), ("subitising", "subitizing"), ("Subitising", "Subitizing")]
-LEAKS = r"(\$|¢|£|°F|\b(Texas|TEKS|STAAR|Common Core|PSLE|MOE|Ontario|Toronto|Ottawa|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Brisbane|Perth|Singapore|Year [1-9]|Primary [1-6]|AUD|CAD|SGD|Tim Hortons|poutine|maple syrup|hockey|netball|Wattle|wattle|kangaroo|koala|footy|ute|lolly|lollies|biscuits?|trolley|fortnight|mum|wombats?|ladybirds?|dollars?|cents?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4)\b)"
+LEAKS = r"(\$|¢|£|°F|\b(Texas|TEKS|STAAR|Common Core|PSLE|MOE|Ontario|Toronto|Ottawa|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Brisbane|Perth|Singapore|Year [1-9]|Primary [1-6]|AUD|CAD|SGD|Tim Hortons|Tobermory|Fort St|Huron|Mississauga|Collingwood|Duluth|Grouse|Smithers|Canadians|Ferries|Superior|ski|skis|skiing|Skiing|skating|Skating|sledding|Sledding|snowboarding|Snowboarding|igloo|blizzard|frostbite|Mexico|Vernon|Squamish|Prince [A-Z]\w+|Kelowna|Kamloops|Whistler|Victoria|Vancouver|Nanaimo|Surrey|Burnaby|Okanagan|Fraser|Yukon|Banff|Calgary|Edmonton|Winnipeg|Halifax|Muskoka|Sudbury|Thunder Bay|Montreal|Quebec|Alberta|Manitoba|Nunavut|Kingston|Hamilton|Niagara|Ottawa|Regina|Saskatoon|Brisbane|Adelaide|Darwin|Hobart|Canberra|Cairns|Uluru|London|Manchester|Birmingham|Leeds|Glasgow|Edinburgh|Cardiff|Bristol|Liverpool|Texas|Houston|Dallas|Austin|Chicago|Boston|Seattle|Denver|Miami|Ohio|Iowa|Utah|Orchard Road|Sentosa|Jurong|Tampines|Changi|poutine|maple syrup|hockey|netball|Wattle|wattle|kangaroo|koala|footy|ute|lolly|lollies|biscuits?|trolley|fortnight|mum|wombats?|ladybirds?|dollars?|cents?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4)\b)"
+
+
+IMPERIAL = "inch|inches|in\\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|mph"
+ALLOW_IMPERIAL = False   # True only in a unit that converts between metric and customary units (Grade 7)
+
+
+def _leaks():
+    if not ALLOW_IMPERIAL:
+        return LEAKS
+    out = LEAKS
+    for t in IMPERIAL.split("|"):
+        out = out.replace("|" + t + "|", "|")
+    return out
 
 
 INCH = r"\d (in|ft|yd|lb|oz|mi|gal|qt|pt)\b(?! (all|the|a|an|each|his|her|their|every|order|total|front|which|this|that|one|its|it|them|row|line|place|between))"
@@ -73,7 +86,7 @@ def ph_ok(it):
     """True when an item fits the Philippines (no dollars, inches, STAAR, ...)."""
     plain = re.sub(r"<svg.*?</svg>", " ", it["q"] + " " + it["e"] + " " + " ".join(it["c"]), flags=re.S)
     t = re.sub(r"<[^>]+>", " ", us_text(plain))
-    return not re.search(LEAKS, t) and not re.search(INCH, t)
+    return not re.search(_leaks(), t) and not re.search(r"\d+c\b", t) and (ALLOW_IMPERIAL or not re.search(INCH, t))
 
 
 def _commas_plain(t):
@@ -106,7 +119,15 @@ def us_text(s):
     s = re.sub(r"(?<=\d)( ?)l\b", r"\1L", s)
     s = re.sub(r"(?<![A-Za-z])ml(?![A-Za-z])", "mL", s)
     s = re.sub(r"\b([ap])\.m\.\.(?!\.)", r"\1.m.", s)
+    s = re.sub(r"\b([Aa]) coach (travels|leaves|takes|drives|goes)", r"\1 bus \2", s)
+    s = s.replace("in standard form", "in decimal form").replace("In standard form", "In decimal form")
+    s = s.replace("ξ", "U")
+    s = re.sub(r"(\d)\xa0(\d{3})(?!\d)", r"\1,\2", s)
+    s = re.sub(r"(\d)\xa0(\d{3})(?!\d)", r"\1,\2", s)
+    s = re.sub(r"\b(\d)th graders\b", r"Grade \1 learners", s)
+    s = re.sub(r"\b(\d)th-graders\b", r"Grade \1 learners", s)
     s = s.replace("sandpit", "sandbox").replace("Sandpit", "Sandbox")
+    s = re.sub(r"(?<![\d.,/−-])\b1 (hour|minute|second|day|week|month|year|meter|kilometer|liter|gram|kilogram|centimeter)s\b", r"1 \1", s)
     s = re.sub(r"(?<![\d.,])\b1 were\b", "1 was", s)
     sing = {"dimes": "dime", "pennies": "penny", "nickels": "nickel", "quarters": "quarter", "tenths": "tenth", "hundredths": "hundredth"}
     s = re.sub(r"(?<![\d.,/])\b1 (dimes|pennies|nickels|quarters|tenths|hundredths)\b", lambda m: "1 " + sing[m.group(1)], s)
@@ -149,6 +170,9 @@ def adopt(mod):
             setattr(mod, name, list(PLACES))
     if hasattr(mod, "comma"):
         mod.comma = comma
+    for name in ("gbp", "aud", "sgd", "usd", "cad"):
+        if callable(getattr(mod, name, None)):
+            setattr(mod, name, peso)
     return mod
 
 
@@ -312,9 +336,9 @@ def finish(sets, rnd, max_num=None):
             it["c"] = [us_text(c) for c in it["c"]]
             assert len(set(it["c"])) == 4, it["c"]
             plain = re.sub(r"<svg.*?</svg>", "", it["q"], flags=re.S)
-            m = re.search(LEAKS, re.sub(r"<[^>]+>", " ", plain + " " + it["e"] + " " + " ".join(it["c"])))
+            m = re.search(_leaks(), re.sub(r"<[^>]+>", " ", plain + " " + it["e"] + " " + " ".join(it["c"])))
             assert not m, (m.group(0), it["q"][:200])
-            m = re.search(INCH, re.sub(r"<[^>]+>", " ", plain + " " + it["e"] + " " + " ".join(it["c"])))
+            m = None if ALLOW_IMPERIAL else re.search(INCH, re.sub(r"<[^>]+>", " ", plain + " " + it["e"] + " " + " ".join(it["c"])))
             assert not m, (m.group(0), it["q"][:200])
             key = it["q"] + "|" + "|".join(sorted(it["c"]))
             assert key not in seen, it["q"][:200]

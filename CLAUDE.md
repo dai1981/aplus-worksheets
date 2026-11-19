@@ -1121,7 +1121,17 @@ PH / Math / Grade 4（MATATAG。Q1〜Q4 の順）
 16. equivalent-fractions-and-simplest-form ✓ 17. factors-and-multiples ✓ 18. adding-and-subtracting-dissimilar-fractions ✓ 19. line-symmetry ✓ 20. reflection-and-glide-reflection ✓
 21. decimal-numbers-to-hundredths ✓ 22. comparing-ordering-and-rounding-decimals ✓ 23. patterns ✓ 24. number-sentences-properties-and-equivalent-facts ✓ 25. tables-and-line-graphs ✓
 
-PH の次: Grade 7（MATATAG の CG が出ている学年）→ Grade 1 → Grades 2・3・5・6（CG が出たら）。catalog.json に学年を足す
+PH / Math / Grade 7（MATATAG。高校の最初の学年）— 生成スクリプトは `gen_ph_math_g7_*`。UK KS3・AU Year 7–8・SG Sec・US Grade 6–8・TX・Ontario・BC の問題関数（one_x・set_x）を再利用。
+ph_common.adopt は gbp・aud・sgd などのお金の関数を peso に替える（モジュール独自の money は imports の extra で `mod.money = peso`）。単位換算の単元だけ `ph_common.ALLOW_IMPERIAL = True`（CG が across different systems のため）。
+LEAKS にカナダ・オーストラリア・英国・米国の地名と雪のスポーツを入れてある。新しく混ざったら LEAKS に足す。VAT は 12%。「standard form」は「decimal form」に直す
+1. classifying-and-drawing-polygons ✓ 2. angle-pairs ✓ 3. interior-and-exterior-angles-of-polygons ✓ 4. percentage-increase-and-decrease ✓ 5. discount-commission-vat-and-simple-interest ✓
+6. budgets-and-financial-plans ✓ 7. rates-and-speed ✓ 8. fractions-decimals-and-percentages ✓ 9. ordering-rational-numbers-on-a-number-line ✓ 10. operations-on-rational-numbers ✓
+11. square-roots-and-cube-roots ✓ 12. irrational-numbers-on-the-number-line ✓ 13. sets-subsets-union-and-intersection ✓ 14. subsets-of-real-numbers ✓ 15. converting-units-of-measure ✓
+16. volume-of-cylinders ✓ 17. volume-of-pyramids ✓ 18. data-collection-and-sampling ✓ 19. frequency-distribution-tables ✓ 20. statistical-graphs ✓
+21. integers-and-absolute-value ✓ 22. adding-and-subtracting-integers ✓ 23. multiplying-and-dividing-integers ✓ 24. order-of-operations-gemdas ✓
+25. algebraic-expressions ✓ 26. properties-of-equality-and-solving-equations ✓ 27. formulas-and-solving-for-a-variable ✓ 28. scientific-notation ✓ 29. probability-experiments-and-outcomes ✓
+
+PH の次: Grade 1（CG が出ている学年）→ Grades 2・3・5・6・8（CG が出たら）。catalog.json に学年を足す
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
