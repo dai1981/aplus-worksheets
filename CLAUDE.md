@@ -1160,7 +1160,11 @@ ZA / Maths / Grade 5（CAPS。数は 6 桁まで、小数なし（お金の R45,
 ZA / Maths / Grade 6（CAPS。数は 9 桁まで、小数は 3 桁まで（コンマ）、負の数なし、分数は twelfths まで＋100分の1）— 生成スクリプトは `gen_za_maths_g6_*`。時刻表は自前（Gautrain・MyCiTi・Metrorail・Durban bus）。za_ok は SVG の文字と aria-label も LEAKS で調べる（AU・カナダの地名や動物、maple）。gb_text は Year N→Grade N、Pupil・Student→Learner、Fall→Autumn も直す
 1. whole-numbers-to-9-digits ✓ 2. rounding-off ✓ 3. addition-and-subtraction ✓ 4. calculation-techniques ✓ 5. multiplication ✓ 6. division ✓ 7. multiples-factors-and-prime-numbers ✓ 8. properties-and-order-of-operations ✓ 9. common-fractions ✓ 10. adding-and-subtracting-fractions ✓ 11. fractions-of-whole-numbers ✓ 12. decimal-fractions ✓ 13. adding-and-subtracting-decimals ✓ 14. multiplying-and-dividing-decimals ✓ 15. percentages ✓ 16. money-rate-and-ratio-problems ✓ 17. numeric-patterns ✓ 18. geometric-patterns ✓ 19. number-sentences ✓ 20. 2d-shapes ✓ 21. angles ✓ 22. 3d-objects ✓ 23. symmetry ✓ 24. transformations-enlargements-and-reductions ✓ 25. position-and-movement ✓ 26. length ✓ 27. mass ✓ 28. capacity-and-volume ✓ 29. time ✓ 30. temperature ✓ 31. perimeter-area-and-volume ✓ 32. collecting-and-organising-data ✓ 33. pictographs-bar-graphs-and-pie-charts ✓ 34. probability ✓
 
-ZA の次: Grade 7–9（Senior Phase）→ Grade 12（NSC）
+ZA / Maths / Grade 7（CAPS Senior Phase。負の数は「−」、円・π・指数表記は Grade 8 以降なので出さない（keep の ok7））— 生成スクリプトは `gen_za_maths_g7_*`。UK Year 7・AU Year 7 の one_x を collect で多く再利用。standard_url は CAPS SP Mathematics Gr 7-9 の PDF（STD_URL_SP）。
+Senior Phase は `za_common.GBP_TO_RAND = True`（UK・AU の問題関数の £・$ を R に、pence を cents に）。za_ok は GST・HST と 15% 以外の VAT を落とす。gb_text は mom→mother。財務（利益・割引・VAT 15%・予算・単利）は自前
+1. whole-numbers ✓ 2. multiples-factors-and-prime-factorisation ✓ 3. calculating-with-whole-numbers ✓ 4. ratio-and-rate ✓ 5. financial-maths ✓ 6. exponents ✓ 7. integers ✓ 8. common-fractions ✓ 9. multiplying-fractions ✓ 10. percentages ✓ 11. decimal-fractions ✓ 12. calculating-with-decimals ✓ 13. numeric-and-geometric-patterns ✓ 14. functions-and-relationships ✓ 15. algebraic-expressions ✓ 16. algebraic-equations ✓ 17. graphs ✓ 18. geometry-of-straight-lines ✓ 19. triangles-and-quadrilaterals ✓ 20. 3d-objects ✓ 21. transformation-geometry ✓ 22. area-and-perimeter ✓ 23. surface-area-and-volume ✓ 24. collecting-and-summarising-data ✓ 25. bar-graphs-histograms-and-pie-charts ✓ 26. probability ✓
+
+ZA の次: Grade 8 → Grade 9（Senior Phase）→ Grade 12（NSC）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

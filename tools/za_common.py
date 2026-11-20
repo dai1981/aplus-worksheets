@@ -20,8 +20,10 @@ FOREIGN_BOYS = ['Aarav', 'Ahmad', 'Aiden', 'Alfie', 'Ali', 'Andre', 'Angelo', 'A
 _FOREIGN = sorted([(n, GIRLS) for n in FOREIGN_GIRLS] + [(n, BOYS) for n in FOREIGN_BOYS], key=lambda p: -len(p[0]))
 PLACES = ["Johannesburg", "Cape Town", "Durban", "Pretoria", "Soweto", "Bloemfontein", "Gqeberha", "Polokwane", "Mbombela", "Kimberley"]
 STD_URL_IP = "https://www.education.gov.za/Portals/0/CD/National%20Curriculum%20Statements%20and%20Vocational/CAPS%20IP%20%20MATHEMATICS%20GR%204-6%20web.pdf"
-STD_URLS = {"grade-4": STD_URL_IP, "grade-5": STD_URL_IP, "grade-6": STD_URL_IP}
+STD_URL_SP = "https://www.education.gov.za/Portals/0/CD/National%20Curriculum%20Statements%20and%20Vocational/CAPS%20SP%20%20MATHEMATICS%20GR%207-9.pdf"
+STD_URLS = {"grade-4": STD_URL_IP, "grade-5": STD_URL_IP, "grade-6": STD_URL_IP, "grade-7": STD_URL_SP, "grade-8": STD_URL_SP, "grade-9": STD_URL_SP}
 GRADE = "grade-4"
+GBP_TO_RAND = False   # Senior Phase: UK KS3 and AU makers write £ and $ amounts inline; turn them into rand
 
 GB_WORDS = [("centimeter", "centimetre"), ("millimeter", "millimetre"), ("kilometer", "kilometre"), ("Kilometer", "Kilometre"), ("Centimeter", "Centimetre"), ("milliliter", "millilitre"), ("Milliliter", "Millilitre"), ("colorful", "colourful"), ("color", "colour"), ("Color", "Colour"), ("meter", "metre"), ("Meter", "Metre"), ("liter", "litre"), ("Liter", "Litre"),
             ("center", "centre"), ("Center", "Centre"), ("favorite", "favourite"), ("Favorite", "Favourite"), ("neighbor", "neighbour"),
@@ -91,6 +93,8 @@ def za_ok(it):
     svgtext = " ".join(" ".join(re.findall(r">([^<>]+)<", g) + re.findall(r"aria-label='([^']*)'", g)) for g in re.findall(r"<svg.*?</svg>", raw, flags=re.S))
     plain = re.sub(r"<svg.*?</svg>", " ", raw, flags=re.S) + " " + svgtext
     t = re.sub(r"<[^>]+>", " ", gb_text(plain))
+    if re.search(r"\b(GST|HST|PST)\b|\bVAT (of|at|is) (?!15 ?%)\d", t):
+        return False
     return not re.search(_leaks(), t) and not re.search(r"\d+p\b", t) and (ALLOW_IMPERIAL or not re.search(INCH, t))
 
 
@@ -142,6 +146,11 @@ def gb_text(s):
     for a, b in ZA_PLACES:
         s = re.sub(r"\b" + a + r"\b", b, s)
     s = s.replace("(L)", "(ℓ)").replace("(mL)", "(mℓ)")
+    s = re.sub(r"\bmom\b", "mother", s)
+    s = re.sub(r"\bMom\b", "Mother", s)
+    if GBP_TO_RAND:
+        s = re.sub(r"\bpence\b", "cents", s)
+        s = re.sub(r"[£$](?=\d)", "R", s)
     s = re.sub(r"(</span></span>)(\s*)L\b", r"\1\2ℓ", s)
     s = re.sub(r"\bPupils\b", "Learners", s).replace("Students", "Learners")
     s = re.sub(r"\bStudent\b", "Learner", s)
@@ -194,7 +203,8 @@ def adopt(mod):
         if hasattr(mod, name):
             setattr(mod, name, list(GIRLS if name == "GIRLS" else BOYS))
     for name in ("PLACES", "CITIES", "TOWNS"):
-        if hasattr(mod, name):
+        v = getattr(mod, name, None)
+        if isinstance(v, (list, tuple)) and v and all(isinstance(x, str) for x in v):
             setattr(mod, name, list(PLACES))
     if hasattr(mod, "comma"):
         mod.comma = comma
