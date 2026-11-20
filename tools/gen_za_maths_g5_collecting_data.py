@@ -55,7 +55,7 @@ def den12(it):
 def build():
     sets, R = build_sets([
         ("Tally tables", [("run", uks.set_tally_table, ("rnd",), 20, nodec)]),
-        ("Frequency tables", [("run", ukt.set_tables, (), 15, nodec), ("run", aud.set_tally, ("rnd",), 5, nodec)]),
+        ("Frequency tables", [("run", ukt.set_tables, (), 13, nodec), ("run", aud.set_tally, ("rnd",), 7, nodec)]),
         ("Compare the data", [("run", aud.set_compare, ("rnd",), 20, nodec)]),
         ("The mode", [("run", aul.set_mode, (), 20, nodec)]),
         ("Data questions", [("run", aud.set_words, ("rnd",), 10, nodec), ("run", aul.set_words, (), 10, nodec)]),

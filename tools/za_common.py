@@ -37,7 +37,7 @@ GB_WORDS = [("centimeter", "centimetre"), ("millimeter", "millimetre"), ("kilome
             ("Year 4 ", "Grade 4 "), ("Year 3 ", "Grade 3 "), ("Year 5 ", "Grade 5 "), ("Year 6 ", "Grade 6 "), ("Primary 4 ", "Grade 4 "),
             ("Wattle Street", "Long Street"), ("baseball", "cricket"), ("Baseball", "Cricket"), ("football", "soccer"), ("Football", "Soccer"),
             ("sari-sari store", "spaza shop"), ("sausage sizzle", "fundraiser"), ("ice blocks", "ice lollies"), ("ice block", "ice lolly"), ("athletics carnival", "athletics day"), ("swimming carnival", "swimming gala"), ("column graph", "bar graph"), ("Column graph", "Bar graph"), ("column graphs", "bar graphs"), ("convenience store", "spaza shop"), ("corner store", "spaza shop")]
-LEAKS = r"(\$|¢|£|₱|°F|\b(Cornwall|Devon|Europe|Scotland|Wales|England|Yorkshire|Kent|Brighton|Oxford|Cambridge|Nevis|Snowdon|Scafell|Thames|Severn|Lake District|Big Ben|Tower Bridge|Philippines|Filipino|Manila|Cebu|Davao|Baguio|Quezon|jeepneys?|sari-sari|pandesal|peso|pesos|centavos?|barangay|lola|lolo|adobo|Carabao|MATATAG|DepEd|tricycle|halo-halo|bibingka|puto|Texas|TEKS|STAAR|Common Core|PSLE|MOE|Ontario|Toronto|Ottawa|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Brisbane|Perth|Singapore|Year [1-9]|Primary [1-6]|AUD|CAD|SGD|Tim Hortons|pucks?|Pucks?|Tobermory|Fort St|Huron|Mississauga|Collingwood|Duluth|Grouse|Smithers|Canadians|Ferries|Superior|ski|skis|skiing|Skiing|skating|Skating|sledding|Sledding|snowboarding|Snowboarding|igloo|blizzard|frostbite|Mexico|Vernon|Squamish|Prince [A-Z]\w+|Kelowna|Kamloops|Whistler|Victoria|Vancouver|Nanaimo|Surrey|Burnaby|Okanagan|Fraser|Yukon|Banff|Calgary|Edmonton|Winnipeg|Halifax|Muskoka|Sudbury|Thunder Bay|Montreal|Quebec|Alberta|Manitoba|Nunavut|Kingston|Hamilton|Niagara|Ottawa|Regina|Saskatoon|Brisbane|Adelaide|Darwin|Hobart|Canberra|Cairns|Uluru|London|Manchester|Birmingham|Leeds|Glasgow|Edinburgh|Cardiff|Bristol|Liverpool|Texas|Houston|Dallas|Austin|Chicago|Boston|Seattle|Denver|Miami|Ohio|Iowa|Utah|Orchard Road|Sentosa|Jurong|Tampines|Changi|poutine|maple syrup|hockey|netball|Wattle|wattle|kangaroo|koala|footy|ute|lolly|lollies|biscuits?|trolley|fortnight|mum|wombats?|ladybirds?|dollars?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4)\b)"
+LEAKS = r"(\$|¢|£|₱|°F|\b(Cornwall|Devon|Europe|Scotland|Wales|England|Yorkshire|Kent|Brighton|Oxford|Cambridge|Nevis|Snowdon|Scafell|Thames|Severn|Lake District|Big Ben|Tower Bridge|Philippines|Filipino|Manila|Cebu|Davao|Baguio|Quezon|jeepneys?|sari-sari|pandesal|peso|pesos|centavos?|barangay|lola|lolo|adobo|Carabao|MATATAG|DepEd|tricycle|halo-halo|bibingka|puto|Texas|TEKS|STAAR|Common Core|PSLE|MOE|Ontario|Toronto|Ottawa|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Brisbane|Perth|Singapore|Year [1-9]|Primary [1-6]|AUD|CAD|SGD|Tim Hortons|pucks?|Pucks?|Tobermory|Fort St|Huron|Mississauga|Collingwood|Duluth|Grouse|Smithers|Canadians|Ferries|Superior|ski|skis|skiing|Skiing|skating|Skating|sledding|Sledding|snowboarding|Snowboarding|igloo|blizzard|frostbite|Mexico|Vernon|Squamish|Prince [A-Z]\w+|Kelowna|Kamloops|Whistler|Victoria|Vancouver|Nanaimo|Surrey|Burnaby|Okanagan|Fraser|Yukon|Banff|Calgary|Edmonton|Winnipeg|Halifax|Muskoka|Sudbury|Thunder Bay|Montreal|Quebec|Alberta|Manitoba|Nunavut|Kingston|Hamilton|Niagara|Ottawa|Regina|Saskatoon|Brisbane|Adelaide|Darwin|Hobart|Canberra|Cairns|Uluru|London|Manchester|Birmingham|Leeds|Glasgow|Edinburgh|Cardiff|Bristol|Liverpool|Texas|Houston|Dallas|Austin|Chicago|Boston|Seattle|Denver|Miami|Ohio|Iowa|Utah|Orchard Road|Sentosa|Jurong|Tampines|Changi|poutine|maple syrup|hockey|netball|Wattle|wattle|kangaroo|koala|footy|ute|lolly|lollies|biscuits?|trolley|fortnight|mum|wombats?|ladybirds?|dollars?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4|Australian|Koalas?|Kangaroos?|Wombats?|Emus?|Kookaburras?|kookaburras?|Galahs?|Lorikeets?|Echidnas?|Platypus|Dingo|Terry Fox|maple|Maple|Flinders|Frankston|Parramatta|Manly|Fremantle|Phillip Island|Blue Mountains|Byron Bay|Bass Strait|Circular Quay|Woolloongabba|Wollongong|Katoomba|Cottesloe|Subiaco|Coorparoo|Carindale|Caulfield|Penrith|Strathfield|Balmain|Taroona|Cowes|Nobbies|Tasmania|Queensland|Victoria|New South Wales|Bondi|Gold Coast)\b)"
 
 
 IMPERIAL = "inch|inches|in\\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|mph"
@@ -87,7 +87,9 @@ def za_ok(it):
     """True when an item fits South Africa (no dollars, pesos, inches, STAAR, ...)."""
     if not it.get("q", "").strip() or "_abcd" in it:
         return False
-    plain = re.sub(r"<svg.*?</svg>", " ", it["q"] + " " + it["e"] + " " + " ".join(it["c"]), flags=re.S)
+    raw = it["q"] + " " + it["e"] + " " + " ".join(it["c"])
+    svgtext = " ".join(" ".join(re.findall(r">([^<>]+)<", g) + re.findall(r"aria-label='([^']*)'", g)) for g in re.findall(r"<svg.*?</svg>", raw, flags=re.S))
+    plain = re.sub(r"<svg.*?</svg>", " ", raw, flags=re.S) + " " + svgtext
     t = re.sub(r"<[^>]+>", " ", gb_text(plain))
     return not re.search(_leaks(), t) and not re.search(r"\d+p\b", t) and (ALLOW_IMPERIAL or not re.search(INCH, t))
 
@@ -140,6 +142,14 @@ def gb_text(s):
     for a, b in ZA_PLACES:
         s = re.sub(r"\b" + a + r"\b", b, s)
     s = s.replace("(L)", "(ℓ)").replace("(mL)", "(mℓ)")
+    s = re.sub(r"(</span></span>)(\s*)L\b", r"\1\2ℓ", s)
+    s = re.sub(r"\bPupils\b", "Learners", s).replace("Students", "Learners")
+    s = re.sub(r"\bStudent\b", "Learner", s)
+    s = s.replace(">Fall<", ">Autumn<")
+    s = re.sub(r"\bFall\b", "Autumn", s)
+    s = re.sub(r"\bPupil\b", "Learner", s)
+    s = re.sub(r"\bYear ([1-7])(?=\b)", r"Grade \1", s)
+    s = re.sub(r"(\d(?:</[a-z]+>)+)(\s*)L\b", r"\1\2ℓ", s)
     s = re.sub(r"\bmath\b", "maths", s)
     s = re.sub(r"\bMath\b", "Maths", s)
     s = re.sub(r"(?<=\d)( ?)(mL|ml)\b", r"\1 mℓ".replace(" mℓ", "mℓ"), s)
