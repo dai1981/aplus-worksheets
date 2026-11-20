@@ -1168,7 +1168,10 @@ ZA / Maths / Grade 8（CAPS Senior Phase。円・π・指数表記・ピタゴ�
 za_common: gb_text は standard form→scientific notation、za_ok は「= None」の壊れた解説を落とす、collect は ValueError なども飛ばす
 1. whole-numbers ✓ 2. financial-maths ✓ 3. integers ✓ 4. exponents ✓ 5. scientific-notation ✓ 6. common-fractions ✓ 7. decimal-fractions ✓ 8. numeric-and-geometric-patterns ✓ 9. functions-and-relationships ✓ 10. algebraic-expressions ✓ 11. algebraic-equations ✓ 12. graphs ✓ 13. geometry-of-straight-lines ✓ 14. triangles-congruence-and-similarity ✓ 15. quadrilaterals-and-polygons ✓ 16. transformation-geometry ✓ 17. 3d-objects ✓ 18. area-and-perimeter ✓ 19. surface-area-and-volume ✓ 20. theorem-of-pythagoras ✓ 21. collecting-and-summarising-data ✓ 22. histograms-pie-charts-and-line-graphs ✓ 23. probability ✓
 
-ZA の次: Grade 9（Senior Phase）→ Grade 12（NSC）
+ZA / Maths / Grade 9（CAPS Senior Phase。負の指数・因数分解（共通因数・平方の差・三項式）・因数分解で解く方程式・指数方程式・円柱あり。三角比・連立方程式・円錐・球はなし（keep の ok9））— 生成スクリプトは `gen_za_maths_g9_*`。SG Sec 1–3・UK Year 8–9・AU Year 8 の one_x を再利用。手数料・家賃は自前、複利・割賦・為替は G8 の問題関数
+1. real-numbers ✓ 2. financial-maths ✓ 3. exponents ✓ 4. scientific-notation ✓ 5. numeric-and-geometric-patterns ✓ 6. functions-and-relationships ✓ 7. algebraic-expressions ✓ 8. factorisation ✓ 9. algebraic-equations ✓ 10. linear-graphs ✓ 11. geometry-of-straight-lines ✓ 12. similar-and-congruent-triangles ✓ 13. quadrilaterals-and-polygons ✓ 14. transformation-geometry ✓ 15. 3d-objects-views-and-nets ✓ 16. area-and-perimeter ✓ 17. surface-area-and-volume ✓ 18. theorem-of-pythagoras ✓ 19. collecting-and-summarising-data ✓ 20. scatter-plots-histograms-and-pie-charts ✓ 21. probability ✓
+
+ZA の次: Grade 12（NSC）。その前に Grade 10・11（FET Phase）を入れるかは要検討
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
