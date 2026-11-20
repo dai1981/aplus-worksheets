@@ -93,6 +93,8 @@ def za_ok(it):
     svgtext = " ".join(" ".join(re.findall(r">([^<>]+)<", g) + re.findall(r"aria-label='([^']*)'", g)) for g in re.findall(r"<svg.*?</svg>", raw, flags=re.S))
     plain = re.sub(r"<svg.*?</svg>", " ", raw, flags=re.S) + " " + svgtext
     t = re.sub(r"<[^>]+>", " ", gb_text(plain))
+    if re.search(r"(=|×|÷|\+|−) None\b|None (litres|km|cm|m|g|kg)\b", t):
+        return False
     if re.search(r"\b(GST|HST|PST)\b|\bVAT (of|at|is) (?!15 ?%)\d", t):
         return False
     return not re.search(_leaks(), t) and not re.search(r"\d+p\b", t) and (ALLOW_IMPERIAL or not re.search(INCH, t))
@@ -147,6 +149,7 @@ def gb_text(s):
         s = re.sub(r"\b" + a + r"\b", b, s)
     s = s.replace("(L)", "(ℓ)").replace("(mL)", "(mℓ)")
     s = re.sub(r"\bmom\b", "mother", s)
+    s = s.replace("standard form", "scientific notation").replace("Standard form", "Scientific notation")
     s = re.sub(r"\bMom\b", "Mother", s)
     if GBP_TO_RAND:
         s = re.sub(r"\bpence\b", "cents", s)
@@ -303,7 +306,7 @@ def collect(maker, n, rnd, tries=4000, avoid=()):
     for _ in range(tries):
         try:
             it = maker(rnd)
-        except AssertionError:
+        except (AssertionError, ValueError, IndexError, ZeroDivisionError, KeyError):
             continue
         if not it or not za_ok(it):
             continue
