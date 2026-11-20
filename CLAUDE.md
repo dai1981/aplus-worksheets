@@ -1171,7 +1171,12 @@ za_common: gb_text は standard form→scientific notation、za_ok は「= None�
 ZA / Maths / Grade 9（CAPS Senior Phase。負の指数・因数分解（共通因数・平方の差・三項式）・因数分解で解く方程式・指数方程式・円柱あり。三角比・連立方程式・円錐・球はなし（keep の ok9））— 生成スクリプトは `gen_za_maths_g9_*`。SG Sec 1–3・UK Year 8–9・AU Year 8 の one_x を再利用。手数料・家賃は自前、複利・割賦・為替は G8 の問題関数
 1. real-numbers ✓ 2. financial-maths ✓ 3. exponents ✓ 4. scientific-notation ✓ 5. numeric-and-geometric-patterns ✓ 6. functions-and-relationships ✓ 7. algebraic-expressions ✓ 8. factorisation ✓ 9. algebraic-equations ✓ 10. linear-graphs ✓ 11. geometry-of-straight-lines ✓ 12. similar-and-congruent-triangles ✓ 13. quadrilaterals-and-polygons ✓ 14. transformation-geometry ✓ 15. 3d-objects-views-and-nets ✓ 16. area-and-perimeter ✓ 17. surface-area-and-volume ✓ 18. theorem-of-pythagoras ✓ 19. collecting-and-summarising-data ✓ 20. scatter-plots-histograms-and-pie-charts ✓ 21. probability ✓
 
-ZA の次: Grade 12（NSC）。その前に Grade 10・11（FET Phase）を入れるかは要検討
+ZA / Maths / Grade 10（CAPS FET Phase。standard_url は CAPS FET Mathematics Gr 10-12 の PDF（STD_URL_FET）。三角比は 0°〜360°、三角方程式は 0°〜90°。複素数・対数・弧度法・正弦／余弦定理・独立事象・有理指数はなし（keep の ok10））— 生成スクリプトは `gen_za_maths_g10_*`。US Algebra 1・Geometry、UK Year 8–9、SG Sec 1–4、AU Year 7–8 の one_x を再利用。特別角・三角方程式・三角関数のグラフ・y = ax² + q・y = a/x + q・y = abˣ + q・逆数比・P(x; y)・単利・インフレ・排反／余事象は自前。
+domain は「Algebra and Number Patterns／Functions／Trigonometry／Euclidean and Analytical Geometry／Finance and Growth／Measurement／Statistics and Probability」。
+za_common.gb_text（GBP_TO_RAND のとき）は座標 (3, 4)→(3; 4)、m∠→∠、slope→gradient、penny→cent も直す
+1. number-system-and-surds ✓ 2. products-and-factorisation ✓ 3. algebraic-fractions ✓ 4. exponents-and-exponential-equations ✓ 5. number-patterns ✓ 6. linear-and-literal-equations ✓ 7. quadratic-equations ✓ 8. simultaneous-equations ✓ 9. linear-inequalities ✓ 10. trigonometric-ratios ✓ 11. special-angles-equations-and-2d-problems ✓ 12. trigonometric-functions ✓ 13. linear-and-quadratic-functions ✓ 14. hyperbolic-and-exponential-functions ✓ 15. euclidean-geometry ✓ 16. analytical-geometry ✓ 17. finance-and-growth ✓ 18. statistics ✓ 19. measurement ✓ 20. probability ✓
+
+ZA の次: Grade 11 → Grade 12（NSC）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

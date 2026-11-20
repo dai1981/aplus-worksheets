@@ -21,7 +21,8 @@ _FOREIGN = sorted([(n, GIRLS) for n in FOREIGN_GIRLS] + [(n, BOYS) for n in FORE
 PLACES = ["Johannesburg", "Cape Town", "Durban", "Pretoria", "Soweto", "Bloemfontein", "Gqeberha", "Polokwane", "Mbombela", "Kimberley"]
 STD_URL_IP = "https://www.education.gov.za/Portals/0/CD/National%20Curriculum%20Statements%20and%20Vocational/CAPS%20IP%20%20MATHEMATICS%20GR%204-6%20web.pdf"
 STD_URL_SP = "https://www.education.gov.za/Portals/0/CD/National%20Curriculum%20Statements%20and%20Vocational/CAPS%20SP%20%20MATHEMATICS%20GR%207-9.pdf"
-STD_URLS = {"grade-4": STD_URL_IP, "grade-5": STD_URL_IP, "grade-6": STD_URL_IP, "grade-7": STD_URL_SP, "grade-8": STD_URL_SP, "grade-9": STD_URL_SP}
+STD_URL_FET = "https://www.education.gov.za/Portals/0/CD/National%20Curriculum%20Statements%20and%20Vocational/CAPS%20FET%20_%20MATHEMATICS%20_%20GR%2010-12%20_%20Web_1133.pdf"
+STD_URLS = {"grade-10": STD_URL_FET, "grade-11": STD_URL_FET, "grade-12": STD_URL_FET, "grade-4": STD_URL_IP, "grade-5": STD_URL_IP, "grade-6": STD_URL_IP, "grade-7": STD_URL_SP, "grade-8": STD_URL_SP, "grade-9": STD_URL_SP}
 GRADE = "grade-4"
 GBP_TO_RAND = False   # Senior Phase: UK KS3 and AU makers write £ and $ amounts inline; turn them into rand
 
@@ -149,10 +150,24 @@ def gb_text(s):
         s = re.sub(r"\b" + a + r"\b", b, s)
     s = s.replace("(L)", "(ℓ)").replace("(mL)", "(mℓ)")
     s = re.sub(r"\bmom\b", "mother", s)
+    s = s.replace("itreal", "iteral")
+    s = s.replace("text-align:centre", "text-align:center")
     s = s.replace("standard form", "scientific notation").replace("Standard form", "Scientific notation")
     s = re.sub(r"\bMom\b", "Mother", s)
     if GBP_TO_RAND:
         s = re.sub(r"\bpence\b", "cents", s)
+        s = re.sub(r"\bpenny\b", "cent", s)
+        s = re.sub(r"\bperpendicular slope\b", "perpendicular gradient", s)
+        s = re.sub(r"\bslope\b(?= is| =|,|\.)", "gradient", s)
+        s = re.sub(r"\bm∠", "∠", s)
+        s = re.sub(r"\(([−-]?\d+(?:\.\d+)?|[a-z]), ([−-]?\d+(?:\.\d+)?|[a-z])\)", r"(\1; \2)", s)
+        for x, y in ((r"\b(the|a|its|same|The|A|Its) slope\b", r"\1 gradient"), (r"\bslope of\b", "gradient of"), (r"\bSlope\b(?! (down|up))", "Gradient"),
+                     (r"simplest radical form", "simplest surd form"), (r"\bradicals\b", "surds"), (r"\bradical\b", "surd"), (r"\bRadicals\b", "Surds"),
+                     (r"\bfactoring\b", "factorising"), (r"\bFactoring\b", "Factorising"), (r"\bFactor completely\b", "Factorise fully"),
+                     (r"(^|>|\. )Factor (?=[^a-z])", r"\1Factorise "), (r"(^|>|\. )Factor (?=[a-z]²|[a-z]\b)", r"\1Factorise "),
+                     (r"\bsystem of equations\b", "pair of simultaneous equations"), (r"\bsystems of equations\b", "simultaneous equations"),
+                     (r"\bbox plot\b", "box-and-whisker plot"), (r"\bbox plots\b", "box-and-whisker plots")):
+            s = re.sub(x, y, s)
         s = re.sub(r"[£$](?=\d)", "R", s)
     s = re.sub(r"(</span></span>)(\s*)L\b", r"\1\2ℓ", s)
     s = re.sub(r"\bPupils\b", "Learners", s).replace("Students", "Learners")
