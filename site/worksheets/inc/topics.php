@@ -94,7 +94,7 @@ function topic_defs($country = null) {
             'out' => '/fraction|decimal|integer|polynomial|divisib/',
             'blurb' => 'Sharing and grouping, division facts, remainders, short division and long division with word problems.'),
         'addition-and-subtraction' => array('name' => 'Addition and Subtraction',
-            'in' => '/add|subtract|number-bonds|make-10|making-10|10-more-and-10-less|ways-to-make|decompose-numbers|decomposing-numbers|ten-more|change-in-quantity|word-problems|part-part-whole|taking-away/',
+            'in' => '/add|subtract|number-bonds|make-10|making-10|10-more-and-10-less|ways-to-make|decompose-numbers|decomposing-numbers|ten-more|change-in-quantity|word-problems|part-part-whole|taking-away|problem-solving-to|mental-mathematics/',
             'out' => '/fraction|decimal|integer|polynomial|mixed-num|multiplicative|ratio|segment-addition|quadratic|multiplication-and-division-word|measurement-word/',
             'blurb' => 'Number bonds and facts to 20, mental strategies, adding and subtracting with regrouping, and multi-step word problems.',
             'blurb_gb' => 'Number bonds and facts to 20, mental strategies, column addition and subtraction, and multi-step word problems.'),

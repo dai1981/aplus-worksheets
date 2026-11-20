@@ -22,7 +22,8 @@ PLACES = ["Johannesburg", "Cape Town", "Durban", "Pretoria", "Soweto", "Bloemfon
 STD_URL_IP = "https://www.education.gov.za/Portals/0/CD/National%20Curriculum%20Statements%20and%20Vocational/CAPS%20IP%20%20MATHEMATICS%20GR%204-6%20web.pdf"
 STD_URL_SP = "https://www.education.gov.za/Portals/0/CD/National%20Curriculum%20Statements%20and%20Vocational/CAPS%20SP%20%20MATHEMATICS%20GR%207-9.pdf"
 STD_URL_FET = "https://www.education.gov.za/Portals/0/CD/National%20Curriculum%20Statements%20and%20Vocational/CAPS%20FET%20_%20MATHEMATICS%20_%20GR%2010-12%20_%20Web_1133.pdf"
-STD_URLS = {"grade-10": STD_URL_FET, "grade-11": STD_URL_FET, "grade-12": STD_URL_FET, "grade-4": STD_URL_IP, "grade-5": STD_URL_IP, "grade-6": STD_URL_IP, "grade-7": STD_URL_SP, "grade-8": STD_URL_SP, "grade-9": STD_URL_SP}
+STD_URL_FP = "https://www.education.gov.za/Portals/0/CD/National%20Curriculum%20Statements%20and%20Vocational/CAPS%20MATHS%20%20ENGLISH%20GR%201-3%20FS.pdf"
+STD_URLS = {"grade-1": STD_URL_FP, "grade-2": STD_URL_FP, "grade-3": STD_URL_FP, "grade-10": STD_URL_FET, "grade-11": STD_URL_FET, "grade-12": STD_URL_FET, "grade-4": STD_URL_IP, "grade-5": STD_URL_IP, "grade-6": STD_URL_IP, "grade-7": STD_URL_SP, "grade-8": STD_URL_SP, "grade-9": STD_URL_SP}
 GRADE = "grade-4"
 GBP_TO_RAND = False   # Senior Phase: UK KS3 and AU makers write £ and $ amounts inline; turn them into rand
 
@@ -40,7 +41,7 @@ GB_WORDS = [("centimeter", "centimetre"), ("millimeter", "millimetre"), ("kilome
             ("Year 4 ", "Grade 4 "), ("Year 3 ", "Grade 3 "), ("Year 5 ", "Grade 5 "), ("Year 6 ", "Grade 6 "), ("Primary 4 ", "Grade 4 "),
             ("Wattle Street", "Long Street"), ("baseball", "cricket"), ("Baseball", "Cricket"), ("football", "soccer"), ("Football", "Soccer"),
             ("sari-sari store", "spaza shop"), ("sausage sizzle", "fundraiser"), ("ice blocks", "ice lollies"), ("ice block", "ice lolly"), ("athletics carnival", "athletics day"), ("swimming carnival", "swimming gala"), ("column graph", "bar graph"), ("Column graph", "Bar graph"), ("column graphs", "bar graphs"), ("convenience store", "spaza shop"), ("corner store", "spaza shop")]
-LEAKS = r"(\$|¢|£|₱|°F|\b(Cornwall|Devon|Europe|Scotland|Wales|England|Yorkshire|Kent|Brighton|Oxford|Cambridge|Nevis|Snowdon|Scafell|Thames|Severn|Lake District|Big Ben|Tower Bridge|Philippines|Filipino|Manila|Cebu|Davao|Baguio|Quezon|jeepneys?|sari-sari|pandesal|peso|pesos|centavos?|barangay|lola|lolo|adobo|Carabao|MATATAG|DepEd|tricycle|halo-halo|bibingka|puto|Texas|TEKS|STAAR|Common Core|PSLE|MOE|Ontario|Toronto|Ottawa|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Brisbane|Perth|Singapore|Year [1-9]|Primary [1-6]|AUD|CAD|SGD|Tim Hortons|pucks?|Pucks?|Tobermory|Fort St|Huron|Mississauga|Collingwood|Duluth|Grouse|Smithers|Canadians|Ferries|Superior|ski|skis|skiing|Skiing|skating|Skating|sledding|Sledding|snowboarding|Snowboarding|igloo|blizzard|frostbite|Mexico|Vernon|Squamish|Prince [A-Z]\w+|Kelowna|Kamloops|Whistler|Victoria|Vancouver|Nanaimo|Surrey|Burnaby|Okanagan|Fraser|Yukon|Banff|Calgary|Edmonton|Winnipeg|Halifax|Muskoka|Sudbury|Thunder Bay|Montreal|Quebec|Alberta|Manitoba|Nunavut|Kingston|Hamilton|Niagara|Ottawa|Regina|Saskatoon|Brisbane|Adelaide|Darwin|Hobart|Canberra|Cairns|Uluru|London|Manchester|Birmingham|Leeds|Glasgow|Edinburgh|Cardiff|Bristol|Liverpool|Texas|Houston|Dallas|Austin|Chicago|Boston|Seattle|Denver|Miami|Ohio|Iowa|Utah|Orchard Road|Sentosa|Jurong|Tampines|Changi|poutine|maple syrup|hockey|netball|Wattle|wattle|kangaroo|koala|footy|ute|lolly|lollies|biscuits?|trolley|fortnight|mum|wombats?|ladybirds?|dollars?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4|Australian|Koalas?|Kangaroos?|Wombats?|Emus?|Kookaburras?|kookaburras?|Galahs?|Lorikeets?|Echidnas?|Platypus|Dingo|Terry Fox|maple|Maple|Flinders|Frankston|Parramatta|Manly|Fremantle|Phillip Island|Blue Mountains|Byron Bay|Bass Strait|Circular Quay|Woolloongabba|Wollongong|Katoomba|Cottesloe|Subiaco|Coorparoo|Carindale|Caulfield|Penrith|Strathfield|Balmain|Taroona|Cowes|Nobbies|Tasmania|Queensland|Victoria|New South Wales|Bondi|Gold Coast)\b)"
+LEAKS = r"(\$|¢|£|₱|°F|\b(Cornwall|Devon|Europe|Scotland|Wales|England|Yorkshire|Kent|Brighton|Oxford|Cambridge|Nevis|Snowdon|Scafell|Thames|Severn|Lake District|Big Ben|Tower Bridge|Philippines|Filipino|Manila|Cebu|Davao|Baguio|Quezon|jeepneys?|sari-sari|pandesal|peso|pesos|centavos?|barangay|lola|lolo|adobo|Carabao|MATATAG|DepEd|tricycle|halo-halo|bibingka|puto|Texas|TEKS|STAAR|Common Core|PSLE|MOE|Ontario|Toronto|Ottawa|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Brisbane|Perth|Singapore|Year [1-9]|Primary [1-6]|AUD|CAD|SGD|Tim Hortons|pucks?|Pucks?|Tobermory|Fort St|Huron|Mississauga|Collingwood|Duluth|Grouse|Smithers|Canadians|Ferries|Superior|ski|skis|skiing|Skiing|skating|Skating|sledding|Sledding|snowboarding|Snowboarding|igloo|blizzard|frostbite|Mexico|Vernon|Squamish|Prince [A-Z]\w+|Kelowna|Kamloops|Whistler|Victoria|Vancouver|Nanaimo|Surrey|Burnaby|Okanagan|Fraser|Yukon|Banff|Calgary|Edmonton|Winnipeg|Halifax|Muskoka|Sudbury|Thunder Bay|Montreal|Quebec|Alberta|Manitoba|Nunavut|Kingston|Hamilton|Niagara|Ottawa|Regina|Saskatoon|Brisbane|Adelaide|Darwin|Hobart|Canberra|Cairns|Uluru|London|Manchester|Birmingham|Leeds|Glasgow|Edinburgh|Cardiff|Bristol|Liverpool|Texas|Houston|Dallas|Austin|Chicago|Boston|Seattle|Denver|Miami|Ohio|Iowa|Utah|Orchard Road|Sentosa|Jurong|Tampines|Changi|poutine|maple syrup|hockey|netball|Wattle|wattle|kangaroo|koala|footy|ute|lolly|lollies|biscuits?|trolley|fortnight|mum|wombats?|ladybirds?|dollars?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4|Australian|loonies|toonies|snowbanks?|snowm[ae]n|mittens?|toques?|Koalas?|Kangaroos?|Wombats?|Emus?|Kookaburras?|kookaburras?|Galahs?|Lorikeets?|Echidnas?|Platypus|Dingo|Terry Fox|maple|Maple|Flinders|Frankston|Parramatta|Manly|Fremantle|Phillip Island|Blue Mountains|Byron Bay|Bass Strait|Circular Quay|Woolloongabba|Wollongong|Katoomba|Cottesloe|Subiaco|Coorparoo|Carindale|Caulfield|Penrith|Strathfield|Balmain|Taroona|Cowes|Nobbies|Tasmania|Queensland|Victoria|New South Wales|Bondi|Gold Coast)\b)"
 
 
 IMPERIAL = "inch|inches|in\\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|mph"
@@ -90,6 +91,11 @@ def za_ok(it):
     """True when an item fits South Africa (no dollars, pesos, inches, STAAR, ...)."""
     if not it.get("q", "").strip() or "_abcd" in it:
         return False
+    if "c" in it:
+        tmp = {"q": it["q"], "e": it.get("e", ""), "c": list(it["c"])}
+        localize(tmp)
+        if len({gb_text(c) for c in tmp["c"]}) < len(tmp["c"]):
+            return False
     raw = it["q"] + " " + it["e"] + " " + " ".join(it["c"])
     svgtext = " ".join(" ".join(re.findall(r">([^<>]+)<", g) + re.findall(r"aria-label='([^']*)'", g)) for g in re.findall(r"<svg.*?</svg>", raw, flags=re.S))
     plain = re.sub(r"<svg.*?</svg>", " ", raw, flags=re.S) + " " + svgtext
@@ -132,7 +138,7 @@ def za_numbers(s):
 
 
 # Australian and North American things in other generators, made South African
-ZA_PLACES = [("Platypuses live in creeks and rivers and are hardly ever seen", "Tortoises live in the veld and hardly ever come into a school"), ("Kangaroos hop", "Zebras run"), ("kangaroos hop", "zebras run"), ("koalas", "lions"), ("Koalas", "Lions"), ("koala", "lion"), ("emus", "ostriches"), ("Emus", "Ostriches"), ("emu", "ostrich"),
+ZA_PLACES = [("conkers", "marbles"), ("conker", "marble"), ("Conkers", "Marbles"), ("Platypuses live in creeks and rivers and are hardly ever seen", "Tortoises live in the veld and hardly ever come into a school"), ("Kangaroos hop", "Zebras run"), ("kangaroos hop", "zebras run"), ("koalas", "lions"), ("Koalas", "Lions"), ("koala", "lion"), ("emus", "ostriches"), ("Emus", "Ostriches"), ("emu", "ostrich"),
              ("wombats", "meerkats"), ("Wombats", "Meerkats"), ("wombat", "meerkat"), ("kangaroos", "zebras"), ("Kangaroos", "Zebras"), ("kangaroo", "zebra"),
              ("dingoes", "wild dogs"), ("Dingoes", "Wild dogs"), ("dingo", "wild dog"), ("platypus", "tortoise"), ("Platypus", "Tortoise"),
              ("Blue Jays", "Hadedas"), ("Blue Jay", "Hadeda"), ("blue jays", "hadedas"), ("Finches", "Weavers"), ("Finch", "Weaver"), ("finches", "weavers"), ("finch", "weaver"),
@@ -228,7 +234,7 @@ def adopt(mod):
             setattr(mod, name, list(GIRLS if name == "GIRLS" else BOYS))
     for name in ("PLACES", "CITIES", "TOWNS"):
         v = getattr(mod, name, None)
-        if isinstance(v, (list, tuple)) and v and all(isinstance(x, str) for x in v):
+        if isinstance(v, (list, tuple)) and v and all(isinstance(x, str) and x[:1].isupper() for x in v):
             setattr(mod, name, list(PLACES))
     if hasattr(mod, "comma"):
         mod.comma = comma

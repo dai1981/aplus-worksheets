@@ -1184,7 +1184,17 @@ ZA / Maths / Grade 12（CAPS FET Phase、NSC（matric）の学年。弧度法・
 南アの小数は小数点以下 3 桁がちょうど 3 桁だと za_numbers が千の位の区切りと見なす（0,075 → 0 075）ので、利率は「7,5% ÷ 12」、和は分数で書く。トピック `calculus`（Differential Calculus）を足した
 1. arithmetic-and-geometric-sequences-and-series ✓ 2. sigma-notation-and-sum-to-infinity ✓ 3. inverse-functions ✓ 4. logarithms ✓ 5. future-value-annuities-and-sinking-funds ✓ 6. present-value-annuities-and-loans ✓ 7. factor-theorem-and-cubic-polynomials ✓ 8. limits-and-first-principles ✓ 9. rules-of-differentiation ✓ 10. equations-of-tangents ✓ 11. cubic-functions ✓ 12. optimisation-and-rates-of-change ✓ 13. compound-and-double-angles ✓ 14. problems-in-three-dimensions ✓ 15. analytical-geometry-circles ✓ 16. euclidean-geometry-proportionality-and-similarity ✓ 17. regression-and-correlation ✓ 18. counting-principle-and-probability ✓
 
-ZA / Maths は Grade 4〜12 まで完了（Grade 1–3 の Foundation Phase は未着手）
+ZA / Maths / Grade 1–3（CAPS Foundation Phase。standard_url は CAPS FP Mathematics Gr 1-3 の PDF（STD_URL_FP）。G1 は 20 まで（数えるのは 100 まで）、G2 は 99 まで（数えるのは 200 まで）、G3 は 999 まで。とても短い文、絵を多く）— 生成スクリプトは `gen_za_maths_g1_*`・`g2_*`・`g3_*`。
+数・計算・文章題・かけ算わり算は自前（num_k・calc_k・story_k・group_k を F(fun, kind, 範囲) で使う。k_pics の絵）、お金は自前（mk(kind, 上限の cents)、10c〜R5 の硬貨と R10〜R200 の札の絵）。図形・位置・時刻・測定・データ・分数・パターンは UK Year 1–3・AU Year 1–3・Ontario Grade 1–3・US Grade 1 のセット関数を run で再利用（le(n) で数の上限、nomoney でお金の問題を落とす）。
+za_common: adopt は大文字で始まる地名のリストだけを南アの地名に替える（tree・house などはそのまま）、za_ok は名前や語を置き換えたあとで選択肢が重なる問題を落とす、conkers→marbles、loonies・snowbank などを LEAKS に
+ZA / Maths / Grade 1
+1. counting-to-100 ✓ 2. numbers-to-20 ✓ 3. tens-and-ones ✓ 4. number-bonds-to-10 ✓ 5. addition-and-subtraction-to-20 ✓ 6. problem-solving-to-20 ✓ 7. grouping-and-sharing ✓ 8. halves-and-quarters ✓ 9. money ✓ 10. patterns ✓ 11. 2d-shapes-and-3d-objects ✓ 12. position-and-direction ✓ 13. time ✓ 14. length-mass-and-capacity ✓ 15. data-handling ✓
+ZA / Maths / Grade 2
+1. numbers-to-200 ✓ 2. place-value ✓ 3. odd-and-even-numbers ✓ 4. addition-and-subtraction-facts-to-20 ✓ 5. adding-and-subtracting-to-99 ✓ 6. problem-solving-to-99 ✓ 7. multiplication-by-2-5-and-10 ✓ 8. sharing-and-grouping ✓ 9. fractions ✓ 10. money ✓ 11. patterns ✓ 12. 2d-shapes-3d-objects-and-symmetry ✓ 13. position-and-direction ✓ 14. time ✓ 15. length-mass-and-capacity ✓ 16. data-handling ✓
+ZA / Maths / Grade 3
+1. numbers-to-1000 ✓ 2. place-value ✓ 3. adding-and-subtracting-to-999 ✓ 4. mental-mathematics ✓ 5. problem-solving-to-999 ✓ 6. times-tables-2-3-4-5-and-10 ✓ 7. multiplication-and-division ✓ 8. fractions ✓ 9. money ✓ 10. patterns ✓ 11. 2d-shapes-and-3d-objects ✓ 12. symmetry ✓ 13. position-and-maps ✓ 14. time ✓ 15. length ✓ 16. mass-and-capacity ✓ 17. perimeter-and-area ✓ 18. data-handling ✓
+
+ZA / Maths は Grade 1〜12 まで完了（Grade R は未着手）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
