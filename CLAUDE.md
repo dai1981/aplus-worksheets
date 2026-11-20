@@ -1180,7 +1180,11 @@ ZA / Maths / Grade 11（CAPS FET Phase。対数・弧度法・sec/csc/cot・複�
 za_common.gb_text は Law of Sines→Sine rule、perpendicular slopes→perpendicular gradients も直す
 1. exponents-and-surds ✓ 2. completing-the-square-and-quadratic-formula ✓ 3. nature-of-roots ✓ 4. quadratic-inequalities ✓ 5. simultaneous-linear-and-quadratic-equations ✓ 6. quadratic-number-patterns ✓ 7. analytical-geometry ✓ 8. quadratic-functions ✓ 9. hyperbolic-and-exponential-functions ✓ 10. trigonometric-functions ✓ 11. reduction-formulae-and-identities ✓ 12. trigonometric-equations ✓ 13. sine-cosine-and-area-rules ✓ 14. euclidean-geometry-circle-theorems ✓ 15. finance-growth-and-decay ✓ 16. probability ✓ 17. statistics ✓
 
-ZA の次: Grade 12（NSC）
+ZA / Maths / Grade 12（CAPS FET Phase、NSC（matric）の学年。弧度法・sec/csc/cot・tan の複合角・nCr・ln/e・積分はなし（kp(ok12)）。kp() は関数ごとに 1 つの uniq を共有し、localize・gb_text 後の文で重複を判定する）— 生成スクリプトは `gen_za_maths_g12_*`。US Algebra 2・Precalculus・Geometry・Algebra 1、SG Sec 4 の one_x を kp() で再利用。年金（将来価値・現在価値・返済額・回数・減債基金）、微分（極限・定義・公式・接線・三次関数・最適化・速度）、数列の和・Σ・無限和、逆関数、対数、円の接線、比例定理、回帰、数え上げは自前。
+南アの小数は小数点以下 3 桁がちょうど 3 桁だと za_numbers が千の位の区切りと見なす（0,075 → 0 075）ので、利率は「7,5% ÷ 12」、和は分数で書く。トピック `calculus`（Differential Calculus）を足した
+1. arithmetic-and-geometric-sequences-and-series ✓ 2. sigma-notation-and-sum-to-infinity ✓ 3. inverse-functions ✓ 4. logarithms ✓ 5. future-value-annuities-and-sinking-funds ✓ 6. present-value-annuities-and-loans ✓ 7. factor-theorem-and-cubic-polynomials ✓ 8. limits-and-first-principles ✓ 9. rules-of-differentiation ✓ 10. equations-of-tangents ✓ 11. cubic-functions ✓ 12. optimisation-and-rates-of-change ✓ 13. compound-and-double-angles ✓ 14. problems-in-three-dimensions ✓ 15. analytical-geometry-circles ✓ 16. euclidean-geometry-proportionality-and-similarity ✓ 17. regression-and-correlation ✓ 18. counting-principle-and-probability ✓
+
+ZA / Maths は Grade 4〜12 まで完了（Grade 1–3 の Foundation Phase は未着手）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
