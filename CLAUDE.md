@@ -1176,7 +1176,11 @@ domain は「Algebra and Number Patterns／Functions／Trigonometry／Euclidean 
 za_common.gb_text（GBP_TO_RAND のとき）は座標 (3, 4)→(3; 4)、m∠→∠、slope→gradient、penny→cent も直す
 1. number-system-and-surds ✓ 2. products-and-factorisation ✓ 3. algebraic-fractions ✓ 4. exponents-and-exponential-equations ✓ 5. number-patterns ✓ 6. linear-and-literal-equations ✓ 7. quadratic-equations ✓ 8. simultaneous-equations ✓ 9. linear-inequalities ✓ 10. trigonometric-ratios ✓ 11. special-angles-equations-and-2d-problems ✓ 12. trigonometric-functions ✓ 13. linear-and-quadratic-functions ✓ 14. hyperbolic-and-exponential-functions ✓ 15. euclidean-geometry ✓ 16. analytical-geometry ✓ 17. finance-and-growth ✓ 18. statistics ✓ 19. measurement ✓ 20. probability ✓
 
-ZA の次: Grade 11 → Grade 12（NSC）
+ZA / Maths / Grade 11（CAPS FET Phase。対数・弧度法・sec/csc/cot・複合角／2倍角・微分はなし（kp(ok11) で他国の問題関数を絞る））— 生成スクリプトは `gen_za_maths_g11_*`。US Algebra 1・Geometry、SG Sec 3–4、UK Year 8–9、TX Algebra II の one_x を kp() で再利用。判別式・二次不等式・二次数列・接線・傾斜角・y = a(x + p)² + q・y = a/(x + p) + q・y = ab^(x + p) + q・k と p の三角関数グラフ・還元公式・恒等式・一般解・減価償却・実効金利は自前（fk(fun, kind) は種類ごとに 1 つの uniq を共有して、セットをまたいで同じ問題を出さない）。
+za_common.gb_text は Law of Sines→Sine rule、perpendicular slopes→perpendicular gradients も直す
+1. exponents-and-surds ✓ 2. completing-the-square-and-quadratic-formula ✓ 3. nature-of-roots ✓ 4. quadratic-inequalities ✓ 5. simultaneous-linear-and-quadratic-equations ✓ 6. quadratic-number-patterns ✓ 7. analytical-geometry ✓ 8. quadratic-functions ✓ 9. hyperbolic-and-exponential-functions ✓ 10. trigonometric-functions ✓ 11. reduction-formulae-and-identities ✓ 12. trigonometric-equations ✓ 13. sine-cosine-and-area-rules ✓ 14. euclidean-geometry-circle-theorems ✓ 15. finance-growth-and-decay ✓ 16. probability ✓ 17. statistics ✓
+
+ZA の次: Grade 12（NSC）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

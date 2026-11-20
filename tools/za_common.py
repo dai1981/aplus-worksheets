@@ -160,6 +160,8 @@ def gb_text(s):
         s = re.sub(r"\bperpendicular slope\b", "perpendicular gradient", s)
         s = re.sub(r"\bslope\b(?= is| =|,|\.)", "gradient", s)
         s = re.sub(r"\bm∠", "∠", s)
+        s = re.sub(r"\b(Perpendicular|perpendicular|Parallel|parallel) slopes\b", r"\1 gradients", s)
+        s = s.replace("Law of Sines", "Sine rule").replace("Law of Cosines", "Cosine rule").replace("law of sines", "sine rule").replace("law of cosines", "cosine rule")
         s = re.sub(r"\(([−-]?\d+(?:\.\d+)?|[a-z]), ([−-]?\d+(?:\.\d+)?|[a-z])\)", r"(\1; \2)", s)
         for x, y in ((r"\b(the|a|its|same|The|A|Its) slope\b", r"\1 gradient"), (r"\bslope of\b", "gradient of"), (r"\bSlope\b(?! (down|up))", "Gradient"),
                      (r"simplest radical form", "simplest surd form"), (r"\bradicals\b", "surds"), (r"\bradical\b", "surd"), (r"\bRadicals\b", "Surds"),
