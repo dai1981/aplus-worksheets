@@ -1142,6 +1142,20 @@ ph_common.run_many は A〜D の絵の問題（"build"）を組み立ててか�
 
 PH の次: MATATAG の CG が出ている学年（1・4・7）は完了。Grades 2・3・5・6・8 は CG が公開されたら（DepEd の MATATAG ページを確認）。catalog.json に学年を足す
 
+ZA / Maths（CAPS Mathematics。Intermediate Phase は Grade 4–6）— country `za`（name「South Africa」、lang en、hreflang en-za）、subject `maths`、grade `grade-N`、A4。生成スクリプトは `gen_za_maths_gN_*`、共通部品は `tools/za_common.py`（ph_common と同じ API。南アの名前・地名、localize、gb_text でイギリス式の綴り（colour・metre・trapezium・anti-clockwise・maths・learners・tuck shop・spaza shop・biscuits・sweets）、LEAKS で $・₱・£・inch・Texas・フィリピンや英国の地名などを落とす、rand（R25、R1 250、R45,50）・cents（50c）、make）。
+数の書き方は南ア式: 1 000 以上は空白区切り（4 536、10 000。ノーブレークスペース）、小数はコンマ（2,5・R12,50）。za_numbers が SVG の文字も含めて自動で直す（小数が並ぶときは「1,5; 2,5」）。容量は mℓ と ℓ。時刻は 24 時間制「14:30」も使う。
+standard_code は CAPS の topic「Grade 4: 1.1 Whole numbers」形式、standard_text は CAPS の concepts and skills の要約、standard_url は CAPS IP Mathematics Gr 4-6 の PDF。domain は CAPS の 5 分野（Numbers, Operations and Relationships／Patterns, Functions and Algebra／Space and Shape (Geometry)／Measurement／Data Handling）。年齢は US と同じ（unit.php）。topic_gb() に za を入れた
+Grade 4 の分数は CAPS のとおり halves〜eighths（keep の den8。同値分数は den12）。数は 10 000 まで（le10000）
+
+ZA / Maths / Grade 4（CAPS）
+1. whole-numbers-to-10000 ✓ 2. rounding-off-to-10-100-and-1000 ✓ 3. addition-and-subtraction ✓ 4. calculation-techniques ✓ 5. multiplication-tables-to-10-x-10 ✓ 6. multiplication ✓
+7. division ✓ 8. multiples-and-factors ✓ 9. properties-of-operations ✓ 10. common-fractions ✓ 11. money-rate-and-ratio-problems ✓ 12. numeric-patterns ✓ 13. geometric-patterns ✓
+14. number-sentences ✓ 15. 2d-shapes-and-angles ✓ 16. 3d-objects ✓ 17. symmetry ✓ 18. composite-shapes-and-tessellations ✓ 19. viewing-objects ✓ 20. position-and-movement ✓
+21. length ✓ 22. mass ✓ 23. capacity-and-volume ✓ 24. time ✓ 25. temperature ✓ 26. perimeter-area-and-volume ✓ 27. collecting-and-organising-data ✓
+28. pictographs-bar-graphs-and-pie-charts ✓ 29. probability ✓
+
+ZA の次: Grade 5 → Grade 6（Intermediate Phase）→ Grade 7–9（Senior Phase）→ Grade 12（NSC）
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB

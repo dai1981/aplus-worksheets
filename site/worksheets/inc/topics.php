@@ -103,7 +103,7 @@ function topic_defs($country = null) {
             'out' => '/counterexample|money|coins|fraction|sort-and-count|decompose|decomposing/',
             'blurb' => 'Counting, tens and ones, place value to millions and beyond, comparing and ordering numbers, and odd and even numbers.'),
         'rounding-and-estimation' => array('name' => 'Rounding and Estimation',
-            'in' => '/round|estimat|benchmark/', 'out' => '/^$/',
+            'in' => '/round|estimat|benchmark|calculation-techniques/', 'out' => '/^$/',
             'blurb' => 'Rounding to the nearest 10, 100 and 1000, rounding decimals, and estimating to check answers.'),
         'order-of-operations' => array('name' => 'Order of Operations',
             'in' => '/order-of-operations|numerical-expressions/', 'out' => '/^$/',
@@ -135,7 +135,7 @@ function topic_defs($country = null) {
             'blurb' => 'Telling time on analog and digital clocks, a.m. and p.m., the 24-hour clock, elapsed time and calendars.',
             'blurb_gb' => 'Telling the time on analogue and digital clocks, the 12- and 24-hour clock, how long things take, and calendars.'),
         'measurement' => array('name' => 'Measurement',
-            'in' => '/measur|length|mass|capacity|metric|convert|scales|conversion|units-and|liquid-volume|weight/', 'out' => '/angle|converting-fractions|geometric|arc-length|trigonometric|parametric/',
+            'in' => '/measur|^temperature$|length|mass|capacity|metric|convert|scales|conversion|units-and|liquid-volume|weight/', 'out' => '/angle|converting-fractions|geometric|arc-length|trigonometric|parametric/',
             'blurb' => 'Measuring length, mass and capacity, reading scales, and converting between units.'),
         'area-and-perimeter' => array('name' => 'Area and Perimeter',
             'in' => '/area|perimeter|dimensional-change/', 'out' => '/surface-area-nets|surface-area-of|surface-area-and/',
@@ -181,7 +181,7 @@ function topic_defs($country = null) {
 }
 
 /* British spelling for these countries */
-function topic_gb($country) { return in_array($country, array('uk', 'au', 'sg'), true); }
+function topic_gb($country) { return in_array($country, array('uk', 'au', 'sg', 'za'), true); }
 
 function topic_name($t, $country) {
     if ($country === 'au' && isset($t['name_au'])) return $t['name_au'];
