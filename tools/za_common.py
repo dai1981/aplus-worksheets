@@ -122,12 +122,24 @@ def za_numbers(s):
     return "".join(out)
 
 
+# Australian and North American things in other generators, made South African
+ZA_PLACES = [("Platypuses live in creeks and rivers and are hardly ever seen", "Tortoises live in the veld and hardly ever come into a school"), ("Kangaroos hop", "Zebras run"), ("kangaroos hop", "zebras run"), ("koalas", "lions"), ("Koalas", "Lions"), ("koala", "lion"), ("emus", "ostriches"), ("Emus", "Ostriches"), ("emu", "ostrich"),
+             ("wombats", "meerkats"), ("Wombats", "Meerkats"), ("wombat", "meerkat"), ("kangaroos", "zebras"), ("Kangaroos", "Zebras"), ("kangaroo", "zebra"),
+             ("dingoes", "wild dogs"), ("Dingoes", "Wild dogs"), ("dingo", "wild dog"), ("platypus", "tortoise"), ("Platypus", "Tortoise"),
+             ("Blue Jays", "Hadedas"), ("Blue Jay", "Hadeda"), ("blue jays", "hadedas"), ("Finches", "Weavers"), ("Finch", "Weaver"), ("finches", "weavers"), ("finch", "weaver"),
+             ("Sydney trains", "Metrorail trains"), ("Sydney", "Cape Town"),
+             ("spring and fall", "spring and autumn"), (r"(in|from|to|the|In|From) fall", r"\1 autumn"), (r"fall (?=\d|bars|bar)", "autumn "), (r"Fall(?=:)", "Autumn")]
+
+
 def gb_text(s):
     for a, b in GB_WORDS:
         s = re.sub(r"(?<![A-Za-z])" + re.escape(a), b, s) if a[0].isalpha() else s.replace(a, b)
     s = re.sub(r"(?<=[☐?] )(l|L)\b", "ℓ", s)
     s = re.sub(r"(?<=[☐?] )(ml|mL)\b", "mℓ", s)
     s = s.replace(">L<", ">ℓ<").replace(">mL<", ">mℓ<").replace(">ml<", ">mℓ<")
+    for a, b in ZA_PLACES:
+        s = re.sub(r"\b" + a + r"\b", b, s)
+    s = s.replace("(L)", "(ℓ)").replace("(mL)", "(mℓ)")
     s = re.sub(r"\bmath\b", "maths", s)
     s = re.sub(r"\bMath\b", "Maths", s)
     s = re.sub(r"(?<=\d)( ?)(mL|ml)\b", r"\1 mℓ".replace(" mℓ", "mℓ"), s)

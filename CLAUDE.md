@@ -1154,7 +1154,10 @@ ZA / Maths / Grade 4（CAPS）
 21. length ✓ 22. mass ✓ 23. capacity-and-volume ✓ 24. time ✓ 25. temperature ✓ 26. perimeter-area-and-volume ✓ 27. collecting-and-organising-data ✓
 28. pictographs-bar-graphs-and-pie-charts ✓ 29. probability ✓
 
-ZA の次: Grade 5 → Grade 6（Intermediate Phase）→ Grade 7–9（Senior Phase）→ Grade 12（NSC）
+ZA / Maths / Grade 5（CAPS。数は 6 桁まで、小数なし（お金の R45,50 だけ）、分数は twelfths まで、温度は正の数だけ）— 生成スクリプトは `gen_za_maths_g5_*`。G4 の生成スクリプトの問題関数（換算・お金・温度など）も再利用。za_common.gb_text は ZA_PLACES で AU の動物・米国の鳥・Sydney・fall も南ア向けに直す
+1. whole-numbers-to-6-digits ✓ 2. rounding-off-to-5-10-100-and-1000 ✓ 3. addition-and-subtraction ✓ 4. calculation-techniques ✓ 5. multiplication ✓ 6. division ✓ 7. multiples-and-factors ✓ 8. properties-of-operations ✓ 9. common-fractions ✓ 10. adding-and-subtracting-fractions ✓ 11. money-rate-and-ratio-problems ✓ 12. numeric-patterns ✓ 13. geometric-patterns ✓ 14. number-sentences ✓ 15. 2d-shapes ✓ 16. angles ✓ 17. 3d-objects ✓ 18. symmetry ✓ 19. transformations ✓ 20. viewing-objects ✓ 21. position-and-movement ✓ 22. length ✓ 23. mass ✓ 24. capacity-and-volume ✓ 25. time ✓ 26. temperature ✓ 27. perimeter-area-and-volume ✓ 28. collecting-and-organising-data ✓ 29. pictographs-bar-graphs-and-pie-charts ✓ 30. probability ✓
+
+ZA の次: Grade 6（Intermediate Phase）→ Grade 7–9（Senior Phase）→ Grade 12（NSC）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
