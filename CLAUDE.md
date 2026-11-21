@@ -1194,7 +1194,10 @@ ZA / Maths / Grade 2
 ZA / Maths / Grade 3
 1. numbers-to-1000 ✓ 2. place-value ✓ 3. adding-and-subtracting-to-999 ✓ 4. mental-mathematics ✓ 5. problem-solving-to-999 ✓ 6. times-tables-2-3-4-5-and-10 ✓ 7. multiplication-and-division ✓ 8. fractions ✓ 9. money ✓ 10. patterns ✓ 11. 2d-shapes-and-3d-objects ✓ 12. symmetry ✓ 13. position-and-maps ✓ 14. time ✓ 15. length ✓ 16. mass-and-capacity ✓ 17. perimeter-and-area ✓ 18. data-handling ✓
 
-ZA / Maths は Grade 1〜12 まで完了（Grade R は未着手）
+ZA / Maths / Grade R（Reception Year、5〜6歳）— grade `grade-r`（name「Grade R」、sort 0）。standard_url は CAPS Gr R の PDF（STD_URL_R）。10 まで、とても短い文、ほぼ全問に絵。お金（認識だけ）・かけ算わり算はなし。生成スクリプトは `gen_za_maths_gr_*`。US Kindergarten・AU Foundation・SG Primary 1（ordinal）・UK Year 1・US Grade 1 の問題関数を再利用、数・文章題・分ける問題は自前（FC で 10 を超える誤答を近い数に替え、÷ を使わない）。le は「1 cats」のような文法の誤り・kaya などの混入も落とす。図形は circle・triangle・square・rectangle・ball・box だけを答えにする（basic）。unit.php で educationalLevel を Grade R / Reception Year に
+1. counting-to-10 ✓ 2. number-symbols-and-names-to-10 ✓ 3. comparing-and-ordering-to-10 ✓ 4. ordinal-numbers-to-tenth ✓ 5. adding-and-taking-away-to-10 ✓ 6. story-sums-to-10 ✓ 7. sharing-and-halves ✓ 8. patterns ✓ 9. 2d-shapes-and-3d-objects ✓ 10. position-and-direction ✓ 11. time ✓ 12. length-mass-and-capacity ✓ 13. sorting-and-data ✓
+
+ZA / Maths は Grade R〜12 まで完了
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
