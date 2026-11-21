@@ -1222,7 +1222,12 @@ Flächen und Körper・Symmetrie・Diagramme は Klasse 3 の生成スクリプ�
 1. zahlen-bis-100 ✓ 2. zahlen-vergleichen-und-ordnen ✓ 3. plus-und-minus-bis-20 ✓ 4. plus-bis-100 ✓ 5. minus-bis-100 ✓ 6. ergaenzen-bis-100 ✓
 7. multiplizieren-verstehen ✓ 8. einmaleins-mit-2-5-und-10 ✓ 9. kleines-einmaleins ✓ 10. geteilt-aufteilen-und-verteilen ✓ 11. sachaufgaben ✓ 12. geld ✓
 13. laengen ✓ 14. uhrzeit ✓ 15. flaechen-und-koerper ✓ 16. spiegeln-und-symmetrie ✓ 17. zahlenmauern-und-muster ✓ 18. strichlisten-und-diagramme ✓
-次は Klasse 1（Zahlen bis 20）
+DE / Mathe / Klasse 1（Zahlen bis 20。とても短い文、ほぼ全問に絵）— 生成スクリプトは `gen_de_mathe_k1_*`（make_unit に grade="klasse-1"）。絵は k_pics（tenframe・dice・bond・box・two_groups・crossed_row・hop_line・pencils・towers・table_scene・box_scene・shelf など）を de_k2.de() でドイツ語の aria-label にして使う。
+Formen・Formenmuster は Klasse 2 の生成スクリプトの問題関数を R を入れ替えて再利用。topic の正規表現に verdoppeln（plus-und-minus）・lage-und（geometrie）を足した
+1. zahlen-bis-10 ✓ 2. zahlen-bis-20 ✓ 3. zahlen-vergleichen ✓ 4. zerlegen-und-ergaenzen ✓ 5. plus-bis-10 ✓ 6. minus-bis-10 ✓
+7. plus-und-minus-bis-20 ✓ 8. plus-und-minus-ueber-die-10 ✓ 9. verdoppeln-und-halbieren ✓ 10. rechengeschichten-und-sachaufgaben ✓ 11. geld ✓
+12. laengen-vergleichen-und-messen ✓ 13. uhrzeit-und-tagesablauf ✓ 14. formen-und-koerper ✓ 15. lage-und-richtung ✓ 16. muster-und-zahlenfolgen ✓ 17. strichlisten-und-tabellen ✓
+DE / Mathe は Klasse 1〜4（Grundschule）まで完了。次は Klasse 5（Gymnasium/Realschule、Bildungsstandards Sekundarstufe I）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
