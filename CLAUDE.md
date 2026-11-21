@@ -1283,7 +1283,16 @@ Class 7 Part 2: 1. geometric-twins ✓ 2. operations-with-integers ✓ 3. findin
 Class 8 Part 1: 1. a-square-and-a-cube ✓ 2. power-play ✓ 3. a-story-of-numbers ✓ 4. quadrilaterals ✓ 5. number-play ✓ 6. we-distribute-yet-things-multiply ✓ 7. proportional-reasoning-1 ✓
 Class 8 Part 2: 1. fractions-in-disguise ✓ 2. the-baudhayana-pythagoras-theorem ✓ 3. proportional-reasoning-2 ✓ 4. exploring-some-geometric-themes ✓ 5. tales-by-dots-and-lines ✓ 6. algebra-play ✓ 7. area ✓
 
-IN の次: Class 1–5（NCERT の新しい教科書 Joyful Mathematics・Maths Mela の章立てを確認してから）、または Class 11–12
+IN / Maths / Class 1–5（NCERT Joyful Mathematics（Class 1–2）・Maths Mela（Class 3–5）。1 単元 = 1 章）— 生成スクリプトは `gen_in_maths_c1_*`〜`c5_*`、共通部品は `tools/in_prim.py`（ph_common をインド向けにしたもの：インドの名前・地名、us_text（GB_WORDS）でイギリス式の綴り・$/£→₹・cuboid・L と mL・mixed number・Terry Fox Run などの言い換え、in_ok は LEAKS を SVG の文字・aria-label にも使う、collect・run_many・build_sets・finish）とお金の絵 `tools/in_money.py`（1〜20 ルピー硬貨、10〜500 ルピー札。one_name・one_count・one_cmp・one_buy・one_make(lim)）。
+in_prim.unit(level, slug, sort, strand, chapter, …, specs, seed, max_num) で作る。specs の部品は `rn(mod("他国の生成スクリプト", seed), "set_x", 数, keep)`（引数を名前から自動で埋める。spots などは rn(..., spots=…) で渡す）と `co(maker, 数)`、数の問題は `num_maker(lo, hi, kinds)`。standard_code は「Class 5, Maths Mela Chapter 9: Coconut Farm」、domain は strand N/G/M/P/D（Numbers and Operations／Shapes and Space／Measurement／Patterns／Data Handling）、standard_url は NCERT textbook。seed は 60N0c（Class N の c 章）。
+Class 1–2 は数にカンマなし、Class 3 から 1,000（インド式 1,00,000）。topics.php の in の調整に Class 1–5 の章名（$jm）を足した
+Class 1: 1. finding-the-furry-cat ✓ 2. what-is-long-what-is-round ✓ 3. mango-treat ✓ 4. making-10 ✓ 5. how-many ✓ 6. vegetable-farm ✓ 7. linas-family ✓ 8. fun-with-numbers ✓ 9. utsav ✓ 10. how-do-i-spend-my-day ✓ 11. how-many-times ✓ 12. how-much-can-we-spend ✓ 13. so-many-toys ✓
+Class 2: 1. a-day-at-the-beach ✓ 2. shapes-around-us ✓ 3. fun-with-numbers ✓ 4. shadow-story ✓ 5. playing-with-lines ✓ 6. decoration-for-festival ✓ 7. ranis-gift ✓ 8. grouping-and-sharing ✓ 9. which-season-is-it ✓ 10. fun-at-the-fair ✓ 11. data-handling ✓
+Class 3: 1. whats-in-a-name ✓ 2. toy-joy ✓ 3. double-century ✓ 4. vacation-with-my-nani-maa ✓ 5. fun-with-shapes ✓ 6. house-of-hundreds-1 ✓ 7. raksha-bandhan ✓ 8. fair-share ✓ 9. house-of-hundreds-2 ✓ 10. fun-at-class-party ✓ 11. filling-and-lifting ✓ 12. give-and-take ✓ 13. time-goes-on ✓ 14. the-surajkund-fair ✓
+Class 4: 1. shapes-around-us ✓ 2. hide-and-seek ✓ 3. pattern-around-us ✓ 4. thousands-around-us ✓ 5. sharing-and-measuring ✓ 6. measuring-length ✓ 7. the-cleanest-village ✓ 8. weigh-it-pour-it ✓ 9. equal-groups ✓ 10. elephants-tigers-and-leopards ✓ 11. fun-with-symmetry ✓ 12. ticking-clocks-and-turning-calendar ✓ 13. the-transport-museum ✓ 14. data-handling ✓
+Class 5: 1. we-the-travellers-1 ✓ 2. fractions ✓ 3. angles-as-turns ✓ 4. we-the-travellers-2 ✓ 5. far-and-near ✓ 6. the-dairy-farm ✓ 7. shapes-and-patterns ✓ 8. weight-and-capacity ✓ 9. coconut-farm ✓ 10. symmetrical-designs ✓ 11. grandmothers-quilt ✓ 12. racing-seconds ✓ 13. animal-jumps ✓ 14. maps-and-locations ✓ 15. data-through-pictures ✓
+
+IN の次: Class 11–12（CBSE / NCERT）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

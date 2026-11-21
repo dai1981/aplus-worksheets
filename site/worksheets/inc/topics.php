@@ -255,6 +255,30 @@ function topic_defs($country = null) {
         $d['rounding-and-estimation']['out'] = substr($d['rounding-and-estimation']['out'], 0, -1) . '|common-ground/';
         $d['multiplication']['out'] = substr($d['multiplication']['out'], 0, -1) . '|we-distribute/';
         $d['congruence-and-similarity']['in'] = substr($d['congruence-and-similarity']['in'], 0, -1) . '|^triangles$/';
+        // Classes 1-5 (Joyful Mathematics and Maths Mela chapter names)
+        $jm = array(
+            'place-value' => '^thousands-around-us$|^mango-treat$|^making-10$|^fun-with-numbers$|^a-day-at-the-beach$|^double-century$|^house-of-hundreds-1$|^we-the-travellers-1$',
+            'addition-and-subtraction' => '^how-many$|^vegetable-farm$|^decoration-for-festival$|^give-and-take$|^vacation-with-my-nani-maa$|^house-of-hundreds-2$|^the-cleanest-village$|^elephants-tigers-and-leopards$|^we-the-travellers-2$',
+            'multiplication' => '^how-many-times$|^raksha-bandhan$|^the-transport-museum$|^the-dairy-farm$',
+            'division' => '^fun-at-class-party$|^the-transport-museum$|^coconut-farm$',
+            'fractions' => '^fair-share$|^sharing-and-measuring$',
+            'factors-and-multiples' => '^animal-jumps$',
+            'money' => '^how-much-can-we-spend$|^fun-at-the-fair$|^the-surajkund-fair$',
+            'time' => '^how-do-i-spend-my-day$|^which-season-is-it$|^racing-seconds$',
+            'measurement' => '^linas-family$|^ranis-gift$|^filling-and-lifting$|^weigh-it-pour-it$|^far-and-near$',
+            'area-and-perimeter' => '^grandmothers-quilt$',
+            'shapes' => '^what-is-long-what-is-round$|^shadow-story$|^playing-with-lines$|^toy-joy$',
+            'coordinates-and-position' => '^finding-the-furry-cat$|^hide-and-seek$',
+            'data-and-graphs' => '^so-many-toys$|^whats-in-a-name$',
+            'algebra' => '^utsav$',
+        );
+        foreach ($jm as $k => $re) $d[$k]['in'] = substr($d[$k]['in'], 0, -1) . '|' . $re . '/';
+        $d['rounding-and-estimation']['out'] = substr($d['rounding-and-estimation']['out'], 0, -1) . '|^(shapes|pattern|thousands)-around-us$|what-is-long-what-is-round/';
+        $d['addition-and-subtraction']['out'] = str_replace('|ratio|', '|(?<!deco)ratio|', $d['addition-and-subtraction']['out']);
+        $d['time']['out'] = substr($d['time']['out'], 0, -1) . '|^how-many-times$/';
+        $d['measurement']['out'] = substr($d['measurement']['out'], 0, -1) . '|^symmetrical-designs$|^sharing-and-measuring$/';
+        $d['division']['out'] = substr($d['division']['out'], 0, -1) . '|^sharing-and-measuring$/';
+        $d['algebra']['out'] = substr($d['algebra']['out'], 0, -1) . '|^shapes-and-patterns$/';
     }
     return $d;
 }
