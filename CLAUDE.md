@@ -1248,7 +1248,11 @@ DE / Mathe / Klasse 8（Sek I）— 生成スクリプトは `gen_de_mathe_k8_*`
 1. potenzen-und-zehnerpotenzen ✓ 2. quadratwurzeln-und-reelle-zahlen ✓ 3. ausmultiplizieren-und-ausklammern ✓ 4. binomische-formeln ✓ 5. lineare-funktionen ✓ 6. geradengleichungen-aufstellen ✓
 7. lineare-gleichungssysteme-grafisch-loesen ✓ 8. lineare-gleichungssysteme-rechnerisch-loesen ✓ 9. gleichungssysteme-in-sachaufgaben ✓ 10. kongruenzsaetze ✓ 11. satz-des-thales ✓
 12. kreisumfang-und-kreisflaeche ✓ 13. zylinder ✓ 14. mehrstufige-zufallsexperimente ✓ 15. bruchterme-und-bruchgleichungen ✓
-DE / Mathe は Klasse 1〜8 まで完了。次は Klasse 9（quadratische Funktionen und Gleichungen・Satz des Pythagoras・Ähnlichkeit und Strahlensätze・Potenzgesetze・Pyramide, Kegel, Kugel・Trigonometrie）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
+DE / Mathe / Klasse 9（Sek I）— 生成スクリプトは `gen_de_mathe_k9_*`（make_unit に grade="klasse-9"）、共通部品は `tools/de_k9.py`（de_k8 の上に zahl・zr（四捨五入した小数、末尾の 0 も表示）・qf（ax² + bx + c）・sform（y = a(x − d)² + e、かっこ内はノーブレークスペース）・parabel（放物線の SVG）・rdreieck（直角三角形の SVG、直角は C））。
+長さ・お金の答えは分数でなく小数（割り切れないときは zr で丸める）。解の集合は「L = {−5; 3}」。トピック quadratische-funktionen-und-gleichungen を足した（lineare-funktionen-… の out に quadratisch）。potenz・wurzel→zahlen、pythagoras・aehnlich・strahlen・trigonometr・pyramide・kegel・kugel→geometrie、vierfelder→daten-und-zufall
+1. potenzgesetze ✓ 2. rechnen-mit-wurzeln ✓ 3. quadratische-funktionen ✓ 4. scheitelpunktform-und-normalform ✓ 5. quadratische-gleichungen ✓ 6. quadratische-gleichungen-in-sachaufgaben ✓
+7. satz-des-pythagoras ✓ 8. pythagoras-in-figuren-und-koerpern ✓ 9. aehnlichkeit-und-zentrische-streckung ✓ 10. strahlensaetze ✓ 11. trigonometrie ✓ 12. pyramide-und-kegel ✓ 13. kugel ✓ 14. vierfeldertafeln ✓
+DE / Mathe は Klasse 1〜9 まで完了。次は Klasse 10（Exponentialfunktionen und Wachstum・Logarithmus・Sinus- und Kosinusfunktion・Sinus- und Kosinussatz・Polynomfunktionen・Kreisausschnitt und Bogenmaß）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
