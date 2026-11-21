@@ -1238,7 +1238,12 @@ DE / Mathe / Klasse 6（Sek I）— 生成スクリプトは `gen_de_mathe_k6_*`
 7. dezimalzahlen-und-stellenwerte ✓ 8. brueche-und-dezimalzahlen ✓ 9. dezimalzahlen-addieren-und-subtrahieren ✓ 10. dezimalzahlen-multiplizieren-und-dividieren ✓ 11. prozente ✓ 12. rechnen-mit-negativen-zahlen ✓
 13. zuordnungen-und-dreisatz ✓ 14. terme-und-gleichungen ✓ 15. kreise-und-kreisdiagramme ✓ 16. dreiecke-und-vierecke ✓ 17. flaecheninhalt-von-parallelogramm-und-dreieck ✓ 18. daten-und-wahrscheinlichkeit ✓
 19. sachaufgaben-mit-bruechen-und-dezimalzahlen ✓
-DE / Mathe は Klasse 1〜6 まで完了。次は Klasse 7（Prozent- und Zinsrechnung・rationale Zahlen・Terme und Gleichungen・Dreiecke konstruieren・Prismen・Daten）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
+DE / Mathe / Klasse 7（Sek I）— 生成スクリプトは `gen_de_mathe_k7_*`（make_unit に grade="klasse-7"）、共通部品は `tools/de_k7.py`（de_k6 の上に mcq（neg=True）・rd（四捨五入）・eur（12,50 €、負は −）・pz（%）・zk）。
+負の数は「−」、かっこ付きで（−3）。図はすべて `lg=True`（印刷で大きく。横長の viewBox にすると読みやすい）。トピック: rational→zahlen、zins→brueche-und-dezimalzahlen、terme→muster、prism→geometrie、boxplot→daten-und-zufall
+1. rationale-zahlen ✓ 2. rechnen-mit-rationalen-zahlen ✓ 3. prozentrechnung ✓ 4. prozentuale-veraenderung ✓ 5. zinsrechnung ✓ 6. proportionale-und-antiproportionale-zuordnungen ✓
+7. terme-umformen ✓ 8. lineare-gleichungen ✓ 9. gleichungen-in-sachaufgaben ✓ 10. winkel-an-geradenkreuzungen ✓ 11. winkelsummen-in-dreiecken-und-vielecken ✓ 12. dreiecke-konstruieren ✓
+13. besondere-linien-im-dreieck ✓ 14. flaecheninhalt-von-vierecken ✓ 15. prismen ✓ 16. boxplots-und-kennwerte ✓ 17. wahrscheinlichkeit ✓
+DE / Mathe は Klasse 1〜7 まで完了。次は Klasse 8（Binomische Formeln・lineare Funktionen・lineare Gleichungssysteme・Kreis und Zylinder・Satz des Thales・mehrstufige Zufallsexperimente）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

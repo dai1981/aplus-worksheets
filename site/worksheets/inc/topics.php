@@ -72,8 +72,8 @@ function topic_defs_tw() {
 function topic_defs_de() {
     return array(
         'zahlen-und-stellenwerte' => array('name' => 'Zahlen und Stellenwerte',
-            'in' => '/^zahlen-(bis|vergleichen)|stellenwert|runden|zahlenraum|zahlen-ordnen|negative|potenzen/', 'out' => '/^$/',
-            'blurb' => 'Zahlen lesen und schreiben, Hunderter, Zehner und Einer, Zahlen vergleichen und ordnen, der Zahlenstrahl und das Runden. Dazu negative Zahlen, Potenzen und Quadratzahlen.'),
+            'in' => '/^zahlen-(bis|vergleichen)|stellenwert|runden|zahlenraum|zahlen-ordnen|negative|potenzen|rational/', 'out' => '/^$/',
+            'blurb' => 'Zahlen lesen und schreiben, Hunderter, Zehner und Einer, Zahlen vergleichen und ordnen, der Zahlenstrahl und das Runden. Dazu negative und rationale Zahlen, Potenzen und Quadratzahlen.'),
         'plus-und-minus' => array('name' => 'Addition und Subtraktion',
             'in' => '/plus|minus|addition|subtraktion|addieren|subtrahieren|ergaenzen|verdoppeln/', 'out' => '/^$/',
             'blurb' => 'Kopfrechnen, halbschriftliches Rechnen und die schriftlichen Verfahren mit Übertrag und Entbündeln.'),
@@ -81,8 +81,8 @@ function topic_defs_de() {
             'in' => '/einmaleins|multipli|dividier|division|mal-und|geteilt|teiler|primzahl/', 'out' => '/^$/',
             'blurb' => 'Das kleine Einmaleins, Geteiltaufgaben, Rechnen mit Zehnerzahlen, halbschriftliches und schriftliches Multiplizieren und Dividieren, das Teilen mit Rest sowie Teiler, Vielfache und Primzahlen.'),
         'brueche-und-dezimalzahlen' => array('name' => 'Brüche, Dezimalzahlen und Prozente',
-            'in' => '/brueche|dezimal|prozent|gemischte-zahlen/', 'out' => '/^$/',
-            'blurb' => 'Brüche als Anteile, erweitern und kürzen, vergleichen und mit Brüchen rechnen, Dezimalzahlen und periodische Dezimalzahlen, das Rechnen mit dem Komma und der Einstieg in die Prozentrechnung.'),
+            'in' => '/brueche|dezimal|prozent|gemischte-zahlen|zins/', 'out' => '/^$/',
+            'blurb' => 'Brüche als Anteile, erweitern und kürzen, vergleichen und mit Brüchen rechnen, Dezimalzahlen und periodische Dezimalzahlen, das Rechnen mit dem Komma, Prozentrechnung, prozentuale Veränderung und Zinsrechnung.'),
         'groessen' => array('name' => 'Größen und Messen',
             'in' => '/geld|laengen|gewicht|uhrzeit|zeitspannen|zeit-und|kalender|hohlmasse|liter|rauminhalt|massstab|volumen/', 'out' => '/^$/',
             'blurb' => 'Mit Euro und Cent, Millimetern bis Kilometern, Gramm bis Tonnen, Litern und Millilitern sowie Uhrzeiten, Zeitspannen und dem Kalender rechnen, umwandeln und schätzen. Dazu Kommaschreibweise und Maßstab.'),
@@ -90,14 +90,14 @@ function topic_defs_de() {
             'in' => '/sachaufgaben|sachrechnen/', 'out' => '/^$/',
             'blurb' => 'Sachaufgaben mit einem und mehreren Rechenschritten: Frage, Rechnung, Antwort.'),
         'geometrie' => array('name' => 'Geometrie',
-            'in' => '/koerper|figuren|symmetrie|flaeche|umfang|geometrie|wuerfel|parallel|senkrecht|vierecke|lage-und|strecken|koordinaten|winkel|kreis|dreieck/', 'out' => '/^$/',
-            'blurb' => 'Formen und Körper, Lage und Richtung, Würfelnetze, Ansichten und Baupläne, Strecken und Geraden, parallel und senkrecht, Vierecke, Winkel, das Koordinatensystem, Achsen- und Punktsymmetrie, Umfang, Flächeninhalt und Volumen.'),
+            'in' => '/koerper|figuren|symmetrie|flaeche|umfang|geometrie|wuerfel|parallel|senkrecht|vierecke|lage-und|strecken|koordinaten|winkel|kreis|dreieck|prism/', 'out' => '/^$/',
+            'blurb' => 'Formen und Körper, Lage und Richtung, Würfelnetze, Ansichten und Baupläne, Strecken und Geraden, parallel und senkrecht, Vierecke, Winkel, das Koordinatensystem, Achsen- und Punktsymmetrie, Dreiecke konstruieren, Umfang, Flächeninhalt, Prismen und Volumen.'),
         'muster-und-strukturen' => array('name' => 'Muster und Strukturen',
-            'in' => '/muster|zahlenfolgen|zahlenmauer|rechengesetze|zuordnung|gleichung/', 'out' => '/^$/',
-            'blurb' => 'Zahlenfolgen und Regeln, Zahlenmauern und wachsende Muster erkennen, beschreiben und fortsetzen, Rechengesetze und Klammern nutzen, Terme und Gleichungen, Zuordnungen und Dreisatz.'),
+            'in' => '/muster|zahlenfolgen|zahlenmauer|rechengesetze|zuordnung|gleichung|terme/', 'out' => '/^$/',
+            'blurb' => 'Zahlenfolgen und Regeln, Zahlenmauern und wachsende Muster erkennen, beschreiben und fortsetzen, Rechengesetze und Klammern nutzen, Terme umformen, lineare Gleichungen, proportionale und antiproportionale Zuordnungen und Dreisatz.'),
         'daten-und-zufall' => array('name' => 'Daten und Zufall',
-            'in' => '/diagramm|tabellen|daten|wahrscheinlich|zufall|kombinatorik/', 'out' => '/^$/',
-            'blurb' => 'Strichlisten, Tabellen, Säulen- und Liniendiagramme lesen und auswerten, Kombinationen zählen und Chancen beschreiben und vergleichen.'),
+            'in' => '/diagramm|tabellen|daten|wahrscheinlich|zufall|kombinatorik|boxplot/', 'out' => '/^$/',
+            'blurb' => 'Strichlisten, Tabellen, Säulen- und Liniendiagramme lesen und auswerten, Kennwerte und Boxplots, Kombinationen zählen, Wahrscheinlichkeiten, Baumdiagramme und Pfadregel.'),
     );
 }
 
