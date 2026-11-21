@@ -68,8 +68,39 @@ function topic_defs_tw() {
     );
 }
 
+/* Germany (de): German topic names and German unit slugs */
+function topic_defs_de() {
+    return array(
+        'zahlen-und-stellenwerte' => array('name' => 'Zahlen und Stellenwerte',
+            'in' => '/^zahlen-(bis|vergleichen)|stellenwert|runden|zahlenraum|zahlen-ordnen/', 'out' => '/^$/',
+            'blurb' => 'Zahlen lesen und schreiben, Hunderter, Zehner und Einer, Zahlen vergleichen und ordnen, der Zahlenstrahl und das Runden.'),
+        'plus-und-minus' => array('name' => 'Addition und Subtraktion',
+            'in' => '/plus|minus|addition|subtraktion|ergaenzen/', 'out' => '/^$/',
+            'blurb' => 'Kopfrechnen, halbschriftliches Rechnen und die schriftlichen Verfahren mit Übertrag und Entbündeln.'),
+        'mal-und-geteilt' => array('name' => 'Multiplikation und Division',
+            'in' => '/einmaleins|multipli|dividier|division|mal-und|geteilt/', 'out' => '/^$/',
+            'blurb' => 'Das kleine Einmaleins, Geteiltaufgaben, Rechnen mit Zehnerzahlen, halbschriftliches Multiplizieren und Dividieren und das Teilen mit Rest.'),
+        'groessen' => array('name' => 'Größen: Geld, Längen, Gewichte und Zeit',
+            'in' => '/geld|laengen|gewicht|uhrzeit|zeitspannen|hohlmasse|liter/', 'out' => '/^$/',
+            'blurb' => 'Mit Euro und Cent, Millimetern bis Kilometern, Gramm und Kilogramm sowie Uhrzeiten und Zeitspannen rechnen, umwandeln und schätzen.'),
+        'sachaufgaben' => array('name' => 'Sachaufgaben',
+            'in' => '/sachaufgaben|sachrechnen/', 'out' => '/^$/',
+            'blurb' => 'Sachaufgaben mit einem und mehreren Rechenschritten: Frage, Rechnung, Antwort.'),
+        'geometrie' => array('name' => 'Geometrie',
+            'in' => '/koerper|figuren|symmetrie|flaeche|umfang|geometrie|wuerfel/', 'out' => '/^$/',
+            'blurb' => 'Körper und ebene Figuren, Würfelnetze und Baupläne, Achsensymmetrie, Umfang und Flächeninhalt.'),
+        'muster-und-strukturen' => array('name' => 'Muster und Strukturen',
+            'in' => '/muster|zahlenfolgen|zahlenmauer/', 'out' => '/^$/',
+            'blurb' => 'Zahlenfolgen und Regeln, Zahlenmauern und wachsende Muster erkennen, beschreiben und fortsetzen.'),
+        'daten-und-zufall' => array('name' => 'Daten und Zufall',
+            'in' => '/diagramm|tabellen|daten|wahrscheinlich|zufall/', 'out' => '/^$/',
+            'blurb' => 'Strichlisten, Tabellen und Säulendiagramme lesen und auswerten, Chancen mit sicher, möglich und unmöglich beschreiben.'),
+    );
+}
+
 function topic_defs($country = null) {
     if ($country === 'tw') return topic_defs_tw();
+    if ($country === 'de') return topic_defs_de();
     return array(
         'fractions' => array('name' => 'Fractions',
             'in' => '/fraction|halves|thirds|fourths|quarters|mixed-num|improper|fair-shares|partition-shapes|operations-with-rational/',

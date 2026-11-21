@@ -115,12 +115,12 @@ def sache():
     if kind == "up":
         tmp, u = R.choice(SACHE_UP)
         ans = q + 1
-        w = [q, rr(q, r), q + 2, r]
+        w = [q, q - 1, q + 2, r]
         return mcq(tmp % (t, d), "%d %s" % (ans, u), ["%s %s" % (x, u) for x in w if x != ans and x != 0],
                    "%d %s %d = %d Rest %d. Die restlichen %d brauchen auch noch Platz, also <b>%d %s</b>." % (t, GETEILT, d, q, r, r, ans, u))
     if kind == "down":
         tmp, u = R.choice(SACHE_DOWN[:2])
-        w = [q + 1, rr(q, r), r, q - 1]
+        w = [q + 1, q - 1, q + 2, r if r > 1 else q + 3]
         return mcq(tmp % (t, d), "%d %s" % (q, u), ["%s %s" % (x, u) for x in w if x != q and x != 0],
                    "%d %s %d = %d Rest %d. Nur volle zählen, also <b>%d %s</b>. %s." % (t, GETEILT, d, q, r, q, u, bleib(r)))
     p = KIDS.next()

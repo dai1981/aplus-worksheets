@@ -48,31 +48,35 @@ def one_step():
         q = "Ein Fahrrad kostet %s €. Im Angebot ist es %d € billiger. Was kostet es jetzt?" % (num(a), b)
         r, u = a - b, "€"
         w = [a + b, a - b + 10, b]
+        e = "Billiger heißt minus: %s − %d = <b>%s €</b>." % (num(a), b, num(r))
     elif kind == "weg":
         a = R.randint(150, 450)
         q = "%s läuft jeden Tag %d m zur Schule und %d m zurück. Wie viele Meter sind das an einem Tag?" % (p[0], a, a)
         r, u = 2 * a, "m"
         w = [a, a + 2, 4 * a if 4 * a <= 1000 else 3 * a]
+        e = "Hin und zurück: %d m + %d m = <b>%d m</b>." % (a, a, r)
     elif kind == "tiere":
         a, b = R.randint(3, 9), R.choice([2, 4])
         tier = "Hühner" if b == 2 else "Kühe"
         q = "Auf dem Bauernhof stehen %d %s. Wie viele Beine haben sie zusammen?" % (a, tier)
         r, u = a * b, "Beine"
         w = [a + b, a * (b + 1), a * b + b]
+        e = "Jedes Tier hat %d Beine: %d %s %d = <b>%d Beine</b>." % (b, a, MAL, b, r)
     elif kind == "kuchen":
         k = R.choice([6, 8, 12])
         n = R.randint(2, 6)
         q = "Ein Blech Kuchen wird in %d Stücke geschnitten. Mama backt %d Bleche. Wie viele Stücke gibt es?" % (k, n)
         r, u = k * n, "Stücke"
         w = [k + n, k * (n - 1), k * n + k]
+        e = "%d Bleche mit je %d Stücken: %d %s %d = <b>%d Stücke</b>." % (n, k, n, MAL, k, r)
     else:
         a = R.randint(20, 50)
         b = R.randint(5, a - 5)
         q = "%s hat %d €. %s kauft ein Buch für %d €. Wie viel Geld hat %s noch?" % (p[0], a, p[1].capitalize(), b, p[1])
         r, u = a - b, "€"
         w = [a + b, a - b - 1, b]
-    return mcq(q, "%s %s" % (num(r), u), ["%s %s" % (num(x), u) for x in w if x > 0 and x != r],
-               "Die Antwort ist <b>%s %s</b>." % (num(r), u))
+        e = "Ausgeben heißt minus: %d − %d = <b>%d €</b>." % (a, b, r)
+    return mcq(q, "%s %s" % (num(r), u), ["%s %s" % (num(x), u) for x in w if x > 0 and x != r], e)
 
 
 def two_step():
@@ -82,7 +86,7 @@ def two_step():
         n, c, have = R.randint(2, 5), R.randint(3, 9), R.choice([20, 50])
         if n * c >= have:
             return None
-        q = "%s kauft %d Hefte zu je %d € und bezahlt mit einem %d-€-Schein. Wie viel Wechselgeld bekommt %s?" % (p[0], n, c, have, p[1])
+        q = "%s kauft %d Malblöcke zu je %d € und bezahlt mit einem %d-€-Schein. Wie viel Wechselgeld bekommt %s?" % (p[0], n, c, have, p[1])
         r, u = have - n * c, "€"
         w = [n * c, have - c, have - n - c]
         e = "Erst: %d %s %d = %d €. Dann: %d − %d = <b>%d €</b>." % (n, MAL, c, n * c, have, n * c, r)

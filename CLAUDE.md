@@ -69,6 +69,8 @@ FTP は上書きのみ（`--delete` を絶対に付けない）。DB は ws_ の
 
 ## ロードマップ（効果の高い順）
 
+新しい国は GDP の高い順（中国本土は Google が使えず AdSense の効果が小さいので後回し）
+
 US / Math / Grade 3（Common Core）
 1. multiplication-facts ✓ 2. division-facts ✓ 3. rounding ✓ 4. fractions ✓ 5. telling-time ✓ 6. area ✓
 7. perimeter ✓
@@ -1198,6 +1200,18 @@ ZA / Maths / Grade R（Reception Year、5〜6歳）— grade `grade-r`（name「
 1. counting-to-10 ✓ 2. number-symbols-and-names-to-10 ✓ 3. comparing-and-ordering-to-10 ✓ 4. ordinal-numbers-to-tenth ✓ 5. adding-and-taking-away-to-10 ✓ 6. story-sums-to-10 ✓ 7. sharing-and-halves ✓ 8. patterns ✓ 9. 2d-shapes-and-3d-objects ✓ 10. position-and-direction ✓ 11. time ✓ 12. length-mass-and-capacity ✓ 13. sorting-and-data ✓
 
 ZA / Maths は Grade R〜12 まで完了
+
+DE / Mathe（KMK-Bildungsstandards Mathematik Primarbereich, Fassung 2022。学年への配分は各州の Lehrplan の一般的な内容）— country `de`（name「Deutschland」、lang `de`、hreflang de-de）、subject `mathe`（Mathe）、grade `klasse-N`（Klasse N、N+5〜N+6 歳）、A4。生成スクリプトは `gen_de_mathe_kN_*`、共通部品は `tools/de_common.py`（num・dez・eur（3,50 €・45 ct）・Kids（名前と er/sie）・mcq・mix・lesson・example・make_unit・schriftlich（Karopapier の筆算）・zahlenstrahl・dienes・stellenwerttafel・saeulen・strichliste・geld_svg・solid_svg・clock）。
+ドイツ語、du で話しかける短い文。記号は 3 · 4（Malpunkt）、12 : 3、17 : 5 = 3 Rest 2。小数はコンマ（2,50 €）、5 桁以上はノーブレークスペース区切り。時刻は「8:15 Uhr」、時間量は「1 h 25 min」。「halb vier」= 3:30 Uhr。
+domain は Leitidee（Zahl und Operation／Raum und Form／Muster, Strukturen und funktionaler Zusammenhang／Größen und Messen／Daten und Zufall）、standard_code は「Leitidee Zahl und Operation」、standard_text は要約、standard_url は KMK の Primarbereich Mathe PDF。body_html は「So geht's → Beispiel → Typische Fehler」。
+q・c・e の中の < > は &lt; &gt;（faq・standard_text・key は生の < >）。数・名詞の単数（1 Kästchen はよいが 1 Stücke は不可）に注意。
+サイトの UI 文言は core.php の 'de'（T と js_text。js の桁区切りは sep = '.'）、学年＋教科の語順は gs()（「Mathe Klasse 3」）、英語の小文字化は lc()。トピックは topics.php の `topic_defs_de()`（ドイツ語の slug 用）。topic.php・topics.php に $de の文言がある
+
+DE / Mathe / Klasse 3
+1. zahlen-bis-1000 ✓ 2. zahlen-vergleichen-und-ordnen ✓ 3. runden-und-ueberschlagen ✓ 4. plus-und-minus-bis-1000 ✓ 5. schriftliche-addition ✓ 6. schriftliche-subtraktion ✓ 7. einmaleins ✓
+8. multiplizieren-und-dividieren ✓ 9. dividieren-mit-rest ✓ 10. sachaufgaben ✓ 11. geld ✓ 12. laengen ✓ 13. gewichte ✓ 14. uhrzeit-und-zeitspannen ✓
+15. koerper-und-figuren ✓ 16. achsensymmetrie ✓ 17. zahlenfolgen-und-muster ✓ 18. diagramme-und-tabellen ✓ 19. wahrscheinlichkeit ✓
+次は Klasse 4（Zahlen bis 1 000 000、schriftliche Multiplikation・Division）、Klasse 2、Klasse 1
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

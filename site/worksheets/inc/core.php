@@ -311,6 +311,7 @@ function js_text($lang) {
             'levelUp' => 'Aufgestiegen!', 'keepGoing' => 'Weiter bis {t}', 'yay' => 'Klasse',
             'achieved' => 'Ziel erreicht!', 'ask' => 'Als Nächstes <b>{t}</b> schaffen ({l})?',
             'goFor' => 'Los geht\'s', 'later' => 'Später', 'notStarted' => 'Noch nicht begonnen',
+            'sep' => '.',
     );
     $J['en-GB'] = array_merge($J['en'], array(
         'confirm' => 'Clear all saved scores for this year?',

@@ -203,7 +203,7 @@
   function wr(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function pad(n) { return (n < 10 ? "0" : "") + n; }
   function today() { var d = new Date(); return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
-  function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+  function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, T.sep || ","); }
 
   function record(setKey, gradeKey, ok, total) {
     var u = String(setKey).replace(/-\d+$/, "");
