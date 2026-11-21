@@ -1217,7 +1217,12 @@ DE / Mathe / Klasse 4（Zahlen bis 1 000 000）— 生成スクリプトは `gen
 7. brueche-im-alltag ✓ 8. sachaufgaben ✓ 9. laengen-mit-komma ✓ 10. gewichte-und-tonnen ✓ 11. rauminhalte ✓ 12. rechnen-mit-geld ✓ 13. zeit-und-kalender ✓ 14. massstab ✓
 15. umfang-und-flaecheninhalt ✓ 16. parallel-senkrecht-und-vierecke ✓ 17. wuerfel-und-quader ✓ 18. daten-und-diagramme ✓ 19. kombinatorik-und-wahrscheinlichkeit ✓
 brueche-im-alltag はまだどのトピックにも入らない（Brüche の単元が 3 つになったら topic_defs_de に brueche を足す）
-次は Klasse 2、Klasse 1
+DE / Mathe / Klasse 2（Zahlen bis 100。短い文、絵を多く）— 生成スクリプトは `gen_de_mathe_k2_*`（make_unit に grade="klasse-2"）。絵の部品は `tools/de_k2.py`（k_pics の絵にドイツ語の aria-label：hunderterfeld・punktfeld・gruppen・reihe・zahlenstrahl100、DING で物の名前）。
+Flächen und Körper・Symmetrie・Diagramme は Klasse 3 の生成スクリプトの問題関数を、モジュールの R を新しい seed に入れ替えて再利用（Diagramme は 100 を超える数を le100 で落とす）
+1. zahlen-bis-100 ✓ 2. zahlen-vergleichen-und-ordnen ✓ 3. plus-und-minus-bis-20 ✓ 4. plus-bis-100 ✓ 5. minus-bis-100 ✓ 6. ergaenzen-bis-100 ✓
+7. multiplizieren-verstehen ✓ 8. einmaleins-mit-2-5-und-10 ✓ 9. kleines-einmaleins ✓ 10. geteilt-aufteilen-und-verteilen ✓ 11. sachaufgaben ✓ 12. geld ✓
+13. laengen ✓ 14. uhrzeit ✓ 15. flaechen-und-koerper ✓ 16. spiegeln-und-symmetrie ✓ 17. zahlenmauern-und-muster ✓ 18. strichlisten-und-diagramme ✓
+次は Klasse 1（Zahlen bis 20）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
