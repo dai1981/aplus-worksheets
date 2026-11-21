@@ -15,8 +15,12 @@ from ws_common import (fig, svg_wrap, text, line, balance, write_unit, fr,   # n
 UPDATED = "2026-11-21"
 STD_URL = ("https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2022/"
            "2022_06_23-Bista-Primarbereich-Mathe.pdf")
+STD_URL_SEK = ("https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2022/"
+               "2022_06_23-Bista-ESA-MSA-Mathe.pdf")
+SEK = {"klasse-%d" % n for n in range(5, 11)}
 # Leitideen der Bildungsstandards (Fassung 2022)
 DOMAIN = {
+    "F": "Funktionaler Zusammenhang",
     "Z": "Zahl und Operation",
     "R": "Raum und Form",
     "M": "Muster, Strukturen und funktionaler Zusammenhang",
@@ -96,7 +100,7 @@ def Er(p):
 
 
 # ------------------------------------------------------------ questions
-def mcq(q, correct, cands, e):
+def mcq(q, correct, cands, e, neg=False):
     """4 択：正解＋重複しない誤答 3 つ（文字列で比べる）。並びは balance() で決める。
     足りないときは答えの数を ±1、±2 … した近い数で補う。"""
     correct = str(correct)
@@ -106,7 +110,7 @@ def mcq(q, correct, cands, e):
         if c is None:
             continue
         c = str(c)
-        if c in seen or c == "" or c.startswith("-") or c.startswith("−"):
+        if c in seen or c == "" or (not neg and (c.startswith("-") or c.startswith("−"))):
             continue
         seen.add(c)
         pick.append(c)
@@ -207,7 +211,7 @@ def make_unit(rnd, slug, dom, std_text, title, seo_title, short_title, meta_desc
     title, seo_title, short_title, meta_desc, key_big, key_sub = map(plain_text, (title, seo_title, short_title, meta_desc, key_big, key_sub))
     write_unit("de", "mathe", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
-        "domain": DOMAIN[dom], "standard_code": "Leitidee " + DOMAIN[dom], "standard_url": STD_URL,
+        "domain": DOMAIN[dom], "standard_code": "Leitidee " + DOMAIN[dom], "standard_url": STD_URL_SEK if grade in SEK else STD_URL,
         "standard_text": std_text, "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
         "body_html": body_html, "faq": faq, "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })
@@ -226,7 +230,8 @@ def zahlenstrahl(lo, hi, step, marks=(), labels=None, label="Zahlenstrahl", ever
     labels: Werte, die unter dem Strich stehen (Standard: lo, hi und alle every)"""
     n = (hi - lo) // step
     u = width / float(n)
-    x0, y = 24, 58
+    lv = labels if labels is not None else [lo, hi]
+    x0, y = max(24, 5 + 4.4 * max(len(num(v)) for v in lv)), 58
     X = lambda v: x0 + (v - lo) / float(step) * u
     s = [line(x0 - 8, y, x0 + n * u + 12, y, INK, 2),
          "<path d='M%.1f %.1f l-9 -6 v12 Z' fill='%s'/>" % (x0 + n * u + 20, y, INK)]

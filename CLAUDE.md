@@ -1216,7 +1216,6 @@ DE / Mathe / Klasse 4（Zahlen bis 1 000 000）— 生成スクリプトは `gen
 1. zahlen-bis-1-million ✓ 2. runden-und-ueberschlagen ✓ 3. schriftlich-addieren-und-subtrahieren ✓ 4. schriftliche-multiplikation ✓ 5. schriftliche-division ✓ 6. rechengesetze-und-klammern ✓
 7. brueche-im-alltag ✓ 8. sachaufgaben ✓ 9. laengen-mit-komma ✓ 10. gewichte-und-tonnen ✓ 11. rauminhalte ✓ 12. rechnen-mit-geld ✓ 13. zeit-und-kalender ✓ 14. massstab ✓
 15. umfang-und-flaecheninhalt ✓ 16. parallel-senkrecht-und-vierecke ✓ 17. wuerfel-und-quader ✓ 18. daten-und-diagramme ✓ 19. kombinatorik-und-wahrscheinlichkeit ✓
-brueche-im-alltag はまだどのトピックにも入らない（Brüche の単元が 3 つになったら topic_defs_de に brueche を足す）
 DE / Mathe / Klasse 2（Zahlen bis 100。短い文、絵を多く）— 生成スクリプトは `gen_de_mathe_k2_*`（make_unit に grade="klasse-2"）。絵の部品は `tools/de_k2.py`（k_pics の絵にドイツ語の aria-label：hunderterfeld・punktfeld・gruppen・reihe・zahlenstrahl100、DING で物の名前）。
 Flächen und Körper・Symmetrie・Diagramme は Klasse 3 の生成スクリプトの問題関数を、モジュールの R を新しい seed に入れ替えて再利用（Diagramme は 100 を超える数を le100 で落とす）
 1. zahlen-bis-100 ✓ 2. zahlen-vergleichen-und-ordnen ✓ 3. plus-und-minus-bis-20 ✓ 4. plus-bis-100 ✓ 5. minus-bis-100 ✓ 6. ergaenzen-bis-100 ✓
@@ -1227,7 +1226,14 @@ Formen・Formenmuster は Klasse 2 の生成スクリプトの問題関数を R 
 1. zahlen-bis-10 ✓ 2. zahlen-bis-20 ✓ 3. zahlen-vergleichen ✓ 4. zerlegen-und-ergaenzen ✓ 5. plus-bis-10 ✓ 6. minus-bis-10 ✓
 7. plus-und-minus-bis-20 ✓ 8. plus-und-minus-ueber-die-10 ✓ 9. verdoppeln-und-halbieren ✓ 10. rechengeschichten-und-sachaufgaben ✓ 11. geld ✓
 12. laengen-vergleichen-und-messen ✓ 13. uhrzeit-und-tagesablauf ✓ 14. formen-und-koerper ✓ 15. lage-und-richtung ✓ 16. muster-und-zahlenfolgen ✓ 17. strichlisten-und-tabellen ✓
-DE / Mathe は Klasse 1〜4（Grundschule）まで完了。次は Klasse 5（Gymnasium/Realschule、Bildungsstandards Sekundarstufe I）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
+DE / Mathe / Klasse 5（Sekundarstufe I。KMK-Bildungsstandards ESA/MSA 2022、de_common.STD_URL_SEK。make_unit は grade が klasse-5〜10 なら自動で Sek I の URL）— 生成スクリプトは `gen_de_mathe_k5_*`（make_unit に grade="klasse-5"）。
+Leitidee に「F」Funktionaler Zusammenhang を足した。負の数を選択肢に入れるときは mcq(…, neg=True)。K3・K4 の問題関数（achsensymmetrie・umfang_und_flaecheninhalt・wuerfel_und_quader・daten_und_diagramme・brueche）を R を入れ替えて再利用。
+zahlenstrahl は長いラベルに合わせて左右の余白を広げる。トピック: negative-zahlen・potenzen→zahlen、teiler・primzahl→mal-und-geteilt、strecken・koordinaten・winkel→geometrie、volumen→groessen
+1. natuerliche-zahlen-und-stellenwerte ✓ 2. runden-und-schaetzen ✓ 3. negative-zahlen ✓ 4. addieren-und-subtrahieren ✓ 5. multiplizieren-und-dividieren ✓ 6. terme-und-rechengesetze ✓
+7. potenzen-und-quadratzahlen ✓ 8. teiler-vielfache-und-primzahlen ✓ 9. brueche-und-anteile ✓ 10. laengen-massen-und-zeit ✓ 11. sachaufgaben-und-kombinatorik ✓ 12. strecken-geraden-und-strahlen ✓
+13. koordinatensystem ✓ 14. winkel ✓ 15. achsen-und-punktsymmetrie ✓ 16. flaecheninhalt-und-umfang ✓ 17. volumen-und-oberflaeche-von-quadern ✓ 18. haeufigkeiten-und-diagramme ✓ 19. muster-terme-und-variablen ✓
+Brüche はまだ 2 単元（K4 brueche-im-alltag・K5 brueche-und-anteile）。3 つになったら topic_defs_de に brueche を足す
+DE / Mathe は Klasse 1〜5 まで完了。次は Klasse 6（Brüche・Dezimalzahlen・Prozent の入口・Kreis・Winkel・Daten）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
