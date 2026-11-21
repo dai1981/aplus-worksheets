@@ -1252,7 +1252,11 @@ DE / Mathe / Klasse 9（Sek I）— 生成スクリプトは `gen_de_mathe_k9_*`
 長さ・お金の答えは分数でなく小数（割り切れないときは zr で丸める）。解の集合は「L = {−5; 3}」。トピック quadratische-funktionen-und-gleichungen を足した（lineare-funktionen-… の out に quadratisch）。potenz・wurzel→zahlen、pythagoras・aehnlich・strahlen・trigonometr・pyramide・kegel・kugel→geometrie、vierfelder→daten-und-zufall
 1. potenzgesetze ✓ 2. rechnen-mit-wurzeln ✓ 3. quadratische-funktionen ✓ 4. scheitelpunktform-und-normalform ✓ 5. quadratische-gleichungen ✓ 6. quadratische-gleichungen-in-sachaufgaben ✓
 7. satz-des-pythagoras ✓ 8. pythagoras-in-figuren-und-koerpern ✓ 9. aehnlichkeit-und-zentrische-streckung ✓ 10. strahlensaetze ✓ 11. trigonometrie ✓ 12. pyramide-und-kegel ✓ 13. kugel ✓ 14. vierfeldertafeln ✓
-DE / Mathe は Klasse 1〜9 まで完了。次は Klasse 10（Exponentialfunktionen und Wachstum・Logarithmus・Sinus- und Kosinusfunktion・Sinus- und Kosinussatz・Polynomfunktionen・Kreisausschnitt und Bogenmaß）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
+DE / Mathe / Klasse 10（Sek I の最後の学年）— 生成スクリプトは `gen_de_mathe_k10_*`（make_unit に grade="klasse-10"）、共通部品は `tools/de_k10.py`（de_k9 の上に pi_txt（π の倍数 → 「3π/2」）・kurve（任意の関数のグラフ。fs=[(f, 色, 名前)]、xr・yr=(lo, hi, 目盛り)、xlab で目盛りの文字を変える（π 単位）、lg））。
+Bogenmaß は 180° = π。三角関数の値は「½√3」の形。電卓の答えは小数第 1〜2 位まで（「≈」）。トピック exponential-potenz-und-winkelfunktionen（Exponential-, Potenz- und Winkelfunktionen）を足した（lineare-funktionen-… の out に exponential|potenzfunktion|polynom|sinus、zahlen の out に potenzfunktion）。logarithm→zahlen、bogenmass・einheitskreis・sinussatz→geometrie、erwartungswert→daten-und-zufall
+1. exponentialfunktionen ✓ 2. exponentielles-wachstum-und-zerfall ✓ 3. logarithmus ✓ 4. potenzfunktionen ✓ 5. polynomfunktionen ✓ 6. bogenmass-und-kreisausschnitt ✓
+7. trigonometrie-am-einheitskreis ✓ 8. sinus-und-kosinusfunktion ✓ 9. sinussatz-und-kosinussatz ✓ 10. erwartungswert ✓
+DE / Mathe は Klasse 1〜10 まで完了。次は GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
