@@ -1273,7 +1273,17 @@ P を点の関数に使うモジュール（gen_sg_maths_s3_angle_properties_of_
 1. number-systems ✓ 2. polynomials ✓ 3. coordinate-geometry ✓ 4. linear-equations-in-two-variables ✓ 5. introduction-to-euclids-geometry ✓ 6. lines-and-angles ✓
 7. triangles ✓ 8. quadrilaterals ✓ 9. circles ✓ 10. herons-formula ✓ 11. surface-areas-and-volumes ✓ 12. statistics ✓
 
-IN の次: Class 8・6・7（NCERT の新しい教科書 Ganita Prakash の章立て。章名と CBSE の内容を確認してから）
+IN / Maths / Class 6–8（NCERT Ganita Prakash。1 単元 = 1 章。Class 7・8 は Part 1・2 に分かれ、章番号はパートごとに 1 から）— 生成スクリプトは `gen_in_maths_c6_*`・`c7_*`・`c8_*`。
+in_common.unit(level, part, chapter, slug, sort, strand, …, spec, R) で作る（part=0 は Class 6、spec は [(セット名, [(maker, 数)])] × 5）。standard_code は「Class 8, Ganita Prakash Part 2, Chapter 1: …」、standard_url は STD_URL_MID（NCERT textbook）、domain は strand N/A/G/M/D（Number／Algebra／Geometry／Mensuration／Data Handling）。sort は Part 1 → Part 2 の通し番号。
+unit() は全 maker を mid_ok で包む（MID_LEAKS で surf・backyard・sweets など他国の語を落とす、正解と同じ値の未約分の誤答（5/40 と 1/8）を落とす、a octagon → an octagon）。£ を書く UK の maker は in_common.rs()（£→₹、p→paise）。
+UK KS3・AU Year 7–8・SG Sec 1–2・US Geometry、IN Class 9 の statistics（one_bar・one_hist・K）・triangles（ind）、Class 8 number play（one_crypt）、Class 6 prime time（one_common・one_prob）を再利用。topics.php の in の調整に Ganita Prakash の章名（$gp）を足した
+Class 6: 1. patterns-in-mathematics ✓ 2. lines-and-angles ✓ 3. number-play ✓ 4. data-handling-and-presentation ✓ 5. prime-time ✓ 6. perimeter-and-area ✓ 7. fractions ✓ 8. playing-with-constructions ✓ 9. symmetry ✓ 10. the-other-side-of-zero ✓
+Class 7 Part 1: 1. large-numbers-around-us ✓ 2. arithmetic-expressions ✓ 3. a-peek-beyond-the-point ✓ 4. expressions-using-letter-numbers ✓ 5. parallel-and-intersecting-lines ✓ 6. number-play ✓ 7. a-tale-of-three-intersecting-lines ✓ 8. working-with-fractions ✓
+Class 7 Part 2: 1. geometric-twins ✓ 2. operations-with-integers ✓ 3. finding-common-ground ✓ 4. another-peek-beyond-the-point ✓ 5. connecting-the-dots ✓ 6. constructions-and-tilings ✓ 7. finding-the-unknown ✓
+Class 8 Part 1: 1. a-square-and-a-cube ✓ 2. power-play ✓ 3. a-story-of-numbers ✓ 4. quadrilaterals ✓ 5. number-play ✓ 6. we-distribute-yet-things-multiply ✓ 7. proportional-reasoning-1 ✓
+Class 8 Part 2: 1. fractions-in-disguise ✓ 2. the-baudhayana-pythagoras-theorem ✓ 3. proportional-reasoning-2 ✓ 4. exploring-some-geometric-themes ✓ 5. tales-by-dots-and-lines ✓ 6. algebra-play ✓ 7. area ✓
+
+IN の次: Class 1–5（NCERT の新しい教科書 Joyful Mathematics・Maths Mela の章立てを確認してから）、または Class 11–12
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

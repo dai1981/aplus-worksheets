@@ -235,6 +235,25 @@ function topic_defs($country = null) {
         // Class 9: Heron's Formula is the area of a triangle; Euclid's Geometry is points, lines and angles
         $d['area-and-perimeter']['in'] = substr($d['area-and-perimeter']['in'], 0, -1) . '|heron/';
         $d['angles']['in'] = substr($d['angles']['in'], 0, -1) . '|euclid/';
+        // Classes 6-8 (Ganita Prakash chapter names)
+        $gp = array(
+            'factors-and-multiples' => '^prime-time$|common-ground|^number-play$',
+            'exponents-and-roots' => 'square-and-a-cube|^power-play$',
+            'place-value' => 'story-of-numbers',
+            'integers' => 'other-side-of-zero|operations-with-integers',
+            'decimals' => 'peek-beyond-the-point',
+            'percents' => 'fractions-in-disguise',
+            'algebra' => 'finding-the-unknown|we-distribute',
+            'data-and-graphs' => 'connecting-the-dots|dots-and-lines',
+            'angles' => 'parallel-and-intersecting|three-intersecting|constructions-and-tilings',
+            'shapes' => 'three-intersecting|constructions-and-tilings|playing-with-constructions|geometric-themes',
+            'circles' => 'playing-with-constructions',
+            'congruence-and-similarity' => 'geometric-twins',
+        );
+        foreach ($gp as $k => $re) $d[$k]['in'] = substr($d[$k]['in'], 0, -1) . '|' . $re . '/';
+        $d['time']['out'] = substr($d['time']['out'], 0, -1) . '|^prime-time$/';
+        $d['rounding-and-estimation']['out'] = substr($d['rounding-and-estimation']['out'], 0, -1) . '|common-ground/';
+        $d['multiplication']['out'] = substr($d['multiplication']['out'], 0, -1) . '|we-distribute/';
         $d['congruence-and-similarity']['in'] = substr($d['congruence-and-similarity']['in'], 0, -1) . '|^triangles$/';
     }
     return $d;

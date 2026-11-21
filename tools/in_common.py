@@ -143,7 +143,10 @@ def lesson(think, examples, mistakes, extra=""):
 
 
 UNITS = {"I": "Number Systems", "II": "Algebra", "III": "Coordinate Geometry", "IV": "Geometry",
-         "V": "Trigonometry", "VI": "Mensuration", "VII": "Statistics and Probability", "St": "Statistics"}
+         "V": "Trigonometry", "VI": "Mensuration", "VII": "Statistics and Probability", "St": "Statistics",
+         # Classes 6-8 (NCERT Ganita Prakash): strands of the middle-stage curriculum
+         "N": "Number", "A": "Algebra", "G": "Geometry", "M": "Mensuration", "D": "Data Handling"}
+STD_URL_MID = "https://ncert.nic.in/textbook.php"
 
 IN_WORDS = [("Secondary 1", "Class 8"), ("Secondary 2", "Class 9"), ("Secondary 3", "Class 10"), ("Secondary 4", "Class 10"),
             ("the MOE syllabus", "the CBSE syllabus"), ("MOE syllabus", "CBSE syllabus"), ("O-Level", "board exam"),
@@ -157,7 +160,7 @@ def indify(s):
     return s
 
 
-def make(level, slug, sort, unit, chapter, title, short_title, std_text, meta, key_big, key_sub, body, faq, sets, rnd):
+def make(level, slug, sort, unit, chapter, title, short_title, std_text, meta, key_big, key_sub, body, faq, sets, rnd, part=None):
     """unit: CBSE unit number ('I'..'VII'), chapter: NCERT chapter number"""
     assert unit in UNITS, unit
     for s in sets:
@@ -176,11 +179,16 @@ def make(level, slug, sort, unit, chapter, title, short_title, std_text, meta, k
             it["q"] = re.sub(r"<svg (?!data-pf)", "<svg data-pf='lg' ", it["q"])   # figures print large
             it["q"], it["e"] = one(it["q"]), one(it["e"])
             it["c"] = [one(c) for c in it["c"]]
-    seo_title = "%s Class %d Worksheet with Answers (NCERT Chapter %d)" % (title.split(":")[0], level, chapter)
+    if part:   # Ganita Prakash (Classes 6-8) comes in parts; each part numbers its chapters from 1
+        seo_title = "%s Class %d Worksheet with Answers (Ganita Prakash%s Chapter %d)" % (title.split(":")[0], level, " Part %d," % part if part > 0 else "", chapter)
+        code = "Class %d, Ganita Prakash%s Chapter %d: %s" % (level, " Part %d," % part if part > 0 else "", chapter, title.split(":")[0])
+    else:
+        seo_title = "%s Class %d Worksheet with Answers (NCERT Chapter %d)" % (title.split(":")[0], level, chapter)
+        code = "Class %d, Chapter %d: %s" % (level, chapter, title.split(":")[0])
     unit_json = {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
-        "domain": UNITS[unit], "standard_code": "Class %d, Chapter %d: %s" % (level, chapter, title.split(":")[0]),
-        "standard_url": STD_URL, "standard_text": std_text, "meta_desc": indify(meta), "key_big": key_big, "key_sub": key_sub,
+        "domain": UNITS[unit], "standard_code": code,
+        "standard_url": STD_URL_MID if part is not None else STD_URL, "standard_text": std_text, "meta_desc": indify(meta), "key_big": key_big, "key_sub": key_sub,
         "body_html": body, "faq": [{"q": indify(q), "a": indify(a)} for q, a in faq], "sets": sets,
         "pdf_url": "", "sort": sort, "updated": UPDATED,
     }
@@ -301,4 +309,62 @@ def gb(fn):
         it["c"] = cs
         return it
     f.__name__ = getattr(fn, "__name__", "f")
+    return f
+
+
+MID_LEAKS = re.compile(r"\b(surf\w*|backyard|barbecue|footy|kangaroo|koala|wombat|AFL|Aussie|ute|thongs?|lolly|lollies|esky|sweets|biscuits|crisps|conkers|car boot|pocket money)\b", re.I)
+
+
+FR_RE = re.compile(r"^(?:(\d+) )?<span class='fr'><span class='fn'>(\d+)</span><span class='fd'>(\d+)</span></span>$")
+
+
+def fval(c):
+    m = FR_RE.match(c.strip())
+    if not m:
+        return None
+    return int(m.group(1) or 0) + F(int(m.group(2)), int(m.group(3)))
+
+
+def mid_ok(fn):
+    """Classes 6-8: drop questions with words from other countries that ok() does not catch,
+    and questions where a wrong answer is an unsimplified form of the right one (5/40 for 1/8)"""
+    def f(r):
+        it = fn(r)
+        if it and MID_LEAKS.search(it["q"] + " " + it["e"] + " " + " ".join(it["c"])):
+            return None
+        if it:
+            art = lambda t: "".join(x if x.startswith("<svg") else re.sub(r"(?<![∠\w])a (?=(?:octagon|hexagon|heptagon|equilateral|isosceles|obtuse|acute|exterior|interior|irregular|eraser|apple|orange|egg|angle|area|isos)\b)", "an ", x) for x in re.split(r"(<svg.*?</svg>)", t))
+            it["q"], it["e"] = art(it["q"]), art(it["e"])
+            it["c"] = [art(c) for c in it["c"]]
+            right = it["c"][it["a"]]
+            rv = fval(right) if fval(right) is not None else (F(int(right)) if right.strip().isdigit() else None)
+            if rv is not None and any(fval(c) == rv for i, c in enumerate(it["c"]) if i != it["a"]):
+                return None
+        return it
+    f.__name__ = getattr(fn, "__name__", "maker")
+    return f
+
+
+def unit(level, part, chapter, slug, sort, strand, title, short_title, std_text, meta, key_big, key_sub,
+         think, examples, mistakes, faq, spec, rnd):
+    """Classes 6-8: spec = [(set title, [(maker, n), ...]) x 5]; part 0 = one-volume book (Class 6)"""
+    seen = set()
+    sets = [S(t, mix(rnd, [(mid_ok(f), n) for f, n in parts], seen)) for t, parts in spec]
+    make(level, slug, sort, strand, chapter, title, short_title, std_text, meta, key_big, key_sub,
+         lesson(think, examples, mistakes), faq, sets, rnd, part=part)
+
+
+def rs(fn):
+    """gb() plus £ -> ₹ (for UK makers that write pounds directly)"""
+    g = gb(fn)
+
+    def f(r):
+        it = g(r)
+        if not it:
+            return None
+        sub = lambda t: re.sub(r"(\d+)p\b", r"\1 paise", t.replace("£", "₹"))
+        it["q"], it["e"] = sub(it["q"]), sub(it["e"])
+        it["c"] = [sub(c) for c in it["c"]]
+        return it
+    f.__name__ = fn.__name__
     return f
