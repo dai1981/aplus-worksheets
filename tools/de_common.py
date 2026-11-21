@@ -418,3 +418,49 @@ def schriftlich(rows, op="+", carries=None, label="schriftliche Rechnung", resul
     if result:
         put(result, len(rows) + 1 - 0.35, col=BLUE)
     return wrap(W, H, "".join(s), label)
+
+
+# ------------------------------------------------------------ Zahlwörter und große Stellenwerttafel (Klasse 4)
+_ONES = ["", "eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun"]
+_TEENS = ["zehn", "elf", "zwölf", "dreizehn", "vierzehn", "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"]
+_TENS = ["", "", "zwanzig", "dreißig", "vierzig", "fünfzig", "sechzig", "siebzig", "achtzig", "neunzig"]
+
+
+def _w99(n):
+    if n < 10:
+        return _ONES[n]
+    if n < 20:
+        return _TEENS[n - 10]
+    t, o = divmod(n, 10)
+    return (("ein" if o == 1 else _ONES[o]) + "und" + _TENS[t]) if o else _TENS[t]
+
+
+def _w999(n, end=True):
+    h, r = divmod(n, 100)
+    s = (("ein" if h == 1 else _ONES[h]) + "hundert") if h else ""
+    if r == 1 and not end:
+        return s + "ein"
+    return s + _w99(r)
+
+
+def wort(n):
+    """Zahlwort bis eine Million: 345206 → dreihundertfünfundvierzigtausendzweihundertsechs"""
+    if n == 1000000:
+        return "eine Million"
+    if n == 0:
+        return "null"
+    t, r = divmod(n, 1000)
+    s = (_w999(t, end=False) + "tausend") if t else ""
+    return s + (_w999(r) if r else "")
+
+
+STELLEN = ["HT", "ZT", "T", "H", "Z", "E"]
+
+
+def stellentafel(n, cols=6):
+    """Stellenwerttafel HT ZT T H Z E (rechts die letzten cols Stellen)"""
+    head = STELLEN[6 - cols:]
+    ds = str(n).rjust(cols, " ")
+    return ("<table class='sn-table' style='width:auto;margin:6px 0'><thead><tr>%s</tr></thead><tbody><tr>%s</tr></tbody></table>"
+            % ("".join("<th>%s</th>" % h for h in head),
+               "".join("<td style='text-align:center;min-width:30px'>%s</td>" % (d if d != " " else "") for d in ds)))
