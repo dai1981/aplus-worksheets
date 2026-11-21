@@ -1267,7 +1267,13 @@ IN / Maths / Class 10（CBSE の board exam の学年）
 1. real-numbers ✓ 2. polynomials ✓ 3. pair-of-linear-equations-in-two-variables ✓ 4. quadratic-equations ✓ 5. arithmetic-progressions ✓ 6. triangles ✓ 7. coordinate-geometry ✓
 8. introduction-to-trigonometry ✓ 9. some-applications-of-trigonometry ✓ 10. circles ✓ 11. areas-related-to-circles ✓ 12. surface-areas-and-volumes ✓ 13. statistics ✓ 14. probability ✓
 
-IN の次: Class 9（NCERT: Number Systems・Polynomials・Coordinate Geometry・Linear Equations in Two Variables・Introduction to Euclid's Geometry・Lines and Angles・Triangles・Quadrilaterals・Circles・Heron's Formula・Surface Areas and Volumes・Statistics）、その後 Class 8・6・7（Ganita Prakash）
+IN / Maths / Class 9（CBSE。NCERT の 12 章）— 生成スクリプトは `gen_in_maths_c9_*`。AU Year 8・US Algebra 1・Geometry・SG Sec 1・3 の問題関数を再利用（in_common.gb で米国式の綴り・m∠・CPCTC・HL→RHS などを直す）。
+P を点の関数に使うモジュール（gen_sg_maths_s3_angle_properties_of_circles）は adopt しない。Statistics の CBSE Unit は「St」（UNITS）。LEAKS の "None" は「= None」などだけ（"None" という正しい答えを残す）。
+度数折れ線の問題は 0 から始まる階級を使わない（仮の階級の階級値が負になるため）。topics.php の in の調整に number-systems→exponents-and-roots、heron→area-and-perimeter、euclid→angles を足した
+1. number-systems ✓ 2. polynomials ✓ 3. coordinate-geometry ✓ 4. linear-equations-in-two-variables ✓ 5. introduction-to-euclids-geometry ✓ 6. lines-and-angles ✓
+7. triangles ✓ 8. quadrilaterals ✓ 9. circles ✓ 10. herons-formula ✓ 11. surface-areas-and-volumes ✓ 12. statistics ✓
+
+IN の次: Class 8・6・7（NCERT の新しい教科書 Ganita Prakash の章立て。章名と CBSE の内容を確認してから）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

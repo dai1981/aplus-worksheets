@@ -48,7 +48,7 @@ LEAKS = ["$", "£", "€", "¢", " R1", "GST", "VAT", "HST", "pence", "penny", "
          "Secondary", "Sec ", "O-Level", "MOE", "GCSE", "KS3", "Year 7", "Year 8", "Year 9", "Grade ", "pupils",
          "London", "Manchester", "Texas", "Sydney", "Toronto", "Cape Town", "miles", "mile ", "inch", "feet", "yard", "pint", "gallon", "ounce", "lb",
          "Fahrenheit", "°F", "snow", "hockey", "Wei", "Jun Jie", "Siti", "Mei", "Hui", "Nurul", "Xin", "Zhi", "Hafiz", "Ahmad", "Imran", "Marcus", "Farah", "Rachel", "Daniel", "Ethan",
-         "None", "nan"]
+         "= None", "None cm", "None m", "(None", "None,", "nan"]
 
 
 class People:
@@ -143,7 +143,7 @@ def lesson(think, examples, mistakes, extra=""):
 
 
 UNITS = {"I": "Number Systems", "II": "Algebra", "III": "Coordinate Geometry", "IV": "Geometry",
-         "V": "Trigonometry", "VI": "Mensuration", "VII": "Statistics and Probability"}
+         "V": "Trigonometry", "VI": "Mensuration", "VII": "Statistics and Probability", "St": "Statistics"}
 
 IN_WORDS = [("Secondary 1", "Class 8"), ("Secondary 2", "Class 9"), ("Secondary 3", "Class 10"), ("Secondary 4", "Class 10"),
             ("the MOE syllabus", "the CBSE syllabus"), ("MOE syllabus", "CBSE syllabus"), ("O-Level", "board exam"),
@@ -269,3 +269,36 @@ def adopt(mod, rnd):
         if hasattr(mod, name):
             setattr(mod, name, list(GIRLS if name == "GIRLS" else BOYS))
     return mod
+
+
+# US spellings and terms in reused makers -> Indian (British) usage
+GB_FIX = [(r"m∠", "∠"), (r"\bcenter", "centre"), (r"\bCenter", "Centre"), (r"ationaliz", "ationalis"), (r"\btrapezoid", "trapezium"),
+          (r"\bTrapezoid", "Trapezium"), (r"\btrapezoids", "trapeziums"), (r"CPCTC", "CPCT"), (r"\bcolor", "colour"), (r"\bmeter", "metre"),
+          (r"\bliter", "litre"), (r"actoriz", "actoris"), (r"\bzeros\b", "zeroes"), (r"Triangle Proportionality Theorem", "Basic Proportionality Theorem"),
+          (r"\bgray\b", "grey"), (r"\bcentimeter", "centimetre"), (r"\bkilometer", "kilometre"), (r"\bmillimeter", "millimetre"), (r"\bgrade\b", "class"),
+          (r"\bmath\b", "maths"), (r"\bnumber cube", "die")]
+
+
+def gb(fn):
+    """wrap a reused maker: US spellings -> British/Indian"""
+    def f(r):
+        it = fn(r)
+        if not it:
+            return None
+        for k in ("q", "e"):
+            parts = re.split(r"(<svg.*?</svg>)", it[k])
+            for i, p in enumerate(parts):
+                if not p.startswith("<svg"):
+                    for a, b in GB_FIX:
+                        p = re.sub(a, b, p)
+                    parts[i] = p
+            it[k] = "".join(parts)
+        cs = []
+        for c in it["c"]:
+            for a, b in GB_FIX:
+                c = re.sub(a, b, c)
+            cs.append(c)
+        it["c"] = cs
+        return it
+    f.__name__ = getattr(fn, "__name__", "f")
+    return f

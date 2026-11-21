@@ -227,11 +227,14 @@ function topic_defs($country = null) {
     if ($country === 'in') {
         // India (NCERT chapter names): Real Numbers is HCF, LCM and irrational numbers; Arithmetic Progressions are sequences
         $d['factors-and-multiples']['in'] = substr($d['factors-and-multiples']['in'], 0, -1) . '|^real-numbers$/';
-        $d['exponents-and-roots']['in'] = substr($d['exponents-and-roots']['in'], 0, -1) . '|^real-numbers$/';
+        $d['exponents-and-roots']['in'] = substr($d['exponents-and-roots']['in'], 0, -1) . '|^real-numbers$|^number-systems$/';
         $d['integers']['out'] = substr($d['integers']['out'], 0, -1) . '|^real-numbers$/';
         $d['algebra']['in'] = substr($d['algebra']['in'], 0, -1) . '|progression/';
         $d['shapes']['out'] = substr($d['shapes']['out'], 0, -1) . '|trigonometr|areas-related|surface-areas/';
         $d['area-and-perimeter']['out'] = substr($d['area-and-perimeter']['out'], 0, -1) . '|surface-areas/';
+        // Class 9: Heron's Formula is the area of a triangle; Euclid's Geometry is points, lines and angles
+        $d['area-and-perimeter']['in'] = substr($d['area-and-perimeter']['in'], 0, -1) . '|heron/';
+        $d['angles']['in'] = substr($d['angles']['in'], 0, -1) . '|euclid/';
         $d['congruence-and-similarity']['in'] = substr($d['congruence-and-similarity']['in'], 0, -1) . '|^triangles$/';
     }
     return $d;
