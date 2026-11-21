@@ -28,7 +28,22 @@ foreach ($units as $u) $titles[] = $u['short_title'];
 $first = $units[0]; $last = $units[count($units) - 1];
 
 $zh = $country['lang'] === 'zh-TW';
-if ($zh) {
+$de = $country['lang'] === 'de';
+if ($de) {
+    $faq = array(
+        array('q' => 'Welche Arbeitsblätter zum Thema ' . $name . ' gibt es hier?',
+              'a' => 'Hier findest du ' . count($units) . ' Themen zu ' . $name . ' von ' . $range . ': '
+                   . implode(', ', array_slice($titles, 0, 6)) . (count($titles) > 6 ? ' und weitere' : '') . '.'),
+        array('q' => 'In welcher Klasse lernen Kinder ' . $name . '?',
+              'a' => 'Das Thema beginnt in ' . $first['grade_name'] . ' mit „' . $first['short_title'] . '“'
+                   . ($first['grade'] === $last['grade'] ? '.' : ' und geht bis ' . $last['grade_name'] . ' mit „' . $last['short_title'] . '“.')),
+        array('q' => 'Wie übt mein Kind am besten mit diesen Arbeitsblättern?',
+              'a' => 'Wähle das Thema für die Klasse deines Kindes, lies die kurze Erklärung und löse dann die 5 Runden mit je 20 Aufgaben. '
+                   . 'Jede Antwort wird sofort geprüft. Für zusätzliche Übung kannst du das Arbeitsblatt im Format ' . $paper . ' ausdrucken; die Lösungen stehen auf der letzten Seite.'),
+        array('q' => 'Sind die Arbeitsblätter kostenlos?',
+              'a' => 'Ja. Die Erklärungen, die Online-Übungen und die Arbeitsblätter mit Lösungen sind kostenlos für zu Hause und den Unterricht. Eine Anmeldung ist nicht nötig.'),
+    );
+} elseif ($zh) {
     $faq = array(
         array('q' => '這一頁有哪些' . $name . '學習單？',
               'a' => '共有 ' . count($units) . ' 個' . $name . '單元，從' . $range . '：'
@@ -60,21 +75,24 @@ if ($zh) {
 
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
-    'title' => $zh ? $name . '學習單｜' . $range . '免費練習（附解答）| ' . SITE_NAME
-                   : $name . ' Worksheets: Free ' . $range . ' ' . $subject['name'] . ' Practice with Answers | ' . SITE_NAME,
-    'desc' => $zh ? '免費' . $name . '學習單，依照' . $country['standard'] . '，從' . $range . '共 ' . count($units)
+    'title' => $de ? $name . ' Arbeitsblätter ' . $range . ': kostenlos üben mit Lösungen | ' . SITE_NAME
+             : ($zh ? $name . '學習單｜' . $range . '免費練習（附解答）| ' . SITE_NAME
+                   : $name . ' Worksheets: Free ' . $range . ' ' . $subject['name'] . ' Practice with Answers | ' . SITE_NAME),
+    'desc' => $de ? 'Kostenlose Arbeitsblätter zum Thema ' . $name . ' für ' . $range . ' nach den ' . $country['standard'] . ': '
+                    . count($units) . ' Themen, jeweils mit Erklärung, 100 Übungsaufgaben und Lösungen zum Ausdrucken.'
+            : ($zh ? '免費' . $name . '學習單，依照' . $country['standard'] . '，從' . $range . '共 ' . count($units)
                     . ' 個單元，每個單元都有說明、100 題練習和可列印的解答。'
                   : 'Free ' . $lc . ' worksheets for ' . $range . ', aligned to the ' . $country['standard'] . ': '
-                    . count($units) . ' skills, each with a lesson, 100 practice questions and a printable answer key.',
+                    . count($units) . ' skills, each with a lesson, 100 practice questions and a printable answer key.'),
     'canonical' => $path, 'image' => preview_path($path),
 ));
 site_header($crumbs);
 ?>
 <main class="sn-wrap">
 <span class="sn-grade"><?= h($range . ' · ' . $country['standard']) ?></span>
-<h1><?= h($zh ? $name . '學習單' : $name . ' Worksheets') ?></h1>
-<div class="sx-hero"><p><?= h(topic_blurb($defs[$tk], $seg[0])) ?><?= $zh ? h('每個單元都有簡短的說明、100 題立即對答的練習，以及附解答的 ' . $paper . ' 列印學習單。免費，不需要註冊。')
-  : ' Every skill below has a short lesson, 100 practice questions with instant feedback and a printable ' . h($paper) . ' worksheet with an answer key. Free, no sign-up.' ?></p></div>
+<h1><?= h(sprintf(T('topic_h1'), $name)) ?></h1>
+<div class="sx-hero"><p><?= h(topic_blurb($defs[$tk], $seg[0])) ?><?= $de ? h(' Zu jedem Thema gibt es eine kurze Erklärung, 100 Übungsaufgaben mit sofortiger Rückmeldung und ein Arbeitsblatt (' . $paper . ') mit Lösungen zum Ausdrucken. Kostenlos, ohne Anmeldung.') : ($zh ? h('每個單元都有簡短的說明、100 題立即對答的練習，以及附解答的 ' . $paper . ' 列印學習單。免費，不需要註冊。')
+  : ' Every skill below has a short lesson, 100 practice questions with instant feedback and a printable ' . h($paper) . ' worksheet with an answer key. Free, no sign-up.') ?></p></div>
 
 <?php if (count($groups) > 1): ?>
 <ul class="tp-grades" aria-label="<?= h(T('grades')) ?>">
@@ -85,7 +103,7 @@ site_header($crumbs);
 <?php endif; ?>
 
 <?php foreach ($groups as $g => $list): $gbase = $sbase . $g . '/'; ?>
-<h2 id="<?= h($g) ?>"><?= h($gnames[$g] . ($zh ? '' : ' ') . $name) ?></h2>
+<h2 id="<?= h($g) ?>"><?= h($gnames[$g] . ($zh ? '' : ($de ? ': ' : ' ')) . $name) ?></h2>
 <ul class="sx-list">
 <?php foreach ($list as $u): $up = $gbase . $u['slug'] . '/'; ?>
 <li><div class="m"><span class="t"><?= h($u['title']) ?></span>
@@ -104,7 +122,7 @@ site_header($crumbs);
 <?php endforeach; ?>
 </section>
 
-<h2><?= h($zh ? '其他' . $subject['name'] . '主題' : 'More ' . strtolower($subject['name']) . ' topics') ?></h2>
+<h2><?= h($de ? 'Weitere Themen in ' . $subject['name'] : ($zh ? '其他' . $subject['name'] . '主題' : 'More ' . strtolower($subject['name']) . ' topics')) ?></h2>
 <ul class="tp-chips">
 <?php foreach ($all as $ok => $ou): if ($ok === $tk) continue; ?>
   <li><a href="<?= url($sbase . 'topics/' . $ok . '/') ?>"><?= h(topic_name($defs[$ok], $seg[0])) ?><span class="n"><?= count($ou) ?></span></a></li>
@@ -119,7 +137,7 @@ foreach ($units as $i => $u) {
                      'url' => abs_url($sbase . $u['grade'] . '/' . $u['slug'] . '/'));
 }
 $cp = array('@context' => 'https://schema.org', '@type' => 'CollectionPage',
-    'name' => $zh ? $name . '學習單' : $name . ' Worksheets', 'description' => topic_blurb($defs[$tk], $seg[0]), 'url' => abs_url($path),
+    'name' => sprintf(T('topic_h1'), $name), 'description' => topic_blurb($defs[$tk], $seg[0]), 'url' => abs_url($path),
     'inLanguage' => $country['hreflang'], 'isAccessibleForFree' => true,
     'about' => array('@type' => 'Thing', 'name' => $name),
     'mainEntity' => array('@type' => 'ItemList', 'numberOfItems' => count($items), 'itemListElement' => $items));

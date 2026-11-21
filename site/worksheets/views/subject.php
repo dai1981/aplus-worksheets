@@ -27,7 +27,7 @@ site_header($crumbs);
 <h2><?= h(T('pick_grade')) ?></h2>
 <ul class="sx-grades">
 <?php foreach ($grades as $g): ?>
-  <li><a href="<?= url($base . $g['slug'] . '/') ?>"><?= h($g['name']) ?><span class="n"><?= h(sprintf(T('skills_count'), $g['n'])) ?></span><span class="lv-tile"<?= rank_attrs($seg[0], $seg[1], $g['slug'], list_units($seg[0], $seg[1], $g['slug']), $g['name'] . ' ' . $subject['name'], 'tile') ?>></span></a></li>
+  <li><a href="<?= url($base . $g['slug'] . '/') ?>"><?= h($g['name']) ?><span class="n"><?= h(sprintf(T('skills_count'), $g['n'])) ?></span><span class="lv-tile"<?= rank_attrs($seg[0], $seg[1], $g['slug'], list_units($seg[0], $seg[1], $g['slug']), gs($g['name'], $subject['name']), 'tile') ?>></span></a></li>
 <?php endforeach; ?>
 </ul>
 <?php if ($topics): ?>

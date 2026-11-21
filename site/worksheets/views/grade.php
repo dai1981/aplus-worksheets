@@ -23,7 +23,7 @@ foreach ($units as $u) { $names[] = $u['short_title']; }
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
     'title' => sprintf(T('grade_ws'), $grade['name'], $subject['name']) . T('grade_title_sfx') . ' | ' . SITE_NAME,
-    'desc' => sprintf(T('grade_desc'), $grade['name'], strtolower($subject['name']), $country['standard'],
+    'desc' => sprintf(T('grade_desc'), $grade['name'], lc($subject['name']), $country['standard'],
                       implode(T('list_sep'), array_slice($names, 0, 6))),
     'canonical' => $base, 'image' => preview_path($base),
 ));
@@ -33,7 +33,7 @@ site_header($crumbs);
 <h1><?= h(sprintf(T('grade_ws'), $grade['name'], $subject['name'])) ?></h1>
 <div class="sx-hero"><p><?= h($grade['intro']) ?></p></div>
 
-<section class="lv" aria-label="Rank"<?= rank_attrs($seg[0], $seg[1], $seg[2], $units, $grade['name'] . ' ' . $subject['name'], 'card') ?>></section>
+<section class="lv" aria-label="Rank"<?= rank_attrs($seg[0], $seg[1], $seg[2], $units, gs($grade['name'], $subject['name']), 'card') ?>></section>
 
 <?php foreach ($groups as $domain => $list): ?>
 <h2><?= h($domain) ?></h2>
@@ -56,7 +56,7 @@ foreach (topics_for($seg[0], $seg[1]) as $tk => $tu) {
     foreach ($tu as $x) { if ($x['grade'] === $seg[2]) { $gtopics[$tk] = topic_name($tdefs[$tk], $seg[0]); break; } }
 }
 if ($gtopics): ?>
-<h2 id="topics"><?= h(sprintf(T('topics_all'), strtolower(T('grades')))) ?></h2>
+<h2 id="topics"><?= h(sprintf(T('topics_all'), lc(T('grades')))) ?></h2>
 <ul class="tp-chips">
 <?php foreach ($gtopics as $tk => $tn): ?>
   <li><a href="<?= url($seg[0] . '/' . $seg[1] . '/topics/' . $tk . '/') ?>"><?= h($tn) ?></a></li>

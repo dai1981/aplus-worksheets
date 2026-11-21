@@ -237,7 +237,8 @@ function topic_range($units) {
     $first = $units[0]['grade_name'];
     $last = $units[count($units) - 1]['grade_name'];
     if ($first === $last) return $first;
-    return $units[0]['country'] === 'tw' ? $first . '到' . $last : $first . ' to ' . $last;
+    if ($units[0]['country'] === 'tw') return $first . '到' . $last;
+    return $units[0]['country'] === 'de' ? $first . ' bis ' . $last : $first . ' to ' . $last;
 }
 
 /* lower case for use inside a sentence, keeping "2D", "3D" */

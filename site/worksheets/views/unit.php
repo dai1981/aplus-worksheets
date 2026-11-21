@@ -42,7 +42,7 @@ site_header($crumbs);
 ?>
 <main class="sn-wrap">
 <article>
-  <span class="sn-grade"><?= h($grade['name'] . ' ' . $subject['name'] . ' · ' . $u['domain']) ?></span>
+  <span class="sn-grade"><?= h(gs($grade['name'], $subject['name']) . ' · ' . $u['domain']) ?></span>
   <h1><?= h($u['title']) ?></h1>
 
   <div class="qz-hook" data-k="<?= h($pkey) ?>" data-n="<?= count($sets) ?>">
@@ -52,14 +52,14 @@ site_header($crumbs);
     <a class="qz-hook-go" href="#quiz"><?= h(T('hook_go')) ?><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
   </div>
 
-  <a class="lv-mini" href="<?= url($gbase) ?>"<?= rank_attrs($seg[0], $seg[1], $seg[2], $siblings, $grade['name'] . ' ' . $subject['name'], 'mini') ?>></a>
+  <a class="lv-mini" href="<?= url($gbase) ?>"<?= rank_attrs($seg[0], $seg[1], $seg[2], $siblings, gs($grade['name'], $subject['name']), 'mini') ?>></a>
 
   <div class="sn-key">
     <div class="sn-key-h"><?= h(T('points')) ?></div>
     <div class="sn-key-b"><span class="big"><?= h($u['key_big']) ?></span>
     <p class="sub"><?= h($u['key_sub']) ?></p></div>
   </div>
-  <p class="ws-share"><?= pin_link($path, sprintf(T('pin_unit'), $grade['name'], strtolower($subject['name']), strtolower($u['short_title']))) ?></p>
+  <p class="ws-share"><?= pin_link($path, sprintf(T('pin_unit'), $grade['name'], lc($subject['name']), lc($u['short_title']))) ?></p>
 
   <?php if ($u['standard_code']): ?>
   <p class="ws-std"><span><?= h($country['standard']) ?></span>
@@ -101,12 +101,12 @@ site_header($crumbs);
   <?php endif; ?>
   <ul class="sn-links">
     <li><a href="<?= url($path . 'print/') ?>"><?= h(T('printable_of')) ?></a></li>
-    <li><a href="<?= url($gbase) ?>"><?= h(T('all_units')) ?> <?= h($grade['name'] . ' ' . $subject['name']) ?></a></li>
+    <li><a href="<?= url($gbase) ?>"><?= h(T('all_units')) ?> <?= h(gs($grade['name'], $subject['name'])) ?></a></li>
 <?php foreach ($utopics as $tk => $tn): ?>
     <li><a href="<?= url($seg[0] . '/' . $seg[1] . '/topics/' . $tk . '/') ?>"><?= h($tn) ?></a></li>
 <?php endforeach; ?>
   </ul>
-  <h3><?= h($grade['name'] . ' ' . $subject['name']) ?></h3>
+  <h3><?= h(gs($grade['name'], $subject['name'])) ?></h3>
   <ul class="sn-links">
 <?php foreach ($siblings as $s): ?>
     <li><a href="<?= url($gbase . $s['slug'] . '/') ?>"<?= $s['slug'] === $u['slug'] ? ' aria-current="page"' : '' ?>><?= h($s['title']) ?></a></li>
@@ -132,6 +132,8 @@ if ($u['key_big']) $lr['teaches'] = $u['key_big'];
 $lr['audience'] = array('@type' => 'EducationalAudience', 'educationalRole' => array('student', 'teacher', 'parent'));
 if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 'us' || $country['code'] === 'us-tx' || $country['code'] === 'ph' || $country['code'] === 'za' || $country['code'] === 'tw' || strpos($country['code'], 'ca') === 0)) {   // Texas, the Philippines, Canada and Taiwan: Grade 3 = age 8-9, like the US
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);
+} elseif (preg_match('/^klasse-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'de') {
+    $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Germany: Klasse 3 = age 8-9
 } elseif ($grade['slug'] === 'grade-r' && $country['code'] === 'za') {
     $lr['typicalAgeRange'] = '5-6';   // South Africa: Grade R (Reception Year), the year before Grade 1
     $lr['educationalLevel'] = array('Grade R', 'Reception Year');

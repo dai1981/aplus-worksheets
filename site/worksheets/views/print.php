@@ -11,7 +11,7 @@ $upath = $gbase . $u['slug'] . '/';
 $path = $upath . 'print/';
 $sets = json_decode($u['sets_json'], true);
 $letter = ($country['paper'] === 'letter');
-$kind = $grade['name'] . ' ' . $subject['name'];
+$kind = gs($grade['name'], $subject['name']);
 
 /* ------------------------------------------------------------------
    How many questions fit on each sheet.
@@ -130,7 +130,7 @@ $title = sprintf(T('pr_h'), $u['short_title'], $grade['name']);
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
     'title' => sprintf(T('pr_title'), $grade['name'], $u['short_title'], $letter ? 'Letter' : 'A4') . ' | ' . SITE_NAME,
-    'desc' => sprintf(T('pr_desc'), $grade['name'], strtolower($u['short_title']),
+    'desc' => sprintf(T('pr_desc'), $grade['name'], lc($u['short_title']),
                       $u['standard_code'] ? sprintf(T('paren'), $u['standard_code']) : '', $QN),
     'canonical' => $path, 'og_type' => 'article', 'css' => 'ws-print.css', 'image' => preview_path($upath),
     'body_class' => 'prbody ' . ($letter ? 'paper-letter' : 'paper-a4'),
@@ -143,7 +143,7 @@ page_head(array(
   <span class="sp"></span>
   <span class="pr-note"><?= h(T('print_note')) ?></span>
   <?php if ($u['pdf_url']): ?><a class="pr-dl" href="<?= h($u['pdf_url']) ?>" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4 3.6 3.6V3h2zM4 19h16v2H4v-2z"/></svg><?= h(T('pdf_btn')) ?></a><?php endif; ?>
-  <?= pin_link($upath, sprintf(T('pr_pin'), $grade['name'], strtolower($u['short_title'])), 'pr-pin') ?>
+  <?= pin_link($upath, sprintf(T('pr_pin'), $grade['name'], lc($u['short_title'])), 'pr-pin') ?>
   <button class="pr-print" type="button" onclick="window.print()"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v4H7V3zm-3 6h16a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2v-4H6v4H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1zm4 8h8v4H8v-4z"/></svg><?= h(T('print_btn')) ?></button>
 </div>
 <?php foreach ($pages as $pi => $pg): ?>

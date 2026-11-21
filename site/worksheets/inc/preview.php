@@ -313,7 +313,7 @@ function preview_route($seg, $kind = 'preview') {
         pv_out($kind, array(
             'cta' => sprintf(T('pv_cta_topic'), count($units)),
             'label' => topic_range($units) . ' · ' . $country['standard'],
-            'title' => $GLOBALS['PV_CJK'] ? $name . '學習單' : $name . ' Worksheets',
+            'title' => sprintf(T('topic_h1'), $name),
             'chips' => array(sprintf(T('pv_skills'), count($units)), T('pv_lessons'), T('pv_keys')),
             'paper_title' => $name, 'paper_sub' => $subject['name'] . ' · ' . $country['name'],
             'lines' => $lines, 'mode' => 'list', 'foot' => $foot));
@@ -334,7 +334,7 @@ function preview_route($seg, $kind = 'preview') {
             'label' => $country['standard'] . ' · ' . $country['name'],
             'title' => sprintf(T('grade_ws'), $grade['name'], $subject['name']),
             'chips' => array(sprintf(T('pv_skills'), count($units)), T('pv_100each'), T('pv_keys')),
-            'paper_title' => $grade['name'] . ' ' . $subject['name'], 'paper_sub' => sprintf(T('pv_skills'), count($units)),
+            'paper_title' => gs($grade['name'], $subject['name']), 'paper_sub' => sprintf(T('pv_skills'), count($units)),
             'lines' => $lines, 'mode' => 'list', 'foot' => $foot));
         exit;
     }
@@ -355,7 +355,7 @@ function preview_route($seg, $kind = 'preview') {
         }
     }
     pv_out($kind, array(
-        'label' => $grade['name'] . ' ' . $subject['name']
+        'label' => gs($grade['name'], $subject['name'])
                    . ($u['standard_code'] ? ' · ' . preg_replace('/^' . preg_quote($grade['name'], '/') . ':\s*/', '', $u['standard_code']) : ''),
         'title' => $u['short_title'],
         'chips' => array(T('pv_lesson'), T('pv_100'), sprintf(T('pv_print'), $paper === 'LETTER' ? 'Letter' : $paper), T('pv_key')),

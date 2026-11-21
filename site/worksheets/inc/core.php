@@ -76,7 +76,7 @@ function T($key = null) {
             'list_sep' => ', ', 'paren' => ' (%s)', 'topics_all' => 'Topics across all %s', 'pages4' => '4 pages',
             'subj_title' => 'Free %1$s Worksheets %2$s (%3$s)', 'subj_h1' => '%s Worksheets', 'browse_topic' => 'Browse by topic',
             'country_title' => 'Free %1$s Worksheets (%2$s)', 'country_h1' => '%s Worksheets',
-            'topic_ws' => '%1$s worksheets: %2$s',
+            'topic_ws' => '%1$s worksheets: %2$s', 'topic_h1' => '%s Worksheets',
             'pin_unit' => 'Free %1$s %2$s %3$s worksheet: short lesson, 100 practice questions and a printable answer key.',
             'date_fmt' => 'F j, Y',
             'pr_title' => '%1$s %2$s Worksheet with Answer Key (Printable, %3$s)',
@@ -121,7 +121,7 @@ function T($key = null) {
             'list_sep' => '、', 'paren' => '（%s）', 'topics_all' => '各%s的主題', 'pages4' => '4頁',
             'subj_title' => '%1$s學習單｜%2$s免費下載（%3$s）', 'subj_h1' => '%s學習單', 'browse_topic' => '依主題找',
             'country_title' => '%1$s免費學習單（%2$s）', 'country_h1' => '%s學習單',
-            'topic_ws' => '%1$s學習單：%2$s',
+            'topic_ws' => '%1$s學習單：%2$s', 'topic_h1' => '%s學習單',
             'pin_unit' => '免費%1$s%2$s「%3$s」學習單：重點說明、100題練習、可列印的解答。',
             'date_fmt' => 'Y年n月j日',
             'pr_title' => '%1$s「%2$s」學習單（附解答・%3$s列印）',
@@ -134,6 +134,52 @@ function T($key = null) {
             'pv_key' => '附解答', 'pv_practice' => '練習・%s',
             'pv_name1' => '姓名 ______________   日期 ________', 'pv_name2' => '姓名 ____________________    日期 __________',
             'pv_foot' => '免費・apu2.com/worksheets',
+        ),
+        // Germany: German (Grundschule)
+        'de' => array(
+            'home' => 'Arbeitsblätter', 'grades' => 'Klassen', 'units' => 'Themen',
+            'questions' => 'Aufgaben', 'points' => 'Das Wichtigste', 'quiz100' => '100 Übungsaufgaben',
+            'quiz_lead' => '5 Runden mit je 20 Aufgaben. Du siehst sofort die Lösung und einen Tipp.',
+            'learn_quiz' => 'Erklärung + 100 Aufgaben', 'print' => 'Drucken', 'pdf' => 'PDF',
+            'your_score' => 'Dein Ergebnis', 'clear_grade' => 'Ergebnisse dieser Klasse löschen',
+            'hook_title' => '100 Übungsaufgaben', 'hook_sub' => '5 Runden mit je 20 · sofort Rückmeldung',
+            'hook_go' => 'Jetzt üben', 'faq' => 'Häufige Fragen',
+            'related' => 'Weiterlernen', 'prev' => 'Zurück', 'next_u' => 'Weiter',
+            'all_units' => 'Alle Themen:', 'printable_of' => 'Arbeitsblatt zum Ausdrucken mit Lösungen',
+            'standard' => 'Bildungsstandards', 'updated' => 'Aktualisiert am', 'by' => 'Von',
+            'pick_grade' => 'Klasse wählen', 'pick_subject' => 'Fach wählen',
+            'print_sheets' => 'Arbeitsblätter zum Ausdrucken',
+            'print_note' => '4 Seiten: Aufwärmen, Übung 1, Übung 2, Lösungen',
+            'print_btn' => 'Drucken / als PDF speichern', 'pdf_btn' => 'PDF herunterladen',
+            'lesson_link' => 'Erklärung und Online-Übung',
+            'p_warmup' => 'Aufwärmen', 'p_prac1' => 'Übung 1', 'p_prac2' => 'Übung 2',
+            'p_key' => 'Lösungen', 'name' => 'Name', 'date' => 'Datum', 'score' => 'Punkte',
+            'circle' => 'Kreise die Nummer der richtigen Antwort ein.', 'total_q' => '%d Aufgaben',
+            'for_check' => 'Zum Kontrollieren',
+            'license' => 'Kostenlos zum Ausdrucken und Kopieren für zu Hause und den Unterricht.',
+            'worksheets' => 'Arbeitsblätter', 'grade_ws' => '%2$s %1$s Arbeitsblätter',
+            'notfound' => 'Seite nicht gefunden', 'back_home' => 'Zurück zu allen Arbeitsblättern',
+            'skills_count' => '%d Themen', 'free' => 'Kostenlos · ohne Anmeldung',
+            'by_grade' => 'nach Klassen', 'pin_save' => 'Auf Pinterest merken',
+            'grade_title_sfx' => ': kostenlos ausdrucken + online üben',
+            'grade_desc' => 'Kostenlose %2$s-Arbeitsblätter für die %1$s nach den %3$s: %4$s. 100 Übungsaufgaben pro Thema und Lösungen zum Ausdrucken.',
+            'list_sep' => ', ', 'paren' => ' (%s)', 'topics_all' => 'Themen über alle %s', 'pages4' => '4 Seiten',
+            'subj_title' => 'Kostenlose %1$s-Arbeitsblätter %2$s (%3$s)', 'subj_h1' => '%s-Arbeitsblätter', 'browse_topic' => 'Nach Themen suchen',
+            'country_title' => 'Kostenlose Arbeitsblätter für %1$s (%2$s)', 'country_h1' => 'Arbeitsblätter für %s',
+            'topic_ws' => '%1$s: Arbeitsblätter (%2$s)', 'topic_h1' => '%s: Arbeitsblätter',
+            'pin_unit' => '%2$s %1$s, %3$s: kostenloses Arbeitsblatt mit kurzer Erklärung, 100 Übungsaufgaben und Lösungen.',
+            'date_fmt' => 'd.m.Y',
+            'pr_title' => '%2$s %1$s: Arbeitsblatt mit Lösungen (zum Ausdrucken, %3$s)',
+            'pr_desc' => 'Kostenloses Arbeitsblatt zum Ausdrucken: %2$s, %1$s%3$s. %4$d Aufgaben auf 3 Seiten und ein Lösungsblatt. Direkt ausdrucken oder als PDF speichern.',
+            'pr_h' => 'Arbeitsblatt: %1$s (%2$s)', 'pr_pin' => 'Kostenloses Arbeitsblatt zum Ausdrucken: %2$s, %1$s, mit Lösungen.',
+            'pv_brand' => '%s Arbeitsblätter', 'pv_cta_unit' => 'KOSTENLOS · Erklärung + 100 Aufgaben + Lösungen',
+            'pv_cta_grade' => 'KOSTENLOS · %d Arbeitsblätter zum Ausdrucken', 'pv_cta_topic' => 'KOSTENLOS · %d Themen mit Lösungen',
+            'pv_skills' => '%d Themen', 'pv_100each' => 'je 100 Aufgaben', 'pv_keys' => 'Lösungen',
+            'pv_lesson' => 'Erklärung', 'pv_lessons' => 'Erklärungen', 'pv_100' => '100 Aufgaben', 'pv_print' => 'Druckvorlage %s',
+            'pv_key' => 'Lösungen', 'pv_practice' => 'Übung · %s',
+            'pv_name1' => 'Name ______________   Datum ________', 'pv_name2' => 'Name ____________________    Datum __________',
+            'pv_foot' => 'Kostenlos · apu2.com/worksheets',
+            'gs' => '%2$s %1$s', 'lc' => 'keep', 'range' => '%1$s bis %2$s',
         ),
     );
     // British English (UK pages): same as 'en' except these words
@@ -153,6 +199,14 @@ function T($key = null) {
     if ($key === null) return $T[$lang];
     return isset($T[$lang][$key]) ? $T[$lang][$key] : $key;
 }
+
+/* "Grade 3 Math" / "Mathe Klasse 3": grade and subject in the order of the page language */
+function gs($grade, $subject) {
+    $f = T('gs');
+    return sprintf($f === 'gs' ? '%1$s %2$s' : $f, $grade, $subject);
+}
+/* lower case inside an English sentence ("grade 3 math worksheets"); German nouns keep their capital */
+function lc($s) { return T('lc') === 'keep' ? $s : strtolower($s); }
 
 /* text used by ws.js (quiz, scores, effects) */
 function js_text($lang) {
@@ -224,6 +278,39 @@ function js_text($lang) {
             'levelUp' => '升級了！', 'keepGoing' => '繼續朝「{t}」前進', 'yay' => '太棒了',
             'achieved' => '目標達成！', 'ask' => '下一個目標挑戰「<b>{t}</b>」嗎？（{l}）',
             'goFor' => '挑戰', 'later' => '之後再說', 'notStarted' => '還沒開始',
+    );
+    $J['de'] = array(
+            'ok' => 'Richtig!', 'ng' => 'Noch nicht', 'ans' => 'Lösung:', 'next' => 'Weiter',
+            'result' => 'Ergebnis ansehen', 'done' => 'Fertig', 'practice' => 'Üben',
+            'score' => '<b>{o}</b> von {n} richtig', 'best' => 'Dein bestes Ergebnis: {o} / {t}',
+            'm100' => 'Alles richtig! Du bist bereit für die nächste Runde.',
+            'm80' => 'Fast geschafft. Rechne nur die falschen Aufgaben noch einmal.',
+            'mlow' => 'Lies dir die Beispiele oben durch und versuche diese Runde noch einmal.',
+            'redoMiss' => 'Die {n} falschen noch einmal', 'redoAll' => 'Von vorne beginnen',
+            'loadErr' => 'Die Aufgaben konnten nicht geladen werden.', 'notYet' => 'Noch nicht begonnen',
+            'total' => '<b>{o}</b> / {t} richtig', 'mastered' => '({c} / {u} Themen geschafft)',
+            'confirm' => 'Alle gespeicherten Ergebnisse dieser Klasse löschen?',
+            'hook0' => 'Noch nicht begonnen. Fang mit Runde 1 an (20 Aufgaben).',
+            'hookAll' => 'Alle 5 Runden geschafft! Komm jederzeit zum Wiederholen zurück.',
+            'hookSome' => '{d} von {n} Runden geschafft. Noch {r}!',
+            'okWords' => array('Richtig!', 'Super!', 'Toll gemacht!', 'Genau!', 'Prima!'),
+            'ngWords' => array('Fast!', 'Probier die nächste!', 'Weiter so!'),
+            'streak' => array('3' => '3 richtig in Folge!', '5' => '5 richtig in Folge!', '10' => '10 richtig in Folge!',
+                              '15' => '15 richtig in Folge!', '20' => 'Runde ohne Fehler!'),
+            'perfect' => 'Alles richtig!', 'good' => 'Gut gemacht!',
+            'tier' => array('above' => 'Über dem Durchschnitt', 'sight' => 'Spitze in Sicht', 'class' => 'Klassenbeste',
+                            'grade' => 'Jahrgangsbeste', 'state' => 'Landesspitze',
+                            'nation' => 'Bundesspitze', 'world' => 'Weltspitze'),
+            'start' => 'Start', 'yourRank' => 'Dein Rang in {name}', 'rankOf' => 'Rang in {name}',
+            'correct' => 'richtige Antworten', 'todayPlus' => 'heute +{n}',
+            'more' => 'Noch <b>{n}</b> richtige Antworten bis {t}',
+            'toGo' => 'Noch {n} bis {t}', 'reachedBtn' => 'Geschafft! Nächstes Ziel ansehen',
+            'allDone' => 'Du hast alle Ränge erreicht!', 'lap' => '{n} Runde', 'laps' => '{n} Runden',
+            'ranks' => 'Ränge', 'moreAfter' => 'Weitere Ränge nach {t}', 'unlocksAfter' => 'ab {t} freigeschaltet', 'reached' => 'Erreicht', 'toGoShort' => 'noch {n}', 'you' => 'Du',
+            'how' => '1 Runde = jede Aufgabe in {name} einmal richtig gelöst ({n} Antworten). Jedes Thema zählt bis zur Runde, in der du gerade bist. Übe also alle Themen.',
+            'levelUp' => 'Aufgestiegen!', 'keepGoing' => 'Weiter bis {t}', 'yay' => 'Klasse',
+            'achieved' => 'Ziel erreicht!', 'ask' => 'Als Nächstes <b>{t}</b> schaffen ({l})?',
+            'goFor' => 'Los geht\'s', 'later' => 'Später', 'notStarted' => 'Noch nicht begonnen',
     );
     $J['en-GB'] = array_merge($J['en'], array(
         'confirm' => 'Clear all saved scores for this year?',
