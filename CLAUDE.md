@@ -1243,7 +1243,12 @@ DE / Mathe / Klasse 7（Sek I）— 生成スクリプトは `gen_de_mathe_k7_*`
 1. rationale-zahlen ✓ 2. rechnen-mit-rationalen-zahlen ✓ 3. prozentrechnung ✓ 4. prozentuale-veraenderung ✓ 5. zinsrechnung ✓ 6. proportionale-und-antiproportionale-zuordnungen ✓
 7. terme-umformen ✓ 8. lineare-gleichungen ✓ 9. gleichungen-in-sachaufgaben ✓ 10. winkel-an-geradenkreuzungen ✓ 11. winkelsummen-in-dreiecken-und-vielecken ✓ 12. dreiecke-konstruieren ✓
 13. besondere-linien-im-dreieck ✓ 14. flaecheninhalt-von-vierecken ✓ 15. prismen ✓ 16. boxplots-und-kennwerte ✓ 17. wahrscheinlichkeit ✓
-DE / Mathe は Klasse 1〜7 まで完了。次は Klasse 8（Binomische Formeln・lineare Funktionen・lineare Gleichungssysteme・Kreis und Zylinder・Satz des Thales・mehrstufige Zufallsexperimente）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
+DE / Mathe / Klasse 8（Sek I）— 生成スクリプトは `gen_de_mathe_k8_*`（make_unit に grade="klasse-8"）、共通部品は `tools/de_k8.py`（de_k7 の上に expr（項の並び → 2x² − 3x + 5）・gl（y = mx + b）・par（負の数をかっこに）・kosy（座標平面の SVG。目盛りは偶数だけ大きく、lg））。
+π は Taschenrechner の値で「auf eine Nachkommastelle」（末尾の 0 も表示）。Definitionsmenge は「D = ℚ ∖ {2}」。連立方程式は「I: …<br>II: …<br>」。トピック lineare-funktionen-und-gleichungssysteme を足した。wurzel→zahlen、ausmultipl・binomisch→muster（mal-und-geteilt の out に ausmultipl）、kongruenz・thales・zylinder→geometrie
+1. potenzen-und-zehnerpotenzen ✓ 2. quadratwurzeln-und-reelle-zahlen ✓ 3. ausmultiplizieren-und-ausklammern ✓ 4. binomische-formeln ✓ 5. lineare-funktionen ✓ 6. geradengleichungen-aufstellen ✓
+7. lineare-gleichungssysteme-grafisch-loesen ✓ 8. lineare-gleichungssysteme-rechnerisch-loesen ✓ 9. gleichungssysteme-in-sachaufgaben ✓ 10. kongruenzsaetze ✓ 11. satz-des-thales ✓
+12. kreisumfang-und-kreisflaeche ✓ 13. zylinder ✓ 14. mehrstufige-zufallsexperimente ✓ 15. bruchterme-und-bruchgleichungen ✓
+DE / Mathe は Klasse 1〜8 まで完了。次は Klasse 9（quadratische Funktionen und Gleichungen・Satz des Pythagoras・Ähnlichkeit und Strahlensätze・Potenzgesetze・Pyramide, Kegel, Kugel・Trigonometrie）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
