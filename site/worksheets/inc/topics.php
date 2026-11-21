@@ -113,7 +113,7 @@ function topic_defs_de() {
 function topic_defs($country = null) {
     if ($country === 'tw') return topic_defs_tw();
     if ($country === 'de') return topic_defs_de();
-    return array(
+    $d = array(
         'fractions' => array('name' => 'Fractions',
             'in' => '/fraction|halves|thirds|fourths|quarters|mixed-num|improper|fair-shares|partition-shapes|operations-with-rational/',
             'out' => '/decimals-tenths|algebraic-fractions|fractional-equations/',
@@ -224,10 +224,21 @@ function topic_defs($country = null) {
             'in' => '/probab|chance|sample-spaces|likelihood|permutations-and-combinations|expected-value/', 'out' => '/^$/',
             'blurb' => 'Likelihood words, spinners and number cubes, probability as a fraction, experiments and tree diagrams.'),
     );
+    if ($country === 'in') {
+        // India (NCERT chapter names): Real Numbers is HCF, LCM and irrational numbers; Arithmetic Progressions are sequences
+        $d['factors-and-multiples']['in'] = substr($d['factors-and-multiples']['in'], 0, -1) . '|^real-numbers$/';
+        $d['exponents-and-roots']['in'] = substr($d['exponents-and-roots']['in'], 0, -1) . '|^real-numbers$/';
+        $d['integers']['out'] = substr($d['integers']['out'], 0, -1) . '|^real-numbers$/';
+        $d['algebra']['in'] = substr($d['algebra']['in'], 0, -1) . '|progression/';
+        $d['shapes']['out'] = substr($d['shapes']['out'], 0, -1) . '|trigonometr|areas-related|surface-areas/';
+        $d['area-and-perimeter']['out'] = substr($d['area-and-perimeter']['out'], 0, -1) . '|surface-areas/';
+        $d['congruence-and-similarity']['in'] = substr($d['congruence-and-similarity']['in'], 0, -1) . '|^triangles$/';
+    }
+    return $d;
 }
 
 /* British spelling for these countries */
-function topic_gb($country) { return in_array($country, array('uk', 'au', 'sg', 'za'), true); }
+function topic_gb($country) { return in_array($country, array('uk', 'au', 'sg', 'za', 'in'), true); }
 
 function topic_name($t, $country) {
     if ($country === 'au' && isset($t['name_au'])) return $t['name_au'];

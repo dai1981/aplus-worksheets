@@ -132,6 +132,8 @@ if ($u['key_big']) $lr['teaches'] = $u['key_big'];
 $lr['audience'] = array('@type' => 'EducationalAudience', 'educationalRole' => array('student', 'teacher', 'parent'));
 if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 'us' || $country['code'] === 'us-tx' || $country['code'] === 'ph' || $country['code'] === 'za' || $country['code'] === 'tw' || strpos($country['code'], 'ca') === 0)) {   // Texas, the Philippines, Canada and Taiwan: Grade 3 = age 8-9, like the US
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);
+} elseif (preg_match('/^class-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'in') {
+    $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // India: Class 10 = age 15-16
 } elseif (preg_match('/^klasse-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'de') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Germany: Klasse 3 = age 8-9
 } elseif ($grade['slug'] === 'grade-r' && $country['code'] === 'za') {

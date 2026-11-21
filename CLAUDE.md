@@ -1256,7 +1256,18 @@ DE / Mathe / Klasse 10（Sek I の最後の学年）— 生成スクリプトは
 Bogenmaß は 180° = π。三角関数の値は「½√3」の形。電卓の答えは小数第 1〜2 位まで（「≈」）。トピック exponential-potenz-und-winkelfunktionen（Exponential-, Potenz- und Winkelfunktionen）を足した（lineare-funktionen-… の out に exponential|potenzfunktion|polynom|sinus、zahlen の out に potenzfunktion）。logarithm→zahlen、bogenmass・einheitskreis・sinussatz→geometrie、erwartungswert→daten-und-zufall
 1. exponentialfunktionen ✓ 2. exponentielles-wachstum-und-zerfall ✓ 3. logarithmus ✓ 4. potenzfunktionen ✓ 5. polynomfunktionen ✓ 6. bogenmass-und-kreisausschnitt ✓
 7. trigonometrie-am-einheitskreis ✓ 8. sinus-und-kosinusfunktion ✓ 9. sinussatz-und-kosinussatz ✓ 10. erwartungswert ✓
-DE / Mathe は Klasse 1〜10 まで完了。次は GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
+DE / Mathe は Klasse 1〜10 まで完了。次は GDP 順で次の国（日本は国内向けで別サイト。インドは下）
+
+IN / Maths（CBSE 2025-26 / NCERT 教科書の章立て）— country `in`（name「India」、lang en、hreflang en-in）、subject `maths`、grade `class-N`（name「Class N」、N+5〜N+6 歳、unit.php）、A4。生成スクリプトは `gen_in_maths_cN_*`、共通部品は `tools/in_common.py`（sg_sec と同じ API。インドの数の書き方 1,23,456（lakh）・₹（inr）・インドの名前と地名、fv、adopt（他国の生成スクリプトの名前・お金・数をインド式に）、ok（LEAKS で $・GST・Singapore・miles など他国の語を落とす。4 桁以上の小数の選択肢も落とす）、collect は名前と代名詞を除いた問題文で重複を判定、make（CBSE の Unit と NCERT の章番号。q の先頭の図は qfig に入れて後ろへ、図は data-pf='lg'、ハイフンのマイナスを − に））。
+1 単元 = NCERT の 1 章（章の名前を slug に）。standard_code は「Class 10, Chapter 4: Quadratic Equations」、domain は CBSE の Unit 名（Number Systems／Algebra／Coordinate Geometry／Geometry／Trigonometry／Mensuration／Statistics and Probability）、standard_text は CBSE シラバスの要約、standard_url は cbseacademic の Maths_Sec_2025-26.pdf。
+イギリス式の綴り（colour, metre, factorisation, zeroes, maths）。π は 22/7（半径は 7 の倍数）、segment は π = 3.14・√3 = 1.73。三角比の値は 1/√2・√3/2 の形、高さと距離は 20√3 m の形。topic_gb() に in を入れた。topics.php の topic_defs() に $country === 'in' の調整（real-numbers→factors・exponents、progression→algebra、triangles→congruence-and-similarity、trigonometry・areas-related・surface-areas を shapes から外す）
+SG Sec 2–3・US Geometry・AU Year 8 の問題関数を adopt で再利用（連立方程式、因数分解、二次方程式の文章題、相似、接線）
+
+IN / Maths / Class 10（CBSE の board exam の学年）
+1. real-numbers ✓ 2. polynomials ✓ 3. pair-of-linear-equations-in-two-variables ✓ 4. quadratic-equations ✓ 5. arithmetic-progressions ✓ 6. triangles ✓ 7. coordinate-geometry ✓
+8. introduction-to-trigonometry ✓ 9. some-applications-of-trigonometry ✓ 10. circles ✓ 11. areas-related-to-circles ✓ 12. surface-areas-and-volumes ✓ 13. statistics ✓ 14. probability ✓
+
+IN の次: Class 9（NCERT: Number Systems・Polynomials・Coordinate Geometry・Linear Equations in Two Variables・Introduction to Euclid's Geometry・Lines and Angles・Triangles・Quadrilaterals・Circles・Heron's Formula・Surface Areas and Volumes・Statistics）、その後 Class 8・6・7（Ganita Prakash）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
