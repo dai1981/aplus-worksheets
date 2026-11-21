@@ -1211,7 +1211,13 @@ DE / Mathe / Klasse 3
 1. zahlen-bis-1000 ✓ 2. zahlen-vergleichen-und-ordnen ✓ 3. runden-und-ueberschlagen ✓ 4. plus-und-minus-bis-1000 ✓ 5. schriftliche-addition ✓ 6. schriftliche-subtraktion ✓ 7. einmaleins ✓
 8. multiplizieren-und-dividieren ✓ 9. dividieren-mit-rest ✓ 10. sachaufgaben ✓ 11. geld ✓ 12. laengen ✓ 13. gewichte ✓ 14. uhrzeit-und-zeitspannen ✓
 15. koerper-und-figuren ✓ 16. achsensymmetrie ✓ 17. zahlenfolgen-und-muster ✓ 18. diagramme-und-tabellen ✓ 19. wahrscheinlichkeit ✓
-次は Klasse 4（Zahlen bis 1 000 000、schriftliche Multiplikation・Division）、Klasse 2、Klasse 1
+DE / Mathe / Klasse 4（Zahlen bis 1 000 000）— 生成スクリプトは `gen_de_mathe_k4_*`（make_unit に grade="klasse-4"）。数詞は de_common.wort、6 桁の位取り表は stellentafel。
+長さ・重さ・容量のコンマ表記（3,250 kg）の共通問題は `tools/de_k4_groessen.py`（komma・zwei・lesen・kleiner・groesser・rechnen）。Würfelnetz の折りたたみは K3 の roll・is_net を使う
+1. zahlen-bis-1-million ✓ 2. runden-und-ueberschlagen ✓ 3. schriftlich-addieren-und-subtrahieren ✓ 4. schriftliche-multiplikation ✓ 5. schriftliche-division ✓ 6. rechengesetze-und-klammern ✓
+7. brueche-im-alltag ✓ 8. sachaufgaben ✓ 9. laengen-mit-komma ✓ 10. gewichte-und-tonnen ✓ 11. rauminhalte ✓ 12. rechnen-mit-geld ✓ 13. zeit-und-kalender ✓ 14. massstab ✓
+15. umfang-und-flaecheninhalt ✓ 16. parallel-senkrecht-und-vierecke ✓ 17. wuerfel-und-quader ✓ 18. daten-und-diagramme ✓ 19. kombinatorik-und-wahrscheinlichkeit ✓
+brueche-im-alltag はまだどのトピックにも入らない（Brüche の単元が 3 つになったら topic_defs_de に brueche を足す）
+次は Klasse 2、Klasse 1
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
