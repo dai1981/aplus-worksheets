@@ -1232,8 +1232,13 @@ zahlenstrahl は長いラベルに合わせて左右の余白を広げる。ト�
 1. natuerliche-zahlen-und-stellenwerte ✓ 2. runden-und-schaetzen ✓ 3. negative-zahlen ✓ 4. addieren-und-subtrahieren ✓ 5. multiplizieren-und-dividieren ✓ 6. terme-und-rechengesetze ✓
 7. potenzen-und-quadratzahlen ✓ 8. teiler-vielfache-und-primzahlen ✓ 9. brueche-und-anteile ✓ 10. laengen-massen-und-zeit ✓ 11. sachaufgaben-und-kombinatorik ✓ 12. strecken-geraden-und-strahlen ✓
 13. koordinatensystem ✓ 14. winkel ✓ 15. achsen-und-punktsymmetrie ✓ 16. flaecheninhalt-und-umfang ✓ 17. volumen-und-oberflaeche-von-quadern ✓ 18. haeufigkeiten-und-diagramme ✓ 19. muster-terme-und-variablen ✓
-Brüche はまだ 2 単元（K4 brueche-im-alltag・K5 brueche-und-anteile）。3 つになったら topic_defs_de に brueche を足す
-DE / Mathe は Klasse 1〜5 まで完了。次は Klasse 6（Brüche・Dezimalzahlen・Prozent の入口・Kreis・Winkel・Daten）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
+DE / Mathe / Klasse 6（Sek I）— 生成スクリプトは `gen_de_mathe_k6_*`（make_unit に grade="klasse-6"）、共通部品は `tools/de_k6.py`（bh＝Fraction を HTML の分数に（gemischt=True で帯分数）、dz＝Fraction を正確な小数（コンマ）に、割り切れないときは ValueError、mcq＝誤答が足りないとき None を返して作り直し）。
+お金は「%d,%02d €」で表示し、四捨五入は int(x * 100 + 1/2)（round() は偶数丸めになるので使わない）。循環小数は `<span class='ov'>3</span>`。トピック brueche-und-dezimalzahlen（Brüche, Dezimalzahlen und Prozente）を足した。zuordnung・gleichung→muster、kreis・dreieck→geometrie、negative→zahlen
+1. brueche-erweitern-und-kuerzen ✓ 2. brueche-vergleichen-und-ordnen ✓ 3. gemischte-zahlen ✓ 4. brueche-addieren-und-subtrahieren ✓ 5. brueche-multiplizieren ✓ 6. brueche-dividieren ✓
+7. dezimalzahlen-und-stellenwerte ✓ 8. brueche-und-dezimalzahlen ✓ 9. dezimalzahlen-addieren-und-subtrahieren ✓ 10. dezimalzahlen-multiplizieren-und-dividieren ✓ 11. prozente ✓ 12. rechnen-mit-negativen-zahlen ✓
+13. zuordnungen-und-dreisatz ✓ 14. terme-und-gleichungen ✓ 15. kreise-und-kreisdiagramme ✓ 16. dreiecke-und-vierecke ✓ 17. flaecheninhalt-von-parallelogramm-und-dreieck ✓ 18. daten-und-wahrscheinlichkeit ✓
+19. sachaufgaben-mit-bruechen-und-dezimalzahlen ✓
+DE / Mathe は Klasse 1〜6 まで完了。次は Klasse 7（Prozent- und Zinsrechnung・rationale Zahlen・Terme und Gleichungen・Dreiecke konstruieren・Prismen・Daten）か、GDP 順で次の国（日本は国内向けで別サイト。次はインドかフランス）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
