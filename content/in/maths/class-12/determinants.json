@@ -1,0 +1,1157 @@
+{
+ "slug": "determinants",
+ "title": "Determinants: Minors, Cofactors, Adjoint, Inverse and Area",
+ "seo_title": "Determinants Class 12 Worksheet with Answers (NCERT Chapter 4)",
+ "short_title": "determinants",
+ "domain": "Algebra",
+ "standard_code": "Class 12, Chapter 4: Determinants",
+ "standard_url": "https://www.cbseacademic.nic.in/web_material/CurriculumMain26/SrSec/Maths_SrSec_2025-26.pdf",
+ "standard_text": "Determinant of a square matrix (up to 3 × 3 matrices), minors, co-factors and applications of determinants in finding the area of a triangle; adjoint and inverse of a square matrix; consistency, inconsistency and number of solutions of a system of linear equations by examples, solving a system of linear equations in two or three variables (having unique solution) using the inverse of a matrix (summary of the CBSE syllabus)",
+ "meta_desc": "Class 12 Determinants worksheet (NCERT Chapter 4): determinants of order 2 and 3, singular matrices, minors and cofactors, |kA|, adjoint and inverse, area of a triangle and the matrix method. 100 questions with answers.",
+ "key_big": "A⁻¹ = (1/|A|) adj A, which exists only when |A| ≠ 0.",
+ "key_sub": "|kA| = kⁿ|A| and |adj A| = |A|ⁿ⁻¹ for an n × n matrix.",
+ "body_html": "<h2>How it works</h2><ul><li>|a b; c d| = ad − bc. Expand a 3 × 3 determinant along any row or column.</li><li>Minor M<sub>ij</sub>: delete row i and column j. Cofactor A<sub>ij</sub> = (−1)<sup>i+j</sup>M<sub>ij</sub>.</li><li>adj A is the transpose of the matrix of cofactors; A(adj A) = |A| I; A<sup>−1</sup> = adj A ÷ |A| when |A| ≠ 0.</li><li>Area of a triangle = ½|det| with rows (x<sub>i</sub>, y<sub>i</sub>, 1); the points are collinear when it is 0.</li><li>AX = B has the unique solution X = A<sup>−1</sup>B when |A| ≠ 0.</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>Find |A| for A = [2 −3; 4 5].</p><p class='sn-ex-s'>ad − bc = 2 × 5 − (−3) × 4</p><p class='sn-ex-s'>= 10 + 12</p><p class='sn-ex-a'>Answer: 22</p></div><h2>Common mistakes</h2><ul><li>Computing ad + bc instead of ad − bc.</li><li>Forgetting the sign (−1)^(i + j) in a cofactor.</li><li>Writing |3A| = 3|A| for a 3 × 3 matrix (it is 27|A|).</li></ul>",
+ "faq": [
+  {
+   "q": "When is a matrix singular?",
+   "a": "When its determinant is 0; then it has no inverse."
+  },
+  {
+   "q": "Does a 2 × 3 matrix have a determinant?",
+   "a": "No. Only square matrices have determinants."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Determinants of order 2 and 3",
+   "items": [
+    {
+     "q": "Find det(<i>A</i>) if <i>A</i> = <span class='mx m2'><span>−4</span><span>−1</span><span>4</span><span>6</span></span>.",
+     "c": [
+      "−28",
+      "−20",
+      "−22",
+      "20"
+     ],
+     "a": 1,
+     "e": "<i>ad</i> − <i>bc</i> = (−4)(6) − (−1)(4) = −24 − (−4) = <b>−20</b>."
+    },
+    {
+     "q": "Find the determinant <span class='mx det m3'><span>2</span><span>−2</span><span>5</span><span>0</span><span>1</span><span>3</span><span>0</span><span>5</span><span>2</span></span>.",
+     "c": [
+      "4",
+      "−26",
+      "26",
+      "−23"
+     ],
+     "a": 1,
+     "e": "Expand along row 1 with signs + − +: 2(−13) − (−2)(0) + 5(0) = <b>−26</b>."
+    },
+    {
+     "q": "Find the determinant <span class='mx det m3'><span>−3</span><span>0</span><span>−1</span><span>0</span><span>−1</span><span>3</span><span>0</span><span>4</span><span>4</span></span>.",
+     "c": [
+      "48",
+      "51",
+      "−48",
+      "12"
+     ],
+     "a": 0,
+     "e": "Expand along row 1 with signs + − +: (−3)(−16) − 0(0) + (−1)(0) = <b>48</b>."
+    },
+    {
+     "q": "For what value of <i>x</i> is <span class='mx m2'><span>2</span><span>−6</span><span>6</span><span><i>x</i></span></span> a singular matrix?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−18",
+      "18",
+      "−2"
+     ],
+     "a": 1,
+     "e": "Singular means the determinant is 0: 2<i>x</i> − (−36) = 0, so <i>x</i> = <b>−18</b>."
+    },
+    {
+     "q": "Find the determinant <span class='mx det m3'><span>−2</span><span>1</span><span>1</span><span>0</span><span>−3</span><span>0</span><span>0</span><span>0</span><span>−2</span></span>.",
+     "c": [
+      "−16",
+      "12",
+      "−9",
+      "−12"
+     ],
+     "a": 3,
+     "e": "Expand along row 1 with signs + − +: (−2)(6) − 1(0) + 1(0) = <b>−12</b>."
+    },
+    {
+     "q": "Find <i>x</i> if <span class='mx det m2'><span>4<i>x</i></span><span>4</span><span>2</span><span><i>x</i></span></span> = 28.",
+     "c": [
+      "±3",
+      "3",
+      "±9",
+      "±4"
+     ],
+     "a": 0,
+     "e": "4<i>x</i>² − (8) = 28, so <i>x</i>² = 9 and <i>x</i> = <b>±3</b>."
+    },
+    {
+     "q": "Find det(<i>A</i>) if <i>A</i> = <span class='mx m2'><span>−4</span><span>−5</span><span>−5</span><span>4</span></span>.",
+     "c": [
+      "40",
+      "41",
+      "9",
+      "−41"
+     ],
+     "a": 3,
+     "e": "<i>ad</i> − <i>bc</i> = (−4)(4) − (−5)(−5) = −16 − 25 = <b>−41</b>."
+    },
+    {
+     "q": "Find the determinant <span class='mx det m2'><span>3</span><span>1</span><span>−4</span><span>4</span></span>.",
+     "c": [
+      "16",
+      "19",
+      "−16",
+      "8"
+     ],
+     "a": 0,
+     "e": "<i>ad</i> − <i>bc</i> = (3)(4) − (1)(−4) = 12 − (−4) = <b>16</b>."
+    },
+    {
+     "q": "For what value of <i>x</i> is <span class='mx m2'><span>3</span><span>−6</span><span>1</span><span><i>x</i></span></span> a singular matrix?",
+     "c": [
+      "−2",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2",
+      "−1"
+     ],
+     "a": 0,
+     "e": "Singular means the determinant is 0: 3<i>x</i> − (−6) = 0, so <i>x</i> = <b>−2</b>."
+    },
+    {
+     "q": "Find det(<i>A</i>) if <i>A</i> = <span class='mx m2'><span>3</span><span>1</span><span>4</span><span>5</span></span>.",
+     "c": [
+      "19",
+      "−17",
+      "11",
+      "−11"
+     ],
+     "a": 2,
+     "e": "<i>ad</i> − <i>bc</i> = (3)(5) − (1)(4) = 15 − 4 = <b>11</b>."
+    },
+    {
+     "q": "Find the determinant <span class='mx det m3'><span>−1</span><span>4</span><span>4</span><span>3</span><span>1</span><span>2</span><span>4</span><span>−3</span><span>3</span></span>.",
+     "c": [
+      "−57",
+      "−3",
+      "−65",
+      "65"
+     ],
+     "a": 2,
+     "e": "Expand along row 1 with signs + − +: (−1)(9) − 4(1) + 4(−13) = <b>−65</b>."
+    },
+    {
+     "q": "Find det(<i>A</i>) if <i>A</i> = <span class='mx m2'><span>5</span><span>−4</span><span>−2</span><span>−1</span></span>.",
+     "c": [
+      "13",
+      "3",
+      "−13",
+      "−22"
+     ],
+     "a": 2,
+     "e": "<i>ad</i> − <i>bc</i> = (5)(−1) − (−4)(−2) = −5 − 8 = <b>−13</b>."
+    },
+    {
+     "q": "Find the determinant <span class='mx det m3'><span>−3</span><span>5</span><span>−1</span><span>0</span><span>−2</span><span>−3</span><span>1</span><span>3</span><span>−3</span></span>.",
+     "c": [
+      "−32",
+      "−18",
+      "−62",
+      "62"
+     ],
+     "a": 2,
+     "e": "Expand along row 1 with signs + − +: (−3)(15) − 5(3) + (−1)(2) = <b>−62</b>."
+    },
+    {
+     "q": "Find the determinant <span class='mx det m3'><span>2</span><span>5</span><span>−1</span><span>−3</span><span>3</span><span>5</span><span>−1</span><span>2</span><span>−1</span></span>.",
+     "c": [
+      "17",
+      "−63",
+      "−6",
+      "63"
+     ],
+     "a": 1,
+     "e": "Expand along row 1 with signs + − +: 2(−13) − 5(8) + (−1)(−3) = <b>−63</b>."
+    },
+    {
+     "q": "Find the determinant <span class='mx det m3'><span>−2</span><span>5</span><span>2</span><span>5</span><span>5</span><span>5</span><span>4</span><span>2</span><span>−2</span></span>.",
+     "c": [
+      "−130",
+      "−170",
+      "20",
+      "170"
+     ],
+     "a": 3,
+     "e": "Expand along row 1 with signs + − +: (−2)(−20) − 5(−30) + 2(−10) = <b>170</b>."
+    },
+    {
+     "q": "Find the determinant <span class='mx det m3'><span>0</span><span>2</span><span>2</span><span>3</span><span>4</span><span>−2</span><span>4</span><span>2</span><span>−2</span></span>.",
+     "c": [
+      "0",
+      "−16",
+      "−24",
+      "24"
+     ],
+     "a": 2,
+     "e": "Expand along row 1 with signs + − +: 0(−4) − 2(2) + 2(−10) = <b>−24</b>."
+    },
+    {
+     "q": "Find the determinant <span class='mx det m2'><span>2</span><span>−2</span><span>1</span><span>−3</span></span>.",
+     "c": [
+      "−4",
+      "−8",
+      "−1",
+      "4"
+     ],
+     "a": 0,
+     "e": "<i>ad</i> − <i>bc</i> = (2)(−3) − (−2)(1) = −6 − (−2) = <b>−4</b>."
+    },
+    {
+     "q": "For what value of <i>x</i> is <span class='mx m2'><span>4</span><span>1</span><span>1</span><span><i>x</i></span></span> a singular matrix?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "4",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "Singular means the determinant is 0: 4<i>x</i> − (1) = 0, so <i>x</i> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Find the determinant <span class='mx det m2'><span>1</span><span>3</span><span>3</span><span>3</span></span>.",
+     "c": [
+      "12",
+      "−6",
+      "−8",
+      "6"
+     ],
+     "a": 1,
+     "e": "<i>ad</i> − <i>bc</i> = (1)(3) − (3)(3) = 3 − 9 = <b>−6</b>."
+    },
+    {
+     "q": "Find det(<i>A</i>) if <i>A</i> = <span class='mx m2'><span>7</span><span>4</span><span>−1</span><span>4</span></span>.",
+     "c": [
+      "30",
+      "−32",
+      "24",
+      "32"
+     ],
+     "a": 3,
+     "e": "<i>ad</i> − <i>bc</i> = (7)(4) − (4)(−1) = 28 − (−4) = <b>32</b>."
+    }
+   ]
+  },
+  {
+   "title": "Equations and singular matrices",
+   "items": [
+    {
+     "q": "Find <i>x</i> if <span class='mx det m2'><span>3<i>x</i></span><span>4</span><span>−1</span><span><i>x</i></span></span> = 16.",
+     "c": [
+      "±2",
+      "2",
+      "±3",
+      "±4"
+     ],
+     "a": 0,
+     "e": "3<i>x</i>² − (−4) = 16, so <i>x</i>² = 4 and <i>x</i> = <b>±2</b>."
+    },
+    {
+     "q": "Find <i>x</i> if <span class='mx det m2'><span>3<i>x</i></span><span>4</span><span>4</span><span><i>x</i></span></span> = 11.",
+     "c": [
+      "3",
+      "±9",
+      "±3",
+      "±4"
+     ],
+     "a": 2,
+     "e": "3<i>x</i>² − (16) = 11, so <i>x</i>² = 9 and <i>x</i> = <b>±3</b>."
+    },
+    {
+     "q": "Find <i>x</i> if <span class='mx det m2'><span>4<i>x</i></span><span>1</span><span>1</span><span><i>x</i></span></span> = 143.",
+     "c": [
+      "±7",
+      "±36",
+      "6",
+      "±6"
+     ],
+     "a": 3,
+     "e": "4<i>x</i>² − (1) = 143, so <i>x</i>² = 36 and <i>x</i> = <b>±6</b>."
+    },
+    {
+     "q": "Find k if the points (4, 1), (7, 5) and (1, k) are collinear.",
+     "c": [
+      "−3",
+      "5",
+      "1",
+      "3"
+     ],
+     "a": 0,
+     "e": "Collinear points make a triangle of area 0: setting the determinant to 0 gives <b>k = −3</b>."
+    },
+    {
+     "q": "For what value of <i>x</i> is <span class='mx m2'><span>5</span><span>−1</span><span>4</span><span><i>x</i></span></span> a singular matrix?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "−20"
+     ],
+     "a": 1,
+     "e": "Singular means the determinant is 0: 5<i>x</i> − (−4) = 0, so <i>x</i> = <b>−<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Find k if the points (4, −1), (5, −4) and (3, k) are collinear.",
+     "c": [
+      "−4",
+      "−2",
+      "2",
+      "−1"
+     ],
+     "a": 2,
+     "e": "Collinear points make a triangle of area 0: setting the determinant to 0 gives <b>k = 2</b>."
+    },
+    {
+     "q": "Find k if the points (5, −5), (4, −1) and (6, k) are collinear.",
+     "c": [
+      "−9",
+      "−1",
+      "−5",
+      "9"
+     ],
+     "a": 0,
+     "e": "Collinear points make a triangle of area 0: setting the determinant to 0 gives <b>k = −9</b>."
+    },
+    {
+     "q": "Find k if the points (4, 1), (3, 2) and (2, k) are collinear.",
+     "c": [
+      "3",
+      "4",
+      "−1",
+      "−3"
+     ],
+     "a": 0,
+     "e": "Collinear points make a triangle of area 0: setting the determinant to 0 gives <b>k = 3</b>."
+    },
+    {
+     "q": "For what value of <i>x</i> is <span class='mx m2'><span>3</span><span>2</span><span>2</span><span><i>x</i></span></span> a singular matrix?",
+     "c": [
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "3"
+     ],
+     "a": 2,
+     "e": "Singular means the determinant is 0: 3<i>x</i> − (4) = 0, so <i>x</i> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Find <i>x</i> if <span class='mx det m2'><span>3<i>x</i></span><span>4</span><span>3</span><span><i>x</i></span></span> = 0.",
+     "c": [
+      "2",
+      "±2",
+      "±4",
+      "±3"
+     ],
+     "a": 1,
+     "e": "3<i>x</i>² − (12) = 0, so <i>x</i>² = 4 and <i>x</i> = <b>±2</b>."
+    },
+    {
+     "q": "For what value of <i>x</i> is <span class='mx m2'><span>5</span><span>−3</span><span>2</span><span><i>x</i></span></span> a singular matrix?",
+     "c": [
+      "−<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Singular means the determinant is 0: 5<i>x</i> − (−6) = 0, so <i>x</i> = <b>−<span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Find <i>x</i> if <span class='mx det m2'><span>2<i>x</i></span><span>4</span><span>2</span><span><i>x</i></span></span> = 24.",
+     "c": [
+      "±16",
+      "4",
+      "±5",
+      "±4"
+     ],
+     "a": 3,
+     "e": "2<i>x</i>² − (8) = 24, so <i>x</i>² = 16 and <i>x</i> = <b>±4</b>."
+    },
+    {
+     "q": "For what value of <i>x</i> is <span class='mx m2'><span>2</span><span>6</span><span>2</span><span><i>x</i></span></span> a singular matrix?",
+     "c": [
+      "−6",
+      "6",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Singular means the determinant is 0: 2<i>x</i> − (12) = 0, so <i>x</i> = <b>6</b>."
+    },
+    {
+     "q": "Find <i>x</i> if <span class='mx det m2'><span>4<i>x</i></span><span>2</span><span>5</span><span><i>x</i></span></span> = 26.",
+     "c": [
+      "±3",
+      "±4",
+      "3",
+      "±9"
+     ],
+     "a": 0,
+     "e": "4<i>x</i>² − (10) = 26, so <i>x</i>² = 9 and <i>x</i> = <b>±3</b>."
+    },
+    {
+     "q": "Find k if the points (−3, 5), (−2, 2) and (0, k) are collinear.",
+     "c": [
+      "−7",
+      "14",
+      "4",
+      "−4"
+     ],
+     "a": 3,
+     "e": "Collinear points make a triangle of area 0: setting the determinant to 0 gives <b>k = −4</b>."
+    },
+    {
+     "q": "Find <i>x</i> if <span class='mx det m2'><span><i>x</i></span><span>2</span><span>3</span><span><i>x</i></span></span> = −2.",
+     "c": [
+      "±3",
+      "±2",
+      "2",
+      "±4"
+     ],
+     "a": 1,
+     "e": "<i>x</i>² − (6) = −2, so <i>x</i>² = 4 and <i>x</i> = <b>±2</b>."
+    },
+    {
+     "q": "Find <i>x</i> if <span class='mx det m2'><span>4<i>x</i></span><span>3</span><span>1</span><span><i>x</i></span></span> = 141.",
+     "c": [
+      "±36",
+      "±6",
+      "6",
+      "±7"
+     ],
+     "a": 1,
+     "e": "4<i>x</i>² − (3) = 141, so <i>x</i>² = 36 and <i>x</i> = <b>±6</b>."
+    },
+    {
+     "q": "Find k if the points (1, −5), (2, −4) and (0, k) are collinear.",
+     "c": [
+      "6",
+      "−5",
+      "−6",
+      "−4"
+     ],
+     "a": 2,
+     "e": "Collinear points make a triangle of area 0: setting the determinant to 0 gives <b>k = −6</b>."
+    },
+    {
+     "q": "Find <i>x</i> if <span class='mx det m2'><span>4<i>x</i></span><span>2</span><span>−3</span><span><i>x</i></span></span> = 42.",
+     "c": [
+      "3",
+      "±9",
+      "±4",
+      "±3"
+     ],
+     "a": 3,
+     "e": "4<i>x</i>² − (−6) = 42, so <i>x</i>² = 9 and <i>x</i> = <b>±3</b>."
+    },
+    {
+     "q": "Find <i>x</i> if <span class='mx det m2'><span>3<i>x</i></span><span>2</span><span>3</span><span><i>x</i></span></span> = 69.",
+     "c": [
+      "±6",
+      "±25",
+      "±5",
+      "5"
+     ],
+     "a": 2,
+     "e": "3<i>x</i>² − (6) = 69, so <i>x</i>² = 25 and <i>x</i> = <b>±5</b>."
+    }
+   ]
+  },
+  {
+   "title": "Minors and cofactors",
+   "items": [
+    {
+     "q": "A = <span class='mx m3'><span>1</span><span>3</span><span>−1</span><span>−4</span><span>6</span><span>−2</span><span>0</span><span>1</span><span>−4</span></span>. Find the cofactor A<sub>21</sub>.",
+     "c": [
+      "−11",
+      "11",
+      "−44",
+      "−13"
+     ],
+     "a": 1,
+     "e": "M<sub>21</sub> = −11, and A<sub>21</sub> = (−1)<sup>3</sup> M<sub>21</sub> = <b>11</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−3</span><span>6</span><span>1</span><span>1</span><span>0</span><span>−1</span><span>−4</span><span>−5</span><span>−1</span></span>. Find the cofactor A<sub>11</sub>.",
+     "c": [
+      "−5",
+      "15",
+      "−4",
+      "5"
+     ],
+     "a": 0,
+     "e": "M<sub>11</sub> = −5, and A<sub>11</sub> = (−1)<sup>2</sup> M<sub>11</sub> = <b>−5</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>2</span><span>6</span><span>5</span><span>2</span><span>2</span><span>1</span><span>6</span><span>2</span><span>−3</span></span>. Find the cofactor A<sub>32</sub>.",
+     "c": [
+      "16",
+      "−8",
+      "8",
+      "12"
+     ],
+     "a": 2,
+     "e": "M<sub>32</sub> = −8, and A<sub>32</sub> = (−1)<sup>5</sup> M<sub>32</sub> = <b>8</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>2</span><span>6</span><span>4</span><span>−4</span><span>−3</span><span>5</span><span>−5</span><span>−2</span><span>−5</span></span>. Find the minor M<sub>21</sub>.",
+     "c": [
+      "22",
+      "−38",
+      "−4",
+      "−22"
+     ],
+     "a": 3,
+     "e": "Delete row 2 and column 1: M<sub>21</sub> = <span class='mx det m2'><span>6</span><span>4</span><span>−2</span><span>−5</span></span> = <b>−22</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−5</span><span>6</span><span>0</span><span>−2</span><span>4</span><span>−4</span><span>4</span><span>−2</span><span>2</span></span>. Find the cofactor A<sub>32</sub>.",
+     "c": [
+      "−20",
+      "−19",
+      "20",
+      "40"
+     ],
+     "a": 0,
+     "e": "M<sub>32</sub> = 20, and A<sub>32</sub> = (−1)<sup>5</sup> M<sub>32</sub> = <b>−20</b>."
+    },
+    {
+     "q": "A is invertible with |A| = 3. Find |A<sup>−1</sup>|.",
+     "c": [
+      "3",
+      "−3",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "|A<sup>−1</sup>| = 1 ÷ |A| = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>3</span><span>1</span><span>−5</span><span>−5</span><span>0</span><span>−3</span><span>6</span><span>−5</span><span>2</span></span>. Find the minor M<sub>21</sub>.",
+     "c": [
+      "27",
+      "−5",
+      "−23",
+      "23"
+     ],
+     "a": 2,
+     "e": "Delete row 2 and column 1: M<sub>21</sub> = <span class='mx det m2'><span>1</span><span>−5</span><span>−5</span><span>2</span></span> = <b>−23</b>."
+    },
+    {
+     "q": "A is a square matrix of order 3 with |A| = −2. What is A(adj A)?",
+     "c": [
+      "adj A",
+      "I",
+      "−2I",
+      "−8I"
+     ],
+     "a": 2,
+     "e": "A(adj A) = (adj A)A = |A| I = <b>−2 I</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−4</span><span>0</span><span>5</span><span>0</span><span>3</span><span>0</span><span>2</span><span>−1</span><span>−2</span></span>. Find the cofactor A<sub>23</sub>.",
+     "c": [
+      "4",
+      "−3",
+      "0",
+      "−4"
+     ],
+     "a": 3,
+     "e": "M<sub>23</sub> = 4, and A<sub>23</sub> = (−1)<sup>5</sup> M<sub>23</sub> = <b>−4</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−2</span><span>−4</span><span>−2</span><span>−2</span><span>−3</span><span>−4</span><span>1</span><span>−4</span><span>2</span></span>. Find the cofactor A<sub>23</sub>.",
+     "c": [
+      "4",
+      "−12",
+      "12",
+      "48"
+     ],
+     "a": 1,
+     "e": "M<sub>23</sub> = 12, and A<sub>23</sub> = (−1)<sup>5</sup> M<sub>23</sub> = <b>−12</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−2</span><span>5</span><span>2</span><span>5</span><span>−1</span><span>3</span><span>6</span><span>3</span><span>−2</span></span>. Find the minor M<sub>12</sub>.",
+     "c": [
+      "−28",
+      "8",
+      "28",
+      "5"
+     ],
+     "a": 0,
+     "e": "Delete row 1 and column 2: M<sub>12</sub> = <span class='mx det m2'><span>5</span><span>3</span><span>6</span><span>−2</span></span> = <b>−28</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−4</span><span>−3</span><span>2</span><span>−5</span><span>5</span><span>5</span><span>3</span><span>−5</span><span>0</span></span>. Find the cofactor A<sub>11</sub>.",
+     "c": [
+      "26",
+      "−25",
+      "25",
+      "−100"
+     ],
+     "a": 2,
+     "e": "M<sub>11</sub> = 25, and A<sub>11</sub> = (−1)<sup>2</sup> M<sub>11</sub> = <b>25</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>0</span><span>6</span><span>2</span><span>6</span><span>−4</span><span>6</span><span>−2</span><span>4</span><span>5</span></span>. Find the minor M<sub>11</sub>.",
+     "c": [
+      "4",
+      "44",
+      "0",
+      "−44"
+     ],
+     "a": 3,
+     "e": "Delete row 1 and column 1: M<sub>11</sub> = <span class='mx det m2'><span>−4</span><span>6</span><span>4</span><span>5</span></span> = <b>−44</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−5</span><span>6</span><span>4</span><span>2</span><span>−3</span><span>−1</span><span>4</span><span>−2</span><span>6</span></span>. Find the minor M<sub>32</sub>.",
+     "c": [
+      "13",
+      "−2",
+      "3",
+      "−3"
+     ],
+     "a": 3,
+     "e": "Delete row 3 and column 2: M<sub>32</sub> = <span class='mx det m2'><span>−5</span><span>4</span><span>2</span><span>−1</span></span> = <b>−3</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−3</span><span>5</span><span>6</span><span>1</span><span>2</span><span>−1</span><span>3</span><span>−1</span><span>4</span></span>. Find the minor M<sub>23</sub>.",
+     "c": [
+      "−12",
+      "12",
+      "−1",
+      "18"
+     ],
+     "a": 0,
+     "e": "Delete row 2 and column 3: M<sub>23</sub> = <span class='mx det m2'><span>−3</span><span>5</span><span>3</span><span>−1</span></span> = <b>−12</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>1</span><span>3</span><span>−3</span><span>4</span><span>3</span><span>4</span><span>2</span><span>−2</span><span>−4</span></span>. Find the cofactor A<sub>12</sub>.",
+     "c": [
+      "24",
+      "−24",
+      "72",
+      "−8"
+     ],
+     "a": 0,
+     "e": "M<sub>12</sub> = −24, and A<sub>12</sub> = (−1)<sup>3</sup> M<sub>12</sub> = <b>24</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−3</span><span>2</span><span>4</span><span>−5</span><span>1</span><span>5</span><span>1</span><span>−2</span><span>1</span></span>. Find the minor M<sub>23</sub>.",
+     "c": [
+      "8",
+      "−4",
+      "4",
+      "5"
+     ],
+     "a": 2,
+     "e": "Delete row 2 and column 3: M<sub>23</sub> = <span class='mx det m2'><span>−3</span><span>2</span><span>1</span><span>−2</span></span> = <b>4</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>3</span><span>5</span><span>2</span><span>−4</span><span>−1</span><span>0</span><span>4</span><span>0</span><span>1</span></span>. Find the cofactor A<sub>21</sub>.",
+     "c": [
+      "5",
+      "−5",
+      "−4",
+      "20"
+     ],
+     "a": 1,
+     "e": "M<sub>21</sub> = 5, and A<sub>21</sub> = (−1)<sup>3</sup> M<sub>21</sub> = <b>−5</b>."
+    },
+    {
+     "q": "A is a square matrix of order 2 with |A| = −5. Find |2A|.",
+     "c": [
+      "−40",
+      "−20",
+      "−3",
+      "−10"
+     ],
+     "a": 1,
+     "e": "Each of the 2 rows is multiplied by 2, so |2A| = (2)<sup>2</sup> × −5 = <b>−20</b>."
+    },
+    {
+     "q": "A is invertible with |A| = −6. Find |A<sup>−1</sup>|.",
+     "c": [
+      "6",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "−6",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "|A<sup>−1</sup>| = 1 ÷ |A| = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Adjoint and inverse",
+   "items": [
+    {
+     "q": "Find adj A if A = <span class='mx m2'><span>−3</span><span>5</span><span>5</span><span>−6</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>5</span><span>5</span><span>−3</span></span>",
+      "<span class='mx m2'><span>6</span><span>5</span><span>5</span><span>3</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−5</span><span>−5</span><span>−6</span></span>",
+      "<span class='mx m2'><span>−6</span><span>−5</span><span>−5</span><span>−3</span></span>"
+     ],
+     "a": 3,
+     "e": "For a 2 × 2 matrix, swap the diagonal entries and change the signs of the other two: <b><span class='mx m2'><span>−6</span><span>−5</span><span>−5</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "Find <i>A</i><sup>−1</sup> if <i>A</i> = <span class='mx m2'><span>4</span><span>5</span><span>5</span><span>6</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−4</span><span>5</span><span>5</span><span>−6</span></span>",
+      "<span class='mx m2'><span>6</span><span>−5</span><span>−5</span><span>4</span></span>",
+      "<span class='mx m2'><span>−6</span><span>−5</span><span>−5</span><span>−4</span></span>",
+      "<span class='mx m2'><span>−6</span><span>5</span><span>5</span><span>−4</span></span>"
+     ],
+     "a": 3,
+     "e": "det(<i>A</i>) = −1. Swap <i>a</i> and <i>d</i>, change the signs of <i>b</i> and <i>c</i>, then divide by −1: <b><span class='mx m2'><span>−6</span><span>5</span><span>5</span><span>−4</span></span></b>."
+    },
+    {
+     "q": "Find adj A if A = <span class='mx m2'><span>6</span><span>0</span><span>−1</span><span>−2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−2</span><span>0</span><span>1</span><span>6</span></span>",
+      "<span class='mx m2'><span>2</span><span>0</span><span>−1</span><span>−6</span></span>",
+      "<span class='mx m2'><span>6</span><span>0</span><span>1</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−2</span><span>0</span><span>−1</span><span>6</span></span>"
+     ],
+     "a": 0,
+     "e": "For a 2 × 2 matrix, swap the diagonal entries and change the signs of the other two: <b><span class='mx m2'><span>−2</span><span>0</span><span>1</span><span>6</span></span></b>."
+    },
+    {
+     "q": "Find adj A if A = <span class='mx m2'><span>−5</span><span>7</span><span>6</span><span>−6</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>−7</span><span>−6</span><span>−5</span></span>",
+      "<span class='mx m2'><span>−6</span><span>7</span><span>6</span><span>−5</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−7</span><span>−6</span><span>−6</span></span>",
+      "<span class='mx m2'><span>6</span><span>7</span><span>6</span><span>5</span></span>"
+     ],
+     "a": 0,
+     "e": "For a 2 × 2 matrix, swap the diagonal entries and change the signs of the other two: <b><span class='mx m2'><span>−6</span><span>−7</span><span>−6</span><span>−5</span></span></b>."
+    },
+    {
+     "q": "A is a square matrix of order 2 with |A| = 4. Find |−2A|.",
+     "c": [
+      "−32",
+      "16",
+      "−8",
+      "2"
+     ],
+     "a": 1,
+     "e": "Each of the 2 rows is multiplied by −2, so |−2A| = (−2)<sup>2</sup> × 4 = <b>16</b>."
+    },
+    {
+     "q": "Find <i>A</i><sup>−1</sup> if <i>A</i> = <span class='mx m2'><span>4</span><span>4</span><span>−4</span><span>−3</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−3</span><span>−4</span><span>4</span><span>4</span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></span><span>−1</span><span>1</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>−1</span><span>1</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></span><span>1</span><span>−1</span><span>1</span></span>"
+     ],
+     "a": 1,
+     "e": "det(<i>A</i>) = 4. Swap <i>a</i> and <i>d</i>, change the signs of <i>b</i> and <i>c</i>, then divide by 4: <b><span class='mx m2'><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></span><span>−1</span><span>1</span><span>1</span></span></b>."
+    },
+    {
+     "q": "A is a square matrix of order 3 with |A| = 3. Find |−2A|.",
+     "c": [
+      "48",
+      "1",
+      "−24",
+      "−6"
+     ],
+     "a": 2,
+     "e": "Each of the 3 rows is multiplied by −2, so |−2A| = (−2)<sup>3</sup> × 3 = <b>−24</b>."
+    },
+    {
+     "q": "Does <i>A</i> = <span class='mx m2'><span>5</span><span>3</span><span>15</span><span>9</span></span> have an inverse?",
+     "c": [
+      "Yes, because det(<i>A</i>) = 0",
+      "No, because det(<i>A</i>) = 0",
+      "Yes, every square matrix has an inverse",
+      "No, because no entry is 0"
+     ],
+     "a": 1,
+     "e": "A square matrix has an inverse exactly when its determinant is not 0. det(<i>A</i>) = 0. <b>No, because det(<i>A</i>) = 0</b>."
+    },
+    {
+     "q": "|A| = −6 for a square matrix A. Find |A′|.",
+     "c": [
+      "36",
+      "−6",
+      "6",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "A matrix and its transpose have the same determinant: <b>−6</b>."
+    },
+    {
+     "q": "A is invertible with |A| = −5. Find |A<sup>−1</sup>|.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "−5",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "5"
+     ],
+     "a": 2,
+     "e": "|A<sup>−1</sup>| = 1 ÷ |A| = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Find <i>A</i><sup>−1</sup> if <i>A</i> = <span class='mx m2'><span>2</span><span>−2</span><span>2</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>2</span><span>−2</span><span>2</span></span>",
+      "<span class='mx m2'><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>0</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>"
+     ],
+     "a": 3,
+     "e": "det(<i>A</i>) = 4. Swap <i>a</i> and <i>d</i>, change the signs of <i>b</i> and <i>c</i>, then divide by 4: <b><span class='mx m2'><span>0</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span></b>."
+    },
+    {
+     "q": "Find adj A if A = <span class='mx m2'><span>5</span><span>3</span><span>−4</span><span>4</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>4</span><span>−3</span><span>4</span><span>5</span></span>",
+      "<span class='mx m2'><span>5</span><span>−3</span><span>4</span><span>4</span></span>",
+      "<span class='mx m2'><span>4</span><span>3</span><span>−4</span><span>5</span></span>",
+      "<span class='mx m2'><span>−4</span><span>3</span><span>−4</span><span>−5</span></span>"
+     ],
+     "a": 0,
+     "e": "For a 2 × 2 matrix, swap the diagonal entries and change the signs of the other two: <b><span class='mx m2'><span>4</span><span>−3</span><span>4</span><span>5</span></span></b>."
+    },
+    {
+     "q": "Find adj A if A = <span class='mx m2'><span>2</span><span>−6</span><span>−5</span><span>−2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>2</span><span>6</span><span>5</span><span>−2</span></span>",
+      "<span class='mx m2'><span>2</span><span>−6</span><span>−5</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−2</span><span>−6</span><span>−5</span><span>2</span></span>",
+      "<span class='mx m2'><span>−2</span><span>6</span><span>5</span><span>2</span></span>"
+     ],
+     "a": 3,
+     "e": "For a 2 × 2 matrix, swap the diagonal entries and change the signs of the other two: <b><span class='mx m2'><span>−2</span><span>6</span><span>5</span><span>2</span></span></b>."
+    },
+    {
+     "q": "Find <i>A</i><sup>−1</sup> if <i>A</i> = <span class='mx m2'><span>2</span><span>−1</span><span>2</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>1</span><span>1</span><span>−2</span><span>2</span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span></span>"
+     ],
+     "a": 2,
+     "e": "det(<i>A</i>) = 4. Swap <i>a</i> and <i>d</i>, change the signs of <i>b</i> and <i>c</i>, then divide by 4: <b><span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span></b>."
+    },
+    {
+     "q": "A is a square matrix of order 3 with |A| = 3. Find |3A|.",
+     "c": [
+      "243",
+      "81",
+      "6",
+      "9"
+     ],
+     "a": 1,
+     "e": "Each of the 3 rows is multiplied by 3, so |3A| = (3)<sup>3</sup> × 3 = <b>81</b>."
+    },
+    {
+     "q": "Find adj A if A = <span class='mx m2'><span>7</span><span>2</span><span>−1</span><span>2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−2</span><span>2</span><span>−1</span><span>−7</span></span>",
+      "<span class='mx m2'><span>2</span><span>2</span><span>−1</span><span>7</span></span>",
+      "<span class='mx m2'><span>7</span><span>−2</span><span>1</span><span>2</span></span>",
+      "<span class='mx m2'><span>2</span><span>−2</span><span>1</span><span>7</span></span>"
+     ],
+     "a": 3,
+     "e": "For a 2 × 2 matrix, swap the diagonal entries and change the signs of the other two: <b><span class='mx m2'><span>2</span><span>−2</span><span>1</span><span>7</span></span></b>."
+    },
+    {
+     "q": "A is invertible with |A| = −2. Find |A<sup>−1</sup>|.",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−2",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2"
+     ],
+     "a": 0,
+     "e": "|A<sup>−1</sup>| = 1 ÷ |A| = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Find <i>A</i><sup>−1</sup> if <i>A</i> = <span class='mx m2'><span>0</span><span>2</span><span>−2</span><span>−2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−2</span><span>−2</span><span>2</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span>"
+     ],
+     "a": 2,
+     "e": "det(<i>A</i>) = 4. Swap <i>a</i> and <i>d</i>, change the signs of <i>b</i> and <i>c</i>, then divide by 4: <b><span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span></b>."
+    },
+    {
+     "q": "Find <i>A</i><sup>−1</sup> if <i>A</i> = <span class='mx m2'><span>5</span><span>3</span><span>2</span><span>2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span></span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span></span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span></span></span>",
+      "<span class='mx m2'><span>2</span><span>−3</span><span>−2</span><span>5</span></span>"
+     ],
+     "a": 0,
+     "e": "det(<i>A</i>) = 4. Swap <i>a</i> and <i>d</i>, change the signs of <i>b</i> and <i>c</i>, then divide by 4: <b><span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span></span></span></b>."
+    },
+    {
+     "q": "Find <i>A</i><sup>−1</sup> if <i>A</i> = <span class='mx m2'><span>2</span><span>−3</span><span>−1</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>3</span><span>1</span><span>−2</span></span>",
+      "<span class='mx m2'><span>1</span><span>3</span><span>1</span><span>2</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−3</span><span>−1</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−2</span><span>−3</span><span>−1</span><span>−1</span></span>"
+     ],
+     "a": 2,
+     "e": "det(<i>A</i>) = −1. Swap <i>a</i> and <i>d</i>, change the signs of <i>b</i> and <i>c</i>, then divide by −1: <b><span class='mx m2'><span>−1</span><span>−3</span><span>−1</span><span>−2</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Area and systems of equations",
+   "items": [
+    {
+     "q": "Solve 2<i>x</i> − 3<i>y</i> = 3 and −<i>x</i> + 2<i>y</i> = −1 using an inverse matrix.",
+     "c": [
+      "(3, 1)",
+      "(−3, −1)",
+      "(1, 3)",
+      "(5, 7)"
+     ],
+     "a": 0,
+     "e": "Write <i>A</i><i>X</i> = <i>B</i>, so <i>X</i> = <i>A</i><sup>−1</sup><i>B</i> with <i>A</i><sup>−1</sup> = <span class='mx m2'><span>2</span><span>3</span><span>1</span><span>2</span></span>. Multiply <i>A</i><sup>−1</sup><i>B</i> (in that order): <b>(3, 1)</b>."
+    },
+    {
+     "q": "Solve −<i>x</i> − <i>y</i> = −1 and 3<i>x</i> + 2<i>y</i> = −3 using an inverse matrix.",
+     "c": [
+      "(7, 2)",
+      "(−5, 6)",
+      "(5, −6)",
+      "(6, −5)"
+     ],
+     "a": 1,
+     "e": "Write <i>A</i><i>X</i> = <i>B</i>, so <i>X</i> = <i>A</i><sup>−1</sup><i>B</i> with <i>A</i><sup>−1</sup> = <span class='mx m2'><span>2</span><span>1</span><span>−3</span><span>−1</span></span>. Multiply <i>A</i><sup>−1</sup><i>B</i> (in that order): <b>(−5, 6)</b>."
+    },
+    {
+     "q": "A is a square matrix of order 2 with |A| = 6. What is A(adj A)?",
+     "c": [
+      "36I",
+      "I",
+      "6I",
+      "adj A"
+     ],
+     "a": 2,
+     "e": "A(adj A) = (adj A)A = |A| I = <b>6 I</b>."
+    },
+    {
+     "q": "A parallelogram has sides given by the vectors ⟨7, 2⟩ and ⟨−3, 5⟩. What is its area?",
+     "c": [
+      "20.5 square units",
+      "11 square units",
+      "41 square units",
+      "29 square units"
+     ],
+     "a": 2,
+     "e": "The area is |det| = |(7)(5) − (2)(−3)| = <b>41 square units</b>."
+    },
+    {
+     "q": "Which matrix equation represents the system −<i>x</i> − <i>y</i> = −7 and <i>x</i> − 3<i>y</i> = 3?",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>1</span><span>−1</span><span>−3</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>−7</span><span>3</span></span>",
+      "<span class='mx m2'><span><i>x</i></span><span><i>y</i></span></span><span class='mx m2'><span>−1</span><span>−1</span><span>1</span><span>−3</span></span> = <span class='mx m1'><span>−7</span><span>3</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−1</span><span>1</span><span>−3</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>−7</span><span>3</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−1</span><span>1</span><span>−3</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>3</span><span>−7</span></span>"
+     ],
+     "a": 2,
+     "e": "The coefficients go in the rows of the matrix, in the same order as the equations: <b><span class='mx m2'><span>−1</span><span>−1</span><span>1</span><span>−3</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>−7</span><span>3</span></span></b>."
+    },
+    {
+     "q": "Solve 3<i>x</i> − 2<i>y</i> = 16 and 5<i>x</i> − 4<i>y</i> = 30 using an inverse matrix.",
+     "c": [
+      "(−2, 5)",
+      "(2, −5)",
+      "(−5, 2)",
+      "(107, −61)"
+     ],
+     "a": 1,
+     "e": "Write <i>A</i><i>X</i> = <i>B</i>, so <i>X</i> = <i>A</i><sup>−1</sup><i>B</i> with <i>A</i><sup>−1</sup> = <span class='mx m2'><span>2</span><span>−1</span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span></span>. Multiply <i>A</i><sup>−1</sup><i>B</i> (in that order): <b>(2, −5)</b>."
+    },
+    {
+     "q": "A is invertible with |A| = 6. Find |A<sup>−1</sup>|.",
+     "c": [
+      "6",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "−6",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "|A<sup>−1</sup>| = 1 ÷ |A| = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "|A| = −3 for a square matrix A. Find |A′|.",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "9",
+      "3",
+      "−3"
+     ],
+     "a": 3,
+     "e": "A matrix and its transpose have the same determinant: <b>−3</b>."
+    },
+    {
+     "q": "A is a square matrix of order 2 with |A| = −4. Find |3A|.",
+     "c": [
+      "−12",
+      "−36",
+      "−108",
+      "−1"
+     ],
+     "a": 1,
+     "e": "Each of the 2 rows is multiplied by 3, so |3A| = (3)<sup>2</sup> × −4 = <b>−36</b>."
+    },
+    {
+     "q": "A parallelogram has sides given by the vectors ⟨6, −2⟩ and ⟨−2, 1⟩. What is its area?",
+     "c": [
+      "10 square units",
+      "2 square units",
+      "1 square units",
+      "14 square units"
+     ],
+     "a": 1,
+     "e": "The area is |det| = |(6)(1) − (−2)(−2)| = <b>2 square units</b>."
+    },
+    {
+     "q": "Solve <i>x</i> + 2<i>y</i> = 3 and −2<i>x</i> − 2<i>y</i> = −2 using an inverse matrix.",
+     "c": [
+      "(−1, 2)",
+      "(1, −2)",
+      "(2, −1)",
+      "(−5, −4)"
+     ],
+     "a": 0,
+     "e": "Write <i>A</i><i>X</i> = <i>B</i>, so <i>X</i> = <i>A</i><sup>−1</sup><i>B</i> with <i>A</i><sup>−1</sup> = <span class='mx m2'><span>−1</span><span>−1</span><span>1</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>. Multiply <i>A</i><sup>−1</sup><i>B</i> (in that order): <b>(−1, 2)</b>."
+    },
+    {
+     "q": "Use a determinant to find the area of the triangle with vertices (−1, 0), (−3, −2) and (−5, 3).",
+     "c": [
+      "14 square units",
+      "9 square units",
+      "7 square units",
+      "3.5 square units"
+     ],
+     "a": 2,
+     "e": "Area = ½ |det| of the matrix with rows (<i>x</i>, <i>y</i>, 1). The determinant is −14, so the area is ½ × 14 = <b>7 square units</b>."
+    },
+    {
+     "q": "Use a determinant to find the area of the triangle with vertices (0, −2), (−5, 4) and (2, −5).",
+     "c": [
+      "3.5 square units",
+      "0.75 square units",
+      "3 square units",
+      "1.5 square units"
+     ],
+     "a": 3,
+     "e": "Area = ½ |det| of the matrix with rows (<i>x</i>, <i>y</i>, 1). The determinant is 3, so the area is ½ × 3 = <b>1.5 square units</b>."
+    },
+    {
+     "q": "Solve −2<i>x</i> − <i>y</i> = 13 and −3<i>x</i> − 2<i>y</i> = 22 using an inverse matrix.",
+     "c": [
+      "(−4, −5)",
+      "(4, 5)",
+      "(−5, −4)",
+      "(40, −31)"
+     ],
+     "a": 0,
+     "e": "Write <i>A</i><i>X</i> = <i>B</i>, so <i>X</i> = <i>A</i><sup>−1</sup><i>B</i> with <i>A</i><sup>−1</sup> = <span class='mx m2'><span>−2</span><span>1</span><span>3</span><span>−2</span></span>. Multiply <i>A</i><sup>−1</sup><i>B</i> (in that order): <b>(−4, −5)</b>."
+    },
+    {
+     "q": "A is a square matrix of order 2 with |A| = 5. Find |2A|.",
+     "c": [
+      "10",
+      "40",
+      "7",
+      "20"
+     ],
+     "a": 3,
+     "e": "Each of the 2 rows is multiplied by 2, so |2A| = (2)<sup>2</sup> × 5 = <b>20</b>."
+    },
+    {
+     "q": "Use a determinant to find the area of the triangle with vertices (4, 0), (−4, 2) and (2, 2).",
+     "c": [
+      "3 square units",
+      "12 square units",
+      "6 square units",
+      "8 square units"
+     ],
+     "a": 2,
+     "e": "Area = ½ |det| of the matrix with rows (<i>x</i>, <i>y</i>, 1). The determinant is −12, so the area is ½ × 12 = <b>6 square units</b>."
+    },
+    {
+     "q": "A is a square matrix of order 3 with |A| = −2. Find |3A|.",
+     "c": [
+      "−162",
+      "−54",
+      "−6",
+      "1"
+     ],
+     "a": 1,
+     "e": "Each of the 3 rows is multiplied by 3, so |3A| = (3)<sup>3</sup> × −2 = <b>−54</b>."
+    },
+    {
+     "q": "Which matrix equation represents the system −<i>x</i> + 6<i>y</i> = −17 and −<i>x</i> + 2<i>y</i> = −5?",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>6</span><span>−1</span><span>2</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>−5</span><span>−17</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−1</span><span>6</span><span>2</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>−17</span><span>−5</span></span>",
+      "<span class='mx m2'><span><i>x</i></span><span><i>y</i></span></span><span class='mx m2'><span>−1</span><span>6</span><span>−1</span><span>2</span></span> = <span class='mx m1'><span>−17</span><span>−5</span></span>",
+      "<span class='mx m2'><span>−1</span><span>6</span><span>−1</span><span>2</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>−17</span><span>−5</span></span>"
+     ],
+     "a": 3,
+     "e": "The coefficients go in the rows of the matrix, in the same order as the equations: <b><span class='mx m2'><span>−1</span><span>6</span><span>−1</span><span>2</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>−17</span><span>−5</span></span></b>."
+    },
+    {
+     "q": "A parallelogram has sides given by the vectors ⟨3, 0⟩ and ⟨−3, 5⟩. What is its area?",
+     "c": [
+      "15 square units",
+      "9 square units",
+      "17 square units",
+      "7.5 square units"
+     ],
+     "a": 0,
+     "e": "The area is |det| = |(3)(5) − (0)(−3)| = <b>15 square units</b>."
+    },
+    {
+     "q": "Which matrix equation represents the system −3<i>x</i> − 4<i>y</i> = 17 and 5<i>x</i> + 6<i>y</i> = −25?",
+     "c": [
+      "<span class='mx m2'><span>−3</span><span>−4</span><span>5</span><span>6</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>17</span><span>−25</span></span>",
+      "<span class='mx m2'><span><i>x</i></span><span><i>y</i></span></span><span class='mx m2'><span>−3</span><span>−4</span><span>5</span><span>6</span></span> = <span class='mx m1'><span>17</span><span>−25</span></span>",
+      "<span class='mx m2'><span>−3</span><span>5</span><span>−4</span><span>6</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>17</span><span>−25</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−4</span><span>5</span><span>6</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>−25</span><span>17</span></span>"
+     ],
+     "a": 0,
+     "e": "The coefficients go in the rows of the matrix, in the same order as the equations: <b><span class='mx m2'><span>−3</span><span>−4</span><span>5</span><span>6</span></span><span class='mx m1'><span><i>x</i></span><span><i>y</i></span></span> = <span class='mx m1'><span>17</span><span>−25</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 4,
+ "updated": "2026-11-22",
+ "country": "in",
+ "subject": "maths",
+ "grade": "class-12"
+}

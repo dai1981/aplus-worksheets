@@ -279,6 +279,14 @@ function topic_defs($country = null) {
         $d['measurement']['out'] = substr($d['measurement']['out'], 0, -1) . '|^symmetrical-designs$|^sharing-and-measuring$/';
         $d['division']['out'] = substr($d['division']['out'], 0, -1) . '|^sharing-and-measuring$/';
         $d['algebra']['out'] = substr($d['algebra']['out'], 0, -1) . '|^shapes-and-patterns$/';
+        // Classes 11-12: calculus covers integrals and differential equations too; lines and 3D geometry are coordinate geometry
+        $d['calculus']['name'] = 'Calculus';
+        $d['calculus']['blurb'] = 'Limits and derivatives, continuity and differentiability, applications of derivatives, integrals, areas under curves and differential equations.';
+        $d['calculus']['in'] = substr($d['calculus']['in'], 0, -1) . '|^limits-and-derivatives$|^continuity-and-differentiability$|^application-of-derivatives$|^integrals$|^application-of-integrals$|^differential-equations$/';
+        $d['vectors-and-matrices']['in'] = substr($d['vectors-and-matrices']['in'], 0, -1) . '|^determinants$|^three-dimensional-geometry$/';
+        $d['coordinates-and-position']['in'] = substr($d['coordinates-and-position']['in'], 0, -1) . '|^straight-lines$|three-dimensional-geometry$/';
+        $d['algebra']['in'] = substr($d['algebra']['in'], 0, -1) . '|^linear-programming$/';
+        $d['algebra']['out'] = substr($d['algebra']['out'], 0, -1) . '|^vector-algebra$|^differential-equations$|^straight-lines$/';
     }
     return $d;
 }

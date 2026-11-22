@@ -1,0 +1,1157 @@
+{
+ "slug": "application-of-derivatives",
+ "title": "Application of Derivatives: Rates, Increasing Functions, Maxima and Minima",
+ "seo_title": "Application of Derivatives Class 12 Worksheet with Answers (NCERT Chapter 6)",
+ "short_title": "application of derivatives",
+ "domain": "Calculus",
+ "standard_code": "Class 12, Chapter 6: Application of Derivatives",
+ "standard_url": "https://www.cbseacademic.nic.in/web_material/CurriculumMain26/SrSec/Maths_SrSec_2025-26.pdf",
+ "standard_text": "Applications of derivatives: rate of change of quantities, increasing/decreasing functions, maxima and minima (first derivative test motivated geometrically and second derivative test given as a provable tool); simple problems that illustrate basic principles and understanding of the subject as well as real life situations (summary of the CBSE syllabus)",
+ "meta_desc": "Class 12 Application of Derivatives worksheet (NCERT Chapter 6): rate of change, related rates, increasing and decreasing functions, local and absolute maxima and minima and optimisation problems. 100 questions with answers.",
+ "key_big": "f′ &gt; 0: increasing; f′ &lt; 0: decreasing; f′ = 0: a critical point.",
+ "key_sub": "Second derivative test: f″ &lt; 0 gives a maximum, f″ &gt; 0 a minimum.",
+ "body_html": "<h2>How it works</h2><ul><li>Rate of change: dA/dr, dV/dt and so on. Related rates use the chain rule: dA/dt = (dA/dr)(dr/dt).</li><li>f is <b>increasing</b> where f′(x) &gt; 0 and <b>decreasing</b> where f′(x) &lt; 0.</li><li>At a critical point (f′ = 0): f″ &lt; 0 gives a local maximum, f″ &gt; 0 a local minimum.</li><li>On a closed interval [a, b], the absolute maximum and minimum are among f at the critical points and at a and b.</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>Find the local maximum of f(x) = x³ − 3x.</p><p class='sn-ex-s'>f′(x) = 3x² − 3 = 0 at x = ±1</p><p class='sn-ex-s'>f″(−1) = −6 &lt; 0</p><p class='sn-ex-a'>Answer: f(−1) = 2</p></div><h2>Common mistakes</h2><ul><li>Forgetting to multiply by dr/dt in related rates.</li><li>Giving the x-value when the question asks for the maximum value.</li><li>Checking only the critical points on a closed interval.</li></ul>",
+ "faq": [
+  {
+   "q": "Can a local maximum be smaller than a local minimum?",
+   "a": "Yes. 'Local' only compares nearby values."
+  },
+  {
+   "q": "What if f″ = 0 at a critical point?",
+   "a": "The second derivative test fails; use the first derivative test."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Rate of change",
+   "items": [
+    {
+     "q": "Find the rate of change of the area of a circle with respect to its radius r when r = 14 cm.",
+     "c": [
+      "28π cm²/cm",
+      "14π cm²/cm",
+      "196π cm²/cm",
+      "28 cm²/cm"
+     ],
+     "a": 0,
+     "e": "A = πr², so dA/dr = 2πr = <b>28π cm²/cm</b>."
+    },
+    {
+     "q": "Find the rate of change of the area of a circle with respect to its radius r when r = 5 cm.",
+     "c": [
+      "25π cm²/cm",
+      "10 cm²/cm",
+      "5π cm²/cm",
+      "10π cm²/cm"
+     ],
+     "a": 3,
+     "e": "A = πr², so dA/dr = 2πr = <b>10π cm²/cm</b>."
+    },
+    {
+     "q": "The total revenue from selling <i>x</i> units is R(<i>x</i>) = 3<i>x</i>² + 19<i>x</i> + 34 rupees. Find the marginal revenue when <i>x</i> = 5.",
+     "c": [
+      "₹34",
+      "₹49",
+      "₹30",
+      "₹204"
+     ],
+     "a": 1,
+     "e": "Marginal revenue = dR/d<i>x</i> = 6<i>x</i> + 19; at <i>x</i> = 5 it is <b>₹49</b>."
+    },
+    {
+     "q": "The radius of a circle is increasing at 1.5 cm/s. How fast is its area increasing when the radius is 4 cm?",
+     "c": [
+      "12π cm²/s",
+      "8π cm²/s",
+      "6π cm²/s",
+      "24π cm²/s"
+     ],
+     "a": 0,
+     "e": "dA/dt = 2πr dr/dt = 2π × 4 × 1.5 = <b>12π cm²/s</b>."
+    },
+    {
+     "q": "Find the rate of change of the area of a circle with respect to its radius r when r = 7 cm.",
+     "c": [
+      "14π cm²/cm",
+      "14 cm²/cm",
+      "49π cm²/cm",
+      "7π cm²/cm"
+     ],
+     "a": 0,
+     "e": "A = πr², so dA/dr = 2πr = <b>14π cm²/cm</b>."
+    },
+    {
+     "q": "Find the rate of change of the volume of a sphere with respect to its radius when r = 4 cm.",
+     "c": [
+      "32π cm³/cm",
+      "16π cm³/cm",
+      "64π cm³/cm",
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>3</span></span>π cm³/cm"
+     ],
+     "a": 2,
+     "e": "V = (4/3)πr³, so dV/dr = 4πr² = <b>64π cm³/cm</b>."
+    },
+    {
+     "q": "Find the rate of change of the area of a circle with respect to its radius r when r = 6 cm.",
+     "c": [
+      "6π cm²/cm",
+      "12 cm²/cm",
+      "12π cm²/cm",
+      "36π cm²/cm"
+     ],
+     "a": 2,
+     "e": "A = πr², so dA/dr = 2πr = <b>12π cm²/cm</b>."
+    },
+    {
+     "q": "Find the rate of change of the area of a circle with respect to its radius r when r = 8 cm.",
+     "c": [
+      "64π cm²/cm",
+      "16 cm²/cm",
+      "8π cm²/cm",
+      "16π cm²/cm"
+     ],
+     "a": 3,
+     "e": "A = πr², so dA/dr = 2πr = <b>16π cm²/cm</b>."
+    },
+    {
+     "q": "The radius of a circle is increasing at 3 cm/s. How fast is its area increasing when the radius is 5 cm?",
+     "c": [
+      "30π cm²/s",
+      "15π cm²/s",
+      "75π cm²/s",
+      "10π cm²/s"
+     ],
+     "a": 0,
+     "e": "dA/dt = 2πr dr/dt = 2π × 5 × 3 = <b>30π cm²/s</b>."
+    },
+    {
+     "q": "The radius of a circle is increasing at 0.5 cm/s. How fast is its area increasing when the radius is 8 cm?",
+     "c": [
+      "4π cm²/s",
+      "32π cm²/s",
+      "8π cm²/s",
+      "16π cm²/s"
+     ],
+     "a": 2,
+     "e": "dA/dt = 2πr dr/dt = 2π × 8 × 0.5 = <b>8π cm²/s</b>."
+    },
+    {
+     "q": "The radius of a circle is increasing at 3 cm/s. How fast is its area increasing when the radius is 6 cm?",
+     "c": [
+      "108π cm²/s",
+      "36π cm²/s",
+      "12π cm²/s",
+      "18π cm²/s"
+     ],
+     "a": 1,
+     "e": "dA/dt = 2πr dr/dt = 2π × 6 × 3 = <b>36π cm²/s</b>."
+    },
+    {
+     "q": "The total revenue from selling <i>x</i> units is R(<i>x</i>) = 5<i>x</i>² + 10<i>x</i> + 16 rupees. Find the marginal revenue when <i>x</i> = 8.",
+     "c": [
+      "₹80",
+      "₹90",
+      "₹50",
+      "₹416"
+     ],
+     "a": 1,
+     "e": "Marginal revenue = dR/d<i>x</i> = 10<i>x</i> + 10; at <i>x</i> = 8 it is <b>₹90</b>."
+    },
+    {
+     "q": "The edge of a cube is increasing at 5 cm/s. How fast is the volume increasing when the edge is 8 cm?",
+     "c": [
+      "192 cm³/s",
+      "2,560 cm³/s",
+      "120 cm³/s",
+      "960 cm³/s"
+     ],
+     "a": 3,
+     "e": "V = x³, so dV/dt = 3x² dx/dt = 3 × 8² × 5 = <b>960 cm³/s</b>."
+    },
+    {
+     "q": "Find the rate of change of the area of a circle with respect to its radius r when r = 10 cm.",
+     "c": [
+      "20 cm²/cm",
+      "100π cm²/cm",
+      "20π cm²/cm",
+      "10π cm²/cm"
+     ],
+     "a": 2,
+     "e": "A = πr², so dA/dr = 2πr = <b>20π cm²/cm</b>."
+    },
+    {
+     "q": "The total revenue from selling <i>x</i> units is R(<i>x</i>) = <i>x</i>² + 2<i>x</i> + 35 rupees. Find the marginal revenue when <i>x</i> = 11.",
+     "c": [
+      "₹24",
+      "₹22",
+      "₹13",
+      "₹178"
+     ],
+     "a": 0,
+     "e": "Marginal revenue = dR/d<i>x</i> = 2<i>x</i> + 2; at <i>x</i> = 11 it is <b>₹24</b>."
+    },
+    {
+     "q": "The total revenue from selling <i>x</i> units is R(<i>x</i>) = 5<i>x</i>² + 17<i>x</i> + 10 rupees. Find the marginal revenue when <i>x</i> = 8.",
+     "c": [
+      "₹466",
+      "₹57",
+      "₹97",
+      "₹80"
+     ],
+     "a": 2,
+     "e": "Marginal revenue = dR/d<i>x</i> = 10<i>x</i> + 17; at <i>x</i> = 8 it is <b>₹97</b>."
+    },
+    {
+     "q": "The total revenue from selling <i>x</i> units is R(<i>x</i>) = <i>x</i>² + 6<i>x</i> + 44 rupees. Find the marginal revenue when <i>x</i> = 10.",
+     "c": [
+      "₹20",
+      "₹16",
+      "₹204",
+      "₹26"
+     ],
+     "a": 3,
+     "e": "Marginal revenue = dR/d<i>x</i> = 2<i>x</i> + 6; at <i>x</i> = 10 it is <b>₹26</b>."
+    },
+    {
+     "q": "Find the rate of change of the volume of a sphere with respect to its radius when r = 6 cm.",
+     "c": [
+      "48π cm³/cm",
+      "288π cm³/cm",
+      "36π cm³/cm",
+      "144π cm³/cm"
+     ],
+     "a": 3,
+     "e": "V = (4/3)πr³, so dV/dr = 4πr² = <b>144π cm³/cm</b>."
+    },
+    {
+     "q": "Find the rate of change of the volume of a sphere with respect to its radius when r = 5 cm.",
+     "c": [
+      "25π cm³/cm",
+      "100π cm³/cm",
+      "<span class='fr'><span class='fn'>500</span><span class='fd'>3</span></span>π cm³/cm",
+      "40π cm³/cm"
+     ],
+     "a": 1,
+     "e": "V = (4/3)πr³, so dV/dr = 4πr² = <b>100π cm³/cm</b>."
+    },
+    {
+     "q": "Find the rate of change of the area of a circle with respect to its radius r when r = 4 cm.",
+     "c": [
+      "4π cm²/cm",
+      "8π cm²/cm",
+      "8 cm²/cm",
+      "16π cm²/cm"
+     ],
+     "a": 1,
+     "e": "A = πr², so dA/dr = 2πr = <b>8π cm²/cm</b>."
+    }
+   ]
+  },
+  {
+   "title": "Increasing and decreasing functions",
+   "items": [
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = 2<i>x</i>³ − 6<i>x</i> − 4 is increasing.",
+     "c": [
+      "(−∞, −1) and (1, ∞)",
+      "(−∞, −1)",
+      "(1, ∞)",
+      "(−1, 1)"
+     ],
+     "a": 0,
+     "e": "f′(<i>x</i>) = 6(<i>x</i> + 1)(<i>x</i> − 1). f′ &gt; 0 on <b>(−∞, −1) and (1, ∞)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = −<i>x</i>³ − 6<i>x</i>² + 15<i>x</i> + 3 is increasing.",
+     "c": [
+      "(−5, 1)",
+      "(−∞, −5) and (1, ∞)",
+      "(1, ∞)",
+      "(−∞, −5)"
+     ],
+     "a": 0,
+     "e": "f′(<i>x</i>) = −3(<i>x</i> + 5)(<i>x</i> − 1). f′ &gt; 0 on <b>(−5, 1)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = <i>x</i>³ − 3<i>x</i> + 1 is increasing.",
+     "c": [
+      "(−1, 1)",
+      "(−∞, −1) and (1, ∞)",
+      "(1, ∞)",
+      "(−∞, −1)"
+     ],
+     "a": 1,
+     "e": "f′(<i>x</i>) = 3(<i>x</i> + 1)(<i>x</i> − 1). f′ &gt; 0 on <b>(−∞, −1) and (1, ∞)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = −<i>x</i>³ + 9<i>x</i>² − 24<i>x</i> − 4 is decreasing.",
+     "c": [
+      "(−∞, 2) and (4, ∞)",
+      "(4, ∞)",
+      "(2, 4)",
+      "(−∞, 2)"
+     ],
+     "a": 0,
+     "e": "f′(<i>x</i>) = −3(<i>x</i> − 2)(<i>x</i> − 4). f′ &lt; 0 on <b>(−∞, 2) and (4, ∞)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = <i>x</i>³ − 27<i>x</i> − 1 is decreasing.",
+     "c": [
+      "(−∞, −3)",
+      "(−∞, −3) and (3, ∞)",
+      "(−3, 3)",
+      "(3, ∞)"
+     ],
+     "a": 2,
+     "e": "f′(<i>x</i>) = 3(<i>x</i> + 3)(<i>x</i> − 3). f′ &lt; 0 on <b>(−3, 3)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = −<i>x</i>³ − 3<i>x</i>² − 1 is decreasing.",
+     "c": [
+      "(−∞, −2) and (0, ∞)",
+      "(−2, 0)",
+      "(−∞, −2)",
+      "(0, ∞)"
+     ],
+     "a": 0,
+     "e": "f′(<i>x</i>) = −3(<i>x</i> + 2)(<i>x</i> − 0). f′ &lt; 0 on <b>(−∞, −2) and (0, ∞)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = 2<i>x</i>³ − 6<i>x</i>² − 18<i>x</i> − 6 is decreasing.",
+     "c": [
+      "(3, ∞)",
+      "(−1, 3)",
+      "(−∞, −1)",
+      "(−∞, −1) and (3, ∞)"
+     ],
+     "a": 1,
+     "e": "f′(<i>x</i>) = 6(<i>x</i> + 1)(<i>x</i> − 3). f′ &lt; 0 on <b>(−1, 3)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = −<i>x</i>³ + 48<i>x</i> + 1 is decreasing.",
+     "c": [
+      "(−∞, −4)",
+      "(−4, 4)",
+      "(−∞, −4) and (4, ∞)",
+      "(4, ∞)"
+     ],
+     "a": 2,
+     "e": "f′(<i>x</i>) = −3(<i>x</i> + 4)(<i>x</i> − 4). f′ &lt; 0 on <b>(−∞, −4) and (4, ∞)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = −<i>x</i>³ + 3<i>x</i>² + 45<i>x</i> + 3 is decreasing.",
+     "c": [
+      "(−3, 5)",
+      "(−∞, −3)",
+      "(5, ∞)",
+      "(−∞, −3) and (5, ∞)"
+     ],
+     "a": 3,
+     "e": "f′(<i>x</i>) = −3(<i>x</i> + 3)(<i>x</i> − 5). f′ &lt; 0 on <b>(−∞, −3) and (5, ∞)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = −<i>x</i>³ + 3<i>x</i> − 1 is increasing.",
+     "c": [
+      "(−∞, −1) and (1, ∞)",
+      "(−1, 1)",
+      "(−∞, −1)",
+      "(1, ∞)"
+     ],
+     "a": 1,
+     "e": "f′(<i>x</i>) = −3(<i>x</i> + 1)(<i>x</i> − 1). f′ &gt; 0 on <b>(−1, 1)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = −<i>x</i>³ + 3<i>x</i>² − 1 is decreasing.",
+     "c": [
+      "(−∞, 0)",
+      "(2, ∞)",
+      "(−∞, 0) and (2, ∞)",
+      "(0, 2)"
+     ],
+     "a": 2,
+     "e": "f′(<i>x</i>) = −3(<i>x</i> − 0)(<i>x</i> − 2). f′ &lt; 0 on <b>(−∞, 0) and (2, ∞)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = 2<i>x</i>³ − 12<i>x</i>² + 18<i>x</i> + 6 is decreasing.",
+     "c": [
+      "(−∞, 1) and (3, ∞)",
+      "(3, ∞)",
+      "(−∞, 1)",
+      "(1, 3)"
+     ],
+     "a": 3,
+     "e": "f′(<i>x</i>) = 6(<i>x</i> − 1)(<i>x</i> − 3). f′ &lt; 0 on <b>(1, 3)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = −<i>x</i>³ + 3<i>x</i>² + 45<i>x</i> + 2 is increasing.",
+     "c": [
+      "(−∞, −3)",
+      "(5, ∞)",
+      "(−3, 5)",
+      "(−∞, −3) and (5, ∞)"
+     ],
+     "a": 2,
+     "e": "f′(<i>x</i>) = −3(<i>x</i> + 3)(<i>x</i> − 5). f′ &gt; 0 on <b>(−3, 5)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = <i>x</i>³ − 3<i>x</i>² − 24<i>x</i> + 8 is decreasing.",
+     "c": [
+      "(−2, 4)",
+      "(4, ∞)",
+      "(−∞, −2)",
+      "(−∞, −2) and (4, ∞)"
+     ],
+     "a": 0,
+     "e": "f′(<i>x</i>) = 3(<i>x</i> + 2)(<i>x</i> − 4). f′ &lt; 0 on <b>(−2, 4)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = <i>x</i>³ + 12<i>x</i>² + 45<i>x</i> + 4 is increasing.",
+     "c": [
+      "(−∞, −5)",
+      "(−3, ∞)",
+      "(−∞, −5) and (−3, ∞)",
+      "(−5, −3)"
+     ],
+     "a": 2,
+     "e": "f′(<i>x</i>) = 3(<i>x</i> + 5)(<i>x</i> + 3). f′ &gt; 0 on <b>(−∞, −5) and (−3, ∞)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = <i>x</i>³ − 12<i>x</i> + 2 is increasing.",
+     "c": [
+      "(2, ∞)",
+      "(−2, 2)",
+      "(−∞, −2)",
+      "(−∞, −2) and (2, ∞)"
+     ],
+     "a": 3,
+     "e": "f′(<i>x</i>) = 3(<i>x</i> + 2)(<i>x</i> − 2). f′ &gt; 0 on <b>(−∞, −2) and (2, ∞)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = <i>x</i>³ − 3<i>x</i>² + 8 is decreasing.",
+     "c": [
+      "(−∞, 0)",
+      "(0, 2)",
+      "(−∞, 0) and (2, ∞)",
+      "(2, ∞)"
+     ],
+     "a": 1,
+     "e": "f′(<i>x</i>) = 3(<i>x</i> − 0)(<i>x</i> − 2). f′ &lt; 0 on <b>(0, 2)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = −<i>x</i>³ − 12<i>x</i>² − 45<i>x</i> − 3 is decreasing.",
+     "c": [
+      "(−3, ∞)",
+      "(−∞, −5) and (−3, ∞)",
+      "(−∞, −5)",
+      "(−5, −3)"
+     ],
+     "a": 1,
+     "e": "f′(<i>x</i>) = −3(<i>x</i> + 5)(<i>x</i> + 3). f′ &lt; 0 on <b>(−∞, −5) and (−3, ∞)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = −<i>x</i>³ − 3<i>x</i>² − 7 is increasing.",
+     "c": [
+      "(−∞, −2)",
+      "(0, ∞)",
+      "(−∞, −2) and (0, ∞)",
+      "(−2, 0)"
+     ],
+     "a": 3,
+     "e": "f′(<i>x</i>) = −3(<i>x</i> + 2)(<i>x</i> − 0). f′ &gt; 0 on <b>(−2, 0)</b>."
+    },
+    {
+     "q": "Find the intervals in which f(<i>x</i>) = −<i>x</i>³ − 6<i>x</i>² + 15<i>x</i> − 4 is decreasing.",
+     "c": [
+      "(−∞, −5)",
+      "(−5, 1)",
+      "(1, ∞)",
+      "(−∞, −5) and (1, ∞)"
+     ],
+     "a": 3,
+     "e": "f′(<i>x</i>) = −3(<i>x</i> + 5)(<i>x</i> − 1). f′ &lt; 0 on <b>(−∞, −5) and (1, ∞)</b>."
+    }
+   ]
+  },
+  {
+   "title": "Local maxima and minima",
+   "items": [
+    {
+     "q": "Find the local minimum value of f(<i>x</i>) = 2<i>x</i>³ − 6<i>x</i>² − 48<i>x</i> + 3.",
+     "c": [
+      "4",
+      "59",
+      "−157",
+      "−29"
+     ],
+     "a": 2,
+     "e": "f′(<i>x</i>) = 0 at −2 and 4. f″(4) &gt; 0, so the local minimum is f(4) = <b>−157</b>."
+    },
+    {
+     "q": "Find the local maximum value of f(<i>x</i>) = 2<i>x</i>³ − 12<i>x</i>² + 18<i>x</i> + 8.",
+     "c": [
+      "1",
+      "−24",
+      "16",
+      "8"
+     ],
+     "a": 2,
+     "e": "f′(<i>x</i>) = 0 at <i>x</i> = 1 and <i>x</i> = 3. f″(1) &lt; 0, so the local maximum is f(1) = <b>16</b>."
+    },
+    {
+     "q": "At which point does f(<i>x</i>) = −<i>x</i>³ − 6<i>x</i>² − 3 have a local maximum?",
+     "c": [
+      "<i>x</i> = 0",
+      "<i>x</i> = 1",
+      "<i>x</i> = −3",
+      "<i>x</i> = −4"
+     ],
+     "a": 0,
+     "e": "f′ changes from + to − at <i>x</i> = 0, so f has a local maximum there: <b><i>x</i> = 0</b>."
+    },
+    {
+     "q": "At which point does f(<i>x</i>) = −<i>x</i>³ − 12<i>x</i>² − 45<i>x</i> + 2 have a local maximum?",
+     "c": [
+      "<i>x</i> = −3",
+      "<i>x</i> = 3",
+      "<i>x</i> = −5",
+      "<i>x</i> = 56"
+     ],
+     "a": 0,
+     "e": "f′ changes from + to − at <i>x</i> = −3, so f has a local maximum there: <b><i>x</i> = −3</b>."
+    },
+    {
+     "q": "At which point does f(<i>x</i>) = 2<i>x</i>³ + 6<i>x</i>² − 18<i>x</i> + 9 have a local maximum?",
+     "c": [
+      "<i>x</i> = 1",
+      "<i>x</i> = −3",
+      "<i>x</i> = 63",
+      "<i>x</i> = 3"
+     ],
+     "a": 1,
+     "e": "f′ changes from + to − at <i>x</i> = −3, so f has a local maximum there: <b><i>x</i> = −3</b>."
+    },
+    {
+     "q": "Find the local minimum value of f(<i>x</i>) = 2<i>x</i>³ + 12<i>x</i>² + 4.",
+     "c": [
+      "68",
+      "4",
+      "0",
+      "3"
+     ],
+     "a": 1,
+     "e": "f′(<i>x</i>) = 0 at −4 and 0. f″(0) &gt; 0, so the local minimum is f(0) = <b>4</b>."
+    },
+    {
+     "q": "Find the local maximum value of f(<i>x</i>) = 2<i>x</i>³ + 6<i>x</i>² − 90<i>x</i> − 1.",
+     "c": [
+      "−51",
+      "−5",
+      "−163",
+      "349"
+     ],
+     "a": 3,
+     "e": "f′(<i>x</i>) = 0 at <i>x</i> = −5 and <i>x</i> = 3. f″(−5) &lt; 0, so the local maximum is f(−5) = <b>349</b>."
+    },
+    {
+     "q": "Find the local minimum value of f(<i>x</i>) = <i>x</i>³ − 9<i>x</i>² + 24<i>x</i> + 7.",
+     "c": [
+      "4",
+      "−297",
+      "27",
+      "23"
+     ],
+     "a": 3,
+     "e": "f′(<i>x</i>) = 0 at 2 and 4. f″(4) &gt; 0, so the local minimum is f(4) = <b>23</b>."
+    },
+    {
+     "q": "At which point does f(<i>x</i>) = −<i>x</i>³ + 9<i>x</i>² − 24<i>x</i> + 2 have a local maximum?",
+     "c": [
+      "<i>x</i> = −14",
+      "<i>x</i> = 2",
+      "<i>x</i> = 4",
+      "<i>x</i> = −4"
+     ],
+     "a": 2,
+     "e": "f′ changes from + to − at <i>x</i> = 4, so f has a local maximum there: <b><i>x</i> = 4</b>."
+    },
+    {
+     "q": "Find the local minimum value of f(<i>x</i>) = −<i>x</i>³ + 3<i>x</i>² + 45<i>x</i> − 9.",
+     "c": [
+      "166",
+      "−3",
+      "−90",
+      "126"
+     ],
+     "a": 2,
+     "e": "f′(<i>x</i>) = 0 at −3 and 5. f″(−3) &gt; 0, so the local minimum is f(−3) = <b>−90</b>."
+    },
+    {
+     "q": "Find the local maximum value of f(<i>x</i>) = <i>x</i>³ − 9<i>x</i>² + 24<i>x</i> − 4.",
+     "c": [
+      "16",
+      "−96",
+      "2",
+      "12"
+     ],
+     "a": 0,
+     "e": "f′(<i>x</i>) = 0 at <i>x</i> = 2 and <i>x</i> = 4. f″(2) &lt; 0, so the local maximum is f(2) = <b>16</b>."
+    },
+    {
+     "q": "Find the local minimum value of f(<i>x</i>) = 2<i>x</i>³ + 18<i>x</i>² + 30<i>x</i> + 3.",
+     "c": [
+      "−12",
+      "−11",
+      "53",
+      "−1"
+     ],
+     "a": 1,
+     "e": "f′(<i>x</i>) = 0 at −5 and −1. f″(−1) &gt; 0, so the local minimum is f(−1) = <b>−11</b>."
+    },
+    {
+     "q": "Find the local maximum value of f(<i>x</i>) = <i>x</i>³ + 3<i>x</i>² − 24<i>x</i> − 2.",
+     "c": [
+      "78",
+      "14",
+      "−30",
+      "−4"
+     ],
+     "a": 0,
+     "e": "f′(<i>x</i>) = 0 at <i>x</i> = −4 and <i>x</i> = 2. f″(−4) &lt; 0, so the local maximum is f(−4) = <b>78</b>."
+    },
+    {
+     "q": "Find the local minimum value of f(<i>x</i>) = −<i>x</i>³ + 9<i>x</i>² − 15<i>x</i>.",
+     "c": [
+      "−8",
+      "1",
+      "25",
+      "−7"
+     ],
+     "a": 3,
+     "e": "f′(<i>x</i>) = 0 at 1 and 5. f″(1) &gt; 0, so the local minimum is f(1) = <b>−7</b>."
+    },
+    {
+     "q": "Find the local minimum value of f(<i>x</i>) = −<i>x</i>³ + 48<i>x</i> − 9.",
+     "c": [
+      "−4",
+      "−138",
+      "119",
+      "−137"
+     ],
+     "a": 3,
+     "e": "f′(<i>x</i>) = 0 at −4 and 4. f″(−4) &gt; 0, so the local minimum is f(−4) = <b>−137</b>."
+    },
+    {
+     "q": "At which point does f(<i>x</i>) = 2<i>x</i>³ + 18<i>x</i>² + 48<i>x</i> − 5 have a local maximum?",
+     "c": [
+      "<i>x</i> = −4",
+      "<i>x</i> = −37",
+      "<i>x</i> = 4",
+      "<i>x</i> = −2"
+     ],
+     "a": 0,
+     "e": "f′ changes from + to − at <i>x</i> = −4, so f has a local maximum there: <b><i>x</i> = −4</b>."
+    },
+    {
+     "q": "Find the local maximum value of f(<i>x</i>) = <i>x</i>³ + 3<i>x</i>² − 9<i>x</i> − 2.",
+     "c": [
+      "−7",
+      "25",
+      "26",
+      "−3"
+     ],
+     "a": 1,
+     "e": "f′(<i>x</i>) = 0 at <i>x</i> = −3 and <i>x</i> = 1. f″(−3) &lt; 0, so the local maximum is f(−3) = <b>25</b>."
+    },
+    {
+     "q": "Find the local maximum value of f(<i>x</i>) = 2<i>x</i>³ − 6<i>x</i>² − 48<i>x</i> − 1.",
+     "c": [
+      "−105",
+      "−161",
+      "55",
+      "−2"
+     ],
+     "a": 2,
+     "e": "f′(<i>x</i>) = 0 at <i>x</i> = −2 and <i>x</i> = 4. f″(−2) &lt; 0, so the local maximum is f(−2) = <b>55</b>."
+    },
+    {
+     "q": "Find the local maximum value of f(<i>x</i>) = 2<i>x</i>³ − 6<i>x</i>² + 5.",
+     "c": [
+      "0",
+      "5",
+      "6",
+      "−3"
+     ],
+     "a": 1,
+     "e": "f′(<i>x</i>) = 0 at <i>x</i> = 0 and <i>x</i> = 2. f″(0) &lt; 0, so the local maximum is f(0) = <b>5</b>."
+    },
+    {
+     "q": "Find the local minimum value of f(<i>x</i>) = <i>x</i>³ + 3<i>x</i>² − 45<i>x</i> − 3.",
+     "c": [
+      "3",
+      "132",
+      "172",
+      "−84"
+     ],
+     "a": 3,
+     "e": "f′(<i>x</i>) = 0 at −5 and 3. f″(3) &gt; 0, so the local minimum is f(3) = <b>−84</b>."
+    }
+   ]
+  },
+  {
+   "title": "Absolute maxima and minima",
+   "items": [
+    {
+     "q": "Find the absolute minimum value of f(<i>x</i>) = 2<i>x</i>² − 12<i>x</i> + 26 on [2, 6].",
+     "c": [
+      "26",
+      "2",
+      "8",
+      "10"
+     ],
+     "a": 2,
+     "e": "Compare f at <i>x</i> = 3, 2 and 6: 8, 10, 26. The smallest is <b>8</b>."
+    },
+    {
+     "q": "Find the absolute minimum value of f(<i>x</i>) = <i>x</i>² + 4<i>x</i> + 8 on [−3, 2].",
+     "c": [
+      "5",
+      "4",
+      "20",
+      "−3"
+     ],
+     "a": 1,
+     "e": "Compare f at <i>x</i> = −2, −3 and 2: 4, 5, 20. The smallest is <b>4</b>."
+    },
+    {
+     "q": "Find the absolute maximum value of f(<i>x</i>) = 3<i>x</i>² + 6<i>x</i> + 10 on [−4, 2].",
+     "c": [
+      "35",
+      "2",
+      "7",
+      "34"
+     ],
+     "a": 3,
+     "e": "Check the critical point <i>x</i> = −1 and the end points: f = 7, 34, 34. The largest is <b>34</b>."
+    },
+    {
+     "q": "Find the absolute minimum value of f(<i>x</i>) = 2<i>x</i>² + 8<i>x</i> + 16 on [−4, 1].",
+     "c": [
+      "−4",
+      "8",
+      "26",
+      "16"
+     ],
+     "a": 1,
+     "e": "Compare f at <i>x</i> = −2, −4 and 1: 8, 16, 26. The smallest is <b>8</b>."
+    },
+    {
+     "q": "Find the absolute maximum value of f(<i>x</i>) = 2<i>x</i>² − 8<i>x</i> + 2 on [−1, 5].",
+     "c": [
+      "13",
+      "12",
+      "5",
+      "−6"
+     ],
+     "a": 1,
+     "e": "Check the critical point <i>x</i> = 2 and the end points: f = −6, 12, 12. The largest is <b>12</b>."
+    },
+    {
+     "q": "Find the absolute maximum value of f(<i>x</i>) = <i>x</i>² − 1 on [−3, 2].",
+     "c": [
+      "2",
+      "9",
+      "−1",
+      "8"
+     ],
+     "a": 3,
+     "e": "Check the critical point <i>x</i> = 0 and the end points: f = −1, 8, 3. The largest is <b>8</b>."
+    },
+    {
+     "q": "Find the absolute minimum value of f(<i>x</i>) = <i>x</i>² + 1 on [−2, 4].",
+     "c": [
+      "1",
+      "5",
+      "−2",
+      "17"
+     ],
+     "a": 0,
+     "e": "Compare f at <i>x</i> = 0, −2 and 4: 1, 5, 17. The smallest is <b>1</b>."
+    },
+    {
+     "q": "Find the absolute minimum value of f(<i>x</i>) = 2<i>x</i>² − 4<i>x</i> − 1 on [0, 5].",
+     "c": [
+      "29",
+      "−1",
+      "0",
+      "−3"
+     ],
+     "a": 3,
+     "e": "Compare f at <i>x</i> = 1, 0 and 5: −3, −1, 29. The smallest is <b>−3</b>."
+    },
+    {
+     "q": "Find the absolute minimum value of f(<i>x</i>) = <i>x</i>² − 4<i>x</i> + 1 on [1, 5].",
+     "c": [
+      "−2",
+      "1",
+      "−3",
+      "6"
+     ],
+     "a": 2,
+     "e": "Compare f at <i>x</i> = 2, 1 and 5: −3, −2, 6. The smallest is <b>−3</b>."
+    },
+    {
+     "q": "Find the absolute minimum value of f(<i>x</i>) = <i>x</i>² − 4<i>x</i> − 3 on [0, 6].",
+     "c": [
+      "−7",
+      "−3",
+      "9",
+      "0"
+     ],
+     "a": 0,
+     "e": "Compare f at <i>x</i> = 2, 0 and 6: −7, −3, 9. The smallest is <b>−7</b>."
+    },
+    {
+     "q": "Find the absolute maximum value of f(<i>x</i>) = 2<i>x</i>² + 9 on [−3, 4].",
+     "c": [
+      "41",
+      "42",
+      "9",
+      "4"
+     ],
+     "a": 0,
+     "e": "Check the critical point <i>x</i> = 0 and the end points: f = 9, 27, 41. The largest is <b>41</b>."
+    },
+    {
+     "q": "Find the absolute maximum value of f(<i>x</i>) = <i>x</i>² − 6<i>x</i> + 6 on [2, 7].",
+     "c": [
+      "13",
+      "14",
+      "−3",
+      "7"
+     ],
+     "a": 0,
+     "e": "Check the critical point <i>x</i> = 3 and the end points: f = −3, −2, 13. The largest is <b>13</b>."
+    },
+    {
+     "q": "Find the absolute maximum value of f(<i>x</i>) = <i>x</i>² + 9 on [−2, 4].",
+     "c": [
+      "9",
+      "4",
+      "26",
+      "25"
+     ],
+     "a": 3,
+     "e": "Check the critical point <i>x</i> = 0 and the end points: f = 9, 13, 25. The largest is <b>25</b>."
+    },
+    {
+     "q": "Find the absolute maximum value of f(<i>x</i>) = 3<i>x</i>² + 18<i>x</i> + 34 on [−4, 0].",
+     "c": [
+      "7",
+      "0",
+      "35",
+      "34"
+     ],
+     "a": 3,
+     "e": "Check the critical point <i>x</i> = −3 and the end points: f = 7, 10, 34. The largest is <b>34</b>."
+    },
+    {
+     "q": "Find the absolute minimum value of f(<i>x</i>) = 2<i>x</i>² + 12<i>x</i> + 21 on [−6, 1].",
+     "c": [
+      "3",
+      "−6",
+      "35",
+      "21"
+     ],
+     "a": 0,
+     "e": "Compare f at <i>x</i> = −3, −6 and 1: 3, 21, 35. The smallest is <b>3</b>."
+    },
+    {
+     "q": "Find the absolute maximum value of f(<i>x</i>) = <i>x</i>² − 8 on [−3, 4].",
+     "c": [
+      "−8",
+      "4",
+      "8",
+      "9"
+     ],
+     "a": 2,
+     "e": "Check the critical point <i>x</i> = 0 and the end points: f = −8, 1, 8. The largest is <b>8</b>."
+    },
+    {
+     "q": "Find the absolute minimum value of f(<i>x</i>) = <i>x</i>² − 2<i>x</i> + 3 on [0, 4].",
+     "c": [
+      "11",
+      "2",
+      "3",
+      "0"
+     ],
+     "a": 1,
+     "e": "Compare f at <i>x</i> = 1, 0 and 4: 2, 3, 11. The smallest is <b>2</b>."
+    },
+    {
+     "q": "Find the absolute minimum value of f(<i>x</i>) = 3<i>x</i>² + 12<i>x</i> + 16 on [−3, 1].",
+     "c": [
+      "−3",
+      "4",
+      "31",
+      "7"
+     ],
+     "a": 1,
+     "e": "Compare f at <i>x</i> = −2, −3 and 1: 4, 7, 31. The smallest is <b>4</b>."
+    },
+    {
+     "q": "Find the absolute maximum value of f(<i>x</i>) = <i>x</i>² − 4<i>x</i> − 4 on [1, 6].",
+     "c": [
+      "6",
+      "−8",
+      "8",
+      "9"
+     ],
+     "a": 2,
+     "e": "Check the critical point <i>x</i> = 2 and the end points: f = −8, −7, 8. The largest is <b>8</b>."
+    },
+    {
+     "q": "Find the absolute minimum value of f(<i>x</i>) = 3<i>x</i>² − 6<i>x</i> + 2 on [0, 5].",
+     "c": [
+      "2",
+      "0",
+      "−1",
+      "47"
+     ],
+     "a": 2,
+     "e": "Compare f at <i>x</i> = 1, 0 and 5: −1, 2, 47. The smallest is <b>−1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Optimisation problems",
+   "items": [
+    {
+     "q": "The edge of a cube is increasing at 5 cm/s. How fast is the volume increasing when the edge is 12 cm?",
+     "c": [
+      "432 cm³/s",
+      "2,160 cm³/s",
+      "8,640 cm³/s",
+      "180 cm³/s"
+     ],
+     "a": 1,
+     "e": "V = x³, so dV/dt = 3x² dx/dt = 3 × 12² × 5 = <b>2,160 cm³/s</b>."
+    },
+    {
+     "q": "The total revenue from selling <i>x</i> units is R(<i>x</i>) = 4<i>x</i>² + 16<i>x</i> + 7 rupees. Find the marginal revenue when <i>x</i> = 6.",
+     "c": [
+      "₹40",
+      "₹48",
+      "₹64",
+      "₹247"
+     ],
+     "a": 2,
+     "e": "Marginal revenue = dR/d<i>x</i> = 8<i>x</i> + 16; at <i>x</i> = 6 it is <b>₹64</b>."
+    },
+    {
+     "q": "The edge of a cube is increasing at 2 cm/s. How fast is the volume increasing when the edge is 12 cm?",
+     "c": [
+      "864 cm³/s",
+      "3,456 cm³/s",
+      "432 cm³/s",
+      "72 cm³/s"
+     ],
+     "a": 0,
+     "e": "V = x³, so dV/dt = 3x² dx/dt = 3 × 12² × 2 = <b>864 cm³/s</b>."
+    },
+    {
+     "q": "A rectangle has perimeter 20 cm. What is its largest possible area?",
+     "c": [
+      "100 cm²",
+      "25 cm²",
+      "24 cm²",
+      "5 cm²"
+     ],
+     "a": 1,
+     "e": "Area = <i>x</i>(10 − <i>x</i>); it is greatest when <i>x</i> = 5, a square: <b>25 cm²</b>."
+    },
+    {
+     "q": "Find the minimum value of <i>x</i> + 4/<i>x</i> for <i>x</i> &gt; 0.",
+     "c": [
+      "5",
+      "8",
+      "4",
+      "2"
+     ],
+     "a": 2,
+     "e": "f′ = 1 − 4/<i>x</i>² = 0 at <i>x</i> = 2; f″ &gt; 0, so the minimum is 2 + 2 = <b>4</b>."
+    },
+    {
+     "q": "Equal squares are cut from the corners of a 18 cm square sheet, and the sides are folded up to make an open box. What side of square gives the largest volume?",
+     "c": [
+      "4 cm",
+      "6 cm",
+      "3 cm",
+      "9 cm"
+     ],
+     "a": 2,
+     "e": "V = <i>x</i>(18 − 2<i>x</i>)²; dV/d<i>x</i> = 0 gives <i>x</i> = 3 (the other root 9 gives no box). <b>3 cm</b>, volume 432 cm³."
+    },
+    {
+     "q": "Two positive numbers have sum 16. Find the largest possible value of their product.",
+     "c": [
+      "64",
+      "8",
+      "63",
+      "128"
+     ],
+     "a": 0,
+     "e": "P = <i>x</i>(16 − <i>x</i>); dP/d<i>x</i> = 16 − 2<i>x</i> = 0 gives <i>x</i> = 8, so the maximum product is 8 × 8 = <b>64</b>."
+    },
+    {
+     "q": "Two positive numbers have sum 24. Find the largest possible value of their product.",
+     "c": [
+      "12",
+      "144",
+      "288",
+      "143"
+     ],
+     "a": 1,
+     "e": "P = <i>x</i>(24 − <i>x</i>); dP/d<i>x</i> = 24 − 2<i>x</i> = 0 gives <i>x</i> = 12, so the maximum product is 12 × 12 = <b>144</b>."
+    },
+    {
+     "q": "The edge of a cube is increasing at 4 cm/s. How fast is the volume increasing when the edge is 8 cm?",
+     "c": [
+      "192 cm³/s",
+      "96 cm³/s",
+      "2,048 cm³/s",
+      "768 cm³/s"
+     ],
+     "a": 3,
+     "e": "V = x³, so dV/dt = 3x² dx/dt = 3 × 8² × 4 = <b>768 cm³/s</b>."
+    },
+    {
+     "q": "The radius of a circle is increasing at 0.5 cm/s. How fast is its area increasing when the radius is 7 cm?",
+     "c": [
+      "3.5π cm²/s",
+      "24.5π cm²/s",
+      "14π cm²/s",
+      "7π cm²/s"
+     ],
+     "a": 3,
+     "e": "dA/dt = 2πr dr/dt = 2π × 7 × 0.5 = <b>7π cm²/s</b>."
+    },
+    {
+     "q": "Find the minimum value of <i>x</i> + 9/<i>x</i> for <i>x</i> &gt; 0.",
+     "c": [
+      "18",
+      "10",
+      "6",
+      "3"
+     ],
+     "a": 2,
+     "e": "f′ = 1 − 9/<i>x</i>² = 0 at <i>x</i> = 3; f″ &gt; 0, so the minimum is 3 + 3 = <b>6</b>."
+    },
+    {
+     "q": "Two positive numbers have sum 12. Find the largest possible value of their product.",
+     "c": [
+      "36",
+      "6",
+      "72",
+      "35"
+     ],
+     "a": 0,
+     "e": "P = <i>x</i>(12 − <i>x</i>); dP/d<i>x</i> = 12 − 2<i>x</i> = 0 gives <i>x</i> = 6, so the maximum product is 6 × 6 = <b>36</b>."
+    },
+    {
+     "q": "A farmer has 80 m of fencing to fence three sides of a rectangular field; a wall forms the fourth side. What is the largest area he can enclose?",
+     "c": [
+      "711 m²",
+      "400 m²",
+      "800 m²",
+      "1,600 m²"
+     ],
+     "a": 2,
+     "e": "A = <i>x</i>(80 − 2<i>x</i>); dA/d<i>x</i> = 0 gives <i>x</i> = 20, so A = 20 × 40 = <b>800 m²</b>."
+    },
+    {
+     "q": "A rectangle has perimeter 40 cm. What is its largest possible area?",
+     "c": [
+      "10 cm²",
+      "100 cm²",
+      "99 cm²",
+      "400 cm²"
+     ],
+     "a": 1,
+     "e": "Area = <i>x</i>(20 − <i>x</i>); it is greatest when <i>x</i> = 10, a square: <b>100 cm²</b>."
+    },
+    {
+     "q": "The total revenue from selling <i>x</i> units is R(<i>x</i>) = 3<i>x</i>² + 2<i>x</i> + 31 rupees. Find the marginal revenue when <i>x</i> = 15.",
+     "c": [
+      "₹736",
+      "₹90",
+      "₹47",
+      "₹92"
+     ],
+     "a": 3,
+     "e": "Marginal revenue = dR/d<i>x</i> = 6<i>x</i> + 2; at <i>x</i> = 15 it is <b>₹92</b>."
+    },
+    {
+     "q": "A farmer has 100 m of fencing to fence three sides of a rectangular field; a wall forms the fourth side. What is the largest area he can enclose?",
+     "c": [
+      "1,111 m²",
+      "1,250 m²",
+      "2,500 m²",
+      "625 m²"
+     ],
+     "a": 1,
+     "e": "A = <i>x</i>(100 − 2<i>x</i>); dA/d<i>x</i> = 0 gives <i>x</i> = 25, so A = 25 × 50 = <b>1,250 m²</b>."
+    },
+    {
+     "q": "Find the minimum value of <i>x</i> + 25/<i>x</i> for <i>x</i> &gt; 0.",
+     "c": [
+      "50",
+      "26",
+      "5",
+      "10"
+     ],
+     "a": 3,
+     "e": "f′ = 1 − 25/<i>x</i>² = 0 at <i>x</i> = 5; f″ &gt; 0, so the minimum is 5 + 5 = <b>10</b>."
+    },
+    {
+     "q": "A rectangle has perimeter 36 cm. What is its largest possible area?",
+     "c": [
+      "81 cm²",
+      "9 cm²",
+      "80 cm²",
+      "324 cm²"
+     ],
+     "a": 0,
+     "e": "Area = <i>x</i>(18 − <i>x</i>); it is greatest when <i>x</i> = 9, a square: <b>81 cm²</b>."
+    },
+    {
+     "q": "Equal squares are cut from the corners of a 12 cm square sheet, and the sides are folded up to make an open box. What side of square gives the largest volume?",
+     "c": [
+      "6 cm",
+      "4 cm",
+      "3 cm",
+      "2 cm"
+     ],
+     "a": 3,
+     "e": "V = <i>x</i>(12 − 2<i>x</i>)²; dV/d<i>x</i> = 0 gives <i>x</i> = 2 (the other root 6 gives no box). <b>2 cm</b>, volume 128 cm³."
+    },
+    {
+     "q": "A farmer has 40 m of fencing to fence three sides of a rectangular field; a wall forms the fourth side. What is the largest area he can enclose?",
+     "c": [
+      "200 m²",
+      "177 m²",
+      "400 m²",
+      "100 m²"
+     ],
+     "a": 0,
+     "e": "A = <i>x</i>(40 − 2<i>x</i>); dA/d<i>x</i> = 0 gives <i>x</i> = 10, so A = 10 × 20 = <b>200 m²</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 6,
+ "updated": "2026-11-22",
+ "country": "in",
+ "subject": "maths",
+ "grade": "class-12"
+}

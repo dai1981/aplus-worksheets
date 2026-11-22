@@ -1,0 +1,1157 @@
+{
+ "slug": "permutations-and-combinations",
+ "title": "Permutations and Combinations: ⁿPᵣ, ⁿCᵣ and Counting",
+ "seo_title": "Permutations and Combinations Class 11 Worksheet with Answers (NCERT Chapter 6)",
+ "short_title": "permutations and combinations",
+ "domain": "Algebra",
+ "standard_code": "Class 11, Chapter 6: Permutations and Combinations",
+ "standard_url": "https://www.cbseacademic.nic.in/web_material/CurriculumMain26/SrSec/Maths_SrSec_2025-26.pdf",
+ "standard_text": "Fundamental principle of counting; factorial n (n!); permutations and combinations, derivation of formulae for ⁿPᵣ and ⁿCᵣ and their connections; simple applications (summary of the CBSE syllabus)",
+ "meta_desc": "Class 11 Permutations and Combinations worksheet (NCERT Chapter 6): counting principle, factorials, ⁿPᵣ, ⁿCᵣ, arrangements of letters, digits, committees and teams. 100 questions with answers.",
+ "key_big": "Order matters → permutation; order does not matter → combination.",
+ "key_sub": "ⁿPᵣ = n!/(n − r)!, ⁿCᵣ = n!/(r!(n − r)!).",
+ "body_html": "<h2>How it works</h2><ul><li><b>Counting principle</b>: if one thing can be done in m ways and the next in n ways, both can be done in mn ways.</li><li>n! = n(n − 1)(n − 2)…1, and 0! = 1.</li><li>Arrangements (order matters): <sup>n</sup>P<sub>r</sub> = n! ÷ (n − r)!.</li><li>Selections (order does not matter): <sup>n</sup>C<sub>r</sub> = n! ÷ (r!(n − r)!), and <sup>n</sup>C<sub>r</sub> = <sup>n</sup>C<sub>n−r</sub>.</li><li>Repeated letters: n! ÷ (p! q! …) where a letter appears p times, another q times, and so on.</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>How many arrangements of the letters of ALLAHABAD are there?</p><p class='sn-ex-s'>9 letters: A 4 times, L twice</p><p class='sn-ex-s'>9! ÷ (4! 2!)</p><p class='sn-ex-a'>Answer: 7,560</p></div><h2>Common mistakes</h2><ul><li>Adding the choices instead of multiplying them.</li><li>Using ⁿPᵣ for a committee, where order does not matter.</li><li>Forgetting to divide by the factorials of repeated letters.</li></ul>",
+ "faq": [
+  {
+   "q": "What is 0!?",
+   "a": "0! = 1. It makes the formulas work when r = n."
+  },
+  {
+   "q": "When is ⁿCᵣ = ⁿCₛ?",
+   "a": "When r = s or r + s = n."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Counting principle and factorials",
+   "items": [
+    {
+     "q": "Vivaan has 4 shirts, 6 pairs of pants and 4 pairs of shoes. How many different outfits can he make?",
+     "c": [
+      "96",
+      "364",
+      "14",
+      "28"
+     ],
+     "a": 0,
+     "e": "Multiply the choices: 4 × 6 × 4 = <b>96</b>."
+    },
+    {
+     "q": "Find n if <sup>n</sup>P<sub>2</sub> = 56.",
+     "c": [
+      "7",
+      "8",
+      "28",
+      "9"
+     ],
+     "a": 1,
+     "e": "<sup>n</sup>P<sub>2</sub> = n(n − 1) = 56. Trying n = 8: 8 × 7 = 56. So <b>n = 8</b>."
+    },
+    {
+     "q": "Is 4! + 3! equal to 7!? Find 4! + 3!.",
+     "c": [
+      "144",
+      "5,040",
+      "31",
+      "30"
+     ],
+     "a": 3,
+     "e": "4! + 3! = 24 + 6 = <b>30</b>, which is not 7! = 5,040."
+    },
+    {
+     "q": "Aditi has 7 shirts, 2 pairs of pants and 3 pairs of shoes. How many different outfits can she make?",
+     "c": [
+      "42",
+      "12",
+      "220",
+      "17"
+     ],
+     "a": 0,
+     "e": "Multiply the choices: 7 × 2 × 3 = <b>42</b>."
+    },
+    {
+     "q": "Shreya has 3 shirts, 3 pairs of pants and 3 pairs of shoes. How many different outfits can she make?",
+     "c": [
+      "12",
+      "27",
+      "84",
+      "9"
+     ],
+     "a": 1,
+     "e": "Multiply the choices: 3 × 3 × 3 = <b>27</b>."
+    },
+    {
+     "q": "Is 4! + 5! equal to 9!? Find 4! + 5!.",
+     "c": [
+      "2,880",
+      "3,62,880",
+      "145",
+      "144"
+     ],
+     "a": 3,
+     "e": "4! + 5! = 24 + 120 = <b>144</b>, which is not 9! = 3,62,880."
+    },
+    {
+     "q": "Dev has 6 shirts, 4 pairs of pants and 2 pairs of shoes. How many different outfits can he make?",
+     "c": [
+      "26",
+      "48",
+      "220",
+      "12"
+     ],
+     "a": 1,
+     "e": "Multiply the choices: 6 × 4 × 2 = <b>48</b>."
+    },
+    {
+     "q": "Arjun has 4 shirts, 6 pairs of pants and 3 pairs of shoes. How many different outfits can he make?",
+     "c": [
+      "72",
+      "286",
+      "27",
+      "13"
+     ],
+     "a": 0,
+     "e": "Multiply the choices: 4 × 6 × 3 = <b>72</b>."
+    },
+    {
+     "q": "Riya has 3 shirts, 6 pairs of pants and 5 pairs of shoes. How many different outfits can she make?",
+     "c": [
+      "23",
+      "14",
+      "90",
+      "364"
+     ],
+     "a": 2,
+     "e": "Multiply the choices: 3 × 6 × 5 = <b>90</b>."
+    },
+    {
+     "q": "Evaluate 6! ÷ 3!.",
+     "c": [
+      "120",
+      "3",
+      "6",
+      "40"
+     ],
+     "a": 0,
+     "e": "6! ÷ 3! = 6 × 5 × 4 = <b>120</b>."
+    },
+    {
+     "q": "Find n if <sup>n</sup>P<sub>3</sub> = 210.",
+     "c": [
+      "70",
+      "8",
+      "6",
+      "7"
+     ],
+     "a": 3,
+     "e": "<sup>n</sup>P<sub>3</sub> = n(n − 1)(n − 2) = 210. Trying n = 7: 7 × 6 × 5 = 210. So <b>n = 7</b>."
+    },
+    {
+     "q": "Evaluate 11! ÷ 8!.",
+     "c": [
+      "330",
+      "990",
+      "3",
+      "6"
+     ],
+     "a": 1,
+     "e": "11! ÷ 8! = 11 × 10 × 9 = <b>990</b>."
+    },
+    {
+     "q": "Is 5! + 2! equal to 7!? Find 5! + 2!.",
+     "c": [
+      "240",
+      "123",
+      "122",
+      "5,040"
+     ],
+     "a": 2,
+     "e": "5! + 2! = 120 + 2 = <b>122</b>, which is not 7! = 5,040."
+    },
+    {
+     "q": "Is 3! + 2! equal to 5!? Find 3! + 2!.",
+     "c": [
+      "120",
+      "8",
+      "9",
+      "12"
+     ],
+     "a": 1,
+     "e": "3! + 2! = 6 + 2 = <b>8</b>, which is not 5! = 120."
+    },
+    {
+     "q": "Is 2! + 5! equal to 7!? Find 2! + 5!.",
+     "c": [
+      "5,040",
+      "240",
+      "123",
+      "122"
+     ],
+     "a": 3,
+     "e": "2! + 5! = 2 + 120 = <b>122</b>, which is not 7! = 5,040."
+    },
+    {
+     "q": "Find n if <sup>n</sup>P<sub>3</sub> = 60.",
+     "c": [
+      "6",
+      "4",
+      "5",
+      "20"
+     ],
+     "a": 2,
+     "e": "<sup>n</sup>P<sub>3</sub> = n(n − 1)(n − 2) = 60. Trying n = 5: 5 × 4 × 3 = 60. So <b>n = 5</b>."
+    },
+    {
+     "q": "Find n if <sup>n</sup>P<sub>3</sub> = 120.",
+     "c": [
+      "6",
+      "7",
+      "40",
+      "5"
+     ],
+     "a": 0,
+     "e": "<sup>n</sup>P<sub>3</sub> = n(n − 1)(n − 2) = 120. Trying n = 6: 6 × 5 × 4 = 120. So <b>n = 6</b>."
+    },
+    {
+     "q": "Is 4! + 2! equal to 6!? Find 4! + 2!.",
+     "c": [
+      "48",
+      "720",
+      "26",
+      "27"
+     ],
+     "a": 2,
+     "e": "4! + 2! = 24 + 2 = <b>26</b>, which is not 6! = 720."
+    },
+    {
+     "q": "Dev has 5 shirts, 5 pairs of pants and 2 pairs of shoes. How many different outfits can he make?",
+     "c": [
+      "12",
+      "220",
+      "50",
+      "27"
+     ],
+     "a": 2,
+     "e": "Multiply the choices: 5 × 5 × 2 = <b>50</b>."
+    },
+    {
+     "q": "Pooja has 7 shirts, 2 pairs of pants and 4 pairs of shoes. How many different outfits can she make?",
+     "c": [
+      "18",
+      "286",
+      "13",
+      "56"
+     ],
+     "a": 3,
+     "e": "Multiply the choices: 7 × 2 × 4 = <b>56</b>."
+    }
+   ]
+  },
+  {
+   "title": "Permutations",
+   "items": [
+    {
+     "q": "A ship has 10 different flags. A signal uses 4 flags, one above the other. How many signals are possible?",
+     "c": [
+      "5,040",
+      "40",
+      "10,000",
+      "210"
+     ],
+     "a": 0,
+     "e": "Order matters and no flag is used twice: <sup>10</sup>P<sub>4</sub> = <b>5,040</b>."
+    },
+    {
+     "q": "In how many ways can 6 students stand in a line?",
+     "c": [
+      "64",
+      "36",
+      "21",
+      "720"
+     ],
+     "a": 3,
+     "e": "6! = <b>720</b>."
+    },
+    {
+     "q": "How many 3-digit numbers can be made from the digits 1 to 6 if no digit is repeated?",
+     "c": [
+      "18",
+      "20",
+      "216",
+      "120"
+     ],
+     "a": 3,
+     "e": "Each place uses a new digit: <sup>6</sup>P<sub>3</sub> = <b>120</b>."
+    },
+    {
+     "q": "Evaluate <sup>6</sup>P<sub>2</sub>.",
+     "c": [
+      "360",
+      "30",
+      "12",
+      "15"
+     ],
+     "a": 1,
+     "e": "<sup>6</sup>P<sub>2</sub> = 6! ÷ 4! = <b>30</b>."
+    },
+    {
+     "q": "In how many ways can 5 students stand in a line?",
+     "c": [
+      "15",
+      "25",
+      "32",
+      "120"
+     ],
+     "a": 3,
+     "e": "5! = <b>120</b>."
+    },
+    {
+     "q": "In how many ways can first, second and third prizes be chosen from 6 students?",
+     "c": [
+      "20",
+      "216",
+      "120",
+      "18"
+     ],
+     "a": 2,
+     "e": "The posts are different, so order matters: <sup>6</sup>P<sub>3</sub> = <b>120</b>."
+    },
+    {
+     "q": "In how many ways can 7 students stand in a line?",
+     "c": [
+      "128",
+      "28",
+      "5,040",
+      "49"
+     ],
+     "a": 2,
+     "e": "7! = <b>5,040</b>."
+    },
+    {
+     "q": "In how many ways can a president, a secretary and a treasurer be chosen from 10 students?",
+     "c": [
+      "1,000",
+      "720",
+      "120",
+      "30"
+     ],
+     "a": 1,
+     "e": "The posts are different, so order matters: <sup>10</sup>P<sub>3</sub> = <b>720</b>."
+    },
+    {
+     "q": "Evaluate <sup>7</sup>P<sub>2</sub>.",
+     "c": [
+      "21",
+      "2,520",
+      "14",
+      "42"
+     ],
+     "a": 3,
+     "e": "<sup>7</sup>P<sub>2</sub> = 7! ÷ 5! = <b>42</b>."
+    },
+    {
+     "q": "How many 2-digit numbers can be made from the digits 1 to 6 if no digit is repeated?",
+     "c": [
+      "36",
+      "30",
+      "12",
+      "15"
+     ],
+     "a": 1,
+     "e": "Each place uses a new digit: <sup>6</sup>P<sub>2</sub> = <b>30</b>."
+    },
+    {
+     "q": "In how many ways can a president, a secretary and a treasurer be chosen from 8 students?",
+     "c": [
+      "56",
+      "336",
+      "24",
+      "512"
+     ],
+     "a": 1,
+     "e": "The posts are different, so order matters: <sup>8</sup>P<sub>3</sub> = <b>336</b>."
+    },
+    {
+     "q": "How many 2-digit numbers can be made from the digits 1 to 8 if no digit is repeated?",
+     "c": [
+      "56",
+      "28",
+      "64",
+      "16"
+     ],
+     "a": 0,
+     "e": "Each place uses a new digit: <sup>8</sup>P<sub>2</sub> = <b>56</b>."
+    },
+    {
+     "q": "In how many ways can 8 students stand in a line?",
+     "c": [
+      "36",
+      "256",
+      "64",
+      "40,320"
+     ],
+     "a": 3,
+     "e": "8! = <b>40,320</b>."
+    },
+    {
+     "q": "How many 4-digit numbers can be made from the digits 1 to 7 if no digit is repeated?",
+     "c": [
+      "840",
+      "28",
+      "35",
+      "2,401"
+     ],
+     "a": 0,
+     "e": "Each place uses a new digit: <sup>7</sup>P<sub>4</sub> = <b>840</b>."
+    },
+    {
+     "q": "In how many ways can first, second and third prizes be chosen from 10 students?",
+     "c": [
+      "1,000",
+      "30",
+      "720",
+      "120"
+     ],
+     "a": 2,
+     "e": "The posts are different, so order matters: <sup>10</sup>P<sub>3</sub> = <b>720</b>."
+    },
+    {
+     "q": "A ship has 8 different flags. A signal uses 4 flags, one above the other. How many signals are possible?",
+     "c": [
+      "70",
+      "32",
+      "1,680",
+      "4,096"
+     ],
+     "a": 2,
+     "e": "Order matters and no flag is used twice: <sup>8</sup>P<sub>4</sub> = <b>1,680</b>."
+    },
+    {
+     "q": "A ship has 6 different flags. A signal uses 3 flags, one above the other. How many signals are possible?",
+     "c": [
+      "120",
+      "20",
+      "18",
+      "216"
+     ],
+     "a": 0,
+     "e": "Order matters and no flag is used twice: <sup>6</sup>P<sub>3</sub> = <b>120</b>."
+    },
+    {
+     "q": "A ship has 6 different flags. A signal uses 2 flags, one above the other. How many signals are possible?",
+     "c": [
+      "15",
+      "36",
+      "30",
+      "12"
+     ],
+     "a": 2,
+     "e": "Order matters and no flag is used twice: <sup>6</sup>P<sub>2</sub> = <b>30</b>."
+    },
+    {
+     "q": "In how many ways can a captain and a vice-captain be chosen from 9 students?",
+     "c": [
+      "18",
+      "72",
+      "81",
+      "36"
+     ],
+     "a": 1,
+     "e": "The posts are different, so order matters: <sup>9</sup>P<sub>2</sub> = <b>72</b>."
+    },
+    {
+     "q": "In how many ways can a monitor and an assistant monitor be chosen from 10 students?",
+     "c": [
+      "90",
+      "45",
+      "20",
+      "100"
+     ],
+     "a": 0,
+     "e": "The posts are different, so order matters: <sup>10</sup>P<sub>2</sub> = <b>90</b>."
+    }
+   ]
+  },
+  {
+   "title": "Arrangements of letters",
+   "items": [
+    {
+     "q": "How many arrangements of the letters of the word DELHI are there?",
+     "c": [
+      "24",
+      "240",
+      "60",
+      "120"
+     ],
+     "a": 3,
+     "e": "There are 5 letters, all different: 5! = <b>120</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word JAIPUR are there?",
+     "c": [
+      "720",
+      "1,440",
+      "120",
+      "360"
+     ],
+     "a": 0,
+     "e": "There are 6 letters, all different: 6! = <b>720</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in COOKIE are there?",
+     "c": [
+      "720",
+      "120",
+      "360",
+      "1,080"
+     ],
+     "a": 2,
+     "e": "6 letters, with repeats: 6! / (2!) = <b>360</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in TENNESSEE are there?",
+     "c": [
+      "7,560",
+      "24",
+      "3,62,880",
+      "3,780"
+     ],
+     "a": 3,
+     "e": "9 letters, with repeats: 9! / (4! · 2! · 2!) = <b>3,780</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word INDEPENDENCE are there?",
+     "c": [
+      "16,63,200",
+      "47,90,01,600",
+      "33,26,400",
+      "8,31,600"
+     ],
+     "a": 0,
+     "e": "There are 12 letters with N 3 times, D 2 times, E 4 times: 12! ÷ (3! × 2! × 4!) = <b>16,63,200</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in COFFEE are there?",
+     "c": [
+      "24",
+      "180",
+      "720",
+      "360"
+     ],
+     "a": 1,
+     "e": "6 letters, with repeats: 6! / (2! · 2!) = <b>180</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word EQUATION are there?",
+     "c": [
+      "5,040",
+      "80,640",
+      "40,320",
+      "20,160"
+     ],
+     "a": 2,
+     "e": "There are 8 letters, all different: 8! = <b>40,320</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word SHIMLA are there?",
+     "c": [
+      "360",
+      "1,440",
+      "120",
+      "720"
+     ],
+     "a": 3,
+     "e": "There are 6 letters, all different: 6! = <b>720</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in BANANA are there?",
+     "c": [
+      "120",
+      "60",
+      "720",
+      "6"
+     ],
+     "a": 1,
+     "e": "6 letters, with repeats: 6! / (3! · 2!) = <b>60</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word MATHS are there?",
+     "c": [
+      "120",
+      "24",
+      "60",
+      "240"
+     ],
+     "a": 0,
+     "e": "There are 5 letters, all different: 5! = <b>120</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word ASSAM are there?",
+     "c": [
+      "120",
+      "15",
+      "30",
+      "60"
+     ],
+     "a": 2,
+     "e": "There are 5 letters with A 2 times, S 2 times: 5! ÷ (2! × 2!) = <b>30</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word NAGPUR are there?",
+     "c": [
+      "360",
+      "720",
+      "120",
+      "1,440"
+     ],
+     "a": 1,
+     "e": "There are 6 letters, all different: 6! = <b>720</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word MONDAY are there?",
+     "c": [
+      "720",
+      "120",
+      "1,440",
+      "360"
+     ],
+     "a": 0,
+     "e": "There are 6 letters, all different: 6! = <b>720</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word GANGA are there?",
+     "c": [
+      "60",
+      "15",
+      "30",
+      "120"
+     ],
+     "a": 2,
+     "e": "There are 5 letters with G 2 times, A 2 times: 5! ÷ (2! × 2!) = <b>30</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word MANGO are there?",
+     "c": [
+      "240",
+      "60",
+      "24",
+      "120"
+     ],
+     "a": 3,
+     "e": "There are 5 letters, all different: 5! = <b>120</b>."
+    },
+    {
+     "q": "In how many arrangements of the letters of KERALA do all the vowels come together?",
+     "c": [
+      "144",
+      "360",
+      "72",
+      "24"
+     ],
+     "a": 2,
+     "e": "Treat the vowels EAA as one block: 24 arrangements of the block and the consonants, times 3 ways inside the block = <b>72</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word BANANA are there?",
+     "c": [
+      "60",
+      "120",
+      "30",
+      "720"
+     ],
+     "a": 0,
+     "e": "There are 6 letters with A 3 times, N 2 times: 6! ÷ (3! × 2!) = <b>60</b>."
+    },
+    {
+     "q": "How many arrangements of the letters of the word DAUGHTER are there?",
+     "c": [
+      "5,040",
+      "80,640",
+      "20,160",
+      "40,320"
+     ],
+     "a": 3,
+     "e": "There are 8 letters, all different: 8! = <b>40,320</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in LEVEL are there?",
+     "c": [
+      "6",
+      "30",
+      "120",
+      "60"
+     ],
+     "a": 1,
+     "e": "5 letters, with repeats: 5! / (2! · 2!) = <b>30</b>."
+    },
+    {
+     "q": "How many different arrangements of the letters in LETTER are there?",
+     "c": [
+      "24",
+      "180",
+      "720",
+      "360"
+     ],
+     "a": 1,
+     "e": "6 letters, with repeats: 6! / (2! · 2!) = <b>180</b>."
+    }
+   ]
+  },
+  {
+   "title": "Combinations",
+   "items": [
+    {
+     "q": "Evaluate <sup>14</sup>C<sub>7</sub>.",
+     "c": [
+      "3,446",
+      "98",
+      "1,72,97,280",
+      "3,432"
+     ],
+     "a": 3,
+     "e": "<sup>14</sup>C<sub>7</sub> = 14! ÷ (7! 7!) = <b>3,432</b>."
+    },
+    {
+     "q": "From 6 boys and 5 girls, a group of 3 boys and 2 girls is chosen. In how many ways?",
+     "c": [
+      "462",
+      "2,400",
+      "200",
+      "30"
+     ],
+     "a": 2,
+     "e": "<sup>6</sup>C<sub>3</sub> × <sup>5</sup>C<sub>2</sub> = 20 × 10 = <b>200</b>."
+    },
+    {
+     "q": "If <sup>n</sup>C<sub>8</sub> = <sup>n</sup>C<sub>2</sub>, find <sup>n</sup>C<sub>2</sub>.",
+     "c": [
+      "120",
+      "90",
+      "45",
+      "10"
+     ],
+     "a": 2,
+     "e": "<sup>n</sup>C<sub>a</sub> = <sup>n</sup>C<sub>b</sub> with a ≠ b means n = a + b = 10. So <sup>10</sup>C<sub>2</sub> = <b>45</b>."
+    },
+    {
+     "q": "If <sup>n</sup>C<sub>5</sub> = <sup>n</sup>C<sub>4</sub>, find <sup>n</sup>C<sub>2</sub>.",
+     "c": [
+      "72",
+      "9",
+      "36",
+      "84"
+     ],
+     "a": 2,
+     "e": "<sup>n</sup>C<sub>a</sub> = <sup>n</sup>C<sub>b</sub> with a ≠ b means n = a + b = 9. So <sup>9</sup>C<sub>2</sub> = <b>36</b>."
+    },
+    {
+     "q": "If <sup>n</sup>C<sub>7</sub> = <sup>n</sup>C<sub>4</sub>, find <sup>n</sup>C<sub>2</sub>.",
+     "c": [
+      "110",
+      "55",
+      "165",
+      "11"
+     ],
+     "a": 1,
+     "e": "<sup>n</sup>C<sub>a</sub> = <sup>n</sup>C<sub>b</sub> with a ≠ b means n = a + b = 11. So <sup>11</sup>C<sub>2</sub> = <b>55</b>."
+    },
+    {
+     "q": "In how many ways can you choose a committee of 2 from 6 people?",
+     "c": [
+      "30",
+      "6",
+      "15",
+      "36"
+     ],
+     "a": 2,
+     "e": "Order does not matter, so it is <sup>6</sup>C<sub>2</sub> = <b>15</b>."
+    },
+    {
+     "q": "In how many ways can you choose a committee of 2 from 9 people?",
+     "c": [
+      "9",
+      "72",
+      "81",
+      "36"
+     ],
+     "a": 3,
+     "e": "Order does not matter, so it is <sup>9</sup>C<sub>2</sub> = <b>36</b>."
+    },
+    {
+     "q": "From 7 boys and 5 girls, a group of 3 boys and 3 girls is chosen. In how many ways?",
+     "c": [
+      "350",
+      "12,600",
+      "45",
+      "924"
+     ],
+     "a": 0,
+     "e": "<sup>7</sup>C<sub>3</sub> × <sup>5</sup>C<sub>3</sub> = 35 × 10 = <b>350</b>."
+    },
+    {
+     "q": "In how many ways can you choose 2 questions to answer out of 6?",
+     "c": [
+      "15",
+      "30",
+      "36",
+      "6"
+     ],
+     "a": 0,
+     "e": "Order does not matter, so it is <sup>6</sup>C<sub>2</sub> = <b>15</b>."
+    },
+    {
+     "q": "Evaluate <sup>7</sup>C<sub>3</sub>.",
+     "c": [
+      "35",
+      "21",
+      "210",
+      "42"
+     ],
+     "a": 0,
+     "e": "<sup>7</sup>C<sub>3</sub> = 7! ÷ (3! 4!) = <b>35</b>."
+    },
+    {
+     "q": "If <sup>n</sup>C<sub>2</sub> = <sup>n</sup>C<sub>9</sub>, find <sup>n</sup>C<sub>2</sub>.",
+     "c": [
+      "165",
+      "55",
+      "11",
+      "110"
+     ],
+     "a": 1,
+     "e": "<sup>n</sup>C<sub>a</sub> = <sup>n</sup>C<sub>b</sub> with a ≠ b means n = a + b = 11. So <sup>11</sup>C<sub>2</sub> = <b>55</b>."
+    },
+    {
+     "q": "From 4 boys and 3 girls, a group of 3 boys and 2 girls is chosen. In how many ways?",
+     "c": [
+      "7",
+      "21",
+      "144",
+      "12"
+     ],
+     "a": 3,
+     "e": "<sup>4</sup>C<sub>3</sub> × <sup>3</sup>C<sub>2</sub> = 4 × 3 = <b>12</b>."
+    },
+    {
+     "q": "Evaluate <sup>11</sup>C<sub>6</sub>.",
+     "c": [
+      "462",
+      "66",
+      "473",
+      "3,32,640"
+     ],
+     "a": 0,
+     "e": "<sup>11</sup>C<sub>6</sub> = 11! ÷ (6! 5!) = <b>462</b>."
+    },
+    {
+     "q": "In how many ways can you choose 3 questions to answer out of 13?",
+     "c": [
+      "78",
+      "286",
+      "2,197",
+      "1,716"
+     ],
+     "a": 1,
+     "e": "Order does not matter, so it is <sup>13</sup>C<sub>3</sub> = <b>286</b>."
+    },
+    {
+     "q": "How many straight lines can be drawn through 12 points, no three of which are collinear?",
+     "c": [
+      "132",
+      "66",
+      "12",
+      "220"
+     ],
+     "a": 1,
+     "e": "Each line is fixed by a pair of points: <sup>12</sup>C<sub>2</sub> = <b>66</b>."
+    },
+    {
+     "q": "In how many ways can you choose 3 books from a shelf of 13?",
+     "c": [
+      "1,716",
+      "78",
+      "2,197",
+      "286"
+     ],
+     "a": 3,
+     "e": "Order does not matter, so it is <sup>13</sup>C<sub>3</sub> = <b>286</b>."
+    },
+    {
+     "q": "From 7 boys and 7 girls, a group of 2 boys and 1 girl is chosen. In how many ways?",
+     "c": [
+      "294",
+      "28",
+      "147",
+      "364"
+     ],
+     "a": 2,
+     "e": "<sup>7</sup>C<sub>2</sub> × <sup>7</sup>C<sub>1</sub> = 21 × 7 = <b>147</b>."
+    },
+    {
+     "q": "If <sup>n</sup>C<sub>3</sub> = <sup>n</sup>C<sub>4</sub>, find <sup>n</sup>C<sub>2</sub>.",
+     "c": [
+      "42",
+      "21",
+      "7",
+      "35"
+     ],
+     "a": 1,
+     "e": "<sup>n</sup>C<sub>a</sub> = <sup>n</sup>C<sub>b</sub> with a ≠ b means n = a + b = 7. So <sup>7</sup>C<sub>2</sub> = <b>21</b>."
+    },
+    {
+     "q": "In how many ways can you choose a committee of 3 from 13 people?",
+     "c": [
+      "286",
+      "1,716",
+      "78",
+      "2,197"
+     ],
+     "a": 0,
+     "e": "Order does not matter, so it is <sup>13</sup>C<sub>3</sub> = <b>286</b>."
+    },
+    {
+     "q": "Evaluate <sup>15</sup>C<sub>13</sub>.",
+     "c": [
+      "120",
+      "195",
+      "6,53,83,71,84,000",
+      "105"
+     ],
+     "a": 3,
+     "e": "<sup>15</sup>C<sub>13</sub> = 15! ÷ (13! 2!) = <b>105</b>."
+    }
+   ]
+  },
+  {
+   "title": "Mixed problems",
+   "items": [
+    {
+     "q": "Evaluate <sup>8</sup>C<sub>6</sub>.",
+     "c": [
+      "36",
+      "28",
+      "20,160",
+      "48"
+     ],
+     "a": 1,
+     "e": "<sup>8</sup>C<sub>6</sub> = 8! ÷ (6! 2!) = <b>28</b>."
+    },
+    {
+     "q": "How many diagonals does a polygon with 8 sides have?",
+     "c": [
+      "28",
+      "40",
+      "20",
+      "5"
+     ],
+     "a": 2,
+     "e": "Lines joining vertices: <sup>8</sup>C<sub>2</sub> = 28; take away the 8 sides: <b>20</b>."
+    },
+    {
+     "q": "If <sup>n</sup>C<sub>8</sub> = <sup>n</sup>C<sub>7</sub>, find <sup>n</sup>C<sub>2</sub>.",
+     "c": [
+      "210",
+      "105",
+      "455",
+      "15"
+     ],
+     "a": 1,
+     "e": "<sup>n</sup>C<sub>a</sub> = <sup>n</sup>C<sub>b</sub> with a ≠ b means n = a + b = 15. So <sup>15</sup>C<sub>2</sub> = <b>105</b>."
+    },
+    {
+     "q": "In how many ways can a captain and a vice-captain be chosen from 10 students?",
+     "c": [
+      "45",
+      "100",
+      "90",
+      "20"
+     ],
+     "a": 2,
+     "e": "The posts are different, so order matters: <sup>10</sup>P<sub>2</sub> = <b>90</b>."
+    },
+    {
+     "q": "How many 3-digit numbers can be made from the digits 1 to 8 if no digit is repeated?",
+     "c": [
+      "24",
+      "512",
+      "56",
+      "336"
+     ],
+     "a": 3,
+     "e": "Each place uses a new digit: <sup>8</sup>P<sub>3</sub> = <b>336</b>."
+    },
+    {
+     "q": "In how many ways can first, second and third prizes be chosen from 5 students?",
+     "c": [
+      "15",
+      "125",
+      "10",
+      "60"
+     ],
+     "a": 3,
+     "e": "The posts are different, so order matters: <sup>5</sup>P<sub>3</sub> = <b>60</b>."
+    },
+    {
+     "q": "Evaluate <sup>8</sup>P<sub>3</sub>.",
+     "c": [
+      "6,720",
+      "336",
+      "24",
+      "56"
+     ],
+     "a": 1,
+     "e": "<sup>8</sup>P<sub>3</sub> = 8! ÷ 5! = <b>336</b>."
+    },
+    {
+     "q": "A ship has 7 different flags. A signal uses 4 flags, one above the other. How many signals are possible?",
+     "c": [
+      "35",
+      "840",
+      "2,401",
+      "28"
+     ],
+     "a": 1,
+     "e": "Order matters and no flag is used twice: <sup>7</sup>P<sub>4</sub> = <b>840</b>."
+    },
+    {
+     "q": "How many 3-digit numbers can be made from the digits 1 to 5 if no digit is repeated?",
+     "c": [
+      "10",
+      "15",
+      "60",
+      "125"
+     ],
+     "a": 2,
+     "e": "Each place uses a new digit: <sup>5</sup>P<sub>3</sub> = <b>60</b>."
+    },
+    {
+     "q": "In how many ways can a president, a secretary and a treasurer be chosen from 5 students?",
+     "c": [
+      "60",
+      "15",
+      "125",
+      "10"
+     ],
+     "a": 0,
+     "e": "The posts are different, so order matters: <sup>5</sup>P<sub>3</sub> = <b>60</b>."
+    },
+    {
+     "q": "How many 2-digit numbers can be made from the digits 1 to 7 if no digit is repeated?",
+     "c": [
+      "42",
+      "21",
+      "49",
+      "14"
+     ],
+     "a": 0,
+     "e": "Each place uses a new digit: <sup>7</sup>P<sub>2</sub> = <b>42</b>."
+    },
+    {
+     "q": "How many 4-digit numbers can be made from the digits 1 to 6 if no digit is repeated?",
+     "c": [
+      "360",
+      "24",
+      "1,296",
+      "15"
+     ],
+     "a": 0,
+     "e": "Each place uses a new digit: <sup>6</sup>P<sub>4</sub> = <b>360</b>."
+    },
+    {
+     "q": "In how many ways can a monitor and an assistant monitor be chosen from 6 students?",
+     "c": [
+      "36",
+      "12",
+      "30",
+      "15"
+     ],
+     "a": 2,
+     "e": "The posts are different, so order matters: <sup>6</sup>P<sub>2</sub> = <b>30</b>."
+    },
+    {
+     "q": "Evaluate <sup>10</sup>C<sub>7</sub>.",
+     "c": [
+      "130",
+      "70",
+      "6,04,800",
+      "120"
+     ],
+     "a": 3,
+     "e": "<sup>10</sup>C<sub>7</sub> = 10! ÷ (7! 3!) = <b>120</b>."
+    },
+    {
+     "q": "From 8 boys and 5 girls, a group of 3 boys and 3 girls is chosen. In how many ways?",
+     "c": [
+      "560",
+      "20,160",
+      "66",
+      "1,716"
+     ],
+     "a": 0,
+     "e": "<sup>8</sup>C<sub>3</sub> × <sup>5</sup>C<sub>3</sub> = 56 × 10 = <b>560</b>."
+    },
+    {
+     "q": "In how many ways can you choose a team of 4 players from 11?",
+     "c": [
+      "165",
+      "14,641",
+      "330",
+      "7,920"
+     ],
+     "a": 2,
+     "e": "Order does not matter, so it is <sup>11</sup>C<sub>4</sub> = <b>330</b>."
+    },
+    {
+     "q": "In how many ways can you choose 4 questions to answer out of 9?",
+     "c": [
+      "3,024",
+      "6,561",
+      "84",
+      "126"
+     ],
+     "a": 3,
+     "e": "Order does not matter, so it is <sup>9</sup>C<sub>4</sub> = <b>126</b>."
+    },
+    {
+     "q": "How many diagonals does a polygon with 9 sides have?",
+     "c": [
+      "27",
+      "36",
+      "54",
+      "6"
+     ],
+     "a": 0,
+     "e": "Lines joining vertices: <sup>9</sup>C<sub>2</sub> = 36; take away the 9 sides: <b>27</b>."
+    },
+    {
+     "q": "Evaluate <sup>15</sup>C<sub>4</sub>.",
+     "c": [
+      "60",
+      "1,380",
+      "32,760",
+      "1,365"
+     ],
+     "a": 3,
+     "e": "<sup>15</sup>C<sub>4</sub> = 15! ÷ (4! 11!) = <b>1,365</b>."
+    },
+    {
+     "q": "If <sup>n</sup>C<sub>9</sub> = <sup>n</sup>C<sub>5</sub>, find <sup>n</sup>C<sub>2</sub>.",
+     "c": [
+      "182",
+      "91",
+      "14",
+      "364"
+     ],
+     "a": 1,
+     "e": "<sup>n</sup>C<sub>a</sub> = <sup>n</sup>C<sub>b</sub> with a ≠ b means n = a + b = 14. So <sup>14</sup>C<sub>2</sub> = <b>91</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 6,
+ "updated": "2026-11-22",
+ "country": "in",
+ "subject": "maths",
+ "grade": "class-11"
+}

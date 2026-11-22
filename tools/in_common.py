@@ -145,8 +145,12 @@ def lesson(think, examples, mistakes, extra=""):
 UNITS = {"I": "Number Systems", "II": "Algebra", "III": "Coordinate Geometry", "IV": "Geometry",
          "V": "Trigonometry", "VI": "Mensuration", "VII": "Statistics and Probability", "St": "Statistics",
          # Classes 6-8 (NCERT Ganita Prakash): strands of the middle-stage curriculum
-         "N": "Number", "A": "Algebra", "G": "Geometry", "M": "Mensuration", "D": "Data Handling"}
+         "N": "Number", "A": "Algebra", "G": "Geometry", "M": "Mensuration", "D": "Data Handling",
+         # Classes 11-12 (CBSE Senior Secondary units)
+         "SF": "Sets and Functions", "Ca": "Calculus", "RF": "Relations and Functions",
+         "V3": "Vectors and Three-Dimensional Geometry", "LP": "Linear Programming", "Pr": "Probability"}
 STD_URL_MID = "https://ncert.nic.in/textbook.php"
+STD_URL_SR = "https://www.cbseacademic.nic.in/web_material/CurriculumMain26/SrSec/Maths_SrSec_2025-26.pdf"
 
 IN_WORDS = [("Secondary 1", "Class 8"), ("Secondary 2", "Class 9"), ("Secondary 3", "Class 10"), ("Secondary 4", "Class 10"),
             ("the MOE syllabus", "the CBSE syllabus"), ("MOE syllabus", "CBSE syllabus"), ("O-Level", "board exam"),
@@ -188,7 +192,7 @@ def make(level, slug, sort, unit, chapter, title, short_title, std_text, meta, k
     unit_json = {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
         "domain": UNITS[unit], "standard_code": code,
-        "standard_url": STD_URL_MID if part is not None else STD_URL, "standard_text": std_text, "meta_desc": indify(meta), "key_big": key_big, "key_sub": key_sub,
+        "standard_url": STD_URL_MID if part is not None else (STD_URL_SR if level >= 11 else STD_URL), "standard_text": std_text, "meta_desc": indify(meta), "key_big": key_big, "key_sub": key_sub,
         "body_html": body, "faq": [{"q": indify(q), "a": indify(a)} for q, a in faq], "sets": sets,
         "pdf_url": "", "sort": sort, "updated": UPDATED,
     }

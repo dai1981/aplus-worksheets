@@ -1292,7 +1292,13 @@ Class 3: 1. whats-in-a-name ✓ 2. toy-joy ✓ 3. double-century ✓ 4. vacation
 Class 4: 1. shapes-around-us ✓ 2. hide-and-seek ✓ 3. pattern-around-us ✓ 4. thousands-around-us ✓ 5. sharing-and-measuring ✓ 6. measuring-length ✓ 7. the-cleanest-village ✓ 8. weigh-it-pour-it ✓ 9. equal-groups ✓ 10. elephants-tigers-and-leopards ✓ 11. fun-with-symmetry ✓ 12. ticking-clocks-and-turning-calendar ✓ 13. the-transport-museum ✓ 14. data-handling ✓
 Class 5: 1. we-the-travellers-1 ✓ 2. fractions ✓ 3. angles-as-turns ✓ 4. we-the-travellers-2 ✓ 5. far-and-near ✓ 6. the-dairy-farm ✓ 7. shapes-and-patterns ✓ 8. weight-and-capacity ✓ 9. coconut-farm ✓ 10. symmetrical-designs ✓ 11. grandmothers-quilt ✓ 12. racing-seconds ✓ 13. animal-jumps ✓ 14. maps-and-locations ✓ 15. data-through-pictures ✓
 
-IN の次: Class 11–12（CBSE / NCERT）
+IN / Maths / Class 11–12（CBSE Senior Secondary 2025-26 / NCERT。1 単元 = 1 章、Class 12 の章番号は Part I・II の通し番号）— 生成スクリプトは `gen_in_maths_c11_*`・`gen_in_maths_c12_*`、共通部品は `tools/in_sr.py`（in_common の上に U()（in_common.unit を level 11・12、part なしで呼ぶ。全 maker を tidy で包み「− −2」→「+ 2」「+ −3」→「− 3」）、use(mod, name, R, pairs)（adopt＋gb＋文字の置き換え。pairs に正規表現も可）、T2（誤答の重複を除く）、poly・xp・sup・pi（π の倍数）・surd・rt（√ の簡約）・frs、ⁿCᵣ の C()・P()、US の <sub>n</sub>C を ⁿC にする NCR）。
+standard_code は「Class 12, Chapter 7: Integrals」、standard_url は CBSE SrSec の Maths_SrSec_2025-26.pdf（in_common.STD_URL_SR、level ≥ 11 で自動）、domain は CBSE の Unit（SF Sets and Functions／II Algebra／III Coordinate Geometry／Ca Calculus／VII Statistics and Probability／RF Relations and Functions／V3 Vectors and Three-Dimensional Geometry／LP Linear Programming／Pr Probability）。seed は 9111cc・9121cc。
+US Algebra 2・Precalculus・Geometry、TX Algebra II・Precalculus、SG Sec 3–4 の問題関数を use() で再利用（Quadrant II→the second quadrant、ft の問題は落とす）、微積分・ベクトル（î ĵ k̂）・3D・LPP・微分方程式は自前。行列は pc_common.mat／det_h。NCERT の log は自然対数。topics.php の in の調整に calculus（名前を Calculus に）・vectors-and-matrices・coordinates-and-position を足した
+Class 11: 1. sets ✓ 2. relations-and-functions ✓ 3. trigonometric-functions ✓ 4. complex-numbers-and-quadratic-equations ✓ 5. linear-inequalities ✓ 6. permutations-and-combinations ✓ 7. binomial-theorem ✓ 8. sequences-and-series ✓ 9. straight-lines ✓ 10. conic-sections ✓ 11. introduction-to-three-dimensional-geometry ✓ 12. limits-and-derivatives ✓ 13. statistics ✓ 14. probability ✓
+Class 12: 1. relations-and-functions ✓ 2. inverse-trigonometric-functions ✓ 3. matrices ✓ 4. determinants ✓ 5. continuity-and-differentiability ✓ 6. application-of-derivatives ✓ 7. integrals ✓ 8. application-of-integrals ✓ 9. differential-equations ✓ 10. vector-algebra ✓ 11. three-dimensional-geometry ✓ 12. linear-programming ✓ 13. probability ✓
+
+IN / Maths は Class 1〜12 まで完了。次は GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

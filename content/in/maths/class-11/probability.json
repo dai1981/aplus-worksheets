@@ -1,0 +1,1157 @@
+{
+ "slug": "probability",
+ "title": "Probability: Events, Axioms and the Addition Rule",
+ "seo_title": "Probability Class 11 Worksheet with Answers (NCERT Chapter 14)",
+ "short_title": "probability",
+ "domain": "Statistics and Probability",
+ "standard_code": "Class 11, Chapter 14: Probability",
+ "standard_url": "https://www.cbseacademic.nic.in/web_material/CurriculumMain26/SrSec/Maths_SrSec_2025-26.pdf",
+ "standard_text": "Events: occurrence of events, 'not', 'and' and 'or' events, exhaustive events, mutually exclusive events; axiomatic (set theoretic) probability, connections with other theories studied in earlier classes; probability of an event, probability of 'not', 'and' and 'or' events (summary of the CBSE syllabus)",
+ "meta_desc": "Class 11 Probability worksheet (NCERT Chapter 14): sample spaces, coins, dice and cards, complementary and mutually exclusive events, axioms and P(A ∪ B). 100 questions with answers.",
+ "key_big": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B).",
+ "key_sub": "P(not A) = 1 − P(A).",
+ "body_html": "<h2>How it works</h2><ul><li>The <b>sample space</b> S is the set of all outcomes. An <b>event</b> is a subset of S.</li><li>Axioms: 0 ≤ P(E) ≤ 1, P(S) = 1, and probabilities of outcomes add up to 1.</li><li>A and B are <b>mutually exclusive</b> if A ∩ B = φ; then P(A ∪ B) = P(A) + P(B).</li><li>In general P(A ∪ B) = P(A) + P(B) − P(A ∩ B), and P(A′) = 1 − P(A).</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>3 coins are tossed. Find P(at least one head).</p><p class='sn-ex-s'>8 outcomes; only TTT has no head</p><p class='sn-ex-s'>1 − 1/8</p><p class='sn-ex-a'>Answer: 7/8</p></div><h2>Common mistakes</h2><ul><li>Adding P(A) + P(B) when A and B overlap.</li><li>Taking 6 outcomes for 3 coins (there are 8).</li><li>Treating 'at least one' as 'exactly one'.</li></ul>",
+ "faq": [
+  {
+   "q": "What are exhaustive events?",
+   "a": "Events whose union is the whole sample space."
+  },
+  {
+   "q": "Can a probability be more than 1?",
+   "a": "No. 0 ≤ P(E) ≤ 1."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Sample spaces and coins",
+   "items": [
+    {
+     "q": "2 coins are tossed. Find the probability of getting exactly one head.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "1"
+     ],
+     "a": 0,
+     "e": "There are 2<sup>2</sup> = 4 equally likely outcomes, and 2 of them have exactly one head: <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "4 coins are tossed. Find the probability of getting no head.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>"
+     ],
+     "a": 3,
+     "e": "There are 2<sup>4</sup> = 16 equally likely outcomes, and 1 of them have no head: <b><span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are multiplied. What is the probability of <b>a product of 18</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span>"
+     ],
+     "a": 2,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 2 of them give a product of 18, so P = <span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "3 coins are tossed. Find the probability of getting exactly two heads.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "There are 2<sup>3</sup> = 8 equally likely outcomes, and 3 of them have exactly two heads: <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "3 coins are tossed. Find the probability of getting exactly one head.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span>"
+     ],
+     "a": 2,
+     "e": "There are 2<sup>3</sup> = 8 equally likely outcomes, and 3 of them have exactly one head: <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "3 coins are tossed. Find the probability of getting no head.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "There are 2<sup>3</sup> = 8 equally likely outcomes, and 1 of them have no head: <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are multiplied. What is the probability of <b>a product of 36</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 1 of them give a product of 36, so P = <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are added. What is the probability of <b>a sum less than 9</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 26 of them give a sum less than 9, so P = <span class='fr'><span class='fn'>26</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>13</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "How many outcomes are there when a die is thrown 3 times?",
+     "c": [
+      "216",
+      "24",
+      "18",
+      "108"
+     ],
+     "a": 0,
+     "e": "Each throw has 6 outcomes: 6<sup>3</sup> = <b>216</b>."
+    },
+    {
+     "q": "A coin is flipped and a fair spinner with 4 equal sections (red, blue, green, yellow) is spun. What is the probability of heads and <b>yellow</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "There are 2 × 4 = 8 equally likely outcomes, and only one is (heads, yellow): <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "A die is thrown and a coin is tossed. How many outcomes are in the sample space?",
+     "c": [
+      "6",
+      "8",
+      "12",
+      "36"
+     ],
+     "a": 2,
+     "e": "6 outcomes for the die × 2 for the coin = <b>12</b>: {1H, 1T, 2H, …, 6T}."
+    },
+    {
+     "q": "4 coins are tossed. Find the probability of getting exactly two heads.",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "There are 2<sup>4</sup> = 16 equally likely outcomes, and 6 of them have exactly two heads: <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are added. What is the probability of <b>a sum of 11</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>"
+     ],
+     "a": 0,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 2 of them give a sum of 11, so P = <span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are added. What is the probability of <b>a sum less than 7</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>21</span></span>"
+     ],
+     "a": 0,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 15 of them give a sum less than 7, so P = <span class='fr'><span class='fn'>15</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "4 coins are tossed. Find the probability of getting exactly one head.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "There are 2<sup>4</sup> = 16 equally likely outcomes, and 4 of them have exactly one head: <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "A coin is flipped and a fair spinner with 4 equal sections (red, blue, green, yellow) is spun. How many outcomes are possible?",
+     "c": [
+      "4",
+      "6",
+      "8",
+      "16"
+     ],
+     "a": 2,
+     "e": "2 outcomes for the coin × 4 for the spinner = <b>8</b>."
+    },
+    {
+     "q": "4 coins are tossed. Find the probability of getting at least two heads.",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>16</span></span>"
+     ],
+     "a": 3,
+     "e": "There are 2<sup>4</sup> = 16 equally likely outcomes, and 11 of them have at least two heads: <b><span class='fr'><span class='fn'>11</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "A coin is flipped and a fair spinner with 3 equal sections (red, blue, green) is spun. What is the probability of heads and <b>green</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "There are 2 × 3 = 6 equally likely outcomes, and only one is (heads, green): <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "3 coins are tossed. Find the probability of getting at least two heads.",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "There are 2<sup>3</sup> = 8 equally likely outcomes, and 4 of them have at least two heads: <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "4 coins are tossed. Find the probability of getting at most one head.",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>"
+     ],
+     "a": 0,
+     "e": "There are 2<sup>4</sup> = 16 equally likely outcomes, and 5 of them have at most one head: <b><span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Dice and cards",
+   "items": [
+    {
+     "q": "A card is drawn at random from a well-shuffled pack of 52 cards. Find the probability that it is a red card.",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>26</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>52</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "26 of the 52 cards are red card, so P = 26/52 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are multiplied. What is the probability of <b>a product of 10</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span>"
+     ],
+     "a": 0,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 2 of them give a product of 10, so P = <span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "A coin is flipped and a fair spinner with 3 equal sections (red, blue, green) is spun. How many outcomes are possible?",
+     "c": [
+      "5",
+      "3",
+      "8",
+      "6"
+     ],
+     "a": 3,
+     "e": "2 outcomes for the coin × 3 for the spinner = <b>6</b>."
+    },
+    {
+     "q": "A coin is flipped and a fair spinner with 5 equal sections (red, blue, green, yellow, white) is spun. What is the probability of tails and <b>blue</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "There are 2 × 5 = 10 equally likely outcomes, and only one is (tails, blue): <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "A coin is flipped and a fair spinner with 5 equal sections (red, blue, green, yellow, white) is spun. How many outcomes are possible?",
+     "c": [
+      "32",
+      "10",
+      "5",
+      "7"
+     ],
+     "a": 1,
+     "e": "2 outcomes for the coin × 5 for the spinner = <b>10</b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are added. What is the probability of <b>a sum of 5</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 4 of them give a sum of 5, so P = <span class='fr'><span class='fn'>4</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are added. What is the probability of <b>an even sum</b>?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 18 of them give an even sum, so P = <span class='fr'><span class='fn'>18</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "A card is drawn at random from a well-shuffled pack of 52 cards. Find the probability that it is a card that is not a heart.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>52</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>52</span></span>"
+     ],
+     "a": 1,
+     "e": "39 of the 52 cards are card that is not heart, so P = 39/52 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "A card is drawn at random from a well-shuffled pack of 52 cards. Find the probability that it is an ace.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span>"
+     ],
+     "a": 0,
+     "e": "4 of the 52 cards are ace, so P = 4/52 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are added. What is the probability of <b>a sum of 9</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 4 of them give a sum of 9, so P = <span class='fr'><span class='fn'>4</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "A card is drawn at random from a well-shuffled pack of 52 cards. Find the probability that it is a red ace.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>26</span></span>"
+     ],
+     "a": 0,
+     "e": "2 of the 52 cards are red ace, so P = 2/52 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>26</span></span></b>."
+    },
+    {
+     "q": "A card is drawn at random from a well-shuffled pack of 52 cards. Find the probability that it is a diamond or a club.",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>26</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>52</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "26 of the 52 cards are diamond or club, so P = 26/52 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are multiplied. What is the probability of <b>a product of 5</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 0,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 2 of them give a product of 5, so P = <span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "A card is drawn at random from a well-shuffled pack of 52 cards. Find the probability that it is a card that is not an ace.",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>52</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>13</span></span>"
+     ],
+     "a": 3,
+     "e": "48 of the 52 cards are card that is not ace, so P = 48/52 = <b><span class='fr'><span class='fn'>12</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "A card is drawn at random from a well-shuffled pack of 52 cards. Find the probability that it is a black king.",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>26</span></span>"
+     ],
+     "a": 2,
+     "e": "2 of the 52 cards are black king, so P = 2/52 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>26</span></span></b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are multiplied. What is the probability of <b>a product of 15</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 2 of them give a product of 15, so P = <span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "A card is drawn at random from a well-shuffled pack of 52 cards. Find the probability that it is a 7.",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span>"
+     ],
+     "a": 1,
+     "e": "4 of the 52 cards are 7, so P = 4/52 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "A card is drawn at random from a well-shuffled pack of 52 cards. Find the probability that it is a heart.",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "13 of the 52 cards are heart, so P = 13/52 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "A card is drawn at random from a well-shuffled pack of 52 cards. Find the probability that it is a black card.",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>26</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>52</span></span>"
+     ],
+     "a": 2,
+     "e": "26 of the 52 cards are black card, so P = 26/52 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are multiplied. What is the probability of <b>a product that is a multiple of 3</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 20 of them give a product that is a multiple of 3, so P = <span class='fr'><span class='fn'>20</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Events and axioms",
+   "items": [
+    {
+     "q": "The probability that it rains tomorrow is 0.3. What is the probability that it does not rain?",
+     "c": [
+      "0.7",
+      "0.3",
+      "0.85",
+      "0.2"
+     ],
+     "a": 0,
+     "e": "Complement: P(not A) = 1 − P(A) = 1 − 0.3 = <b>0.7</b>."
+    },
+    {
+     "q": "A die is rolled. What is the probability of a number less than 3 or a 6?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Outcomes 1, 2 and 6: 3/6 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>. These events cannot happen together."
+    },
+    {
+     "q": "The probability that it rains tomorrow is 0.15. What is the probability that it does not rain?",
+     "c": [
+      "0.85",
+      "0.925",
+      "0.35",
+      "0.15"
+     ],
+     "a": 0,
+     "e": "Complement: P(not A) = 1 − P(A) = 1 − 0.15 = <b>0.85</b>."
+    },
+    {
+     "q": "P(E) = 0.6. Find P(not E).",
+     "c": [
+      "0.6",
+      "1.6",
+      "−0.4",
+      "0.4"
+     ],
+     "a": 3,
+     "e": "P(E′) = 1 − P(E) = <b>0.4</b>."
+    },
+    {
+     "q": "P(E) = 0.2. Find P(not E).",
+     "c": [
+      "0.2",
+      "−0.8",
+      "1.2",
+      "0.8"
+     ],
+     "a": 3,
+     "e": "P(E′) = 1 − P(E) = <b>0.8</b>."
+    },
+    {
+     "q": "The probability that it rains tomorrow is 0.45. What is the probability that it does not rain?",
+     "c": [
+      "0.55",
+      "0.775",
+      "0.05",
+      "0.45"
+     ],
+     "a": 0,
+     "e": "Complement: P(not A) = 1 − P(A) = 1 − 0.45 = <b>0.55</b>."
+    },
+    {
+     "q": "P(E) = 0.1. Find P(not E).",
+     "c": [
+      "−0.9",
+      "0.1",
+      "0.9",
+      "1.1"
+     ],
+     "a": 2,
+     "e": "P(E′) = 1 − P(E) = <b>0.9</b>."
+    },
+    {
+     "q": "A sample space has four outcomes. Which assignment of probabilities to them is valid?",
+     "c": [
+      "0.3, 0.2, 0.5, 0.1",
+      "1.1, 0.5, 0.5, −1.1",
+      "0.1, 0.3, 0.3, 0.3",
+      "0.5, 0.1, 0.5, −0.1"
+     ],
+     "a": 2,
+     "e": "Each probability must be between 0 and 1 and they must add up to 1. Only <b>0.1, 0.3, 0.3, 0.3</b> does this."
+    },
+    {
+     "q": "A die is thrown. A is the event 'a number less than 5'. What is A′?",
+     "c": [
+      "{6}",
+      "{1, 2, 3, 4, 5}",
+      "{5, 6}",
+      "{1, 2, 3, 4}"
+     ],
+     "a": 2,
+     "e": "A = {1, 2, 3, 4}, so A′ = S − A = <b>{5, 6}</b>."
+    },
+    {
+     "q": "A die is thrown. A: an even number, B: an odd number, C: a number less than 3. Which pair is mutually exclusive?",
+     "c": [
+      "A and C",
+      "B and C",
+      "A and B",
+      "A, B and C together"
+     ],
+     "a": 2,
+     "e": "A ∩ B = φ, but A ∩ C = {2} and B ∩ C = {1}. So <b>A and B</b> are mutually exclusive."
+    },
+    {
+     "q": "P(E) = 0.7. Find P(not E).",
+     "c": [
+      "1.7",
+      "0.7",
+      "0.3",
+      "−0.3"
+     ],
+     "a": 2,
+     "e": "P(E′) = 1 − P(E) = <b>0.3</b>."
+    },
+    {
+     "q": "A die is thrown. A is the event 'a number less than 3'. What is A′?",
+     "c": [
+      "{4, 5, 6}",
+      "{3, 4, 5, 6}",
+      "{1, 2}",
+      "{1, 2, 3}"
+     ],
+     "a": 1,
+     "e": "A = {1, 2}, so A′ = S − A = <b>{3, 4, 5, 6}</b>."
+    },
+    {
+     "q": "Events A and B are mutually exclusive (they cannot both happen). P(A) = 0.1 and P(B) = 0.1. Find P(A ∪ B).",
+     "c": [
+      "0.05",
+      "0.2",
+      "0.01",
+      "0.19"
+     ],
+     "a": 1,
+     "e": "Mutually exclusive events have no overlap, so P(A ∩ B) = 0 and P(A ∪ B) = 0.1 + 0.1 = <b>0.2</b>."
+    },
+    {
+     "q": "The probability that it rains tomorrow is 0.75. What is the probability that it does not rain?",
+     "c": [
+      "0.25",
+      "0.05",
+      "0.625",
+      "0.75"
+     ],
+     "a": 0,
+     "e": "Complement: P(not A) = 1 − P(A) = 1 − 0.75 = <b>0.25</b>."
+    },
+    {
+     "q": "A die is thrown. A is the event 'a number less than 6'. What is A′?",
+     "c": [
+      "{1, 2, 3, 4, 5, 6}",
+      "{1, 2, 3, 4, 5}",
+      "φ",
+      "{6}"
+     ],
+     "a": 3,
+     "e": "A = {1, 2, 3, 4, 5}, so A′ = S − A = <b>{6}</b>."
+    },
+    {
+     "q": "P(A) = 0.4, P(B) = 0.6 and P(A ∩ B) = 0.3. Find P(A ∪ B).",
+     "c": [
+      "1",
+      "0.24",
+      "0.4",
+      "0.7"
+     ],
+     "a": 3,
+     "e": "Addition Rule: P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.4 + 0.6 − 0.3 = <b>0.7</b>. Subtract the overlap so it is not counted twice."
+    },
+    {
+     "q": "P(E) = 0.9. Find P(not E).",
+     "c": [
+      "0.1",
+      "−0.1",
+      "1.9",
+      "0.9"
+     ],
+     "a": 0,
+     "e": "P(E′) = 1 − P(E) = <b>0.1</b>."
+    },
+    {
+     "q": "Events A and B are mutually exclusive (they cannot both happen). P(A) = 0.5 and P(B) = 0.3. Find P(A ∪ B).",
+     "c": [
+      "0.2",
+      "0.8",
+      "0.15",
+      "0.65"
+     ],
+     "a": 1,
+     "e": "Mutually exclusive events have no overlap, so P(A ∩ B) = 0 and P(A ∪ B) = 0.5 + 0.3 = <b>0.8</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.2 and P(A ∩ B) = 0.1. Find P(A ∪ B).",
+     "c": [
+      "0.12",
+      "0.8",
+      "0.6",
+      "0.7"
+     ],
+     "a": 3,
+     "e": "Addition Rule: P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.6 + 0.2 − 0.1 = <b>0.7</b>. Subtract the overlap so it is not counted twice."
+    },
+    {
+     "q": "P(E) = 0.3. Find P(not E).",
+     "c": [
+      "1.3",
+      "0.7",
+      "0.3",
+      "−0.7"
+     ],
+     "a": 1,
+     "e": "P(E′) = 1 − P(E) = <b>0.7</b>."
+    }
+   ]
+  },
+  {
+   "title": "Addition rule",
+   "items": [
+    {
+     "q": "P(A) = 0.4 and P(A ∩ B) = 0.1. Find P(A but not B).",
+     "c": [
+      "0.3",
+      "0.9",
+      "0.4",
+      "0.5"
+     ],
+     "a": 0,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0.3</b>."
+    },
+    {
+     "q": "P(A) = 0.4, P(B) = 0.4 and P(A ∩ B) = 0.2. Find P(not A and not B).",
+     "c": [
+      "0.2",
+      "0.36",
+      "0.4",
+      "0.6"
+     ],
+     "a": 2,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.6 = <b>0.4</b>."
+    },
+    {
+     "q": "P(A) = 0.4 and P(A ∩ B) = 0.4. Find P(A but not B).",
+     "c": [
+      "0.8",
+      "0.6",
+      "0",
+      "0.4"
+     ],
+     "a": 2,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0</b>."
+    },
+    {
+     "q": "P(A) = 0.7 and P(A ∩ B) = 0.4. Find P(A but not B).",
+     "c": [
+      "0.3",
+      "0.7",
+      "0.4",
+      "0.6"
+     ],
+     "a": 0,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0.3</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.2 and P(A ∩ B) = 0.2. Find P(not A and not B).",
+     "c": [
+      "0.32",
+      "0.2",
+      "0.6",
+      "0.4"
+     ],
+     "a": 3,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.6 = <b>0.4</b>."
+    },
+    {
+     "q": "P(A) = 0.3, P(B) = 0.4 and P(A ∩ B) = 0.1. Find P(not A and not B).",
+     "c": [
+      "0.42",
+      "0.3",
+      "0.4",
+      "0.6"
+     ],
+     "a": 2,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.6 = <b>0.4</b>."
+    },
+    {
+     "q": "P(A) = 0.3 and P(A ∩ B) = 0.3. Find P(A but not B).",
+     "c": [
+      "0.6",
+      "0.7",
+      "0",
+      "0.3"
+     ],
+     "a": 2,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0</b>."
+    },
+    {
+     "q": "P(A) = 0.3, P(B) = 0.6 and P(A ∩ B) = 0.3. Find P(not A and not B).",
+     "c": [
+      "0.1",
+      "0.28",
+      "0.6",
+      "0.4"
+     ],
+     "a": 3,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.6 = <b>0.4</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.2 and P(A ∩ B) = 0.2. Find P(A ∪ B).",
+     "c": [
+      "0.4",
+      "0.6",
+      "0.12",
+      "0.8"
+     ],
+     "a": 1,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.6 + 0.2 − 0.2 = <b>0.6</b>."
+    },
+    {
+     "q": "P(A) = 0.7, P(B) = 0.7 and P(A ∩ B) = 0.5. Find P(A ∪ B).",
+     "c": [
+      "0.4",
+      "0.9",
+      "0.49",
+      "1"
+     ],
+     "a": 1,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.7 + 0.7 − 0.5 = <b>0.9</b>."
+    },
+    {
+     "q": "P(A) = 0.4, P(B) = 0.3 and P(A ∩ B) = 0.3. Find P(A ∪ B).",
+     "c": [
+      "0.12",
+      "0.7",
+      "0.1",
+      "0.4"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.4 + 0.3 − 0.3 = <b>0.4</b>."
+    },
+    {
+     "q": "P(A) = 0.2, P(B) = 0.4 and P(A ∩ B) = 0.1. Find P(A ∪ B).",
+     "c": [
+      "0.08",
+      "0.6",
+      "0.4",
+      "0.5"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.2 + 0.4 − 0.1 = <b>0.5</b>."
+    },
+    {
+     "q": "P(A) = 0.4 and P(A ∩ B) = 0.2. Find P(A but not B).",
+     "c": [
+      "0.4",
+      "0.2",
+      "0.8",
+      "0.6"
+     ],
+     "a": 1,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0.2</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.3 and P(A ∩ B) = 0.2. Find P(A ∪ B).",
+     "c": [
+      "0.18",
+      "0.7",
+      "0.9",
+      "0.5"
+     ],
+     "a": 1,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.6 + 0.3 − 0.2 = <b>0.7</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.4 and P(A ∩ B) = 0.3. Find P(A ∪ B).",
+     "c": [
+      "0.7",
+      "0.24",
+      "1",
+      "0.4"
+     ],
+     "a": 0,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.6 + 0.4 − 0.3 = <b>0.7</b>."
+    },
+    {
+     "q": "P(A) = 0.3 and P(A ∩ B) = 0.2. Find P(A but not B).",
+     "c": [
+      "0.1",
+      "0.5",
+      "0.3",
+      "0.8"
+     ],
+     "a": 0,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0.1</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.3 and P(A ∪ B) = 0.6. Find P(A ∩ B).",
+     "c": [
+      "0.5",
+      "0.18",
+      "0",
+      "0.3"
+     ],
+     "a": 3,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0.3</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.7 and P(A ∪ B) = 1. Find P(A ∩ B).",
+     "c": [
+      "0.4",
+      "0.3",
+      "0.42",
+      "0.5"
+     ],
+     "a": 1,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0.3</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.5 and P(A ∩ B) = 0.1. Find P(A ∪ B).",
+     "c": [
+      "1.1",
+      "0.9",
+      "1",
+      "0.3"
+     ],
+     "a": 2,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.6 + 0.5 − 0.1 = <b>1</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.6 and P(A ∩ B) = 0.5. Find P(not A and not B).",
+     "c": [
+      "0.3",
+      "0.7",
+      "0.16",
+      "0.4"
+     ],
+     "a": 0,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.7 = <b>0.3</b>."
+    }
+   ]
+  },
+  {
+   "title": "Mixed problems",
+   "items": [
+    {
+     "q": "P(A) = 0.6 and P(A ∩ B) = 0.3. Find P(A but not B).",
+     "c": [
+      "0.7",
+      "0.3",
+      "0.6",
+      "0.9"
+     ],
+     "a": 1,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0.3</b>."
+    },
+    {
+     "q": "P(A) = 0.7, P(B) = 0.3 and P(A ∩ B) = 0.3. Find P(A ∪ B).",
+     "c": [
+      "0.21",
+      "0.7",
+      "0.4",
+      "1"
+     ],
+     "a": 1,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.7 + 0.3 − 0.3 = <b>0.7</b>."
+    },
+    {
+     "q": "One card is drawn from a standard 52-card deck. What is the probability it is a heart or a king?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>52</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>52</span></span>"
+     ],
+     "a": 0,
+     "e": "13 hearts + 4 kings − 1 king of hearts (counted twice) = 16 cards. 16/52 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0.3, P(B) = 0.4 and P(A ∩ B) = 0.1. Find P(A ∪ B).",
+     "c": [
+      "0.7",
+      "0.12",
+      "0.6",
+      "0.5"
+     ],
+     "a": 2,
+     "e": "Addition Rule: P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.3 + 0.4 − 0.1 = <b>0.6</b>. Subtract the overlap so it is not counted twice."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.5 and P(A ∩ B) = 0.2. Find P(A ∪ B).",
+     "c": [
+      "0.9",
+      "0.2",
+      "0.3",
+      "0.7"
+     ],
+     "a": 0,
+     "e": "Addition Rule: P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.6 + 0.5 − 0.2 = <b>0.9</b>. Subtract the overlap so it is not counted twice."
+    },
+    {
+     "q": "A coin is flipped and a fair spinner with 4 equal sections (red, blue, green, yellow) is spun. What is the probability of tails and <b>red</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "There are 2 × 4 = 8 equally likely outcomes, and only one is (tails, red): <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0.5, P(B) = 0.2 and P(A ∩ B) = 0.1. Find P(A ∪ B).",
+     "c": [
+      "0.7",
+      "0.1",
+      "0.5",
+      "0.6"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.5 + 0.2 − 0.1 = <b>0.6</b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are multiplied. What is the probability of <b>a product more than 20</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>"
+     ],
+     "a": 2,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 6 of them give a product more than 20, so P = <span class='fr'><span class='fn'>6</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0.5, P(B) = 0.3 and P(A ∪ B) = 0.6. Find P(A ∩ B).",
+     "c": [
+      "0.1",
+      "0.2",
+      "0.15",
+      "0.4"
+     ],
+     "a": 1,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0.2</b>."
+    },
+    {
+     "q": "P(A) = 0.4, P(B) = 0.5 and P(A ∩ B) = 0.4. Find P(A ∪ B).",
+     "c": [
+      "0.5",
+      "0.1",
+      "0.2",
+      "0.9"
+     ],
+     "a": 0,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.4 + 0.5 − 0.4 = <b>0.5</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.5 and P(A ∩ B) = 0.4. Find P(A ∪ B).",
+     "c": [
+      "0.8",
+      "0.3",
+      "0.4",
+      "0.7"
+     ],
+     "a": 3,
+     "e": "Addition Rule: P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.6 + 0.5 − 0.4 = <b>0.7</b>. Subtract the overlap so it is not counted twice."
+    },
+    {
+     "q": "The probability that it rains tomorrow is 0.4. What is the probability that it does not rain?",
+     "c": [
+      "0.6",
+      "0.8",
+      "0.1",
+      "0.4"
+     ],
+     "a": 0,
+     "e": "Complement: P(not A) = 1 − P(A) = 1 − 0.4 = <b>0.6</b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are subtracted (larger − smaller). What is the probability of <b>an even difference</b>?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>"
+     ],
+     "a": 2,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 18 of them give an even difference, so P = <span class='fr'><span class='fn'>18</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Events A and B are mutually exclusive (they cannot both happen). P(A) = 0.5 and P(B) = 0.2. Find P(A ∪ B).",
+     "c": [
+      "0.6",
+      "0.7",
+      "0.3",
+      "0.1"
+     ],
+     "a": 1,
+     "e": "Mutually exclusive events have no overlap, so P(A ∩ B) = 0 and P(A ∪ B) = 0.5 + 0.2 = <b>0.7</b>."
+    },
+    {
+     "q": "P(A) = 0.2 and P(A ∩ B) = 0.1. Find P(A but not B).",
+     "c": [
+      "0.3",
+      "0.9",
+      "0.2",
+      "0.1"
+     ],
+     "a": 3,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0.1</b>."
+    },
+    {
+     "q": "Events A and B are mutually exclusive (they cannot both happen). P(A) = 0.4 and P(B) = 0.1. Find P(A ∪ B).",
+     "c": [
+      "0.3",
+      "0.04",
+      "0.46",
+      "0.5"
+     ],
+     "a": 3,
+     "e": "Mutually exclusive events have no overlap, so P(A ∩ B) = 0 and P(A ∪ B) = 0.4 + 0.1 = <b>0.5</b>."
+    },
+    {
+     "q": "P(A) = 0.3, P(B) = 0.5 and P(A ∩ B) = 0.2. Find P(not A and not B).",
+     "c": [
+      "0.6",
+      "0.35",
+      "0.2",
+      "0.4"
+     ],
+     "a": 3,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.6 = <b>0.4</b>."
+    },
+    {
+     "q": "Two fair dice are rolled and the scores are added. What is the probability of <b>a sum of 12</b>?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 1,
+     "e": "Draw a 6 × 6 sample space: 36 equally likely outcomes. 1 of them give a sum of 12, so P = <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "The probability that it rains tomorrow is 0.65. What is the probability that it does not rain?",
+     "c": [
+      "0.675",
+      "0.15",
+      "0.35",
+      "0.65"
+     ],
+     "a": 2,
+     "e": "Complement: P(not A) = 1 − P(A) = 1 − 0.65 = <b>0.35</b>."
+    },
+    {
+     "q": "P(A) = 0.3, P(B) = 0.5 and P(A ∩ B) = 0.1. Find P(A ∪ B).",
+     "c": [
+      "0.6",
+      "0.15",
+      "0.7",
+      "0.8"
+     ],
+     "a": 2,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.3 + 0.5 − 0.1 = <b>0.7</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 14,
+ "updated": "2026-11-22",
+ "country": "in",
+ "subject": "maths",
+ "grade": "class-11"
+}

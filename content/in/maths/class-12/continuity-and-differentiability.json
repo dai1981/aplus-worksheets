@@ -1,0 +1,1157 @@
+{
+ "slug": "continuity-and-differentiability",
+ "title": "Continuity and Differentiability: Chain Rule, Implicit and Parametric Derivatives",
+ "seo_title": "Continuity and Differentiability Class 12 Worksheet with Answers (NCERT Chapter 5)",
+ "short_title": "continuity and differentiability",
+ "domain": "Calculus",
+ "standard_code": "Class 12, Chapter 5: Continuity and Differentiability",
+ "standard_url": "https://www.cbseacademic.nic.in/web_material/CurriculumMain26/SrSec/Maths_SrSec_2025-26.pdf",
+ "standard_text": "Continuity and differentiability, chain rule, derivative of inverse trigonometric functions, like sin⁻¹ x, cos⁻¹ x and tan⁻¹ x, derivative of implicit functions; concept of exponential and logarithmic functions; derivatives of logarithmic and exponential functions; logarithmic differentiation, derivative of functions expressed in parametric forms; second order derivatives (summary of the CBSE syllabus)",
+ "meta_desc": "Class 12 Continuity and Differentiability worksheet (NCERT Chapter 5): continuity of piecewise functions, chain rule, inverse trigonometric, exponential and log derivatives, implicit, parametric and logarithmic differentiation and second derivatives. 100 questions with answers.",
+ "key_big": "Chain rule: dy/dx = (dy/du)(du/dx).",
+ "key_sub": "f is continuous at a when the left limit, the right limit and f(a) are equal.",
+ "body_html": "<h2>How it works</h2><ul><li>f is <b>continuous</b> at c if lim<sub>x→c</sub> f(x) = f(c): both one-sided limits must equal f(c).</li><li><b>Chain rule</b>: d/dx f(g(x)) = f′(g(x)) g′(x). Example: d/dx sin(3x) = 3 cos 3x.</li><li>d/dx(e<sup>x</sup>) = e<sup>x</sup>, d/dx(log x) = 1/x, d/dx(sin<sup>−1</sup> x) = 1/√(1 − x²), d/dx(tan<sup>−1</sup> x) = 1/(1 + x²).</li><li>Implicit: differentiate both sides, treating <i>y</i> as a function of x. Parametric: dy/dx = (dy/dt) ÷ (dx/dt).</li><li>For <i>y</i> = f(x)<sup>g(x)</sup>, take logs first (logarithmic differentiation).</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>Find dy/dx if y = sin(x²).</p><p class='sn-ex-s'>Outer: cos(x²); inner: x² with derivative 2x</p><p class='sn-ex-a'>Answer: 2x cos(x²)</p></div><h2>Common mistakes</h2><ul><li>Forgetting to multiply by the derivative of the inside.</li><li>Using (dx/dt) ÷ (dy/dt) for a parametric curve.</li><li>Writing d/dx(xˣ) = x · xˣ⁻¹.</li></ul>",
+ "faq": [
+  {
+   "q": "Is every continuous function differentiable?",
+   "a": "No. |x| is continuous at 0 but not differentiable there."
+  },
+  {
+   "q": "What does log mean in NCERT calculus?",
+   "a": "The natural logarithm, base e."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Continuity",
+   "items": [
+    {
+     "q": "<i>f</i>(<i>x</i>) = 3<i>x</i> + 1 if <i>x</i> &lt; −3, and <i>f</i>(<i>x</i>) = 2<i>x</i> − 3 if <i>x</i> ≥ −3. Describe the behaviour of <i>f</i> as <i>x</i> → −3 from each side.",
+     "c": [
+      "From the left, <i>f</i>(<i>x</i>) → −9; from the right, <i>f</i>(<i>x</i>) → −9",
+      "From the left, <i>f</i>(<i>x</i>) → −8; from the right, <i>f</i>(<i>x</i>) → −8",
+      "From the left, <i>f</i>(<i>x</i>) → −8; from the right, <i>f</i>(<i>x</i>) → −9",
+      "From the left, <i>f</i>(<i>x</i>) → −9; from the right, <i>f</i>(<i>x</i>) → −8"
+     ],
+     "a": 2,
+     "e": "Left side uses 3<i>x</i> + 1: −8. Right side uses 2<i>x</i> − 3: −9. <b>From the left, <i>f</i>(<i>x</i>) → −8; from the right, <i>f</i>(<i>x</i>) → −9</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = <i>x</i> + 3 if <i>x</i> &lt; 4, and <i>f</i>(<i>x</i>) = −<i>x</i> − 5 if <i>x</i> ≥ 4. Is <i>f</i> continuous at <i>x</i> = 4?",
+     "c": [
+      "No, the pieces give 7 and −9",
+      "No, a piecewise function is never continuous",
+      "Yes, every piecewise function is continuous",
+      "Yes, both pieces give −9 there"
+     ],
+     "a": 0,
+     "e": "Put <i>x</i> = 4 into both pieces: 7 and −9. <b>No, the pieces give 7 and −9</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = −2<i>x</i> + 3 if <i>x</i> &lt; −1, and <i>f</i>(<i>x</i>) = 2<i>x</i> if <i>x</i> ≥ −1. Is <i>f</i> continuous at <i>x</i> = −1?",
+     "c": [
+      "No, a piecewise function is never continuous",
+      "Yes, both pieces give −2 there",
+      "Yes, every piecewise function is continuous",
+      "No, the pieces give 5 and −2"
+     ],
+     "a": 3,
+     "e": "Put <i>x</i> = −1 into both pieces: 5 and −2. <b>No, the pieces give 5 and −2</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = −2<i>x</i> + 6 if <i>x</i> &lt; −2, and <i>f</i>(<i>x</i>) = 2<i>x</i> − 3 if <i>x</i> ≥ −2. Is <i>f</i> continuous at <i>x</i> = −2?",
+     "c": [
+      "Yes, every piecewise function is continuous",
+      "Yes, both pieces give −7 there",
+      "No, a piecewise function is never continuous",
+      "No, the pieces give 10 and −7"
+     ],
+     "a": 3,
+     "e": "Put <i>x</i> = −2 into both pieces: 10 and −7. <b>No, the pieces give 10 and −7</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = −<i>x</i> − 5 if <i>x</i> &lt; 1, and <i>f</i>(<i>x</i>) = −2<i>x</i> − 5 if <i>x</i> ≥ 1. Describe the behaviour of <i>f</i> as <i>x</i> → 1 from each side.",
+     "c": [
+      "From the left, <i>f</i>(<i>x</i>) → −6; from the right, <i>f</i>(<i>x</i>) → −7",
+      "From the left, <i>f</i>(<i>x</i>) → −7; from the right, <i>f</i>(<i>x</i>) → −6",
+      "From the left, <i>f</i>(<i>x</i>) → −6; from the right, <i>f</i>(<i>x</i>) → −6",
+      "From the left, <i>f</i>(<i>x</i>) → −7; from the right, <i>f</i>(<i>x</i>) → −7"
+     ],
+     "a": 0,
+     "e": "Left side uses −<i>x</i> − 5: −6. Right side uses −2<i>x</i> − 5: −7. <b>From the left, <i>f</i>(<i>x</i>) → −6; from the right, <i>f</i>(<i>x</i>) → −7</b>."
+    },
+    {
+     "q": "For what value of <i>k</i> is the function continuous? <i>f</i>(<i>x</i>) = 2<i>x</i> + <i>k</i> if <i>x</i> &lt; −3, and <i>f</i>(<i>x</i>) = −<i>x</i> + 6 if <i>x</i> ≥ −3",
+     "c": [
+      "17",
+      "15",
+      "9",
+      "−15"
+     ],
+     "a": 1,
+     "e": "The pieces must meet at <i>x</i> = −3: 2(−3) + <i>k</i> = −1(−3) + 6, so <i>k</i> = 15. <b>15</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = −<i>x</i> + 3 if <i>x</i> &lt; −2, and <i>f</i>(<i>x</i>) = −<i>x</i> + 1 if <i>x</i> ≥ −2. Describe the behaviour of <i>f</i> as <i>x</i> → −2 from each side.",
+     "c": [
+      "From the left, <i>f</i>(<i>x</i>) → 3; from the right, <i>f</i>(<i>x</i>) → 3",
+      "From the left, <i>f</i>(<i>x</i>) → 5; from the right, <i>f</i>(<i>x</i>) → 3",
+      "From the left, <i>f</i>(<i>x</i>) → 5; from the right, <i>f</i>(<i>x</i>) → 5",
+      "From the left, <i>f</i>(<i>x</i>) → 3; from the right, <i>f</i>(<i>x</i>) → 5"
+     ],
+     "a": 1,
+     "e": "Left side uses −<i>x</i> + 3: 5. Right side uses −<i>x</i> + 1: 3. <b>From the left, <i>f</i>(<i>x</i>) → 5; from the right, <i>f</i>(<i>x</i>) → 3</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = −2<i>x</i> − 6 if <i>x</i> &lt; 0, and <i>f</i>(<i>x</i>) = −<i>x</i> + 3 if <i>x</i> ≥ 0. Is <i>f</i> continuous at <i>x</i> = 0?",
+     "c": [
+      "No, a piecewise function is never continuous",
+      "Yes, every piecewise function is continuous",
+      "Yes, both pieces give 3 there",
+      "No, the pieces give −6 and 3"
+     ],
+     "a": 3,
+     "e": "Put <i>x</i> = 0 into both pieces: −6 and 3. <b>No, the pieces give −6 and 3</b>."
+    },
+    {
+     "q": "For what value of <i>k</i> is the function continuous? <i>f</i>(<i>x</i>) = −2<i>x</i> + <i>k</i> if <i>x</i> &lt; 2, and <i>f</i>(<i>x</i>) = 3<i>x</i> + 6 if <i>x</i> ≥ 2",
+     "c": [
+      "16",
+      "−16",
+      "14",
+      "12"
+     ],
+     "a": 0,
+     "e": "The pieces must meet at <i>x</i> = 2: −2(2) + <i>k</i> = 3(2) + 6, so <i>k</i> = 16. <b>16</b>."
+    },
+    {
+     "q": "For what value of <i>k</i> is the function continuous? <i>f</i>(<i>x</i>) = 3<i>x</i> + <i>k</i> if <i>x</i> &lt; 3, and <i>f</i>(<i>x</i>) = 2<i>x</i> if <i>x</i> ≥ 3",
+     "c": [
+      "6",
+      "0",
+      "3",
+      "−3"
+     ],
+     "a": 3,
+     "e": "The pieces must meet at <i>x</i> = 3: 3(3) + <i>k</i> = 2(3) + 0, so <i>k</i> = −3. <b>−3</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = −2<i>x</i> + 5 if <i>x</i> &lt; −3, and <i>f</i>(<i>x</i>) = 2<i>x</i> − 6 if <i>x</i> ≥ −3. How big is the jump in the graph at <i>x</i> = −3?",
+     "c": [
+      "1",
+      "24",
+      "23",
+      "There is no jump"
+     ],
+     "a": 2,
+     "e": "Just left of −3 the value approaches 11; at −3 it is −12. The jump is |11 − (−12)| = 23. <b>23</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = <i>x</i> − 3 if <i>x</i> &lt; 4, and <i>f</i>(<i>x</i>) = −<i>x</i> if <i>x</i> ≥ 4. Describe the behaviour of <i>f</i> as <i>x</i> → 4 from each side.",
+     "c": [
+      "From the left, <i>f</i>(<i>x</i>) → 1; from the right, <i>f</i>(<i>x</i>) → 1",
+      "From the left, <i>f</i>(<i>x</i>) → 1; from the right, <i>f</i>(<i>x</i>) → −4",
+      "From the left, <i>f</i>(<i>x</i>) → −4; from the right, <i>f</i>(<i>x</i>) → −4",
+      "From the left, <i>f</i>(<i>x</i>) → −4; from the right, <i>f</i>(<i>x</i>) → 1"
+     ],
+     "a": 1,
+     "e": "Left side uses <i>x</i> − 3: 1. Right side uses −<i>x</i>: −4. <b>From the left, <i>f</i>(<i>x</i>) → 1; from the right, <i>f</i>(<i>x</i>) → −4</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = −<i>x</i> − 7 if <i>x</i> &lt; 4, and <i>f</i>(<i>x</i>) = 4<i>x</i> − 7 if <i>x</i> ≥ 4. How big is the jump in the graph at <i>x</i> = 4?",
+     "c": [
+      "2",
+      "There is no jump",
+      "20",
+      "21"
+     ],
+     "a": 2,
+     "e": "Just left of 4 the value approaches −11; at 4 it is 9. The jump is |−11 − 9| = 20. <b>20</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = −2<i>x</i> − 3 if <i>x</i> &lt; 1, and <i>f</i>(<i>x</i>) = 4<i>x</i> − 3 if <i>x</i> ≥ 1. How big is the jump in the graph at <i>x</i> = 1?",
+     "c": [
+      "There is no jump",
+      "6",
+      "4",
+      "7"
+     ],
+     "a": 1,
+     "e": "Just left of 1 the value approaches −5; at 1 it is 1. The jump is |−5 − 1| = 6. <b>6</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = −<i>x</i> if <i>x</i> &lt; −2, and <i>f</i>(<i>x</i>) = −<i>x</i> + 2 if <i>x</i> ≥ −2. Describe the behaviour of <i>f</i> as <i>x</i> → −2 from each side.",
+     "c": [
+      "From the left, <i>f</i>(<i>x</i>) → 4; from the right, <i>f</i>(<i>x</i>) → 2",
+      "From the left, <i>f</i>(<i>x</i>) → 4; from the right, <i>f</i>(<i>x</i>) → 4",
+      "From the left, <i>f</i>(<i>x</i>) → 2; from the right, <i>f</i>(<i>x</i>) → 4",
+      "From the left, <i>f</i>(<i>x</i>) → 2; from the right, <i>f</i>(<i>x</i>) → 2"
+     ],
+     "a": 2,
+     "e": "Left side uses −<i>x</i>: 2. Right side uses −<i>x</i> + 2: 4. <b>From the left, <i>f</i>(<i>x</i>) → 2; from the right, <i>f</i>(<i>x</i>) → 4</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = <i>x</i> − 6 if <i>x</i> &lt; 4, and <i>f</i>(<i>x</i>) = −<i>x</i> + 4 if <i>x</i> ≥ 4. Describe the behaviour of <i>f</i> as <i>x</i> → 4 from each side.",
+     "c": [
+      "From the left, <i>f</i>(<i>x</i>) → −2; from the right, <i>f</i>(<i>x</i>) → −2",
+      "From the left, <i>f</i>(<i>x</i>) → 0; from the right, <i>f</i>(<i>x</i>) → 0",
+      "From the left, <i>f</i>(<i>x</i>) → 0; from the right, <i>f</i>(<i>x</i>) → −2",
+      "From the left, <i>f</i>(<i>x</i>) → −2; from the right, <i>f</i>(<i>x</i>) → 0"
+     ],
+     "a": 3,
+     "e": "Left side uses <i>x</i> − 6: −2. Right side uses −<i>x</i> + 4: 0. <b>From the left, <i>f</i>(<i>x</i>) → −2; from the right, <i>f</i>(<i>x</i>) → 0</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = 2<i>x</i> − 5 if <i>x</i> &lt; −1, and <i>f</i>(<i>x</i>) = −<i>x</i> − 5 if <i>x</i> ≥ −1. Describe the behaviour of <i>f</i> as <i>x</i> → −1 from each side.",
+     "c": [
+      "From the left, <i>f</i>(<i>x</i>) → −7; from the right, <i>f</i>(<i>x</i>) → −4",
+      "From the left, <i>f</i>(<i>x</i>) → −4; from the right, <i>f</i>(<i>x</i>) → −7",
+      "From the left, <i>f</i>(<i>x</i>) → −7; from the right, <i>f</i>(<i>x</i>) → −7",
+      "From the left, <i>f</i>(<i>x</i>) → −4; from the right, <i>f</i>(<i>x</i>) → −4"
+     ],
+     "a": 0,
+     "e": "Left side uses 2<i>x</i> − 5: −7. Right side uses −<i>x</i> − 5: −4. <b>From the left, <i>f</i>(<i>x</i>) → −7; from the right, <i>f</i>(<i>x</i>) → −4</b>."
+    },
+    {
+     "q": "For what value of <i>k</i> is the function continuous? <i>f</i>(<i>x</i>) = <i>x</i> + <i>k</i> if <i>x</i> &lt; −2, and <i>f</i>(<i>x</i>) = 2<i>x</i> + 6 if <i>x</i> ≥ −2",
+     "c": [
+      "2",
+      "5",
+      "4",
+      "−4"
+     ],
+     "a": 2,
+     "e": "The pieces must meet at <i>x</i> = −2: 1(−2) + <i>k</i> = 2(−2) + 6, so <i>k</i> = 4. <b>4</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = 2<i>x</i> − 2 if <i>x</i> &lt; 1, and <i>f</i>(<i>x</i>) = <i>x</i> − 4 if <i>x</i> ≥ 1. Is <i>f</i> continuous at <i>x</i> = 1?",
+     "c": [
+      "No, the pieces give 0 and −3",
+      "Yes, every piecewise function is continuous",
+      "No, a piecewise function is never continuous",
+      "Yes, both pieces give −3 there"
+     ],
+     "a": 0,
+     "e": "Put <i>x</i> = 1 into both pieces: 0 and −3. <b>No, the pieces give 0 and −3</b>."
+    },
+    {
+     "q": "<i>f</i>(<i>x</i>) = −<i>x</i> − 6 if <i>x</i> &lt; −3, and <i>f</i>(<i>x</i>) = −<i>x</i> − 1 if <i>x</i> ≥ −3. Describe the behaviour of <i>f</i> as <i>x</i> → −3 from each side.",
+     "c": [
+      "From the left, <i>f</i>(<i>x</i>) → −3; from the right, <i>f</i>(<i>x</i>) → −3",
+      "From the left, <i>f</i>(<i>x</i>) → −3; from the right, <i>f</i>(<i>x</i>) → 2",
+      "From the left, <i>f</i>(<i>x</i>) → 2; from the right, <i>f</i>(<i>x</i>) → 2",
+      "From the left, <i>f</i>(<i>x</i>) → 2; from the right, <i>f</i>(<i>x</i>) → −3"
+     ],
+     "a": 1,
+     "e": "Left side uses −<i>x</i> − 6: −3. Right side uses −<i>x</i> − 1: 2. <b>From the left, <i>f</i>(<i>x</i>) → −3; from the right, <i>f</i>(<i>x</i>) → 2</b>."
+    }
+   ]
+  },
+  {
+   "title": "Chain rule",
+   "items": [
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = (5<i>x</i> − 2)⁷.",
+     "c": [
+      "7(5<i>x</i> − 2)⁶",
+      "35(5<i>x</i> − 2)⁶",
+      "35(5<i>x</i> − 2)⁷",
+      "5(5<i>x</i> − 2)⁶"
+     ],
+     "a": 1,
+     "e": "n(5<i>x</i> − 2)ⁿ⁻¹ × 5 = <b>35(5<i>x</i> − 2)⁶</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = (3<i>x</i> + 1)⁷.",
+     "c": [
+      "3(3<i>x</i> + 1)⁶",
+      "21(3<i>x</i> + 1)⁶",
+      "21(3<i>x</i> + 1)⁷",
+      "7(3<i>x</i> + 1)⁶"
+     ],
+     "a": 1,
+     "e": "n(3<i>x</i> + 1)ⁿ⁻¹ × 3 = <b>21(3<i>x</i> + 1)⁶</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = e<sup>−2<i>x</i> + 6</sup>.",
+     "c": [
+      "6e<sup>−2<i>x</i> + 6</sup>",
+      "−2e<sup>−2<i>x</i> + 8</sup>",
+      "e<sup>−2<i>x</i> + 6</sup>",
+      "−2e<sup>−2<i>x</i> + 6</sup>"
+     ],
+     "a": 3,
+     "e": "d/d<i>x</i>(e<sup>u</sup>) = e<sup>u</sup> × u′, and u′ = −2: <b>−2e<sup>−2<i>x</i> + 6</sup></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = sin(−3<i>x</i> − 1).",
+     "c": [
+      "−3cos(−3<i>x</i> − 1)",
+      "cos(−3<i>x</i> − 1)",
+      "−3sin(−3<i>x</i> − 1)",
+      "3cos(−3<i>x</i> − 1)"
+     ],
+     "a": 0,
+     "e": "Chain rule: cos(−3<i>x</i> − 1) × d/d<i>x</i>(−3<i>x</i> − 1) = <b>−3cos(−3<i>x</i> − 1)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = (5<i>x</i> + 5)⁷.",
+     "c": [
+      "7(5<i>x</i> + 5)⁶",
+      "35(5<i>x</i> + 5)⁶",
+      "35(5<i>x</i> + 5)⁷",
+      "5(5<i>x</i> + 5)⁶"
+     ],
+     "a": 1,
+     "e": "n(5<i>x</i> + 5)ⁿ⁻¹ × 5 = <b>35(5<i>x</i> + 5)⁶</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = e<sup>3<i>x</i> + 4</sup>.",
+     "c": [
+      "3e<sup>3<i>x</i> + 4</sup>",
+      "3e<sup>3<i>x</i> + 1</sup>",
+      "4e<sup>3<i>x</i> + 4</sup>",
+      "e<sup>3<i>x</i> + 4</sup>"
+     ],
+     "a": 0,
+     "e": "d/d<i>x</i>(e<sup>u</sup>) = e<sup>u</sup> × u′, and u′ = 3: <b>3e<sup>3<i>x</i> + 4</sup></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = sin²(4<i>x</i>).",
+     "c": [
+      "4 cos² 4<i>x</i>",
+      "8 sin 4<i>x</i> cos 4<i>x</i>",
+      "2 sin 4<i>x</i> cos 4<i>x</i>",
+      "2 sin 4<i>x</i>"
+     ],
+     "a": 1,
+     "e": "2 sin(4<i>x</i>) × cos(4<i>x</i>) × 4 = <b>8 sin 4<i>x</i> cos 4<i>x</i></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = sin(2<i>x</i>).",
+     "c": [
+      "−2cos(2<i>x</i>)",
+      "2sin(2<i>x</i>)",
+      "cos(2<i>x</i>)",
+      "2cos(2<i>x</i>)"
+     ],
+     "a": 3,
+     "e": "Chain rule: cos(2<i>x</i>) × d/d<i>x</i>(2<i>x</i>) = <b>2cos(2<i>x</i>)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = log(2<i>x</i> + 5).",
+     "c": [
+      "2/(2<i>x</i> + 5)",
+      "2/<i>x</i>",
+      "1/(2<i>x</i> + 5)",
+      "1/2"
+     ],
+     "a": 0,
+     "e": "(1/(2<i>x</i> + 5)) × 2 = <b>2/(2<i>x</i> + 5)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = log(2<i>x</i> + 1).",
+     "c": [
+      "2/(2<i>x</i> + 1)",
+      "1/2",
+      "2/<i>x</i>",
+      "1/(2<i>x</i> + 1)"
+     ],
+     "a": 0,
+     "e": "(1/(2<i>x</i> + 1)) × 2 = <b>2/(2<i>x</i> + 1)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = √(3<i>x</i> + 2).",
+     "c": [
+      "1/(2√(3<i>x</i> + 2))",
+      "3/(2√(3<i>x</i> + 2))",
+      "3√(3<i>x</i> + 2)",
+      "3/√(3<i>x</i> + 2)"
+     ],
+     "a": 1,
+     "e": "(1/(2√(3<i>x</i> + 2))) × 3 = <b>3/(2√(3<i>x</i> + 2))</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = √(3<i>x</i> + 3).",
+     "c": [
+      "1/(2√(3<i>x</i> + 3))",
+      "3√(3<i>x</i> + 3)",
+      "3/√(3<i>x</i> + 3)",
+      "3/(2√(3<i>x</i> + 3))"
+     ],
+     "a": 3,
+     "e": "(1/(2√(3<i>x</i> + 3))) × 3 = <b>3/(2√(3<i>x</i> + 3))</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = log(4<i>x</i> + 4).",
+     "c": [
+      "4/<i>x</i>",
+      "1/4",
+      "4/(4<i>x</i> + 4)",
+      "1/(4<i>x</i> + 4)"
+     ],
+     "a": 2,
+     "e": "(1/(4<i>x</i> + 4)) × 4 = <b>4/(4<i>x</i> + 4)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = cos(−3<i>x</i>).",
+     "c": [
+      "3cos(−3<i>x</i>)",
+      "−sin(−3<i>x</i>)",
+      "−3sin(−3<i>x</i>)",
+      "3sin(−3<i>x</i>)"
+     ],
+     "a": 3,
+     "e": "−sin(−3<i>x</i>) × −3 = <b>3sin(−3<i>x</i>)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = sin²(3<i>x</i>).",
+     "c": [
+      "2 sin 3<i>x</i> cos 3<i>x</i>",
+      "2 sin 3<i>x</i>",
+      "3 cos² 3<i>x</i>",
+      "6 sin 3<i>x</i> cos 3<i>x</i>"
+     ],
+     "a": 3,
+     "e": "2 sin(3<i>x</i>) × cos(3<i>x</i>) × 3 = <b>6 sin 3<i>x</i> cos 3<i>x</i></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = cos(5<i>x</i> + 3).",
+     "c": [
+      "−5sin(5<i>x</i> + 3)",
+      "5sin(5<i>x</i> + 3)",
+      "−sin(5<i>x</i> + 3)",
+      "−5cos(5<i>x</i> + 3)"
+     ],
+     "a": 0,
+     "e": "−sin(5<i>x</i> + 3) × 5 = <b>−5sin(5<i>x</i> + 3)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = log(4<i>x</i>).",
+     "c": [
+      "1/(4<i>x</i>)",
+      "1/4",
+      "4/(4<i>x</i>)",
+      "4/<i>x</i>"
+     ],
+     "a": 2,
+     "e": "(1/(4<i>x</i>)) × 4 = <b>4/(4<i>x</i>)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = sin(4<i>x</i> + 1).",
+     "c": [
+      "−4cos(4<i>x</i> + 1)",
+      "4sin(4<i>x</i> + 1)",
+      "4cos(4<i>x</i> + 1)",
+      "cos(4<i>x</i> + 1)"
+     ],
+     "a": 2,
+     "e": "Chain rule: cos(4<i>x</i> + 1) × d/d<i>x</i>(4<i>x</i> + 1) = <b>4cos(4<i>x</i> + 1)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = cos(2<i>x</i> − 5).",
+     "c": [
+      "−2cos(2<i>x</i> − 5)",
+      "2sin(2<i>x</i> − 5)",
+      "−2sin(2<i>x</i> − 5)",
+      "−sin(2<i>x</i> − 5)"
+     ],
+     "a": 2,
+     "e": "−sin(2<i>x</i> − 5) × 2 = <b>−2sin(2<i>x</i> − 5)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = log(3<i>x</i> − 1).",
+     "c": [
+      "3/<i>x</i>",
+      "1/3",
+      "3/(3<i>x</i> − 1)",
+      "1/(3<i>x</i> − 1)"
+     ],
+     "a": 2,
+     "e": "(1/(3<i>x</i> − 1)) × 3 = <b>3/(3<i>x</i> − 1)</b>."
+    }
+   ]
+  },
+  {
+   "title": "Inverse trigonometric, implicit functions",
+   "items": [
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if −6<i>x</i> + 5<i>y</i> = sin <i>x</i>.",
+     "c": [
+      "(cos <i>x</i> + 6)/5",
+      "(cos <i>x</i> − 6)/5",
+      "(cos <i>x</i>)/5",
+      "(sin <i>x</i> + 6)/5"
+     ],
+     "a": 0,
+     "e": "−6 + 5<i>y</i>′ = cos <i>x</i>, so <i>y</i>′ = <b>(cos <i>x</i> + 6)/5</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i>² + <i>x</i><i>y</i> + <i>y</i>² = 100.",
+     "c": [
+      "−(2<i>x</i> + <i>y</i>)/(<i>x</i> + 2<i>y</i>)",
+      "−(2<i>x</i> + <i>y</i>)/(2<i>y</i>)",
+      "(2<i>x</i> + <i>y</i>)/(<i>x</i> + 2<i>y</i>)",
+      "−<i>x</i>/<i>y</i>"
+     ],
+     "a": 0,
+     "e": "2<i>x</i> + (<i>y</i> + <i>x</i><i>y</i>′) + 2<i>y</i><i>y</i>′ = 0, so <i>y</i>′ = <b>−(2<i>x</i> + <i>y</i>)/(<i>x</i> + 2<i>y</i>)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i><i>y</i> = 2.",
+     "c": [
+      "<i>y</i>/<i>x</i>",
+      "−<i>y</i>/<i>x</i>",
+      "−<i>x</i>/<i>y</i>",
+      "2/<i>x</i>"
+     ],
+     "a": 1,
+     "e": "Product rule: <i>y</i> + <i>x</i>(d<i>y</i>/d<i>x</i>) = 0, so d<i>y</i>/d<i>x</i> = <b>−<i>y</i>/<i>x</i></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if 6<i>x</i> + <i>y</i> = sin <i>x</i>.",
+     "c": [
+      "cos <i>x</i> + 6",
+      "sin <i>x</i> − 6",
+      "cos <i>x</i>",
+      "cos <i>x</i> − 6"
+     ],
+     "a": 3,
+     "e": "6 + <i>y</i>′ = cos <i>x</i>, so <i>y</i>′ = <b>cos <i>x</i> − 6</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i><i>y</i> = 5.",
+     "c": [
+      "−<i>x</i>/<i>y</i>",
+      "5/<i>x</i>",
+      "<i>y</i>/<i>x</i>",
+      "−<i>y</i>/<i>x</i>"
+     ],
+     "a": 3,
+     "e": "Product rule: <i>y</i> + <i>x</i>(d<i>y</i>/d<i>x</i>) = 0, so d<i>y</i>/d<i>x</i> = <b>−<i>y</i>/<i>x</i></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if −2<i>x</i> + 6<i>y</i> = sin <i>x</i>.",
+     "c": [
+      "(cos <i>x</i> − 2)/6",
+      "(cos <i>x</i> + 2)/6",
+      "(sin <i>x</i> + 2)/6",
+      "(cos <i>x</i>)/6"
+     ],
+     "a": 1,
+     "e": "−2 + 6<i>y</i>′ = cos <i>x</i>, so <i>y</i>′ = <b>(cos <i>x</i> + 2)/6</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i><i>y</i> = 19.",
+     "c": [
+      "19/<i>x</i>",
+      "−<i>y</i>/<i>x</i>",
+      "<i>y</i>/<i>x</i>",
+      "−<i>x</i>/<i>y</i>"
+     ],
+     "a": 1,
+     "e": "Product rule: <i>y</i> + <i>x</i>(d<i>y</i>/d<i>x</i>) = 0, so d<i>y</i>/d<i>x</i> = <b>−<i>y</i>/<i>x</i></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i><i>y</i> = 15.",
+     "c": [
+      "15/<i>x</i>",
+      "−<i>y</i>/<i>x</i>",
+      "−<i>x</i>/<i>y</i>",
+      "<i>y</i>/<i>x</i>"
+     ],
+     "a": 1,
+     "e": "Product rule: <i>y</i> + <i>x</i>(d<i>y</i>/d<i>x</i>) = 0, so d<i>y</i>/d<i>x</i> = <b>−<i>y</i>/<i>x</i></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = sin<sup>−1</sup>(2<i>x</i>).",
+     "c": [
+      "2/(1 + 4<i>x</i>²)",
+      "1/√(1 − 4<i>x</i>²)",
+      "2/√(1 − 4<i>x</i>²)",
+      "2/√(1 − 2<i>x</i>²)"
+     ],
+     "a": 2,
+     "e": "d/du(sin<sup>−1</sup> u) = 1/√(1 − u²) with u = 2<i>x</i>, times u′ = 2: <b>2/√(1 − 4<i>x</i>²)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = tan<sup>−1</sup>(5<i>x</i>).",
+     "c": [
+      "5/(1 + 25<i>x</i>²)",
+      "1/(1 + 25<i>x</i>²)",
+      "5/√(1 − 25<i>x</i>²)",
+      "5/(1 + 5<i>x</i>²)"
+     ],
+     "a": 0,
+     "e": "1/(1 + (5<i>x</i>)²) × 5 = <b>5/(1 + 25<i>x</i>²)</b>."
+    },
+    {
+     "q": "Find d/d<i>x</i> (cos<sup>−1</sup> <i>x</i>).",
+     "c": [
+      "1/√(1 − <i>x</i>²)",
+      "−1/(1 + <i>x</i>²)",
+      "−sin<sup>−1</sup> <i>x</i>",
+      "−1/√(1 − <i>x</i>²)"
+     ],
+     "a": 3,
+     "e": "d/d<i>x</i>(cos<sup>−1</sup> <i>x</i>) = <b>−1/√(1 − <i>x</i>²)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = sin<sup>−1</sup>(4<i>x</i>).",
+     "c": [
+      "1/√(1 − 16<i>x</i>²)",
+      "4/√(1 − 16<i>x</i>²)",
+      "4/√(1 − 4<i>x</i>²)",
+      "4/(1 + 16<i>x</i>²)"
+     ],
+     "a": 1,
+     "e": "d/du(sin<sup>−1</sup> u) = 1/√(1 − u²) with u = 4<i>x</i>, times u′ = 4: <b>4/√(1 − 16<i>x</i>²)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = sin<sup>−1</sup>(3<i>x</i>).",
+     "c": [
+      "1/√(1 − 9<i>x</i>²)",
+      "3/√(1 − 3<i>x</i>²)",
+      "3/√(1 − 9<i>x</i>²)",
+      "3/(1 + 9<i>x</i>²)"
+     ],
+     "a": 2,
+     "e": "d/du(sin<sup>−1</sup> u) = 1/√(1 − u²) with u = 3<i>x</i>, times u′ = 3: <b>3/√(1 − 9<i>x</i>²)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if −6<i>x</i> + 3<i>y</i> = sin <i>x</i>.",
+     "c": [
+      "(sin <i>x</i> + 6)/3",
+      "(cos <i>x</i>)/3",
+      "(cos <i>x</i> − 6)/3",
+      "(cos <i>x</i> + 6)/3"
+     ],
+     "a": 3,
+     "e": "−6 + 3<i>y</i>′ = cos <i>x</i>, so <i>y</i>′ = <b>(cos <i>x</i> + 6)/3</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = tan<sup>−1</sup>(4<i>x</i>).",
+     "c": [
+      "4/(1 + 4<i>x</i>²)",
+      "1/(1 + 16<i>x</i>²)",
+      "4/(1 + 16<i>x</i>²)",
+      "4/√(1 − 16<i>x</i>²)"
+     ],
+     "a": 2,
+     "e": "1/(1 + (4<i>x</i>)²) × 4 = <b>4/(1 + 16<i>x</i>²)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = tan<sup>−1</sup>(2<i>x</i>).",
+     "c": [
+      "1/(1 + 4<i>x</i>²)",
+      "2/√(1 − 4<i>x</i>²)",
+      "2/(1 + 2<i>x</i>²)",
+      "2/(1 + 4<i>x</i>²)"
+     ],
+     "a": 3,
+     "e": "1/(1 + (2<i>x</i>)²) × 2 = <b>2/(1 + 4<i>x</i>²)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if 5<i>x</i> + 2<i>y</i> = sin <i>x</i>.",
+     "c": [
+      "(cos <i>x</i> − 5)/2",
+      "(cos <i>x</i> + 5)/2",
+      "(sin <i>x</i> − 5)/2",
+      "(cos <i>x</i>)/2"
+     ],
+     "a": 0,
+     "e": "5 + 2<i>y</i>′ = cos <i>x</i>, so <i>y</i>′ = <b>(cos <i>x</i> − 5)/2</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i><i>y</i> = 6.",
+     "c": [
+      "<i>y</i>/<i>x</i>",
+      "6/<i>x</i>",
+      "−<i>y</i>/<i>x</i>",
+      "−<i>x</i>/<i>y</i>"
+     ],
+     "a": 2,
+     "e": "Product rule: <i>y</i> + <i>x</i>(d<i>y</i>/d<i>x</i>) = 0, so d<i>y</i>/d<i>x</i> = <b>−<i>y</i>/<i>x</i></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if −5<i>x</i> + 5<i>y</i> = sin <i>x</i>.",
+     "c": [
+      "(sin <i>x</i> + 5)/5",
+      "(cos <i>x</i> − 5)/5",
+      "(cos <i>x</i> + 5)/5",
+      "(cos <i>x</i>)/5"
+     ],
+     "a": 2,
+     "e": "−5 + 5<i>y</i>′ = cos <i>x</i>, so <i>y</i>′ = <b>(cos <i>x</i> + 5)/5</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = tan<sup>−1</sup>(<i>x</i>²).",
+     "c": [
+      "2<i>x</i>/(1 + <i>x</i>⁴)",
+      "1/(1 + <i>x</i>⁴)",
+      "1/(1 + <i>x</i>²)",
+      "2<i>x</i>/(1 + <i>x</i>²)"
+     ],
+     "a": 0,
+     "e": "1/(1 + (<i>x</i>²)²) × 2<i>x</i> = <b>2<i>x</i>/(1 + <i>x</i>⁴)</b>."
+    }
+   ]
+  },
+  {
+   "title": "Parametric and logarithmic differentiation",
+   "items": [
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 5 cos θ, <i>y</i> = 5 sin θ.",
+     "c": [
+      "tan θ",
+      "cot θ",
+      "−cot θ",
+      "−tan θ"
+     ],
+     "a": 2,
+     "e": "d<i>x</i>/dθ = −5 sin θ and d<i>y</i>/dθ = 5 cos θ, so d<i>y</i>/d<i>x</i> = <b>−cot θ</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 4 cos θ, <i>y</i> = 6 sin θ.",
+     "c": [
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> tan θ",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> cot θ",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> cot θ",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> cot θ"
+     ],
+     "a": 1,
+     "e": "d<i>y</i>/d<i>x</i> = (6 cos θ) ÷ (−4 sin θ) = <b>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> cot θ</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 2<i>t</i> + 1, <i>y</i> = 5<i>t</i>² − 1.",
+     "c": [
+      "5",
+      "5<i>t</i>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span><i>t</i>",
+      "10<i>t</i>"
+     ],
+     "a": 1,
+     "e": "d<i>y</i>/d<i>x</i> = 10<i>t</i> ÷ 2 = <b>5<i>t</i></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 2<i>t</i>², <i>y</i> = 4<i>t</i>.",
+     "c": [
+      "<i>t</i>",
+      "1/<i>t</i>",
+      "2<i>t</i>",
+      "2/<i>t</i>"
+     ],
+     "a": 1,
+     "e": "d<i>x</i>/d<i>t</i> = 4<i>t</i> and d<i>y</i>/d<i>t</i> = 4, so d<i>y</i>/d<i>x</i> = 4 ÷ 4<i>t</i> = <b>1/<i>t</i></b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = 5<i>x</i>⁴ − 6<i>x</i>² + 6<i>x</i>.",
+     "c": [
+      "60<i>x</i>² − 12",
+      "60<i>x</i>³ − 12",
+      "20<i>x</i>³ − 12<i>x</i> + 6",
+      "60<i>x</i>²"
+     ],
+     "a": 0,
+     "e": "Differentiate twice: <b>60<i>x</i>² − 12</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = <i>t</i>², <i>y</i> = <i>t</i>³.",
+     "c": [
+      "3<i>t</i>/2",
+      "3<i>t</i>²",
+      "2/(3<i>t</i>)",
+      "<i>t</i>/2"
+     ],
+     "a": 0,
+     "e": "d<i>y</i>/d<i>x</i> = 3<i>t</i>² ÷ 2<i>t</i> = <b>3<i>t</i>/2</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 6<i>t</i>², <i>y</i> = 12<i>t</i>.",
+     "c": [
+      "<i>t</i>",
+      "6<i>t</i>",
+      "1/<i>t</i>",
+      "2/<i>t</i>"
+     ],
+     "a": 2,
+     "e": "d<i>x</i>/d<i>t</i> = 12<i>t</i> and d<i>y</i>/d<i>t</i> = 12, so d<i>y</i>/d<i>x</i> = 12 ÷ 12<i>t</i> = <b>1/<i>t</i></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 3<i>t</i> + 1, <i>y</i> = 3<i>t</i>² − 1.",
+     "c": [
+      "2<i>t</i>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><i>t</i>",
+      "6<i>t</i>",
+      "2"
+     ],
+     "a": 0,
+     "e": "d<i>y</i>/d<i>x</i> = 6<i>t</i> ÷ 3 = <b>2<i>t</i></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 3<i>t</i>², <i>y</i> = 6<i>t</i>.",
+     "c": [
+      "<i>t</i>",
+      "3<i>t</i>",
+      "2/<i>t</i>",
+      "1/<i>t</i>"
+     ],
+     "a": 3,
+     "e": "d<i>x</i>/d<i>t</i> = 6<i>t</i> and d<i>y</i>/d<i>t</i> = 6, so d<i>y</i>/d<i>x</i> = 6 ÷ 6<i>t</i> = <b>1/<i>t</i></b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = e<sup>−2<i>x</i></sup>.",
+     "c": [
+      "e<sup>−2<i>x</i></sup>",
+      "4e<sup>−2<i>x</i></sup>",
+      "−2e<sup>−2<i>x</i></sup>",
+      "−4e<sup>−2<i>x</i></sup>"
+     ],
+     "a": 1,
+     "e": "Each derivative multiplies by −2, so the second gives <b>4e<sup>−2<i>x</i></sup></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 4<i>t</i> + 1, <i>y</i> = 4<i>t</i>² − 1.",
+     "c": [
+      "2",
+      "8<i>t</i>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><i>t</i>",
+      "2<i>t</i>"
+     ],
+     "a": 3,
+     "e": "d<i>y</i>/d<i>x</i> = 8<i>t</i> ÷ 4 = <b>2<i>t</i></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 4<i>t</i>², <i>y</i> = 8<i>t</i>.",
+     "c": [
+      "2/<i>t</i>",
+      "4<i>t</i>",
+      "<i>t</i>",
+      "1/<i>t</i>"
+     ],
+     "a": 3,
+     "e": "d<i>x</i>/d<i>t</i> = 8<i>t</i> and d<i>y</i>/d<i>t</i> = 8, so d<i>y</i>/d<i>x</i> = 8 ÷ 8<i>t</i> = <b>1/<i>t</i></b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = e<sup>−3<i>x</i></sup>.",
+     "c": [
+      "e<sup>−3<i>x</i></sup>",
+      "−6e<sup>−3<i>x</i></sup>",
+      "9e<sup>−3<i>x</i></sup>",
+      "−3e<sup>−3<i>x</i></sup>"
+     ],
+     "a": 2,
+     "e": "Each derivative multiplies by −3, so the second gives <b>9e<sup>−3<i>x</i></sup></b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = 4<i>x</i>³ + 6<i>x</i>² + 9<i>x</i>.",
+     "c": [
+      "24<i>x</i> + 12",
+      "12<i>x</i>² + 12<i>x</i> + 9",
+      "24<i>x</i>",
+      "24<i>x</i>² + 12"
+     ],
+     "a": 0,
+     "e": "Differentiate twice: <b>24<i>x</i> + 12</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 3 cos θ, <i>y</i> = 7 sin θ.",
+     "c": [
+      "−<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span> tan θ",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> cot θ",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span> cot θ",
+      "−<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span> cot θ"
+     ],
+     "a": 3,
+     "e": "d<i>y</i>/d<i>x</i> = (7 cos θ) ÷ (−3 sin θ) = <b>−<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span> cot θ</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 4 cos θ, <i>y</i> = 4 sin θ.",
+     "c": [
+      "cot θ",
+      "tan θ",
+      "−tan θ",
+      "−cot θ"
+     ],
+     "a": 3,
+     "e": "d<i>x</i>/dθ = −4 sin θ and d<i>y</i>/dθ = 4 cos θ, so d<i>y</i>/d<i>x</i> = <b>−cot θ</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 6 cos θ, <i>y</i> = 4 sin θ.",
+     "c": [
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> cot θ",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> cot θ",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> cot θ",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> tan θ"
+     ],
+     "a": 2,
+     "e": "d<i>y</i>/d<i>x</i> = (4 cos θ) ÷ (−6 sin θ) = <b>−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> cot θ</b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = 3<i>x</i>⁴ − 5<i>x</i>² + 9<i>x</i>.",
+     "c": [
+      "36<i>x</i>² − 10",
+      "36<i>x</i>²",
+      "36<i>x</i>³ − 10",
+      "12<i>x</i>³ − 10<i>x</i> + 9"
+     ],
+     "a": 0,
+     "e": "Differentiate twice: <b>36<i>x</i>² − 10</b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = log <i>x</i>.",
+     "c": [
+      "1/<i>x</i>²",
+      "1/<i>x</i>",
+      "−1/<i>x</i>²",
+      "−1/<i>x</i>"
+     ],
+     "a": 2,
+     "e": "<i>y</i>′ = 1/<i>x</i> = <i>x</i><sup>−1</sup>, so <i>y</i>″ = <b>−1/<i>x</i>²</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>x</i> = 5 cos θ, <i>y</i> = 2 sin θ.",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> cot θ",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> cot θ",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> tan θ",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> cot θ"
+     ],
+     "a": 1,
+     "e": "d<i>y</i>/d<i>x</i> = (2 cos θ) ÷ (−5 sin θ) = <b>−<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> cot θ</b>."
+    }
+   ]
+  },
+  {
+   "title": "Second order derivatives and mixed problems",
+   "items": [
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = <i>x</i>⁴ + 4<i>x</i>² − 9<i>x</i>.",
+     "c": [
+      "12<i>x</i>³ + 8",
+      "4<i>x</i>³ + 8<i>x</i> − 9",
+      "12<i>x</i>² + 8",
+      "12<i>x</i>²"
+     ],
+     "a": 2,
+     "e": "Differentiate twice: <b>12<i>x</i>² + 8</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = log(5<i>x</i> + 1).",
+     "c": [
+      "5/(5<i>x</i> + 1)",
+      "1/5",
+      "5/<i>x</i>",
+      "1/(5<i>x</i> + 1)"
+     ],
+     "a": 0,
+     "e": "(1/(5<i>x</i> + 1)) × 5 = <b>5/(5<i>x</i> + 1)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = <i>x</i><sup><i>x</i></sup>.",
+     "c": [
+      "<i>x</i><sup><i>x</i></sup>(1 + log <i>x</i>)",
+      "<i>x</i><sup><i>x</i></sup> log <i>x</i>",
+      "<i>x</i> · <i>x</i><sup><i>x</i> − 1</sup>",
+      "<i>x</i><sup><i>x</i></sup>"
+     ],
+     "a": 0,
+     "e": "Take logs: log <i>y</i> = <i>x</i> log <i>x</i>, so (1/<i>y</i>)<i>y</i>′ = log <i>x</i> + 1 and <i>y</i>′ = <b><i>x</i><sup><i>x</i></sup>(1 + log <i>x</i>)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = √(2<i>x</i> + 2).",
+     "c": [
+      "1/√(2<i>x</i> + 2)",
+      "2/√(2<i>x</i> + 2)",
+      "2√(2<i>x</i> + 2)",
+      "1/(2√(2<i>x</i> + 2))"
+     ],
+     "a": 0,
+     "e": "(1/(2√(2<i>x</i> + 2))) × 2 = <b>1/√(2<i>x</i> + 2)</b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = 3<i>x</i>³ − 3<i>x</i>² − 1<i>x</i>.",
+     "c": [
+      "9<i>x</i>² − 6<i>x</i> − 1",
+      "18<i>x</i> − 6",
+      "18<i>x</i>² − 6",
+      "18<i>x</i>"
+     ],
+     "a": 1,
+     "e": "Differentiate twice: <b>18<i>x</i> − 6</b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = 5<i>x</i>⁴ + 4<i>x</i>² + 3<i>x</i>.",
+     "c": [
+      "60<i>x</i>³ + 8",
+      "20<i>x</i>³ + 8<i>x</i> + 3",
+      "60<i>x</i>²",
+      "60<i>x</i>² + 8"
+     ],
+     "a": 3,
+     "e": "Differentiate twice: <b>60<i>x</i>² + 8</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = cos(−2<i>x</i>).",
+     "c": [
+      "−2sin(−2<i>x</i>)",
+      "2sin(−2<i>x</i>)",
+      "−sin(−2<i>x</i>)",
+      "2cos(−2<i>x</i>)"
+     ],
+     "a": 1,
+     "e": "−sin(−2<i>x</i>) × −2 = <b>2sin(−2<i>x</i>)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = sin(4<i>x</i> + 6).",
+     "c": [
+      "cos(4<i>x</i> + 6)",
+      "4sin(4<i>x</i> + 6)",
+      "4cos(4<i>x</i> + 6)",
+      "−4cos(4<i>x</i> + 6)"
+     ],
+     "a": 2,
+     "e": "Chain rule: cos(4<i>x</i> + 6) × d/d<i>x</i>(4<i>x</i> + 6) = <b>4cos(4<i>x</i> + 6)</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = e<sup>−2<i>x</i> + 2</sup>.",
+     "c": [
+      "e<sup>−2<i>x</i> + 2</sup>",
+      "−2e<sup>−2<i>x</i> + 4</sup>",
+      "2e<sup>−2<i>x</i> + 2</sup>",
+      "−2e<sup>−2<i>x</i> + 2</sup>"
+     ],
+     "a": 3,
+     "e": "d/d<i>x</i>(e<sup>u</sup>) = e<sup>u</sup> × u′, and u′ = −2: <b>−2e<sup>−2<i>x</i> + 2</sup></b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = sin 4<i>x</i>.",
+     "c": [
+      "16 sin 4<i>x</i>",
+      "−4 sin 4<i>x</i>",
+      "−16 cos 4<i>x</i>",
+      "−16 sin 4<i>x</i>"
+     ],
+     "a": 3,
+     "e": "d²<i>y</i>/d<i>x</i>² = −4² sin 4<i>x</i> = <b>−16 sin 4<i>x</i></b>, so <i>y</i>″ + 16<i>y</i> = 0."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = cos(2<i>x</i> − 2).",
+     "c": [
+      "−sin(2<i>x</i> − 2)",
+      "−2cos(2<i>x</i> − 2)",
+      "−2sin(2<i>x</i> − 2)",
+      "2sin(2<i>x</i> − 2)"
+     ],
+     "a": 2,
+     "e": "−sin(2<i>x</i> − 2) × 2 = <b>−2sin(2<i>x</i> − 2)</b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = <i>x</i>⁴ + 1<i>x</i>² + 4<i>x</i>.",
+     "c": [
+      "12<i>x</i>³ + 2",
+      "12<i>x</i>² + 2",
+      "12<i>x</i>²",
+      "4<i>x</i>³ + 2<i>x</i> + 4"
+     ],
+     "a": 1,
+     "e": "Differentiate twice: <b>12<i>x</i>² + 2</b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = cos(−2<i>x</i> − 2).",
+     "c": [
+      "2sin(−2<i>x</i> − 2)",
+      "−2sin(−2<i>x</i> − 2)",
+      "2cos(−2<i>x</i> − 2)",
+      "−sin(−2<i>x</i> − 2)"
+     ],
+     "a": 0,
+     "e": "−sin(−2<i>x</i> − 2) × −2 = <b>2sin(−2<i>x</i> − 2)</b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = cos 5<i>x</i>.",
+     "c": [
+      "−5 cos 5<i>x</i>",
+      "−25 sin 5<i>x</i>",
+      "25 cos 5<i>x</i>",
+      "−25 cos 5<i>x</i>"
+     ],
+     "a": 3,
+     "e": "d²<i>y</i>/d<i>x</i>² = −5² cos 5<i>x</i> = <b>−25 cos 5<i>x</i></b>, so <i>y</i>″ + 25<i>y</i> = 0."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = log(2<i>x</i> + 2).",
+     "c": [
+      "1/2",
+      "1/(2<i>x</i> + 2)",
+      "2/(2<i>x</i> + 2)",
+      "2/<i>x</i>"
+     ],
+     "a": 2,
+     "e": "(1/(2<i>x</i> + 2)) × 2 = <b>2/(2<i>x</i> + 2)</b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = cos 6<i>x</i>.",
+     "c": [
+      "−6 cos 6<i>x</i>",
+      "−36 cos 6<i>x</i>",
+      "36 cos 6<i>x</i>",
+      "−36 sin 6<i>x</i>"
+     ],
+     "a": 1,
+     "e": "d²<i>y</i>/d<i>x</i>² = −6² cos 6<i>x</i> = <b>−36 cos 6<i>x</i></b>, so <i>y</i>″ + 36<i>y</i> = 0."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = sin 2<i>x</i>.",
+     "c": [
+      "−2 sin 2<i>x</i>",
+      "−4 sin 2<i>x</i>",
+      "−4 cos 2<i>x</i>",
+      "4 sin 2<i>x</i>"
+     ],
+     "a": 1,
+     "e": "d²<i>y</i>/d<i>x</i>² = −2² sin 2<i>x</i> = <b>−4 sin 2<i>x</i></b>, so <i>y</i>″ + 4<i>y</i> = 0."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = cos(2<i>x</i>).",
+     "c": [
+      "−sin(2<i>x</i>)",
+      "−2cos(2<i>x</i>)",
+      "−2sin(2<i>x</i>)",
+      "2sin(2<i>x</i>)"
+     ],
+     "a": 2,
+     "e": "−sin(2<i>x</i>) × 2 = <b>−2sin(2<i>x</i>)</b>."
+    },
+    {
+     "q": "Find d²<i>y</i>/d<i>x</i>² if <i>y</i> = e<sup>5<i>x</i></sup>.",
+     "c": [
+      "25e<sup>5<i>x</i></sup>",
+      "10e<sup>5<i>x</i></sup>",
+      "e<sup>5<i>x</i></sup>",
+      "5e<sup>5<i>x</i></sup>"
+     ],
+     "a": 0,
+     "e": "Each derivative multiplies by 5, so the second gives <b>25e<sup>5<i>x</i></sup></b>."
+    },
+    {
+     "q": "Find d<i>y</i>/d<i>x</i> if <i>y</i> = (4<i>x</i>)³.",
+     "c": [
+      "3(4<i>x</i>)²",
+      "4(4<i>x</i>)²",
+      "12(4<i>x</i>)³",
+      "12(4<i>x</i>)²"
+     ],
+     "a": 3,
+     "e": "n(4<i>x</i>)ⁿ⁻¹ × 4 = <b>12(4<i>x</i>)²</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 5,
+ "updated": "2026-11-22",
+ "country": "in",
+ "subject": "maths",
+ "grade": "class-12"
+}

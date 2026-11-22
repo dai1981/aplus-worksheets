@@ -1,0 +1,1157 @@
+{
+ "slug": "matrices",
+ "title": "Matrices: Order, Operations, Transpose and Symmetric Matrices",
+ "seo_title": "Matrices Class 12 Worksheet with Answers (NCERT Chapter 3)",
+ "short_title": "matrices",
+ "domain": "Algebra",
+ "standard_code": "Class 12, Chapter 3: Matrices",
+ "standard_url": "https://www.cbseacademic.nic.in/web_material/CurriculumMain26/SrSec/Maths_SrSec_2025-26.pdf",
+ "standard_text": "Concept, notation, order, equality, types of matrices, zero and identity matrix, transpose of a matrix, symmetric and skew symmetric matrices; operations on matrices: addition and multiplication and multiplication with a scalar; simple properties of addition, multiplication and scalar multiplication; non-commutativity of multiplication of matrices; invertible matrices (summary of the CBSE syllabus)",
+ "meta_desc": "Class 12 Matrices worksheet (NCERT Chapter 3): order, aᵢⱼ, equality, addition, scalar multiples, multiplication, AB ≠ BA, transpose, symmetric and skew symmetric matrices. 100 questions with answers.",
+ "key_big": "AB is defined only when columns of A = rows of B.",
+ "key_sub": "(AB)′ = B′A′; any square matrix = symmetric part + skew symmetric part.",
+ "body_html": "<h2>How it works</h2><ul><li>An m × n matrix has m rows and n columns; a<sub>ij</sub> is in row i, column j.</li><li>Add matrices of the same order entry by entry; kA multiplies every entry by k.</li><li>AB is defined when the number of columns of A equals the number of rows of B; multiply rows by columns. In general AB ≠ BA.</li><li>Transpose A′: rows become columns. Symmetric: A′ = A. Skew symmetric: A′ = −A (diagonal entries 0). A = ½(A + A′) + ½(A − A′).</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>A = [1 2; 3 4]. Find A².</p><p class='sn-ex-s'>Row 1 × columns: 1·1 + 2·3 = 7, 1·2 + 2·4 = 10</p><p class='sn-ex-s'>Row 2: 3·1 + 4·3 = 15, 3·2 + 4·4 = 22</p><p class='sn-ex-a'>Answer: [7 10; 15 22]</p></div><h2>Common mistakes</h2><ul><li>Swapping rows and columns when giving the order.</li><li>Multiplying matrices entry by entry.</li><li>Assuming AB = BA.</li></ul>",
+ "faq": [
+  {
+   "q": "Can a non-square matrix be symmetric?",
+   "a": "No. A′ = A needs the same order, so the matrix must be square."
+  },
+  {
+   "q": "What is the identity matrix?",
+   "a": "A square matrix with 1s on the diagonal and 0s elsewhere; AI = IA = A."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Order and elements",
+   "items": [
+    {
+     "q": "A = <span class='mx m3'><span>4</span><span>−2</span><span>4</span><span>−4</span><span>6</span><span>3</span></span>. Find a<sub>12</sub>.",
+     "c": [
+      "−2",
+      "−4",
+      "2",
+      "−1"
+     ],
+     "a": 0,
+     "e": "a<sub>12</sub> is in row 1 and column 2: <b>−2</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−1</span><span>6</span><span>1</span><span>0</span><span>1</span><span>3</span><span>6</span><span>0</span><span>2</span></span>. Find a<sub>31</sub>.",
+     "c": [
+      "1",
+      "−6",
+      "6",
+      "7"
+     ],
+     "a": 2,
+     "e": "a<sub>31</sub> is in row 3 and column 1: <b>6</b>."
+    },
+    {
+     "q": "Build the 2 × 3 matrix with a<sub>ij</sub> = 3i − 2j.",
+     "c": [
+      "<span class='mx m3'><span>2</span><span>0</span><span>−2</span><span>5</span><span>3</span><span>1</span></span>",
+      "<span class='mx m3'><span>1</span><span>4</span><span>7</span><span>−1</span><span>2</span><span>5</span></span>",
+      "<span class='mx m3'><span>2</span><span>−2</span><span>−6</span><span>8</span><span>4</span><span>0</span></span>",
+      "<span class='mx m3'><span>1</span><span>−1</span><span>−3</span><span>4</span><span>2</span><span>0</span></span>"
+     ],
+     "a": 3,
+     "e": "Put i = row number and j = column number into 3i − 2j: <b><span class='mx m3'><span>1</span><span>−1</span><span>−3</span><span>4</span><span>2</span><span>0</span></span></b>."
+    },
+    {
+     "q": "<i>A</i> is 4 × 2 and <i>B</i> is 2 × 4. What is the order of <i>A</i><i>B</i>?",
+     "c": [
+      "4 × 2",
+      "<i>A</i><i>B</i> is not defined",
+      "4 × 4",
+      "2 × 2"
+     ],
+     "a": 2,
+     "e": "The inside numbers match (2 = 2), so the product is defined. Its size is the outside numbers: <b>4 × 4</b>."
+    },
+    {
+     "q": "A matrix has 13 elements. What are its possible orders?",
+     "c": [
+      "1 × 13 only",
+      "1 × 13, 13 × 1",
+      "13 × 1 only",
+      "13 × 13"
+     ],
+     "a": 1,
+     "e": "The order m × n needs mn = 13, so it can be <b>1 × 13, 13 × 1</b>."
+    },
+    {
+     "q": "How many matrices of order 2 × 3 can be made with each entry 0, 1 or 2?",
+     "c": [
+      "729",
+      "32",
+      "216",
+      "18"
+     ],
+     "a": 0,
+     "e": "There are 6 entries, each with 3 choices: 3<sup>6</sup> = <b>729</b>."
+    },
+    {
+     "q": "How many matrices of order 2 × 2 can be made with each entry 0, 1 or 2?",
+     "c": [
+      "16",
+      "12",
+      "81",
+      "64"
+     ],
+     "a": 2,
+     "e": "There are 4 entries, each with 3 choices: 3<sup>4</sup> = <b>81</b>."
+    },
+    {
+     "q": "<i>A</i> is 3 × 2 and <i>B</i> is 2 × 5. Is <i>A</i><i>B</i> defined, and if so, what is its order?",
+     "c": [
+      "Yes, 5 × 3",
+      "No, it is not defined",
+      "Yes, 2 × 2",
+      "Yes, 3 × 5"
+     ],
+     "a": 3,
+     "e": "<i>A</i> has 2 columns and <i>B</i> has 2 rows. They match, so the product is 3 × 5. <b>Yes, 3 × 5</b>."
+    },
+    {
+     "q": "Build the 2 × 3 matrix with a<sub>ij</sub> = |i − 3j|.",
+     "c": [
+      "<span class='mx m3'><span>3</span><span>6</span><span>9</span><span>2</span><span>5</span><span>8</span></span>",
+      "<span class='mx m3'><span>2</span><span>5</span><span>8</span><span>1</span><span>4</span><span>7</span></span>",
+      "<span class='mx m3'><span>2</span><span>1</span><span>0</span><span>5</span><span>4</span><span>3</span></span>",
+      "<span class='mx m3'><span>4</span><span>10</span><span>16</span><span>2</span><span>8</span><span>14</span></span>"
+     ],
+     "a": 1,
+     "e": "Put i = row number and j = column number into |i − 3j|: <b><span class='mx m3'><span>2</span><span>5</span><span>8</span><span>1</span><span>4</span><span>7</span></span></b>."
+    },
+    {
+     "q": "<i>A</i> is 2 × 4 and <i>B</i> is 4 × 1. What is the order of <i>A</i><i>B</i>?",
+     "c": [
+      "<i>A</i><i>B</i> is not defined",
+      "1 × 2",
+      "2 × 1",
+      "4 × 4"
+     ],
+     "a": 2,
+     "e": "The inside numbers match (4 = 4), so the product is defined. Its size is the outside numbers: <b>2 × 1</b>."
+    },
+    {
+     "q": "Build the 2 × 3 matrix with a<sub>ij</sub> = 2i − j.",
+     "c": [
+      "<span class='mx m3'><span>2</span><span>1</span><span>0</span><span>4</span><span>3</span><span>2</span></span>",
+      "<span class='mx m3'><span>1</span><span>0</span><span>−1</span><span>3</span><span>2</span><span>1</span></span>",
+      "<span class='mx m3'><span>1</span><span>3</span><span>5</span><span>0</span><span>2</span><span>4</span></span>",
+      "<span class='mx m3'><span>2</span><span>0</span><span>−2</span><span>6</span><span>4</span><span>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Put i = row number and j = column number into 2i − j: <b><span class='mx m3'><span>1</span><span>0</span><span>−1</span><span>3</span><span>2</span><span>1</span></span></b>."
+    },
+    {
+     "q": "How many matrices of order 1 × 3 can be made with each entry 0 or 1?",
+     "c": [
+      "6",
+      "8",
+      "9",
+      "16"
+     ],
+     "a": 1,
+     "e": "There are 3 entries, each with 2 choices: 2<sup>3</sup> = <b>8</b>."
+    },
+    {
+     "q": "<i>A</i> is 3 × 2 and <i>B</i> is 2 × 1. What is the order of <i>A</i><i>B</i>?",
+     "c": [
+      "<i>A</i><i>B</i> is not defined",
+      "2 × 2",
+      "1 × 3",
+      "3 × 1"
+     ],
+     "a": 3,
+     "e": "The inside numbers match (2 = 2), so the product is defined. Its size is the outside numbers: <b>3 × 1</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>2</span><span>6</span><span>1</span><span>−5</span><span>−4</span><span>−1</span></span>. Find a<sub>12</sub>.",
+     "c": [
+      "6",
+      "−5",
+      "−6",
+      "7"
+     ],
+     "a": 0,
+     "e": "a<sub>12</sub> is in row 1 and column 2: <b>6</b>."
+    },
+    {
+     "q": "<i>A</i> is 2 × 4 and <i>B</i> is 4 × 3. What is the order of <i>A</i><i>B</i>?",
+     "c": [
+      "<i>A</i><i>B</i> is not defined",
+      "3 × 2",
+      "4 × 4",
+      "2 × 3"
+     ],
+     "a": 3,
+     "e": "The inside numbers match (4 = 4), so the product is defined. Its size is the outside numbers: <b>2 × 3</b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>3</span><span>−1</span><span>−2</span><span>−4</span></span>. Find a<sub>12</sub>.",
+     "c": [
+      "1",
+      "−2",
+      "0",
+      "−1"
+     ],
+     "a": 3,
+     "e": "a<sub>12</sub> is in row 1 and column 2: <b>−1</b>."
+    },
+    {
+     "q": "A matrix has 12 elements. What are its possible orders?",
+     "c": [
+      "1 × 12, 2 × 6, 3 × 4, 4 × 3, 6 × 2, 12 × 1",
+      "1 × 12, 2 × 6, 3 × 4, 4 × 3",
+      "12 × 12",
+      "1 × 12, 2 × 6, 3 × 4"
+     ],
+     "a": 0,
+     "e": "The order m × n needs mn = 12, so it can be <b>1 × 12, 2 × 6, 3 × 4, 4 × 3, 6 × 2, 12 × 1</b>."
+    },
+    {
+     "q": "A matrix has 8 elements. What are its possible orders?",
+     "c": [
+      "1 × 8, 2 × 4, 4 × 2, 8 × 1",
+      "8 × 8",
+      "1 × 8, 2 × 4, 4 × 2",
+      "1 × 8, 2 × 4"
+     ],
+     "a": 0,
+     "e": "The order m × n needs mn = 8, so it can be <b>1 × 8, 2 × 4, 4 × 2, 8 × 1</b>."
+    },
+    {
+     "q": "<i>A</i> is 2 × 2 and <i>B</i> is 2 × 4. What is the order of <i>A</i><i>B</i>?",
+     "c": [
+      "4 × 2",
+      "2 × 2",
+      "2 × 4",
+      "<i>A</i><i>B</i> is not defined"
+     ],
+     "a": 2,
+     "e": "The inside numbers match (2 = 2), so the product is defined. Its size is the outside numbers: <b>2 × 4</b>."
+    },
+    {
+     "q": "A matrix has 18 elements. What are its possible orders?",
+     "c": [
+      "18 × 18",
+      "1 × 18, 2 × 9, 3 × 6, 6 × 3, 9 × 2, 18 × 1",
+      "1 × 18, 2 × 9, 3 × 6",
+      "1 × 18, 2 × 9, 3 × 6, 6 × 3"
+     ],
+     "a": 1,
+     "e": "The order m × n needs mn = 18, so it can be <b>1 × 18, 2 × 9, 3 × 6, 6 × 3, 9 × 2, 18 × 1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Equality, addition and scalar multiples",
+   "items": [
+    {
+     "q": "Find <i>x</i>, <i>y</i> and <i>z</i> if <span class='mx m2'><span>3<i>x</i> + 2<i>y</i></span><span>2</span><span><i>x</i> − <i>y</i></span><span><i>z</i></span></span> = <span class='mx m2'><span>−14</span><span>2</span><span>2</span><span>−2</span></span>.",
+     "c": [
+      "<i>x</i> = −2, <i>y</i> = −4, <i>z</i> = −2",
+      "<i>x</i> = −4, <i>y</i> = −2, <i>z</i> = −2",
+      "<i>x</i> = −14, <i>y</i> = 2, <i>z</i> = −2",
+      "<i>x</i> = −2, <i>y</i> = 4, <i>z</i> = 2"
+     ],
+     "a": 0,
+     "e": "Equal matrices have equal corresponding entries: 3<i>x</i> + 2<i>y</i> = −14 and <i>x</i> − <i>y</i> = 2, so <b><i>x</i> = −2, <i>y</i> = −4, <i>z</i> = −2</b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>4</span><span>−3</span><span>0</span><span>−4</span></span>, find 3<i>A</i>.",
+     "c": [
+      "<span class='mx m2'><span>7</span><span>0</span><span>3</span><span>−1</span></span>",
+      "<span class='mx m2'><span>−12</span><span>9</span><span>0</span><span>12</span></span>",
+      "<span class='mx m2'><span>12</span><span>−9</span><span>0</span><span>−12</span></span>",
+      "<span class='mx m2'><span>12</span><span>−3</span><span>0</span><span>−4</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiply every entry by 3. <b><span class='mx m2'><span>12</span><span>−9</span><span>0</span><span>−12</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>−2</span><span>−3</span><span>0</span><span>1</span></span> and <i>B</i> = <span class='mx m2'><span>0</span><span>1</span><span>3</span><span>3</span></span>, find 2<i>A</i> + 3<i>B</i>.",
+     "c": [
+      "<span class='mx m2'><span>−4</span><span>−9</span><span>−9</span><span>−7</span></span>",
+      "<span class='mx m2'><span>−2</span><span>0</span><span>9</span><span>10</span></span>",
+      "<span class='mx m2'><span>5</span><span>3</span><span>0</span><span>5</span></span>",
+      "<span class='mx m2'><span>−4</span><span>−3</span><span>9</span><span>11</span></span>"
+     ],
+     "a": 3,
+     "e": "Multiply each matrix by its scalar, then combine matching entries. <b><span class='mx m2'><span>−4</span><span>−3</span><span>9</span><span>11</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>−2</span><span>6</span><span>6</span><span>3</span></span> and <i>B</i> = <span class='mx m2'><span>2</span><span>−3</span><span>−2</span><span>−5</span></span>, find 2<i>A</i> − <i>B</i>.",
+     "c": [
+      "<span class='mx m2'><span>−2</span><span>17</span><span>10</span><span>9</span></span>",
+      "<span class='mx m2'><span>−2</span><span>9</span><span>10</span><span>1</span></span>",
+      "<span class='mx m2'><span>−6</span><span>15</span><span>14</span><span>11</span></span>",
+      "<span class='mx m2'><span>−4</span><span>9</span><span>8</span><span>8</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiply each matrix by its scalar, then combine matching entries. <b><span class='mx m2'><span>−6</span><span>15</span><span>14</span><span>11</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>4</span><span>5</span><span>5</span><span>6</span></span> and <i>B</i> = <span class='mx m2'><span>3</span><span>−5</span><span>0</span><span>−3</span></span>, find <i>A</i> + <i>B</i>.",
+     "c": [
+      "<span class='mx m2'><span>7</span><span>0</span><span>5</span><span>3</span></span>",
+      "<span class='mx m2'><span>0</span><span>7</span><span>3</span><span>5</span></span>",
+      "<span class='mx m2'><span>1</span><span>10</span><span>5</span><span>9</span></span>",
+      "<span class='mx m2'><span>12</span><span>−25</span><span>0</span><span>−18</span></span>"
+     ],
+     "a": 0,
+     "e": "Add or subtract the entries in the same positions. <b><span class='mx m2'><span>7</span><span>0</span><span>5</span><span>3</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m3'><span>9</span><span>9</span><span>7</span><span>6</span><span>7</span><span>−3</span></span> and <i>B</i> = <span class='mx m3'><span>−3</span><span>8</span><span>8</span><span>7</span><span>−1</span><span>4</span></span>, find <i>A</i> + <i>B</i>.",
+     "c": [
+      "<span class='mx m3'><span>12</span><span>1</span><span>−1</span><span>−1</span><span>8</span><span>−7</span></span>",
+      "<span class='mx m3'><span>6</span><span>17</span><span>15</span><span>13</span><span>6</span><span>1</span></span>",
+      "<span class='mx m3'><span>−27</span><span>72</span><span>56</span><span>42</span><span>−7</span><span>−12</span></span>",
+      "<span class='mx m3'><span>15</span><span>17</span><span>6</span><span>1</span><span>6</span><span>13</span></span>"
+     ],
+     "a": 1,
+     "e": "Add or subtract the entries in the same positions. <b><span class='mx m3'><span>6</span><span>17</span><span>15</span><span>13</span><span>6</span><span>1</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>−2</span><span>4</span><span>0</span><span>4</span></span>, find 2<i>A</i>.",
+     "c": [
+      "<span class='mx m2'><span>−4</span><span>8</span><span>0</span><span>8</span></span>",
+      "<span class='mx m2'><span>−4</span><span>4</span><span>0</span><span>4</span></span>",
+      "<span class='mx m2'><span>4</span><span>−8</span><span>0</span><span>−8</span></span>",
+      "<span class='mx m2'><span>0</span><span>6</span><span>2</span><span>6</span></span>"
+     ],
+     "a": 0,
+     "e": "Multiply every entry by 2. <b><span class='mx m2'><span>−4</span><span>8</span><span>0</span><span>8</span></span></b>."
+    },
+    {
+     "q": "Find <i>x</i>, <i>y</i> and <i>z</i> if <span class='mx m2'><span><i>x</i> + 2<i>y</i></span><span>1</span><span><i>x</i> − <i>y</i></span><span><i>z</i></span></span> = <span class='mx m2'><span>−16</span><span>1</span><span>2</span><span>−1</span></span>.",
+     "c": [
+      "<i>x</i> = −4, <i>y</i> = −6, <i>z</i> = −1",
+      "<i>x</i> = −16, <i>y</i> = 2, <i>z</i> = −1",
+      "<i>x</i> = −4, <i>y</i> = 6, <i>z</i> = 1",
+      "<i>x</i> = −6, <i>y</i> = −4, <i>z</i> = −1"
+     ],
+     "a": 0,
+     "e": "Equal matrices have equal corresponding entries: <i>x</i> + 2<i>y</i> = −16 and <i>x</i> − <i>y</i> = 2, so <b><i>x</i> = −4, <i>y</i> = −6, <i>z</i> = −1</b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>2</span><span>8</span><span>7</span><span>6</span><span>5</span><span>−6</span></span> and <i>B</i> = <span class='mx m2'><span>−6</span><span>−3</span><span>−4</span><span>6</span><span>6</span><span>6</span></span>, find <i>A</i> − <i>B</i>.",
+     "c": [
+      "<span class='mx m2'><span>−4</span><span>5</span><span>3</span><span>12</span><span>11</span><span>0</span></span>",
+      "<span class='mx m2'><span>−12</span><span>−24</span><span>−28</span><span>36</span><span>30</span><span>−36</span></span>",
+      "<span class='mx m2'><span>−8</span><span>−11</span><span>−11</span><span>0</span><span>1</span><span>12</span></span>",
+      "<span class='mx m2'><span>8</span><span>11</span><span>11</span><span>0</span><span>−1</span><span>−12</span></span>"
+     ],
+     "a": 3,
+     "e": "Add or subtract the entries in the same positions. <b><span class='mx m2'><span>8</span><span>11</span><span>11</span><span>0</span><span>−1</span><span>−12</span></span></b>."
+    },
+    {
+     "q": "Find <i>x</i>, <i>y</i> and <i>z</i> if <span class='mx m2'><span>2<i>x</i> + 3<i>y</i></span><span>2</span><span><i>x</i> − <i>y</i></span><span><i>z</i></span></span> = <span class='mx m2'><span>−5</span><span>2</span><span>5</span><span>6</span></span>.",
+     "c": [
+      "<i>x</i> = −5, <i>y</i> = 5, <i>z</i> = 6",
+      "<i>x</i> = −3, <i>y</i> = 2, <i>z</i> = 6",
+      "<i>x</i> = 2, <i>y</i> = 3, <i>z</i> = −6",
+      "<i>x</i> = 2, <i>y</i> = −3, <i>z</i> = 6"
+     ],
+     "a": 3,
+     "e": "Equal matrices have equal corresponding entries: 2<i>x</i> + 3<i>y</i> = −5 and <i>x</i> − <i>y</i> = 5, so <b><i>x</i> = 2, <i>y</i> = −3, <i>z</i> = 6</b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>2</span><span>3</span><span>5</span><span>−1</span></span>, find 3<i>A</i>.",
+     "c": [
+      "<span class='mx m2'><span>6</span><span>9</span><span>15</span><span>−3</span></span>",
+      "<span class='mx m2'><span>6</span><span>3</span><span>5</span><span>−1</span></span>",
+      "<span class='mx m2'><span>5</span><span>6</span><span>8</span><span>2</span></span>",
+      "<span class='mx m2'><span>−6</span><span>−9</span><span>−15</span><span>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Multiply every entry by 3. <b><span class='mx m2'><span>6</span><span>9</span><span>15</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "Find <i>x</i>, <i>y</i> and <i>z</i> if <span class='mx m2'><span><i>x</i> + 3<i>y</i></span><span>7</span><span><i>x</i> − <i>y</i></span><span><i>z</i></span></span> = <span class='mx m2'><span>21</span><span>7</span><span>−3</span><span>2</span></span>.",
+     "c": [
+      "<i>x</i> = 21, <i>y</i> = −3, <i>z</i> = 2",
+      "<i>x</i> = 6, <i>y</i> = 3, <i>z</i> = 2",
+      "<i>x</i> = 3, <i>y</i> = 6, <i>z</i> = 2",
+      "<i>x</i> = 3, <i>y</i> = −6, <i>z</i> = −2"
+     ],
+     "a": 2,
+     "e": "Equal matrices have equal corresponding entries: <i>x</i> + 3<i>y</i> = 21 and <i>x</i> − <i>y</i> = −3, so <b><i>x</i> = 3, <i>y</i> = 6, <i>z</i> = 2</b>."
+    },
+    {
+     "q": "Find <i>x</i>, <i>y</i> and <i>z</i> if <span class='mx m2'><span>3<i>x</i> + 2<i>y</i></span><span>6</span><span><i>x</i> − <i>y</i></span><span><i>z</i></span></span> = <span class='mx m2'><span>−16</span><span>6</span><span>3</span><span>−3</span></span>.",
+     "c": [
+      "<i>x</i> = −16, <i>y</i> = 3, <i>z</i> = −3",
+      "<i>x</i> = −2, <i>y</i> = 5, <i>z</i> = 3",
+      "<i>x</i> = −5, <i>y</i> = −2, <i>z</i> = −3",
+      "<i>x</i> = −2, <i>y</i> = −5, <i>z</i> = −3"
+     ],
+     "a": 3,
+     "e": "Equal matrices have equal corresponding entries: 3<i>x</i> + 2<i>y</i> = −16 and <i>x</i> − <i>y</i> = 3, so <b><i>x</i> = −2, <i>y</i> = −5, <i>z</i> = −3</b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>4</span><span>−4</span><span>0</span><span>−1</span></span> and <i>B</i> = <span class='mx m2'><span>0</span><span>3</span><span>−1</span><span>−3</span></span>, find <i>A</i> − <i>B</i>.",
+     "c": [
+      "<span class='mx m2'><span>4</span><span>−1</span><span>−1</span><span>−4</span></span>",
+      "<span class='mx m2'><span>4</span><span>−7</span><span>1</span><span>2</span></span>",
+      "<span class='mx m2'><span>−4</span><span>7</span><span>−1</span><span>−2</span></span>",
+      "<span class='mx m2'><span>0</span><span>−12</span><span>0</span><span>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Add or subtract the entries in the same positions. <b><span class='mx m2'><span>4</span><span>−7</span><span>1</span><span>2</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>−5</span><span>4</span><span>4</span><span>−2</span></span> and <i>B</i> = <span class='mx m2'><span>−5</span><span>3</span><span>−4</span><span>6</span></span>, find −2<i>A</i> − <i>B</i>.",
+     "c": [
+      "<span class='mx m2'><span>14</span><span>−14</span><span>−3</span><span>1</span></span>",
+      "<span class='mx m2'><span>15</span><span>−11</span><span>−4</span><span>−2</span></span>",
+      "<span class='mx m2'><span>5</span><span>−5</span><span>−12</span><span>10</span></span>",
+      "<span class='mx m2'><span>0</span><span>1</span><span>8</span><span>−8</span></span>"
+     ],
+     "a": 1,
+     "e": "Multiply each matrix by its scalar, then combine matching entries. <b><span class='mx m2'><span>15</span><span>−11</span><span>−4</span><span>−2</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>6</span><span>0</span><span>2</span><span>−3</span></span>, find 3<i>A</i>.",
+     "c": [
+      "<span class='mx m2'><span>−18</span><span>0</span><span>−6</span><span>9</span></span>",
+      "<span class='mx m2'><span>18</span><span>0</span><span>2</span><span>−3</span></span>",
+      "<span class='mx m2'><span>9</span><span>3</span><span>5</span><span>0</span></span>",
+      "<span class='mx m2'><span>18</span><span>0</span><span>6</span><span>−9</span></span>"
+     ],
+     "a": 3,
+     "e": "Multiply every entry by 3. <b><span class='mx m2'><span>18</span><span>0</span><span>6</span><span>−9</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m3'><span>−6</span><span>−2</span><span>−3</span><span>7</span><span>5</span><span>−4</span></span> and <i>B</i> = <span class='mx m3'><span>7</span><span>2</span><span>1</span><span>3</span><span>2</span><span>−3</span></span>, find <i>A</i> + <i>B</i>.",
+     "c": [
+      "<span class='mx m3'><span>−13</span><span>−4</span><span>−4</span><span>4</span><span>3</span><span>−1</span></span>",
+      "<span class='mx m3'><span>1</span><span>0</span><span>−2</span><span>10</span><span>7</span><span>−7</span></span>",
+      "<span class='mx m3'><span>−42</span><span>−4</span><span>−3</span><span>21</span><span>10</span><span>12</span></span>",
+      "<span class='mx m3'><span>−2</span><span>0</span><span>1</span><span>−7</span><span>7</span><span>10</span></span>"
+     ],
+     "a": 1,
+     "e": "Add or subtract the entries in the same positions. <b><span class='mx m3'><span>1</span><span>0</span><span>−2</span><span>10</span><span>7</span><span>−7</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>7</span><span>−2</span><span>−4</span><span>2</span><span>4</span><span>2</span></span> and <i>B</i> = <span class='mx m2'><span>8</span><span>7</span><span>−1</span><span>3</span><span>4</span><span>9</span></span>, find <i>A</i> + <i>B</i>.",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>−9</span><span>−3</span><span>−1</span><span>0</span><span>−7</span></span>",
+      "<span class='mx m2'><span>56</span><span>−14</span><span>4</span><span>6</span><span>16</span><span>18</span></span>",
+      "<span class='mx m2'><span>15</span><span>5</span><span>−5</span><span>5</span><span>8</span><span>11</span></span>",
+      "<span class='mx m2'><span>5</span><span>15</span><span>5</span><span>−5</span><span>11</span><span>8</span></span>"
+     ],
+     "a": 2,
+     "e": "Add or subtract the entries in the same positions. <b><span class='mx m2'><span>15</span><span>5</span><span>−5</span><span>5</span><span>8</span><span>11</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>8</span><span>−5</span><span>−6</span><span>−5</span></span> and <i>B</i> = <span class='mx m2'><span>1</span><span>−3</span><span>2</span><span>0</span></span>, find <i>A</i> + <i>B</i>.",
+     "c": [
+      "<span class='mx m2'><span>−8</span><span>9</span><span>−5</span><span>−4</span></span>",
+      "<span class='mx m2'><span>9</span><span>−8</span><span>−4</span><span>−5</span></span>",
+      "<span class='mx m2'><span>8</span><span>15</span><span>−12</span><span>0</span></span>",
+      "<span class='mx m2'><span>7</span><span>−2</span><span>−8</span><span>−5</span></span>"
+     ],
+     "a": 1,
+     "e": "Add or subtract the entries in the same positions. <b><span class='mx m2'><span>9</span><span>−8</span><span>−4</span><span>−5</span></span></b>."
+    },
+    {
+     "q": "Find <i>x</i>, <i>y</i> and <i>z</i> if <span class='mx m2'><span>2<i>x</i> + 3<i>y</i></span><span>2</span><span><i>x</i> − <i>y</i></span><span><i>z</i></span></span> = <span class='mx m2'><span>15</span><span>2</span><span>−5</span><span>6</span></span>.",
+     "c": [
+      "<i>x</i> = 0, <i>y</i> = −5, <i>z</i> = −6",
+      "<i>x</i> = 15, <i>y</i> = −5, <i>z</i> = 6",
+      "<i>x</i> = 0, <i>y</i> = 5, <i>z</i> = 6",
+      "<i>x</i> = 5, <i>y</i> = 0, <i>z</i> = 6"
+     ],
+     "a": 2,
+     "e": "Equal matrices have equal corresponding entries: 2<i>x</i> + 3<i>y</i> = 15 and <i>x</i> − <i>y</i> = −5, so <b><i>x</i> = 0, <i>y</i> = 5, <i>z</i> = 6</b>."
+    }
+   ]
+  },
+  {
+   "title": "Multiplying matrices",
+   "items": [
+    {
+     "q": "A = <span class='mx m2'><span>0</span><span>2</span><span>3</span><span>0</span></span> and B = <span class='mx m2'><span>2</span><span>2</span><span>2</span><span>−3</span></span>. Find AB.",
+     "c": [
+      "<span class='mx m2'><span>4</span><span>−6</span><span>6</span><span>6</span></span>",
+      "<span class='mx m2'><span>4</span><span>6</span><span>−6</span><span>6</span></span>",
+      "<span class='mx m2'><span>0</span><span>4</span><span>6</span><span>0</span></span>",
+      "<span class='mx m2'><span>6</span><span>4</span><span>−9</span><span>4</span></span>"
+     ],
+     "a": 0,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>4</span><span>−6</span><span>6</span><span>6</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>0</span><span>0</span><span>2</span><span>−2</span></span>. Find A².",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>−4</span><span>0</span><span>4</span></span>",
+      "<span class='mx m2'><span>0</span><span>0</span><span>−4</span><span>4</span></span>",
+      "<span class='mx m2'><span>0</span><span>0</span><span>4</span><span>−4</span></span>",
+      "<span class='mx m2'><span>0</span><span>0</span><span>4</span><span>4</span></span>"
+     ],
+     "a": 1,
+     "e": "A² = A × A, multiplying rows by columns (not squaring each entry): <b><span class='mx m2'><span>0</span><span>0</span><span>−4</span><span>4</span></span></b>."
+    },
+    {
+     "q": "Find <i>A</i><i>B</i> if <i>A</i> = <span class='mx m2'><span>5</span><span>1</span><span>2</span><span>−3</span></span> and <i>B</i> = <span class='mx m2'><span>1</span><span>6</span><span>6</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>17</span><span>32</span><span>−17</span><span>3</span></span>",
+      "<span class='mx m2'><span>11</span><span>31</span><span>−16</span><span>9</span></span>",
+      "<span class='mx m2'><span>5</span><span>6</span><span>12</span><span>−3</span></span>",
+      "<span class='mx m2'><span>17</span><span>−17</span><span>32</span><span>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Each entry is a row of <i>A</i> times a column of <i>B</i>. Do not multiply entry by entry, and keep the order: <i>A</i><i>B</i> ≠ <i>B</i><i>A</i> in general. <b><span class='mx m2'><span>11</span><span>31</span><span>−16</span><span>9</span></span></b>."
+    },
+    {
+     "q": "Find <i>A</i><i>B</i> if <i>A</i> = <span class='mx m2'><span>−3</span><span>2</span><span>0</span><span>5</span></span> and <i>B</i> = <span class='mx m2'><span>0</span><span>−3</span><span>−1</span><span>5</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>9</span><span>−5</span><span>19</span></span>",
+      "<span class='mx m2'><span>−2</span><span>19</span><span>−5</span><span>25</span></span>",
+      "<span class='mx m2'><span>0</span><span>−15</span><span>3</span><span>23</span></span>",
+      "<span class='mx m2'><span>0</span><span>−6</span><span>0</span><span>25</span></span>"
+     ],
+     "a": 1,
+     "e": "Each entry is a row of <i>A</i> times a column of <i>B</i>. Do not multiply entry by entry, and keep the order: <i>A</i><i>B</i> ≠ <i>B</i><i>A</i> in general. <b><span class='mx m2'><span>−2</span><span>19</span><span>−5</span><span>25</span></span></b>."
+    },
+    {
+     "q": "Find <i>A</i><i>B</i> if <i>A</i> = <span class='mx m2'><span>−3</span><span>2</span><span>6</span><span>−3</span></span> and <i>B</i> = <span class='mx m2'><span>3</span><span>6</span><span>−2</span><span>5</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−13</span><span>−8</span><span>24</span><span>21</span></span>",
+      "<span class='mx m2'><span>27</span><span>−12</span><span>36</span><span>−19</span></span>",
+      "<span class='mx m2'><span>−9</span><span>12</span><span>−12</span><span>−15</span></span>",
+      "<span class='mx m2'><span>−21</span><span>12</span><span>12</span><span>−3</span></span>"
+     ],
+     "a": 0,
+     "e": "Each entry is a row of <i>A</i> times a column of <i>B</i>. Do not multiply entry by entry, and keep the order: <i>A</i><i>B</i> ≠ <i>B</i><i>A</i> in general. <b><span class='mx m2'><span>−13</span><span>−8</span><span>24</span><span>21</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>2</span><span>4</span><span>2</span><span>−1</span></span>. Find A².",
+     "c": [
+      "<span class='mx m2'><span>4</span><span>8</span><span>4</span><span>−2</span></span>",
+      "<span class='mx m2'><span>12</span><span>2</span><span>4</span><span>9</span></span>",
+      "<span class='mx m2'><span>4</span><span>16</span><span>4</span><span>1</span></span>",
+      "<span class='mx m2'><span>12</span><span>4</span><span>2</span><span>9</span></span>"
+     ],
+     "a": 3,
+     "e": "A² = A × A, multiplying rows by columns (not squaring each entry): <b><span class='mx m2'><span>12</span><span>4</span><span>2</span><span>9</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>−3</span><span>−4</span><span>6</span><span>2</span></span> and <i>B</i> = <span class='mx m2'><span>−4</span><span>−3</span><span>6</span><span>−2</span></span>, what is the entry in row 2, column 2 of <i>A</i><i>B</i>?",
+     "c": [
+      "−4",
+      "−28",
+      "−22",
+      "−24"
+     ],
+     "a": 2,
+     "e": "Row 2 of <i>A</i> times column 2 of <i>B</i>: (6)(−3) + (2)(−2) = <b>−22</b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−1</span><span>1</span><span>−2</span><span>4</span></span> and B = <span class='mx m2'><span>4</span><span>4</span><span>4</span><span>−1</span></span>. Find BA.",
+     "c": [
+      "<span class='mx m2'><span>−12</span><span>−2</span><span>20</span><span>0</span></span>",
+      "<span class='mx m2'><span>−12</span><span>20</span><span>−2</span><span>0</span></span>",
+      "<span class='mx m2'><span>−4</span><span>4</span><span>−8</span><span>−4</span></span>",
+      "<span class='mx m2'><span>0</span><span>−5</span><span>8</span><span>−12</span></span>"
+     ],
+     "a": 1,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>−12</span><span>20</span><span>−2</span><span>0</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>3</span><span>6</span><span>3</span><span>−2</span></span> and <i>B</i> = <span class='mx m2'><span>−4</span><span>1</span><span>−2</span><span>2</span></span>, what is the entry in row 2, column 1 of <i>A</i><i>B</i>?",
+     "c": [
+      "−8",
+      "15",
+      "0",
+      "−6"
+     ],
+     "a": 0,
+     "e": "Row 2 of <i>A</i> times column 1 of <i>B</i>: (3)(−4) + (−2)(−2) = <b>−8</b>."
+    },
+    {
+     "q": "Find <i>A</i><i>B</i> if <i>A</i> = <span class='mx m2'><span>3</span><span>5</span><span>3</span><span>−3</span></span> and <i>B</i> = <span class='mx m1'><span>0</span><span>−2</span></span>.",
+     "c": [
+      "<span class='mx m1'><span>−6</span><span>6</span></span>",
+      "<span class='mx m1'><span>0</span><span>6</span></span>",
+      "<span class='mx m1'><span>−10</span><span>6</span></span>",
+      "<span class='mx m1'><span>0</span><span>0</span></span>"
+     ],
+     "a": 2,
+     "e": "Row times column: (3)(0) + (5)(−2) = −10 and (3)(0) + (−3)(−2) = 6. <b><span class='mx m1'><span>−10</span><span>6</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>2</span><span>1</span><span>5</span><span>3</span></span> and <i>B</i> = <span class='mx m2'><span>−1</span><span>5</span><span>−2</span><span>1</span></span>, what is the entry in row 2, column 2 of <i>A</i><i>B</i>?",
+     "c": [
+      "28",
+      "1",
+      "3",
+      "26"
+     ],
+     "a": 0,
+     "e": "Row 2 of <i>A</i> times column 2 of <i>B</i>: (5)(5) + (3)(1) = <b>28</b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−2</span><span>−1</span><span>2</span><span>2</span></span>. Find A².",
+     "c": [
+      "<span class='mx m2'><span>−4</span><span>−2</span><span>4</span><span>4</span></span>",
+      "<span class='mx m2'><span>2</span><span>0</span><span>0</span><span>2</span></span>",
+      "<span class='mx m2'><span>3</span><span>1</span><span>1</span><span>3</span></span>",
+      "<span class='mx m2'><span>4</span><span>1</span><span>4</span><span>4</span></span>"
+     ],
+     "a": 1,
+     "e": "A² = A × A, multiplying rows by columns (not squaring each entry): <b><span class='mx m2'><span>2</span><span>0</span><span>0</span><span>2</span></span></b>."
+    },
+    {
+     "q": "Find <i>A</i><i>B</i> if <i>A</i> = <span class='mx m2'><span>6</span><span>3</span><span>−1</span><span>−2</span></span> and <i>B</i> = <span class='mx m1'><span>0</span><span>4</span></span>.",
+     "c": [
+      "<span class='mx m1'><span>12</span><span>−8</span></span>",
+      "<span class='mx m1'><span>0</span><span>−12</span></span>",
+      "<span class='mx m1'><span>−4</span><span>−8</span></span>",
+      "<span class='mx m1'><span>0</span><span>−8</span></span>"
+     ],
+     "a": 0,
+     "e": "Row times column: (6)(0) + (3)(4) = 12 and (−1)(0) + (−2)(4) = −8. <b><span class='mx m1'><span>12</span><span>−8</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−3</span><span>2</span><span>4</span><span>3</span></span> and B = <span class='mx m2'><span>3</span><span>4</span><span>−3</span><span>−1</span></span>. Find AB.",
+     "c": [
+      "<span class='mx m2'><span>7</span><span>18</span><span>5</span><span>−9</span></span>",
+      "<span class='mx m2'><span>−15</span><span>3</span><span>−14</span><span>13</span></span>",
+      "<span class='mx m2'><span>−15</span><span>−14</span><span>3</span><span>13</span></span>",
+      "<span class='mx m2'><span>−9</span><span>8</span><span>−12</span><span>−3</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>−15</span><span>−14</span><span>3</span><span>13</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−3</span><span>−3</span><span>3</span><span>−2</span></span> and B = <span class='mx m2'><span>1</span><span>2</span><span>−3</span><span>4</span></span>. Find AB.",
+     "c": [
+      "<span class='mx m2'><span>3</span><span>−7</span><span>21</span><span>1</span></span>",
+      "<span class='mx m2'><span>6</span><span>9</span><span>−18</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−6</span><span>−9</span><span>−8</span></span>",
+      "<span class='mx m2'><span>6</span><span>−18</span><span>9</span><span>−2</span></span>"
+     ],
+     "a": 3,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>6</span><span>−18</span><span>9</span><span>−2</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>2</span><span>3</span><span>−3</span><span>2</span></span> and B = <span class='mx m2'><span>3</span><span>−1</span><span>3</span><span>−1</span></span>. Find BA.",
+     "c": [
+      "<span class='mx m2'><span>9</span><span>9</span><span>7</span><span>7</span></span>",
+      "<span class='mx m2'><span>6</span><span>−3</span><span>−9</span><span>−2</span></span>",
+      "<span class='mx m2'><span>15</span><span>−5</span><span>−3</span><span>1</span></span>",
+      "<span class='mx m2'><span>9</span><span>7</span><span>9</span><span>7</span></span>"
+     ],
+     "a": 3,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>9</span><span>7</span><span>9</span><span>7</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>2</span><span>2</span><span>−3</span><span>−1</span></span> and B = <span class='mx m2'><span>1</span><span>0</span><span>2</span><span>4</span></span>. Find BA.",
+     "c": [
+      "<span class='mx m2'><span>2</span><span>−8</span><span>2</span><span>0</span></span>",
+      "<span class='mx m2'><span>6</span><span>8</span><span>−5</span><span>−4</span></span>",
+      "<span class='mx m2'><span>2</span><span>0</span><span>−6</span><span>−4</span></span>",
+      "<span class='mx m2'><span>2</span><span>2</span><span>−8</span><span>0</span></span>"
+     ],
+     "a": 3,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>2</span><span>2</span><span>−8</span><span>0</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>2</span><span>2</span><span>−2</span><span>2</span></span> and B = <span class='mx m2'><span>−2</span><span>−2</span><span>−1</span><span>0</span></span>. Find AB.",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>2</span><span>−4</span><span>4</span></span>",
+      "<span class='mx m2'><span>0</span><span>−8</span><span>−2</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−6</span><span>−4</span><span>2</span><span>4</span></span>",
+      "<span class='mx m2'><span>−4</span><span>−4</span><span>2</span><span>0</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>−6</span><span>−4</span><span>2</span><span>4</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "Find <i>A</i><i>B</i> if <i>A</i> = <span class='mx m2'><span>4</span><span>6</span><span>5</span><span>−1</span></span> and <i>B</i> = <span class='mx m2'><span>5</span><span>−3</span><span>0</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>20</span><span>−12</span><span>30</span><span>−18</span></span>",
+      "<span class='mx m2'><span>20</span><span>−18</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>5</span><span>33</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>20</span><span>−12</span><span>25</span><span>−15</span></span>"
+     ],
+     "a": 3,
+     "e": "Each entry is a row of <i>A</i> times a column of <i>B</i>. Do not multiply entry by entry, and keep the order: <i>A</i><i>B</i> ≠ <i>B</i><i>A</i> in general. <b><span class='mx m2'><span>20</span><span>−12</span><span>25</span><span>−15</span></span></b>."
+    },
+    {
+     "q": "If <i>A</i> = <span class='mx m2'><span>5</span><span>−4</span><span>1</span><span>6</span></span> and <i>B</i> = <span class='mx m2'><span>−2</span><span>3</span><span>−2</span><span>−2</span></span>, what is the entry in row 2, column 1 of <i>A</i><i>B</i>?",
+     "c": [
+      "−2",
+      "−12",
+      "−14",
+      "23"
+     ],
+     "a": 2,
+     "e": "Row 2 of <i>A</i> times column 1 of <i>B</i>: (1)(−2) + (6)(−2) = <b>−14</b>."
+    }
+   ]
+  },
+  {
+   "title": "Transpose, symmetric and skew symmetric",
+   "items": [
+    {
+     "q": "Which matrix is skew symmetric?",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>−4</span><span>−4</span><span>−1</span></span>",
+      "<span class='mx m2'><span>0</span><span>−4</span><span>−4</span><span>0</span></span>",
+      "<span class='mx m2'><span>−6</span><span>−4</span><span>4</span><span>−1</span></span>",
+      "<span class='mx m2'><span>0</span><span>−4</span><span>4</span><span>0</span></span>"
+     ],
+     "a": 3,
+     "e": "A skew symmetric matrix has A′ = −A, so its diagonal is 0 and a<sub>ji</sub> = −a<sub>ij</sub>: <b><span class='mx m2'><span>0</span><span>−4</span><span>4</span><span>0</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>4</span><span>5</span><span>4</span><span>6</span><span>1</span><span>2</span><span>6</span><span>1</span><span>3</span></span>. Find the symmetric part ½(A + A′).",
+     "c": [
+      "<span class='mx m3'><span>8</span><span>11</span><span>10</span><span>11</span><span>2</span><span>3</span><span>10</span><span>3</span><span>6</span></span>",
+      "<span class='mx m3'><span>4</span><span><span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span></span><span>5</span><span><span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span></span><span>1</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>5</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>3</span></span>",
+      "<span class='mx m3'><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−1</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>1</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span>",
+      "<span class='mx m3'><span>4</span><span>6</span><span>6</span><span>5</span><span>1</span><span>1</span><span>4</span><span>2</span><span>3</span></span>"
+     ],
+     "a": 1,
+     "e": "½(A + A′) = <b><span class='mx m3'><span>4</span><span><span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span></span><span>5</span><span><span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span></span><span>1</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>5</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>3</span></span></b>; it equals its own transpose."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>0</span><span>6</span><span>0</span><span>−1</span><span>6</span><span>4</span></span>. Find A′.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>−1</span><span>6</span><span>6</span><span>0</span><span>4</span></span>",
+      "<span class='mx m3'><span>0</span><span>6</span><span>0</span><span>−1</span><span>6</span><span>4</span></span>",
+      "<span class='mx m3'><span>0</span><span>6</span><span>0</span><span>4</span><span>6</span><span>−1</span></span>",
+      "<span class='mx m2'><span>−1</span><span>0</span><span>6</span><span>6</span><span>4</span><span>0</span></span>"
+     ],
+     "a": 0,
+     "e": "Rows become columns: <b><span class='mx m2'><span>0</span><span>−1</span><span>6</span><span>6</span><span>0</span><span>4</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−3</span><span>6</span><span>−3</span><span>3</span><span>−5</span><span>4</span><span>1</span><span>3</span><span>−4</span></span>. Find the skew symmetric part ½(A − A′).",
+     "c": [
+      "<span class='mx m3'><span>−3</span><span><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></span><span>−1</span><span><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></span><span>−5</span><span><span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span></span><span>−1</span><span><span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span></span><span>−4</span></span>",
+      "<span class='mx m3'><span>0</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−2</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>0</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>2</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span>",
+      "<span class='mx m3'><span>0</span><span>3</span><span>−4</span><span>−3</span><span>0</span><span>1</span><span>4</span><span>−1</span><span>0</span></span>",
+      "<span class='mx m3'><span>0</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>2</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−2</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span>"
+     ],
+     "a": 1,
+     "e": "½(A − A′) = <b><span class='mx m3'><span>0</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−2</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>0</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>2</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span></b>; its diagonal entries are 0."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−4</span><span>3</span><span>2</span><span>−3</span><span>4</span><span>−1</span><span>−3</span><span>2</span><span>6</span></span>. Find the symmetric part ½(A + A′).",
+     "c": [
+      "<span class='mx m3'><span>−8</span><span>0</span><span>−1</span><span>0</span><span>8</span><span>1</span><span>−1</span><span>1</span><span>12</span></span>",
+      "<span class='mx m3'><span>0</span><span>3</span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−3</span><span>0</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>0</span></span>",
+      "<span class='mx m3'><span>−4</span><span>−3</span><span>−3</span><span>3</span><span>4</span><span>2</span><span>2</span><span>−1</span><span>6</span></span>",
+      "<span class='mx m3'><span>−4</span><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span><span>4</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>6</span></span>"
+     ],
+     "a": 3,
+     "e": "½(A + A′) = <b><span class='mx m3'><span>−4</span><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span><span>4</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>6</span></span></b>; it equals its own transpose."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−4</span><span>−3</span><span>−2</span><span>−5</span></span>. Find the symmetric part ½(A + A′).",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span>",
+      "<span class='mx m2'><span>−8</span><span>−5</span><span>−5</span><span>−10</span></span>",
+      "<span class='mx m2'><span>−4</span><span>−2</span><span>−3</span><span>−5</span></span>",
+      "<span class='mx m2'><span>−4</span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−5</span></span>"
+     ],
+     "a": 3,
+     "e": "½(A + A′) = <b><span class='mx m2'><span>−4</span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−5</span></span></b>; it equals its own transpose."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−2</span><span>4</span><span>−3</span><span>−1</span><span>−3</span><span>−3</span><span>−5</span><span>2</span><span>2</span></span>. Find the symmetric part ½(A + A′).",
+     "c": [
+      "<span class='mx m3'><span>−2</span><span>−1</span><span>−5</span><span>4</span><span>−3</span><span>2</span><span>−3</span><span>−3</span><span>2</span></span>",
+      "<span class='mx m3'><span>−4</span><span>3</span><span>−8</span><span>3</span><span>−6</span><span>−1</span><span>−8</span><span>−1</span><span>4</span></span>",
+      "<span class='mx m3'><span>−2</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−4</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−3</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−4</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>2</span></span>",
+      "<span class='mx m3'><span>0</span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>1</span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>0</span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−1</span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>0</span></span>"
+     ],
+     "a": 2,
+     "e": "½(A + A′) = <b><span class='mx m3'><span>−2</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−4</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−3</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−4</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>2</span></span></b>; it equals its own transpose."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>0</span><span>5</span><span>−3</span><span>−5</span><span>3</span><span>3</span></span>. Find A′.",
+     "c": [
+      "<span class='mx m3'><span>−3</span><span>5</span><span>0</span><span>3</span><span>3</span><span>−5</span></span>",
+      "<span class='mx m2'><span>0</span><span>−5</span><span>5</span><span>3</span><span>−3</span><span>3</span></span>",
+      "<span class='mx m3'><span>0</span><span>5</span><span>−3</span><span>−5</span><span>3</span><span>3</span></span>",
+      "<span class='mx m2'><span>−5</span><span>0</span><span>3</span><span>5</span><span>3</span><span>−3</span></span>"
+     ],
+     "a": 1,
+     "e": "Rows become columns: <b><span class='mx m2'><span>0</span><span>−5</span><span>5</span><span>3</span><span>−3</span><span>3</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>2</span><span>−2</span><span>6</span><span>1</span></span>. Find the symmetric part ½(A + A′).",
+     "c": [
+      "<span class='mx m2'><span>2</span><span>2</span><span>2</span><span>1</span></span>",
+      "<span class='mx m2'><span>4</span><span>4</span><span>4</span><span>2</span></span>",
+      "<span class='mx m2'><span>0</span><span>−4</span><span>4</span><span>0</span></span>",
+      "<span class='mx m2'><span>2</span><span>6</span><span>−2</span><span>1</span></span>"
+     ],
+     "a": 0,
+     "e": "½(A + A′) = <b><span class='mx m2'><span>2</span><span>2</span><span>2</span><span>1</span></span></b>; it equals its own transpose."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>2</span><span>4</span><span>−5</span><span>−4</span><span>2</span><span>6</span></span>. Find A′.",
+     "c": [
+      "<span class='mx m3'><span>−5</span><span>4</span><span>2</span><span>6</span><span>2</span><span>−4</span></span>",
+      "<span class='mx m2'><span>−4</span><span>2</span><span>2</span><span>4</span><span>6</span><span>−5</span></span>",
+      "<span class='mx m2'><span>2</span><span>−4</span><span>4</span><span>2</span><span>−5</span><span>6</span></span>",
+      "<span class='mx m3'><span>2</span><span>4</span><span>−5</span><span>−4</span><span>2</span><span>6</span></span>"
+     ],
+     "a": 2,
+     "e": "Rows become columns: <b><span class='mx m2'><span>2</span><span>−4</span><span>4</span><span>2</span><span>−5</span><span>6</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>3</span><span>−1</span><span>3</span><span>4</span><span>5</span><span>2</span><span>3</span><span>−4</span><span>0</span></span>. Find the skew symmetric part ½(A − A′).",
+     "c": [
+      "<span class='mx m3'><span>3</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>3</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>5</span><span>−1</span><span>3</span><span>−1</span><span>0</span></span>",
+      "<span class='mx m3'><span>0</span><span>−5</span><span>0</span><span>5</span><span>0</span><span>6</span><span>0</span><span>−6</span><span>0</span></span>",
+      "<span class='mx m3'><span>0</span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>0</span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>0</span><span>3</span><span>0</span><span>−3</span><span>0</span></span>",
+      "<span class='mx m3'><span>0</span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>0</span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>0</span><span>−3</span><span>0</span><span>3</span><span>0</span></span>"
+     ],
+     "a": 2,
+     "e": "½(A − A′) = <b><span class='mx m3'><span>0</span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>0</span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>0</span><span>3</span><span>0</span><span>−3</span><span>0</span></span></b>; its diagonal entries are 0."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>5</span><span>0</span><span>−1</span><span>0</span></span>. Find the skew symmetric part ½(A − A′).",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span>",
+      "<span class='mx m2'><span>5</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>1</span><span>−1</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span>"
+     ],
+     "a": 3,
+     "e": "½(A − A′) = <b><span class='mx m2'><span>0</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span></span></b>; its diagonal entries are 0."
+    },
+    {
+     "q": "Which matrix is symmetric?",
+     "c": [
+      "<span class='mx m2'><span>6</span><span>−1</span><span>−6</span><span>6</span></span>",
+      "<span class='mx m2'><span>0</span><span>−1</span><span>1</span><span>0</span></span>",
+      "<span class='mx m2'><span>6</span><span>−1</span><span>−1</span><span>−6</span></span>",
+      "<span class='mx m2'><span>6</span><span>−1</span><span>1</span><span>−6</span></span>"
+     ],
+     "a": 2,
+     "e": "A symmetric matrix has A′ = A, so a<sub>ji</sub> = a<sub>ij</sub>: <b><span class='mx m2'><span>6</span><span>−1</span><span>−1</span><span>−6</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−1</span><span>−2</span><span>4</span><span>5</span><span>6</span><span>1</span></span>. Find A′.",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>5</span><span>−2</span><span>6</span><span>4</span><span>1</span></span>",
+      "<span class='mx m3'><span>4</span><span>−2</span><span>−1</span><span>1</span><span>6</span><span>5</span></span>",
+      "<span class='mx m3'><span>−1</span><span>−2</span><span>4</span><span>5</span><span>6</span><span>1</span></span>",
+      "<span class='mx m2'><span>5</span><span>−1</span><span>6</span><span>−2</span><span>1</span><span>4</span></span>"
+     ],
+     "a": 0,
+     "e": "Rows become columns: <b><span class='mx m2'><span>−1</span><span>5</span><span>−2</span><span>6</span><span>4</span><span>1</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>5</span><span>−5</span><span>−2</span><span>−3</span><span>−4</span><span>3</span></span>. Find A′.",
+     "c": [
+      "<span class='mx m2'><span>5</span><span>−3</span><span>−5</span><span>−4</span><span>−2</span><span>3</span></span>",
+      "<span class='mx m3'><span>−2</span><span>−5</span><span>5</span><span>3</span><span>−4</span><span>−3</span></span>",
+      "<span class='mx m2'><span>−3</span><span>5</span><span>−4</span><span>−5</span><span>3</span><span>−2</span></span>",
+      "<span class='mx m3'><span>5</span><span>−5</span><span>−2</span><span>−3</span><span>−4</span><span>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Rows become columns: <b><span class='mx m2'><span>5</span><span>−3</span><span>−5</span><span>−4</span><span>−2</span><span>3</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−3</span><span>−3</span><span>−4</span><span>−3</span><span>2</span><span>−2</span></span>. Find A′.",
+     "c": [
+      "<span class='mx m3'><span>−3</span><span>−3</span><span>−4</span><span>−3</span><span>2</span><span>−2</span></span>",
+      "<span class='mx m3'><span>−4</span><span>−3</span><span>−3</span><span>−2</span><span>2</span><span>−3</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−3</span><span>−3</span><span>2</span><span>−4</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−3</span><span>2</span><span>−3</span><span>−2</span><span>−4</span></span>"
+     ],
+     "a": 2,
+     "e": "Rows become columns: <b><span class='mx m2'><span>−3</span><span>−3</span><span>−3</span><span>2</span><span>−4</span><span>−2</span></span></b>."
+    },
+    {
+     "q": "For matrices A and B for which AB is defined, which is always true?",
+     "c": [
+      "(A + B)′ = A′ − B′",
+      "AB = BA",
+      "(AB)′ = A′B′",
+      "(AB)′ = B′A′"
+     ],
+     "a": 3,
+     "e": "The transpose of a product reverses the order: <b>(AB)′ = B′A′</b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−1</span><span>0</span><span>−4</span><span>−1</span></span>. Find the skew symmetric part ½(A − A′).",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>−2</span><span>2</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>2</span><span>−2</span><span>0</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−2</span><span>−2</span><span>−1</span></span>",
+      "<span class='mx m2'><span>0</span><span>4</span><span>−4</span><span>0</span></span>"
+     ],
+     "a": 1,
+     "e": "½(A − A′) = <b><span class='mx m2'><span>0</span><span>2</span><span>−2</span><span>0</span></span></b>; its diagonal entries are 0."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−1</span><span>1</span><span>5</span><span>4</span><span>4</span><span>−1</span></span>. Find A′.",
+     "c": [
+      "<span class='mx m3'><span>5</span><span>1</span><span>−1</span><span>−1</span><span>4</span><span>4</span></span>",
+      "<span class='mx m2'><span>−1</span><span>4</span><span>1</span><span>4</span><span>5</span><span>−1</span></span>",
+      "<span class='mx m3'><span>−1</span><span>1</span><span>5</span><span>4</span><span>4</span><span>−1</span></span>",
+      "<span class='mx m2'><span>4</span><span>−1</span><span>4</span><span>1</span><span>−1</span><span>5</span></span>"
+     ],
+     "a": 1,
+     "e": "Rows become columns: <b><span class='mx m2'><span>−1</span><span>4</span><span>1</span><span>4</span><span>5</span><span>−1</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>−1</span><span>0</span><span>3</span><span>−4</span><span>0</span><span>4</span></span>. Find A′.",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>−4</span><span>0</span><span>0</span><span>3</span><span>4</span></span>",
+      "<span class='mx m3'><span>−1</span><span>0</span><span>3</span><span>−4</span><span>0</span><span>4</span></span>",
+      "<span class='mx m3'><span>3</span><span>0</span><span>−1</span><span>4</span><span>0</span><span>−4</span></span>",
+      "<span class='mx m2'><span>−4</span><span>−1</span><span>0</span><span>0</span><span>4</span><span>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Rows become columns: <b><span class='mx m2'><span>−1</span><span>−4</span><span>0</span><span>0</span><span>3</span><span>4</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Mixed problems",
+   "items": [
+    {
+     "q": "A matrix has 5 elements. What are its possible orders?",
+     "c": [
+      "5 × 1 only",
+      "5 × 5",
+      "1 × 5 only",
+      "1 × 5, 5 × 1"
+     ],
+     "a": 3,
+     "e": "The order m × n needs mn = 5, so it can be <b>1 × 5, 5 × 1</b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>3</span><span>−2</span><span>4</span><span>1</span></span> and B = <span class='mx m2'><span>2</span><span>3</span><span>3</span><span>−3</span></span>. Find AB.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>11</span><span>15</span><span>9</span></span>",
+      "<span class='mx m2'><span>0</span><span>15</span><span>11</span><span>9</span></span>",
+      "<span class='mx m2'><span>18</span><span>−1</span><span>−3</span><span>−9</span></span>",
+      "<span class='mx m2'><span>6</span><span>−6</span><span>12</span><span>−3</span></span>"
+     ],
+     "a": 1,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>0</span><span>15</span><span>11</span><span>9</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>3</span><span>4</span><span>−3</span></span> and B = <span class='mx m2'><span>−1</span><span>1</span><span>−2</span><span>−3</span></span>. Find BA.",
+     "c": [
+      "<span class='mx m2'><span>−7</span><span>−8</span><span>2</span><span>13</span></span>",
+      "<span class='mx m2'><span>−1</span><span>3</span><span>−8</span><span>9</span></span>",
+      "<span class='mx m2'><span>3</span><span>−6</span><span>−14</span><span>3</span></span>",
+      "<span class='mx m2'><span>3</span><span>−14</span><span>−6</span><span>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>3</span><span>−6</span><span>−14</span><span>3</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−2</span><span>3</span><span>0</span><span>−2</span></span> and B = <span class='mx m2'><span>4</span><span>0</span><span>−3</span><span>0</span></span>. Find AB.",
+     "c": [
+      "<span class='mx m2'><span>−8</span><span>0</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>−8</span><span>12</span><span>6</span><span>−9</span></span>",
+      "<span class='mx m2'><span>−17</span><span>0</span><span>6</span><span>0</span></span>",
+      "<span class='mx m2'><span>−17</span><span>6</span><span>0</span><span>0</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>−17</span><span>0</span><span>6</span><span>0</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>2</span><span>2</span><span>4</span><span>−2</span></span>. Find A².",
+     "c": [
+      "<span class='mx m2'><span>13</span><span>1</span><span>1</span><span>13</span></span>",
+      "<span class='mx m2'><span>4</span><span>4</span><span>8</span><span>−4</span></span>",
+      "<span class='mx m2'><span>4</span><span>4</span><span>16</span><span>4</span></span>",
+      "<span class='mx m2'><span>12</span><span>0</span><span>0</span><span>12</span></span>"
+     ],
+     "a": 3,
+     "e": "A² = A × A, multiplying rows by columns (not squaring each entry): <b><span class='mx m2'><span>12</span><span>0</span><span>0</span><span>12</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>3</span><span>1</span><span>0</span><span>2</span></span> and B = <span class='mx m2'><span>0</span><span>3</span><span>4</span><span>0</span></span>. Find BA.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>6</span><span>12</span><span>4</span></span>",
+      "<span class='mx m2'><span>0</span><span>3</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>4</span><span>9</span><span>8</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>12</span><span>6</span><span>4</span></span>"
+     ],
+     "a": 0,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>0</span><span>6</span><span>12</span><span>4</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "The table shows how many items two students sold. Small pizzas cost ₹9 each and large pizzas cost ₹15 each. The sales matrix times the price matrix <span class='mx m1'><span>₹9</span><span>₹15</span></span> gives each student's total.<table class='sn-table'><tr><th></th><th>Small pizzas</th><th>Large pizzas</th></tr><tr><td>Priya</td><td>29</td><td>39</td></tr><tr><td>Ishaan</td><td>13</td><td>35</td></tr></table> How much money did Ishaan collect?",
+     "c": [
+      "₹456",
+      "₹642",
+      "₹1,152",
+      "₹510"
+     ],
+     "a": 1,
+     "e": "13 × ₹9 + 35 × ₹15 = ₹117 + ₹525 = <b>₹642</b>."
+    },
+    {
+     "q": "A = <span class='mx m3'><span>3</span><span>−2</span><span>4</span><span>1</span><span>−2</span><span>0</span></span>. Find a<sub>12</sub>.",
+     "c": [
+      "2",
+      "−2",
+      "−1",
+      "1"
+     ],
+     "a": 1,
+     "e": "a<sub>12</sub> is in row 1 and column 2: <b>−2</b>."
+    },
+    {
+     "q": "The table shows how many items two students sold. Adult tickets cost ₹14 each and child tickets cost ₹6 each. The sales matrix times the price matrix <span class='mx m1'><span>₹14</span><span>₹6</span></span> gives each student's total.<table class='sn-table'><tr><th></th><th>Adult tickets</th><th>Child tickets</th></tr><tr><td>Kavya</td><td>22</td><td>10</td></tr><tr><td>Meera</td><td>51</td><td>16</td></tr></table> How much money did Meera collect?",
+     "c": [
+      "₹1,340",
+      "₹614",
+      "₹530",
+      "₹810"
+     ],
+     "a": 3,
+     "e": "51 × ₹14 + 16 × ₹6 = ₹714 + ₹96 = <b>₹810</b>."
+    },
+    {
+     "q": "How many matrices of order 3 × 3 can be made with each entry 0, 1 or 2?",
+     "c": [
+      "729",
+      "27",
+      "64",
+      "19,683"
+     ],
+     "a": 3,
+     "e": "There are 9 entries, each with 3 choices: 3<sup>9</sup> = <b>19,683</b>."
+    },
+    {
+     "q": "The table shows how many items two students sold. Adult tickets cost ₹11 each and child tickets cost ₹7 each. The sales matrix times the price matrix <span class='mx m1'><span>₹11</span><span>₹7</span></span> gives each student's total.<table class='sn-table'><tr><th></th><th>Adult tickets</th><th>Child tickets</th></tr><tr><td>Aditya</td><td>23</td><td>10</td></tr><tr><td>Siddharth</td><td>48</td><td>56</td></tr></table> How much more did the student who collected more money collect?",
+     "c": [
+      "₹1,243",
+      "₹597",
+      "₹1,194",
+      "₹781"
+     ],
+     "a": 1,
+     "e": "The totals are ₹323 and ₹920. The difference is <b>₹597</b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−3</span><span>2</span><span>−1</span><span>−1</span></span> and B = <span class='mx m2'><span>−3</span><span>−1</span><span>−1</span><span>4</span></span>. Find BA.",
+     "c": [
+      "<span class='mx m2'><span>7</span><span>11</span><span>4</span><span>−3</span></span>",
+      "<span class='mx m2'><span>10</span><span>−1</span><span>−5</span><span>−6</span></span>",
+      "<span class='mx m2'><span>9</span><span>−2</span><span>1</span><span>−4</span></span>",
+      "<span class='mx m2'><span>10</span><span>−5</span><span>−1</span><span>−6</span></span>"
+     ],
+     "a": 3,
+     "e": "Multiply rows of the first matrix by columns of the second: <b><span class='mx m2'><span>10</span><span>−5</span><span>−1</span><span>−6</span></span></b>. (Here AB ≠ BA.)"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−3</span><span>−2</span><span>4</span><span>−2</span></span>. Find A².",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>−4</span><span>8</span><span>−4</span></span>",
+      "<span class='mx m2'><span>1</span><span>−20</span><span>10</span><span>−4</span></span>",
+      "<span class='mx m2'><span>1</span><span>10</span><span>−20</span><span>−4</span></span>",
+      "<span class='mx m2'><span>9</span><span>4</span><span>16</span><span>4</span></span>"
+     ],
+     "a": 2,
+     "e": "A² = A × A, multiplying rows by columns (not squaring each entry): <b><span class='mx m2'><span>1</span><span>10</span><span>−20</span><span>−4</span></span></b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>1</span><span>5</span><span>1</span></span>. Find a<sub>21</sub>.",
+     "c": [
+      "5",
+      "6",
+      "−5",
+      "1"
+     ],
+     "a": 0,
+     "e": "a<sub>21</sub> is in row 2 and column 1: <b>5</b>."
+    },
+    {
+     "q": "A matrix has 7 elements. What are its possible orders?",
+     "c": [
+      "1 × 7, 7 × 1",
+      "1 × 7 only",
+      "7 × 1 only",
+      "7 × 7"
+     ],
+     "a": 0,
+     "e": "The order m × n needs mn = 7, so it can be <b>1 × 7, 7 × 1</b>."
+    },
+    {
+     "q": "The table shows how many items two students sold. Small pizzas cost ₹11 each and large pizzas cost ₹7 each. The sales matrix times the price matrix <span class='mx m1'><span>₹11</span><span>₹7</span></span> gives each student's total.<table class='sn-table'><tr><th></th><th>Small pizzas</th><th>Large pizzas</th></tr><tr><td>Siddharth</td><td>25</td><td>56</td></tr><tr><td>Aarav</td><td>25</td><td>57</td></tr></table> Which matrix gives both totals?",
+     "c": [
+      "<span class='mx m1'><span>₹450</span><span>₹1,015</span></span>",
+      "<span class='mx m2'><span>₹275</span><span>₹392</span><span>₹275</span><span>₹399</span></span>",
+      "<span class='mx m1'><span>₹667</span><span>₹674</span></span>",
+      "<span class='mx m1'><span>₹791</span><span>₹802</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiply each row of the sales matrix by the price column. The result is a 2 × 1 matrix: <b><span class='mx m1'><span>₹667</span><span>₹674</span></span></b>."
+    },
+    {
+     "q": "A matrix has 24 elements. What are its possible orders?",
+     "c": [
+      "1 × 24, 2 × 12, 3 × 8, 4 × 6, 6 × 4, 8 × 3, 12 × 2, 24 × 1",
+      "24 × 24",
+      "1 × 24, 2 × 12, 3 × 8, 4 × 6, 6 × 4",
+      "1 × 24, 3 × 8, 4 × 6, 12 × 2"
+     ],
+     "a": 0,
+     "e": "The order m × n needs mn = 24, so it can be <b>1 × 24, 2 × 12, 3 × 8, 4 × 6, 6 × 4, 8 × 3, 12 × 2, 24 × 1</b>."
+    },
+    {
+     "q": "A = <span class='mx m2'><span>3</span><span>3</span><span>1</span><span>2</span></span>. Find A².",
+     "c": [
+      "<span class='mx m2'><span>9</span><span>9</span><span>1</span><span>4</span></span>",
+      "<span class='mx m2'><span>12</span><span>5</span><span>15</span><span>7</span></span>",
+      "<span class='mx m2'><span>12</span><span>15</span><span>5</span><span>7</span></span>",
+      "<span class='mx m2'><span>6</span><span>6</span><span>2</span><span>4</span></span>"
+     ],
+     "a": 2,
+     "e": "A² = A × A, multiplying rows by columns (not squaring each entry): <b><span class='mx m2'><span>12</span><span>15</span><span>5</span><span>7</span></span></b>."
+    },
+    {
+     "q": "The table shows how many items two students sold. T-shirts cost ₹20 each and hats cost ₹10 each. The sales matrix times the price matrix <span class='mx m1'><span>₹20</span><span>₹10</span></span> gives each student's total.<table class='sn-table'><tr><th></th><th>T-shirts</th><th>Hats</th></tr><tr><td>Aditya</td><td>13</td><td>52</td></tr><tr><td>Pooja</td><td>17</td><td>48</td></tr></table> How much money did Pooja collect?",
+     "c": [
+      "₹430",
+      "₹820",
+      "₹1,130",
+      "₹1,950"
+     ],
+     "a": 1,
+     "e": "17 × ₹20 + 48 × ₹10 = ₹340 + ₹480 = <b>₹820</b>."
+    },
+    {
+     "q": "The table shows how many items two students sold. T-shirts cost ₹12 each and hats cost ₹8 each. The sales matrix times the price matrix <span class='mx m1'><span>₹12</span><span>₹8</span></span> gives each student's total.<table class='sn-table'><tr><th></th><th>T-shirts</th><th>Hats</th></tr><tr><td>Sneha</td><td>35</td><td>41</td></tr><tr><td>Meera</td><td>57</td><td>16</td></tr></table> How much money did Meera collect?",
+     "c": [
+      "₹812",
+      "₹648",
+      "₹876",
+      "₹1,460"
+     ],
+     "a": 0,
+     "e": "57 × ₹12 + 16 × ₹8 = ₹684 + ₹128 = <b>₹812</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 3,
+ "updated": "2026-11-22",
+ "country": "in",
+ "subject": "maths",
+ "grade": "class-12"
+}

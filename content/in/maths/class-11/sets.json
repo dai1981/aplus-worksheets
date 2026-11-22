@@ -1,0 +1,1157 @@
+{
+ "slug": "sets",
+ "title": "Sets: Subsets, Intervals, Venn Diagrams and Set Operations",
+ "seo_title": "Sets Class 11 Worksheet with Answers (NCERT Chapter 1)",
+ "short_title": "sets",
+ "domain": "Sets and Functions",
+ "standard_code": "Class 11, Chapter 1: Sets",
+ "standard_url": "https://www.cbseacademic.nic.in/web_material/CurriculumMain26/SrSec/Maths_SrSec_2025-26.pdf",
+ "standard_text": "Sets and their representations; empty, finite, infinite and equal sets; subsets, subsets of the set of real numbers (intervals); Venn diagrams; union, intersection, difference and complement of sets and their properties (summary of the CBSE syllabus)",
+ "meta_desc": "Class 11 Sets worksheet (NCERT Chapter 1): roster and set-builder form, subsets, power set, intervals, union, intersection, difference, complement and Venn diagrams. 100 questions with answers.",
+ "key_big": "A set with n elements has 2ⁿ subsets.",
+ "key_sub": "n(A ∪ B) = n(A) + n(B) − n(A ∩ B).",
+ "body_html": "<h2>How it works</h2><ul><li><b>Roster form</b> lists the elements: {2, 3, 5, 7}. <b>Set-builder form</b> gives the rule: {x : x is a prime less than 10}.</li><li>B ⊂ A when every element of B is in A. A set with n elements has 2<sup>n</sup> subsets; the power set P(A) has 2<sup>n</sup> elements.</li><li>Intervals: (a, b) leaves out both ends, [a, b] keeps both, [a, b) keeps only a.</li><li>A ∪ B (in A or B), A ∩ B (in both), A − B (in A but not B), A′ = U − A. De Morgan: (A ∪ B)′ = A′ ∩ B′.</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>A = {1, 2, 3}. How many subsets does A have?</p><p class='sn-ex-s'>φ, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}</p><p class='sn-ex-s'>2³ = 8</p><p class='sn-ex-a'>Answer: 8</p></div><h2>Common mistakes</h2><ul><li>Forgetting φ and A itself when counting subsets.</li><li>Writing {1} ∈ A instead of {1} ⊂ A.</li><li>Adding n(A) + n(B) without subtracting n(A ∩ B).</li></ul>",
+ "faq": [
+  {
+   "q": "What is the difference between ⊂ and ∈?",
+   "a": "∈ links an element to a set (2 ∈ A); ⊂ links a set to a set ({2} ⊂ A)."
+  },
+  {
+   "q": "Is φ a subset of every set?",
+   "a": "Yes. The empty set is a subset of every set, and every set is a subset of itself."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Representing sets",
+   "items": [
+    {
+     "q": "Write the set A = {x : x ∈ Z and −2 ≤ x &lt; 3} in roster form.",
+     "c": [
+      "{−1, 0, 1, 2}",
+      "{−2, −1, 0, 1}",
+      "{−2, −1, 0, 1, 2, 3}",
+      "{−2, −1, 0, 1, 2}"
+     ],
+     "a": 3,
+     "e": "List every element that fits the rule, once each: A = <b>{−2, −1, 0, 1, 2}</b>."
+    },
+    {
+     "q": "Write the set A = {x : x = n², n ∈ N and n ≤ 6} in roster form.",
+     "c": [
+      "{4, 9, 16, 25, 36}",
+      "{1, 4, 9, 16, 25}",
+      "{1, 4, 9, 16, 25, 36, 47}",
+      "{1, 4, 9, 16, 25, 36}"
+     ],
+     "a": 3,
+     "e": "List every element that fits the rule, once each: A = <b>{1, 4, 9, 16, 25, 36}</b>."
+    },
+    {
+     "q": "Write the set A = {x : x is a prime number less than 24} in roster form.",
+     "c": [
+      "{2, 3, 5, 7, 11, 13, 17, 19, 23, 27}",
+      "{1, 2, 3, 5, 7, 11, 13, 17, 19, 23}",
+      "{2, 3, 5, 7, 11, 13, 17, 19}",
+      "{2, 3, 5, 7, 11, 13, 17, 19, 23}"
+     ],
+     "a": 3,
+     "e": "List every element that fits the rule, once each: A = <b>{2, 3, 5, 7, 11, 13, 17, 19, 23}</b>."
+    },
+    {
+     "q": "A = {1, 2, 3, 4, 5}. Which statement is true?",
+     "c": [
+      "{1, 5} ⊂ A",
+      "A ⊂ {1, 5}",
+      "5 ⊂ A",
+      "{1, 5} ∈ A"
+     ],
+     "a": 0,
+     "e": "{1, 5} is a set whose elements are all in A, so it is a subset: <b>{1, 5} ⊂ A ⊂ A</b>. ∈ is used for single elements, as in 5 ∈ A."
+    },
+    {
+     "q": "Which set is equal to {x : x is a factor of 10}?",
+     "c": [
+      "{1, 2, 5, 10, 20}",
+      "{1, 2, 5}",
+      "{1, 2, 5, 10}",
+      "{1, 3, 5, 7, 9}"
+     ],
+     "a": 2,
+     "e": "Equal sets have exactly the same elements: <b>{1, 2, 5, 10}</b>."
+    },
+    {
+     "q": "U = {<i>x</i> : <i>x</i> is an integer and 1 ≤ <i>x</i> ≤ 10} and A = {<i>x</i> : <i>x</i> is an even number}. Which statement is true?",
+     "c": [
+      "{2, 6} ∈ A",
+      "{5, 6} ⊆ A",
+      "{2, 6} ⊆ A",
+      "A ⊆ {2, 6}"
+     ],
+     "a": 2,
+     "e": "Every element of {2, 6} is in A = {2, 4, 6, 8, 10}, so it is a subset: <b>{2, 6} ⊆ A</b>."
+    },
+    {
+     "q": "Write the set A = {x : x is a natural number and x² &lt; 70} in roster form.",
+     "c": [
+      "{1, 2, 3, 4, 5, 6, 7}",
+      "{1, 2, 3, 4, 5, 6, 7, 8, 9}",
+      "{2, 3, 4, 5, 6, 7, 8}",
+      "{1, 2, 3, 4, 5, 6, 7, 8}"
+     ],
+     "a": 3,
+     "e": "List every element that fits the rule, once each: A = <b>{1, 2, 3, 4, 5, 6, 7, 8}</b>."
+    },
+    {
+     "q": "Which set is equal to {x : x is a factor of 12}?",
+     "c": [
+      "{1, 3, 5, 7, 9, 11}",
+      "{1, 2, 3, 4, 6}",
+      "{1, 2, 3, 4, 6, 12}",
+      "{1, 2, 3, 4, 6, 12, 24}"
+     ],
+     "a": 2,
+     "e": "Equal sets have exactly the same elements: <b>{1, 2, 3, 4, 6, 12}</b>."
+    },
+    {
+     "q": "Which of these is the empty set?",
+     "c": [
+      "{<i>x</i> : <i>x</i> is an odd number less than 2}",
+      "{<i>x</i> : <i>x</i> is an even prime number greater than 2}",
+      "{∅}",
+      "{0}"
+     ],
+     "a": 1,
+     "e": "There is no even prime greater than 2, so that set has no elements: <b>∅</b>. {0} and {∅} each have one element."
+    },
+    {
+     "q": "Write the set A = {x : x is a natural number and x² &lt; 40} in roster form.",
+     "c": [
+      "{1, 2, 3, 4, 5, 6}",
+      "{2, 3, 4, 5, 6}",
+      "{1, 2, 3, 4, 5, 6, 7}",
+      "{1, 2, 3, 4, 5}"
+     ],
+     "a": 0,
+     "e": "List every element that fits the rule, once each: A = <b>{1, 2, 3, 4, 5, 6}</b>."
+    },
+    {
+     "q": "Write the set A = {x : x is an odd natural number less than 14} in roster form.",
+     "c": [
+      "{1, 3, 5, 7, 9, 11, 13}",
+      "{1, 3, 5, 7, 9, 11, 13, 15}",
+      "{1, 3, 5, 7, 9, 11}",
+      "{3, 5, 7, 9, 11, 13}"
+     ],
+     "a": 0,
+     "e": "List every element that fits the rule, once each: A = <b>{1, 3, 5, 7, 9, 11, 13}</b>."
+    },
+    {
+     "q": "Write the set A = {x : x = n², n ∈ N and n ≤ 4} in roster form.",
+     "c": [
+      "{4, 9, 16}",
+      "{1, 4, 9, 16}",
+      "{1, 4, 9}",
+      "{1, 4, 9, 16, 23}"
+     ],
+     "a": 1,
+     "e": "List every element that fits the rule, once each: A = <b>{1, 4, 9, 16}</b>."
+    },
+    {
+     "q": "Which set is finite?",
+     "c": [
+      "{x : x is a month of the year}",
+      "the set of lines through a point",
+      "{x : x ∈ Z and x &lt; 5}",
+      "{x : x ∈ N and x is even}"
+     ],
+     "a": 0,
+     "e": "<b>{x : x is a month of the year}</b> has a definite number of elements; the others go on without end."
+    },
+    {
+     "q": "Write the set A = {x : x is a natural number and x² &lt; 50} in roster form.",
+     "c": [
+      "{1, 2, 3, 4, 5, 6, 7}",
+      "{2, 3, 4, 5, 6, 7}",
+      "{1, 2, 3, 4, 5, 6, 7, 8}",
+      "{1, 2, 3, 4, 5, 6}"
+     ],
+     "a": 0,
+     "e": "List every element that fits the rule, once each: A = <b>{1, 2, 3, 4, 5, 6, 7}</b>."
+    },
+    {
+     "q": "Write the set A = {x : x is a prime number less than 20} in roster form.",
+     "c": [
+      "{2, 3, 5, 7, 11, 13, 17, 19, 21}",
+      "{1, 2, 3, 5, 7, 11, 13, 17, 19}",
+      "{2, 3, 5, 7, 11, 13, 17}",
+      "{2, 3, 5, 7, 11, 13, 17, 19}"
+     ],
+     "a": 3,
+     "e": "List every element that fits the rule, once each: A = <b>{2, 3, 5, 7, 11, 13, 17, 19}</b>."
+    },
+    {
+     "q": "Write the set A = {x : x is a natural number and x divides 30} in roster form.",
+     "c": [
+      "{1, 2, 3, 5, 6, 10, 15, 30, 45}",
+      "{2, 3, 5, 6, 10, 15}",
+      "{1, 2, 3, 5, 6, 10, 15, 30}",
+      "{1, 2, 3, 5, 6, 10, 15}"
+     ],
+     "a": 2,
+     "e": "List every element that fits the rule, once each: A = <b>{1, 2, 3, 5, 6, 10, 15, 30}</b>."
+    },
+    {
+     "q": "Write the set A = {x : x is a natural number and x divides 18} in roster form.",
+     "c": [
+      "{1, 2, 3, 6, 9}",
+      "{1, 2, 3, 6, 9, 18}",
+      "{1, 2, 3, 6, 9, 18, 27}",
+      "{2, 3, 6, 9}"
+     ],
+     "a": 1,
+     "e": "List every element that fits the rule, once each: A = <b>{1, 2, 3, 6, 9, 18}</b>."
+    },
+    {
+     "q": "U = {<i>x</i> : <i>x</i> is an integer and 1 ≤ <i>x</i> ≤ 15} and A = {<i>x</i> : <i>x</i> is an even number}. Which statement is true?",
+     "c": [
+      "{2, 13} ⊆ A",
+      "A ⊆ {2, 4, 12}",
+      "{2, 4, 12} ⊆ A",
+      "{2, 4, 12} ∈ A"
+     ],
+     "a": 2,
+     "e": "Every element of {2, 4, 12} is in A = {2, 4, 6, 8, 10, 12, 14}, so it is a subset: <b>{2, 4, 12} ⊆ A</b>."
+    },
+    {
+     "q": "Which of these is the empty set φ?",
+     "c": [
+      "{x : x is an even prime number}",
+      "{x : x² = 4 and x is odd}",
+      "{0}",
+      "{x : x is a whole number less than 1}"
+     ],
+     "a": 1,
+     "e": "{x : x² = 4 and x is odd} has no elements. {0} has one element (0), and there is exactly one even prime (2)."
+    },
+    {
+     "q": "Write the set A = {x : x is a natural number and x divides 20} in roster form.",
+     "c": [
+      "{2, 4, 5, 10}",
+      "{1, 2, 4, 5, 10, 20}",
+      "{1, 2, 4, 5, 10}",
+      "{1, 2, 4, 5, 10, 20, 30}"
+     ],
+     "a": 1,
+     "e": "List every element that fits the rule, once each: A = <b>{1, 2, 4, 5, 10, 20}</b>."
+    }
+   ]
+  },
+  {
+   "title": "Subsets and intervals",
+   "items": [
+    {
+     "q": "U = {<i>x</i> : <i>x</i> is an integer and 1 ≤ <i>x</i> ≤ 15} and A = {<i>x</i> : <i>x</i> is a multiple of 3}. Find n(A).",
+     "c": [
+      "10",
+      "6",
+      "5",
+      "15"
+     ],
+     "a": 2,
+     "e": "A = {3, 6, 9, 12, 15}, so <b>n(A) = 5</b> (the number of elements)."
+    },
+    {
+     "q": "U = {<i>x</i> : <i>x</i> is an integer and 1 ≤ <i>x</i> ≤ 15} and A = {<i>x</i> : <i>x</i> is a perfect square}. Find n(A).",
+     "c": [
+      "3",
+      "9",
+      "4",
+      "12"
+     ],
+     "a": 0,
+     "e": "A = {1, 4, 9}, so <b>n(A) = 3</b> (the number of elements)."
+    },
+    {
+     "q": "Which set is the interval (−4, 5]?",
+     "c": [
+      "{x : −4 ≤ x &lt; 5}",
+      "{x : −4 &lt; x &lt; 5}",
+      "{x : −4 ≤ x ≤ 5}",
+      "{x : −4 &lt; x ≤ 5}"
+     ],
+     "a": 3,
+     "e": "( or ) means the end point is not included, [ or ] means it is: <b>{x : −4 &lt; x ≤ 5}</b>."
+    },
+    {
+     "q": "Write {x : x ∈ R, 3 &lt; x ≤ 9} as an interval.",
+     "c": [
+      "[3, 9)",
+      "[3, 9]",
+      "(3, 9]",
+      "(3, 9)"
+     ],
+     "a": 2,
+     "e": "A round bracket leaves the end point out (&lt;) and a square bracket keeps it in (≤): <b>(3, 9]</b>."
+    },
+    {
+     "q": "If A = {3, 6, 10, 11, 12, 14, 18}, how many elements does the power set P(A) have?",
+     "c": [
+      "127",
+      "49",
+      "7",
+      "128"
+     ],
+     "a": 3,
+     "e": "P(A) is the set of all subsets of A, so n[P(A)] = 2<sup>7</sup> = <b>128</b>."
+    },
+    {
+     "q": "If A = {s, q, a, r, b, p, c}, how many elements does the power set P(A) have?",
+     "c": [
+      "49",
+      "128",
+      "7",
+      "127"
+     ],
+     "a": 1,
+     "e": "P(A) is the set of all subsets of A, so n[P(A)] = 2<sup>7</sup> = <b>128</b>."
+    },
+    {
+     "q": "How many subsets does A = {p, s, b, a, r, d, c} have?",
+     "c": [
+      "128",
+      "49",
+      "14",
+      "127"
+     ],
+     "a": 0,
+     "e": "A set with 7 elements has 2<sup>7</sup> = <b>128</b> subsets (including φ and A itself)."
+    },
+    {
+     "q": "A power set P(A) has 128 elements. How many elements does A have?",
+     "c": [
+      "64",
+      "127",
+      "8",
+      "7"
+     ],
+     "a": 3,
+     "e": "n[P(A)] = 2<sup>n</sup> = 128, so n = <b>7</b>."
+    },
+    {
+     "q": "If A = {e, a, b}, how many elements does the power set P(A) have?",
+     "c": [
+      "3",
+      "7",
+      "8",
+      "9"
+     ],
+     "a": 2,
+     "e": "P(A) is the set of all subsets of A, so n[P(A)] = 2<sup>3</sup> = <b>8</b>."
+    },
+    {
+     "q": "If A = {1, 2, 6, 12, 14, 16, 17}, how many elements does the power set P(A) have?",
+     "c": [
+      "127",
+      "128",
+      "49",
+      "7"
+     ],
+     "a": 1,
+     "e": "P(A) is the set of all subsets of A, so n[P(A)] = 2<sup>7</sup> = <b>128</b>."
+    },
+    {
+     "q": "Which set is the interval [−2, 5)?",
+     "c": [
+      "{x : −2 ≤ x &lt; 5}",
+      "{x : −2 &lt; x &lt; 5}",
+      "{x : −2 &lt; x ≤ 5}",
+      "{x : −2 ≤ x ≤ 5}"
+     ],
+     "a": 0,
+     "e": "( or ) means the end point is not included, [ or ] means it is: <b>{x : −2 ≤ x &lt; 5}</b>."
+    },
+    {
+     "q": "Write {x : x ∈ R, −2 ≤ x ≤ 3} as an interval.",
+     "c": [
+      "[−2, 3)",
+      "(−2, 3)",
+      "[−2, 3]",
+      "(−2, 3]"
+     ],
+     "a": 2,
+     "e": "A round bracket leaves the end point out (&lt;) and a square bracket keeps it in (≤): <b>[−2, 3]</b>."
+    },
+    {
+     "q": "How many proper subsets does A = {s, b, c, p, d} have?",
+     "c": [
+      "30",
+      "32",
+      "10",
+      "31"
+     ],
+     "a": 3,
+     "e": "There are 2<sup>5</sup> = 32 subsets; all except A itself are proper: <b>31</b>."
+    },
+    {
+     "q": "Write {x : x ∈ R, 4 &lt; x &lt; 11} as an interval.",
+     "c": [
+      "[4, 11]",
+      "[4, 11)",
+      "(4, 11)",
+      "(4, 11]"
+     ],
+     "a": 2,
+     "e": "A round bracket leaves the end point out (&lt;) and a square bracket keeps it in (≤): <b>(4, 11)</b>."
+    },
+    {
+     "q": "How many subsets does A = {1, 3, 4, 8, 15, 18, 19} have?",
+     "c": [
+      "14",
+      "128",
+      "127",
+      "49"
+     ],
+     "a": 1,
+     "e": "A set with 7 elements has 2<sup>7</sup> = <b>128</b> subsets (including φ and A itself)."
+    },
+    {
+     "q": "Which set is the interval [5, 12)?",
+     "c": [
+      "{x : 5 &lt; x &lt; 12}",
+      "{x : 5 ≤ x &lt; 12}",
+      "{x : 5 &lt; x ≤ 12}",
+      "{x : 5 ≤ x ≤ 12}"
+     ],
+     "a": 1,
+     "e": "( or ) means the end point is not included, [ or ] means it is: <b>{x : 5 ≤ x &lt; 12}</b>."
+    },
+    {
+     "q": "U = {<i>x</i> : <i>x</i> is an integer and 1 ≤ <i>x</i> ≤ 12} and A = {<i>x</i> : <i>x</i> is an even number}. List A′.",
+     "c": [
+      "{2, 4, 6, 8, 10, 12}",
+      "{1, 3, 5, 7, 9}",
+      "{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}",
+      "{1, 3, 5, 7, 9, 11}"
+     ],
+     "a": 3,
+     "e": "A′ is everything in U that is <b>not</b> in A: <b>{1, 3, 5, 7, 9, 11}</b>."
+    },
+    {
+     "q": "If A = {1, 4, 10, 15, 19}, how many elements does the power set P(A) have?",
+     "c": [
+      "31",
+      "32",
+      "5",
+      "25"
+     ],
+     "a": 1,
+     "e": "P(A) is the set of all subsets of A, so n[P(A)] = 2<sup>5</sup> = <b>32</b>."
+    },
+    {
+     "q": "Which set is the interval [2, 8)?",
+     "c": [
+      "{x : 2 ≤ x &lt; 8}",
+      "{x : 2 &lt; x &lt; 8}",
+      "{x : 2 ≤ x ≤ 8}",
+      "{x : 2 &lt; x ≤ 8}"
+     ],
+     "a": 0,
+     "e": "( or ) means the end point is not included, [ or ] means it is: <b>{x : 2 ≤ x &lt; 8}</b>."
+    },
+    {
+     "q": "A power set P(A) has 16 elements. How many elements does A have?",
+     "c": [
+      "4",
+      "15",
+      "8",
+      "5"
+     ],
+     "a": 0,
+     "e": "n[P(A)] = 2<sup>n</sup> = 16, so n = <b>4</b>."
+    }
+   ]
+  },
+  {
+   "title": "Union, intersection and difference",
+   "items": [
+    {
+     "q": "A = {5, 7, 8, 9, 10} and B = {3, 4, 5, 10}. Find B − A.",
+     "c": [
+      "{7, 8, 9}",
+      "{5, 10}",
+      "{3, 4, 5, 7, 8, 9, 10}",
+      "{3, 4}"
+     ],
+     "a": 3,
+     "e": "B − A keeps the elements of B that are not in A: <b>{3, 4}</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, …, 10} and A = {2, 3, 4, 7, 8, 9}. Find A′.",
+     "c": [
+      "{5, 6, 10}",
+      "{2, 3, 4, 7, 8, 9}",
+      "{1, 5, 6, 10}",
+      "{1, 2, 6, 7, 8}"
+     ],
+     "a": 2,
+     "e": "A′ = U − A, the elements of U not in A: <b>{1, 5, 6, 10}</b>."
+    },
+    {
+     "q": "A = {1, 3, 5} and B = {1, 2, 3, 4, 9}. Find A − B.",
+     "c": [
+      "{1, 2, 3, 4, 5, 9}",
+      "{1, 3}",
+      "{5}",
+      "{2, 4, 9}"
+     ],
+     "a": 2,
+     "e": "A − B keeps the elements of A that are not in B: <b>{5}</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, …, 10}, A = {3, 4, 5, 8, 10} and B = {1, 2, 5, 6, 7, 8}. Find (A ∪ B)′.",
+     "c": [
+      "{9}",
+      "{5, 8}",
+      "{1, 2, 3, 4, 6, 7, 9, 10}",
+      "{1, 2, 3, 4, 5, 6, 7, 8, 10}"
+     ],
+     "a": 0,
+     "e": "A ∪ B = {1, 2, 3, 4, 5, 6, 7, 8, 10}, so (A ∪ B)′ = <b>{9}</b> (De Morgan: it equals A′ ∩ B′)."
+    },
+    {
+     "q": "A = {5, 7, 9} and B = {1, 2, 8, 9}. Find B − A.",
+     "c": [
+      "{1, 2, 8}",
+      "{5, 7}",
+      "{1, 2, 5, 7, 8, 9}",
+      "{9}"
+     ],
+     "a": 0,
+     "e": "B − A keeps the elements of B that are not in A: <b>{1, 2, 8}</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, …, 10}, A = {3, 4, 5, 7, 9, 10} and B = {1, 2, 5, 6, 8}. Find (A ∪ B)′.",
+     "c": [
+      "{1, 2, 3, 4, 6, 7, 8, 9, 10}",
+      "{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}",
+      "φ",
+      "{5}"
+     ],
+     "a": 2,
+     "e": "A ∪ B = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, so (A ∪ B)′ = <b>φ</b> (De Morgan: it equals A′ ∩ B′)."
+    },
+    {
+     "q": "U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, A = {6, 10, 11} and B = {1, 3, 4, 6, 10, 12}. Find A ∩ B′.",
+     "c": [
+      "{11}",
+      "{6, 10}",
+      "{2, 5, 7, 8, 9, 11}",
+      "{1, 3, 4, 12}"
+     ],
+     "a": 0,
+     "e": "B′ is everything not in B. A ∩ B′ is in A but not in B: <b>{11}</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, A = {2, 7, 11, 12} and B = {3, 4, 5, 6, 7, 12}. Find A ∩ B.",
+     "c": [
+      "{2, 11}",
+      "{3, 4, 5, 6}",
+      "{7, 12}",
+      "{2, 3, 4, 5, 6, 7, 11, 12}"
+     ],
+     "a": 2,
+     "e": "A ∩ B contains the elements in <b>both</b> A and B: <b>{7, 12}</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, A = {1, 2, 3, 5, 7, 10} and B = {1, 3, 4, 5, 6, 9}. Find A ∪ B.",
+     "c": [
+      "{2, 4, 6, 7, 9, 10}",
+      "{1, 2, 3, 4, 5, 6, 7, 9, 10}",
+      "{8, 11, 12}",
+      "{1, 3, 5}"
+     ],
+     "a": 1,
+     "e": "A ∪ B contains everything in A <b>or</b> B (or both): <b>{1, 2, 3, 4, 5, 6, 7, 9, 10}</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, …, 20}, A = {3, 5, 7, 14, 17, 19} and B = {4, 8, 18, 19, 20}. Find A ∩ B′.",
+     "c": [
+      "{4, 8, 18, 20}",
+      "{3, 5, 7, 14, 17}",
+      "{1, 2, 3, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17}",
+      "{19}"
+     ],
+     "a": 1,
+     "e": "B′ is everything not in B. A ∩ B′ is in A but not in B: <b>{3, 5, 7, 14, 17}</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, A = {1, 2, 3, 4, 7, 11} and B = {1, 5, 10}. Find n((A ∪ B)′).",
+     "c": [
+      "8",
+      "11",
+      "4",
+      "3"
+     ],
+     "a": 2,
+     "e": "n(A ∪ B) = 8, so n((A ∪ B)′) = 12 − 8 = <b>4</b>."
+    },
+    {
+     "q": "A = {3, 4, 9} and B = {5, 6, 7, 8}. Find A − B.",
+     "c": [
+      "φ",
+      "{3, 4, 9}",
+      "{3, 4, 5, 6, 7, 8, 9}",
+      "{5, 6, 7, 8}"
+     ],
+     "a": 1,
+     "e": "A − B keeps the elements of A that are not in B: <b>{3, 4, 9}</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, A = {2, 4, 5, 9, 10} and B = {4, 6, 10}. Find A ∩ B′.",
+     "c": [
+      "{1, 2, 3, 5, 7, 8, 9}",
+      "{6}",
+      "{4, 10}",
+      "{2, 5, 9}"
+     ],
+     "a": 3,
+     "e": "B′ is everything not in B. A ∩ B′ is in A but not in B: <b>{2, 5, 9}</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, A = {1, 4, 6, 9, 11} and B = {1, 2, 4, 6, 11, 12}. Find A ∩ B.",
+     "c": [
+      "{1, 2, 4, 6, 9, 11, 12}",
+      "{2, 12}",
+      "{9}",
+      "{1, 4, 6, 11}"
+     ],
+     "a": 3,
+     "e": "A ∩ B contains the elements in <b>both</b> A and B: <b>{1, 4, 6, 11}</b>."
+    },
+    {
+     "q": "A = {3, 7, 8} and B = {2, 3, 4, 6, 8}. Find B − A.",
+     "c": [
+      "{7}",
+      "{2, 4, 6}",
+      "{2, 3, 4, 6, 7, 8}",
+      "{3, 8}"
+     ],
+     "a": 1,
+     "e": "B − A keeps the elements of B that are not in A: <b>{2, 4, 6}</b>."
+    },
+    {
+     "q": "A = {2, 3, 7, 9} and B = {3, 6, 7, 10}. Find A − B.",
+     "c": [
+      "{2, 9}",
+      "{2, 3, 6, 7, 9, 10}",
+      "{3, 7}",
+      "{6, 10}"
+     ],
+     "a": 0,
+     "e": "A − B keeps the elements of A that are not in B: <b>{2, 9}</b>."
+    },
+    {
+     "q": "A = {1, 4, 5, 6, 8, 10} and B = {3, 4, 6, 8, 10}. Find B − A.",
+     "c": [
+      "{1, 3, 4, 5, 6, 8, 10}",
+      "{4, 6, 8, 10}",
+      "{1, 5}",
+      "{3}"
+     ],
+     "a": 3,
+     "e": "B − A keeps the elements of B that are not in A: <b>{3}</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, …, 10}, A = {2, 6, 9, 10} and B = {7, 9, 10}. Find (A ∪ B)′.",
+     "c": [
+      "{1, 3, 4, 5, 8}",
+      "{9, 10}",
+      "{2, 6, 7, 9, 10}",
+      "{1, 2, 3, 4, 5, 6, 7, 8}"
+     ],
+     "a": 0,
+     "e": "A ∪ B = {2, 6, 7, 9, 10}, so (A ∪ B)′ = <b>{1, 3, 4, 5, 8}</b> (De Morgan: it equals A′ ∩ B′)."
+    },
+    {
+     "q": "A = {2, 3, 6, 7, 9, 10} and B = {2, 4, 5, 6, 8}. Find B − A.",
+     "c": [
+      "{2, 6}",
+      "{4, 5, 8}",
+      "{3, 7, 9, 10}",
+      "{2, 3, 4, 5, 6, 7, 8, 9, 10}"
+     ],
+     "a": 1,
+     "e": "B − A keeps the elements of B that are not in A: <b>{4, 5, 8}</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, …, 20}, A = {2, 4, 8, 13, 19} and B = {4, 5, 12}. Find n(A ∪ B).",
+     "c": [
+      "1",
+      "13",
+      "8",
+      "7"
+     ],
+     "a": 3,
+     "e": "A ∪ B = {2, 4, 5, 8, 12, 13, 19}, so n(A ∪ B) = <b>7</b>. (Not 5 + 3: the overlap is counted once.)"
+    }
+   ]
+  },
+  {
+   "title": "Venn diagrams",
+   "items": [
+    {
+     "q": "A = {1, 2, 6, 9, 10} and B = {2, 4, 5, 6, 7, 9}. Find B − A.",
+     "c": [
+      "{1, 2, 4, 5, 6, 7, 9, 10}",
+      "{1, 10}",
+      "{4, 5, 7}",
+      "{2, 6, 9}"
+     ],
+     "a": 2,
+     "e": "B − A keeps the elements of B that are not in A: <b>{4, 5, 7}</b>."
+    },
+    {
+     "q": "Which set is shaded in the Venn diagram?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with a shaded region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='#bcd7f5'/><circle cx='115' cy='100' r='62' fill='#fff'/><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div>",
+     "c": [
+      "A ∩ B",
+      "A′",
+      "A ∩ B′",
+      "B′"
+     ],
+     "a": 1,
+     "e": "The shaded part is everything outside A: <b>A′</b>."
+    },
+    {
+     "q": "A = {1, 5, 6, 9} and B = {5, 6, 7, 8, 9, 10}. Find B − A.",
+     "c": [
+      "{5, 6, 9}",
+      "{1}",
+      "{7, 8, 10}",
+      "{1, 5, 6, 7, 8, 9, 10}"
+     ],
+     "a": 2,
+     "e": "B − A keeps the elements of B that are not in A: <b>{7, 8, 10}</b>."
+    },
+    {
+     "q": "The Venn diagram shows the number of elements in each region. Find n(A ∪ B).<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with numbers in each region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>12</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>10</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3</text></g></svg></div>",
+     "c": [
+      "22",
+      "24",
+      "26",
+      "2"
+     ],
+     "a": 1,
+     "e": "n(A ∪ B) is everything inside either circle: 12 + 2 + 10 = <b>24</b>."
+    },
+    {
+     "q": "The Venn diagram shows the number of elements in each region. Find n(A′ ∩ B).<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with numbers in each region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>9</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>14</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>8</text></g></svg></div>",
+     "c": [
+      "14",
+      "8",
+      "23",
+      "7"
+     ],
+     "a": 0,
+     "e": "n(A′ ∩ B) is in B but not in A = <b>14</b>."
+    },
+    {
+     "q": "The Venn diagram shows the number of elements in each region. Find n(A′).<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with numbers in each region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>8</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>11</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>9</text></g></svg></div>",
+     "c": [
+      "4",
+      "12",
+      "9",
+      "20"
+     ],
+     "a": 3,
+     "e": "n(A′) is everything outside A: 11 + 9 = <b>20</b>."
+    },
+    {
+     "q": "The Venn diagram shows the number of elements in each region. Find n(A′).<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with numbers in each region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>8</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>13</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2</text></g></svg></div>",
+     "c": [
+      "13",
+      "15",
+      "2",
+      "5"
+     ],
+     "a": 1,
+     "e": "n(A′) is everything outside A: 13 + 2 = <b>15</b>."
+    },
+    {
+     "q": "The Venn diagram shows the number of elements in each region. Find n(A ∩ B′).<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with numbers in each region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>10</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>12</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>9</text></g></svg></div>",
+     "c": [
+      "6",
+      "16",
+      "12",
+      "10"
+     ],
+     "a": 0,
+     "e": "n(A ∩ B′) is in A but not in B = <b>6</b>."
+    },
+    {
+     "q": "The Venn diagram shows the number of elements in each region. Find n(A).<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with numbers in each region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>14</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>10</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>11</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>11</text></g></svg></div>",
+     "c": [
+      "35",
+      "14",
+      "10",
+      "24"
+     ],
+     "a": 3,
+     "e": "n(A) is everything inside circle A: 14 + 10 = <b>24</b>."
+    },
+    {
+     "q": "Which set is shaded in the Venn diagram?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with a shaded region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='#bcd7f5'/><path d='M150.0 48.8 A62 62 0 0 1 150.0 151.2 A62 62 0 0 1 150.0 48.8 Z' fill='#fff'/><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div>",
+     "c": [
+      "(A ∩ B)′",
+      "(A ∪ B)′",
+      "A ∩ B",
+      "B′"
+     ],
+     "a": 0,
+     "e": "The shaded part is everything except the overlap: <b>(A ∩ B)′</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, …, 10}, A = {2, 4, 5, 6, 7, 9} and B = {1, 3, 5, 8, 9, 10}. Find (A ∪ B)′.",
+     "c": [
+      "{5, 9}",
+      "{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}",
+      "φ",
+      "{1, 2, 3, 4, 6, 7, 8, 10}"
+     ],
+     "a": 2,
+     "e": "A ∪ B = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, so (A ∪ B)′ = <b>φ</b> (De Morgan: it equals A′ ∩ B′)."
+    },
+    {
+     "q": "Which set is shaded in the Venn diagram?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with a shaded region'><g font-family='Arial, Helvetica, sans-serif'><path d='M150.0 48.8 A62 62 0 0 1 150.0 151.2 A62 62 0 0 1 150.0 48.8 Z' fill='#bcd7f5'/><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div>",
+     "c": [
+      "A ∩ B",
+      "A′",
+      "(A ∩ B)′",
+      "A ∪ B"
+     ],
+     "a": 0,
+     "e": "The shaded part is the overlap of A and B: <b>A ∩ B</b>."
+    },
+    {
+     "q": "The Venn diagram shows the number of elements in each region. Find n(A ∩ B).<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with numbers in each region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>11</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>10</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3</text></g></svg></div>",
+     "c": [
+      "26",
+      "21",
+      "5",
+      "8"
+     ],
+     "a": 2,
+     "e": "n(A ∩ B) is the overlap only = <b>5</b>."
+    },
+    {
+     "q": "In which region would you put an element that is not in both A and B?",
+     "c": [
+      "A′ ∩ B",
+      "A ∩ B",
+      "(A ∩ B)′",
+      "(A ∪ B)′"
+     ],
+     "a": 2,
+     "e": "That description is the set <b>(A ∩ B)′</b>."
+    },
+    {
+     "q": "U = {1, 2, 3, …, 10}, A = {2, 3, 6, 7, 8, 10} and B = {1, 3, 5, 6, 9}. Find (A ∪ B)′.",
+     "c": [
+      "{1, 2, 3, 5, 6, 7, 8, 9, 10}",
+      "{4}",
+      "{3, 6}",
+      "{1, 2, 4, 5, 7, 8, 9, 10}"
+     ],
+     "a": 1,
+     "e": "A ∪ B = {1, 2, 3, 5, 6, 7, 8, 9, 10}, so (A ∪ B)′ = <b>{4}</b> (De Morgan: it equals A′ ∩ B′)."
+    },
+    {
+     "q": "The Venn diagram shows the number of elements in each region. Find n(A ∩ B).<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with numbers in each region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>10</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2</text></g></svg></div>",
+     "c": [
+      "18",
+      "6",
+      "12",
+      "8"
+     ],
+     "a": 1,
+     "e": "n(A ∩ B) is the overlap only = <b>6</b>."
+    },
+    {
+     "q": "Which set is shaded in the Venn diagram?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with a shaded region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='#bcd7f5'/><circle cx='185' cy='100' r='62' fill='#fff'/><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div>",
+     "c": [
+      "A′ ∩ B",
+      "A′",
+      "(A ∩ B)′",
+      "B′"
+     ],
+     "a": 3,
+     "e": "The shaded part is everything outside B: <b>B′</b>."
+    },
+    {
+     "q": "The Venn diagram shows the number of elements in each region. Find n(A).<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with numbers in each region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>9</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>9</text></g></svg></div>",
+     "c": [
+      "7",
+      "16",
+      "3",
+      "4"
+     ],
+     "a": 0,
+     "e": "n(A) is everything inside circle A: 3 + 4 = <b>7</b>."
+    },
+    {
+     "q": "The Venn diagram shows the number of elements in each region. Find n(A ∪ B).<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with numbers in each region'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>10</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>8</text></g></svg></div>",
+     "c": [
+      "17",
+      "31",
+      "7",
+      "24"
+     ],
+     "a": 3,
+     "e": "n(A ∪ B) is everything inside either circle: 7 + 7 + 10 = <b>24</b>."
+    },
+    {
+     "q": "Which set is shaded in the Venn diagram?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with a shaded region'><g font-family='Arial, Helvetica, sans-serif'><circle cx='115' cy='100' r='62' fill='#bcd7f5'/><path d='M150.0 48.8 A62 62 0 0 1 150.0 151.2 A62 62 0 0 1 150.0 48.8 Z' fill='#fff'/><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div>",
+     "c": [
+      "A ∪ B",
+      "A′ ∩ B",
+      "A′",
+      "A ∩ B′"
+     ],
+     "a": 3,
+     "e": "The shaded part is in A but not in B: <b>A ∩ B′</b>."
+    }
+   ]
+  },
+  {
+   "title": "Counting problems",
+   "items": [
+    {
+     "q": "52 students each like newspaper H or newspaper T or both. 17 like newspaper H and 48 like newspaper T. How many like both?",
+     "c": [
+      "65",
+      "31",
+      "35",
+      "13"
+     ],
+     "a": 3,
+     "e": "n(A ∩ B) = n(A) + n(B) − n(A ∪ B) = 17 + 48 − 52 = <b>13</b>."
+    },
+    {
+     "q": "41 students were asked whether they are in the choir (C) or the band (B). 10 are in the choir, 16 are in the band and 21 are in neither. Find <i>x</i>, the number in both.<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with x in the overlap'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>C</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>10 − x</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>x</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>16 − x</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>21</text></g></svg></div>",
+     "c": [
+      "27",
+      "20",
+      "6",
+      "26"
+     ],
+     "a": 2,
+     "e": "(10 − <i>x</i>) + <i>x</i> + (16 − <i>x</i>) + 21 = 41, so 47 − <i>x</i> = 41 and <i>x</i> = <b>6</b>."
+    },
+    {
+     "q": "42 students each like newspaper H or newspaper T or both. 19 like newspaper H and 39 like newspaper T. How many like both?",
+     "c": [
+      "23",
+      "16",
+      "20",
+      "58"
+     ],
+     "a": 1,
+     "e": "n(A ∩ B) = n(A) + n(B) − n(A ∪ B) = 19 + 39 − 42 = <b>16</b>."
+    },
+    {
+     "q": "31 students were asked whether they are in the art club (A) or the drama club (D). 11 are in the art club, 15 are in the drama club and 13 are in neither. Find <i>x</i>, the number in both.<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with x in the overlap'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>D</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>11 − x</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>x</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>15 − x</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>13</text></g></svg></div>",
+     "c": [
+      "8",
+      "21",
+      "18",
+      "26"
+     ],
+     "a": 0,
+     "e": "(11 − <i>x</i>) + <i>x</i> + (15 − <i>x</i>) + 13 = 31, so 39 − <i>x</i> = 31 and <i>x</i> = <b>8</b>."
+    },
+    {
+     "q": "42 people like Hindi, 20 like English and 4 like both. How many like Hindi only?",
+     "c": [
+      "38",
+      "4",
+      "16",
+      "42"
+     ],
+     "a": 0,
+     "e": "n(A − B) = n(A) − n(A ∩ B) = 42 − 4 = <b>38</b>."
+    },
+    {
+     "q": "38 people like tea, 16 like coffee and 4 like both. How many like tea only?",
+     "c": [
+      "12",
+      "4",
+      "38",
+      "34"
+     ],
+     "a": 3,
+     "e": "n(A − B) = n(A) − n(A ∩ B) = 38 − 4 = <b>34</b>."
+    },
+    {
+     "q": "37 people like cricket, 21 like football and 14 like both. How many like cricket only?",
+     "c": [
+      "14",
+      "7",
+      "37",
+      "23"
+     ],
+     "a": 3,
+     "e": "n(A − B) = n(A) − n(A ∩ B) = 37 − 14 = <b>23</b>."
+    },
+    {
+     "q": "In a class of 34 students, 17 are in the chess club, 18 are in the robotics club and 8 are in both. How many are in neither?",
+     "c": [
+      "26",
+      "27",
+      "7",
+      "−1"
+     ],
+     "a": 2,
+     "e": "n(A ∪ B) = 17 + 18 − 8 = 27 (subtract the overlap once). Neither = 34 − 27 = <b>7</b>."
+    },
+    {
+     "q": "In a class of 44 students, 16 are in the art club, 18 are in the drama club and 2 are in both. How many are in neither?",
+     "c": [
+      "32",
+      "42",
+      "12",
+      "10"
+     ],
+     "a": 2,
+     "e": "n(A ∪ B) = 16 + 18 − 2 = 32 (subtract the overlap once). Neither = 44 − 32 = <b>12</b>."
+    },
+    {
+     "q": "45 students each like Physics or Chemistry or both. 36 like Physics and 28 like Chemistry. How many like both?",
+     "c": [
+      "19",
+      "64",
+      "8",
+      "9"
+     ],
+     "a": 0,
+     "e": "n(A ∩ B) = n(A) + n(B) − n(A ∪ B) = 36 + 28 − 45 = <b>19</b>."
+    },
+    {
+     "q": "40 students were asked whether they are in the chess club (C) or the robotics club (R). 17 are in the chess club, 9 are in the robotics club and 18 are in neither. Find <i>x</i>, the number in both.<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with x in the overlap'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>C</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>17 − x</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>x</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>9 − x</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>18</text></g></svg></div>",
+     "c": [
+      "26",
+      "22",
+      "4",
+      "5"
+     ],
+     "a": 2,
+     "e": "(17 − <i>x</i>) + <i>x</i> + (9 − <i>x</i>) + 18 = 40, so 44 − <i>x</i> = 40 and <i>x</i> = <b>4</b>."
+    },
+    {
+     "q": "70 students each like tea or coffee or both. 46 like tea and 41 like coffee. How many like both?",
+     "c": [
+      "24",
+      "87",
+      "17",
+      "5"
+     ],
+     "a": 2,
+     "e": "n(A ∩ B) = n(A) + n(B) − n(A ∪ B) = 46 + 41 − 70 = <b>17</b>."
+    },
+    {
+     "q": "67 students each like Physics or Chemistry or both. 60 like Physics and 24 like Chemistry. How many like both?",
+     "c": [
+      "36",
+      "84",
+      "7",
+      "17"
+     ],
+     "a": 3,
+     "e": "n(A ∩ B) = n(A) + n(B) − n(A ∪ B) = 60 + 24 − 67 = <b>17</b>."
+    },
+    {
+     "q": "In a class of 31 students, 19 are in the art club, 14 are in the drama club and 3 are in neither. How many are in both?",
+     "c": [
+      "33",
+      "5",
+      "28",
+      "8"
+     ],
+     "a": 1,
+     "e": "n(A ∪ B) = 31 − 3 = 28. Both = 19 + 14 − 28 = <b>5</b>."
+    },
+    {
+     "q": "22 people like Hindi, 56 like English and 13 like both. How many like Hindi only?",
+     "c": [
+      "43",
+      "13",
+      "22",
+      "9"
+     ],
+     "a": 3,
+     "e": "n(A − B) = n(A) − n(A ∩ B) = 22 − 13 = <b>9</b>."
+    },
+    {
+     "q": "32 students were asked whether they are in the chess club (C) or the robotics club (R). 13 are in the chess club, 14 are in the robotics club and 10 are in neither. Find <i>x</i>, the number in both.<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with x in the overlap'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>C</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>13 − x</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>x</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>14 − x</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>10</text></g></svg></div>",
+     "c": [
+      "15",
+      "5",
+      "27",
+      "22"
+     ],
+     "a": 1,
+     "e": "(13 − <i>x</i>) + <i>x</i> + (14 − <i>x</i>) + 10 = 32, so 37 − <i>x</i> = 32 and <i>x</i> = <b>5</b>."
+    },
+    {
+     "q": "42 students were asked whether they are in the choir (C) or the band (B). 16 are in the choir, 9 are in the band and 21 are in neither. Find <i>x</i>, the number in both.<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' role='img' aria-label='Venn diagram with x in the overlap'><g font-family='Arial, Helvetica, sans-serif'><rect x='10' y='10' width='280' height='170' fill='none' stroke='#2b2b2b' stroke-width='2'/><circle cx='115' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><circle cx='185' cy='100' r='62' fill='none' stroke='#2b2b2b' stroke-width='2.4'/><text x='24.0' y='30.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>U</text><text x='63.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>C</text><text x='237.0' y='50.0' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><text x='87.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>16 − x</text><text x='150.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>x</text><text x='213.0' y='106.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>9 − x</text><text x='266.0' y='166.0' font-size='16' font-weight='700' fill='#1f6fd1' text-anchor='middle'>21</text></g></svg></div>",
+     "c": [
+      "4",
+      "5",
+      "21",
+      "25"
+     ],
+     "a": 0,
+     "e": "(16 − <i>x</i>) + <i>x</i> + (9 − <i>x</i>) + 21 = 42, so 46 − <i>x</i> = 42 and <i>x</i> = <b>4</b>."
+    },
+    {
+     "q": "40 people like tea, 23 like coffee and 5 like both. How many like tea only?",
+     "c": [
+      "18",
+      "35",
+      "5",
+      "40"
+     ],
+     "a": 1,
+     "e": "n(A − B) = n(A) − n(A ∩ B) = 40 − 5 = <b>35</b>."
+    },
+    {
+     "q": "40 students each like newspaper H or newspaper T or both. 18 like newspaper H and 31 like newspaper T. How many like both?",
+     "c": [
+      "49",
+      "9",
+      "22",
+      "13"
+     ],
+     "a": 1,
+     "e": "n(A ∩ B) = n(A) + n(B) − n(A ∪ B) = 18 + 31 − 40 = <b>9</b>."
+    },
+    {
+     "q": "68 students each like Physics or Chemistry or both. 45 like Physics and 35 like Chemistry. How many like both?",
+     "c": [
+      "12",
+      "80",
+      "23",
+      "10"
+     ],
+     "a": 0,
+     "e": "n(A ∩ B) = n(A) + n(B) − n(A ∪ B) = 45 + 35 − 68 = <b>12</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 1,
+ "updated": "2026-11-22",
+ "country": "in",
+ "subject": "maths",
+ "grade": "class-11"
+}

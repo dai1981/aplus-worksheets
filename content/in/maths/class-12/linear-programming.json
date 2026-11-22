@@ -1,0 +1,1157 @@
+{
+ "slug": "linear-programming",
+ "title": "Linear Programming: Constraints, Feasible Regions and the Corner Point Method",
+ "seo_title": "Linear Programming Class 12 Worksheet with Answers (NCERT Chapter 12)",
+ "short_title": "linear programming",
+ "domain": "Linear Programming",
+ "standard_code": "Class 12, Chapter 12: Linear Programming",
+ "standard_url": "https://www.cbseacademic.nic.in/web_material/CurriculumMain26/SrSec/Maths_SrSec_2025-26.pdf",
+ "standard_text": "Introduction, related terminology such as constraints, objective function, optimization; graphical method of solution for problems in two variables, feasible and infeasible regions (bounded or unbounded), feasible and infeasible solutions, optimal feasible solutions (up to three non-trivial constraints) (summary of the CBSE syllabus)",
+ "meta_desc": "Class 12 Linear Programming worksheet (NCERT Chapter 12): objective functions, constraints, feasible points, corner points, the corner point method for maximum and minimum, and unbounded regions. 100 questions with answers.",
+ "key_big": "The optimal value of Z occurs at a corner point.",
+ "key_sub": "For an unbounded region, check the half-plane before accepting a corner value.",
+ "body_html": "<h2>How it works</h2><ul><li>An LPP maximises or minimises an <b>objective function</b> Z = a<i>x</i> + b<i>y</i> subject to linear <b>constraints</b> and <i>x</i>, <i>y</i> ≥ 0.</li><li>The <b>feasible region</b> is the set of points that satisfy every constraint.</li><li><b>Corner point method</b>: find the corner points (where boundary lines meet), work out Z at each, and pick the largest or smallest.</li><li>If the region is <b>unbounded</b>, the largest (smallest) corner value M is the maximum (minimum) only if the half-plane a<i>x</i> + b<i>y</i> &gt; M (&lt; M) has no point in the region.</li></ul><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>Maximise Z = 3<i>x</i> + 4<i>y</i> with corner points (0, 0), (4, 0), (2, 3), (0, 4).</p><p class='sn-ex-s'>Z = 0, 12, 18, 16</p><p class='sn-ex-a'>Answer: 18 at (2, 3)</p></div><h2>Common mistakes</h2><ul><li>Writing the inequality the wrong way round.</li><li>Swapping the coefficients of x and y in a constraint.</li><li>Assuming a maximum always exists in an unbounded region.</li></ul>",
+ "faq": [
+  {
+   "q": "Why only the corner points?",
+   "a": "For a linear Z, the optimum of a bounded region is always at a corner."
+  },
+  {
+   "q": "Can there be more than one optimal point?",
+   "a": "Yes. If two corners give the same optimum, every point between them does too."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Terms and ideas",
+   "items": [
+    {
+     "q": "In a linear programming problem, where does the optimal value of Z occur (if it exists)?",
+     "c": [
+      "At the centre of the feasible region",
+      "At a corner point of the feasible region",
+      "Only at the origin",
+      "Anywhere inside the feasible region"
+     ],
+     "a": 1,
+     "e": "<b>At a corner point of the feasible region</b>."
+    },
+    {
+     "q": "What are the conditions x ≥ 0, y ≥ 0 called?",
+     "c": [
+      "Non-negative constraints",
+      "Objective functions",
+      "Feasible solutions",
+      "Optimal solutions"
+     ],
+     "a": 0,
+     "e": "<b>Non-negative constraints</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> fans and <i>y</i> lamps. Each of the fans needs 4 hours of assembly and each of the lamps needs 5 hours. At most 113 hours of assembly are available. Which constraint is correct?",
+     "c": [
+      "5<i>x</i> + 4<i>y</i> ≤ 113",
+      "<i>x</i> + <i>y</i> ≤ 113",
+      "4<i>x</i> + 5<i>y</i> ≥ 113",
+      "4<i>x</i> + 5<i>y</i> ≤ 113"
+     ],
+     "a": 3,
+     "e": "Hours used = 4<i>x</i> + 5<i>y</i>, and it cannot be more than 113: <b>4<i>x</i> + 5<i>y</i> ≤ 113</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> kurtas and <i>y</i> shirts. Each of the kurtas needs 6 hours of tailoring and each of the shirts needs 1 hour. At most 65 hours of tailoring are available. Which constraint is correct?",
+     "c": [
+      "<i>x</i> + 6<i>y</i> ≤ 65",
+      "6<i>x</i> + <i>y</i> ≤ 65",
+      "6<i>x</i> + <i>y</i> ≥ 65",
+      "<i>x</i> + <i>y</i> ≤ 65"
+     ],
+     "a": 1,
+     "e": "Hours used = 6<i>x</i> + 1<i>y</i>, and it cannot be more than 65: <b>6<i>x</i> + <i>y</i> ≤ 65</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> chairs and <i>y</i> tables. Each of the chairs needs 1 hour of carpentry and each of the tables needs 6 hours. At most 104 hours of carpentry are available. Which constraint is correct?",
+     "c": [
+      "<i>x</i> + 6<i>y</i> ≥ 104",
+      "<i>x</i> + 6<i>y</i> ≤ 104",
+      "6<i>x</i> + <i>y</i> ≤ 104",
+      "<i>x</i> + <i>y</i> ≤ 104"
+     ],
+     "a": 1,
+     "e": "Hours used = 1<i>x</i> + 6<i>y</i>, and it cannot be more than 104: <b><i>x</i> + 6<i>y</i> ≤ 104</b>."
+    },
+    {
+     "q": "Two corner points give the same maximum value of Z. Which is true?",
+     "c": [
+      "The feasible region is unbounded",
+      "The problem has no maximum",
+      "Only those two points give the maximum",
+      "Every point on the segment joining them also gives the maximum"
+     ],
+     "a": 3,
+     "e": "<b>Every point on the segment joining them also gives the maximum</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> kurtas and <i>y</i> shirts. Each of the kurtas needs 6 hours of tailoring and each of the shirts needs 5 hours. At most 36 hours of tailoring are available. Which constraint is correct?",
+     "c": [
+      "6<i>x</i> + 5<i>y</i> ≤ 36",
+      "5<i>x</i> + 6<i>y</i> ≤ 36",
+      "<i>x</i> + <i>y</i> ≤ 36",
+      "6<i>x</i> + 5<i>y</i> ≥ 36"
+     ],
+     "a": 0,
+     "e": "Hours used = 6<i>x</i> + 5<i>y</i>, and it cannot be more than 36: <b>6<i>x</i> + 5<i>y</i> ≤ 36</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> pots and <i>y</i> vases. Each of the pots needs 3 hours of glazing and each of the vases needs 1 hour. At most 20 hours of glazing are available. Which constraint is correct?",
+     "c": [
+      "3<i>x</i> + <i>y</i> ≤ 20",
+      "<i>x</i> + <i>y</i> ≤ 20",
+      "3<i>x</i> + <i>y</i> ≥ 20",
+      "<i>x</i> + 3<i>y</i> ≤ 20"
+     ],
+     "a": 0,
+     "e": "Hours used = 3<i>x</i> + 1<i>y</i>, and it cannot be more than 20: <b>3<i>x</i> + <i>y</i> ≤ 20</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> pots and <i>y</i> vases. Each of the pots needs 5 hours of glazing and each of the vases needs 4 hours. At most 76 hours of glazing are available. Which constraint is correct?",
+     "c": [
+      "5<i>x</i> + 4<i>y</i> ≤ 76",
+      "5<i>x</i> + 4<i>y</i> ≥ 76",
+      "<i>x</i> + <i>y</i> ≤ 76",
+      "4<i>x</i> + 5<i>y</i> ≤ 76"
+     ],
+     "a": 0,
+     "e": "Hours used = 5<i>x</i> + 4<i>y</i>, and it cannot be more than 76: <b>5<i>x</i> + 4<i>y</i> ≤ 76</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> fans and <i>y</i> lamps. Each of the fans needs 2 hours of assembly and each of the lamps needs 3 hours. At most 108 hours of assembly are available. Which constraint is correct?",
+     "c": [
+      "<i>x</i> + <i>y</i> ≤ 108",
+      "3<i>x</i> + 2<i>y</i> ≤ 108",
+      "2<i>x</i> + 3<i>y</i> ≤ 108",
+      "2<i>x</i> + 3<i>y</i> ≥ 108"
+     ],
+     "a": 2,
+     "e": "Hours used = 2<i>x</i> + 3<i>y</i>, and it cannot be more than 108: <b>2<i>x</i> + 3<i>y</i> ≤ 108</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> toys of type A and <i>y</i> toys of type B. Each of the toys of type A needs 5 hours of machine and each of the toys of type B needs 3 hours. At most 94 hours of machine are available. Which constraint is correct?",
+     "c": [
+      "5<i>x</i> + 3<i>y</i> ≥ 94",
+      "<i>x</i> + <i>y</i> ≤ 94",
+      "3<i>x</i> + 5<i>y</i> ≤ 94",
+      "5<i>x</i> + 3<i>y</i> ≤ 94"
+     ],
+     "a": 3,
+     "e": "Hours used = 5<i>x</i> + 3<i>y</i>, and it cannot be more than 94: <b>5<i>x</i> + 3<i>y</i> ≤ 94</b>."
+    },
+    {
+     "q": "What is the function Z = ax + by that is maximised or minimised called?",
+     "c": [
+      "The objective function",
+      "The constraint",
+      "The feasible region",
+      "The decision variable"
+     ],
+     "a": 0,
+     "e": "<b>The objective function</b>."
+    },
+    {
+     "q": "The feasible region is bounded. Which is true?",
+     "c": [
+      "Z has a maximum but never a minimum",
+      "Z has no optimal value",
+      "Z has both a maximum and a minimum value",
+      "Z may have no maximum"
+     ],
+     "a": 2,
+     "e": "<b>Z has both a maximum and a minimum value</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> bags and <i>y</i> belts. Each of the bags needs 4 hours of stitching and each of the belts needs 3 hours. At most 41 hours of stitching are available. Which constraint is correct?",
+     "c": [
+      "4<i>x</i> + 3<i>y</i> ≥ 41",
+      "<i>x</i> + <i>y</i> ≤ 41",
+      "4<i>x</i> + 3<i>y</i> ≤ 41",
+      "3<i>x</i> + 4<i>y</i> ≤ 41"
+     ],
+     "a": 2,
+     "e": "Hours used = 4<i>x</i> + 3<i>y</i>, and it cannot be more than 41: <b>4<i>x</i> + 3<i>y</i> ≤ 41</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> chairs and <i>y</i> tables. Each of the chairs needs 1 hour of carpentry and each of the tables needs 2 hours. At most 104 hours of carpentry are available. Which constraint is correct?",
+     "c": [
+      "<i>x</i> + <i>y</i> ≤ 104",
+      "2<i>x</i> + <i>y</i> ≤ 104",
+      "<i>x</i> + 2<i>y</i> ≤ 104",
+      "<i>x</i> + 2<i>y</i> ≥ 104"
+     ],
+     "a": 2,
+     "e": "Hours used = 1<i>x</i> + 2<i>y</i>, and it cannot be more than 104: <b><i>x</i> + 2<i>y</i> ≤ 104</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> chairs and <i>y</i> tables. Each of the chairs needs 5 hours of carpentry and each of the tables needs 4 hours. At most 84 hours of carpentry are available. Which constraint is correct?",
+     "c": [
+      "4<i>x</i> + 5<i>y</i> ≤ 84",
+      "5<i>x</i> + 4<i>y</i> ≤ 84",
+      "5<i>x</i> + 4<i>y</i> ≥ 84",
+      "<i>x</i> + <i>y</i> ≤ 84"
+     ],
+     "a": 1,
+     "e": "Hours used = 5<i>x</i> + 4<i>y</i>, and it cannot be more than 84: <b>5<i>x</i> + 4<i>y</i> ≤ 84</b>."
+    },
+    {
+     "q": "A set of constraints has no point that satisfies all of them. What is the feasible region called?",
+     "c": [
+      "Convex",
+      "Empty (the problem is infeasible)",
+      "Bounded",
+      "Unbounded"
+     ],
+     "a": 1,
+     "e": "<b>Empty (the problem is infeasible)</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> chairs and <i>y</i> tables. Each of the chairs needs 5 hours of carpentry and each of the tables needs 2 hours. At most 115 hours of carpentry are available. Which constraint is correct?",
+     "c": [
+      "2<i>x</i> + 5<i>y</i> ≤ 115",
+      "<i>x</i> + <i>y</i> ≤ 115",
+      "5<i>x</i> + 2<i>y</i> ≥ 115",
+      "5<i>x</i> + 2<i>y</i> ≤ 115"
+     ],
+     "a": 3,
+     "e": "Hours used = 5<i>x</i> + 2<i>y</i>, and it cannot be more than 115: <b>5<i>x</i> + 2<i>y</i> ≤ 115</b>."
+    },
+    {
+     "q": "The feasible region is unbounded. Which is true?",
+     "c": [
+      "A maximum always exists",
+      "A minimum never exists",
+      "A maximum or minimum may not exist",
+      "There are no corner points"
+     ],
+     "a": 2,
+     "e": "<b>A maximum or minimum may not exist</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> chairs and <i>y</i> tables. Each of the chairs needs 4 hours of carpentry and each of the tables needs 1 hour. At most 117 hours of carpentry are available. Which constraint is correct?",
+     "c": [
+      "<i>x</i> + <i>y</i> ≤ 117",
+      "4<i>x</i> + <i>y</i> ≥ 117",
+      "<i>x</i> + 4<i>y</i> ≤ 117",
+      "4<i>x</i> + <i>y</i> ≤ 117"
+     ],
+     "a": 3,
+     "e": "Hours used = 4<i>x</i> + 1<i>y</i>, and it cannot be more than 117: <b>4<i>x</i> + <i>y</i> ≤ 117</b>."
+    }
+   ]
+  },
+  {
+   "title": "Feasible points and corners",
+   "items": [
+    {
+     "q": "Find the corner point where the lines 3<i>x</i> + 3<i>y</i> = 33 and <i>x</i> + 3<i>y</i> = 21 meet.",
+     "c": [
+      "(5, 6)",
+      "(0, 7)",
+      "(11, 0)",
+      "(6, 5)"
+     ],
+     "a": 3,
+     "e": "Solve the two equations together: <b>(6, 5)</b>."
+    },
+    {
+     "q": "Find the corner point where the lines <i>x</i> + <i>y</i> = 11 and 2<i>x</i> + 5<i>y</i> = 28 meet.",
+     "c": [
+      "(2, 9)",
+      "(11, 0)",
+      "(9, 2)",
+      "(0, <span class='fr'><span class='fn'>28</span><span class='fd'>5</span></span>)"
+     ],
+     "a": 2,
+     "e": "Solve the two equations together: <b>(9, 2)</b>."
+    },
+    {
+     "q": "Find the corner point where the lines <i>x</i> + 2<i>y</i> = 3 and 4<i>x</i> + <i>y</i> = 5 meet.",
+     "c": [
+      "(3, 0)",
+      "(2, 1)",
+      "(1, 1)",
+      "(0, 5)"
+     ],
+     "a": 2,
+     "e": "Solve the two equations together: <b>(1, 1)</b>."
+    },
+    {
+     "q": "Find the corner point where the lines <i>x</i> + 3<i>y</i> = 36 and 5<i>x</i> + 2<i>y</i> = 63 meet.",
+     "c": [
+      "(0, <span class='fr'><span class='fn'>63</span><span class='fd'>2</span></span>)",
+      "(10, 9)",
+      "(9, 9)",
+      "(36, 0)"
+     ],
+     "a": 2,
+     "e": "Solve the two equations together: <b>(9, 9)</b>."
+    },
+    {
+     "q": "Find the corner point where the lines 2<i>x</i> + 4<i>y</i> = 44 and 3<i>x</i> + 3<i>y</i> = 45 meet.",
+     "c": [
+      "(8, 7)",
+      "(0, 15)",
+      "(22, 0)",
+      "(7, 8)"
+     ],
+     "a": 0,
+     "e": "Solve the two equations together: <b>(8, 7)</b>."
+    },
+    {
+     "q": "Find the corner point where the lines 5<i>x</i> + 3<i>y</i> = 38 and 3<i>x</i> + 4<i>y</i> = 36 meet.",
+     "c": [
+      "(6, 4)",
+      "(4, 6)",
+      "(0, 9)",
+      "(<span class='fr'><span class='fn'>38</span><span class='fd'>5</span></span>, 0)"
+     ],
+     "a": 1,
+     "e": "Solve the two equations together: <b>(4, 6)</b>."
+    },
+    {
+     "q": "Which point lies in the feasible region <i>x</i> + 2<i>y</i> ≤ 13, 4<i>x</i> + <i>y</i> ≤ 16, <i>x</i> ≥ 0, <i>y</i> ≥ 0?",
+     "c": [
+      "(0, 5)",
+      "(3, 8)",
+      "(7, 4)",
+      "(3, 6)"
+     ],
+     "a": 0,
+     "e": "Substitute each point. (0, 5) gives 10 ≤ 13 and 5 ≤ 16, so <b>(0, 5)</b> is feasible; each of the others breaks a constraint."
+    },
+    {
+     "q": "Which point lies in the feasible region <i>x</i> + 4<i>y</i> ≤ 25, 3<i>x</i> + 2<i>y</i> ≤ 13, <i>x</i> ≥ 0, <i>y</i> ≥ 0?",
+     "c": [
+      "(1, 6)",
+      "(5, 0)",
+      "(2, 3)",
+      "(7, 4)"
+     ],
+     "a": 2,
+     "e": "Substitute each point. (2, 3) gives 14 ≤ 25 and 12 ≤ 13, so <b>(2, 3)</b> is feasible; each of the others breaks a constraint."
+    },
+    {
+     "q": "Find the corner point where the lines 3<i>x</i> + <i>y</i> = 25 and 3<i>x</i> + 3<i>y</i> = 39 meet.",
+     "c": [
+      "(<span class='fr'><span class='fn'>25</span><span class='fd'>3</span></span>, 0)",
+      "(6, 7)",
+      "(7, 6)",
+      "(0, 13)"
+     ],
+     "a": 1,
+     "e": "Solve the two equations together: <b>(6, 7)</b>."
+    },
+    {
+     "q": "Which point lies in the feasible region 2<i>x</i> + 2<i>y</i> ≤ 17, 4<i>x</i> + 3<i>y</i> ≤ 17, <i>x</i> ≥ 0, <i>y</i> ≥ 0?",
+     "c": [
+      "(4, 2)",
+      "(4, 6)",
+      "(2, 8)",
+      "(4, 0)"
+     ],
+     "a": 3,
+     "e": "Substitute each point. (4, 0) gives 8 ≤ 17 and 16 ≤ 17, so <b>(4, 0)</b> is feasible; each of the others breaks a constraint."
+    },
+    {
+     "q": "Which point lies in the feasible region 2<i>x</i> + 3<i>y</i> ≤ 22, 3<i>x</i> + 4<i>y</i> ≤ 12, <i>x</i> ≥ 0, <i>y</i> ≥ 0?",
+     "c": [
+      "(6, 4)",
+      "(8, 7)",
+      "(3, 2)",
+      "(1, 0)"
+     ],
+     "a": 3,
+     "e": "Substitute each point. (1, 0) gives 2 ≤ 22 and 3 ≤ 12, so <b>(1, 0)</b> is feasible; each of the others breaks a constraint."
+    },
+    {
+     "q": "Which point lies in the feasible region 3<i>x</i> + 4<i>y</i> ≤ 19, <i>x</i> + 2<i>y</i> ≤ 15, <i>x</i> ≥ 0, <i>y</i> ≥ 0?",
+     "c": [
+      "(1, 1)",
+      "(4, 3)",
+      "(2, 5)",
+      "(6, 5)"
+     ],
+     "a": 0,
+     "e": "Substitute each point. (1, 1) gives 7 ≤ 19 and 3 ≤ 15, so <b>(1, 1)</b> is feasible; each of the others breaks a constraint."
+    },
+    {
+     "q": "Which point lies in the feasible region 2<i>x</i> + 4<i>y</i> ≤ 14, 3<i>x</i> + 4<i>y</i> ≤ 23, <i>x</i> ≥ 0, <i>y</i> ≥ 0?",
+     "c": [
+      "(5, 2)",
+      "(1, 6)",
+      "(5, 8)",
+      "(1, 1)"
+     ],
+     "a": 3,
+     "e": "Substitute each point. (1, 1) gives 6 ≤ 14 and 7 ≤ 23, so <b>(1, 1)</b> is feasible; each of the others breaks a constraint."
+    },
+    {
+     "q": "Which point lies in the feasible region <i>x</i> + 4<i>y</i> ≤ 24, 2<i>x</i> + 4<i>y</i> ≤ 23, <i>x</i> ≥ 0, <i>y</i> ≥ 0?",
+     "c": [
+      "(0, 6)",
+      "(7, 7)",
+      "(2, 1)",
+      "(7, 4)"
+     ],
+     "a": 2,
+     "e": "Substitute each point. (2, 1) gives 6 ≤ 24 and 8 ≤ 23, so <b>(2, 1)</b> is feasible; each of the others breaks a constraint."
+    },
+    {
+     "q": "Which point lies in the feasible region 2<i>x</i> + 3<i>y</i> ≤ 25, <i>x</i> + 2<i>y</i> ≤ 18, <i>x</i> ≥ 0, <i>y</i> ≥ 0?",
+     "c": [
+      "(1, 4)",
+      "(5, 7)",
+      "(8, 4)",
+      "(3, 7)"
+     ],
+     "a": 0,
+     "e": "Substitute each point. (1, 4) gives 14 ≤ 25 and 9 ≤ 18, so <b>(1, 4)</b> is feasible; each of the others breaks a constraint."
+    },
+    {
+     "q": "Find the corner point where the lines 3<i>x</i> + 3<i>y</i> = 51 and 4<i>x</i> + 3<i>y</i> = 60 meet.",
+     "c": [
+      "(9, 8)",
+      "(8, 9)",
+      "(0, 20)",
+      "(17, 0)"
+     ],
+     "a": 0,
+     "e": "Solve the two equations together: <b>(9, 8)</b>."
+    },
+    {
+     "q": "Find the corner point where the lines 2<i>x</i> + 5<i>y</i> = 29 and 5<i>x</i> + 2<i>y</i> = 41 meet.",
+     "c": [
+      "(<span class='fr'><span class='fn'>29</span><span class='fd'>2</span></span>, 0)",
+      "(7, 3)",
+      "(3, 7)",
+      "(0, <span class='fr'><span class='fn'>41</span><span class='fd'>2</span></span>)"
+     ],
+     "a": 1,
+     "e": "Solve the two equations together: <b>(7, 3)</b>."
+    },
+    {
+     "q": "Which point lies in the feasible region 4<i>x</i> + 3<i>y</i> ≤ 10, <i>x</i> + 3<i>y</i> ≤ 10, <i>x</i> ≥ 0, <i>y</i> ≥ 0?",
+     "c": [
+      "(6, 6)",
+      "(0, 2)",
+      "(1, 4)",
+      "(8, 4)"
+     ],
+     "a": 1,
+     "e": "Substitute each point. (0, 2) gives 6 ≤ 10 and 6 ≤ 10, so <b>(0, 2)</b> is feasible; each of the others breaks a constraint."
+    },
+    {
+     "q": "Find the corner point where the lines <i>x</i> + 4<i>y</i> = 40 and 4<i>x</i> + 5<i>y</i> = 72 meet.",
+     "c": [
+      "(0, <span class='fr'><span class='fn'>72</span><span class='fd'>5</span></span>)",
+      "(8, 8)",
+      "(9, 8)",
+      "(40, 0)"
+     ],
+     "a": 1,
+     "e": "Solve the two equations together: <b>(8, 8)</b>."
+    },
+    {
+     "q": "Which point lies in the feasible region <i>x</i> + 3<i>y</i> ≤ 26, 2<i>x</i> + 2<i>y</i> ≤ 11, <i>x</i> ≥ 0, <i>y</i> ≥ 0?",
+     "c": [
+      "(7, 8)",
+      "(2, 8)",
+      "(6, 4)",
+      "(1, 3)"
+     ],
+     "a": 3,
+     "e": "Substitute each point. (1, 3) gives 10 ≤ 26 and 8 ≤ 11, so <b>(1, 3)</b> is feasible; each of the others breaks a constraint."
+    }
+   ]
+  },
+  {
+   "title": "Maximum by the corner point method",
+   "items": [
+    {
+     "q": "Maximise Z = 8<i>x</i> + <i>y</i> subject to 2<i>x</i> + 2<i>y</i> ≤ 22, 3<i>x</i> + 4<i>y</i> ≤ 36, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (11, 0), (8, 3), (0, 9). Find the maximum value of Z.",
+     "c": [
+      "67",
+      "164",
+      "88",
+      "11"
+     ],
+     "a": 2,
+     "e": "Work out Z at each corner: (0, 0) → 0, (11, 0) → 88, (8, 3) → 67, (0, 9) → 9. The largest is <b>88</b>, at (11, 0)."
+    },
+    {
+     "q": "Maximise Z = 2<i>x</i> + 2<i>y</i> subject to 3<i>x</i> + 2<i>y</i> ≤ 30, <i>x</i> + 3<i>y</i> ≤ 24, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (10, 0), (6, 6), (0, 8). Find the maximum value of Z.",
+     "c": [
+      "24",
+      "60",
+      "20",
+      "10"
+     ],
+     "a": 0,
+     "e": "Work out Z at each corner: (0, 0) → 0, (10, 0) → 20, (6, 6) → 24, (0, 8) → 16. The largest is <b>24</b>, at (6, 6)."
+    },
+    {
+     "q": "Maximise Z = 5<i>x</i> + 9<i>y</i> subject to 4<i>x</i> + 2<i>y</i> ≤ 40, 4<i>x</i> + 3<i>y</i> ≤ 48, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (10, 0), (6, 8), (0, 16). Find the maximum value of Z.",
+     "c": [
+      "296",
+      "102",
+      "16",
+      "144"
+     ],
+     "a": 3,
+     "e": "Work out Z at each corner: (0, 0) → 0, (10, 0) → 50, (6, 8) → 102, (0, 16) → 144. The largest is <b>144</b>, at (0, 16)."
+    },
+    {
+     "q": "Maximise Z = 5<i>x</i> + <i>y</i> subject to 3<i>x</i> + 3<i>y</i> ≤ 21, 2<i>x</i> + <i>y</i> ≤ 12, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (6, 0), (5, 2), (0, 7). Find the maximum value of Z.",
+     "c": [
+      "30",
+      "64",
+      "27",
+      "7"
+     ],
+     "a": 0,
+     "e": "Work out Z at each corner: (0, 0) → 0, (6, 0) → 30, (5, 2) → 27, (0, 7) → 7. The largest is <b>30</b>, at (6, 0)."
+    },
+    {
+     "q": "Maximise Z = <i>x</i> + 2<i>y</i> subject to 3<i>x</i> + 4<i>y</i> ≤ 44, <i>x</i> + <i>y</i> ≤ 13, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (13, 0), (8, 5), (0, 11). Find the maximum value of Z.",
+     "c": [
+      "18",
+      "53",
+      "22",
+      "13"
+     ],
+     "a": 2,
+     "e": "Work out Z at each corner: (0, 0) → 0, (13, 0) → 13, (8, 5) → 18, (0, 11) → 22. The largest is <b>22</b>, at (0, 11)."
+    },
+    {
+     "q": "Maximise Z = 3<i>x</i> + 7<i>y</i> subject to 2<i>x</i> + <i>y</i> ≤ 8, 3<i>x</i> + 3<i>y</i> ≤ 21, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (4, 0), (1, 6), (0, 7). Find the maximum value of Z.",
+     "c": [
+      "106",
+      "45",
+      "7",
+      "49"
+     ],
+     "a": 3,
+     "e": "Work out Z at each corner: (0, 0) → 0, (4, 0) → 12, (1, 6) → 45, (0, 7) → 49. The largest is <b>49</b>, at (0, 7)."
+    },
+    {
+     "q": "Maximise Z = 4<i>x</i> + 7<i>y</i> subject to 4<i>x</i> + 2<i>y</i> ≤ 44, 3<i>x</i> + 2<i>y</i> ≤ 36, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (11, 0), (8, 6), (0, 18). Find the maximum value of Z.",
+     "c": [
+      "126",
+      "18",
+      "74",
+      "244"
+     ],
+     "a": 0,
+     "e": "Work out Z at each corner: (0, 0) → 0, (11, 0) → 44, (8, 6) → 74, (0, 18) → 126. The largest is <b>126</b>, at (0, 18)."
+    },
+    {
+     "q": "Maximise Z = 3<i>x</i> + 5<i>y</i> subject to 4<i>x</i> + 4<i>y</i> ≤ 28, 4<i>x</i> + 3<i>y</i> ≤ 24, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (6, 0), (3, 4), (0, 7). Find the maximum value of Z.",
+     "c": [
+      "29",
+      "82",
+      "35",
+      "7"
+     ],
+     "a": 2,
+     "e": "Work out Z at each corner: (0, 0) → 0, (6, 0) → 18, (3, 4) → 29, (0, 7) → 35. The largest is <b>35</b>, at (0, 7)."
+    },
+    {
+     "q": "Maximise Z = 9<i>x</i> + 3<i>y</i> subject to 3<i>x</i> + 2<i>y</i> ≤ 27, 3<i>x</i> + 3<i>y</i> ≤ 30, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (9, 0), (7, 3), (0, 10). Find the maximum value of Z.",
+     "c": [
+      "183",
+      "72",
+      "81",
+      "10"
+     ],
+     "a": 2,
+     "e": "Work out Z at each corner: (0, 0) → 0, (9, 0) → 81, (7, 3) → 72, (0, 10) → 30. The largest is <b>81</b>, at (9, 0)."
+    },
+    {
+     "q": "Maximise Z = 6<i>x</i> + 9<i>y</i> subject to 4<i>x</i> + 2<i>y</i> ≤ 28, 4<i>x</i> + 4<i>y</i> ≤ 44, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (7, 0), (3, 8), (0, 11). Find the maximum value of Z.",
+     "c": [
+      "231",
+      "99",
+      "11",
+      "90"
+     ],
+     "a": 1,
+     "e": "Work out Z at each corner: (0, 0) → 0, (7, 0) → 42, (3, 8) → 90, (0, 11) → 99. The largest is <b>99</b>, at (0, 11)."
+    },
+    {
+     "q": "Maximise Z = 5<i>x</i> + 8<i>y</i> subject to <i>x</i> + 2<i>y</i> ≤ 14, 2<i>x</i> + 2<i>y</i> ≤ 16, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (8, 0), (2, 6), (0, 7). Find the maximum value of Z.",
+     "c": [
+      "8",
+      "154",
+      "56",
+      "58"
+     ],
+     "a": 3,
+     "e": "Work out Z at each corner: (0, 0) → 0, (8, 0) → 40, (2, 6) → 58, (0, 7) → 56. The largest is <b>58</b>, at (2, 6)."
+    },
+    {
+     "q": "Maximise Z = 2<i>x</i> + 3<i>y</i> subject to 3<i>x</i> + 4<i>y</i> ≤ 56, 3<i>x</i> + 3<i>y</i> ≤ 48, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (16, 0), (8, 8), (0, 14). Find the maximum value of Z.",
+     "c": [
+      "114",
+      "42",
+      "16",
+      "40"
+     ],
+     "a": 1,
+     "e": "Work out Z at each corner: (0, 0) → 0, (16, 0) → 32, (8, 8) → 40, (0, 14) → 42. The largest is <b>42</b>, at (0, 14)."
+    },
+    {
+     "q": "Maximise Z = <i>x</i> + 5<i>y</i> subject to 2<i>x</i> + 4<i>y</i> ≤ 20, 4<i>x</i> + 4<i>y</i> ≤ 28, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (7, 0), (4, 3), (0, 5). Find the maximum value of Z.",
+     "c": [
+      "7",
+      "19",
+      "25",
+      "51"
+     ],
+     "a": 2,
+     "e": "Work out Z at each corner: (0, 0) → 0, (7, 0) → 7, (4, 3) → 19, (0, 5) → 25. The largest is <b>25</b>, at (0, 5)."
+    },
+    {
+     "q": "Maximise Z = 5<i>x</i> + 4<i>y</i> subject to 4<i>x</i> + 2<i>y</i> ≤ 20, 4<i>x</i> + 4<i>y</i> ≤ 28, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (5, 0), (3, 4), (0, 7). Find the maximum value of Z.",
+     "c": [
+      "7",
+      "31",
+      "84",
+      "28"
+     ],
+     "a": 1,
+     "e": "Work out Z at each corner: (0, 0) → 0, (5, 0) → 25, (3, 4) → 31, (0, 7) → 28. The largest is <b>31</b>, at (3, 4)."
+    },
+    {
+     "q": "Maximise Z = 6<i>x</i> + 2<i>y</i> subject to <i>x</i> + 2<i>y</i> ≤ 19, <i>x</i> + 3<i>y</i> ≤ 27, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (19, 0), (3, 8), (0, 9). Find the maximum value of Z.",
+     "c": [
+      "19",
+      "114",
+      "34",
+      "166"
+     ],
+     "a": 1,
+     "e": "Work out Z at each corner: (0, 0) → 0, (19, 0) → 114, (3, 8) → 34, (0, 9) → 18. The largest is <b>114</b>, at (19, 0)."
+    },
+    {
+     "q": "Maximise Z = 3<i>x</i> + 6<i>y</i> subject to <i>x</i> + <i>y</i> ≤ 4, 3<i>x</i> + 2<i>y</i> ≤ 9, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (3, 0), (1, 3), (0, 4). Find the maximum value of Z.",
+     "c": [
+      "24",
+      "54",
+      "21",
+      "4"
+     ],
+     "a": 0,
+     "e": "Work out Z at each corner: (0, 0) → 0, (3, 0) → 9, (1, 3) → 21, (0, 4) → 24. The largest is <b>24</b>, at (0, 4)."
+    },
+    {
+     "q": "Maximise Z = 3<i>x</i> + 9<i>y</i> subject to 3<i>x</i> + 3<i>y</i> ≤ 24, 4<i>x</i> + 3<i>y</i> ≤ 28, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (7, 0), (4, 4), (0, 8). Find the maximum value of Z.",
+     "c": [
+      "48",
+      "141",
+      "8",
+      "72"
+     ],
+     "a": 3,
+     "e": "Work out Z at each corner: (0, 0) → 0, (7, 0) → 21, (4, 4) → 48, (0, 8) → 72. The largest is <b>72</b>, at (0, 8)."
+    },
+    {
+     "q": "Maximise Z = 3<i>x</i> + 9<i>y</i> subject to 3<i>x</i> + 4<i>y</i> ≤ 28, 2<i>x</i> + 2<i>y</i> ≤ 18, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (9, 0), (8, 1), (0, 7). Find the maximum value of Z.",
+     "c": [
+      "123",
+      "63",
+      "9",
+      "33"
+     ],
+     "a": 1,
+     "e": "Work out Z at each corner: (0, 0) → 0, (9, 0) → 27, (8, 1) → 33, (0, 7) → 63. The largest is <b>63</b>, at (0, 7)."
+    },
+    {
+     "q": "Maximise Z = 4<i>x</i> + 7<i>y</i> subject to 2<i>x</i> + 2<i>y</i> ≤ 32, 2<i>x</i> + 4<i>y</i> ≤ 48, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (16, 0), (8, 8), (0, 12). Find the maximum value of Z.",
+     "c": [
+      "88",
+      "16",
+      "84",
+      "236"
+     ],
+     "a": 0,
+     "e": "Work out Z at each corner: (0, 0) → 0, (16, 0) → 64, (8, 8) → 88, (0, 12) → 84. The largest is <b>88</b>, at (8, 8)."
+    },
+    {
+     "q": "Maximise Z = 2<i>x</i> + 9<i>y</i> subject to <i>x</i> + <i>y</i> ≤ 10, 4<i>x</i> + <i>y</i> ≤ 28, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (7, 0), (6, 4), (0, 10). Find the maximum value of Z.",
+     "c": [
+      "152",
+      "48",
+      "10",
+      "90"
+     ],
+     "a": 3,
+     "e": "Work out Z at each corner: (0, 0) → 0, (7, 0) → 14, (6, 4) → 48, (0, 10) → 90. The largest is <b>90</b>, at (0, 10)."
+    }
+   ]
+  },
+  {
+   "title": "Minimum and unbounded regions",
+   "items": [
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 9), (2, 4), (8, 0). The half-plane 6<i>x</i> + 3<i>y</i> &lt; 24 has no point in common with the region. Find the minimum of Z = 6<i>x</i> + 3<i>y</i>.",
+     "c": [
+      "27",
+      "24",
+      "It has no minimum",
+      "48"
+     ],
+     "a": 1,
+     "e": "Z at the corners: 27, 24, 48. Since 6<i>x</i> + 3<i>y</i> &lt; 24 has no point in the region, the smallest corner value <b>24</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 11), (3, 5), (9, 0). The half-plane 5<i>x</i> + <i>y</i> &lt; 11 has no point in common with the region. Find the minimum of Z = 5<i>x</i> + <i>y</i>.",
+     "c": [
+      "11",
+      "It has no minimum",
+      "45",
+      "20"
+     ],
+     "a": 0,
+     "e": "Z at the corners: 11, 20, 45. Since 5<i>x</i> + <i>y</i> &lt; 11 has no point in the region, the smallest corner value <b>11</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 6), (3, 3), (8, 0). The half-plane <i>x</i> + 7<i>y</i> &lt; 8 has no point in common with the region. Find the minimum of Z = <i>x</i> + 7<i>y</i>.",
+     "c": [
+      "8",
+      "It has no minimum",
+      "24",
+      "42"
+     ],
+     "a": 0,
+     "e": "Z at the corners: 42, 24, 8. Since <i>x</i> + 7<i>y</i> &lt; 8 has no point in the region, the smallest corner value <b>8</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 11), (4, 4), (6, 0). The half-plane 9<i>x</i> + 9<i>y</i> &lt; 54 has no point in common with the region. Find the minimum of Z = 9<i>x</i> + 9<i>y</i>.",
+     "c": [
+      "99",
+      "It has no minimum",
+      "72",
+      "54"
+     ],
+     "a": 3,
+     "e": "Z at the corners: 99, 72, 54. Since 9<i>x</i> + 9<i>y</i> &lt; 54 has no point in the region, the smallest corner value <b>54</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 8), (3, 2), (7, 0). The half-plane 4<i>x</i> + 4<i>y</i> &lt; 20 has no point in common with the region. Find the minimum of Z = 4<i>x</i> + 4<i>y</i>.",
+     "c": [
+      "28",
+      "20",
+      "32",
+      "It has no minimum"
+     ],
+     "a": 1,
+     "e": "Z at the corners: 32, 20, 28. Since 4<i>x</i> + 4<i>y</i> &lt; 20 has no point in the region, the smallest corner value <b>20</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 11), (4, 4), (6, 0). The half-plane 6<i>x</i> + 6<i>y</i> &lt; 36 has no point in common with the region. Find the minimum of Z = 6<i>x</i> + 6<i>y</i>.",
+     "c": [
+      "66",
+      "48",
+      "36",
+      "It has no minimum"
+     ],
+     "a": 2,
+     "e": "Z at the corners: 66, 48, 36. Since 6<i>x</i> + 6<i>y</i> &lt; 36 has no point in the region, the smallest corner value <b>36</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 12), (1, 2), (8, 0). The half-plane 9<i>x</i> + 5<i>y</i> &lt; 19 has no point in common with the region. Find the minimum of Z = 9<i>x</i> + 5<i>y</i>.",
+     "c": [
+      "19",
+      "72",
+      "It has no minimum",
+      "60"
+     ],
+     "a": 0,
+     "e": "Z at the corners: 60, 19, 72. Since 9<i>x</i> + 5<i>y</i> &lt; 19 has no point in the region, the smallest corner value <b>19</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 8), (1, 2), (5, 0). The half-plane 7<i>x</i> + 9<i>y</i> &lt; 25 has no point in common with the region. Find the minimum of Z = 7<i>x</i> + 9<i>y</i>.",
+     "c": [
+      "35",
+      "25",
+      "It has no minimum",
+      "72"
+     ],
+     "a": 1,
+     "e": "Z at the corners: 72, 25, 35. Since 7<i>x</i> + 9<i>y</i> &lt; 25 has no point in the region, the smallest corner value <b>25</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 10), (2, 5), (7, 0). The half-plane 7<i>x</i> + 9<i>y</i> &lt; 49 has no point in common with the region. Find the minimum of Z = 7<i>x</i> + 9<i>y</i>.",
+     "c": [
+      "59",
+      "49",
+      "It has no minimum",
+      "90"
+     ],
+     "a": 1,
+     "e": "Z at the corners: 90, 59, 49. Since 7<i>x</i> + 9<i>y</i> &lt; 49 has no point in the region, the smallest corner value <b>49</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 10), (1, 3), (5, 0). The half-plane 5<i>x</i> + 9<i>y</i> &lt; 25 has no point in common with the region. Find the minimum of Z = 5<i>x</i> + 9<i>y</i>.",
+     "c": [
+      "90",
+      "32",
+      "It has no minimum",
+      "25"
+     ],
+     "a": 3,
+     "e": "Z at the corners: 90, 32, 25. Since 5<i>x</i> + 9<i>y</i> &lt; 25 has no point in the region, the smallest corner value <b>25</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 11), (3, 2), (8, 0). The half-plane 5<i>x</i> + 3<i>y</i> &lt; 21 has no point in common with the region. Find the minimum of Z = 5<i>x</i> + 3<i>y</i>.",
+     "c": [
+      "21",
+      "40",
+      "33",
+      "It has no minimum"
+     ],
+     "a": 0,
+     "e": "Z at the corners: 33, 21, 40. Since 5<i>x</i> + 3<i>y</i> &lt; 21 has no point in the region, the smallest corner value <b>21</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 8), (1, 4), (9, 0). The half-plane 6<i>x</i> + 7<i>y</i> &lt; 34 has no point in common with the region. Find the minimum of Z = 6<i>x</i> + 7<i>y</i>.",
+     "c": [
+      "54",
+      "56",
+      "It has no minimum",
+      "34"
+     ],
+     "a": 3,
+     "e": "Z at the corners: 56, 34, 54. Since 6<i>x</i> + 7<i>y</i> &lt; 34 has no point in the region, the smallest corner value <b>34</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 7), (3, 4), (8, 0). The half-plane 5<i>x</i> + 4<i>y</i> &lt; 28 has no point in common with the region. Find the minimum of Z = 5<i>x</i> + 4<i>y</i>.",
+     "c": [
+      "31",
+      "28",
+      "40",
+      "It has no minimum"
+     ],
+     "a": 1,
+     "e": "Z at the corners: 28, 31, 40. Since 5<i>x</i> + 4<i>y</i> &lt; 28 has no point in the region, the smallest corner value <b>28</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 12), (2, 5), (6, 0). The half-plane <i>x</i> + 5<i>y</i> &lt; 6 has no point in common with the region. Find the minimum of Z = <i>x</i> + 5<i>y</i>.",
+     "c": [
+      "It has no minimum",
+      "60",
+      "6",
+      "27"
+     ],
+     "a": 2,
+     "e": "Z at the corners: 60, 27, 6. Since <i>x</i> + 5<i>y</i> &lt; 6 has no point in the region, the smallest corner value <b>6</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 12), (2, 4), (7, 0). The half-plane 8<i>x</i> + 3<i>y</i> &lt; 28 has no point in common with the region. Find the minimum of Z = 8<i>x</i> + 3<i>y</i>.",
+     "c": [
+      "36",
+      "It has no minimum",
+      "28",
+      "56"
+     ],
+     "a": 2,
+     "e": "Z at the corners: 36, 28, 56. Since 8<i>x</i> + 3<i>y</i> &lt; 28 has no point in the region, the smallest corner value <b>28</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 8), (4, 3), (6, 0). The half-plane 9<i>x</i> + 7<i>y</i> &lt; 54 has no point in common with the region. Find the minimum of Z = 9<i>x</i> + 7<i>y</i>.",
+     "c": [
+      "It has no minimum",
+      "56",
+      "57",
+      "54"
+     ],
+     "a": 3,
+     "e": "Z at the corners: 56, 57, 54. Since 9<i>x</i> + 7<i>y</i> &lt; 54 has no point in the region, the smallest corner value <b>54</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 11), (3, 2), (9, 0). The half-plane 9<i>x</i> + 9<i>y</i> &lt; 45 has no point in common with the region. Find the minimum of Z = 9<i>x</i> + 9<i>y</i>.",
+     "c": [
+      "It has no minimum",
+      "99",
+      "45",
+      "81"
+     ],
+     "a": 2,
+     "e": "Z at the corners: 99, 45, 81. Since 9<i>x</i> + 9<i>y</i> &lt; 45 has no point in the region, the smallest corner value <b>45</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 8), (1, 3), (6, 0). The half-plane 8<i>x</i> + 2<i>y</i> &lt; 14 has no point in common with the region. Find the minimum of Z = 8<i>x</i> + 2<i>y</i>.",
+     "c": [
+      "14",
+      "16",
+      "It has no minimum",
+      "48"
+     ],
+     "a": 0,
+     "e": "Z at the corners: 16, 14, 48. Since 8<i>x</i> + 2<i>y</i> &lt; 14 has no point in the region, the smallest corner value <b>14</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 10), (2, 5), (9, 0). The half-plane 3<i>x</i> + <i>y</i> &lt; 10 has no point in common with the region. Find the minimum of Z = 3<i>x</i> + <i>y</i>.",
+     "c": [
+      "11",
+      "It has no minimum",
+      "27",
+      "10"
+     ],
+     "a": 3,
+     "e": "Z at the corners: 10, 11, 27. Since 3<i>x</i> + <i>y</i> &lt; 10 has no point in the region, the smallest corner value <b>10</b> is the minimum."
+    },
+    {
+     "q": "The feasible region of a problem is unbounded, with corner points (0, 8), (1, 4), (7, 0). The half-plane 9<i>x</i> + 6<i>y</i> &lt; 33 has no point in common with the region. Find the minimum of Z = 9<i>x</i> + 6<i>y</i>.",
+     "c": [
+      "48",
+      "63",
+      "33",
+      "It has no minimum"
+     ],
+     "a": 2,
+     "e": "Z at the corners: 48, 33, 63. Since 9<i>x</i> + 6<i>y</i> &lt; 33 has no point in the region, the smallest corner value <b>33</b> is the minimum."
+    }
+   ]
+  },
+  {
+   "title": "Mixed problems",
+   "items": [
+    {
+     "q": "Find the corner point where the lines 2<i>x</i> + <i>y</i> = 9 and 5<i>x</i> + 5<i>y</i> = 40 meet.",
+     "c": [
+      "(<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>, 0)",
+      "(0, 8)",
+      "(1, 7)",
+      "(7, 1)"
+     ],
+     "a": 2,
+     "e": "Solve the two equations together: <b>(1, 7)</b>."
+    },
+    {
+     "q": "Find the corner point where the lines 2<i>x</i> + <i>y</i> = 17 and 5<i>x</i> + 3<i>y</i> = 46 meet.",
+     "c": [
+      "(7, 5)",
+      "(<span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span>, 0)",
+      "(5, 7)",
+      "(0, <span class='fr'><span class='fn'>46</span><span class='fd'>3</span></span>)"
+     ],
+     "a": 2,
+     "e": "Solve the two equations together: <b>(5, 7)</b>."
+    },
+    {
+     "q": "Find the corner point where the lines 4<i>x</i> + 5<i>y</i> = 51 and 4<i>x</i> + 2<i>y</i> = 30 meet.",
+     "c": [
+      "(7, 4)",
+      "(0, 15)",
+      "(<span class='fr'><span class='fn'>51</span><span class='fd'>4</span></span>, 0)",
+      "(4, 7)"
+     ],
+     "a": 3,
+     "e": "Solve the two equations together: <b>(4, 7)</b>."
+    },
+    {
+     "q": "Find the corner point where the lines 3<i>x</i> + <i>y</i> = 16 and 4<i>x</i> + 5<i>y</i> = 25 meet.",
+     "c": [
+      "(<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>, 0)",
+      "(5, 1)",
+      "(0, 5)",
+      "(1, 5)"
+     ],
+     "a": 1,
+     "e": "Solve the two equations together: <b>(5, 1)</b>."
+    },
+    {
+     "q": "Maximise Z = 4<i>x</i> + 6<i>y</i> subject to 3<i>x</i> + <i>y</i> ≤ 9, <i>x</i> + 2<i>y</i> ≤ 8, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (3, 0), (2, 3), (0, 4). Find the maximum value of Z.",
+     "c": [
+      "24",
+      "26",
+      "62",
+      "4"
+     ],
+     "a": 1,
+     "e": "Work out Z at each corner: (0, 0) → 0, (3, 0) → 12, (2, 3) → 26, (0, 4) → 24. The largest is <b>26</b>, at (2, 3)."
+    },
+    {
+     "q": "Maximise Z = 2<i>x</i> + 4<i>y</i> subject to 4<i>x</i> + 4<i>y</i> ≤ 64, 4<i>x</i> + 3<i>y</i> ≤ 56, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (14, 0), (8, 8), (0, 16). Find the maximum value of Z.",
+     "c": [
+      "16",
+      "48",
+      "64",
+      "140"
+     ],
+     "a": 2,
+     "e": "Work out Z at each corner: (0, 0) → 0, (14, 0) → 28, (8, 8) → 48, (0, 16) → 64. The largest is <b>64</b>, at (0, 16)."
+    },
+    {
+     "q": "A factory makes <i>x</i> fans and <i>y</i> lamps. Each of the fans needs 1 hour of assembly and each of the lamps needs 6 hours. At most 46 hours of assembly are available. Which constraint is correct?",
+     "c": [
+      "<i>x</i> + 6<i>y</i> ≤ 46",
+      "<i>x</i> + 6<i>y</i> ≥ 46",
+      "<i>x</i> + <i>y</i> ≤ 46",
+      "6<i>x</i> + <i>y</i> ≤ 46"
+     ],
+     "a": 0,
+     "e": "Hours used = 1<i>x</i> + 6<i>y</i>, and it cannot be more than 46: <b><i>x</i> + 6<i>y</i> ≤ 46</b>."
+    },
+    {
+     "q": "Maximise Z = 4<i>x</i> + 3<i>y</i> subject to 3<i>x</i> + 3<i>y</i> ≤ 30, 2<i>x</i> + 3<i>y</i> ≤ 27, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (10, 0), (3, 7), (0, 9). Find the maximum value of Z.",
+     "c": [
+      "100",
+      "10",
+      "40",
+      "33"
+     ],
+     "a": 2,
+     "e": "Work out Z at each corner: (0, 0) → 0, (10, 0) → 40, (3, 7) → 33, (0, 9) → 27. The largest is <b>40</b>, at (10, 0)."
+    },
+    {
+     "q": "A factory makes <i>x</i> bags and <i>y</i> belts. Each of the bags needs 1 hour of stitching and each of the belts needs 4 hours. At most 51 hours of stitching are available. Which constraint is correct?",
+     "c": [
+      "<i>x</i> + 4<i>y</i> ≤ 51",
+      "4<i>x</i> + <i>y</i> ≤ 51",
+      "<i>x</i> + 4<i>y</i> ≥ 51",
+      "<i>x</i> + <i>y</i> ≤ 51"
+     ],
+     "a": 0,
+     "e": "Hours used = 1<i>x</i> + 4<i>y</i>, and it cannot be more than 51: <b><i>x</i> + 4<i>y</i> ≤ 51</b>."
+    },
+    {
+     "q": "Find the corner point where the lines 3<i>x</i> + <i>y</i> = 17 and <i>x</i> + 5<i>y</i> = 29 meet.",
+     "c": [
+      "(<span class='fr'><span class='fn'>17</span><span class='fd'>3</span></span>, 0)",
+      "(4, 5)",
+      "(0, <span class='fr'><span class='fn'>29</span><span class='fd'>5</span></span>)",
+      "(5, 4)"
+     ],
+     "a": 1,
+     "e": "Solve the two equations together: <b>(4, 5)</b>."
+    },
+    {
+     "q": "A factory makes <i>x</i> kurtas and <i>y</i> shirts. Each of the kurtas needs 6 hours of tailoring and each of the shirts needs 4 hours. At most 69 hours of tailoring are available. Which constraint is correct?",
+     "c": [
+      "6<i>x</i> + 4<i>y</i> ≤ 69",
+      "6<i>x</i> + 4<i>y</i> ≥ 69",
+      "<i>x</i> + <i>y</i> ≤ 69",
+      "4<i>x</i> + 6<i>y</i> ≤ 69"
+     ],
+     "a": 0,
+     "e": "Hours used = 6<i>x</i> + 4<i>y</i>, and it cannot be more than 69: <b>6<i>x</i> + 4<i>y</i> ≤ 69</b>."
+    },
+    {
+     "q": "Maximise Z = 3<i>x</i> + 9<i>y</i> subject to <i>x</i> + 2<i>y</i> ≤ 14, 3<i>x</i> + 2<i>y</i> ≤ 18, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (6, 0), (2, 6), (0, 7). Find the maximum value of Z.",
+     "c": [
+      "141",
+      "60",
+      "7",
+      "63"
+     ],
+     "a": 3,
+     "e": "Work out Z at each corner: (0, 0) → 0, (6, 0) → 18, (2, 6) → 60, (0, 7) → 63. The largest is <b>63</b>, at (0, 7)."
+    },
+    {
+     "q": "A factory makes <i>x</i> toys of type A and <i>y</i> toys of type B. Each of the toys of type A needs 5 hours of machine and each of the toys of type B needs 1 hour. At most 33 hours of machine are available. Which constraint is correct?",
+     "c": [
+      "5<i>x</i> + <i>y</i> ≤ 33",
+      "<i>x</i> + <i>y</i> ≤ 33",
+      "5<i>x</i> + <i>y</i> ≥ 33",
+      "<i>x</i> + 5<i>y</i> ≤ 33"
+     ],
+     "a": 0,
+     "e": "Hours used = 5<i>x</i> + 1<i>y</i>, and it cannot be more than 33: <b>5<i>x</i> + <i>y</i> ≤ 33</b>."
+    },
+    {
+     "q": "Find the corner point where the lines 4<i>x</i> + <i>y</i> = 17 and 2<i>x</i> + 5<i>y</i> = 13 meet.",
+     "c": [
+      "(1, 4)",
+      "(0, <span class='fr'><span class='fn'>13</span><span class='fd'>5</span></span>)",
+      "(<span class='fr'><span class='fn'>17</span><span class='fd'>4</span></span>, 0)",
+      "(4, 1)"
+     ],
+     "a": 3,
+     "e": "Solve the two equations together: <b>(4, 1)</b>."
+    },
+    {
+     "q": "Maximise Z = 6<i>x</i> + <i>y</i> subject to <i>x</i> + <i>y</i> ≤ 10, 2<i>x</i> + 4<i>y</i> ≤ 36, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (10, 0), (2, 8), (0, 9). Find the maximum value of Z.",
+     "c": [
+      "10",
+      "89",
+      "60",
+      "20"
+     ],
+     "a": 2,
+     "e": "Work out Z at each corner: (0, 0) → 0, (10, 0) → 60, (2, 8) → 20, (0, 9) → 9. The largest is <b>60</b>, at (10, 0)."
+    },
+    {
+     "q": "A factory makes <i>x</i> bags and <i>y</i> belts. Each of the bags needs 5 hours of stitching and each of the belts needs 6 hours. At most 110 hours of stitching are available. Which constraint is correct?",
+     "c": [
+      "5<i>x</i> + 6<i>y</i> ≥ 110",
+      "5<i>x</i> + 6<i>y</i> ≤ 110",
+      "6<i>x</i> + 5<i>y</i> ≤ 110",
+      "<i>x</i> + <i>y</i> ≤ 110"
+     ],
+     "a": 1,
+     "e": "Hours used = 5<i>x</i> + 6<i>y</i>, and it cannot be more than 110: <b>5<i>x</i> + 6<i>y</i> ≤ 110</b>."
+    },
+    {
+     "q": "Maximise Z = 2<i>x</i> + 8<i>y</i> subject to 3<i>x</i> + 2<i>y</i> ≤ 20, 4<i>x</i> + <i>y</i> ≤ 20, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (5, 0), (4, 4), (0, 10). Find the maximum value of Z.",
+     "c": [
+      "80",
+      "40",
+      "130",
+      "10"
+     ],
+     "a": 0,
+     "e": "Work out Z at each corner: (0, 0) → 0, (5, 0) → 10, (4, 4) → 40, (0, 10) → 80. The largest is <b>80</b>, at (0, 10)."
+    },
+    {
+     "q": "Maximise Z = 2<i>x</i> + 6<i>y</i> subject to 3<i>x</i> + 2<i>y</i> ≤ 14, 2<i>x</i> + <i>y</i> ≤ 8, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (4, 0), (2, 4), (0, 7). Find the maximum value of Z.",
+     "c": [
+      "7",
+      "78",
+      "28",
+      "42"
+     ],
+     "a": 3,
+     "e": "Work out Z at each corner: (0, 0) → 0, (4, 0) → 8, (2, 4) → 28, (0, 7) → 42. The largest is <b>42</b>, at (0, 7)."
+    },
+    {
+     "q": "A factory makes <i>x</i> pots and <i>y</i> vases. Each of the pots needs 1 hour of glazing and each of the vases needs 3 hours. At most 21 hours of glazing are available. Which constraint is correct?",
+     "c": [
+      "<i>x</i> + 3<i>y</i> ≥ 21",
+      "<i>x</i> + <i>y</i> ≤ 21",
+      "3<i>x</i> + <i>y</i> ≤ 21",
+      "<i>x</i> + 3<i>y</i> ≤ 21"
+     ],
+     "a": 3,
+     "e": "Hours used = 1<i>x</i> + 3<i>y</i>, and it cannot be more than 21: <b><i>x</i> + 3<i>y</i> ≤ 21</b>."
+    },
+    {
+     "q": "Maximise Z = <i>x</i> + 5<i>y</i> subject to 2<i>x</i> + 4<i>y</i> ≤ 40, 2<i>x</i> + <i>y</i> ≤ 16, <i>x</i> ≥ 0, <i>y</i> ≥ 0. The corner points of the feasible region are (0, 0), (8, 0), (4, 8), (0, 10). Find the maximum value of Z.",
+     "c": [
+      "44",
+      "50",
+      "10",
+      "102"
+     ],
+     "a": 1,
+     "e": "Work out Z at each corner: (0, 0) → 0, (8, 0) → 8, (4, 8) → 44, (0, 10) → 50. The largest is <b>50</b>, at (0, 10)."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 12,
+ "updated": "2026-11-22",
+ "country": "in",
+ "subject": "maths",
+ "grade": "class-12"
+}
