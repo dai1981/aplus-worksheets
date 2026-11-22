@@ -129,7 +129,7 @@ function topic_defs_fr() {
             'in' => '/decima|arrondir/', 'out' => '/division/',
             'blurb' => 'Dixièmes, centièmes et millièmes, fractions décimales et écriture à virgule, comparer, ranger et arrondir des nombres décimaux.'),
         'algebre-et-proportionnalite' => array('name' => 'Algèbre et proportionnalité',
-            'in' => '/egalites|programme|proportionnalit|pourcentage|echelle|agrandissement|ratio/', 'out' => '/^$/',
+            'in' => '/egalites|programme|proportionnalit|pourcentage|echelle|agrandissement|(^|-)ratios?(-|$)/', 'out' => '/^$/',
             'blurb' => 'Égalités à trous, programmes de calcul, suites de nombres et de motifs, tableaux de proportionnalité et recettes.'),
         'nombres-relatifs' => array('name' => 'Nombres relatifs',
             'in' => '/relatif/', 'out' => '/^$/',

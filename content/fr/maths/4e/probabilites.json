@@ -1,0 +1,1157 @@
+{
+ "slug": "probabilites",
+ "title": "Probabilités : événements et expériences à deux épreuves",
+ "seo_title": "Probabilités 4e : fiches et exercices avec corrigé",
+ "short_title": "Probabilités",
+ "domain": "Données et probabilités",
+ "standard_code": "4e · Données et probabilités",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo10/MENE2602912A",
+ "standard_text": "Utiliser l’événement contraire et les événements incompatibles ; représenter une expérience à deux épreuves par un arbre ou un tableau ; calculer des probabilités ; dénombrer des issues (résumé du programme 2026 du cycle 4)",
+ "meta_desc": "Fiches de maths 4e sur les probabilités : événement contraire, événements incompatibles, deux épreuves, arbres, tableaux à double entrée et problèmes. 100 exercices corrigés.",
+ "key_big": "P(non A) = 1 − P(A)",
+ "key_sub": "Sur un arbre, on multiplie le long d’un chemin",
+ "body_html": "<h2>Comment faire</h2><p>P(non A) = 1 − P(A). Si A et B sont <b>incompatibles</b> (ne peuvent pas se produire en même temps), P(A ou B) = P(A) + P(B).</p><p>Pour une expérience à <b>deux épreuves</b>, on liste les issues avec un arbre ou un tableau à double entrée.</p><p>Sur un arbre, on multiplie les probabilités le long d’un chemin et on additionne les chemins qui conviennent.</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>Deux lancers d’une pièce : P(deux piles)</p><p class='sn-ex-s'>issues : PP, PF, FP, FF</p><p class='sn-ex-s'>1 issue favorable sur 4</p><p class='sn-ex-a'>Réponse : 1/4</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>Croire que les sommes de deux dés (2 à 12) sont équiprobables</td><td>7 s’obtient de 6 façons, 12 d’une seule.</td></tr><tr><td>Oublier PF ou FP</td><td>Ce sont deux issues différentes.</td></tr><tr><td>Additionner sur un chemin d’arbre</td><td>On multiplie le long d’un chemin.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Comment savoir si deux événements sont incompatibles ?",
+   "a": "Ils n’ont aucune issue en commun : par exemple « obtenir 2 » et « obtenir 5 » avec un dé."
+  },
+  {
+   "q": "Arbre ou tableau ?",
+   "a": "Le tableau à double entrée est pratique pour deux dés ; l’arbre convient à toutes les expériences à plusieurs épreuves."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Événement contraire et incompatibles",
+   "items": [
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,95. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "1,95",
+      "−0,95",
+      "0,95",
+      "0,05"
+     ],
+     "a": 3,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,95 = <b>0,05</b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,31. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "1,31",
+      "0,31",
+      "−0,31",
+      "0,69"
+     ],
+     "a": 3,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,31 = <b>0,69</b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,48. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "0,48",
+      "1,48",
+      "−0,48",
+      "0,52"
+     ],
+     "a": 3,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,48 = <b>0,52</b>."
+    },
+    {
+     "q": "Une urne contient 1 boule jaune, 2 boules rouges et 1 boule noire. Quelle est la probabilité de tirer une boule jaune ou rouge ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "Les deux événements sont incompatibles : P = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 4 boules bleues, 2 boules jaunes et 3 boules noires. Quelle est la probabilité de tirer une boule bleue ou jaune ?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Les deux événements sont incompatibles : P = <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,61. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "−0,61",
+      "0,61",
+      "1,61",
+      "0,39"
+     ],
+     "a": 3,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,61 = <b>0,39</b>."
+    },
+    {
+     "q": "Une urne contient 5 boules blanches, 2 boules bleues et 5 boules vertes. Quelle est la probabilité de tirer une boule blanche ou bleue ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>24</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>72</span></span>"
+     ],
+     "a": 1,
+     "e": "Les deux événements sont incompatibles : P = <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,62. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "0,38",
+      "1,62",
+      "−0,62",
+      "0,62"
+     ],
+     "a": 0,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,62 = <b>0,38</b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,09. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "0,09",
+      "0,91",
+      "−0,09",
+      "1,09"
+     ],
+     "a": 1,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,09 = <b>0,91</b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,28. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "0,28",
+      "1,28",
+      "0,72",
+      "−0,28"
+     ],
+     "a": 2,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,28 = <b>0,72</b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,43. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "0,57",
+      "1,43",
+      "0,43",
+      "−0,43"
+     ],
+     "a": 0,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,43 = <b>0,57</b>."
+    },
+    {
+     "q": "P(A) = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>. Quelle est P(non A) ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "1 − <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,81. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "−0,81",
+      "0,81",
+      "0,19",
+      "1,81"
+     ],
+     "a": 2,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,81 = <b>0,19</b>."
+    },
+    {
+     "q": "Une urne contient 4 boules blanches, 1 boule rouge et 6 boules bleues. Quelle est la probabilité de tirer une boule blanche ou rouge ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>"
+     ],
+     "a": 1,
+     "e": "Les deux événements sont incompatibles : P = <span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 3 boules vertes, 6 boules jaunes et 5 boules blanches. Quelle est la probabilité de tirer une boule verte ou jaune ?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>98</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>"
+     ],
+     "a": 0,
+     "e": "Les deux événements sont incompatibles : P = <span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span> + <span class='fr'><span class='fn'>6</span><span class='fd'>14</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>14</span></span></b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,69. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "−0,69",
+      "0,69",
+      "0,31",
+      "1,69"
+     ],
+     "a": 2,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,69 = <b>0,31</b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,53. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "0,47",
+      "0,53",
+      "−0,53",
+      "1,53"
+     ],
+     "a": 0,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,53 = <b>0,47</b>."
+    },
+    {
+     "q": "P(A) = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>. Quelle est P(non A) ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "1 − <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,34. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "−0,34",
+      "0,66",
+      "1,34",
+      "0,34"
+     ],
+     "a": 1,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,34 = <b>0,66</b>."
+    },
+    {
+     "q": "La probabilité qu’un événement A se réalise est 0,27. Quelle est la probabilité de l’événement contraire « non A » ?",
+     "c": [
+      "−0,27",
+      "0,27",
+      "0,73",
+      "1,27"
+     ],
+     "a": 2,
+     "e": "P(non A) = 1 − P(A) = 1 − 0,27 = <b>0,73</b>."
+    }
+   ]
+  },
+  {
+   "title": "Deux épreuves : lister les issues",
+   "items": [
+    {
+     "q": "On lance deux dés à 6 faces et on additionne les résultats. Quelle est la probabilité d’obtenir 2 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 1,
+     "e": "Il y a 36 issues équiprobables (tableau 6 × 6) ; 1 issue donnent 2 : <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "On lance deux fois une pièce équilibrée. Quelle est la probabilité d’obtenir au moins un « pile » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "Issues : PP, PF, FP, FF (4 issues équiprobables). Favorables : PP, PF, FP → <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 3 boules jaunes et 2 boules bleues. On tire une boule, on la remet, puis on en tire une seconde. Quelle est la probabilité d’obtenir deux boules jaunes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "Arbre : <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "On lance deux dés à 6 faces et on additionne les résultats. Quelle est la probabilité d’obtenir 5 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "Il y a 36 issues équiprobables (tableau 6 × 6) ; 4 issues donnent 5 : <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "On lance deux dés à 6 faces et on additionne les résultats. Quelle est la probabilité d’obtenir 7 ?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 2,
+     "e": "Il y a 36 issues équiprobables (tableau 6 × 6) ; 6 issues donnent 7 : <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "On lance deux dés à 6 faces et on additionne les résultats. Quelle est la probabilité d’obtenir 11 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Il y a 36 issues équiprobables (tableau 6 × 6) ; 2 issues donnent 11 : <b><span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 3 boules noires et 2 boules jaunes. On tire une boule, on la remet, puis on en tire une seconde. Quelle est la probabilité d’obtenir deux boules noires ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 2,
+     "e": "Arbre : <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 5 boules blanches et 2 boules rouges. On tire une boule, on la remet, puis on en tire une seconde. Quelle est la probabilité d’obtenir deux boules blanches ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>49</span></span>"
+     ],
+     "a": 3,
+     "e": "Arbre : <span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>49</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 3 boules jaunes et 5 boules bleues. On tire une boule, on la remet, puis on en tire une seconde. Quelle est la probabilité d’obtenir deux boules jaunes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>"
+     ],
+     "a": 3,
+     "e": "Arbre : <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "On lance un dé à 6 faces puis une pièce. Combien y a-t-il d’issues ? Et quelle est la probabilité d’obtenir « 4 et pile » ?",
+     "c": [
+      "6 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "8 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 2,
+     "e": "6 × 2 = 12 issues équiprobables ; une seule est favorable : <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "On lance un dé à 6 faces puis une pièce. Combien y a-t-il d’issues ? Et quelle est la probabilité d’obtenir « 1 et pile » ?",
+     "c": [
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "8 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "6 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "6 × 2 = 12 issues équiprobables ; une seule est favorable : <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "On lance deux dés à 6 faces et on additionne les résultats. Quelle est la probabilité d’obtenir 12 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "Il y a 36 issues équiprobables (tableau 6 × 6) ; 1 issue donnent 12 : <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "On lance deux fois une pièce équilibrée. Quelle est la probabilité d’obtenir un « pile » et un « face » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Issues : PP, PF, FP, FF (4 issues équiprobables). Favorables : PF, FP → <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "On lance un dé à 6 faces puis une pièce. Combien y a-t-il d’issues ? Et quelle est la probabilité d’obtenir « 2 et pile » ?",
+     "c": [
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "6 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "8 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "6 × 2 = 12 issues équiprobables ; une seule est favorable : <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 5 boules bleues et 2 boules rouges. On tire une boule, on la remet, puis on en tire une seconde. Quelle est la probabilité d’obtenir deux boules bleues ?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>49</span></span>"
+     ],
+     "a": 0,
+     "e": "Arbre : <span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>49</span></span></b>."
+    },
+    {
+     "q": "On lance un dé à 6 faces puis une pièce. Combien y a-t-il d’issues ? Et quelle est la probabilité d’obtenir « 6 et pile » ?",
+     "c": [
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "6 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "8 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "6 × 2 = 12 issues équiprobables ; une seule est favorable : <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "On lance un dé à 6 faces puis une pièce. Combien y a-t-il d’issues ? Et quelle est la probabilité d’obtenir « 3 et pile » ?",
+     "c": [
+      "6 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "8 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "6 × 2 = 12 issues équiprobables ; une seule est favorable : <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "On lance deux dés à 6 faces et on additionne les résultats. Quelle est la probabilité d’obtenir 10 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>"
+     ],
+     "a": 0,
+     "e": "Il y a 36 issues équiprobables (tableau 6 × 6) ; 3 issues donnent 10 : <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 5 boules bleues et 3 boules jaunes. On tire une boule, on la remet, puis on en tire une seconde. Quelle est la probabilité d’obtenir deux boules bleues ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>"
+     ],
+     "a": 1,
+     "e": "Arbre : <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "On lance un dé à 6 faces puis une pièce. Combien y a-t-il d’issues ? Et quelle est la probabilité d’obtenir « 5 et pile » ?",
+     "c": [
+      "6 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "12 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "8 issues ; <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "6 × 2 = 12 issues équiprobables ; une seule est favorable : <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Arbres de probabilités",
+   "items": [
+    {
+     "q": "Urne : 4 boules bleues et 2 boules jaunes. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules de couleurs différentes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> → <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Urne : 3 boules noires et 4 boules blanches. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules de couleurs différentes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>49</span></span>",
+      "1"
+     ],
+     "a": 1,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> → <b><span class='fr'><span class='fn'>24</span><span class='fd'>49</span></span></b>."
+    },
+    {
+     "q": "Urne : 4 boules blanches et 2 boules noires. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules de couleurs différentes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> → <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Urne : 4 boules noires et 2 boules blanches. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules blanches ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>",
+      "1"
+     ],
+     "a": 1,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Urne : 1 boule verte et 3 boules bleues. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir au moins une boule verte ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>",
+      "1"
+     ],
+     "a": 0,
+     "e": "Avec l’arbre : 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> → <b><span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Urne : 2 boules rouges et 1 boule blanche. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules blanches ?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Urne : 2 boules jaunes et 4 boules vertes. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules vertes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "1"
+     ],
+     "a": 0,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> → <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Urne : 4 boules noires et 4 boules bleues. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules bleues ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Urne : 1 boule jaune et 2 boules bleues. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules bleues ?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> → <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Urne : 1 boule blanche et 1 boule verte. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules de couleurs différentes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "1"
+     ],
+     "a": 1,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Urne : 1 boule bleue et 4 boules jaunes. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir au moins une boule bleue ?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "Avec l’arbre : 1 − <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> → <b><span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Urne : 4 boules noires et 4 boules jaunes. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules de couleurs différentes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "1"
+     ],
+     "a": 2,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Urne : 1 boule noire et 3 boules rouges. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules rouges ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>"
+     ],
+     "a": 3,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> → <b><span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Urne : 4 boules vertes et 4 boules noires. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules de couleurs différentes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "1"
+     ],
+     "a": 0,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Urne : 4 boules bleues et 1 boule rouge. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir au moins une boule bleue ?",
+     "c": [
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "1"
+     ],
+     "a": 0,
+     "e": "Avec l’arbre : 1 − <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> → <b><span class='fr'><span class='fn'>24</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Urne : 2 boules jaunes et 1 boule rouge. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules rouges ?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Urne : 3 boules bleues et 3 boules vertes. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules de couleurs différentes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Urne : 2 boules rouges et 4 boules vertes. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules de couleurs différentes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> → <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Urne : 2 boules vertes et 1 boule noire. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules noires ?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Urne : 3 boules blanches et 2 boules noires. On tire une boule, on la remet, on en tire une autre. Quelle est la probabilité d’obtenir deux boules noires ?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "Avec l’arbre : <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> → <b><span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Tableaux et dénombrement",
+   "items": [
+    {
+     "q": "Un menu propose 2 entrées, 2 plats et 2 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "8",
+      "9",
+      "6",
+      "16"
+     ],
+     "a": 0,
+     "e": "2 × 2 × 2 = <b>8</b> menus."
+    },
+    {
+     "q": "Un cadenas a 3 molettes de 10 chiffres chacune (0 à 9). Combien de codes possibles ? Et quelle est la probabilité de trouver le code au hasard du premier coup ?",
+     "c": [
+      "30 codes ; <span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "1 000 codes ; <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "729 codes ; <span class='fr'><span class='fn'>1</span><span class='fd'>729</span></span>",
+      "1 000 codes ; <span class='fr'><span class='fn'>1</span><span class='fd'>1 000</span></span>"
+     ],
+     "a": 3,
+     "e": "10 possibilités pour chaque molette : 10<sup>3</sup> = 1 000 codes ; <b><span class='fr'><span class='fn'>1</span><span class='fd'>1 000</span></span></b>."
+    },
+    {
+     "q": "Un menu propose 4 entrées, 4 plats et 3 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "48",
+      "19",
+      "96",
+      "11"
+     ],
+     "a": 0,
+     "e": "4 × 4 × 3 = <b>48</b> menus."
+    },
+    {
+     "q": "Un menu propose 4 entrées, 4 plats et 2 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "32",
+      "18",
+      "64",
+      "10"
+     ],
+     "a": 0,
+     "e": "4 × 4 × 2 = <b>32</b> menus."
+    },
+    {
+     "q": "Un cadenas a 2 molettes de 10 chiffres chacune (0 à 9). Combien de codes possibles ? Et quelle est la probabilité de trouver le code au hasard du premier coup ?",
+     "c": [
+      "20 codes ; <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "100 codes ; <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "1024 codes ; <span class='fr'><span class='fn'>1</span><span class='fd'>81</span></span>",
+      "100 codes ; <span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span>"
+     ],
+     "a": 3,
+     "e": "10 possibilités pour chaque molette : 10<sup>2</sup> = 100 codes ; <b><span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Un menu propose 2 entrées, 2 plats et 3 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "24",
+      "13",
+      "12",
+      "7"
+     ],
+     "a": 2,
+     "e": "2 × 2 × 3 = <b>12</b> menus."
+    },
+    {
+     "q": "On lance deux dés à 6 faces. Quelle est la probabilité d’obtenir au moins un 6 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "Dans le tableau à double entrée (36 cases), 11 cases conviennent : <b><span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Un menu propose 3 entrées, 4 plats et 4 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "11",
+      "48",
+      "16",
+      "96"
+     ],
+     "a": 1,
+     "e": "3 × 4 × 4 = <b>48</b> menus."
+    },
+    {
+     "q": "On lance deux dés à 6 faces. Quelle est la probabilité d’obtenir une somme égale à 7 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>36</span></span>"
+     ],
+     "a": 1,
+     "e": "Dans le tableau à double entrée (36 cases), 6 cases conviennent : <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Un menu propose 2 entrées, 2 plats et 4 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "8",
+      "17",
+      "32",
+      "16"
+     ],
+     "a": 3,
+     "e": "2 × 2 × 4 = <b>16</b> menus."
+    },
+    {
+     "q": "On lance deux dés à 6 faces. Quelle est la probabilité d’obtenir un double ?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>36</span></span>"
+     ],
+     "a": 1,
+     "e": "Dans le tableau à double entrée (36 cases), 6 cases conviennent : <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Un menu propose 2 entrées, 3 plats et 3 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "36",
+      "18",
+      "8",
+      "9"
+     ],
+     "a": 1,
+     "e": "2 × 3 × 3 = <b>18</b> menus."
+    },
+    {
+     "q": "Un menu propose 4 entrées, 4 plats et 4 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "20",
+      "12",
+      "128",
+      "64"
+     ],
+     "a": 3,
+     "e": "4 × 4 × 4 = <b>64</b> menus."
+    },
+    {
+     "q": "On lance deux dés à 6 faces. Quelle est la probabilité d’obtenir une somme supérieure à 9 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>36</span></span>"
+     ],
+     "a": 0,
+     "e": "Dans le tableau à double entrée (36 cases), 6 cases conviennent : <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Un menu propose 3 entrées, 3 plats et 4 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "72",
+      "10",
+      "36",
+      "13"
+     ],
+     "a": 2,
+     "e": "3 × 3 × 4 = <b>36</b> menus."
+    },
+    {
+     "q": "On lance deux dés à 6 faces. Quelle est la probabilité d’obtenir un produit pair ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "Dans le tableau à double entrée (36 cases), 27 cases conviennent : <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Un menu propose 4 entrées, 3 plats et 4 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "48",
+      "96",
+      "11",
+      "16"
+     ],
+     "a": 0,
+     "e": "4 × 3 × 4 = <b>48</b> menus."
+    },
+    {
+     "q": "On lance deux dés à 6 faces. Quelle est la probabilité d’obtenir deux nombres impairs ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "Dans le tableau à double entrée (36 cases), 9 cases conviennent : <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Un menu propose 3 entrées, 4 plats et 2 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "14",
+      "9",
+      "24",
+      "48"
+     ],
+     "a": 2,
+     "e": "3 × 4 × 2 = <b>24</b> menus."
+    },
+    {
+     "q": "Un menu propose 4 entrées, 3 plats et 2 desserts. Combien de menus différents (entrée, plat, dessert) peut-on composer ?",
+     "c": [
+      "14",
+      "9",
+      "24",
+      "48"
+     ],
+     "a": 2,
+     "e": "4 × 3 × 2 = <b>24</b> menus."
+    }
+   ]
+  },
+  {
+   "title": "Problèmes",
+   "items": [
+    {
+     "q": "On lance deux dés. Nour gagne si la somme vaut 7, son adversaire gagne si la somme vaut 12. Ce jeu est-il équitable ?",
+     "c": [
+      "on ne peut pas savoir",
+      "non, Nour a plus de chances",
+      "oui, chacun a une chance sur 11",
+      "non, l’adversaire a plus de chances"
+     ],
+     "a": 1,
+     "e": "P(somme 7) = 6/36 et P(somme 12) = 1/36 : <b>non, Nour a plus de chances</b>."
+    },
+    {
+     "q": "On lance deux dés. Sacha gagne si la somme vaut 7, son adversaire gagne si la somme vaut 12. Ce jeu est-il équitable ?",
+     "c": [
+      "non, Sacha a plus de chances",
+      "on ne peut pas savoir",
+      "oui, chacun a une chance sur 11",
+      "non, l’adversaire a plus de chances"
+     ],
+     "a": 0,
+     "e": "P(somme 7) = 6/36 et P(somme 12) = 1/36 : <b>non, Sacha a plus de chances</b>."
+    },
+    {
+     "q": "Dans un sondage, 30 % des élèves viennent à vélo. Dans un collège de 500 élèves, combien peut-on estimer de cyclistes ?",
+     "c": [
+      "30",
+      "300",
+      "350",
+      "150"
+     ],
+     "a": 3,
+     "e": "30 % de 500 = <b>150</b> (c’est une estimation)."
+    },
+    {
+     "q": "Pile ou face avec deux pièces : Emma gagne si les deux faces sont identiques, sinon c’est son adversaire. Le jeu est-il équitable ?",
+     "c": [
+      "non : Emma a plus de chances",
+      "non : l’adversaire a 3 chances sur 4",
+      "on ne peut pas savoir",
+      "oui : chacun a une probabilité de 1/2"
+     ],
+     "a": 3,
+     "e": "Identiques : PP, FF ; différentes : PF, FP. <b>Oui, 1/2 chacun</b>."
+    },
+    {
+     "q": "On lance deux dés. Louise gagne si la somme vaut 7, son adversaire gagne si la somme vaut 12. Ce jeu est-il équitable ?",
+     "c": [
+      "non, Louise a plus de chances",
+      "on ne peut pas savoir",
+      "non, l’adversaire a plus de chances",
+      "oui, chacun a une chance sur 11"
+     ],
+     "a": 0,
+     "e": "P(somme 7) = 6/36 et P(somme 12) = 1/36 : <b>non, Louise a plus de chances</b>."
+    },
+    {
+     "q": "On lance deux dés. Manon gagne si la somme vaut 7, son adversaire gagne si la somme vaut 12. Ce jeu est-il équitable ?",
+     "c": [
+      "oui, chacun a une chance sur 11",
+      "non, l’adversaire a plus de chances",
+      "non, Manon a plus de chances",
+      "on ne peut pas savoir"
+     ],
+     "a": 2,
+     "e": "P(somme 7) = 6/36 et P(somme 12) = 1/36 : <b>non, Manon a plus de chances</b>."
+    },
+    {
+     "q": "On lance deux dés. Lucas gagne si la somme vaut 7, son adversaire gagne si la somme vaut 12. Ce jeu est-il équitable ?",
+     "c": [
+      "non, l’adversaire a plus de chances",
+      "oui, chacun a une chance sur 11",
+      "on ne peut pas savoir",
+      "non, Lucas a plus de chances"
+     ],
+     "a": 3,
+     "e": "P(somme 7) = 6/36 et P(somme 12) = 1/36 : <b>non, Lucas a plus de chances</b>."
+    },
+    {
+     "q": "Une roue a 10 secteurs égaux dont 4 secteurs gagnants. On la fait tourner deux fois. Quelle est la probabilité de gagner les deux fois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Dans un sondage, 25 % des élèves viennent à vélo. Dans un collège de 500 élèves, combien peut-on estimer de cyclistes ?",
+     "c": [
+      "375",
+      "25",
+      "125",
+      "250"
+     ],
+     "a": 2,
+     "e": "25 % de 500 = <b>125</b> (c’est une estimation)."
+    },
+    {
+     "q": "Dans un sondage, 30 % des élèves viennent à vélo. Dans un collège de 1000 élèves, combien peut-on estimer de cyclistes ?",
+     "c": [
+      "600",
+      "300",
+      "30",
+      "700"
+     ],
+     "a": 1,
+     "e": "30 % de 1000 = <b>300</b> (c’est une estimation)."
+    },
+    {
+     "q": "On lance deux dés. Hugo gagne si la somme vaut 7, son adversaire gagne si la somme vaut 12. Ce jeu est-il équitable ?",
+     "c": [
+      "on ne peut pas savoir",
+      "oui, chacun a une chance sur 11",
+      "non, l’adversaire a plus de chances",
+      "non, Hugo a plus de chances"
+     ],
+     "a": 3,
+     "e": "P(somme 7) = 6/36 et P(somme 12) = 1/36 : <b>non, Hugo a plus de chances</b>."
+    },
+    {
+     "q": "Dans un sondage, 20 % des élèves viennent à vélo. Dans un collège de 200 élèves, combien peut-on estimer de cyclistes ?",
+     "c": [
+      "20",
+      "160",
+      "40",
+      "80"
+     ],
+     "a": 2,
+     "e": "20 % de 200 = <b>40</b> (c’est une estimation)."
+    },
+    {
+     "q": "Pile ou face avec deux pièces : Gabriel gagne si les deux faces sont identiques, sinon c’est son adversaire. Le jeu est-il équitable ?",
+     "c": [
+      "non : Gabriel a plus de chances",
+      "oui : chacun a une probabilité de 1/2",
+      "on ne peut pas savoir",
+      "non : l’adversaire a 3 chances sur 4"
+     ],
+     "a": 1,
+     "e": "Identiques : PP, FF ; différentes : PF, FP. <b>Oui, 1/2 chacun</b>."
+    },
+    {
+     "q": "Pile ou face avec deux pièces : Adam gagne si les deux faces sont identiques, sinon c’est son adversaire. Le jeu est-il équitable ?",
+     "c": [
+      "oui : chacun a une probabilité de 1/2",
+      "non : Adam a plus de chances",
+      "on ne peut pas savoir",
+      "non : l’adversaire a 3 chances sur 4"
+     ],
+     "a": 0,
+     "e": "Identiques : PP, FF ; différentes : PF, FP. <b>Oui, 1/2 chacun</b>."
+    },
+    {
+     "q": "Dans un sondage, 30 % des élèves viennent à vélo. Dans un collège de 400 élèves, combien peut-on estimer de cyclistes ?",
+     "c": [
+      "30",
+      "240",
+      "120",
+      "280"
+     ],
+     "a": 2,
+     "e": "30 % de 400 = <b>120</b> (c’est une estimation)."
+    },
+    {
+     "q": "On lance deux dés. Zoé gagne si la somme vaut 7, son adversaire gagne si la somme vaut 12. Ce jeu est-il équitable ?",
+     "c": [
+      "oui, chacun a une chance sur 11",
+      "non, Zoé a plus de chances",
+      "on ne peut pas savoir",
+      "non, l’adversaire a plus de chances"
+     ],
+     "a": 1,
+     "e": "P(somme 7) = 6/36 et P(somme 12) = 1/36 : <b>non, Zoé a plus de chances</b>."
+    },
+    {
+     "q": "On lance deux dés. Jade gagne si la somme vaut 7, son adversaire gagne si la somme vaut 12. Ce jeu est-il équitable ?",
+     "c": [
+      "on ne peut pas savoir",
+      "oui, chacun a une chance sur 11",
+      "non, l’adversaire a plus de chances",
+      "non, Jade a plus de chances"
+     ],
+     "a": 3,
+     "e": "P(somme 7) = 6/36 et P(somme 12) = 1/36 : <b>non, Jade a plus de chances</b>."
+    },
+    {
+     "q": "Dans un sondage, 40 % des élèves viennent à vélo. Dans un collège de 1000 élèves, combien peut-on estimer de cyclistes ?",
+     "c": [
+      "600",
+      "40",
+      "400",
+      "800"
+     ],
+     "a": 2,
+     "e": "40 % de 1000 = <b>400</b> (c’est une estimation)."
+    },
+    {
+     "q": "On lance deux dés. Léo gagne si la somme vaut 7, son adversaire gagne si la somme vaut 12. Ce jeu est-il équitable ?",
+     "c": [
+      "non, Léo a plus de chances",
+      "on ne peut pas savoir",
+      "non, l’adversaire a plus de chances",
+      "oui, chacun a une chance sur 11"
+     ],
+     "a": 0,
+     "e": "P(somme 7) = 6/36 et P(somme 12) = 1/36 : <b>non, Léo a plus de chances</b>."
+    },
+    {
+     "q": "On lance deux dés. Jules gagne si la somme vaut 7, son adversaire gagne si la somme vaut 12. Ce jeu est-il équitable ?",
+     "c": [
+      "non, Jules a plus de chances",
+      "non, l’adversaire a plus de chances",
+      "oui, chacun a une chance sur 11",
+      "on ne peut pas savoir"
+     ],
+     "a": 0,
+     "e": "P(somme 7) = 6/36 et P(somme 12) = 1/36 : <b>non, Jules a plus de chances</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 18,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "4e"
+}

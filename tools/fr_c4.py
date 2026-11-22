@@ -138,3 +138,53 @@ def em(x):
     """montant sans le symbole : 35 ; 12,50"""
     x = Fr(x)
     return d(x) if x.denominator == 1 else dk(x, 2)
+
+
+def figure(pts, segs, sides=(), right=(), W=340, H=230, label="figure géométrique", ticks=(), dashed=()):
+    """pts : {nom: (x, y)} (repère mathématique) ; segs : [(A, B)] ; sides : [(A, B, texte)] ;
+    right : [(sommet, A, B)] marque d’angle droit ; ticks : [(A, B, n)] codage de longueurs égales ; dashed : [(A, B)]"""
+    import math
+    xs = [p[0] for p in pts.values()]
+    ys = [p[1] for p in pts.values()]
+    m, mxm = 34, 64
+    sc = min((W - 2 * mxm) / float(max(xs) - min(xs) or 1), (H - 2 * m) / float(max(ys) - min(ys) or 1))
+    ox = (W - (max(xs) - min(xs)) * sc) / 2.0
+    oy = (H - (max(ys) - min(ys)) * sc) / 2.0
+    P = {k: (ox + (x - min(xs)) * sc, H - oy - (y - min(ys)) * sc) for k, (x, y) in pts.items()}
+    cx = sum(p[0] for p in P.values()) / len(P)
+    cy = sum(p[1] for p in P.values()) / len(P)
+    s = []
+    for a, b in segs:
+        s.append(line(P[a][0], P[a][1], P[b][0], P[b][1], INK, 2))
+    for a, b in dashed:
+        s.append(line(P[a][0], P[a][1], P[b][0], P[b][1], BLUE, 1.6, " stroke-dasharray='5 4'"))
+    for v, a, b in right:
+        (vx, vy), (ax, ay), (bx, by) = P[v], P[a], P[b]
+        da = math.hypot(ax - vx, ay - vy)
+        db = math.hypot(bx - vx, by - vy)
+        ux, uy = (ax - vx) / da * 11, (ay - vy) / da * 11
+        wx, wy = (bx - vx) / db * 11, (by - vy) / db * 11
+        s.append("<path d='M%.1f %.1f L%.1f %.1f L%.1f %.1f' fill='none' stroke='%s' stroke-width='1.6'/>" % (vx + ux, vy + uy, vx + ux + wx, vy + uy + wy, vx + wx, vy + wy, INK))
+    for a, b, n in ticks:
+        mx, my = (P[a][0] + P[b][0]) / 2, (P[a][1] + P[b][1]) / 2
+        dx, dy = P[b][0] - P[a][0], P[b][1] - P[a][1]
+        L_ = math.hypot(dx, dy)
+        nx, ny = -dy / L_ * 6, dx / L_ * 6
+        tx, ty = dx / L_ * 4, dy / L_ * 4
+        for i in range(n):
+            o = (i - (n - 1) / 2.0)
+            s.append(line(mx + o * tx - nx, my + o * ty - ny, mx + o * tx + nx, my + o * ty + ny, RED, 1.8))
+    for a, b, t in sides:
+        mx, my = (P[a][0] + P[b][0]) / 2, (P[a][1] + P[b][1]) / 2
+        dx, dy = P[b][0] - P[a][0], P[b][1] - P[a][1]
+        L_ = math.hypot(dx, dy)
+        nx, ny = -dy / L_, dx / L_
+        if (mx + nx - cx) ** 2 + (my + ny - cy) ** 2 < (mx - cx) ** 2 + (my - cy) ** 2:
+            nx, ny = -nx, -ny
+        anc = "middle" if abs(nx) < 0.6 else ("start" if nx > 0 else "end")
+        s.append(text(mx + nx * (16 if anc == "middle" else 8), my + ny * 16 + 5, t, 14, anchor=anc, col=BLUE))
+    for k, (x, y) in P.items():
+        dx, dy = x - cx, y - cy
+        L_ = math.hypot(dx, dy) or 1
+        s.append(text(x + dx / L_ * 15, y + dy / L_ * 15 + 5, k, 15))
+    return wrap(W, H, "".join(s), label, lg=True)
