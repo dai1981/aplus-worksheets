@@ -7,6 +7,7 @@ Fractions de dénominateur 2, 3, 4, 5, 6, 8, 10 : lire sur une figure, nommer, p
 Erreurs : inverser numérateur et dénominateur, compter les parts blanches, croire que 1/8 > 1/4 parce que 8 > 4.
 """
 import random
+from fr_c2 import pl
 from fr_common import mcq, lesson, example, make_unit, mix, Kids, fr, bande, disque, droite_frac, table
 
 R = random.Random(51009)
@@ -35,7 +36,7 @@ def s1_mot():
     d = R.choice(DEN)
     k = R.randint(1, d - 1)
     return mcq("Comment s’écrit « %s » ?" % mot(k, d), fr(k, d), [fr(d, k), fr(k, d + 1) if d + 1 in NOM else fr(k, d - 1), fr(k + 1, d) if k + 1 < d else fr(k - 1, d) if k > 1 else fr(1, d + 2)],
-                "« %s » : on partage en %d et on prend %d parts : <b>%s</b>." % (mot(k, d), d, k, fr(k, d)))
+                "« %s » : on partage en %d et on prend %s : <b>%s</b>." % (mot(k, d), d, pl(k, "part"), fr(k, d)))
 
 
 def s2_droite():
@@ -46,7 +47,7 @@ def s2_droite():
     pic = droite_frac(d, 2, [(k, "A")])
     return mcq("<div class='qfig'>%s</div>Quelle fraction est repérée par la lettre A ?" % pic, fr(k, d),
                [fr(k, 2 * d), fr(k + 1, d), fr(k - 1, d) if k > 1 else fr(k + 2, d), fr(d, k) if d != k else None],
-               "Chaque unité est partagée en %d. A est à %d graduations de 0 : <b>%s</b>." % (d, k, fr(k, d)))
+               "Chaque unité est partagée en %d. A est à %s de 0 : <b>%s</b>." % (d, pl(k, "graduation"), fr(k, d)))
 
 
 def s3_cmp_un():
@@ -63,7 +64,7 @@ def s3_meme_den():
     a, b = R.sample(range(1, d), 2)
     g = max(a, b)
     return mcq("Quelle est la plus grande fraction : %s ou %s ?" % (fr(a, d), fr(b, d)), fr(g, d), [fr(min(a, b), d), "elles sont égales", "on ne peut pas savoir"],
-               "Même dénominateur : les parts ont la même taille. %d parts, c’est plus que %d : <b>%s</b>." % (g, min(a, b), fr(g, d)))
+               "Même dénominateur : les parts ont la même taille. %s, c’est plus que %d : <b>%s</b>." % (pl(g, "part"), min(a, b), fr(g, d)))
 
 
 def s3_meme_num():
@@ -79,13 +80,13 @@ def s4_demi():
     n = d // 2
     if R.random() < 0.5:
         return mcq("Complète : %s = %s" % (fr(1, 2), fr("…", d)), n, [n + 1, n - 1, d, 2],
-                   "%s, c’est la moitié : la moitié de %d parts, c’est <b>%d</b> parts. %s = %s." % (fr(1, 2), d, n, fr(n, d), fr(1, 2)))
+                   "%s, c’est la moitié : la moitié de %d parts, c’est <b>%s</b>. %s = %s." % (fr(1, 2), d, pl(n, "part"), fr(n, d), fr(1, 2)))
     h = R.randint(1, d - 1)
     if h == n:
         return None
     others = [fr(h, d), fr(n, d + 2) if d + 2 <= 10 else fr(n, d - 2), fr(1, d)]
     return mcq("Parmi ces fractions, laquelle est égale à %s : %s, %s ou %s ?" % (fr(1, 2), fr(h, d), fr(n, d), others[1]), fr(n, d), others,
-               "La moitié de %d parts, c’est %d parts : <b>%s = %s</b>." % (d, n, fr(n, d), fr(1, 2)))
+               "La moitié de %d parts, c’est %s : <b>%s = %s</b>." % (d, pl(n, "part"), fr(n, d), fr(1, 2)))
 
 
 def s4_un():

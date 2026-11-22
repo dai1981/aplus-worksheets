@@ -8,6 +8,7 @@ programmes de calcul (exécuter ; CM2 : retrouver le nombre de départ), suites 
 Erreurs : ignorer les parenthèses, 345 + … = 1 000 → 1 345, appliquer les étapes du programme dans le désordre.
 """
 import random
+from fr_c2 import que
 from fr_c3 import mcq, num, lesson, example, unit, mix, Kids, GN, FOIS, DIV, wrap, FILL, GREEN, INK, text
 
 R = K = None
@@ -155,12 +156,12 @@ def s5():
     if k == "plus":
         d, x = R.randint(4, 30), R.randint(10, 60)
         t = 2 * x + d
-        return mcq("%s et %s ont %d billes en tout. %s en a %d de plus que %s. Combien %s en a-t-%s ?" % (p[0], o[0], t, o[0], d, p[0], p[0], p[1]), str(x), [str(t // 2), str(x + d), str(t - d)],
+        return mcq("%s et %s ont %d billes en tout. %s en a %d de plus %s. Combien %s en a-t-%s ?" % (p[0], o[0], t, o[0], d, que(p[0]), p[0], p[1]), str(x), [str(t // 2), str(x + d), str(t - d)],
                    "Schéma en barres : on enlève les %d billes en plus : %d − %d = %d, puis on partage en 2 : <b>%d</b>." % (d, t, d, t - d, x))
     if k == "fois":
         f, x = R.randint(2, 5), R.randint(5, 40)
         t = x * (f + 1)
-        return mcq("%s et %s ont %d € en tout. %s a %d fois plus d’argent que %s. Combien %s a-t-%s ?" % (p[0], o[0], t, o[0], f, p[0], p[0], p[1]), "%d €" % x, ["%d €" % (t // f), "%d €" % (t // 2), "%d €" % (x * f)],
+        return mcq("%s et %s ont %d € en tout. %s a %d fois plus d’argent %s. Combien %s a-t-%s ?" % (p[0], o[0], t, o[0], f, que(p[0]), p[0], p[1]), "%d €" % x, ["%d €" % (t // f), "%d €" % (t // 2), "%d €" % (x * f)],
                    "%s = 1 part, %s = %d parts : %d parts en tout. %d %s %d = <b>%d €</b>." % (p[0], o[0], f, f + 1, t, DIV, f + 1, x))
     if k == "balance":
         n, m, c = R.randint(2, 5), R.randint(1, 4), R.choice([50, 100, 200])

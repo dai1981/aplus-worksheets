@@ -7,6 +7,7 @@ multiplicative), problèmes mixtes en plusieurs étapes, dénombrement, optimisa
 Erreurs : choisir l’opération d’après un mot, oublier une étape, additionner les choix d’un dénombrement.
 """
 import random
+from fr_c2 import que
 from fr_c3 import mcq, num, lesson, example, unit, mix, Kids, GN, FOIS, DIV, dz
 
 R = K = None
@@ -44,7 +45,7 @@ def s1():
         return mcq("%s achète un livre à %s € et un cahier à %s €. Combien paie-t-%s ?" % (p[0], dz(a + 500, 2, True), dz(b, 2, True), p[1]), dz(a + 500 + b, 2, True) + " €",
                    [dz(abs(a + 500 - b), 2, True) + " €", dz(a + 500 + b + 100, 2, True) + " €", dz(a + 500 + b - 10, 2, True) + " €"], "%s + %s = <b>%s €</b>." % (dz(a + 500, 2, True), dz(b, 2, True), dz(a + 500 + b, 2, True)))
     a, d = R.randint(1200, 9000), R.randint(150, 900)
-    return mcq("%s a marché %s pas. C’est %s pas de moins que %s. Combien de pas %s a-t-%s faits ?" % (p[0], num(a), num(d), o[0], o[0], o[1]), num(a + d), [num(a - d), num(d), num(a + d + 100)],
+    return mcq("%s a marché %s pas. C’est %s pas de moins %s. Combien de pas %s a-t-%s faits ?" % (p[0], num(a), num(d), que(o[0]), o[0], o[1]), num(a + d), [num(a - d), num(d), num(a + d + 100)],
                "%s en a fait plus : %s + %s = <b>%s</b>. « De moins » ne veut pas toujours dire « − »." % (o[0], num(a), num(d), num(a + d)))
 
 

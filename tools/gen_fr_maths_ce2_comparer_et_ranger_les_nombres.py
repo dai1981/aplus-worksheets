@@ -7,6 +7,7 @@ le plus grand nombre avec des chiffres donnés.
 Erreurs : comparer le dernier chiffre au lieu du premier, inverser < et >, lire la graduation de 1 en 1 au lieu de 10 en 10.
 """
 import random
+from fr_c2 import pl
 from fr_common import mcq, num, lesson, example, make_unit, mix, droite
 
 R = random.Random(51002)
@@ -108,7 +109,7 @@ def s4_droite():
     v = lo + k * step
     return mcq(droite(lo, hi, step, marks=[(v, "A")], labels=[lo, hi], every=step * 5) + "Quel nombre est au point A ?", num(v),
                [num(lo + k), num(lo + k * step // 10) if step > 10 else num(lo + k * 100), num(v + step), num(v - step)],
-               "Entre %s et %s il y a %d graduations : chacune vaut %s. A est à %d graduations de %s : <b>%s</b>." % (num(lo), num(hi), n, num(step), k, num(lo), num(v)))
+               "Entre %s et %s il y a %d graduations : chacune vaut %s. A est à %s de %s : <b>%s</b>." % (num(lo), num(hi), n, num(step), pl(k, "graduation"), num(lo), num(v)))
 
 
 def s5_chiffres():

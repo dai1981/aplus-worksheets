@@ -1323,7 +1323,17 @@ set を作ってから list にするときは sorted() してから shuffle（�
 15. proportionnalite ✓ 16. longueurs-et-perimetres ✓ 17. masses-et-contenances ✓ 18. aires ✓ 19. angles ✓ 20. heures-et-durees ✓ 21. figures-planes ✓ 22. symetrie-axiale ✓
 23. solides-et-patrons ✓ 24. tableaux-et-graphiques ✓ 25. probabilites ✓
 
-FR の次: CE1・CP（cycle 2、BO 2024）→ 6e〜3e（collège）。catalog.json に学年を足す
+FR / Maths / CP・CE1（Programmes 2024 du cycle 2、BO n°41。CE2 と同じルール）— grade `cp`（sort 1、6〜7歳）・`ce1`（sort 2）。
+生成スクリプトは `gen_fr_maths_cp_*` に `build(lv)`（lv = 0 は CP、1 は CE1、seed は 53000 + 100 × lv + 番号）、`gen_fr_maths_ce1_*` は `build(1)` を呼ぶだけ（CE1 だけの 4 単元は自前）。共通部品は `tools/fr_c2.py`（fr_common の上に G・GN、CHOSE（k_pics の絵 → フランス語の名詞と性）、ch・nom・un・le・de、pic（k_pics の SVG にフランス語の aria-label）、pl（1 dizaine / 3 dizaines）、que・de_n（qu’Ambre・d’Ambre）、unit（seo_title を自動、standard_text に「(résumé du programme 2024 du cycle 2)」））。
+範囲：CP は 100 まで（計算は 20 まで、2 桁の繰り上がり 1 回まで、お金は整数の €、時刻は heure pile）、CE1 は 999 まで（分数は 1 以下、時刻は quart・demie）。CP はほぼ全問に絵（k_pics・f_common.glasses_svg）。CE2 の生成スクリプトの問題関数（時刻・お金・図形・立体・対称・座標・データ・分数・九九）を R を入れ替えて再利用（CE1 の範囲外は包んで落とす：losange、2 unités、小数 × 整数など）。
+トピック：compter→nombres、complements・doubles-et-moities→addition-et-soustraction、tables-d-addition は multiplication の out
+CP: 1. nombres-jusqu-a-100 ✓ 2. comparer-et-ranger-les-nombres ✓ 3. compter-et-suites ✓ 4. tables-d-addition ✓ 5. calcul-mental ✓ 6. addition-posee ✓ 7. sens-de-la-soustraction ✓ 8. doubles-et-moities ✓ 9. problemes ✓
+10. longueurs ✓ 11. masses-et-contenances ✓ 12. monnaie ✓ 13. lire-l-heure ✓ 14. figures-planes ✓ 15. solides ✓ 16. se-reperer-et-se-deplacer ✓ 17. tableaux-et-diagrammes ✓
+CE1: 1. nombres-jusqu-a-1000 ✓ 2. comparer-et-ranger-les-nombres ✓ 3. compter-pair-et-impair ✓ 4. complements-a-la-dizaine-et-a-100 ✓ 5. calcul-mental ✓ 6. addition-posee ✓ 7. soustraction-posee ✓ 8. doubles-et-moities ✓ 9. problemes ✓
+10. longueurs-et-perimetres ✓ 11. masses-et-contenances ✓ 12. monnaie ✓ 13. heures-et-durees ✓ 14. figures-planes-et-angles-droits ✓ 15. solides ✓ 16. se-reperer-et-se-deplacer ✓ 17. tableaux-et-diagrammes ✓
+18. sens-de-la-multiplication ✓ 19. tables-de-multiplication ✓ 20. fractions ✓ 21. symetrie-axiale ✓
+
+FR の次: 6e〜3e（collège、cycle 3 の 6e と cycle 4）。catalog.json に学年を足す
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

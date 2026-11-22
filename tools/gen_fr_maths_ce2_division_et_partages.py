@@ -7,6 +7,7 @@ problèmes (dont « combien de boîtes faut-il ? »).
 Erreurs : prendre un reste plus grand que le diviseur, oublier la boîte en plus pour le reste, confondre avec × ou −.
 """
 import random
+from fr_c2 import pl
 from fr_common import mcq, num, lesson, example, make_unit, mix, Kids, FOIS, DIV
 
 R = random.Random(51008)
@@ -88,7 +89,7 @@ def s5():
         n = d * R.randint(3, 8) + R.randint(1, d - 1)
         q = n // d + 1
         return mcq("On range %d œufs dans des boîtes de %d. Combien de boîtes faut-il pour ranger tous les œufs ?" % (n, d), q, [q - 1, n - d, q + 1],
-                   "%d %s %d = %d reste %d. Il faut une boîte de plus pour les %d derniers œufs : <b>%d boîtes</b>." % (n, DIV, d, n // d, n % d, n % d, q))
+                   "%d %s %d = %d reste %d. Il faut une boîte de plus pour %s : <b>%d boîtes</b>." % (n, DIV, d, n // d, n % d, "le dernier œuf" if n % d == 1 else "les %d derniers œufs" % (n % d), q))
     if k == "voitures":
         n = 4 * R.randint(4, 9) + R.randint(1, 3)
         q = n // 4 + 1

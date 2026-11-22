@@ -114,13 +114,13 @@ function topic_defs_de() {
 function topic_defs_fr() {
     return array(
         'nombres' => array('name' => 'Nombres et numération',
-            'in' => '/nombres|numeration|ranger|comparer-les/', 'out' => '/fraction|decima/',
+            'in' => '/nombres|numeration|ranger|comparer-les|compter/', 'out' => '/fraction|decima/',
             'blurb' => 'Lire, écrire et décomposer les nombres, les unités de numération, comparer et ranger, placer des nombres sur une droite graduée.'),
         'addition-et-soustraction' => array('name' => 'Addition et soustraction',
-            'in' => '/addition|soustraction|calcul-mental/', 'out' => '/fraction/',
+            'in' => '/addition|soustraction|calcul-mental|complements|doubles-et-moities/', 'out' => '/fraction/',
             'blurb' => 'Calcul mental, compléments, addition et soustraction posées avec retenues, et problèmes additifs.'),
         'multiplication-et-division' => array('name' => 'Multiplication et division',
-            'in' => '/multiplication|division|tables|partage|multiples/', 'out' => '/fraction/',
+            'in' => '/multiplication|division|tables|partage|multiples/', 'out' => '/fraction|tables-d-addition/',
             'blurb' => 'Tables de multiplication, multiples et diviseurs, multiplication posée, partages et groupements, division euclidienne et décimale.'),
         'fractions' => array('name' => 'Fractions',
             'in' => '/fraction/', 'out' => '/^$/',

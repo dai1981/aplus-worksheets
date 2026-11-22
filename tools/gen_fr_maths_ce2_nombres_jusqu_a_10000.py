@@ -7,6 +7,7 @@ chiffre des centaines et nombre de centaines ; suivant et précédent.
 Erreurs : oublier le zéro (3 milliers 5 dizaines → 350), confondre chiffre et nombre de centaines, inverser deux chiffres.
 """
 import random
+from fr_c2 import pl
 from fr_common import (mcq, num, lesson, example, make_unit, mix, blocs, numeration, lettres, Kids)
 
 R = random.Random(51001)
@@ -33,7 +34,7 @@ def s1_blocs():
     m, c, d, u = R.randint(1, 3), R.randint(0, 6), R.randint(0, 9), R.randint(0, 9)
     n = 1000 * m + 100 * c + 10 * d + u
     return mcq(blocs(m, c, d, u) + "Quel nombre est représenté ?", num(n), wrong_place(n),
-               "%d milliers, %d centaines, %d dizaines et %d unités : <b>%s</b>." % (m, c, d, u, num(n)))
+               "%s, %s, %s et %s : <b>%s</b>." % (pl(m, "millier"), pl(c, "centaine"), pl(d, "dizaine"), pl(u, "unité"), num(n)))
 
 
 def s1_tableau():
@@ -87,7 +88,7 @@ def s3_decomp():
     w2 = " + ".join(num(int(t)) for t in [str(100 * m), str(100 * c), str(10 * d), str(u)] if int(t))
     w3 = " + ".join(num(int(t)) for t in [str(1000 * m), str(100 * d), str(10 * c), str(u)] if int(t))
     return mcq("Quelle décomposition est celle de %s ?" % num(n), right, [w1, w2, w3],
-               "%s = %d milliers + %d centaines + %d dizaines + %d unités = <b>%s</b>." % (num(n), m, c, d, u, right))
+               "%s = %s + %s + %s + %s = <b>%s</b>." % (num(n), pl(m, "millier"), pl(c, "centaine"), pl(d, "dizaine"), pl(u, "unité"), right))
 
 
 def s3_chiffre():

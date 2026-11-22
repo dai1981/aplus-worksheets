@@ -8,6 +8,7 @@ Erreurs : additionner les dénominateurs (1/4 + 2/4 → 3/8), oublier que 4/4 = 
 """
 import random
 from fractions import Fraction as F
+from fr_c2 import pl
 from fr_common import mcq, lesson, example, make_unit, mix, Kids, fr
 
 R = random.Random(51010)
@@ -34,7 +35,7 @@ def s1_sub():
     a = R.randint(2, d)
     b = R.randint(1, a - 1)
     return mcq("Calcule : %s − %s" % (fr(a, d), fr(b, d)), fr(a - b, d), [fr(a + b, d), fr(a - b + 1, d), fr(b, d) if b != a - b else fr(a, d)],
-               "On enlève %d parts à %d parts : %d − %d = %d, donc <b>%s</b>." % (b, a, a, b, a - b, fr(a - b, d)))
+               "On enlève %s à %s : %d − %d = %d, donc <b>%s</b>." % (pl(b, "part"), pl(a, "part"), a, b, a - b, fr(a - b, d)))
 
 
 def s2_plus_un():
@@ -62,7 +63,7 @@ def s3_compl():
     d = R.choice(DEN + [2])
     a = R.randint(1, d - 1)
     return mcq("Complète : %s + … = 1" % fr(a, d), fr(d - a, d), [fr(a, d) if a != d - a else fr(a + 1, d), fr(d - a, 2 * d), fr(d - a + 1, d) if d - a + 1 < d else fr(1, d + 1), fr(1, a) if a > 1 else None],
-               "1 = %s. Il manque %d − %d = %d parts : <b>%s</b>." % (fr(d, d), d, a, d - a, fr(d - a, d)))
+               "1 = %s. Il manque %d − %d = %s : <b>%s</b>." % (fr(d, d), d, a, pl(d - a, "part"), fr(d - a, d)))
 
 
 def s3_moins():
