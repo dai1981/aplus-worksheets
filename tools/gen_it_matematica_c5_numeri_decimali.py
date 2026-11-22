@@ -44,7 +44,7 @@ def s1_frazione():
         return None
     w = [D(k, p - 1) if p > 1 else D(k, 2), D(k, p + 1), "%d,%d" % (k, 10 ** p) if p == 1 else str(k), "%d,%d" % (10 ** p, k), D(k, p + 2)]
     return mcq("Come si scrive %s come numero decimale?" % fr(k, 10 ** p), D(k, p), w,
-               "%s = %d %s: dopo la virgola ci devono essere %d %s. <b>%s</b>." % (fr(k, 10 ** p), k, NOMI[p][0 if k == 1 else 1], p, "cifra" if p == 1 else "cifre", D(k, p)))
+               "%s = %d %s: dopo la virgola %s. <b>%s</b>." % (fr(k, 10 ** p), k, NOMI[p][0 if k == 1 else 1], "c’è 1 cifra" if p == 1 else "ci sono %d cifre" % p, D(k, p)))
 
 
 def s1_tabella():

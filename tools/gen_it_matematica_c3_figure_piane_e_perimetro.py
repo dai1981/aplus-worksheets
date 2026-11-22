@@ -67,11 +67,11 @@ def s2_prop():
 def rett_svg(a, b, u="cm", sq=False):
     sc = 160.0 / max(a, b)
     W, H = a * sc, b * sc
-    s = ["<rect x='40' y='20' width='%.1f' height='%.1f' fill='%s' stroke='%s' stroke-width='2.2'/>" % (W, H, FILL, GREEN),
-         text(40 + W / 2, 14, "%d%s%s" % (a, NB, u), 13, weight=600)]
+    s = ["<rect x='64' y='20' width='%.1f' height='%.1f' fill='%s' stroke='%s' stroke-width='2.2'/>" % (W, H, FILL, GREEN),
+         text(64 + W / 2, 14, "%d%s%s" % (a, NB, u), 13, weight=600)]
     if not sq:
-        s.append(text(34, 24 + H / 2, "%d%s%s" % (b, NB, u), 13, weight=600, anchor="end"))
-    return wrap(W + 60, H + 34, "".join(s), "rettangolo" if not sq else "quadrato", lg=True)
+        s.append(text(58, 24 + H / 2, "%d%s%s" % (b, NB, u), 13, weight=600, anchor="end"))
+    return wrap(W + 84, H + 34, "".join(s), "rettangolo" if not sq else "quadrato", lg=True)
 
 
 def s3_perimetro():

@@ -171,7 +171,7 @@ function topic_defs_fr() {
 function topic_defs_it() {
     return array(
         'numeri' => array('name' => 'Numeri',
-            'in' => '/numeri|ordinare|potenz|pari-e-dispari|espression/', 'out' => '/decimal|frazion/',
+            'in' => '/numeri|ordinare|potenz|pari-e-dispari|espression|multipli/', 'out' => '/decimal|frazion/',
             'blurb' => 'Leggere, scrivere e scomporre i numeri, il valore posizionale delle cifre, confrontare e ordinare i numeri sulla retta.'),
         'addizione-e-sottrazione' => array('name' => 'Addizione e sottrazione',
             'in' => '/addizion|sottrazion|calcolo-mentale/', 'out' => '/^$/',
@@ -189,7 +189,7 @@ function topic_defs_it() {
             'in' => '/misure|lunghezz|peso|capacit|euro|orologio|tempo/', 'out' => '/^$/',
             'blurb' => 'Misure di lunghezza, peso e capacità, equivalenze, l’euro, l’orologio e la durata del tempo.'),
         'geometria' => array('name' => 'Geometria',
-            'in' => '/linee|angoli|figure|poligon|perimetro|solidi|simmetria|percorsi|cerchio|trasformazion|cartesian/', 'out' => '/^$/',
+            'in' => '/linee|angoli|figure|poligon|perimetro|solidi|simmetria|percorsi|cerchio|trasformazion|cartesian|triangol|quadrilater|isometri|(^|-)area(-|$)/', 'out' => '/^$/',
             'blurb' => 'Linee e angoli, poligoni e perimetro, figure solide, simmetria, percorsi e reticoli.'),
         'dati-e-probabilita' => array('name' => 'Dati e probabilità',
             'in' => '/dati|probabilit|grafic|indagin/', 'out' => '/^$/',

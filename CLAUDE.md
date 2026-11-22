@@ -1388,7 +1388,13 @@ IT / Matematica / Classe seconda（INVALSI の学年。100 まで。文は短く
 
 トピック（topic_defs_it）：potenze・pari-e-dispari・espressioni→numeri、doppio→moltiplicazione、percentuali→frazioni-e-decimali、compravendita→problemi、cerchio・trasformazioni・cartesiano→geometria
 
-IT の次: classe quarta → classe prima → scuola secondaria di primo grado（prima〜terza media）。catalog.json に学年を足す
+IT / Matematica / Classe quarta（数は 999 999 まで、小数は 1000 分の 1 まで）— 生成スクリプトは `gen_it_matematica_c4_*`（seed は 7040N）。多くは classe terza・quinta の生成スクリプトの問題関数を R と K（Kids(R)）を入れ替えて再利用。
+角度の図（goniometro・angle_fig）と三角形・四角形の図（tri_pts・shape_svg。辺の印 ticks、直角 rights）は `gen_au_maths_y5_angles` を relabel で使う。トピック：multipli→numeri、triangol・quadrilater・isometri・area→geometria
+1. numeri-entro-il-milione ✓ 2. addizioni-e-sottrazioni ✓ 3. moltiplicazioni ✓ 4. divisioni ✓ 5. multipli-e-divisori ✓ 6. frazioni ✓ 7. frazione-di-un-numero ✓
+8. numeri-decimali ✓ 9. operazioni-con-i-decimali ✓ 10. problemi ✓ 11. misure ✓ 12. compravendita ✓ 13. misure-di-tempo ✓ 14. angoli ✓
+15. triangoli ✓ 16. quadrilateri ✓ 17. perimetro ✓ 18. area ✓ 19. isometrie ✓ 20. statistica-e-probabilita ✓
+
+IT の次: classe prima → scuola secondaria di primo grado（prima〜terza media。grade は prima-media・seconda-media・terza-media、unit.php に年齢あり）。catalog.json に学年を足す
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

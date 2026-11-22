@@ -115,7 +115,7 @@ def s4_prob():
     if k == "dado":
         ev, fav = R.choice([("un numero pari", 3), ("il 6", 1), ("un numero maggiore di 4", 2), ("un numero minore di 3", 2), ("un multiplo di 3", 2), ("un numero dispari", 3), ("un numero minore di 7", 6), ("il 7", 0)])
         a = fr(fav, 6) if 0 < fav < 6 else ("1 (evento certo)" if fav == 6 else "0 (evento impossibile)")
-        return mcq("Lanci un dado a 6 facce. Qual è la probabilità che esca %s?" % ev, a, [fr(6, fav) if 0 < fav < 6 else fr(1, 6), fr(fav, 12) if 0 < fav < 6 else fr(5, 6), fr(fav + 1, 6) if fav < 5 else "1", fr(1, fav) if 1 < fav < 6 else fr(1, 2)],
+        return mcq("Lanci un dado a 6 facce. Qual è la probabilità che esca %s?" % ev, a, [fr(6, fav) if 0 < fav < 6 else fr(1, 6), fr(fav, 12) if 0 < fav < 6 else fr(5, 6), fr(fav + 1, 6) if fav < 5 else fr(1, 6) if fav == 6 else "1", fr(1, fav) if 1 < fav < 6 else fr(1, 2)],
                    "Casi favorevoli: %d; casi possibili: 6. Probabilità = <b>%s</b>." % (fav, a))
     if k == "sacchetto":
         r, b, g = R.randint(1, 7), R.randint(1, 7), R.randint(1, 6)
