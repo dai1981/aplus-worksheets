@@ -1,0 +1,1157 @@
+{
+ "slug": "probabilites",
+ "title": "Probabilités : arbres et tirages sans remise",
+ "seo_title": "Probabilités 3e : fiches et exercices avec corrigé",
+ "short_title": "Probabilités",
+ "domain": "Données et probabilités",
+ "standard_code": "3e · Données et probabilités",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo10/MENE2602912A",
+ "standard_text": "Calculer des probabilités dans des expériences à deux épreuves, avec ou sans remise, à l’aide d’arbres pondérés ou de tableaux ; utiliser l’événement contraire ; relier fréquence et probabilité pour estimer une probabilité (résumé du programme 2026 du cycle 4)",
+ "meta_desc": "Fiches de maths 3e sur les probabilités : tirages avec et sans remise, arbres pondérés, événement contraire, fréquences et loi des grands nombres, problèmes. 100 exercices corrigés.",
+ "key_big": "Sur un arbre : × le long d’un chemin, + entre chemins",
+ "key_sub": "Sans remise : une boule de moins au 2e tirage",
+ "body_html": "<h2>Comment faire</h2><p>Dans un <b>arbre pondéré</b>, on multiplie les probabilités le long d’un chemin et on additionne les probabilités des chemins qui réalisent l’événement.</p><p><b>Sans remise</b>, la composition change au deuxième tirage : il y a une boule de moins. <b>Avec remise</b>, elle ne change pas.</p><p>Quand on répète une expérience un grand nombre de fois, la fréquence observée se rapproche de la probabilité (on peut l’utiliser pour estimer une probabilité inconnue).</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>3 rouges, 2 bleues, deux tirages sans remise : P(RR)</p><p class='sn-ex-s'>3/5 × 2/4</p><p class='sn-ex-a'>Réponse : 6/20 = 3/10</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>Garder 3/5 au 2e tirage sans remise</td><td>Il ne reste que 4 boules dont 2 rouges : 2/4.</td></tr><tr><td>Additionner sur un chemin</td><td>On multiplie le long d’un chemin.</td></tr><tr><td>Prendre une fréquence sur 20 essais pour la probabilité exacte</td><td>Il faut un grand nombre d’essais, et cela reste une estimation.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Comment vérifier un arbre ?",
+   "a": "Les probabilités issues d’un même nœud ont pour somme 1, et la somme des probabilités de tous les chemins vaut 1."
+  },
+  {
+   "q": "Quelle différence entre fréquence et probabilité ?",
+   "a": "La fréquence est observée et varie d’une série d’essais à l’autre ; la probabilité est une valeur théorique."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Tirages sans remise",
+   "items": [
+    {
+     "q": "Une urne contient 3 boules blanches et 2 boules noires. On tire deux boules sans remise. Quelle est la probabilité d’obtenir deux couleurs différentes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 3 boules jaunes et 4 boules rouges. On tire deux boules sans remise. Quelle est la probabilité de tirer deux boules rouges ?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>49</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 4 boules noires et 4 boules vertes. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules noires ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span></b> (au 2e tirage, il reste 7 boules dont 3 noires)."
+    },
+    {
+     "q": "Une urne contient 6 boules vertes et 3 boules jaunes. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules vertes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>6</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></b> (au 2e tirage, il reste 8 boules dont 5 vertes)."
+    },
+    {
+     "q": "Une urne contient 3 boules rouges et 3 boules noires. On tire deux boules sans remise. Quelle est la probabilité de tirer deux boules noires ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 2 boules noires et 5 boules vertes. On tire deux boules sans remise. Quelle est la probabilité d’obtenir deux couleurs différentes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>21</span></span>"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>10</span><span class='fd'>21</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 3 boules blanches et 6 boules bleues. On tire deux boules sans remise. Quelle est la probabilité de tirer deux boules bleues ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>27</span></span>"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>6</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 4 boules vertes et 5 boules jaunes. On tire deux boules sans remise. Quelle est la probabilité de tirer deux boules jaunes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>81</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 4 boules noires et 2 boules rouges. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules noires ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b> (au 2e tirage, il reste 5 boules dont 3 noires)."
+    },
+    {
+     "q": "Une urne contient 3 boules noires et 6 boules blanches. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules noires ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b> (au 2e tirage, il reste 8 boules dont 2 noires)."
+    },
+    {
+     "q": "Une urne contient 2 boules noires et 4 boules blanches. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules noires ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>2</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span></b> (au 2e tirage, il reste 5 boules dont 1 noire)."
+    },
+    {
+     "q": "Une urne contient 2 boules vertes et 3 boules jaunes. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules vertes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b> (au 2e tirage, il reste 4 boules dont 1 verte)."
+    },
+    {
+     "q": "Une urne contient 4 boules rouges et 2 boules blanches. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules rouges ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b> (au 2e tirage, il reste 5 boules dont 3 rouges)."
+    },
+    {
+     "q": "Une urne contient 5 boules jaunes et 4 boules bleues. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules jaunes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span></b> (au 2e tirage, il reste 8 boules dont 4 jaunes)."
+    },
+    {
+     "q": "Une urne contient 4 boules jaunes et 6 boules noires. On tire deux boules sans remise. Quelle est la probabilité d’obtenir deux couleurs différentes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>9</span></span> + <span class='fr'><span class='fn'>6</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 4 boules vertes et 2 boules blanches. On tire deux boules sans remise. Quelle est la probabilité de tirer deux boules blanches ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>2</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 4 boules blanches et 3 boules noires. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules blanches ?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span></b> (au 2e tirage, il reste 6 boules dont 3 blanches)."
+    },
+    {
+     "q": "Une urne contient 3 boules blanches et 2 boules rouges. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules blanches ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b> (au 2e tirage, il reste 4 boules dont 2 blanches)."
+    },
+    {
+     "q": "Une urne contient 3 boules blanches et 3 boules bleues. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules blanches ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b> (au 2e tirage, il reste 5 boules dont 2 blanches)."
+    },
+    {
+     "q": "Une urne contient 2 boules jaunes et 6 boules blanches. On tire deux boules <b>sans remise</b>. Quelle est la probabilité de tirer deux boules jaunes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>28</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>2</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>28</span></span></b> (au 2e tirage, il reste 7 boules dont 1 jaune)."
+    }
+   ]
+  },
+  {
+   "title": "Arbres pondérés",
+   "items": [
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> et <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> et <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> et <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>. Quelle est la probabilité d’en réussir au moins un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>"
+     ],
+     "a": 2,
+     "e": "Événement contraire : « aucun » a pour probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span> ; donc 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>17</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> et <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>40</span></span>"
+     ],
+     "a": 1,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> et <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> et <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> et <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>"
+     ],
+     "a": 1,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> et <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> et <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> et <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>47</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span>"
+     ],
+     "a": 0,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>19</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> et <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>31</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> et <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>50</span></span>"
+     ],
+     "a": 3,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>19</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Un joueur réussit son premier tir avec la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> et son second avec la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> (indépendamment). Quelle est la probabilité qu’il réussisse les deux ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Sur l’arbre, on multiplie le long du chemin : <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> et <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>16</span></span>"
+     ],
+     "a": 1,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Un joueur réussit son premier tir avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> et son second avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> (indépendamment). Quelle est la probabilité qu’il réussisse les deux ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "Sur l’arbre, on multiplie le long du chemin : <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Un joueur réussit son premier tir avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> et son second avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> (indépendamment). Quelle est la probabilité qu’il réussisse les deux ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "Sur l’arbre, on multiplie le long du chemin : <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> et <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. Quelle est la probabilité d’en réussir au moins un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "Événement contraire : « aucun » a pour probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span> ; donc 1 − <span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span> = <b><span class='fr'><span class='fn'>11</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Un joueur réussit son premier tir avec la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> et son second avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> (indépendamment). Quelle est la probabilité qu’il réussisse les deux ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Sur l’arbre, on multiplie le long du chemin : <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> et <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>. Quelle est la probabilité d’en réussir au moins un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>47</span><span class='fd'>50</span></span>"
+     ],
+     "a": 3,
+     "e": "Événement contraire : « aucun » a pour probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span> ; donc 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span> = <b><span class='fr'><span class='fn'>47</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Deux tirs indépendants réussissent avec les probabilités <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> et <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>. Quelle est la probabilité d’en réussir exactement un ?",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "Deux chemins : <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>14</span><span class='fd'>25</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Avec ou sans remise ?",
+   "items": [
+    {
+     "q": "Une urne contient 2 boules noires et 3 boules rouges. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules noires ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 6 boules rouges et 2 boules noires. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules rouges ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>"
+     ],
+     "a": 3,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>6</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Dans un arbre de probabilités, la somme des probabilités des branches issues d’un même nœud vaut…",
+     "c": [
+      "0",
+      "la probabilité du chemin",
+      "1",
+      "2"
+     ],
+     "a": 2,
+     "e": "Réponse : <b>1</b>."
+    },
+    {
+     "q": "Une urne contient 6 boules noires et 4 boules rouges. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules noires ?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>6</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 5 boules jaunes et 3 boules noires. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules jaunes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>64</span></span>"
+     ],
+     "a": 3,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 3 boules blanches et 4 boules jaunes. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules blanches ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>"
+     ],
+     "a": 2,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>49</span></span></b>."
+    },
+    {
+     "q": "Pour obtenir la probabilité d’un chemin dans un arbre, on…",
+     "c": [
+      "additionne les probabilités des branches",
+      "divise par le nombre de branches",
+      "prend la plus grande branche",
+      "multiplie les probabilités des branches"
+     ],
+     "a": 3,
+     "e": "Réponse : <b>multiplie les probabilités des branches</b>."
+    },
+    {
+     "q": "Une urne contient 6 boules rouges et 3 boules noires. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules rouges ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>6</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 2 boules blanches et 4 boules rouges. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules blanches ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>2</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 6 boules bleues et 3 boules blanches. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules bleues ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>27</span></span>"
+     ],
+     "a": 0,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>6</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 4 boules blanches et 1 boule bleue. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules blanches ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 6 boules vertes et 1 boule bleue. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules vertes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>36</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>49</span></span>"
+     ],
+     "a": 1,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>36</span><span class='fd'>49</span></span></b>."
+    },
+    {
+     "q": "On tire deux cartes d’un jeu de 32 cartes. La probabilité d’avoir deux as est-elle la même avec et sans remise ?",
+     "c": [
+      "on ne peut pas savoir",
+      "non : sans remise, elle est plus petite",
+      "oui, toujours",
+      "non : sans remise, elle est plus grande"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>non : sans remise, elle est plus petite</b>."
+    },
+    {
+     "q": "Une urne contient 2 boules rouges et 6 boules noires. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules rouges ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>28</span></span>"
+     ],
+     "a": 1,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>2</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 2 boules jaunes et 6 boules bleues. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules jaunes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>"
+     ],
+     "a": 0,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>2</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 4 boules vertes et 1 boule jaune. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules vertes ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "On tire successivement deux cartes sans remise dans un jeu de 32 cartes. Quelle est la probabilité d’obtenir deux cœurs ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>124</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>8</span><span class='fd'>32</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>31</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>124</span></span></b>."
+    },
+    {
+     "q": "On tire successivement deux cartes sans remise dans un jeu de 32 cartes. Quelle est la probabilité d’obtenir deux rois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>248</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>32</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>31</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>248</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 4 boules rouges et 6 boules bleues. On tire une boule, on la <b>remet</b>, puis on en tire une seconde. Quelle est la probabilité de tirer deux boules rouges ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Avec remise, la composition ne change pas : <span class='fr'><span class='fn'>4</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Pour obtenir la probabilité d’un événement formé de plusieurs chemins, on…",
+     "c": [
+      "additionne les probabilités des chemins",
+      "multiplie les probabilités des chemins",
+      "prend le chemin le plus probable",
+      "compte les chemins"
+     ],
+     "a": 0,
+     "e": "Réponse : <b>additionne les probabilités des chemins</b>."
+    }
+   ]
+  },
+  {
+   "title": "Fréquences et probabilités",
+   "items": [
+    {
+     "q": "On lance une punaise 100 fois ; elle tombe 24 fois sur la pointe. Quelle est la fréquence de « pointe » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "24",
+      "0,76",
+      "0,24"
+     ],
+     "a": 3,
+     "e": "24 ÷ 100 = <b>0,24</b>."
+    },
+    {
+     "q": "Un jeu est gagnant avec la probabilité 0,25. Sur 200 parties, combien de parties gagnantes peut-on espérer environ ?",
+     "c": [
+      "100",
+      "25",
+      "150",
+      "50"
+     ],
+     "a": 3,
+     "e": "0,25 × 200 = <b>50</b> (environ)."
+    },
+    {
+     "q": "On lance une punaise 500 fois ; elle tombe 179 fois sur la pointe. Quelle est la fréquence de « pointe » ?",
+     "c": [
+      "0,642",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "0,358",
+      "179"
+     ],
+     "a": 2,
+     "e": "179 ÷ 500 = <b>0,358</b>."
+    },
+    {
+     "q": "Un jeu est gagnant avec la probabilité 0,2. Sur 1 000 parties, combien de parties gagnantes peut-on espérer environ ?",
+     "c": [
+      "20",
+      "400",
+      "800",
+      "200"
+     ],
+     "a": 3,
+     "e": "0,2 × 1 000 = <b>200</b> (environ)."
+    },
+    {
+     "q": "Pour estimer une probabilité inconnue (punaise, pièce truquée), on…",
+     "c": [
+      "fait un seul essai",
+      "répète l’expérience un grand nombre de fois et on calcule la fréquence",
+      "compte les faces",
+      "prend toujours 1/2"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>répète l’expérience un grand nombre de fois et on calcule la fréquence</b>."
+    },
+    {
+     "q": "Sur 20 lancers d’un dé équilibré, le 6 sort 7 fois. Le dé est-il forcément truqué ?",
+     "c": [
+      "oui, le 6 sort trop souvent",
+      "non : sur peu de lancers, la fréquence peut s’éloigner de 1/6",
+      "non, car 7 est impair",
+      "oui, car 7/20 ≠ 1/6"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>non : sur peu de lancers, la fréquence peut s’éloigner de 1/6</b>."
+    },
+    {
+     "q": "Un jeu est gagnant avec la probabilité 0,4. Sur 2 000 parties, combien de parties gagnantes peut-on espérer environ ?",
+     "c": [
+      "1 200",
+      "1 600",
+      "800",
+      "40"
+     ],
+     "a": 2,
+     "e": "0,4 × 2 000 = <b>800</b> (environ)."
+    },
+    {
+     "q": "On lance une punaise 1 000 fois ; elle tombe 290 fois sur la pointe. Quelle est la fréquence de « pointe » ?",
+     "c": [
+      "0,29",
+      "0,71",
+      "290",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "290 ÷ 1 000 = <b>0,29</b>."
+    },
+    {
+     "q": "On lance une punaise 50 fois ; elle tombe 10 fois sur la pointe. Quelle est la fréquence de « pointe » ?",
+     "c": [
+      "0,2",
+      "10",
+      "0,8",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "10 ÷ 50 = <b>0,2</b>."
+    },
+    {
+     "q": "Quand on répète une expérience un très grand nombre de fois, la fréquence d’un événement…",
+     "c": [
+      "se rapproche de sa probabilité",
+      "s’éloigne de sa probabilité",
+      "reste toujours la même",
+      "devient égale à 1"
+     ],
+     "a": 0,
+     "e": "Réponse : <b>se rapproche de sa probabilité</b>."
+    },
+    {
+     "q": "On lance une punaise 100 fois ; elle tombe 44 fois sur la pointe. Quelle est la fréquence de « pointe » ?",
+     "c": [
+      "0,56",
+      "0,44",
+      "44",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "44 ÷ 100 = <b>0,44</b>."
+    },
+    {
+     "q": "On lance une punaise 50 fois ; elle tombe 13 fois sur la pointe. Quelle est la fréquence de « pointe » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "0,74",
+      "0,26",
+      "13"
+     ],
+     "a": 2,
+     "e": "13 ÷ 50 = <b>0,26</b>."
+    },
+    {
+     "q": "On lance une punaise 1 000 fois ; elle tombe 430 fois sur la pointe. Quelle est la fréquence de « pointe » ?",
+     "c": [
+      "0,57",
+      "430",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "0,43"
+     ],
+     "a": 3,
+     "e": "430 ÷ 1 000 = <b>0,43</b>."
+    },
+    {
+     "q": "On lance une punaise 100 fois ; elle tombe 41 fois sur la pointe. Quelle est la fréquence de « pointe » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "0,41",
+      "0,59",
+      "41"
+     ],
+     "a": 1,
+     "e": "41 ÷ 100 = <b>0,41</b>."
+    },
+    {
+     "q": "Un jeu est gagnant avec la probabilité 0,2. Sur 500 parties, combien de parties gagnantes peut-on espérer environ ?",
+     "c": [
+      "20",
+      "400",
+      "100",
+      "200"
+     ],
+     "a": 2,
+     "e": "0,2 × 500 = <b>100</b> (environ)."
+    },
+    {
+     "q": "Un jeu est gagnant avec la probabilité 0,3. Sur 2 000 parties, combien de parties gagnantes peut-on espérer environ ?",
+     "c": [
+      "1 200",
+      "30",
+      "600",
+      "1 400"
+     ],
+     "a": 2,
+     "e": "0,3 × 2 000 = <b>600</b> (environ)."
+    },
+    {
+     "q": "Un jeu est gagnant avec la probabilité 0,2. Sur 2 000 parties, combien de parties gagnantes peut-on espérer environ ?",
+     "c": [
+      "800",
+      "1 600",
+      "20",
+      "400"
+     ],
+     "a": 3,
+     "e": "0,2 × 2 000 = <b>400</b> (environ)."
+    },
+    {
+     "q": "On lance une punaise 500 fois ; elle tombe 121 fois sur la pointe. Quelle est la fréquence de « pointe » ?",
+     "c": [
+      "0,242",
+      "121",
+      "0,758",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "121 ÷ 500 = <b>0,242</b>."
+    },
+    {
+     "q": "Un jeu est gagnant avec la probabilité 0,2. Sur 200 parties, combien de parties gagnantes peut-on espérer environ ?",
+     "c": [
+      "40",
+      "20",
+      "160",
+      "80"
+     ],
+     "a": 0,
+     "e": "0,2 × 200 = <b>40</b> (environ)."
+    },
+    {
+     "q": "On lance une punaise 1 000 fois ; elle tombe 425 fois sur la pointe. Quelle est la fréquence de « pointe » ?",
+     "c": [
+      "425",
+      "0,425",
+      "0,575",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "425 ÷ 1 000 = <b>0,425</b>."
+    }
+   ]
+  },
+  {
+   "title": "Problèmes",
+   "items": [
+    {
+     "q": "Un tiroir contient 5 chaussettes noires et 3 blanches. Adam en prend deux au hasard dans le noir. Quelle est la probabilité d’avoir une paire de même couleur ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>32</span></span>"
+     ],
+     "a": 2,
+     "e": "P(NN) + P(BB) = <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>13</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "Nathan propose : « On tire deux boules sans remise dans une urne de 2 rouges et 2 bleues. Si elles sont de même couleur, je gagne. » Le jeu est-il équitable ?",
+     "c": [
+      "non : P(même couleur) = 1/3",
+      "non : P(même couleur) = 2/3",
+      "oui : P(même couleur) = 1/2",
+      "oui, car il y a autant de rouges que de bleues"
+     ],
+     "a": 0,
+     "e": "P(RR) + P(BB) = 2/4 × 1/3 + 2/4 × 1/3 = <b>1/3</b> : le jeu n’est pas équitable."
+    },
+    {
+     "q": "Un code de 3 chiffres (0 à 9) est choisi au hasard. Quelle est la probabilité de le trouver du premier coup ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1 000</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>729</span></span>"
+     ],
+     "a": 2,
+     "e": "Il y a 10<sup>3</sup> = 1 000 codes : <b><span class='fr'><span class='fn'>1</span><span class='fd'>1 000</span></span></b>."
+    },
+    {
+     "q": "Un tiroir contient 3 chaussettes noires et 2 blanches. Léo en prend deux au hasard dans le noir. Quelle est la probabilité d’avoir une paire de même couleur ?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "P(NN) + P(BB) = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Un tiroir contient 3 chaussettes noires et 2 blanches. Gabriel en prend deux au hasard dans le noir. Quelle est la probabilité d’avoir une paire de même couleur ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(NN) + P(BB) = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Inès propose : « On tire deux boules sans remise dans une urne de 2 rouges et 2 bleues. Si elles sont de même couleur, je gagne. » Le jeu est-il équitable ?",
+     "c": [
+      "non : P(même couleur) = 1/3",
+      "oui, car il y a autant de rouges que de bleues",
+      "oui : P(même couleur) = 1/2",
+      "non : P(même couleur) = 2/3"
+     ],
+     "a": 0,
+     "e": "P(RR) + P(BB) = 2/4 × 1/3 + 2/4 × 1/3 = <b>1/3</b> : le jeu n’est pas équitable."
+    },
+    {
+     "q": "Jules propose : « On tire deux boules sans remise dans une urne de 2 rouges et 2 bleues. Si elles sont de même couleur, je gagne. » Le jeu est-il équitable ?",
+     "c": [
+      "oui, car il y a autant de rouges que de bleues",
+      "non : P(même couleur) = 1/3",
+      "oui : P(même couleur) = 1/2",
+      "non : P(même couleur) = 2/3"
+     ],
+     "a": 1,
+     "e": "P(RR) + P(BB) = 2/4 × 1/3 + 2/4 × 1/3 = <b>1/3</b> : le jeu n’est pas équitable."
+    },
+    {
+     "q": "Noah propose : « On tire deux boules sans remise dans une urne de 2 rouges et 2 bleues. Si elles sont de même couleur, je gagne. » Le jeu est-il équitable ?",
+     "c": [
+      "oui : P(même couleur) = 1/2",
+      "non : P(même couleur) = 2/3",
+      "non : P(même couleur) = 1/3",
+      "oui, car il y a autant de rouges que de bleues"
+     ],
+     "a": 2,
+     "e": "P(RR) + P(BB) = 2/4 × 1/3 + 2/4 × 1/3 = <b>1/3</b> : le jeu n’est pas équitable."
+    },
+    {
+     "q": "Nour propose : « On tire deux boules sans remise dans une urne de 2 rouges et 2 bleues. Si elles sont de même couleur, je gagne. » Le jeu est-il équitable ?",
+     "c": [
+      "oui : P(même couleur) = 1/2",
+      "non : P(même couleur) = 2/3",
+      "oui, car il y a autant de rouges que de bleues",
+      "non : P(même couleur) = 1/3"
+     ],
+     "a": 3,
+     "e": "P(RR) + P(BB) = 2/4 × 1/3 + 2/4 × 1/3 = <b>1/3</b> : le jeu n’est pas équitable."
+    },
+    {
+     "q": "Un tiroir contient 3 chaussettes noires et 5 blanches. Arthur en prend deux au hasard dans le noir. Quelle est la probabilité d’avoir une paire de même couleur ?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>"
+     ],
+     "a": 0,
+     "e": "P(NN) + P(BB) = <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>13</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "Emma propose : « On tire deux boules sans remise dans une urne de 2 rouges et 2 bleues. Si elles sont de même couleur, je gagne. » Le jeu est-il équitable ?",
+     "c": [
+      "non : P(même couleur) = 2/3",
+      "oui : P(même couleur) = 1/2",
+      "oui, car il y a autant de rouges que de bleues",
+      "non : P(même couleur) = 1/3"
+     ],
+     "a": 3,
+     "e": "P(RR) + P(BB) = 2/4 × 1/3 + 2/4 × 1/3 = <b>1/3</b> : le jeu n’est pas équitable."
+    },
+    {
+     "q": "Un tiroir contient 4 chaussettes noires et 5 blanches. Arthur en prend deux au hasard dans le noir. Quelle est la probabilité d’avoir une paire de même couleur ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "P(NN) + P(BB) = <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Un tiroir contient 2 chaussettes noires et 5 blanches. Jules en prend deux au hasard dans le noir. Quelle est la probabilité d’avoir une paire de même couleur ?",
+     "c": [
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span>"
+     ],
+     "a": 1,
+     "e": "P(NN) + P(BB) = <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>11</span><span class='fd'>21</span></span></b>."
+    },
+    {
+     "q": "Un tiroir contient 5 chaussettes noires et 3 blanches. Malo en prend deux au hasard dans le noir. Quelle est la probabilité d’avoir une paire de même couleur ?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>32</span></span>"
+     ],
+     "a": 0,
+     "e": "P(NN) + P(BB) = <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>13</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "Manon propose : « On tire deux boules sans remise dans une urne de 2 rouges et 2 bleues. Si elles sont de même couleur, je gagne. » Le jeu est-il équitable ?",
+     "c": [
+      "oui : P(même couleur) = 1/2",
+      "non : P(même couleur) = 2/3",
+      "oui, car il y a autant de rouges que de bleues",
+      "non : P(même couleur) = 1/3"
+     ],
+     "a": 3,
+     "e": "P(RR) + P(BB) = 2/4 × 1/3 + 2/4 × 1/3 = <b>1/3</b> : le jeu n’est pas équitable."
+    },
+    {
+     "q": "Un code de 4 chiffres (0 à 9) est choisi au hasard. Quelle est la probabilité de le trouver du premier coup ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10 000</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6561</span></span>"
+     ],
+     "a": 2,
+     "e": "Il y a 10<sup>4</sup> = 10 000 codes : <b><span class='fr'><span class='fn'>1</span><span class='fd'>10 000</span></span></b>."
+    },
+    {
+     "q": "Dans une classe, <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> des élèves font du théâtre. Parmi eux, <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> font aussi de la musique. On choisit un élève au hasard. Quelle est la probabilité qu’il fasse théâtre et musique ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Un tiroir contient 2 chaussettes noires et 4 blanches. Jade en prend deux au hasard dans le noir. Quelle est la probabilité d’avoir une paire de même couleur ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>"
+     ],
+     "a": 0,
+     "e": "P(NN) + P(BB) = <span class='fr'><span class='fn'>2</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Un tiroir contient 5 chaussettes noires et 3 blanches. Hugo en prend deux au hasard dans le noir. Quelle est la probabilité d’avoir une paire de même couleur ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>"
+     ],
+     "a": 2,
+     "e": "P(NN) + P(BB) = <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>13</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "Un tiroir contient 4 chaussettes noires et 2 blanches. Zoé en prend deux au hasard dans le noir. Quelle est la probabilité d’avoir une paire de même couleur ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(NN) + P(BB) = <span class='fr'><span class='fn'>4</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 16,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "3e"
+}
