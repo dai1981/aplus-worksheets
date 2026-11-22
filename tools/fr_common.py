@@ -22,6 +22,9 @@ DOMAIN = {
 }
 STD_URL_C3 = "https://www.education.gouv.fr/bo/2025/Hebdo16/MENE2504620A"
 DOMAIN_C3 = dict(DOMAIN, D="Organisation et gestion de données et probabilités", P="Proportionnalité")
+STD_URL_C4 = "https://www.education.gouv.fr/bo/2026/Hebdo10/MENE2602912A"
+DOMAIN_C4 = {"N": "Nombres et calculs", "A": "Calcul littéral et algébrique", "F": "Proportionnalité et fonctions",
+             "E": "Espace et géométrie", "D": "Données et probabilités"}
 GIRLS = ["Emma", "Léa", "Chloé", "Inès", "Jade", "Louise", "Manon", "Camille", "Zoé", "Lina", "Alice", "Rose", "Ambre", "Nour"]
 BOYS = ["Lucas", "Hugo", "Nathan", "Louis", "Gabriel", "Arthur", "Jules", "Adam", "Léo", "Tom", "Raphaël", "Sacha", "Noah", "Malo"]
 NB = " "
@@ -220,11 +223,13 @@ def make_unit(rnd, slug, dom, std_text, title, seo_title, short_title, meta_desc
             allq.add(k)
     balance(sets, rnd)
     title, seo_title, short_title, meta_desc, key_big, key_sub = [fp(plain_text(x)) for x in (title, seo_title, short_title, meta_desc, key_big, key_sub)]
-    c3 = grade in ("cm1", "cm2")
-    dname = (DOMAIN_C3 if c3 else DOMAIN)[dom]
+    c3 = grade in ("cm1", "cm2", "6e")
+    c4 = grade in ("5e", "4e", "3e")
+    dname = (DOMAIN_C4 if c4 else DOMAIN_C3 if c3 else DOMAIN)[dom]
+    glab = grade if grade[0].isdigit() else grade.upper()
     write_unit("fr", "maths", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
-        "domain": dname, "standard_code": "%s · %s" % (grade.upper(), dname), "standard_url": STD_URL_C3 if c3 else STD_URL,
+        "domain": dname, "standard_code": "%s · %s" % (glab, dname), "standard_url": STD_URL_C4 if c4 else STD_URL_C3 if c3 else STD_URL,
         "standard_text": fp(std_text), "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
         "body_html": body_html, "faq": [{"q": fp(q), "a": fp(a)} for q, a in faq], "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })
