@@ -1399,7 +1399,13 @@ IT / Matematica / Classe prima（20 まで。とても短い文、ほぼ全問�
 1. numeri-fino-a-10 ✓ 2. numeri-fino-a-20 ✓ 3. confrontare-i-numeri ✓ 4. amici-del-10 ✓ 5. addizioni-entro-10 ✓ 6. sottrazioni-entro-10 ✓ 7. addizioni-e-sottrazioni-entro-20 ✓
 8. problemi ✓ 9. euro ✓ 10. misure ✓ 11. il-tempo ✓ 12. linee-e-figure ✓ 13. posizioni-e-percorsi ✓ 14. ritmi-classificazioni-e-dati ✓
 
-IT の次: scuola secondaria di primo grado（prima〜terza media。grade は prima-media・seconda-media・terza-media、unit.php に年齢あり）。catalog.json に学年を足す
+IT / Matematica / Prima media・Seconda media（scuola secondaria di primo grado。grade は prima-media（sort 6）・seconda-media（7）・terza-media（8）、unit.php に年齢あり）— 生成スクリプトは `gen_it_matematica_m1_*`・`m2_*`（seed は 711NN・712NN）、共通部品は `tools/it_media.py`（d（コンマの小数、割り切れないと ValueError）・dk・fq（分数の HTML）・par・sgn・expr・val、M（正解と同じ値の誤答を落とす mcq(neg=True)、IT_WARN=1 で FILL）、W（None・負の数・重複を落とす）、L（lesson）、unit（standard_text の末尾は「al termine della classe terza della scuola secondaria di primo grado」）、figure（fr_c4）・kosy（de_k8）・kurve（de_k10））。
+domain に F Relazioni e funzioni を足した。座標は「P(3; 5)」（セミコロン）。seconda media の piano cartesiano は第 1 象限だけ（負の数は terza）。π・√2・√3 は 3,14・1,414・0,866 で計算。
+トピック（topic_defs_it）：mcd・insiemi・radice→numeri、segmenti・rette・pitagora・similitudine→geometria、statistic→dati-e-probabilita（out に cartesian）。proporzioni-e-funzioni（rapporti・proporzional・retta・funzion）と calcolo-letterale-ed-equazioni（letterale・monomi・polinomi・equazion）を足した
+Prima media: 1. insiemi ✓ 2. numeri-naturali-e-operazioni ✓ 4. potenze ✓ 5. espressioni ✓ 6. divisibilita-e-numeri-primi ✓ 7. mcd-e-mcm ✓ 8. frazioni ✓ 9. operazioni-con-le-frazioni ✓ 10. enti-geometrici-e-segmenti ✓ 11. angoli ✓ 12. rette-parallele-e-perpendicolari ✓ 13. triangoli ✓ 14. poligoni-e-quadrilateri ✓ 15. statistica ✓
+Seconda media: 1. numeri-decimali-e-frazioni ✓ 2. radice-quadrata ✓ 3. rapporti-e-proporzioni ✓ 4. proporzionalita-diretta-e-inversa ✓ 5. percentuali ✓ 6. piano-cartesiano-e-grafici ✓ 7. area-dei-poligoni ✓ 8. teorema-di-pitagora ✓ 9. applicazioni-del-teorema-di-pitagora ✓ 10. trasformazioni-isometriche ✓ 11. similitudine-e-talete ✓ 12. probabilita ✓
+
+IT の次: terza media（gen_it_matematica_m3_*、seed 713NN、catalog に sort 8）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

@@ -198,7 +198,8 @@ def make_unit(rnd, slug, dom, std_text, title, short_title, meta_desc,
     write_unit("it", "matematica", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
         "domain": dname, "standard_code": "%s · %s" % (gname, dname), "standard_url": STD_URL,
-        "standard_text": std_text + " (sintesi degli obiettivi di apprendimento al termine della classe %s, Indicazioni nazionali)" % ("quinta" if grade in ("classe-quarta", "classe-quinta") else "terza"),
+        "standard_text": std_text + (" (sintesi degli obiettivi di apprendimento al termine della classe terza della scuola secondaria di primo grado, Indicazioni nazionali)" if grade.endswith("-media") else
+                                      " (sintesi degli obiettivi di apprendimento al termine della classe %s, Indicazioni nazionali)" % ("quinta" if grade in ("classe-quarta", "classe-quinta") else "terza")),
         "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
         "body_html": body_html, "faq": [{"q": q, "a": a} for q, a in faq], "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })

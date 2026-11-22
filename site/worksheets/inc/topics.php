@@ -171,7 +171,7 @@ function topic_defs_fr() {
 function topic_defs_it() {
     return array(
         'numeri' => array('name' => 'Numeri',
-            'in' => '/numeri|ordinare|potenz|pari-e-dispari|espression|multipli/', 'out' => '/decimal|frazion/',
+            'in' => '/numeri|ordinare|potenz|pari-e-dispari|espression|multipli|mcd|insiemi|radice/', 'out' => '/decimal|frazion/',
             'blurb' => 'Leggere, scrivere e scomporre i numeri, il valore posizionale delle cifre, confrontare e ordinare i numeri sulla retta.'),
         'addizione-e-sottrazione' => array('name' => 'Addizione e sottrazione',
             'in' => '/addizion|sottrazion|calcolo-mentale|amici-del/', 'out' => '/^$/',
@@ -189,10 +189,16 @@ function topic_defs_it() {
             'in' => '/misure|lunghezz|peso|capacit|euro|orologio|tempo/', 'out' => '/^$/',
             'blurb' => 'Misure di lunghezza, peso e capacità, equivalenze, l’euro, l’orologio e la durata del tempo.'),
         'geometria' => array('name' => 'Geometria',
-            'in' => '/linee|angoli|figure|poligon|perimetro|solidi|simmetria|percorsi|cerchio|trasformazion|cartesian|triangol|quadrilater|isometri|(^|-)area(-|$)/', 'out' => '/^$/',
+            'in' => '/linee|angoli|figure|poligon|perimetro|solidi|simmetria|percorsi|cerchio|circonferenz|trasformazion|cartesian|triangol|quadrilater|isometri|segmenti|rette|pitagora|similitudine|poliedri|rotazione|(^|-)area(-|$)/', 'out' => '/^$/',
             'blurb' => 'Linee e angoli, poligoni e perimetro, figure solide, simmetria, percorsi e reticoli.'),
+        'proporzioni-e-funzioni' => array('name' => 'Proporzioni e funzioni',
+            'in' => '/rapporti|proporzional|(^|-)retta(-|$)|funzion/', 'out' => '/^$/',
+            'blurb' => 'Rapporti e proporzioni, grandezze direttamente e inversamente proporzionali, funzioni e rette nel piano cartesiano.'),
+        'calcolo-letterale-ed-equazioni' => array('name' => 'Calcolo letterale ed equazioni',
+            'in' => '/letterale|monomi|polinomi|equazion|prodotti-notevoli/', 'out' => '/^$/',
+            'blurb' => 'Monomi e polinomi, prodotti notevoli, equazioni di primo grado e problemi risolti con le equazioni.'),
         'dati-e-probabilita' => array('name' => 'Dati e probabilità',
-            'in' => '/dati|probabilit|grafic|indagin/', 'out' => '/^$/',
+            'in' => '/dati|probabilit|grafic|indagin|statistic/', 'out' => '/cartesian/',
             'blurb' => 'Indagini, tabelle, ideogrammi e istogrammi, la moda, eventi certi, possibili e impossibili.'),
     );
 }
