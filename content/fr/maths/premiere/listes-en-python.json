@@ -1,0 +1,1157 @@
+{
+ "slug": "listes-en-python",
+ "title": "Listes en Python",
+ "seo_title": "Listes en Python première : fiches et exercices avec corrigé",
+ "short_title": "Listes en Python",
+ "domain": "Algorithmique et programmation",
+ "standard_code": "Première spécialité · Algorithmique et programmation",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A",
+ "standard_text": "Générer une liste en extension, par ajouts successifs ou en compréhension ; manipuler des éléments et des indices ; parcourir une liste ; itérer sur les éléments ; utiliser des listes pour les termes d’une suite, des simulations et des statistiques (résumé du programme 2026 de spécialité de première)",
+ "meta_desc": "Fiches de maths première sur les listes en Python : indices, len, append, listes en compréhension, parcours, termes de suites, moyenne, maximum et simulations. 100 exercices corrigés.",
+ "key_big": "Le premier indice d’une liste est 0",
+ "key_sub": "L = [f(k) for k in range(n)]",
+ "body_html": "<h2>Comment faire</h2><p>Une liste se crée <b>en extension</b> (L = [3, 5, 8]), <b>par ajouts</b> (L = [] puis L.append(x)) ou <b>en compréhension</b> (L = [k ** 2 for k in range(5)]).</p><p>Les indices commencent à <b>0</b> : L[0] est le premier élément, L[len(L) − 1] (ou L[-1]) le dernier. len(L) donne le nombre d’éléments.</p><p>On parcourt une liste par ses éléments (for x in L) ou par ses indices (for i in range(len(L))). range(a, b) va de a à b − 1.</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>L = [2 * k + 1 for k in range(4)]</p><p class='sn-ex-s'>k = 0, 1, 2, 3</p><p class='sn-ex-s'>2k + 1 = 1, 3, 5, 7</p><p class='sn-ex-a'>Réponse : L = [1, 3, 5, 7]</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>L[1] est le premier élément</td><td>C’est L[0] ; L[1] est le deuxième.</td></tr><tr><td>range(1, 5) va jusqu’à 5</td><td>Il s’arrête à 4.</td></tr><tr><td>L[len(L)] est le dernier élément</td><td>Il n’existe pas : le dernier est L[len(L) − 1].</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Pourquoi utiliser des listes en mathématiques ?",
+   "a": "Pour stocker les termes d’une suite, des résultats de simulation ou des données statistiques, puis calculer une somme, une moyenne, un maximum ou une fréquence."
+  },
+  {
+   "q": "Quelle différence entre L.append(x) et L[i] = x ?",
+   "a": "append ajoute x à la fin (la liste s’allonge) ; L[i] = x remplace l’élément d’indice i (même longueur)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Indices et longueur",
+   "items": [
+    {
+     "q": "L = [37, 1, 36, 2, 3, 30, 34]. Que vaut L[2] ?",
+     "c": [
+      "2",
+      "36",
+      "1",
+      "37"
+     ],
+     "a": 1,
+     "e": "Les indices commencent à 0 : L[2] est le 3<sup>e</sup> élément, <b>36</b>."
+    },
+    {
+     "q": "L = [19, 12, 18, 39, 9]. Que vaut L[4] ?",
+     "c": [
+      "4",
+      "39",
+      "9",
+      "19"
+     ],
+     "a": 2,
+     "e": "Les indices commencent à 0 : L[4] est le 5<sup>e</sup> élément, <b>9</b>."
+    },
+    {
+     "q": "L = [9, 24, 37, 16, 13, 0]. Que vaut L[0] ?",
+     "c": [
+      "0",
+      "9",
+      "10",
+      "24"
+     ],
+     "a": 1,
+     "e": "Les indices commencent à 0 : L[0] est le 1<sup>er</sup> élément, <b>9</b>."
+    },
+    {
+     "q": "L = [14, 9, 32, 20, 0]. Que vaut L[3] ?",
+     "c": [
+      "20",
+      "32",
+      "3",
+      "0"
+     ],
+     "a": 0,
+     "e": "Les indices commencent à 0 : L[3] est le 4<sup>e</sup> élément, <b>20</b>."
+    },
+    {
+     "q": "L = [4, 5, 7, 36, 27, 9, 39]. Que vaut L[0] ?",
+     "c": [
+      "3",
+      "0",
+      "5",
+      "4"
+     ],
+     "a": 3,
+     "e": "Les indices commencent à 0 : L[0] est le 1<sup>er</sup> élément, <b>4</b>."
+    },
+    {
+     "q": "L = [31, 0, 6, 38, 27]. Quelle instruction donne le dernier élément ?",
+     "c": [
+      "L[5]",
+      "L[1]",
+      "L[4]",
+      "L[27]"
+     ],
+     "a": 2,
+     "e": "Il y a 5 éléments, d’indices 0 à 4 : <b>L[4]</b> (ou L[-1]). L[5] provoque une erreur."
+    },
+    {
+     "q": "L = [10, 20, 39, 8, 32]. Que vaut len(L) ?",
+     "c": [
+      "4",
+      "39",
+      "109",
+      "5"
+     ],
+     "a": 3,
+     "e": "len(L) est le nombre d’éléments : <b>5</b>."
+    },
+    {
+     "q": "L = [38, 31, 16, 0]. Quelle instruction donne le dernier élément ?",
+     "c": [
+      "L[1]",
+      "L[4]",
+      "L[0]",
+      "L[3]"
+     ],
+     "a": 3,
+     "e": "Il y a 4 éléments, d’indices 0 à 3 : <b>L[3]</b> (ou L[-1]). L[4] provoque une erreur."
+    },
+    {
+     "q": "L = [16, 8, 35, 10, 20]. Que vaut L[3] ?",
+     "c": [
+      "10",
+      "35",
+      "20",
+      "3"
+     ],
+     "a": 0,
+     "e": "Les indices commencent à 0 : L[3] est le 4<sup>e</sup> élément, <b>10</b>."
+    },
+    {
+     "q": "L = [34, 22, 27, 20, 15, 13, 38]. Que vaut L[6] ?",
+     "c": [
+      "6",
+      "38",
+      "34",
+      "13"
+     ],
+     "a": 1,
+     "e": "Les indices commencent à 0 : L[6] est le 7<sup>e</sup> élément, <b>38</b>."
+    },
+    {
+     "q": "L = [18, 21, 25, 8, 7, 4, 5]. Quelle instruction donne le dernier élément ?",
+     "c": [
+      "L[6]",
+      "L[5]",
+      "L[7]",
+      "L[1]"
+     ],
+     "a": 0,
+     "e": "Il y a 7 éléments, d’indices 0 à 6 : <b>L[6]</b> (ou L[-1]). L[7] provoque une erreur."
+    },
+    {
+     "q": "L = [19, 20, 37, 17, 38]. Que vaut len(L) ?",
+     "c": [
+      "131",
+      "5",
+      "4",
+      "38"
+     ],
+     "a": 1,
+     "e": "len(L) est le nombre d’éléments : <b>5</b>."
+    },
+    {
+     "q": "L = [26, 20, 21, 23, 39]. Que vaut L[2] ?",
+     "c": [
+      "2",
+      "21",
+      "20",
+      "23"
+     ],
+     "a": 1,
+     "e": "Les indices commencent à 0 : L[2] est le 3<sup>e</sup> élément, <b>21</b>."
+    },
+    {
+     "q": "L = [10, 38, 35, 20, 32, 13, 30]. Que vaut L[-1] ?",
+     "c": [
+      "30",
+      "10",
+      "13",
+      "une erreur"
+     ],
+     "a": 0,
+     "e": "L[-1] est le dernier élément : <b>30</b>."
+    },
+    {
+     "q": "L = [5, 11, 10, 28]. Que vaut len(L) ?",
+     "c": [
+      "28",
+      "3",
+      "4",
+      "54"
+     ],
+     "a": 2,
+     "e": "len(L) est le nombre d’éléments : <b>4</b>."
+    },
+    {
+     "q": "L = [20, 37, 14, 2, 36]. Que vaut L[2] ?",
+     "c": [
+      "37",
+      "2",
+      "15",
+      "14"
+     ],
+     "a": 3,
+     "e": "Les indices commencent à 0 : L[2] est le 3<sup>e</sup> élément, <b>14</b>."
+    },
+    {
+     "q": "L = [36, 30, 21, 7, 16]. Que vaut len(L) ?",
+     "c": [
+      "36",
+      "110",
+      "4",
+      "5"
+     ],
+     "a": 3,
+     "e": "len(L) est le nombre d’éléments : <b>5</b>."
+    },
+    {
+     "q": "L = [38, 8, 9, 33, 37, 26, 2]. Que vaut L[2] ?",
+     "c": [
+      "9",
+      "8",
+      "2",
+      "33"
+     ],
+     "a": 0,
+     "e": "Les indices commencent à 0 : L[2] est le 3<sup>e</sup> élément, <b>9</b>."
+    },
+    {
+     "q": "L = [33, 37, 24, 25, 28]. Quelle instruction donne le dernier élément ?",
+     "c": [
+      "L[1]",
+      "L[28]",
+      "L[4]",
+      "L[5]"
+     ],
+     "a": 2,
+     "e": "Il y a 5 éléments, d’indices 0 à 4 : <b>L[4]</b> (ou L[-1]). L[5] provoque une erreur."
+    },
+    {
+     "q": "L = [10, 36, 24, 17, 18, 6, 4]. Quelle instruction donne le dernier élément ?",
+     "c": [
+      "L[4]",
+      "L[1]",
+      "L[6]",
+      "L[7]"
+     ],
+     "a": 2,
+     "e": "Il y a 7 éléments, d’indices 0 à 6 : <b>L[6]</b> (ou L[-1]). L[7] provoque une erreur."
+    }
+   ]
+  },
+  {
+   "title": "Listes en compréhension et range",
+   "items": [
+    {
+     "q": "Que contient L ?<span class='code'>L = [3 * k + 3 for k in range(4)]</span>",
+     "c": [
+      "[3, 6, 9, 12]",
+      "[6, 9, 12, 15]",
+      "[3, 6, 9, 12, 15]",
+      "[0, 3, 6, 9]"
+     ],
+     "a": 0,
+     "e": "k prend les valeurs 0 à 3 : <b>[3, 6, 9, 12]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [k ** 2 for k in range(1, 6)]</span>",
+     "c": [
+      "[2, 4, 6, 8, 10]",
+      "[1, 4, 9, 16, 25]",
+      "[1, 4, 9, 16, 25, 36]",
+      "[0, 1, 4, 9, 16]"
+     ],
+     "a": 1,
+     "e": "k va de 1 à 5 (range s’arrête avant 6) : <b>[1, 4, 9, 16, 25]</b>."
+    },
+    {
+     "q": "Que contient list(range(2, 10, 3)) ?",
+     "c": [
+      "[2, 5, 8]",
+      "[3, 6, 9]",
+      "[2, 3, 4, 5, 6, 7, 8, 9]",
+      "[2, 5, 9]"
+     ],
+     "a": 0,
+     "e": "On commence à 2, on avance de 3 et on s’arrête <b>avant</b> 10 : <b>[2, 5, 8]</b>."
+    },
+    {
+     "q": "Que contient list(range(2, 9, 3)) ?",
+     "c": [
+      "[2, 3, 4, 5, 6, 7, 8]",
+      "[3, 6, 9]",
+      "[2, 5, 9]",
+      "[2, 5, 8]"
+     ],
+     "a": 3,
+     "e": "On commence à 2, on avance de 3 et on s’arrête <b>avant</b> 9 : <b>[2, 5, 8]</b>."
+    },
+    {
+     "q": "L = [9, 2, 15, 8, 1, 3]. Que contient M ?<span class='code'>M = [x for x in L if x &gt; 10]</span>",
+     "c": [
+      "[2]",
+      "[9, 2, 8, 1, 3]",
+      "[15]",
+      "[16]"
+     ],
+     "a": 2,
+     "e": "On garde les éléments strictement supérieurs à 10, dans l’ordre : <b>[15]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [2 * k + 2 for k in range(3)]</span>",
+     "c": [
+      "[4, 6, 8]",
+      "[0, 2, 4]",
+      "[2, 4, 6, 8]",
+      "[2, 4, 6]"
+     ],
+     "a": 3,
+     "e": "k prend les valeurs 0 à 2 : <b>[2, 4, 6]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [2 * k + 5 for k in range(5)]</span>",
+     "c": [
+      "[5, 7, 9, 11, 13]",
+      "[5, 7, 9, 11, 13, 15]",
+      "[0, 2, 4, 6, 8]",
+      "[7, 9, 11, 13, 15]"
+     ],
+     "a": 0,
+     "e": "k prend les valeurs 0 à 4 : <b>[5, 7, 9, 11, 13]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [3 * k + 2 for k in range(5)]</span>",
+     "c": [
+      "[0, 3, 6, 9, 12]",
+      "[2, 5, 8, 11, 14, 17]",
+      "[2, 5, 8, 11, 14]",
+      "[5, 8, 11, 14, 17]"
+     ],
+     "a": 2,
+     "e": "k prend les valeurs 0 à 4 : <b>[2, 5, 8, 11, 14]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [5 * k + 2 for k in range(5)]</span>",
+     "c": [
+      "[2, 7, 12, 17, 22, 27]",
+      "[2, 7, 12, 17, 22]",
+      "[0, 5, 10, 15, 20]",
+      "[7, 12, 17, 22, 27]"
+     ],
+     "a": 1,
+     "e": "k prend les valeurs 0 à 4 : <b>[2, 7, 12, 17, 22]</b>."
+    },
+    {
+     "q": "Que contient list(range(4, 7, 3)) ?",
+     "c": [
+      "[4, 7]",
+      "[5]",
+      "[4]",
+      "[4, 5, 6]"
+     ],
+     "a": 2,
+     "e": "On commence à 4, on avance de 3 et on s’arrête <b>avant</b> 7 : <b>[4]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [4 * k + 4 for k in range(6)]</span>",
+     "c": [
+      "[4, 8, 12, 16, 20, 24, 28]",
+      "[8, 12, 16, 20, 24, 28]",
+      "[0, 4, 8, 12, 16, 20]",
+      "[4, 8, 12, 16, 20, 24]"
+     ],
+     "a": 3,
+     "e": "k prend les valeurs 0 à 5 : <b>[4, 8, 12, 16, 20, 24]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [3 * k + 5 for k in range(6)]</span>",
+     "c": [
+      "[8, 11, 14, 17, 20, 23]",
+      "[5, 8, 11, 14, 17, 20]",
+      "[5, 8, 11, 14, 17, 20, 23]",
+      "[0, 3, 6, 9, 12, 15]"
+     ],
+     "a": 1,
+     "e": "k prend les valeurs 0 à 5 : <b>[5, 8, 11, 14, 17, 20]</b>."
+    },
+    {
+     "q": "Que contient list(range(2, 12, 2)) ?",
+     "c": [
+      "[2, 4, 6, 8, 10]",
+      "[2, 3, 4, 5, 6, 7, 8, 9, 10, 11]",
+      "[3, 5, 7, 9, 11]",
+      "[2, 4, 6, 8, 10, 12]"
+     ],
+     "a": 0,
+     "e": "On commence à 2, on avance de 2 et on s’arrête <b>avant</b> 12 : <b>[2, 4, 6, 8, 10]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [5 * k + 1 for k in range(5)]</span>",
+     "c": [
+      "[1, 6, 11, 16, 21, 26]",
+      "[1, 6, 11, 16, 21]",
+      "[0, 5, 10, 15, 20]",
+      "[6, 11, 16, 21, 26]"
+     ],
+     "a": 1,
+     "e": "k prend les valeurs 0 à 4 : <b>[1, 6, 11, 16, 21]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [5 * k + 1 for k in range(3)]</span>",
+     "c": [
+      "[1, 6, 11]",
+      "[1, 6, 11, 16]",
+      "[6, 11, 16]",
+      "[0, 5, 10]"
+     ],
+     "a": 0,
+     "e": "k prend les valeurs 0 à 2 : <b>[1, 6, 11]</b>."
+    },
+    {
+     "q": "Que contient list(range(3, 8, 2)) ?",
+     "c": [
+      "[3, 4, 5, 6, 7]",
+      "[4, 6, 8]",
+      "[3, 5, 8]",
+      "[3, 5, 7]"
+     ],
+     "a": 3,
+     "e": "On commence à 3, on avance de 2 et on s’arrête <b>avant</b> 8 : <b>[3, 5, 7]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [2 * k + 2 for k in range(5)]</span>",
+     "c": [
+      "[4, 6, 8, 10, 12]",
+      "[2, 4, 6, 8, 10, 12]",
+      "[0, 2, 4, 6, 8]",
+      "[2, 4, 6, 8, 10]"
+     ],
+     "a": 3,
+     "e": "k prend les valeurs 0 à 4 : <b>[2, 4, 6, 8, 10]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [k ** 2 for k in range(1, 7)]</span>",
+     "c": [
+      "[0, 1, 4, 9, 16, 25]",
+      "[1, 4, 9, 16, 25, 36, 49]",
+      "[1, 4, 9, 16, 25, 36]",
+      "[2, 4, 6, 8, 10, 12]"
+     ],
+     "a": 2,
+     "e": "k va de 1 à 6 (range s’arrête avant 7) : <b>[1, 4, 9, 16, 25, 36]</b>."
+    },
+    {
+     "q": "Que contient list(range(4, 12, 3)) ?",
+     "c": [
+      "[4, 7, 11]",
+      "[4, 5, 6, 7, 8, 9, 10, 11]",
+      "[4, 7, 10]",
+      "[5, 8, 11]"
+     ],
+     "a": 2,
+     "e": "On commence à 4, on avance de 3 et on s’arrête <b>avant</b> 12 : <b>[4, 7, 10]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [k ** 2 for k in range(1, 4)]</span>",
+     "c": [
+      "[0, 1, 4]",
+      "[1, 4, 9]",
+      "[2, 4, 6]",
+      "[1, 4, 9, 16]"
+     ],
+     "a": 1,
+     "e": "k va de 1 à 3 (range s’arrête avant 4) : <b>[1, 4, 9]</b>."
+    }
+   ]
+  },
+  {
+   "title": "Ajouter, parcourir, modifier",
+   "items": [
+    {
+     "q": "L = [16, 10, 2, 12, 4]. Que vaut s à la fin ?<span class='code'>s = 0<br>for x in L:<br>    s = s + x</span>",
+     "c": [
+      "5",
+      "10",
+      "44",
+      "40"
+     ],
+     "a": 2,
+     "e": "On ajoute chaque élément : s = <b>44</b> (comme sum(L))."
+    },
+    {
+     "q": "L = [2, 3, 6, 2, 2, 6, 1, 4]. Que vaut c à la fin ?<span class='code'>c = 0<br>for x in L:<br>    if x == 3:<br>        c = c + 1</span>",
+     "c": [
+      "1",
+      "8",
+      "3",
+      "2"
+     ],
+     "a": 0,
+     "e": "c compte les éléments égaux à 3 : <b>1</b>."
+    },
+    {
+     "q": "L = [14, 10, 3, 4, 8]. Que contient L après l’instruction L[0] = 40 ?",
+     "c": [
+      "[14, 40, 3, 4, 8]",
+      "[14, 10, 3, 4, 8, 40]",
+      "[40, 14, 10, 3, 4, 8]",
+      "[40, 10, 3, 4, 8]"
+     ],
+     "a": 3,
+     "e": "L’élément d’indice 0 est remplacé (la liste garde 5 éléments) : <b>[40, 10, 3, 4, 8]</b>."
+    },
+    {
+     "q": "L = [7, 14, 10, 4, 8]. Que contient L après l’instruction L[0] = 26 ?",
+     "c": [
+      "[7, 26, 10, 4, 8]",
+      "[26, 7, 14, 10, 4, 8]",
+      "[7, 14, 10, 4, 8, 26]",
+      "[26, 14, 10, 4, 8]"
+     ],
+     "a": 3,
+     "e": "L’élément d’indice 0 est remplacé (la liste garde 5 éléments) : <b>[26, 14, 10, 4, 8]</b>."
+    },
+    {
+     "q": "L = [2, 4, 14, 9]. Que vaut s à la fin ?<span class='code'>s = 0<br>for x in L:<br>    s = s + x</span>",
+     "c": [
+      "20",
+      "6",
+      "29",
+      "4"
+     ],
+     "a": 2,
+     "e": "On ajoute chaque élément : s = <b>29</b> (comme sum(L))."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>L = []<br>for i in range(3):<br>    L.append(1 * i)</span>",
+     "c": [
+      "[0, 1, 2]",
+      "[0, 1]",
+      "[2]",
+      "[1, 2, 3]"
+     ],
+     "a": 0,
+     "e": "À chaque tour, append ajoute 1 × i à la fin : <b>[0, 1, 2]</b>."
+    },
+    {
+     "q": "L = [1, 6, 2, 5, 4, 6, 1, 1, 2]. Que vaut c à la fin ?<span class='code'>c = 0<br>for x in L:<br>    if x == 6:<br>        c = c + 1</span>",
+     "c": [
+      "2",
+      "9",
+      "6",
+      "3"
+     ],
+     "a": 0,
+     "e": "c compte les éléments égaux à 6 : <b>2</b>."
+    },
+    {
+     "q": "L = [8, 2, 14, 3, 7, 11]. Que vaut s à la fin ?<span class='code'>s = 0<br>for x in L:<br>    s = s + x</span>",
+     "c": [
+      "34",
+      "6",
+      "45",
+      "15"
+     ],
+     "a": 2,
+     "e": "On ajoute chaque élément : s = <b>45</b> (comme sum(L))."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>L = []<br>for i in range(5):<br>    L.append(4 * i)</span>",
+     "c": [
+      "[0, 4, 8, 12, 16]",
+      "[4, 8, 12, 16, 20]",
+      "[16]",
+      "[0, 4, 8, 12]"
+     ],
+     "a": 0,
+     "e": "À chaque tour, append ajoute 4 × i à la fin : <b>[0, 4, 8, 12, 16]</b>."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>L = []<br>for i in range(4):<br>    L.append(3 * i)</span>",
+     "c": [
+      "[3, 6, 9, 12]",
+      "[0, 3, 6, 9]",
+      "[0, 3, 6]",
+      "[9]"
+     ],
+     "a": 1,
+     "e": "À chaque tour, append ajoute 3 × i à la fin : <b>[0, 3, 6, 9]</b>."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>L = []<br>for i in range(4):<br>    L.append(2 * i)</span>",
+     "c": [
+      "[0, 2, 4]",
+      "[0, 2, 4, 6]",
+      "[2, 4, 6, 8]",
+      "[6]"
+     ],
+     "a": 1,
+     "e": "À chaque tour, append ajoute 2 × i à la fin : <b>[0, 2, 4, 6]</b>."
+    },
+    {
+     "q": "L = [6, 2, 6, 2, 5, 6]. Que vaut c à la fin ?<span class='code'>c = 0<br>for x in L:<br>    if x == 6:<br>        c = c + 1</span>",
+     "c": [
+      "6",
+      "3",
+      "4",
+      "0"
+     ],
+     "a": 1,
+     "e": "c compte les éléments égaux à 6 : <b>3</b>."
+    },
+    {
+     "q": "L = [1, 12, 3, 14]. Que vaut s à la fin ?<span class='code'>s = 0<br>for x in L:<br>    s = s + x</span>",
+     "c": [
+      "6",
+      "16",
+      "4",
+      "30"
+     ],
+     "a": 3,
+     "e": "On ajoute chaque élément : s = <b>30</b> (comme sum(L))."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>L = []<br>for i in range(5):<br>    L.append(2 * i)</span>",
+     "c": [
+      "[2, 4, 6, 8, 10]",
+      "[0, 2, 4, 6]",
+      "[0, 2, 4, 6, 8]",
+      "[8]"
+     ],
+     "a": 2,
+     "e": "À chaque tour, append ajoute 2 × i à la fin : <b>[0, 2, 4, 6, 8]</b>."
+    },
+    {
+     "q": "L = [3, 2, 1, 6, 1, 2, 5, 3]. Que vaut c à la fin ?<span class='code'>c = 0<br>for x in L:<br>    if x == 1:<br>        c = c + 1</span>",
+     "c": [
+      "3",
+      "8",
+      "1",
+      "2"
+     ],
+     "a": 3,
+     "e": "c compte les éléments égaux à 1 : <b>2</b>."
+    },
+    {
+     "q": "L = [5, 11, 7, 14, 1]. Que contient L après l’instruction L[0] = 25 ?",
+     "c": [
+      "[5, 11, 7, 14, 1, 25]",
+      "[5, 25, 7, 14, 1]",
+      "[25, 5, 11, 7, 14, 1]",
+      "[25, 11, 7, 14, 1]"
+     ],
+     "a": 3,
+     "e": "L’élément d’indice 0 est remplacé (la liste garde 5 éléments) : <b>[25, 11, 7, 14, 1]</b>."
+    },
+    {
+     "q": "L = [5, 10, 13, 2, 4]. Que contient L après l’instruction L[4] = 27 ?",
+     "c": [
+      "[27, 10, 13, 2, 4]",
+      "[5, 10, 13, 2, 27]",
+      "[5, 10, 13, 2, 27, 4]",
+      "[5, 10, 13, 2, 4, 27]"
+     ],
+     "a": 1,
+     "e": "L’élément d’indice 4 est remplacé (la liste garde 5 éléments) : <b>[5, 10, 13, 2, 27]</b>."
+    },
+    {
+     "q": "L = [15, 7, 16, 14, 18]. Que vaut s à la fin ?<span class='code'>s = 0<br>for x in L:<br>    s = s + x</span>",
+     "c": [
+      "52",
+      "70",
+      "10",
+      "5"
+     ],
+     "a": 1,
+     "e": "On ajoute chaque élément : s = <b>70</b> (comme sum(L))."
+    },
+    {
+     "q": "L = [5, 11, 13, 12, 14]. Que contient L après l’instruction L[1] = 40 ?",
+     "c": [
+      "[5, 40, 11, 13, 12, 14]",
+      "[5, 11, 13, 12, 14, 40]",
+      "[5, 40, 13, 12, 14]",
+      "[5, 11, 40, 12, 14]"
+     ],
+     "a": 2,
+     "e": "L’élément d’indice 1 est remplacé (la liste garde 5 éléments) : <b>[5, 40, 13, 12, 14]</b>."
+    },
+    {
+     "q": "L = [14, 11, 4, 9, 19, 13]. Que vaut s à la fin ?<span class='code'>s = 0<br>for x in L:<br>    s = s + x</span>",
+     "c": [
+      "70",
+      "15",
+      "6",
+      "57"
+     ],
+     "a": 0,
+     "e": "On ajoute chaque élément : s = <b>70</b> (comme sum(L))."
+    }
+   ]
+  },
+  {
+   "title": "Listes et suites",
+   "items": [
+    {
+     "q": "L = [11, 8, 14, 19, 20]. Que renvoie moyenne(L) ?<span class='code'>def moyenne(L):<br>    return sum(L) / len(L)</span>",
+     "c": [
+      "18",
+      "20",
+      "14.4",
+      "72"
+     ],
+     "a": 2,
+     "e": "sum(L) = 72 et len(L) = 5 : 72 / 5 = <b>14.4</b> (Python écrit le point décimal)."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>u = 4<br>L = [u]<br>for k in range(3):<br>    u = u + 4<br>    L.append(u)</span>",
+     "c": [
+      "[8, 12, 16, 20]",
+      "[4, 8, 12, 16, 20]",
+      "[4, 8, 12]",
+      "[4, 8, 12, 16]"
+     ],
+     "a": 3,
+     "e": "L contient u<sub>0</sub> puis les 3 termes suivants : <b>[4, 8, 12, 16]</b>."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>u = 6<br>L = [u]<br>for k in range(3):<br>    u = u + 2<br>    L.append(u)</span>",
+     "c": [
+      "[6, 8, 10]",
+      "[8, 10, 12, 14]",
+      "[6, 8, 10, 12]",
+      "[6, 8, 10, 12, 14]"
+     ],
+     "a": 2,
+     "e": "L contient u<sub>0</sub> puis les 3 termes suivants : <b>[6, 8, 10, 12]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [3 * 3 ** n for n in range(4)]</span>",
+     "c": [
+      "[0, 9, 18, 27]",
+      "[1, 9, 81, 729]",
+      "[9, 27, 81, 243]",
+      "[3, 9, 27, 81]"
+     ],
+     "a": 3,
+     "e": "Termes u<sub>0</sub> à u<sub>3</sub> de la suite géométrique : <b>[3, 9, 27, 81]</b>."
+    },
+    {
+     "q": "L = [20, 6, 16, 13, 17]. Que renvoie moyenne(L) ?<span class='code'>def moyenne(L):<br>    return sum(L) / len(L)</span>",
+     "c": [
+      "20",
+      "14.4",
+      "18",
+      "72"
+     ],
+     "a": 1,
+     "e": "sum(L) = 72 et len(L) = 5 : 72 / 5 = <b>14.4</b> (Python écrit le point décimal)."
+    },
+    {
+     "q": "L = [14, 8, 11, 8]. Que renvoie moyenne(L) ?<span class='code'>def moyenne(L):<br>    return sum(L) / len(L)</span>",
+     "c": [
+      "10.25",
+      "41",
+      "14",
+      "4"
+     ],
+     "a": 0,
+     "e": "sum(L) = 41 et len(L) = 4 : 41 / 4 = <b>10.25</b> (Python écrit le point décimal)."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>u = 5<br>L = [u]<br>for k in range(5):<br>    u = u + 3<br>    L.append(u)</span>",
+     "c": [
+      "[5, 8, 11, 14, 17, 20]",
+      "[5, 8, 11, 14, 17, 20, 23]",
+      "[5, 8, 11, 14, 17]",
+      "[8, 11, 14, 17, 20, 23]"
+     ],
+     "a": 0,
+     "e": "L contient u<sub>0</sub> puis les 5 termes suivants : <b>[5, 8, 11, 14, 17, 20]</b>."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>u = 8<br>L = [u]<br>for k in range(4):<br>    u = u + 3<br>    L.append(u)</span>",
+     "c": [
+      "[8, 11, 14, 17]",
+      "[8, 11, 14, 17, 20]",
+      "[8, 11, 14, 17, 20, 23]",
+      "[11, 14, 17, 20, 23]"
+     ],
+     "a": 1,
+     "e": "L contient u<sub>0</sub> puis les 4 termes suivants : <b>[8, 11, 14, 17, 20]</b>."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>u = 2<br>L = [u]<br>for k in range(5):<br>    u = u + 5<br>    L.append(u)</span>",
+     "c": [
+      "[2, 7, 12, 17, 22]",
+      "[2, 7, 12, 17, 22, 27, 32]",
+      "[7, 12, 17, 22, 27, 32]",
+      "[2, 7, 12, 17, 22, 27]"
+     ],
+     "a": 3,
+     "e": "L contient u<sub>0</sub> puis les 5 termes suivants : <b>[2, 7, 12, 17, 22, 27]</b>."
+    },
+    {
+     "q": "L = [7, 17, 16, 5]. Que renvoie moyenne(L) ?<span class='code'>def moyenne(L):<br>    return sum(L) / len(L)</span>",
+     "c": [
+      "11.25",
+      "15",
+      "45",
+      "17"
+     ],
+     "a": 0,
+     "e": "sum(L) = 45 et len(L) = 4 : 45 / 4 = <b>11.25</b> (Python écrit le point décimal)."
+    },
+    {
+     "q": "L = [7, 18, 18, 19, 16]. Que renvoie moyenne(L) ?<span class='code'>def moyenne(L):<br>    return sum(L) / len(L)</span>",
+     "c": [
+      "19.5",
+      "19",
+      "78",
+      "15.6"
+     ],
+     "a": 3,
+     "e": "sum(L) = 78 et len(L) = 5 : 78 / 5 = <b>15.6</b> (Python écrit le point décimal)."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>u = 4<br>L = [u]<br>for k in range(5):<br>    u = u + 4<br>    L.append(u)</span>",
+     "c": [
+      "[4, 8, 12, 16, 20, 24, 28]",
+      "[4, 8, 12, 16, 20, 24]",
+      "[8, 12, 16, 20, 24, 28]",
+      "[4, 8, 12, 16, 20]"
+     ],
+     "a": 1,
+     "e": "L contient u<sub>0</sub> puis les 5 termes suivants : <b>[4, 8, 12, 16, 20, 24]</b>."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>u = 7<br>L = [u]<br>for k in range(5):<br>    u = u + 4<br>    L.append(u)</span>",
+     "c": [
+      "[7, 11, 15, 19, 23]",
+      "[7, 11, 15, 19, 23, 27]",
+      "[7, 11, 15, 19, 23, 27, 31]",
+      "[11, 15, 19, 23, 27, 31]"
+     ],
+     "a": 1,
+     "e": "L contient u<sub>0</sub> puis les 5 termes suivants : <b>[7, 11, 15, 19, 23, 27]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [2 * 2 ** n for n in range(4)]</span>",
+     "c": [
+      "[2, 4, 8, 16]",
+      "[4, 8, 16, 32]",
+      "[0, 4, 8, 12]",
+      "[1, 4, 16, 64]"
+     ],
+     "a": 0,
+     "e": "Termes u<sub>0</sub> à u<sub>3</sub> de la suite géométrique : <b>[2, 4, 8, 16]</b>."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>u = 6<br>L = [u]<br>for k in range(5):<br>    u = u + 3<br>    L.append(u)</span>",
+     "c": [
+      "[6, 9, 12, 15, 18, 21]",
+      "[6, 9, 12, 15, 18]",
+      "[6, 9, 12, 15, 18, 21, 24]",
+      "[9, 12, 15, 18, 21, 24]"
+     ],
+     "a": 0,
+     "e": "L contient u<sub>0</sub> puis les 5 termes suivants : <b>[6, 9, 12, 15, 18, 21]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [3 * 2 ** n for n in range(5)]</span>",
+     "c": [
+      "[1, 6, 36, 216, 1296]",
+      "[6, 12, 24, 48, 96]",
+      "[3, 6, 12, 24, 48]",
+      "[0, 6, 12, 18, 24]"
+     ],
+     "a": 2,
+     "e": "Termes u<sub>0</sub> à u<sub>4</sub> de la suite géométrique : <b>[3, 6, 12, 24, 48]</b>."
+    },
+    {
+     "q": "L = [19, 12, 19, 15]. Que renvoie moyenne(L) ?<span class='code'>def moyenne(L):<br>    return sum(L) / len(L)</span>",
+     "c": [
+      "19",
+      "65",
+      "4",
+      "16.25"
+     ],
+     "a": 3,
+     "e": "sum(L) = 65 et len(L) = 4 : 65 / 4 = <b>16.25</b> (Python écrit le point décimal)."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>u = 5<br>L = [u]<br>for k in range(5):<br>    u = u + 5<br>    L.append(u)</span>",
+     "c": [
+      "[5, 10, 15, 20, 25, 30, 35]",
+      "[5, 10, 15, 20, 25, 30]",
+      "[10, 15, 20, 25, 30, 35]",
+      "[5, 10, 15, 20, 25]"
+     ],
+     "a": 1,
+     "e": "L contient u<sub>0</sub> puis les 5 termes suivants : <b>[5, 10, 15, 20, 25, 30]</b>."
+    },
+    {
+     "q": "Que contient L ?<span class='code'>L = [2 * 3 ** n for n in range(5)]</span>",
+     "c": [
+      "[0, 6, 12, 18, 24]",
+      "[6, 18, 54, 162, 486]",
+      "[2, 6, 18, 54, 162]",
+      "[1, 6, 36, 216, 1296]"
+     ],
+     "a": 2,
+     "e": "Termes u<sub>0</sub> à u<sub>4</sub> de la suite géométrique : <b>[2, 6, 18, 54, 162]</b>."
+    },
+    {
+     "q": "Que contient L à la fin ?<span class='code'>u = 7<br>L = [u]<br>for k in range(3):<br>    u = u + 2<br>    L.append(u)</span>",
+     "c": [
+      "[7, 9, 11, 13, 15]",
+      "[9, 11, 13, 15]",
+      "[7, 9, 11, 13]",
+      "[7, 9, 11]"
+     ],
+     "a": 2,
+     "e": "L contient u<sub>0</sub> puis les 3 termes suivants : <b>[7, 9, 11, 13]</b>."
+    }
+   ]
+  },
+  {
+   "title": "Algorithmes sur les listes",
+   "items": [
+    {
+     "q": "Que renvoie approximativement ce programme ?<span class='code'>from random import randint<br>L = [randint(1, 6) for i in range(1000)]<br>print(L.count(6) / len(L))</span>",
+     "c": [
+      "une valeur proche de 166",
+      "une valeur proche de 0,5",
+      "exactement 6",
+      "une valeur proche de 0,17 (fréquence des 6)"
+     ],
+     "a": 3,
+     "e": "On simule 1 000 lancers de dé et on calcule la fréquence des 6 : elle est proche de 1/6 ≈ <b>0,17</b>."
+    },
+    {
+     "q": "Que contient F à la fin ?<span class='code'>F = [1, 1]<br>while len(F) &lt; 6:<br>    F.append(F[-1] + F[-2])</span>",
+     "c": [
+      "[1, 1, 2, 3, 5, 8]",
+      "[1, 1, 2, 3, 5]",
+      "[1, 1, 2, 4, 8, 16]",
+      "[1, 1, 2, 3, 5, 8, 13]"
+     ],
+     "a": 0,
+     "e": "Chaque nouveau terme est la somme des deux derniers (suite de Fibonacci), jusqu’à 6 éléments : <b>[1, 1, 2, 3, 5, 8]</b>."
+    },
+    {
+     "q": "L = [10, 34, 0, 9, 19, 26]. Que renvoie f(L) ?<span class='code'>def f(L):<br>    m = L[0]<br>    for x in L:<br>        if x &gt; m:<br>            m = x<br>    return m</span>",
+     "c": [
+      "10",
+      "34",
+      "0",
+      "1"
+     ],
+     "a": 1,
+     "e": "f garde le plus grand élément rencontré : <b>34</b> (le maximum)."
+    },
+    {
+     "q": "L = [41, 2, 24, 28, 39, 21]. Que renvoie g(L) ?<span class='code'>def g(L):<br>    j = 0<br>    for i in range(len(L)):<br>        if L[i] &gt; L[j]:<br>            j = i<br>    return j</span>",
+     "c": [
+      "5",
+      "41",
+      "0",
+      "1"
+     ],
+     "a": 2,
+     "e": "g renvoie l’<b>indice</b> du maximum : 41 est à l’indice <b>0</b>."
+    },
+    {
+     "q": "L = [37, 35, 1, 12, 26, 23]. Que renvoie f(L) ?<span class='code'>def f(L):<br>    m = L[0]<br>    for x in L:<br>        if x &gt; m:<br>            m = x<br>    return m</span>",
+     "c": [
+      "1",
+      "0",
+      "37",
+      "23"
+     ],
+     "a": 2,
+     "e": "f garde le plus grand élément rencontré : <b>37</b> (le maximum)."
+    },
+    {
+     "q": "L = [19, 2, 42, 12, 34, 24]. Que renvoie g(L) ?<span class='code'>def g(L):<br>    j = 0<br>    for i in range(len(L)):<br>        if L[i] &gt; L[j]:<br>            j = i<br>    return j</span>",
+     "c": [
+      "2",
+      "3",
+      "42",
+      "5"
+     ],
+     "a": 0,
+     "e": "g renvoie l’<b>indice</b> du maximum : 42 est à l’indice <b>2</b>."
+    },
+    {
+     "q": "L = [12, 19, 25, 28, 24, 22]. Que renvoie f(L) ?<span class='code'>def f(L):<br>    m = L[0]<br>    for x in L:<br>        if x &gt; m:<br>            m = x<br>    return m</span>",
+     "c": [
+      "28",
+      "12",
+      "25",
+      "3"
+     ],
+     "a": 0,
+     "e": "f garde le plus grand élément rencontré : <b>28</b> (le maximum)."
+    },
+    {
+     "q": "L = [3, 25, 34, 26, 40, 6]. Que renvoie g(L) ?<span class='code'>def g(L):<br>    j = 0<br>    for i in range(len(L)):<br>        if L[i] &gt; L[j]:<br>            j = i<br>    return j</span>",
+     "c": [
+      "40",
+      "0",
+      "5",
+      "4"
+     ],
+     "a": 3,
+     "e": "g renvoie l’<b>indice</b> du maximum : 40 est à l’indice <b>4</b>."
+    },
+    {
+     "q": "L = [20, 0, 33, 2, 6, 34]. Que renvoie f(L) ?<span class='code'>def f(L):<br>    m = L[0]<br>    for x in L:<br>        if x &gt; m:<br>            m = x<br>    return m</span>",
+     "c": [
+      "5",
+      "0",
+      "34",
+      "20"
+     ],
+     "a": 2,
+     "e": "f garde le plus grand élément rencontré : <b>34</b> (le maximum)."
+    },
+    {
+     "q": "L = [20, 9, 19, 10, 25, 30]. Que renvoie f(L) ?<span class='code'>def f(L):<br>    m = L[0]<br>    for x in L:<br>        if x &gt; m:<br>            m = x<br>    return m</span>",
+     "c": [
+      "30",
+      "20",
+      "9",
+      "5"
+     ],
+     "a": 0,
+     "e": "f garde le plus grand élément rencontré : <b>30</b> (le maximum)."
+    },
+    {
+     "q": "Que renvoie approximativement ce programme ?<span class='code'>from random import randint<br>L = [randint(1, 6) for i in range(10000)]<br>print(L.count(6) / len(L))</span>",
+     "c": [
+      "une valeur proche de 1666",
+      "une valeur proche de 0,17 (fréquence des 6)",
+      "une valeur proche de 0,5",
+      "exactement 6"
+     ],
+     "a": 1,
+     "e": "On simule 10 000 lancers de dé et on calcule la fréquence des 6 : elle est proche de 1/6 ≈ <b>0,17</b>."
+    },
+    {
+     "q": "L = [9, 34, 3, 35, 18, 25]. Que renvoie f(L) ?<span class='code'>def f(L):<br>    m = L[0]<br>    for x in L:<br>        if x &gt; m:<br>            m = x<br>    return m</span>",
+     "c": [
+      "3",
+      "34",
+      "35",
+      "9"
+     ],
+     "a": 2,
+     "e": "f garde le plus grand élément rencontré : <b>35</b> (le maximum)."
+    },
+    {
+     "q": "L = [14, 22, 33, 6, 0, 19]. Que renvoie f(L) ?<span class='code'>def f(L):<br>    m = L[0]<br>    for x in L:<br>        if x &gt; m:<br>            m = x<br>    return m</span>",
+     "c": [
+      "0",
+      "33",
+      "2",
+      "14"
+     ],
+     "a": 1,
+     "e": "f garde le plus grand élément rencontré : <b>33</b> (le maximum)."
+    },
+    {
+     "q": "L = [28, 36, 6, 3, 10, 30]. Que renvoie f(L) ?<span class='code'>def f(L):<br>    m = L[0]<br>    for x in L:<br>        if x &gt; m:<br>            m = x<br>    return m</span>",
+     "c": [
+      "1",
+      "28",
+      "3",
+      "36"
+     ],
+     "a": 3,
+     "e": "f garde le plus grand élément rencontré : <b>36</b> (le maximum)."
+    },
+    {
+     "q": "Que contient F à la fin ?<span class='code'>F = [1, 1]<br>while len(F) &lt; 9:<br>    F.append(F[-1] + F[-2])</span>",
+     "c": [
+      "[1, 1, 2, 3, 5, 8, 13, 21, 34]",
+      "[1, 1, 2, 3, 5, 8, 13, 21]",
+      "[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]",
+      "[1, 1, 2, 4, 8, 16, 32, 64, 128]"
+     ],
+     "a": 0,
+     "e": "Chaque nouveau terme est la somme des deux derniers (suite de Fibonacci), jusqu’à 9 éléments : <b>[1, 1, 2, 3, 5, 8, 13, 21, 34]</b>."
+    },
+    {
+     "q": "L = [38, 6, 4, 0, 34, 35]. Que renvoie f(L) ?<span class='code'>def f(L):<br>    m = L[0]<br>    for x in L:<br>        if x &gt; m:<br>            m = x<br>    return m</span>",
+     "c": [
+      "35",
+      "0",
+      "39",
+      "38"
+     ],
+     "a": 3,
+     "e": "f garde le plus grand élément rencontré : <b>38</b> (le maximum)."
+    },
+    {
+     "q": "L = [17, 7, 11, 2, 1, 15]. Que renvoie g(L) ?<span class='code'>def g(L):<br>    j = 0<br>    for i in range(len(L)):<br>        if L[i] &gt; L[j]:<br>            j = i<br>    return j</span>",
+     "c": [
+      "17",
+      "0",
+      "1",
+      "5"
+     ],
+     "a": 1,
+     "e": "g renvoie l’<b>indice</b> du maximum : 17 est à l’indice <b>0</b>."
+    },
+    {
+     "q": "L = [34, 7, 13, 22, 46, 48]. Que renvoie g(L) ?<span class='code'>def g(L):<br>    j = 0<br>    for i in range(len(L)):<br>        if L[i] &gt; L[j]:<br>            j = i<br>    return j</span>",
+     "c": [
+      "48",
+      "0",
+      "5",
+      "6"
+     ],
+     "a": 2,
+     "e": "g renvoie l’<b>indice</b> du maximum : 48 est à l’indice <b>5</b>."
+    },
+    {
+     "q": "Que contient F à la fin ?<span class='code'>F = [1, 1]<br>while len(F) &lt; 7:<br>    F.append(F[-1] + F[-2])</span>",
+     "c": [
+      "[1, 1, 2, 3, 5, 8, 13, 21]",
+      "[1, 1, 2, 3, 5, 8]",
+      "[1, 1, 2, 4, 8, 16, 32]",
+      "[1, 1, 2, 3, 5, 8, 13]"
+     ],
+     "a": 3,
+     "e": "Chaque nouveau terme est la somme des deux derniers (suite de Fibonacci), jusqu’à 7 éléments : <b>[1, 1, 2, 3, 5, 8, 13]</b>."
+    },
+    {
+     "q": "L = [46, 24, 26, 39, 47, 25]. Que renvoie g(L) ?<span class='code'>def g(L):<br>    j = 0<br>    for i in range(len(L)):<br>        if L[i] &gt; L[j]:<br>            j = i<br>    return j</span>",
+     "c": [
+      "5",
+      "4",
+      "1",
+      "47"
+     ],
+     "a": 1,
+     "e": "g renvoie l’<b>indice</b> du maximum : 47 est à l’indice <b>4</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 24,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "premiere"
+}

@@ -1,0 +1,1157 @@
+{
+ "slug": "variables-aleatoires-et-esperance",
+ "title": "Variables aléatoires, loi et espérance",
+ "seo_title": "Variables aléatoires première : fiches et exercices avec corrigé",
+ "short_title": "Variables aléatoires",
+ "domain": "Probabilités et statistiques",
+ "standard_code": "Première spécialité · Probabilités et statistiques",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A",
+ "standard_text": "Variable aléatoire réelle sur un univers fini, loi de probabilité ; calculer P(X = a), P(X ⩽ a) ; espérance d’une variable aléatoire ; linéarité de l’espérance ; jeu équitable (résumé du programme 2026 de spécialité de première)",
+ "meta_desc": "Fiches de maths première sur les variables aléatoires : loi de probabilité, P(X = a), espérance, jeu équitable, linéarité et problèmes. 100 exercices corrigés.",
+ "key_big": "E(X) = Σ x × P(X = x)",
+ "key_sub": "Jeu équitable : E(gain) = 0",
+ "body_html": "<h2>Comment faire</h2><p>Une <b>variable aléatoire</b> X associe un nombre à chaque issue d’une expérience aléatoire. Sa <b>loi</b> donne P(X = x<sub>i</sub>) pour chaque valeur ; la somme de ces probabilités vaut 1.</p><p>L’<b>espérance</b> E(X) = x<sub>1</sub>p<sub>1</sub> + x<sub>2</sub>p<sub>2</sub> + … + x<sub>n</sub>p<sub>n</sub> est la valeur moyenne de X sur un grand nombre de répétitions.</p><p>Un jeu est <b>équitable</b> si l’espérance du gain algébrique (gain − mise) est nulle. Linéarité : E(aX + b) = aE(X) + b.</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>X prend −2, 1, 5 avec les probabilités 0,5 ; 0,3 ; 0,2</p><p class='sn-ex-s'>E(X) = −2 × 0,5 + 1 × 0,3 + 5 × 0,2 = 0,3</p><p class='sn-ex-a'>Réponse : en moyenne, on gagne 0,30 € par partie</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>E(X) = moyenne des valeurs</td><td>On pondère chaque valeur par sa probabilité.</td></tr><tr><td>Gain = somme gagnée</td><td>Gain algébrique = somme gagnée − mise.</td></tr><tr><td>P(X &gt; 2) inclut X = 2</td><td>« &gt; » exclut 2 ; « ⩾ » l’inclut.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Que signifie E(X) = −0,5 € pour un jeu ?",
+   "a": "Sur un grand nombre de parties, le joueur perd en moyenne 0,50 € par partie : le jeu est défavorable au joueur."
+  },
+  {
+   "q": "L’espérance est-elle une valeur que X peut prendre ?",
+   "a": "Pas forcément : c’est une moyenne. Par exemple, le nombre moyen de « pile » en un lancer est 0,5."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Loi de probabilité",
+   "items": [
+    {
+     "q": "Calcule P(X &lt; 3). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−3</th><th>−2</th><th>1</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,05</td><td>0,2</td><td>0,15</td><td>0,25</td><td>0,35</td></tr></tbody></table></div>",
+     "c": [
+      "0,6",
+      "0,4",
+      "0,65",
+      "0,25"
+     ],
+     "a": 1,
+     "e": "On additionne les probabilités des valeurs strictement inférieures à 3 : <b>0,4</b>."
+    },
+    {
+     "q": "Calcule P(X &lt; 5). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−5</th><th>3</th><th>5</th><th>7</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,15</td><td>0,55</td><td>0,15</td><td>0,15</td></tr></tbody></table></div>",
+     "c": [
+      "0,7",
+      "0,85",
+      "0,15",
+      "0,3"
+     ],
+     "a": 0,
+     "e": "On additionne les probabilités des valeurs strictement inférieures à 5 : <b>0,7</b>."
+    },
+    {
+     "q": "Que vaut p ? Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>0</th><th>1</th><th>4</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,2</td><td>p</td><td>0,15</td><td>0,25</td></tr></tbody></table></div>",
+     "c": [
+      "0,6",
+      "0,4",
+      "0,5",
+      "0,25"
+     ],
+     "a": 1,
+     "e": "La somme des probabilités vaut 1 : p = 1 − 0,6 = <b>0,4</b>."
+    },
+    {
+     "q": "Calcule P(X ⩾ 0). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−3</th><th>0</th><th>4</th><th>9</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,3</td><td>0,15</td><td>0,3</td><td>0,25</td></tr></tbody></table></div>",
+     "c": [
+      "0,7",
+      "0,15",
+      "0,45",
+      "0,55"
+     ],
+     "a": 0,
+     "e": "On additionne les probabilités des valeurs ⩾ 0 : <b>0,7</b>."
+    },
+    {
+     "q": "Que vaut p ? Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−3</th><th>0</th><th>7</th><th>9</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,05</td><td>0,05</td><td>p</td><td>0,55</td></tr></tbody></table></div>",
+     "c": [
+      "0,35",
+      "0,25",
+      "0,45",
+      "0,65"
+     ],
+     "a": 0,
+     "e": "La somme des probabilités vaut 1 : p = 1 − 0,65 = <b>0,35</b>."
+    },
+    {
+     "q": "Que vaut p ? Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−5</th><th>−4</th><th>3</th><th>6</th><th>8</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>p</td><td>0,4</td><td>0,15</td><td>0,1</td><td>0,15</td></tr></tbody></table></div>",
+     "c": [
+      "0,2",
+      "0,1",
+      "0,8",
+      "0,3"
+     ],
+     "a": 0,
+     "e": "La somme des probabilités vaut 1 : p = 1 − 0,8 = <b>0,2</b>."
+    },
+    {
+     "q": "Que vaut P(X = 6) ? Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>2</th><th>3</th><th>6</th><th>7</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,55</td><td>0,05</td><td>0,2</td><td>0,2</td></tr></tbody></table></div>",
+     "c": [
+      "0,4",
+      "0,25",
+      "0,6",
+      "0,2"
+     ],
+     "a": 3,
+     "e": "On lit la case sous 6 : <b>0,2</b>."
+    },
+    {
+     "q": "Calcule P(X &lt; −3). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−5</th><th>−3</th><th>−2</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,6</td><td>0,35</td><td>0,05</td></tr></tbody></table></div>",
+     "c": [
+      "0,4",
+      "0,6",
+      "0,95",
+      "0,35"
+     ],
+     "a": 1,
+     "e": "On additionne les probabilités des valeurs strictement inférieures à −3 : <b>0,6</b>."
+    },
+    {
+     "q": "Que vaut p ? Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−3</th><th>−1</th><th>2</th><th>6</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,35</td><td>p</td><td>0,15</td><td>0,05</td></tr></tbody></table></div>",
+     "c": [
+      "0,55",
+      "0,46",
+      "0,45",
+      "0,25"
+     ],
+     "a": 2,
+     "e": "La somme des probabilités vaut 1 : p = 1 − 0,55 = <b>0,45</b>."
+    },
+    {
+     "q": "Calcule P(X ⩾ 7). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−2</th><th>1</th><th>3</th><th>7</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,05</td><td>0,1</td><td>0,3</td><td>0,3</td><td>0,25</td></tr></tbody></table></div>",
+     "c": [
+      "0,25",
+      "0,75",
+      "0,3",
+      "0,55"
+     ],
+     "a": 3,
+     "e": "On additionne les probabilités des valeurs ⩾ 7 : <b>0,55</b>."
+    },
+    {
+     "q": "Calcule P(X ⩾ 1). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−3</th><th>1</th><th>2</th><th>7</th><th>9</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,15</td><td>0,1</td><td>0,35</td><td>0,25</td><td>0,15</td></tr></tbody></table></div>",
+     "c": [
+      "0,85",
+      "0,1",
+      "0,25",
+      "0,75"
+     ],
+     "a": 0,
+     "e": "On additionne les probabilités des valeurs ⩾ 1 : <b>0,85</b>."
+    },
+    {
+     "q": "Que vaut p ? Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−4</th><th>−2</th><th>3</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>p</td><td>0,1</td><td>0,35</td><td>0,1</td></tr></tbody></table></div>",
+     "c": [
+      "0,25",
+      "0,55",
+      "0,46",
+      "0,45"
+     ],
+     "a": 3,
+     "e": "La somme des probabilités vaut 1 : p = 1 − 0,55 = <b>0,45</b>."
+    },
+    {
+     "q": "Que vaut P(X = −3) ? Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−4</th><th>−3</th><th>−2</th><th>0</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,1</td><td>0,55</td><td>0,05</td><td>0,3</td></tr></tbody></table></div>",
+     "c": [
+      "0,25",
+      "0,9",
+      "0,55",
+      "0,1"
+     ],
+     "a": 2,
+     "e": "On lit la case sous −3 : <b>0,55</b>."
+    },
+    {
+     "q": "Calcule P(X &lt; 0). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−2</th><th>0</th><th>7</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,05</td><td>0,35</td><td>0,5</td><td>0,1</td></tr></tbody></table></div>",
+     "c": [
+      "0,95",
+      "0,35",
+      "0,05",
+      "0,4"
+     ],
+     "a": 2,
+     "e": "On additionne les probabilités des valeurs strictement inférieures à 0 : <b>0,05</b>."
+    },
+    {
+     "q": "Que vaut P(X = 6) ? Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−4</th><th>−1</th><th>2</th><th>6</th><th>9</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,45</td><td>0,3</td><td>0,1</td><td>0,05</td><td>0,1</td></tr></tbody></table></div>",
+     "c": [
+      "0,15",
+      "0,05",
+      "0,85",
+      "0,2"
+     ],
+     "a": 1,
+     "e": "On lit la case sous 6 : <b>0,05</b>."
+    },
+    {
+     "q": "Que vaut P(X = −2) ? Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−4</th><th>−3</th><th>−2</th><th>4</th><th>7</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,3</td><td>0,05</td><td>0,2</td><td>0,1</td><td>0,35</td></tr></tbody></table></div>",
+     "c": [
+      "0,3",
+      "0,65",
+      "0,2",
+      "0,35"
+     ],
+     "a": 2,
+     "e": "On lit la case sous −2 : <b>0,2</b>."
+    },
+    {
+     "q": "Calcule P(X ⩾ 5). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>1</th><th>5</th><th>9</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,15</td><td>0,2</td><td>0,65</td></tr></tbody></table></div>",
+     "c": [
+      "0,35",
+      "0,85",
+      "0,65",
+      "0,2"
+     ],
+     "a": 1,
+     "e": "On additionne les probabilités des valeurs ⩾ 5 : <b>0,85</b>."
+    },
+    {
+     "q": "Calcule P(X ⩾ 6). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>5</th><th>6</th><th>7</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,65</td><td>0,3</td><td>0,05</td></tr></tbody></table></div>",
+     "c": [
+      "0,3",
+      "0,05",
+      "0,95",
+      "0,35"
+     ],
+     "a": 3,
+     "e": "On additionne les probabilités des valeurs ⩾ 6 : <b>0,35</b>."
+    },
+    {
+     "q": "Calcule P(X &lt; 5). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−3</th><th>5</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,65</td><td>0,15</td><td>0,05</td><td>0,15</td></tr></tbody></table></div>",
+     "c": [
+      "0,35",
+      "0,8",
+      "0,15",
+      "0,65"
+     ],
+     "a": 3,
+     "e": "On additionne les probabilités des valeurs strictement inférieures à 5 : <b>0,65</b>."
+    },
+    {
+     "q": "Que vaut p ? Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>0</th><th>2</th><th>7</th><th>8</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,3</td><td>0,15</td><td>0,2</td><td>p</td><td>0,15</td></tr></tbody></table></div>",
+     "c": [
+      "0,1",
+      "0,3",
+      "0,2",
+      "0,8"
+     ],
+     "a": 2,
+     "e": "La somme des probabilités vaut 1 : p = 1 − 0,8 = <b>0,2</b>."
+    }
+   ]
+  },
+  {
+   "title": "Définir une variable aléatoire",
+   "items": [
+    {
+     "q": "On lance un dé équilibré à 6 faces. Si on obtient 6, on gagne 4 € ; sinon, on gagne 2 €. La mise est de 1 €. X est le gain algébrique (gain − mise). Quelles sont les valeurs de X ?",
+     "c": [
+      "3 et 5",
+      "1 et 3",
+      "2 et 4",
+      "−1, 1 et 3"
+     ],
+     "a": 1,
+     "e": "On retire la mise de chaque gain : <b>1 et 3</b>."
+    },
+    {
+     "q": "On lance 3 pièces équilibrées. X est le nombre de « pile ». Que vaut P(X = 1) ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "8 issues équiprobables, dont 3 avec 1 pile : <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "On lance un dé équilibré à 6 faces. Si on obtient 6, on gagne 10 € ; sinon, on gagne 2 €. La mise est de 2 €. X est le gain algébrique (gain − mise). Quelles sont les valeurs de X ?",
+     "c": [
+      "−2, 0 et 8",
+      "2 et 10",
+      "0 et 8",
+      "4 et 12"
+     ],
+     "a": 2,
+     "e": "On retire la mise de chaque gain : <b>0 et 8</b>."
+    },
+    {
+     "q": "On lance un dé équilibré à 6 faces. Si on obtient 6, on gagne 4 € ; sinon, on gagne 0 €. La mise est de 1 €. X est le gain algébrique (gain − mise). Quelles sont les valeurs de X ?",
+     "c": [
+      "3 et 4",
+      "1 et 5",
+      "−1 et 3",
+      "0 et 4"
+     ],
+     "a": 2,
+     "e": "On retire la mise de chaque gain : <b>−1 et 3</b>."
+    },
+    {
+     "q": "Une urne contient 5 boules rouges, 4 bleues et 4 vertes. On gagne 4 € pour une rouge, 4 € pour une bleue, 0 € pour une verte. X est le gain. Que vaut P(X = 4) ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "X = 4 quand on tire une rouge : 5 ÷ 13 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "On lance un dé équilibré à 6 faces. Si on obtient 6, on gagne 6 € ; sinon, on gagne 2 €. La mise est de 1 €. X est le gain algébrique (gain − mise). Quelles sont les valeurs de X ?",
+     "c": [
+      "3 et 7",
+      "1 et 5",
+      "2 et 6",
+      "−1, 1 et 5"
+     ],
+     "a": 1,
+     "e": "On retire la mise de chaque gain : <b>1 et 5</b>."
+    },
+    {
+     "q": "On lance 2 pièces équilibrées. X est le nombre de « pile ». Que vaut P(X = 2) ?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "4 issues équiprobables, dont 1 avec 2 pile : <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "On lance un dé équilibré à 6 faces. Si on obtient 6, on gagne 8 € ; sinon, on gagne 2 €. La mise est de 3 €. X est le gain algébrique (gain − mise). Quelles sont les valeurs de X ?",
+     "c": [
+      "2 et 8",
+      "5 et 11",
+      "−3, −1 et 5",
+      "−1 et 5"
+     ],
+     "a": 3,
+     "e": "On retire la mise de chaque gain : <b>−1 et 5</b>."
+    },
+    {
+     "q": "Une urne contient 1 boules rouges, 4 bleues et 4 vertes. On gagne 7 € pour une rouge, 3 € pour une bleue, 0 € pour une verte. X est le gain. Que vaut P(X = 7) ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "X = 7 quand on tire une rouge : 1 ÷ 9 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "On lance un dé équilibré à 6 faces. Si on obtient 6, on gagne 5 € ; sinon, on gagne 2 €. La mise est de 2 €. X est le gain algébrique (gain − mise). Quelles sont les valeurs de X ?",
+     "c": [
+      "4 et 7",
+      "0 et 3",
+      "2 et 5",
+      "−2, 0 et 3"
+     ],
+     "a": 1,
+     "e": "On retire la mise de chaque gain : <b>0 et 3</b>."
+    },
+    {
+     "q": "On lance un dé équilibré à 6 faces. Si on obtient 6, on gagne 8 € ; sinon, on gagne 0 €. La mise est de 1 €. X est le gain algébrique (gain − mise). Quelles sont les valeurs de X ?",
+     "c": [
+      "1 et 9",
+      "−1 et 7",
+      "0 et 8",
+      "7 et 8"
+     ],
+     "a": 1,
+     "e": "On retire la mise de chaque gain : <b>−1 et 7</b>."
+    },
+    {
+     "q": "On lance un dé équilibré à 6 faces. Si on obtient 6, on gagne 9 € ; sinon, on gagne 1 €. La mise est de 2 €. X est le gain algébrique (gain − mise). Quelles sont les valeurs de X ?",
+     "c": [
+      "1 et 9",
+      "−2, −1 et 7",
+      "−1 et 7",
+      "3 et 11"
+     ],
+     "a": 2,
+     "e": "On retire la mise de chaque gain : <b>−1 et 7</b>."
+    },
+    {
+     "q": "On lance 3 pièces équilibrées. X est le nombre de « pile ». Que vaut P(X = 3) ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "8 issues équiprobables, dont 1 avec 3 pile : <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "On lance un dé équilibré à 6 faces. Si on obtient 6, on gagne 8 € ; sinon, on gagne 0 €. La mise est de 2 €. X est le gain algébrique (gain − mise). Quelles sont les valeurs de X ?",
+     "c": [
+      "0 et 8",
+      "6 et 8",
+      "−2 et 6",
+      "2 et 10"
+     ],
+     "a": 2,
+     "e": "On retire la mise de chaque gain : <b>−2 et 6</b>."
+    },
+    {
+     "q": "Une urne contient 4 boules rouges, 5 bleues et 4 vertes. On gagne 2 € pour une rouge, 5 € pour une bleue, 0 € pour une verte. X est le gain. Que vaut P(X = 2) ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "X = 2 quand on tire une rouge : 4 ÷ 13 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "Une urne contient 2 boules rouges, 4 bleues et 4 vertes. On gagne 6 € pour une rouge, 2 € pour une bleue, 0 € pour une verte. X est le gain. Que vaut P(X = 6) ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "X = 6 quand on tire une rouge : 2 ÷ 10 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "On lance 3 pièces équilibrées. X est le nombre de « pile ». Que vaut P(X = 2) ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "8 issues équiprobables, dont 3 avec 2 pile : <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "On lance un dé équilibré à 6 faces. Si on obtient 6, on gagne 7 € ; sinon, on gagne 0 €. La mise est de 3 €. X est le gain algébrique (gain − mise). Quelles sont les valeurs de X ?",
+     "c": [
+      "−3 et 4",
+      "3 et 10",
+      "4 et 7",
+      "0 et 7"
+     ],
+     "a": 0,
+     "e": "On retire la mise de chaque gain : <b>−3 et 4</b>."
+    },
+    {
+     "q": "On lance un dé équilibré à 6 faces. Si on obtient 6, on gagne 7 € ; sinon, on gagne 1 €. La mise est de 1 €. X est le gain algébrique (gain − mise). Quelles sont les valeurs de X ?",
+     "c": [
+      "2 et 8",
+      "−1, 0 et 6",
+      "1 et 7",
+      "0 et 6"
+     ],
+     "a": 3,
+     "e": "On retire la mise de chaque gain : <b>0 et 6</b>."
+    },
+    {
+     "q": "Une urne contient 5 boules rouges, 4 bleues et 4 vertes. On gagne 7 € pour une rouge, 4 € pour une bleue, 0 € pour une verte. X est le gain. Que vaut P(X = 7) ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>13</span></span>"
+     ],
+     "a": 3,
+     "e": "X = 7 quand on tire une rouge : 5 ÷ 13 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>13</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Calculer l’espérance",
+   "items": [
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−4</th><th>1</th><th>3</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,15</td><td>0,1</td><td>0,35</td><td>0,4</td></tr></tbody></table></div>",
+     "c": [
+      "1",
+      "2,5",
+      "45,65",
+      "4,55"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−4) × 0,15 + 1 × 0,1 + 3 × 0,35 + 10 × 0,4 = <b>4,55</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−2</th><th>2</th><th>4</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,45</td><td>0,25</td><td>0,3</td></tr></tbody></table></div>",
+     "c": [
+      "7,6",
+      "4",
+      "1",
+      "0,8"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−2) × 0,45 + 2 × 0,25 + 4 × 0,3 = <b>0,8</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−3</th><th>0</th><th>2</th><th>8</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,3</td><td>0,1</td><td>0,5</td><td>0,1</td></tr></tbody></table></div>",
+     "c": [
+      "0,9",
+      "1,75",
+      "1",
+      "11,1"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−3) × 0,3 + 0 × 0,1 + 2 × 0,5 + 8 × 0,1 = <b>0,9</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−5</th><th>−3</th><th>−2</th><th>4</th><th>5</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,15</td><td>0,1</td><td>0,1</td><td>0,05</td><td>0,6</td></tr></tbody></table></div>",
+     "c": [
+      "20,85",
+      "1",
+      "1,95",
+      "−0,2"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−5) × 0,15 + (−3) × 0,1 + (−2) × 0,1 + 4 × 0,05 + 5 × 0,6 = <b>1,95</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−4</th><th>4</th><th>8</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,85</td><td>0,05</td><td>0,1</td></tr></tbody></table></div>",
+     "c": [
+      "20,8",
+      "−2,4",
+      "1",
+      "8"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−4) × 0,85 + 4 × 0,05 + 8 × 0,1 = <b>−2,4</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−1</th><th>1</th><th>2</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,05</td><td>0,75</td><td>0,2</td></tr></tbody></table></div>",
+     "c": [
+      "2",
+      "1,1",
+      "1,6",
+      "1"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−1) × 0,05 + 1 × 0,75 + 2 × 0,2 = <b>1,1</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>0</th><th>3</th><th>4</th><th>8</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,25</td><td>0,35</td><td>0,05</td><td>0,35</td></tr></tbody></table></div>",
+     "c": [
+      "1",
+      "26,35",
+      "4,05",
+      "3,75"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = 0 × 0,25 + 3 × 0,35 + 4 × 0,05 + 8 × 0,35 = <b>4,05</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−2</th><th>4</th><th>6</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,55</td><td>0,05</td><td>0,2</td><td>0,2</td></tr></tbody></table></div>",
+     "c": [
+      "30,2",
+      "2,3",
+      "1",
+      "4,5"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−2) × 0,55 + 4 × 0,05 + 6 × 0,2 + 10 × 0,2 = <b>2,3</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−3</th><th>−1</th><th>0</th><th>5</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,25</td><td>0,1</td><td>0,25</td><td>0,25</td><td>0,15</td></tr></tbody></table></div>",
+     "c": [
+      "2,2",
+      "1",
+      "1,9",
+      "23,6"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−3) × 0,25 + (−1) × 0,1 + 0 × 0,25 + 5 × 0,25 + 10 × 0,15 = <b>1,9</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−4</th><th>−1</th><th>2</th><th>6</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,15</td><td>0,4</td><td>0,25</td><td>0,15</td><td>0,05</td></tr></tbody></table></div>",
+     "c": [
+      "2,6",
+      "1",
+      "0,9",
+      "14,2"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−4) × 0,15 + (−1) × 0,4 + 2 × 0,25 + 6 × 0,15 + 10 × 0,05 = <b>0,9</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>4</th><th>5</th><th>7</th><th>8</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,3</td><td>0,1</td><td>0,2</td><td>0,4</td></tr></tbody></table></div>",
+     "c": [
+      "6,3",
+      "42,7",
+      "1",
+      "6"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = 4 × 0,3 + 5 × 0,1 + 7 × 0,2 + 8 × 0,4 = <b>6,3</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−4</th><th>3</th><th>9</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,65</td><td>0,2</td><td>0,15</td></tr></tbody></table></div>",
+     "c": [
+      "8",
+      "1",
+      "24,35",
+      "−0,65"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−4) × 0,65 + 3 × 0,2 + 9 × 0,15 = <b>−0,65</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−1</th><th>7</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,25</td><td>0,35</td><td>0,4</td></tr></tbody></table></div>",
+     "c": [
+      "16",
+      "1",
+      "6,2",
+      "57,4"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−1) × 0,25 + 7 × 0,35 + 10 × 0,4 = <b>6,2</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−1</th><th>0</th><th>3</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,15</td><td>0,35</td><td>0,2</td><td>0,25</td><td>0,05</td></tr></tbody></table></div>",
+     "c": [
+      "4,2",
+      "3,2",
+      "1",
+      "27,2"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−1) × 0,15 + 0 × 0,35 + 3 × 0,2 + 9 × 0,25 + 10 × 0,05 = <b>3,2</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−5</th><th>−3</th><th>7</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,35</td><td>0,2</td><td>0,25</td><td>0,1</td><td>0,1</td></tr></tbody></table></div>",
+     "c": [
+      "1",
+      "3,2",
+      "37,3",
+      "1,1"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−5) × 0,35 + (−3) × 0,2 + 7 × 0,25 + 8 × 0,1 + 9 × 0,1 = <b>1,1</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−5</th><th>−3</th><th>0</th><th>9</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,8</td><td>0,1</td><td>0,05</td><td>0,05</td></tr></tbody></table></div>",
+     "c": [
+      "−3,85",
+      "1",
+      "0,25",
+      "24,95"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−5) × 0,8 + (−3) × 0,1 + 0 × 0,05 + 9 × 0,05 = <b>−3,85</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−2</th><th>2</th><th>4</th><th>8</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,05</td><td>0,4</td><td>0,05</td><td>0,5</td></tr></tbody></table></div>",
+     "c": [
+      "34,6",
+      "1",
+      "3",
+      "4,9"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−2) × 0,05 + 2 × 0,4 + 4 × 0,05 + 8 × 0,5 = <b>4,9</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>1</th><th>7</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,2</td><td>0,25</td><td>0,05</td><td>0,5</td></tr></tbody></table></div>",
+     "c": [
+      "7,4",
+      "66,5",
+      "1",
+      "6,75"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = 1 × 0,2 + 7 × 0,25 + 9 × 0,05 + 10 × 0,5 = <b>7,4</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>4</th><th>5</th><th>10</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,25</td><td>0,4</td><td>0,35</td></tr></tbody></table></div>",
+     "c": [
+      "19",
+      "6,5",
+      "49",
+      "1"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = 4 × 0,25 + 5 × 0,4 + 10 × 0,35 = <b>6,5</b> (ce n’est pas la moyenne des valeurs)."
+    },
+    {
+     "q": "Calcule l’espérance E(X). Loi de X :<div class='sn-tw'><table class='sn-table'><thead><tr><th>X = x<sub>i</sub></th><th>−5</th><th>0</th><th>1</th><th>9</th></tr></thead><tbody><tr><td>P(X = x<sub>i</sub>)</td><td>0,15</td><td>0,15</td><td>0,45</td><td>0,25</td></tr></tbody></table></div>",
+     "c": [
+      "1,95",
+      "1",
+      "1,25",
+      "24,45"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x<sub>i</sub> × P(X = x<sub>i</sub>) = (−5) × 0,15 + 0 × 0,15 + 1 × 0,45 + 9 × 0,25 = <b>1,95</b> (ce n’est pas la moyenne des valeurs)."
+    }
+   ]
+  },
+  {
+   "title": "Jeu équitable et linéarité",
+   "items": [
+    {
+     "q": "Un jeu a un gain moyen E(X) = −2 €. On double tous les gains et on ajoute un bonus de 7 €. Quel est le nouveau gain moyen ?",
+     "c": [
+      "5 €",
+      "3 €",
+      "10 €",
+      "−4 €"
+     ],
+     "a": 1,
+     "e": "E(2X + 7) = 2 × (−2) + 7 = <b>3 €</b>."
+    },
+    {
+     "q": "On tire une carte parmi 10, dont 5 gagnantes. Une carte gagnante rapporte 3 € ; la mise est m €. Pour quelle valeur de m le jeu est-il équitable ?",
+     "c": [
+      "m = 3 €",
+      "m = 0,30 €",
+      "m = 1,51 €",
+      "m = 1,50 €"
+     ],
+     "a": 3,
+     "e": "Équitable ⇔ E(X) = 0 : 3 × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> − m = 0 ⇔ <b>m = 1,50 €</b>."
+    },
+    {
+     "q": "On tire une carte parmi 10, dont 1 gagnante. Une carte gagnante rapporte 3 € ; la mise est m €. Pour quelle valeur de m le jeu est-il équitable ?",
+     "c": [
+      "m = 3 €",
+      "m = 1,30 €",
+      "m = 0,30 €",
+      "m = 2,70 €"
+     ],
+     "a": 2,
+     "e": "Équitable ⇔ E(X) = 0 : 3 × <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> − m = 0 ⇔ <b>m = 0,30 €</b>."
+    },
+    {
+     "q": "On tire une carte parmi 8, dont 4 gagnantes. Une carte gagnante rapporte 4 € ; la mise est m €. Pour quelle valeur de m le jeu est-il équitable ?",
+     "c": [
+      "m = 0,50 €",
+      "m = 3 €",
+      "m = 2 €",
+      "m = 4 €"
+     ],
+     "a": 2,
+     "e": "Équitable ⇔ E(X) = 0 : 4 × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> − m = 0 ⇔ <b>m = 2 €</b>."
+    },
+    {
+     "q": "E(X) = −1,15. Calcule E(3X − 3).",
+     "c": [
+      "−3,45",
+      "−4,15",
+      "−6,45",
+      "−12,45"
+     ],
+     "a": 2,
+     "e": "E(aX + b) = aE(X) + b = 3 × (−1,15) − 3 = <b>−6,45</b>."
+    },
+    {
+     "q": "E(X) = 3,2. Calcule E(−4X + 1).",
+     "c": [
+      "4,2",
+      "−11,8",
+      "−16,8",
+      "−12,8"
+     ],
+     "a": 1,
+     "e": "E(aX + b) = aE(X) + b = −4 × 3,2 + 1 = <b>−11,8</b>."
+    },
+    {
+     "q": "On tire une carte parmi 8, dont 1 gagnante. Une carte gagnante rapporte 4 € ; la mise est m €. Pour quelle valeur de m le jeu est-il équitable ?",
+     "c": [
+      "m = 0,50 €",
+      "m = 1,50 €",
+      "m = 3,50 €",
+      "m = 4 €"
+     ],
+     "a": 0,
+     "e": "Équitable ⇔ E(X) = 0 : 4 × <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> − m = 0 ⇔ <b>m = 0,50 €</b>."
+    },
+    {
+     "q": "Un jeu a un gain moyen E(X) = 2 €. On double tous les gains et on ajoute un bonus de 6 €. Quel est le nouveau gain moyen ?",
+     "c": [
+      "8 €",
+      "4 €",
+      "10 €",
+      "16 €"
+     ],
+     "a": 2,
+     "e": "E(2X + 6) = 2 × 2 + 6 = <b>10 €</b>."
+    },
+    {
+     "q": "E(X) = 1,6. Calcule E(4X + 1).",
+     "c": [
+      "10,4",
+      "7,4",
+      "2,6",
+      "6,4"
+     ],
+     "a": 1,
+     "e": "E(aX + b) = aE(X) + b = 4 × 1,6 + 1 = <b>7,4</b>."
+    },
+    {
+     "q": "On tire une carte parmi 8, dont 3 gagnantes. Une carte gagnante rapporte 6 € ; la mise est m €. Pour quelle valeur de m le jeu est-il équitable ?",
+     "c": [
+      "m = 6 €",
+      "m = 0,75 €",
+      "m = 3,75 €",
+      "m = 2,25 €"
+     ],
+     "a": 3,
+     "e": "Équitable ⇔ E(X) = 0 : 6 × <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> − m = 0 ⇔ <b>m = 2,25 €</b>."
+    },
+    {
+     "q": "On tire une carte parmi 6, dont 2 gagnantes. Une carte gagnante rapporte 4 € ; la mise est m €. Pour quelle valeur de m le jeu est-il équitable ?",
+     "c": [
+      "m = 2,67 €",
+      "m = 1,33 €",
+      "m = 0,67 €",
+      "m = 4 €"
+     ],
+     "a": 1,
+     "e": "Équitable ⇔ E(X) = 0 : 4 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> − m = 0 ⇔ <b>m = 1,33 €</b>."
+    },
+    {
+     "q": "Un jeu a un gain moyen E(X) = 3 €. On double tous les gains et on ajoute un bonus de 5 €. Quel est le nouveau gain moyen ?",
+     "c": [
+      "6 €",
+      "8 €",
+      "11 €",
+      "16 €"
+     ],
+     "a": 2,
+     "e": "E(2X + 5) = 2 × 3 + 5 = <b>11 €</b>."
+    },
+    {
+     "q": "Un jeu a un gain moyen E(X) = 4 €. On double tous les gains et on ajoute un bonus de 5 €. Quel est le nouveau gain moyen ?",
+     "c": [
+      "13 €",
+      "8 €",
+      "18 €",
+      "9 €"
+     ],
+     "a": 0,
+     "e": "E(2X + 5) = 2 × 4 + 5 = <b>13 €</b>."
+    },
+    {
+     "q": "On tire une carte parmi 8, dont 1 gagnante. Une carte gagnante rapporte 3 € ; la mise est m €. Pour quelle valeur de m le jeu est-il équitable ?",
+     "c": [
+      "m = 0,38 €",
+      "m = 1,38 €",
+      "m = 3 €",
+      "m = 2,62 €"
+     ],
+     "a": 0,
+     "e": "Équitable ⇔ E(X) = 0 : 3 × <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> − m = 0 ⇔ <b>m = 0,38 €</b>."
+    },
+    {
+     "q": "On tire une carte parmi 10, dont 2 gagnantes. Une carte gagnante rapporte 4 € ; la mise est m €. Pour quelle valeur de m le jeu est-il équitable ?",
+     "c": [
+      "m = 4 €",
+      "m = 0,80 €",
+      "m = 3,20 €",
+      "m = 0,40 €"
+     ],
+     "a": 1,
+     "e": "Équitable ⇔ E(X) = 0 : 4 × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> − m = 0 ⇔ <b>m = 0,80 €</b>."
+    },
+    {
+     "q": "On tire une carte parmi 10, dont 4 gagnantes. Une carte gagnante rapporte 3 € ; la mise est m €. Pour quelle valeur de m le jeu est-il équitable ?",
+     "c": [
+      "m = 0,30 €",
+      "m = 1,80 €",
+      "m = 3 €",
+      "m = 1,20 €"
+     ],
+     "a": 3,
+     "e": "Équitable ⇔ E(X) = 0 : 3 × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> − m = 0 ⇔ <b>m = 1,20 €</b>."
+    },
+    {
+     "q": "E(X) = −2,05. Calcule E(X + 2).",
+     "c": [
+      "−0,05",
+      "−0,06",
+      "−0,04",
+      "−2,05"
+     ],
+     "a": 0,
+     "e": "E(aX + b) = aE(X) + b = 1 × (−2,05) + 2 = <b>−0,05</b>."
+    },
+    {
+     "q": "On tire une carte parmi 4, dont 2 gagnantes. Une carte gagnante rapporte 4 € ; la mise est m €. Pour quelle valeur de m le jeu est-il équitable ?",
+     "c": [
+      "m = 2 €",
+      "m = 4 €",
+      "m = 3 €",
+      "m = 1 €"
+     ],
+     "a": 0,
+     "e": "Équitable ⇔ E(X) = 0 : 4 × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> − m = 0 ⇔ <b>m = 2 €</b>."
+    },
+    {
+     "q": "On tire une carte parmi 5, dont 1 gagnante. Une carte gagnante rapporte 2 € ; la mise est m €. Pour quelle valeur de m le jeu est-il équitable ?",
+     "c": [
+      "m = 2 €",
+      "m = 1,40 €",
+      "m = 1,60 €",
+      "m = 0,40 €"
+     ],
+     "a": 3,
+     "e": "Équitable ⇔ E(X) = 0 : 2 × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> − m = 0 ⇔ <b>m = 0,40 €</b>."
+    },
+    {
+     "q": "E(X) = 2,95. Calcule E(X − 1).",
+     "c": [
+      "1,96",
+      "2,95",
+      "1,94",
+      "1,95"
+     ],
+     "a": 3,
+     "e": "E(aX + b) = aE(X) + b = 1 × 2,95 − 1 = <b>1,95</b>."
+    }
+   ]
+  },
+  {
+   "title": "Problèmes",
+   "items": [
+    {
+     "q": "On mise 4 € puis on lance un dé : 6 rapporte 15 €, 5 rapporte 2 €, sinon rien. X est le gain algébrique. Calcule E(X) et conclus.",
+     "c": [
+      "E(X) = −<span class='fr'><span class='fn'>7</span><span class='fd'>6</span></span> € : jeu défavorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>17</span><span class='fd'>6</span></span> € : jeu favorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> € : jeu favorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>7</span><span class='fd'>6</span></span> € : jeu favorable au joueur"
+     ],
+     "a": 0,
+     "e": "E(X) = 11 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−2) × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−4) × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b>−<span class='fr'><span class='fn'>7</span><span class='fd'>6</span></span> €</b> : jeu défavorable au joueur."
+    },
+    {
+     "q": "Une assurance encaisse 120 € par client et rembourse 1 000 € avec la probabilité 0,005. Quel est le gain moyen de l’assurance par client ?",
+     "c": [
+      "125 €",
+      "5 €",
+      "120 €",
+      "115 €"
+     ],
+     "a": 3,
+     "e": "E = 120 − 0,005 × 1 000 = <b>115 €</b>."
+    },
+    {
+     "q": "Une tombola vend 100 billets à 3 € : 1 lot de 100 €, 2 lots de 20 € et 6 lots de 5 €. Quelle est l’espérance du gain algébrique d’un billet ?",
+     "c": [
+      "4,70 €",
+      "1,70 €",
+      "−1,30 €",
+      "1,30 €"
+     ],
+     "a": 2,
+     "e": "Gain moyen des lots : 170 ÷ 100 = 1,7 ; on retire le prix du billet : <b>−1,30 €</b>."
+    },
+    {
+     "q": "Une tombola vend 100 billets à 3 € : 1 lot de 50 €, 4 lots de 20 € et 10 lots de 2 €. Quelle est l’espérance du gain algébrique d’un billet ?",
+     "c": [
+      "−1,50 €",
+      "1,50 €",
+      "47 €",
+      "4,50 €"
+     ],
+     "a": 0,
+     "e": "Gain moyen des lots : 150 ÷ 100 = 1,5 ; on retire le prix du billet : <b>−1,50 €</b>."
+    },
+    {
+     "q": "On mise 1 € puis on lance un dé : 6 rapporte 11 €, 5 rapporte 5 €, sinon rien. X est le gain algébrique. Calcule E(X) et conclus.",
+     "c": [
+      "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> € : jeu favorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>13</span><span class='fd'>3</span></span> € : jeu favorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span> € : jeu favorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> € : jeu défavorable au joueur"
+     ],
+     "a": 0,
+     "e": "E(X) = 10 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + 4 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−1) × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> €</b> : jeu favorable au joueur."
+    },
+    {
+     "q": "On mise 4 € puis on lance un dé : 6 rapporte 9 €, 5 rapporte 2 €, sinon rien. X est le gain algébrique. Calcule E(X) et conclus.",
+     "c": [
+      "E(X) = −<span class='fr'><span class='fn'>13</span><span class='fd'>6</span></span> € : jeu favorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>13</span><span class='fd'>6</span></span> € : jeu défavorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> € : jeu défavorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>11</span><span class='fd'>6</span></span> € : jeu favorable au joueur"
+     ],
+     "a": 1,
+     "e": "E(X) = 5 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−2) × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−4) × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b>−<span class='fr'><span class='fn'>13</span><span class='fd'>6</span></span> €</b> : jeu défavorable au joueur."
+    },
+    {
+     "q": "Une tombola vend 100 billets à 3 € : 1 lot de 100 €, 4 lots de 10 € et 13 lots de 5 €. Quelle est l’espérance du gain algébrique d’un billet ?",
+     "c": [
+      "5,05 €",
+      "2,05 €",
+      "−0,95 €",
+      "0,95 €"
+     ],
+     "a": 2,
+     "e": "Gain moyen des lots : 205 ÷ 100 = 2,05 ; on retire le prix du billet : <b>−0,95 €</b>."
+    },
+    {
+     "q": "Une assurance encaisse 30 € par client et rembourse 2 000 € avec la probabilité 0,005. Quel est le gain moyen de l’assurance par client ?",
+     "c": [
+      "10 €",
+      "20 €",
+      "30 €",
+      "40 €"
+     ],
+     "a": 1,
+     "e": "E = 30 − 0,005 × 2 000 = <b>20 €</b>."
+    },
+    {
+     "q": "Une tombola vend 100 billets à 1 € : 1 lot de 50 €, 2 lots de 20 € et 12 lots de 2 €. Quelle est l’espérance du gain algébrique d’un billet ?",
+     "c": [
+      "37 €",
+      "0,14 €",
+      "1,14 €",
+      "2,14 €"
+     ],
+     "a": 1,
+     "e": "Gain moyen des lots : 114 ÷ 100 = 1,14 ; on retire le prix du billet : <b>0,14 €</b>."
+    },
+    {
+     "q": "Une tombola vend 100 billets à 2 € : 1 lot de 100 €, 4 lots de 10 € et 7 lots de 2 €. Quelle est l’espérance du gain algébrique d’un billet ?",
+     "c": [
+      "0,46 €",
+      "1,54 €",
+      "3,54 €",
+      "−0,46 €"
+     ],
+     "a": 3,
+     "e": "Gain moyen des lots : 154 ÷ 100 = 1,54 ; on retire le prix du billet : <b>−0,46 €</b>."
+    },
+    {
+     "q": "On mise 4 € puis on lance un dé : 6 rapporte 14 €, 5 rapporte 5 €, sinon rien. X est le gain algébrique. Calcule E(X) et conclus.",
+     "c": [
+      "E(X) = <span class='fr'><span class='fn'>19</span><span class='fd'>6</span></span> € : jeu favorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> € : jeu favorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span> € : jeu favorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> € : jeu défavorable au joueur"
+     ],
+     "a": 3,
+     "e": "E(X) = 10 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + 1 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−4) × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b>−<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> €</b> : jeu défavorable au joueur."
+    },
+    {
+     "q": "On mise 4 € puis on lance un dé : 6 rapporte 6 €, 5 rapporte 4 €, sinon rien. X est le gain algébrique. Calcule E(X) et conclus.",
+     "c": [
+      "E(X) = −<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span> € : jeu défavorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> € : jeu favorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span> € : jeu favorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> € : jeu défavorable au joueur"
+     ],
+     "a": 0,
+     "e": "E(X) = 2 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + 0 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−4) × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b>−<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span> €</b> : jeu défavorable au joueur."
+    },
+    {
+     "q": "On mise 1 € puis on lance un dé : 6 rapporte 11 €, 5 rapporte 4 €, sinon rien. X est le gain algébrique. Calcule E(X) et conclus.",
+     "c": [
+      "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> € : jeu favorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> € : jeu défavorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> € : jeu favorable au joueur",
+      "E(X) = 4 € : jeu favorable au joueur"
+     ],
+     "a": 2,
+     "e": "E(X) = 10 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + 3 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−1) × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> €</b> : jeu favorable au joueur."
+    },
+    {
+     "q": "Une assurance encaisse 80 € par client et rembourse 2 000 € avec la probabilité 0,02. Quel est le gain moyen de l’assurance par client ?",
+     "c": [
+      "40 €",
+      "41 €",
+      "120 €",
+      "80 €"
+     ],
+     "a": 0,
+     "e": "E = 80 − 0,02 × 2 000 = <b>40 €</b>."
+    },
+    {
+     "q": "Une tombola vend 200 billets à 3 € : 1 lot de 100 €, 4 lots de 10 € et 6 lots de 2 €. Quelle est l’espérance du gain algébrique d’un billet ?",
+     "c": [
+      "3,76 €",
+      "0,76 €",
+      "−2,24 €",
+      "2,24 €"
+     ],
+     "a": 2,
+     "e": "Gain moyen des lots : 152 ÷ 200 = 0,76 ; on retire le prix du billet : <b>−2,24 €</b>."
+    },
+    {
+     "q": "Une tombola vend 100 billets à 3 € : 1 lot de 100 €, 2 lots de 20 € et 15 lots de 5 €. Quelle est l’espérance du gain algébrique d’un billet ?",
+     "c": [
+      "5,15 €",
+      "−0,85 €",
+      "2,15 €",
+      "0,85 €"
+     ],
+     "a": 1,
+     "e": "Gain moyen des lots : 215 ÷ 100 = 2,15 ; on retire le prix du billet : <b>−0,85 €</b>."
+    },
+    {
+     "q": "On mise 4 € puis on lance un dé : 6 rapporte 6 €, 5 rapporte 2 €, sinon rien. X est le gain algébrique. Calcule E(X) et conclus.",
+     "c": [
+      "E(X) = <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> € : jeu favorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> € : jeu défavorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span> € : jeu favorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span> € : jeu défavorable au joueur"
+     ],
+     "a": 3,
+     "e": "E(X) = 2 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−2) × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−4) × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b>−<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span> €</b> : jeu défavorable au joueur."
+    },
+    {
+     "q": "On mise 2 € puis on lance un dé : 6 rapporte 8 €, 5 rapporte 3 €, sinon rien. X est le gain algébrique. Calcule E(X) et conclus.",
+     "c": [
+      "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> € : jeu favorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> € : jeu favorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>11</span><span class='fd'>6</span></span> € : jeu favorable au joueur",
+      "E(X) = −<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> € : jeu défavorable au joueur"
+     ],
+     "a": 3,
+     "e": "E(X) = 6 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + 1 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−2) × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> €</b> : jeu défavorable au joueur."
+    },
+    {
+     "q": "Une assurance encaisse 120 € par client et rembourse 10 000 € avec la probabilité 0,01. Quel est le gain moyen de l’assurance par client ?",
+     "c": [
+      "120 €",
+      "220 €",
+      "20 €",
+      "100 €"
+     ],
+     "a": 2,
+     "e": "E = 120 − 0,01 × 10 000 = <b>20 €</b>."
+    },
+    {
+     "q": "On mise 1 € puis on lance un dé : 6 rapporte 6 €, 5 rapporte 3 €, sinon rien. X est le gain algébrique. Calcule E(X) et conclus.",
+     "c": [
+      "E(X) = 2 € : jeu favorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> € : jeu favorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> € : jeu défavorable au joueur",
+      "E(X) = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> € : jeu favorable au joueur"
+     ],
+     "a": 1,
+     "e": "E(X) = 5 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + 2 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + (−1) × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> €</b> : jeu favorable au joueur."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 22,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "premiere"
+}

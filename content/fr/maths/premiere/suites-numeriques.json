@@ -1,0 +1,1157 @@
+{
+ "slug": "suites-numeriques",
+ "title": "Suites numériques : forme explicite, récurrence et variations",
+ "seo_title": "Suites numériques première : fiches et exercices avec corrigé",
+ "short_title": "Suites numériques",
+ "domain": "Algèbre",
+ "standard_code": "Première spécialité · Algèbre",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A",
+ "standard_text": "Modes de génération d’une suite : explicite, par récurrence, par un algorithme, par des motifs ; calculer des termes ; sens de variation d’une suite ; modéliser une situation discrète par une suite (résumé du programme 2026 de spécialité de première)",
+ "meta_desc": "Fiches de maths première sur les suites numériques : forme explicite, relation de récurrence, motifs, algorithmes en Python et sens de variation. 100 exercices corrigés.",
+ "key_big": "Pour u(n + 1), on remplace n par n + 1",
+ "key_sub": "Sens de variation : signe de u(n + 1) − u(n)",
+ "body_html": "<h2>Comment faire</h2><p>Une suite (u<sub>n</sub>) associe un nombre u<sub>n</sub> à chaque entier n. Le premier terme est souvent u<sub>0</sub>.</p><p><b>Forme explicite</b> : u<sub>n</sub> = f(n), on calcule directement n’importe quel terme. <b>Récurrence</b> : u<sub>n+1</sub> = f(u<sub>n</sub>), on calcule les termes un par un.</p><p>Sens de variation : on étudie le signe de u<sub>n+1</sub> − u<sub>n</sub>. Positif pour tout n : croissante ; négatif : décroissante.</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>u<sub>0</sub> = 2 et u<sub>n+1</sub> = 3u<sub>n</sub> − 1</p><p class='sn-ex-s'>u<sub>1</sub> = 3 × 2 − 1 = 5</p><p class='sn-ex-s'>u<sub>2</sub> = 3 × 5 − 1 = 14</p><p class='sn-ex-a'>Réponse : u<sub>2</sub> = 14</p></div><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>u<sub>n</sub> = n² + 1</p><p class='sn-ex-s'>u<sub>n+1</sub> − u<sub>n</sub> = (n + 1)² + 1 − n² − 1 = 2n + 1 &gt; 0</p><p class='sn-ex-a'>Réponse : la suite est croissante</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>u<sub>n+1</sub> = u<sub>n</sub> + 1</td><td>u<sub>n+1</sub> s’obtient en remplaçant n par n + 1 dans la formule.</td></tr><tr><td>Le 5<sup>e</sup> terme est u<sub>5</sub></td><td>Si la suite commence à u<sub>0</sub>, le 5<sup>e</sup> terme est u<sub>4</sub>.</td></tr><tr><td>u<sub>1</sub> &lt; u<sub>2</sub> donc la suite est croissante</td><td>Il faut comparer u<sub>n+1</sub> et u<sub>n</sub> pour tout n.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Quelle différence entre forme explicite et récurrence ?",
+   "a": "Avec la forme explicite, on calcule u<sub>100</sub> directement. Avec une récurrence, il faut d’abord u<sub>99</sub>, donc tous les termes précédents (ou un algorithme)."
+  },
+  {
+   "q": "Comment étudier le sens de variation d’une suite ?",
+   "a": "On calcule u<sub>n+1</sub> − u<sub>n</sub> et on étudie son signe. Si les termes sont positifs, on peut aussi comparer u<sub>n+1</sub> ÷ u<sub>n</sub> à 1."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Forme explicite",
+   "items": [
+    {
+     "q": "u<sub>n</sub> = 5n² − 4. Exprime u<sub>n+1</sub> en fonction de n.",
+     "c": [
+      "5n² − 3",
+      "5n² + 1",
+      "5n² + 10n + 1",
+      "5n² + 10n − 4"
+     ],
+     "a": 2,
+     "e": "u<sub>n+1</sub> = 5(n + 1)² − 4 = <b>5n² + 10n + 1</b> (on remplace n par n + 1, on ne rajoute pas 1)."
+    },
+    {
+     "q": "La suite (u<sub>n</sub>) est définie par u<sub>n</sub> = n² + 4n + 8. Calcule u<sub>8</sub>.",
+     "c": [
+      "85",
+      "125",
+      "56",
+      "104"
+     ],
+     "a": 3,
+     "e": "On remplace n par 8 : u<sub>8</sub> = <b>104</b>."
+    },
+    {
+     "q": "La suite (u<sub>n</sub>) est définie par u<sub>n</sub> = 3n² + 2n. Calcule u<sub>4</sub>.",
+     "c": [
+      "56",
+      "33",
+      "85",
+      "32"
+     ],
+     "a": 0,
+     "e": "On remplace n par 4 : u<sub>4</sub> = <b>56</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = (3n + 1) ÷ (n + 1). Calcule u<sub>4</sub>.",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "u<sub>4</sub> = (3 × 4 + 1) ÷ (4 + 1) = <b><span class='fr'><span class='fn'>13</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "u<sub>n</sub> = (3n + 1) ÷ (n + 3). Calcule u<sub>2</sub>.",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "u<sub>2</sub> = (3 × 2 + 1) ÷ (2 + 3) = <b><span class='fr'><span class='fn'>7</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "u<sub>n</sub> = (5n + 1) ÷ (n + 3). Calcule u<sub>5</sub>.",
+     "c": [
+      "3",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "u<sub>5</sub> = (5 × 5 + 1) ÷ (5 + 3) = <b><span class='fr'><span class='fn'>13</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "u<sub>n</sub> = 3n² − 2. Exprime u<sub>n+1</sub> en fonction de n.",
+     "c": [
+      "3n² + 6n − 2",
+      "3n² + 6n + 1",
+      "3n² − 1",
+      "3n² + 1"
+     ],
+     "a": 1,
+     "e": "u<sub>n+1</sub> = 3(n + 1)² − 2 = <b>3n² + 6n + 1</b> (on remplace n par n + 1, on ne rajoute pas 1)."
+    },
+    {
+     "q": "u<sub>n</sub> = n² + 8. Exprime u<sub>n+1</sub> en fonction de n.",
+     "c": [
+      "n² + 9",
+      "n² + 2n + 8",
+      "n² + n + 9",
+      "n² + 2n + 9"
+     ],
+     "a": 3,
+     "e": "u<sub>n+1</sub> = (n + 1)² + 8 = <b>n² + 2n + 9</b> (on remplace n par n + 1, on ne rajoute pas 1)."
+    },
+    {
+     "q": "u<sub>n</sub> = 2 × 2<sup>n</sup>. Calcule u<sub>5</sub>.",
+     "c": [
+      "20",
+      "64",
+      "1 024",
+      "32"
+     ],
+     "a": 1,
+     "e": "u<sub>5</sub> = 2 × 2<sup>5</sup> = 2 × 32 = <b>64</b> (la puissance d’abord)."
+    },
+    {
+     "q": "u<sub>n</sub> = 4 × 3<sup>n</sup>. Calcule u<sub>5</sub>.",
+     "c": [
+      "248 832",
+      "60",
+      "972",
+      "324"
+     ],
+     "a": 2,
+     "e": "u<sub>5</sub> = 4 × 3<sup>5</sup> = 4 × 243 = <b>972</b> (la puissance d’abord)."
+    },
+    {
+     "q": "u<sub>n</sub> = −3n² − 3. Exprime u<sub>n+1</sub> en fonction de n.",
+     "c": [
+      "−3n² − 6",
+      "−3n² − 6n − 6",
+      "−3n² − 2",
+      "−3n² − 6n − 3"
+     ],
+     "a": 1,
+     "e": "u<sub>n+1</sub> = −3(n + 1)² − 3 = <b>−3n² − 6n − 6</b> (on remplace n par n + 1, on ne rajoute pas 1)."
+    },
+    {
+     "q": "u<sub>n</sub> = (4n + 1) ÷ (n + 2). Calcule u<sub>3</sub>.",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "u<sub>3</sub> = (4 × 3 + 1) ÷ (3 + 2) = <b><span class='fr'><span class='fn'>13</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "La suite (u<sub>n</sub>) est définie par u<sub>n</sub> = n² − n − 8. Calcule u<sub>6</sub>.",
+     "c": [
+      "12",
+      "−2",
+      "34",
+      "22"
+     ],
+     "a": 3,
+     "e": "On remplace n par 6 : u<sub>6</sub> = <b>22</b>."
+    },
+    {
+     "q": "La suite (u<sub>n</sub>) est définie par u<sub>n</sub> = −n² − 6n − 3. Calcule u<sub>6</sub>.",
+     "c": [
+      "−75",
+      "−51",
+      "−58",
+      "−94"
+     ],
+     "a": 0,
+     "e": "On remplace n par 6 : u<sub>6</sub> = <b>−75</b>."
+    },
+    {
+     "q": "La suite (u<sub>n</sub>) est définie par u<sub>n</sub> = −n² − 6n − 6. Calcule u<sub>8</sub>.",
+     "c": [
+      "−97",
+      "−70",
+      "−118",
+      "−141"
+     ],
+     "a": 2,
+     "e": "On remplace n par 8 : u<sub>8</sub> = <b>−118</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = (4n + 1) ÷ (n + 2). Calcule u<sub>5</sub>.",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>5</span></span>",
+      "3",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "u<sub>5</sub> = (4 × 5 + 1) ÷ (5 + 2) = <b>3</b>."
+    },
+    {
+     "q": "La suite (u<sub>n</sub>) est définie par u<sub>n</sub> = −2n² − n − 4. Calcule u<sub>9</sub>.",
+     "c": [
+      "−49",
+      "−214",
+      "−175",
+      "−140"
+     ],
+     "a": 2,
+     "e": "On remplace n par 9 : u<sub>9</sub> = <b>−175</b>."
+    },
+    {
+     "q": "La suite (u<sub>n</sub>) est définie par u<sub>n</sub> = −2n² + 1. Calcule u<sub>2</sub>.",
+     "c": [
+      "−7",
+      "17",
+      "−1",
+      "−17"
+     ],
+     "a": 0,
+     "e": "On remplace n par 2 : u<sub>2</sub> = <b>−7</b>."
+    },
+    {
+     "q": "La suite (u<sub>n</sub>) est définie par u<sub>n</sub> = −n² + 3n − 8. Calcule u<sub>5</sub>.",
+     "c": [
+      "−18",
+      "−3",
+      "−12",
+      "−26"
+     ],
+     "a": 0,
+     "e": "On remplace n par 5 : u<sub>5</sub> = <b>−18</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = 4n² − 5. Exprime u<sub>n+1</sub> en fonction de n.",
+     "c": [
+      "4n² + 8n − 5",
+      "4n² − 1",
+      "4n² − 4",
+      "4n² + 8n − 1"
+     ],
+     "a": 3,
+     "e": "u<sub>n+1</sub> = 4(n + 1)² − 5 = <b>4n² + 8n − 1</b> (on remplace n par n + 1, on ne rajoute pas 1)."
+    }
+   ]
+  },
+  {
+   "title": "Relation de récurrence",
+   "items": [
+    {
+     "q": "u<sub>0</sub> = 2 et u<sub>n+1</sub> = u<sub>n</sub>² − 3. Calcule u<sub>2</sub>.",
+     "c": [
+      "1",
+      "−2",
+      "4",
+      "−1"
+     ],
+     "a": 1,
+     "e": "u<sub>1</sub> = 1 ; u<sub>2</sub> = 1² − 3 = <b>−2</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 1 et u<sub>n+1</sub> = −2u<sub>n</sub> − 2. Calcule u<sub>3</sub>.",
+     "c": [
+      "26",
+      "−14",
+      "6",
+      "−8"
+     ],
+     "a": 1,
+     "e": "u<sub>1</sub> = −4 ; u<sub>2</sub> = 6 ; u<sub>3</sub> = <b>−14</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 4 et u<sub>n+1</sub> = 2u<sub>n</sub> + 5. Calcule u<sub>3</sub>.",
+     "c": [
+      "67",
+      "11",
+      "31",
+      "139"
+     ],
+     "a": 0,
+     "e": "u<sub>1</sub> = 13 ; u<sub>2</sub> = 31 ; u<sub>3</sub> = <b>67</b>."
+    },
+    {
+     "q": "u<sub>1</sub> = 9 et, pour tout n ⩾ 1, u<sub>n+1</sub> = u<sub>n</sub> + 3n. Calcule u<sub>3</sub>.",
+     "c": [
+      "18",
+      "27",
+      "15",
+      "12"
+     ],
+     "a": 0,
+     "e": "u<sub>2</sub> = 9 + 3 × 1 = 12 ; u<sub>3</sub> = 12 + 3 × 2 = <b>18</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 2 et u<sub>n+1</sub> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>u<sub>n</sub> − 5. Calcule u<sub>3</sub>.",
+     "c": [
+      "−<span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>37</span><span class='fd'>4</span></span>",
+      "−<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "−7"
+     ],
+     "a": 0,
+     "e": "u<sub>1</sub> = −4 ; u<sub>2</sub> = −7 ; u<sub>3</sub> = <b>−<span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "u<sub>1</sub> = 1 et, pour tout n ⩾ 1, u<sub>n+1</sub> = u<sub>n</sub> + 2n. Calcule u<sub>3</sub>.",
+     "c": [
+      "3",
+      "5",
+      "7",
+      "13"
+     ],
+     "a": 2,
+     "e": "u<sub>2</sub> = 1 + 2 × 1 = 3 ; u<sub>3</sub> = 3 + 2 × 2 = <b>7</b>."
+    },
+    {
+     "q": "u<sub>1</sub> = 3 et, pour tout n ⩾ 1, u<sub>n+1</sub> = u<sub>n</sub> + 4n. Calcule u<sub>3</sub>.",
+     "c": [
+      "7",
+      "27",
+      "11",
+      "15"
+     ],
+     "a": 3,
+     "e": "u<sub>2</sub> = 3 + 4 × 1 = 7 ; u<sub>3</sub> = 7 + 4 × 2 = <b>15</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 1 et u<sub>n+1</sub> = u<sub>n</sub>² + 2. Calcule u<sub>2</sub>.",
+     "c": [
+      "8",
+      "6",
+      "11",
+      "3"
+     ],
+     "a": 2,
+     "e": "u<sub>1</sub> = 3 ; u<sub>2</sub> = 3² + 2 = <b>11</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = −2 et u<sub>n+1</sub> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>u<sub>n</sub> − 3. Calcule u<sub>3</sub>.",
+     "c": [
+      "−<span class='fr'><span class='fn'>23</span><span class='fd'>4</span></span>",
+      "−<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−5"
+     ],
+     "a": 1,
+     "e": "u<sub>1</sub> = −4 ; u<sub>2</sub> = −5 ; u<sub>3</sub> = <b>−<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 4 et u<sub>n+1</sub> = 2u<sub>n</sub>. Calcule u<sub>3</sub>.",
+     "c": [
+      "16",
+      "6",
+      "64",
+      "32"
+     ],
+     "a": 3,
+     "e": "u<sub>1</sub> = 8 ; u<sub>2</sub> = 16 ; u<sub>3</sub> = <b>32</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = −1 et u<sub>n+1</sub> = u<sub>n</sub>² + 3. Calcule u<sub>2</sub>.",
+     "c": [
+      "11",
+      "7",
+      "4",
+      "19"
+     ],
+     "a": 3,
+     "e": "u<sub>1</sub> = 4 ; u<sub>2</sub> = 4² + 3 = <b>19</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 2 et u<sub>n+1</sub> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>u<sub>n</sub> + 1. Calcule u<sub>3</sub>.",
+     "c": [
+      "3",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "2"
+     ],
+     "a": 3,
+     "e": "u<sub>1</sub> = 2 ; u<sub>2</sub> = 2 ; u<sub>3</sub> = <b>2</b>."
+    },
+    {
+     "q": "u<sub>1</sub> = 5 et, pour tout n ⩾ 1, u<sub>n+1</sub> = u<sub>n</sub> + 3n. Calcule u<sub>3</sub>.",
+     "c": [
+      "14",
+      "8",
+      "11",
+      "23"
+     ],
+     "a": 0,
+     "e": "u<sub>2</sub> = 5 + 3 × 1 = 8 ; u<sub>3</sub> = 8 + 3 × 2 = <b>14</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = −2 et u<sub>n+1</sub> = u<sub>n</sub>² − 2. Calcule u<sub>2</sub>.",
+     "c": [
+      "−6",
+      "2",
+      "3",
+      "6"
+     ],
+     "a": 1,
+     "e": "u<sub>1</sub> = 2 ; u<sub>2</sub> = 2² − 2 = <b>2</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = −2 et u<sub>n+1</sub> = u<sub>n</sub>² + 2. Calcule u<sub>2</sub>.",
+     "c": [
+      "34",
+      "14",
+      "6",
+      "38"
+     ],
+     "a": 3,
+     "e": "u<sub>1</sub> = 6 ; u<sub>2</sub> = 6² + 2 = <b>38</b>."
+    },
+    {
+     "q": "u<sub>1</sub> = 9 et, pour tout n ⩾ 1, u<sub>n+1</sub> = u<sub>n</sub> + 2n. Calcule u<sub>3</sub>.",
+     "c": [
+      "15",
+      "11",
+      "21",
+      "13"
+     ],
+     "a": 0,
+     "e": "u<sub>2</sub> = 9 + 2 × 1 = 11 ; u<sub>3</sub> = 11 + 2 × 2 = <b>15</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 1 et u<sub>n+1</sub> = u<sub>n</sub>² − 2. Calcule u<sub>2</sub>.",
+     "c": [
+      "3",
+      "−4",
+      "−1",
+      "2"
+     ],
+     "a": 2,
+     "e": "u<sub>1</sub> = −1 ; u<sub>2</sub> = (−1)² − 2 = <b>−1</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 3 et u<sub>n+1</sub> = 2u<sub>n</sub>. Calcule u<sub>3</sub>.",
+     "c": [
+      "48",
+      "12",
+      "24",
+      "6"
+     ],
+     "a": 2,
+     "e": "u<sub>1</sub> = 6 ; u<sub>2</sub> = 12 ; u<sub>3</sub> = <b>24</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = −1 et u<sub>n+1</sub> = u<sub>n</sub>² + 2. Calcule u<sub>2</sub>.",
+     "c": [
+      "6",
+      "8",
+      "11",
+      "3"
+     ],
+     "a": 2,
+     "e": "u<sub>1</sub> = 3 ; u<sub>2</sub> = 3² + 2 = <b>11</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = −2 et u<sub>n+1</sub> = 3u<sub>n</sub> + 3. Calcule u<sub>3</sub>.",
+     "c": [
+      "12",
+      "−15",
+      "−42",
+      "−6"
+     ],
+     "a": 1,
+     "e": "u<sub>1</sub> = −3 ; u<sub>2</sub> = −6 ; u<sub>3</sub> = <b>−15</b>."
+    }
+   ]
+  },
+  {
+   "title": "Sens de variation",
+   "items": [
+    {
+     "q": "Pour tout n, u<sub>n+1</sub> = u<sub>n</sub> + 4n + 1. Quel est le sens de variation de (u<sub>n</sub>) ?",
+     "c": [
+      "on ne peut pas savoir sans u<sub>0</sub>",
+      "décroissante",
+      "croissante",
+      "constante"
+     ],
+     "a": 2,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = 4n + 1, positif pour tout n : la suite est <b>croissante</b>."
+    },
+    {
+     "q": "Pour tout n, u<sub>n+1</sub> = u<sub>n</sub> + n² + 1. Quel est le sens de variation de (u<sub>n</sub>) ?",
+     "c": [
+      "croissante",
+      "on ne peut pas savoir sans u<sub>0</sub>",
+      "décroissante",
+      "constante"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = n² + 1, positif pour tout n : la suite est <b>croissante</b>."
+    },
+    {
+     "q": "Pour tout n, u<sub>n+1</sub> = u<sub>n</sub> + 3. Quel est le sens de variation de (u<sub>n</sub>) ?",
+     "c": [
+      "constante",
+      "on ne peut pas savoir sans u<sub>0</sub>",
+      "décroissante",
+      "croissante"
+     ],
+     "a": 3,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = 3, positif pour tout n : la suite est <b>croissante</b>."
+    },
+    {
+     "q": "Quel est le sens de variation de la suite définie par u<sub>n</sub> = −4n − 8 ?",
+     "c": [
+      "ni croissante ni décroissante",
+      "croissante",
+      "décroissante",
+      "constante"
+     ],
+     "a": 2,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = −4, négatif : la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = 6 ÷ (n + 4) pour n ⩾ 0. Quel est le sens de variation de la suite ?",
+     "c": [
+      "croissante",
+      "décroissante",
+      "constante",
+      "croissante puis décroissante"
+     ],
+     "a": 1,
+     "e": "Quand n augmente, n + 4 augmente, donc 6 ÷ (n + 4) diminue : la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = 2n² − 7n. La suite est-elle monotone ?",
+     "c": [
+      "oui, elle est constante",
+      "oui, elle est décroissante",
+      "oui, elle est croissante",
+      "elle décroît d’abord, puis croît"
+     ],
+     "a": 3,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = 4n − 5 : négatif pour les petits n, positif ensuite. La suite <b>décroît d’abord, puis croît</b>."
+    },
+    {
+     "q": "Pour tout n, u<sub>n+1</sub> = u<sub>n</sub> − n + 1. Quel est le sens de variation de (u<sub>n</sub>) ?",
+     "c": [
+      "on ne peut pas savoir sans u<sub>0</sub>",
+      "constante",
+      "croissante",
+      "décroissante"
+     ],
+     "a": 3,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = −(n + 1), négatif pour tout n : la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = 2n² − 5n + 8. Calcule u<sub>n+1</sub> − u<sub>n</sub>.",
+     "c": [
+      "4n − 3",
+      "2n − 3",
+      "4n + 5",
+      "4n − 5"
+     ],
+     "a": 0,
+     "e": "2(n + 1)² − 2n² − 5 = <b>4n − 3</b>."
+    },
+    {
+     "q": "Pour tout n, u<sub>n+1</sub> = u<sub>n</sub> − 6n + 1. Quel est le sens de variation de (u<sub>n</sub>) ?",
+     "c": [
+      "croissante",
+      "décroissante",
+      "constante",
+      "on ne peut pas savoir sans u<sub>0</sub>"
+     ],
+     "a": 1,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = −(6n + 1), négatif pour tout n : la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "Pour tout n, u<sub>n+1</sub> = u<sub>n</sub> + 7n + 1. Quel est le sens de variation de (u<sub>n</sub>) ?",
+     "c": [
+      "on ne peut pas savoir sans u<sub>0</sub>",
+      "constante",
+      "décroissante",
+      "croissante"
+     ],
+     "a": 3,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = 7n + 1, positif pour tout n : la suite est <b>croissante</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = 3n² − 3n + 1. Calcule u<sub>n+1</sub> − u<sub>n</sub>.",
+     "c": [
+      "6n + 1",
+      "6n − 3",
+      "6n",
+      "3n"
+     ],
+     "a": 2,
+     "e": "3(n + 1)² − 3n² − 3 = <b>6n</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = 4n² + 5n + 1. Calcule u<sub>n+1</sub> − u<sub>n</sub>.",
+     "c": [
+      "8n + 9",
+      "8n + 10",
+      "8n + 5",
+      "4n + 9"
+     ],
+     "a": 0,
+     "e": "4(n + 1)² − 4n² + 5 = <b>8n + 9</b>."
+    },
+    {
+     "q": "Quel est le sens de variation de la suite définie par u<sub>n</sub> = n − 4 ?",
+     "c": [
+      "croissante",
+      "ni croissante ni décroissante",
+      "décroissante",
+      "constante"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = 1, positif : la suite est <b>croissante</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = 2n² + 6n + 7. Calcule u<sub>n+1</sub> − u<sub>n</sub>.",
+     "c": [
+      "4n + 6",
+      "4n + 8",
+      "4n + 15",
+      "2n + 8"
+     ],
+     "a": 1,
+     "e": "2(n + 1)² − 2n² + 6 = <b>4n + 8</b>."
+    },
+    {
+     "q": "Quel est le sens de variation de la suite définie par u<sub>n</sub> = 2n − 2 ?",
+     "c": [
+      "constante",
+      "ni croissante ni décroissante",
+      "croissante",
+      "décroissante"
+     ],
+     "a": 2,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = 2, positif : la suite est <b>croissante</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = 3n² − n + 8. Calcule u<sub>n+1</sub> − u<sub>n</sub>.",
+     "c": [
+      "6n + 10",
+      "6n − 1",
+      "3n + 2",
+      "6n + 2"
+     ],
+     "a": 3,
+     "e": "3(n + 1)² − 3n² − 1 = <b>6n + 2</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = 3 ÷ (n + 3) pour n ⩾ 0. Quel est le sens de variation de la suite ?",
+     "c": [
+      "croissante",
+      "décroissante",
+      "constante",
+      "croissante puis décroissante"
+     ],
+     "a": 1,
+     "e": "Quand n augmente, n + 3 augmente, donc 3 ÷ (n + 3) diminue : la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = 3n² + 2n + 4. Calcule u<sub>n+1</sub> − u<sub>n</sub>.",
+     "c": [
+      "3n + 5",
+      "6n + 9",
+      "6n + 5",
+      "6n + 2"
+     ],
+     "a": 2,
+     "e": "3(n + 1)² − 3n² + 2 = <b>6n + 5</b>."
+    },
+    {
+     "q": "Pour tout n, u<sub>n+1</sub> = u<sub>n</sub> − 8n + 1. Quel est le sens de variation de (u<sub>n</sub>) ?",
+     "c": [
+      "décroissante",
+      "on ne peut pas savoir sans u<sub>0</sub>",
+      "constante",
+      "croissante"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = −(8n + 1), négatif pour tout n : la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "Pour tout n, u<sub>n+1</sub> = u<sub>n</sub> + n² + 9. Quel est le sens de variation de (u<sub>n</sub>) ?",
+     "c": [
+      "décroissante",
+      "croissante",
+      "on ne peut pas savoir sans u<sub>0</sub>",
+      "constante"
+     ],
+     "a": 1,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = n² + 9, positif pour tout n : la suite est <b>croissante</b>."
+    }
+   ]
+  },
+  {
+   "title": "Motifs et algorithmes",
+   "items": [
+    {
+     "q": "Un motif de rang 1 utilise 7 carreaux, celui de rang 2 en utilise 9, celui de rang 3 en utilise 11, et ainsi de suite (on ajoute 2 à chaque fois). Combien de carreaux pour le rang 26 ?",
+     "c": [
+      "59",
+      "57",
+      "52",
+      "182"
+     ],
+     "a": 1,
+     "e": "Rang n : 2n + 5. Rang 26 : 2 × 26 + 5 = <b>57</b>."
+    },
+    {
+     "q": "Un motif de rang 1 utilise 7 carreaux, celui de rang 2 en utilise 11, celui de rang 3 en utilise 15, et ainsi de suite (on ajoute 4 à chaque fois). Combien de carreaux pour le rang 25 ?",
+     "c": [
+      "100",
+      "107",
+      "103",
+      "175"
+     ],
+     "a": 2,
+     "e": "Rang n : 4n + 3. Rang 25 : 4 × 25 + 3 = <b>103</b>."
+    },
+    {
+     "q": "Un motif de rang 1 utilise 8 jetons, celui de rang 2 en utilise 14, celui de rang 3 en utilise 20, et ainsi de suite (on ajoute 6 à chaque fois). Combien de jetons pour le rang 17 ?",
+     "c": [
+      "136",
+      "102",
+      "104",
+      "110"
+     ],
+     "a": 2,
+     "e": "Rang n : 6n + 2. Rang 17 : 6 × 17 + 2 = <b>104</b>."
+    },
+    {
+     "q": "Un motif de rang 1 utilise 9 points, celui de rang 2 en utilise 15, celui de rang 3 en utilise 21, et ainsi de suite (on ajoute 6 à chaque fois). Combien de points pour le rang 11 ?",
+     "c": [
+      "75",
+      "66",
+      "69",
+      "99"
+     ],
+     "a": 2,
+     "e": "Rang n : 6n + 3. Rang 11 : 6 × 11 + 3 = <b>69</b>."
+    },
+    {
+     "q": "Un motif de rang 1 utilise 6 points, celui de rang 2 en utilise 9, celui de rang 3 en utilise 12, et ainsi de suite (on ajoute 3 à chaque fois). Combien de points pour le rang 21 ?",
+     "c": [
+      "63",
+      "66",
+      "69",
+      "126"
+     ],
+     "a": 1,
+     "e": "Rang n : 3n + 3. Rang 21 : 3 × 21 + 3 = <b>66</b>."
+    },
+    {
+     "q": "Que renvoie suite(5) ?<span class='code'>def suite(n):<br>    return 3 * n ** 2 + 1</span>",
+     "c": [
+      "75",
+      "226",
+      "76",
+      "31"
+     ],
+     "a": 2,
+     "e": "3 × 5² + 1 = <b>76</b> (forme explicite)."
+    },
+    {
+     "q": "Que renvoie suite(3) ?<span class='code'>def suite(n):<br>    return 4 * n ** 2 + 6</span>",
+     "c": [
+      "42",
+      "30",
+      "36",
+      "150"
+     ],
+     "a": 0,
+     "e": "4 × 3² + 6 = <b>42</b> (forme explicite)."
+    },
+    {
+     "q": "Une suite commence par u<sub>0</sub> = 4. Quel est son 10<sup>e</sup> terme ?",
+     "c": [
+      "u<sub>11</sub>",
+      "u<sub>10</sub>",
+      "u<sub>8</sub>",
+      "u<sub>9</sub>"
+     ],
+     "a": 3,
+     "e": "u<sub>0</sub> est le 1<sup>er</sup> terme, donc le 10<sup>e</sup> est <b>u<sub>9</sub></b>."
+    },
+    {
+     "q": "Une suite commence par u<sub>0</sub> = 2. Quel est son 10<sup>e</sup> terme ?",
+     "c": [
+      "u<sub>10</sub>",
+      "u<sub>11</sub>",
+      "u<sub>8</sub>",
+      "u<sub>9</sub>"
+     ],
+     "a": 3,
+     "e": "u<sub>0</sub> est le 1<sup>er</sup> terme, donc le 10<sup>e</sup> est <b>u<sub>9</sub></b>."
+    },
+    {
+     "q": "Un motif de rang 1 utilise 3 allumettes, celui de rang 2 en utilise 5, celui de rang 3 en utilise 7, et ainsi de suite (on ajoute 2 à chaque fois). Combien de allumettes pour le rang 9 ?",
+     "c": [
+      "18",
+      "27",
+      "19",
+      "21"
+     ],
+     "a": 2,
+     "e": "Rang n : 2n + 1. Rang 9 : 2 × 9 + 1 = <b>19</b>."
+    },
+    {
+     "q": "Une suite commence par u<sub>0</sub> = 5. Quel est son 10<sup>e</sup> terme ?",
+     "c": [
+      "u<sub>9</sub>",
+      "u<sub>11</sub>",
+      "u<sub>8</sub>",
+      "u<sub>10</sub>"
+     ],
+     "a": 0,
+     "e": "u<sub>0</sub> est le 1<sup>er</sup> terme, donc le 10<sup>e</sup> est <b>u<sub>9</sub></b>."
+    },
+    {
+     "q": "Que renvoie suite(3) ?<span class='code'>def suite(n):<br>    return 3 * n ** 2 + 5</span>",
+     "c": [
+      "32",
+      "27",
+      "23",
+      "86"
+     ],
+     "a": 0,
+     "e": "3 × 3² + 5 = <b>32</b> (forme explicite)."
+    },
+    {
+     "q": "Que vaut u à la fin de ce programme ?<span class='code'>u = 1<br>for i in range(2):<br>    u = 3 * u + 0</span>",
+     "c": [
+      "3",
+      "7",
+      "27",
+      "9"
+     ],
+     "a": 3,
+     "e": "La boucle fait 2 tours : u prend les valeurs 3, 9. À la fin, u = <b>9</b> = u<sub>2</sub>."
+    },
+    {
+     "q": "Un motif de rang 1 utilise 8 jetons, celui de rang 2 en utilise 13, celui de rang 3 en utilise 18, et ainsi de suite (on ajoute 5 à chaque fois). Combien de jetons pour le rang 30 ?",
+     "c": [
+      "153",
+      "150",
+      "240",
+      "158"
+     ],
+     "a": 0,
+     "e": "Rang n : 5n + 3. Rang 30 : 5 × 30 + 3 = <b>153</b>."
+    },
+    {
+     "q": "Que renvoie suite(5) ?<span class='code'>def suite(n):<br>    return 4 * n ** 2 + 2</span>",
+     "c": [
+      "42",
+      "402",
+      "100",
+      "102"
+     ],
+     "a": 3,
+     "e": "4 × 5² + 2 = <b>102</b> (forme explicite)."
+    },
+    {
+     "q": "Une suite commence par u<sub>0</sub> = 3. Quel est son 10<sup>e</sup> terme ?",
+     "c": [
+      "u<sub>11</sub>",
+      "u<sub>9</sub>",
+      "u<sub>10</sub>",
+      "u<sub>8</sub>"
+     ],
+     "a": 1,
+     "e": "u<sub>0</sub> est le 1<sup>er</sup> terme, donc le 10<sup>e</sup> est <b>u<sub>9</sub></b>."
+    },
+    {
+     "q": "Que renvoie suite(6) ?<span class='code'>def suite(n):<br>    return 2 * n ** 2 + 2</span>",
+     "c": [
+      "72",
+      "146",
+      "26",
+      "74"
+     ],
+     "a": 3,
+     "e": "2 × 6² + 2 = <b>74</b> (forme explicite)."
+    },
+    {
+     "q": "Que renvoie suite(4) ?<span class='code'>def suite(n):<br>    return 3 * n ** 2 + 5</span>",
+     "c": [
+      "29",
+      "53",
+      "149",
+      "48"
+     ],
+     "a": 1,
+     "e": "3 × 4² + 5 = <b>53</b> (forme explicite)."
+    },
+    {
+     "q": "Que renvoie suite(6) ?<span class='code'>def suite(n):<br>    return 2 * n ** 2 + 6</span>",
+     "c": [
+      "30",
+      "78",
+      "150",
+      "72"
+     ],
+     "a": 1,
+     "e": "2 × 6² + 6 = <b>78</b> (forme explicite)."
+    },
+    {
+     "q": "Que renvoie suite(4) ?<span class='code'>def suite(n):<br>    return 2 * n ** 2 + 4</span>",
+     "c": [
+      "36",
+      "20",
+      "68",
+      "32"
+     ],
+     "a": 0,
+     "e": "2 × 4² + 4 = <b>36</b> (forme explicite)."
+    }
+   ]
+  },
+  {
+   "title": "Modéliser par une suite",
+   "items": [
+    {
+     "q": "Une cuve contient 120 L. Chaque semaine, on retire 10 % de l’eau puis on ajoute 20 L. Combien de litres après une semaine ?",
+     "c": [
+      "130",
+      "32",
+      "128",
+      "126"
+     ],
+     "a": 2,
+     "e": "120 × 0,9 + 20 = <b>128</b> L (on retire d’abord, on ajoute ensuite)."
+    },
+    {
+     "q": "Une ville compte 2 000 habitants. Sa population augmente de 4 % par an. Quelle relation de récurrence vérifie la population u<sub>n</sub> après n années ?",
+     "c": [
+      "u<sub>n+1</sub> = 0,04 × u<sub>n</sub>",
+      "u<sub>n+1</sub> = 1,04 × u<sub>n</sub>",
+      "u<sub>n+1</sub> = u<sub>n</sub> + 4",
+      "u<sub>n+1</sub> = u<sub>n</sub> + 1,04"
+     ],
+     "a": 1,
+     "e": "Augmenter de 4 % revient à multiplier par 1 + 0,04 = <b>1,04</b>."
+    },
+    {
+     "q": "Une cuve contient 240 L. Chaque semaine, on retire 25 % de l’eau puis on ajoute 20 L. Combien de litres après une semaine ?",
+     "c": [
+      "195",
+      "235",
+      "200",
+      "80"
+     ],
+     "a": 2,
+     "e": "240 × 0,75 + 20 = <b>200</b> L (on retire d’abord, on ajoute ensuite)."
+    },
+    {
+     "q": "Un stock de 71 pièces diminue de 3 pièces par jour. On note u<sub>n</sub> le stock après n jours. Exprime u<sub>n</sub> en fonction de n.",
+     "c": [
+      "u<sub>n</sub> = 71n − 3",
+      "u<sub>n</sub> = 71 − 3",
+      "u<sub>n</sub> = 71 − 3<sup>n</sup>",
+      "u<sub>n</sub> = 71 − 3n"
+     ],
+     "a": 3,
+     "e": "On retire 3 chaque jour, n fois : <b>u<sub>n</sub> = 71 − 3n</b>."
+    },
+    {
+     "q": "Un club compte 800 abonnés en 2025. Chaque année, 85 % des abonnés restent et 300 nouveaux s’inscrivent. On note u<sub>n</sub> le nombre d’abonnés en 2025 + n. Combien y aura-t-il d’abonnés en 2027 ?",
+     "c": [
+      "578",
+      "980",
+      "1 400",
+      "1 133"
+     ],
+     "a": 3,
+     "e": "u<sub>1</sub> = 0,85 × 800 + 300 = 980 ; u<sub>2</sub> = 0,85 × 980 + 300 = <b>1 133</b>."
+    },
+    {
+     "q": "Une ville compte 2 000 habitants. Sa population augmente de 10 % par an. Quelle relation de récurrence vérifie la population u<sub>n</sub> après n années ?",
+     "c": [
+      "u<sub>n+1</sub> = 0,1 × u<sub>n</sub>",
+      "u<sub>n+1</sub> = 1,1 × u<sub>n</sub>",
+      "u<sub>n+1</sub> = u<sub>n</sub> + 10",
+      "u<sub>n+1</sub> = u<sub>n</sub> + 1,1"
+     ],
+     "a": 1,
+     "e": "Augmenter de 10 % revient à multiplier par 1 + 0,1 = <b>1,1</b>."
+    },
+    {
+     "q": "Un club compte 600 abonnés en 2025. Chaque année, 90 % des abonnés restent et 350 nouveaux s’inscrivent. On note u<sub>n</sub> le nombre d’abonnés en 2025 + n. Combien y aura-t-il d’abonnés en 2027 ?",
+     "c": [
+      "486",
+      "890",
+      "1 151",
+      "1 300"
+     ],
+     "a": 2,
+     "e": "u<sub>1</sub> = 0,9 × 600 + 350 = 890 ; u<sub>2</sub> = 0,9 × 890 + 350 = <b>1 151</b>."
+    },
+    {
+     "q": "Une cuve contient 170 L. Chaque semaine, on retire 10 % de l’eau puis on ajoute 60 L. Combien de litres après une semaine ?",
+     "c": [
+      "207",
+      "220",
+      "77",
+      "213"
+     ],
+     "a": 3,
+     "e": "170 × 0,9 + 60 = <b>213</b> L (on retire d’abord, on ajoute ensuite)."
+    },
+    {
+     "q": "Une ville compte 3 000 habitants. Sa population augmente de 5 % par an. Quelle relation de récurrence vérifie la population u<sub>n</sub> après n années ?",
+     "c": [
+      "u<sub>n+1</sub> = u<sub>n</sub> + 5",
+      "u<sub>n+1</sub> = u<sub>n</sub> + 1,05",
+      "u<sub>n+1</sub> = 1,05 × u<sub>n</sub>",
+      "u<sub>n+1</sub> = 0,05 × u<sub>n</sub>"
+     ],
+     "a": 2,
+     "e": "Augmenter de 5 % revient à multiplier par 1 + 0,05 = <b>1,05</b>."
+    },
+    {
+     "q": "Un club compte 1100 abonnés en 2025. Chaque année, 90 % des abonnés restent et 150 nouveaux s’inscrivent. On note u<sub>n</sub> le nombre d’abonnés en 2025 + n. Combien y aura-t-il d’abonnés en 2027 ?",
+     "c": [
+      "1 176",
+      "1 400",
+      "891",
+      "1 140"
+     ],
+     "a": 0,
+     "e": "u<sub>1</sub> = 0,9 × 1 100 + 150 = 1 140 ; u<sub>2</sub> = 0,9 × 1 140 + 150 = <b>1 176</b>."
+    },
+    {
+     "q": "Un club compte 700 abonnés en 2025. Chaque année, 80 % des abonnés restent et 400 nouveaux s’inscrivent. On note u<sub>n</sub> le nombre d’abonnés en 2025 + n. Combien y aura-t-il d’abonnés en 2027 ?",
+     "c": [
+      "448",
+      "1 168",
+      "960",
+      "1 500"
+     ],
+     "a": 1,
+     "e": "u<sub>1</sub> = 0,8 × 700 + 400 = 960 ; u<sub>2</sub> = 0,8 × 960 + 400 = <b>1 168</b>."
+    },
+    {
+     "q": "Une cuve contient 230 L. Chaque semaine, on retire 20 % de l’eau puis on ajoute 50 L. Combien de litres après une semaine ?",
+     "c": [
+      "234",
+      "260",
+      "224",
+      "96"
+     ],
+     "a": 0,
+     "e": "230 × 0,8 + 50 = <b>234</b> L (on retire d’abord, on ajoute ensuite)."
+    },
+    {
+     "q": "Une ville compte 5 000 habitants. Sa population augmente de 5 % par an. Quelle relation de récurrence vérifie la population u<sub>n</sub> après n années ?",
+     "c": [
+      "u<sub>n+1</sub> = 1,05 × u<sub>n</sub>",
+      "u<sub>n+1</sub> = 0,05 × u<sub>n</sub>",
+      "u<sub>n+1</sub> = u<sub>n</sub> + 5",
+      "u<sub>n+1</sub> = u<sub>n</sub> + 1,05"
+     ],
+     "a": 0,
+     "e": "Augmenter de 5 % revient à multiplier par 1 + 0,05 = <b>1,05</b>."
+    },
+    {
+     "q": "Un club compte 700 abonnés en 2025. Chaque année, 90 % des abonnés restent et 350 nouveaux s’inscrivent. On note u<sub>n</sub> le nombre d’abonnés en 2025 + n. Combien y aura-t-il d’abonnés en 2027 ?",
+     "c": [
+      "1 400",
+      "1 232",
+      "980",
+      "567"
+     ],
+     "a": 1,
+     "e": "u<sub>1</sub> = 0,9 × 700 + 350 = 980 ; u<sub>2</sub> = 0,9 × 980 + 350 = <b>1 232</b>."
+    },
+    {
+     "q": "Une cuve contient 160 L. Chaque semaine, on retire 10 % de l’eau puis on ajoute 20 L. Combien de litres après une semaine ?",
+     "c": [
+      "36",
+      "162",
+      "170",
+      "164"
+     ],
+     "a": 3,
+     "e": "160 × 0,9 + 20 = <b>164</b> L (on retire d’abord, on ajoute ensuite)."
+    },
+    {
+     "q": "Une cuve contient 130 L. Chaque semaine, on retire 20 % de l’eau puis on ajoute 20 L. Combien de litres après une semaine ?",
+     "c": [
+      "124",
+      "130",
+      "46",
+      "120"
+     ],
+     "a": 0,
+     "e": "130 × 0,8 + 20 = <b>124</b> L (on retire d’abord, on ajoute ensuite)."
+    },
+    {
+     "q": "Un stock de 51 pièces diminue de 3 pièces par jour. On note u<sub>n</sub> le stock après n jours. Exprime u<sub>n</sub> en fonction de n.",
+     "c": [
+      "u<sub>n</sub> = 51 − 3",
+      "u<sub>n</sub> = 51n − 3",
+      "u<sub>n</sub> = 51 − 3<sup>n</sup>",
+      "u<sub>n</sub> = 51 − 3n"
+     ],
+     "a": 3,
+     "e": "On retire 3 chaque jour, n fois : <b>u<sub>n</sub> = 51 − 3n</b>."
+    },
+    {
+     "q": "Une cuve contient 130 L. Chaque semaine, on retire 20 % de l’eau puis on ajoute 40 L. Combien de litres après une semaine ?",
+     "c": [
+      "150",
+      "66",
+      "144",
+      "136"
+     ],
+     "a": 2,
+     "e": "130 × 0,8 + 40 = <b>144</b> L (on retire d’abord, on ajoute ensuite)."
+    },
+    {
+     "q": "Un stock de 83 pièces diminue de 4 pièces par jour. On note u<sub>n</sub> le stock après n jours. Exprime u<sub>n</sub> en fonction de n.",
+     "c": [
+      "u<sub>n</sub> = 83 − 4n",
+      "u<sub>n</sub> = 83 − 4<sup>n</sup>",
+      "u<sub>n</sub> = 83 − 4",
+      "u<sub>n</sub> = 83n − 4"
+     ],
+     "a": 0,
+     "e": "On retire 4 chaque jour, n fois : <b>u<sub>n</sub> = 83 − 4n</b>."
+    },
+    {
+     "q": "Un club compte 1100 abonnés en 2025. Chaque année, 85 % des abonnés restent et 200 nouveaux s’inscrivent. On note u<sub>n</sub> le nombre d’abonnés en 2025 + n. Combien y aura-t-il d’abonnés en 2027 ?",
+     "c": [
+      "794,75",
+      "1 164,75",
+      "1 135",
+      "1 500"
+     ],
+     "a": 1,
+     "e": "u<sub>1</sub> = 0,85 × 1 100 + 200 = 1 135 ; u<sub>2</sub> = 0,85 × 1 135 + 200 = <b>1 164,75</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 2,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "premiere"
+}

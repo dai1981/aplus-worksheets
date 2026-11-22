@@ -1,0 +1,1157 @@
+{
+ "slug": "suites-arithmetiques",
+ "title": "Suites arithmétiques : raison, terme général et variations",
+ "seo_title": "Suites arithmétiques première : fiches et exercices avec corrigé",
+ "short_title": "Suites arithmétiques",
+ "domain": "Algèbre",
+ "standard_code": "Première spécialité · Algèbre",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A",
+ "standard_text": "Suites arithmétiques : relation de récurrence, terme général, sens de variation ; lien avec les fonctions affines ; modéliser une croissance linéaire (résumé du programme 2026 de spécialité de première)",
+ "meta_desc": "Fiches de maths première sur les suites arithmétiques : raison, terme général, premier terme, sens de variation, seuil et problèmes de croissance linéaire. 100 exercices corrigés.",
+ "key_big": "Suite arithmétique : u(n) = u(0) + nr",
+ "key_sub": "On ajoute toujours la même raison r",
+ "body_html": "<h2>Comment faire</h2><p>Une suite est <b>arithmétique</b> quand on passe d’un terme au suivant en ajoutant toujours le même nombre r (la raison) : u<sub>n+1</sub> = u<sub>n</sub> + r.</p><p>Terme général : u<sub>n</sub> = u<sub>0</sub> + nr, et plus généralement u<sub>n</sub> = u<sub>p</sub> + (n − p)r.</p><p>Si r &gt; 0, la suite est croissante ; si r &lt; 0, décroissante. Ses points sont alignés : c’est la version discrète d’une fonction affine.</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>u<sub>3</sub> = 11 et u<sub>8</sub> = 26</p><p class='sn-ex-s'>u<sub>8</sub> − u<sub>3</sub> = 5r = 15, donc r = 3</p><p class='sn-ex-s'>u<sub>0</sub> = 11 − 3 × 3 = 2</p><p class='sn-ex-a'>Réponse : u<sub>n</sub> = 2 + 3n</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>u<sub>n</sub> = u<sub>0</sub> + (n − 1)r</td><td>Avec u<sub>0</sub> : u<sub>0</sub> + nr. Le « n − 1 » sert quand on part de u<sub>1</sub>.</td></tr><tr><td>r = (u<sub>8</sub> − u<sub>3</sub>) ÷ 8</td><td>On divise par l’écart d’indices : 8 − 3 = 5.</td></tr><tr><td>La suite est croissante car u<sub>0</sub> &gt; 0</td><td>Seul le signe de r compte.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Comment montrer qu’une suite est arithmétique ?",
+   "a": "On calcule u<sub>n+1</sub> − u<sub>n</sub> : si le résultat est un nombre qui ne dépend pas de n, la suite est arithmétique de raison ce nombre."
+  },
+  {
+   "q": "Quel lien avec les fonctions affines ?",
+   "a": "u<sub>n</sub> = u<sub>0</sub> + nr = f(n) avec f(x) = rx + u<sub>0</sub> : les points (n ; u<sub>n</sub>) sont sur une droite de coefficient directeur r."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Reconnaître une suite arithmétique",
+   "items": [
+    {
+     "q": "Une suite arithmétique a pour premiers termes u<sub>0</sub> = 14 ; u<sub>1</sub> = 8 ; u<sub>2</sub> = 2. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "38",
+      "−4",
+      "−16",
+      "−10"
+     ],
+     "a": 3,
+     "e": "r = −6, donc u<sub>4</sub> = 2 + 2 × (−6) = <b>−10</b>."
+    },
+    {
+     "q": "Une suite arithmétique vérifie u<sub>0</sub> = −8 ; u<sub>1</sub> = −7 ; u<sub>2</sub> = −6 ; u<sub>3</sub> = −5. Quelle est sa raison ?",
+     "c": [
+      "−8",
+      "2",
+      "1",
+      "−1"
+     ],
+     "a": 2,
+     "e": "r = u<sub>1</sub> − u<sub>0</sub> = <b>1</b> (terme suivant moins terme précédent)."
+    },
+    {
+     "q": "Une suite arithmétique vérifie u<sub>0</sub> = −6 ; u<sub>1</sub> = −15 ; u<sub>2</sub> = −24 ; u<sub>3</sub> = −33. Quelle est sa raison ?",
+     "c": [
+      "−18",
+      "−9",
+      "−6",
+      "9"
+     ],
+     "a": 1,
+     "e": "r = u<sub>1</sub> − u<sub>0</sub> = <b>−9</b> (terme suivant moins terme précédent)."
+    },
+    {
+     "q": "Une suite arithmétique a pour premiers termes u<sub>0</sub> = 16 ; u<sub>1</sub> = 9 ; u<sub>2</sub> = 2. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "44",
+      "−12",
+      "−5",
+      "−19"
+     ],
+     "a": 1,
+     "e": "r = −7, donc u<sub>4</sub> = 2 + 2 × (−7) = <b>−12</b>."
+    },
+    {
+     "q": "Une suite arithmétique vérifie u<sub>0</sub> = 13 ; u<sub>1</sub> = 15 ; u<sub>2</sub> = 17 ; u<sub>3</sub> = 19. Quelle est sa raison ?",
+     "c": [
+      "−2",
+      "4",
+      "13",
+      "2"
+     ],
+     "a": 3,
+     "e": "r = u<sub>1</sub> − u<sub>0</sub> = <b>2</b> (terme suivant moins terme précédent)."
+    },
+    {
+     "q": "Une suite arithmétique vérifie u<sub>0</sub> = 5 ; u<sub>1</sub> = 14 ; u<sub>2</sub> = 23 ; u<sub>3</sub> = 32. Quelle est sa raison ?",
+     "c": [
+      "18",
+      "9",
+      "5",
+      "−9"
+     ],
+     "a": 1,
+     "e": "r = u<sub>1</sub> − u<sub>0</sub> = <b>9</b> (terme suivant moins terme précédent)."
+    },
+    {
+     "q": "Une suite arithmétique vérifie u<sub>0</sub> = 13 ; u<sub>1</sub> = 20 ; u<sub>2</sub> = 27 ; u<sub>3</sub> = 34. Quelle est sa raison ?",
+     "c": [
+      "13",
+      "−7",
+      "14",
+      "7"
+     ],
+     "a": 3,
+     "e": "r = u<sub>1</sub> − u<sub>0</sub> = <b>7</b> (terme suivant moins terme précédent)."
+    },
+    {
+     "q": "Une suite arithmétique a pour premiers termes u<sub>0</sub> = 8 ; u<sub>1</sub> = 3 ; u<sub>2</sub> = −2. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "−17",
+      "28",
+      "−7",
+      "−12"
+     ],
+     "a": 3,
+     "e": "r = −5, donc u<sub>4</sub> = −2 + 2 × (−5) = <b>−12</b>."
+    },
+    {
+     "q": "Une suite arithmétique vérifie u<sub>0</sub> = 4 ; u<sub>1</sub> = 7 ; u<sub>2</sub> = 10 ; u<sub>3</sub> = 13. Quelle est sa raison ?",
+     "c": [
+      "3",
+      "6",
+      "−3",
+      "4"
+     ],
+     "a": 0,
+     "e": "r = u<sub>1</sub> − u<sub>0</sub> = <b>3</b> (terme suivant moins terme précédent)."
+    },
+    {
+     "q": "Laquelle de ces listes peut être le début d’une suite arithmétique ?",
+     "c": [
+      "2 ; 3 ; 5 ; 8",
+      "11 ; 15 ; 19 ; 23",
+      "2 ; 6 ; 18 ; 54",
+      "1 ; 4 ; 9 ; 16"
+     ],
+     "a": 1,
+     "e": "On passe d’un terme au suivant en ajoutant toujours 4 : <b>11 ; 15 ; 19 ; 23</b>."
+    },
+    {
+     "q": "Une suite arithmétique a pour premiers termes u<sub>0</sub> = 19 ; u<sub>1</sub> = 20 ; u<sub>2</sub> = 21. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "15",
+      "24",
+      "23",
+      "22"
+     ],
+     "a": 2,
+     "e": "r = 1, donc u<sub>4</sub> = 21 + 2 × 1 = <b>23</b>."
+    },
+    {
+     "q": "Une suite arithmétique a pour premiers termes u<sub>0</sub> = −4 ; u<sub>1</sub> = 3 ; u<sub>2</sub> = 10. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "24",
+      "−32",
+      "31",
+      "17"
+     ],
+     "a": 0,
+     "e": "r = 7, donc u<sub>4</sub> = 10 + 2 × 7 = <b>24</b>."
+    },
+    {
+     "q": "Une suite arithmétique vérifie u<sub>0</sub> = −10 ; u<sub>1</sub> = −15 ; u<sub>2</sub> = −20 ; u<sub>3</sub> = −25. Quelle est sa raison ?",
+     "c": [
+      "−5",
+      "5",
+      "−15",
+      "−10"
+     ],
+     "a": 0,
+     "e": "r = u<sub>1</sub> − u<sub>0</sub> = <b>−5</b> (terme suivant moins terme précédent)."
+    },
+    {
+     "q": "Une suite arithmétique vérifie u<sub>0</sub> = 16 ; u<sub>1</sub> = 14 ; u<sub>2</sub> = 12 ; u<sub>3</sub> = 10. Quelle est sa raison ?",
+     "c": [
+      "−4",
+      "2",
+      "16",
+      "−2"
+     ],
+     "a": 3,
+     "e": "r = u<sub>1</sub> − u<sub>0</sub> = <b>−2</b> (terme suivant moins terme précédent)."
+    },
+    {
+     "q": "Une suite arithmétique a pour premiers termes u<sub>0</sub> = 13 ; u<sub>1</sub> = 21 ; u<sub>2</sub> = 29. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "37",
+      "53",
+      "45",
+      "−19"
+     ],
+     "a": 2,
+     "e": "r = 8, donc u<sub>4</sub> = 29 + 2 × 8 = <b>45</b>."
+    },
+    {
+     "q": "Une suite arithmétique vérifie u<sub>0</sub> = 16 ; u<sub>1</sub> = 8 ; u<sub>2</sub> = 0 ; u<sub>3</sub> = −8. Quelle est sa raison ?",
+     "c": [
+      "16",
+      "−8",
+      "−16",
+      "8"
+     ],
+     "a": 1,
+     "e": "r = u<sub>1</sub> − u<sub>0</sub> = <b>−8</b> (terme suivant moins terme précédent)."
+    },
+    {
+     "q": "Une suite arithmétique a pour premiers termes u<sub>0</sub> = −15 ; u<sub>1</sub> = −14 ; u<sub>2</sub> = −13. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "−12",
+      "−19",
+      "−11",
+      "−10"
+     ],
+     "a": 2,
+     "e": "r = 1, donc u<sub>4</sub> = −13 + 2 × 1 = <b>−11</b>."
+    },
+    {
+     "q": "Une suite arithmétique a pour premiers termes u<sub>0</sub> = −3 ; u<sub>1</sub> = −8 ; u<sub>2</sub> = −13. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "17",
+      "−28",
+      "−23",
+      "−18"
+     ],
+     "a": 2,
+     "e": "r = −5, donc u<sub>4</sub> = −13 + 2 × (−5) = <b>−23</b>."
+    },
+    {
+     "q": "Une suite arithmétique vérifie u<sub>0</sub> = 15 ; u<sub>1</sub> = 22 ; u<sub>2</sub> = 29 ; u<sub>3</sub> = 36. Quelle est sa raison ?",
+     "c": [
+      "7",
+      "14",
+      "−7",
+      "15"
+     ],
+     "a": 0,
+     "e": "r = u<sub>1</sub> − u<sub>0</sub> = <b>7</b> (terme suivant moins terme précédent)."
+    },
+    {
+     "q": "Une suite arithmétique a pour premiers termes u<sub>0</sub> = −1 ; u<sub>1</sub> = −2 ; u<sub>2</sub> = −3. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "−5",
+      "−4",
+      "3",
+      "−6"
+     ],
+     "a": 0,
+     "e": "r = −1, donc u<sub>4</sub> = −3 + 2 × (−1) = <b>−5</b>."
+    }
+   ]
+  },
+  {
+   "title": "Terme général",
+   "items": [
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = −19 et de raison 3. Quelle est son expression ?",
+     "c": [
+      "u<sub>n</sub> = −19n + 3",
+      "u<sub>n</sub> = 3n − 19",
+      "u<sub>n</sub> = 3n − 22",
+      "u<sub>n</sub> = −19 × 3<sup>n</sup>"
+     ],
+     "a": 1,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + nr : <b>u<sub>n</sub> = 3n − 19</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>1</sub> = 17 et r = −4 (la suite commence à u<sub>1</sub>). Calcule u<sub>37</sub>.",
+     "c": [
+      "−131",
+      "−135",
+      "−148",
+      "−127"
+     ],
+     "a": 3,
+     "e": "u<sub>n</sub> = u<sub>1</sub> + (n − 1) × r = 17 + 36 × (−4) = <b>−127</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = 16 et de raison −1. Quelle est son expression ?",
+     "c": [
+      "u<sub>n</sub> = 16n − 1",
+      "u<sub>n</sub> = −n + 16",
+      "u<sub>n</sub> = 16 × (−1)<sup>n</sup>",
+      "u<sub>n</sub> = −n + 17"
+     ],
+     "a": 1,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + nr : <b>u<sub>n</sub> = −n + 16</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = −11 et de raison 3. Calcule u<sub>30</sub>.",
+     "c": [
+      "−3",
+      "82",
+      "79",
+      "76"
+     ],
+     "a": 2,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + n × r = −11 + 30 × 3 = <b>79</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>1</sub> = −13 et r = −3 (la suite commence à u<sub>1</sub>). Calcule u<sub>55</sub>.",
+     "c": [
+      "−175",
+      "−165",
+      "−178",
+      "−181"
+     ],
+     "a": 0,
+     "e": "u<sub>n</sub> = u<sub>1</sub> + (n − 1) × r = −13 + 54 × (−3) = <b>−175</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>9</sub> = 18 et r = −8. Calcule u<sub>23</sub>.",
+     "c": [
+      "−166",
+      "−238",
+      "−86",
+      "−94"
+     ],
+     "a": 3,
+     "e": "u<sub>23</sub> = u<sub>9</sub> + (23 − 9) × r = 18 + 14 × (−8) = <b>−94</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = −13 et de raison −5. Calcule u<sub>45</sub>.",
+     "c": [
+      "−233",
+      "−243",
+      "−238",
+      "110"
+     ],
+     "a": 2,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + n × r = −13 + 45 × (−5) = <b>−238</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = −2 et de raison 3. Calcule u<sub>10</sub>.",
+     "c": [
+      "31",
+      "25",
+      "4",
+      "28"
+     ],
+     "a": 3,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + n × r = −2 + 10 × 3 = <b>28</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = 19 et de raison −6. Calcule u<sub>21</sub>.",
+     "c": [
+      "−107",
+      "−101",
+      "−113",
+      "−93"
+     ],
+     "a": 0,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + n × r = 19 + 21 × (−6) = <b>−107</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = 10 et de raison −2. Calcule u<sub>17</sub>.",
+     "c": [
+      "−22",
+      "−26",
+      "−24",
+      "−3"
+     ],
+     "a": 2,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + n × r = 10 + 17 × (−2) = <b>−24</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>1</sub> = 25 et r = −6 (la suite commence à u<sub>1</sub>). Calcule u<sub>38</sub>.",
+     "c": [
+      "−203",
+      "−228",
+      "−197",
+      "−209"
+     ],
+     "a": 2,
+     "e": "u<sub>n</sub> = u<sub>1</sub> + (n − 1) × r = 25 + 37 × (−6) = <b>−197</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = 19 et de raison 2. Calcule u<sub>20</sub>.",
+     "c": [
+      "57",
+      "59",
+      "61",
+      "58"
+     ],
+     "a": 1,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + n × r = 19 + 20 × 2 = <b>59</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = −15 et de raison 8. Quelle est son expression ?",
+     "c": [
+      "u<sub>n</sub> = −15 × 8<sup>n</sup>",
+      "u<sub>n</sub> = 8n − 15",
+      "u<sub>n</sub> = −15n + 8",
+      "u<sub>n</sub> = 8n − 23"
+     ],
+     "a": 1,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + nr : <b>u<sub>n</sub> = 8n − 15</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = 25 et de raison 8. Calcule u<sub>12</sub>.",
+     "c": [
+      "212",
+      "113",
+      "129",
+      "121"
+     ],
+     "a": 3,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + n × r = 25 + 12 × 8 = <b>121</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = 16 et de raison 2. Calcule u<sub>41</sub>.",
+     "c": [
+      "98",
+      "73",
+      "100",
+      "96"
+     ],
+     "a": 0,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + n × r = 16 + 41 × 2 = <b>98</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = 25 et de raison 5. Quelle est son expression ?",
+     "c": [
+      "u<sub>n</sub> = 25 × 5<sup>n</sup>",
+      "u<sub>n</sub> = 5n + 20",
+      "u<sub>n</sub> = 5n + 25",
+      "u<sub>n</sub> = 25n + 5"
+     ],
+     "a": 2,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + nr : <b>u<sub>n</sub> = 5n + 25</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = −11 et de raison 5. Calcule u<sub>47</sub>.",
+     "c": [
+      "224",
+      "219",
+      "229",
+      "−8"
+     ],
+     "a": 0,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + n × r = −11 + 47 × 5 = <b>224</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = 14 et de raison −5. Calcule u<sub>20</sub>.",
+     "c": [
+      "−91",
+      "−86",
+      "−50",
+      "−81"
+     ],
+     "a": 1,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + n × r = 14 + 20 × (−5) = <b>−86</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>1</sub> = −5 et r = 4 (la suite commence à u<sub>1</sub>). Calcule u<sub>48</sub>.",
+     "c": [
+      "183",
+      "192",
+      "187",
+      "191"
+     ],
+     "a": 0,
+     "e": "u<sub>n</sub> = u<sub>1</sub> + (n − 1) × r = −5 + 47 × 4 = <b>183</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de premier terme u<sub>0</sub> = −17 et de raison −3. Quelle est son expression ?",
+     "c": [
+      "u<sub>n</sub> = −3n − 14",
+      "u<sub>n</sub> = −17n − 3",
+      "u<sub>n</sub> = −17 × (−3)<sup>n</sup>",
+      "u<sub>n</sub> = −3n − 17"
+     ],
+     "a": 3,
+     "e": "u<sub>n</sub> = u<sub>0</sub> + nr : <b>u<sub>n</sub> = −3n − 17</b>."
+    }
+   ]
+  },
+  {
+   "title": "Trouver la raison et le premier terme",
+   "items": [
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>1</sub> = −9 et u<sub>7</sub> = −3. Quelle est sa raison ?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>",
+      "−1",
+      "6"
+     ],
+     "a": 0,
+     "e": "u<sub>7</sub> − u<sub>1</sub> = (7 − 1) × r, donc r = 6 ÷ 6 = <b>1</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>1</sub> = −6 et u<sub>5</sub> = 6. Quelle est sa raison ?",
+     "c": [
+      "3",
+      "12",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span>",
+      "−3"
+     ],
+     "a": 0,
+     "e": "u<sub>5</sub> − u<sub>1</sub> = (5 − 1) × r, donc r = 12 ÷ 4 = <b>3</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = 25 et u<sub>9</sub> = 43. Quelle est sa raison ?",
+     "c": [
+      "−2",
+      "2",
+      "18",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "u<sub>9</sub> − u<sub>0</sub> = (9 − 0) × r, donc r = 18 ÷ 9 = <b>2</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>5</sub> = 17 et u<sub>8</sub> = 2. Quelle est sa raison ?",
+     "c": [
+      "5",
+      "−15",
+      "−<span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span>",
+      "−5"
+     ],
+     "a": 3,
+     "e": "u<sub>8</sub> − u<sub>5</sub> = (8 − 5) × r, donc r = −15 ÷ 3 = <b>−5</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>3</sub> = 24 et u<sub>7</sub> = −4. Quelle est sa raison ?",
+     "c": [
+      "7",
+      "−7",
+      "−<span class='fr'><span class='fn'>28</span><span class='fd'>5</span></span>",
+      "−28"
+     ],
+     "a": 1,
+     "e": "u<sub>7</sub> − u<sub>3</sub> = (7 − 3) × r, donc r = −28 ÷ 4 = <b>−7</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>6</sub> = 10 et u<sub>8</sub> = 22. Quelle est sa raison ?",
+     "c": [
+      "4",
+      "6",
+      "−6",
+      "12"
+     ],
+     "a": 1,
+     "e": "u<sub>8</sub> − u<sub>6</sub> = (8 − 6) × r, donc r = 12 ÷ 2 = <b>6</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>2</sub> = 25 et u<sub>10</sub> = −15. Quelle est sa raison ?",
+     "c": [
+      "−40",
+      "−<span class='fr'><span class='fn'>40</span><span class='fd'>9</span></span>",
+      "−5",
+      "5"
+     ],
+     "a": 2,
+     "e": "u<sub>10</sub> − u<sub>2</sub> = (10 − 2) × r, donc r = −40 ÷ 8 = <b>−5</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>3</sub> = 25 et u<sub>11</sub> = 17. Quelle est sa raison ?",
+     "c": [
+      "−1",
+      "−8",
+      "1",
+      "−<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "u<sub>11</sub> − u<sub>3</sub> = (11 − 3) × r, donc r = −8 ÷ 8 = <b>−1</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>5</sub> = 28 et u<sub>8</sub> = 46. Quelle est sa raison ?",
+     "c": [
+      "−6",
+      "18",
+      "6",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "u<sub>8</sub> − u<sub>5</sub> = (8 − 5) × r, donc r = 18 ÷ 3 = <b>6</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>2</sub> = 9 et u<sub>13</sub> = 75. Quelle est sa raison ?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "6",
+      "−6",
+      "66"
+     ],
+     "a": 1,
+     "e": "u<sub>13</sub> − u<sub>2</sub> = (13 − 2) × r, donc r = 66 ÷ 11 = <b>6</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>5</sub> = −9 et u<sub>9</sub> = −25. Quelle est sa raison ?",
+     "c": [
+      "−4",
+      "−16",
+      "−<span class='fr'><span class='fn'>16</span><span class='fd'>5</span></span>",
+      "4"
+     ],
+     "a": 0,
+     "e": "u<sub>9</sub> − u<sub>5</sub> = (9 − 5) × r, donc r = −16 ÷ 4 = <b>−4</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = 20 et u<sub>6</sub> = 62. Quelle est sa raison ?",
+     "c": [
+      "−7",
+      "42",
+      "6",
+      "7"
+     ],
+     "a": 3,
+     "e": "u<sub>6</sub> − u<sub>0</sub> = (6 − 0) × r, donc r = 42 ÷ 6 = <b>7</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>3</sub> = −5 et u<sub>12</sub> = 13. Calcule u<sub>0</sub>.",
+     "c": [
+      "1",
+      "−11",
+      "−9",
+      "−5"
+     ],
+     "a": 1,
+     "e": "r = 18 ÷ 9 = 2, puis u<sub>0</sub> = −5 − 3 × 2 = <b>−11</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>8</sub> = 4 et u<sub>14</sub> = −2. Quelle est sa raison ?",
+     "c": [
+      "1",
+      "−6",
+      "−<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>",
+      "−1"
+     ],
+     "a": 3,
+     "e": "u<sub>14</sub> − u<sub>8</sub> = (14 − 8) × r, donc r = −6 ÷ 6 = <b>−1</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>5</sub> = 9 et u<sub>8</sub> = −12. Calcule u<sub>0</sub>.",
+     "c": [
+      "9",
+      "−26",
+      "37",
+      "44"
+     ],
+     "a": 3,
+     "e": "r = −21 ÷ 3 = −7, puis u<sub>0</sub> = 9 − 5 × (−7) = <b>44</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>11</sub> = 17 et u<sub>13</sub> = 5. Quelle est sa raison ?",
+     "c": [
+      "−12",
+      "−4",
+      "6",
+      "−6"
+     ],
+     "a": 3,
+     "e": "u<sub>13</sub> − u<sub>11</sub> = (13 − 11) × r, donc r = −12 ÷ 2 = <b>−6</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>3</sub> = −12 et u<sub>11</sub> = 12. Quelle est sa raison ?",
+     "c": [
+      "−3",
+      "24",
+      "3",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "u<sub>11</sub> − u<sub>3</sub> = (11 − 3) × r, donc r = 24 ÷ 8 = <b>3</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>8</sub> = −16 et u<sub>13</sub> = 19. Quelle est sa raison ?",
+     "c": [
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>6</span></span>",
+      "−7",
+      "7",
+      "35"
+     ],
+     "a": 2,
+     "e": "u<sub>13</sub> − u<sub>8</sub> = (13 − 8) × r, donc r = 35 ÷ 5 = <b>7</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>8</sub> = −5 et u<sub>12</sub> = −25. Quelle est sa raison ?",
+     "c": [
+      "5",
+      "−20",
+      "−5",
+      "−4"
+     ],
+     "a": 2,
+     "e": "u<sub>12</sub> − u<sub>8</sub> = (12 − 8) × r, donc r = −20 ÷ 4 = <b>−5</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>4</sub> = 8 et u<sub>8</sub> = 4. Quelle est sa raison ?",
+     "c": [
+      "−1",
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "1",
+      "−4"
+     ],
+     "a": 0,
+     "e": "u<sub>8</sub> − u<sub>4</sub> = (8 − 4) × r, donc r = −4 ÷ 4 = <b>−1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Variations, représentation et seuil",
+   "items": [
+    {
+     "q": "La suite définie par u<sub>n</sub> = n + 12 est arithmétique. Quelle est sa raison ?",
+     "c": [
+      "1",
+      "−1",
+      "12",
+      "13"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = (n + 13) − (n + 12) = <b>1</b> : c’est le coefficient de n."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de raison −3 et u<sub>0</sub> = 2. Quel est son sens de variation ?",
+     "c": [
+      "constante",
+      "décroissante",
+      "croissante, car u<sub>0</sub> &gt; 0",
+      "croissante"
+     ],
+     "a": 1,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = r = −3 : la suite est <b>décroissante</b> (seul le signe de r compte)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260' width='260' height='260' role='img' aria-label='termes d’une suite'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='240.0' x2='20.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='240.0' x2='240.0' y2='240.0' stroke='#d5dfec' stroke-width='1'/><line x1='42.0' y1='240.0' x2='42.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='218.0' x2='240.0' y2='218.0' stroke='#d5dfec' stroke-width='1'/><line x1='64.0' y1='240.0' x2='64.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='196.0' x2='240.0' y2='196.0' stroke='#d5dfec' stroke-width='1'/><line x1='86.0' y1='240.0' x2='86.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='174.0' x2='240.0' y2='174.0' stroke='#d5dfec' stroke-width='1'/><line x1='108.0' y1='240.0' x2='108.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='152.0' x2='240.0' y2='152.0' stroke='#d5dfec' stroke-width='1'/><line x1='130.0' y1='240.0' x2='130.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='130.0' x2='240.0' y2='130.0' stroke='#d5dfec' stroke-width='1'/><line x1='152.0' y1='240.0' x2='152.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='108.0' x2='240.0' y2='108.0' stroke='#d5dfec' stroke-width='1'/><line x1='174.0' y1='240.0' x2='174.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='86.0' x2='240.0' y2='86.0' stroke='#d5dfec' stroke-width='1'/><line x1='196.0' y1='240.0' x2='196.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='64.0' x2='240.0' y2='64.0' stroke='#d5dfec' stroke-width='1'/><line x1='218.0' y1='240.0' x2='218.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='42.0' x2='240.0' y2='42.0' stroke='#d5dfec' stroke-width='1'/><line x1='240.0' y1='240.0' x2='240.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='20.0' x2='240.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='130.0' x2='248.0' y2='130.0' stroke='#2b2b2b' stroke-width='2.2'/><line x1='130.0' y1='240.0' x2='130.0' y2='12.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='42.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><text x='117.0' y='224.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><text x='86.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='117.0' y='180.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='174.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><text x='117.0' y='92.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><text x='218.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><text x='117.0' y='48.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><text x='246.0' y='122.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='142.0' y='18.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><circle cx='130.0' cy='152.0' r='6' fill='#c0392b'/><circle cx='152.0' cy='108.0' r='6' fill='#c0392b'/><circle cx='174.0' cy='64.0' r='6' fill='#c0392b'/><circle cx='196.0' cy='20.0' r='6' fill='#c0392b'/><circle cx='218.0' cy='-24.0' r='6' fill='#c0392b'/></g></svg></div></div>Les points représentent u<sub>0</sub>, …, u<sub>4</sub>. Ils sont alignés. Quelle est la raison de la suite ?",
+     "c": [
+      "−1",
+      "−2",
+      "0",
+      "2"
+     ],
+     "a": 3,
+     "e": "On passe d’un point au suivant en montant de 2 : r = <b>2</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 6 et u<sub>n+1</sub> = u<sub>n</sub> + 9. À partir de quel rang n a-t-on u<sub>n</sub> &gt; 297 ?",
+     "c": [
+      "n = 34",
+      "n = 32",
+      "n = 35",
+      "n = 33"
+     ],
+     "a": 3,
+     "e": "u<sub>n</sub> = 6 + 9n &gt; 297 ⇔ n &gt; <span class='fr'><span class='fn'>97</span><span class='fd'>3</span></span> ; le premier entier est <b>n = 33</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 3 et u<sub>n+1</sub> = u<sub>n</sub> + 3. À partir de quel rang n a-t-on u<sub>n</sub> &gt; 107 ?",
+     "c": [
+      "n = 37",
+      "n = 36",
+      "n = 35",
+      "n = 34"
+     ],
+     "a": 2,
+     "e": "u<sub>n</sub> = 3 + 3n &gt; 107 ⇔ n &gt; <span class='fr'><span class='fn'>104</span><span class='fd'>3</span></span> ; le premier entier est <b>n = 35</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de raison −4 et u<sub>0</sub> = 9. Quel est son sens de variation ?",
+     "c": [
+      "constante",
+      "décroissante",
+      "croissante",
+      "croissante, car u<sub>0</sub> &gt; 0"
+     ],
+     "a": 1,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = r = −4 : la suite est <b>décroissante</b> (seul le signe de r compte)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260' width='260' height='260' role='img' aria-label='termes d’une suite'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='240.0' x2='20.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='240.0' x2='240.0' y2='240.0' stroke='#d5dfec' stroke-width='1'/><line x1='42.0' y1='240.0' x2='42.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='218.0' x2='240.0' y2='218.0' stroke='#d5dfec' stroke-width='1'/><line x1='64.0' y1='240.0' x2='64.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='196.0' x2='240.0' y2='196.0' stroke='#d5dfec' stroke-width='1'/><line x1='86.0' y1='240.0' x2='86.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='174.0' x2='240.0' y2='174.0' stroke='#d5dfec' stroke-width='1'/><line x1='108.0' y1='240.0' x2='108.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='152.0' x2='240.0' y2='152.0' stroke='#d5dfec' stroke-width='1'/><line x1='130.0' y1='240.0' x2='130.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='130.0' x2='240.0' y2='130.0' stroke='#d5dfec' stroke-width='1'/><line x1='152.0' y1='240.0' x2='152.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='108.0' x2='240.0' y2='108.0' stroke='#d5dfec' stroke-width='1'/><line x1='174.0' y1='240.0' x2='174.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='86.0' x2='240.0' y2='86.0' stroke='#d5dfec' stroke-width='1'/><line x1='196.0' y1='240.0' x2='196.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='64.0' x2='240.0' y2='64.0' stroke='#d5dfec' stroke-width='1'/><line x1='218.0' y1='240.0' x2='218.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='42.0' x2='240.0' y2='42.0' stroke='#d5dfec' stroke-width='1'/><line x1='240.0' y1='240.0' x2='240.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='20.0' x2='240.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='130.0' x2='248.0' y2='130.0' stroke='#2b2b2b' stroke-width='2.2'/><line x1='130.0' y1='240.0' x2='130.0' y2='12.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='42.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><text x='117.0' y='224.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><text x='86.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='117.0' y='180.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='174.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><text x='117.0' y='92.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><text x='218.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><text x='117.0' y='48.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><text x='246.0' y='122.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='142.0' y='18.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><circle cx='130.0' cy='196.0' r='6' fill='#c0392b'/><circle cx='152.0' cy='240.0' r='6' fill='#c0392b'/><circle cx='174.0' cy='284.0' r='6' fill='#c0392b'/><circle cx='196.0' cy='328.0' r='6' fill='#c0392b'/><circle cx='218.0' cy='372.0' r='6' fill='#c0392b'/></g></svg></div></div>Les points représentent u<sub>0</sub>, …, u<sub>4</sub>. Ils sont alignés. Quelle est la raison de la suite ?",
+     "c": [
+      "0",
+      "−2",
+      "−3",
+      "2"
+     ],
+     "a": 1,
+     "e": "On passe d’un point au suivant en descendant de 2 : r = <b>−2</b>."
+    },
+    {
+     "q": "La suite définie par u<sub>n</sub> = −8n + 12 est arithmétique. Quelle est sa raison ?",
+     "c": [
+      "−8",
+      "4",
+      "12",
+      "8"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = (−8n + 4) − (−8n + 12) = <b>−8</b> : c’est le coefficient de n."
+    },
+    {
+     "q": "La suite définie par u<sub>n</sub> = −5n + 8 est arithmétique. Quelle est sa raison ?",
+     "c": [
+      "−5",
+      "8",
+      "3",
+      "5"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = (−5n + 3) − (−5n + 8) = <b>−5</b> : c’est le coefficient de n."
+    },
+    {
+     "q": "La suite définie par u<sub>n</sub> = −7n + 3 est arithmétique. Quelle est sa raison ?",
+     "c": [
+      "−7",
+      "−4",
+      "7",
+      "3"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = (−7n − 4) − (−7n + 3) = <b>−7</b> : c’est le coefficient de n."
+    },
+    {
+     "q": "La suite définie par u<sub>n</sub> = −n + 2 est arithmétique. Quelle est sa raison ?",
+     "c": [
+      "2",
+      "−2",
+      "−1",
+      "1"
+     ],
+     "a": 2,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = (−n + 1) − (−n + 2) = <b>−1</b> : c’est le coefficient de n."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de raison 1 et u<sub>0</sub> = 0. Quel est son sens de variation ?",
+     "c": [
+      "décroissante",
+      "décroissante, car u<sub>0</sub> ⩽ 0",
+      "croissante",
+      "constante"
+     ],
+     "a": 2,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = r = 1 : la suite est <b>croissante</b> (seul le signe de r compte)."
+    },
+    {
+     "q": "u<sub>0</sub> = 10 et u<sub>n+1</sub> = u<sub>n</sub> + 6. À partir de quel rang n a-t-on u<sub>n</sub> &gt; 99 ?",
+     "c": [
+      "n = 17",
+      "n = 16",
+      "n = 14",
+      "n = 15"
+     ],
+     "a": 3,
+     "e": "u<sub>n</sub> = 10 + 6n &gt; 99 ⇔ n &gt; <span class='fr'><span class='fn'>89</span><span class='fd'>6</span></span> ; le premier entier est <b>n = 15</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 13 et u<sub>n+1</sub> = u<sub>n</sub> + 9. À partir de quel rang n a-t-on u<sub>n</sub> &gt; 257 ?",
+     "c": [
+      "n = 27",
+      "n = 28",
+      "n = 29",
+      "n = 30"
+     ],
+     "a": 1,
+     "e": "u<sub>n</sub> = 13 + 9n &gt; 257 ⇔ n &gt; <span class='fr'><span class='fn'>244</span><span class='fd'>9</span></span> ; le premier entier est <b>n = 28</b>."
+    },
+    {
+     "q": "u<sub>0</sub> = 5 et u<sub>n+1</sub> = u<sub>n</sub> + 3. À partir de quel rang n a-t-on u<sub>n</sub> &gt; 146 ?",
+     "c": [
+      "n = 47",
+      "n = 49",
+      "n = 50",
+      "n = 48"
+     ],
+     "a": 3,
+     "e": "u<sub>n</sub> = 5 + 3n &gt; 146 ⇔ n &gt; 47 ; le premier entier est <b>n = 48</b>."
+    },
+    {
+     "q": "La suite définie par u<sub>n</sub> = −7n − 6 est arithmétique. Quelle est sa raison ?",
+     "c": [
+      "−7",
+      "−13",
+      "7",
+      "−6"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = (−7n − 13) − (−7n − 6) = <b>−7</b> : c’est le coefficient de n."
+    },
+    {
+     "q": "La suite définie par u<sub>n</sub> = −7n − 9 est arithmétique. Quelle est sa raison ?",
+     "c": [
+      "−16",
+      "−7",
+      "−9",
+      "7"
+     ],
+     "a": 1,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = (−7n − 16) − (−7n − 9) = <b>−7</b> : c’est le coefficient de n."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260' width='260' height='260' role='img' aria-label='termes d’une suite'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='240.0' x2='20.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='240.0' x2='240.0' y2='240.0' stroke='#d5dfec' stroke-width='1'/><line x1='42.0' y1='240.0' x2='42.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='218.0' x2='240.0' y2='218.0' stroke='#d5dfec' stroke-width='1'/><line x1='64.0' y1='240.0' x2='64.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='196.0' x2='240.0' y2='196.0' stroke='#d5dfec' stroke-width='1'/><line x1='86.0' y1='240.0' x2='86.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='174.0' x2='240.0' y2='174.0' stroke='#d5dfec' stroke-width='1'/><line x1='108.0' y1='240.0' x2='108.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='152.0' x2='240.0' y2='152.0' stroke='#d5dfec' stroke-width='1'/><line x1='130.0' y1='240.0' x2='130.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='130.0' x2='240.0' y2='130.0' stroke='#d5dfec' stroke-width='1'/><line x1='152.0' y1='240.0' x2='152.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='108.0' x2='240.0' y2='108.0' stroke='#d5dfec' stroke-width='1'/><line x1='174.0' y1='240.0' x2='174.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='86.0' x2='240.0' y2='86.0' stroke='#d5dfec' stroke-width='1'/><line x1='196.0' y1='240.0' x2='196.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='64.0' x2='240.0' y2='64.0' stroke='#d5dfec' stroke-width='1'/><line x1='218.0' y1='240.0' x2='218.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='42.0' x2='240.0' y2='42.0' stroke='#d5dfec' stroke-width='1'/><line x1='240.0' y1='240.0' x2='240.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='20.0' x2='240.0' y2='20.0' stroke='#d5dfec' stroke-width='1'/><line x1='20.0' y1='130.0' x2='248.0' y2='130.0' stroke='#2b2b2b' stroke-width='2.2'/><line x1='130.0' y1='240.0' x2='130.0' y2='12.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='42.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><text x='117.0' y='224.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><text x='86.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='117.0' y='180.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='174.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><text x='117.0' y='92.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><text x='218.0' y='149.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><text x='117.0' y='48.0' font-size='16' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><text x='246.0' y='122.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='142.0' y='18.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><circle cx='130.0' cy='196.0' r='6' fill='#c0392b'/><circle cx='152.0' cy='174.0' r='6' fill='#c0392b'/><circle cx='174.0' cy='152.0' r='6' fill='#c0392b'/><circle cx='196.0' cy='130.0' r='6' fill='#c0392b'/><circle cx='218.0' cy='108.0' r='6' fill='#c0392b'/></g></svg></div></div>Les points représentent u<sub>0</sub>, …, u<sub>4</sub>. Ils sont alignés. Quelle est la raison de la suite ?",
+     "c": [
+      "0",
+      "−3",
+      "1",
+      "−1"
+     ],
+     "a": 2,
+     "e": "On passe d’un point au suivant en montant de 1 : r = <b>1</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique de raison 4 et u<sub>0</sub> = 4. Quel est son sens de variation ?",
+     "c": [
+      "décroissante",
+      "constante",
+      "croissante",
+      "on ne peut pas savoir"
+     ],
+     "a": 2,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = r = 4 : la suite est <b>croissante</b> (seul le signe de r compte)."
+    },
+    {
+     "q": "La suite définie par u<sub>n</sub> = −3n + 4 est arithmétique. Quelle est sa raison ?",
+     "c": [
+      "1",
+      "3",
+      "4",
+      "−3"
+     ],
+     "a": 3,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = (−3n + 1) − (−3n + 4) = <b>−3</b> : c’est le coefficient de n."
+    }
+   ]
+  },
+  {
+   "title": "Problèmes",
+   "items": [
+    {
+     "q": "Un loyer de 720 € augmente de 20 € par an. Au bout de combien d’années atteindra-t-il 840 € ?",
+     "c": [
+      "42 ans",
+      "5 ans",
+      "7 ans",
+      "6 ans"
+     ],
+     "a": 3,
+     "e": "720 + 20n = 840 ⇔ n = 120 ÷ 20 = <b>6</b>."
+    },
+    {
+     "q": "Un salaire mensuel est de 2 400 € la première année (année 1). Il augmente de 40 € chaque année. Quel est le salaire de l’année 5 ?",
+     "c": [
+      "2 560 €",
+      "2 640 €",
+      "2 600 €",
+      "2 440 €"
+     ],
+     "a": 0,
+     "e": "Année n : 2 400 + (n − 1) × 40. Année 5 : <b>2 560 €</b>."
+    },
+    {
+     "q": "Léa a 250 € sur un compte en janvier (mois 0) et y ajoute 20 € chaque mois. Combien a-t-elle au mois 7 ?",
+     "c": [
+      "370 €",
+      "140 €",
+      "1 890 €",
+      "390 €"
+     ],
+     "a": 3,
+     "e": "u<sub>7</sub> = 250 + 20 × 7 = <b>390 €</b>."
+    },
+    {
+     "q": "Un coureur court 5 km la semaine 1 et ajoute 1,5 km chaque semaine. Combien court-il la semaine 9 ?",
+     "c": [
+      "45 km",
+      "17 km",
+      "15,5 km",
+      "18,5 km"
+     ],
+     "a": 1,
+     "e": "5 + (9 − 1) × 1,5 = <b>17 km</b>."
+    },
+    {
+     "q": "Un salaire mensuel est de 1 900 € la première année (année 1). Il augmente de 50 € chaque année. Quel est le salaire de l’année 10 ?",
+     "c": [
+      "1 950 €",
+      "2 350 €",
+      "2 400 €",
+      "2 450 €"
+     ],
+     "a": 1,
+     "e": "Année n : 1 900 + (n − 1) × 50. Année 10 : <b>2 350 €</b>."
+    },
+    {
+     "q": "Léa a 300 € sur un compte en janvier (mois 0) et y ajoute 20 € chaque mois. Combien a-t-elle au mois 21 ?",
+     "c": [
+      "6 720 €",
+      "720 €",
+      "700 €",
+      "420 €"
+     ],
+     "a": 1,
+     "e": "u<sub>21</sub> = 300 + 20 × 21 = <b>720 €</b>."
+    },
+    {
+     "q": "Un coureur court 2 km la semaine 1 et ajoute 1 km chaque semaine. Combien court-il la semaine 7 ?",
+     "c": [
+      "14 km",
+      "9 km",
+      "8 km",
+      "7 km"
+     ],
+     "a": 2,
+     "e": "2 + (7 − 1) × 1 = <b>8 km</b>."
+    },
+    {
+     "q": "Léa a 400 € sur un compte en janvier (mois 0) et y ajoute 40 € chaque mois. Combien a-t-elle au mois 24 ?",
+     "c": [
+      "10 560 €",
+      "1 360 €",
+      "960 €",
+      "1 320 €"
+     ],
+     "a": 1,
+     "e": "u<sub>24</sub> = 400 + 40 × 24 = <b>1 360 €</b>."
+    },
+    {
+     "q": "Un coureur court 5 km la semaine 1 et ajoute 1 km chaque semaine. Combien court-il la semaine 9 ?",
+     "c": [
+      "13 km",
+      "12 km",
+      "14 km",
+      "45 km"
+     ],
+     "a": 0,
+     "e": "5 + (9 − 1) × 1 = <b>13 km</b>."
+    },
+    {
+     "q": "Léa a 250 € sur un compte en janvier (mois 0) et y ajoute 40 € chaque mois. Combien a-t-elle au mois 24 ?",
+     "c": [
+      "6 960 €",
+      "960 €",
+      "1 210 €",
+      "1 170 €"
+     ],
+     "a": 2,
+     "e": "u<sub>24</sub> = 250 + 40 × 24 = <b>1 210 €</b>."
+    },
+    {
+     "q": "Un loyer de 590 € augmente de 15 € par an. Au bout de combien d’années atteindra-t-il 710 € ?",
+     "c": [
+      "8 ans",
+      "9 ans",
+      "7 ans",
+      "47 ans"
+     ],
+     "a": 0,
+     "e": "590 + 15n = 710 ⇔ n = 120 ÷ 15 = <b>8</b>."
+    },
+    {
+     "q": "Dans un théâtre, la rangée 1 compte 13 sièges et chaque rangée a 2 sièges de plus que la précédente. Combien de sièges dans la rangée 12 ?",
+     "c": [
+      "35",
+      "156",
+      "33",
+      "37"
+     ],
+     "a": 0,
+     "e": "13 + (12 − 1) × 2 = <b>35</b>."
+    },
+    {
+     "q": "Léa a 400 € sur un compte en janvier (mois 0) et y ajoute 20 € chaque mois. Combien a-t-elle au mois 12 ?",
+     "c": [
+      "5 040 €",
+      "620 €",
+      "240 €",
+      "640 €"
+     ],
+     "a": 3,
+     "e": "u<sub>12</sub> = 400 + 20 × 12 = <b>640 €</b>."
+    },
+    {
+     "q": "Dans un théâtre, la rangée 1 compte 21 sièges et chaque rangée a 3 sièges de plus que la précédente. Combien de sièges dans la rangée 10 ?",
+     "c": [
+      "210",
+      "45",
+      "51",
+      "48"
+     ],
+     "a": 3,
+     "e": "21 + (10 − 1) × 3 = <b>48</b>."
+    },
+    {
+     "q": "Un coureur court 4 km la semaine 1 et ajoute 1,5 km chaque semaine. Combien court-il la semaine 7 ?",
+     "c": [
+      "28 km",
+      "14,5 km",
+      "13 km",
+      "11,5 km"
+     ],
+     "a": 2,
+     "e": "4 + (7 − 1) × 1,5 = <b>13 km</b>."
+    },
+    {
+     "q": "Léa a 200 € sur un compte en janvier (mois 0) et y ajoute 30 € chaque mois. Combien a-t-elle au mois 21 ?",
+     "c": [
+      "630 €",
+      "800 €",
+      "830 €",
+      "4 830 €"
+     ],
+     "a": 2,
+     "e": "u<sub>21</sub> = 200 + 30 × 21 = <b>830 €</b>."
+    },
+    {
+     "q": "Dans un théâtre, la rangée 1 compte 22 sièges et chaque rangée a 2 sièges de plus que la précédente. Combien de sièges dans la rangée 17 ?",
+     "c": [
+      "52",
+      "374",
+      "54",
+      "56"
+     ],
+     "a": 2,
+     "e": "22 + (17 − 1) × 2 = <b>54</b>."
+    },
+    {
+     "q": "Dans un théâtre, la rangée 1 compte 15 sièges et chaque rangée a 3 sièges de plus que la précédente. Combien de sièges dans la rangée 24 ?",
+     "c": [
+      "87",
+      "84",
+      "81",
+      "360"
+     ],
+     "a": 1,
+     "e": "15 + (24 − 1) × 3 = <b>84</b>."
+    },
+    {
+     "q": "Dans un théâtre, la rangée 1 compte 18 sièges et chaque rangée a 2 sièges de plus que la précédente. Combien de sièges dans la rangée 12 ?",
+     "c": [
+      "40",
+      "42",
+      "38",
+      "216"
+     ],
+     "a": 0,
+     "e": "18 + (12 − 1) × 2 = <b>40</b>."
+    },
+    {
+     "q": "Un salaire mensuel est de 2 600 € la première année (année 1). Il augmente de 40 € chaque année. Quel est le salaire de l’année 7 ?",
+     "c": [
+      "2 920 €",
+      "2 880 €",
+      "2 640 €",
+      "2 840 €"
+     ],
+     "a": 3,
+     "e": "Année n : 2 600 + (n − 1) × 40. Année 7 : <b>2 840 €</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 3,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "premiere"
+}

@@ -110,8 +110,8 @@ def de_n(n):
 
 
 def unit(grade, R, slug, dom, std, title, short, meta, key_big, key_sub, body, faq, sets, sort):
-    seo = "%s %s : fiches et exercices avec corrigé" % (short, grade)
-    tail = " (résumé du programme 2025 du cycle 3)" if grade == "6e" else " (résumé du programme 2026 de seconde)" if grade == "seconde" else " (résumé du programme 2026 du cycle 4)"
+    seo = "%s %s : fiches et exercices avec corrigé" % (short, {"premiere": "première"}.get(grade, grade))
+    tail = " (résumé du programme 2025 du cycle 3)" if grade == "6e" else " (résumé du programme 2026 de seconde)" if grade == "seconde" else " (résumé du programme 2026 de spécialité de première)" if grade == "premiere" else " (résumé du programme 2026 du cycle 4)"
     make_unit(R, slug, dom, std + tail, title, seo, short, meta, key_big, key_sub, body, faq, sets, sort, grade=grade)
 
 

@@ -67,7 +67,9 @@ function pv_wrap($s, $size, $font, $max, $lines) {
         $out = array_slice($out, 0, $lines);
         $last = $out[$lines - 1];
         while ($last !== '' && pv_width($size, $font, $last . '…') > $max) {
-            $last = $cjk ? mb_substr($last, 0, -1, 'UTF-8') : preg_replace('/\s*\S+$/u', '', $last);
+            $nl = $cjk ? mb_substr($last, 0, -1, 'UTF-8') : preg_replace('/\s*\S+\s*$/u', '', $last);
+            if ($nl === $last) break;
+            $last = $nl;
         }
         $out[$lines - 1] = rtrim($last, ' ,;:') . '…';
     }

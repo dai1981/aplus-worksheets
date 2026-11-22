@@ -1,0 +1,1157 @@
+{
+ "slug": "derivee-et-variations",
+ "title": "Dérivée et variations : extremums et optimisation",
+ "seo_title": "Dérivée et variations première : fiches et exercices avec corrigé",
+ "short_title": "Dérivée et variations",
+ "domain": "Analyse",
+ "standard_code": "Première spécialité · Analyse",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A",
+ "standard_text": "Lien entre le signe de la dérivée et le sens de variation ; extremum local et tangente horizontale ; fonctions paires et impaires ; étudier les variations d’une fonction, résoudre un problème d’optimisation, établir une inégalité (résumé du programme 2026 de spécialité de première)",
+ "meta_desc": "Fiches de maths première sur la dérivée et les variations : signe de f′, tableau de variations, extremums, parité, inégalités et optimisation. 100 exercices corrigés.",
+ "key_big": "f′ ⩾ 0 : croissante ; f′ ⩽ 0 : décroissante",
+ "key_sub": "Extremum local là où f′ s’annule en changeant de signe",
+ "body_html": "<h2>Comment faire</h2><p>Sur un intervalle : si f′(x) ⩾ 0, f est <b>croissante</b> ; si f′(x) ⩽ 0, f est <b>décroissante</b> ; si f′ = 0, f est constante.</p><p>Si f′ s’annule en a <b>en changeant de signe</b>, f admet un extremum local en a (maximum si f′ passe de + à −, minimum de − à +). La tangente y est horizontale.</p><p>Méthode : calculer f′(x), étudier son signe (tableau de signes), en déduire le tableau de variations, calculer les extremums.</p><p>f est <b>paire</b> si f(−x) = f(x), <b>impaire</b> si f(−x) = −f(x).</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>f(x) = x³ − 3x</p><p class='sn-ex-s'>f′(x) = 3x² − 3 = 3(x − 1)(x + 1)</p><p class='sn-ex-s'>f′ : + avant −1, − entre −1 et 1, + après 1</p><p class='sn-ex-a'>Réponse : maximum local f(−1) = 2, minimum local f(1) = −2</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>f′ décroît, donc f décroît</td><td>C’est le signe de f′ qui compte, pas ses variations.</td></tr><tr><td>f′(0) = 0 donc 0 est un extremum</td><td>Il faut que f′ change de signe (contre-exemple : x³).</td></tr><tr><td>Le maximum est x = 2</td><td>Le maximum est une valeur de f : f(2).</td></tr><tr><td>x³ est paire</td><td>(−x)³ = −x³ : x³ est impaire.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Pourquoi étudier le signe de la dérivée ?",
+   "a": "Parce que f′(x) est la pente de la tangente : pente positive, la courbe monte ; pente négative, elle descend."
+  },
+  {
+   "q": "Comment prouver une inégalité f(x) ⩾ g(x) ?",
+   "a": "On étudie h(x) = f(x) − g(x) : si son minimum est positif ou nul, alors h(x) ⩾ 0, donc f(x) ⩾ g(x)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Signe de f′ et variations",
+   "items": [
+    {
+     "q": "On sait que f′(x) = −2x + 9 pour tout réel x. Quelles sont les variations de f ?",
+     "c": [
+      "croissante sur ]−∞ ; <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>], décroissante sur [<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> ; +∞[",
+      "décroissante sur ℝ",
+      "décroissante sur ]−∞ ; <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>], croissante sur [<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> ; +∞[",
+      "croissante sur ]−∞ ; −<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>], décroissante sur [−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> ; +∞["
+     ],
+     "a": 0,
+     "e": "f′(x) s’annule en <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> et est du signe de −2 à droite : f′ + puis −, donc <b>croissante sur ]−∞ ; <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>], décroissante sur [<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> ; +∞[</b>."
+    },
+    {
+     "q": "On sait que f′(x) = −4x + 8 pour tout réel x. Quelles sont les variations de f ?",
+     "c": [
+      "croissante sur ]−∞ ; 2], décroissante sur [2 ; +∞[",
+      "décroissante sur ℝ",
+      "décroissante sur ]−∞ ; 2], croissante sur [2 ; +∞[",
+      "croissante sur ]−∞ ; −2], décroissante sur [−2 ; +∞["
+     ],
+     "a": 0,
+     "e": "f′(x) s’annule en 2 et est du signe de −4 à droite : f′ + puis −, donc <b>croissante sur ]−∞ ; 2], décroissante sur [2 ; +∞[</b>."
+    },
+    {
+     "q": "On sait que f′(x) = 3x − 6 pour tout réel x. Quelles sont les variations de f ?",
+     "c": [
+      "croissante sur ℝ",
+      "croissante sur ]−∞ ; 2], décroissante sur [2 ; +∞[",
+      "décroissante sur ]−∞ ; −2], croissante sur [−2 ; +∞[",
+      "décroissante sur ]−∞ ; 2], croissante sur [2 ; +∞["
+     ],
+     "a": 3,
+     "e": "f′(x) s’annule en 2 et est du signe de 3 à droite : f′ − puis +, donc <b>décroissante sur ]−∞ ; 2], croissante sur [2 ; +∞[</b>."
+    },
+    {
+     "q": "On sait que f′(x) = −4x − 11 pour tout réel x. Quelles sont les variations de f ?",
+     "c": [
+      "croissante sur ]−∞ ; <span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>], décroissante sur [<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span> ; +∞[",
+      "décroissante sur ]−∞ ; −<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>], croissante sur [−<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span> ; +∞[",
+      "croissante sur ]−∞ ; −<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>], décroissante sur [−<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span> ; +∞[",
+      "décroissante sur ℝ"
+     ],
+     "a": 2,
+     "e": "f′(x) s’annule en −<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span> et est du signe de −4 à droite : f′ + puis −, donc <b>croissante sur ]−∞ ; −<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>], décroissante sur [−<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span> ; +∞[</b>."
+    },
+    {
+     "q": "f′(x) = −x² + 5x − 6 (racines 2 et 3). Quelles sont les variations de f ?",
+     "c": [
+      "croissante, décroissante, croissante (changements en 2 et 3)",
+      "décroissante sur ℝ",
+      "décroissante, croissante, décroissante (changements en 2 et 3)",
+      "croissante puis décroissante (changement en <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>)"
+     ],
+     "a": 2,
+     "e": "f′(x) est du signe de a = −1 à l’extérieur des racines : f′ est −, +, −, donc f est <b>décroissante, croissante, décroissante (changements en 2 et 3)</b>."
+    },
+    {
+     "q": "On sait que f′(x) = 4x + 4 pour tout réel x. Quelles sont les variations de f ?",
+     "c": [
+      "décroissante sur ]−∞ ; −1], croissante sur [−1 ; +∞[",
+      "croissante sur ]−∞ ; −1], décroissante sur [−1 ; +∞[",
+      "décroissante sur ]−∞ ; 1], croissante sur [1 ; +∞[",
+      "croissante sur ℝ"
+     ],
+     "a": 0,
+     "e": "f′(x) s’annule en −1 et est du signe de 4 à droite : f′ − puis +, donc <b>décroissante sur ]−∞ ; −1], croissante sur [−1 ; +∞[</b>."
+    },
+    {
+     "q": "Le signe de f′(x) est − sur ]−∞ ; −5[, + sur ]−5 ; 4[ et − sur ]4 ; +∞[. Quel est le sens de variation de f sur [4 ; +∞[ ?",
+     "c": [
+      "décroissante",
+      "constante",
+      "on ne peut pas savoir sans f",
+      "croissante"
+     ],
+     "a": 0,
+     "e": "f′(x) ⩽ 0 sur cet intervalle : f est <b>décroissante</b>."
+    },
+    {
+     "q": "On sait que f′(x) = 5x − 4 pour tout réel x. Quelles sont les variations de f ?",
+     "c": [
+      "décroissante sur ]−∞ ; <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>], croissante sur [<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ; +∞[",
+      "décroissante sur ]−∞ ; −<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>], croissante sur [−<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ; +∞[",
+      "croissante sur ]−∞ ; <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>], décroissante sur [<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ; +∞[",
+      "croissante sur ℝ"
+     ],
+     "a": 0,
+     "e": "f′(x) s’annule en <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> et est du signe de 5 à droite : f′ − puis +, donc <b>décroissante sur ]−∞ ; <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>], croissante sur [<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ; +∞[</b>."
+    },
+    {
+     "q": "Le signe de f′(x) est − sur ]−∞ ; 2[, + sur ]2 ; 3[ et − sur ]3 ; +∞[. Quel est le sens de variation de f sur [2 ; 3] ?",
+     "c": [
+      "constante",
+      "croissante",
+      "on ne peut pas savoir sans f",
+      "décroissante"
+     ],
+     "a": 1,
+     "e": "f′(x) ⩾ 0 sur cet intervalle : f est <b>croissante</b>."
+    },
+    {
+     "q": "On sait que f′(x) = 4x − 7 pour tout réel x. Quelles sont les variations de f ?",
+     "c": [
+      "croissante sur ]−∞ ; <span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>], décroissante sur [<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span> ; +∞[",
+      "décroissante sur ]−∞ ; −<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>], croissante sur [−<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span> ; +∞[",
+      "croissante sur ℝ",
+      "décroissante sur ]−∞ ; <span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>], croissante sur [<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span> ; +∞["
+     ],
+     "a": 3,
+     "e": "f′(x) s’annule en <span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span> et est du signe de 4 à droite : f′ − puis +, donc <b>décroissante sur ]−∞ ; <span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>], croissante sur [<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span> ; +∞[</b>."
+    },
+    {
+     "q": "On sait que f′(x) = 3x + 9 pour tout réel x. Quelles sont les variations de f ?",
+     "c": [
+      "croissante sur ℝ",
+      "décroissante sur ]−∞ ; −3], croissante sur [−3 ; +∞[",
+      "décroissante sur ]−∞ ; 3], croissante sur [3 ; +∞[",
+      "croissante sur ]−∞ ; −3], décroissante sur [−3 ; +∞["
+     ],
+     "a": 1,
+     "e": "f′(x) s’annule en −3 et est du signe de 3 à droite : f′ − puis +, donc <b>décroissante sur ]−∞ ; −3], croissante sur [−3 ; +∞[</b>."
+    },
+    {
+     "q": "Le signe de f′(x) est − sur ]−∞ ; 3[, + sur ]3 ; 6[ et − sur ]6 ; +∞[. Quel est le sens de variation de f sur [3 ; 6] ?",
+     "c": [
+      "constante",
+      "décroissante",
+      "croissante",
+      "on ne peut pas savoir sans f"
+     ],
+     "a": 2,
+     "e": "f′(x) ⩾ 0 sur cet intervalle : f est <b>croissante</b>."
+    },
+    {
+     "q": "f′(x) = x² + 5x + 6 (racines −3 et −2). Quelles sont les variations de f ?",
+     "c": [
+      "croissante sur ℝ",
+      "croissante, décroissante, croissante (changements en −3 et −2)",
+      "décroissante, croissante, décroissante (changements en −3 et −2)",
+      "décroissante puis croissante (changement en −<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>)"
+     ],
+     "a": 1,
+     "e": "f′(x) est du signe de a = 1 à l’extérieur des racines : f′ est +, −, +, donc f est <b>croissante, décroissante, croissante (changements en −3 et −2)</b>."
+    },
+    {
+     "q": "f′(x) = 3x² − 18x + 24 (racines 2 et 4). Quelles sont les variations de f ?",
+     "c": [
+      "décroissante puis croissante (changement en 3)",
+      "décroissante, croissante, décroissante (changements en 2 et 4)",
+      "croissante sur ℝ",
+      "croissante, décroissante, croissante (changements en 2 et 4)"
+     ],
+     "a": 3,
+     "e": "f′(x) est du signe de a = 3 à l’extérieur des racines : f′ est +, −, +, donc f est <b>croissante, décroissante, croissante (changements en 2 et 4)</b>."
+    },
+    {
+     "q": "f′(x) = 2x² − 8x (racines 0 et 4). Quelles sont les variations de f ?",
+     "c": [
+      "décroissante, croissante, décroissante (changements en 0 et 4)",
+      "croissante sur ℝ",
+      "décroissante puis croissante (changement en 2)",
+      "croissante, décroissante, croissante (changements en 0 et 4)"
+     ],
+     "a": 3,
+     "e": "f′(x) est du signe de a = 2 à l’extérieur des racines : f′ est +, −, +, donc f est <b>croissante, décroissante, croissante (changements en 0 et 4)</b>."
+    },
+    {
+     "q": "f′(x) = −x² − 3x − 2 (racines −2 et −1). Quelles sont les variations de f ?",
+     "c": [
+      "croissante, décroissante, croissante (changements en −2 et −1)",
+      "croissante puis décroissante (changement en −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)",
+      "décroissante, croissante, décroissante (changements en −2 et −1)",
+      "décroissante sur ℝ"
+     ],
+     "a": 2,
+     "e": "f′(x) est du signe de a = −1 à l’extérieur des racines : f′ est −, +, −, donc f est <b>décroissante, croissante, décroissante (changements en −2 et −1)</b>."
+    },
+    {
+     "q": "On sait que f′(x) = 2x + 12 pour tout réel x. Quelles sont les variations de f ?",
+     "c": [
+      "croissante sur ℝ",
+      "décroissante sur ]−∞ ; 6], croissante sur [6 ; +∞[",
+      "croissante sur ]−∞ ; −6], décroissante sur [−6 ; +∞[",
+      "décroissante sur ]−∞ ; −6], croissante sur [−6 ; +∞["
+     ],
+     "a": 3,
+     "e": "f′(x) s’annule en −6 et est du signe de 2 à droite : f′ − puis +, donc <b>décroissante sur ]−∞ ; −6], croissante sur [−6 ; +∞[</b>."
+    },
+    {
+     "q": "On sait que f′(x) = 2x + 8 pour tout réel x. Quelles sont les variations de f ?",
+     "c": [
+      "décroissante sur ]−∞ ; 4], croissante sur [4 ; +∞[",
+      "croissante sur ℝ",
+      "décroissante sur ]−∞ ; −4], croissante sur [−4 ; +∞[",
+      "croissante sur ]−∞ ; −4], décroissante sur [−4 ; +∞["
+     ],
+     "a": 2,
+     "e": "f′(x) s’annule en −4 et est du signe de 2 à droite : f′ − puis +, donc <b>décroissante sur ]−∞ ; −4], croissante sur [−4 ; +∞[</b>."
+    },
+    {
+     "q": "f′(x) = x² − 9 (racines −3 et 3). Quelles sont les variations de f ?",
+     "c": [
+      "décroissante, croissante, décroissante (changements en −3 et 3)",
+      "croissante, décroissante, croissante (changements en −3 et 3)",
+      "croissante sur ℝ",
+      "décroissante puis croissante (changement en 0)"
+     ],
+     "a": 1,
+     "e": "f′(x) est du signe de a = 1 à l’extérieur des racines : f′ est +, −, +, donc f est <b>croissante, décroissante, croissante (changements en −3 et 3)</b>."
+    },
+    {
+     "q": "On sait que f′(x) = −2x + 3 pour tout réel x. Quelles sont les variations de f ?",
+     "c": [
+      "décroissante sur ]−∞ ; <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>], croissante sur [<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> ; +∞[",
+      "croissante sur ]−∞ ; <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>], décroissante sur [<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> ; +∞[",
+      "décroissante sur ℝ",
+      "croissante sur ]−∞ ; −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>], décroissante sur [−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> ; +∞["
+     ],
+     "a": 1,
+     "e": "f′(x) s’annule en <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> et est du signe de −2 à droite : f′ + puis −, donc <b>croissante sur ]−∞ ; <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>], décroissante sur [<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> ; +∞[</b>."
+    }
+   ]
+  },
+  {
+   "title": "Étudier une fonction polynôme",
+   "items": [
+    {
+     "q": "f(x) = −x³ + 6x² − 9x − 1, f′(x) = −3x² + 12x − 9. Quel est le minimum local de f ?",
+     "c": [
+      "−5, atteint en x = 1",
+      "−1, atteint en x = 3",
+      "0, atteint en x = 1",
+      "1, atteint en x = −5"
+     ],
+     "a": 0,
+     "e": "f′ s’annule en 1 et 3 ; f′ change de signe de − à + en 1 : minimum local <b>f(1) = −5</b>."
+    },
+    {
+     "q": "f(x) = 2x³ − 9x² + 5, f′(x) = 6x² − 18x. Quel est le minimum local de f ?",
+     "c": [
+      "5, atteint en x = 0",
+      "−22, atteint en x = 3",
+      "3, atteint en x = −22",
+      "0, atteint en x = 3"
+     ],
+     "a": 1,
+     "e": "f′ s’annule en 0 et 3 ; f′ change de signe de − à + en 3 : minimum local <b>f(3) = −22</b>."
+    },
+    {
+     "q": "f(x) = −2x³ − 12x² + 6. Calcule f′(x).",
+     "c": [
+      "f′(x) = −6x³ − 24x²",
+      "f′(x) = −2x² − 12x",
+      "f′(x) = −6x² − 24x",
+      "f′(x) = −6x² − 24x + 1"
+     ],
+     "a": 2,
+     "e": "On dérive terme à terme : <b>f′(x) = −6x² − 24x</b>."
+    },
+    {
+     "q": "f(x) = 2x³ − 12x² − 4, f′(x) = 6x² − 24x. Quel est le maximum local de f ?",
+     "c": [
+      "−4, atteint en x = 0",
+      "0, atteint en x = −4",
+      "−68, atteint en x = 4",
+      "0, atteint en x = 0"
+     ],
+     "a": 0,
+     "e": "f′ s’annule en 0 et 4 ; f′ change de signe de + à − en 0 : maximum local <b>f(0) = −4</b>."
+    },
+    {
+     "q": "f(x) = x³ − 48x − 2, f′(x) = 3x² − 48. Quel est le maximum local de f ?",
+     "c": [
+      "−4, atteint en x = 126",
+      "−130, atteint en x = 4",
+      "0, atteint en x = −4",
+      "126, atteint en x = −4"
+     ],
+     "a": 3,
+     "e": "f′ s’annule en −4 et 4 ; f′ change de signe de + à − en −4 : maximum local <b>f(−4) = 126</b>."
+    },
+    {
+     "q": "f(x) = 2x³ − 9x² + 12x − 3, f′(x) = 6x² − 18x + 12. Quel est le minimum local de f ?",
+     "c": [
+      "1, atteint en x = 2",
+      "1, atteint en x = −2",
+      "2, atteint en x = 1",
+      "0, atteint en x = 2"
+     ],
+     "a": 0,
+     "e": "f′ s’annule en 1 et 2 ; f′ change de signe de − à + en 2 : minimum local <b>f(2) = 1</b>."
+    },
+    {
+     "q": "f(x) = −2x³ + 12x² − 18x − 5, f′(x) = −6x² + 24x − 18. Quel est le minimum local de f ?",
+     "c": [
+      "1, atteint en x = −13",
+      "0, atteint en x = 1",
+      "−5, atteint en x = 3",
+      "−13, atteint en x = 1"
+     ],
+     "a": 3,
+     "e": "f′ s’annule en 1 et 3 ; f′ change de signe de − à + en 1 : minimum local <b>f(1) = −13</b>."
+    },
+    {
+     "q": "f(x) = −2x³ − 3x² − 5, f′(x) = −6x² − 6x. Quel est le maximum local de f ?",
+     "c": [
+      "−5, atteint en x = 0",
+      "−6, atteint en x = −1",
+      "0, atteint en x = 0",
+      "0, atteint en x = −5"
+     ],
+     "a": 0,
+     "e": "f′ s’annule en −1 et 0 ; f′ change de signe de + à − en 0 : maximum local <b>f(0) = −5</b>."
+    },
+    {
+     "q": "f(x) = −2x³ − 12x² − 3. Calcule f′(x).",
+     "c": [
+      "f′(x) = −6x³ − 24x²",
+      "f′(x) = −6x² − 24x + 1",
+      "f′(x) = −6x² − 24x",
+      "f′(x) = −2x² − 12x"
+     ],
+     "a": 2,
+     "e": "On dérive terme à terme : <b>f′(x) = −6x² − 24x</b>."
+    },
+    {
+     "q": "f(x) = x³ + 3x² − 9x + 3, f′(x) = 3x² + 6x − 9. Quel est le minimum local de f ?",
+     "c": [
+      "30, atteint en x = −3",
+      "1, atteint en x = −2",
+      "−2, atteint en x = 1",
+      "0, atteint en x = 1"
+     ],
+     "a": 2,
+     "e": "f′ s’annule en −3 et 1 ; f′ change de signe de − à + en 1 : minimum local <b>f(1) = −2</b>."
+    },
+    {
+     "q": "f(x) = −2x³ − 12x² − 5. Calcule f′(x).",
+     "c": [
+      "f′(x) = −2x² − 12x",
+      "f′(x) = −6x² − 24x",
+      "f′(x) = −6x³ − 24x²",
+      "f′(x) = −6x² − 24x + 1"
+     ],
+     "a": 1,
+     "e": "On dérive terme à terme : <b>f′(x) = −6x² − 24x</b>."
+    },
+    {
+     "q": "f(x) = 2x³ + 3x² − 36x, f′(x) = 6x² + 6x − 36. Quel est le maximum local de f ?",
+     "c": [
+      "−44, atteint en x = 2",
+      "−3, atteint en x = 81",
+      "81, atteint en x = −3",
+      "0, atteint en x = −3"
+     ],
+     "a": 2,
+     "e": "f′ s’annule en −3 et 2 ; f′ change de signe de + à − en −3 : maximum local <b>f(−3) = 81</b>."
+    },
+    {
+     "q": "f(x) = −2x³ − 3x² + 36x − 6, f′(x) = −6x² − 6x + 36. Quel est le minimum local de f ?",
+     "c": [
+      "38, atteint en x = 2",
+      "0, atteint en x = −3",
+      "−3, atteint en x = −87",
+      "−87, atteint en x = −3"
+     ],
+     "a": 3,
+     "e": "f′ s’annule en −3 et 2 ; f′ change de signe de − à + en −3 : minimum local <b>f(−3) = −87</b>."
+    },
+    {
+     "q": "f(x) = 2x³ + 3x² − 72x, f′(x) = 6x² + 6x − 72. Quel est le minimum local de f ?",
+     "c": [
+      "3, atteint en x = −135",
+      "−135, atteint en x = 3",
+      "208, atteint en x = −4",
+      "0, atteint en x = 3"
+     ],
+     "a": 1,
+     "e": "f′ s’annule en −4 et 3 ; f′ change de signe de − à + en 3 : minimum local <b>f(3) = −135</b>."
+    },
+    {
+     "q": "f(x) = 2x³ − 12x² − 1, f′(x) = 6x² − 24x. Quel est le minimum local de f ?",
+     "c": [
+      "4, atteint en x = −65",
+      "−1, atteint en x = 0",
+      "−65, atteint en x = 4",
+      "0, atteint en x = 4"
+     ],
+     "a": 2,
+     "e": "f′ s’annule en 0 et 4 ; f′ change de signe de − à + en 4 : minimum local <b>f(4) = −65</b>."
+    },
+    {
+     "q": "f(x) = 2x³ − 9x² − 24x − 2, f′(x) = 6x² − 18x − 24. Quel est le minimum local de f ?",
+     "c": [
+      "4, atteint en x = −114",
+      "0, atteint en x = 4",
+      "11, atteint en x = −1",
+      "−114, atteint en x = 4"
+     ],
+     "a": 3,
+     "e": "f′ s’annule en −1 et 4 ; f′ change de signe de − à + en 4 : minimum local <b>f(4) = −114</b>."
+    },
+    {
+     "q": "f(x) = 2x³ − 9x² − 5, f′(x) = 6x² − 18x. Quel est le maximum local de f ?",
+     "c": [
+      "0, atteint en x = −5",
+      "−5, atteint en x = 0",
+      "−32, atteint en x = 3",
+      "0, atteint en x = 0"
+     ],
+     "a": 1,
+     "e": "f′ s’annule en 0 et 3 ; f′ change de signe de + à − en 0 : maximum local <b>f(0) = −5</b>."
+    },
+    {
+     "q": "f(x) = −x³ + 9x² − 24x − 1, f′(x) = −3x² + 18x − 24. Quel est le minimum local de f ?",
+     "c": [
+      "2, atteint en x = −21",
+      "−21, atteint en x = 2",
+      "0, atteint en x = 2",
+      "−17, atteint en x = 4"
+     ],
+     "a": 1,
+     "e": "f′ s’annule en 2 et 4 ; f′ change de signe de − à + en 2 : minimum local <b>f(2) = −21</b>."
+    },
+    {
+     "q": "f(x) = −2x³ − 9x² + 1, f′(x) = −6x² − 18x. Quel est le minimum local de f ?",
+     "c": [
+      "−3, atteint en x = −26",
+      "0, atteint en x = −3",
+      "1, atteint en x = 0",
+      "−26, atteint en x = −3"
+     ],
+     "a": 3,
+     "e": "f′ s’annule en −3 et 0 ; f′ change de signe de − à + en −3 : minimum local <b>f(−3) = −26</b>."
+    },
+    {
+     "q": "f(x) = 2x³ − 12x² − 6. Calcule f′(x).",
+     "c": [
+      "f′(x) = 6x² − 24x",
+      "f′(x) = 2x² − 12x",
+      "f′(x) = 6x³ − 24x²",
+      "f′(x) = 6x² − 24x + 1"
+     ],
+     "a": 0,
+     "e": "On dérive terme à terme : <b>f′(x) = 6x² − 24x</b>."
+    }
+   ]
+  },
+  {
+   "title": "Extremums et tableaux de variations",
+   "items": [
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 370 172' width='370' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='366' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='368.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='368.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−1</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>1</text><text x='120.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><text x='220.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>0</text><text x='320.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−6</text><line x1='142.0' y1='154.0' x2='198.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='100.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='100.0' x2='298.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='154.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le signe de f′(−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) ?",
+     "c": [
+      "nul",
+      "négatif",
+      "on ne peut pas savoir",
+      "positif"
+     ],
+     "a": 3,
+     "e": "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> est entre −1 et 0, où f est croissante : f′(−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) est <b>positif</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 470 172' width='470' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='466' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='468.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='468.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='370.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='320.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−3</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>5</text><text x='420.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='120.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>0</text><text x='220.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='320.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><text x='420.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>0</text><line x1='142.0' y1='100.0' x2='198.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='154.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='154.0' x2='298.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='100.0' r='3.5' fill='#1f5fa8'/><line x1='342.0' y1='100.0' x2='398.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='398.0' cy='154.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le minimum de f sur [−3 ; 6] ?",
+     "c": [
+      "−1",
+      "−2",
+      "5",
+      "0"
+     ],
+     "a": 1,
+     "e": "On lit la plus petite valeur de la ligne f(x) : <b>−2</b>, atteinte en x = −2."
+    },
+    {
+     "q": "f(x) = −2x³ + 12x² − 18x − 2. En quel point la tangente à la courbe est-elle horizontale, avec x &gt; 0 ?",
+     "c": [
+      "(−2 ; 3)",
+      "(3 ; −2)",
+      "(0 ; −2)",
+      "(3 ; 0)"
+     ],
+     "a": 1,
+     "e": "Tangente horizontale ⇔ f′(x) = 0 ⇔ x = 1 ou x = 3. Le point cherché est <b>(3 ; −2)</b>."
+    },
+    {
+     "q": "f(x) = −2x³ + 12x². En quel point la tangente à la courbe est-elle horizontale, avec x &gt; 0 ?",
+     "c": [
+      "(4 ; 0)",
+      "(64 ; 4)",
+      "(0 ; 0)",
+      "(4 ; 64)"
+     ],
+     "a": 3,
+     "e": "Tangente horizontale ⇔ f′(x) = 0 ⇔ x = 0 ou x = 4. Le point cherché est <b>(4 ; 64)</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 470 172' width='470' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='466' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='468.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='468.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='370.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='320.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−1</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='420.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>5</text><text x='120.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>0</text><text x='220.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><text x='320.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='420.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='142.0' y1='154.0' x2='198.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='100.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='100.0' x2='298.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='154.0' r='3.5' fill='#1f5fa8'/><line x1='342.0' y1='154.0' x2='398.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='398.0' cy='100.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le signe de f′(<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>) ?",
+     "c": [
+      "on ne peut pas savoir",
+      "positif",
+      "nul",
+      "négatif"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> est entre 4 et 5, où f est croissante : f′(<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>) est <b>positif</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 370 172' width='370' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='366' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='368.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='368.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−4</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>3</text><text x='120.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><text x='220.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>0</text><text x='320.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='142.0' y1='100.0' x2='198.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='154.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='154.0' x2='298.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='100.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le signe de f′(−1) ?",
+     "c": [
+      "nul",
+      "positif",
+      "négatif",
+      "on ne peut pas savoir"
+     ],
+     "a": 2,
+     "e": "−1 est entre −4 et 2, où f est décroissante : f′(−1) est <b>négatif</b>."
+    },
+    {
+     "q": "f(x) = x³ + 3. f′(0) = 0. f admet-elle un extremum local en 0 ?",
+     "c": [
+      "oui, car f′(0) = 0",
+      "oui, un minimum",
+      "non, car f′(x) = 3x² ne change pas de signe",
+      "oui, un maximum"
+     ],
+     "a": 2,
+     "e": "f′(x) = 3x² ⩾ 0 : f est croissante sur ℝ. f′(0) = 0 mais f′ ne change pas de signe : <b>pas d’extremum</b>."
+    },
+    {
+     "q": "f(x) = x³ + 2. f′(0) = 0. f admet-elle un extremum local en 0 ?",
+     "c": [
+      "oui, un minimum",
+      "non, car f′(x) = 3x² ne change pas de signe",
+      "oui, car f′(0) = 0",
+      "oui, un maximum"
+     ],
+     "a": 1,
+     "e": "f′(x) = 3x² ⩾ 0 : f est croissante sur ℝ. f′(0) = 0 mais f′ ne change pas de signe : <b>pas d’extremum</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 470 172' width='470' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='466' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='468.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='468.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='370.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='320.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='420.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>7</text><text x='120.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><text x='220.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='320.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><text x='420.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>0</text><line x1='142.0' y1='154.0' x2='198.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='100.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='100.0' x2='298.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='154.0' r='3.5' fill='#1f5fa8'/><line x1='342.0' y1='154.0' x2='398.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='398.0' cy='100.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le minimum de f sur [−2 ; 7] ?",
+     "c": [
+      "0",
+      "5",
+      "−5",
+      "−2"
+     ],
+     "a": 2,
+     "e": "On lit la plus petite valeur de la ligne f(x) : <b>−5</b>, atteinte en x = −2."
+    },
+    {
+     "q": "f(x) = x³ − 12x. En quel point la tangente à la courbe est-elle horizontale, avec x &lt; 0 ?",
+     "c": [
+      "(−2 ; 0)",
+      "(16 ; −2)",
+      "(−2 ; 16)",
+      "(0 ; 0)"
+     ],
+     "a": 2,
+     "e": "Tangente horizontale ⇔ f′(x) = 0 ⇔ x = −2 ou x = 2. Le point cherché est <b>(−2 ; 16)</b>."
+    },
+    {
+     "q": "f(x) = −2x³ − 9x² − 2. En quel point la tangente à la courbe est-elle horizontale, avec x &lt; 0 ?",
+     "c": [
+      "(−3 ; −29)",
+      "(−3 ; 0)",
+      "(−29 ; −3)",
+      "(0 ; −2)"
+     ],
+     "a": 0,
+     "e": "Tangente horizontale ⇔ f′(x) = 0 ⇔ x = −3 ou x = 0. Le point cherché est <b>(−3 ; −29)</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 470 172' width='470' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='466' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='468.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='468.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='370.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='320.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−3</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−1</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>3</text><text x='420.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='120.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><text x='220.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−10</text><text x='320.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−7</text><text x='420.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−13</text><line x1='142.0' y1='100.0' x2='198.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='154.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='154.0' x2='298.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='100.0' r='3.5' fill='#1f5fa8'/><line x1='342.0' y1='100.0' x2='398.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='398.0' cy='154.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le maximum de f sur [−3 ; 4] ?",
+     "c": [
+      "0",
+      "−5",
+      "−13",
+      "−3"
+     ],
+     "a": 1,
+     "e": "On lit la plus grande valeur de la ligne f(x) : <b>−5</b>, atteinte en x = −3."
+    },
+    {
+     "q": "f(x) = x³ + 1. f′(0) = 0. f admet-elle un extremum local en 0 ?",
+     "c": [
+      "non, car f′(x) = 3x² ne change pas de signe",
+      "oui, car f′(0) = 0",
+      "oui, un minimum",
+      "oui, un maximum"
+     ],
+     "a": 0,
+     "e": "f′(x) = 3x² ⩾ 0 : f est croissante sur ℝ. f′(0) = 0 mais f′ ne change pas de signe : <b>pas d’extremum</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 370 172' width='370' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='366' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='368.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='368.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>3</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>7</text><text x='120.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><text x='220.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><text x='320.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>7</text><line x1='142.0' y1='100.0' x2='198.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='154.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='154.0' x2='298.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='100.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le minimum de f sur [3 ; 7] ?",
+     "c": [
+      "1",
+      "0",
+      "6",
+      "7"
+     ],
+     "a": 0,
+     "e": "On lit la plus petite valeur de la ligne f(x) : <b>1</b>, atteinte en x = 6."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 470 172' width='470' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='466' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='468.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='468.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='370.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='320.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−4</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−3</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−1</text><text x='420.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>5</text><text x='120.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><text x='220.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><text x='320.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='420.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−7</text><line x1='142.0' y1='100.0' x2='198.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='154.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='154.0' x2='298.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='100.0' r='3.5' fill='#1f5fa8'/><line x1='342.0' y1='100.0' x2='398.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='398.0' cy='154.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le maximum de f sur [−4 ; 5] ?",
+     "c": [
+      "0",
+      "−7",
+      "−4",
+      "1"
+     ],
+     "a": 3,
+     "e": "On lit la plus grande valeur de la ligne f(x) : <b>1</b>, atteinte en x = −4."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 370 172' width='370' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='366' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='368.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='368.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>1</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>5</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='120.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><text x='220.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><text x='320.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>8</text><line x1='142.0' y1='100.0' x2='198.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='154.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='154.0' x2='298.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='100.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le maximum de f sur [1 ; 6] ?",
+     "c": [
+      "6",
+      "1",
+      "0",
+      "8"
+     ],
+     "a": 3,
+     "e": "On lit la plus grande valeur de la ligne f(x) : <b>8</b>, atteinte en x = 6."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 470 172' width='470' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='466' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='468.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='468.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='370.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='320.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−5</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='420.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='120.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><text x='220.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−12</text><text x='320.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−7</text><text x='420.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−9</text><line x1='142.0' y1='100.0' x2='198.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='154.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='154.0' x2='298.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='100.0' r='3.5' fill='#1f5fa8'/><line x1='342.0' y1='100.0' x2='398.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='398.0' cy='154.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le minimum de f sur [−5 ; 4] ?",
+     "c": [
+      "−5",
+      "−2",
+      "−12",
+      "0"
+     ],
+     "a": 2,
+     "e": "On lit la plus petite valeur de la ligne f(x) : <b>−12</b>, atteinte en x = −2."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 470 172' width='470' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='466' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='468.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='468.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='370.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='320.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−4</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−3</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='420.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>3</text><text x='120.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><text x='220.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><text x='320.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='420.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='142.0' y1='154.0' x2='198.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='100.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='100.0' x2='298.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='154.0' r='3.5' fill='#1f5fa8'/><line x1='342.0' y1='154.0' x2='398.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='398.0' cy='100.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le signe de f′(<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>) ?",
+     "c": [
+      "négatif",
+      "nul",
+      "on ne peut pas savoir",
+      "positif"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> est entre 2 et 3, où f est croissante : f′(<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>) est <b>positif</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 370 172' width='370' height='172' role='img' aria-label='tableau de variations'><g font-family='Arial, Helvetica, sans-serif'><rect x='2' y='2' width='366' height='168' fill='none' stroke='#2b2b2b' stroke-width='1.5'/><line x1='2.0' y1='38.0' x2='368.0' y2='38.0' stroke='#2b2b2b' stroke-width='1.2'/><line x1='76.0' y1='2.0' x2='76.0' y2='170.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='26.0' font-size='15' font-weight='700' fill='#2b2b2b' text-anchor='middle'>x</text><line x1='2.0' y1='80.0' x2='368.0' y2='80.0' stroke='#2b2b2b' stroke-width='1.2'/><text x='39.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f′(x)</text><text x='170.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>+</text><text x='270.0' y='66.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−</text><text x='220.0' y='65.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='39.0' y='132.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>f(x)</text><text x='120.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>−2</text><text x='220.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='320.0' y='26.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle'>3</text><text x='120.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><text x='220.0' y='102.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>8</text><text x='320.0' y='162.0' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='142.0' y1='154.0' x2='198.0' y2='100.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='198.0' cy='100.0' r='3.5' fill='#1f5fa8'/><line x1='242.0' y1='100.0' x2='298.0' y2='154.0' stroke='#1f5fa8' stroke-width='1.8'/><circle cx='298.0' cy='154.0' r='3.5' fill='#1f5fa8'/></g></svg></div></div>Quel est le maximum de f sur [−2 ; 3] ?",
+     "c": [
+      "8",
+      "0",
+      "−8",
+      "2"
+     ],
+     "a": 0,
+     "e": "On lit la plus grande valeur de la ligne f(x) : <b>8</b>, atteinte en x = 2."
+    },
+    {
+     "q": "f(x) = 2x³ − 6x + 1. En quel point la tangente à la courbe est-elle horizontale, avec x &lt; 0 ?",
+     "c": [
+      "(−1 ; 5)",
+      "(−1 ; 0)",
+      "(0 ; 1)",
+      "(5 ; −1)"
+     ],
+     "a": 0,
+     "e": "Tangente horizontale ⇔ f′(x) = 0 ⇔ x = −1 ou x = 1. Le point cherché est <b>(−1 ; 5)</b>."
+    }
+   ]
+  },
+  {
+   "title": "Parité et inégalités",
+   "items": [
+    {
+     "q": "On étudie g(x) = x³ − 3x sur [0 ; +∞[ : g′(x) = 3x² − 3, g est décroissante puis croissante, de minimum g(1) = −2. Que peut-on conclure ?",
+     "c": [
+      "x³ − 3x ⩾ −2 pour tout x ⩾ 0",
+      "x³ − 3x ⩾ 0 pour tout x ⩾ 0",
+      "x³ − 3x &gt; 1 pour tout x ⩾ 0",
+      "x³ − 3x ⩽ −2 pour tout x ⩾ 0"
+     ],
+     "a": 0,
+     "e": "Le minimum de g sur [0 ; +∞[ est −2 : <b>g(x) ⩾ −2</b> pour tout x ⩾ 0 (inégalité obtenue par l’étude de fonction)."
+    },
+    {
+     "q": "La fonction f(x) = −5x⁴ + x² est-elle paire, impaire ou ni l’une ni l’autre ?",
+     "c": [
+      "paire",
+      "paire et impaire",
+      "ni paire ni impaire",
+      "impaire"
+     ],
+     "a": 0,
+     "e": "f(−x) = f(x) pour tout x : f est <b>paire</b> (courbe symétrique par rapport à l’axe des ordonnées)."
+    },
+    {
+     "q": "La fonction f(x) = |x| + 9 est-elle paire, impaire ou ni l’une ni l’autre ?",
+     "c": [
+      "paire",
+      "paire et impaire",
+      "impaire",
+      "ni paire ni impaire"
+     ],
+     "a": 0,
+     "e": "f(−x) = f(x) pour tout x : f est <b>paire</b> (courbe symétrique par rapport à l’axe des ordonnées)."
+    },
+    {
+     "q": "La fonction f(x) = −1/x est-elle paire, impaire ou ni l’une ni l’autre ?",
+     "c": [
+      "ni paire ni impaire",
+      "impaire",
+      "paire",
+      "paire et impaire"
+     ],
+     "a": 1,
+     "e": "f(−x) = −f(x) pour tout x : f est <b>impaire</b> (courbe symétrique par rapport à l’origine)."
+    },
+    {
+     "q": "f est impaire et f(6) = 4. Que vaut f(−6) ?",
+     "c": [
+      "6",
+      "−4",
+      "−6",
+      "4"
+     ],
+     "a": 1,
+     "e": "Impaire : f(−6) = −f(6) = <b>−4</b>."
+    },
+    {
+     "q": "La fonction f(x) = 2x³ + 1 est-elle paire, impaire ou ni l’une ni l’autre ?",
+     "c": [
+      "impaire",
+      "ni paire ni impaire",
+      "paire",
+      "paire et impaire"
+     ],
+     "a": 1,
+     "e": "Par exemple f(1) ≠ f(−1) et f(−1) ≠ −f(1) : f n’est <b>ni paire ni impaire</b>."
+    },
+    {
+     "q": "f est impaire et f(3) = 6. Que vaut f(−3) ?",
+     "c": [
+      "−6",
+      "3",
+      "6",
+      "−3"
+     ],
+     "a": 0,
+     "e": "Impaire : f(−3) = −f(3) = <b>−6</b>."
+    },
+    {
+     "q": "f est paire et f(2) = 3. Que vaut f(−2) ?",
+     "c": [
+      "−3",
+      "3",
+      "−2",
+      "2"
+     ],
+     "a": 1,
+     "e": "Paire : f(−2) = <b>3</b>."
+    },
+    {
+     "q": "f est paire et f(6) = −3. Que vaut f(−6) ?",
+     "c": [
+      "−6",
+      "3",
+      "6",
+      "−3"
+     ],
+     "a": 3,
+     "e": "Paire : f(−6) = <b>−3</b>."
+    },
+    {
+     "q": "f est paire et f(5) = −2. Que vaut f(−5) ?",
+     "c": [
+      "−5",
+      "2",
+      "5",
+      "−2"
+     ],
+     "a": 3,
+     "e": "Paire : f(−5) = <b>−2</b>."
+    },
+    {
+     "q": "La fonction f(x) = −3x³ + 5x est-elle paire, impaire ou ni l’une ni l’autre ?",
+     "c": [
+      "impaire",
+      "paire et impaire",
+      "ni paire ni impaire",
+      "paire"
+     ],
+     "a": 0,
+     "e": "f(−x) = −f(x) pour tout x : f est <b>impaire</b> (courbe symétrique par rapport à l’origine)."
+    },
+    {
+     "q": "f est paire et f(4) = −9. Que vaut f(−4) ?",
+     "c": [
+      "4",
+      "−4",
+      "−9",
+      "9"
+     ],
+     "a": 2,
+     "e": "Paire : f(−4) = <b>−9</b>."
+    },
+    {
+     "q": "La fonction f(x) = −4x² − 2 est-elle paire, impaire ou ni l’une ni l’autre ?",
+     "c": [
+      "ni paire ni impaire",
+      "paire et impaire",
+      "paire",
+      "impaire"
+     ],
+     "a": 2,
+     "e": "f(−x) = f(x) pour tout x : f est <b>paire</b> (courbe symétrique par rapport à l’axe des ordonnées)."
+    },
+    {
+     "q": "On étudie g(x) = x³ − 27x sur [0 ; +∞[ : g′(x) = 3x² − 27, g est décroissante puis croissante, de minimum g(3) = −54. Que peut-on conclure ?",
+     "c": [
+      "x³ − 27x ⩾ 0 pour tout x ⩾ 0",
+      "x³ − 27x &gt; 3 pour tout x ⩾ 0",
+      "x³ − 27x ⩽ −54 pour tout x ⩾ 0",
+      "x³ − 27x ⩾ −54 pour tout x ⩾ 0"
+     ],
+     "a": 3,
+     "e": "Le minimum de g sur [0 ; +∞[ est −54 : <b>g(x) ⩾ −54</b> pour tout x ⩾ 0 (inégalité obtenue par l’étude de fonction)."
+    },
+    {
+     "q": "La fonction f(x) = −5/x est-elle paire, impaire ou ni l’une ni l’autre ?",
+     "c": [
+      "paire et impaire",
+      "paire",
+      "ni paire ni impaire",
+      "impaire"
+     ],
+     "a": 3,
+     "e": "f(−x) = −f(x) pour tout x : f est <b>impaire</b> (courbe symétrique par rapport à l’origine)."
+    },
+    {
+     "q": "f est impaire et f(3) = −5. Que vaut f(−3) ?",
+     "c": [
+      "−5",
+      "−3",
+      "5",
+      "3"
+     ],
+     "a": 2,
+     "e": "Impaire : f(−3) = −f(3) = <b>5</b>."
+    },
+    {
+     "q": "La fonction f(x) = −x² + 1 est-elle paire, impaire ou ni l’une ni l’autre ?",
+     "c": [
+      "impaire",
+      "paire",
+      "ni paire ni impaire",
+      "paire et impaire"
+     ],
+     "a": 1,
+     "e": "f(−x) = f(x) pour tout x : f est <b>paire</b> (courbe symétrique par rapport à l’axe des ordonnées)."
+    },
+    {
+     "q": "La fonction f(x) = −5x⁴ + 6x² est-elle paire, impaire ou ni l’une ni l’autre ?",
+     "c": [
+      "ni paire ni impaire",
+      "paire et impaire",
+      "paire",
+      "impaire"
+     ],
+     "a": 2,
+     "e": "f(−x) = f(x) pour tout x : f est <b>paire</b> (courbe symétrique par rapport à l’axe des ordonnées)."
+    },
+    {
+     "q": "f est impaire et f(3) = 4. Que vaut f(−3) ?",
+     "c": [
+      "−3",
+      "3",
+      "4",
+      "−4"
+     ],
+     "a": 3,
+     "e": "Impaire : f(−3) = −f(3) = <b>−4</b>."
+    },
+    {
+     "q": "La fonction f(x) = −3x² − 3x est-elle paire, impaire ou ni l’une ni l’autre ?",
+     "c": [
+      "paire et impaire",
+      "impaire",
+      "ni paire ni impaire",
+      "paire"
+     ],
+     "a": 2,
+     "e": "Par exemple f(1) ≠ f(−1) et f(−1) ≠ −f(1) : f n’est <b>ni paire ni impaire</b>."
+    }
+   ]
+  },
+  {
+   "title": "Optimisation",
+   "items": [
+    {
+     "q": "Dans un carré de carton de 36 cm de côté, on découpe un carré de côté x aux quatre coins pour fabriquer une boîte sans couvercle. V(x) = x(36 − 2x)². Pour quelle valeur de x le volume est-il maximal ?",
+     "c": [
+      "x = 12 cm",
+      "x = 9 cm",
+      "x = 6 cm",
+      "x = 18 cm"
+     ],
+     "a": 2,
+     "e": "V′(x) = (36 − 2x)(36 − 6x) s’annule en x = 6 (l’autre racine 18 donne V = 0). <b>x = 6 cm</b>, V = 3 456 cm³."
+    },
+    {
+     "q": "Dans un carré de carton de 30 cm de côté, on découpe un carré de côté x aux quatre coins pour fabriquer une boîte sans couvercle. V(x) = x(30 − 2x)². Pour quelle valeur de x le volume est-il maximal ?",
+     "c": [
+      "x = 15 cm",
+      "x = 5 cm",
+      "x = 10 cm",
+      "x = 7 cm"
+     ],
+     "a": 1,
+     "e": "V′(x) = (30 − 2x)(30 − 6x) s’annule en x = 5 (l’autre racine 15 donne V = 0). <b>x = 5 cm</b>, V = 2 000 cm³."
+    },
+    {
+     "q": "Un enclos rectangulaire de 200 m² est adossé à un mur : on clôture trois côtés, de longueur totale L(x) = 2x + 200/x. Pour quelle valeur de x la clôture est-elle la plus courte ?",
+     "c": [
+      "x = 20 m",
+      "x = 10 m",
+      "x = 9 m",
+      "x = 50 m"
+     ],
+     "a": 1,
+     "e": "L′(x) = 2 − 200/x² s’annule pour x² = 100, soit <b>x = 10 m</b> (L′ change de signe de − à +)."
+    },
+    {
+     "q": "Le bénéfice (en milliers d’€) pour x centaines d’objets (0 ⩽ x ⩽ 10) est B(x) = −x³ + 15x² − 63x + 11. B′(x) = −3x² + 30x − 63. Pour combien de centaines d’objets le bénéfice est-il maximal sur [3 ; 10] ?",
+     "c": [
+      "7",
+      "3",
+      "10",
+      "8"
+     ],
+     "a": 0,
+     "e": "B′(x) = −3(x − 3)(x − 7) : B croît sur [3 ; 7] puis décroît. Maximum en <b>x = 7</b>."
+    },
+    {
+     "q": "Dans un carré de carton de 18 cm de côté, on découpe un carré de côté x aux quatre coins pour fabriquer une boîte sans couvercle. V(x) = x(18 − 2x)². Pour quelle valeur de x le volume est-il maximal ?",
+     "c": [
+      "x = 3 cm",
+      "x = 4 cm",
+      "x = 9 cm",
+      "x = 6 cm"
+     ],
+     "a": 0,
+     "e": "V′(x) = (18 − 2x)(18 − 6x) s’annule en x = 3 (l’autre racine 9 donne V = 0). <b>x = 3 cm</b>, V = 432 cm³."
+    },
+    {
+     "q": "Un enclos rectangulaire de 50 m² est adossé à un mur : on clôture trois côtés, de longueur totale L(x) = 2x + 50/x. Pour quelle valeur de x la clôture est-elle la plus courte ?",
+     "c": [
+      "x = 7 m",
+      "x = 10 m",
+      "x = 5 m",
+      "x = 4 m"
+     ],
+     "a": 2,
+     "e": "L′(x) = 2 − 50/x² s’annule pour x² = 25, soit <b>x = 5 m</b> (L′ change de signe de − à +)."
+    },
+    {
+     "q": "Le bénéfice (en milliers d’€) pour x centaines d’objets (0 ⩽ x ⩽ 10) est B(x) = −x³ + 15x² − 48x + 46. B′(x) = −3x² + 30x − 48. Pour combien de centaines d’objets le bénéfice est-il maximal sur [2 ; 10] ?",
+     "c": [
+      "2",
+      "8",
+      "10",
+      "9"
+     ],
+     "a": 1,
+     "e": "B′(x) = −3(x − 2)(x − 8) : B croît sur [2 ; 8] puis décroît. Maximum en <b>x = 8</b>."
+    },
+    {
+     "q": "Un enclos rectangulaire de 128 m² est adossé à un mur : on clôture trois côtés, de longueur totale L(x) = 2x + 128/x. Pour quelle valeur de x la clôture est-elle la plus courte ?",
+     "c": [
+      "x = 16 m",
+      "x = 12 m",
+      "x = 8 m",
+      "x = 32 m"
+     ],
+     "a": 2,
+     "e": "L′(x) = 2 − 128/x² s’annule pour x² = 64, soit <b>x = 8 m</b> (L′ change de signe de − à +)."
+    },
+    {
+     "q": "Le coût moyen de fabrication est CM(q) = 2q + 800/q + 5 (q &gt; 0). Pour quelle quantité q est-il minimal ?",
+     "c": [
+      "q = 400",
+      "q = 10",
+      "q = 40",
+      "q = 20"
+     ],
+     "a": 3,
+     "e": "CM′(q) = 2 − 800/q² s’annule pour q² = 400 : <b>q = 20</b>."
+    },
+    {
+     "q": "Un enclos rectangulaire de 72 m² est adossé à un mur : on clôture trois côtés, de longueur totale L(x) = 2x + 72/x. Pour quelle valeur de x la clôture est-elle la plus courte ?",
+     "c": [
+      "x = 7 m",
+      "x = 12 m",
+      "x = 18 m",
+      "x = 6 m"
+     ],
+     "a": 3,
+     "e": "L′(x) = 2 − 72/x² s’annule pour x² = 36, soit <b>x = 6 m</b> (L′ change de signe de − à +)."
+    },
+    {
+     "q": "Le coût moyen de fabrication est CM(q) = q + 400/q + 5 (q &gt; 0). Pour quelle quantité q est-il minimal ?",
+     "c": [
+      "q = 20",
+      "q = 10",
+      "q = 400",
+      "q = 40"
+     ],
+     "a": 0,
+     "e": "CM′(q) = 1 − 400/q² s’annule pour q² = 400 : <b>q = 20</b>."
+    },
+    {
+     "q": "Le coût moyen de fabrication est CM(q) = 2q + 200/q + 5 (q &gt; 0). Pour quelle quantité q est-il minimal ?",
+     "c": [
+      "q = 5",
+      "q = 10",
+      "q = 100",
+      "q = 20"
+     ],
+     "a": 1,
+     "e": "CM′(q) = 2 − 200/q² s’annule pour q² = 100 : <b>q = 10</b>."
+    },
+    {
+     "q": "Le bénéfice (en milliers d’€) pour x centaines d’objets (0 ⩽ x ⩽ 10) est B(x) = −x³ + 21x² − 144x + 47. B′(x) = −3x² + 42x − 144. Pour combien de centaines d’objets le bénéfice est-il maximal sur [6 ; 10] ?",
+     "c": [
+      "14",
+      "10",
+      "8",
+      "6"
+     ],
+     "a": 2,
+     "e": "B′(x) = −3(x − 6)(x − 8) : B croît sur [6 ; 8] puis décroît. Maximum en <b>x = 8</b>."
+    },
+    {
+     "q": "Un enclos rectangulaire de 98 m² est adossé à un mur : on clôture trois côtés, de longueur totale L(x) = 2x + 98/x. Pour quelle valeur de x la clôture est-elle la plus courte ?",
+     "c": [
+      "x = 14 m",
+      "x = 6 m",
+      "x = 9 m",
+      "x = 7 m"
+     ],
+     "a": 3,
+     "e": "L′(x) = 2 − 98/x² s’annule pour x² = 49, soit <b>x = 7 m</b> (L′ change de signe de − à +)."
+    },
+    {
+     "q": "Le bénéfice (en milliers d’€) pour x centaines d’objets (0 ⩽ x ⩽ 10) est B(x) = −x³ + 18x² − 96x + 18. B′(x) = −3x² + 36x − 96. Pour combien de centaines d’objets le bénéfice est-il maximal sur [4 ; 10] ?",
+     "c": [
+      "4",
+      "10",
+      "8",
+      "12"
+     ],
+     "a": 2,
+     "e": "B′(x) = −3(x − 4)(x − 8) : B croît sur [4 ; 8] puis décroît. Maximum en <b>x = 8</b>."
+    },
+    {
+     "q": "Le bénéfice (en milliers d’€) pour x centaines d’objets (0 ⩽ x ⩽ 10) est B(x) = −x³ + 6x² − 9x + 51. B′(x) = −3x² + 12x − 9. Pour combien de centaines d’objets le bénéfice est-il maximal sur [1 ; 10] ?",
+     "c": [
+      "4",
+      "1",
+      "10",
+      "3"
+     ],
+     "a": 3,
+     "e": "B′(x) = −3(x − 1)(x − 3) : B croît sur [1 ; 3] puis décroît. Maximum en <b>x = 3</b>."
+    },
+    {
+     "q": "Le bénéfice (en milliers d’€) pour x centaines d’objets (0 ⩽ x ⩽ 10) est B(x) = −x³ + 6x² − 9x + 29. B′(x) = −3x² + 12x − 9. Pour combien de centaines d’objets le bénéfice est-il maximal sur [1 ; 10] ?",
+     "c": [
+      "10",
+      "3",
+      "1",
+      "4"
+     ],
+     "a": 1,
+     "e": "B′(x) = −3(x − 1)(x − 3) : B croît sur [1 ; 3] puis décroît. Maximum en <b>x = 3</b>."
+    },
+    {
+     "q": "Dans un carré de carton de 12 cm de côté, on découpe un carré de côté x aux quatre coins pour fabriquer une boîte sans couvercle. V(x) = x(12 − 2x)². Pour quelle valeur de x le volume est-il maximal ?",
+     "c": [
+      "x = 2 cm",
+      "x = 6 cm",
+      "x = 3 cm",
+      "x = 4 cm"
+     ],
+     "a": 0,
+     "e": "V′(x) = (12 − 2x)(12 − 6x) s’annule en x = 2 (l’autre racine 6 donne V = 0). <b>x = 2 cm</b>, V = 128 cm³."
+    },
+    {
+     "q": "Un enclos rectangulaire de 242 m² est adossé à un mur : on clôture trois côtés, de longueur totale L(x) = 2x + 242/x. Pour quelle valeur de x la clôture est-elle la plus courte ?",
+     "c": [
+      "x = 11 m",
+      "x = 24 m",
+      "x = 13 m",
+      "x = 22 m"
+     ],
+     "a": 0,
+     "e": "L′(x) = 2 − 242/x² s’annule pour x² = 121, soit <b>x = 11 m</b> (L′ change de signe de − à +)."
+    },
+    {
+     "q": "Dans un carré de carton de 24 cm de côté, on découpe un carré de côté x aux quatre coins pour fabriquer une boîte sans couvercle. V(x) = x(24 − 2x)². Pour quelle valeur de x le volume est-il maximal ?",
+     "c": [
+      "x = 8 cm",
+      "x = 12 cm",
+      "x = 6 cm",
+      "x = 4 cm"
+     ],
+     "a": 3,
+     "e": "V′(x) = (24 − 2x)(24 − 6x) s’annule en x = 4 (l’autre racine 12 donne V = 0). <b>x = 4 cm</b>, V = 1 024 cm³."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 11,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "premiere"
+}

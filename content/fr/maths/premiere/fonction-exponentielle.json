@@ -1,0 +1,1157 @@
+{
+ "slug": "fonction-exponentielle",
+ "title": "Fonction exponentielle : propriétés et dérivée",
+ "seo_title": "Fonction exponentielle première : fiches et exercices avec corrigé",
+ "short_title": "Fonction exponentielle",
+ "domain": "Analyse",
+ "standard_code": "Première spécialité · Analyse",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A",
+ "standard_text": "Fonction exponentielle : définition par exp′ = exp et exp(0) = 1, propriétés algébriques, nombre e, signe, variations et courbe ; résoudre des équations et inéquations ; dériver x ↦ e<sup>ax+b</sup> ; lien avec les suites géométriques ; méthode d’Euler (résumé du programme 2026 de spécialité de première)",
+ "meta_desc": "Fiches de maths première sur la fonction exponentielle : propriétés algébriques, équations, inéquations, dérivées, signe, variations et méthode d’Euler. 100 exercices corrigés.",
+ "key_big": "exp′ = exp et e^0 = 1",
+ "key_sub": "e^a × e^b = e^(a+b) ; e^x > 0",
+ "body_html": "<h2>Comment faire</h2><p>La fonction exponentielle est l’unique fonction dérivable sur ℝ telle que <b>exp′ = exp et exp(0) = 1</b>. On note exp(x) = e<sup>x</sup>, avec e ≈ 2,718.</p><p>e<sup>a</sup> × e<sup>b</sup> = e<sup>a+b</sup> ; e<sup>a</sup> ÷ e<sup>b</sup> = e<sup>a−b</sup> ; e<sup>−a</sup> = 1 ÷ e<sup>a</sup> ; (e<sup>a</sup>)<sup>n</sup> = e<sup>na</sup>.</p><p>e<sup>x</sup> &gt; 0 pour tout x ; exp est strictement croissante, donc e<sup>a</sup> = e<sup>b</sup> ⇔ a = b et e<sup>a</sup> &lt; e<sup>b</sup> ⇔ a &lt; b.</p><p>(e<sup>ax+b</sup>)′ = a e<sup>ax+b</sup>.</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>e<sup>2x − 1</sup> &gt; e<sup>x + 3</sup></p><p class='sn-ex-s'>2x − 1 &gt; x + 3</p><p class='sn-ex-s'>x &gt; 4</p><p class='sn-ex-a'>Réponse : S = ]4 ; +∞[</p></div><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>f(x) = (x − 2)e<sup>x</sup></p><p class='sn-ex-s'>f′(x) = e<sup>x</sup> + (x − 2)e<sup>x</sup> = (x − 1)e<sup>x</sup></p><p class='sn-ex-a'>Réponse : minimum en x = 1</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>e<sup>2</sup> × e<sup>3</sup> = e<sup>6</sup></td><td>On ajoute les exposants : e<sup>5</sup>.</td></tr><tr><td>e<sup>2</sup> + e<sup>3</sup> = e<sup>5</sup></td><td>Il n’y a pas de règle pour la somme.</td></tr><tr><td>(e<sup>3x</sup>)′ = e<sup>3x</sup></td><td>(e<sup>3x</sup>)′ = 3e<sup>3x</sup>.</td></tr><tr><td>e<sup>x</sup> = −2 a une solution</td><td>e<sup>x</sup> &gt; 0 : aucune solution.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Pourquoi e<sup>x</sup> est-il toujours positif ?",
+   "a": "e<sup>x</sup> = (e<sup>x/2</sup>)² est un carré, et il n’est jamais nul car e<sup>x</sup> × e<sup>−x</sup> = 1."
+  },
+  {
+   "q": "Quel lien avec les suites géométriques ?",
+   "a": "Pour tout réel a, la suite u<sub>n</sub> = e<sup>na</sup> est géométrique de raison e<sup>a</sup> : l’exponentielle prolonge les suites géométriques aux réels."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Propriétés algébriques",
+   "items": [
+    {
+     "q": "Quelle expression est égale à 1 ÷ e<sup>−5</sup> ?",
+     "c": [
+      "e<sup>−5</sup>",
+      "e<sup>5</sup>",
+      "e<sup>−<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></sup>",
+      "−e<sup>−5</sup>"
+     ],
+     "a": 1,
+     "e": "1 ÷ e<sup>a</sup> = e<sup>−a</sup> : <b>e<sup>5</sup></b>."
+    },
+    {
+     "q": "Simplifie (e<sup>2</sup>)<sup>3</sup>.",
+     "c": [
+      "e<sup>8</sup>",
+      "3e<sup>2</sup>",
+      "e<sup>5</sup>",
+      "e<sup>6</sup>"
+     ],
+     "a": 3,
+     "e": "(e<sup>a</sup>)<sup>n</sup> = e<sup>na</sup> : <b>e<sup>6</sup></b>."
+    },
+    {
+     "q": "Simplifie (e<sup>−2</sup>)<sup>3</sup>.",
+     "c": [
+      "e<sup>−8</sup>",
+      "3e<sup>−2</sup>",
+      "e<sup>−6</sup>",
+      "e"
+     ],
+     "a": 2,
+     "e": "(e<sup>a</sup>)<sup>n</sup> = e<sup>na</sup> : <b>e<sup>−6</sup></b>."
+    },
+    {
+     "q": "Simplifie e<sup>3x + 5</sup> × e<sup>−2x − 2</sup>.",
+     "c": [
+      "e<sup>5x + 7</sup>",
+      "2e<sup>x + 3</sup>",
+      "e<sup>(3x + 5)(−2x − 2)</sup>",
+      "e<sup>x + 3</sup>"
+     ],
+     "a": 3,
+     "e": "e<sup>a</sup> × e<sup>b</sup> = e<sup>a+b</sup> : <b>e<sup>x + 3</sup></b>."
+    },
+    {
+     "q": "Simplifie e<sup>2x + 3</sup> × e.",
+     "c": [
+      "e<sup>2x + 2</sup>",
+      "2e<sup>2x + 4</sup>",
+      "e<sup>2x + 4</sup>",
+      "e<sup>(2x + 3)(1)</sup>"
+     ],
+     "a": 2,
+     "e": "e<sup>a</sup> × e<sup>b</sup> = e<sup>a+b</sup> : <b>e<sup>2x + 4</sup></b>."
+    },
+    {
+     "q": "Simplifie e<sup>−3</sup> ÷ e.",
+     "c": [
+      "e<sup>4</sup>",
+      "e<sup>−2</sup>",
+      "e<sup>−4</sup>",
+      "e<sup>−3</sup>"
+     ],
+     "a": 2,
+     "e": "e<sup>a</sup> ÷ e<sup>b</sup> = e<sup>a−b</sup> : <b>e<sup>−4</sup></b>."
+    },
+    {
+     "q": "Simplifie (e<sup>2x</sup> × e<sup>2</sup>) ÷ e<sup>x</sup>.",
+     "c": [
+      "e<sup>x + 2</sup>",
+      "e<sup>4x</sup>",
+      "e<sup>2x + 1</sup>",
+      "e<sup>3x + 2</sup>"
+     ],
+     "a": 0,
+     "e": "e<sup>2x</sup> × e<sup>2</sup> ÷ e<sup>x</sup> = e<sup>2x + 2 − x</sup> = <b>e<sup>x + 2</sup></b>."
+    },
+    {
+     "q": "Simplifie e<sup>−1</sup> ÷ e<sup>−5</sup>.",
+     "c": [
+      "e<sup><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></sup>",
+      "e<sup>4</sup>",
+      "e<sup>−6</sup>",
+      "e<sup>−4</sup>"
+     ],
+     "a": 1,
+     "e": "e<sup>a</sup> ÷ e<sup>b</sup> = e<sup>a−b</sup> : <b>e<sup>4</sup></b>."
+    },
+    {
+     "q": "Simplifie (e<sup>−5</sup>)<sup>5</sup>.",
+     "c": [
+      "e<sup>−25</sup>",
+      "e<sup>0</sup>",
+      "e<sup>−3 125</sup>",
+      "5e<sup>−5</sup>"
+     ],
+     "a": 0,
+     "e": "(e<sup>a</sup>)<sup>n</sup> = e<sup>na</sup> : <b>e<sup>−25</sup></b>."
+    },
+    {
+     "q": "Simplifie e<sup>4x</sup> × e<sup>−3x + 5</sup>.",
+     "c": [
+      "e<sup>(4x)(−3x + 5)</sup>",
+      "e<sup>7x − 5</sup>",
+      "2e<sup>x + 5</sup>",
+      "e<sup>x + 5</sup>"
+     ],
+     "a": 3,
+     "e": "e<sup>a</sup> × e<sup>b</sup> = e<sup>a+b</sup> : <b>e<sup>x + 5</sup></b>."
+    },
+    {
+     "q": "Quelle expression est égale à 1 ÷ e<sup>−8</sup> ?",
+     "c": [
+      "e<sup>−<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></sup>",
+      "−e<sup>−8</sup>",
+      "e<sup>8</sup>",
+      "e<sup>−8</sup>"
+     ],
+     "a": 2,
+     "e": "1 ÷ e<sup>a</sup> = e<sup>−a</sup> : <b>e<sup>8</sup></b>."
+    },
+    {
+     "q": "Quelle expression est égale à 1 ÷ e<sup>−4</sup> ?",
+     "c": [
+      "e<sup>−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></sup>",
+      "e<sup>4</sup>",
+      "e<sup>−4</sup>",
+      "−e<sup>−4</sup>"
+     ],
+     "a": 1,
+     "e": "1 ÷ e<sup>a</sup> = e<sup>−a</sup> : <b>e<sup>4</sup></b>."
+    },
+    {
+     "q": "Simplifie e<sup>4x − 5</sup> × e<sup>−3x − 1</sup>.",
+     "c": [
+      "e<sup>(4x − 5)(−3x − 1)</sup>",
+      "e<sup>x − 6</sup>",
+      "2e<sup>x − 6</sup>",
+      "e<sup>7x − 4</sup>"
+     ],
+     "a": 1,
+     "e": "e<sup>a</sup> × e<sup>b</sup> = e<sup>a+b</sup> : <b>e<sup>x − 6</sup></b>."
+    },
+    {
+     "q": "Quelle expression est égale à 1 ÷ e<sup>4</sup> ?",
+     "c": [
+      "e<sup><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></sup>",
+      "e<sup>4</sup>",
+      "−e<sup>4</sup>",
+      "e<sup>−4</sup>"
+     ],
+     "a": 3,
+     "e": "1 ÷ e<sup>a</sup> = e<sup>−a</sup> : <b>e<sup>−4</sup></b>."
+    },
+    {
+     "q": "Simplifie (e<sup>−2</sup>)<sup>4</sup>.",
+     "c": [
+      "e<sup>−8</sup>",
+      "e<sup>2</sup>",
+      "e<sup>16</sup>",
+      "4e<sup>−2</sup>"
+     ],
+     "a": 0,
+     "e": "(e<sup>a</sup>)<sup>n</sup> = e<sup>na</sup> : <b>e<sup>−8</sup></b>."
+    },
+    {
+     "q": "Simplifie (e<sup>2x</sup> × e<sup>4</sup>) ÷ e<sup>x</sup>.",
+     "c": [
+      "e<sup>2x + 3</sup>",
+      "e<sup>x + 4</sup>",
+      "e<sup>8x</sup>",
+      "e<sup>3x + 4</sup>"
+     ],
+     "a": 1,
+     "e": "e<sup>2x</sup> × e<sup>4</sup> ÷ e<sup>x</sup> = e<sup>2x + 4 − x</sup> = <b>e<sup>x + 4</sup></b>."
+    },
+    {
+     "q": "Simplifie e<sup>4x + 1</sup> × e<sup>2x − 3</sup>.",
+     "c": [
+      "2e<sup>6x − 2</sup>",
+      "e<sup>(4x + 1)(2x − 3)</sup>",
+      "e<sup>2x + 4</sup>",
+      "e<sup>6x − 2</sup>"
+     ],
+     "a": 3,
+     "e": "e<sup>a</sup> × e<sup>b</sup> = e<sup>a+b</sup> : <b>e<sup>6x − 2</sup></b>."
+    },
+    {
+     "q": "Simplifie (e<sup>3x</sup> × e<sup>4</sup>) ÷ e<sup>x</sup>.",
+     "c": [
+      "e<sup>4x + 4</sup>",
+      "e<sup>3x + 3</sup>",
+      "e<sup>2x + 4</sup>",
+      "e<sup>12x</sup>"
+     ],
+     "a": 2,
+     "e": "e<sup>3x</sup> × e<sup>4</sup> ÷ e<sup>x</sup> = e<sup>3x + 4 − x</sup> = <b>e<sup>2x + 4</sup></b>."
+    },
+    {
+     "q": "Quelle expression est égale à 1 ÷ e<sup>9</sup> ?",
+     "c": [
+      "e<sup>−9</sup>",
+      "e<sup><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></sup>",
+      "−e<sup>9</sup>",
+      "e<sup>9</sup>"
+     ],
+     "a": 0,
+     "e": "1 ÷ e<sup>a</sup> = e<sup>−a</sup> : <b>e<sup>−9</sup></b>."
+    },
+    {
+     "q": "Simplifie e<sup>3x + 3</sup> × e<sup>−4</sup>.",
+     "c": [
+      "e<sup>3x − 1</sup>",
+      "e<sup>(3x + 3)(−4)</sup>",
+      "e<sup>3x + 7</sup>",
+      "2e<sup>3x − 1</sup>"
+     ],
+     "a": 0,
+     "e": "e<sup>a</sup> × e<sup>b</sup> = e<sup>a+b</sup> : <b>e<sup>3x − 1</sup></b>."
+    }
+   ]
+  },
+  {
+   "title": "Équations et inéquations",
+   "items": [
+    {
+     "q": "Résous e<sup>−4x − 8</sup> = e<sup>9</sup>.",
+     "c": [
+      "x = −<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "x = −<span class='fr'><span class='fn'>17</span><span class='fd'>4</span></span>",
+      "x = <span class='fr'><span class='fn'>17</span><span class='fd'>4</span></span>",
+      "x = <span class='fr'><span class='fn'>23</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "e<sup>a</sup> = e<sup>b</sup> ⇔ a = b : −4x − 8 = 9 ⇔ <b>x = −<span class='fr'><span class='fn'>17</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Résous e<sup>4x + 1</sup> ⩾ e<sup>3x + 5</sup>.",
+     "c": [
+      "S = ]4 ; +∞[",
+      "S = [−4 ; +∞[",
+      "S = [4 ; +∞[",
+      "S = ]−∞ ; 4]"
+     ],
+     "a": 2,
+     "e": "exp est strictement croissante : 4x + 1 ⩾ 3x + 5 ⇔ x ⩾ 4 : <b>S = [4 ; +∞[</b>."
+    },
+    {
+     "q": "Résous e<sup>5x − 4</sup> = e.",
+     "c": [
+      "x = 1",
+      "x = <span class='fr'><span class='fn'>21</span><span class='fd'>5</span></span>",
+      "x = −1",
+      "x = −<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "e<sup>a</sup> = e<sup>b</sup> ⇔ a = b : 5x − 4 = 1 ⇔ <b>x = 1</b>."
+    },
+    {
+     "q": "Résous e<sup>5x − 7</sup> = e<sup>−3</sup>.",
+     "c": [
+      "x = <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "x = <span class='fr'><span class='fn'>32</span><span class='fd'>5</span></span>",
+      "x = −<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "x = −2"
+     ],
+     "a": 0,
+     "e": "e<sup>a</sup> = e<sup>b</sup> ⇔ a = b : 5x − 7 = −3 ⇔ <b>x = <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Résous e<sup>x²</sup> = e<sup>9</sup>.",
+     "c": [
+      "S = {−3 ; 3}",
+      "S = {3}",
+      "S = {9}",
+      "S = ∅"
+     ],
+     "a": 0,
+     "e": "x² = 9 ⇔ x = −3 ou x = 3 : <b>S = {−3 ; 3}</b>."
+    },
+    {
+     "q": "Résous e<sup>x</sup> = −2.",
+     "c": [
+      "S = ∅",
+      "S = {0}",
+      "S = {−2}",
+      "S = {2}"
+     ],
+     "a": 0,
+     "e": "e<sup>X</sup> &gt; 0 pour tout réel X : l’équation n’a <b>pas de solution</b>."
+    },
+    {
+     "q": "Résous e<sup>5x − 9</sup> = e<sup>−3</sup>.",
+     "c": [
+      "x = −<span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span>",
+      "x = −<span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span>",
+      "x = <span class='fr'><span class='fn'>42</span><span class='fd'>5</span></span>",
+      "x = <span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "e<sup>a</sup> = e<sup>b</sup> ⇔ a = b : 5x − 9 = −3 ⇔ <b>x = <span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Résous e<sup>x²</sup> = e<sup>16</sup>.",
+     "c": [
+      "S = {16}",
+      "S = {−4 ; 4}",
+      "S = ∅",
+      "S = {4}"
+     ],
+     "a": 1,
+     "e": "x² = 16 ⇔ x = −4 ou x = 4 : <b>S = {−4 ; 4}</b>."
+    },
+    {
+     "q": "Résous e<sup>x + 1</sup> = 1.",
+     "c": [
+      "x = 1",
+      "x = 0",
+      "pas de solution",
+      "x = −1"
+     ],
+     "a": 3,
+     "e": "1 = e<sup>0</sup>, donc x + 1 = 0 ⇔ <b>x = −1</b>."
+    },
+    {
+     "q": "Résous e<sup>x − 4</sup> ⩽ e<sup>−2x + 4</sup>.",
+     "c": [
+      "S = ]−∞ ; −<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>]",
+      "S = ]−∞ ; <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>[",
+      "S = ]−∞ ; <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>]",
+      "S = [<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span> ; +∞["
+     ],
+     "a": 2,
+     "e": "exp est strictement croissante : x − 4 ⩽ −2x + 4 ⇔ x ⩽ <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span> : <b>S = ]−∞ ; <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>]</b>."
+    },
+    {
+     "q": "Résous e<sup>x²</sup> = e<sup>4</sup>.",
+     "c": [
+      "S = ∅",
+      "S = {2}",
+      "S = {4}",
+      "S = {−2 ; 2}"
+     ],
+     "a": 3,
+     "e": "x² = 4 ⇔ x = −2 ou x = 2 : <b>S = {−2 ; 2}</b>."
+    },
+    {
+     "q": "Résous e<sup>−4x + 3</sup> = 1.",
+     "c": [
+      "x = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "pas de solution",
+      "x = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "x = −<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "1 = e<sup>0</sup>, donc −4x + 3 = 0 ⇔ <b>x = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Résous e<sup>−x − 9</sup> = e<sup>3</sup>.",
+     "c": [
+      "x = −12",
+      "x = 6",
+      "x = −3",
+      "x = 12"
+     ],
+     "a": 0,
+     "e": "e<sup>a</sup> = e<sup>b</sup> ⇔ a = b : −x − 9 = 3 ⇔ <b>x = −12</b>."
+    },
+    {
+     "q": "Résous e<sup>2x + 2</sup> ⩽ e<sup>3x + 1</sup>.",
+     "c": [
+      "S = ]−∞ ; 1]",
+      "S = [1 ; +∞[",
+      "S = [−1 ; +∞[",
+      "S = ]1 ; +∞["
+     ],
+     "a": 1,
+     "e": "exp est strictement croissante : 2x + 2 ⩽ 3x + 1 ⇔ x ⩾ 1 : <b>S = [1 ; +∞[</b>."
+    },
+    {
+     "q": "Résous e<sup>−5x − 9</sup> = 1.",
+     "c": [
+      "pas de solution",
+      "x = −<span class='fr'><span class='fn'>9</span><span class='fd'>5</span></span>",
+      "x = <span class='fr'><span class='fn'>9</span><span class='fd'>5</span></span>",
+      "x = −2"
+     ],
+     "a": 1,
+     "e": "1 = e<sup>0</sup>, donc −5x − 9 = 0 ⇔ <b>x = −<span class='fr'><span class='fn'>9</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Résous e<sup>2x + 3</sup> &lt; e<sup>−x + 3</sup>.",
+     "c": [
+      "S = ]−∞ ; 0]",
+      "S = ℝ",
+      "S = ]−∞ ; 0[",
+      "S = ]0 ; +∞["
+     ],
+     "a": 2,
+     "e": "exp est strictement croissante : 2x + 3 &lt; −x + 3 ⇔ x &lt; 0 : <b>S = ]−∞ ; 0[</b>."
+    },
+    {
+     "q": "Résous e<sup>2x − 6</sup> = 1.",
+     "c": [
+      "pas de solution",
+      "x = <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "x = 3",
+      "x = −3"
+     ],
+     "a": 2,
+     "e": "1 = e<sup>0</sup>, donc 2x − 6 = 0 ⇔ <b>x = 3</b>."
+    },
+    {
+     "q": "Résous e<sup>4x − 9</sup> = e.",
+     "c": [
+      "x = −<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "x = <span class='fr'><span class='fn'>37</span><span class='fd'>4</span></span>",
+      "x = −2",
+      "x = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "e<sup>a</sup> = e<sup>b</sup> ⇔ a = b : 4x − 9 = 1 ⇔ <b>x = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Résous e<sup>−5x + 2</sup> = 1.",
+     "c": [
+      "x = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "pas de solution",
+      "x = −<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "x = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "1 = e<sup>0</sup>, donc −5x + 2 = 0 ⇔ <b>x = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Résous e<sup>−2x + 1</sup> = 1.",
+     "c": [
+      "pas de solution",
+      "x = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "x = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "x = 0"
+     ],
+     "a": 1,
+     "e": "1 = e<sup>0</sup>, donc −2x + 1 = 0 ⇔ <b>x = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Dérivées",
+   "items": [
+    {
+     "q": "Quelle est la dérivée de f(x) = 3e<sup>x</sup> ?",
+     "c": [
+      "f′(x) = 3e<sup>x</sup>",
+      "f′(x) = e<sup>x</sup>",
+      "f′(x) = 3",
+      "f′(x) = 3xe<sup>x−1</sup>"
+     ],
+     "a": 0,
+     "e": "(e<sup>x</sup>)′ = e<sup>x</sup> : <b>3e<sup>x</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = e<sup>2x + 4</sup> ?",
+     "c": [
+      "f′(x) = (2x + 4)e<sup>2x + 3</sup>",
+      "f′(x) = e<sup>2x + 4</sup>",
+      "f′(x) = e<sup>2x + 3</sup>",
+      "f′(x) = 2e<sup>2x + 4</sup>"
+     ],
+     "a": 3,
+     "e": "(e<sup>ax+b</sup>)′ = a e<sup>ax+b</sup> : <b>2e<sup>2x + 4</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = e<sup>−x</sup> ?",
+     "c": [
+      "f′(x) = −e<sup>−x</sup>",
+      "f′(x) = (−x)e<sup>−x − 1</sup>",
+      "f′(x) = e<sup>−x − 1</sup>",
+      "f′(x) = e<sup>−x</sup>"
+     ],
+     "a": 0,
+     "e": "(e<sup>ax+b</sup>)′ = a e<sup>ax+b</sup> : <b>−e<sup>−x</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = (−3x − 5)e<sup>x</sup> ?",
+     "c": [
+      "f′(x) = −3e<sup>x</sup>",
+      "f′(x) = (−3x − 8)e<sup>x</sup>",
+      "f′(x) = (−3x − 5)e<sup>x</sup>",
+      "f′(x) = (−3x − 2)e<sup>x</sup>"
+     ],
+     "a": 1,
+     "e": "u′v + uv′ = −3e<sup>x</sup> + (−3x − 5)e<sup>x</sup> = <b>(−3x − 8)e<sup>x</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = (x + 4)e<sup>x</sup> ?",
+     "c": [
+      "f′(x) = (x + 5)e<sup>x</sup>",
+      "f′(x) = (x + 4)e<sup>x</sup>",
+      "f′(x) = e<sup>x</sup>",
+      "f′(x) = (x + 3)e<sup>x</sup>"
+     ],
+     "a": 0,
+     "e": "u′v + uv′ = 1e<sup>x</sup> + (x + 4)e<sup>x</sup> = <b>(x + 5)e<sup>x</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = e<sup>−2x + 5</sup> ?",
+     "c": [
+      "f′(x) = −2e<sup>−2x + 5</sup>",
+      "f′(x) = e<sup>−2x + 4</sup>",
+      "f′(x) = e<sup>−2x + 5</sup>",
+      "f′(x) = (−2x + 5)e<sup>−2x + 4</sup>"
+     ],
+     "a": 0,
+     "e": "(e<sup>ax+b</sup>)′ = a e<sup>ax+b</sup> : <b>−2e<sup>−2x + 5</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = −5e<sup>x</sup> ?",
+     "c": [
+      "f′(x) = −5",
+      "f′(x) = e<sup>x</sup>",
+      "f′(x) = −5e<sup>x</sup>",
+      "f′(x) = −5xe<sup>x−1</sup>"
+     ],
+     "a": 2,
+     "e": "(e<sup>x</sup>)′ = e<sup>x</sup> : <b>−5e<sup>x</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = e<sup>x</sup> − 2x<sup>2</sup> ?",
+     "c": [
+      "f′(x) = − 4x",
+      "f′(x) = e<sup>x</sup> − 4x",
+      "f′(x) = xe<sup>x−1</sup> − 4x",
+      "f′(x) = e<sup>x</sup> − 2x<sup>2</sup>"
+     ],
+     "a": 1,
+     "e": "On dérive terme à terme : <b>e<sup>x</sup> − 4x</b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = 2e<sup>x</sup> ?",
+     "c": [
+      "f′(x) = 2e<sup>x</sup>",
+      "f′(x) = e<sup>x</sup>",
+      "f′(x) = 2xe<sup>x−1</sup>",
+      "f′(x) = 2"
+     ],
+     "a": 0,
+     "e": "(e<sup>x</sup>)′ = e<sup>x</sup> : <b>2e<sup>x</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = e<sup>4x − 5</sup> ?",
+     "c": [
+      "f′(x) = e<sup>4x − 5</sup>",
+      "f′(x) = (4x − 5)e<sup>4x − 6</sup>",
+      "f′(x) = 4e<sup>4x − 5</sup>",
+      "f′(x) = e<sup>4x − 6</sup>"
+     ],
+     "a": 2,
+     "e": "(e<sup>ax+b</sup>)′ = a e<sup>ax+b</sup> : <b>4e<sup>4x − 5</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = e<sup>−3x + 5</sup> ?",
+     "c": [
+      "f′(x) = e<sup>−3x + 5</sup>",
+      "f′(x) = (−3x + 5)e<sup>−3x + 4</sup>",
+      "f′(x) = e<sup>−3x + 4</sup>",
+      "f′(x) = −3e<sup>−3x + 5</sup>"
+     ],
+     "a": 3,
+     "e": "(e<sup>ax+b</sup>)′ = a e<sup>ax+b</sup> : <b>−3e<sup>−3x + 5</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = e<sup>4x − 3</sup> ?",
+     "c": [
+      "f′(x) = e<sup>4x − 3</sup>",
+      "f′(x) = e<sup>4x − 4</sup>",
+      "f′(x) = (4x − 3)e<sup>4x − 4</sup>",
+      "f′(x) = 4e<sup>4x − 3</sup>"
+     ],
+     "a": 3,
+     "e": "(e<sup>ax+b</sup>)′ = a e<sup>ax+b</sup> : <b>4e<sup>4x − 3</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = (4x − 5)e<sup>x</sup> ?",
+     "c": [
+      "f′(x) = 4e<sup>x</sup>",
+      "f′(x) = (4x − 1)e<sup>x</sup>",
+      "f′(x) = (4x − 9)e<sup>x</sup>",
+      "f′(x) = (4x − 5)e<sup>x</sup>"
+     ],
+     "a": 1,
+     "e": "u′v + uv′ = 4e<sup>x</sup> + (4x − 5)e<sup>x</sup> = <b>(4x − 1)e<sup>x</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = −e<sup>x</sup> ?",
+     "c": [
+      "f′(x) = −1xe<sup>x−1</sup>",
+      "f′(x) = e<sup>x</sup>",
+      "f′(x) = −e<sup>x</sup>",
+      "f′(x) = −1"
+     ],
+     "a": 2,
+     "e": "(e<sup>x</sup>)′ = e<sup>x</sup> : <b>−e<sup>x</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = −8e<sup>x</sup> ?",
+     "c": [
+      "f′(x) = −8xe<sup>x−1</sup>",
+      "f′(x) = e<sup>x</sup>",
+      "f′(x) = −8e<sup>x</sup>",
+      "f′(x) = −8"
+     ],
+     "a": 2,
+     "e": "(e<sup>x</sup>)′ = e<sup>x</sup> : <b>−8e<sup>x</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = xe<sup>x</sup> ?",
+     "c": [
+      "f′(x) = xe<sup>x</sup>",
+      "f′(x) = x²e<sup>x−1</sup>",
+      "f′(x) = (x + 1)e<sup>x</sup>",
+      "f′(x) = e<sup>x</sup>"
+     ],
+     "a": 2,
+     "e": "(uv)′ = u′v + uv′ = e<sup>x</sup> + xe<sup>x</sup> = <b>(x + 1)e<sup>x</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = e<sup>2x − 4</sup> ?",
+     "c": [
+      "f′(x) = e<sup>2x − 4</sup>",
+      "f′(x) = e<sup>2x − 5</sup>",
+      "f′(x) = (2x − 4)e<sup>2x − 5</sup>",
+      "f′(x) = 2e<sup>2x − 4</sup>"
+     ],
+     "a": 3,
+     "e": "(e<sup>ax+b</sup>)′ = a e<sup>ax+b</sup> : <b>2e<sup>2x − 4</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = (x − 4)e<sup>x</sup> ?",
+     "c": [
+      "f′(x) = (x − 4)e<sup>x</sup>",
+      "f′(x) = (x − 3)e<sup>x</sup>",
+      "f′(x) = (x − 5)e<sup>x</sup>",
+      "f′(x) = e<sup>x</sup>"
+     ],
+     "a": 1,
+     "e": "u′v + uv′ = 1e<sup>x</sup> + (x − 4)e<sup>x</sup> = <b>(x − 3)e<sup>x</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = e<sup>−x − 1</sup> ?",
+     "c": [
+      "f′(x) = e<sup>−x − 2</sup>",
+      "f′(x) = e<sup>−x − 1</sup>",
+      "f′(x) = (−x − 1)e<sup>−x − 2</sup>",
+      "f′(x) = −e<sup>−x − 1</sup>"
+     ],
+     "a": 3,
+     "e": "(e<sup>ax+b</sup>)′ = a e<sup>ax+b</sup> : <b>−e<sup>−x − 1</sup></b>."
+    },
+    {
+     "q": "Quelle est la dérivée de f(x) = e<sup>x</sup> + 4x<sup>2</sup> ?",
+     "c": [
+      "f′(x) = 8x",
+      "f′(x) = e<sup>x</sup> + 8x",
+      "f′(x) = xe<sup>x−1</sup> + 8x",
+      "f′(x) = e<sup>x</sup> + 4x<sup>2</sup>"
+     ],
+     "a": 1,
+     "e": "On dérive terme à terme : <b>e<sup>x</sup> + 8x</b>."
+    }
+   ]
+  },
+  {
+   "title": "Signe et variations",
+   "items": [
+    {
+     "q": "Quelle est l’équation de la tangente à la courbe de f(x) = e<sup>2x</sup> au point d’abscisse 0 ?",
+     "c": [
+      "y = 2x + 2",
+      "y = x + 1",
+      "y = 2x + 1",
+      "y = 2x"
+     ],
+     "a": 2,
+     "e": "f(0) = 1, f′(x) = 2e<sup>2x</sup> donc f′(0) = 2 : <b>y = 2x + 1</b>."
+    },
+    {
+     "q": "Quel est le sens de variation de f(x) = 5e<sup>−3x</sup> sur ℝ ?",
+     "c": [
+      "croissante",
+      "décroissante puis croissante",
+      "constante",
+      "décroissante"
+     ],
+     "a": 3,
+     "e": "f′(x) = −15e<sup>−3x</sup> &lt; 0 : f est <b>décroissante</b>."
+    },
+    {
+     "q": "Quel est le signe de f(x) = (−4x + 7)e<sup>x</sup> ?",
+     "c": [
+      "toujours négatif",
+      "positif pour x &lt; <span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>, négatif de l’autre côté",
+      "toujours positif, car e<sup>x</sup> &gt; 0",
+      "positif pour x &gt; <span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>, négatif de l’autre côté"
+     ],
+     "a": 1,
+     "e": "e<sup>x</sup> &gt; 0 : f(x) a le signe de −4x + 7, qui s’annule en <span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span> : <b>positif pour x &lt; <span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "f(x) = (x − 5)e<sup>x</sup>, donc f′(x) = (x − 4)e<sup>x</sup>. Où f admet-elle son minimum ?",
+     "c": [
+      "en x = −4",
+      "en x = 4",
+      "en x = 5",
+      "en x = 0"
+     ],
+     "a": 1,
+     "e": "f′(x) a le signe de x − 4 : négatif puis positif, minimum <b>en x = 4</b>."
+    },
+    {
+     "q": "Quel est le sens de variation de f(x) = 8e<sup>−3x</sup> sur ℝ ?",
+     "c": [
+      "décroissante",
+      "croissante",
+      "constante",
+      "décroissante puis croissante"
+     ],
+     "a": 0,
+     "e": "f′(x) = −24e<sup>−3x</sup> &lt; 0 : f est <b>décroissante</b>."
+    },
+    {
+     "q": "Quel est le sens de variation de f(x) = 2e<sup>−5x</sup> sur ℝ ?",
+     "c": [
+      "décroissante",
+      "constante",
+      "décroissante puis croissante",
+      "croissante"
+     ],
+     "a": 0,
+     "e": "f′(x) = −10e<sup>−5x</sup> &lt; 0 : f est <b>décroissante</b>."
+    },
+    {
+     "q": "Quel est le sens de variation de f(x) = 2e<sup>−2x</sup> sur ℝ ?",
+     "c": [
+      "décroissante puis croissante",
+      "croissante",
+      "constante",
+      "décroissante"
+     ],
+     "a": 3,
+     "e": "f′(x) = −4e<sup>−2x</sup> &lt; 0 : f est <b>décroissante</b>."
+    },
+    {
+     "q": "Quel est le signe de f(x) = (3x − 2)e<sup>x</sup> ?",
+     "c": [
+      "positif pour x &lt; <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>, négatif de l’autre côté",
+      "toujours positif, car e<sup>x</sup> &gt; 0",
+      "positif pour x &gt; <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>, négatif de l’autre côté",
+      "toujours négatif"
+     ],
+     "a": 2,
+     "e": "e<sup>x</sup> &gt; 0 : f(x) a le signe de 3x − 2, qui s’annule en <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> : <b>positif pour x &gt; <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Quel est le sens de variation de f(x) = 9e<sup>−4x</sup> sur ℝ ?",
+     "c": [
+      "décroissante puis croissante",
+      "croissante",
+      "décroissante",
+      "constante"
+     ],
+     "a": 2,
+     "e": "f′(x) = −36e<sup>−4x</sup> &lt; 0 : f est <b>décroissante</b>."
+    },
+    {
+     "q": "Quel est le signe de f(x) = (−4x + 6)e<sup>x</sup> ?",
+     "c": [
+      "positif pour x &lt; <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, négatif de l’autre côté",
+      "toujours négatif",
+      "positif pour x &gt; <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, négatif de l’autre côté",
+      "toujours positif, car e<sup>x</sup> &gt; 0"
+     ],
+     "a": 0,
+     "e": "e<sup>x</sup> &gt; 0 : f(x) a le signe de −4x + 6, qui s’annule en <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> : <b>positif pour x &lt; <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "f(x) = (x + 1)e<sup>x</sup>, donc f′(x) = (x + 2)e<sup>x</sup>. Où f admet-elle son minimum ?",
+     "c": [
+      "en x = −1",
+      "en x = 0",
+      "en x = 2",
+      "en x = −2"
+     ],
+     "a": 3,
+     "e": "f′(x) a le signe de x + 2 : négatif puis positif, minimum <b>en x = −2</b>."
+    },
+    {
+     "q": "Quel est le sens de variation de f(x) = 6e<sup>−x</sup> sur ℝ ?",
+     "c": [
+      "décroissante",
+      "croissante",
+      "constante",
+      "décroissante puis croissante"
+     ],
+     "a": 0,
+     "e": "f′(x) = −6e<sup>−x</sup> &lt; 0 : f est <b>décroissante</b>."
+    },
+    {
+     "q": "Quel est le signe de f(x) = (x − 4)e<sup>x</sup> ?",
+     "c": [
+      "positif pour x &gt; 4, négatif de l’autre côté",
+      "toujours négatif",
+      "toujours positif, car e<sup>x</sup> &gt; 0",
+      "positif pour x &lt; 4, négatif de l’autre côté"
+     ],
+     "a": 0,
+     "e": "e<sup>x</sup> &gt; 0 : f(x) a le signe de x − 4, qui s’annule en 4 : <b>positif pour x &gt; 4</b>."
+    },
+    {
+     "q": "f(x) = (x + 5)e<sup>x</sup>, donc f′(x) = (x + 6)e<sup>x</sup>. Où f admet-elle son minimum ?",
+     "c": [
+      "en x = 0",
+      "en x = −6",
+      "en x = −5",
+      "en x = 6"
+     ],
+     "a": 1,
+     "e": "f′(x) a le signe de x + 6 : négatif puis positif, minimum <b>en x = −6</b>."
+    },
+    {
+     "q": "Quelle est l’équation de la tangente à la courbe de f(x) = e<sup>3x</sup> au point d’abscisse 0 ?",
+     "c": [
+      "y = x + 1",
+      "y = 3x",
+      "y = 3x + 1",
+      "y = 3x + 3"
+     ],
+     "a": 2,
+     "e": "f(0) = 1, f′(x) = 3e<sup>3x</sup> donc f′(0) = 3 : <b>y = 3x + 1</b>."
+    },
+    {
+     "q": "Quelle est l’équation de la tangente à la courbe de f(x) = e<sup>x</sup> au point d’abscisse 0 ?",
+     "c": [
+      "y = x",
+      "y = x + 1",
+      "y = ex",
+      "y = 2x + 1"
+     ],
+     "a": 1,
+     "e": "f(0) = 1, f′(x) = e<sup>x</sup> donc f′(0) = 1 : <b>y = x + 1</b>."
+    },
+    {
+     "q": "f(x) = (x − 3)e<sup>x</sup>, donc f′(x) = (x − 2)e<sup>x</sup>. Où f admet-elle son minimum ?",
+     "c": [
+      "en x = 3",
+      "en x = 0",
+      "en x = −2",
+      "en x = 2"
+     ],
+     "a": 3,
+     "e": "f′(x) a le signe de x − 2 : négatif puis positif, minimum <b>en x = 2</b>."
+    },
+    {
+     "q": "Quel est le signe de f(x) = (−3x + 4)e<sup>x</sup> ?",
+     "c": [
+      "toujours positif, car e<sup>x</sup> &gt; 0",
+      "positif pour x &lt; <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>, négatif de l’autre côté",
+      "toujours négatif",
+      "positif pour x &gt; <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>, négatif de l’autre côté"
+     ],
+     "a": 1,
+     "e": "e<sup>x</sup> &gt; 0 : f(x) a le signe de −3x + 4, qui s’annule en <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> : <b>positif pour x &lt; <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "f(x) = (x + 3)e<sup>x</sup>, donc f′(x) = (x + 4)e<sup>x</sup>. Où f admet-elle son minimum ?",
+     "c": [
+      "en x = 0",
+      "en x = 4",
+      "en x = −3",
+      "en x = −4"
+     ],
+     "a": 3,
+     "e": "f′(x) a le signe de x + 4 : négatif puis positif, minimum <b>en x = −4</b>."
+    },
+    {
+     "q": "Quel est le signe de f(x) = (x − 9)e<sup>x</sup> ?",
+     "c": [
+      "positif pour x &lt; 9, négatif de l’autre côté",
+      "toujours positif, car e<sup>x</sup> &gt; 0",
+      "positif pour x &gt; 9, négatif de l’autre côté",
+      "toujours négatif"
+     ],
+     "a": 2,
+     "e": "e<sup>x</sup> &gt; 0 : f(x) a le signe de x − 9, qui s’annule en 9 : <b>positif pour x &gt; 9</b>."
+    }
+   ]
+  },
+  {
+   "title": "Valeurs, suites et méthode d’Euler",
+   "items": [
+    {
+     "q": "u<sub>n</sub> = e<sup>2n</sup>. Cette suite est géométrique. Quelle est sa raison ?",
+     "c": [
+      "2",
+      "e",
+      "e<sup>2</sup>",
+      "e<sup>2n</sup>"
+     ],
+     "a": 2,
+     "e": "u<sub>n+1</sub> = e<sup>2(n+1)</sup> = u<sub>n</sub> × e<sup>2</sup> : raison <b>e<sup>2</sup></b>."
+    },
+    {
+     "q": "u<sub>n</sub> = e<sup>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>n</sup>. Cette suite est géométrique. Quelle est sa raison ?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "e<sup>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>n</sup>",
+      "e",
+      "e<sup>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></sup>"
+     ],
+     "a": 3,
+     "e": "u<sub>n+1</sub> = e<sup>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>(n+1)</sup> = u<sub>n</sub> × e<sup>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></sup> : raison <b>e<sup>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></sup></b>."
+    },
+    {
+     "q": "u<sub>n</sub> = e<sup>−n</sup>. Cette suite est géométrique. Quelle est sa raison ?",
+     "c": [
+      "n",
+      "−1",
+      "e",
+      "e<sup>−1</sup>"
+     ],
+     "a": 3,
+     "e": "u<sub>n+1</sub> = e<sup>−1(n+1)</sup> = u<sub>n</sub> × e<sup>−1</sup> : raison <b>e<sup>−1</sup></b>."
+    },
+    {
+     "q": "u<sub>n</sub> = e<sup>3n</sup>. Cette suite est géométrique. Quelle est sa raison ?",
+     "c": [
+      "e<sup>3</sup>",
+      "3",
+      "e<sup>3n</sup>",
+      "e"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> = e<sup>3(n+1)</sup> = u<sub>n</sub> × e<sup>3</sup> : raison <b>e<sup>3</sup></b>."
+    },
+    {
+     "q": "Donne une valeur approchée au centième de e<sup>−1</sup>.",
+     "c": [
+      "−2,72",
+      "0,37",
+      "0,74",
+      "1,72"
+     ],
+     "a": 1,
+     "e": "À la calculatrice : e<sup>−1</sup> ≈ <b>0,37</b>."
+    },
+    {
+     "q": "Méthode d’Euler pour f′ = f, f(0) = 1, avec le pas h = 0,25 : y<sub>k+1</sub> = (1 + h) × y<sub>k</sub>. Quelle valeur approchée de f(0,5) obtient-on ?",
+     "c": [
+      "1,5",
+      "1,0625",
+      "1,5625",
+      "2,5"
+     ],
+     "a": 2,
+     "e": "y<sub>2</sub> = 1,25<sup>2</sup> = <b>1,5625</b> (valeur exacte e<sup>0,5</sup> ≈ 1,649)."
+    },
+    {
+     "q": "u<sub>n</sub> = e<sup>−2n</sup>. Cette suite est géométrique. Quelle est sa raison ?",
+     "c": [
+      "e<sup>−2</sup>",
+      "e<sup>−2n</sup>",
+      "e",
+      "−2"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> = e<sup>−2(n+1)</sup> = u<sub>n</sub> × e<sup>−2</sup> : raison <b>e<sup>−2</sup></b>."
+    },
+    {
+     "q": "Compare e<sup>−4</sup> et e<sup>−1</sup>.",
+     "c": [
+      "e<sup>−4</sup> = e<sup>−1</sup>",
+      "e<sup>−4</sup> &gt; e<sup>−1</sup>",
+      "e<sup>−4</sup> &lt; e<sup>−1</sup>",
+      "on ne peut pas comparer"
+     ],
+     "a": 2,
+     "e": "exp est strictement croissante : <b>e<sup>−4</sup> &lt; e<sup>−1</sup></b>."
+    },
+    {
+     "q": "Que vaut e<sup>1</sup> ?",
+     "c": [
+      "e ≈ 2,718",
+      "0",
+      "1",
+      "10"
+     ],
+     "a": 0,
+     "e": "Réponse : <b>e ≈ 2,718</b>."
+    },
+    {
+     "q": "Méthode d’Euler pour f′ = f, f(0) = 1, avec le pas h = 0,2 : y<sub>k+1</sub> = (1 + h) × y<sub>k</sub>. Quelle valeur approchée de f(0,4) obtient-on ?",
+     "c": [
+      "1,04",
+      "1,44",
+      "2,4",
+      "1,4"
+     ],
+     "a": 1,
+     "e": "y<sub>2</sub> = 1,2<sup>2</sup> = <b>1,44</b> (valeur exacte e<sup>0,4</sup> ≈ 1,492)."
+    },
+    {
+     "q": "Donne une valeur approchée au centième de e<sup>3</sup>.",
+     "c": [
+      "20,1",
+      "8,15",
+      "40,17",
+      "5,72"
+     ],
+     "a": 0,
+     "e": "À la calculatrice : e<sup>3</sup> ≈ <b>20,1</b>."
+    },
+    {
+     "q": "Que vaut le signe de e<sup>x</sup> ?",
+     "c": [
+      "nul en 0",
+      "strictement positif pour tout x",
+      "négatif si x &lt; 0",
+      "positif seulement si x &gt; 0"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>strictement positif pour tout x</b>."
+    },
+    {
+     "q": "Compare e<sup>−3</sup> et e<sup>−4</sup>.",
+     "c": [
+      "e<sup>−3</sup> = e<sup>−4</sup>",
+      "on ne peut pas comparer",
+      "e<sup>−3</sup> &lt; e<sup>−4</sup>",
+      "e<sup>−3</sup> &gt; e<sup>−4</sup>"
+     ],
+     "a": 3,
+     "e": "exp est strictement croissante : <b>e<sup>−3</sup> &gt; e<sup>−4</sup></b>."
+    },
+    {
+     "q": "Méthode d’Euler pour f′ = f, f(0) = 1, avec le pas h = 0,1 : y<sub>k+1</sub> = (1 + h) × y<sub>k</sub>. Quelle valeur approchée de f(0,2) obtient-on ?",
+     "c": [
+      "1,2",
+      "1,21",
+      "2,2",
+      "1,01"
+     ],
+     "a": 1,
+     "e": "y<sub>2</sub> = 1,1<sup>2</sup> = <b>1,21</b> (valeur exacte e<sup>0,2</sup> ≈ 1,221)."
+    },
+    {
+     "q": "Méthode d’Euler pour f′ = f, f(0) = 1, avec le pas h = 0,25 : y<sub>k+1</sub> = (1 + h) × y<sub>k</sub>. Quelle valeur approchée de f(0,75) obtient-on ?",
+     "c": [
+      "3,75",
+      "1,953125",
+      "1,015625",
+      "1,75"
+     ],
+     "a": 1,
+     "e": "y<sub>3</sub> = 1,25<sup>3</sup> = <b>1,953125</b> (valeur exacte e<sup>0,75</sup> ≈ 2,117)."
+    },
+    {
+     "q": "Donne une valeur approchée au centième de e<sup>−2</sup>.",
+     "c": [
+      "−5,44",
+      "0,27",
+      "0,14",
+      "0,72"
+     ],
+     "a": 2,
+     "e": "À la calculatrice : e<sup>−2</sup> ≈ <b>0,14</b>."
+    },
+    {
+     "q": "u<sub>n</sub> = e<sup><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>n</sup>. Cette suite est géométrique. Quelle est sa raison ?",
+     "c": [
+      "e<sup><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></sup>",
+      "e<sup><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>n</sup>",
+      "e",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> = e<sup><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>(n+1)</sup> = u<sub>n</sub> × e<sup><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></sup> : raison <b>e<sup><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></sup></b>."
+    },
+    {
+     "q": "Compare e et e<sup>3</sup>.",
+     "c": [
+      "e &gt; e<sup>3</sup>",
+      "e = e<sup>3</sup>",
+      "e &lt; e<sup>3</sup>",
+      "on ne peut pas comparer"
+     ],
+     "a": 2,
+     "e": "exp est strictement croissante et 1 &lt; 3 : <b>e &lt; e<sup>3</sup></b>."
+    },
+    {
+     "q": "Compare e<sup>4</sup> et e<sup>2</sup>.",
+     "c": [
+      "e<sup>4</sup> = e<sup>2</sup>",
+      "e<sup>4</sup> &lt; e<sup>2</sup>",
+      "on ne peut pas comparer",
+      "e<sup>4</sup> &gt; e<sup>2</sup>"
+     ],
+     "a": 3,
+     "e": "exp est strictement croissante et 4 &gt; 2 : <b>e<sup>4</sup> &gt; e<sup>2</sup></b>."
+    },
+    {
+     "q": "Compare e<sup>2</sup> et e<sup>−4</sup>.",
+     "c": [
+      "e<sup>2</sup> &lt; e<sup>−4</sup>",
+      "on ne peut pas comparer",
+      "e<sup>2</sup> = e<sup>−4</sup>",
+      "e<sup>2</sup> &gt; e<sup>−4</sup>"
+     ],
+     "a": 3,
+     "e": "exp est strictement croissante : <b>e<sup>2</sup> &gt; e<sup>−4</sup></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 12,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "premiere"
+}

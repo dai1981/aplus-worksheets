@@ -1,0 +1,1157 @@
+{
+ "slug": "suites-geometriques",
+ "title": "Suites géométriques : raison, terme général et pourcentages",
+ "seo_title": "Suites géométriques première : fiches et exercices avec corrigé",
+ "short_title": "Suites géométriques",
+ "domain": "Algèbre",
+ "standard_code": "Première spécialité · Algèbre",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A",
+ "standard_text": "Suites géométriques : relation de récurrence, terme général, sens de variation ; lien avec les évolutions en pourcentage successives et la croissance exponentielle ; modéliser une évolution à taux constant (résumé du programme 2026 de spécialité de première)",
+ "meta_desc": "Fiches de maths première sur les suites géométriques : raison, terme général, évolutions en pourcentage, intérêts composés, sens de variation et problèmes. 100 exercices corrigés.",
+ "key_big": "Suite géométrique : u(n) = u(0) × q^n",
+ "key_sub": "Hausse de t % : q = 1 + t/100",
+ "body_html": "<h2>Comment faire</h2><p>Une suite est <b>géométrique</b> quand on passe d’un terme au suivant en multipliant toujours par le même nombre q (la raison) : u<sub>n+1</sub> = q × u<sub>n</sub>.</p><p>Terme général : u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup>, et u<sub>n</sub> = u<sub>p</sub> × q<sup>n−p</sup>.</p><p>Une hausse de t % donne q = 1 + t/100 ; une baisse de t % donne q = 1 − t/100.</p><p>Si u<sub>0</sub> &gt; 0 : q &gt; 1 croissante, 0 &lt; q &lt; 1 décroissante. Si q &lt; 0, la suite n’est pas monotone.</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>Un capital de 2 000 € placé à 3 % par an</p><p class='sn-ex-s'>u<sub>n</sub> = 2 000 × 1,03<sup>n</sup></p><p class='sn-ex-s'>u<sub>5</sub> = 2 000 × 1,03<sup>5</sup> ≈ 2 318,55</p><p class='sn-ex-a'>Réponse : environ 2 318,55 € après 5 ans</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>u<sub>n</sub> = u<sub>0</sub> × q × n</td><td>La raison est en exposant : u<sub>0</sub> × q<sup>n</sup>.</td></tr><tr><td>+ 5 % : q = 0,05</td><td>q = 1,05.</td></tr><tr><td>Deux hausses de 10 % font + 20 %</td><td>1,1² = 1,21 : c’est + 21 %.</td></tr><tr><td>q &gt; 1 donc croissante, toujours</td><td>Si u<sub>0</sub> &lt; 0 et q &gt; 1, la suite est décroissante.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Comment montrer qu’une suite est géométrique ?",
+   "a": "On montre que u<sub>n+1</sub> = q × u<sub>n</sub> pour tout n (ou, si les termes ne s’annulent pas, que u<sub>n+1</sub> ÷ u<sub>n</sub> est constant)."
+  },
+  {
+   "q": "Quel lien avec l’exponentielle ?",
+   "a": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> décrit une croissance (ou décroissance) exponentielle en temps discret : c’est le pendant des fonctions x ↦ a × e<sup>kx</sup>."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Reconnaître une suite géométrique",
+   "items": [
+    {
+     "q": "Une suite géométrique a pour premiers termes u<sub>0</sub> = −4 ; u<sub>1</sub> = −12 ; u<sub>2</sub> = −36. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "−972",
+      "−52",
+      "−108",
+      "−324"
+     ],
+     "a": 3,
+     "e": "q = 3, donc u<sub>4</sub> = −36 × 3² = <b>−324</b>."
+    },
+    {
+     "q": "Une suite géométrique vérifie u<sub>0</sub> = −5 ; u<sub>1</sub> = −20 ; u<sub>2</sub> = −80 ; u<sub>3</sub> = −320. Quelle est sa raison ?",
+     "c": [
+      "−4",
+      "4",
+      "−15",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "q = u<sub>1</sub> ÷ u<sub>0</sub> = <b>4</b> (terme suivant divisé par terme précédent)."
+    },
+    {
+     "q": "Laquelle de ces listes peut être le début d’une suite géométrique ?",
+     "c": [
+      "3 ; 6 ; 8 ; 14",
+      "9 ; 16 ; 25 ; 36",
+      "3 ; 6 ; 12 ; 24",
+      "3 ; 5 ; 7 ; 9"
+     ],
+     "a": 2,
+     "e": "On multiplie toujours par 2 : <b>3 ; 6 ; 12 ; 24</b>."
+    },
+    {
+     "q": "Une suite géométrique vérifie u<sub>0</sub> = 4 ; u<sub>1</sub> = 16 ; u<sub>2</sub> = 64 ; u<sub>3</sub> = 256. Quelle est sa raison ?",
+     "c": [
+      "−4",
+      "4",
+      "12",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "q = u<sub>1</sub> ÷ u<sub>0</sub> = <b>4</b> (terme suivant divisé par terme précédent)."
+    },
+    {
+     "q": "Une suite géométrique vérifie u<sub>0</sub> = 2 ; u<sub>1</sub> = 8 ; u<sub>2</sub> = 32 ; u<sub>3</sub> = 128. Quelle est sa raison ?",
+     "c": [
+      "6",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "4",
+      "−4"
+     ],
+     "a": 2,
+     "e": "q = u<sub>1</sub> ÷ u<sub>0</sub> = <b>4</b> (terme suivant divisé par terme précédent)."
+    },
+    {
+     "q": "Une suite géométrique vérifie u<sub>0</sub> = 8 ; u<sub>1</sub> = −16 ; u<sub>2</sub> = 32 ; u<sub>3</sub> = −64. Quelle est sa raison ?",
+     "c": [
+      "−24",
+      "2",
+      "−2",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "q = u<sub>1</sub> ÷ u<sub>0</sub> = <b>−2</b> (terme suivant divisé par terme précédent)."
+    },
+    {
+     "q": "Une suite géométrique vérifie u<sub>0</sub> = −8 ; u<sub>1</sub> = −4 ; u<sub>2</sub> = −2 ; u<sub>3</sub> = −1. Quelle est sa raison ?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "4",
+      "2"
+     ],
+     "a": 1,
+     "e": "q = u<sub>1</sub> ÷ u<sub>0</sub> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b> (terme suivant divisé par terme précédent)."
+    },
+    {
+     "q": "Une suite géométrique vérifie u<sub>0</sub> = 6 ; u<sub>1</sub> = −12 ; u<sub>2</sub> = 24 ; u<sub>3</sub> = −48. Quelle est sa raison ?",
+     "c": [
+      "2",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−18",
+      "−2"
+     ],
+     "a": 3,
+     "e": "q = u<sub>1</sub> ÷ u<sub>0</sub> = <b>−2</b> (terme suivant divisé par terme précédent)."
+    },
+    {
+     "q": "Une suite géométrique vérifie u<sub>0</sub> = −2 ; u<sub>1</sub> = −8 ; u<sub>2</sub> = −32 ; u<sub>3</sub> = −128. Quelle est sa raison ?",
+     "c": [
+      "−6",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "−4",
+      "4"
+     ],
+     "a": 3,
+     "e": "q = u<sub>1</sub> ÷ u<sub>0</sub> = <b>4</b> (terme suivant divisé par terme précédent)."
+    },
+    {
+     "q": "Une suite géométrique a pour premiers termes u<sub>0</sub> = 2 ; u<sub>1</sub> = −4 ; u<sub>2</sub> = 8. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "−4",
+      "−64",
+      "−16",
+      "32"
+     ],
+     "a": 3,
+     "e": "q = −2, donc u<sub>4</sub> = 8 × (−2)² = <b>32</b>."
+    },
+    {
+     "q": "Une suite géométrique a pour premiers termes u<sub>0</sub> = 1 ; u<sub>1</sub> = 3 ; u<sub>2</sub> = 9. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "81",
+      "243",
+      "13",
+      "27"
+     ],
+     "a": 0,
+     "e": "q = 3, donc u<sub>4</sub> = 9 × 3² = <b>81</b>."
+    },
+    {
+     "q": "Une suite géométrique vérifie u<sub>0</sub> = 3 ; u<sub>1</sub> = 15 ; u<sub>2</sub> = 75 ; u<sub>3</sub> = 375. Quelle est sa raison ?",
+     "c": [
+      "12",
+      "−5",
+      "5",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "q = u<sub>1</sub> ÷ u<sub>0</sub> = <b>5</b> (terme suivant divisé par terme précédent)."
+    },
+    {
+     "q": "Une suite géométrique vérifie u<sub>0</sub> = −3 ; u<sub>1</sub> = −15 ; u<sub>2</sub> = −75 ; u<sub>3</sub> = −375. Quelle est sa raison ?",
+     "c": [
+      "−5",
+      "5",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "−12"
+     ],
+     "a": 1,
+     "e": "q = u<sub>1</sub> ÷ u<sub>0</sub> = <b>5</b> (terme suivant divisé par terme précédent)."
+    },
+    {
+     "q": "Une suite géométrique a pour premiers termes u<sub>0</sub> = −2 ; u<sub>1</sub> = −4 ; u<sub>2</sub> = −8. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "−12",
+      "−64",
+      "−16",
+      "−32"
+     ],
+     "a": 3,
+     "e": "q = 2, donc u<sub>4</sub> = −8 × 2² = <b>−32</b>."
+    },
+    {
+     "q": "Une suite géométrique a pour premiers termes u<sub>0</sub> = −48 ; u<sub>1</sub> = −24 ; u<sub>2</sub> = −12. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "−3",
+      "−6",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "36"
+     ],
+     "a": 0,
+     "e": "q = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, donc u<sub>4</sub> = −12 × (<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)² = <b>−3</b>."
+    },
+    {
+     "q": "Une suite géométrique a pour premiers termes u<sub>0</sub> = −2 ; u<sub>1</sub> = 4 ; u<sub>2</sub> = −8. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "−32",
+      "64",
+      "16",
+      "4"
+     ],
+     "a": 0,
+     "e": "q = −2, donc u<sub>4</sub> = −8 × (−2)² = <b>−32</b>."
+    },
+    {
+     "q": "Une suite géométrique a pour premiers termes u<sub>0</sub> = 2 ; u<sub>1</sub> = 8 ; u<sub>2</sub> = 32. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "2 048",
+      "128",
+      "512",
+      "44"
+     ],
+     "a": 2,
+     "e": "q = 4, donc u<sub>4</sub> = 32 × 4² = <b>512</b>."
+    },
+    {
+     "q": "Une suite géométrique vérifie u<sub>0</sub> = −1 ; u<sub>1</sub> = 3 ; u<sub>2</sub> = −9 ; u<sub>3</sub> = 27. Quelle est sa raison ?",
+     "c": [
+      "−3",
+      "3",
+      "4",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "q = u<sub>1</sub> ÷ u<sub>0</sub> = <b>−3</b> (terme suivant divisé par terme précédent)."
+    },
+    {
+     "q": "Une suite géométrique a pour premiers termes u<sub>0</sub> = −5 ; u<sub>1</sub> = −15 ; u<sub>2</sub> = −45. Que vaut u<sub>4</sub> ?",
+     "c": [
+      "−405",
+      "−65",
+      "−135",
+      "−1 215"
+     ],
+     "a": 0,
+     "e": "q = 3, donc u<sub>4</sub> = −45 × 3² = <b>−405</b>."
+    },
+    {
+     "q": "Une suite géométrique vérifie u<sub>0</sub> = 40 ; u<sub>1</sub> = 20 ; u<sub>2</sub> = 10 ; u<sub>3</sub> = 5. Quelle est sa raison ?",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−20"
+     ],
+     "a": 1,
+     "e": "q = u<sub>1</sub> ÷ u<sub>0</sub> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b> (terme suivant divisé par terme précédent)."
+    }
+   ]
+  },
+  {
+   "title": "Terme général",
+   "items": [
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = −6 et de raison −2. Calcule u<sub>3</sub>.",
+     "c": [
+      "1 728",
+      "36",
+      "48",
+      "−24"
+     ],
+     "a": 2,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> = −6 × (−2)<sup>3</sup> = <b>48</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>4</sub> = 4 et q = 3. Calcule u<sub>6</sub>.",
+     "c": [
+      "24",
+      "2 916",
+      "12",
+      "36"
+     ],
+     "a": 3,
+     "e": "u<sub>6</sub> = u<sub>4</sub> × q<sup>6 − 4</sup> = 4 × 3<sup>2</sup> = <b>36</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = −5 et de raison 3. Quelle est son expression ?",
+     "c": [
+      "u<sub>n</sub> = −5 + 3n",
+      "u<sub>n</sub> = −5 × 3<sup>n</sup>",
+      "u<sub>n</sub> = (−5 × 3)<sup>n</sup>",
+      "u<sub>n</sub> = 3 × (−5)<sup>n</sup>"
+     ],
+     "a": 1,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> : <b>u<sub>n</sub> = −5 × 3<sup>n</sup></b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = −384 et de raison <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Calcule u<sub>6</sub>.",
+     "c": [
+      "−12",
+      "−1 152",
+      "−6",
+      "−381"
+     ],
+     "a": 2,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> = −384 × (<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>6</sup> = <b>−6</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = 320 et de raison 1,5. Quelle est son expression ?",
+     "c": [
+      "u<sub>n</sub> = 1,5 × 320<sup>n</sup>",
+      "u<sub>n</sub> = 320 × 1,5<sup>n</sup>",
+      "u<sub>n</sub> = (320 × 1,5)<sup>n</sup>",
+      "u<sub>n</sub> = 320 + 1,5n"
+     ],
+     "a": 1,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> : <b>u<sub>n</sub> = 320 × 1,5<sup>n</sup></b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>1</sub> = −3 et q = −2 (la suite commence à u<sub>1</sub>). Calcule u<sub>5</sub>.",
+     "c": [
+      "−192",
+      "−48",
+      "24",
+      "96"
+     ],
+     "a": 1,
+     "e": "u<sub>5</sub> = u<sub>1</sub> × q<sup>n−1</sup> = <b>−48</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = 3 et de raison 3. Calcule u<sub>4</sub>.",
+     "c": [
+      "36",
+      "81",
+      "6 561",
+      "243"
+     ],
+     "a": 3,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> = 3 × 3<sup>4</sup> = <b>243</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>3</sub> = −9 et q = 2. Calcule u<sub>5</sub>.",
+     "c": [
+      "−72",
+      "−18",
+      "−36",
+      "−288"
+     ],
+     "a": 2,
+     "e": "u<sub>5</sub> = u<sub>3</sub> × q<sup>5 − 3</sup> = −9 × 2<sup>2</sup> = <b>−36</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>2</sub> = 3 et q = 2. Calcule u<sub>4</sub>.",
+     "c": [
+      "12",
+      "48",
+      "24",
+      "6"
+     ],
+     "a": 0,
+     "e": "u<sub>4</sub> = u<sub>2</sub> × q<sup>4 − 2</sup> = 3 × 2<sup>2</sup> = <b>12</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = 1 et de raison −2. Calcule u<sub>4</sub>.",
+     "c": [
+      "−16",
+      "16",
+      "−8",
+      "−7"
+     ],
+     "a": 1,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> = 1 × (−2)<sup>4</sup> = <b>16</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>1</sub> = −72 et q = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> (la suite commence à u<sub>1</sub>). Calcule u<sub>3</sub>.",
+     "c": [
+      "−18",
+      "−72",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "−9"
+     ],
+     "a": 0,
+     "e": "u<sub>3</sub> = u<sub>1</sub> × q<sup>n−1</sup> = <b>−18</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = 112 et de raison <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>. Calcule u<sub>4</sub>.",
+     "c": [
+      "672",
+      "378",
+      "567",
+      "118"
+     ],
+     "a": 2,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> = 112 × (<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)<sup>4</sup> = <b>567</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>3</sub> = −48 et q = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Calcule u<sub>6</sub>.",
+     "c": [
+      "−72",
+      "−12",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "−6"
+     ],
+     "a": 3,
+     "e": "u<sub>6</sub> = u<sub>3</sub> × q<sup>6 − 3</sup> = −48 × (<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>3</sup> = <b>−6</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>4</sub> = −7 et q = 3. Calcule u<sub>6</sub>.",
+     "c": [
+      "−63",
+      "−5 103",
+      "−42",
+      "−21"
+     ],
+     "a": 0,
+     "e": "u<sub>6</sub> = u<sub>4</sub> × q<sup>6 − 4</sup> = −7 × 3<sup>2</sup> = <b>−63</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = 80 et de raison <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>. Calcule u<sub>4</sub>.",
+     "c": [
+      "405",
+      "86",
+      "480",
+      "270"
+     ],
+     "a": 0,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> = 80 × (<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)<sup>4</sup> = <b>405</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = −8 et de raison 3. Quelle est son expression ?",
+     "c": [
+      "u<sub>n</sub> = −8 × 3<sup>n</sup>",
+      "u<sub>n</sub> = −8 + 3n",
+      "u<sub>n</sub> = 3 × (−8)<sup>n</sup>",
+      "u<sub>n</sub> = (−8 × 3)<sup>n</sup>"
+     ],
+     "a": 0,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> : <b>u<sub>n</sub> = −8 × 3<sup>n</sup></b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = 24 et de raison 1,5. Quelle est son expression ?",
+     "c": [
+      "u<sub>n</sub> = 24 + 1,5n",
+      "u<sub>n</sub> = (24 × 1,5)<sup>n</sup>",
+      "u<sub>n</sub> = 1,5 × 24<sup>n</sup>",
+      "u<sub>n</sub> = 24 × 1,5<sup>n</sup>"
+     ],
+     "a": 3,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> : <b>u<sub>n</sub> = 24 × 1,5<sup>n</sup></b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = −9 et de raison −2. Calcule u<sub>5</sub>.",
+     "c": [
+      "−19",
+      "−144",
+      "288",
+      "90"
+     ],
+     "a": 2,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> = −9 × (−2)<sup>5</sup> = <b>288</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>4</sub> = 448 et q = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>. Calcule u<sub>6</sub>.",
+     "c": [
+      "5 103",
+      "1 344",
+      "672",
+      "1 008"
+     ],
+     "a": 3,
+     "e": "u<sub>6</sub> = u<sub>4</sub> × q<sup>6 − 4</sup> = 448 × (<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)<sup>2</sup> = <b>1 008</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique de premier terme u<sub>0</sub> = −6 et de raison −2. Calcule u<sub>5</sub>.",
+     "c": [
+      "−96",
+      "192",
+      "60",
+      "−16"
+     ],
+     "a": 1,
+     "e": "u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> = −6 × (−2)<sup>5</sup> = <b>192</b>."
+    }
+   ]
+  },
+  {
+   "title": "Évolutions en pourcentage",
+   "items": [
+    {
+     "q": "Une quantité diminue de 20 % chaque mois. Quelle est la raison de la suite géométrique associée ?",
+     "c": [
+      "1,2",
+      "−0,2",
+      "0,8",
+      "0,2"
+     ],
+     "a": 2,
+     "e": "Diminuer de 20 % revient à multiplier par 1 − 0,2 = <b>0,8</b>."
+    },
+    {
+     "q": "Une quantité augmente de 8 % chaque année. On note u<sub>n</sub> sa valeur après n années. La suite est géométrique de raison :",
+     "c": [
+      "0,92",
+      "8",
+      "1,08",
+      "0,08"
+     ],
+     "a": 2,
+     "e": "Augmenter de 8 % revient à multiplier par 1 + 0,08 = <b>1,08</b>."
+    },
+    {
+     "q": "Une quantité diminue de 5 % chaque mois. Quelle est la raison de la suite géométrique associée ?",
+     "c": [
+      "0,05",
+      "−0,05",
+      "0,95",
+      "1,05"
+     ],
+     "a": 2,
+     "e": "Diminuer de 5 % revient à multiplier par 1 − 0,05 = <b>0,95</b>."
+    },
+    {
+     "q": "Une quantité diminue de 3 % chaque mois. Quelle est la raison de la suite géométrique associée ?",
+     "c": [
+      "−0,03",
+      "0,97",
+      "1,03",
+      "0,03"
+     ],
+     "a": 1,
+     "e": "Diminuer de 3 % revient à multiplier par 1 − 0,03 = <b>0,97</b>."
+    },
+    {
+     "q": "Une quantité augmente de 20 % chaque année. On note u<sub>n</sub> sa valeur après n années. La suite est géométrique de raison :",
+     "c": [
+      "0,2",
+      "0,8",
+      "20",
+      "1,2"
+     ],
+     "a": 3,
+     "e": "Augmenter de 20 % revient à multiplier par 1 + 0,2 = <b>1,2</b>."
+    },
+    {
+     "q": "Un capital de 900 € augmente de 6 % par an (intérêts composés). Quelle est sa valeur au bout de 2 ans ?",
+     "c": [
+      "1 011,24 €",
+      "903,24 €",
+      "954 €",
+      "1 008 €"
+     ],
+     "a": 0,
+     "e": "900 × 1,06² = <b>1 011,24 €</b> (et non + 12 %)."
+    },
+    {
+     "q": "Un capital de 800 € augmente de 4 % par an (intérêts composés). Quelle est sa valeur au bout de 2 ans ?",
+     "c": [
+      "832 €",
+      "865,28 €",
+      "864 €",
+      "801,28 €"
+     ],
+     "a": 1,
+     "e": "800 × 1,04² = <b>865,28 €</b> (et non + 8 %)."
+    },
+    {
+     "q": "Une quantité augmente de 12 % chaque année. On note u<sub>n</sub> sa valeur après n années. La suite est géométrique de raison :",
+     "c": [
+      "0,88",
+      "0,12",
+      "12",
+      "1,12"
+     ],
+     "a": 3,
+     "e": "Augmenter de 12 % revient à multiplier par 1 + 0,12 = <b>1,12</b>."
+    },
+    {
+     "q": "Un capital de 700 € augmente de 10 % par an (intérêts composés). Quelle est sa valeur au bout de 2 ans ?",
+     "c": [
+      "707 €",
+      "840 €",
+      "847 €",
+      "770 €"
+     ],
+     "a": 2,
+     "e": "700 × 1,1² = <b>847 €</b> (et non + 20 %)."
+    },
+    {
+     "q": "Une suite géométrique a pour raison 1,04. Quelle évolution en pourcentage cela représente-t-il à chaque étape ?",
+     "c": [
+      "− 4 %",
+      "+ 4 %",
+      "+ 104 %",
+      "+ 0,4 %"
+     ],
+     "a": 1,
+     "e": "q = 1,04 = 1 + 0,04 : hausse de <b>4 %</b>."
+    },
+    {
+     "q": "Une suite géométrique a pour raison 0,98. Quelle évolution en pourcentage cela représente-t-il à chaque étape ?",
+     "c": [
+      "− 2 %",
+      "+ 2 %",
+      "− 98 %",
+      "− 0,2 %"
+     ],
+     "a": 0,
+     "e": "q = 0,98 = 1 − 0,02 : baisse de <b>2 %</b>."
+    },
+    {
+     "q": "Une quantité augmente de 15 % chaque année. On note u<sub>n</sub> sa valeur après n années. La suite est géométrique de raison :",
+     "c": [
+      "0,15",
+      "15",
+      "0,85",
+      "1,15"
+     ],
+     "a": 3,
+     "e": "Augmenter de 15 % revient à multiplier par 1 + 0,15 = <b>1,15</b>."
+    },
+    {
+     "q": "Une quantité augmente de 4 % chaque année. On note u<sub>n</sub> sa valeur après n années. La suite est géométrique de raison :",
+     "c": [
+      "1,04",
+      "0,96",
+      "0,04",
+      "4"
+     ],
+     "a": 0,
+     "e": "Augmenter de 4 % revient à multiplier par 1 + 0,04 = <b>1,04</b>."
+    },
+    {
+     "q": "Une suite géométrique a pour raison 0,9. Quelle évolution en pourcentage cela représente-t-il à chaque étape ?",
+     "c": [
+      "− 90 %",
+      "+ 10 %",
+      "− 1 %",
+      "− 10 %"
+     ],
+     "a": 3,
+     "e": "q = 0,9 = 1 − 0,1 : baisse de <b>10 %</b>."
+    },
+    {
+     "q": "Un capital de 200 € augmente de 6 % par an (intérêts composés). Quelle est sa valeur au bout de 2 ans ?",
+     "c": [
+      "224 €",
+      "212 €",
+      "200,72 €",
+      "224,72 €"
+     ],
+     "a": 3,
+     "e": "200 × 1,06² = <b>224,72 €</b> (et non + 12 %)."
+    },
+    {
+     "q": "Un capital de 200 € augmente de 15 % par an (intérêts composés). Quelle est sa valeur au bout de 2 ans ?",
+     "c": [
+      "264,50 €",
+      "260 €",
+      "230 €",
+      "204,50 €"
+     ],
+     "a": 0,
+     "e": "200 × 1,15² = <b>264,50 €</b> (et non + 30 %)."
+    },
+    {
+     "q": "Une suite géométrique a pour raison 0,75. Quelle évolution en pourcentage cela représente-t-il à chaque étape ?",
+     "c": [
+      "− 25 %",
+      "+ 25 %",
+      "− 75 %",
+      "− 2,5 %"
+     ],
+     "a": 0,
+     "e": "q = 0,75 = 1 − 0,25 : baisse de <b>25 %</b>."
+    },
+    {
+     "q": "Un capital de 600 € augmente de 10 % par an (intérêts composés). Quelle est sa valeur au bout de 2 ans ?",
+     "c": [
+      "720 €",
+      "660 €",
+      "726 €",
+      "606 €"
+     ],
+     "a": 2,
+     "e": "600 × 1,1² = <b>726 €</b> (et non + 20 %)."
+    },
+    {
+     "q": "Une quantité augmente de 2 % chaque année. On note u<sub>n</sub> sa valeur après n années. La suite est géométrique de raison :",
+     "c": [
+      "2",
+      "1,02",
+      "0,98",
+      "0,02"
+     ],
+     "a": 1,
+     "e": "Augmenter de 2 % revient à multiplier par 1 + 0,02 = <b>1,02</b>."
+    },
+    {
+     "q": "Une quantité diminue de 6 % chaque mois. Quelle est la raison de la suite géométrique associée ?",
+     "c": [
+      "0,06",
+      "0,94",
+      "−0,06",
+      "1,06"
+     ],
+     "a": 1,
+     "e": "Diminuer de 6 % revient à multiplier par 1 − 0,06 = <b>0,94</b>."
+    }
+   ]
+  },
+  {
+   "title": "Sens de variation",
+   "items": [
+    {
+     "q": "Montre que u<sub>n</sub> = 9 × 0,5<sup>n</sup> est géométrique : u<sub>n+1</sub> ÷ u<sub>n</sub> vaut",
+     "c": [
+      "9",
+      "0,5",
+      "4,5",
+      "1,5"
+     ],
+     "a": 1,
+     "e": "u<sub>n+1</sub> ÷ u<sub>n</sub> = (9 × 0,5<sup>n+1</sup>) ÷ (9 × 0,5<sup>n</sup>) = <b>0,5</b> : raison 0,5."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 5 &gt; 0 et q = 0,5. Quel est son sens de variation ?",
+     "c": [
+      "croissante",
+      "constante",
+      "décroissante",
+      "ni croissante ni décroissante"
+     ],
+     "a": 2,
+     "e": "u<sub>0</sub> &gt; 0 et q &lt; 1 : la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 2 &gt; 0 et q = 1,1. Quel est son sens de variation ?",
+     "c": [
+      "décroissante",
+      "ni croissante ni décroissante",
+      "croissante",
+      "constante"
+     ],
+     "a": 2,
+     "e": "u<sub>0</sub> &gt; 0 et q &gt; 1 : la suite est <b>croissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = −2 &lt; 0 et q = 2. Quel est son sens de variation ?",
+     "c": [
+      "ni croissante ni décroissante",
+      "décroissante",
+      "croissante",
+      "constante"
+     ],
+     "a": 1,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = u<sub>n</sub>(q − 1) : u<sub>n</sub> &lt; 0 et q − 1 &gt; 0, donc la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 8 et q = −3. Quel est son sens de variation ?",
+     "c": [
+      "croissante",
+      "ni croissante ni décroissante",
+      "constante",
+      "décroissante"
+     ],
+     "a": 1,
+     "e": "q &lt; 0 : les termes changent de signe à chaque rang, la suite <b>n’est ni croissante ni décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 7 &gt; 0 et q = 2. Quel est son sens de variation ?",
+     "c": [
+      "constante",
+      "croissante",
+      "ni croissante ni décroissante",
+      "décroissante"
+     ],
+     "a": 1,
+     "e": "u<sub>0</sub> &gt; 0 et q &gt; 1 : la suite est <b>croissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 7 &gt; 0 et q = 0,75. Quel est son sens de variation ?",
+     "c": [
+      "croissante",
+      "décroissante",
+      "constante",
+      "ni croissante ni décroissante"
+     ],
+     "a": 1,
+     "e": "u<sub>0</sub> &gt; 0 et q &lt; 1 : la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = −5 &lt; 0 et q = 3. Quel est son sens de variation ?",
+     "c": [
+      "ni croissante ni décroissante",
+      "constante",
+      "croissante",
+      "décroissante"
+     ],
+     "a": 3,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = u<sub>n</sub>(q − 1) : u<sub>n</sub> &lt; 0 et q − 1 &gt; 0, donc la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 6 et q = −2. Quel est son sens de variation ?",
+     "c": [
+      "ni croissante ni décroissante",
+      "croissante",
+      "constante",
+      "décroissante"
+     ],
+     "a": 0,
+     "e": "q &lt; 0 : les termes changent de signe à chaque rang, la suite <b>n’est ni croissante ni décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = −9 &lt; 0 et q = 2. Quel est son sens de variation ?",
+     "c": [
+      "décroissante",
+      "constante",
+      "ni croissante ni décroissante",
+      "croissante"
+     ],
+     "a": 0,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = u<sub>n</sub>(q − 1) : u<sub>n</sub> &lt; 0 et q − 1 &gt; 0, donc la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 9 &gt; 0 et q = 3. Quel est son sens de variation ?",
+     "c": [
+      "constante",
+      "décroissante",
+      "ni croissante ni décroissante",
+      "croissante"
+     ],
+     "a": 3,
+     "e": "u<sub>0</sub> &gt; 0 et q &gt; 1 : la suite est <b>croissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 1 et q = −0,5. Quel est son sens de variation ?",
+     "c": [
+      "ni croissante ni décroissante",
+      "décroissante",
+      "croissante",
+      "constante"
+     ],
+     "a": 0,
+     "e": "q &lt; 0 : les termes changent de signe à chaque rang, la suite <b>n’est ni croissante ni décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 8 &gt; 0 et q = 1,1. Quel est son sens de variation ?",
+     "c": [
+      "ni croissante ni décroissante",
+      "décroissante",
+      "constante",
+      "croissante"
+     ],
+     "a": 3,
+     "e": "u<sub>0</sub> &gt; 0 et q &gt; 1 : la suite est <b>croissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 2 &gt; 0 et q = 0,75. Quel est son sens de variation ?",
+     "c": [
+      "croissante",
+      "constante",
+      "décroissante",
+      "ni croissante ni décroissante"
+     ],
+     "a": 2,
+     "e": "u<sub>0</sub> &gt; 0 et q &lt; 1 : la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 1 &gt; 0 et q = 0,9. Quel est son sens de variation ?",
+     "c": [
+      "constante",
+      "croissante",
+      "décroissante",
+      "ni croissante ni décroissante"
+     ],
+     "a": 2,
+     "e": "u<sub>0</sub> &gt; 0 et q &lt; 1 : la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 7 et q = −0,5. Quel est son sens de variation ?",
+     "c": [
+      "ni croissante ni décroissante",
+      "croissante",
+      "constante",
+      "décroissante"
+     ],
+     "a": 0,
+     "e": "q &lt; 0 : les termes changent de signe à chaque rang, la suite <b>n’est ni croissante ni décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = −1 &lt; 0 et q = 2. Quel est son sens de variation ?",
+     "c": [
+      "constante",
+      "croissante",
+      "ni croissante ni décroissante",
+      "décroissante"
+     ],
+     "a": 3,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = u<sub>n</sub>(q − 1) : u<sub>n</sub> &lt; 0 et q − 1 &gt; 0, donc la suite est <b>décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 3 et q = −3. Quel est son sens de variation ?",
+     "c": [
+      "ni croissante ni décroissante",
+      "croissante",
+      "décroissante",
+      "constante"
+     ],
+     "a": 0,
+     "e": "q &lt; 0 : les termes changent de signe à chaque rang, la suite <b>n’est ni croissante ni décroissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = −2 &lt; 0 et q = 0,75. Quel est son sens de variation ?",
+     "c": [
+      "constante",
+      "décroissante",
+      "croissante",
+      "ni croissante ni décroissante"
+     ],
+     "a": 2,
+     "e": "u<sub>n+1</sub> − u<sub>n</sub> = u<sub>n</sub>(q − 1) : u<sub>n</sub> &lt; 0 et q − 1 &lt; 0, donc la suite est <b>croissante</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 9 et q = −0,5. Quel est son sens de variation ?",
+     "c": [
+      "constante",
+      "décroissante",
+      "croissante",
+      "ni croissante ni décroissante"
+     ],
+     "a": 3,
+     "e": "q &lt; 0 : les termes changent de signe à chaque rang, la suite <b>n’est ni croissante ni décroissante</b>."
+    }
+   ]
+  },
+  {
+   "title": "Problèmes",
+   "items": [
+    {
+     "q": "Une ville compte 53 000 habitants en 2025 et sa population augmente de 5 % par an. Combien d’habitants en 2028 (arrondi à l’unité) ?",
+     "c": [
+      "60 950",
+      "64 422",
+      "61 354",
+      "58 433"
+     ],
+     "a": 2,
+     "e": "53 000 × 1,05<sup>3</sup> ≈ <b>61 354</b>."
+    },
+    {
+     "q": "Une population de 600 bactéries double toutes les heures. Combien y en a-t-il au bout de 5 heures ?",
+     "c": [
+      "632",
+      "19 200",
+      "9 600",
+      "6 000"
+     ],
+     "a": 1,
+     "e": "600 × 2<sup>5</sup> = <b>19 200</b>."
+    },
+    {
+     "q": "Une voiture achetée 40 000 € perd 10 % de sa valeur chaque année. Quelle est sa valeur au bout de 2 ans ?",
+     "c": [
+      "32 400 €",
+      "36 000 €",
+      "400 €",
+      "32 000 €"
+     ],
+     "a": 0,
+     "e": "40 000 × 0,9<sup>2</sup> = <b>32 400 €</b>."
+    },
+    {
+     "q": "Un site a 2 000 abonnés. Le nombre d’abonnés augmente de 25 % par mois. Quelle relation donne u<sub>n</sub>, le nombre d’abonnés après n mois ?",
+     "c": [
+      "u<sub>n</sub> = 2 000 + 25n",
+      "u<sub>n</sub> = 2 000 × 1,25<sup>n</sup>",
+      "u<sub>n</sub> = 2 000 × 1,25 × n",
+      "u<sub>n</sub> = 2 000 × 0,25<sup>n</sup>"
+     ],
+     "a": 1,
+     "e": "On multiplie par 1,25 chaque mois : <b>u<sub>n</sub> = 2 000 × 1,25<sup>n</sup></b>."
+    },
+    {
+     "q": "Une population de 600 bactéries double toutes les heures. Combien y en a-t-il au bout de 8 heures ?",
+     "c": [
+      "76 800",
+      "153 600",
+      "9 600",
+      "856"
+     ],
+     "a": 1,
+     "e": "600 × 2<sup>8</sup> = <b>153 600</b>."
+    },
+    {
+     "q": "Une ville compte 57 000 habitants en 2025 et sa population augmente de 3 % par an. Combien d’habitants en 2028 (arrondi à l’unité) ?",
+     "c": [
+      "60 471",
+      "62 130",
+      "64 154",
+      "62 285"
+     ],
+     "a": 3,
+     "e": "57 000 × 1,03<sup>3</sup> ≈ <b>62 285</b>."
+    },
+    {
+     "q": "Une ville compte 44 000 habitants en 2025 et sa population augmente de 5 % par an. Combien d’habitants en 2027 (arrondi à l’unité) ?",
+     "c": [
+      "48 400",
+      "48 510",
+      "50 936",
+      "46 200"
+     ],
+     "a": 1,
+     "e": "44 000 × 1,05<sup>2</sup> ≈ <b>48 510</b>."
+    },
+    {
+     "q": "Une ville compte 23 000 habitants en 2025 et sa population augmente de 3 % par an. Combien d’habitants en 2028 (arrondi à l’unité) ?",
+     "c": [
+      "25 887",
+      "25 070",
+      "25 133",
+      "24 401"
+     ],
+     "a": 2,
+     "e": "23 000 × 1,03<sup>3</sup> ≈ <b>25 133</b>."
+    },
+    {
+     "q": "On lâche une balle de 250 cm. À chaque rebond, elle remonte aux <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> de sa hauteur précédente. Quelle hauteur atteint-elle après le 3<sup>e</sup> rebond ?",
+     "c": [
+      "128 cm",
+      "2 cm",
+      "102,4 cm",
+      "160 cm"
+     ],
+     "a": 0,
+     "e": "250 × (<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>)<sup>3</sup> = <b>128 cm</b>."
+    },
+    {
+     "q": "On lâche une balle de 256 cm. À chaque rebond, elle remonte aux <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> de sa hauteur précédente. Quelle hauteur atteint-elle après le 4<sup>e</sup> rebond ?",
+     "c": [
+      "60,75 cm",
+      "1 cm",
+      "81 cm",
+      "108 cm"
+     ],
+     "a": 2,
+     "e": "256 × (<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>4</sup> = <b>81 cm</b>."
+    },
+    {
+     "q": "Une ville compte 47 000 habitants en 2025 et sa population augmente de 3 % par an. Combien d’habitants en 2027 (arrondi à l’unité) ?",
+     "c": [
+      "51 358",
+      "49 820",
+      "48 410",
+      "49 862"
+     ],
+     "a": 3,
+     "e": "47 000 × 1,03<sup>2</sup> ≈ <b>49 862</b>."
+    },
+    {
+     "q": "On lâche une balle de 50 cm. À chaque rebond, elle remonte aux <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> de sa hauteur précédente. Quelle hauteur atteint-elle après le 2<sup>e</sup> rebond ?",
+     "c": [
+      "25,6 cm",
+      "40 cm",
+      "32 cm",
+      "2 cm"
+     ],
+     "a": 2,
+     "e": "50 × (<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>)<sup>2</sup> = <b>32 cm</b>."
+    },
+    {
+     "q": "Une voiture achetée 31 000 € perd 15 % de sa valeur chaque année. Quelle est sa valeur au bout de 2 ans ?",
+     "c": [
+      "26 350 €",
+      "697,50 €",
+      "21 700 €",
+      "22 397,50 €"
+     ],
+     "a": 3,
+     "e": "31 000 × 0,85<sup>2</sup> = <b>22 397,50 €</b>."
+    },
+    {
+     "q": "On lâche une balle de 64 cm. À chaque rebond, elle remonte aux <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> de sa hauteur précédente. Quelle hauteur atteint-elle après le 2<sup>e</sup> rebond ?",
+     "c": [
+      "27 cm",
+      "4 cm",
+      "48 cm",
+      "36 cm"
+     ],
+     "a": 3,
+     "e": "64 × (<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>2</sup> = <b>36 cm</b>."
+    },
+    {
+     "q": "Une population de 400 bactéries double toutes les heures. Combien y en a-t-il au bout de 5 heures ?",
+     "c": [
+      "4 000",
+      "432",
+      "12 800",
+      "6 400"
+     ],
+     "a": 2,
+     "e": "400 × 2<sup>5</sup> = <b>12 800</b>."
+    },
+    {
+     "q": "Une voiture achetée 29 000 € perd 15 % de sa valeur chaque année. Quelle est sa valeur au bout de 3 ans ?",
+     "c": [
+      "97,88 €",
+      "17 809,62 €",
+      "20 952,50 €",
+      "15 950 €"
+     ],
+     "a": 1,
+     "e": "29 000 × 0,85<sup>3</sup> = <b>17 809,62 €</b>."
+    },
+    {
+     "q": "Une ville compte 39 000 habitants en 2025 et sa population augmente de 3 % par an. Combien d’habitants en 2027 (arrondi à l’unité) ?",
+     "c": [
+      "41 375",
+      "42 616",
+      "41 340",
+      "40 170"
+     ],
+     "a": 0,
+     "e": "39 000 × 1,03<sup>2</sup> ≈ <b>41 375</b>."
+    },
+    {
+     "q": "On lâche une balle de 32 cm. À chaque rebond, elle remonte aux <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> de sa hauteur précédente. Quelle hauteur atteint-elle après le 3<sup>e</sup> rebond ?",
+     "c": [
+      "4 cm",
+      "16 cm",
+      "2 cm",
+      "8 cm"
+     ],
+     "a": 0,
+     "e": "32 × (<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>3</sup> = <b>4 cm</b>."
+    },
+    {
+     "q": "Une ville compte 15 000 habitants en 2025 et sa population augmente de 5 % par an. Combien d’habitants en 2027 (arrondi à l’unité) ?",
+     "c": [
+      "17 364",
+      "15 750",
+      "16 500",
+      "16 538"
+     ],
+     "a": 3,
+     "e": "15 000 × 1,05<sup>2</sup> ≈ <b>16 538</b>."
+    },
+    {
+     "q": "Un site a 3 000 abonnés. Le nombre d’abonnés augmente de 25 % par mois. Quelle relation donne u<sub>n</sub>, le nombre d’abonnés après n mois ?",
+     "c": [
+      "u<sub>n</sub> = 3 000 × 1,25<sup>n</sup>",
+      "u<sub>n</sub> = 3 000 × 0,25<sup>n</sup>",
+      "u<sub>n</sub> = 3 000 + 25n",
+      "u<sub>n</sub> = 3 000 × 1,25 × n"
+     ],
+     "a": 0,
+     "e": "On multiplie par 1,25 chaque mois : <b>u<sub>n</sub> = 3 000 × 1,25<sup>n</sup></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 4,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "premiere"
+}

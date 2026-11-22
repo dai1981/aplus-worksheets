@@ -1352,7 +1352,17 @@ fr_common.make_unit は seconde で DOMAIN_LY（N Nombres et calculs, algèbre�
 8. fonctions-generalites ✓ 9. fonctions-de-reference ✓ 10. variations-et-extremums ✓ 11. fonctions-affines ✓ 12. vecteurs ✓ 13. coordonnees-et-colinearite ✓ 14. equations-de-droites ✓
 15. systemes-lineaires ✓ 16. geometrie-plane ✓ 17. pourcentages-et-evolutions ✓ 18. statistiques ✓ 19. probabilites ✓ 20. echantillonnage ✓ 21. algorithmique-et-python ✓
 
-FR / Maths は CP〜seconde まで完了。次は première（spécialité）か、GDP 順で次の国
+FR / Maths / Première（spécialité。Programme 2026 de spécialité de première、BO 2026 n°14、MENE2602917A、2026 年度から）— grade `premiere`（name「Première」、sort 11、16歳）。生成スクリプトは `gen_fr_maths_premiere_*`（seed は 606xx）、共通部品は `tools/fr_ly1.py`（fr_c4 の上に E・nz・P2（ax² + bx + c）・sq（√ の簡約）・pit／pif（π の倍数、pif は HTML の分数）・trig_val（cos・sin の値の正確な文字列）・FR・U（u<sub>n</sub>）・vtab（変化表、dsig で f′ の符号の行）・arbre（重み付き樹形図）・code（Python）・loi（確率分布の表）・kurve・kosy）。
+fr_ly1.M は「(x)(」を「x(」に直し、「Voici la loi de X :表 …」は問題文を先にする。環境変数 FRLY_WARN=1 で実行すると、誤答が足りず mcq が数字をずらして補った問題を FILL: で表示する（数字以外の答えで出たら誤答を足す）。
+fr_common.make_unit は premiere で DOMAIN_1（A Algèbre／F Analyse／G Géométrie／S Probabilités et statistiques／P Algorithmique et programmation／L Vocabulaire ensembliste et logique）と STD_URL_1、standard_code は「Première spécialité · Analyse」。key_big・key_sub はプレーンテキスト（u(n)、q^n、e^(kt) と書く）。
+トピック：suites（Suites numériques）・second-degre・derivation を足した。exponentiel・deriv→fonctions、scalaire・kashi→geometrie、aleatoire・variance→donnees、multiplication-et-division の out に suite。ensembles-et-logique・listes-en-python はトピックなし。
+preview.php の pv_wrap の省略ループが末尾の空白で止まらなくなる不具合を直した（変化がなければ抜ける）
+1. ensembles-et-logique ✓ 2. suites-numeriques ✓ 3. suites-arithmetiques ✓ 4. suites-geometriques ✓ 5. sommes-et-limites-de-suites ✓ 6. forme-canonique-et-sommet ✓ 7. equations-du-second-degre ✓ 8. signe-du-second-degre ✓
+9. nombre-derive-et-tangente ✓ 10. fonctions-derivees ✓ 11. derivee-et-variations ✓ 12. fonction-exponentielle ✓ 13. croissance-et-decroissance-exponentielles ✓ 14. cercle-trigonometrique-et-radian ✓ 15. fonctions-cosinus-et-sinus ✓
+16. produit-scalaire ✓ 17. al-kashi-et-applications-du-produit-scalaire ✓ 18. vecteur-normal-et-equations-de-droites ✓ 19. equations-de-cercles-et-paraboles ✓
+20. probabilites-conditionnelles ✓ 21. independance-et-probabilites-totales ✓ 22. variables-aleatoires-et-esperance ✓ 23. variance-et-ecart-type ✓ 24. listes-en-python ✓
+
+FR / Maths は CP〜première まで完了。次は terminale（spécialité、Programme 2026 は 2027 年度から。BO 2026 n°14 MENE2602919A）か、GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

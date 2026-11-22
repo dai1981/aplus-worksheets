@@ -1,0 +1,1157 @@
+{
+ "slug": "sommes-et-limites-de-suites",
+ "title": "Sommes de termes et limites de suites",
+ "seo_title": "Sommes et limites de suites première : fiches et exercices avec corrigé",
+ "short_title": "Sommes et limites de suites",
+ "domain": "Algèbre",
+ "standard_code": "Première spécialité · Algèbre",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A",
+ "standard_text": "Calculer la somme des n premiers entiers et la somme 1 + q + … + qⁿ ; calculer des sommes de termes de suites arithmétiques et géométriques ; approche intuitive de la limite d’une suite ; déterminer un seuil par un algorithme (résumé du programme 2026 de spécialité de première)",
+ "meta_desc": "Fiches de maths première sur les sommes de termes et les limites de suites : 1 + 2 + … + n, sommes arithmétiques et géométriques, limite intuitive et seuils en Python. 100 exercices corrigés.",
+ "key_big": "1 + q + … + q^n = (q^(n+1) − 1) ÷ (q − 1)",
+ "key_sub": "De u(0) à u(n) : n + 1 termes",
+ "body_html": "<h2>Comment faire</h2><p>1 + 2 + … + n = n(n + 1) ÷ 2. Pour une suite arithmétique : somme = nombre de termes × (premier + dernier) ÷ 2.</p><p>Pour q ≠ 1 : 1 + q + q² + … + q<sup>n</sup> = (q<sup>n+1</sup> − 1) ÷ (q − 1). Pour une suite géométrique : u<sub>0</sub> + … + u<sub>n</sub> = u<sub>0</sub> × (q<sup>n+1</sup> − 1) ÷ (q − 1).</p><p>De u<sub>0</sub> à u<sub>n</sub>, il y a <b>n + 1</b> termes. Si q &gt; 1, q<sup>n</sup> tend vers +∞ ; si 0 &lt; q &lt; 1, q<sup>n</sup> tend vers 0.</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>1 + 3 + 3² + 3³</p><p class='sn-ex-s'>(3<sup>4</sup> − 1) ÷ (3 − 1) = 80 ÷ 2</p><p class='sn-ex-a'>Réponse : 40</p></div><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>u<sub>0</sub> = 5, r = 2 ; somme de u<sub>0</sub> à u<sub>10</sub></p><p class='sn-ex-s'>u<sub>10</sub> = 25 ; 11 termes</p><p class='sn-ex-s'>11 × (5 + 25) ÷ 2</p><p class='sn-ex-a'>Réponse : 165</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>De u<sub>0</sub> à u<sub>10</sub>, il y a 10 termes</td><td>Il y en a 11.</td></tr><tr><td>1 + 2 + … + 2<sup>5</sup> = 2<sup>5</sup> − 1</td><td>Il y a 6 termes : 2<sup>6</sup> − 1 = 63.</td></tr><tr><td>0,9<sup>n</sup> tend vers +∞ car on multiplie sans arrêt</td><td>Multiplier par 0,9 fait diminuer : 0,9<sup>n</sup> tend vers 0.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Pourquoi 1 + 2 + … + n = n(n + 1) ÷ 2 ?",
+   "a": "On écrit la somme à l’endroit et à l’envers : chaque colonne vaut n + 1 et il y a n colonnes, donc 2S = n(n + 1)."
+  },
+  {
+   "q": "Comment trouver un seuil avec Python ?",
+   "a": "Avec une boucle while : tant que la condition n’est pas atteinte, on calcule le terme suivant et on augmente n de 1."
+  }
+ ],
+ "sets": [
+  {
+   "title": "1 + 2 + … + n",
+   "items": [
+    {
+     "q": "Calcule 9 + 10 + … + 61.",
+     "c": [
+      "1 846",
+      "1 855",
+      "1 820",
+      "1 891"
+     ],
+     "a": 1,
+     "e": "Il y a 61 − 9 + 1 = 53 termes ; somme = 53 × (9 + 61) ÷ 2 = <b>1 855</b>."
+    },
+    {
+     "q": "Calcule 2 + 4 + 6 + … + 24.",
+     "c": [
+      "300",
+      "156",
+      "78",
+      "144"
+     ],
+     "a": 1,
+     "e": "2 + 4 + … + 2n = 2(1 + 2 + … + n) = n(n + 1) = 12 × 13 = <b>156</b>."
+    },
+    {
+     "q": "Calcule 1 + 2 + 3 + … + 148.",
+     "c": [
+      "11 026",
+      "22 052",
+      "21 904",
+      "10 878"
+     ],
+     "a": 0,
+     "e": "1 + 2 + … + n = n(n + 1) ÷ 2 = 148 × 149 ÷ 2 = <b>11 026</b>."
+    },
+    {
+     "q": "Calcule 1 + 2 + 3 + … + 32.",
+     "c": [
+      "1 024",
+      "496",
+      "1 056",
+      "528"
+     ],
+     "a": 3,
+     "e": "1 + 2 + … + n = n(n + 1) ÷ 2 = 32 × 33 ÷ 2 = <b>528</b>."
+    },
+    {
+     "q": "Calcule 2 + 4 + 6 + … + 152.",
+     "c": [
+      "2 926",
+      "11 628",
+      "5 776",
+      "5 852"
+     ],
+     "a": 3,
+     "e": "2 + 4 + … + 2n = 2(1 + 2 + … + n) = n(n + 1) = 76 × 77 = <b>5 852</b>."
+    },
+    {
+     "q": "Calcule 1 + 2 + 3 + … + 132.",
+     "c": [
+      "17 556",
+      "17 424",
+      "8 646",
+      "8 778"
+     ],
+     "a": 3,
+     "e": "1 + 2 + … + n = n(n + 1) ÷ 2 = 132 × 133 ÷ 2 = <b>8 778</b>."
+    },
+    {
+     "q": "Calcule 1 + 3 + 5 + … + 39 (les 20 premiers nombres impairs).",
+     "c": [
+      "380",
+      "400",
+      "780",
+      "420"
+     ],
+     "a": 1,
+     "e": "20 termes, premier 1, dernier 39 : 20 × (1 + 39) ÷ 2 = <b>400</b> (= n²)."
+    },
+    {
+     "q": "Calcule 2 + 4 + 6 + … + 156.",
+     "c": [
+      "3 081",
+      "6 084",
+      "6 162",
+      "12 246"
+     ],
+     "a": 2,
+     "e": "2 + 4 + … + 2n = 2(1 + 2 + … + n) = n(n + 1) = 78 × 79 = <b>6 162</b>."
+    },
+    {
+     "q": "Calcule 1 + 3 + 5 + … + 115 (les 58 premiers nombres impairs).",
+     "c": [
+      "3 306",
+      "6 670",
+      "3 364",
+      "3 422"
+     ],
+     "a": 2,
+     "e": "58 termes, premier 1, dernier 115 : 58 × (1 + 115) ÷ 2 = <b>3 364</b> (= n²)."
+    },
+    {
+     "q": "Calcule 1 + 2 + 3 + … + 121.",
+     "c": [
+      "7 381",
+      "14 641",
+      "14 762",
+      "7 260"
+     ],
+     "a": 0,
+     "e": "1 + 2 + … + n = n(n + 1) ÷ 2 = 121 × 122 ÷ 2 = <b>7 381</b>."
+    },
+    {
+     "q": "Calcule 1 + 3 + 5 + … + 49 (les 25 premiers nombres impairs).",
+     "c": [
+      "1 225",
+      "625",
+      "650",
+      "600"
+     ],
+     "a": 1,
+     "e": "25 termes, premier 1, dernier 49 : 25 × (1 + 49) ÷ 2 = <b>625</b> (= n²)."
+    },
+    {
+     "q": "Calcule 2 + 4 + 6 + … + 58.",
+     "c": [
+      "870",
+      "1 711",
+      "435",
+      "841"
+     ],
+     "a": 0,
+     "e": "2 + 4 + … + 2n = 2(1 + 2 + … + n) = n(n + 1) = 29 × 30 = <b>870</b>."
+    },
+    {
+     "q": "Calcule 1 + 2 + 3 + … + 136.",
+     "c": [
+      "9 316",
+      "9 180",
+      "18 632",
+      "18 496"
+     ],
+     "a": 0,
+     "e": "1 + 2 + … + n = n(n + 1) ÷ 2 = 136 × 137 ÷ 2 = <b>9 316</b>."
+    },
+    {
+     "q": "Calcule 30 + 31 + … + 89.",
+     "c": [
+      "4 005",
+      "3 510",
+      "3 570",
+      "3 540"
+     ],
+     "a": 2,
+     "e": "Il y a 89 − 30 + 1 = 60 termes ; somme = 60 × (30 + 89) ÷ 2 = <b>3 570</b>."
+    },
+    {
+     "q": "Calcule 1 + 2 + 3 + … + 116.",
+     "c": [
+      "6 670",
+      "13 572",
+      "13 456",
+      "6 786"
+     ],
+     "a": 3,
+     "e": "1 + 2 + … + n = n(n + 1) ÷ 2 = 116 × 117 ÷ 2 = <b>6 786</b>."
+    },
+    {
+     "q": "Calcule 21 + 22 + … + 48.",
+     "c": [
+      "966",
+      "931",
+      "945",
+      "1 176"
+     ],
+     "a": 0,
+     "e": "Il y a 48 − 21 + 1 = 28 termes ; somme = 28 × (21 + 48) ÷ 2 = <b>966</b>."
+    },
+    {
+     "q": "Calcule 1 + 3 + 5 + … + 87 (les 44 premiers nombres impairs).",
+     "c": [
+      "1 892",
+      "1 936",
+      "3 828",
+      "1 980"
+     ],
+     "a": 1,
+     "e": "44 termes, premier 1, dernier 87 : 44 × (1 + 87) ÷ 2 = <b>1 936</b> (= n²)."
+    },
+    {
+     "q": "Calcule 30 + 31 + … + 71.",
+     "c": [
+      "2 556",
+      "2 091",
+      "2 121",
+      "2 070"
+     ],
+     "a": 2,
+     "e": "Il y a 71 − 30 + 1 = 42 termes ; somme = 42 × (30 + 71) ÷ 2 = <b>2 121</b>."
+    },
+    {
+     "q": "Calcule 1 + 2 + 3 + … + 166.",
+     "c": [
+      "13 695",
+      "27 556",
+      "13 861",
+      "27 722"
+     ],
+     "a": 2,
+     "e": "1 + 2 + … + n = n(n + 1) ÷ 2 = 166 × 167 ÷ 2 = <b>13 861</b>."
+    },
+    {
+     "q": "Calcule 1 + 2 + 3 + … + 51.",
+     "c": [
+      "1 275",
+      "2 652",
+      "2 601",
+      "1 326"
+     ],
+     "a": 3,
+     "e": "1 + 2 + … + n = n(n + 1) ÷ 2 = 51 × 52 ÷ 2 = <b>1 326</b>."
+    }
+   ]
+  },
+  {
+   "title": "Sommes de termes arithmétiques",
+   "items": [
+    {
+     "q": "Calcule la somme 6 + 15 + 24 + … + 105 (on ajoute 9 à chaque fois).",
+     "c": [
+      "666",
+      "1 332",
+      "721,5",
+      "610,5"
+     ],
+     "a": 0,
+     "e": "Nombre de termes : (105 − 6) ÷ 9 + 1 = 12 ; somme = 12 × (6 + 105) ÷ 2 = <b>666</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = 26 et r = 2. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>19</sub>.",
+     "c": [
+      "880",
+      "1 800",
+      "900",
+      "855"
+     ],
+     "a": 2,
+     "e": "u<sub>19</sub> = 64 ; il y a 20 termes : S = 20 × (26 + 64) ÷ 2 = <b>900</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>1</sub> = −7 et r = 8. Calcule u<sub>1</sub> + u<sub>2</sub> + … + u<sub>38</sub>.",
+     "c": [
+      "10 716",
+      "5 510",
+      "5 358",
+      "5 499"
+     ],
+     "a": 2,
+     "e": "u<sub>38</sub> = 289 ; 38 termes : S = 38 × (−7 + 289) ÷ 2 = <b>5 358</b>."
+    },
+    {
+     "q": "Calcule la somme 3 + 8 + 13 + … + 98 (on ajoute 5 à chaque fois).",
+     "c": [
+      "1 060,5",
+      "2 020",
+      "1 010",
+      "959,5"
+     ],
+     "a": 2,
+     "e": "Nombre de termes : (98 − 3) ÷ 5 + 1 = 20 ; somme = 20 × (3 + 98) ÷ 2 = <b>1 010</b>."
+    },
+    {
+     "q": "Calcule la somme 20 + 24 + 28 + … + 96 (on ajoute 4 à chaque fois).",
+     "c": [
+      "2 320",
+      "1 218",
+      "1 102",
+      "1 160"
+     ],
+     "a": 3,
+     "e": "Nombre de termes : (96 − 20) ÷ 4 + 1 = 20 ; somme = 20 × (20 + 96) ÷ 2 = <b>1 160</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = 18 et r = 2. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>8</sub>.",
+     "c": [
+      "225",
+      "208",
+      "468",
+      "234"
+     ],
+     "a": 3,
+     "e": "u<sub>8</sub> = 34 ; il y a 9 termes : S = 9 × (18 + 34) ÷ 2 = <b>234</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = 24 et r = 7. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>24</sub>.",
+     "c": [
+      "5 400",
+      "2 592",
+      "2 612,5",
+      "2 700"
+     ],
+     "a": 3,
+     "e": "u<sub>24</sub> = 192 ; il y a 25 termes : S = 25 × (24 + 192) ÷ 2 = <b>2 700</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = 28 et r = 6. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>13</sub>.",
+     "c": [
+      "938",
+      "871",
+      "1 876",
+      "896"
+     ],
+     "a": 0,
+     "e": "u<sub>13</sub> = 106 ; il y a 14 termes : S = 14 × (28 + 106) ÷ 2 = <b>938</b>."
+    },
+    {
+     "q": "Calcule la somme 12 + 16 + 20 + … + 40 (on ajoute 4 à chaque fois).",
+     "c": [
+      "182",
+      "208",
+      "416",
+      "234"
+     ],
+     "a": 1,
+     "e": "Nombre de termes : (40 − 12) ÷ 4 + 1 = 8 ; somme = 8 × (12 + 40) ÷ 2 = <b>208</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = 17 et r = 4. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>23</sub>.",
+     "c": [
+      "3 024",
+      "1 449",
+      "1 464",
+      "1 512"
+     ],
+     "a": 3,
+     "e": "u<sub>23</sub> = 109 ; il y a 24 termes : S = 24 × (17 + 109) ÷ 2 = <b>1 512</b>."
+    },
+    {
+     "q": "Calcule la somme 6 + 12 + 18 + … + 72 (on ajoute 6 à chaque fois).",
+     "c": [
+      "507",
+      "936",
+      "468",
+      "429"
+     ],
+     "a": 2,
+     "e": "Nombre de termes : (72 − 6) ÷ 6 + 1 = 12 ; somme = 12 × (6 + 72) ÷ 2 = <b>468</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = −4 et r = 7. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>20</sub>.",
+     "c": [
+      "1 386",
+      "2 772",
+      "1 320",
+      "1 312,5"
+     ],
+     "a": 0,
+     "e": "u<sub>20</sub> = 136 ; il y a 21 termes : S = 21 × (−4 + 136) ÷ 2 = <b>1 386</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = 4 et r = 5. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>22</sub>.",
+     "c": [
+      "1 298",
+      "1 357",
+      "1 299,5",
+      "2 714"
+     ],
+     "a": 1,
+     "e": "u<sub>22</sub> = 114 ; il y a 23 termes : S = 23 × (4 + 114) ÷ 2 = <b>1 357</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = 8 et r = 2. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>30</sub>.",
+     "c": [
+      "1 147",
+      "1 178",
+      "2 356",
+      "1 140"
+     ],
+     "a": 1,
+     "e": "u<sub>30</sub> = 68 ; il y a 31 termes : S = 31 × (8 + 68) ÷ 2 = <b>1 178</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>1</sub> = −4 et r = 1. Calcule u<sub>1</sub> + u<sub>2</sub> + … + u<sub>11</sub>.",
+     "c": [
+      "22",
+      "11",
+      "12",
+      "16,5"
+     ],
+     "a": 1,
+     "e": "u<sub>11</sub> = 6 ; 11 termes : S = 11 × (−4 + 6) ÷ 2 = <b>11</b>."
+    },
+    {
+     "q": "Calcule la somme 11 + 15 + 19 + … + 71 (on ajoute 4 à chaque fois).",
+     "c": [
+      "1 312",
+      "697",
+      "656",
+      "615"
+     ],
+     "a": 2,
+     "e": "Nombre de termes : (71 − 11) ÷ 4 + 1 = 16 ; somme = 16 × (11 + 71) ÷ 2 = <b>656</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>1</sub> = 0 et r = 1. Calcule u<sub>1</sub> + u<sub>2</sub> + … + u<sub>27</sub>.",
+     "c": [
+      "351",
+      "364",
+      "364,5",
+      "702"
+     ],
+     "a": 0,
+     "e": "u<sub>27</sub> = 26 ; 27 termes : S = 27 × (0 + 26) ÷ 2 = <b>351</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = 30 et r = −3. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>12</sub>.",
+     "c": [
+      "156",
+      "175,5",
+      "312",
+      "144"
+     ],
+     "a": 0,
+     "e": "u<sub>12</sub> = −6 ; il y a 13 termes : S = 13 × (30 + (−6)) ÷ 2 = <b>156</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est arithmétique avec u<sub>0</sub> = −7 et r = −2. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>31</sub>.",
+     "c": [
+      "−2 432",
+      "−1 184",
+      "−1 178",
+      "−1 216"
+     ],
+     "a": 3,
+     "e": "u<sub>31</sub> = −69 ; il y a 32 termes : S = 32 × (−7 + (−69)) ÷ 2 = <b>−1 216</b>."
+    },
+    {
+     "q": "Calcule la somme 12 + 21 + 30 + … + 129 (on ajoute 9 à chaque fois).",
+     "c": [
+      "916,5",
+      "987",
+      "1 057,5",
+      "1 974"
+     ],
+     "a": 1,
+     "e": "Nombre de termes : (129 − 12) ÷ 9 + 1 = 14 ; somme = 14 × (12 + 129) ÷ 2 = <b>987</b>."
+    }
+   ]
+  },
+  {
+   "title": "1 + q + … + qⁿ",
+   "items": [
+    {
+     "q": "Calcule 1 + 2 + 2² + … + 2<sup>9</sup>.",
+     "c": [
+      "19",
+      "1 024",
+      "511",
+      "1 023"
+     ],
+     "a": 3,
+     "e": "1 + q + … + q<sup>n</sup> = (q<sup>n+1</sup> − 1) ÷ (q − 1) = 2<sup>10</sup> − 1 = <b>1 023</b>."
+    },
+    {
+     "q": "Calcule 1 + 2 + 2² + … + 2<sup>5</sup>.",
+     "c": [
+      "64",
+      "11",
+      "63",
+      "31"
+     ],
+     "a": 2,
+     "e": "1 + q + … + q<sup>n</sup> = (q<sup>n+1</sup> − 1) ÷ (q − 1) = 2<sup>6</sup> − 1 = <b>63</b>."
+    },
+    {
+     "q": "Quelle formule donne 1 + 10 + 10² + … + 10<sup>5</sup> ?",
+     "c": [
+      "(10<sup>6</sup> − 1) ÷ 9",
+      "(10<sup>5</sup> − 1) ÷ 9",
+      "(10<sup>6</sup> − 1) ÷ 10",
+      "5 × (5 + 1) ÷ 2"
+     ],
+     "a": 0,
+     "e": "Il y a 6 termes (de q⁰ à q<sup>5</sup>) : (q<sup>n+1</sup> − 1) ÷ (q − 1) = <b>(10<sup>6</sup> − 1) ÷ 9</b>."
+    },
+    {
+     "q": "Calcule 1 + 2 + 2² + … + 2<sup>8</sup>.",
+     "c": [
+      "511",
+      "17",
+      "512",
+      "255"
+     ],
+     "a": 0,
+     "e": "1 + q + … + q<sup>n</sup> = (q<sup>n+1</sup> − 1) ÷ (q − 1) = 2<sup>9</sup> − 1 = <b>511</b>."
+    },
+    {
+     "q": "Calcule 1 + 2 + 2² + … + 2<sup>4</sup>.",
+     "c": [
+      "15",
+      "32",
+      "9",
+      "31"
+     ],
+     "a": 3,
+     "e": "1 + q + … + q<sup>n</sup> = (q<sup>n+1</sup> − 1) ÷ (q − 1) = 2<sup>5</sup> − 1 = <b>31</b>."
+    },
+    {
+     "q": "Calcule 1 + 2 + 2² + … + 2<sup>10</sup>.",
+     "c": [
+      "21",
+      "2 048",
+      "2 047",
+      "1 023"
+     ],
+     "a": 2,
+     "e": "1 + q + … + q<sup>n</sup> = (q<sup>n+1</sup> − 1) ÷ (q − 1) = 2<sup>11</sup> − 1 = <b>2 047</b>."
+    },
+    {
+     "q": "Quelle formule donne 1 + 5 + 5² + … + 5<sup>5</sup> ?",
+     "c": [
+      "(5<sup>5</sup> − 1) ÷ 4",
+      "(5<sup>6</sup> − 1) ÷ 5",
+      "5 × (5 + 1) ÷ 2",
+      "(5<sup>6</sup> − 1) ÷ 4"
+     ],
+     "a": 3,
+     "e": "Il y a 6 termes (de q⁰ à q<sup>5</sup>) : (q<sup>n+1</sup> − 1) ÷ (q − 1) = <b>(5<sup>6</sup> − 1) ÷ 4</b>."
+    },
+    {
+     "q": "Calcule 1 + 3 + 3² + … + 3<sup>7</sup>.",
+     "c": [
+      "6 560",
+      "3 280",
+      "2 186",
+      "1 093"
+     ],
+     "a": 1,
+     "e": "(3<sup>8</sup> − 1) ÷ (3 − 1) = (6 561 − 1) ÷ 2 = <b>3 280</b>."
+    },
+    {
+     "q": "Quelle formule donne 1 + 2 + 2² + … + 2<sup>4</sup> ?",
+     "c": [
+      "4 × (4 + 1) ÷ 2",
+      "(2<sup>4</sup> − 1) ÷ 1",
+      "(2<sup>5</sup> − 1) ÷ 1",
+      "(2<sup>5</sup> − 1) ÷ 2"
+     ],
+     "a": 2,
+     "e": "Il y a 5 termes (de q⁰ à q<sup>4</sup>) : (q<sup>n+1</sup> − 1) ÷ (q − 1) = <b>(2<sup>5</sup> − 1) ÷ 1</b>."
+    },
+    {
+     "q": "Calcule 1 + ½ + ¼ + … + (½)<sup>4</sup>.",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>63</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>16</span></span>"
+     ],
+     "a": 3,
+     "e": "(1 − (½)<sup>5</sup>) ÷ (1 − ½) = 2 − (½)<sup>4</sup> = <b><span class='fr'><span class='fn'>31</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Quelle formule donne 1 + 3 + 3² + … + 3<sup>4</sup> ?",
+     "c": [
+      "(3<sup>5</sup> − 1) ÷ 2",
+      "(3<sup>5</sup> − 1) ÷ 3",
+      "4 × (4 + 1) ÷ 2",
+      "(3<sup>4</sup> − 1) ÷ 2"
+     ],
+     "a": 0,
+     "e": "Il y a 5 termes (de q⁰ à q<sup>4</sup>) : (q<sup>n+1</sup> − 1) ÷ (q − 1) = <b>(3<sup>5</sup> − 1) ÷ 2</b>."
+    },
+    {
+     "q": "Calcule 1 + 3 + 3² + … + 3<sup>6</sup>.",
+     "c": [
+      "1 093",
+      "728",
+      "2 186",
+      "364"
+     ],
+     "a": 0,
+     "e": "(3<sup>7</sup> − 1) ÷ (3 − 1) = (2 187 − 1) ÷ 2 = <b>1 093</b>."
+    },
+    {
+     "q": "Calcule 1 + ½ + ¼ + … + (½)<sup>8</sup>.",
+     "c": [
+      "<span class='fr'><span class='fn'>1023</span><span class='fd'>512</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>511</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "(1 − (½)<sup>9</sup>) ÷ (1 − ½) = 2 − (½)<sup>8</sup> = <b><span class='fr'><span class='fn'>511</span><span class='fd'>256</span></span></b>."
+    },
+    {
+     "q": "Quelle formule donne 1 + 2 + 2² + … + 2<sup>5</sup> ?",
+     "c": [
+      "(2<sup>5</sup> − 1) ÷ 1",
+      "(2<sup>6</sup> − 1) ÷ 2",
+      "5 × (5 + 1) ÷ 2",
+      "(2<sup>6</sup> − 1) ÷ 1"
+     ],
+     "a": 3,
+     "e": "Il y a 6 termes (de q⁰ à q<sup>5</sup>) : (q<sup>n+1</sup> − 1) ÷ (q − 1) = <b>(2<sup>6</sup> − 1) ÷ 1</b>."
+    },
+    {
+     "q": "Calcule 1 + 3 + 3² + … + 3<sup>4</sup>.",
+     "c": [
+      "40",
+      "242",
+      "121",
+      "80"
+     ],
+     "a": 2,
+     "e": "(3<sup>5</sup> − 1) ÷ (3 − 1) = (243 − 1) ÷ 2 = <b>121</b>."
+    },
+    {
+     "q": "Quelle formule donne 1 + 2 + 2² + … + 2<sup>6</sup> ?",
+     "c": [
+      "(2<sup>7</sup> − 1) ÷ 2",
+      "(2<sup>7</sup> − 1) ÷ 1",
+      "6 × (6 + 1) ÷ 2",
+      "(2<sup>6</sup> − 1) ÷ 1"
+     ],
+     "a": 1,
+     "e": "Il y a 7 termes (de q⁰ à q<sup>6</sup>) : (q<sup>n+1</sup> − 1) ÷ (q − 1) = <b>(2<sup>7</sup> − 1) ÷ 1</b>."
+    },
+    {
+     "q": "Calcule 1 + ½ + ¼ + … + (½)<sup>7</sup>.",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>255</span><span class='fd'>128</span></span>",
+      "<span class='fr'><span class='fn'>511</span><span class='fd'>256</span></span>",
+      "4"
+     ],
+     "a": 1,
+     "e": "(1 − (½)<sup>8</sup>) ÷ (1 − ½) = 2 − (½)<sup>7</sup> = <b><span class='fr'><span class='fn'>255</span><span class='fd'>128</span></span></b>."
+    },
+    {
+     "q": "Quelle formule donne 1 + 4 + 4² + … + 4<sup>6</sup> ?",
+     "c": [
+      "6 × (6 + 1) ÷ 2",
+      "(4<sup>7</sup> − 1) ÷ 3",
+      "(4<sup>6</sup> − 1) ÷ 3",
+      "(4<sup>7</sup> − 1) ÷ 4"
+     ],
+     "a": 1,
+     "e": "Il y a 7 termes (de q⁰ à q<sup>6</sup>) : (q<sup>n+1</sup> − 1) ÷ (q − 1) = <b>(4<sup>7</sup> − 1) ÷ 3</b>."
+    },
+    {
+     "q": "Quelle formule donne 1 + 4 + 4² + … + 4<sup>4</sup> ?",
+     "c": [
+      "(4<sup>5</sup> − 1) ÷ 3",
+      "(4<sup>5</sup> − 1) ÷ 4",
+      "(4<sup>4</sup> − 1) ÷ 3",
+      "4 × (4 + 1) ÷ 2"
+     ],
+     "a": 0,
+     "e": "Il y a 5 termes (de q⁰ à q<sup>4</sup>) : (q<sup>n+1</sup> − 1) ÷ (q − 1) = <b>(4<sup>5</sup> − 1) ÷ 3</b>."
+    },
+    {
+     "q": "Quelle formule donne 1 + 10 + 10² + … + 10<sup>3</sup> ?",
+     "c": [
+      "3 × (3 + 1) ÷ 2",
+      "(10<sup>4</sup> − 1) ÷ 9",
+      "(10<sup>3</sup> − 1) ÷ 9",
+      "(10<sup>4</sup> − 1) ÷ 10"
+     ],
+     "a": 1,
+     "e": "Il y a 4 termes (de q⁰ à q<sup>3</sup>) : (q<sup>n+1</sup> − 1) ÷ (q − 1) = <b>(10<sup>4</sup> − 1) ÷ 9</b>."
+    }
+   ]
+  },
+  {
+   "title": "Sommes géométriques en situation",
+   "items": [
+    {
+     "q": "Tom met 40 € de côté le 1<sup>er</sup> mois, puis double la somme chaque mois. Combien a-t-il mis de côté en tout au bout de 4 mois ?",
+     "c": [
+      "1 240 €",
+      "600 €",
+      "640 €",
+      "320 €"
+     ],
+     "a": 1,
+     "e": "40 × (1 + 2 + … + 2<sup>3</sup>) = 40 × (2<sup>4</sup> − 1) = <b>600 €</b>."
+    },
+    {
+     "q": "On pose 1 grain de riz sur la case 1, 2 sur la case 2, 4 sur la case 3, et on double à chaque case. Combien de grains en tout sur les 6 premières cases ?",
+     "c": [
+      "127",
+      "63",
+      "32",
+      "64"
+     ],
+     "a": 1,
+     "e": "1 + 2 + … + 2<sup>5</sup> = 2<sup>6</sup> − 1 = <b>63</b>."
+    },
+    {
+     "q": "On pose 1 grain de riz sur la case 1, 2 sur la case 2, 4 sur la case 3, et on double à chaque case. Combien de grains en tout sur les 8 premières cases ?",
+     "c": [
+      "256",
+      "511",
+      "255",
+      "128"
+     ],
+     "a": 2,
+     "e": "1 + 2 + … + 2<sup>7</sup> = 2<sup>8</sup> − 1 = <b>255</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 3 et q = 2. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>4</sub>.",
+     "c": [
+      "31",
+      "45",
+      "48",
+      "93"
+     ],
+     "a": 3,
+     "e": "S = u<sub>0</sub> × (q<sup>5</sup> − 1) ÷ (q − 1) = 3 × (32 − 1) ÷ 1 = <b>93</b>."
+    },
+    {
+     "q": "Tom met 30 € de côté le 1<sup>er</sup> mois, puis double la somme chaque mois. Combien a-t-il mis de côté en tout au bout de 6 mois ?",
+     "c": [
+      "960 €",
+      "3 810 €",
+      "360 €",
+      "1 890 €"
+     ],
+     "a": 3,
+     "e": "30 × (1 + 2 + … + 2<sup>5</sup>) = 30 × (2<sup>6</sup> − 1) = <b>1 890 €</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 6 et q = 3. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>3</sub>.",
+     "c": [
+      "78",
+      "162",
+      "40",
+      "240"
+     ],
+     "a": 3,
+     "e": "S = u<sub>0</sub> × (q<sup>4</sup> − 1) ÷ (q − 1) = 6 × (81 − 1) ÷ 2 = <b>240</b>."
+    },
+    {
+     "q": "Un salaire annuel de 26 000 € augmente de 2 % chaque année. Combien gagne-t-on au total sur les 2 premières années ?",
+     "c": [
+      "26 520 €",
+      "79 570,40 €",
+      "52 000 €",
+      "52 520 €"
+     ],
+     "a": 3,
+     "e": "26 000 × (1,02<sup>2</sup> − 1) ÷ (1,02 − 1) = <b>52 520 €</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 4 et q = 3. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>6</sub>.",
+     "c": [
+      "1 456",
+      "4 372",
+      "1 093",
+      "2 916"
+     ],
+     "a": 1,
+     "e": "S = u<sub>0</sub> × (q<sup>7</sup> − 1) ÷ (q − 1) = 4 × (2 187 − 1) ÷ 2 = <b>4 372</b>."
+    },
+    {
+     "q": "Tom met 10 € de côté le 1<sup>er</sup> mois, puis double la somme chaque mois. Combien a-t-il mis de côté en tout au bout de 4 mois ?",
+     "c": [
+      "150 €",
+      "310 €",
+      "160 €",
+      "80 €"
+     ],
+     "a": 0,
+     "e": "10 × (1 + 2 + … + 2<sup>3</sup>) = 10 × (2<sup>4</sup> − 1) = <b>150 €</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 5 et q = 3. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>3</sub>.",
+     "c": [
+      "65",
+      "135",
+      "200",
+      "40"
+     ],
+     "a": 2,
+     "e": "S = u<sub>0</sub> × (q<sup>4</sup> − 1) ÷ (q − 1) = 5 × (81 − 1) ÷ 2 = <b>200</b>."
+    },
+    {
+     "q": "Un salaire annuel de 24 000 € augmente de 10 % chaque année. Combien gagne-t-on au total sur les 4 premières années ?",
+     "c": [
+      "31 944 €",
+      "96 000 €",
+      "111 384 €",
+      "146 522,40 €"
+     ],
+     "a": 2,
+     "e": "24 000 × (1,1<sup>4</sup> − 1) ÷ (1,1 − 1) = <b>111 384 €</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 4 et q = 3. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>3</sub>.",
+     "c": [
+      "40",
+      "160",
+      "108",
+      "52"
+     ],
+     "a": 1,
+     "e": "S = u<sub>0</sub> × (q<sup>4</sup> − 1) ÷ (q − 1) = 4 × (81 − 1) ÷ 2 = <b>160</b>."
+    },
+    {
+     "q": "On pose 1 grain de riz sur la case 1, 2 sur la case 2, 4 sur la case 3, et on double à chaque case. Combien de grains en tout sur les 11 premières cases ?",
+     "c": [
+      "2 047",
+      "4 095",
+      "2 048",
+      "1 024"
+     ],
+     "a": 0,
+     "e": "1 + 2 + … + 2<sup>10</sup> = 2<sup>11</sup> − 1 = <b>2 047</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 4 et q = 3. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>7</sub>.",
+     "c": [
+      "8 748",
+      "4 372",
+      "13 120",
+      "3 280"
+     ],
+     "a": 2,
+     "e": "S = u<sub>0</sub> × (q<sup>8</sup> − 1) ÷ (q − 1) = 4 × (6 561 − 1) ÷ 2 = <b>13 120</b>."
+    },
+    {
+     "q": "Un salaire annuel de 27 000 € augmente de 5 % chaque année. Combien gagne-t-on au total sur les 4 premières années ?",
+     "c": [
+      "149 192,04 €",
+      "108 000 €",
+      "116 373,38 €",
+      "31 255,88 €"
+     ],
+     "a": 2,
+     "e": "27 000 × (1,05<sup>4</sup> − 1) ÷ (1,05 − 1) = <b>116 373,38 €</b>."
+    },
+    {
+     "q": "Un salaire annuel de 24 000 € augmente de 2 % chaque année. Combien gagne-t-on au total sur les 2 premières années ?",
+     "c": [
+      "73 449,60 €",
+      "48 480 €",
+      "24 480 €",
+      "48 000 €"
+     ],
+     "a": 1,
+     "e": "24 000 × (1,02<sup>2</sup> − 1) ÷ (1,02 − 1) = <b>48 480 €</b>."
+    },
+    {
+     "q": "(u<sub>n</sub>) est géométrique avec u<sub>0</sub> = 5 et q = 3. Calcule u<sub>0</sub> + u<sub>1</sub> + … + u<sub>7</sub>.",
+     "c": [
+      "16 400",
+      "5 465",
+      "3 280",
+      "10 935"
+     ],
+     "a": 0,
+     "e": "S = u<sub>0</sub> × (q<sup>8</sup> − 1) ÷ (q − 1) = 5 × (6 561 − 1) ÷ 2 = <b>16 400</b>."
+    },
+    {
+     "q": "Un salaire annuel de 25 000 € augmente de 2 % chaque année. Combien gagne-t-on au total sur les 4 premières années ?",
+     "c": [
+      "103 040,20 €",
+      "130 101,00 €",
+      "100 000 €",
+      "26 530,20 €"
+     ],
+     "a": 0,
+     "e": "25 000 × (1,02<sup>4</sup> − 1) ÷ (1,02 − 1) = <b>103 040,20 €</b>."
+    },
+    {
+     "q": "Un salaire annuel de 30 000 € augmente de 5 % chaque année. Combien gagne-t-on au total sur les 3 premières années ?",
+     "c": [
+      "129 303,75 €",
+      "90 000 €",
+      "33 075 €",
+      "94 575 €"
+     ],
+     "a": 3,
+     "e": "30 000 × (1,05<sup>3</sup> − 1) ÷ (1,05 − 1) = <b>94 575 €</b>."
+    },
+    {
+     "q": "Tom met 30 € de côté le 1<sup>er</sup> mois, puis double la somme chaque mois. Combien a-t-il mis de côté en tout au bout de 4 mois ?",
+     "c": [
+      "450 €",
+      "240 €",
+      "930 €",
+      "480 €"
+     ],
+     "a": 0,
+     "e": "30 × (1 + 2 + … + 2<sup>3</sup>) = 30 × (2<sup>4</sup> − 1) = <b>450 €</b>."
+    }
+   ]
+  },
+  {
+   "title": "Limites et seuils",
+   "items": [
+    {
+     "q": "Quel est le plus petit entier n tel que 0,7<sup>n</sup> &lt; 0,05 ?",
+     "c": [
+      "9",
+      "8",
+      "20",
+      "10"
+     ],
+     "a": 0,
+     "e": "0,7<sup>8</sup> ≈ 0,0576 et 0,7<sup>9</sup> ≈ 0,0404 : <b>n = 9</b>."
+    },
+    {
+     "q": "Conjecture la limite de la suite u<sub>n</sub> = 9 + 1/n quand n tend vers +∞.",
+     "c": [
+      "0",
+      "+∞",
+      "10",
+      "9"
+     ],
+     "a": 3,
+     "e": "Avec de grandes valeurs de n (tableur ou calculatrice), u<sub>n</sub> se rapproche de <b>9</b>."
+    },
+    {
+     "q": "Quel est le plus petit entier n tel que 2<sup>n</sup> &gt; 10 000 ?",
+     "c": [
+      "14",
+      "13",
+      "5000",
+      "15"
+     ],
+     "a": 0,
+     "e": "2<sup>13</sup> = 8 192 ⩽ 10 000 et 2<sup>14</sup> = 16 384 &gt; 10 000 : <b>n = 14</b>."
+    },
+    {
+     "q": "Quel est le plus petit entier n tel que 2<sup>n</sup> &gt; 500 ?",
+     "c": [
+      "250",
+      "9",
+      "10",
+      "8"
+     ],
+     "a": 1,
+     "e": "2<sup>8</sup> = 256 ⩽ 500 et 2<sup>9</sup> = 512 &gt; 500 : <b>n = 9</b>."
+    },
+    {
+     "q": "Quel est le plus petit entier n tel que 0,9<sup>n</sup> &lt; 0,05 ?",
+     "c": [
+      "30",
+      "29",
+      "20",
+      "28"
+     ],
+     "a": 1,
+     "e": "0,9<sup>28</sup> ≈ 0,0523 et 0,9<sup>29</sup> ≈ 0,0471 : <b>n = 29</b>."
+    },
+    {
+     "q": "Quel est le plus petit entier n tel que 0,8<sup>n</sup> &lt; 0,05 ?",
+     "c": [
+      "14",
+      "15",
+      "20",
+      "13"
+     ],
+     "a": 0,
+     "e": "0,8<sup>13</sup> ≈ 0,055 et 0,8<sup>14</sup> ≈ 0,044 : <b>n = 14</b>."
+    },
+    {
+     "q": "Que renvoie ce programme ?<span class='code'>u = 100<br>n = 0<br>while u &lt;= 5000:<br>    u = 2 * u<br>    n = n + 1<br>print(n)</span>",
+     "c": [
+      "5",
+      "6",
+      "7",
+      "6400"
+     ],
+     "a": 1,
+     "e": "u prend les valeurs 100, 200, 400, 800, 1 600, 3 200, 6 400 ; la boucle s’arrête quand u &gt; 5 000 : <b>n = 6</b>."
+    },
+    {
+     "q": "Conjecture la limite de la suite u<sub>n</sub> = 0,3<sup>n</sup> quand n tend vers +∞.",
+     "c": [
+      "+∞",
+      "0",
+      "0,3",
+      "1"
+     ],
+     "a": 1,
+     "e": "Avec de grandes valeurs de n (tableur ou calculatrice), u<sub>n</sub> se rapproche de <b>0</b>."
+    },
+    {
+     "q": "Que renvoie ce programme ?<span class='code'>u = 700<br>n = 0<br>while u &lt;= 20000:<br>    u = 3 * u<br>    n = n + 1<br>print(n)</span>",
+     "c": [
+      "56700",
+      "5",
+      "3",
+      "4"
+     ],
+     "a": 3,
+     "e": "u prend les valeurs 700, 2 100, 6 300, 18 900, 56 700 ; la boucle s’arrête quand u &gt; 20 000 : <b>n = 4</b>."
+    },
+    {
+     "q": "Quel est le plus petit entier n tel que 0,5<sup>n</sup> &lt; 0,1 ?",
+     "c": [
+      "10",
+      "3",
+      "5",
+      "4"
+     ],
+     "a": 3,
+     "e": "0,5<sup>3</sup> ≈ 0,125 et 0,5<sup>4</sup> ≈ 0,0625 : <b>n = 4</b>."
+    },
+    {
+     "q": "Conjecture la limite de la suite u<sub>n</sub> = n² − 2n quand n tend vers +∞.",
+     "c": [
+      "+∞",
+      "0",
+      "−∞",
+      "−2"
+     ],
+     "a": 0,
+     "e": "Avec de grandes valeurs de n (tableur ou calculatrice), u<sub>n</sub> se rapproche de <b>+∞</b>."
+    },
+    {
+     "q": "Conjecture la limite de la suite u<sub>n</sub> = (−1)<sup>n</sup> quand n tend vers +∞.",
+     "c": [
+      "0",
+      "−1",
+      "pas de limite",
+      "1"
+     ],
+     "a": 2,
+     "e": "Les termes valent 1, −1, 1, −1… : la suite n’a <b>pas de limite</b>."
+    },
+    {
+     "q": "Que renvoie ce programme ?<span class='code'>u = 200<br>n = 0<br>while u &lt;= 5000:<br>    u = 2 * u<br>    n = n + 1<br>print(n)</span>",
+     "c": [
+      "4",
+      "6400",
+      "5",
+      "6"
+     ],
+     "a": 2,
+     "e": "u prend les valeurs 200, 400, 800, 1 600, 3 200, 6 400 ; la boucle s’arrête quand u &gt; 5 000 : <b>n = 5</b>."
+    },
+    {
+     "q": "Conjecture la limite de la suite u<sub>n</sub> = 1,1<sup>n</sup> quand n tend vers +∞.",
+     "c": [
+      "1,1",
+      "1",
+      "+∞",
+      "0"
+     ],
+     "a": 2,
+     "e": "Avec de grandes valeurs de n (tableur ou calculatrice), u<sub>n</sub> se rapproche de <b>+∞</b>."
+    },
+    {
+     "q": "Que renvoie ce programme ?<span class='code'>u = 800<br>n = 0<br>while u &lt;= 5000:<br>    u = 2 * u<br>    n = n + 1<br>print(n)</span>",
+     "c": [
+      "4",
+      "2",
+      "6400",
+      "3"
+     ],
+     "a": 3,
+     "e": "u prend les valeurs 800, 1 600, 3 200, 6 400 ; la boucle s’arrête quand u &gt; 5 000 : <b>n = 3</b>."
+    },
+    {
+     "q": "Quel est le plus petit entier n tel que 2<sup>n</sup> &gt; 1 000 ?",
+     "c": [
+      "9",
+      "10",
+      "11",
+      "500"
+     ],
+     "a": 1,
+     "e": "2<sup>9</sup> = 512 ⩽ 1 000 et 2<sup>10</sup> = 1 024 &gt; 1 000 : <b>n = 10</b>."
+    },
+    {
+     "q": "Quel est le plus petit entier n tel que 2<sup>n</sup> &gt; 5 000 ?",
+     "c": [
+      "12",
+      "2500",
+      "13",
+      "14"
+     ],
+     "a": 2,
+     "e": "2<sup>12</sup> = 4 096 ⩽ 5 000 et 2<sup>13</sup> = 8 192 &gt; 5 000 : <b>n = 13</b>."
+    },
+    {
+     "q": "Conjecture la limite de la suite u<sub>n</sub> = n² − 1n quand n tend vers +∞.",
+     "c": [
+      "−1",
+      "−∞",
+      "0",
+      "+∞"
+     ],
+     "a": 3,
+     "e": "Avec de grandes valeurs de n (tableur ou calculatrice), u<sub>n</sub> se rapproche de <b>+∞</b>."
+    },
+    {
+     "q": "Conjecture la limite de la suite u<sub>n</sub> = 9 − 1/n² quand n tend vers +∞.",
+     "c": [
+      "9",
+      "8",
+      "0",
+      "+∞"
+     ],
+     "a": 0,
+     "e": "Avec de grandes valeurs de n (tableur ou calculatrice), u<sub>n</sub> se rapproche de <b>9</b>."
+    },
+    {
+     "q": "Conjecture la limite de la suite u<sub>n</sub> = 2 × 0,9<sup>n</sup> quand n tend vers +∞.",
+     "c": [
+      "+∞",
+      "0,9",
+      "0",
+      "2"
+     ],
+     "a": 2,
+     "e": "Avec de grandes valeurs de n (tableur ou calculatrice), u<sub>n</sub> se rapproche de <b>0</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 5,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "premiere"
+}

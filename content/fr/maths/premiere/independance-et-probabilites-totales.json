@@ -1,0 +1,1157 @@
+{
+ "slug": "independance-et-probabilites-totales",
+ "title": "Indépendance et probabilités totales",
+ "seo_title": "Probabilités totales première : fiches et exercices avec corrigé",
+ "short_title": "Probabilités totales",
+ "domain": "Probabilités et statistiques",
+ "standard_code": "Première spécialité · Probabilités et statistiques",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A",
+ "standard_text": "Partition de l’univers et formule des probabilités totales ; indépendance de deux événements ; succession de deux épreuves indépendantes ; répétitions d’épreuves de Bernoulli (n ⩽ 4) représentées par un arbre (résumé du programme 2026 de spécialité de première)",
+ "meta_desc": "Fiches de maths première sur l’indépendance et les probabilités totales : partition, formule des probabilités totales, événements indépendants, épreuves répétées de Bernoulli. 100 exercices corrigés.",
+ "key_big": "Indépendants : P(A ∩ B) = P(A) × P(B)",
+ "key_sub": "P(B) = somme des chemins de l’arbre qui mènent à B",
+ "body_html": "<h2>Comment faire</h2><p>Si A<sub>1</sub>, …, A<sub>n</sub> forment une <b>partition</b> de l’univers : P(B) = P(A<sub>1</sub> ∩ B) + … + P(A<sub>n</sub> ∩ B) (formule des probabilités totales). Sur un arbre : on additionne les chemins qui mènent à B.</p><p>A et B sont <b>indépendants</b> si P(A ∩ B) = P(A) × P(B) (si P(A) ≠ 0, cela équivaut à P<sub>A</sub>(B) = P(B)).</p><p>Lors d’épreuves indépendantes, la probabilité d’une issue (chemin) est le produit des probabilités. Pour k succès en n répétitions de Bernoulli : nombre de chemins × p<sup>k</sup>(1 − p)<sup>n−k</sup>.</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>3 lancers, P(succès) = 1/3, exactement 2 succès</p><p class='sn-ex-s'>chemins SSE, SES, ESS : 3</p><p class='sn-ex-s'>chacun : (1/3)² × 2/3 = 2/27</p><p class='sn-ex-a'>Réponse : 3 × 2/27 = 2/9</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>P(B) = P<sub>A</sub>(B) + P<sub>Ā</sub>(B)</td><td>On pondère : P(A)P<sub>A</sub>(B) + P(Ā)P<sub>Ā</sub>(B).</td></tr><tr><td>Indépendants = incompatibles</td><td>Incompatibles : P(A ∩ B) = 0. Indépendants : P(A ∩ B) = P(A)P(B).</td></tr><tr><td>2 succès sur 3 : p²(1 − p)</td><td>Il faut multiplier par le nombre de chemins (3).</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Comment savoir si deux événements sont indépendants ?",
+   "a": "On calcule P(A) × P(B) et on compare à P(A ∩ B). L’indépendance se démontre par le calcul, ou elle est donnée par le contexte (tirages avec remise, lancers successifs)."
+  },
+  {
+   "q": "Pourquoi utiliser l’événement contraire pour « au moins un » ?",
+   "a": "« Au moins un succès » a de nombreux chemins, alors que son contraire « aucun succès » n’en a qu’un : 1 − (1 − p)<sup>n</sup>."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Probabilités totales avec un arbre",
+   "items": [
+    {
+     "q": "P(A) = 0,8, P<sub>A</sub>(B) = 0,5 et P<sub>Ā</sub>(B) = 0,2. Calcule P(B).",
+     "c": [
+      "0,7",
+      "0,56",
+      "0,44",
+      "0,4"
+     ],
+     "a": 2,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,8 × 0,5 + 0,2 × 0,2 = <b>0,44</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(B).",
+     "c": [
+      "0,9",
+      "0,74",
+      "0,42",
+      "0,56"
+     ],
+     "a": 1,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,6 × 0,7 + 0,4 × 0,8 = <b>0,74</b>."
+    },
+    {
+     "q": "P(A) = 0,6, P<sub>A</sub>(B) = 0,8 et P<sub>Ā</sub>(B) = 0,6. Calcule P(B).",
+     "c": [
+      "0,72",
+      "0,48",
+      "0,84",
+      "0,64"
+     ],
+     "a": 0,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,6 × 0,8 + 0,4 × 0,6 = <b>0,72</b>."
+    },
+    {
+     "q": "P(A) = 0,1, P<sub>A</sub>(B) = 0,1 et P<sub>Ā</sub>(B) = 0,1. Calcule P(B).",
+     "c": [
+      "0,01",
+      "0,2",
+      "0,02",
+      "0,1"
+     ],
+     "a": 3,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,1 × 0,1 + 0,9 × 0,1 = <b>0,1</b>."
+    },
+    {
+     "q": "P(A) = 0,1, P<sub>A</sub>(B) = 0,2 et P<sub>Ā</sub>(B) = 0,5. Calcule P(B).",
+     "c": [
+      "0,02",
+      "0,07",
+      "0,7",
+      "0,47"
+     ],
+     "a": 3,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,1 × 0,2 + 0,9 × 0,5 = <b>0,47</b>."
+    },
+    {
+     "q": "P(A) = 0,2, P<sub>A</sub>(B) = 0,5 et P<sub>Ā</sub>(B) = 0,5. Calcule P(B).",
+     "c": [
+      "0,5",
+      "0,2",
+      "1",
+      "0,1"
+     ],
+     "a": 0,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,2 × 0,5 + 0,8 × 0,5 = <b>0,5</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(B).",
+     "c": [
+      "0,4",
+      "0,74",
+      "0,26",
+      "0,1"
+     ],
+     "a": 1,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,2 × 0,5 + 0,8 × 0,8 = <b>0,74</b>."
+    },
+    {
+     "q": "P(A) = 0,8, P<sub>A</sub>(B) = 0,2 et P<sub>Ā</sub>(B) = 0,4. Calcule P(B).",
+     "c": [
+      "0,48",
+      "0,24",
+      "0,6",
+      "0,16"
+     ],
+     "a": 1,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,8 × 0,2 + 0,2 × 0,4 = <b>0,24</b>."
+    },
+    {
+     "q": "P(A) = 0,2, P<sub>A</sub>(B) = 0,1 et P<sub>Ā</sub>(B) = 0,4. Calcule P(B).",
+     "c": [
+      "0,02",
+      "0,1",
+      "0,34",
+      "0,5"
+     ],
+     "a": 2,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,2 × 0,1 + 0,8 × 0,4 = <b>0,34</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(B).",
+     "c": [
+      "0,24",
+      "0,36",
+      "0,78",
+      "0,6"
+     ],
+     "a": 3,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,6 × 0,4 + 0,4 × 0,9 = <b>0,6</b>."
+    },
+    {
+     "q": "P(A) = 0,1, P<sub>A</sub>(B) = 0,7 et P<sub>Ā</sub>(B) = 0,6. Calcule P(B).",
+     "c": [
+      "0,13",
+      "0,07",
+      "0,61",
+      "0,42"
+     ],
+     "a": 2,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,1 × 0,7 + 0,9 × 0,6 = <b>0,61</b>."
+    },
+    {
+     "q": "P(A) = 0,2, P<sub>A</sub>(B) = 0,7 et P<sub>Ā</sub>(B) = 0,3. Calcule P(B).",
+     "c": [
+      "0,2",
+      "1",
+      "0,14",
+      "0,38"
+     ],
+     "a": 3,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,2 × 0,7 + 0,8 × 0,3 = <b>0,38</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(B).",
+     "c": [
+      "0,2",
+      "0,12",
+      "0,7",
+      "0,14"
+     ],
+     "a": 0,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,2 × 0,6 + 0,8 × 0,1 = <b>0,2</b>."
+    },
+    {
+     "q": "P(A) = 0,7, P<sub>A</sub>(B) = 0,4 et P<sub>Ā</sub>(B) = 0,4. Calcule P(B).",
+     "c": [
+      "0,8",
+      "0,28",
+      "0,4",
+      "0,56"
+     ],
+     "a": 2,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,7 × 0,4 + 0,3 × 0,4 = <b>0,4</b>."
+    },
+    {
+     "q": "P(A) = 0,2, P<sub>A</sub>(B) = 0,7 et P<sub>Ā</sub>(B) = 0,5. Calcule P(B).",
+     "c": [
+      "0,54",
+      "0,35",
+      "0,14",
+      "0,24"
+     ],
+     "a": 0,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,2 × 0,7 + 0,8 × 0,5 = <b>0,54</b>."
+    },
+    {
+     "q": "P(A) = 0,3, P<sub>A</sub>(B) = 0,1 et P<sub>Ā</sub>(B) = 0,2. Calcule P(B).",
+     "c": [
+      "0,03",
+      "0,17",
+      "0,3",
+      "0,09"
+     ],
+     "a": 1,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,3 × 0,1 + 0,7 × 0,2 = <b>0,17</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(B).",
+     "c": [
+      "0,06",
+      "0,27",
+      "0,24",
+      "0,78"
+     ],
+     "a": 3,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,2 × 0,3 + 0,8 × 0,9 = <b>0,78</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(B).",
+     "c": [
+      "0,18",
+      "0,48",
+      "0,08",
+      "0,6"
+     ],
+     "a": 0,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,8 × 0,1 + 0,2 × 0,5 = <b>0,18</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(B).",
+     "c": [
+      "0,7",
+      "0,47",
+      "0,45",
+      "0,63"
+     ],
+     "a": 1,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,9 × 0,5 + 0,1 × 0,2 = <b>0,47</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(B).",
+     "c": [
+      "0,09",
+      "0,06",
+      "0,33",
+      "0,9"
+     ],
+     "a": 2,
+     "e": "Formule des probabilités totales (A, Ā partition) : P(B) = 0,1 × 0,6 + 0,9 × 0,3 = <b>0,33</b>."
+    }
+   ]
+  },
+  {
+   "title": "Partition en trois événements",
+   "items": [
+    {
+     "q": "Les pièces viennent de trois fournisseurs F₁, F₂, F₃ dans les proportions 0,5, 0,3 et 0,2. Elles sont abîmées avec les probabilités 0,01, 0,03 et 0,03. Quelle est la probabilité qu’une pièce soit abîmée ?",
+     "c": [
+      "0,07",
+      "0,005",
+      "0,01",
+      "0,02"
+     ],
+     "a": 3,
+     "e": "On additionne les trois chemins : 0,5 × 0,01 + 0,3 × 0,03 + 0,2 × 0,03 = <b>0,02</b>."
+    },
+    {
+     "q": "Les pièces viennent de trois usines U₁, U₂, U₃ dans les proportions 0,2, 0,5 et 0,3. Elles sont défectueuses avec les probabilités 0,01, 0,04 et 0,06. Sachant qu’une pièce est défectueuse, quelle est la probabilité qu’elle vienne de U₁ (arrondie à 0,01) ?",
+     "c": [
+      "0,01",
+      "0,002",
+      "0,20",
+      "0,05"
+     ],
+     "a": 3,
+     "e": "P(… ∩ défectueuse) ÷ P(défectueuse) = 0,002 ÷ 0,04 ≈ <b>0,05</b>."
+    },
+    {
+     "q": "Les pièces viennent de trois fournisseurs F₁, F₂, F₃ dans les proportions 0,4, 0,35 et 0,25. Elles sont abîmées avec les probabilités 0,09, 0,07 et 0,03. Quelle est la probabilité qu’une pièce soit abîmée ?",
+     "c": [
+      "0,09",
+      "0,19",
+      "0,036",
+      "0,068"
+     ],
+     "a": 3,
+     "e": "On additionne les trois chemins : 0,4 × 0,09 + 0,35 × 0,07 + 0,25 × 0,03 = <b>0,068</b>."
+    },
+    {
+     "q": "Les pièces viennent de trois fournisseurs F₁, F₂, F₃ dans les proportions 0,5, 0,3 et 0,2. Elles sont abîmées avec les probabilités 0,01, 0,02 et 0,08. Sachant qu’une pièce est abîmée, quelle est la probabilité qu’elle vienne de F₁ (arrondie à 0,01) ?",
+     "c": [
+      "0,01",
+      "0,005",
+      "0,19",
+      "0,50"
+     ],
+     "a": 2,
+     "e": "P(… ∩ abîmée) ÷ P(abîmée) = 0,005 ÷ 0,027 ≈ <b>0,19</b>."
+    },
+    {
+     "q": "Les pièces viennent de trois fournisseurs F₁, F₂, F₃ dans les proportions 0,5, 0,3 et 0,2. Elles sont abîmées avec les probabilités 0,02, 0,05 et 0,05. Quelle est la probabilité qu’une pièce soit abîmée ?",
+     "c": [
+      "0,035",
+      "0,04",
+      "0,12",
+      "0,01"
+     ],
+     "a": 0,
+     "e": "On additionne les trois chemins : 0,5 × 0,02 + 0,3 × 0,05 + 0,2 × 0,05 = <b>0,035</b>."
+    },
+    {
+     "q": "Les pièces viennent de trois usines U₁, U₂, U₃ dans les proportions 0,6, 0,25 et 0,15. Elles sont défectueuses avec les probabilités 0,04, 0,03 et 0,06. Sachant qu’une pièce est défectueuse, quelle est la probabilité qu’elle vienne de U₁ (arrondie à 0,01) ?",
+     "c": [
+      "0,04",
+      "0,59",
+      "0,60",
+      "0,024"
+     ],
+     "a": 1,
+     "e": "P(… ∩ défectueuse) ÷ P(défectueuse) = 0,024 ÷ 0,0405 ≈ <b>0,59</b>."
+    },
+    {
+     "q": "Les trajets se font avec trois lignes de bus L₁, L₂, L₃ dans les proportions 0,2, 0,5 et 0,3. Ils sont en retard avec les probabilités 0,04, 0,03 et 0,01. Quelle est la probabilité qu’un trajet soit en retard ?",
+     "c": [
+      "0,026",
+      "0,08",
+      "0,04",
+      "0,008"
+     ],
+     "a": 0,
+     "e": "On additionne les trois chemins : 0,2 × 0,04 + 0,5 × 0,03 + 0,3 × 0,01 = <b>0,026</b>."
+    },
+    {
+     "q": "Les trajets se font avec trois lignes de bus L₁, L₂, L₃ dans les proportions 0,4, 0,35 et 0,25. Ils sont en retard avec les probabilités 0,08, 0,04 et 0,01. Sachant qu’un trajet est en retard, quelle est la probabilité qu’il vienne de L₁ (arrondie à 0,01) ?",
+     "c": [
+      "0,08",
+      "0,032",
+      "0,66",
+      "0,40"
+     ],
+     "a": 2,
+     "e": "P(… ∩ en retard) ÷ P(en retard) = 0,032 ÷ 0,0485 ≈ <b>0,66</b>."
+    },
+    {
+     "q": "Les pièces viennent de trois fournisseurs F₁, F₂, F₃ dans les proportions 0,6, 0,25 et 0,15. Elles sont abîmées avec les probabilités 0,02, 0,07 et 0,04. Quelle est la probabilité qu’une pièce soit abîmée ?",
+     "c": [
+      "0,012",
+      "0,02",
+      "0,0355",
+      "0,13"
+     ],
+     "a": 2,
+     "e": "On additionne les trois chemins : 0,6 × 0,02 + 0,25 × 0,07 + 0,15 × 0,04 = <b>0,0355</b>."
+    },
+    {
+     "q": "Les trajets se font avec trois lignes de bus L₁, L₂, L₃ dans les proportions 0,5, 0,3 et 0,2. Ils sont en retard avec les probabilités 0,05, 0,01 et 0,04. Quelle est la probabilité qu’un trajet soit en retard ?",
+     "c": [
+      "0,025",
+      "0,036",
+      "0,1",
+      "0,05"
+     ],
+     "a": 1,
+     "e": "On additionne les trois chemins : 0,5 × 0,05 + 0,3 × 0,01 + 0,2 × 0,04 = <b>0,036</b>."
+    },
+    {
+     "q": "Les pièces viennent de trois usines U₁, U₂, U₃ dans les proportions 0,5, 0,3 et 0,2. Elles sont défectueuses avec les probabilités 0,05, 0,07 et 0,08. Quelle est la probabilité qu’une pièce soit défectueuse ?",
+     "c": [
+      "0,05",
+      "0,2",
+      "0,062",
+      "0,025"
+     ],
+     "a": 2,
+     "e": "On additionne les trois chemins : 0,5 × 0,05 + 0,3 × 0,07 + 0,2 × 0,08 = <b>0,062</b>."
+    },
+    {
+     "q": "Les pièces viennent de trois usines U₁, U₂, U₃ dans les proportions 0,4, 0,35 et 0,25. Elles sont défectueuses avec les probabilités 0,01, 0,03 et 0,07. Sachant qu’une pièce est défectueuse, quelle est la probabilité qu’elle vienne de U₁ (arrondie à 0,01) ?",
+     "c": [
+      "0,12",
+      "0,01",
+      "0,40",
+      "0,004"
+     ],
+     "a": 0,
+     "e": "P(… ∩ défectueuse) ÷ P(défectueuse) = 0,004 ÷ 0,032 ≈ <b>0,12</b>."
+    },
+    {
+     "q": "Les trajets se font avec trois lignes de bus L₁, L₂, L₃ dans les proportions 0,2, 0,5 et 0,3. Ils sont en retard avec les probabilités 0,01, 0,08 et 0,05. Quelle est la probabilité qu’un trajet soit en retard ?",
+     "c": [
+      "0,002",
+      "0,057",
+      "0,14",
+      "0,01"
+     ],
+     "a": 1,
+     "e": "On additionne les trois chemins : 0,2 × 0,01 + 0,5 × 0,08 + 0,3 × 0,05 = <b>0,057</b>."
+    },
+    {
+     "q": "Les pièces viennent de trois fournisseurs F₁, F₂, F₃ dans les proportions 0,4, 0,35 et 0,25. Elles sont abîmées avec les probabilités 0,02, 0,02 et 0,08. Quelle est la probabilité qu’une pièce soit abîmée ?",
+     "c": [
+      "0,04",
+      "0,12",
+      "0,008",
+      "0,035"
+     ],
+     "a": 3,
+     "e": "On additionne les trois chemins : 0,4 × 0,02 + 0,35 × 0,02 + 0,25 × 0,08 = <b>0,035</b>."
+    },
+    {
+     "q": "Les trajets se font avec trois lignes de bus L₁, L₂, L₃ dans les proportions 0,2, 0,5 et 0,3. Ils sont en retard avec les probabilités 0,09, 0,05 et 0,08. Quelle est la probabilité qu’un trajet soit en retard ?",
+     "c": [
+      "0,018",
+      "0,067",
+      "0,22",
+      "0,09"
+     ],
+     "a": 1,
+     "e": "On additionne les trois chemins : 0,2 × 0,09 + 0,5 × 0,05 + 0,3 × 0,08 = <b>0,067</b>."
+    },
+    {
+     "q": "Les trajets se font avec trois lignes de bus L₁, L₂, L₃ dans les proportions 0,5, 0,3 et 0,2. Ils sont en retard avec les probabilités 0,03, 0,04 et 0,02. Sachant qu’un trajet est en retard, quelle est la probabilité qu’il vienne de L₁ (arrondie à 0,01) ?",
+     "c": [
+      "0,50",
+      "0,03",
+      "0,48",
+      "0,015"
+     ],
+     "a": 2,
+     "e": "P(… ∩ en retard) ÷ P(en retard) = 0,015 ÷ 0,031 ≈ <b>0,48</b>."
+    },
+    {
+     "q": "Les pièces viennent de trois usines U₁, U₂, U₃ dans les proportions 0,4, 0,35 et 0,25. Elles sont défectueuses avec les probabilités 0,01, 0,05 et 0,07. Sachant qu’une pièce est défectueuse, quelle est la probabilité qu’elle vienne de U₁ (arrondie à 0,01) ?",
+     "c": [
+      "0,10",
+      "0,01",
+      "0,40",
+      "0,004"
+     ],
+     "a": 0,
+     "e": "P(… ∩ défectueuse) ÷ P(défectueuse) = 0,004 ÷ 0,039 ≈ <b>0,10</b>."
+    },
+    {
+     "q": "Les trajets se font avec trois lignes de bus L₁, L₂, L₃ dans les proportions 0,5, 0,3 et 0,2. Ils sont en retard avec les probabilités 0,09, 0,07 et 0,06. Quelle est la probabilité qu’un trajet soit en retard ?",
+     "c": [
+      "0,22",
+      "0,045",
+      "0,09",
+      "0,078"
+     ],
+     "a": 3,
+     "e": "On additionne les trois chemins : 0,5 × 0,09 + 0,3 × 0,07 + 0,2 × 0,06 = <b>0,078</b>."
+    },
+    {
+     "q": "Les trajets se font avec trois lignes de bus L₁, L₂, L₃ dans les proportions 0,2, 0,5 et 0,3. Ils sont en retard avec les probabilités 0,07, 0,02 et 0,08. Quelle est la probabilité qu’un trajet soit en retard ?",
+     "c": [
+      "0,048",
+      "0,07",
+      "0,014",
+      "0,17"
+     ],
+     "a": 0,
+     "e": "On additionne les trois chemins : 0,2 × 0,07 + 0,5 × 0,02 + 0,3 × 0,08 = <b>0,048</b>."
+    },
+    {
+     "q": "Les pièces viennent de trois fournisseurs F₁, F₂, F₃ dans les proportions 0,2, 0,5 et 0,3. Elles sont abîmées avec les probabilités 0,07, 0,01 et 0,08. Quelle est la probabilité qu’une pièce soit abîmée ?",
+     "c": [
+      "0,07",
+      "0,043",
+      "0,014",
+      "0,16"
+     ],
+     "a": 1,
+     "e": "On additionne les trois chemins : 0,2 × 0,07 + 0,5 × 0,01 + 0,3 × 0,08 = <b>0,043</b>."
+    }
+   ]
+  },
+  {
+   "title": "Indépendance de deux événements",
+   "items": [
+    {
+     "q": "A et B sont indépendants, P(A) = 0,1 et P(B) = 0,7. Calcule P(A ∩ B).",
+     "c": [
+      "0,07",
+      "0",
+      "0,8",
+      "0,73"
+     ],
+     "a": 0,
+     "e": "Indépendants : P(A ∩ B) = P(A) × P(B) = <b>0,07</b>."
+    },
+    {
+     "q": "A et B sont deux événements de probabilités non nulles. S’ils sont incompatibles (A ∩ B = ∅), peuvent-ils être indépendants ?",
+     "c": [
+      "oui, toujours",
+      "non, car P(A ∩ B) = 0 ≠ P(A) × P(B)",
+      "on ne peut pas savoir",
+      "oui, si P(A) = P(B)"
+     ],
+     "a": 1,
+     "e": "Incompatibles : P(A ∩ B) = 0, alors que P(A) × P(B) &gt; 0 : <b>ils ne sont pas indépendants</b>."
+    },
+    {
+     "q": "A et B sont indépendants avec P(A) = 0,1. Que vaut P<sub>B</sub>(A) ?",
+     "c": [
+      "0,1",
+      "0,09",
+      "0,9",
+      "0,2"
+     ],
+     "a": 0,
+     "e": "Indépendants : P<sub>B</sub>(A) = P(A) = <b>0,1</b>."
+    },
+    {
+     "q": "P(A) = 0,7, P(B) = 0,6 et P(A ∩ B) = 0,47. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "non",
+      "on ne peut pas savoir",
+      "oui",
+      "oui, car P(A ∩ B) ≠ 0"
+     ],
+     "a": 0,
+     "e": "P(A) × P(B) = 0,42 ≠ P(A ∩ B) : <b>pas indépendants</b>."
+    },
+    {
+     "q": "P(A) = 0,6, P(B) = 0,9 et P(A ∩ B) = 0,59. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "non",
+      "on ne peut pas savoir",
+      "oui",
+      "oui, car P(A ∩ B) ≠ 0"
+     ],
+     "a": 0,
+     "e": "P(A) × P(B) = 0,54 ≠ P(A ∩ B) : <b>pas indépendants</b>."
+    },
+    {
+     "q": "P(A) = 0,6, P(B) = 0,7 et P(A ∩ B) = 0,42. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "oui, car P(A ∩ B) ≠ 0",
+      "non",
+      "on ne peut pas savoir",
+      "oui"
+     ],
+     "a": 3,
+     "e": "P(A) × P(B) = 0,42 = P(A ∩ B) : <b>indépendants</b>."
+    },
+    {
+     "q": "P(A) = 0,8, P(B) = 0,6 et P(A ∩ B) = 0,5. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "oui",
+      "non",
+      "oui, car P(A ∩ B) ≠ 0",
+      "on ne peut pas savoir"
+     ],
+     "a": 1,
+     "e": "P(A) × P(B) = 0,48 ≠ P(A ∩ B) : <b>pas indépendants</b>."
+    },
+    {
+     "q": "P(A) = 0,4, P(B) = 0,5 et P(A ∩ B) = 0,21. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "oui",
+      "non",
+      "oui, car P(A ∩ B) ≠ 0",
+      "on ne peut pas savoir"
+     ],
+     "a": 1,
+     "e": "P(A) × P(B) = 0,2 ≠ P(A ∩ B) : <b>pas indépendants</b>."
+    },
+    {
+     "q": "P(A) = 0,4, P(B) = 0,6 et P(A ∩ B) = 0,24. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "on ne peut pas savoir",
+      "non",
+      "oui",
+      "oui, car P(A ∩ B) ≠ 0"
+     ],
+     "a": 2,
+     "e": "P(A) × P(B) = 0,24 = P(A ∩ B) : <b>indépendants</b>."
+    },
+    {
+     "q": "P(A) = 0,6, P(B) = 0,6 et P(A ∩ B) = 0,36. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "non",
+      "on ne peut pas savoir",
+      "oui, car P(A ∩ B) ≠ 0",
+      "oui"
+     ],
+     "a": 3,
+     "e": "P(A) × P(B) = 0,36 = P(A ∩ B) : <b>indépendants</b>."
+    },
+    {
+     "q": "P(A) = 0,5, P(B) = 0,6 et P(A ∩ B) = 0,3. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "oui, car P(A ∩ B) ≠ 0",
+      "non",
+      "oui",
+      "on ne peut pas savoir"
+     ],
+     "a": 2,
+     "e": "P(A) × P(B) = 0,3 = P(A ∩ B) : <b>indépendants</b>."
+    },
+    {
+     "q": "P(A) = 0,8, P(B) = 0,4 et P(A ∩ B) = 0,34. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "oui, car P(A ∩ B) ≠ 0",
+      "oui",
+      "on ne peut pas savoir",
+      "non"
+     ],
+     "a": 3,
+     "e": "P(A) × P(B) = 0,32 ≠ P(A ∩ B) : <b>pas indépendants</b>."
+    },
+    {
+     "q": "A et B sont indépendants, P(A) = 0,5 et P(B) = 0,6. Calcule P(A ∩ B).",
+     "c": [
+      "0,8",
+      "0,3",
+      "0",
+      "0,5"
+     ],
+     "a": 1,
+     "e": "Indépendants : P(A ∩ B) = P(A) × P(B) = <b>0,3</b>."
+    },
+    {
+     "q": "A et B sont indépendants, P(A) = 0,9 et P(B) = 0,8. Calcule P(A ∩ B).",
+     "c": [
+      "0",
+      "0,9",
+      "0,72",
+      "0,98"
+     ],
+     "a": 2,
+     "e": "Indépendants : P(A ∩ B) = P(A) × P(B) = <b>0,72</b>."
+    },
+    {
+     "q": "P(A) = 0,6, P(B) = 0,5 et P(A ∩ B) = 0,35. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "oui, car P(A ∩ B) ≠ 0",
+      "oui",
+      "on ne peut pas savoir",
+      "non"
+     ],
+     "a": 3,
+     "e": "P(A) × P(B) = 0,3 ≠ P(A ∩ B) : <b>pas indépendants</b>."
+    },
+    {
+     "q": "P(A) = 0,3, P(B) = 0,5 et P(A ∩ B) = 0,14. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "non",
+      "oui",
+      "oui, car P(A ∩ B) ≠ 0",
+      "on ne peut pas savoir"
+     ],
+     "a": 0,
+     "e": "P(A) × P(B) = 0,15 ≠ P(A ∩ B) : <b>pas indépendants</b>."
+    },
+    {
+     "q": "P(A) = 0,5, P(B) = 0,8 et P(A ∩ B) = 0,42. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "on ne peut pas savoir",
+      "non",
+      "oui",
+      "oui, car P(A ∩ B) ≠ 0"
+     ],
+     "a": 1,
+     "e": "P(A) × P(B) = 0,4 ≠ P(A ∩ B) : <b>pas indépendants</b>."
+    },
+    {
+     "q": "A et B sont indépendants, P(A) = 0,4 et P(B) = 0,8. Calcule P(A ∪ B).",
+     "c": [
+      "0,32",
+      "1",
+      "0,68",
+      "0,88"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A) × P(B) = <b>0,88</b>."
+    },
+    {
+     "q": "A et B sont indépendants avec P(A) = 0,2. Que vaut P<sub>B</sub>(A) ?",
+     "c": [
+      "0,8",
+      "0,18",
+      "0,2",
+      "0,9"
+     ],
+     "a": 2,
+     "e": "Indépendants : P<sub>B</sub>(A) = P(A) = <b>0,2</b>."
+    },
+    {
+     "q": "P(A) = 0,1, P(B) = 0,3 et P(A ∩ B) = 0,08. Les événements A et B sont-ils indépendants ?",
+     "c": [
+      "on ne peut pas savoir",
+      "oui, car P(A ∩ B) ≠ 0",
+      "non",
+      "oui"
+     ],
+     "a": 2,
+     "e": "P(A) × P(B) = 0,03 ≠ P(A ∩ B) : <b>pas indépendants</b>."
+    }
+   ]
+  },
+  {
+   "title": "Répétitions de Bernoulli",
+   "items": [
+    {
+     "q": "On lance 3 fois une pièce truquée qui donne pile avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Quelle est la probabilité d’obtenir exactement 3 piles ?",
+     "c": [
+      "<span class='fr'><span class='fn'>215</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>108</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>432</span></span>"
+     ],
+     "a": 2,
+     "e": "Il y a 1 chemin avec 3 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span><sup>3</sup> × <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>0</sup> : 1 × <span class='fr'><span class='fn'>1</span><span class='fd'>216</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>216</span></span></b>."
+    },
+    {
+     "q": "Une ampoule est défectueuse avec la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. On en prend 2 au hasard (tirages indépendants). Quelle est la probabilité d’avoir exactement 2 ampoules défectueuses ?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span>"
+     ],
+     "a": 1,
+     "e": "Il y a 1 chemin avec 2 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span><sup>2</sup> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span><sup>0</sup> : 1 × <span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Une ampoule est défectueuse avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. On en prend 4 au hasard (tirages indépendants). Quelle est la probabilité d’avoir exactement 1 ampoule défectueuse ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Il y a 4 chemins avec 1 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>1</sup> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>3</sup> : 4 × <span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Un tireur atteint la cible avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Il tire 2 fois, les tirs étant indépendants. Quelle est la probabilité qu’il atteigne la cible exactement 0 fois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>72</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span>"
+     ],
+     "a": 2,
+     "e": "Il y a 1 chemin avec 0 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span><sup>0</sup> × <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>2</sup> : 1 × <span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Un tireur atteint la cible avec la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. Il tire 3 fois, les tirs étant indépendants. Quelle est la probabilité qu’il atteigne la cible exactement 1 fois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "Il y a 3 chemins avec 1 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>1</sup> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span><sup>2</sup> : 3 × <span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "Un tireur atteint la cible avec la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>. Il tire 2 fois, les tirs étant indépendants. Quelle est la probabilité qu’il atteigne la cible exactement 0 fois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>100</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>100</span></span>"
+     ],
+     "a": 3,
+     "e": "Il y a 1 chemin avec 0 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span><sup>0</sup> × <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span><sup>2</sup> : 1 × <span class='fr'><span class='fn'>49</span><span class='fd'>100</span></span> = <b><span class='fr'><span class='fn'>49</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Une ampoule est défectueuse avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. On en prend 4 au hasard (tirages indépendants). Quelle est la probabilité d’avoir exactement 1 ampoule défectueuse ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>1296</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>324</span></span>"
+     ],
+     "a": 3,
+     "e": "Il y a 4 chemins avec 1 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span><sup>1</sup> × <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>3</sup> : 4 × <span class='fr'><span class='fn'>125</span><span class='fd'>1296</span></span> = <b><span class='fr'><span class='fn'>125</span><span class='fd'>324</span></span></b>."
+    },
+    {
+     "q": "Un tireur atteint la cible avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Il tire 4 fois, les tirs étant indépendants. Quelle est la probabilité qu’il atteigne la cible exactement 2 fois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>1296</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>216</span></span>"
+     ],
+     "a": 3,
+     "e": "Il y a 6 chemins avec 2 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span><sup>2</sup> × <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>2</sup> : 6 × <span class='fr'><span class='fn'>25</span><span class='fd'>1296</span></span> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>216</span></span></b>."
+    },
+    {
+     "q": "On lance 4 fois une pièce truquée qui donne pile avec la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. Quelle est la probabilité d’obtenir exactement 3 piles ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>96</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>125</span></span>"
+     ],
+     "a": 2,
+     "e": "Il y a 4 chemins avec 3 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span><sup>3</sup> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span><sup>1</sup> : 4 × <span class='fr'><span class='fn'>24</span><span class='fd'>625</span></span> = <b><span class='fr'><span class='fn'>96</span><span class='fd'>625</span></span></b>."
+    },
+    {
+     "q": "Un tireur atteint la cible avec la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. Il tire 3 fois, les tirs étant indépendants. Quelle est la probabilité qu’il atteigne la cible exactement 2 fois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>"
+     ],
+     "a": 0,
+     "e": "Il y a 3 chemins avec 2 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>2</sup> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span><sup>1</sup> : 3 × <span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "Une ampoule est défectueuse avec la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. On en prend 4 au hasard (tirages indépendants). Quelle est la probabilité d’avoir exactement 2 ampoules défectueuses ?",
+     "c": [
+      "<span class='fr'><span class='fn'>216</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>36</span><span class='fd'>625</span></span>"
+     ],
+     "a": 0,
+     "e": "Il y a 6 chemins avec 2 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span><sup>2</sup> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span><sup>2</sup> : 6 × <span class='fr'><span class='fn'>36</span><span class='fd'>625</span></span> = <b><span class='fr'><span class='fn'>216</span><span class='fd'>625</span></span></b>."
+    },
+    {
+     "q": "Une ampoule est défectueuse avec la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>. On en prend 4 au hasard (tirages indépendants). Quelle est la probabilité d’avoir exactement 4 ampoules défectueuses ?",
+     "c": [
+      "<span class='fr'><span class='fn'>9919</span><span class='fd'>10000</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>10000</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>20000</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>5000</span></span>"
+     ],
+     "a": 1,
+     "e": "Il y a 1 chemin avec 4 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span><sup>4</sup> × <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span><sup>0</sup> : 1 × <span class='fr'><span class='fn'>81</span><span class='fd'>10000</span></span> = <b><span class='fr'><span class='fn'>81</span><span class='fd'>10000</span></span></b>."
+    },
+    {
+     "q": "Une ampoule est défectueuse avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. On en prend 2 au hasard (tirages indépendants). Quelle est la probabilité d’avoir exactement 1 ampoule défectueuse ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>"
+     ],
+     "a": 3,
+     "e": "Il y a 2 chemins avec 1 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span><sup>1</sup> × <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>1</sup> : 2 × <span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "Un tireur atteint la cible avec la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. Il tire 4 fois, les tirs étant indépendants. Quelle est la probabilité qu’il atteigne la cible exactement 2 fois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>128</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "Il y a 6 chemins avec 2 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>2</sup> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span><sup>2</sup> : 6 × <span class='fr'><span class='fn'>9</span><span class='fd'>256</span></span> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>128</span></span></b>."
+    },
+    {
+     "q": "Un tireur atteint la cible avec la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>. Il tire 4 fois, les tirs étant indépendants. Quelle est la probabilité qu’il atteigne la cible exactement 3 fois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>81</span></span>"
+     ],
+     "a": 3,
+     "e": "Il y a 4 chemins avec 3 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span><sup>3</sup> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span><sup>1</sup> : 4 × <span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span> = <b><span class='fr'><span class='fn'>32</span><span class='fd'>81</span></span></b>."
+    },
+    {
+     "q": "Un tireur atteint la cible avec la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>. Il tire 4 fois, les tirs étant indépendants. Quelle est la probabilité qu’il atteigne la cible exactement 1 fois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>81</span></span>"
+     ],
+     "a": 1,
+     "e": "Il y a 4 chemins avec 1 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span><sup>1</sup> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span><sup>3</sup> : 4 × <span class='fr'><span class='fn'>2</span><span class='fd'>81</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span></b>."
+    },
+    {
+     "q": "Un tireur atteint la cible avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Il tire 2 fois, les tirs étant indépendants. Quelle est la probabilité qu’il atteigne la cible exactement 2 fois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Il y a 1 chemin avec 2 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>2</sup> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>0</sup> : 1 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "On lance 2 fois une pièce truquée qui donne pile avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Quelle est la probabilité d’obtenir exactement 2 piles ?",
+     "c": [
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>72</span></span>"
+     ],
+     "a": 2,
+     "e": "Il y a 1 chemin avec 2 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span><sup>2</sup> × <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>0</sup> : 1 × <span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "On lance 3 fois une pièce truquée qui donne pile avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Quelle est la probabilité d’obtenir exactement 3 piles ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>"
+     ],
+     "a": 1,
+     "e": "Il y a 1 chemin avec 3 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>3</sup> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>0</sup> : 1 × <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Un tireur atteint la cible avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Il tire 2 fois, les tirs étant indépendants. Quelle est la probabilité qu’il atteigne la cible exactement 1 fois ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Il y a 2 chemins avec 1 succès sur l’arbre ; chacun a la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span><sup>1</sup> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>1</sup> : 2 × <span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Épreuves indépendantes",
+   "items": [
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. On la répète 3 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>91</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>215</span><span class='fd'>216</span></span>"
+     ],
+     "a": 2,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>3</sup>. Donc 1 − <span class='fr'><span class='fn'>125</span><span class='fd'>216</span></span> = <b><span class='fr'><span class='fn'>91</span><span class='fd'>216</span></span></b>."
+    },
+    {
+     "q": "On lance un dé équilibré puis une pièce truquée (indépendants). P(« le dé donne au plus 3 ») = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> et P(« pile ») = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Probabilité d’avoir les deux ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "Épreuves indépendantes : on multiplie, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. On la répète 4 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>81</span></span>"
+     ],
+     "a": 2,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span><sup>4</sup>. Donc 1 − <span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span> = <b><span class='fr'><span class='fn'>65</span><span class='fd'>81</span></span></b>."
+    },
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>. On la répète 4 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3439</span><span class='fd'>10000</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9999</span><span class='fd'>10000</span></span>",
+      "<span class='fr'><span class='fn'>6561</span><span class='fd'>10000</span></span>"
+     ],
+     "a": 0,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span><sup>4</sup>. Donc 1 − <span class='fr'><span class='fn'>6561</span><span class='fd'>10000</span></span> = <b><span class='fr'><span class='fn'>3439</span><span class='fd'>10000</span></span></b>."
+    },
+    {
+     "q": "On répète 3 fois une épreuve de Bernoulli. Combien de chemins de l’arbre comportent exactement 1 succès ?",
+     "c": [
+      "8",
+      "1",
+      "4",
+      "3"
+     ],
+     "a": 3,
+     "e": "On compte les façons de placer 1 succès parmi 3 épreuves : <b>3</b> chemins."
+    },
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. On la répète 4 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1295</span><span class='fd'>1296</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>625</span><span class='fd'>1296</span></span>",
+      "<span class='fr'><span class='fn'>671</span><span class='fd'>1296</span></span>"
+     ],
+     "a": 3,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>4</sup>. Donc 1 − <span class='fr'><span class='fn'>625</span><span class='fd'>1296</span></span> = <b><span class='fr'><span class='fn'>671</span><span class='fd'>1296</span></span></b>."
+    },
+    {
+     "q": "On lance un dé équilibré puis une pièce truquée (indépendants). P(« le dé donne au plus 5 ») = <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> et P(« pile ») = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. Probabilité d’avoir les deux ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>24</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>24</span></span>"
+     ],
+     "a": 0,
+     "e": "Épreuves indépendantes : on multiplie, <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "On lance un dé équilibré puis une pièce truquée (indépendants). P(« le dé donne au plus 4 ») = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> et P(« pile ») = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. Probabilité d’avoir les deux ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>12</span></span>"
+     ],
+     "a": 2,
+     "e": "Épreuves indépendantes : on multiplie, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. On la répète 3 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>61</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>124</span><span class='fd'>125</span></span>"
+     ],
+     "a": 1,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span><sup>3</sup>. Donc 1 − <span class='fr'><span class='fn'>64</span><span class='fd'>125</span></span> = <b><span class='fr'><span class='fn'>61</span><span class='fd'>125</span></span></b>."
+    },
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>. On la répète 2 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>"
+     ],
+     "a": 0,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span><sup>2</sup>. Donc 1 − <span class='fr'><span class='fn'>81</span><span class='fd'>100</span></span> = <b><span class='fr'><span class='fn'>19</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. On la répète 2 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span><sup>2</sup>. Donc 1 − <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "On lance un dé équilibré puis une pièce truquée (indépendants). P(« le dé donne au plus 4 ») = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> et P(« pile ») = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Probabilité d’avoir les deux ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "Épreuves indépendantes : on multiplie, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "On lance un dé équilibré puis une pièce truquée (indépendants). P(« le dé donne au plus 3 ») = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> et P(« pile ») = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. Probabilité d’avoir les deux ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 2,
+     "e": "Épreuves indépendantes : on multiplie, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. On la répète 3 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>27</span></span>"
+     ],
+     "a": 3,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span><sup>3</sup>. Donc 1 − <span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span> = <b><span class='fr'><span class='fn'>19</span><span class='fd'>27</span></span></b>."
+    },
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. On la répète 2 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>2</sup>. Donc 1 − <span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. On la répète 2 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>"
+     ],
+     "a": 0,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>2</sup>. Donc 1 − <span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "On répète 4 fois une épreuve de Bernoulli. Combien de chemins de l’arbre comportent exactement 1 succès ?",
+     "c": [
+      "1",
+      "16",
+      "4",
+      "5"
+     ],
+     "a": 2,
+     "e": "On compte les façons de placer 1 succès parmi 4 épreuves : <b>4</b> chemins."
+    },
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. On la répète 4 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>544</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>609</span><span class='fd'>625</span></span>"
+     ],
+     "a": 1,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span><sup>4</sup>. Donc 1 − <span class='fr'><span class='fn'>81</span><span class='fd'>625</span></span> = <b><span class='fr'><span class='fn'>544</span><span class='fd'>625</span></span></b>."
+    },
+    {
+     "q": "On répète 3 fois une épreuve de Bernoulli. Combien de chemins de l’arbre comportent exactement 2 succès ?",
+     "c": [
+      "6",
+      "3",
+      "8",
+      "2"
+     ],
+     "a": 1,
+     "e": "On compte les façons de placer 2 succès parmi 3 épreuves : <b>3</b> chemins."
+    },
+    {
+     "q": "Une expérience réussit avec la probabilité <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. On la répète 3 fois de façon indépendante. Quelle est la probabilité d’au moins un succès ?",
+     "c": [
+      "<span class='fr'><span class='fn'>63</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>64</span></span>"
+     ],
+     "a": 3,
+     "e": "Contraire : aucun succès, de probabilité <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>3</sup>. Donc 1 − <span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span> = <b><span class='fr'><span class='fn'>37</span><span class='fd'>64</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 21,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "premiere"
+}

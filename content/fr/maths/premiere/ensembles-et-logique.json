@@ -1,0 +1,1161 @@
+{
+ "slug": "ensembles-et-logique",
+ "title": "Ensembles et logique : implication, réciproque, contraposée",
+ "seo_title": "Ensembles et logique première : fiches et exercices avec corrigé",
+ "short_title": "Ensembles et logique",
+ "domain": "Vocabulaire ensembliste et logique",
+ "standard_code": "Première spécialité · Vocabulaire ensembliste et logique",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A",
+ "standard_text": "Utiliser le vocabulaire ensembliste (appartenance, inclusion, réunion, intersection, complémentaire, cardinal) ; distinguer implication, réciproque et contraposée, conditions nécessaires et suffisantes ; formuler la négation d’une proposition avec « et », « ou », « tous », « il existe » ; utiliser un contre-exemple, le raisonnement par l’absurde, par contraposition et par disjonction des cas (résumé du programme 2026 de spécialité de première)",
+ "meta_desc": "Fiches de maths première sur le vocabulaire ensembliste et la logique : réunion, intersection, implication, réciproque, contraposée, conditions nécessaires et suffisantes, négation et contre-exemples. 100 exercices corrigés.",
+ "key_big": "P ⇒ Q a la même valeur que non Q ⇒ non P",
+ "key_sub": "La réciproque Q ⇒ P peut être fausse",
+ "body_html": "<h2>Comment faire</h2><p>A ∩ B : éléments communs ; A ∪ B : éléments de A ou de B ; Ā : éléments qui ne sont pas dans A. Card(A ∪ B) = Card(A) + Card(B) − Card(A ∩ B).</p><p>« P ⇒ Q » : si P est vraie, Q est vraie. Sa <b>réciproque</b> est « Q ⇒ P » (pas forcément vraie). Sa <b>contraposée</b> « non Q ⇒ non P » a toujours la même valeur de vérité.</p><p>Si P ⇒ Q est vraie, P est une condition <b>suffisante</b> pour Q, et Q une condition <b>nécessaire</b> pour P.</p><p>Négations : non (P et Q) = non P ou non Q ; non (P ou Q) = non P et non Q ; « tous » devient « au moins un … ne … pas ».</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>« Si x = 3, alors x² = 9 »</p><p class='sn-ex-s'>Vraie.</p><p class='sn-ex-s'>Réciproque : si x² = 9, alors x = 3 : fausse (x = −3).</p><p class='sn-ex-s'>Contraposée : si x² ≠ 9, alors x ≠ 3 : vraie.</p><p class='sn-ex-a'>Réponse : x = 3 est une condition suffisante, pas nécessaire, pour x² = 9</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>Confondre réciproque et contraposée</td><td>Réciproque : Q ⇒ P. Contraposée : non Q ⇒ non P.</td></tr><tr><td>Négation de « x &gt; 2 » : « x &lt; 2 »</td><td>C’est « x ⩽ 2 ».</td></tr><tr><td>Négation de « tous sont reçus » : « aucun n’est reçu »</td><td>C’est « au moins un n’est pas reçu ».</td></tr><tr><td>Un exemple prouve une affirmation générale</td><td>Un exemple ne prouve rien ; un contre-exemple suffit pour montrer qu’elle est fausse.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Une implication vraie a-t-elle toujours une réciproque vraie ?",
+   "a": "Non. « Si x = 3, alors x² = 9 » est vraie, mais sa réciproque est fausse (x = −3)."
+  },
+  {
+   "q": "Quand utiliser la contraposée ?",
+   "a": "Quand la conclusion « non P » est plus facile à obtenir à partir de « non Q » : on montre « non Q ⇒ non P », ce qui prouve « P ⇒ Q »."
+  },
+  {
+   "q": "Que signifie « condition nécessaire et suffisante » ?",
+   "a": "P ⇔ Q : P ⇒ Q et Q ⇒ P sont vraies toutes les deux. On dit aussi « si et seulement si »."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Ensembles et intervalles",
+   "items": [
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {1 ; 4 ; 9} et B = {2 ; 3 ; 6 ; 10}. Détermine A ∪ B.",
+     "c": [
+      "∅",
+      "{1 ; 4 ; 9}",
+      "{1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8 ; 9 ; 10}",
+      "{1 ; 2 ; 3 ; 4 ; 6 ; 9 ; 10}"
+     ],
+     "a": 3,
+     "e": "A ∪ B contient les éléments de A ou de B (ou des deux) : <b>{1 ; 2 ; 3 ; 4 ; 6 ; 9 ; 10}</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {1 ; 2 ; 3 ; 7 ; 9} et B = {2 ; 3 ; 4 ; 7 ; 10}. Détermine A ∖ B (éléments de A qui ne sont pas dans B).",
+     "c": [
+      "{1 ; 9}",
+      "{1 ; 4 ; 9 ; 10}",
+      "{2 ; 3 ; 7}",
+      "{4 ; 10}"
+     ],
+     "a": 0,
+     "e": "On retire de A les éléments de B : <b>{1 ; 9}</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {1 ; 7 ; 8 ; 9 ; 10} et B = {3 ; 4 ; 6 ; 7 ; 9}. Détermine le complémentaire Ā de A dans E.",
+     "c": [
+      "{1 ; 7 ; 8 ; 9 ; 10}",
+      "{2 ; 3 ; 4 ; 5 ; 6}",
+      "{1 ; 2 ; 5 ; 8 ; 10}",
+      "{2 ; 5}"
+     ],
+     "a": 1,
+     "e": "Ā contient les éléments de E qui ne sont pas dans A : <b>{2 ; 3 ; 4 ; 5 ; 6}</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {1 ; 4 ; 6 ; 8} et B = {4 ; 8 ; 10}. Détermine A ∪ B.",
+     "c": [
+      "{1 ; 2 ; 3 ; 5 ; 6 ; 7 ; 9 ; 10}",
+      "{1 ; 4 ; 6 ; 8 ; 10}",
+      "{1 ; 6 ; 10}",
+      "{4 ; 8}"
+     ],
+     "a": 1,
+     "e": "A ∪ B contient les éléments de A ou de B (ou des deux) : <b>{1 ; 4 ; 6 ; 8 ; 10}</b>."
+    },
+    {
+     "q": "Détermine [−8 ; −6] ∪ [−7 ; 8].",
+     "c": [
+      "[−8 ; −7] ∪ [−6 ; 8]",
+      "[−8 ; 8]",
+      "[−6 ; 8]",
+      "[−7 ; −6]"
+     ],
+     "a": 1,
+     "e": "Sur une droite graduée, on réunit les deux intervalles, qui se chevauchent : <b>[−8 ; 8]</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {3 ; 4 ; 5 ; 6 ; 8} et B = {1 ; 2 ; 7}. Détermine A ∖ B (éléments de A qui ne sont pas dans B).",
+     "c": [
+      "{3 ; 4 ; 5 ; 6 ; 8}",
+      "{1 ; 2 ; 7}",
+      "∅",
+      "{1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8}"
+     ],
+     "a": 0,
+     "e": "On retire de A les éléments de B : <b>{3 ; 4 ; 5 ; 6 ; 8}</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {1 ; 2 ; 7 ; 9} et B = {1 ; 3 ; 7}. Détermine A ∪ B.",
+     "c": [
+      "{1 ; 7}",
+      "{1 ; 2 ; 3 ; 7 ; 9}",
+      "{2 ; 3 ; 9}",
+      "{2 ; 3 ; 4 ; 5 ; 6 ; 8 ; 9 ; 10}"
+     ],
+     "a": 1,
+     "e": "A ∪ B contient les éléments de A ou de B (ou des deux) : <b>{1 ; 2 ; 3 ; 7 ; 9}</b>."
+    },
+    {
+     "q": "Dans un groupe, A est l’ensemble des élèves qui font du sport (Card(A) = 40) et B ceux qui font de la musique (Card(B) = 34). Card(A ∩ B) = 27. Combien d’éléments a A ∪ B ?",
+     "c": [
+      "20",
+      "101",
+      "47",
+      "74"
+     ],
+     "a": 2,
+     "e": "Card(A ∪ B) = Card(A) + Card(B) − Card(A ∩ B) = 40 + 34 − 27 = <b>47</b> (sinon on compte deux fois A ∩ B)."
+    },
+    {
+     "q": "Dans un groupe, A est l’ensemble des clients qui ont acheté un livre (Card(A) = 28) et B ceux qui ont acheté un jeu (Card(B) = 19). Card(A ∩ B) = 15. Combien d’éléments a A ∪ B ?",
+     "c": [
+      "62",
+      "32",
+      "47",
+      "17"
+     ],
+     "a": 1,
+     "e": "Card(A ∪ B) = Card(A) + Card(B) − Card(A ∩ B) = 28 + 19 − 15 = <b>32</b> (sinon on compte deux fois A ∩ B)."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {1 ; 2 ; 3 ; 4} et B = {4 ; 5 ; 6 ; 9}. Détermine A ∩ B.",
+     "c": [
+      "{5 ; 6 ; 9}",
+      "{1 ; 2 ; 3}",
+      "{1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 9}",
+      "{4}"
+     ],
+     "a": 3,
+     "e": "A ∩ B contient les éléments communs à A et à B : <b>{4}</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {1 ; 3 ; 10} et B = {1 ; 2 ; 3 ; 5 ; 6}. Détermine A ∪ B.",
+     "c": [
+      "{1 ; 2 ; 3 ; 5 ; 6 ; 10}",
+      "{1 ; 3}",
+      "{2 ; 5 ; 6 ; 10}",
+      "{2 ; 4 ; 5 ; 6 ; 7 ; 8 ; 9 ; 10}"
+     ],
+     "a": 0,
+     "e": "A ∪ B contient les éléments de A ou de B (ou des deux) : <b>{1 ; 2 ; 3 ; 5 ; 6 ; 10}</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {2 ; 4 ; 5 ; 10} et B = {1 ; 4 ; 7 ; 8}. Détermine A ∪ B.",
+     "c": [
+      "{1 ; 2 ; 3 ; 5 ; 6 ; 7 ; 8 ; 9 ; 10}",
+      "{4}",
+      "{1 ; 2 ; 5 ; 7 ; 8 ; 10}",
+      "{1 ; 2 ; 4 ; 5 ; 7 ; 8 ; 10}"
+     ],
+     "a": 3,
+     "e": "A ∪ B contient les éléments de A ou de B (ou des deux) : <b>{1 ; 2 ; 4 ; 5 ; 7 ; 8 ; 10}</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {1 ; 6 ; 8 ; 9 ; 10} et B = {1 ; 2 ; 4 ; 5 ; 6}. Détermine A ∪ B.",
+     "c": [
+      "{1 ; 2 ; 4 ; 5 ; 6 ; 8 ; 9 ; 10}",
+      "{1 ; 6}",
+      "{2 ; 3 ; 4 ; 5 ; 7 ; 8 ; 9 ; 10}",
+      "{2 ; 4 ; 5 ; 8 ; 9 ; 10}"
+     ],
+     "a": 0,
+     "e": "A ∪ B contient les éléments de A ou de B (ou des deux) : <b>{1 ; 2 ; 4 ; 5 ; 6 ; 8 ; 9 ; 10}</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {1 ; 6 ; 8 ; 10} et B = {1 ; 2 ; 4 ; 7}. Détermine A ∪ B.",
+     "c": [
+      "{1 ; 2 ; 4 ; 6 ; 7 ; 8 ; 10}",
+      "{2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8 ; 9 ; 10}",
+      "{1}",
+      "{2 ; 4 ; 6 ; 7 ; 8 ; 10}"
+     ],
+     "a": 0,
+     "e": "A ∪ B contient les éléments de A ou de B (ou des deux) : <b>{1 ; 2 ; 4 ; 6 ; 7 ; 8 ; 10}</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {3 ; 4 ; 7} et B = {4 ; 6 ; 7}. Détermine A ∖ B (éléments de A qui ne sont pas dans B).",
+     "c": [
+      "{3 ; 6}",
+      "{4 ; 7}",
+      "{6}",
+      "{3}"
+     ],
+     "a": 3,
+     "e": "On retire de A les éléments de B : <b>{3}</b>."
+    },
+    {
+     "q": "Dans un groupe, A est l’ensemble des élèves qui font du sport (Card(A) = 20) et B ceux qui font de la musique (Card(B) = 16). Card(A ∩ B) = 3. Combien d’éléments a A ∪ B ?",
+     "c": [
+      "30",
+      "36",
+      "33",
+      "39"
+     ],
+     "a": 2,
+     "e": "Card(A ∪ B) = Card(A) + Card(B) − Card(A ∩ B) = 20 + 16 − 3 = <b>33</b> (sinon on compte deux fois A ∩ B)."
+    },
+    {
+     "q": "Détermine [−9 ; 7] ∩ [−2 ; 8].",
+     "c": [
+      "∅",
+      "[−9 ; −2]",
+      "[−2 ; 7]",
+      "[−9 ; 8]"
+     ],
+     "a": 2,
+     "e": "Sur une droite graduée, on garde la partie commune : <b>[−2 ; 7]</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {4 ; 5 ; 7 ; 8} et B = {1 ; 2 ; 4 ; 5}. Détermine A ∪ B.",
+     "c": [
+      "{1 ; 2 ; 7 ; 8}",
+      "{1 ; 2 ; 3 ; 6 ; 7 ; 8 ; 9 ; 10}",
+      "{1 ; 2 ; 4 ; 5 ; 7 ; 8}",
+      "{4 ; 5}"
+     ],
+     "a": 2,
+     "e": "A ∪ B contient les éléments de A ou de B (ou des deux) : <b>{1 ; 2 ; 4 ; 5 ; 7 ; 8}</b>."
+    },
+    {
+     "q": "E = {1 ; 2 ; … ; 10}, A = {3 ; 4 ; 6} et B = {4 ; 5 ; 7 ; 8}. Détermine A ∩ B.",
+     "c": [
+      "{5 ; 7 ; 8}",
+      "{3 ; 4 ; 5 ; 6 ; 7 ; 8}",
+      "{4}",
+      "{3 ; 6}"
+     ],
+     "a": 2,
+     "e": "A ∩ B contient les éléments communs à A et à B : <b>{4}</b>."
+    },
+    {
+     "q": "Dans un groupe, A est l’ensemble des adhérents qui nagent (Card(A) = 24) et B ceux qui courent (Card(B) = 13). Card(A ∩ B) = 11. Combien d’éléments a A ∪ B ?",
+     "c": [
+      "37",
+      "48",
+      "15",
+      "26"
+     ],
+     "a": 3,
+     "e": "Card(A ∪ B) = Card(A) + Card(B) − Card(A ∩ B) = 24 + 13 − 11 = <b>26</b> (sinon on compte deux fois A ∩ B)."
+    }
+   ]
+  },
+  {
+   "title": "Implication, réciproque et contraposée",
+   "items": [
+    {
+     "q": "Quelle est la contraposée de l’implication « Si n est pair, alors n² est pair » ?",
+     "c": [
+      "Si n² est impair, alors n est impair.",
+      "Si n² est impair, alors n est pair.",
+      "Si n² est pair, alors n est pair.",
+      "Si n est impair, alors n² est impair."
+     ],
+     "a": 0,
+     "e": "La contraposée de « P ⇒ Q » est « non Q ⇒ non P » : <b>Si n² est impair, alors n est impair</b>. Elle a la même valeur de vérité que l’implication."
+    },
+    {
+     "q": "L’implication « Si x = 6, alors x² = 36 » est-elle vraie ?",
+     "c": [
+      "vraie seulement si sa réciproque est vraie",
+      "fausse",
+      "on ne peut pas savoir",
+      "vraie"
+     ],
+     "a": 3,
+     "e": "Dès que « x = 6 » est vrai, « x² = 36 » l’est aussi : l’implication est <b>vraie</b>."
+    },
+    {
+     "q": "L’implication « Si n est divisible par 6, alors n est divisible par 3 » est-elle vraie ?",
+     "c": [
+      "vraie",
+      "on ne peut pas savoir",
+      "fausse",
+      "vraie seulement si sa réciproque est vraie"
+     ],
+     "a": 0,
+     "e": "Dès que « n est divisible par 6 » est vrai, « n est divisible par 3 » l’est aussi : l’implication est <b>vraie</b>."
+    },
+    {
+     "q": "Quelle est la réciproque de l’implication « Si n est divisible par 4, alors n est divisible par 2 » ?",
+     "c": [
+      "Si n n’est pas divisible par 4, alors n n’est pas divisible par 2.",
+      "Si n n’est pas divisible par 2, alors n n’est pas divisible par 4.",
+      "Si n est divisible par 2, alors n est divisible par 4.",
+      "Si n est divisible par 4, alors n n’est pas divisible par 2."
+     ],
+     "a": 2,
+     "e": "La réciproque échange l’hypothèse et la conclusion : <b>Si n est divisible par 2, alors n est divisible par 4</b>."
+    },
+    {
+     "q": "Quelle est la contraposée de l’implication « Si ABCD est un losange, alors les diagonales de ABCD sont perpendiculaires » ?",
+     "c": [
+      "Si ABCD n’est pas un losange, alors les diagonales de ABCD ne sont pas perpendiculaires.",
+      "Si les diagonales de ABCD ne sont pas perpendiculaires, alors ABCD n’est pas un losange.",
+      "Si les diagonales de ABCD ne sont pas perpendiculaires, alors ABCD est un losange.",
+      "Si les diagonales de ABCD sont perpendiculaires, alors ABCD est un losange."
+     ],
+     "a": 1,
+     "e": "La contraposée de « P ⇒ Q » est « non Q ⇒ non P » : <b>Si les diagonales de ABCD ne sont pas perpendiculaires, alors ABCD n’est pas un losange</b>. Elle a la même valeur de vérité que l’implication."
+    },
+    {
+     "q": "Quelle est la réciproque de l’implication « Si n est divisible par 9, alors n est divisible par 3 » ?",
+     "c": [
+      "Si n est divisible par 3, alors n est divisible par 9.",
+      "Si n n’est pas divisible par 9, alors n n’est pas divisible par 3.",
+      "Si n n’est pas divisible par 3, alors n n’est pas divisible par 9.",
+      "Si n est divisible par 9, alors n n’est pas divisible par 3."
+     ],
+     "a": 0,
+     "e": "La réciproque échange l’hypothèse et la conclusion : <b>Si n est divisible par 3, alors n est divisible par 9</b>."
+    },
+    {
+     "q": "Quelle est la réciproque de l’implication « Si ABCD est un losange, alors les diagonales de ABCD sont perpendiculaires » ?",
+     "c": [
+      "Si les diagonales de ABCD ne sont pas perpendiculaires, alors ABCD n’est pas un losange.",
+      "Si ABCD est un losange, alors les diagonales de ABCD ne sont pas perpendiculaires.",
+      "Si ABCD n’est pas un losange, alors les diagonales de ABCD ne sont pas perpendiculaires.",
+      "Si les diagonales de ABCD sont perpendiculaires, alors ABCD est un losange."
+     ],
+     "a": 3,
+     "e": "La réciproque échange l’hypothèse et la conclusion : <b>Si les diagonales de ABCD sont perpendiculaires, alors ABCD est un losange</b>."
+    },
+    {
+     "q": "Quelle est la réciproque de l’implication « Si ABCD est un carré, alors ABCD est un rectangle » ?",
+     "c": [
+      "Si ABCD est un carré, alors ABCD n’est pas un rectangle.",
+      "Si ABCD n’est pas un rectangle, alors ABCD n’est pas un carré.",
+      "Si ABCD n’est pas un carré, alors ABCD n’est pas un rectangle.",
+      "Si ABCD est un rectangle, alors ABCD est un carré."
+     ],
+     "a": 3,
+     "e": "La réciproque échange l’hypothèse et la conclusion : <b>Si ABCD est un rectangle, alors ABCD est un carré</b>."
+    },
+    {
+     "q": "L’implication « Si x ∈ [-1 ; 3], alors x ∈ [-4 ; 6] » est-elle vraie ?",
+     "c": [
+      "vraie seulement si sa réciproque est vraie",
+      "on ne peut pas savoir",
+      "fausse",
+      "vraie"
+     ],
+     "a": 3,
+     "e": "Dès que « x ∈ [-1 ; 3] » est vrai, « x ∈ [-4 ; 6] » l’est aussi : l’implication est <b>vraie</b>."
+    },
+    {
+     "q": "L’implication « Si x ∈ [6 ; 7], alors x ∈ [2 ; 11] » est vraie. Sa réciproque est-elle vraie ?",
+     "c": [
+      "fausse",
+      "vraie",
+      "elle n’existe pas",
+      "toujours vraie, comme l’implication"
+     ],
+     "a": 0,
+     "e": "La réciproque « Si x ∈ [2 ; 11], alors x ∈ [6 ; 7] » est <b>fausse</b> : une implication vraie peut avoir une réciproque fausse."
+    },
+    {
+     "q": "L’implication « Si le triangle ABC est rectangle en A, alors BC² = AB² + AC² » est-elle vraie ?",
+     "c": [
+      "fausse",
+      "on ne peut pas savoir",
+      "vraie",
+      "vraie seulement si sa réciproque est vraie"
+     ],
+     "a": 2,
+     "e": "Dès que « le triangle ABC est rectangle en A » est vrai, « BC² = AB² + AC² » l’est aussi : l’implication est <b>vraie</b>."
+    },
+    {
+     "q": "Quelle est la contraposée de l’implication « Si x &gt; 4, alors x &gt; 3 » ?",
+     "c": [
+      "Si x ⩽ 3, alors x ⩽ 4.",
+      "Si x &gt; 3, alors x &gt; 4.",
+      "Si x ⩽ 3, alors x &gt; 4.",
+      "Si x ⩽ 4, alors x ⩽ 3."
+     ],
+     "a": 0,
+     "e": "La contraposée de « P ⇒ Q » est « non Q ⇒ non P » : <b>Si x ⩽ 3, alors x ⩽ 4</b>. Elle a la même valeur de vérité que l’implication."
+    },
+    {
+     "q": "L’implication « Si ABCD est un losange, alors les diagonales de ABCD sont perpendiculaires » est vraie. Sa réciproque est-elle vraie ?",
+     "c": [
+      "vraie",
+      "elle n’existe pas",
+      "fausse",
+      "toujours vraie, comme l’implication"
+     ],
+     "a": 2,
+     "e": "La réciproque « Si les diagonales de ABCD sont perpendiculaires, alors ABCD est un losange » est <b>fausse</b> : une implication vraie peut avoir une réciproque fausse."
+    },
+    {
+     "q": "L’implication « Si ABCD est un carré, alors ABCD est un rectangle » est vraie. Sa réciproque est-elle vraie ?",
+     "c": [
+      "vraie",
+      "elle n’existe pas",
+      "toujours vraie, comme l’implication",
+      "fausse"
+     ],
+     "a": 3,
+     "e": "La réciproque « Si ABCD est un rectangle, alors ABCD est un carré » est <b>fausse</b> : une implication vraie peut avoir une réciproque fausse."
+    },
+    {
+     "q": "L’implication « Si x = 3, alors x² = 9 » est-elle vraie ?",
+     "c": [
+      "fausse",
+      "on ne peut pas savoir",
+      "vraie",
+      "vraie seulement si sa réciproque est vraie"
+     ],
+     "a": 2,
+     "e": "Dès que « x = 3 » est vrai, « x² = 9 » l’est aussi : l’implication est <b>vraie</b>."
+    },
+    {
+     "q": "L’implication « Si x ∈ [3 ; 8], alors x ∈ [-1 ; 12] » est-elle vraie ?",
+     "c": [
+      "fausse",
+      "vraie",
+      "vraie seulement si sa réciproque est vraie",
+      "on ne peut pas savoir"
+     ],
+     "a": 1,
+     "e": "Dès que « x ∈ [3 ; 8] » est vrai, « x ∈ [-1 ; 12] » l’est aussi : l’implication est <b>vraie</b>."
+    },
+    {
+     "q": "Quelle est la réciproque de l’implication « Si x = 8, alors 3x = 24 » ?",
+     "c": [
+      "Si x = 8, alors 3x ≠ 24.",
+      "Si 3x = 24, alors x = 8.",
+      "Si 3x ≠ 24, alors x ≠ 8.",
+      "Si x ≠ 8, alors 3x ≠ 24."
+     ],
+     "a": 1,
+     "e": "La réciproque échange l’hypothèse et la conclusion : <b>Si 3x = 24, alors x = 8</b>."
+    },
+    {
+     "q": "L’implication « Si x ∈ [2 ; 4], alors x ∈ [-3 ; 9] » est-elle vraie ?",
+     "c": [
+      "vraie seulement si sa réciproque est vraie",
+      "vraie",
+      "fausse",
+      "on ne peut pas savoir"
+     ],
+     "a": 1,
+     "e": "Dès que « x ∈ [2 ; 4] » est vrai, « x ∈ [-3 ; 9] » l’est aussi : l’implication est <b>vraie</b>."
+    },
+    {
+     "q": "L’implication « Si n est pair, alors n² est pair » est-elle vraie ?",
+     "c": [
+      "fausse",
+      "vraie",
+      "vraie seulement si sa réciproque est vraie",
+      "on ne peut pas savoir"
+     ],
+     "a": 1,
+     "e": "Dès que « n est pair » est vrai, « n² est pair » l’est aussi : l’implication est <b>vraie</b>."
+    },
+    {
+     "q": "L’implication « Si x ∈ [5 ; 6], alors x ∈ [1 ; 10] » est-elle vraie ?",
+     "c": [
+      "on ne peut pas savoir",
+      "fausse",
+      "vraie",
+      "vraie seulement si sa réciproque est vraie"
+     ],
+     "a": 2,
+     "e": "Dès que « x ∈ [5 ; 6] » est vrai, « x ∈ [1 ; 10] » l’est aussi : l’implication est <b>vraie</b>."
+    }
+   ]
+  },
+  {
+   "title": "Conditions nécessaires et suffisantes",
+   "items": [
+    {
+     "q": "Pour avoir « n² est pair », la condition « n est pair » est :",
+     "c": [
+      "nécessaire et suffisante",
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante",
+      "suffisante mais pas nécessaire"
+     ],
+     "a": 0,
+     "e": "« n est pair » ⇒ « n² est pair » est vraie ; « n² est pair » ⇒ « n est pair » est vraie. La condition est <b>nécessaire et suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « n est divisible par 3 », la condition « n est divisible par 6 » est :",
+     "c": [
+      "nécessaire et suffisante",
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante",
+      "suffisante mais pas nécessaire"
+     ],
+     "a": 3,
+     "e": "« n est divisible par 6 » ⇒ « n est divisible par 3 » est vraie ; « n est divisible par 3 » ⇒ « n est divisible par 6 » est fausse. La condition est <b>suffisante mais pas nécessaire</b>."
+    },
+    {
+     "q": "Pour avoir « n est divisible par 2 », la condition « n est divisible par 4 » est :",
+     "c": [
+      "nécessaire et suffisante",
+      "suffisante mais pas nécessaire",
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante"
+     ],
+     "a": 1,
+     "e": "« n est divisible par 4 » ⇒ « n est divisible par 2 » est vraie ; « n est divisible par 2 » ⇒ « n est divisible par 4 » est fausse. La condition est <b>suffisante mais pas nécessaire</b>."
+    },
+    {
+     "q": "Pour avoir « BC² = AB² + AC² », la condition « le triangle ABC est rectangle en A » est :",
+     "c": [
+      "nécessaire mais pas suffisante",
+      "nécessaire et suffisante",
+      "suffisante mais pas nécessaire",
+      "ni nécessaire ni suffisante"
+     ],
+     "a": 1,
+     "e": "« le triangle ABC est rectangle en A » ⇒ « BC² = AB² + AC² » est vraie ; « BC² = AB² + AC² » ⇒ « le triangle ABC est rectangle en A » est vraie. La condition est <b>nécessaire et suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « x &gt; 6 », la condition « x &lt; 8 » est :",
+     "c": [
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante",
+      "suffisante mais pas nécessaire",
+      "nécessaire et suffisante"
+     ],
+     "a": 0,
+     "e": "« x &lt; 8 » ⇒ « x &gt; 6 » est fausse ; « x &gt; 6 » ⇒ « x &lt; 8 » est fausse. La condition n’est <b>ni nécessaire ni suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « x &lt; 13 », la condition « x &gt; 9 » est :",
+     "c": [
+      "nécessaire mais pas suffisante",
+      "ni nécessaire ni suffisante",
+      "suffisante mais pas nécessaire",
+      "nécessaire et suffisante"
+     ],
+     "a": 1,
+     "e": "« x &gt; 9 » ⇒ « x &lt; 13 » est fausse ; « x &lt; 13 » ⇒ « x &gt; 9 » est fausse. La condition n’est <b>ni nécessaire ni suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « x &lt; 14 », la condition « x &gt; 8 » est :",
+     "c": [
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante",
+      "suffisante mais pas nécessaire",
+      "nécessaire et suffisante"
+     ],
+     "a": 0,
+     "e": "« x &gt; 8 » ⇒ « x &lt; 14 » est fausse ; « x &lt; 14 » ⇒ « x &gt; 8 » est fausse. La condition n’est <b>ni nécessaire ni suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « x = 8 », la condition « x² = 64 » est :",
+     "c": [
+      "ni nécessaire ni suffisante",
+      "nécessaire et suffisante",
+      "suffisante mais pas nécessaire",
+      "nécessaire mais pas suffisante"
+     ],
+     "a": 3,
+     "e": "« x² = 64 » ⇒ « x = 8 » est fausse ; « x = 8 » ⇒ « x² = 64 » est vraie. La condition est <b>nécessaire mais pas suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « x &gt; 3 », la condition « x &lt; 8 » est :",
+     "c": [
+      "nécessaire mais pas suffisante",
+      "ni nécessaire ni suffisante",
+      "suffisante mais pas nécessaire",
+      "nécessaire et suffisante"
+     ],
+     "a": 1,
+     "e": "« x &lt; 8 » ⇒ « x &gt; 3 » est fausse ; « x &gt; 3 » ⇒ « x &lt; 8 » est fausse. La condition n’est <b>ni nécessaire ni suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « n est pair », la condition « n est un multiple de 7 » est :",
+     "c": [
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante",
+      "nécessaire et suffisante",
+      "suffisante mais pas nécessaire"
+     ],
+     "a": 0,
+     "e": "« n est un multiple de 7 » ⇒ « n est pair » est fausse ; « n est pair » ⇒ « n est un multiple de 7 » est fausse. La condition n’est <b>ni nécessaire ni suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « x &gt; 6 », la condition « x &gt; 7 » est :",
+     "c": [
+      "nécessaire mais pas suffisante",
+      "nécessaire et suffisante",
+      "suffisante mais pas nécessaire",
+      "ni nécessaire ni suffisante"
+     ],
+     "a": 2,
+     "e": "« x &gt; 7 » ⇒ « x &gt; 6 » est vraie ; « x &gt; 6 » ⇒ « x &gt; 7 » est fausse. La condition est <b>suffisante mais pas nécessaire</b>."
+    },
+    {
+     "q": "Pour avoir « x ∈ [-6 ; 8] », la condition « x ∈ [-1 ; 3] » est :",
+     "c": [
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante",
+      "suffisante mais pas nécessaire",
+      "nécessaire et suffisante"
+     ],
+     "a": 2,
+     "e": "« x ∈ [-1 ; 3] » ⇒ « x ∈ [-6 ; 8] » est vraie ; « x ∈ [-6 ; 8] » ⇒ « x ∈ [-1 ; 3] » est fausse. La condition est <b>suffisante mais pas nécessaire</b>."
+    },
+    {
+     "q": "Pour avoir « le triangle ABC est rectangle en A », la condition « BC² = AB² + AC² » est :",
+     "c": [
+      "suffisante mais pas nécessaire",
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante",
+      "nécessaire et suffisante"
+     ],
+     "a": 3,
+     "e": "« BC² = AB² + AC² » ⇒ « le triangle ABC est rectangle en A » est vraie ; « le triangle ABC est rectangle en A » ⇒ « BC² = AB² + AC² » est vraie. La condition est <b>nécessaire et suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « x &gt; 8 », la condition « x &gt; 6 » est :",
+     "c": [
+      "ni nécessaire ni suffisante",
+      "suffisante mais pas nécessaire",
+      "nécessaire et suffisante",
+      "nécessaire mais pas suffisante"
+     ],
+     "a": 3,
+     "e": "« x &gt; 6 » ⇒ « x &gt; 8 » est fausse ; « x &gt; 8 » ⇒ « x &gt; 6 » est vraie. La condition est <b>nécessaire mais pas suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « 5x = 25 », la condition « x = 5 » est :",
+     "c": [
+      "ni nécessaire ni suffisante",
+      "nécessaire et suffisante",
+      "nécessaire mais pas suffisante",
+      "suffisante mais pas nécessaire"
+     ],
+     "a": 1,
+     "e": "« x = 5 » ⇒ « 5x = 25 » est vraie ; « 5x = 25 » ⇒ « x = 5 » est vraie. La condition est <b>nécessaire et suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « n est divisible par 4 », la condition « n est divisible par 2 » est :",
+     "c": [
+      "suffisante mais pas nécessaire",
+      "nécessaire et suffisante",
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante"
+     ],
+     "a": 3,
+     "e": "« n est divisible par 2 » ⇒ « n est divisible par 4 » est fausse ; « n est divisible par 4 » ⇒ « n est divisible par 2 » est vraie. La condition est <b>nécessaire mais pas suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « n est pair », la condition « n est un multiple de 5 » est :",
+     "c": [
+      "nécessaire mais pas suffisante",
+      "nécessaire et suffisante",
+      "ni nécessaire ni suffisante",
+      "suffisante mais pas nécessaire"
+     ],
+     "a": 2,
+     "e": "« n est un multiple de 5 » ⇒ « n est pair » est fausse ; « n est pair » ⇒ « n est un multiple de 5 » est fausse. La condition n’est <b>ni nécessaire ni suffisante</b>."
+    },
+    {
+     "q": "Pour avoir « x² = 4 », la condition « x = 2 » est :",
+     "c": [
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante",
+      "suffisante mais pas nécessaire",
+      "nécessaire et suffisante"
+     ],
+     "a": 2,
+     "e": "« x = 2 » ⇒ « x² = 4 » est vraie ; « x² = 4 » ⇒ « x = 2 » est fausse. La condition est <b>suffisante mais pas nécessaire</b>."
+    },
+    {
+     "q": "Pour avoir « x &gt; 8 », la condition « x &gt; 9 » est :",
+     "c": [
+      "suffisante mais pas nécessaire",
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante",
+      "nécessaire et suffisante"
+     ],
+     "a": 0,
+     "e": "« x &gt; 9 » ⇒ « x &gt; 8 » est vraie ; « x &gt; 8 » ⇒ « x &gt; 9 » est fausse. La condition est <b>suffisante mais pas nécessaire</b>."
+    },
+    {
+     "q": "Pour avoir « ABCD est un rectangle », la condition « ABCD est un carré » est :",
+     "c": [
+      "ni nécessaire ni suffisante",
+      "nécessaire mais pas suffisante",
+      "suffisante mais pas nécessaire",
+      "nécessaire et suffisante"
+     ],
+     "a": 2,
+     "e": "« ABCD est un carré » ⇒ « ABCD est un rectangle » est vraie ; « ABCD est un rectangle » ⇒ « ABCD est un carré » est fausse. La condition est <b>suffisante mais pas nécessaire</b>."
+    }
+   ]
+  },
+  {
+   "title": "Négation d’une proposition",
+   "items": [
+    {
+     "q": "Quelle est la négation de « x &lt; 6 ou x &gt; 9 » ?",
+     "c": [
+      "x &gt; 6 et x &lt; 9",
+      "x ⩾ 6 et x ⩽ 9",
+      "x &lt; 6 et x &gt; 9",
+      "x ⩾ 6 ou x ⩽ 9"
+     ],
+     "a": 1,
+     "e": "La négation de « P ou Q » est « non P <b>et</b> non Q » : <b>6 ⩽ x ⩽ 9</b>."
+    },
+    {
+     "q": "Quelle est la négation de « Tous les élèves de la classe ont une note supérieure à 5 » ?",
+     "c": [
+      "Au moins un élève de la classe a une note inférieure à 5",
+      "Au moins un élève de la classe a une note inférieure ou égale à 5",
+      "Tous les élèves de la classe ont une note inférieure à 5",
+      "Aucun élève de la classe n’a une note supérieure à 5"
+     ],
+     "a": 1,
+     "e": "La négation de « tous … vérifient P » est « <b>au moins un</b> … ne vérifie pas P ». Le contraire de « supérieure à 5 » est « inférieure ou égale à 5 »."
+    },
+    {
+     "q": "Quelle est la négation de « Tous les élèves de la classe ont une note supérieure à 3 » ?",
+     "c": [
+      "Au moins un élève de la classe a une note inférieure à 3",
+      "Tous les élèves de la classe ont une note inférieure à 3",
+      "Au moins un élève de la classe a une note inférieure ou égale à 3",
+      "Aucun élève de la classe n’a une note supérieure à 3"
+     ],
+     "a": 2,
+     "e": "La négation de « tous … vérifient P » est « <b>au moins un</b> … ne vérifie pas P ». Le contraire de « supérieure à 3 » est « inférieure ou égale à 3 »."
+    },
+    {
+     "q": "Quelle est la négation de « Tous les termes de la suite sont supérieurs à 2 » ?",
+     "c": [
+      "Aucun terme de la suite n’est supérieur à 2",
+      "Au moins un terme de la suite est inférieur ou égal à 2",
+      "Tous les termes de la suite sont inférieurs à 2",
+      "Au moins un terme de la suite est inférieur à 2"
+     ],
+     "a": 1,
+     "e": "La négation de « tous … vérifient P » est « <b>au moins un</b> … ne vérifie pas P ». Le contraire de « supérieur à 2 » est « inférieur ou égal à 2 »."
+    },
+    {
+     "q": "Quelle est la négation de « x &lt; 3 ou x &gt; 6 » ?",
+     "c": [
+      "x ⩾ 3 ou x ⩽ 6",
+      "x &gt; 3 et x &lt; 6",
+      "x ⩾ 3 et x ⩽ 6",
+      "x &lt; 3 et x &gt; 6"
+     ],
+     "a": 2,
+     "e": "La négation de « P ou Q » est « non P <b>et</b> non Q » : <b>3 ⩽ x ⩽ 6</b>."
+    },
+    {
+     "q": "Quelle est la négation de « x &gt; 5 » ?",
+     "c": [
+      "x &lt; 5",
+      "x ≠ 5",
+      "x ⩽ 5",
+      "x ⩾ 5"
+     ],
+     "a": 2,
+     "e": "Le contraire de « &gt; » est « ⩽ » : <b>x ⩽ 5</b>."
+    },
+    {
+     "q": "Quelle est la négation de « x &gt; −5 et y ⩽ 0 » ?",
+     "c": [
+      "x ⩽ −5 et y &gt; 0",
+      "x &lt; −5 ou y ⩾ 0",
+      "x &gt; −5 ou y ⩽ 0",
+      "x ⩽ −5 ou y &gt; 0"
+     ],
+     "a": 3,
+     "e": "La négation de « P et Q » est « non P <b>ou</b> non Q » : <b>x ⩽ −5 ou y &gt; 0</b>."
+    },
+    {
+     "q": "Quelle est la négation de « x &lt; −7 ou x &gt; 3 » ?",
+     "c": [
+      "x &lt; −7 et x &gt; 3",
+      "x &gt; −7 et x &lt; 3",
+      "x ⩾ −7 ou x ⩽ 3",
+      "x ⩾ −7 et x ⩽ 3"
+     ],
+     "a": 3,
+     "e": "La négation de « P ou Q » est « non P <b>et</b> non Q » : <b>−7 ⩽ x ⩽ 3</b>."
+    },
+    {
+     "q": "Quelle est la négation de « x &lt; −1 ou x &gt; 3 » ?",
+     "c": [
+      "x ⩾ −1 et x ⩽ 3",
+      "x &gt; −1 et x &lt; 3",
+      "x &lt; −1 et x &gt; 3",
+      "x ⩾ −1 ou x ⩽ 3"
+     ],
+     "a": 0,
+     "e": "La négation de « P ou Q » est « non P <b>et</b> non Q » : <b>−1 ⩽ x ⩽ 3</b>."
+    },
+    {
+     "q": "Quelle est la négation de « x &lt; −6 ou x &gt; −2 » ?",
+     "c": [
+      "x &lt; −6 et x &gt; −2",
+      "x &gt; −6 et x &lt; −2",
+      "x ⩾ −6 et x ⩽ −2",
+      "x ⩾ −6 ou x ⩽ −2"
+     ],
+     "a": 2,
+     "e": "La négation de « P ou Q » est « non P <b>et</b> non Q » : <b>−6 ⩽ x ⩽ −2</b>."
+    },
+    {
+     "q": "Quelle est la négation de « x ⩾ −2 » ?",
+     "c": [
+      "x &lt; −2",
+      "x = −2",
+      "x ⩽ −2",
+      "x &gt; −2"
+     ],
+     "a": 0,
+     "e": "Le contraire de « ⩾ » est « &lt; » : <b>x &lt; −2</b>."
+    },
+    {
+     "q": "Quelle est la négation de « Tous les élèves de la classe ont une note supérieure à 9 » ?",
+     "c": [
+      "Au moins un élève de la classe a une note inférieure ou égale à 9",
+      "Aucun élève de la classe n’a une note supérieure à 9",
+      "Tous les élèves de la classe ont une note inférieure à 9",
+      "Au moins un élève de la classe a une note inférieure à 9"
+     ],
+     "a": 0,
+     "e": "La négation de « tous … vérifient P » est « <b>au moins un</b> … ne vérifie pas P ». Le contraire de « supérieure à 9 » est « inférieure ou égale à 9 »."
+    },
+    {
+     "q": "Quelle est la négation de « x &gt; −3 et y ⩽ −4 » ?",
+     "c": [
+      "x ⩽ −3 ou y &gt; −4",
+      "x &lt; −3 ou y ⩾ −4",
+      "x &gt; −3 ou y ⩽ −4",
+      "x ⩽ −3 et y &gt; −4"
+     ],
+     "a": 0,
+     "e": "La négation de « P et Q » est « non P <b>ou</b> non Q » : <b>x ⩽ −3 ou y &gt; −4</b>."
+    },
+    {
+     "q": "Quelle est la négation de « Tous les élèves de la classe ont une note supérieure à 2 » ?",
+     "c": [
+      "Au moins un élève de la classe a une note inférieure à 2",
+      "Au moins un élève de la classe a une note inférieure ou égale à 2",
+      "Aucun élève de la classe n’a une note supérieure à 2",
+      "Tous les élèves de la classe ont une note inférieure à 2"
+     ],
+     "a": 1,
+     "e": "La négation de « tous … vérifient P » est « <b>au moins un</b> … ne vérifie pas P ». Le contraire de « supérieure à 2 » est « inférieure ou égale à 2 »."
+    },
+    {
+     "q": "Quelle est la négation de « Il existe un réel x tel que x² = 9 » ?",
+     "c": [
+      "Il existe un réel x tel que x² ≠ 9",
+      "Pour tout réel x, x² = 9",
+      "Il n’existe aucun réel x tel que x² ≠ 9",
+      "Pour tout réel x, x² ≠ 9"
+     ],
+     "a": 3,
+     "e": "La négation de « il existe … tel que P » est « pour tout …, non P » : <b>pour tout réel x, x² ≠ 9</b>."
+    },
+    {
+     "q": "Quelle est la négation de « Tous les élèves de la classe ont une note supérieure à 10 » ?",
+     "c": [
+      "Aucun élève de la classe n’a une note supérieure à 10",
+      "Au moins un élève de la classe a une note inférieure ou égale à 10",
+      "Tous les élèves de la classe ont une note inférieure à 10",
+      "Au moins un élève de la classe a une note inférieure à 10"
+     ],
+     "a": 1,
+     "e": "La négation de « tous … vérifient P » est « <b>au moins un</b> … ne vérifie pas P ». Le contraire de « supérieure à 10 » est « inférieure ou égale à 10 »."
+    },
+    {
+     "q": "Quelle est la négation de « Tous les élèves de la classe ont une note supérieure à 11 » ?",
+     "c": [
+      "Au moins un élève de la classe a une note inférieure ou égale à 11",
+      "Aucun élève de la classe n’a une note supérieure à 11",
+      "Tous les élèves de la classe ont une note inférieure à 11",
+      "Au moins un élève de la classe a une note inférieure à 11"
+     ],
+     "a": 0,
+     "e": "La négation de « tous … vérifient P » est « <b>au moins un</b> … ne vérifie pas P ». Le contraire de « supérieure à 11 » est « inférieure ou égale à 11 »."
+    },
+    {
+     "q": "Quelle est la négation de « x &lt; 9 » ?",
+     "c": [
+      "x &gt; 9",
+      "x ⩽ 9",
+      "x ≠ 9",
+      "x ⩾ 9"
+     ],
+     "a": 3,
+     "e": "Le contraire de « &lt; » est « ⩾ » : <b>x ⩾ 9</b>."
+    },
+    {
+     "q": "Quelle est la négation de « Tous les élèves de la classe ont une note supérieure à 7 » ?",
+     "c": [
+      "Au moins un élève de la classe a une note inférieure à 7",
+      "Tous les élèves de la classe ont une note inférieure à 7",
+      "Aucun élève de la classe n’a une note supérieure à 7",
+      "Au moins un élève de la classe a une note inférieure ou égale à 7"
+     ],
+     "a": 3,
+     "e": "La négation de « tous … vérifient P » est « <b>au moins un</b> … ne vérifie pas P ». Le contraire de « supérieure à 7 » est « inférieure ou égale à 7 »."
+    },
+    {
+     "q": "Quelle est la négation de « x &gt; 6 et y ⩽ 7 » ?",
+     "c": [
+      "x &lt; 6 ou y ⩾ 7",
+      "x &gt; 6 ou y ⩽ 7",
+      "x ⩽ 6 ou y &gt; 7",
+      "x ⩽ 6 et y &gt; 7"
+     ],
+     "a": 2,
+     "e": "La négation de « P et Q » est « non P <b>ou</b> non Q » : <b>x ⩽ 6 ou y &gt; 7</b>."
+    }
+   ]
+  },
+  {
+   "title": "Contre-exemples et raisonnements",
+   "items": [
+    {
+     "q": "« Pour tout réel x &gt; 0, √x ⩽ x. » Quelle valeur est un contre-exemple (parmi 0,81 ; 2 ; 4 ; 16) ?",
+     "c": [
+      "2",
+      "0,81",
+      "4",
+      "16"
+     ],
+     "a": 1,
+     "e": "√0,81 = 0,9 &gt; 0,81 : <b>0,81</b> est un contre-exemple (entre 0 et 1, √x &gt; x)."
+    },
+    {
+     "q": "Pour montrer que |x| ⩾ x pour tout réel x, on traite x ⩾ 0 puis x &lt; 0. Quel raisonnement est utilisé ?",
+     "c": [
+      "par contraposition",
+      "par l’absurde",
+      "un contre-exemple",
+      "par disjonction des cas"
+     ],
+     "a": 3,
+     "e": "Réponse : <b>par disjonction des cas</b>."
+    },
+    {
+     "q": "« Pour tout réel x &gt; 0, √x ⩽ x. » Quelle valeur est un contre-exemple (parmi 0,25 ; 2 ; 9 ; 100) ?",
+     "c": [
+      "0,25",
+      "100",
+      "9",
+      "2"
+     ],
+     "a": 0,
+     "e": "√0,25 = 0,5 &gt; 0,25 : <b>0,25</b> est un contre-exemple (entre 0 et 1, √x &gt; x)."
+    },
+    {
+     "q": "« Pour tout réel x &gt; 0, √x ⩽ x. » Quelle valeur est un contre-exemple (parmi 0,64 ; 4 ; 9 ; 100) ?",
+     "c": [
+      "0,64",
+      "9",
+      "100",
+      "4"
+     ],
+     "a": 0,
+     "e": "√0,64 = 0,8 &gt; 0,64 : <b>0,64</b> est un contre-exemple (entre 0 et 1, √x &gt; x)."
+    },
+    {
+     "q": "« Pour tout réel x &gt; 0, √x ⩽ x. » Quelle valeur est un contre-exemple (parmi 0,25 ; 2 ; 9 ; 25) ?",
+     "c": [
+      "9",
+      "2",
+      "25",
+      "0,25"
+     ],
+     "a": 3,
+     "e": "√0,25 = 0,5 &gt; 0,25 : <b>0,25</b> est un contre-exemple (entre 0 et 1, √x &gt; x)."
+    },
+    {
+     "q": "« Pour tous réels a et b, (a + b)² = a² + b². » Quel couple est un contre-exemple ?",
+     "c": [
+      "a = 0 et b = 2",
+      "a = 6 et b = 0",
+      "a = 6 et b = 2",
+      "a = 0 et b = 0"
+     ],
+     "a": 2,
+     "e": "(6 + 2)² = 64 mais 6² + 2² = 40 : <b>a = 6 et b = 2</b> est un contre-exemple (avec a = 0 ou b = 0 l’égalité est vraie)."
+    },
+    {
+     "q": "Pour montrer « si n² est pair, alors n est pair », on montre « si n est impair, alors n² est impair ». Quel raisonnement est utilisé ?",
+     "c": [
+      "par la réciproque",
+      "par contraposition",
+      "par disjonction des cas",
+      "par l’absurde"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>par contraposition</b>."
+    },
+    {
+     "q": "« Pour tout réel x, si x² &gt; 1 alors x &gt; 1. » Quelle valeur de x est un contre-exemple ?",
+     "c": [
+      "x = 5",
+      "x = −5",
+      "x = 0",
+      "x = 1"
+     ],
+     "a": 1,
+     "e": "Pour x = −5 : x² = 25 &gt; 1 mais x &lt; 1. <b>x = −5</b> est un contre-exemple."
+    },
+    {
+     "q": "« Pour tout réel x &gt; 0, √x ⩽ x. » Quelle valeur est un contre-exemple (parmi 0,81 ; 2 ; 3 ; 9) ?",
+     "c": [
+      "2",
+      "9",
+      "0,81",
+      "3"
+     ],
+     "a": 2,
+     "e": "√0,81 = 0,9 &gt; 0,81 : <b>0,81</b> est un contre-exemple (entre 0 et 1, √x &gt; x)."
+    },
+    {
+     "q": "Pour montrer que n(n + 1) est pair, on étudie le cas n pair puis le cas n impair. Quel raisonnement est utilisé ?",
+     "c": [
+      "par l’absurde",
+      "par disjonction des cas",
+      "par contraposition",
+      "par contre-exemple"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>par disjonction des cas</b>."
+    },
+    {
+     "q": "« Pour tout réel x, si x² &gt; 25 alors x &gt; 5. » Quelle valeur de x est un contre-exemple ?",
+     "c": [
+      "x = 5",
+      "x = −9",
+      "x = 9",
+      "x = 0"
+     ],
+     "a": 1,
+     "e": "Pour x = −9 : x² = 81 &gt; 25 mais x &lt; 5. <b>x = −9</b> est un contre-exemple."
+    },
+    {
+     "q": "« Pour tout réel x &gt; 0, √x ⩽ x. » Quelle valeur est un contre-exemple (parmi 0,09 ; 2 ; 3 ; 25) ?",
+     "c": [
+      "0,09",
+      "3",
+      "25",
+      "2"
+     ],
+     "a": 0,
+     "e": "√0,09 = 0,3 &gt; 0,09 : <b>0,09</b> est un contre-exemple (entre 0 et 1, √x &gt; x)."
+    },
+    {
+     "q": "Pour montrer « si n n’est pas divisible par 3, alors n² non plus », on montre « si n² est divisible par 3, alors n l’est ». Quel raisonnement est utilisé ?",
+     "c": [
+      "par contraposition",
+      "par la réciproque",
+      "par l’absurde",
+      "par disjonction des cas"
+     ],
+     "a": 0,
+     "e": "Réponse : <b>par contraposition</b>."
+    },
+    {
+     "q": "On veut montrer que « pour tout réel x, x² ⩾ x » est fausse. Quelle valeur de x est un contre-exemple (parmi 0 ; 0,4 ; 5 ; −1) ?",
+     "c": [
+      "−1",
+      "5",
+      "0,4",
+      "0"
+     ],
+     "a": 2,
+     "e": "Pour x = 0,4, x² = 0,16 &lt; x : <b>0,4</b> est un contre-exemple. Les autres valeurs vérifient x² ⩾ x."
+    },
+    {
+     "q": "Pour montrer que √2 est irrationnel, on suppose que √2 = p/q (fraction irréductible) et on arrive à une contradiction. Quel raisonnement est utilisé ?",
+     "c": [
+      "par disjonction des cas",
+      "par contre-exemple",
+      "par contraposition",
+      "par l’absurde"
+     ],
+     "a": 3,
+     "e": "Réponse : <b>par l’absurde</b>."
+    },
+    {
+     "q": "« Pour tout réel x, si x² &gt; 9 alors x &gt; 3. » Quelle valeur de x est un contre-exemple ?",
+     "c": [
+      "x = 3",
+      "x = 5",
+      "x = −5",
+      "x = 0"
+     ],
+     "a": 2,
+     "e": "Pour x = −5 : x² = 25 &gt; 9 mais x &lt; 3. <b>x = −5</b> est un contre-exemple."
+    },
+    {
+     "q": "On veut montrer que « pour tout réel x, x² ⩾ x » est fausse. Quelle valeur de x est un contre-exemple (parmi 0,3 ; 10 ; 3 ; −1) ?",
+     "c": [
+      "−1",
+      "3",
+      "0,3",
+      "10"
+     ],
+     "a": 2,
+     "e": "Pour x = 0,3, x² = 0,09 &lt; x : <b>0,3</b> est un contre-exemple. Les autres valeurs vérifient x² ⩾ x."
+    },
+    {
+     "q": "On veut montrer que « pour tout réel x, x² ⩾ x » est fausse. Quelle valeur de x est un contre-exemple (parmi 0 ; 0,4 ; 1 ; 5) ?",
+     "c": [
+      "5",
+      "1",
+      "0",
+      "0,4"
+     ],
+     "a": 3,
+     "e": "Pour x = 0,4, x² = 0,16 &lt; x : <b>0,4</b> est un contre-exemple. Les autres valeurs vérifient x² ⩾ x."
+    },
+    {
+     "q": "« Pour tout réel x, si x² &gt; 16 alors x &gt; 4. » Quelle valeur de x est un contre-exemple ?",
+     "c": [
+      "x = 8",
+      "x = 4",
+      "x = 0",
+      "x = −8"
+     ],
+     "a": 3,
+     "e": "Pour x = −8 : x² = 64 &gt; 16 mais x &lt; 4. <b>x = −8</b> est un contre-exemple."
+    },
+    {
+     "q": "« Pour tout réel x &gt; 0, √x ⩽ x. » Quelle valeur est un contre-exemple (parmi 0,04 ; 2 ; 3 ; 9) ?",
+     "c": [
+      "0,04",
+      "2",
+      "9",
+      "3"
+     ],
+     "a": 0,
+     "e": "√0,04 = 0,2 &gt; 0,04 : <b>0,04</b> est un contre-exemple (entre 0 et 1, √x &gt; x)."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 1,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "premiere"
+}

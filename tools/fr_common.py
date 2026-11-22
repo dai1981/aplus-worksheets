@@ -26,6 +26,9 @@ STD_URL_C4 = "https://www.education.gouv.fr/bo/2026/Hebdo10/MENE2602912A"
 STD_URL_LY = "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602914A"
 DOMAIN_LY = {"N": "Nombres et calculs, algèbre", "G": "Géométrie", "F": "Fonctions", "S": "Statistiques et probabilités",
              "P": "Algorithmique et programmation"}
+STD_URL_1 = "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A"
+DOMAIN_1 = {"A": "Algèbre", "F": "Analyse", "G": "Géométrie", "S": "Probabilités et statistiques",
+            "P": "Algorithmique et programmation", "L": "Vocabulaire ensembliste et logique"}
 DOMAIN_C4 = {"N": "Nombres et calculs", "A": "Calcul littéral et algébrique", "F": "Proportionnalité et fonctions",
              "E": "Espace et géométrie", "D": "Données et probabilités"}
 GIRLS = ["Emma", "Léa", "Chloé", "Inès", "Jade", "Louise", "Manon", "Camille", "Zoé", "Lina", "Alice", "Rose", "Ambre", "Nour"]
@@ -229,11 +232,12 @@ def make_unit(rnd, slug, dom, std_text, title, seo_title, short_title, meta_desc
     c3 = grade in ("cm1", "cm2", "6e")
     c4 = grade in ("5e", "4e", "3e")
     ly = grade == "seconde"
-    dname = (DOMAIN_LY if ly else DOMAIN_C4 if c4 else DOMAIN_C3 if c3 else DOMAIN)[dom]
-    glab = "Seconde" if ly else grade if grade[0].isdigit() else grade.upper()
+    p1 = grade == "premiere"
+    dname = (DOMAIN_1 if p1 else DOMAIN_LY if ly else DOMAIN_C4 if c4 else DOMAIN_C3 if c3 else DOMAIN)[dom]
+    glab = "Première spécialité" if p1 else "Seconde" if ly else grade if grade[0].isdigit() else grade.upper()
     write_unit("fr", "maths", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
-        "domain": dname, "standard_code": "%s · %s" % (glab, dname), "standard_url": STD_URL_LY if ly else STD_URL_C4 if c4 else STD_URL_C3 if c3 else STD_URL,
+        "domain": dname, "standard_code": "%s · %s" % (glab, dname), "standard_url": STD_URL_1 if p1 else STD_URL_LY if ly else STD_URL_C4 if c4 else STD_URL_C3 if c3 else STD_URL,
         "standard_text": fp(std_text), "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
         "body_html": body_html, "faq": [{"q": fp(q), "a": fp(a)} for q, a in faq], "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })

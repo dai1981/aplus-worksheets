@@ -1,0 +1,1157 @@
+{
+ "slug": "probabilites-conditionnelles",
+ "title": "Probabilités conditionnelles et arbres pondérés",
+ "seo_title": "Probabilités conditionnelles première : fiches et exercices avec corrigé",
+ "short_title": "Probabilités conditionnelles",
+ "domain": "Probabilités et statistiques",
+ "standard_code": "Première spécialité · Probabilités et statistiques",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602917A",
+ "standard_text": "Probabilité conditionnelle d’un événement B sachant un événement A de probabilité non nulle, notée P<sub>A</sub>(B) ; P(A ∩ B) = P(A) × P<sub>A</sub>(B) ; tableaux croisés et arbres pondérés ; distinguer P<sub>A</sub>(B) et P<sub>B</sub>(A) (résumé du programme 2026 de spécialité de première)",
+ "meta_desc": "Fiches de maths première sur les probabilités conditionnelles : définition, tableaux croisés, arbres pondérés, inverser le conditionnement et problèmes. 100 exercices corrigés.",
+ "key_big": "Probabilité de B sachant A = P(A ∩ B) ÷ P(A)",
+ "key_sub": "Arbre : on multiplie le long d’un chemin",
+ "body_html": "<h2>Comment faire</h2><p>Si P(A) ≠ 0, la <b>probabilité de B sachant A</b> est P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A). Donc P(A ∩ B) = P(A) × P<sub>A</sub>(B).</p><p>Dans un tableau croisé, P<sub>A</sub>(B) = effectif de A ∩ B ÷ effectif de A (on divise par l’effectif de la condition).</p><p>Dans un arbre pondéré : on <b>multiplie</b> le long d’un chemin ; les branches issues d’un même nœud ont pour somme 1.</p><p>P<sub>B</sub>(A) n’est pas P<sub>A</sub>(B) : P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B).</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>P(A) = 0,3, P<sub>A</sub>(B) = 0,6, P<sub>Ā</sub>(B) = 0,2</p><p class='sn-ex-s'>P(A ∩ B) = 0,3 × 0,6 = 0,18</p><p class='sn-ex-s'>P(B) = 0,18 + 0,7 × 0,2 = 0,32</p><p class='sn-ex-a'>Réponse : P<sub>B</sub>(A) = 0,18 ÷ 0,32 = 0,5625</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>P<sub>A</sub>(B) = effectif de A ∩ B ÷ effectif total</td><td>On divise par l’effectif de A.</td></tr><tr><td>P(A ∩ B) = P(A) + P<sub>A</sub>(B)</td><td>On multiplie le long du chemin.</td></tr><tr><td>P<sub>A</sub>(B) = P<sub>B</sub>(A)</td><td>En général, ces deux nombres sont différents.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Quelle différence entre P(A ∩ B) et P<sub>A</sub>(B) ?",
+   "a": "P(A ∩ B) se calcule sur toute la population ; P<sub>A</sub>(B) seulement parmi les issues où A est réalisé."
+  },
+  {
+   "q": "Pourquoi un test positif ne veut-il pas dire « malade » à coup sûr ?",
+   "a": "Parce que P<sub>T</sub>(M) dépend aussi de la rareté de la maladie : s’il y a peu de malades, beaucoup de tests positifs viennent de non-malades."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Définition",
+   "items": [
+    {
+     "q": "P(A) = 0,4 et P<sub>A</sub>(B) = 0,6. Calcule P(A ∩ B).",
+     "c": [
+      "0,16",
+      "1",
+      "0,24",
+      "0,6"
+     ],
+     "a": 2,
+     "e": "P(A ∩ B) = P(A) × P<sub>A</sub>(B) = 0,4 × 0,6 = <b>0,24</b>."
+    },
+    {
+     "q": "P(A) = 0,7 et P(A ∩ B) = 0,28. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,42",
+      "0,4",
+      "0,196",
+      "0,98"
+     ],
+     "a": 1,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,28 ÷ 0,7 = <b>0,4</b>."
+    },
+    {
+     "q": "P(A) = 0,2 et P(A ∩ B) = 0,02. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,004",
+      "0,18",
+      "0,22",
+      "0,1"
+     ],
+     "a": 3,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,02 ÷ 0,2 = <b>0,1</b>."
+    },
+    {
+     "q": "P(A) = 0,5 et P(A ∩ B) = 0,35. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,35",
+      "0,175",
+      "0,7",
+      "0,15"
+     ],
+     "a": 2,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,35 ÷ 0,5 = <b>0,7</b>."
+    },
+    {
+     "q": "P(A) = 0,5 et P(A ∩ B) = 0,25. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,5",
+      "0,6",
+      "0,125",
+      "0,25"
+     ],
+     "a": 0,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,25 ÷ 0,5 = <b>0,5</b>."
+    },
+    {
+     "q": "P(A) = 0,6 et P(A ∩ B) = 0,48. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,8",
+      "0,288",
+      "1",
+      "0,12"
+     ],
+     "a": 0,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,48 ÷ 0,6 = <b>0,8</b>."
+    },
+    {
+     "q": "P<sub>A</sub>(B) = 0,5 et P(A ∩ B) = 0,4. Calcule P(A).",
+     "c": [
+      "0,2",
+      "0,9",
+      "0,1",
+      "0,8"
+     ],
+     "a": 3,
+     "e": "P(A) = P(A ∩ B) ÷ P<sub>A</sub>(B) = 0,4 ÷ 0,5 = <b>0,8</b>."
+    },
+    {
+     "q": "P(A) = 0,3 et P(A ∩ B) = 0,27. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,9",
+      "0,57",
+      "0,03",
+      "0,081"
+     ],
+     "a": 0,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,27 ÷ 0,3 = <b>0,9</b>."
+    },
+    {
+     "q": "P(A) = 0,6 et P<sub>A</sub>(B) = 0,8. Calcule P(A ∩ B).",
+     "c": [
+      "0,12",
+      "0,6",
+      "0,8",
+      "0,48"
+     ],
+     "a": 3,
+     "e": "P(A ∩ B) = P(A) × P<sub>A</sub>(B) = 0,6 × 0,8 = <b>0,48</b>."
+    },
+    {
+     "q": "P(A) = 0,2 et P(A ∩ B) = 0,1. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,5",
+      "0,125",
+      "0,02",
+      "0,1"
+     ],
+     "a": 0,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,1 ÷ 0,2 = <b>0,5</b>."
+    },
+    {
+     "q": "P(A) = 0,8 et P<sub>A</sub>(B) = 0,4. Calcule P(A ∩ B).",
+     "c": [
+      "0,5",
+      "0,48",
+      "0,8",
+      "0,32"
+     ],
+     "a": 3,
+     "e": "P(A ∩ B) = P(A) × P<sub>A</sub>(B) = 0,8 × 0,4 = <b>0,32</b>."
+    },
+    {
+     "q": "P(A) = 0,7 et P(A ∩ B) = 0,35. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,35",
+      "0,5",
+      "0,245",
+      "1"
+     ],
+     "a": 1,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,35 ÷ 0,7 = <b>0,5</b>."
+    },
+    {
+     "q": "P<sub>A</sub>(B) = 0,3 et P(A ∩ B) = 0,18. Calcule P(A).",
+     "c": [
+      "0,054",
+      "0,6",
+      "0,4",
+      "0,12"
+     ],
+     "a": 1,
+     "e": "P(A) = P(A ∩ B) ÷ P<sub>A</sub>(B) = 0,18 ÷ 0,3 = <b>0,6</b>."
+    },
+    {
+     "q": "P(A) = 0,8 et P<sub>A</sub>(B) = 0,6. Calcule P(A ∩ B).",
+     "c": [
+      "0,32",
+      "0,48",
+      "0,8",
+      "0,75"
+     ],
+     "a": 1,
+     "e": "P(A ∩ B) = P(A) × P<sub>A</sub>(B) = 0,8 × 0,6 = <b>0,48</b>."
+    },
+    {
+     "q": "P<sub>A</sub>(B) = 0,9 et P(A ∩ B) = 0,72. Calcule P(A).",
+     "c": [
+      "0,18",
+      "0,648",
+      "0,8",
+      "0,2"
+     ],
+     "a": 2,
+     "e": "P(A) = P(A ∩ B) ÷ P<sub>A</sub>(B) = 0,72 ÷ 0,9 = <b>0,8</b>."
+    },
+    {
+     "q": "P<sub>A</sub>(B) = 0,6 et P(A ∩ B) = 0,18. Calcule P(A).",
+     "c": [
+      "0,42",
+      "0,7",
+      "0,108",
+      "0,3"
+     ],
+     "a": 3,
+     "e": "P(A) = P(A ∩ B) ÷ P<sub>A</sub>(B) = 0,18 ÷ 0,6 = <b>0,3</b>."
+    },
+    {
+     "q": "P(A) = 0,6 et P(A ∩ B) = 0,24. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,36",
+      "0,144",
+      "0,4",
+      "0,6"
+     ],
+     "a": 2,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,24 ÷ 0,6 = <b>0,4</b>."
+    },
+    {
+     "q": "P(A) = 0,5 et P(A ∩ B) = 0,1. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,4",
+      "0,1",
+      "0,2",
+      "0,05"
+     ],
+     "a": 2,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,1 ÷ 0,5 = <b>0,2</b>."
+    },
+    {
+     "q": "P(A) = 0,2 et P(A ∩ B) = 0,12. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,6",
+      "0,024",
+      "0,15",
+      "0,08"
+     ],
+     "a": 0,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,12 ÷ 0,2 = <b>0,6</b>."
+    },
+    {
+     "q": "P(A) = 0,3 et P(A ∩ B) = 0,06. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,36",
+      "0,2",
+      "0,24",
+      "0,018"
+     ],
+     "a": 1,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,06 ÷ 0,3 = <b>0,2</b>."
+    }
+   ]
+  },
+  {
+   "title": "Tableaux croisés",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>En retard</th><th>À l’heure</th><th>Total</th></tr></thead><tbody><tr><td>Matin</td><td>58</td><td>57</td><td>115</td></tr><tr><td>Soir</td><td>55</td><td>30</td><td>85</td></tr><tr><td>Total</td><td>113</td><td>87</td><td>200</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« En retard »</sub>(« Matin »).",
+     "c": [
+      "<span class='fr'><span class='fn'>113</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>58</span><span class='fd'>115</span></span>",
+      "<span class='fr'><span class='fn'>58</span><span class='fd'>113</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>100</span></span>"
+     ],
+     "a": 2,
+     "e": "Parmi les 113 personnes « En retard », 58 sont « Matin » : <b><span class='fr'><span class='fn'>58</span><span class='fd'>113</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Défectueux</th><th>Conforme</th><th>Total</th></tr></thead><tbody><tr><td>Produit A</td><td>36</td><td>15</td><td>51</td></tr><tr><td>Produit B</td><td>54</td><td>31</td><td>85</td></tr><tr><td>Total</td><td>90</td><td>46</td><td>136</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P(« Produit B » ∩ « Défectueux »).",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>54</span><span class='fd'>85</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>68</span></span>",
+      "<span class='fr'><span class='fn'>225</span><span class='fd'>544</span></span>"
+     ],
+     "a": 2,
+     "e": "Case « Produit B / Défectueux » ÷ total : 54 ÷ 136 = <b><span class='fr'><span class='fn'>27</span><span class='fd'>68</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Malades</th><th>Non malades</th><th>Total</th></tr></thead><tbody><tr><td>Vaccinés</td><td>18</td><td>25</td><td>43</td></tr><tr><td>Non vaccinés</td><td>23</td><td>41</td><td>64</td></tr><tr><td>Total</td><td>41</td><td>66</td><td>107</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Vaccinés »</sub>(« Malades »).",
+     "c": [
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>107</span></span>",
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>107</span></span>",
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>41</span></span>",
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>43</span></span>"
+     ],
+     "a": 3,
+     "e": "Parmi les 43 personnes « Vaccinés », 18 sont « Malades » : <b><span class='fr'><span class='fn'>18</span><span class='fd'>43</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Demi-pension</th><th>Externat</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>57</td><td>34</td><td>91</td></tr><tr><td>Garçons</td><td>43</td><td>48</td><td>91</td></tr><tr><td>Total</td><td>100</td><td>82</td><td>182</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P(« Garçons » ∩ « Demi-pension »).",
+     "c": [
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>91</span></span>",
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>182</span></span>",
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>91</span></span>"
+     ],
+     "a": 1,
+     "e": "Case « Garçons / Demi-pension » ÷ total : 43 ÷ 182 = <b><span class='fr'><span class='fn'>43</span><span class='fd'>182</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Demi-pension</th><th>Externat</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>41</td><td>14</td><td>55</td></tr><tr><td>Garçons</td><td>36</td><td>18</td><td>54</td></tr><tr><td>Total</td><td>77</td><td>32</td><td>109</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Filles »</sub>(« Demi-pension »).",
+     "c": [
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>77</span></span>",
+      "<span class='fr'><span class='fn'>55</span><span class='fd'>109</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>109</span></span>"
+     ],
+     "a": 2,
+     "e": "Parmi les 55 personnes « Filles », 41 sont « Demi-pension » : <b><span class='fr'><span class='fn'>41</span><span class='fd'>55</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Demi-pension</th><th>Externat</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>28</td><td>39</td><td>67</td></tr><tr><td>Garçons</td><td>21</td><td>36</td><td>57</td></tr><tr><td>Total</td><td>49</td><td>75</td><td>124</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Demi-pension »</sub>(« Filles »).",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>124</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>31</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>67</span></span>"
+     ],
+     "a": 0,
+     "e": "Parmi les 49 personnes « Demi-pension », 28 sont « Filles » : <b><span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Option latin</th><th>Sans latin</th><th>Total</th></tr></thead><tbody><tr><td>Seconde</td><td>26</td><td>23</td><td>49</td></tr><tr><td>Première</td><td>17</td><td>60</td><td>77</td></tr><tr><td>Total</td><td>43</td><td>83</td><td>126</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Option latin »</sub>(« Seconde »).",
+     "c": [
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>43</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>63</span></span>",
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>126</span></span>"
+     ],
+     "a": 0,
+     "e": "Parmi les 43 personnes « Option latin », 26 sont « Seconde » : <b><span class='fr'><span class='fn'>26</span><span class='fd'>43</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Demi-pension</th><th>Externat</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>25</td><td>7</td><td>32</td></tr><tr><td>Garçons</td><td>38</td><td>35</td><td>73</td></tr><tr><td>Total</td><td>63</td><td>42</td><td>105</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Demi-pension »</sub>(« Filles »).",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>63</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>21</span></span>"
+     ],
+     "a": 1,
+     "e": "Parmi les 63 personnes « Demi-pension », 25 sont « Filles » : <b><span class='fr'><span class='fn'>25</span><span class='fd'>63</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Option latin</th><th>Sans latin</th><th>Total</th></tr></thead><tbody><tr><td>Seconde</td><td>13</td><td>32</td><td>45</td></tr><tr><td>Première</td><td>23</td><td>32</td><td>55</td></tr><tr><td>Total</td><td>36</td><td>64</td><td>100</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Option latin »</sub>(« Seconde »).",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>45</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "Parmi les 36 personnes « Option latin », 13 sont « Seconde » : <b><span class='fr'><span class='fn'>13</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Demi-pension</th><th>Externat</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>38</td><td>33</td><td>71</td></tr><tr><td>Garçons</td><td>25</td><td>50</td><td>75</td></tr><tr><td>Total</td><td>63</td><td>83</td><td>146</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Garçons »</sub>(« Externat »).",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>73</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>83</span></span>"
+     ],
+     "a": 2,
+     "e": "Parmi les 75 personnes « Garçons », 50 sont « Externat » : <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Défectueux</th><th>Conforme</th><th>Total</th></tr></thead><tbody><tr><td>Produit A</td><td>21</td><td>13</td><td>34</td></tr><tr><td>Produit B</td><td>59</td><td>50</td><td>109</td></tr><tr><td>Total</td><td>80</td><td>63</td><td>143</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Défectueux »</sub>(« Produit A »).",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>34</span></span>",
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>143</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>80</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>143</span></span>"
+     ],
+     "a": 2,
+     "e": "Parmi les 80 personnes « Défectueux », 21 sont « Produit A » : <b><span class='fr'><span class='fn'>21</span><span class='fd'>80</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Malades</th><th>Non malades</th><th>Total</th></tr></thead><tbody><tr><td>Vaccinés</td><td>26</td><td>14</td><td>40</td></tr><tr><td>Non vaccinés</td><td>31</td><td>60</td><td>91</td></tr><tr><td>Total</td><td>57</td><td>74</td><td>131</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P(« Non vaccinés » ∩ « Malades »).",
+     "c": [
+      "<span class='fr'><span class='fn'>5187</span><span class='fd'>17161</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>131</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>91</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>57</span></span>"
+     ],
+     "a": 1,
+     "e": "Case « Non vaccinés / Malades » ÷ total : 31 ÷ 131 = <b><span class='fr'><span class='fn'>31</span><span class='fd'>131</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>En retard</th><th>À l’heure</th><th>Total</th></tr></thead><tbody><tr><td>Matin</td><td>46</td><td>15</td><td>61</td></tr><tr><td>Soir</td><td>52</td><td>54</td><td>106</td></tr><tr><td>Total</td><td>98</td><td>69</td><td>167</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P(« Soir » ∩ « En retard »).",
+     "c": [
+      "<span class='fr'><span class='fn'>52</span><span class='fd'>167</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>53</span></span>",
+      "<span class='fr'><span class='fn'>10388</span><span class='fd'>27889</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>49</span></span>"
+     ],
+     "a": 0,
+     "e": "Case « Soir / En retard » ÷ total : 52 ÷ 167 = <b><span class='fr'><span class='fn'>52</span><span class='fd'>167</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Demi-pension</th><th>Externat</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>37</td><td>40</td><td>77</td></tr><tr><td>Garçons</td><td>46</td><td>39</td><td>85</td></tr><tr><td>Total</td><td>83</td><td>79</td><td>162</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Demi-pension »</sub>(« Filles »).",
+     "c": [
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>77</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>83</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>162</span></span>",
+      "<span class='fr'><span class='fn'>83</span><span class='fd'>162</span></span>"
+     ],
+     "a": 1,
+     "e": "Parmi les 83 personnes « Demi-pension », 37 sont « Filles » : <b><span class='fr'><span class='fn'>37</span><span class='fd'>83</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Malades</th><th>Non malades</th><th>Total</th></tr></thead><tbody><tr><td>Vaccinés</td><td>48</td><td>44</td><td>92</td></tr><tr><td>Non vaccinés</td><td>50</td><td>31</td><td>81</td></tr><tr><td>Total</td><td>98</td><td>75</td><td>173</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Vaccinés »</sub>(« Malades »).",
+     "c": [
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>23</span></span>",
+      "<span class='fr'><span class='fn'>48</span><span class='fd'>173</span></span>",
+      "<span class='fr'><span class='fn'>92</span><span class='fd'>173</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>49</span></span>"
+     ],
+     "a": 0,
+     "e": "Parmi les 92 personnes « Vaccinés », 48 sont « Malades » : <b><span class='fr'><span class='fn'>12</span><span class='fd'>23</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>En retard</th><th>À l’heure</th><th>Total</th></tr></thead><tbody><tr><td>Matin</td><td>52</td><td>15</td><td>67</td></tr><tr><td>Soir</td><td>58</td><td>42</td><td>100</td></tr><tr><td>Total</td><td>110</td><td>57</td><td>167</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Matin »</sub>(« En retard »).",
+     "c": [
+      "<span class='fr'><span class='fn'>67</span><span class='fd'>167</span></span>",
+      "<span class='fr'><span class='fn'>52</span><span class='fd'>167</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>52</span><span class='fd'>67</span></span>"
+     ],
+     "a": 3,
+     "e": "Parmi les 67 personnes « Matin », 52 sont « En retard » : <b><span class='fr'><span class='fn'>52</span><span class='fd'>67</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Demi-pension</th><th>Externat</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>51</td><td>40</td><td>91</td></tr><tr><td>Garçons</td><td>29</td><td>25</td><td>54</td></tr><tr><td>Total</td><td>80</td><td>65</td><td>145</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Demi-pension »</sub>(« Filles »).",
+     "c": [
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>80</span></span>",
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>145</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>91</span></span>"
+     ],
+     "a": 0,
+     "e": "Parmi les 80 personnes « Demi-pension », 51 sont « Filles » : <b><span class='fr'><span class='fn'>51</span><span class='fd'>80</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>En retard</th><th>À l’heure</th><th>Total</th></tr></thead><tbody><tr><td>Matin</td><td>33</td><td>29</td><td>62</td></tr><tr><td>Soir</td><td>58</td><td>45</td><td>103</td></tr><tr><td>Total</td><td>91</td><td>74</td><td>165</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Soir »</sub>(« À l’heure »).",
+     "c": [
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>74</span></span>",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>103</span></span>",
+      "<span class='fr'><span class='fn'>58</span><span class='fd'>103</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span>"
+     ],
+     "a": 1,
+     "e": "Parmi les 103 personnes « Soir », 45 sont « À l’heure » : <b><span class='fr'><span class='fn'>45</span><span class='fd'>103</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Défectueux</th><th>Conforme</th><th>Total</th></tr></thead><tbody><tr><td>Produit A</td><td>18</td><td>37</td><td>55</td></tr><tr><td>Produit B</td><td>51</td><td>6</td><td>57</td></tr><tr><td>Total</td><td>69</td><td>43</td><td>112</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P<sub>« Défectueux »</sub>(« Produit A »).",
+     "c": [
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>69</span><span class='fd'>112</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>23</span></span>"
+     ],
+     "a": 3,
+     "e": "Parmi les 69 personnes « Défectueux », 18 sont « Produit A » : <b><span class='fr'><span class='fn'>6</span><span class='fd'>23</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Demi-pension</th><th>Externat</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>38</td><td>53</td><td>91</td></tr><tr><td>Garçons</td><td>28</td><td>39</td><td>67</td></tr><tr><td>Total</td><td>66</td><td>92</td><td>158</td></tr></tbody></table></div><br>On choisit une personne au hasard. Calcule P(« Garçons » ∩ « Demi-pension »).",
+     "c": [
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>67</span></span>",
+      "<span class='fr'><span class='fn'>2211</span><span class='fd'>12482</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>79</span></span>"
+     ],
+     "a": 3,
+     "e": "Case « Garçons / Demi-pension » ÷ total : 28 ÷ 158 = <b><span class='fr'><span class='fn'>14</span><span class='fd'>79</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Arbres pondérés",
+   "items": [
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Lis P<sub>Ā</sub>(B) sur l’arbre.",
+     "c": [
+      "0,7",
+      "0,6",
+      "0,28",
+      "0,4"
+     ],
+     "a": 3,
+     "e": "C’est la probabilité portée par la branche Ā → B : <b>0,4</b>."
+    },
+    {
+     "q": "Dans un arbre pondéré, P<sub>A</sub>(B) = 0,7. Que vaut P<sub>A</sub>(B̄) ?",
+     "c": [
+      "0,4",
+      "0,3",
+      "0,7",
+      "1"
+     ],
+     "a": 1,
+     "e": "Les branches issues du nœud A ont pour somme 1 : 1 − 0,7 = <b>0,3</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(Ā ∩ B̄).",
+     "c": [
+      "0,68",
+      "0,14",
+      "0,06",
+      "0,5"
+     ],
+     "a": 2,
+     "e": "Chemin Ā → B̄ : 0,2 × 0,3 = <b>0,06</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(A ∩ B).",
+     "c": [
+      "0,1",
+      "0,3",
+      "0,4",
+      "0,6"
+     ],
+     "a": 1,
+     "e": "On multiplie les probabilités le long du chemin A → B : 0,5 × 0,6 = <b>0,3</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Lis P<sub>Ā</sub>(B) sur l’arbre.",
+     "c": [
+      "0,8",
+      "0,5",
+      "0,6",
+      "0,48"
+     ],
+     "a": 2,
+     "e": "C’est la probabilité portée par la branche Ā → B : <b>0,6</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Lis P<sub>Ā</sub>(B) sur l’arbre.",
+     "c": [
+      "0,7",
+      "0,3",
+      "0,9",
+      "0,63"
+     ],
+     "a": 0,
+     "e": "C’est la probabilité portée par la branche Ā → B : <b>0,7</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(Ā ∩ B̄).",
+     "c": [
+      "0,27",
+      "0,98",
+      "0,63",
+      "0,7"
+     ],
+     "a": 2,
+     "e": "Chemin Ā → B̄ : 0,9 × 0,7 = <b>0,63</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(Ā ∩ B̄).",
+     "c": [
+      "0,48",
+      "0,6",
+      "0,32",
+      "0,9"
+     ],
+     "a": 0,
+     "e": "Chemin Ā → B̄ : 0,8 × 0,6 = <b>0,48</b>."
+    },
+    {
+     "q": "Dans un arbre pondéré, P<sub>A</sub>(B) = 0,4. Que vaut P<sub>A</sub>(B̄) ?",
+     "c": [
+      "0,6",
+      "0,7",
+      "0,4",
+      "1"
+     ],
+     "a": 0,
+     "e": "Les branches issues du nœud A ont pour somme 1 : 1 − 0,4 = <b>0,6</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(Ā ∩ B̄).",
+     "c": [
+      "0,02",
+      "0,9",
+      "0,28",
+      "0,08"
+     ],
+     "a": 3,
+     "e": "Chemin Ā → B̄ : 0,1 × 0,8 = <b>0,08</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(Ā ∩ B̄).",
+     "c": [
+      "0,82",
+      "0,01",
+      "0,09",
+      "1"
+     ],
+     "a": 2,
+     "e": "Chemin Ā → B̄ : 0,1 × 0,9 = <b>0,09</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Lis P<sub>Ā</sub>(B) sur l’arbre.",
+     "c": [
+      "0,9",
+      "0,64",
+      "0,6",
+      "0,8"
+     ],
+     "a": 3,
+     "e": "C’est la probabilité portée par la branche Ā → B : <b>0,8</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(A ∩ B).",
+     "c": [
+      "0,64",
+      "0,7",
+      "0,63",
+      "0,27"
+     ],
+     "a": 2,
+     "e": "On multiplie les probabilités le long du chemin A → B : 0,9 × 0,7 = <b>0,63</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(Ā ∩ B̄).",
+     "c": [
+      "0,05",
+      "0,06",
+      "0,73",
+      "0,6"
+     ],
+     "a": 0,
+     "e": "Chemin Ā → B̄ : 0,1 × 0,5 = <b>0,05</b>."
+    },
+    {
+     "q": "Dans un arbre pondéré, P<sub>A</sub>(B) = 0,1. Que vaut P<sub>A</sub>(B̄) ?",
+     "c": [
+      "0,5",
+      "0,9",
+      "1",
+      "0,1"
+     ],
+     "a": 1,
+     "e": "Les branches issues du nœud A ont pour somme 1 : 1 − 0,1 = <b>0,9</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(A ∩ B).",
+     "c": [
+      "0,29",
+      "0,4",
+      "0,35",
+      "0,28"
+     ],
+     "a": 3,
+     "e": "On multiplie les probabilités le long du chemin A → B : 0,7 × 0,4 = <b>0,28</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(Ā ∩ B̄).",
+     "c": [
+      "0,7",
+      "0,49",
+      "0,73",
+      "0,21"
+     ],
+     "a": 1,
+     "e": "Chemin Ā → B̄ : 0,7 × 0,7 = <b>0,49</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(Ā ∩ B̄).",
+     "c": [
+      "0,6",
+      "0,68",
+      "0,12",
+      "0,08"
+     ],
+     "a": 3,
+     "e": "Chemin Ā → B̄ : 0,2 × 0,4 = <b>0,08</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>Calcule P(Ā ∩ B̄).",
+     "c": [
+      "0,16",
+      "0,24",
+      "1",
+      "0,7"
+     ],
+     "a": 1,
+     "e": "Chemin Ā → B̄ : 0,4 × 0,6 = <b>0,24</b>."
+    },
+    {
+     "q": "Dans un arbre pondéré, P<sub>A</sub>(B) = 0,6. Que vaut P<sub>A</sub>(B̄) ?",
+     "c": [
+      "0,4",
+      "0,6",
+      "0,1",
+      "1"
+     ],
+     "a": 0,
+     "e": "Les branches issues du nœud A ont pour somme 1 : 1 − 0,6 = <b>0,4</b>."
+    }
+   ]
+  },
+  {
+   "title": "Inverser le conditionnement",
+   "items": [
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,62. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>38</span></span>",
+      "0,35",
+      "0,5",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>62</span></span>"
+     ],
+     "a": 3,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,35 ÷ 0,62 = <b><span class='fr'><span class='fn'>35</span><span class='fd'>62</span></span></b> (différent de P<sub>A</sub>(B) = 0,5)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,15. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>17</span></span>",
+      "0,05",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "0,1"
+     ],
+     "a": 2,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,05 ÷ 0,15 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b> (différent de P<sub>A</sub>(B) = 0,1)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,38. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>31</span></span>",
+      "0,3",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>19</span></span>",
+      "0,18"
+     ],
+     "a": 2,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,18 ÷ 0,38 = <b><span class='fr'><span class='fn'>9</span><span class='fd'>19</span></span></b> (différent de P<sub>A</sub>(B) = 0,3)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,21. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "0,3",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>79</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "0,03"
+     ],
+     "a": 2,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,03 ÷ 0,21 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span></b> (différent de P<sub>A</sub>(B) = 0,3)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,26. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>13</span></span>",
+      "0,24",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>37</span></span>",
+      "0,3"
+     ],
+     "a": 0,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,24 ÷ 0,26 = <b><span class='fr'><span class='fn'>12</span><span class='fd'>13</span></span></b> (différent de P<sub>A</sub>(B) = 0,3)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,36. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "0,3",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "0,21",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>64</span></span>"
+     ],
+     "a": 1,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,21 ÷ 0,36 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></b> (différent de P<sub>A</sub>(B) = 0,3)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,6. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "0,2",
+      "0,3",
+      "0,12",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,12 ÷ 0,6 = <b>0,2</b> (différent de P<sub>A</sub>(B) = 0,3)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,13. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "0,4",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>87</span></span>",
+      "0,04"
+     ],
+     "a": 1,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,04 ÷ 0,13 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span></b> (différent de P<sub>A</sub>(B) = 0,4)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,7. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "0,4",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "0,16"
+     ],
+     "a": 1,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,16 ÷ 0,7 = <b><span class='fr'><span class='fn'>8</span><span class='fd'>35</span></span></b> (différent de P<sub>A</sub>(B) = 0,4)."
+    },
+    {
+     "q": "P<sub>B</sub>(A) se lit…",
+     "c": [
+      "probabilité de A et B",
+      "probabilité de B sachant A",
+      "probabilité de B ou A",
+      "probabilité de A sachant B"
+     ],
+     "a": 3,
+     "e": "P<sub>B</sub>(A) est la probabilité de A <b>sachant que B est réalisé</b>."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,41. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "<span class='fr'><span class='fn'>36</span><span class='fd'>41</span></span>",
+      "<span class='fr'><span class='fn'>36</span><span class='fd'>59</span></span>",
+      "0,4",
+      "0,36"
+     ],
+     "a": 0,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,36 ÷ 0,41 = <b><span class='fr'><span class='fn'>36</span><span class='fd'>41</span></span></b> (différent de P<sub>A</sub>(B) = 0,4)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,48. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "0,5",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>",
+      "0,45",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>52</span></span>"
+     ],
+     "a": 1,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,45 ÷ 0,48 = <b><span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span></b> (différent de P<sub>A</sub>(B) = 0,5)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,6. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "0,36",
+      "0,6",
+      "0,9",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,36 ÷ 0,6 = <b>0,6</b> (différent de P<sub>A</sub>(B) = 0,9)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,14. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>86</span></span>",
+      "0,05",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "0,5"
+     ],
+     "a": 2,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,05 ÷ 0,14 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span></b> (différent de P<sub>A</sub>(B) = 0,5)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,6. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "0,6",
+      "0,2",
+      "0,12"
+     ],
+     "a": 2,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,12 ÷ 0,6 = <b>0,2</b> (différent de P<sub>A</sub>(B) = 0,6)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,74. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "0,9",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>13</span></span>",
+      "0,18",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>37</span></span>"
+     ],
+     "a": 3,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,18 ÷ 0,74 = <b><span class='fr'><span class='fn'>9</span><span class='fd'>37</span></span></b> (différent de P<sub>A</sub>(B) = 0,9)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,25. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "0,18",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "0,2",
+      "0,72"
+     ],
+     "a": 3,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,18 ÷ 0,25 = <b>0,72</b> (différent de P<sub>A</sub>(B) = 0,2)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,41. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "0,2",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>59</span></span>",
+      "0,06",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>41</span></span>"
+     ],
+     "a": 3,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,06 ÷ 0,41 = <b><span class='fr'><span class='fn'>6</span><span class='fd'>41</span></span></b> (différent de P<sub>A</sub>(B) = 0,2)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,19. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>19</span></span>",
+      "0,07",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>81</span></span>",
+      "0,1"
+     ],
+     "a": 0,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,07 ÷ 0,19 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>19</span></span></b> (différent de P<sub>A</sub>(B) = 0,1)."
+    },
+    {
+     "q": "<div class='qfig'><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='arbre pondéré'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div></div>P(B) = 0,72. Calcule P<sub>B</sub>(A).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>28</span></span>",
+      "0,3",
+      "0,09"
+     ],
+     "a": 0,
+     "e": "P<sub>B</sub>(A) = P(A ∩ B) ÷ P(B) = 0,09 ÷ 0,72 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b> (différent de P<sub>A</sub>(B) = 0,3)."
+    }
+   ]
+  },
+  {
+   "title": "Problèmes",
+   "items": [
+    {
+     "q": "Une maladie touche 1 % de la population. Un test est positif pour 99 % des malades et pour 1 % des non-malades. Une personne a un test positif. Quelle est la probabilité qu’elle soit malade (arrondie à 0,01) ?",
+     "c": [
+      "0,50",
+      "0,51",
+      "0,01",
+      "0,99"
+     ],
+     "a": 0,
+     "e": "P(T) = 0,01 × 0,99 + 0,99 × 0,01 = 0,0198 ; P<sub>T</sub>(M) = 0,0099 ÷ 0,0198 ≈ <b>0,50</b>."
+    },
+    {
+     "q": "Une usine a deux machines. A fabrique 40 % des pièces, dont 1 % sont défectueuses ; B fabrique le reste, dont 5 % sont défectueuses. Quelle est la probabilité qu’une pièce soit fabriquée par A et défectueuse ?",
+     "c": [
+      "0,01",
+      "0,034",
+      "0,004",
+      "0,41"
+     ],
+     "a": 2,
+     "e": "P(A ∩ D) = P(A) × P<sub>A</sub>(D) = 0,4 × 0,01 = <b>0,004</b>."
+    },
+    {
+     "q": "Une urne contient 4 boules rouges et 2 bleues. On tire deux boules sans remise. Quelle est la probabilité de tirer deux rouges ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "Sans remise : <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b> (la deuxième probabilité est conditionnelle au premier tirage)."
+    },
+    {
+     "q": "Une maladie touche 2 % de la population. Un test est positif pour 99 % des malades et pour 1 % des non-malades. Une personne a un test positif. Quelle est la probabilité qu’elle soit malade (arrondie à 0,01) ?",
+     "c": [
+      "0,99",
+      "0,67",
+      "0,68",
+      "0,02"
+     ],
+     "a": 1,
+     "e": "P(T) = 0,02 × 0,99 + 0,98 × 0,01 = 0,0296 ; P<sub>T</sub>(M) = 0,0198 ÷ 0,0296 ≈ <b>0,67</b>."
+    },
+    {
+     "q": "Une usine a deux machines. A fabrique 60 % des pièces, dont 2 % sont défectueuses ; B fabrique le reste, dont 6 % sont défectueuses. Quelle est la probabilité qu’une pièce soit fabriquée par A et défectueuse ?",
+     "c": [
+      "0,02",
+      "0,012",
+      "0,036",
+      "0,62"
+     ],
+     "a": 1,
+     "e": "P(A ∩ D) = P(A) × P<sub>A</sub>(D) = 0,6 × 0,02 = <b>0,012</b>."
+    },
+    {
+     "q": "Une maladie touche 5 % de la population. Un test est positif pour 99 % des malades et pour 5 % des non-malades. Une personne a un test positif. Quelle est la probabilité qu’elle soit malade (arrondie à 0,01) ?",
+     "c": [
+      "0,51",
+      "0,95",
+      "0,99",
+      "0,05"
+     ],
+     "a": 0,
+     "e": "P(T) = 0,05 × 0,99 + 0,95 × 0,05 = 0,097 ; P<sub>T</sub>(M) = 0,0495 ÷ 0,097 ≈ <b>0,51</b>."
+    },
+    {
+     "q": "Une urne contient 2 boules rouges et 7 bleues. On tire deux boules sans remise. Quelle est la probabilité de tirer deux rouges ?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>72</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "Sans remise : <span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b> (la deuxième probabilité est conditionnelle au premier tirage)."
+    },
+    {
+     "q": "Une usine a deux machines. A fabrique 70 % des pièces, dont 1 % sont défectueuses ; B fabrique le reste, dont 6 % sont défectueuses. Quelle est la probabilité qu’une pièce soit fabriquée par A et défectueuse ?",
+     "c": [
+      "0,71",
+      "0,01",
+      "0,025",
+      "0,007"
+     ],
+     "a": 3,
+     "e": "P(A ∩ D) = P(A) × P<sub>A</sub>(D) = 0,7 × 0,01 = <b>0,007</b>."
+    },
+    {
+     "q": "Une maladie touche 10 % de la population. Un test est positif pour 95 % des malades et pour 1 % des non-malades. Une personne a un test positif. Quelle est la probabilité qu’elle soit malade (arrondie à 0,01) ?",
+     "c": [
+      "0,91",
+      "0,99",
+      "0,95",
+      "0,10"
+     ],
+     "a": 0,
+     "e": "P(T) = 0,1 × 0,95 + 0,9 × 0,01 = 0,104 ; P<sub>T</sub>(M) = 0,095 ÷ 0,104 ≈ <b>0,91</b>."
+    },
+    {
+     "q": "Une urne contient 4 boules rouges et 7 bleues. On tire deux boules sans remise. Quelle est la probabilité de tirer deux rouges ?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>73</span><span class='fd'>110</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>121</span></span>"
+     ],
+     "a": 2,
+     "e": "Sans remise : <span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>6</span><span class='fd'>55</span></span></b> (la deuxième probabilité est conditionnelle au premier tirage)."
+    },
+    {
+     "q": "Une usine a deux machines. A fabrique 40 % des pièces, dont 3 % sont défectueuses ; B fabrique le reste, dont 5 % sont défectueuses. Quelle est la probabilité qu’une pièce soit fabriquée par A et défectueuse ?",
+     "c": [
+      "0,43",
+      "0,042",
+      "0,012",
+      "0,03"
+     ],
+     "a": 2,
+     "e": "P(A ∩ D) = P(A) × P<sub>A</sub>(D) = 0,4 × 0,03 = <b>0,012</b>."
+    },
+    {
+     "q": "Une usine a deux machines. A fabrique 60 % des pièces, dont 1 % sont défectueuses ; B fabrique le reste, dont 6 % sont défectueuses. Quelle est la probabilité qu’une pièce soit fabriquée par A et défectueuse ?",
+     "c": [
+      "0,61",
+      "0,006",
+      "0,01",
+      "0,03"
+     ],
+     "a": 1,
+     "e": "P(A ∩ D) = P(A) × P<sub>A</sub>(D) = 0,6 × 0,01 = <b>0,006</b>."
+    },
+    {
+     "q": "Une maladie touche 2 % de la population. Un test est positif pour 99 % des malades et pour 5 % des non-malades. Une personne a un test positif. Quelle est la probabilité qu’elle soit malade (arrondie à 0,01) ?",
+     "c": [
+      "0,99",
+      "0,02",
+      "0,95",
+      "0,29"
+     ],
+     "a": 3,
+     "e": "P(T) = 0,02 × 0,99 + 0,98 × 0,05 = 0,0688 ; P<sub>T</sub>(M) = 0,0198 ÷ 0,0688 ≈ <b>0,29</b>."
+    },
+    {
+     "q": "Une usine a deux machines. A fabrique 70 % des pièces, dont 1 % sont défectueuses ; B fabrique le reste, dont 4 % sont défectueuses. Quelle est la probabilité qu’une pièce soit fabriquée par A et défectueuse ?",
+     "c": [
+      "0,007",
+      "0,019",
+      "0,01",
+      "0,71"
+     ],
+     "a": 0,
+     "e": "P(A ∩ D) = P(A) × P<sub>A</sub>(D) = 0,7 × 0,01 = <b>0,007</b>."
+    },
+    {
+     "q": "Une classe de 25 élèves compte 9 filles. 2 filles et 2 garçons font du latin. On choisit un élève qui fait du latin. Quelle est la probabilité que ce soit une fille ?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "On se restreint aux 4 latinistes : 2 ÷ 4 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Une maladie touche 1 % de la population. Un test est positif pour 99 % des malades et pour 5 % des non-malades. Une personne a un test positif. Quelle est la probabilité qu’elle soit malade (arrondie à 0,01) ?",
+     "c": [
+      "0,99",
+      "0,95",
+      "0,17",
+      "0,01"
+     ],
+     "a": 2,
+     "e": "P(T) = 0,01 × 0,99 + 0,99 × 0,05 = 0,0594 ; P<sub>T</sub>(M) = 0,0099 ÷ 0,0594 ≈ <b>0,17</b>."
+    },
+    {
+     "q": "Une maladie touche 5 % de la population. Un test est positif pour 95 % des malades et pour 1 % des non-malades. Une personne a un test positif. Quelle est la probabilité qu’elle soit malade (arrondie à 0,01) ?",
+     "c": [
+      "0,99",
+      "0,95",
+      "0,05",
+      "0,83"
+     ],
+     "a": 3,
+     "e": "P(T) = 0,05 × 0,95 + 0,95 × 0,01 = 0,057 ; P<sub>T</sub>(M) = 0,0475 ÷ 0,057 ≈ <b>0,83</b>."
+    },
+    {
+     "q": "Une classe de 35 élèves compte 14 filles. 2 filles et 15 garçons font du latin. On choisit un élève qui fait du latin. Quelle est la probabilité que ce soit une fille ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>17</span></span>"
+     ],
+     "a": 3,
+     "e": "On se restreint aux 17 latinistes : 2 ÷ 17 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>17</span></span></b>."
+    },
+    {
+     "q": "Une classe de 30 élèves compte 10 filles. 7 filles et 13 garçons font du latin. On choisit un élève qui fait du latin. Quelle est la probabilité que ce soit une fille ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>30</span></span>"
+     ],
+     "a": 0,
+     "e": "On se restreint aux 20 latinistes : 7 ÷ 20 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "Une usine a deux machines. A fabrique 60 % des pièces, dont 3 % sont défectueuses ; B fabrique le reste, dont 5 % sont défectueuses. Quelle est la probabilité qu’une pièce soit fabriquée par A et défectueuse ?",
+     "c": [
+      "0,63",
+      "0,03",
+      "0,018",
+      "0,038"
+     ],
+     "a": 2,
+     "e": "P(A ∩ D) = P(A) × P<sub>A</sub>(D) = 0,6 × 0,03 = <b>0,018</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 20,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "premiere"
+}
