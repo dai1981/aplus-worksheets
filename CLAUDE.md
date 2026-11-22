@@ -1405,7 +1405,10 @@ domain に F Relazioni e funzioni を足した。座標は「P(3; 5)」（セミ
 Prima media: 1. insiemi ✓ 2. numeri-naturali-e-operazioni ✓ 4. potenze ✓ 5. espressioni ✓ 6. divisibilita-e-numeri-primi ✓ 7. mcd-e-mcm ✓ 8. frazioni ✓ 9. operazioni-con-le-frazioni ✓ 10. enti-geometrici-e-segmenti ✓ 11. angoli ✓ 12. rette-parallele-e-perpendicolari ✓ 13. triangoli ✓ 14. poligoni-e-quadrilateri ✓ 15. statistica ✓
 Seconda media: 1. numeri-decimali-e-frazioni ✓ 2. radice-quadrata ✓ 3. rapporti-e-proporzioni ✓ 4. proporzionalita-diretta-e-inversa ✓ 5. percentuali ✓ 6. piano-cartesiano-e-grafici ✓ 7. area-dei-poligoni ✓ 8. teorema-di-pitagora ✓ 9. applicazioni-del-teorema-di-pitagora ✓ 10. trasformazioni-isometriche ✓ 11. similitudine-e-talete ✓ 12. probabilita ✓
 
-IT の次: terza media（gen_it_matematica_m3_*、seed 713NN、catalog に sort 8）
+Terza media（gen_it_matematica_m3_*、seed 713NN。単項式・多項式の部品は `tools/it_m3.py`（mono・P・show・mul・add・evalp）。負の数は sgn で「+3／−3」。π の答えは「10π cm」の形か 3,14）: 1. numeri-relativi ✓ 2. operazioni-con-i-numeri-relativi ✓ 3. calcolo-letterale-monomi ✓ 4. polinomi-e-prodotti-notevoli ✓ 5. equazioni-di-primo-grado ✓ 6. problemi-con-le-equazioni ✓ 7. piano-cartesiano-e-retta ✓ 8. circonferenza-e-cerchio ✓ 9. lunghezza-della-circonferenza-e-area-del-cerchio ✓ 10. poliedri-prismi-e-piramidi ✓ 11. solidi-di-rotazione ✓ 12. probabilita-di-eventi-composti ✓ 13. statistica-e-indici-di-posizione ✓
+misure の out に circonferenz（lunghezza-della-circonferenza は geometria だけ）
+
+IT / Matematica は classe prima〜terza media まで完了。次は GDP 順で次の国（scuola secondaria di secondo grado は Indicazioni nazionali per i licei で別）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

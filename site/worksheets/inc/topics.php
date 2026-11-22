@@ -186,7 +186,7 @@ function topic_defs_it() {
             'in' => '/problemi|compravendita/', 'out' => '/^$/',
             'blurb' => 'Problemi con una o due operazioni, dati utili e inutili, domande nascoste, problemi con l’euro e le misure.'),
         'misure' => array('name' => 'Misure',
-            'in' => '/misure|lunghezz|peso|capacit|euro|orologio|tempo/', 'out' => '/^$/',
+            'in' => '/misure|lunghezz|peso|capacit|euro|orologio|tempo/', 'out' => '/circonferenz/',
             'blurb' => 'Misure di lunghezza, peso e capacità, equivalenze, l’euro, l’orologio e la durata del tempo.'),
         'geometria' => array('name' => 'Geometria',
             'in' => '/linee|angoli|figure|poligon|perimetro|solidi|simmetria|percorsi|cerchio|circonferenz|trasformazion|cartesian|triangol|quadrilater|isometri|segmenti|rette|pitagora|similitudine|poliedri|rotazione|(^|-)area(-|$)/', 'out' => '/^$/',
