@@ -115,7 +115,7 @@ def art(p):
 
 
 # ------------------------------------------------------------ questions
-def mcq(q, correct, cands, e):
+def mcq(q, correct, cands, e, neg=False):
     """4 択：正解＋重複しない誤答 3 つ。足りないときは答えの数を ±1、±2 … した近い数で補う。"""
     correct = str(correct)
     seen = {correct}
@@ -124,7 +124,7 @@ def mcq(q, correct, cands, e):
         if c is None:
             continue
         c = str(c)
-        if c in seen or c == "" or c.startswith("-") or c.startswith("−"):
+        if c in seen or c == "" or (not neg and (c.startswith("-") or c.startswith("−"))):
             continue
         seen.add(c)
         pick.append(c)
@@ -198,7 +198,7 @@ def make_unit(rnd, slug, dom, std_text, title, short_title, meta_desc,
     write_unit("it", "matematica", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
         "domain": dname, "standard_code": "%s · %s" % (gname, dname), "standard_url": STD_URL,
-        "standard_text": std_text + " (sintesi degli obiettivi di apprendimento al termine della classe terza, Indicazioni nazionali)",
+        "standard_text": std_text + " (sintesi degli obiettivi di apprendimento al termine della classe %s, Indicazioni nazionali)" % ("quinta" if grade in ("classe-quarta", "classe-quinta") else "terza"),
         "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
         "body_html": body_html, "faq": [{"q": q, "a": a} for q, a in faq], "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })

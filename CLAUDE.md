@@ -1376,7 +1376,19 @@ IT / Matematica / Classe terza
 8. divisioni ✓ 9. moltiplicare-e-dividere-per-10-100-1000 ✓ 10. frazioni ✓ 11. numeri-decimali ✓ 12. problemi ✓ 13. misure-di-lunghezza ✓ 14. peso-e-capacita ✓
 15. euro ✓ 16. orologio-e-tempo ✓ 17. linee-e-angoli ✓ 18. figure-piane-e-perimetro ✓ 19. solidi ✓ 20. simmetria-e-percorsi ✓ 21. dati-e-probabilita ✓
 
-IT の次: classe quinta（INVALSI の学年）→ classe seconda（INVALSI）→ classe quarta → classe prima → scuola secondaria di primo grado（prima〜terza media）。catalog.json に学年を足す
+IT / Matematica / Classe quinta（INVALSI の学年。数は 10 億まで、小数は 1000 分の 1 まで、負の数は「−」（mcq(…, neg=True)））— 生成スクリプトは `gen_it_matematica_c5_*`（seed は 7050N）。make_unit は classe-quarta・quinta で standard_text の末尾を「al termine della classe quinta」に
+1. grandi-numeri ✓ 2. numeri-relativi ✓ 3. numeri-romani ✓ 4. numeri-decimali ✓ 5. addizioni-e-sottrazioni-con-i-decimali ✓ 6. moltiplicazioni-e-divisioni-con-i-decimali ✓ 7. divisioni-con-due-cifre-al-divisore ✓
+8. multipli-divisori-e-numeri-primi ✓ 9. potenze ✓ 10. espressioni ✓ 11. frazioni ✓ 12. operazioni-con-le-frazioni ✓ 13. percentuali ✓ 14. compravendita ✓ 15. problemi ✓
+16. misure-ed-equivalenze ✓ 17. perimetro-e-area-dei-poligoni ✓ 18. cerchio-e-circonferenza ✓ 19. solidi-e-volume ✓ 20. trasformazioni-e-piano-cartesiano ✓ 21. statistica-e-probabilita ✓
+
+IT / Matematica / Classe seconda（INVALSI の学年。100 まで。文は短く、絵を多く）— 生成スクリプトは `gen_it_matematica_c2_*`（seed は 7020N）、絵の部品は `tools/it_c2.py`（k_pics・de_k2 の絵にイタリア語の aria-label：COSE（名詞の単数・複数・性）、cose・nome・un_・quanti（Quanti/Quante）、riga・gruppi・tabella100・punti・retta100・mucchio）。
+線・図形・立体・対称・データは classe terza の生成スクリプトの問題関数を R を入れ替えて再利用
+1. numeri-fino-a-100 ✓ 2. confrontare-e-ordinare-i-numeri ✓ 3. pari-e-dispari ✓ 4. addizioni-entro-100 ✓ 5. sottrazioni-entro-100 ✓ 6. addizioni-e-sottrazioni-in-colonna ✓ 7. la-moltiplicazione ✓
+8. tabelline ✓ 9. la-divisione ✓ 10. doppio-e-meta ✓ 11. problemi ✓ 12. euro ✓ 13. orologio-e-calendario ✓ 14. misure ✓ 15. linee-e-regioni ✓ 16. figure-e-solidi ✓ 17. simmetria-e-percorsi ✓ 18. classificazioni-e-dati ✓
+
+トピック（topic_defs_it）：potenze・pari-e-dispari・espressioni→numeri、doppio→moltiplicazione、percentuali→frazioni-e-decimali、compravendita→problemi、cerchio・trasformazioni・cartesiano→geometria
+
+IT の次: classe quarta → classe prima → scuola secondaria di primo grado（prima〜terza media）。catalog.json に学年を足す
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
