@@ -20,6 +20,8 @@ DOMAIN = {
     "E": "Espace et géométrie",
     "D": "Organisation et gestion des données",
 }
+STD_URL_C3 = "https://www.education.gouv.fr/bo/2025/Hebdo16/MENE2504620A"
+DOMAIN_C3 = dict(DOMAIN, D="Organisation et gestion de données et probabilités", P="Proportionnalité")
 GIRLS = ["Emma", "Léa", "Chloé", "Inès", "Jade", "Louise", "Manon", "Camille", "Zoé", "Lina", "Alice", "Rose", "Ambre", "Nour"]
 BOYS = ["Lucas", "Hugo", "Nathan", "Louis", "Gabriel", "Arthur", "Jules", "Adam", "Léo", "Tom", "Raphaël", "Sacha", "Noah", "Malo"]
 NB = " "
@@ -218,9 +220,11 @@ def make_unit(rnd, slug, dom, std_text, title, seo_title, short_title, meta_desc
             allq.add(k)
     balance(sets, rnd)
     title, seo_title, short_title, meta_desc, key_big, key_sub = [fp(plain_text(x)) for x in (title, seo_title, short_title, meta_desc, key_big, key_sub)]
+    c3 = grade in ("cm1", "cm2")
+    dname = (DOMAIN_C3 if c3 else DOMAIN)[dom]
     write_unit("fr", "maths", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
-        "domain": DOMAIN[dom], "standard_code": "%s · %s" % (grade.upper(), DOMAIN[dom]), "standard_url": STD_URL,
+        "domain": dname, "standard_code": "%s · %s" % (grade.upper(), dname), "standard_url": STD_URL_C3 if c3 else STD_URL,
         "standard_text": fp(std_text), "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
         "body_html": body_html, "faq": [{"q": fp(q), "a": fp(a)} for q, a in faq], "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })

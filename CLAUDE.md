@@ -1312,7 +1312,18 @@ FR / Maths / CE2
 13. masses-et-contenances ✓ 14. heures-et-durees ✓ 15. monnaie ✓ 16. solides ✓ 17. figures-planes-et-angles-droits ✓ 18. symetrie-axiale ✓
 19. se-reperer-et-se-deplacer ✓ 20. tableaux-et-diagrammes ✓
 
-FR の次: CM1・CM2（cycle 3）→ CE1・CP → 6e〜3e（collège）。catalog.json に学年を足す
+FR / Maths / CM1・CM2（Programmes 2025 du cycle 3、BO n°16 du 17 avril 2025。CM1 は 2025 年度、CM2 は 2026 年度から）— grade `cm1`（sort 4）・`cm2`（sort 5）。
+生成スクリプトは `gen_fr_maths_cm1_*` に `build(lv)`（lv = 1 または 2）を書き、`gen_fr_maths_cm2_*` は `build(2)` を呼ぶだけ（seed は 52100 + 100 × lv + 番号）。共通部品は `tools/fr_c3.py`（fr_common の上に dz（整数 → コンマの小数）・lettres_big（999 999 999 までの数詞）・nomfrac（3/4 → trois quarts）・RANGS／RANGP・de（d’élèves）・droite_dec・unit（seo_title を自動、standard_text に「(résumé du programme 2025 du cycle 3)」））。
+fr_common.make_unit は cm1・cm2 で standard_url を BO 2025（STD_URL_C3）にし、domain に「P」Proportionnalité と「D」Organisation et gestion de données et probabilités を使う。
+範囲：CM1 は 999 999・小数 2 桁・分母 20 まで、CM2 は 999 999 999・小数 3 桁・分母 60 まで。CE2 の生成スクリプトの問題関数（時刻・グラフ・図形・立体・対称）を R を入れ替えて再利用。
+set を作ってから list にするときは sorted() してから shuffle（文字列を含む set は実行ごとに順番が変わる）。トピックに nombres-decimaux と algebre-et-proportionnalite を足した
+1. nombres（cm1: nombres-jusqu-a-999-999、cm2: nombres-jusqu-a-999-999-999）✓ 2. comparer-encadrer-et-ranger-les-nombres ✓ 3. multiples-et-diviseurs ✓ 4. calcul-mental ✓ 5. addition-et-soustraction-posees ✓
+6. multiplication-posee ✓ 7. division（cm1: division-euclidienne、cm2: division-decimale）✓ 8. fractions ✓ 9. comparer-additionner-et-soustraire-des-fractions ✓
+10. fraction-d-une-quantite（cm2: fraction-d-une-quantite-et-multiplication）✓ 11. fractions-decimales ✓ 12. nombres-decimaux ✓ 13. egalites-a-trous-et-programmes-de-calcul ✓ 14. problemes ✓
+15. proportionnalite ✓ 16. longueurs-et-perimetres ✓ 17. masses-et-contenances ✓ 18. aires ✓ 19. angles ✓ 20. heures-et-durees ✓ 21. figures-planes ✓ 22. symetrie-axiale ✓
+23. solides-et-patrons ✓ 24. tableaux-et-graphiques ✓ 25. probabilites ✓
+
+FR の次: CE1・CP（cycle 2、BO 2024）→ 6e〜3e（collège）。catalog.json に学年を足す
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
