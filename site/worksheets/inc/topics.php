@@ -150,10 +150,10 @@ function topic_defs_fr() {
             'in' => '/longueur|masse|contenance|perimetre|monnaie|heure|duree|mesure|(^|-)aires|volume/', 'out' => '/^$/',
             'blurb' => 'Longueurs et périmètres, masses, contenances, aires, lire l’heure et calculer des durées, la monnaie et les conversions.'),
         'geometrie' => array('name' => 'Espace et géométrie',
-            'in' => '/solide|figure|symetrie|repere|angle|geometrie|deplacer|droite|triangle|quadrilatere|mediatrice|cercle|parallelogramme|translation|pythagore|thales|trigonometr|vecteur|sphere|pyramide/', 'out' => '/^$/',
+            'in' => '/solide|figure|symetrie|repere|angle|geometrie|deplacer|droite|triangle|quadrilatere|mediatrice|cercle|parallelogramme|translation|pythagore|thales|trigonometr|vecteur|sphere|pyramide|reperage|milieu|cone/', 'out' => '/^$/',
             'blurb' => 'Solides, figures planes, angles droits, symétrie axiale, se repérer et se déplacer sur un plan ou un quadrillage.'),
         'donnees' => array('name' => 'Organisation et gestion des données',
-            'in' => '/tableau|diagramme|donnees|graphique|probabilit/', 'out' => '/^$/',
+            'in' => '/tableau|diagramme|donnees|graphique|probabilit|statistique/', 'out' => '/^$/',
             'blurb' => 'Lire et compléter des tableaux, diagrammes en barres, courbes et diagrammes circulaires, et premières probabilités.'),
     );
 }
