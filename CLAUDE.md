@@ -1394,7 +1394,12 @@ IT / Matematica / Classe quarta（数は 999 999 まで、小数は 1000 分の 
 8. numeri-decimali ✓ 9. operazioni-con-i-decimali ✓ 10. problemi ✓ 11. misure ✓ 12. compravendita ✓ 13. misure-di-tempo ✓ 14. angoli ✓
 15. triangoli ✓ 16. quadrilateri ✓ 17. perimetro ✓ 18. area ✓ 19. isometrie ✓ 20. statistica-e-probabilita ✓
 
-IT の次: classe prima → scuola secondaria di primo grado（prima〜terza media。grade は prima-media・seconda-media・terza-media、unit.php に年齢あり）。catalog.json に学年を足す
+IT / Matematica / Classe prima（20 まで。とても短い文、ほぼ全問に絵）— 生成スクリプトは `gen_it_matematica_c1_*`（seed は 7010N）、絵の部品は `tools/it_c1.py`（k_pics の絵にイタリア語の aria-label：dieci・dado・due（2 つの群と記号）・barrati・scatola・salti・coppia・regoli・carte・retta・piatto・ritmo、num_parola、Q）。
+線・図形・位置・測定・時間・分類は classe seconda の生成スクリプトの問題関数を R を入れ替えて再利用（範囲外は包んで落とす）。トピック：amici-del→addizione-e-sottrazione
+1. numeri-fino-a-10 ✓ 2. numeri-fino-a-20 ✓ 3. confrontare-i-numeri ✓ 4. amici-del-10 ✓ 5. addizioni-entro-10 ✓ 6. sottrazioni-entro-10 ✓ 7. addizioni-e-sottrazioni-entro-20 ✓
+8. problemi ✓ 9. euro ✓ 10. misure ✓ 11. il-tempo ✓ 12. linee-e-figure ✓ 13. posizioni-e-percorsi ✓ 14. ritmi-classificazioni-e-dati ✓
+
+IT の次: scuola secondaria di primo grado（prima〜terza media。grade は prima-media・seconda-media・terza-media、unit.php に年齢あり）。catalog.json に学年を足す
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

@@ -174,7 +174,7 @@ function topic_defs_it() {
             'in' => '/numeri|ordinare|potenz|pari-e-dispari|espression|multipli/', 'out' => '/decimal|frazion/',
             'blurb' => 'Leggere, scrivere e scomporre i numeri, il valore posizionale delle cifre, confrontare e ordinare i numeri sulla retta.'),
         'addizione-e-sottrazione' => array('name' => 'Addizione e sottrazione',
-            'in' => '/addizion|sottrazion|calcolo-mentale/', 'out' => '/^$/',
+            'in' => '/addizion|sottrazion|calcolo-mentale|amici-del/', 'out' => '/^$/',
             'blurb' => 'Calcolo mentale, addizioni e sottrazioni in colonna con il cambio, prova e proprietà delle operazioni.'),
         'moltiplicazione-e-divisione' => array('name' => 'Moltiplicazione e divisione',
             'in' => '/moltiplic|division|tabellin|doppio/', 'out' => '/^$/',
