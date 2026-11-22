@@ -122,7 +122,7 @@ function preview_render($c) {
     foreach (pv_wrap($c['paper_title'], 22, pv_font('b'), $px2 - $px1 - 60, 2) as $l) {
         imagettftext($im, 22, 0, $x, $y, $ink, pv_face($l, 'b'), $l); $y += 32;
     }
-    imagettftext($im, 13, 0, $x, $y, $green, pv_font('b'), strtoupper($c['paper_sub']));
+    imagettftext($im, 13, 0, $x, $y, $green, pv_font('b'), pv_up($c['paper_sub']));
     $y += 16;
     imagesetthickness($im, 2); imageline($im, $x, $y, $px2 - 30, $y, $line); imagesetthickness($im, 1);
     $y += 34;
@@ -156,7 +156,7 @@ function preview_render($c) {
     pv_logo($im, $lx + 18, 74, 18, $green);
     imagettftext($im, 22, 0, $lx + 48, 83, $green, pv_font('b'), sprintf(T('pv_brand'), SITE_NAME));
     $y = 150;
-    foreach (pv_wrap(strtoupper($c['label']), 15, pv_font('b'), 580, 2) as $l) {
+    foreach (pv_wrap(pv_up($c['label']), 15, pv_font('b'), 580, 2) as $l) {
         imagettftext($im, 15, 0, $lx, $y, $muted, pv_face($l, 'b'), $l); $y += 24;
     }
     $y += 34;
@@ -198,7 +198,7 @@ function pin_render($c) {
     pv_logo($im, $lx + 20, 86, 20, $green);
     imagettftext($im, 26, 0, $lx + 54, 96, $green, pv_font('b'), sprintf(T('pv_brand'), SITE_NAME));
     $y = 178;
-    foreach (pv_wrap(strtoupper($c['label']), 20, pv_font('b'), $W - 2 * $lx, 2) as $l) {
+    foreach (pv_wrap(pv_up($c['label']), 20, pv_font('b'), $W - 2 * $lx, 2) as $l) {
         imagettftext($im, 20, 0, $lx, $y, $muted, pv_face($l, 'b'), $l); $y += 30;
     }
     $y += 20;
@@ -288,6 +288,9 @@ function preview_cache_check($tag) {
     }
 }
 
+/* upper case that keeps accents (É, Ü) */
+function pv_up($s) { return function_exists('mb_strtoupper') ? mb_strtoupper($s, 'UTF-8') : strtoupper($s); }
+
 function preview_route($seg, $kind = 'preview') {
     global $PV_KIND;
     $PV_KIND = $kind;
@@ -356,7 +359,7 @@ function preview_route($seg, $kind = 'preview') {
     }
     pv_out($kind, array(
         'label' => gs($grade['name'], $subject['name'])
-                   . ($u['standard_code'] ? ' · ' . preg_replace('/^' . preg_quote($grade['name'], '/') . ':\s*/', '', $u['standard_code']) : ''),
+                   . ($u['standard_code'] ? ' · ' . preg_replace('/^' . preg_quote($grade['name'], '/') . '\s*[:·]\s*/u', '', $u['standard_code']) : ''),
         'title' => $u['short_title'],
         'chips' => array(T('pv_lesson'), T('pv_100'), sprintf(T('pv_print'), $paper === 'LETTER' ? 'Letter' : $paper), T('pv_key')),
         'paper_title' => $u['short_title'], 'paper_sub' => sprintf(T('pv_practice'), $grade['name']),

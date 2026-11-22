@@ -110,9 +110,40 @@ function topic_defs_de() {
     );
 }
 
+/* France: French unit slugs, French names */
+function topic_defs_fr() {
+    return array(
+        'nombres' => array('name' => 'Nombres et numération',
+            'in' => '/nombres|numeration|ranger|comparer-les/', 'out' => '/fraction|decima/',
+            'blurb' => 'Lire, écrire et décomposer les nombres, les unités de numération, comparer et ranger, placer des nombres sur une droite graduée.'),
+        'addition-et-soustraction' => array('name' => 'Addition et soustraction',
+            'in' => '/addition|soustraction|calcul-mental/', 'out' => '/fraction/',
+            'blurb' => 'Calcul mental, compléments, addition et soustraction posées avec retenues, et problèmes additifs.'),
+        'multiplication-et-division' => array('name' => 'Multiplication et division',
+            'in' => '/multiplication|division|tables|partage/', 'out' => '/^$/',
+            'blurb' => 'Tables de multiplication, multiplier par 10 et 100, multiplication posée, partages et groupements, division et problèmes multiplicatifs.'),
+        'fractions' => array('name' => 'Fractions',
+            'in' => '/fraction/', 'out' => '/^$/',
+            'blurb' => 'Lire et écrire des fractions, les placer, les comparer, trouver des fractions égales, additionner et soustraire des fractions.'),
+        'problemes' => array('name' => 'Résolution de problèmes',
+            'in' => '/probleme/', 'out' => '/^$/',
+            'blurb' => 'Problèmes additifs et multiplicatifs en une ou plusieurs étapes, comparaisons « de plus » et « fois plus ».'),
+        'grandeurs-et-mesures' => array('name' => 'Grandeurs et mesures',
+            'in' => '/longueur|masse|contenance|perimetre|monnaie|heure|duree|mesure/', 'out' => '/^$/',
+            'blurb' => 'Longueurs et périmètres, masses, contenances, lire l’heure et calculer des durées, la monnaie et les conversions.'),
+        'geometrie' => array('name' => 'Espace et géométrie',
+            'in' => '/solide|figure|symetrie|repere|angle|geometrie|deplacer/', 'out' => '/^$/',
+            'blurb' => 'Solides, figures planes, angles droits, symétrie axiale, se repérer et se déplacer sur un plan ou un quadrillage.'),
+        'donnees' => array('name' => 'Organisation et gestion des données',
+            'in' => '/tableau|diagramme|donnees|graphique/', 'out' => '/^$/',
+            'blurb' => 'Lire et compléter des tableaux, lire et construire des diagrammes en barres, tableaux à double entrée.'),
+    );
+}
+
 function topic_defs($country = null) {
     if ($country === 'tw') return topic_defs_tw();
     if ($country === 'de') return topic_defs_de();
+    if ($country === 'fr') return topic_defs_fr();
     $d = array(
         'fractions' => array('name' => 'Fractions',
             'in' => '/fraction|halves|thirds|fourths|quarters|mixed-num|improper|fair-shares|partition-shapes|operations-with-rational/',
@@ -346,6 +377,7 @@ function topic_range($units) {
     $last = $units[count($units) - 1]['grade_name'];
     if ($first === $last) return $first;
     if ($units[0]['country'] === 'tw') return $first . '到' . $last;
+    if ($units[0]['country'] === 'fr') return 'du ' . $first . ' au ' . $last;
     return $units[0]['country'] === 'de' ? $first . ' bis ' . $last : $first . ' to ' . $last;
 }
 

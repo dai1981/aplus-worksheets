@@ -139,7 +139,7 @@ page_head(array(
 ?>
 <div class="pr-bar">
   <a href="<?= url($gbase) ?>"><?= h($kind) ?></a>
-  <a href="<?= url($upath) ?>"><?= h(T('lesson_link')) ?>: <?= h($u['short_title']) ?></a>
+  <a href="<?= url($upath) ?>"><?= h(T('lesson_link')) ?><?= T('colon') === 'colon' ? ':' : T('colon') ?> <?= h($u['short_title']) ?></a>
   <span class="sp"></span>
   <span class="pr-note"><?= h(T('print_note')) ?></span>
   <?php if ($u['pdf_url']): ?><a class="pr-dl" href="<?= h($u['pdf_url']) ?>" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4 3.6 3.6V3h2zM4 19h16v2H4v-2z"/></svg><?= h(T('pdf_btn')) ?></a><?php endif; ?>

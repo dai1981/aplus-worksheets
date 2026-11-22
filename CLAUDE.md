@@ -1300,6 +1300,20 @@ Class 12: 1. relations-and-functions ✓ 2. inverse-trigonometric-functions ✓ 
 
 IN / Maths は Class 1〜12 まで完了。次は GDP 順で次の国
 
+FR / Maths（Programmes 2024 du cycle 2、BO n°41 du 31 octobre 2024、2025 年度から）— country `fr`（name「France」、lang `fr`、hreflang fr-fr）、subject `maths`（Maths）、grade `ce2`（name「CE2」、sort 3、8〜9歳。cp 1・ce1 2・ce2 3・cm1 4・cm2 5、unit.php に年齢あり）、A4。生成スクリプトは `gen_fr_maths_ce2_*`、共通部品は `tools/fr_common.py`（num・dec・eur（3,50 €・45 c）・hm（8 h 15）・dur（1 h 25 min）・fp（: ; ? ! の前にノーブレークスペース。mcq が q と e に自動で使う）・Kids（名前と il/elle）・mcq・mix・lesson（Comment faire → Exemple → Erreurs fréquentes）・make_unit・lettres（数詞）・図：droite・numeration・blocs・barres・argent_svg（€ の硬貨と札）・solide_svg・horloge・posee（筆算）・bande・disque・droite_frac（分数））。
+フランス語、tu で話しかける短い文。記号は × と ÷。1 000 以上はノーブレークスペース区切り、小数はコンマ。アポストロフィは ’（まっすぐな ' は使わない）。「de」「que」「à le」の縮約に注意（d’élèves、qu’Ambre、au rond）。
+short_title は冠詞なしで大文字始まり（「Fractions」「Addition posée」）。standard_code は「CE2 · Grandeurs et mesures」形式（domain は Nombres, calcul et résolution de problèmes／Grandeurs et mesures／Espace et géométrie／Organisation et gestion des données）、standard_text は要約、standard_url は BO 2024 n°41。
+UI 文言は core.php の 'fr'（js の桁区切りはノーブレークスペース、'colon' で「 :」）。トピックは topics.php の `topic_defs_fr()`（nombres・addition-et-soustraction・multiplication-et-division・fractions・problemes・grandeurs-et-mesures・geometrie・donnees）。topic.php・topics.php に $fr の文言。preview.php の大文字は mb_strtoupper（pv_up）
+symétrie・solides は DE Klasse 3 の生成スクリプトの関数（grid・mirror・wuerfelnetz・bauplan）を R を入れ替えて使い、文字をフランス語に置き換える
+
+FR / Maths / CE2
+1. nombres-jusqu-a-10-000 ✓ 2. comparer-et-ranger-les-nombres ✓ 3. calcul-mental ✓ 4. addition-posee ✓ 5. soustraction-posee ✓ 6. tables-de-multiplication ✓
+7. multiplication-posee ✓ 8. division-et-partages ✓ 9. fractions ✓ 10. additionner-et-soustraire-des-fractions ✓ 11. problemes ✓ 12. longueurs-et-perimetres ✓
+13. masses-et-contenances ✓ 14. heures-et-durees ✓ 15. monnaie ✓ 16. solides ✓ 17. figures-planes-et-angles-droits ✓ 18. symetrie-axiale ✓
+19. se-reperer-et-se-deplacer ✓ 20. tableaux-et-diagrammes ✓
+
+FR の次: CM1・CM2（cycle 3）→ CE1・CP → 6e〜3e（collège）。catalog.json に学年を足す
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
