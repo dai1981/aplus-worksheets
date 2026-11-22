@@ -1,0 +1,1157 @@
+{
+ "slug": "echantillonnage",
+ "title": "Échantillonnage et estimation",
+ "seo_title": "Échantillonnage seconde : fiches et exercices avec corrigé",
+ "short_title": "Échantillonnage",
+ "domain": "Statistiques et probabilités",
+ "standard_code": "Seconde · Statistiques et probabilités",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602914A",
+ "standard_text": "Calculer une fréquence observée dans un échantillon ; comprendre la fluctuation d’échantillonnage et la loi des grands nombres ; utiliser la borne 1/√n pour estimer une proportion ou juger un écart ; simuler des échantillons (résumé du programme 2026 de seconde)",
+ "meta_desc": "Fiches de maths seconde sur l’échantillonnage : fréquence observée, fluctuation, loi des grands nombres, écart |f − p| ⩽ 1/√n, estimation et simulation. 100 exercices corrigés.",
+ "key_big": "|f − p| ⩽ 1/√n dans au moins 95 % des cas",
+ "key_sub": "Estimation : [f − 1/√n ; f + 1/√n]",
+ "body_html": "<h2>Comment faire</h2><p>Un <b>échantillon</b> de taille n est formé de n répétitions indépendantes d’une expérience à deux issues. La fréquence observée f varie d’un échantillon à l’autre : c’est la <b>fluctuation d’échantillonnage</b>.</p><p>Quand n est grand, f se rapproche de la probabilité p (loi des grands nombres) ; dans au moins 95 % des cas, |f − p| ⩽ 1/√n.</p><p>On peut donc estimer une proportion inconnue p par l’intervalle [f − 1/√n ; f + 1/√n].</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>n = 400, f = 0,42</p><p class='sn-ex-s'>1/√400 = 0,05</p><p class='sn-ex-a'>Réponse : p ∈ [0,37 ; 0,47] (estimation)</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>Croire que f = p</td><td>f fluctue autour de p.</td></tr><tr><td>Utiliser 1/n au lieu de 1/√n</td><td>Pour n = 400 : 1/√n = 0,05.</td></tr><tr><td>Conclure sur 10 essais</td><td>Un petit échantillon fluctue beaucoup.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Pourquoi 1/√n ?",
+   "a": "C’est un ordre de grandeur de la fluctuation : pour diviser l’écart par 2, il faut multiplier la taille de l’échantillon par 4."
+  },
+  {
+   "q": "Est-ce une certitude ?",
+   "a": "Non : environ 95 % des échantillons vérifient |f − p| ⩽ 1/√n, pas tous."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Fréquence observée",
+   "items": [
+    {
+     "q": "La probabilité théorique est p = 0,25. Sur 400 essais, la fréquence observée est f = 0,22. Quel est l’écart |f − p| ?",
+     "c": [
+      "12",
+      "−0,03",
+      "0,25",
+      "0,03"
+     ],
+     "a": 3,
+     "e": "|0,22 − 0,25| = <b>0,03</b>."
+    },
+    {
+     "q": "La probabilité théorique est p = 0,6. Sur 50 essais, la fréquence observée est f = 0,54. Quel est l’écart |f − p| ?",
+     "c": [
+      "−0,06",
+      "0,06",
+      "0,6",
+      "3"
+     ],
+     "a": 1,
+     "e": "|0,54 − 0,6| = <b>0,06</b>."
+    },
+    {
+     "q": "La probabilité théorique est p = 0,6. Sur 400 essais, la fréquence observée est f = 0,56. Quel est l’écart |f − p| ?",
+     "c": [
+      "−0,04",
+      "0,6",
+      "16",
+      "0,04"
+     ],
+     "a": 3,
+     "e": "|0,56 − 0,6| = <b>0,04</b>."
+    },
+    {
+     "q": "Dans un échantillon de 100 pièces, 23 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "23",
+      "0,23",
+      "0,77",
+      "0,023"
+     ],
+     "a": 1,
+     "e": "f = 23 ÷ 100 = <b>0,23</b>."
+    },
+    {
+     "q": "Dans un échantillon de 50 pièces, 9 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "0,18",
+      "0,09",
+      "0,82",
+      "9"
+     ],
+     "a": 0,
+     "e": "f = 9 ÷ 50 = <b>0,18</b>."
+    },
+    {
+     "q": "Dans un échantillon de 50 pièces, 7 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "0,86",
+      "0,14",
+      "0,07",
+      "7"
+     ],
+     "a": 1,
+     "e": "f = 7 ÷ 50 = <b>0,14</b>."
+    },
+    {
+     "q": "La probabilité théorique est p = 0,5. Sur 2 500 essais, la fréquence observée est f = 0,4996. Quel est l’écart |f − p| ?",
+     "c": [
+      "0,5",
+      "1",
+      "0,0004",
+      "−0,0004"
+     ],
+     "a": 2,
+     "e": "|0,4996 − 0,5| = <b>0,0004</b>."
+    },
+    {
+     "q": "Dans un échantillon de 500 pièces, 318 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "0,636",
+      "318",
+      "0,364",
+      "3,18"
+     ],
+     "a": 0,
+     "e": "f = 318 ÷ 500 = <b>0,636</b>."
+    },
+    {
+     "q": "Dans un échantillon de 2 500 pièces, 506 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "0,7976",
+      "5,06",
+      "506",
+      "0,2024"
+     ],
+     "a": 3,
+     "e": "f = 506 ÷ 2 500 = <b>0,2024</b>."
+    },
+    {
+     "q": "Dans un échantillon de 1 000 pièces, 256 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "0,744",
+      "2,56",
+      "0,256",
+      "256"
+     ],
+     "a": 2,
+     "e": "f = 256 ÷ 1 000 = <b>0,256</b>."
+    },
+    {
+     "q": "Dans un échantillon de 2 500 pièces, 726 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "0,2904",
+      "0,7096",
+      "7,26",
+      "726"
+     ],
+     "a": 0,
+     "e": "f = 726 ÷ 2 500 = <b>0,2904</b>."
+    },
+    {
+     "q": "Dans un échantillon de 1 000 pièces, 250 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "250",
+      "0,75",
+      "0,25",
+      "2,5"
+     ],
+     "a": 2,
+     "e": "f = 250 ÷ 1 000 = <b>0,25</b>."
+    },
+    {
+     "q": "La probabilité théorique est p = 0,2. Sur 1 000 essais, la fréquence observée est f = 0,247. Quel est l’écart |f − p| ?",
+     "c": [
+      "0,047",
+      "0,2",
+      "47",
+      "0,447"
+     ],
+     "a": 0,
+     "e": "|0,247 − 0,2| = <b>0,047</b>."
+    },
+    {
+     "q": "Dans un échantillon de 100 pièces, 29 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "29",
+      "0,71",
+      "0,029",
+      "0,29"
+     ],
+     "a": 3,
+     "e": "f = 29 ÷ 100 = <b>0,29</b>."
+    },
+    {
+     "q": "La probabilité théorique est p = 0,4. Sur 500 essais, la fréquence observée est f = 0,384. Quel est l’écart |f − p| ?",
+     "c": [
+      "−0,016",
+      "0,4",
+      "8",
+      "0,016"
+     ],
+     "a": 3,
+     "e": "|0,384 − 0,4| = <b>0,016</b>."
+    },
+    {
+     "q": "Dans un échantillon de 50 pièces, 15 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "0,15",
+      "0,7",
+      "0,3",
+      "15"
+     ],
+     "a": 2,
+     "e": "f = 15 ÷ 50 = <b>0,3</b>."
+    },
+    {
+     "q": "Dans un échantillon de 2 500 pièces, 1 247 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "0,5012",
+      "0,4988",
+      "1 247",
+      "12,47"
+     ],
+     "a": 1,
+     "e": "f = 1 247 ÷ 2 500 = <b>0,4988</b>."
+    },
+    {
+     "q": "La probabilité théorique est p = 0,3. Sur 1 000 essais, la fréquence observée est f = 0,339. Quel est l’écart |f − p| ?",
+     "c": [
+      "0,639",
+      "39",
+      "0,039",
+      "0,3"
+     ],
+     "a": 2,
+     "e": "|0,339 − 0,3| = <b>0,039</b>."
+    },
+    {
+     "q": "Dans un échantillon de 1 000 pièces, 515 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "0,485",
+      "0,515",
+      "515",
+      "5,15"
+     ],
+     "a": 1,
+     "e": "f = 515 ÷ 1 000 = <b>0,515</b>."
+    },
+    {
+     "q": "Dans un échantillon de 50 pièces, 16 sont défectueuses. Quelle est la fréquence observée de pièces défectueuses ?",
+     "c": [
+      "0,32",
+      "0,16",
+      "0,68",
+      "16"
+     ],
+     "a": 0,
+     "e": "f = 16 ÷ 50 = <b>0,32</b>."
+    }
+   ]
+  },
+  {
+   "title": "La borne 1/√n",
+   "items": [
+    {
+     "q": "p = 0,4, n = 400 et f = 0,325. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "on ne peut pas savoir",
+      "oui",
+      "seulement si n &gt; 1 000",
+      "non"
+     ],
+     "a": 3,
+     "e": "|f − p| = 0,075 et 1/√n = 0,05 : <b>non</b>."
+    },
+    {
+     "q": "Pour un échantillon de taille n = 625, que vaut 1/√n ?",
+     "c": [
+      "0,04",
+      "0,02",
+      "0,08",
+      "0,0016"
+     ],
+     "a": 0,
+     "e": "√625 = 25, donc 1/√n = <b>0,04</b>."
+    },
+    {
+     "q": "p = 0,25, n = 10 000 et f = 0,245. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "non",
+      "on ne peut pas savoir",
+      "oui",
+      "seulement si n &gt; 1 000"
+     ],
+     "a": 2,
+     "e": "|f − p| = 0,005 et 1/√n = 0,01 : <b>oui</b>."
+    },
+    {
+     "q": "p = 0,25, n = 625 et f = 0,31. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "seulement si n &gt; 1 000",
+      "on ne peut pas savoir",
+      "non",
+      "oui"
+     ],
+     "a": 2,
+     "e": "|f − p| = 0,06 et 1/√n = 0,04 : <b>non</b>."
+    },
+    {
+     "q": "p = 0,5, n = 400 et f = 0,425. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "non",
+      "oui",
+      "seulement si n &gt; 1 000",
+      "on ne peut pas savoir"
+     ],
+     "a": 0,
+     "e": "|f − p| = 0,075 et 1/√n = 0,05 : <b>non</b>."
+    },
+    {
+     "q": "Pour un échantillon de taille n = 10 000, que vaut 1/√n ?",
+     "c": [
+      "0,01",
+      "0,02",
+      "0,005",
+      "0,0001"
+     ],
+     "a": 0,
+     "e": "√10 000 = 100, donc 1/√n = <b>0,01</b>."
+    },
+    {
+     "q": "p = 0,3, n = 2 500 et f = 0,27. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "seulement si n &gt; 1 000",
+      "on ne peut pas savoir",
+      "oui",
+      "non"
+     ],
+     "a": 3,
+     "e": "|f − p| = 0,03 et 1/√n = 0,02 : <b>non</b>."
+    },
+    {
+     "q": "p = 0,5, n = 10 000 et f = 0,485. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "on ne peut pas savoir",
+      "oui",
+      "seulement si n &gt; 1 000",
+      "non"
+     ],
+     "a": 3,
+     "e": "|f − p| = 0,015 et 1/√n = 0,01 : <b>non</b>."
+    },
+    {
+     "q": "Pour un échantillon de taille n = 2 500, que vaut 1/√n ?",
+     "c": [
+      "0,01",
+      "0,02",
+      "0,04",
+      "0,0004"
+     ],
+     "a": 1,
+     "e": "√2 500 = 50, donc 1/√n = <b>0,02</b>."
+    },
+    {
+     "q": "p = 0,25, n = 25 et f = 0,35. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "on ne peut pas savoir",
+      "oui",
+      "seulement si n &gt; 1 000",
+      "non"
+     ],
+     "a": 1,
+     "e": "|f − p| = 0,1 et 1/√n = 0,2 : <b>oui</b>."
+    },
+    {
+     "q": "p = 0,5, n = 10 000 et f = 0,495. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "non",
+      "seulement si n &gt; 1 000",
+      "oui",
+      "on ne peut pas savoir"
+     ],
+     "a": 2,
+     "e": "|f − p| = 0,005 et 1/√n = 0,01 : <b>oui</b>."
+    },
+    {
+     "q": "p = 0,3, n = 25 et f = 0,4. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "on ne peut pas savoir",
+      "oui",
+      "non",
+      "seulement si n &gt; 1 000"
+     ],
+     "a": 1,
+     "e": "|f − p| = 0,1 et 1/√n = 0,2 : <b>oui</b>."
+    },
+    {
+     "q": "Pour un échantillon de taille n = 100, que vaut 1/√n ?",
+     "c": [
+      "0,2",
+      "0,01",
+      "0,05",
+      "0,1"
+     ],
+     "a": 3,
+     "e": "√100 = 10, donc 1/√n = <b>0,1</b>."
+    },
+    {
+     "q": "Pour un échantillon de taille n = 25, que vaut 1/√n ?",
+     "c": [
+      "0,2",
+      "0,1",
+      "0,04",
+      "0,4"
+     ],
+     "a": 0,
+     "e": "√25 = 5, donc 1/√n = <b>0,2</b>."
+    },
+    {
+     "q": "p = 0,3, n = 100 et f = 0,45. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "seulement si n &gt; 1 000",
+      "non",
+      "oui",
+      "on ne peut pas savoir"
+     ],
+     "a": 1,
+     "e": "|f − p| = 0,15 et 1/√n = 0,1 : <b>non</b>."
+    },
+    {
+     "q": "p = 0,3, n = 2 500 et f = 0,29. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "non",
+      "on ne peut pas savoir",
+      "oui",
+      "seulement si n &gt; 1 000"
+     ],
+     "a": 2,
+     "e": "|f − p| = 0,01 et 1/√n = 0,02 : <b>oui</b>."
+    },
+    {
+     "q": "p = 0,5, n = 100 et f = 0,65. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "on ne peut pas savoir",
+      "oui",
+      "seulement si n &gt; 1 000",
+      "non"
+     ],
+     "a": 3,
+     "e": "|f − p| = 0,15 et 1/√n = 0,1 : <b>non</b>."
+    },
+    {
+     "q": "p = 0,3, n = 10 000 et f = 0,295. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "seulement si n &gt; 1 000",
+      "on ne peut pas savoir",
+      "oui",
+      "non"
+     ],
+     "a": 2,
+     "e": "|f − p| = 0,005 et 1/√n = 0,01 : <b>oui</b>."
+    },
+    {
+     "q": "p = 0,4, n = 2 500 et f = 0,39. L’écart |f − p| est-il inférieur ou égal à 1/√n ?",
+     "c": [
+      "oui",
+      "non",
+      "on ne peut pas savoir",
+      "seulement si n &gt; 1 000"
+     ],
+     "a": 0,
+     "e": "|f − p| = 0,01 et 1/√n = 0,02 : <b>oui</b>."
+    },
+    {
+     "q": "Pour un échantillon de taille n = 400, que vaut 1/√n ?",
+     "c": [
+      "0,025",
+      "0,05",
+      "0,1",
+      "0,0025"
+     ],
+     "a": 1,
+     "e": "√400 = 20, donc 1/√n = <b>0,05</b>."
+    }
+   ]
+  },
+  {
+   "title": "Fluctuation et estimation",
+   "items": [
+    {
+     "q": "On simule N échantillons de taille n. Environ quelle proportion vérifie |f − p| ⩽ 1/√n quand n est grand ?",
+     "c": [
+      "au moins 95 % des échantillons",
+      "exactement 100 %",
+      "environ 5 %",
+      "environ 50 %"
+     ],
+     "a": 0,
+     "e": "Réponse : <b>au moins 95 % des échantillons</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 2 500, on observe une fréquence f = 0,48. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,46 ; 0,5]",
+      "[0,44 ; 0,52]",
+      "[0,48 ; 0,5]",
+      "[0,4796 ; 0,4804]"
+     ],
+     "a": 0,
+     "e": "1/√2 500 = 0,02 : <b>[0,46 ; 0,5]</b>."
+    },
+    {
+     "q": "Une pièce donne 7 « pile » sur 10 lancers. Peut-on conclure qu’elle est truquée ?",
+     "c": [
+      "non : sur 10 lancers, une telle fréquence est fréquente",
+      "non, car 7 est impair",
+      "oui, car 0,7 ≠ 0,5",
+      "oui, elle tombe trop souvent sur pile"
+     ],
+     "a": 0,
+     "e": "Réponse : <b>non : sur 10 lancers, une telle fréquence est fréquente</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 400, on observe une fréquence f = 0,7. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,7 ; 0,75]",
+      "[0,65 ; 0,75]",
+      "[0,6975 ; 0,7025]",
+      "[0,6 ; 0,8]"
+     ],
+     "a": 1,
+     "e": "1/√400 = 0,05 : <b>[0,65 ; 0,75]</b>."
+    },
+    {
+     "q": "Pour estimer la proportion de votants pour un candidat, on interroge…",
+     "c": [
+      "uniquement ses amis",
+      "les personnes d’un seul quartier",
+      "un échantillon aléatoire assez grand de la population",
+      "une seule personne"
+     ],
+     "a": 2,
+     "e": "Réponse : <b>un échantillon aléatoire assez grand de la population</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 100, on observe une fréquence f = 0,57. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,57 ; 0,67]",
+      "[0,47 ; 0,67]",
+      "[0,37 ; 0,77]",
+      "[0,56 ; 0,58]"
+     ],
+     "a": 1,
+     "e": "1/√100 = 0,1 : <b>[0,47 ; 0,67]</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 2 500, on observe une fréquence f = 0,53. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,51 ; 0,55]",
+      "[0,5296 ; 0,5304]",
+      "[0,49 ; 0,57]",
+      "[0,53 ; 0,55]"
+     ],
+     "a": 0,
+     "e": "1/√2 500 = 0,02 : <b>[0,51 ; 0,55]</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 2 500, on observe une fréquence f = 0,71. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,71 ; 0,73]",
+      "[0,67 ; 0,75]",
+      "[0,69 ; 0,73]",
+      "[0,7096 ; 0,7104]"
+     ],
+     "a": 2,
+     "e": "1/√2 500 = 0,02 : <b>[0,69 ; 0,73]</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 2 500, on observe une fréquence f = 0,23. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,23 ; 0,25]",
+      "[0,19 ; 0,27]",
+      "[0,2296 ; 0,2304]",
+      "[0,21 ; 0,25]"
+     ],
+     "a": 3,
+     "e": "1/√2 500 = 0,02 : <b>[0,21 ; 0,25]</b>."
+    },
+    {
+     "q": "Quand la taille de l’échantillon augmente, la fréquence observée…",
+     "c": [
+      "s’éloigne de la probabilité",
+      "devient égale à 0,5",
+      "ne change pas",
+      "a tendance à se rapprocher de la probabilité"
+     ],
+     "a": 3,
+     "e": "Réponse : <b>a tendance à se rapprocher de la probabilité</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 2 500, on observe une fréquence f = 0,58. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,56 ; 0,6]",
+      "[0,5796 ; 0,5804]",
+      "[0,58 ; 0,6]",
+      "[0,54 ; 0,62]"
+     ],
+     "a": 0,
+     "e": "1/√2 500 = 0,02 : <b>[0,56 ; 0,6]</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 400, on observe une fréquence f = 0,65. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,55 ; 0,75]",
+      "[0,6475 ; 0,6525]",
+      "[0,6 ; 0,7]",
+      "[0,65 ; 0,7]"
+     ],
+     "a": 2,
+     "e": "1/√400 = 0,05 : <b>[0,6 ; 0,7]</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 2 500, on observe une fréquence f = 0,54. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,5396 ; 0,5404]",
+      "[0,54 ; 0,56]",
+      "[0,52 ; 0,56]",
+      "[0,5 ; 0,58]"
+     ],
+     "a": 2,
+     "e": "1/√2 500 = 0,02 : <b>[0,52 ; 0,56]</b>."
+    },
+    {
+     "q": "Que dit la loi des grands nombres ?",
+     "c": [
+      "après plusieurs « face », « pile » devient plus probable",
+      "la probabilité dépend du nombre d’essais",
+      "un événement rare finit toujours par arriver",
+      "la fréquence d’un événement se rapproche de sa probabilité quand le nombre d’essais augmente"
+     ],
+     "a": 3,
+     "e": "Réponse : <b>la fréquence d’un événement se rapproche de sa probabilité quand le nombre d’essais augmente</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 400, on observe une fréquence f = 0,4. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,4 ; 0,45]",
+      "[0,35 ; 0,45]",
+      "[0,3975 ; 0,4025]",
+      "[0,3 ; 0,5]"
+     ],
+     "a": 1,
+     "e": "1/√400 = 0,05 : <b>[0,35 ; 0,45]</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 625, on observe une fréquence f = 0,72. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,64 ; 0,8]",
+      "[0,7184 ; 0,7216]",
+      "[0,72 ; 0,76]",
+      "[0,68 ; 0,76]"
+     ],
+     "a": 3,
+     "e": "1/√625 = 0,04 : <b>[0,68 ; 0,76]</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 625, on observe une fréquence f = 0,8. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,8 ; 0,84]",
+      "[0,76 ; 0,84]",
+      "[0,72 ; 0,88]",
+      "[0,7984 ; 0,8016]"
+     ],
+     "a": 1,
+     "e": "1/√625 = 0,04 : <b>[0,76 ; 0,84]</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 625, on observe une fréquence f = 0,7. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,6984 ; 0,7016]",
+      "[0,62 ; 0,78]",
+      "[0,66 ; 0,74]",
+      "[0,7 ; 0,74]"
+     ],
+     "a": 2,
+     "e": "1/√625 = 0,04 : <b>[0,66 ; 0,74]</b>."
+    },
+    {
+     "q": "Sur un échantillon de taille 100, on observe une fréquence f = 0,7. Quel intervalle [f − 1/√n ; f + 1/√n] obtient-on pour estimer la proportion p ?",
+     "c": [
+      "[0,7 ; 0,8]",
+      "[0,69 ; 0,71]",
+      "[0,5 ; 0,9]",
+      "[0,6 ; 0,8]"
+     ],
+     "a": 3,
+     "e": "1/√100 = 0,1 : <b>[0,6 ; 0,8]</b>."
+    },
+    {
+     "q": "Deux échantillons de même taille tirés dans la même population donnent…",
+     "c": [
+      "toujours la même fréquence",
+      "en général des fréquences différentes (fluctuation d’échantillonnage)",
+      "toujours des fréquences opposées",
+      "la probabilité exacte"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>en général des fréquences différentes (fluctuation d’échantillonnage)</b>."
+    }
+   ]
+  },
+  {
+   "title": "Simulation",
+   "items": [
+    {
+     "q": "On répète 6 000 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "2 100",
+      "3 000",
+      "1 500",
+      "4 500"
+     ],
+     "a": 2,
+     "e": "6 000 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b>1 500</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "En Python, random() renvoie…",
+     "c": [
+      "un nombre aléatoire de [0 ; 100[",
+      "toujours 0,5",
+      "un nombre aléatoire de [0 ; 1[",
+      "un entier aléatoire entre 0 et 10"
+     ],
+     "a": 2,
+     "e": "Réponse : <b>un nombre aléatoire de [0 ; 1[</b>."
+    },
+    {
+     "q": "On répète 120 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "42",
+      "90",
+      "60",
+      "30"
+     ],
+     "a": 3,
+     "e": "120 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b>30</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 300 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "200",
+      "101",
+      "130",
+      "100"
+     ],
+     "a": 3,
+     "e": "300 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b>100</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 60 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "21",
+      "45",
+      "30",
+      "15"
+     ],
+     "a": 3,
+     "e": "60 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b>15</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 300 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "225",
+      "150",
+      "75",
+      "105"
+     ],
+     "a": 2,
+     "e": "300 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b>75</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 600 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "200",
+      "160",
+      "100",
+      "500"
+     ],
+     "a": 2,
+     "e": "600 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b>100</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 300 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "30",
+      "60",
+      "31",
+      "270"
+     ],
+     "a": 0,
+     "e": "300 × <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> = <b>30</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 60 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "26",
+      "20",
+      "21",
+      "40"
+     ],
+     "a": 1,
+     "e": "60 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b>20</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "Pour simuler un lancer de dé en Python, on utilise…",
+     "c": [
+      "random(6)",
+      "randint(1, 6)",
+      "randint(0, 6)",
+      "random() * 6"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>randint(1, 6)</b>."
+    },
+    {
+     "q": "On répète 1 200 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "420",
+      "300",
+      "900",
+      "600"
+     ],
+     "a": 1,
+     "e": "1 200 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b>300</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 300 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "250",
+      "50",
+      "80",
+      "100"
+     ],
+     "a": 1,
+     "e": "300 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b>50</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 600 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "60",
+      "120",
+      "540",
+      "61"
+     ],
+     "a": 0,
+     "e": "600 × <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> = <b>60</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 6 000 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "3 001",
+      "3 600",
+      "6 000",
+      "3 000"
+     ],
+     "a": 3,
+     "e": "6 000 × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b>3 000</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 60 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "36",
+      "60",
+      "31",
+      "30"
+     ],
+     "a": 3,
+     "e": "60 × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b>30</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "Pour simuler un succès de probabilité 0,3 en Python, on teste…",
+     "c": [
+      "random() &lt; 0.3",
+      "random() == 0.3",
+      "random() &gt; 0.3",
+      "randint(0, 3) == 1"
+     ],
+     "a": 0,
+     "e": "Réponse : <b>random() &lt; 0.3</b>."
+    },
+    {
+     "q": "On répète 6 000 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "1 000",
+      "1 600",
+      "2 000",
+      "5 000"
+     ],
+     "a": 0,
+     "e": "6 000 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b>1 000</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 3 000 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "1 000",
+      "1 001",
+      "2 000",
+      "1 300"
+     ],
+     "a": 0,
+     "e": "3 000 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b>1 000</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 120 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "52",
+      "41",
+      "40",
+      "80"
+     ],
+     "a": 2,
+     "e": "120 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b>40</b> (environ : la valeur fluctue)."
+    },
+    {
+     "q": "On répète 3 000 fois une expérience de probabilité de succès <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>. Combien de succès peut-on s’attendre à obtenir environ ?",
+     "c": [
+      "301",
+      "300",
+      "2 700",
+      "600"
+     ],
+     "a": 1,
+     "e": "3 000 × <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> = <b>300</b> (environ : la valeur fluctue)."
+    }
+   ]
+  },
+  {
+   "title": "Problèmes",
+   "items": [
+    {
+     "q": "Dans un sondage auprès de 400 personnes choisies au hasard, 52 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "entre 47 % et 57 %",
+      "entre 51,75 % et 52,25 %",
+      "exactement 52 %",
+      "entre 0 % et 52 %"
+     ],
+     "a": 0,
+     "e": "1/√400 = 0,05 ; on propose [0,47 ; 0,57], soit <b>entre 47 % et 57 %</b>."
+    },
+    {
+     "q": "Quelle taille d’échantillon faut-il pour que 1/√n = 0,05 ?",
+     "c": [
+      "800",
+      "20",
+      "400",
+      "200"
+     ],
+     "a": 2,
+     "e": "1/√n = 0,05 ⇔ √n = 20 ⇔ <b>n = 400</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 400 personnes choisies au hasard, 54 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "entre 49 % et 59 %",
+      "exactement 54 %",
+      "entre 53,75 % et 54,25 %",
+      "entre 0 % et 54 %"
+     ],
+     "a": 0,
+     "e": "1/√400 = 0,05 ; on propose [0,49 ; 0,59], soit <b>entre 49 % et 59 %</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 400 personnes choisies au hasard, 36 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "entre 35,75 % et 36,25 %",
+      "entre 0 % et 36 %",
+      "entre 31 % et 41 %",
+      "exactement 36 %"
+     ],
+     "a": 2,
+     "e": "1/√400 = 0,05 ; on propose [0,31 ; 0,41], soit <b>entre 31 % et 41 %</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 400 personnes choisies au hasard, 57 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "exactement 57 %",
+      "entre 56,75 % et 57,25 %",
+      "entre 0 % et 57 %",
+      "entre 52 % et 62 %"
+     ],
+     "a": 3,
+     "e": "1/√400 = 0,05 ; on propose [0,52 ; 0,62], soit <b>entre 52 % et 62 %</b>."
+    },
+    {
+     "q": "Une usine annonce 3 % de pièces défectueuses. Sur 400 pièces prises au hasard, 52 sont défectueuses. L’écart |f − p| dépasse-t-il 1/√n ?",
+     "c": [
+      "on ne peut pas savoir sans tout vérifier",
+      "oui : l’annonce est douteuse",
+      "non : l’annonce est compatible",
+      "oui, car f ≠ p"
+     ],
+     "a": 1,
+     "e": "f = 0,13, |f − p| = 0,1 et 1/√400 = 0,05 : <b>l’écart est trop grand</b>."
+    },
+    {
+     "q": "Une usine annonce 2 % de pièces défectueuses. Sur 400 pièces prises au hasard, 10 sont défectueuses. L’écart |f − p| dépasse-t-il 1/√n ?",
+     "c": [
+      "on ne peut pas savoir sans tout vérifier",
+      "oui, car f ≠ p",
+      "oui : l’annonce est douteuse",
+      "non : l’annonce est compatible"
+     ],
+     "a": 3,
+     "e": "f = 0,025, |f − p| = 0,005 et 1/√400 = 0,05 : <b>l’écart reste dans la fluctuation</b>."
+    },
+    {
+     "q": "Quelle taille d’échantillon faut-il pour que 1/√n = 0,01 ?",
+     "c": [
+      "100",
+      "10 000",
+      "5 000",
+      "20 000"
+     ],
+     "a": 1,
+     "e": "1/√n = 0,01 ⇔ √n = 100 ⇔ <b>n = 10 000</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 2 500 personnes choisies au hasard, 43 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "entre 41 % et 45 %",
+      "exactement 43 %",
+      "entre 42,96 % et 43,04 %",
+      "entre 0 % et 43 %"
+     ],
+     "a": 0,
+     "e": "1/√2 500 = 0,02 ; on propose [0,41 ; 0,45], soit <b>entre 41 % et 45 %</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 400 personnes choisies au hasard, 56 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "entre 51 % et 61 %",
+      "entre 0 % et 56 %",
+      "entre 55,75 % et 56,25 %",
+      "exactement 56 %"
+     ],
+     "a": 0,
+     "e": "1/√400 = 0,05 ; on propose [0,51 ; 0,61], soit <b>entre 51 % et 61 %</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 625 personnes choisies au hasard, 45 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "entre 0 % et 45 %",
+      "exactement 45 %",
+      "entre 41 % et 49 %",
+      "entre 44,84 % et 45,16 %"
+     ],
+     "a": 2,
+     "e": "1/√625 = 0,04 ; on propose [0,41 ; 0,49], soit <b>entre 41 % et 49 %</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 625 personnes choisies au hasard, 57 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "entre 0 % et 57 %",
+      "entre 56,84 % et 57,16 %",
+      "exactement 57 %",
+      "entre 53 % et 61 %"
+     ],
+     "a": 3,
+     "e": "1/√625 = 0,04 ; on propose [0,53 ; 0,61], soit <b>entre 53 % et 61 %</b>."
+    },
+    {
+     "q": "Une usine annonce 5 % de pièces défectueuses. Sur 400 pièces prises au hasard, 22 sont défectueuses. L’écart |f − p| dépasse-t-il 1/√n ?",
+     "c": [
+      "on ne peut pas savoir sans tout vérifier",
+      "oui, car f ≠ p",
+      "oui : l’annonce est douteuse",
+      "non : l’annonce est compatible"
+     ],
+     "a": 3,
+     "e": "f = 0,055, |f − p| = 0,005 et 1/√400 = 0,05 : <b>l’écart reste dans la fluctuation</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 2 500 personnes choisies au hasard, 40 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "exactement 40 %",
+      "entre 38 % et 42 %",
+      "entre 39,96 % et 40,04 %",
+      "entre 0 % et 40 %"
+     ],
+     "a": 1,
+     "e": "1/√2 500 = 0,02 ; on propose [0,38 ; 0,42], soit <b>entre 38 % et 42 %</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 2 500 personnes choisies au hasard, 56 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "entre 55,96 % et 56,04 %",
+      "entre 54 % et 58 %",
+      "entre 0 % et 56 %",
+      "exactement 56 %"
+     ],
+     "a": 1,
+     "e": "1/√2 500 = 0,02 ; on propose [0,54 ; 0,58], soit <b>entre 54 % et 58 %</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 400 personnes choisies au hasard, 38 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "exactement 38 %",
+      "entre 37,75 % et 38,25 %",
+      "entre 0 % et 38 %",
+      "entre 33 % et 43 %"
+     ],
+     "a": 3,
+     "e": "1/√400 = 0,05 ; on propose [0,33 ; 0,43], soit <b>entre 33 % et 43 %</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 400 personnes choisies au hasard, 63 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "entre 62,75 % et 63,25 %",
+      "entre 58 % et 68 %",
+      "entre 0 % et 63 %",
+      "exactement 63 %"
+     ],
+     "a": 1,
+     "e": "1/√400 = 0,05 ; on propose [0,58 ; 0,68], soit <b>entre 58 % et 68 %</b>."
+    },
+    {
+     "q": "Dans un sondage auprès de 400 personnes choisies au hasard, 58 % déclarent pratiquer un sport. Quelle estimation de la proportion réelle propose-t-on ?",
+     "c": [
+      "exactement 58 %",
+      "entre 0 % et 58 %",
+      "entre 53 % et 63 %",
+      "entre 57,75 % et 58,25 %"
+     ],
+     "a": 2,
+     "e": "1/√400 = 0,05 ; on propose [0,53 ; 0,63], soit <b>entre 53 % et 63 %</b>."
+    },
+    {
+     "q": "Quelle taille d’échantillon faut-il pour que 1/√n = 0,02 ?",
+     "c": [
+      "5 000",
+      "50",
+      "2 500",
+      "1 250"
+     ],
+     "a": 2,
+     "e": "1/√n = 0,02 ⇔ √n = 50 ⇔ <b>n = 2 500</b>."
+    },
+    {
+     "q": "Une usine annonce 3 % de pièces défectueuses. Sur 400 pièces prises au hasard, 14 sont défectueuses. L’écart |f − p| dépasse-t-il 1/√n ?",
+     "c": [
+      "non : l’annonce est compatible",
+      "on ne peut pas savoir sans tout vérifier",
+      "oui : l’annonce est douteuse",
+      "oui, car f ≠ p"
+     ],
+     "a": 0,
+     "e": "f = 0,035, |f − p| = 0,005 et 1/√400 = 0,05 : <b>l’écart reste dans la fluctuation</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 20,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "seconde"
+}

@@ -1,0 +1,1157 @@
+{
+ "slug": "algorithmique-et-python",
+ "title": "Algorithmique et programmation en Python",
+ "seo_title": "Algorithmique et Python seconde : fiches et exercices avec corrigé",
+ "short_title": "Algorithmique et Python",
+ "domain": "Algorithmique et programmation",
+ "standard_code": "Seconde · Algorithmique et programmation",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602914A",
+ "standard_text": "Utiliser des variables et des affectations ; écrire des instructions conditionnelles ; écrire des boucles bornées (for) et non bornées (while) ; écrire, lire et compléter des fonctions en Python ; simuler des expériences aléatoires (résumé du programme 2026 de seconde)",
+ "meta_desc": "Fiches de maths seconde sur l’algorithmique en Python : variables, affectations, conditions, boucles for et while, fonctions et simulation. 100 exercices corrigés.",
+ "key_big": "for : nombre de tours connu ; while : jusqu’à une condition",
+ "key_sub": "range(a, b) : de a à b − 1",
+ "body_html": "<h2>Comment faire</h2><p>Une <b>variable</b> a un type (int, float, str, bool). L’affectation x = x + 1 remplace l’ancienne valeur de x. Le test d’égalité s’écrit ==.</p><p><b>if / elif / else</b> exécute un bloc selon une condition. <b>for i in range(a, b)</b> répète pour i = a, …, b − 1. <b>while condition</b> répète tant que la condition est vraie.</p><p>Une <b>fonction</b> (def) prend des arguments et renvoie un résultat avec return. random() et randint() servent à simuler des expériences aléatoires.</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>s = 0 ; for i in range(1, 5): s = s + i</p><p class='sn-ex-s'>i = 1, 2, 3, 4</p><p class='sn-ex-s'>s = 1 + 2 + 3 + 4</p><p class='sn-ex-a'>Réponse : s = 10</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>range(1, 5) va jusqu’à 5</td><td>Il s’arrête à 4.</td></tr><tr><td>Écrire if x = 3:</td><td>Le test d’égalité est ==.</td></tr><tr><td>Oublier l’indentation</td><td>Le bloc d’une boucle ou d’une condition est décalé de 4 espaces.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Quand utiliser for ou while ?",
+   "a": "for quand on connaît le nombre de répétitions ; while quand on répète jusqu’à ce qu’une condition change (un seuil à dépasser)."
+  },
+  {
+   "q": "Que signifient // et % ?",
+   "a": "a // b est le quotient de la division euclidienne, a % b son reste."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Variables et affectations",
+   "items": [
+    {
+     "q": "Que contient la variable x après ce programme ?<span class='code'>x = 2<br>y = 5<br>x = x + y<br>x = x * 3<br>x = x - 2</span>",
+     "c": [
+      "2",
+      "15",
+      "21",
+      "19"
+     ],
+     "a": 3,
+     "e": "x vaut 2, puis 7, puis 21, puis <b>19</b> (chaque affectation remplace l’ancienne valeur)."
+    },
+    {
+     "q": "Que contient la variable x après ce programme ?<span class='code'>x = 8<br>y = 7<br>x = x + y<br>x = x * 5<br>x = x - 8</span>",
+     "c": [
+      "35",
+      "67",
+      "8",
+      "75"
+     ],
+     "a": 1,
+     "e": "x vaut 8, puis 15, puis 75, puis <b>67</b> (chaque affectation remplace l’ancienne valeur)."
+    },
+    {
+     "q": "Que valent a et b à la fin ?<span class='code'>a = 3<br>b = 8<br>a = b<br>b = a</span>",
+     "c": [
+      "a = 8 et b = 8",
+      "a = 3 et b = 3",
+      "a = 8 et b = 3",
+      "a = 3 et b = 8"
+     ],
+     "a": 0,
+     "e": "Après a = b, a vaut 8 ; puis b = a donne aussi 8 : <b>a = 8 et b = 8</b> (l’ancienne valeur de a est perdue)."
+    },
+    {
+     "q": "Que valent a et b à la fin ?<span class='code'>a = 9<br>b = 6<br>a = b<br>b = a</span>",
+     "c": [
+      "a = 6 et b = 6",
+      "a = 9 et b = 9",
+      "a = 9 et b = 6",
+      "a = 6 et b = 9"
+     ],
+     "a": 0,
+     "e": "Après a = b, a vaut 6 ; puis b = a donne aussi 6 : <b>a = 6 et b = 6</b> (l’ancienne valeur de a est perdue)."
+    },
+    {
+     "q": "Que valent a et b à la fin ?<span class='code'>a = 6<br>b = 9<br>a = b<br>b = a</span>",
+     "c": [
+      "a = 6 et b = 6",
+      "a = 6 et b = 9",
+      "a = 9 et b = 6",
+      "a = 9 et b = 9"
+     ],
+     "a": 3,
+     "e": "Après a = b, a vaut 9 ; puis b = a donne aussi 9 : <b>a = 9 et b = 9</b> (l’ancienne valeur de a est perdue)."
+    },
+    {
+     "q": "Que vaut 2 ** 5 en Python ?",
+     "c": [
+      "10",
+      "32",
+      "25",
+      "7"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>32</b>."
+    },
+    {
+     "q": "Que contient la variable x après ce programme ?<span class='code'>x = 3<br>y = 4<br>x = x + y<br>x = x * 5<br>x = x - 3</span>",
+     "c": [
+      "3",
+      "32",
+      "20",
+      "35"
+     ],
+     "a": 1,
+     "e": "x vaut 3, puis 7, puis 35, puis <b>32</b> (chaque affectation remplace l’ancienne valeur)."
+    },
+    {
+     "q": "Que vaut 17 % 5 en Python ?",
+     "c": [
+      "0.2",
+      "3.4",
+      "2",
+      "3"
+     ],
+     "a": 2,
+     "e": "Réponse : <b>2</b>."
+    },
+    {
+     "q": "Que contient la variable x après ce programme ?<span class='code'>x = 7<br>y = 9<br>x = x + y<br>x = x * 3<br>x = x - 7</span>",
+     "c": [
+      "27",
+      "41",
+      "48",
+      "7"
+     ],
+     "a": 1,
+     "e": "x vaut 7, puis 16, puis 48, puis <b>41</b> (chaque affectation remplace l’ancienne valeur)."
+    },
+    {
+     "q": "Que contient la variable x après ce programme ?<span class='code'>x = 6<br>y = 5<br>x = x + y<br>x = x * 2<br>x = x - 6</span>",
+     "c": [
+      "10",
+      "6",
+      "16",
+      "22"
+     ],
+     "a": 2,
+     "e": "x vaut 6, puis 11, puis 22, puis <b>16</b> (chaque affectation remplace l’ancienne valeur)."
+    },
+    {
+     "q": "Quel est le type de la valeur True en Python ?",
+     "c": [
+      "bool (booléen)",
+      "int (entier)",
+      "str (chaîne)",
+      "float (décimal)"
+     ],
+     "a": 0,
+     "e": "Réponse : <b>bool (booléen)</b>."
+    },
+    {
+     "q": "Que contient la variable x après ce programme ?<span class='code'>x = 5<br>y = 7<br>x = x + y<br>x = x * 4<br>x = x - 5</span>",
+     "c": [
+      "28",
+      "48",
+      "5",
+      "43"
+     ],
+     "a": 3,
+     "e": "x vaut 5, puis 12, puis 48, puis <b>43</b> (chaque affectation remplace l’ancienne valeur)."
+    },
+    {
+     "q": "Que contient la variable x après ce programme ?<span class='code'>x = 2<br>y = 4<br>x = x + y<br>x = x * 3<br>x = x - 2</span>",
+     "c": [
+      "12",
+      "18",
+      "2",
+      "16"
+     ],
+     "a": 3,
+     "e": "x vaut 2, puis 6, puis 18, puis <b>16</b> (chaque affectation remplace l’ancienne valeur)."
+    },
+    {
+     "q": "Que valent a et b à la fin ?<span class='code'>a = 2<br>b = 6<br>a = b<br>b = a</span>",
+     "c": [
+      "a = 2 et b = 2",
+      "a = 2 et b = 6",
+      "a = 6 et b = 6",
+      "a = 6 et b = 2"
+     ],
+     "a": 2,
+     "e": "Après a = b, a vaut 6 ; puis b = a donne aussi 6 : <b>a = 6 et b = 6</b> (l’ancienne valeur de a est perdue)."
+    },
+    {
+     "q": "Que valent a et b à la fin ?<span class='code'>a = 3<br>b = 4<br>a = b<br>b = a</span>",
+     "c": [
+      "a = 3 et b = 4",
+      "a = 4 et b = 3",
+      "a = 3 et b = 3",
+      "a = 4 et b = 4"
+     ],
+     "a": 3,
+     "e": "Après a = b, a vaut 4 ; puis b = a donne aussi 4 : <b>a = 4 et b = 4</b> (l’ancienne valeur de a est perdue)."
+    },
+    {
+     "q": "Que contient la variable x après ce programme ?<span class='code'>x = 2<br>y = 8<br>x = x + y<br>x = x * 3<br>x = x - 2</span>",
+     "c": [
+      "28",
+      "2",
+      "30",
+      "24"
+     ],
+     "a": 0,
+     "e": "x vaut 2, puis 10, puis 30, puis <b>28</b> (chaque affectation remplace l’ancienne valeur)."
+    },
+    {
+     "q": "Que contient la variable x après ce programme ?<span class='code'>x = 8<br>y = 8<br>x = x + y<br>x = x * 5<br>x = x - 8</span>",
+     "c": [
+      "8",
+      "72",
+      "80",
+      "40"
+     ],
+     "a": 1,
+     "e": "x vaut 8, puis 16, puis 80, puis <b>72</b> (chaque affectation remplace l’ancienne valeur)."
+    },
+    {
+     "q": "Que contient la variable x après ce programme ?<span class='code'>x = 2<br>y = 7<br>x = x + y<br>x = x * 5<br>x = x - 2</span>",
+     "c": [
+      "45",
+      "35",
+      "43",
+      "2"
+     ],
+     "a": 2,
+     "e": "x vaut 2, puis 9, puis 45, puis <b>43</b> (chaque affectation remplace l’ancienne valeur)."
+    },
+    {
+     "q": "Que valent a et b à la fin ?<span class='code'>a = 7<br>b = 7<br>a = b<br>b = a</span>",
+     "c": [
+      "a = 7 et b = 8",
+      "a = 8 et b = 7",
+      "a = 7 et b = 7",
+      "a = 0 et b = 0"
+     ],
+     "a": 2,
+     "e": "Après a = b, a vaut 7 ; puis b = a donne aussi 7 : <b>a = 7 et b = 7</b> (l’ancienne valeur de a est perdue)."
+    },
+    {
+     "q": "Que contient la variable x après ce programme ?<span class='code'>x = 7<br>y = 9<br>x = x + y<br>x = x * 5<br>x = x - 7</span>",
+     "c": [
+      "73",
+      "7",
+      "80",
+      "45"
+     ],
+     "a": 0,
+     "e": "x vaut 7, puis 16, puis 80, puis <b>73</b> (chaque affectation remplace l’ancienne valeur)."
+    }
+   ]
+  },
+  {
+   "title": "Conditions",
+   "items": [
+    {
+     "q": "Que vaut l’expression 13 == 13 en Python ?",
+     "c": [
+      "False",
+      "True",
+      "une erreur",
+      "13"
+     ],
+     "a": 1,
+     "e": "<b>True</b>."
+    },
+    {
+     "q": "Que vaut l’expression 20 == 21 en Python ?",
+     "c": [
+      "False",
+      "True",
+      "une erreur",
+      "20"
+     ],
+     "a": 0,
+     "e": "<b>False</b>."
+    },
+    {
+     "q": "Que vaut l’expression 22 % 2 == 0 en Python ?",
+     "c": [
+      "False",
+      "22",
+      "True",
+      "une erreur"
+     ],
+     "a": 2,
+     "e": "<b>True</b>."
+    },
+    {
+     "q": "Que renvoie mention(8) ?<span class='code'>def mention(n):<br>    if n &gt;= 16:<br>        return 'TB'<br>    elif n &gt;= 14:<br>        return 'B'<br>    elif n &gt;= 12:<br>        return 'AB'<br>    else:<br>        return 'rien'</span>",
+     "c": [
+      "'B'",
+      "'TB'",
+      "'rien'",
+      "'AB'"
+     ],
+     "a": 2,
+     "e": "On teste les conditions dans l’ordre ; la première vraie donne <b>'rien'</b>."
+    },
+    {
+     "q": "Que renvoie f(1) ?<span class='code'>def f(x):<br>    if x &gt; 14:<br>        return 2 * x<br>    else:<br>        return x + 10</span>",
+     "c": [
+      "12",
+      "2",
+      "1",
+      "11"
+     ],
+     "a": 3,
+     "e": "1 ⩽ 14, donc on calcule 1 + 10 = <b>11</b>."
+    },
+    {
+     "q": "Que renvoie f(15) ?<span class='code'>def f(x):<br>    if x &gt; 3:<br>        return 2 * x<br>    else:<br>        return x + 10</span>",
+     "c": [
+      "15",
+      "30",
+      "25",
+      "31"
+     ],
+     "a": 1,
+     "e": "15 &gt; 3, donc on calcule 2 × 15 = <b>30</b>."
+    },
+    {
+     "q": "Que renvoie f(-6) ?<span class='code'>def f(x):<br>    if x &gt; 12:<br>        return 2 * x<br>    else:<br>        return x + 10</span>",
+     "c": [
+      "−12",
+      "4",
+      "5",
+      "−6"
+     ],
+     "a": 1,
+     "e": "−6 ⩽ 12, donc on calcule −6 + 10 = <b>4</b>."
+    },
+    {
+     "q": "Que renvoie f(0) ?<span class='code'>def f(x):<br>    if x &gt; 13:<br>        return 2 * x<br>    else:<br>        return x + 10</span>",
+     "c": [
+      "10",
+      "0",
+      "9",
+      "11"
+     ],
+     "a": 0,
+     "e": "0 ⩽ 13, donc on calcule 0 + 10 = <b>10</b>."
+    },
+    {
+     "q": "Que vaut l’expression 4 &gt; 17 or 17 == 17 en Python ?",
+     "c": [
+      "4",
+      "False",
+      "une erreur",
+      "True"
+     ],
+     "a": 3,
+     "e": "<b>True</b>."
+    },
+    {
+     "q": "Que renvoie mention(13) ?<span class='code'>def mention(n):<br>    if n &gt;= 16:<br>        return 'TB'<br>    elif n &gt;= 14:<br>        return 'B'<br>    elif n &gt;= 12:<br>        return 'AB'<br>    else:<br>        return 'rien'</span>",
+     "c": [
+      "'TB'",
+      "'rien'",
+      "'AB'",
+      "'B'"
+     ],
+     "a": 2,
+     "e": "On teste les conditions dans l’ordre ; la première vraie donne <b>'AB'</b>."
+    },
+    {
+     "q": "Que renvoie f(-1) ?<span class='code'>def f(x):<br>    if x &gt; 15:<br>        return 2 * x<br>    else:<br>        return x + 10</span>",
+     "c": [
+      "−2",
+      "10",
+      "9",
+      "−1"
+     ],
+     "a": 2,
+     "e": "−1 ⩽ 15, donc on calcule −1 + 10 = <b>9</b>."
+    },
+    {
+     "q": "Que renvoie mention(4) ?<span class='code'>def mention(n):<br>    if n &gt;= 16:<br>        return 'TB'<br>    elif n &gt;= 14:<br>        return 'B'<br>    elif n &gt;= 12:<br>        return 'AB'<br>    else:<br>        return 'rien'</span>",
+     "c": [
+      "'B'",
+      "'AB'",
+      "'TB'",
+      "'rien'"
+     ],
+     "a": 3,
+     "e": "On teste les conditions dans l’ordre ; la première vraie donne <b>'rien'</b>."
+    },
+    {
+     "q": "Que renvoie f(-8) ?<span class='code'>def f(x):<br>    if x &gt; 5:<br>        return 2 * x<br>    else:<br>        return x + 10</span>",
+     "c": [
+      "2",
+      "3",
+      "−16",
+      "−8"
+     ],
+     "a": 0,
+     "e": "−8 ⩽ 5, donc on calcule −8 + 10 = <b>2</b>."
+    },
+    {
+     "q": "Que renvoie f(-8) ?<span class='code'>def f(x):<br>    if x &gt; 0:<br>        return 2 * x<br>    else:<br>        return x + 10</span>",
+     "c": [
+      "3",
+      "−8",
+      "2",
+      "−16"
+     ],
+     "a": 2,
+     "e": "−8 ⩽ 0, donc on calcule −8 + 10 = <b>2</b>."
+    },
+    {
+     "q": "Que renvoie mention(19) ?<span class='code'>def mention(n):<br>    if n &gt;= 16:<br>        return 'TB'<br>    elif n &gt;= 14:<br>        return 'B'<br>    elif n &gt;= 12:<br>        return 'AB'<br>    else:<br>        return 'rien'</span>",
+     "c": [
+      "'TB'",
+      "'B'",
+      "'AB'",
+      "'rien'"
+     ],
+     "a": 0,
+     "e": "On teste les conditions dans l’ordre ; la première vraie donne <b>'TB'</b>."
+    },
+    {
+     "q": "Que renvoie f(-6) ?<span class='code'>def f(x):<br>    if x &gt; 2:<br>        return 2 * x<br>    else:<br>        return x + 10</span>",
+     "c": [
+      "5",
+      "4",
+      "−6",
+      "−12"
+     ],
+     "a": 1,
+     "e": "−6 ⩽ 2, donc on calcule −6 + 10 = <b>4</b>."
+    },
+    {
+     "q": "Que vaut l’expression 8 &lt; 9 and 8 &gt; 0 en Python ?",
+     "c": [
+      "8",
+      "une erreur",
+      "False",
+      "True"
+     ],
+     "a": 3,
+     "e": "<b>True</b>."
+    },
+    {
+     "q": "Que renvoie f(16) ?<span class='code'>def f(x):<br>    if x &gt; 5:<br>        return 2 * x<br>    else:<br>        return x + 10</span>",
+     "c": [
+      "16",
+      "33",
+      "26",
+      "32"
+     ],
+     "a": 3,
+     "e": "16 &gt; 5, donc on calcule 2 × 16 = <b>32</b>."
+    },
+    {
+     "q": "Que renvoie mention(15) ?<span class='code'>def mention(n):<br>    if n &gt;= 16:<br>        return 'TB'<br>    elif n &gt;= 14:<br>        return 'B'<br>    elif n &gt;= 12:<br>        return 'AB'<br>    else:<br>        return 'rien'</span>",
+     "c": [
+      "'B'",
+      "'rien'",
+      "'TB'",
+      "'AB'"
+     ],
+     "a": 0,
+     "e": "On teste les conditions dans l’ordre ; la première vraie donne <b>'B'</b>."
+    },
+    {
+     "q": "Que vaut l’expression 17 &gt; 22 or 22 == 22 en Python ?",
+     "c": [
+      "une erreur",
+      "True",
+      "False",
+      "17"
+     ],
+     "a": 1,
+     "e": "<b>True</b>."
+    }
+   ]
+  },
+  {
+   "title": "Boucles bornées (for)",
+   "items": [
+    {
+     "q": "Que contient s à la fin ?<span class='code'>s = 0<br>for i in range(1, 9):<br>    s = s + i</span>",
+     "c": [
+      "45",
+      "8",
+      "28",
+      "36"
+     ],
+     "a": 3,
+     "e": "range(1, 9) donne 1, 2, 3, 4, 5, 6, 7, 8 : la somme vaut <b>36</b>."
+    },
+    {
+     "q": "Que contient s à la fin ?<span class='code'>s = 0<br>for i in range(1, 8):<br>    s = s + i</span>",
+     "c": [
+      "7",
+      "21",
+      "36",
+      "28"
+     ],
+     "a": 3,
+     "e": "range(1, 8) donne 1, 2, 3, 4, 5, 6, 7 : la somme vaut <b>28</b>."
+    },
+    {
+     "q": "Que contient c à la fin ?<span class='code'>c = 0<br>for i in range(12):<br>    if i % 4 == 0:<br>        c = c + 1</span>",
+     "c": [
+      "4",
+      "12",
+      "3",
+      "2"
+     ],
+     "a": 2,
+     "e": "On compte les multiples de 4 de 0 à 11 : <b>3</b>."
+    },
+    {
+     "q": "Combien de fois la boucle « for i in range(5, 11): » s’exécute-t-elle ?",
+     "c": [
+      "7",
+      "11",
+      "6",
+      "5"
+     ],
+     "a": 2,
+     "e": "i prend les valeurs 5 à 10 : <b>6</b> tours."
+    },
+    {
+     "q": "Que contient s à la fin ?<span class='code'>s = 0<br>for i in range(0, 9):<br>    s = s + i</span>",
+     "c": [
+      "36",
+      "28",
+      "8",
+      "45"
+     ],
+     "a": 0,
+     "e": "range(0, 9) donne 0, 1, 2, 3, 4, 5, 6, 7, 8 : la somme vaut <b>36</b>."
+    },
+    {
+     "q": "Que contient c à la fin ?<span class='code'>c = 0<br>for i in range(18):<br>    if i % 4 == 0:<br>        c = c + 1</span>",
+     "c": [
+      "4",
+      "6",
+      "5",
+      "7"
+     ],
+     "a": 2,
+     "e": "On compte les multiples de 4 de 0 à 17 : <b>5</b>."
+    },
+    {
+     "q": "Que contient c à la fin ?<span class='code'>c = 0<br>for i in range(21):<br>    if i % 3 == 0:<br>        c = c + 1</span>",
+     "c": [
+      "8",
+      "6",
+      "21",
+      "7"
+     ],
+     "a": 3,
+     "e": "On compte les multiples de 3 de 0 à 20 : <b>7</b>."
+    },
+    {
+     "q": "Combien de fois la boucle « for i in range(2, 8): » s’exécute-t-elle ?",
+     "c": [
+      "6",
+      "8",
+      "7",
+      "5"
+     ],
+     "a": 0,
+     "e": "i prend les valeurs 2 à 7 : <b>6</b> tours."
+    },
+    {
+     "q": "Que contient s à la fin ?<span class='code'>s = 0<br>for i in range(1, 10):<br>    s = s + i</span>",
+     "c": [
+      "36",
+      "9",
+      "55",
+      "45"
+     ],
+     "a": 3,
+     "e": "range(1, 10) donne 1, 2, 3, 4, 5, 6, 7, 8, 9 : la somme vaut <b>45</b>."
+    },
+    {
+     "q": "Que contient s à la fin ?<span class='code'>s = 0<br>for i in range(1, 4):<br>    s = s + i</span>",
+     "c": [
+      "7",
+      "6",
+      "10",
+      "3"
+     ],
+     "a": 1,
+     "e": "range(1, 4) donne 1, 2, 3 : la somme vaut <b>6</b>."
+    },
+    {
+     "q": "Que contient p à la fin ?<span class='code'>p = 1<br>for i in range(1, 4):<br>    p = p * i</span>",
+     "c": [
+      "7",
+      "24",
+      "6",
+      "2"
+     ],
+     "a": 2,
+     "e": "p = 1 × 2 × … × 3 = <b>6</b>."
+    },
+    {
+     "q": "Que contient s à la fin ?<span class='code'>s = 0<br>for i in range(0, 6):<br>    s = s + i</span>",
+     "c": [
+      "21",
+      "10",
+      "5",
+      "15"
+     ],
+     "a": 3,
+     "e": "range(0, 6) donne 0, 1, 2, 3, 4, 5 : la somme vaut <b>15</b>."
+    },
+    {
+     "q": "Que contient s à la fin ?<span class='code'>s = 0<br>for i in range(0, 10):<br>    s = s + i</span>",
+     "c": [
+      "36",
+      "45",
+      "9",
+      "55"
+     ],
+     "a": 1,
+     "e": "range(0, 10) donne 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 : la somme vaut <b>45</b>."
+    },
+    {
+     "q": "Que contient p à la fin ?<span class='code'>p = 1<br>for i in range(1, 7):<br>    p = p * i</span>",
+     "c": [
+      "21",
+      "720",
+      "5040",
+      "120"
+     ],
+     "a": 1,
+     "e": "p = 1 × 2 × … × 6 = <b>720</b>."
+    },
+    {
+     "q": "Que contient c à la fin ?<span class='code'>c = 0<br>for i in range(15):<br>    if i % 4 == 0:<br>        c = c + 1</span>",
+     "c": [
+      "4",
+      "6",
+      "5",
+      "3"
+     ],
+     "a": 0,
+     "e": "On compte les multiples de 4 de 0 à 14 : <b>4</b>."
+    },
+    {
+     "q": "Que contient c à la fin ?<span class='code'>c = 0<br>for i in range(15):<br>    if i % 5 == 0:<br>        c = c + 1</span>",
+     "c": [
+      "3",
+      "15",
+      "2",
+      "4"
+     ],
+     "a": 0,
+     "e": "On compte les multiples de 5 de 0 à 14 : <b>3</b>."
+    },
+    {
+     "q": "Que contient s à la fin ?<span class='code'>s = 0<br>for i in range(1, 5):<br>    s = s + i</span>",
+     "c": [
+      "15",
+      "10",
+      "6",
+      "4"
+     ],
+     "a": 1,
+     "e": "range(1, 5) donne 1, 2, 3, 4 : la somme vaut <b>10</b>."
+    },
+    {
+     "q": "Que contient p à la fin ?<span class='code'>p = 1<br>for i in range(1, 6):<br>    p = p * i</span>",
+     "c": [
+      "15",
+      "120",
+      "24",
+      "720"
+     ],
+     "a": 1,
+     "e": "p = 1 × 2 × … × 5 = <b>120</b>."
+    },
+    {
+     "q": "Que contient s à la fin ?<span class='code'>s = 0<br>for i in range(1, 11):<br>    s = s + i</span>",
+     "c": [
+      "45",
+      "66",
+      "55",
+      "10"
+     ],
+     "a": 2,
+     "e": "range(1, 11) donne 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 : la somme vaut <b>55</b>."
+    },
+    {
+     "q": "Que contient s à la fin ?<span class='code'>s = 0<br>for i in range(1, 6):<br>    s = s + i</span>",
+     "c": [
+      "15",
+      "5",
+      "10",
+      "21"
+     ],
+     "a": 0,
+     "e": "range(1, 6) donne 1, 2, 3, 4, 5 : la somme vaut <b>15</b>."
+    }
+   ]
+  },
+  {
+   "title": "Boucles non bornées (while)",
+   "items": [
+    {
+     "q": "Que contient n à la fin ?<span class='code'>x = 1<br>n = 0<br>while x &lt; 50:<br>    x = 2 * x<br>    n = n + 1</span>",
+     "c": [
+      "6",
+      "7",
+      "64",
+      "5"
+     ],
+     "a": 0,
+     "e": "x prend les valeurs 1, 2, 4, 8, 16, 32, 64 ; la boucle s’arrête quand x ⩾ 50 : <b>n = 6</b>."
+    },
+    {
+     "q": "Que contient n à la fin ?<span class='code'>x = 1<br>n = 0<br>while x &lt; 100:<br>    x = 2 * x<br>    n = n + 1</span>",
+     "c": [
+      "128",
+      "6",
+      "8",
+      "7"
+     ],
+     "a": 3,
+     "e": "x prend les valeurs 1, 2, 4, 8, 16, 32, 64, 128 ; la boucle s’arrête quand x ⩾ 100 : <b>n = 7</b>."
+    },
+    {
+     "q": "Que contient n à la fin ?<span class='code'>x = 1<br>n = 0<br>while x &lt; 1000:<br>    x = 2 * x<br>    n = n + 1</span>",
+     "c": [
+      "10",
+      "11",
+      "9",
+      "1024"
+     ],
+     "a": 0,
+     "e": "x prend les valeurs 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 ; la boucle s’arrête quand x ⩾ 1000 : <b>n = 10</b>."
+    },
+    {
+     "q": "Que contient n à la fin ?<span class='code'>x = 3<br>n = 0<br>while x &lt; 50:<br>    x = 2 * x<br>    n = n + 1</span>",
+     "c": [
+      "4",
+      "5",
+      "96",
+      "6"
+     ],
+     "a": 1,
+     "e": "x prend les valeurs 3, 6, 12, 24, 48, 96 ; la boucle s’arrête quand x ⩾ 50 : <b>n = 5</b>."
+    },
+    {
+     "q": "Que contient n à la fin ?<span class='code'>x = 5<br>n = 0<br>while x &lt; 50:<br>    x = 2 * x<br>    n = n + 1</span>",
+     "c": [
+      "80",
+      "4",
+      "5",
+      "3"
+     ],
+     "a": 1,
+     "e": "x prend les valeurs 5, 10, 20, 40, 80 ; la boucle s’arrête quand x ⩾ 50 : <b>n = 4</b>."
+    },
+    {
+     "q": "Que contient u à la fin ?<span class='code'>u = 1<br>for k in range(3):<br>    u = 3 * u + 3</span>",
+     "c": [
+      "6",
+      "19",
+      "66",
+      "21"
+     ],
+     "a": 2,
+     "e": "On applique 3 fois u ← 3u + 3 à partir de 1 : <b>66</b>."
+    },
+    {
+     "q": "Que contient n à la fin ?<span class='code'>x = 2<br>n = 0<br>while x &lt; 100:<br>    x = 2 * x<br>    n = n + 1</span>",
+     "c": [
+      "7",
+      "6",
+      "128",
+      "5"
+     ],
+     "a": 1,
+     "e": "x prend les valeurs 2, 4, 8, 16, 32, 64, 128 ; la boucle s’arrête quand x ⩾ 100 : <b>n = 6</b>."
+    },
+    {
+     "q": "Que contient u à la fin ?<span class='code'>u = 2<br>for k in range(4):<br>    u = 3 * u + 2</span>",
+     "c": [
+      "80",
+      "8",
+      "242",
+      "22"
+     ],
+     "a": 2,
+     "e": "On applique 4 fois u ← 3u + 2 à partir de 2 : <b>242</b>."
+    },
+    {
+     "q": "Que contient n à la fin ?<span class='code'>x = 3<br>n = 0<br>while x &lt; 200:<br>    x = 2 * x<br>    n = n + 1</span>",
+     "c": [
+      "7",
+      "6",
+      "384",
+      "8"
+     ],
+     "a": 0,
+     "e": "x prend les valeurs 3, 6, 12, 24, 48, 96, 192, 384 ; la boucle s’arrête quand x ⩾ 200 : <b>n = 7</b>."
+    },
+    {
+     "q": "Que contient n à la fin ?<span class='code'>x = 2<br>n = 0<br>while x &lt; 200:<br>    x = 2 * x<br>    n = n + 1</span>",
+     "c": [
+      "8",
+      "6",
+      "7",
+      "256"
+     ],
+     "a": 2,
+     "e": "x prend les valeurs 2, 4, 8, 16, 32, 64, 128, 256 ; la boucle s’arrête quand x ⩾ 200 : <b>n = 7</b>."
+    },
+    {
+     "q": "Que contient n à la fin ?<span class='code'>x = 3<br>n = 0<br>while x &lt; 1000:<br>    x = 2 * x<br>    n = n + 1</span>",
+     "c": [
+      "8",
+      "9",
+      "1536",
+      "10"
+     ],
+     "a": 1,
+     "e": "x prend les valeurs 3, 6, 12, 24, 48, 96, 192, 384, 768, 1536 ; la boucle s’arrête quand x ⩾ 1000 : <b>n = 9</b>."
+    },
+    {
+     "q": "Un capital de 100 € augmente de 50 % par an. Ce programme cherche le nombre d’années pour le doubler. Que renvoie-t-il ?<span class='code'>v = 100<br>n = 0<br>while v &lt; 200:<br>    v = v * 1.5<br>    n = n + 1<br>print(n)</span>",
+     "c": [
+      "1",
+      "3",
+      "4",
+      "2"
+     ],
+     "a": 3,
+     "e": "On multiplie par 1,5 jusqu’à dépasser 200 : <b>2</b> années."
+    },
+    {
+     "q": "Que contient n à la fin ?<span class='code'>x = 2<br>n = 0<br>while x &lt; 1000:<br>    x = 2 * x<br>    n = n + 1</span>",
+     "c": [
+      "9",
+      "10",
+      "8",
+      "1024"
+     ],
+     "a": 0,
+     "e": "x prend les valeurs 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 ; la boucle s’arrête quand x ⩾ 1000 : <b>n = 9</b>."
+    },
+    {
+     "q": "Que contient u à la fin ?<span class='code'>u = 4<br>for k in range(3):<br>    u = 4 * u + 2</span>",
+     "c": [
+      "22",
+      "74",
+      "298",
+      "18"
+     ],
+     "a": 2,
+     "e": "On applique 3 fois u ← 4u + 2 à partir de 4 : <b>298</b>."
+    },
+    {
+     "q": "Que contient u à la fin ?<span class='code'>u = 2<br>for k in range(2):<br>    u = 3 * u + 5</span>",
+     "c": [
+      "18",
+      "38",
+      "39",
+      "11"
+     ],
+     "a": 1,
+     "e": "On applique 2 fois u ← 3u + 5 à partir de 2 : <b>38</b>."
+    },
+    {
+     "q": "Que contient n à la fin ?<span class='code'>x = 5<br>n = 0<br>while x &lt; 100:<br>    x = 2 * x<br>    n = n + 1</span>",
+     "c": [
+      "4",
+      "160",
+      "5",
+      "6"
+     ],
+     "a": 2,
+     "e": "x prend les valeurs 5, 10, 20, 40, 80, 160 ; la boucle s’arrête quand x ⩾ 100 : <b>n = 5</b>."
+    },
+    {
+     "q": "Un capital de 1 000 € augmente de 50 % par an. Ce programme cherche le nombre d’années pour le doubler. Que renvoie-t-il ?<span class='code'>v = 1000<br>n = 0<br>while v &lt; 2000:<br>    v = v * 1.5<br>    n = n + 1<br>print(n)</span>",
+     "c": [
+      "3",
+      "4",
+      "1",
+      "2"
+     ],
+     "a": 3,
+     "e": "On multiplie par 1,5 jusqu’à dépasser 2 000 : <b>2</b> années."
+    },
+    {
+     "q": "Que contient u à la fin ?<span class='code'>u = 4<br>for k in range(3):<br>    u = 4 * u + 5</span>",
+     "c": [
+      "361",
+      "89",
+      "21",
+      "31"
+     ],
+     "a": 0,
+     "e": "On applique 3 fois u ← 4u + 5 à partir de 4 : <b>361</b>."
+    },
+    {
+     "q": "Que contient u à la fin ?<span class='code'>u = 1<br>for k in range(3):<br>    u = 3 * u + 5</span>",
+     "c": [
+      "29",
+      "8",
+      "25",
+      "92"
+     ],
+     "a": 3,
+     "e": "On applique 3 fois u ← 3u + 5 à partir de 1 : <b>92</b>."
+    },
+    {
+     "q": "Un capital de 100 € augmente de 20 % par an. Ce programme cherche le nombre d’années pour le doubler. Que renvoie-t-il ?<span class='code'>v = 100<br>n = 0<br>while v &lt; 200:<br>    v = v * 1.2<br>    n = n + 1<br>print(n)</span>",
+     "c": [
+      "3",
+      "5",
+      "6",
+      "4"
+     ],
+     "a": 3,
+     "e": "On multiplie par 1,2 jusqu’à dépasser 200 : <b>4</b> années."
+    }
+   ]
+  },
+  {
+   "title": "Fonctions et simulation",
+   "items": [
+    {
+     "q": "Que renvoie f(5) ?<span class='code'>def f(x):<br>    y = 4 * x ** 2 + 9<br>    return y</span>",
+     "c": [
+      "49",
+      "109",
+      "91",
+      "409"
+     ],
+     "a": 1,
+     "e": "4 × 5² + 9 = <b>109</b> (** est la puissance)."
+    },
+    {
+     "q": "Que renvoie f(6) ?<span class='code'>def f(x):<br>    y = 2 * x ** 2 + 1<br>    return y</span>",
+     "c": [
+      "25",
+      "71",
+      "73",
+      "145"
+     ],
+     "a": 2,
+     "e": "2 × 6² + 1 = <b>73</b> (** est la puissance)."
+    },
+    {
+     "q": "Que renvoie f(5) ?<span class='code'>def f(x):<br>    y = 3 * x ** 2 - 9<br>    return y</span>",
+     "c": [
+      "21",
+      "216",
+      "66",
+      "84"
+     ],
+     "a": 2,
+     "e": "3 × 5² − 9 = <b>66</b> (** est la puissance)."
+    },
+    {
+     "q": "Que renvoie f(-3) ?<span class='code'>def f(x):<br>    y = 2 * x ** 2 - 7<br>    return y</span>",
+     "c": [
+      "29",
+      "−19",
+      "11",
+      "25"
+     ],
+     "a": 2,
+     "e": "2 × (−3)² − 7 = <b>11</b> (** est la puissance)."
+    },
+    {
+     "q": "Que renvoie f(6) ?<span class='code'>def f(x):<br>    y = 6 * x ** 2 - 3<br>    return y</span>",
+     "c": [
+      "69",
+      "219",
+      "1 293",
+      "213"
+     ],
+     "a": 3,
+     "e": "6 × 6² − 3 = <b>213</b> (** est la puissance)."
+    },
+    {
+     "q": "On veut une fonction qui renvoie True si n est pair. Que mettre à la place de … ?<span class='code'>def pair(n):<br>    return …</span>",
+     "c": [
+      "n % 2 == 0",
+      "n / 2 == 0",
+      "n // 2",
+      "n % 2 = 0"
+     ],
+     "a": 0,
+     "e": "Réponse : <b>n % 2 == 0</b>."
+    },
+    {
+     "q": "Que renvoie f(0) ?<span class='code'>def f(x):<br>    y = 2 * x ** 2 - 9<br>    return y</span>",
+     "c": [
+      "−9",
+      "−10",
+      "9",
+      "−8"
+     ],
+     "a": 0,
+     "e": "2 × 0² − 9 = <b>−9</b> (** est la puissance)."
+    },
+    {
+     "q": "On veut que la boucle affiche 1, 2, …, 10. Que mettre à la place de … ?<span class='code'>for i in …:<br>    print(i)</span>",
+     "c": [
+      "range(0, 11)",
+      "range(10)",
+      "range(1, 10)",
+      "range(1, 11)"
+     ],
+     "a": 3,
+     "e": "Réponse : <b>range(1, 11)</b>."
+    },
+    {
+     "q": "Que renvoie f(-5) ?<span class='code'>def f(x):<br>    y = 4 * x ** 2 - 9<br>    return y</span>",
+     "c": [
+      "109",
+      "391",
+      "91",
+      "−49"
+     ],
+     "a": 2,
+     "e": "4 × (−5)² − 9 = <b>91</b> (** est la puissance)."
+    },
+    {
+     "q": "Que renvoie f(0) ?<span class='code'>def f(x):<br>    y = 6 * x ** 2 + 3<br>    return y</span>",
+     "c": [
+      "4",
+      "3",
+      "−3",
+      "2"
+     ],
+     "a": 1,
+     "e": "6 × 0² + 3 = <b>3</b> (** est la puissance)."
+    },
+    {
+     "q": "Que renvoie f(-4) ?<span class='code'>def f(x):<br>    y = 5 * x ** 2 - 6<br>    return y</span>",
+     "c": [
+      "74",
+      "−46",
+      "394",
+      "86"
+     ],
+     "a": 0,
+     "e": "5 × (−4)² − 6 = <b>74</b> (** est la puissance)."
+    },
+    {
+     "q": "Que renvoie f(-1) ?<span class='code'>def f(x):<br>    y = 5 * x ** 2 + 3<br>    return y</span>",
+     "c": [
+      "28",
+      "2",
+      "−7",
+      "8"
+     ],
+     "a": 3,
+     "e": "5 × (−1)² + 3 = <b>8</b> (** est la puissance)."
+    },
+    {
+     "q": "Que renvoie f(-4) ?<span class='code'>def f(x):<br>    y = 3 * x ** 2 + 4<br>    return y</span>",
+     "c": [
+      "−20",
+      "44",
+      "52",
+      "148"
+     ],
+     "a": 2,
+     "e": "3 × (−4)² + 4 = <b>52</b> (** est la puissance)."
+    },
+    {
+     "q": "Que renvoie f(6) ?<span class='code'>def f(x):<br>    y = 4 * x ** 2 - 5<br>    return y</span>",
+     "c": [
+      "571",
+      "149",
+      "43",
+      "139"
+     ],
+     "a": 3,
+     "e": "4 × 6² − 5 = <b>139</b> (** est la puissance)."
+    },
+    {
+     "q": "On veut calculer la moyenne de a, b, c. Quelle instruction convient ?",
+     "c": [
+      "m = a + b + c, 3",
+      "m = a + b + c / 3",
+      "m = (a + b + c) // 3",
+      "m = (a + b + c) / 3"
+     ],
+     "a": 3,
+     "e": "Réponse : <b>m = (a + b + c) / 3</b>."
+    },
+    {
+     "q": "Que renvoie f(-2) ?<span class='code'>def f(x):<br>    y = 2 * x ** 2 + 2<br>    return y</span>",
+     "c": [
+      "6",
+      "10",
+      "−6",
+      "18"
+     ],
+     "a": 1,
+     "e": "2 × (−2)² + 2 = <b>10</b> (** est la puissance)."
+    },
+    {
+     "q": "Que renvoie f(6) ?<span class='code'>def f(x):<br>    y = 4 * x ** 2 + 4<br>    return y</span>",
+     "c": [
+      "148",
+      "140",
+      "52",
+      "580"
+     ],
+     "a": 0,
+     "e": "4 × 6² + 4 = <b>148</b> (** est la puissance)."
+    },
+    {
+     "q": "Que renvoie f(6) ?<span class='code'>def f(x):<br>    y = 6 * x ** 2 - 7<br>    return y</span>",
+     "c": [
+      "1 289",
+      "209",
+      "223",
+      "65"
+     ],
+     "a": 1,
+     "e": "6 × 6² − 7 = <b>209</b> (** est la puissance)."
+    },
+    {
+     "q": "Après « from random import randint », que peut renvoyer randint(1, 6) ?",
+     "c": [
+      "un décimal entre 1 et 6",
+      "un entier de 1 à 6",
+      "un entier de 1 à 5",
+      "toujours 6"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>un entier de 1 à 6</b>."
+    },
+    {
+     "q": "Que fait cette fonction ?<span class='code'>from random import random<br>def essai():<br>    if random() &lt; 0.3:<br>        return 1<br>    return 0</span>",
+     "c": [
+      "elle simule une épreuve de succès de probabilité 0,3",
+      "elle renvoie 0,3",
+      "elle simule un dé à 6 faces",
+      "elle renvoie toujours 1"
+     ],
+     "a": 0,
+     "e": "Réponse : <b>elle simule une épreuve de succès de probabilité 0,3</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 21,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "seconde"
+}

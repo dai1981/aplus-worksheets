@@ -1,0 +1,1157 @@
+{
+ "slug": "probabilites",
+ "title": "Probabilités et probabilités conditionnelles",
+ "seo_title": "Probabilités seconde : fiches et exercices avec corrigé",
+ "short_title": "Probabilités",
+ "domain": "Statistiques et probabilités",
+ "standard_code": "Seconde · Statistiques et probabilités",
+ "standard_url": "https://www.education.gouv.fr/bo/2026/Hebdo14/MENE2602914A",
+ "standard_text": "Utiliser la réunion, l’intersection et le contraire d’événements ; calculer des fréquences marginales et conditionnelles dans un tableau croisé ; calculer des probabilités, y compris conditionnelles, à l’aide de tableaux et d’arbres pondérés (résumé du programme 2026 de seconde)",
+ "meta_desc": "Fiches de maths seconde sur les probabilités : réunion, intersection, tableaux croisés, fréquences conditionnelles, probabilités conditionnelles et arbres. 100 exercices corrigés.",
+ "key_big": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)",
+ "key_sub": "P_A(B) = P(A ∩ B) ÷ P(A)",
+ "body_html": "<h2>Comment faire</h2><p>P(A ∪ B) = P(A) + P(B) − P(A ∩ B) ; P(Ā) = 1 − P(A).</p><p>Dans un tableau croisé, la <b>fréquence conditionnelle</b> de B parmi A est (effectif de A ∩ B) ÷ (effectif de A).</p><p><b>Probabilité conditionnelle</b> : P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A). Sur un arbre, on multiplie le long d’un chemin : P(A ∩ B) = P(A) × P<sub>A</sub>(B).</p><div class='sn-ex'><span class='sn-ex-t'>Exemple</span><p class='sn-ex-q'>P(A) = 0,4 et P<sub>A</sub>(B) = 0,3</p><p class='sn-ex-s'>P(A ∩ B) = 0,4 × 0,3</p><p class='sn-ex-a'>Réponse : 0,12</p></div><h2>Erreurs fréquentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erreur fréquente</th><th>Ce qu'il faut faire</th></tr></thead><tbody><tr><td>P(A ∪ B) = P(A) + P(B)</td><td>On retire P(A ∩ B), comptée deux fois.</td></tr><tr><td>Confondre P<sub>A</sub>(B) et P<sub>B</sub>(A)</td><td>On divise par la probabilité de l’événement « sachant ».</td></tr><tr><td>Diviser par l’effectif total pour une fréquence conditionnelle</td><td>On divise par l’effectif de la sous-population.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Que signifie « sachant que » ?",
+   "a": "On se restreint à une partie de la population : on ne compte plus que les individus de A."
+  },
+  {
+   "q": "Comment vérifier un arbre ?",
+   "a": "Les branches issues d’un même nœud ont pour somme 1."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Réunion, intersection et contraire",
+   "items": [
+    {
+     "q": "P(A) = 0,6. Que vaut P(Ā) (événement contraire) ?",
+     "c": [
+      "1,6",
+      "−0,6",
+      "0,4",
+      "0,6"
+     ],
+     "a": 2,
+     "e": "P(Ā) = 1 − P(A) = <b>0,4</b>."
+    },
+    {
+     "q": "P(A) = 0,3, P(B) = 0,7 et P(A ∩ B) = 0,2. Calcule P(A ∪ B).",
+     "c": [
+      "0,21",
+      "1",
+      "0,7",
+      "0,8"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = <b>0,8</b>."
+    },
+    {
+     "q": "P(A) = 0,7, P(B) = 0,3 et P(A ∩ B) = 0,2. Calcule P(A ∪ B).",
+     "c": [
+      "0,7",
+      "0,21",
+      "1",
+      "0,8"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = <b>0,8</b>."
+    },
+    {
+     "q": "P(A) = 0,3, P(B) = 0,7 et P(A ∩ B) = 0,1. Calcule P(A ∪ B).",
+     "c": [
+      "0,21",
+      "1",
+      "0,9",
+      "0,8"
+     ],
+     "a": 2,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = <b>0,9</b>."
+    },
+    {
+     "q": "P(A) = 0,4. Que vaut P(Ā) (événement contraire) ?",
+     "c": [
+      "1,4",
+      "−0,4",
+      "0,6",
+      "0,4"
+     ],
+     "a": 2,
+     "e": "P(Ā) = 1 − P(A) = <b>0,6</b>."
+    },
+    {
+     "q": "P(A) = 0,5, P(B) = 0,4 et P(A ∪ B) = 0,6. Calcule P(A ∩ B).",
+     "c": [
+      "0,3",
+      "0,4",
+      "0,2",
+      "0,1"
+     ],
+     "a": 0,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0,3</b>."
+    },
+    {
+     "q": "P(A) = 0,7, P(B) = 0,6 et P(A ∩ B) = 0,3. Calcule P(A ∪ B).",
+     "c": [
+      "0,9",
+      "1",
+      "1,3",
+      "0,42"
+     ],
+     "a": 1,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = <b>1</b>."
+    },
+    {
+     "q": "P(A) = 0,6, P(B) = 0,5 et P(A ∪ B) = 1. Calcule P(A ∩ B).",
+     "c": [
+      "0,1",
+      "0,2",
+      "0,3",
+      "0,4"
+     ],
+     "a": 0,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0,1</b>."
+    },
+    {
+     "q": "P(A) = 0,2, P(B) = 0,6 et P(A ∩ B) = 0,1. Calcule P(A ∪ B).",
+     "c": [
+      "0,8",
+      "0,7",
+      "0,12",
+      "0,9"
+     ],
+     "a": 1,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = <b>0,7</b>."
+    },
+    {
+     "q": "P(A) = 0,6, P(B) = 0,3 et P(A ∩ B) = 0,2. Calcule P(A ∪ B).",
+     "c": [
+      "0,18",
+      "0,9",
+      "0,7",
+      "0,6"
+     ],
+     "a": 2,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = <b>0,7</b>."
+    },
+    {
+     "q": "P(A) = 0,2. Que vaut P(Ā) (événement contraire) ?",
+     "c": [
+      "0,2",
+      "−0,2",
+      "1,2",
+      "0,8"
+     ],
+     "a": 3,
+     "e": "P(Ā) = 1 − P(A) = <b>0,8</b>."
+    },
+    {
+     "q": "P(A) = 0,4, P(B) = 0,4 et P(A ∩ B) = 0,3. Calcule P(A ∪ B).",
+     "c": [
+      "0,4",
+      "0,8",
+      "0,16",
+      "0,5"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = <b>0,5</b>."
+    },
+    {
+     "q": "P(A) = 0,7. Que vaut P(Ā) (événement contraire) ?",
+     "c": [
+      "1,7",
+      "0,3",
+      "0,7",
+      "−0,7"
+     ],
+     "a": 1,
+     "e": "P(Ā) = 1 − P(A) = <b>0,3</b>."
+    },
+    {
+     "q": "P(A) = 0,6, P(B) = 0,7 et P(A ∪ B) = 0,8. Calcule P(A ∩ B).",
+     "c": [
+      "0,42",
+      "0,5",
+      "0,2",
+      "0,6"
+     ],
+     "a": 1,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0,5</b>."
+    },
+    {
+     "q": "P(A) = 0,4, P(B) = 0,5 et P(A ∪ B) = 0,7. Calcule P(A ∩ B).",
+     "c": [
+      "0,3",
+      "0,2",
+      "0,4",
+      "0,1"
+     ],
+     "a": 1,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0,2</b>."
+    },
+    {
+     "q": "P(A) = 0,5. Que vaut P(Ā) (événement contraire) ?",
+     "c": [
+      "0,5",
+      "1,5",
+      "−0,5",
+      "0,6"
+     ],
+     "a": 0,
+     "e": "P(Ā) = 1 − P(A) = <b>0,5</b>."
+    },
+    {
+     "q": "P(A) = 0,3, P(B) = 0,2 et P(A ∩ B) = 0,1. Calcule P(A ∪ B).",
+     "c": [
+      "0,4",
+      "0,6",
+      "0,06",
+      "0,5"
+     ],
+     "a": 0,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = <b>0,4</b>."
+    },
+    {
+     "q": "P(A) = 0,3. Que vaut P(Ā) (événement contraire) ?",
+     "c": [
+      "0,3",
+      "−0,3",
+      "0,7",
+      "1,3"
+     ],
+     "a": 2,
+     "e": "P(Ā) = 1 − P(A) = <b>0,7</b>."
+    },
+    {
+     "q": "P(A) = 0,7, P(B) = 0,4 et P(A ∪ B) = 1. Calcule P(A ∩ B).",
+     "c": [
+      "0,1",
+      "0,3",
+      "0,28",
+      "0,2"
+     ],
+     "a": 0,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0,1</b>."
+    },
+    {
+     "q": "P(A) = 0,2, P(B) = 0,7 et P(A ∩ B) = 0,1. Calcule P(A ∪ B).",
+     "c": [
+      "0,14",
+      "0,9",
+      "1",
+      "0,8"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = <b>0,8</b>."
+    }
+   ]
+  },
+  {
+   "title": "Tableaux croisés et fréquences conditionnelles",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>34</td><td>37</td><td>71</td></tr><tr><td>Bus</td><td>16</td><td>28</td><td>44</td></tr><tr><td>Total</td><td>50</td><td>65</td><td>115</td></tr></tbody></table></div><br>Parmi les « Vélo », quelle est la fréquence de « Moins de 3 km » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>115</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>23</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>71</span></span>"
+     ],
+     "a": 3,
+     "e": "Fréquence conditionnelle : 34 ÷ 71 = <b><span class='fr'><span class='fn'>34</span><span class='fd'>71</span></span></b> (on divise par l’effectif de « Vélo »)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>34</td><td>37</td><td>71</td></tr><tr><td>Garçons</td><td>20</td><td>8</td><td>28</td></tr><tr><td>Total</td><td>54</td><td>45</td><td>99</td></tr></tbody></table></div><br>Parmi les « Filles », quelle est la fréquence de « Sport » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>99</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>71</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>27</span></span>"
+     ],
+     "a": 2,
+     "e": "Fréquence conditionnelle : 34 ÷ 71 = <b><span class='fr'><span class='fn'>34</span><span class='fd'>71</span></span></b> (on divise par l’effectif de « Filles »)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>29</td><td>19</td><td>48</td></tr><tr><td>Bus</td><td>29</td><td>7</td><td>36</td></tr><tr><td>Total</td><td>58</td><td>26</td><td>84</td></tr></tbody></table></div><br>Parmi les « Vélo », quelle est la fréquence de « Moins de 3 km » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>84</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>42</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>48</span></span>"
+     ],
+     "a": 3,
+     "e": "Fréquence conditionnelle : 29 ÷ 48 = <b><span class='fr'><span class='fn'>29</span><span class='fd'>48</span></span></b> (on divise par l’effectif de « Vélo »)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>6</td><td>26</td><td>32</td></tr><tr><td>Bus</td><td>13</td><td>9</td><td>22</td></tr><tr><td>Total</td><td>19</td><td>35</td><td>54</td></tr></tbody></table></div><br>Parmi les « Vélo », quelle est la fréquence de « Moins de 3 km » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>54</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>19</span></span>"
+     ],
+     "a": 1,
+     "e": "Fréquence conditionnelle : 6 ÷ 32 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span></b> (on divise par l’effectif de « Vélo »)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>35</td><td>15</td><td>50</td></tr><tr><td>Externe</td><td>29</td><td>32</td><td>61</td></tr><tr><td>Total</td><td>64</td><td>47</td><td>111</td></tr></tbody></table></div><br>Quelle est la fréquence marginale de « Seconde » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>111</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>111</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>64</span></span>"
+     ],
+     "a": 2,
+     "e": "Effectif de « Seconde » ÷ effectif total = 64 ÷ 111 = <b><span class='fr'><span class='fn'>64</span><span class='fd'>111</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>8</td><td>7</td><td>15</td></tr><tr><td>Externe</td><td>27</td><td>11</td><td>38</td></tr><tr><td>Total</td><td>35</td><td>18</td><td>53</td></tr></tbody></table></div><br>Quelle est la fréquence marginale de « Seconde » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>53</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>53</span></span>"
+     ],
+     "a": 3,
+     "e": "Effectif de « Seconde » ÷ effectif total = 35 ÷ 53 = <b><span class='fr'><span class='fn'>35</span><span class='fd'>53</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>26</td><td>26</td><td>52</td></tr><tr><td>Bus</td><td>28</td><td>38</td><td>66</td></tr><tr><td>Total</td><td>54</td><td>64</td><td>118</td></tr></tbody></table></div><br>Quelle est la fréquence marginale de « Moins de 3 km » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>59</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>59</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>27</span></span>"
+     ],
+     "a": 0,
+     "e": "Effectif de « Moins de 3 km » ÷ effectif total = 54 ÷ 118 = <b><span class='fr'><span class='fn'>27</span><span class='fd'>59</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>33</td><td>9</td><td>42</td></tr><tr><td>Bus</td><td>26</td><td>20</td><td>46</td></tr><tr><td>Total</td><td>59</td><td>29</td><td>88</td></tr></tbody></table></div><br>Parmi les « Plus de 3 km », quelle est la fréquence de « Bus » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>88</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>23</span></span>"
+     ],
+     "a": 0,
+     "e": "20 ÷ 29 = <b><span class='fr'><span class='fn'>20</span><span class='fd'>29</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>40</td><td>6</td><td>46</td></tr><tr><td>Garçons</td><td>29</td><td>19</td><td>48</td></tr><tr><td>Total</td><td>69</td><td>25</td><td>94</td></tr></tbody></table></div><br>Parmi les « Pas de sport », quelle est la fréquence de « Garçons » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>94</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>94</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>48</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "19 ÷ 25 = <b><span class='fr'><span class='fn'>19</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>16</td><td>39</td><td>55</td></tr><tr><td>Externe</td><td>26</td><td>28</td><td>54</td></tr><tr><td>Total</td><td>42</td><td>67</td><td>109</td></tr></tbody></table></div><br>Quelle est la fréquence marginale de « Seconde » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>42</span><span class='fd'>109</span></span>",
+      "<span class='fr'><span class='fn'>42</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>109</span></span>"
+     ],
+     "a": 0,
+     "e": "Effectif de « Seconde » ÷ effectif total = 42 ÷ 109 = <b><span class='fr'><span class='fn'>42</span><span class='fd'>109</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>40</td><td>40</td><td>80</td></tr><tr><td>Bus</td><td>14</td><td>9</td><td>23</td></tr><tr><td>Total</td><td>54</td><td>49</td><td>103</td></tr></tbody></table></div><br>Parmi les « Vélo », quelle est la fréquence de « Moins de 3 km » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>54</span><span class='fd'>103</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>103</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>27</span></span>"
+     ],
+     "a": 1,
+     "e": "Fréquence conditionnelle : 40 ÷ 80 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b> (on divise par l’effectif de « Vélo »)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>10</td><td>13</td><td>23</td></tr><tr><td>Externe</td><td>22</td><td>25</td><td>47</td></tr><tr><td>Total</td><td>32</td><td>38</td><td>70</td></tr></tbody></table></div><br>Parmi les « Interne », quelle est la fréquence de « Seconde » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>23</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>"
+     ],
+     "a": 2,
+     "e": "Fréquence conditionnelle : 10 ÷ 23 = <b><span class='fr'><span class='fn'>10</span><span class='fd'>23</span></span></b> (on divise par l’effectif de « Interne »)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>7</td><td>33</td><td>40</td></tr><tr><td>Garçons</td><td>22</td><td>14</td><td>36</td></tr><tr><td>Total</td><td>29</td><td>47</td><td>76</td></tr></tbody></table></div><br>Quelle est la fréquence marginale de « Sport » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>76</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>76</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>40</span></span>"
+     ],
+     "a": 1,
+     "e": "Effectif de « Sport » ÷ effectif total = 29 ÷ 76 = <b><span class='fr'><span class='fn'>29</span><span class='fd'>76</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>27</td><td>32</td><td>59</td></tr><tr><td>Garçons</td><td>12</td><td>34</td><td>46</td></tr><tr><td>Total</td><td>39</td><td>66</td><td>105</td></tr></tbody></table></div><br>Parmi les « Filles », quelle est la fréquence de « Sport » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>59</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>35</span></span>"
+     ],
+     "a": 2,
+     "e": "Fréquence conditionnelle : 27 ÷ 59 = <b><span class='fr'><span class='fn'>27</span><span class='fd'>59</span></span></b> (on divise par l’effectif de « Filles »)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>16</td><td>33</td><td>49</td></tr><tr><td>Bus</td><td>15</td><td>34</td><td>49</td></tr><tr><td>Total</td><td>31</td><td>67</td><td>98</td></tr></tbody></table></div><br>Parmi les « Plus de 3 km », quelle est la fréquence de « Bus » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>67</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>67</span><span class='fd'>98</span></span>"
+     ],
+     "a": 1,
+     "e": "34 ÷ 67 = <b><span class='fr'><span class='fn'>34</span><span class='fd'>67</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>25</td><td>16</td><td>41</td></tr><tr><td>Bus</td><td>24</td><td>17</td><td>41</td></tr><tr><td>Total</td><td>49</td><td>33</td><td>82</td></tr></tbody></table></div><br>Parmi les « Plus de 3 km », quelle est la fréquence de « Bus » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>41</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>82</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>82</span></span>"
+     ],
+     "a": 1,
+     "e": "17 ÷ 33 = <b><span class='fr'><span class='fn'>17</span><span class='fd'>33</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>32</td><td>37</td><td>69</td></tr><tr><td>Garçons</td><td>37</td><td>18</td><td>55</td></tr><tr><td>Total</td><td>69</td><td>55</td><td>124</td></tr></tbody></table></div><br>Parmi les « Filles », quelle est la fréquence de « Sport » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>69</span></span>",
+      "<span class='fr'><span class='fn'>69</span><span class='fd'>124</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>31</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>69</span></span>"
+     ],
+     "a": 0,
+     "e": "Fréquence conditionnelle : 32 ÷ 69 = <b><span class='fr'><span class='fn'>32</span><span class='fd'>69</span></span></b> (on divise par l’effectif de « Filles »)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>21</td><td>7</td><td>28</td></tr><tr><td>Bus</td><td>7</td><td>9</td><td>16</td></tr><tr><td>Total</td><td>28</td><td>16</td><td>44</td></tr></tbody></table></div><br>Parmi les « Vélo », quelle est la fréquence de « Moins de 3 km » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>44</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span>"
+     ],
+     "a": 2,
+     "e": "Fréquence conditionnelle : 21 ÷ 28 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b> (on divise par l’effectif de « Vélo »)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>29</td><td>29</td><td>58</td></tr><tr><td>Garçons</td><td>38</td><td>37</td><td>75</td></tr><tr><td>Total</td><td>67</td><td>66</td><td>133</td></tr></tbody></table></div><br>Parmi les « Pas de sport », quelle est la fréquence de « Garçons » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>66</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>75</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>133</span></span>",
+      "<span class='fr'><span class='fn'>66</span><span class='fd'>133</span></span>"
+     ],
+     "a": 0,
+     "e": "37 ÷ 66 = <b><span class='fr'><span class='fn'>37</span><span class='fd'>66</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>16</td><td>23</td><td>39</td></tr><tr><td>Garçons</td><td>33</td><td>27</td><td>60</td></tr><tr><td>Total</td><td>49</td><td>50</td><td>99</td></tr></tbody></table></div><br>Parmi les « Filles », quelle est la fréquence de « Sport » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>99</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>99</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>39</span></span>"
+     ],
+     "a": 3,
+     "e": "Fréquence conditionnelle : 16 ÷ 39 = <b><span class='fr'><span class='fn'>16</span><span class='fd'>39</span></span></b> (on divise par l’effectif de « Filles »)."
+    }
+   ]
+  },
+  {
+   "title": "Probabilités à partir d’un tableau",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>5</td><td>14</td><td>19</td></tr><tr><td>Externe</td><td>22</td><td>25</td><td>47</td></tr><tr><td>Total</td><td>27</td><td>39</td><td>66</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Interne » ou « Seconde » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>66</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>66</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = (19 + 27 − 5) ÷ 66 = <b><span class='fr'><span class='fn'>41</span><span class='fd'>66</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>24</td><td>34</td><td>58</td></tr><tr><td>Bus</td><td>22</td><td>37</td><td>59</td></tr><tr><td>Total</td><td>46</td><td>71</td><td>117</td></tr></tbody></table></div><br>On choisit une personne au hasard parmi les « Moins de 3 km ». Quelle est la probabilité qu’elle soit « Bus » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>23</span></span>",
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>59</span></span>",
+      "<span class='fr'><span class='fn'>46</span><span class='fd'>117</span></span>",
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>117</span></span>"
+     ],
+     "a": 0,
+     "e": "P<sub>Moins de 3 km</sub>(Bus) = 22 ÷ 46 = <b><span class='fr'><span class='fn'>11</span><span class='fd'>23</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>28</td><td>9</td><td>37</td></tr><tr><td>Garçons</td><td>40</td><td>13</td><td>53</td></tr><tr><td>Total</td><td>68</td><td>22</td><td>90</td></tr></tbody></table></div><br>On choisit une personne au hasard parmi les « Sport ». Quelle est la probabilité qu’elle soit « Garçons » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>53</span></span>",
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>45</span></span>"
+     ],
+     "a": 1,
+     "e": "P<sub>Sport</sub>(Garçons) = 40 ÷ 68 = <b><span class='fr'><span class='fn'>10</span><span class='fd'>17</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>15</td><td>38</td><td>53</td></tr><tr><td>Garçons</td><td>34</td><td>21</td><td>55</td></tr><tr><td>Total</td><td>49</td><td>59</td><td>108</td></tr></tbody></table></div><br>On choisit une personne au hasard parmi les « Sport ». Quelle est la probabilité qu’elle soit « Garçons » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>54</span></span>",
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>108</span></span>"
+     ],
+     "a": 2,
+     "e": "P<sub>Sport</sub>(Garçons) = 34 ÷ 49 = <b><span class='fr'><span class='fn'>34</span><span class='fd'>49</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>13</td><td>6</td><td>19</td></tr><tr><td>Bus</td><td>34</td><td>25</td><td>59</td></tr><tr><td>Total</td><td>47</td><td>31</td><td>78</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Vélo » et « Plus de 3 km » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>589</span><span class='fd'>6084</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>31</span></span>"
+     ],
+     "a": 0,
+     "e": "Case « Vélo / Plus de 3 km » : 6 ÷ 78 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>28</td><td>38</td><td>66</td></tr><tr><td>Externe</td><td>28</td><td>25</td><td>53</td></tr><tr><td>Total</td><td>56</td><td>63</td><td>119</td></tr></tbody></table></div><br>On choisit une personne au hasard parmi les « Seconde ». Quelle est la probabilité qu’elle soit « Externe » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>53</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>17</span></span>"
+     ],
+     "a": 1,
+     "e": "P<sub>Seconde</sub>(Externe) = 28 ÷ 56 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>21</td><td>9</td><td>30</td></tr><tr><td>Garçons</td><td>25</td><td>18</td><td>43</td></tr><tr><td>Total</td><td>46</td><td>27</td><td>73</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Filles » et « Pas de sport » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>73</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>810</span><span class='fd'>5329</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Case « Filles / Pas de sport » : 9 ÷ 73 = <b><span class='fr'><span class='fn'>9</span><span class='fd'>73</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>12</td><td>14</td><td>26</td></tr><tr><td>Externe</td><td>27</td><td>38</td><td>65</td></tr><tr><td>Total</td><td>39</td><td>52</td><td>91</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Interne » et « Première » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>13</span></span>"
+     ],
+     "a": 3,
+     "e": "Case « Interne / Première » : 14 ÷ 91 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>5</td><td>10</td><td>15</td></tr><tr><td>Garçons</td><td>15</td><td>5</td><td>20</td></tr><tr><td>Total</td><td>20</td><td>15</td><td>35</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Filles » ou « Sport » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = (15 + 20 − 5) ÷ 35 = <b><span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>6</td><td>34</td><td>40</td></tr><tr><td>Bus</td><td>8</td><td>32</td><td>40</td></tr><tr><td>Total</td><td>14</td><td>66</td><td>80</td></tr></tbody></table></div><br>On choisit une personne au hasard parmi les « Moins de 3 km ». Quelle est la probabilité qu’elle soit « Bus » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "P<sub>Moins de 3 km</sub>(Bus) = 8 ÷ 14 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>11</td><td>31</td><td>42</td></tr><tr><td>Externe</td><td>20</td><td>8</td><td>28</td></tr><tr><td>Total</td><td>31</td><td>39</td><td>70</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Interne » et « Première » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>39</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>42</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>70</span></span>",
+      "<span class='fr'><span class='fn'>117</span><span class='fd'>350</span></span>"
+     ],
+     "a": 2,
+     "e": "Case « Interne / Première » : 31 ÷ 70 = <b><span class='fr'><span class='fn'>31</span><span class='fd'>70</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>12</td><td>13</td><td>25</td></tr><tr><td>Externe</td><td>22</td><td>6</td><td>28</td></tr><tr><td>Total</td><td>34</td><td>19</td><td>53</td></tr></tbody></table></div><br>On choisit une personne au hasard parmi les « Seconde ». Quelle est la probabilité qu’elle soit « Externe » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>53</span></span>",
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>53</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>14</span></span>"
+     ],
+     "a": 0,
+     "e": "P<sub>Seconde</sub>(Externe) = 22 ÷ 34 = <b><span class='fr'><span class='fn'>11</span><span class='fd'>17</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>9</td><td>9</td><td>18</td></tr><tr><td>Bus</td><td>39</td><td>33</td><td>72</td></tr><tr><td>Total</td><td>48</td><td>42</td><td>90</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Vélo » ou « Moins de 3 km » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>30</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = (18 + 48 − 9) ÷ 90 = <b><span class='fr'><span class='fn'>19</span><span class='fd'>30</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>33</td><td>34</td><td>67</td></tr><tr><td>Externe</td><td>9</td><td>39</td><td>48</td></tr><tr><td>Total</td><td>42</td><td>73</td><td>115</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Interne » et « Première » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>73</span></span>",
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>67</span></span>",
+      "<span class='fr'><span class='fn'>4891</span><span class='fd'>13225</span></span>",
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>115</span></span>"
+     ],
+     "a": 3,
+     "e": "Case « Interne / Première » : 34 ÷ 115 = <b><span class='fr'><span class='fn'>34</span><span class='fd'>115</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>15</td><td>37</td><td>52</td></tr><tr><td>Bus</td><td>10</td><td>32</td><td>42</td></tr><tr><td>Total</td><td>25</td><td>69</td><td>94</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Vélo » ou « Moins de 3 km » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>94</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>47</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>77</span><span class='fd'>94</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A ∪ B) = (52 + 25 − 15) ÷ 94 = <b><span class='fr'><span class='fn'>31</span><span class='fd'>47</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>8</td><td>25</td><td>33</td></tr><tr><td>Bus</td><td>28</td><td>7</td><td>35</td></tr><tr><td>Total</td><td>36</td><td>32</td><td>68</td></tr></tbody></table></div><br>On choisit une personne au hasard parmi les « Moins de 3 km ». Quelle est la probabilité qu’elle soit « Bus » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>17</span></span>"
+     ],
+     "a": 2,
+     "e": "P<sub>Moins de 3 km</sub>(Bus) = 28 ÷ 36 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Sport</th><th>Pas de sport</th><th>Total</th></tr></thead><tbody><tr><td>Filles</td><td>39</td><td>8</td><td>47</td></tr><tr><td>Garçons</td><td>13</td><td>26</td><td>39</td></tr><tr><td>Total</td><td>52</td><td>34</td><td>86</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Filles » et « Pas de sport » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>799</span><span class='fd'>3698</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>47</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>43</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>17</span></span>"
+     ],
+     "a": 2,
+     "e": "Case « Filles / Pas de sport » : 8 ÷ 86 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>43</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>18</td><td>39</td><td>57</td></tr><tr><td>Externe</td><td>39</td><td>34</td><td>73</td></tr><tr><td>Total</td><td>57</td><td>73</td><td>130</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Interne » ou « Seconde » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>57</span><span class='fd'>65</span></span>",
+      "<span class='fr'><span class='fn'>48</span><span class='fd'>65</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>65</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A ∪ B) = (57 + 57 − 18) ÷ 130 = <b><span class='fr'><span class='fn'>48</span><span class='fd'>65</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Moins de 3 km</th><th>Plus de 3 km</th><th>Total</th></tr></thead><tbody><tr><td>Vélo</td><td>23</td><td>31</td><td>54</td></tr><tr><td>Bus</td><td>18</td><td>31</td><td>49</td></tr><tr><td>Total</td><td>41</td><td>62</td><td>103</td></tr></tbody></table></div><br>On choisit une personne au hasard. Quelle est la probabilité qu’elle soit « Vélo » et « Plus de 3 km » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>103</span></span>",
+      "<span class='fr'><span class='fn'>3348</span><span class='fd'>10609</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>54</span></span>"
+     ],
+     "a": 0,
+     "e": "Case « Vélo / Plus de 3 km » : 31 ÷ 103 = <b><span class='fr'><span class='fn'>31</span><span class='fd'>103</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Seconde</th><th>Première</th><th>Total</th></tr></thead><tbody><tr><td>Interne</td><td>10</td><td>39</td><td>49</td></tr><tr><td>Externe</td><td>34</td><td>38</td><td>72</td></tr><tr><td>Total</td><td>44</td><td>77</td><td>121</td></tr></tbody></table></div><br>On choisit une personne au hasard parmi les « Seconde ». Quelle est la probabilité qu’elle soit « Externe » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>36</span></span>"
+     ],
+     "a": 2,
+     "e": "P<sub>Seconde</sub>(Externe) = 34 ÷ 44 = <b><span class='fr'><span class='fn'>17</span><span class='fd'>22</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Arbres pondérés et probabilités conditionnelles",
+   "items": [
+    {
+     "q": "P(A) = 0,2 et P(A ∩ B) = 0,1. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,02",
+      "0,1",
+      "0,5",
+      "0,6"
+     ],
+     "a": 2,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,1 ÷ 0,2 = <b>0,5</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré : P(A) = 0,5 et P<sub>A</sub>(B) = 0,8. Calcule P(A ∩ B).",
+     "c": [
+      "0,3",
+      "0,5",
+      "0,4",
+      "0,8"
+     ],
+     "a": 2,
+     "e": "On multiplie le long du chemin : 0,5 × 0,8 = <b>0,4</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré : P(A) = 0,4 et P<sub>A</sub>(B) = 0,8. Calcule P(A ∩ B).",
+     "c": [
+      "0,4",
+      "0,32",
+      "0,8",
+      "0,42"
+     ],
+     "a": 1,
+     "e": "On multiplie le long du chemin : 0,4 × 0,8 = <b>0,32</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré, P<sub>A</sub>(B) = 0,1. Que vaut P<sub>A</sub>(B̄) ?",
+     "c": [
+      "0,9",
+      "0,1",
+      "0,27",
+      "0,7"
+     ],
+     "a": 0,
+     "e": "Les branches issues d’un même nœud ont pour somme 1 : <b>0,9</b>."
+    },
+    {
+     "q": "P(A) = 0,6 et P(A ∩ B) = 0,12. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,12",
+      "0,2",
+      "0,48",
+      "0,072"
+     ],
+     "a": 1,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,12 ÷ 0,6 = <b>0,2</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré, P<sub>A</sub>(B) = 0,9. Que vaut P<sub>A</sub>(B̄) ?",
+     "c": [
+      "0,5",
+      "0,05",
+      "0,1",
+      "0,9"
+     ],
+     "a": 2,
+     "e": "Les branches issues d’un même nœud ont pour somme 1 : <b>0,1</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré, P<sub>A</sub>(B) = 0,7. Que vaut P<sub>A</sub>(B̄) ?",
+     "c": [
+      "0,6",
+      "0,3",
+      "0,12",
+      "0,7"
+     ],
+     "a": 1,
+     "e": "Les branches issues d’un même nœud ont pour somme 1 : <b>0,3</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré : P(A) = 0,5 et P<sub>A</sub>(B) = 0,7. Calcule P(A ∩ B).",
+     "c": [
+      "0,35",
+      "0,45",
+      "0,5",
+      "0,7"
+     ],
+     "a": 0,
+     "e": "On multiplie le long du chemin : 0,5 × 0,7 = <b>0,35</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré : P(A) = 0,4 et P<sub>A</sub>(B) = 0,9. Calcule P(A ∩ B).",
+     "c": [
+      "0,46",
+      "0,4",
+      "0,9",
+      "0,36"
+     ],
+     "a": 3,
+     "e": "On multiplie le long du chemin : 0,4 × 0,9 = <b>0,36</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré : P(A) = 0,2 et P<sub>A</sub>(B) = 0,9. Calcule P(A ∩ B).",
+     "c": [
+      "0,18",
+      "0,2",
+      "0,9",
+      "0,28"
+     ],
+     "a": 0,
+     "e": "On multiplie le long du chemin : 0,2 × 0,9 = <b>0,18</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré : P(A) = 0,5 et P<sub>A</sub>(B) = 0,4. Calcule P(A ∩ B).",
+     "c": [
+      "0,4",
+      "0,5",
+      "0,2",
+      "0,9"
+     ],
+     "a": 2,
+     "e": "On multiplie le long du chemin : 0,5 × 0,4 = <b>0,2</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré, P<sub>A</sub>(B) = 0,4. Que vaut P<sub>A</sub>(B̄) ?",
+     "c": [
+      "0,3",
+      "0,42",
+      "0,4",
+      "0,6"
+     ],
+     "a": 3,
+     "e": "Les branches issues d’un même nœud ont pour somme 1 : <b>0,6</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré : P(A) = 0,3 et P<sub>A</sub>(B) = 0,1. Calcule P(A ∩ B).",
+     "c": [
+      "0,4",
+      "0,03",
+      "0,1",
+      "0,3"
+     ],
+     "a": 1,
+     "e": "On multiplie le long du chemin : 0,3 × 0,1 = <b>0,03</b>."
+    },
+    {
+     "q": "P(A) = 0,6 et P(A ∩ B) = 0,18. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,3",
+      "0,108",
+      "0,42",
+      "0,18"
+     ],
+     "a": 0,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,18 ÷ 0,6 = <b>0,3</b>."
+    },
+    {
+     "q": "P(A) = 0,6 et P(A ∩ B) = 0,3. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,6",
+      "0,3",
+      "0,5",
+      "0,18"
+     ],
+     "a": 2,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,3 ÷ 0,6 = <b>0,5</b>."
+    },
+    {
+     "q": "P(A) = 0,5 et P(A ∩ B) = 0,05. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,45",
+      "0,1",
+      "0,025",
+      "0,05"
+     ],
+     "a": 1,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,05 ÷ 0,5 = <b>0,1</b>."
+    },
+    {
+     "q": "Sur un arbre pondéré : P(A) = 0,6 et P<sub>A</sub>(B) = 0,5. Calcule P(A ∩ B).",
+     "c": [
+      "0,5",
+      "0,6",
+      "0,4",
+      "0,3"
+     ],
+     "a": 3,
+     "e": "On multiplie le long du chemin : 0,6 × 0,5 = <b>0,3</b>."
+    },
+    {
+     "q": "P(A) = 0,7 et P(A ∩ B) = 0,49. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,21",
+      "0,49",
+      "0,343",
+      "0,7"
+     ],
+     "a": 3,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,49 ÷ 0,7 = <b>0,7</b>."
+    },
+    {
+     "q": "P(A) = 0,4 et P(A ∩ B) = 0,08. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,32",
+      "0,032",
+      "0,08",
+      "0,2"
+     ],
+     "a": 3,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,08 ÷ 0,4 = <b>0,2</b>."
+    },
+    {
+     "q": "P(A) = 0,4 et P(A ∩ B) = 0,12. Calcule P<sub>A</sub>(B).",
+     "c": [
+      "0,3",
+      "0,28",
+      "0,12",
+      "0,048"
+     ],
+     "a": 0,
+     "e": "P<sub>A</sub>(B) = P(A ∩ B) ÷ P(A) = 0,12 ÷ 0,4 = <b>0,3</b>."
+    }
+   ]
+  },
+  {
+   "title": "Problèmes",
+   "items": [
+    {
+     "q": "Une maladie touche 5 % d’une population. Un test est positif pour 99 % des malades. Quelle est la probabilité qu’une personne soit malade et testée positive ?",
+     "c": [
+      "0,99",
+      "0,04",
+      "0,0495",
+      "0,05"
+     ],
+     "a": 2,
+     "e": "P(M ∩ T) = P(M) × P<sub>M</sub>(T) = 0,05 × 0,99 = <b>0,0495</b>."
+    },
+    {
+     "q": "On lance deux dés équilibrés. Quelle est la probabilité d’obtenir une somme égale à 7 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Tableau à double entrée : 6 issues favorables sur 36 : <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "On lance deux dés équilibrés. Quelle est la probabilité d’obtenir deux nombres pairs ?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "Tableau à double entrée : 9 issues favorables sur 36 : <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Sur un arbre pondéré, pour obtenir la probabilité d’un chemin, on…",
+     "c": [
+      "prend la plus grande branche",
+      "additionne les probabilités des branches",
+      "divise par le nombre de branches",
+      "multiplie les probabilités des branches"
+     ],
+     "a": 3,
+     "e": "Réponse : <b>multiplie les probabilités des branches</b>."
+    },
+    {
+     "q": "On lance 3 fois une pièce équilibrée. Quelle est la probabilité d’obtenir trois « face » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "Il y a 2<sup>3</sup> = 8 issues équiprobables, dont 1 favorable : <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Une maladie touche 1 % d’une population. Un test est positif pour 99 % des malades. Quelle est la probabilité qu’une personne soit malade et testée positive ?",
+     "c": [
+      "0,99",
+      "0,0099",
+      "0,01",
+      "0,0001"
+     ],
+     "a": 1,
+     "e": "P(M ∩ T) = P(M) × P<sub>M</sub>(T) = 0,01 × 0,99 = <b>0,0099</b>."
+    },
+    {
+     "q": "Une maladie touche 2 % d’une population. Un test est positif pour 95 % des malades. Quelle est la probabilité qu’une personne soit malade et testée positive ?",
+     "c": [
+      "0,001",
+      "0,95",
+      "0,019",
+      "0,02"
+     ],
+     "a": 2,
+     "e": "P(M ∩ T) = P(M) × P<sub>M</sub>(T) = 0,02 × 0,95 = <b>0,019</b>."
+    },
+    {
+     "q": "On lance 3 fois une pièce équilibrée. Quelle est la probabilité d’obtenir au moins un « pile » ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "1"
+     ],
+     "a": 0,
+     "e": "Il y a 2<sup>3</sup> = 8 issues équiprobables, dont 7 favorables : <b><span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Une maladie touche 1 % d’une population. Un test est positif pour 90 % des malades. Quelle est la probabilité qu’une personne soit malade et testée positive ?",
+     "c": [
+      "0,9",
+      "0,001",
+      "0,01",
+      "0,009"
+     ],
+     "a": 3,
+     "e": "P(M ∩ T) = P(M) × P<sub>M</sub>(T) = 0,01 × 0,9 = <b>0,009</b>."
+    },
+    {
+     "q": "On lance deux dés équilibrés. Quelle est la probabilité d’obtenir une somme égale à 4 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 3,
+     "e": "Tableau à double entrée : 3 issues favorables sur 36 : <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Une maladie touche 1 % d’une population. Un test est positif pour 95 % des malades. Quelle est la probabilité qu’une personne soit malade et testée positive ?",
+     "c": [
+      "0,0095",
+      "0,01",
+      "0,95",
+      "0,0005"
+     ],
+     "a": 0,
+     "e": "P(M ∩ T) = P(M) × P<sub>M</sub>(T) = 0,01 × 0,95 = <b>0,0095</b>."
+    },
+    {
+     "q": "Une maladie touche 5 % d’une population. Un test est positif pour 90 % des malades. Quelle est la probabilité qu’une personne soit malade et testée positive ?",
+     "c": [
+      "0,045",
+      "0,9",
+      "0,05",
+      "0,005"
+     ],
+     "a": 0,
+     "e": "P(M ∩ T) = P(M) × P<sub>M</sub>(T) = 0,05 × 0,9 = <b>0,045</b>."
+    },
+    {
+     "q": "Une maladie touche 2 % d’une population. Un test est positif pour 99 % des malades. Quelle est la probabilité qu’une personne soit malade et testée positive ?",
+     "c": [
+      "0,02",
+      "0,99",
+      "0,01",
+      "0,0198"
+     ],
+     "a": 3,
+     "e": "P(M ∩ T) = P(M) × P<sub>M</sub>(T) = 0,02 × 0,99 = <b>0,0198</b>."
+    },
+    {
+     "q": "Une maladie touche 2 % d’une population. Un test est positif pour 90 % des malades. Quelle est la probabilité qu’une personne soit malade et testée positive ?",
+     "c": [
+      "0,018",
+      "0,002",
+      "0,02",
+      "0,9"
+     ],
+     "a": 0,
+     "e": "P(M ∩ T) = P(M) × P<sub>M</sub>(T) = 0,02 × 0,9 = <b>0,018</b>."
+    },
+    {
+     "q": "On lance deux dés équilibrés. Quelle est la probabilité d’obtenir une somme supérieure ou égale à 10 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>36</span></span>"
+     ],
+     "a": 0,
+     "e": "Tableau à double entrée : 6 issues favorables sur 36 : <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "On lance deux dés équilibrés. Quelle est la probabilité d’obtenir au moins un 6 ?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Tableau à double entrée : 11 issues favorables sur 36 : <b><span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "P<sub>A</sub>(B) et P<sub>B</sub>(A) sont-elles toujours égales ?",
+     "c": [
+      "oui, si P(A) = 0,5",
+      "non, en général elles sont différentes",
+      "oui, toujours",
+      "elles valent toujours P(A ∩ B)"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>non, en général elles sont différentes</b>."
+    },
+    {
+     "q": "Une maladie touche 5 % d’une population. Un test est positif pour 95 % des malades. Quelle est la probabilité qu’une personne soit malade et testée positive ?",
+     "c": [
+      "0,0025",
+      "0,95",
+      "0,0475",
+      "0,05"
+     ],
+     "a": 2,
+     "e": "P(M ∩ T) = P(M) × P<sub>M</sub>(T) = 0,05 × 0,95 = <b>0,0475</b>."
+    },
+    {
+     "q": "Dans un lycée, P<sub>F</sub>(S) désigne la probabilité…",
+     "c": [
+      "qu’un élève fasse du sport ou soit une fille",
+      "qu’un élève fasse du sport sachant que c’est une fille",
+      "qu’un élève soit une fille sachant qu’il fait du sport",
+      "qu’un élève soit une fille et fasse du sport"
+     ],
+     "a": 1,
+     "e": "Réponse : <b>qu’un élève fasse du sport sachant que c’est une fille</b>."
+    },
+    {
+     "q": "On lance deux dés équilibrés. Quelle est la probabilité d’obtenir un double ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Tableau à double entrée : 6 issues favorables sur 36 : <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 19,
+ "updated": "2026-11-22",
+ "country": "fr",
+ "subject": "maths",
+ "grade": "seconde"
+}

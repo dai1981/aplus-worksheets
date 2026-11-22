@@ -1344,7 +1344,15 @@ FR / Maths / 5e: 1. nombres-relatifs ✓ 2. additionner-et-soustraire-des-relati
 FR / Maths / 4e: 1. multiplier-et-diviser-des-relatifs ✓ 2. operations-sur-les-fractions ✓ 3. puissances ✓ 4. racine-carree ✓ 5. developper-et-factoriser ✓ 6. equations ✓ 7. programmes-de-calcul ✓ 8. proportionnalite-et-ratios ✓ 9. pourcentages-et-coefficients-multiplicateurs ✓ 10. fonctions-et-representations-graphiques ✓ 11. translations ✓ 12. droite-des-milieux ✓ 13. theoreme-de-pythagore ✓ 14. reciproque-et-contraposee-de-pythagore ✓ 15. cercle-circonscrit-au-triangle-rectangle ✓ 16. pyramides-et-cones ✓ 17. statistiques ✓ 18. probabilites ✓
 FR / Maths / 3e（brevet）: 1. fractions-irreductibles-et-diviseurs ✓ 2. puissances-et-notation-scientifique ✓ 3. racines-carrees-et-equation-x2-a ✓ 4. developper-et-factoriser ✓ 5. identites-remarquables ✓ 6. equations-produit-nul-et-inequations ✓ 7. pourcentages-ratios-et-echelles ✓ 8. fonctions-image-et-antecedent ✓ 9. fonctions-lineaires-et-affines ✓ 10. theoreme-de-thales ✓ 11. trigonometrie ✓ 12. vecteurs-et-translations ✓ 13. sphere-et-sections ✓ 14. volumes ✓ 15. statistiques ✓ 16. probabilites ✓
 
-FR / Maths は CP〜3e まで完了。次は lycée（seconde）か、GDP 順で次の国
+FR / Maths / Seconde（lycée。Programme 2026 de seconde générale et technologique、BO 2026 n°14、MENE2602914A）— grade `seconde`（sort 10、15歳）。生成スクリプトは `gen_fr_maths_seconde_*`（seed は 605xx）、共通部品は fr_c4（unit の standard_text 末尾は「(résumé du programme 2026 de seconde)」）。
+fr_common.make_unit は seconde で DOMAIN_LY（N Nombres et calculs, algèbre／G Géométrie／F Fonctions／S Statistiques et probabilités／P Algorithmique et programmation）と STD_URL_LY。
+連立方程式は `<span class='sys'>式1<br>式2</span>`、Python のコードは `<span class='code'>…<br>…</span>`（字下げは NB、< > は &lt; &gt;、文字列はシングルクォート。ws.css・ws-print.css）。符号表・変化表は生成スクリプト内の自前 SVG。
+トピック：valeur-absolue→nombres、arithmetique→multiplication-et-division、systeme・signes→calcul-litteral-et-equations、variations-et-extremums→fonctions、colinearite→geometrie、echantillon→donnees。algorithmique-et-python はトピックなし
+1. arithmetique ✓ 2. nombres-reels-et-intervalles ✓ 3. valeur-absolue-et-encadrements ✓ 4. puissances-et-racines-carrees ✓ 5. calcul-litteral ✓ 6. equations-et-inequations ✓ 7. tableaux-de-signes ✓
+8. fonctions-generalites ✓ 9. fonctions-de-reference ✓ 10. variations-et-extremums ✓ 11. fonctions-affines ✓ 12. vecteurs ✓ 13. coordonnees-et-colinearite ✓ 14. equations-de-droites ✓
+15. systemes-lineaires ✓ 16. geometrie-plane ✓ 17. pourcentages-et-evolutions ✓ 18. statistiques ✓ 19. probabilites ✓ 20. echantillonnage ✓ 21. algorithmique-et-python ✓
+
+FR / Maths は CP〜seconde まで完了。次は première（spécialité）か、GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
