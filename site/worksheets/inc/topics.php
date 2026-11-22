@@ -167,10 +167,41 @@ function topic_defs_fr() {
     );
 }
 
+/* Italy: Italian unit slugs, Italian names */
+function topic_defs_it() {
+    return array(
+        'numeri' => array('name' => 'Numeri',
+            'in' => '/numeri|ordinare/', 'out' => '/decimal|frazion/',
+            'blurb' => 'Leggere, scrivere e scomporre i numeri, il valore posizionale delle cifre, confrontare e ordinare i numeri sulla retta.'),
+        'addizione-e-sottrazione' => array('name' => 'Addizione e sottrazione',
+            'in' => '/addizion|sottrazion|calcolo-mentale/', 'out' => '/^$/',
+            'blurb' => 'Calcolo mentale, addizioni e sottrazioni in colonna con il cambio, prova e proprietà delle operazioni.'),
+        'moltiplicazione-e-divisione' => array('name' => 'Moltiplicazione e divisione',
+            'in' => '/moltiplic|division|tabellin/', 'out' => '/^$/',
+            'blurb' => 'Tabelline, moltiplicazioni in colonna, divisioni con il resto, moltiplicare e dividere per 10, 100 e 1000.'),
+        'frazioni-e-decimali' => array('name' => 'Frazioni e numeri decimali',
+            'in' => '/frazion|decimal/', 'out' => '/^$/',
+            'blurb' => 'Unità frazionarie, frazione di una quantità, frazioni decimali, decimi e centesimi, numeri decimali con l’euro e le misure.'),
+        'problemi' => array('name' => 'Problemi',
+            'in' => '/problemi/', 'out' => '/^$/',
+            'blurb' => 'Problemi con una o due operazioni, dati utili e inutili, domande nascoste, problemi con l’euro e le misure.'),
+        'misure' => array('name' => 'Misure',
+            'in' => '/misure|lunghezz|peso|capacit|euro|orologio|tempo/', 'out' => '/^$/',
+            'blurb' => 'Misure di lunghezza, peso e capacità, equivalenze, l’euro, l’orologio e la durata del tempo.'),
+        'geometria' => array('name' => 'Geometria',
+            'in' => '/linee|angoli|figure|poligon|perimetro|solidi|simmetria|percorsi/', 'out' => '/^$/',
+            'blurb' => 'Linee e angoli, poligoni e perimetro, figure solide, simmetria, percorsi e reticoli.'),
+        'dati-e-probabilita' => array('name' => 'Dati e probabilità',
+            'in' => '/dati|probabilit|grafic|indagin/', 'out' => '/^$/',
+            'blurb' => 'Indagini, tabelle, ideogrammi e istogrammi, la moda, eventi certi, possibili e impossibili.'),
+    );
+}
+
 function topic_defs($country = null) {
     if ($country === 'tw') return topic_defs_tw();
     if ($country === 'de') return topic_defs_de();
     if ($country === 'fr') return topic_defs_fr();
+    if ($country === 'it') return topic_defs_it();
     $d = array(
         'fractions' => array('name' => 'Fractions',
             'in' => '/fraction|halves|thirds|fourths|quarters|mixed-num|improper|fair-shares|partition-shapes|operations-with-rational/',
@@ -405,6 +436,7 @@ function topic_range($units) {
     if ($first === $last) return $first;
     if ($units[0]['country'] === 'tw') return $first . '到' . $last;
     if ($units[0]['country'] === 'fr') return 'du ' . $first . ' au ' . $last;
+    if ($units[0]['country'] === 'it') return 'dalla ' . strtolower($first) . ' alla ' . strtolower($last);
     return $units[0]['country'] === 'de' ? $first . ' bis ' . $last : $first . ' to ' . $last;
 }
 

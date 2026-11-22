@@ -1364,6 +1364,20 @@ preview.php の pv_wrap の省略ループが末尾の空白で止まらなく�
 
 FR / Maths は CP〜première まで完了。次は terminale（spécialité、Programme 2026 は 2027 年度から。BO 2026 n°14 MENE2602919A）か、GDP 順で次の国
 
+IT / Matematica（Indicazioni nazionali per il curricolo。新しい Indicazioni は DM 9 dicembre 2025 n. 221（GU n. 21 del 27/01/2026）、2026/27 年度にクラス 1 から、上の学年は 2012 年版（DM 254/2012）が移行期間中も有効）— country `it`（name「Italia」、lang `it`、hreflang it-it）、subject `matematica`（Matematica）、grade `classe-N`（name「Classe terza」など、classe-prima 6〜7 歳。unit.php に年齢あり）、A4。
+生成スクリプトは `gen_it_matematica_c3_*`（seed は 7030N）、共通部品は `tools/it_common.py`（num（4 桁はそのまま 1000、5 桁以上はノーブレークスペース 12 000）・dec（コンマ 2,5）・eur（3,50 €、c=True で 50 cent）・ora（8:15）・dur（1 h 25 min）・pl（1 matita / 3 matite）・Kids（名前と lui/lei）・mcq・lesson（Come si fa → Esempio → Errori frequenti。examples は (q, steps, ans) のタプル）・make_unit（seo_title と standard_code「Classe terza · Numeri」と standard_text の末尾を自動）・lettere（9999 までの数詞）・図：retta・blocchi・tabella_valore（h da u）・istogramma・soldi_svg（硬貨は「10 c」）・solido_svg・orologio・colonna（筆算）・striscia・cerchio）。
+イタリア語、tu で話しかける短い文。記号は × と :（割り算）。余りは「23 : 5 = 4 con resto 3」。位は h, da, u（uk）。単位は m, dm, cm, mm, dam, hm, km、kg, hg, dag, g、l, dl, cl, ml。peso lordo / netto / tara。
+domain は N Numeri／S Spazio e figure／M Misure／D Relazioni, dati e previsioni／P Problemi、standard_url は MIM の curricolo PDF。q・c・e の中の < > は &lt; &gt;（faq・standard_text・key は生の < >）。環境変数 IT_WARN=1 で、誤答が足りず数字をずらして補った問題を FILL: で表示する。
+多くの単元は FR CE2 の生成スクリプトの図（règle・balance・verre doseur・figures・grille・robot）と DE Klasse 3（Würfelnetz・Bauplan・Achsensymmetrie）の問題関数を、モジュールの R を入れ替え、文をイタリア語にして再利用。
+UI 文言は core.php の 'it'、トピックは topics.php の `topic_defs_it()`（numeri・addizione-e-sottrazione・moltiplicazione-e-divisione・frazioni-e-decimali・problemi・misure・geometria・dati-e-probabilita）。topic.php・topics.php に $it の文言
+
+IT / Matematica / Classe terza
+1. numeri-fino-a-1000 ✓ 2. confrontare-e-ordinare-i-numeri ✓ 3. calcolo-mentale ✓ 4. addizioni-in-colonna ✓ 5. sottrazioni-in-colonna ✓ 6. tabelline ✓ 7. moltiplicazioni-in-colonna ✓
+8. divisioni ✓ 9. moltiplicare-e-dividere-per-10-100-1000 ✓ 10. frazioni ✓ 11. numeri-decimali ✓ 12. problemi ✓ 13. misure-di-lunghezza ✓ 14. peso-e-capacita ✓
+15. euro ✓ 16. orologio-e-tempo ✓ 17. linee-e-angoli ✓ 18. figure-piane-e-perimetro ✓ 19. solidi ✓ 20. simmetria-e-percorsi ✓ 21. dati-e-probabilita ✓
+
+IT の次: classe quinta（INVALSI の学年）→ classe seconda（INVALSI）→ classe quarta → classe prima → scuola secondaria di primo grado（prima〜terza media）。catalog.json に学年を足す
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB

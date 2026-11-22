@@ -139,6 +139,9 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 } elseif ($country['code'] === 'fr' && isset(array('cp' => 1, 'ce1' => 1, 'ce2' => 1, 'cm1' => 1, 'cm2' => 1, '6e' => 1, '5e' => 1, '4e' => 1, '3e' => 1, 'seconde' => 1, 'premiere' => 1)[$grade['slug']])) {
     $fy = array('cp' => 6, 'ce1' => 7, 'ce2' => 8, 'cm1' => 9, 'cm2' => 10, '6e' => 11, '5e' => 12, '4e' => 13, '3e' => 14, 'seconde' => 15, 'premiere' => 16);   // France: CE2 = age 8-9
     $lr['typicalAgeRange'] = $fy[$grade['slug']] . '-' . ($fy[$grade['slug']] + 1);
+} elseif ($country['code'] === 'it' && isset(array('classe-prima' => 1, 'classe-seconda' => 1, 'classe-terza' => 1, 'classe-quarta' => 1, 'classe-quinta' => 1, 'prima-media' => 1, 'seconda-media' => 1, 'terza-media' => 1)[$grade['slug']])) {
+    $iy = array('classe-prima' => 6, 'classe-seconda' => 7, 'classe-terza' => 8, 'classe-quarta' => 9, 'classe-quinta' => 10, 'prima-media' => 11, 'seconda-media' => 12, 'terza-media' => 13);   // Italy: classe terza = age 8-9
+    $lr['typicalAgeRange'] = $iy[$grade['slug']] . '-' . ($iy[$grade['slug']] + 1);
 } elseif ($grade['slug'] === 'grade-r' && $country['code'] === 'za') {
     $lr['typicalAgeRange'] = '5-6';   // South Africa: Grade R (Reception Year), the year before Grade 1
     $lr['educationalLevel'] = array('Grade R', 'Reception Year');
