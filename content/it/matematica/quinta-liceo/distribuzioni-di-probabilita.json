@@ -1,0 +1,1157 @@
+{
+ "slug": "distribuzioni-di-probabilita",
+ "title": "Distribuzioni di probabilità",
+ "seo_title": "Distribuzioni di probabilità quinta liceo: schede di matematica con soluzioni",
+ "short_title": "Distribuzioni di probabilità",
+ "domain": "Dati e previsioni",
+ "standard_code": "Quinta liceo · Dati e previsioni",
+ "standard_url": "https://www.gazzettaufficiale.it/eli/id/2010/12/14/010G0232/sg",
+ "standard_text": "Distribuzioni di probabilità discrete e continue: binomiale, di Poisson, normale; valore atteso e varianza (sintesi degli obiettivi specifici di apprendimento di matematica del liceo scientifico, Indicazioni nazionali, DM 211/2010)",
+ "meta_desc": "Schede di matematica per la quinta liceo sulle distribuzioni di probabilità: variabili aleatorie discrete, valore atteso, varianza, giochi equi, distribuzione binomiale, distribuzione di Poisson, distribuzione normale e regola empirica. 100 esercizi con soluzioni.",
+ "key_big": "Binomiale: E(X) = np, Var(X) = np(1 − p).",
+ "key_sub": "Normale: 68% in μ ± σ, 95% in μ ± 2σ.",
+ "body_html": "<h2>Come si fa</h2><p>Una <b>variabile aleatoria discreta</b> X assume valori x<sub>i</sub> con probabilità p<sub>i</sub> (Σ p<sub>i</sub> = 1). Valore atteso: E(X) = Σ x<sub>i</sub> p<sub>i</sub>; varianza: Var(X) = E(X²) − E(X)²; deviazione standard σ = √Var(X).</p><p>Un gioco è <b>equo</b> se il guadagno atteso è 0.</p><p><b>Binomiale</b> (n prove indipendenti, probabilità di successo p): P(X = k) = C(n, k) p<sup>k</sup>(1 − p)<sup>n − k</sup>, E(X) = np, Var(X) = np(1 − p). <b>Poisson</b> (eventi rari): P(X = k) = λ<sup>k</sup>e<sup>−λ</sup>/k!, E(X) = Var(X) = λ.</p><p><b>Normale</b> di media μ e deviazione standard σ: z = (x − μ)/σ. Regola empirica: circa il 68% dei valori in μ ± σ, il 95% in μ ± 2σ, il 99,7% in μ ± 3σ.</p><div class='sn-ex'><span class='sn-ex-t'>Esempio</span><p class='sn-ex-q'>Binomiale n = 4, p = 1/2, P(X = 2)</p><p class='sn-ex-s'>C(4, 2) = 6</p><p class='sn-ex-s'>6 · (1/2)<sup>4</sup></p><p class='sn-ex-a'>Risposta: 3/8</p></div><div class='sn-ex'><span class='sn-ex-t'>Esempio</span><p class='sn-ex-q'>Normale μ = 100, σ = 10: P(X &gt; 120)</p><p class='sn-ex-s'>120 = μ + 2σ</p><p class='sn-ex-s'>(100% − 95%)/2</p><p class='sn-ex-a'>Risposta: circa 2,5%</p></div><h2>Errori frequenti</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Errore frequente</th><th>Che cosa fare</th></tr></thead><tbody><tr><td>Dimenticare C(n, k)</td><td>P(X = k) conta tutti i modi di ottenere k successi.</td></tr><tr><td>Var(X) = E(X²)</td><td>Bisogna sottrarre E(X)².</td></tr><tr><td>Confondere σ e σ²</td><td>σ è la deviazione standard, σ² la varianza.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Quando si usa la distribuzione binomiale?",
+   "a": "Quando si ripete n volte una prova con due esiti (successo o insuccesso), le prove sono indipendenti e la probabilità di successo p è sempre la stessa."
+  },
+  {
+   "q": "Che cosa rappresenta la distribuzione normale?",
+   "a": "Descrive grandezze che si distribuiscono a campana intorno alla media, come le altezze o gli errori di misura; è simmetrica rispetto a μ."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Variabili aleatorie e valore atteso",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−2</th><th>−1</th><th>2</th><th>3</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></td><td>p</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td></tr></tbody></table></div>Nella distribuzione di probabilità della tabella manca un valore. Quanto vale p?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>60</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "La somma delle probabilità è 1: p = 1 − <span class='fr'><span class='fn'>11</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>1</th><th>2</th><th>3</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>12</span></span>",
+      "5",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>12</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = (−1) · <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span> + 1 · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + 2 · <span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span> + 3 · <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>19</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>0</th><th>2</th><th>4</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>",
+      "6",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "2"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = 0 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + 2 · <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> + 4 · <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>3</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td>p</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td></tr></tbody></table></div>Nella distribuzione di probabilità della tabella manca un valore. Quanto vale p?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "La somma delle probabilità è 1: p = 1 − <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>4</th><th>5</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td>p</td></tr></tbody></table></div>Nella distribuzione di probabilità della tabella manca un valore. Quanto vale p?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "La somma delle probabilità è 1: p = 1 − <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>3</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td>p</td></tr></tbody></table></div>Nella distribuzione di probabilità della tabella manca un valore. Quanto vale p?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>60</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>"
+     ],
+     "a": 3,
+     "e": "La somma delle probabilità è 1: p = 1 − <span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−2</th><th>0</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>10</span></span>",
+      "4",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = (−2) · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + 0 · <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> + 6 · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>0</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "<span class='fr'><span class='fn'>39</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>3</span></span>",
+      "11"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = 0 · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + 5 · <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> + 6 · <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>35</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>2</th><th>3</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td>p</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td></tr></tbody></table></div>Nella distribuzione di probabilità della tabella manca un valore. Quanto vale p?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "La somma delle probabilità è 1: p = 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−2</th><th>2</th><th>3</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td>p</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td></tr></tbody></table></div>Nella distribuzione di probabilità della tabella manca un valore. Quanto vale p?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "La somma delle probabilità è 1: p = 1 − <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "2",
+      "8",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = (−1) · <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span> + 2 · <span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span> + 3 · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + 4 · <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>13</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>0</th><th>3</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td>p</td></tr></tbody></table></div>Nella distribuzione di probabilità della tabella manca un valore. Quanto vale p?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "La somma delle probabilità è 1: p = 1 − <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−2</th><th>−1</th><th>5</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td>p</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td></tr></tbody></table></div>Nella distribuzione di probabilità della tabella manca un valore. Quanto vale p?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "La somma delle probabilità è 1: p = 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>1</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>6</span></span>",
+      "8",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = 1 · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> + 3 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + 4 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>17</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>2</th><th>3</th><th>5</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>4</span></span>",
+      "9",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = (−1) · <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> + 2 · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + 3 · <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> + 5 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>13</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−2</th><th>−1</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "8",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = (−2) · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> + (−1) · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + 5 · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> + 6 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>11</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>0</th><th>2</th><th>3</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "4"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = (−1) · <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> + 0 · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + 2 · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + 3 · <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>0</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>6</span></span>",
+      "6",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = (−1) · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + 0 · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> + 3 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + 4 · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>1</th><th>4</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>6</span></span>",
+      "11"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = 1 · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> + 4 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + 6 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>0</th><th>2</th><th>5</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td></tr></tbody></table></div>La variabile aleatoria X ha la distribuzione della tabella. Calcola il valore atteso E(X).",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>4</span></span>",
+      "7"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x<sub>i</sub> p<sub>i</sub> = 0 · <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> + 2 · <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> + 5 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>13</span><span class='fd'>4</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Varianza e giochi equi",
+   "items": [
+    {
+     "q": "Si paga 3 € per lanciare un dado: se esce 6 si vincono 12 €, altrimenti niente. Qual è il guadagno atteso?",
+     "c": [
+      "−2 €",
+      "2 €",
+      "−1 €",
+      "1 €"
+     ],
+     "a": 2,
+     "e": "E = 12 · 1/6 − 3 = −1 € (sfavorevole al giocatore): <b>−1 €</b>."
+    },
+    {
+     "q": "Si pagano 3 € per lanciare due monete: se escono due teste si vincono 6 €. Qual è il guadagno atteso?",
+     "c": [
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> €",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> €",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> €",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> €"
+     ],
+     "a": 0,
+     "e": "P(TT) = 1/4; E = 6 · 1/4 − 3 = −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> € (sfavorevole al giocatore): <b>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> €</b>."
+    },
+    {
+     "q": "Si pagano 2 € per lanciare due monete: se escono due teste si vincono 6 €. Qual è il guadagno atteso?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> €",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> €",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> €",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> €"
+     ],
+     "a": 2,
+     "e": "P(TT) = 1/4; E = 6 · 1/4 − 2 = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> € (sfavorevole al giocatore): <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> €</b>."
+    },
+    {
+     "q": "Si paga 4 € per lanciare un dado: se esce 6 si vincono 12 €, altrimenti niente. Qual è il guadagno atteso?",
+     "c": [
+      "−2 €",
+      "−3 €",
+      "−1 €",
+      "2 €"
+     ],
+     "a": 0,
+     "e": "E = 12 · 1/6 − 4 = −2 € (sfavorevole al giocatore): <b>−2 €</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−2</th><th>1</th><th>3</th><th>5</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td></tr></tbody></table></div>Calcola la varianza Var(X) della variabile aleatoria della tabella.",
+     "c": [
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>77</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>92</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>, E(X²) = <span class='fr'><span class='fn'>34</span><span class='fd'>3</span></span>; Var(X) = E(X²) − E(X)² = <span class='fr'><span class='fn'>34</span><span class='fd'>3</span></span> − <span class='fr'><span class='fn'>25</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>77</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>2</th><th>4</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td></tr></tbody></table></div>Calcola la varianza Var(X) della variabile aleatoria della tabella.",
+     "c": [
+      "<span class='fr'><span class='fn'>431</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>529</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>73</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>201</span><span class='fd'>100</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = <span class='fr'><span class='fn'>23</span><span class='fd'>10</span></span>, E(X²) = <span class='fr'><span class='fn'>73</span><span class='fd'>10</span></span>; Var(X) = E(X²) − E(X)² = <span class='fr'><span class='fn'>73</span><span class='fd'>10</span></span> − <span class='fr'><span class='fn'>529</span><span class='fd'>100</span></span> = <b><span class='fr'><span class='fn'>201</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>1</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></td></tr></tbody></table></div>Calcola la varianza Var(X) della variabile aleatoria della tabella.",
+     "c": [
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>441</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>121</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>127</span><span class='fd'>16</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = <span class='fr'><span class='fn'>21</span><span class='fd'>4</span></span>, E(X²) = <span class='fr'><span class='fn'>121</span><span class='fd'>4</span></span>; Var(X) = E(X²) − E(X)² = <span class='fr'><span class='fn'>121</span><span class='fd'>4</span></span> − <span class='fr'><span class='fn'>441</span><span class='fd'>16</span></span> = <b><span class='fr'><span class='fn'>43</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Si paga 4 € per lanciare un dado: se esce 6 si vincono 6 €, altrimenti niente. Qual è il guadagno atteso?",
+     "c": [
+      "1 €",
+      "3 €",
+      "−4 €",
+      "−3 €"
+     ],
+     "a": 3,
+     "e": "E = 6 · 1/6 − 4 = −3 € (sfavorevole al giocatore): <b>−3 €</b>."
+    },
+    {
+     "q": "Si paga 1 € per lanciare un dado: se esce 6 si vincono 18 €, altrimenti niente. Qual è il guadagno atteso?",
+     "c": [
+      "1 €",
+      "3 €",
+      "2 €",
+      "−2 €"
+     ],
+     "a": 2,
+     "e": "E = 18 · 1/6 − 1 = 2 € (favorevole al giocatore): <b>2 €</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>0</th><th>5</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></td></tr></tbody></table></div>Calcola la varianza Var(X) della variabile aleatoria della tabella.",
+     "c": [
+      "<span class='fr'><span class='fn'>101</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>245</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>361</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>359</span><span class='fd'>36</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = <span class='fr'><span class='fn'>19</span><span class='fd'>6</span></span>, E(X²) = <span class='fr'><span class='fn'>101</span><span class='fd'>6</span></span>; Var(X) = E(X²) − E(X)² = <span class='fr'><span class='fn'>101</span><span class='fd'>6</span></span> − <span class='fr'><span class='fn'>361</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>245</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Un’urna contiene 3 palline rosse e 4 bianche. Si pagano 3 € per estrarne una: se è rossa si vincono 20 €. Qual è il guadagno atteso?",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>7</span></span> €",
+      "−<span class='fr'><span class='fn'>39</span><span class='fd'>7</span></span> €",
+      "<span class='fr'><span class='fn'>60</span><span class='fd'>7</span></span> €",
+      "<span class='fr'><span class='fn'>39</span><span class='fd'>7</span></span> €"
+     ],
+     "a": 3,
+     "e": "P(rossa) = 3/7; E = 20 · 3/7 − 3 = <span class='fr'><span class='fn'>39</span><span class='fd'>7</span></span> € (favorevole al giocatore): <b><span class='fr'><span class='fn'>39</span><span class='fd'>7</span></span> €</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></td></tr></tbody></table></div>Calcola la varianza Var(X) della variabile aleatoria della tabella.",
+     "c": [
+      "<span class='fr'><span class='fn'>349</span><span class='fd'>48</span></span>",
+      "<span class='fr'><span class='fn'>265</span><span class='fd'>48</span></span>",
+      "<span class='fr'><span class='fn'>103</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>16</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = <span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>, E(X²) = <span class='fr'><span class='fn'>103</span><span class='fd'>12</span></span>; Var(X) = E(X²) − E(X)² = <span class='fr'><span class='fn'>103</span><span class='fd'>12</span></span> − <span class='fr'><span class='fn'>49</span><span class='fd'>16</span></span> = <b><span class='fr'><span class='fn'>265</span><span class='fd'>48</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−2</th><th>0</th><th>1</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></td></tr></tbody></table></div>Calcola la varianza Var(X) della variabile aleatoria della tabella.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>59</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>, E(X²) = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>; Var(X) = E(X²) − E(X)² = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> − <span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>59</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Un’urna contiene 1 palline rosse e 5 bianche. Si pagano 2 € per estrarne una: se è rossa si vincono 10 €. Qual è il guadagno atteso?",
+     "c": [
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> €",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> €",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> €",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> €"
+     ],
+     "a": 1,
+     "e": "P(rossa) = 1/6; E = 10 · 1/6 − 2 = −<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> € (sfavorevole al giocatore): <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> €</b>."
+    },
+    {
+     "q": "Si pagano 2 € per lanciare due monete: se escono due teste si vincono 10 €. Qual è il guadagno atteso?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> €",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> €",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> €",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> €"
+     ],
+     "a": 2,
+     "e": "P(TT) = 1/4; E = 10 · 1/4 − 2 = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> € (favorevole al giocatore): <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> €</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−1</th><th>1</th><th>4</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td></tr></tbody></table></div>Calcola la varianza Var(X) della variabile aleatoria della tabella.",
+     "c": [
+      "<span class='fr'><span class='fn'>875</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>289</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>1079</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>97</span><span class='fd'>12</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = <span class='fr'><span class='fn'>17</span><span class='fd'>12</span></span>, E(X²) = <span class='fr'><span class='fn'>97</span><span class='fd'>12</span></span>; Var(X) = E(X²) − E(X)² = <span class='fr'><span class='fn'>97</span><span class='fd'>12</span></span> − <span class='fr'><span class='fn'>289</span><span class='fd'>144</span></span> = <b><span class='fr'><span class='fn'>875</span><span class='fd'>144</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>0</th><th>1</th><th>4</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td></tr></tbody></table></div>Calcola la varianza Var(X) della variabile aleatoria della tabella.",
+     "c": [
+      "<span class='fr'><span class='fn'>831</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>561</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>129</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>729</span><span class='fd'>100</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = <span class='fr'><span class='fn'>27</span><span class='fd'>10</span></span>, E(X²) = <span class='fr'><span class='fn'>129</span><span class='fd'>10</span></span>; Var(X) = E(X²) − E(X)² = <span class='fr'><span class='fn'>129</span><span class='fd'>10</span></span> − <span class='fr'><span class='fn'>729</span><span class='fd'>100</span></span> = <b><span class='fr'><span class='fn'>561</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Si pagano 1 € per lanciare due monete: se escono due teste si vincono 6 €. Qual è il guadagno atteso?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> €",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> €",
+      "1 €",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> €"
+     ],
+     "a": 3,
+     "e": "P(TT) = 1/4; E = 6 · 1/4 − 1 = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> € (favorevole al giocatore): <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> €</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>1</th><th>2</th><th>4</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td></tr></tbody></table></div>Calcola la varianza Var(X) della variabile aleatoria della tabella.",
+     "c": [
+      "<span class='fr'><span class='fn'>209</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>109</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>441</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>104</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = <span class='fr'><span class='fn'>21</span><span class='fd'>5</span></span>, E(X²) = <span class='fr'><span class='fn'>109</span><span class='fd'>5</span></span>; Var(X) = E(X²) − E(X)² = <span class='fr'><span class='fn'>109</span><span class='fd'>5</span></span> − <span class='fr'><span class='fn'>441</span><span class='fd'>25</span></span> = <b><span class='fr'><span class='fn'>104</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x<sub>i</sub></th><th>−2</th><th>0</th><th>4</th><th>6</th></tr></thead><tbody><tr><td>p<sub>i</sub></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td></tr></tbody></table></div>Calcola la varianza Var(X) della variabile aleatoria della tabella.",
+     "c": [
+      "<span class='fr'><span class='fn'>36</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>72</span><span class='fd'>5</span></span>",
+      "0"
+     ],
+     "a": 0,
+     "e": "E(X) = 0, E(X²) = <span class='fr'><span class='fn'>36</span><span class='fd'>5</span></span>; Var(X) = E(X²) − E(X)² = <span class='fr'><span class='fn'>36</span><span class='fd'>5</span></span> − 0 = <b><span class='fr'><span class='fn'>36</span><span class='fd'>5</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Distribuzione binomiale",
+   "items": [
+    {
+     "q": "X è binomiale: 3 prove con probabilità di successo 1/3. Calcola P(X = 1).",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 3 · (<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>1</sup> · (<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "X è binomiale con n = 12 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Quanto vale la varianza Var(X)?",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "10",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Var(X) = np(1 − p) = 12 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> · <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "X è binomiale con n = 30 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Quanto vale la varianza Var(X)?",
+     "c": [
+      "25",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>6</span></span>",
+      "5"
+     ],
+     "a": 2,
+     "e": "Var(X) = np(1 − p) = 30 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> · <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "X è binomiale con n = 60 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Quanto vale il valore atteso E(X)?",
+     "c": [
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span>",
+      "40",
+      "20",
+      "21"
+     ],
+     "a": 2,
+     "e": "E(X) = np = 60 · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b>20</b>."
+    },
+    {
+     "q": "X è binomiale con n = 100 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Quanto vale la varianza Var(X)?",
+     "c": [
+      "<span class='fr'><span class='fn'>75</span><span class='fd'>4</span></span>",
+      "25",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span>",
+      "75"
+     ],
+     "a": 0,
+     "e": "Var(X) = np(1 − p) = 100 · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>75</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "X è binomiale: 4 prove con probabilità di successo 1/3. Calcola P(X = 0).",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>81</span></span>"
+     ],
+     "a": 2,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 1 · (<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>0</sup> · (<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span></b>."
+    },
+    {
+     "q": "X è binomiale con n = 36 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Quanto vale la varianza Var(X)?",
+     "c": [
+      "30",
+      "1",
+      "5",
+      "6"
+     ],
+     "a": 2,
+     "e": "Var(X) = np(1 − p) = 36 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> · <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> = <b>5</b>."
+    },
+    {
+     "q": "X è binomiale: 4 prove con probabilità di successo 1/5. Calcola P(X = 3).",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 4 · (<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)<sup>3</sup> · (<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>16</span><span class='fd'>625</span></span></b>."
+    },
+    {
+     "q": "X è binomiale: 5 risposte a caso a domande con 4 opzioni (X = risposte esatte). Calcola P(X = 5).",
+     "c": [
+      "<span class='fr'><span class='fn'>1023</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4096</span></span>"
+     ],
+     "a": 1,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 1 · (<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)<sup>5</sup> · (<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>0</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>1024</span></span></b>."
+    },
+    {
+     "q": "X è binomiale: 3 prove con probabilità di successo 1/5. Calcola P(X = 1).",
+     "c": [
+      "<span class='fr'><span class='fn'>48</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 3 · (<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)<sup>1</sup> · (<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>48</span><span class='fd'>125</span></span></b>."
+    },
+    {
+     "q": "X è binomiale: 3 prove con probabilità di successo 1/3. Calcola P(X = 3).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>81</span></span>"
+     ],
+     "a": 0,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 1 · (<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>3</sup> · (<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>0</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span></b>."
+    },
+    {
+     "q": "X è binomiale: 5 risposte a caso a domande con 4 opzioni (X = risposte esatte). Calcola P(X = 4).",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>1024</span></span>"
+     ],
+     "a": 3,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 5 · (<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)<sup>4</sup> · (<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>15</span><span class='fd'>1024</span></span></b>."
+    },
+    {
+     "q": "X è binomiale con n = 60 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Quanto vale la varianza Var(X)?",
+     "c": [
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span>",
+      "40",
+      "20",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Var(X) = np(1 − p) = 60 · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "X è binomiale: 5 prove con probabilità di successo 2/3. Calcola P(X = 3).",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span>"
+     ],
+     "a": 3,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 10 · (<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>3</sup> · (<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span></b>."
+    },
+    {
+     "q": "X è binomiale: 6 prove con probabilità di successo 1/5. Calcola P(X = 1).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1024</span><span class='fd'>15625</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>15625</span></span>",
+      "<span class='fr'><span class='fn'>6144</span><span class='fd'>15625</span></span>"
+     ],
+     "a": 3,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 6 · (<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)<sup>1</sup> · (<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>)<sup>5</sup> = <b><span class='fr'><span class='fn'>6144</span><span class='fd'>15625</span></span></b>."
+    },
+    {
+     "q": "X è binomiale: 6 lanci di una moneta (X = numero di teste). Calcola P(X = 5).",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>"
+     ],
+     "a": 0,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 6 · (<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>5</sup> · (<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "X è binomiale con n = 20 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Quanto vale la varianza Var(X)?",
+     "c": [
+      "5",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "15"
+     ],
+     "a": 1,
+     "e": "Var(X) = np(1 − p) = 20 · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "X è binomiale con n = 12 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Quanto vale la varianza Var(X)?",
+     "c": [
+      "6",
+      "3",
+      "4",
+      "2"
+     ],
+     "a": 1,
+     "e": "Var(X) = np(1 − p) = 12 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b>3</b>."
+    },
+    {
+     "q": "X è binomiale: 3 lanci di un dado (X = numero di volte che esce 6). Calcola P(X = 3).",
+     "c": [
+      "<span class='fr'><span class='fn'>215</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1296</span></span>"
+     ],
+     "a": 1,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 1 · (<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)<sup>3</sup> · (<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>)<sup>0</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>216</span></span></b>."
+    },
+    {
+     "q": "X è binomiale: 6 prove con probabilità di successo 1/5. Calcola P(X = 0).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15625</span></span>",
+      "<span class='fr'><span class='fn'>11529</span><span class='fd'>15625</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4096</span><span class='fd'>15625</span></span>"
+     ],
+     "a": 3,
+     "e": "P(X = k) = C(n, k) p<sup>k</sup> (1 − p)<sup>n − k</sup> = 1 · (<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)<sup>0</sup> · (<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>)<sup>6</sup> = <b><span class='fr'><span class='fn'>4096</span><span class='fd'>15625</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Distribuzione di Poisson",
+   "items": [
+    {
+     "q": "X è binomiale con n = 12 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Quanto vale la varianza Var(X)?",
+     "c": [
+      "4",
+      "8",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Var(X) = np(1 − p) = 12 · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "X è binomiale con n = 30 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Quanto vale il valore atteso E(X)?",
+     "c": [
+      "25",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>6</span></span>",
+      "5",
+      "6"
+     ],
+     "a": 2,
+     "e": "E(X) = np = 30 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b>5</b>."
+    },
+    {
+     "q": "X è binomiale con n = 12 e p = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>. Quanto vale il valore atteso E(X)?",
+     "c": [
+      "9",
+      "8",
+      "4",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = np = 12 · <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b>8</b>."
+    },
+    {
+     "q": "X segue una distribuzione di Poisson con λ = 5. Calcola P(X = 1).",
+     "c": [
+      "5 e<sup>−5</sup>",
+      "5 e<sup>5</sup>",
+      "e<sup>−5</sup>",
+      "5 e<sup>−1</sup>"
+     ],
+     "a": 0,
+     "e": "P(X = k) = λ<sup>k</sup> e<sup>−λ</sup>/k! = 5<sup>1</sup> e<sup>−5</sup>/1!: <b>5 e<sup>−5</sup></b>."
+    },
+    {
+     "q": "X segue una distribuzione di Poisson con λ = 1. Calcola P(X = 2).",
+     "c": [
+      "e<sup>−1</sup>",
+      "<span class='fr'><span class='fn'>2 e<sup>−1</sup></span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>e<sup>−2</sup></span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>e<sup>−1</sup></span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "P(X = k) = λ<sup>k</sup> e<sup>−λ</sup>/k! = 1<sup>2</sup> e<sup>−1</sup>/2!: <b><span class='fr'><span class='fn'>e<sup>−1</sup></span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Il numero di clienti che arrivano in un minuto segue una distribuzione di Poisson con λ = 4. Quanti clienti si aspettano in media al minuto?",
+     "c": [
+      "6",
+      "4",
+      "5",
+      "16"
+     ],
+     "a": 1,
+     "e": "Per Poisson E(X) = Var(X) = λ: <b>4</b>."
+    },
+    {
+     "q": "X segue una distribuzione di Poisson con λ = 2. Calcola P(X = 1).",
+     "c": [
+      "e<sup>−2</sup>",
+      "2 e<sup>−2</sup>",
+      "2 e<sup>2</sup>",
+      "2 e<sup>−1</sup>"
+     ],
+     "a": 1,
+     "e": "P(X = k) = λ<sup>k</sup> e<sup>−λ</sup>/k! = 2<sup>1</sup> e<sup>−2</sup>/1!: <b>2 e<sup>−2</sup></b>."
+    },
+    {
+     "q": "X segue una distribuzione di Poisson con λ = 1. Calcola P(X = 4).",
+     "c": [
+      "<span class='fr'><span class='fn'>4 e<sup>−1</sup></span><span class='fd'>24</span></span>",
+      "e<sup>−1</sup>",
+      "<span class='fr'><span class='fn'>e<sup>−1</sup></span><span class='fd'>24</span></span>",
+      "<span class='fr'><span class='fn'>e<sup>−4</sup></span><span class='fd'>24</span></span>"
+     ],
+     "a": 2,
+     "e": "P(X = k) = λ<sup>k</sup> e<sup>−λ</sup>/k! = 1<sup>4</sup> e<sup>−1</sup>/4!: <b><span class='fr'><span class='fn'>e<sup>−1</sup></span><span class='fd'>24</span></span></b>."
+    },
+    {
+     "q": "Il numero di clienti che arrivano in un minuto segue una distribuzione di Poisson con λ = 6. Quanti clienti si aspettano in media al minuto?",
+     "c": [
+      "6",
+      "36",
+      "8",
+      "7"
+     ],
+     "a": 0,
+     "e": "Per Poisson E(X) = Var(X) = λ: <b>6</b>."
+    },
+    {
+     "q": "X segue una distribuzione di Poisson con λ = 6. Calcola P(X = 1).",
+     "c": [
+      "e<sup>−6</sup>",
+      "6 e<sup>6</sup>",
+      "6 e<sup>−1</sup>",
+      "6 e<sup>−6</sup>"
+     ],
+     "a": 3,
+     "e": "P(X = k) = λ<sup>k</sup> e<sup>−λ</sup>/k! = 6<sup>1</sup> e<sup>−6</sup>/1!: <b>6 e<sup>−6</sup></b>."
+    },
+    {
+     "q": "X è binomiale con n = 60 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Quanto vale il valore atteso E(X)?",
+     "c": [
+      "31",
+      "60",
+      "15",
+      "30"
+     ],
+     "a": 3,
+     "e": "E(X) = np = 60 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b>30</b>."
+    },
+    {
+     "q": "X è binomiale con n = 50 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Quanto vale il valore atteso E(X)?",
+     "c": [
+      "25",
+      "50",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>",
+      "26"
+     ],
+     "a": 0,
+     "e": "E(X) = np = 50 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b>25</b>."
+    },
+    {
+     "q": "Il numero di clienti che arrivano in un minuto segue una distribuzione di Poisson con λ = 3. Quanti clienti si aspettano in media al minuto?",
+     "c": [
+      "9",
+      "5",
+      "3",
+      "4"
+     ],
+     "a": 2,
+     "e": "Per Poisson E(X) = Var(X) = λ: <b>3</b>."
+    },
+    {
+     "q": "X è binomiale con n = 12 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Quanto vale la varianza Var(X)?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "9",
+      "3",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "Var(X) = np(1 − p) = 12 · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Il numero di clienti che arrivano in un minuto segue una distribuzione di Poisson con λ = 2. Quanti clienti si aspettano in media al minuto?",
+     "c": [
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "a": 0,
+     "e": "Per Poisson E(X) = Var(X) = λ: <b>2</b>."
+    },
+    {
+     "q": "X segue una distribuzione di Poisson con λ = 4. Calcola P(X = 4).",
+     "c": [
+      "<span class='fr'><span class='fn'>16 e<sup>−4</sup></span><span class='fd'>24</span></span>",
+      "256 e<sup>−4</sup>",
+      "<span class='fr'><span class='fn'>256 e<sup>4</sup></span><span class='fd'>24</span></span>",
+      "<span class='fr'><span class='fn'>256 e<sup>−4</sup></span><span class='fd'>24</span></span>"
+     ],
+     "a": 3,
+     "e": "P(X = k) = λ<sup>k</sup> e<sup>−λ</sup>/k! = 4<sup>4</sup> e<sup>−4</sup>/4!: <b><span class='fr'><span class='fn'>256 e<sup>−4</sup></span><span class='fd'>24</span></span></b>."
+    },
+    {
+     "q": "X è binomiale con n = 30 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Quanto vale il valore atteso E(X)?",
+     "c": [
+      "11",
+      "10",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>",
+      "20"
+     ],
+     "a": 1,
+     "e": "E(X) = np = 30 · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b>10</b>."
+    },
+    {
+     "q": "X segue una distribuzione di Poisson con λ = 4. Calcola P(X = 3).",
+     "c": [
+      "<span class='fr'><span class='fn'>12 e<sup>−4</sup></span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>64 e<sup>−4</sup></span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>64 e<sup>−3</sup></span><span class='fd'>6</span></span>",
+      "64 e<sup>−4</sup>"
+     ],
+     "a": 1,
+     "e": "P(X = k) = λ<sup>k</sup> e<sup>−λ</sup>/k! = 4<sup>3</sup> e<sup>−4</sup>/3!: <b><span class='fr'><span class='fn'>64 e<sup>−4</sup></span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "X è binomiale con n = 20 e p = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Quanto vale la varianza Var(X)?",
+     "c": [
+      "4",
+      "6",
+      "10",
+      "5"
+     ],
+     "a": 3,
+     "e": "Var(X) = np(1 − p) = 20 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b>5</b>."
+    },
+    {
+     "q": "X segue una distribuzione di Poisson con λ = 5. Calcola P(X = 2).",
+     "c": [
+      "25 e<sup>−5</sup>",
+      "<span class='fr'><span class='fn'>10 e<sup>−5</sup></span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>25 e<sup>−5</sup></span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>25 e<sup>−2</sup></span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "P(X = k) = λ<sup>k</sup> e<sup>−λ</sup>/k! = 5<sup>2</sup> e<sup>−5</sup>/2!: <b><span class='fr'><span class='fn'>25 e<sup>−5</sup></span><span class='fd'>2</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Distribuzione normale",
+   "items": [
+    {
+     "q": "X è normale con μ = 60 e σ = 5. Qual è il valore standardizzato z di x = 57?",
+     "c": [
+      "−3",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "z = (x − μ)/σ = (57 − 60)/5 = <b>−<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "X è normale con μ = 170 e σ = 5. Qual è il valore standardizzato z di x = 187?",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>25</span></span>",
+      "17",
+      "−<span class='fr'><span class='fn'>17</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "z = (x − μ)/σ = (187 − 170)/5 = <b><span class='fr'><span class='fn'>17</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "X è normale con media μ = 75 e deviazione standard σ = 4. Circa quale percentuale dei valori sta tra 67 e 83?",
+     "c": [
+      "99,7%",
+      "68%",
+      "95%",
+      "50%"
+     ],
+     "a": 2,
+     "e": "L’intervallo è μ ± 2σ: per la regola empirica circa <b>95%</b>."
+    },
+    {
+     "q": "X è normale con μ = 20 e σ = 4. Circa quale percentuale dei valori supera 32?",
+     "c": [
+      "99,7%",
+      "50%",
+      "0,15%",
+      "0,3%"
+     ],
+     "a": 2,
+     "e": "Fuori da μ ± 3σ c’è circa lo 0,3% dei valori, metà per parte: <b>0,15%</b>."
+    },
+    {
+     "q": "X è normale con μ = 20 e σ = 4. Qual è il valore standardizzato z di x = 28?",
+     "c": [
+      "2",
+      "8",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−2"
+     ],
+     "a": 0,
+     "e": "z = (x − μ)/σ = (28 − 20)/4 = <b>2</b>."
+    },
+    {
+     "q": "X è normale con media μ = 170 e deviazione standard σ = 3. Circa quale percentuale dei valori sta tra 164 e 176?",
+     "c": [
+      "68%",
+      "95%",
+      "99,7%",
+      "50%"
+     ],
+     "a": 1,
+     "e": "L’intervallo è μ ± 2σ: per la regola empirica circa <b>95%</b>."
+    },
+    {
+     "q": "X è normale con μ = 60 e σ = 5. Circa quale percentuale dei valori supera 75?",
+     "c": [
+      "50%",
+      "0,3%",
+      "99,7%",
+      "0,15%"
+     ],
+     "a": 3,
+     "e": "Fuori da μ ± 3σ c’è circa lo 0,3% dei valori, metà per parte: <b>0,15%</b>."
+    },
+    {
+     "q": "X è normale con μ = 100 e σ = 8. Circa quale percentuale dei valori supera 108?",
+     "c": [
+      "16%",
+      "50%",
+      "32%",
+      "68%"
+     ],
+     "a": 0,
+     "e": "Fuori da μ ± 1σ c’è circa il 32% dei valori, metà per parte: <b>16%</b>."
+    },
+    {
+     "q": "X è normale con μ = 170 e σ = 10. Circa quale percentuale dei valori supera 200?",
+     "c": [
+      "0,15%",
+      "99,7%",
+      "0,3%",
+      "50%"
+     ],
+     "a": 0,
+     "e": "Fuori da μ ± 3σ c’è circa lo 0,3% dei valori, metà per parte: <b>0,15%</b>."
+    },
+    {
+     "q": "X è normale con μ = 20 e σ = 2. Qual è il valore standardizzato z di x = 19?",
+     "c": [
+      "−1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "z = (x − μ)/σ = (19 − 20)/2 = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "X è normale con media μ = 75 e deviazione standard σ = 5. Circa quale percentuale dei valori sta tra 60 e 90?",
+     "c": [
+      "50%",
+      "95%",
+      "68%",
+      "99,7%"
+     ],
+     "a": 3,
+     "e": "L’intervallo è μ ± 3σ: per la regola empirica circa <b>99,7%</b>."
+    },
+    {
+     "q": "X è normale con μ = 100 e σ = 8. Circa quale percentuale dei valori supera 116?",
+     "c": [
+      "50%",
+      "2,5%",
+      "95%",
+      "5%"
+     ],
+     "a": 1,
+     "e": "Fuori da μ ± 2σ c’è circa il 5% dei valori, metà per parte: <b>2,5%</b>."
+    },
+    {
+     "q": "X è normale con media μ = 60 e deviazione standard σ = 5. Circa quale percentuale dei valori sta tra 45 e 75?",
+     "c": [
+      "95%",
+      "68%",
+      "99,7%",
+      "50%"
+     ],
+     "a": 2,
+     "e": "L’intervallo è μ ± 3σ: per la regola empirica circa <b>99,7%</b>."
+    },
+    {
+     "q": "X è normale con μ = 170 e σ = 8. Circa quale percentuale dei valori supera 186?",
+     "c": [
+      "95%",
+      "2,5%",
+      "50%",
+      "5%"
+     ],
+     "a": 1,
+     "e": "Fuori da μ ± 2σ c’è circa il 5% dei valori, metà per parte: <b>2,5%</b>."
+    },
+    {
+     "q": "X è normale con μ = 500 e σ = 4. Qual è il valore standardizzato z di x = 508?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2",
+      "8",
+      "−2"
+     ],
+     "a": 1,
+     "e": "z = (x − μ)/σ = (508 − 500)/4 = <b>2</b>."
+    },
+    {
+     "q": "X è normale con μ = 100 e σ = 10. Circa quale percentuale dei valori supera 130?",
+     "c": [
+      "0,15%",
+      "0,3%",
+      "99,7%",
+      "50%"
+     ],
+     "a": 0,
+     "e": "Fuori da μ ± 3σ c’è circa lo 0,3% dei valori, metà per parte: <b>0,15%</b>."
+    },
+    {
+     "q": "X è normale con μ = 100 e σ = 4. Qual è il valore standardizzato z di x = 106?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "6"
+     ],
+     "a": 2,
+     "e": "z = (x − μ)/σ = (106 − 100)/4 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "X è normale con μ = 75 e σ = 4. Circa quale percentuale dei valori supera 87?",
+     "c": [
+      "50%",
+      "0,15%",
+      "0,3%",
+      "99,7%"
+     ],
+     "a": 1,
+     "e": "Fuori da μ ± 3σ c’è circa lo 0,3% dei valori, metà per parte: <b>0,15%</b>."
+    },
+    {
+     "q": "X è normale con μ = 100 e σ = 4. Qual è il valore standardizzato z di x = 104?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "4",
+      "−1",
+      "1"
+     ],
+     "a": 3,
+     "e": "z = (x − μ)/σ = (104 − 100)/4 = <b>1</b>."
+    },
+    {
+     "q": "X è normale con μ = 100 e σ = 5. Circa quale percentuale dei valori supera 115?",
+     "c": [
+      "0,15%",
+      "0,3%",
+      "50%",
+      "99,7%"
+     ],
+     "a": 0,
+     "e": "Fuori da μ ± 3σ c’è circa lo 0,3% dei valori, metà per parte: <b>0,15%</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 13,
+ "updated": "2026-11-23",
+ "country": "it",
+ "subject": "matematica",
+ "grade": "quinta-liceo"
+}
