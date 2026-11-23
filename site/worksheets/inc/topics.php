@@ -215,7 +215,32 @@ function topic_defs_it() {
     );
 }
 
+/* Brazil: Portuguese unit slugs, Portuguese names (BNCC) */
+function topic_defs_br() {
+    return array(
+        'numeros' => array('name' => 'Números',
+            'in' => '/numeros|comparar-e-ordenar|reta-numerica|sequencias/', 'out' => '/decima|fraco/',
+            'blurb' => 'Ler, escrever e decompor números, valor posicional, comparar e ordenar números na reta numérica, sequências numéricas.'),
+        'adicao-e-subtracao' => array('name' => 'Adição e subtração',
+            'in' => '/adicao|subtracao|calculo-mental|igualdade/', 'out' => '/^$/',
+            'blurb' => 'Cálculo mental, adição e subtração com reagrupamento, conta armada, problemas de juntar, acrescentar, separar, retirar, comparar e completar.'),
+        'multiplicacao-e-divisao' => array('name' => 'Multiplicação e divisão',
+            'in' => '/multiplica|divisao|tabuada|metade|terca|dobro/', 'out' => '/^$/',
+            'blurb' => 'Tabuada, multiplicação como adição de parcelas iguais e disposição retangular, divisão exata e com resto, metade, terça e quarta parte.'),
+        'geometria' => array('name' => 'Geometria',
+            'in' => '/figuras|solidos|localizacao|trajetos|simetria|angulos|poligonos/', 'out' => '/^$/',
+            'blurb' => 'Localização e trajetos, figuras geométricas espaciais e suas planificações, figuras planas, lados e vértices.'),
+        'grandezas-e-medidas' => array('name' => 'Grandezas e medidas',
+            'in' => '/comprimento|massa|capacidade|area|horas|tempo|sistema-monetario|dinheiro|medidas/', 'out' => '/^$/',
+            'blurb' => 'Medidas de comprimento, massa e capacidade, comparar áreas, horas e intervalos de tempo, o sistema monetário brasileiro.'),
+        'probabilidade-e-estatistica' => array('name' => 'Probabilidade e estatística',
+            'in' => '/graficos|tabelas|probabilidade|pesquisa/', 'out' => '/^$/',
+            'blurb' => 'Tabelas simples e de dupla entrada, gráficos de colunas e de barras, pesquisas, resultados possíveis e chances.'),
+    );
+}
+
 function topic_defs($country = null) {
+    if ($country === 'br') return topic_defs_br();
     if ($country === 'tw') return topic_defs_tw();
     if ($country === 'de') return topic_defs_de();
     if ($country === 'fr') return topic_defs_fr();
@@ -454,6 +479,7 @@ function topic_range($units) {
     if ($first === $last) return $first;
     if ($units[0]['country'] === 'tw') return $first . '到' . $last;
     if ($units[0]['country'] === 'fr') return 'du ' . $first . ' au ' . $last;
+    if ($units[0]['country'] === 'br') return 'do ' . $first . ' ao ' . $last;
     if ($units[0]['country'] === 'it') return 'dalla ' . strtolower($first) . ' alla ' . strtolower($last);
     return $units[0]['country'] === 'de' ? $first . ' bis ' . $last : $first . ' to ' . $last;
 }

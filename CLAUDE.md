@@ -1418,7 +1418,20 @@ Terza liceo: 1. equazioni-e-disequazioni-con-valore-assoluto-e-irrazionali ✓ 2
 Quarta liceo: 1. funzione-esponenziale ✓ 2. logaritmi ✓ 3. equazioni-esponenziali-e-logaritmiche ✓ 4. goniometria ✓ 5. formule-goniometriche ✓ 6. equazioni-goniometriche ✓ 7. trigonometria ✓ 8. numeri-complessi ✓ 9. geometria-nello-spazio ✓ 10. calcolo-combinatorio ✓ 11. probabilita-condizionata-e-bayes ✓
 Quinta liceo: 1. geometria-analitica-nello-spazio ✓ 2. dominio-e-segno-di-una-funzione ✓ 3. limiti ✓ 4. forme-indeterminate-e-limiti-notevoli ✓ 5. continuita-e-asintoti ✓ 6. derivate ✓ 7. teoremi-del-calcolo-differenziale ✓ 8. massimi-minimi-e-flessi ✓ 9. studio-di-funzione ✓ 10. integrali-indefiniti ✓ 11. integrali-definiti-e-aree ✓ 12. equazioni-differenziali ✓ 13. distribuzioni-di-probabilita ✓
 
-IT / Matematica は classe prima〜quinta liceo まで完了。新しい Indicazioni per i licei が出たら（2027/28）単元を見直す。次は GDP 順で次の国
+IT / Matematica は classe prima〜quinta liceo まで完了。新しい Indicazioni per i licei が出たら（2027/28）単元を見直す。次は GDP 順で次の国（ロシアは Google 広告が配信されないので後回し）
+
+BR / Matemática（BNCC、Base Nacional Comum Curricular）— country `br`（name「Brasil」、lang `pt-BR`、hreflang pt-br、standard「BNCC」）、subject `matematica`（Matemática）、grade `N-ano`（name「3º ano」、1º ano = 6〜7 歳、unit.php）、A4。
+生成スクリプトは `gen_br_matematica_N_*`（seed は 80N0c、絵の部品の R は 809xx）、共通部品は `tools/br_common.py`（num（1.000、4.536：4 桁から点で区切る）・dec（コンマ）・reais（R$ 3,50、c=True で 50 centavos）・hora（8h、8h15）・dur（1 h 25 min）・pl・Kids（名前と ela/ele）・mcq（BR_WARN=1 で FILL、R$ は 1 レアル単位で補う）・lesson（Como pensar → Exemplo → Erros comuns）・make_unit（codes に BNCC の EF03MA05 などを渡し standard_code に、seo_title「Adição – 3º ano: atividades de matemática com gabarito」）・extenso（9.999 までの数詞）・図：reta・material_dourado・quadro_valor（UM C D U）・grafico・dinheiro_svg（硬貨 5〜50 centavos と 1 real、紙幣 R$ 2〜200）・solido_svg・relogio・digital・armada（conta armada、点を外す）・faixa・disco・arranjo・grupos・linha・COISAS（k_pics の物の名前と性））。
+fr_common の絵の数（1 000）は brn() で 1.000 に。ポルトガル語、você で話しかける短い文。記号は × と ÷、余りは「23 ÷ 4 = 5 e resto 3」。単位は m・cm・mm、kg・g・mg、L・mL。お金の文は reais() を使う（"R$ %d" を書かない）。
+domain は BNCC のユニダージ・テマチカ（N Números／A Álgebra／G Geometria／M Grandezas e medidas／E Probabilidade e estatística）、standard_url は BNCC の PDF。q の文に答えを決める情報（数・選択肢）を入れる（同じ文の問題は重複扱いで作れない）。誤答のリストを [:3] で切らない（mcq が重複を落としてから 3 つ取る）。
+UI 文言は core.php の 'pt-BR'（js の桁区切りは '.'）、トピックは topics.php の `topic_defs_br()`（numeros・adicao-e-subtracao・multiplicacao-e-divisao・geometria・grandezas-e-medidas・probabilidade-e-estatistica）、topic.php・topics.php に $pt の文言
+
+BR / Matemática / 3º ano（BNCC EF03MA01〜EF03MA28）
+1. numeros-ate-9999 ✓ 2. comparar-e-ordenar-numeros ✓ 3. calculo-mental ✓ 4. adicao ✓ 5. subtracao ✓ 6. problemas-de-adicao-e-subtracao ✓ 7. tabuada ✓ 8. multiplicacao ✓
+9. divisao ✓ 10. metade-terca-e-quarta-parte ✓ 11. sequencias-numericas ✓ 12. igualdade ✓ 13. localizacao-e-trajetos ✓ 14. figuras-geometricas-espaciais ✓ 15. figuras-geometricas-planas ✓
+16. medidas-de-comprimento ✓ 17. massa-e-capacidade ✓ 18. area ✓ 19. horas-e-intervalos-de-tempo ✓ 20. sistema-monetario ✓ 21. tabelas-e-graficos ✓ 22. probabilidade ✓
+
+BR の次: 5º ano（SAEB の学年）→ 4º ano → 2º ano → 1º ano → 9º ano（SAEB）… の順。各学年の BNCC コード（EF05MA01 など）で単元を分ける
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
