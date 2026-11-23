@@ -1453,7 +1453,13 @@ BR / Matemática / 2º ano（BNCC EF02MA01〜EF02MA23。1.000 まで。文は短
 12. localizacao-e-trajetos ✓ 13. figuras-geometricas-espaciais ✓ 14. figuras-geometricas-planas ✓ 15. medidas-de-comprimento ✓ 16. massa-e-capacidade ✓ 17. calendario ✓
 18. horas-e-intervalos-de-tempo ✓ 19. sistema-monetario ✓ 20. probabilidade ✓ 21. tabelas-e-graficos ✓ 22. pesquisa-e-organizacao-de-dados ✓
 
-BR の次: 1º ano → 9º ano（SAEB）… の順。各学年の BNCC コード（EF01MA01 など）で単元を分ける
+BR / Matemática / 1º ano（BNCC EF01MA01〜EF01MA22。100 まで、計算は 20 まで。とても短い文、ほぼ全問に絵）— 生成スクリプトは `gen_br_matematica_1_*`（seed は 801NN、use で再利用する 2º・3º のモジュールの R は 80970〜80988）、共通部品は `tools/br_1.py`（k_pics の絵にポルトガル語の aria-label：fila・espalhados・quadro_dez・dados・dois_grupos・riscados・torres・lapis・ligacao・caixa、nome・quantos・art・fem、EXTENSO・ORD_M）。
+多くの単元は 2º ano の問題関数を `use(..., preds=(lim(20 か 100, 0),))` で再利用。女の子の序数は「a 4ª」。トピック：dezenas・ordinais・classificar→numeros、periodos→grandezas-e-medidas
+1. numeros-ate-100 ✓ 2. numeros-ordinais ✓ 3. contar-e-estimar-quantidades ✓ 4. comparar-e-ordenar-numeros ✓ 5. dezenas-e-unidades ✓ 6. fatos-basicos-da-adicao ✓ 7. adicao-e-subtracao-ate-20 ✓
+8. problemas-de-adicao-e-subtracao ✓ 9. classificar-e-ordenar-objetos ✓ 10. sequencias-e-padroes ✓ 11. localizacao ✓ 12. figuras-geometricas-espaciais ✓ 13. figuras-geometricas-planas ✓
+14. comprimento-massa-e-capacidade ✓ 15. periodos-do-dia ✓ 16. calendario-e-datas ✓ 17. sistema-monetario ✓ 18. probabilidade ✓ 19. tabelas-e-graficos ✓ 20. pesquisa ✓
+
+BR の次: 9º ano（SAEB）→ 6º・7º・8º ano の順。各学年の BNCC コード（EF09MA01 など）で単元を分ける
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
