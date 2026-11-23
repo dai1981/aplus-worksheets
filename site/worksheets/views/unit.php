@@ -5,6 +5,7 @@ $grade = $subject ? get_grade($seg[0], $seg[1], $seg[2]) : null;
 $u = $grade ? get_unit($seg[0], $seg[1], $seg[2], $seg[3]) : null;
 if (!$u) not_found();
 T(array($country['lang']));
+$std_name = ($country['code'] === 'it' && substr($grade['slug'], -6) === '-liceo') ? 'Indicazioni nazionali per i licei' : $country['standard'];   // Italy: the licei have their own Indicazioni (DM 211/2010)
 
 $gbase = $seg[0] . '/' . $seg[1] . '/' . $seg[2] . '/';
 $path = $gbase . $u['slug'] . '/';
@@ -62,7 +63,7 @@ site_header($crumbs);
   <p class="ws-share"><?= pin_link($path, sprintf(T('pin_unit'), $grade['name'], lc($subject['name']), lc($u['short_title']))) ?></p>
 
   <?php if ($u['standard_code']): ?>
-  <p class="ws-std"><span><?= h($country['standard']) ?></span>
+  <p class="ws-std"><span><?= h($std_name) ?></span>
     <?php if ($u['standard_url']): ?><a href="<?= h($u['standard_url']) ?>" rel="noopener" target="_blank"><?= h($u['standard_code']) ?></a><?php else: ?><b><?= h($u['standard_code']) ?></b><?php endif; ?>
     <?= h($u['standard_text']) ?></p>
   <?php endif; ?>
@@ -139,8 +140,8 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 } elseif ($country['code'] === 'fr' && isset(array('cp' => 1, 'ce1' => 1, 'ce2' => 1, 'cm1' => 1, 'cm2' => 1, '6e' => 1, '5e' => 1, '4e' => 1, '3e' => 1, 'seconde' => 1, 'premiere' => 1)[$grade['slug']])) {
     $fy = array('cp' => 6, 'ce1' => 7, 'ce2' => 8, 'cm1' => 9, 'cm2' => 10, '6e' => 11, '5e' => 12, '4e' => 13, '3e' => 14, 'seconde' => 15, 'premiere' => 16);   // France: CE2 = age 8-9
     $lr['typicalAgeRange'] = $fy[$grade['slug']] . '-' . ($fy[$grade['slug']] + 1);
-} elseif ($country['code'] === 'it' && isset(array('classe-prima' => 1, 'classe-seconda' => 1, 'classe-terza' => 1, 'classe-quarta' => 1, 'classe-quinta' => 1, 'prima-media' => 1, 'seconda-media' => 1, 'terza-media' => 1)[$grade['slug']])) {
-    $iy = array('classe-prima' => 6, 'classe-seconda' => 7, 'classe-terza' => 8, 'classe-quarta' => 9, 'classe-quinta' => 10, 'prima-media' => 11, 'seconda-media' => 12, 'terza-media' => 13);   // Italy: classe terza = age 8-9
+} elseif ($country['code'] === 'it' && isset(array('classe-prima' => 1, 'classe-seconda' => 1, 'classe-terza' => 1, 'classe-quarta' => 1, 'classe-quinta' => 1, 'prima-media' => 1, 'seconda-media' => 1, 'terza-media' => 1, 'prima-liceo' => 1, 'seconda-liceo' => 1, 'terza-liceo' => 1, 'quarta-liceo' => 1, 'quinta-liceo' => 1)[$grade['slug']])) {
+    $iy = array('classe-prima' => 6, 'classe-seconda' => 7, 'classe-terza' => 8, 'classe-quarta' => 9, 'classe-quinta' => 10, 'prima-media' => 11, 'seconda-media' => 12, 'terza-media' => 13, 'prima-liceo' => 14, 'seconda-liceo' => 15, 'terza-liceo' => 16, 'quarta-liceo' => 17, 'quinta-liceo' => 18);   // Italy: classe terza = age 8-9
     $lr['typicalAgeRange'] = $iy[$grade['slug']] . '-' . ($iy[$grade['slug']] + 1);
 } elseif ($grade['slug'] === 'grade-r' && $country['code'] === 'za') {
     $lr['typicalAgeRange'] = '5-6';   // South Africa: Grade R (Reception Year), the year before Grade 1
@@ -170,7 +171,7 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 }
 if ($u['standard_code']) {
     $al = array('@type' => 'AlignmentObject', 'alignmentType' => 'teaches',
-                'educationalFramework' => $country['standard'], 'targetName' => $u['standard_code'],
+                'educationalFramework' => $std_name, 'targetName' => $u['standard_code'],
                 'targetDescription' => $u['standard_text']);
     if ($u['standard_url']) $al['targetUrl'] = $u['standard_url'];
     $lr['educationalAlignment'] = $al;

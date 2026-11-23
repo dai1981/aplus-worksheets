@@ -21,6 +21,7 @@ NB = "\u00a0"
 FOIS = "×"
 DIV = ":"
 STD_URL = "https://www.mim.gov.it/documents/20182/10554370/curricolo_web.pdf"
+STD_URL_LICEI = "https://www.gazzettaufficiale.it/eli/id/2010/12/14/010G0232/sg"
 DOMAIN = {"N": "Numeri", "S": "Spazio e figure", "M": "Misure", "D": "Relazioni, dati e previsioni", "P": "Problemi"}
 GRADE_NAME = {"classe-prima": "Classe prima", "classe-seconda": "Classe seconda", "classe-terza": "Classe terza",
               "classe-quarta": "Classe quarta", "classe-quinta": "Classe quinta"}
@@ -197,8 +198,8 @@ def make_unit(rnd, slug, dom, std_text, title, short_title, meta_desc,
     dname = DOMAIN[dom]
     write_unit("it", "matematica", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
-        "domain": dname, "standard_code": "%s · %s" % (gname, dname), "standard_url": STD_URL,
-        "standard_text": std_text + (" (sintesi degli obiettivi di apprendimento al termine della classe terza della scuola secondaria di primo grado, Indicazioni nazionali)" if grade.endswith("-media") else
+        "domain": dname, "standard_code": "%s · %s" % (gname, dname), "standard_url": STD_URL_LICEI if grade.endswith("-liceo") else STD_URL,
+        "standard_text": std_text + (" (sintesi degli obiettivi specifici di apprendimento di matematica del liceo scientifico, Indicazioni nazionali, DM 211/2010)" if grade.endswith("-liceo") else" (sintesi degli obiettivi di apprendimento al termine della classe terza della scuola secondaria di primo grado, Indicazioni nazionali)" if grade.endswith("-media") else
                                       " (sintesi degli obiettivi di apprendimento al termine della classe %s, Indicazioni nazionali)" % ("quinta" if grade in ("classe-quarta", "classe-quinta") else "terza")),
         "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
         "body_html": body_html, "faq": [{"q": q, "a": a} for q, a in faq], "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,

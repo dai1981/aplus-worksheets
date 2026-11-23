@@ -1,0 +1,1157 @@
+{
+ "slug": "insiemi-e-logica",
+ "title": "Insiemi e logica",
+ "seo_title": "Insiemi e logica prima liceo: schede di matematica con soluzioni",
+ "short_title": "Insiemi e logica",
+ "domain": "Relazioni e funzioni",
+ "standard_code": "Prima liceo · Relazioni e funzioni",
+ "standard_url": "https://www.gazzettaufficiale.it/eli/id/2010/12/14/010G0232/sg",
+ "standard_text": "Il linguaggio degli insiemi; operazioni tra insiemi; elementi di logica: proposizioni, connettivi, quantificatori (sintesi degli obiettivi specifici di apprendimento di matematica del liceo scientifico, Indicazioni nazionali, DM 211/2010)",
+ "meta_desc": "Schede di matematica per la prima liceo su insiemi e logica: elencazione e proprietà caratteristica, unione, intersezione, differenza, complementare, prodotto cartesiano, diagrammi di Venn, proposizioni, connettivi, tavole di verità, De Morgan e quantificatori. 100 esercizi con soluzioni.",
+ "key_big": "|A ∪ B| = |A| + |B| − |A ∩ B|",
+ "key_sub": "¬(p ∧ q) = ¬p ∨ ¬q e ¬(p ∨ q) = ¬p ∧ ¬q.",
+ "body_html": "<h2>Come si fa</h2><p>Un <b>insieme</b> si descrive per <b>elencazione</b> (A = {1, 2, 3}) o con una <b>proprietà caratteristica</b> (A = {x ∈ ℕ | x &lt; 4}). In Italia ℕ contiene lo 0.</p><p><b>Unione</b> A ∪ B: elementi di A o di B. <b>Intersezione</b> A ∩ B: elementi comuni. <b>Differenza</b> A − B: elementi di A che non stanno in B. Un insieme di n elementi ha 2<sup>n</sup> sottoinsiemi.</p><p>Per contare: |A ∪ B| = |A| + |B| − |A ∩ B|. Il prodotto cartesiano A × B contiene le coppie (a; b) e ha |A| · |B| elementi.</p><p>Una <b>proposizione</b> è vera o falsa. ¬p (non), p ∧ q (e: vera se entrambe vere), p ∨ q (o: falsa se entrambe false), p → q (falsa solo se p vera e q falsa).</p><p><b>De Morgan</b>: ¬(p ∧ q) = ¬p ∨ ¬q e ¬(p ∨ q) = ¬p ∧ ¬q. La negazione di «tutti» è «almeno uno non».</p><div class='sn-tw'><table class='sn-table'><thead><tr><th>p</th><th>q</th><th>p ∧ q</th><th>p ∨ q</th><th>p → q</th></tr></thead><tbody><tr><td>V</td><td>V</td><td>V</td><td>V</td><td>V</td></tr><tr><td>V</td><td>F</td><td>F</td><td>V</td><td>F</td></tr><tr><td>F</td><td>V</td><td>F</td><td>V</td><td>V</td></tr><tr><td>F</td><td>F</td><td>F</td><td>F</td><td>V</td></tr></tbody></table></div><div class='sn-ex'><span class='sn-ex-t'>Esempio</span><p class='sn-ex-q'>A = {1, 2, 3, 4}, B = {3, 4, 5}. Trova A ∪ B e A ∩ B.</p><p class='sn-ex-s'>Unione: tutti gli elementi, una volta.</p><p class='sn-ex-s'>Intersezione: solo quelli comuni.</p><p class='sn-ex-a'>Risposta: A ∪ B = {1, 2, 3, 4, 5}; A ∩ B = {3, 4}</p></div><div class='sn-ex'><span class='sn-ex-t'>Esempio</span><p class='sn-ex-q'>Su 30 studenti, 18 giocano a calcio, 12 a tennis e 5 a entrambi. Quanti a nessuno?</p><p class='sn-ex-s'>Almeno uno: 18 + 12 − 5 = 25.</p><p class='sn-ex-a'>Risposta: 30 − 25 = 5</p></div><h2>Errori frequenti</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Errore frequente</th><th>Che cosa fare</th></tr></thead><tbody><tr><td>Contare due volte gli elementi comuni</td><td>Nell’unione ogni elemento si scrive una volta: sottrai |A ∩ B|.</td></tr><tr><td>Pensare che A − B = B − A</td><td>A − B toglie da A gli elementi di B: in generale è diverso da B − A.</td></tr><tr><td>Negare «tutti» con «nessuno»</td><td>Basta un controesempio: «esiste almeno uno che non…».</td></tr><tr><td>Credere p → q falsa quando p è falsa</td><td>Se p è falsa l’implicazione è vera.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Lo 0 appartiene a ℕ?",
+   "a": "Sì: nei libri italiani di solito ℕ = {0, 1, 2, 3, …}. ℕ senza lo 0 si indica con ℕ<sub>0</sub> o ℕ*."
+  },
+  {
+   "q": "Perché «se piove allora prendo l’ombrello» è vera se non piove?",
+   "a": "L’implicazione p → q è falsa solo quando p è vera e q è falsa. Se p è falsa non c’è nessuna promessa tradita, quindi è vera."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Elencazione, caratteristica, cardinalità",
+   "items": [
+    {
+     "q": "Scrivi per elencazione l’insieme A = {x ∈ ℤ | −2 ≤ x ≤ 1}.",
+     "c": [
+      "{−1, 0, 1}",
+      "{−2, −1, 0, 1, 2}",
+      "{−2, −1, 0, 1}",
+      "{−2, −1, 0}"
+     ],
+     "a": 2,
+     "e": "Gli elementi che verificano la proprietà sono: A = <b>{−2, −1, 0, 1}</b>."
+    },
+    {
+     "q": "Quanti elementi ha l’insieme A = {x ∈ ℕ | 1 ≤ x ≤ 3}?",
+     "c": [
+      "2",
+      "3",
+      "5",
+      "4"
+     ],
+     "a": 1,
+     "e": "A = {1, 2, 3}: la cardinalità è |A| = <b>3</b>."
+    },
+    {
+     "q": "Quanti elementi ha l’insieme A = {x ∈ ℕ | x ≤ 5}?",
+     "c": [
+      "7",
+      "6",
+      "8",
+      "5"
+     ],
+     "a": 1,
+     "e": "A = {0, 1, 2, 3, 4, 5}: la cardinalità è |A| = <b>6</b>."
+    },
+    {
+     "q": "Quanti elementi ha l’insieme delle parti 𝒫(A), con A = {c, e}?",
+     "c": [
+      "3",
+      "6",
+      "2",
+      "4"
+     ],
+     "a": 3,
+     "e": "Con 2 elementi i sottoinsiemi sono 2<sup>2</sup> = <b>4</b> (∅ e A compresi)."
+    },
+    {
+     "q": "Scrivi per elencazione l’insieme A = {x ∈ ℕ | x è un divisore di 14}.",
+     "c": [
+      "{1, 2, 7, 14, 15}",
+      "{1, 2, 7, 14}",
+      "{2, 7, 14}",
+      "{1, 2, 7}"
+     ],
+     "a": 1,
+     "e": "Gli elementi che verificano la proprietà sono: A = <b>{1, 2, 7, 14}</b>."
+    },
+    {
+     "q": "Scrivi per elencazione l’insieme A = {x ∈ ℕ | x &lt; 6}.",
+     "c": [
+      "{0, 1, 2, 3, 4}",
+      "{0, 1, 2, 3, 4, 5, 6}",
+      "{0, 1, 2, 3, 4, 5}",
+      "{1, 2, 3, 4, 5}"
+     ],
+     "a": 2,
+     "e": "Gli elementi che verificano la proprietà sono: A = <b>{0, 1, 2, 3, 4, 5}</b>."
+    },
+    {
+     "q": "Scrivi per elencazione l’insieme A = {x ∈ ℕ | x è un numero primo minore di 19}.",
+     "c": [
+      "{2, 3, 5, 7, 11, 13, 17}",
+      "{1, 2, 3, 5, 7, 11, 13, 17}",
+      "{2, 3, 5, 7, 11, 13}",
+      "{3, 5, 7, 11, 13, 17}"
+     ],
+     "a": 0,
+     "e": "Gli elementi che verificano la proprietà sono: A = <b>{2, 3, 5, 7, 11, 13, 17}</b>."
+    },
+    {
+     "q": "Quanti elementi ha l’insieme delle parti 𝒫(A), con A = {a, b, c, e, g}?",
+     "c": [
+      "32",
+      "25",
+      "31",
+      "10"
+     ],
+     "a": 0,
+     "e": "Con 5 elementi i sottoinsiemi sono 2<sup>5</sup> = <b>32</b> (∅ e A compresi)."
+    },
+    {
+     "q": "Scrivi per elencazione l’insieme A = {x ∈ ℕ | x &lt; 3}.",
+     "c": [
+      "{0, 1}",
+      "{0, 1, 2, 3}",
+      "{0, 1, 2}",
+      "{1, 2}"
+     ],
+     "a": 2,
+     "e": "Gli elementi che verificano la proprietà sono: A = <b>{0, 1, 2}</b>."
+    },
+    {
+     "q": "Scrivi per elencazione l’insieme A = {x = 2n, n ∈ ℕ, n &lt; 4}.",
+     "c": [
+      "{0, 2, 4, 6}",
+      "{0, 2, 4}",
+      "{0, 2, 4, 6, 7}",
+      "{2, 4, 6}"
+     ],
+     "a": 0,
+     "e": "Gli elementi che verificano la proprietà sono: A = <b>{0, 2, 4, 6}</b>."
+    },
+    {
+     "q": "Scrivi per elencazione l’insieme A = {x ∈ ℕ | 1 ≤ x ≤ 5}.",
+     "c": [
+      "{1, 2, 3, 4, 5}",
+      "{2, 3, 4, 5}",
+      "{1, 2, 3, 4, 5, 6}",
+      "{1, 2, 3, 4}"
+     ],
+     "a": 0,
+     "e": "Gli elementi che verificano la proprietà sono: A = <b>{1, 2, 3, 4, 5}</b>."
+    },
+    {
+     "q": "Scrivi per elencazione l’insieme A = {x ∈ ℕ | x è un divisore di 26}.",
+     "c": [
+      "{1, 2, 13, 26, 27}",
+      "{1, 2, 13}",
+      "{1, 2, 13, 26}",
+      "{2, 13, 26}"
+     ],
+     "a": 2,
+     "e": "Gli elementi che verificano la proprietà sono: A = <b>{1, 2, 13, 26}</b>."
+    },
+    {
+     "q": "Quanti elementi ha l’insieme A = {x ∈ ℕ | x &lt; 3}?",
+     "c": [
+      "3",
+      "5",
+      "4",
+      "2"
+     ],
+     "a": 0,
+     "e": "A = {0, 1, 2}: la cardinalità è |A| = <b>3</b>."
+    },
+    {
+     "q": "Quanti elementi ha l’insieme A = {x ∈ ℕ | 1 ≤ x ≤ 4}?",
+     "c": [
+      "6",
+      "5",
+      "3",
+      "4"
+     ],
+     "a": 3,
+     "e": "A = {1, 2, 3, 4}: la cardinalità è |A| = <b>4</b>."
+    },
+    {
+     "q": "Scrivi per elencazione l’insieme A = {x ∈ ℕ | x è un numero primo minore di 12}.",
+     "c": [
+      "{3, 5, 7, 11}",
+      "{2, 3, 5, 7}",
+      "{2, 3, 5, 7, 11}",
+      "{1, 2, 3, 5, 7, 11}"
+     ],
+     "a": 2,
+     "e": "Gli elementi che verificano la proprietà sono: A = <b>{2, 3, 5, 7, 11}</b>."
+    },
+    {
+     "q": "Quanti elementi ha l’insieme A = {x ∈ ℤ | |x| ≤ 2}?",
+     "c": [
+      "7",
+      "4",
+      "6",
+      "5"
+     ],
+     "a": 3,
+     "e": "A = {−2, −1, 0, 1, 2}: la cardinalità è |A| = <b>5</b>."
+    },
+    {
+     "q": "Quanti elementi ha l’insieme A = {x = 2n, n ∈ ℕ, n &lt; 3}?",
+     "c": [
+      "2",
+      "3",
+      "5",
+      "4"
+     ],
+     "a": 1,
+     "e": "A = {0, 2, 4}: la cardinalità è |A| = <b>3</b>."
+    },
+    {
+     "q": "Scrivi per elencazione l’insieme A = {x = 2n, n ∈ ℕ, n &lt; 6}.",
+     "c": [
+      "{0, 2, 4, 6, 8}",
+      "{2, 4, 6, 8, 10}",
+      "{0, 2, 4, 6, 8, 10, 11}",
+      "{0, 2, 4, 6, 8, 10}"
+     ],
+     "a": 3,
+     "e": "Gli elementi che verificano la proprietà sono: A = <b>{0, 2, 4, 6, 8, 10}</b>."
+    },
+    {
+     "q": "Quanti elementi ha l’insieme delle parti 𝒫(A), con A = {b, c, f}?",
+     "c": [
+      "6",
+      "7",
+      "9",
+      "8"
+     ],
+     "a": 3,
+     "e": "Con 3 elementi i sottoinsiemi sono 2<sup>3</sup> = <b>8</b> (∅ e A compresi)."
+    },
+    {
+     "q": "Quanti elementi ha l’insieme delle parti 𝒫(A), con A = {b, e}?",
+     "c": [
+      "6",
+      "4",
+      "3",
+      "2"
+     ],
+     "a": 1,
+     "e": "Con 2 elementi i sottoinsiemi sono 2<sup>2</sup> = <b>4</b> (∅ e A compresi)."
+    }
+   ]
+  },
+  {
+   "title": "Unione, intersezione, differenza",
+   "items": [
+    {
+     "q": "U = {1, 2, …, 9} è l’insieme universo e A = {2, 3, 5, 6, 8}. Trova il complementare di A rispetto a U.",
+     "c": [
+      "{2, 3, 5, 6, 8}",
+      "{4, 7, 9}",
+      "{1, 4, 7, 9}",
+      "{1, 2, 4, 7, 9}"
+     ],
+     "a": 2,
+     "e": "Il complementare contiene gli elementi di U che non stanno in A: <b>{1, 4, 7, 9}</b>."
+    },
+    {
+     "q": "A = {1, 2, 7, 8, 11}, B = {2, 5, 7}. Trova B − A.",
+     "c": [
+      "{5}",
+      "{1, 2, 5, 7, 8, 11}",
+      "{1, 8, 11}",
+      "{2, 7}"
+     ],
+     "a": 0,
+     "e": "È la differenza B − A: gli elementi di B che non stanno in A: B − A = <b>{5}</b>."
+    },
+    {
+     "q": "U = {1, 2, …, 9} è l’insieme universo e A = {1, 2, 4, 5, 7, 8}. Trova il complementare di A rispetto a U.",
+     "c": [
+      "{6, 9}",
+      "{1, 3, 6, 9}",
+      "{1, 2, 4, 5, 7, 8}",
+      "{3, 6, 9}"
+     ],
+     "a": 3,
+     "e": "Il complementare contiene gli elementi di U che non stanno in A: <b>{3, 6, 9}</b>."
+    },
+    {
+     "q": "A = {0, 1, 3, 7, 10, 12}, B = {1, 2, 3, 4, 8, 11}. Trova A − B.",
+     "c": [
+      "{0, 2, 4, 7, 8, 10, 11, 12}",
+      "{2, 4, 8, 11}",
+      "{1, 3}",
+      "{0, 7, 10, 12}"
+     ],
+     "a": 3,
+     "e": "È la differenza A − B: gli elementi di A che non stanno in B: A − B = <b>{0, 7, 10, 12}</b>."
+    },
+    {
+     "q": "U = {1, 2, …, 11} è l’insieme universo e A = {2, 3, 4, 6, 7}. Trova il complementare di A rispetto a U.",
+     "c": [
+      "{2, 3, 4, 6, 7}",
+      "{1, 5, 8, 9, 10, 11}",
+      "{1, 2, 5, 8, 9, 10, 11}",
+      "{5, 8, 9, 10, 11}"
+     ],
+     "a": 1,
+     "e": "Il complementare contiene gli elementi di U che non stanno in A: <b>{1, 5, 8, 9, 10, 11}</b>."
+    },
+    {
+     "q": "A = {1, 2, 7, 11, 12}, B = {0, 1, 6, 7, 8, 10}. Trova A ∪ B.",
+     "c": [
+      "{2, 11, 12}",
+      "{1, 7}",
+      "{0, 1, 2, 6, 7, 8, 10, 11, 12}",
+      "{0, 2, 6, 8, 10, 11, 12}"
+     ],
+     "a": 2,
+     "e": "È l’unione: gli elementi di A o di B (presi una volta): A ∪ B = <b>{0, 1, 2, 6, 7, 8, 10, 11, 12}</b>."
+    },
+    {
+     "q": "A = {2, 6, 9}, B = {1, 3, 4, 5, 9}. Trova B − A.",
+     "c": [
+      "{2, 6}",
+      "{1, 3, 4, 5}",
+      "{9}",
+      "{1, 2, 3, 4, 5, 6, 9}"
+     ],
+     "a": 1,
+     "e": "È la differenza B − A: gli elementi di B che non stanno in A: B − A = <b>{1, 3, 4, 5}</b>."
+    },
+    {
+     "q": "A = {1, 6, 7, 11}, B = {7, 10, 12}. Trova A ∪ B.",
+     "c": [
+      "{1, 6, 7, 10, 11, 12}",
+      "{7}",
+      "{1, 6, 10, 11, 12}",
+      "{1, 6, 11}"
+     ],
+     "a": 0,
+     "e": "È l’unione: gli elementi di A o di B (presi una volta): A ∪ B = <b>{1, 6, 7, 10, 11, 12}</b>."
+    },
+    {
+     "q": "U = {1, 2, …, 11} è l’insieme universo e A = {1, 2, 4, 6, 11}. Trova il complementare di A rispetto a U.",
+     "c": [
+      "{5, 7, 8, 9, 10}",
+      "{1, 2, 4, 6, 11}",
+      "{1, 3, 5, 7, 8, 9, 10}",
+      "{3, 5, 7, 8, 9, 10}"
+     ],
+     "a": 3,
+     "e": "Il complementare contiene gli elementi di U che non stanno in A: <b>{3, 5, 7, 8, 9, 10}</b>."
+    },
+    {
+     "q": "A = {2, 7, 8, 10}, B = {2, 4, 5, 7, 10}. Trova A ∪ B.",
+     "c": [
+      "{8}",
+      "{4, 5, 8}",
+      "{2, 4, 5, 7, 8, 10}",
+      "{2, 7, 10}"
+     ],
+     "a": 2,
+     "e": "È l’unione: gli elementi di A o di B (presi una volta): A ∪ B = <b>{2, 4, 5, 7, 8, 10}</b>."
+    },
+    {
+     "q": "A = {0, 3, 4, 5, 6, 11}, B = {0, 3, 7, 9, 10, 11}. Trova A − B.",
+     "c": [
+      "{4, 5, 6}",
+      "{4, 5, 6, 7, 9, 10}",
+      "{0, 3, 11}",
+      "{7, 9, 10}"
+     ],
+     "a": 0,
+     "e": "È la differenza A − B: gli elementi di A che non stanno in B: A − B = <b>{4, 5, 6}</b>."
+    },
+    {
+     "q": "A = {0, 1, 3, 4, 5, 9}, B = {2, 3, 5, 7, 9, 11}. Trova A ∩ B.",
+     "c": [
+      "{2, 7, 11}",
+      "{0, 1, 2, 3, 4, 5, 7, 9, 11}",
+      "{0, 1, 4}",
+      "{3, 5, 9}"
+     ],
+     "a": 3,
+     "e": "È l’intersezione: gli elementi comuni: A ∩ B = <b>{3, 5, 9}</b>."
+    },
+    {
+     "q": "U = {1, 2, …, 9} è l’insieme universo e A = {1, 2, 7, 9}. Trova il complementare di A rispetto a U.",
+     "c": [
+      "{1, 3, 4, 5, 6, 8}",
+      "{3, 4, 5, 6, 8}",
+      "{4, 5, 6, 8}",
+      "{1, 2, 7, 9}"
+     ],
+     "a": 1,
+     "e": "Il complementare contiene gli elementi di U che non stanno in A: <b>{3, 4, 5, 6, 8}</b>."
+    },
+    {
+     "q": "A = {4, 5, 7, 9, 11, 12}, B = {6, 7, 11}. Trova A ∪ B.",
+     "c": [
+      "{4, 5, 6, 9, 12}",
+      "{4, 5, 6, 7, 9, 11, 12}",
+      "{4, 5, 9, 12}",
+      "{7, 11}"
+     ],
+     "a": 1,
+     "e": "È l’unione: gli elementi di A o di B (presi una volta): A ∪ B = <b>{4, 5, 6, 7, 9, 11, 12}</b>."
+    },
+    {
+     "q": "A = {2, 3, 4, 10}, B = {4, 5, 6, 9, 12}. Trova A − B.",
+     "c": [
+      "{4}",
+      "{2, 3, 5, 6, 9, 10, 12}",
+      "{5, 6, 9, 12}",
+      "{2, 3, 10}"
+     ],
+     "a": 3,
+     "e": "È la differenza A − B: gli elementi di A che non stanno in B: A − B = <b>{2, 3, 10}</b>."
+    },
+    {
+     "q": "U = {1, 2, …, 12} è l’insieme universo e A = {4, 5, 9}. Trova il complementare di A rispetto a U.",
+     "c": [
+      "{2, 3, 6, 7, 8, 10, 11, 12}",
+      "{1, 2, 3, 6, 7, 8, 10, 11, 12}",
+      "{4, 5, 9}",
+      "{1, 2, 3, 4, 6, 7, 8, 10, 11, 12}"
+     ],
+     "a": 1,
+     "e": "Il complementare contiene gli elementi di U che non stanno in A: <b>{1, 2, 3, 6, 7, 8, 10, 11, 12}</b>."
+    },
+    {
+     "q": "A = {0, 7, 9}, B = {0, 2, 3, 6, 7, 11}. Trova B − A.",
+     "c": [
+      "{0, 7}",
+      "{0, 2, 3, 6, 7, 9, 11}",
+      "{2, 3, 6, 11}",
+      "{9}"
+     ],
+     "a": 2,
+     "e": "È la differenza B − A: gli elementi di B che non stanno in A: B − A = <b>{2, 3, 6, 11}</b>."
+    },
+    {
+     "q": "A = {2, 3, 6, 7, 11}, B = {2, 4, 6, 7, 8, 10}. Trova B − A.",
+     "c": [
+      "{4, 8, 10}",
+      "{3, 11}",
+      "{2, 3, 4, 6, 7, 8, 10, 11}",
+      "{2, 6, 7}"
+     ],
+     "a": 0,
+     "e": "È la differenza B − A: gli elementi di B che non stanno in A: B − A = <b>{4, 8, 10}</b>."
+    },
+    {
+     "q": "A = {1, 3, 4, 6, 9, 11}, B = {1, 3, 4, 5, 7, 8}. Trova A − B.",
+     "c": [
+      "{6, 9, 11}",
+      "{5, 6, 7, 8, 9, 11}",
+      "{5, 7, 8}",
+      "{1, 3, 4}"
+     ],
+     "a": 0,
+     "e": "È la differenza A − B: gli elementi di A che non stanno in B: A − B = <b>{6, 9, 11}</b>."
+    },
+    {
+     "q": "A = {2, 5, 7, 8, 12}, B = {0, 2, 3, 5, 8}. Trova A ∪ B.",
+     "c": [
+      "{0, 3, 7, 12}",
+      "{7, 12}",
+      "{0, 2, 3, 5, 7, 8, 12}",
+      "{2, 5, 8}"
+     ],
+     "a": 2,
+     "e": "È l’unione: gli elementi di A o di B (presi una volta): A ∪ B = <b>{0, 2, 3, 5, 7, 8, 12}</b>."
+    }
+   ]
+  },
+  {
+   "title": "Prodotto cartesiano e problemi",
+   "items": [
+    {
+     "q": "In una classe di 28 studenti, 9 fanno nuoto, 21 atletica e 3 entrambi. Quanti non fanno né nuoto né atletica?",
+     "c": [
+      "3",
+      "25",
+      "4",
+      "1"
+     ],
+     "a": 3,
+     "e": "Almeno uno: 9 + 21 − 3 = 27; nessuno dei due: 28 − 27 = <b>1</b>."
+    },
+    {
+     "q": "A = {1, 5}, B = {b, c}. Quale coppia appartiene a B × A?",
+     "c": [
+      "(5; c)",
+      "(c; 5)",
+      "(b; c)",
+      "(1; 5)"
+     ],
+     "a": 1,
+     "e": "In B × A il primo elemento viene da B: <b>(c; 5)</b>. B × A è diverso da A × B."
+    },
+    {
+     "q": "A = {1, 5}, B = {b, c}. Quanti elementi ha A × B?",
+     "c": [
+      "3",
+      "8",
+      "5",
+      "4"
+     ],
+     "a": 3,
+     "e": "|A × B| = |A| · |B| = 2 · 2 = <b>4</b>."
+    },
+    {
+     "q": "In una classe di 30 studenti, 24 studiano il tedesco, 8 lo spagnolo e 3 entrambi. Quanti non studiano né il tedesco né lo spagnolo?",
+     "c": [
+      "4",
+      "3",
+      "1",
+      "27"
+     ],
+     "a": 2,
+     "e": "Almeno uno: 24 + 8 − 3 = 29; nessuno dei due: 30 − 29 = <b>1</b>."
+    },
+    {
+     "q": "In una classe di 24 studenti, 13 fanno nuoto, 12 atletica e 3 entrambi. Quanti fanno almeno una delle due attività?",
+     "c": [
+      "21",
+      "19",
+      "22",
+      "25"
+     ],
+     "a": 2,
+     "e": "|A ∪ B| = |A| + |B| − |A ∩ B| = 13 + 12 − 3 = <b>22</b>."
+    },
+    {
+     "q": "In una classe di 30 studenti, 9 studiano il tedesco, 14 lo spagnolo e 4 entrambi. Quanti non studiano né il tedesco né lo spagnolo?",
+     "c": [
+      "11",
+      "26",
+      "15",
+      "7"
+     ],
+     "a": 0,
+     "e": "Almeno uno: 9 + 14 − 4 = 19; nessuno dei due: 30 − 19 = <b>11</b>."
+    },
+    {
+     "q": "In una classe di 30 studenti, 22 giocano a calcio, 10 a pallavolo e 5 entrambi. Quanti giocano ad almeno uno dei due sport?",
+     "c": [
+      "22",
+      "27",
+      "25",
+      "32"
+     ],
+     "a": 1,
+     "e": "|A ∪ B| = |A| + |B| − |A ∩ B| = 22 + 10 − 5 = <b>27</b>."
+    },
+    {
+     "q": "In una classe di 25 studenti, 15 studiano il tedesco, 14 lo spagnolo e 8 entrambi. Quanti studiano solo il tedesco?",
+     "c": [
+      "15",
+      "23",
+      "7",
+      "6"
+     ],
+     "a": 2,
+     "e": "Solo il tedesco: 15 − 8 = <b>7</b> (tolgo chi studia entrambe le lingue)."
+    },
+    {
+     "q": "In una classe di 28 studenti, 14 suonano il pianoforte, 11 la chitarra e 5 entrambi. Quanti non suonano né il pianoforte né la chitarra?",
+     "c": [
+      "23",
+      "13",
+      "8",
+      "3"
+     ],
+     "a": 2,
+     "e": "Almeno uno: 14 + 11 − 5 = 20; nessuno dei due: 28 − 20 = <b>8</b>."
+    },
+    {
+     "q": "In una classe di 25 studenti, 12 fanno nuoto, 20 atletica e 8 entrambi. Quanti fanno almeno una delle due attività?",
+     "c": [
+      "16",
+      "17",
+      "32",
+      "24"
+     ],
+     "a": 3,
+     "e": "|A ∪ B| = |A| + |B| − |A ∩ B| = 12 + 20 − 8 = <b>24</b>."
+    },
+    {
+     "q": "A = {1, 2}, B = {b, c, d}. Quale coppia appartiene ad A × B?",
+     "c": [
+      "(d; 2)",
+      "(2; d)",
+      "(b; c)",
+      "(1; 2)"
+     ],
+     "a": 1,
+     "e": "In A × B il primo elemento viene da A e il secondo da B: <b>(2; d)</b>."
+    },
+    {
+     "q": "A = {2, 4, 5}, B = {a, c, d}. Quale coppia appartiene a B × A?",
+     "c": [
+      "(a; d)",
+      "(a; 4)",
+      "(2; 5)",
+      "(4; a)"
+     ],
+     "a": 1,
+     "e": "In B × A il primo elemento viene da B: <b>(a; 4)</b>. B × A è diverso da A × B."
+    },
+    {
+     "q": "In una classe di 28 studenti, 22 suonano il pianoforte, 11 la chitarra e 7 entrambi. Quanti suonano solo il pianoforte?",
+     "c": [
+      "29",
+      "4",
+      "22",
+      "15"
+     ],
+     "a": 3,
+     "e": "Solo il pianoforte: 22 − 7 = <b>15</b> (tolgo chi suona entrambi gli strumenti)."
+    },
+    {
+     "q": "A = {1, 5}, B = {a, c, d}. Quanti elementi ha A × B?",
+     "c": [
+      "7",
+      "6",
+      "5",
+      "12"
+     ],
+     "a": 1,
+     "e": "|A × B| = |A| · |B| = 2 · 3 = <b>6</b>."
+    },
+    {
+     "q": "A = {3, 4, 5}, B = {a, b, c}. Quanti elementi ha A × B?",
+     "c": [
+      "9",
+      "8",
+      "18",
+      "6"
+     ],
+     "a": 0,
+     "e": "|A × B| = |A| · |B| = 3 · 3 = <b>9</b>."
+    },
+    {
+     "q": "In una classe di 28 studenti, 13 giocano a calcio, 15 a pallavolo e 4 entrambi. Quanti giocano ad almeno uno dei due sport?",
+     "c": [
+      "20",
+      "28",
+      "25",
+      "24"
+     ],
+     "a": 3,
+     "e": "|A ∪ B| = |A| + |B| − |A ∩ B| = 13 + 15 − 4 = <b>24</b>."
+    },
+    {
+     "q": "A = {1, 3, 4}, B = {a, c}. Quale coppia appartiene a B × A?",
+     "c": [
+      "(a; c)",
+      "(1; 4)",
+      "(c; 4)",
+      "(4; c)"
+     ],
+     "a": 2,
+     "e": "In B × A il primo elemento viene da B: <b>(c; 4)</b>. B × A è diverso da A × B."
+    },
+    {
+     "q": "A = {2, 3, 5}, B = {a, d}. Quale coppia appartiene a B × A?",
+     "c": [
+      "(a; 3)",
+      "(2; 5)",
+      "(a; d)",
+      "(3; a)"
+     ],
+     "a": 0,
+     "e": "In B × A il primo elemento viene da B: <b>(a; 3)</b>. B × A è diverso da A × B."
+    },
+    {
+     "q": "In una classe di 32 studenti, 19 fanno nuoto, 12 atletica e 8 entrambi. Quanti fanno almeno una delle due attività?",
+     "c": [
+      "23",
+      "24",
+      "15",
+      "31"
+     ],
+     "a": 0,
+     "e": "|A ∪ B| = |A| + |B| − |A ∩ B| = 19 + 12 − 8 = <b>23</b>."
+    },
+    {
+     "q": "In una classe di 24 studenti, 11 fanno nuoto, 8 atletica e 5 entrambi. Quanti fanno solo nuoto?",
+     "c": [
+      "6",
+      "11",
+      "16",
+      "3"
+     ],
+     "a": 0,
+     "e": "Solo nuoto: 11 − 5 = <b>6</b> (tolgo chi fa entrambe le attività)."
+    }
+   ]
+  },
+  {
+   "title": "Proposizioni e connettivi",
+   "items": [
+    {
+     "q": "«Che ore sono?» è una proposizione logica?",
+     "c": [
+      "no",
+      "sì, ma solo a volte",
+      "sì, falsa",
+      "sì, vera"
+     ],
+     "a": 0,
+     "e": "Una proposizione è un enunciato di cui si può dire con certezza se è vero o falso. Domande, ordini, giudizi personali ed enunciati aperti non lo sono: <b>no</b>."
+    },
+    {
+     "q": "«Il blu è il colore più elegante» è una proposizione logica?",
+     "c": [
+      "no",
+      "sì, falsa",
+      "sì, ma solo a volte",
+      "sì, vera"
+     ],
+     "a": 0,
+     "e": "Una proposizione è un enunciato di cui si può dire con certezza se è vero o falso. Domande, ordini, giudizi personali ed enunciati aperti non lo sono: <b>no</b>."
+    },
+    {
+     "q": "Quante righe ha la tavola di verità di una proposizione composta con 3 proposizioni elementari diverse?",
+     "c": [
+      "6",
+      "16",
+      "8",
+      "4"
+     ],
+     "a": 2,
+     "e": "Ogni proposizione può essere V o F: 2<sup>3</sup> = <b>8</b> righe."
+    },
+    {
+     "q": "p è vera e q è falsa. Che valore di verità ha q → p?",
+     "c": [
+      "vero solo se p = q",
+      "falso",
+      "vero",
+      "non si può stabilire"
+     ],
+     "a": 2,
+     "e": "→ è falsa solo se l’antecedente (q) è vero e il conseguente (p) è falso: con p = V e q = F risulta <b>vero</b>."
+    },
+    {
+     "q": "p è vera e q è vera. Che valore di verità ha p → q?",
+     "c": [
+      "vero",
+      "falso",
+      "vero solo se p = q",
+      "non si può stabilire"
+     ],
+     "a": 0,
+     "e": "→ (se… allora) è falsa solo se p è vera e q è falsa: con p = V e q = V risulta <b>vero</b>."
+    },
+    {
+     "q": "p è vera e q è vera. Che valore di verità ha q → p?",
+     "c": [
+      "non si può stabilire",
+      "vero",
+      "falso",
+      "vero solo se p = q"
+     ],
+     "a": 1,
+     "e": "→ è falsa solo se l’antecedente (q) è vero e il conseguente (p) è falso: con p = V e q = V risulta <b>vero</b>."
+    },
+    {
+     "q": "p è vera e q è falsa. Che valore di verità ha p ∨ ¬q?",
+     "c": [
+      "vero solo se p = q",
+      "vero",
+      "falso",
+      "non si può stabilire"
+     ],
+     "a": 1,
+     "e": "Prima nego q, poi applico ∨: con p = V e q = F risulta <b>vero</b>."
+    },
+    {
+     "q": "Quante righe ha la tavola di verità di una proposizione composta con 5 proposizioni elementari diverse?",
+     "c": [
+      "32",
+      "10",
+      "6",
+      "64"
+     ],
+     "a": 0,
+     "e": "Ogni proposizione può essere V o F: 2<sup>5</sup> = <b>32</b> righe."
+    },
+    {
+     "q": "«Chiudi la finestra!» è una proposizione logica?",
+     "c": [
+      "sì, falsa",
+      "sì, vera",
+      "no",
+      "sì, ma solo a volte"
+     ],
+     "a": 2,
+     "e": "Una proposizione è un enunciato di cui si può dire con certezza se è vero o falso. Domande, ordini, giudizi personali ed enunciati aperti non lo sono: <b>no</b>."
+    },
+    {
+     "q": "«Un anno ha 12 mesi» è una proposizione logica?",
+     "c": [
+      "sì, falsa",
+      "dipende da chi la legge",
+      "no",
+      "sì, vera"
+     ],
+     "a": 3,
+     "e": "Si può stabilire se è vera o falsa, quindi è una proposizione: <b>sì, vera</b>."
+    },
+    {
+     "q": "p è vera e q è falsa. Che valore di verità ha ¬p ∨ ¬q?",
+     "c": [
+      "falso",
+      "non si può stabilire",
+      "vero",
+      "vero solo se p = q"
+     ],
+     "a": 2,
+     "e": "Nego p e q, poi applico ∨: con p = V e q = F risulta <b>vero</b>."
+    },
+    {
+     "q": "Quante righe ha la tavola di verità di una proposizione composta con 2 proposizioni elementari diverse?",
+     "c": [
+      "8",
+      "4",
+      "5",
+      "3"
+     ],
+     "a": 1,
+     "e": "Ogni proposizione può essere V o F: 2<sup>2</sup> = <b>4</b> righe."
+    },
+    {
+     "q": "p è vera e q è falsa. Che valore di verità ha ¬(p ∨ q)?",
+     "c": [
+      "falso",
+      "vero",
+      "vero solo se p = q",
+      "non si può stabilire"
+     ],
+     "a": 0,
+     "e": "Calcolo p ∨ q e poi nego: con p = V e q = F risulta <b>falso</b>."
+    },
+    {
+     "q": "p è falsa e q è falsa. Che valore di verità ha p ∨ ¬q?",
+     "c": [
+      "falso",
+      "vero solo se p = q",
+      "vero",
+      "non si può stabilire"
+     ],
+     "a": 2,
+     "e": "Prima nego q, poi applico ∨: con p = F e q = F risulta <b>vero</b>."
+    },
+    {
+     "q": "p è falsa e q è vera. Che valore di verità ha ¬p ∨ ¬q?",
+     "c": [
+      "vero solo se p = q",
+      "falso",
+      "non si può stabilire",
+      "vero"
+     ],
+     "a": 3,
+     "e": "Nego p e q, poi applico ∨: con p = F e q = V risulta <b>vero</b>."
+    },
+    {
+     "q": "p è falsa e q è vera. Che valore di verità ha ¬(p ∨ q)?",
+     "c": [
+      "non si può stabilire",
+      "falso",
+      "vero solo se p = q",
+      "vero"
+     ],
+     "a": 1,
+     "e": "Calcolo p ∨ q e poi nego: con p = F e q = V risulta <b>falso</b>."
+    },
+    {
+     "q": "«9 è un numero primo» è una proposizione logica?",
+     "c": [
+      "sì, vera",
+      "no",
+      "dipende da chi la legge",
+      "sì, falsa"
+     ],
+     "a": 3,
+     "e": "Si può stabilire se è vera o falsa, quindi è una proposizione: <b>sì, falsa</b>."
+    },
+    {
+     "q": "p è falsa e q è falsa. Che valore di verità ha ¬p ∧ q?",
+     "c": [
+      "non si può stabilire",
+      "vero solo se p = q",
+      "vero",
+      "falso"
+     ],
+     "a": 3,
+     "e": "Prima nego p, poi applico ∧: con p = F e q = F risulta <b>falso</b>."
+    },
+    {
+     "q": "Quante righe ha la tavola di verità di una proposizione composta con 4 proposizioni elementari diverse?",
+     "c": [
+      "32",
+      "16",
+      "5",
+      "8"
+     ],
+     "a": 1,
+     "e": "Ogni proposizione può essere V o F: 2<sup>4</sup> = <b>16</b> righe."
+    },
+    {
+     "q": "«Che bella giornata!» è una proposizione logica?",
+     "c": [
+      "sì, vera",
+      "sì, falsa",
+      "sì, ma solo a volte",
+      "no"
+     ],
+     "a": 3,
+     "e": "Una proposizione è un enunciato di cui si può dire con certezza se è vero o falso. Domande, ordini, giudizi personali ed enunciati aperti non lo sono: <b>no</b>."
+    }
+   ]
+  },
+  {
+   "title": "De Morgan e quantificatori",
+   "items": [
+    {
+     "q": "Quale proposizione è equivalente a ¬(p ∨ q)?",
+     "c": [
+      "¬p ∨ ¬q",
+      "p ∧ q",
+      "¬p ∨ q",
+      "¬p ∧ ¬q"
+     ],
+     "a": 3,
+     "e": "Per le leggi di De Morgan (e la doppia negazione) ¬(p ∨ q) equivale a <b>¬p ∧ ¬q</b>: hanno la stessa tavola di verità."
+    },
+    {
+     "q": "Quale proposizione è equivalente a ¬(p → q)?",
+     "c": [
+      "¬p ∨ q",
+      "p ∧ ¬q",
+      "¬p ∧ q",
+      "¬p → ¬q"
+     ],
+     "a": 1,
+     "e": "Per le leggi di De Morgan (e la doppia negazione) ¬(p → q) equivale a <b>p ∧ ¬q</b>: hanno la stessa tavola di verità."
+    },
+    {
+     "q": "In una classe di 24 studenti, 15 giocano a calcio, 11 a pallavolo e 5 entrambi. Quanti giocano ad almeno uno dei due sport?",
+     "c": [
+      "21",
+      "19",
+      "26",
+      "16"
+     ],
+     "a": 0,
+     "e": "|A ∪ B| = |A| + |B| − |A ∩ B| = 15 + 11 − 5 = <b>21</b>."
+    },
+    {
+     "q": "Qual è la negazione di «Esiste almeno un gatto del cortile che è nero»?",
+     "c": [
+      "Nessun gatto del cortile è nero",
+      "Non tutti i gatti del cortile sono neri",
+      "Esiste almeno un gatto del cortile che non è nero",
+      "Tutti i gatti del cortile sono neri"
+     ],
+     "a": 0,
+     "e": "Negare «esiste almeno uno che…» vuol dire che non ce n’è nessuno: <b>nessun gatto del cortile è nero</b>."
+    },
+    {
+     "q": "In una classe di 25 studenti, 18 suonano il pianoforte, 10 la chitarra e 7 entrambi. Quanti suonano solo il pianoforte?",
+     "c": [
+      "11",
+      "3",
+      "25",
+      "18"
+     ],
+     "a": 0,
+     "e": "Solo il pianoforte: 18 − 7 = <b>11</b> (tolgo chi suona entrambi gli strumenti)."
+    },
+    {
+     "q": "Quale proposizione è equivalente a ¬(p ∧ ¬q)?",
+     "c": [
+      "¬p ∨ q",
+      "¬p ∨ ¬q",
+      "p ∨ ¬q",
+      "¬p ∧ q"
+     ],
+     "a": 0,
+     "e": "Per le leggi di De Morgan (e la doppia negazione) ¬(p ∧ ¬q) equivale a <b>¬p ∨ q</b>: hanno la stessa tavola di verità."
+    },
+    {
+     "q": "Qual è la negazione di «Esiste almeno un numero primo che è dispari»?",
+     "c": [
+      "Tutti i numeri primi sono dispari",
+      "Non tutti i numeri primi sono dispari",
+      "Nessun numero primo è dispari",
+      "Esiste almeno un numero primo che non è dispari"
+     ],
+     "a": 2,
+     "e": "Negare «esiste almeno uno che…» vuol dire che non ce n’è nessuno: <b>nessun numero primo è dispari</b>."
+    },
+    {
+     "q": "In una classe di 28 studenti, 13 studiano il tedesco, 15 lo spagnolo e 7 entrambi. Quanti studiano solo il tedesco?",
+     "c": [
+      "20",
+      "8",
+      "13",
+      "6"
+     ],
+     "a": 3,
+     "e": "Solo il tedesco: 13 − 7 = <b>6</b> (tolgo chi studia entrambe le lingue)."
+    },
+    {
+     "q": "Qual è la negazione di «Esiste almeno un quadrilatero che ha le diagonali uguali»?",
+     "c": [
+      "Non tutti i quadrilateri hanno le diagonali uguali",
+      "Esiste almeno un quadrilatero che non ha le diagonali uguali",
+      "Nessun quadrilatero ha le diagonali uguali",
+      "Tutti i quadrilateri hanno le diagonali uguali"
+     ],
+     "a": 2,
+     "e": "Negare «esiste almeno uno che…» vuol dire che non ce n’è nessuno: <b>nessun quadrilatero ha le diagonali uguali</b>."
+    },
+    {
+     "q": "In una classe di 30 studenti, 13 studiano il tedesco, 10 lo spagnolo e 5 entrambi. Quanti non studiano né il tedesco né lo spagnolo?",
+     "c": [
+      "17",
+      "12",
+      "25",
+      "7"
+     ],
+     "a": 1,
+     "e": "Almeno uno: 13 + 10 − 5 = 18; nessuno dei due: 30 − 18 = <b>12</b>."
+    },
+    {
+     "q": "Quale frase è la negazione equivalente di «Non è vero che piove e fa freddo»?",
+     "c": [
+      "Non piove e non fa freddo",
+      "Non piove o non fa freddo",
+      "Piove o fa freddo",
+      "Piove e non fa freddo"
+     ],
+     "a": 1,
+     "e": "Leggi di De Morgan: negando «e» si ottiene «o» (e viceversa) e si negano le due parti: <b>Non piove o non fa freddo</b>."
+    },
+    {
+     "q": "Qual è la negazione di «Tutti i gatti del cortile sono neri»?",
+     "c": [
+      "Non esiste un gatto del cortile che non è nero",
+      "Esiste almeno un gatto del cortile che è nero",
+      "Nessun gatto del cortile è nero",
+      "Esiste almeno un gatto del cortile che non è nero"
+     ],
+     "a": 3,
+     "e": "La negazione di «per ogni x vale P» è «esiste almeno un x per cui P non vale». Basta un controesempio: <b>esiste almeno un gatto del cortile che non è nero</b>."
+    },
+    {
+     "q": "In una classe di 30 studenti, 15 fanno nuoto, 13 atletica e 3 entrambi. Quanti fanno solo nuoto?",
+     "c": [
+      "18",
+      "15",
+      "12",
+      "10"
+     ],
+     "a": 2,
+     "e": "Solo nuoto: 15 − 3 = <b>12</b> (tolgo chi fa entrambe le attività)."
+    },
+    {
+     "q": "Quale frase è la negazione equivalente di «Non è vero che prendo il treno o l’autobus»?",
+     "c": [
+      "Prendo solo il treno",
+      "Non prendo il treno o non prendo l’autobus",
+      "Non prendo il treno e non prendo l’autobus",
+      "Prendo il treno e l’autobus"
+     ],
+     "a": 2,
+     "e": "Leggi di De Morgan: negando «e» si ottiene «o» (e viceversa) e si negano le due parti: <b>Non prendo il treno e non prendo l’autobus</b>."
+    },
+    {
+     "q": "Qual è la negazione di «Tutti le auto del parcheggio sono rosse»?",
+     "c": [
+      "Non esiste un’auto del parcheggio che non è rossa",
+      "Esiste almeno un’auto del parcheggio che non è rossa",
+      "Nessuna auto del parcheggio è rossa",
+      "Esiste almeno un’auto del parcheggio che è rossa"
+     ],
+     "a": 1,
+     "e": "La negazione di «per ogni x vale P» è «esiste almeno un x per cui P non vale». Basta un controesempio: <b>esiste almeno un’auto del parcheggio che non è rossa</b>."
+    },
+    {
+     "q": "In una classe di 24 studenti, 8 giocano a calcio, 15 a pallavolo e 3 entrambi. Quanti giocano solo a calcio?",
+     "c": [
+      "11",
+      "12",
+      "8",
+      "5"
+     ],
+     "a": 3,
+     "e": "Solo a calcio: 8 − 3 = <b>5</b> (tolgo chi gioca a tutti e due gli sport)."
+    },
+    {
+     "q": "Quale proposizione è equivalente a ¬(¬p ∨ q)?",
+     "c": [
+      "¬p ∧ ¬q",
+      "¬p ∧ q",
+      "p ∧ ¬q",
+      "p ∨ ¬q"
+     ],
+     "a": 2,
+     "e": "Per le leggi di De Morgan (e la doppia negazione) ¬(¬p ∨ q) equivale a <b>p ∧ ¬q</b>: hanno la stessa tavola di verità."
+    },
+    {
+     "q": "Quale proposizione è equivalente a ¬(p ∧ q)?",
+     "c": [
+      "¬p ∨ ¬q",
+      "¬p ∧ ¬q",
+      "¬p ∧ q",
+      "p ∨ q"
+     ],
+     "a": 0,
+     "e": "Per le leggi di De Morgan (e la doppia negazione) ¬(p ∧ q) equivale a <b>¬p ∨ ¬q</b>: hanno la stessa tavola di verità."
+    },
+    {
+     "q": "Qual è la negazione di «Tutti i triangoli sono isosceli»?",
+     "c": [
+      "Non esiste un triangolo che non è isoscele",
+      "Nessun triangolo è isoscele",
+      "Esiste almeno un triangolo che è isoscele",
+      "Esiste almeno un triangolo che non è isoscele"
+     ],
+     "a": 3,
+     "e": "La negazione di «per ogni x vale P» è «esiste almeno un x per cui P non vale». Basta un controesempio: <b>esiste almeno un triangolo che non è isoscele</b>."
+    },
+    {
+     "q": "Quale proposizione è equivalente a ¬(¬p)?",
+     "c": [
+      "¬p",
+      "p",
+      "p ∧ ¬p",
+      "p ∨ ¬p"
+     ],
+     "a": 1,
+     "e": "Per le leggi di De Morgan (e la doppia negazione) ¬(¬p) equivale a <b>p</b>: hanno la stessa tavola di verità."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 1,
+ "updated": "2026-11-23",
+ "country": "it",
+ "subject": "matematica",
+ "grade": "prima-liceo"
+}
