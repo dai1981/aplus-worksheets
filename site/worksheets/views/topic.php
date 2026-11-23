@@ -15,7 +15,7 @@ $lc = topic_lc($name);
 $range = topic_range($units);
 $sbase = $seg[0] . '/' . $seg[1] . '/';
 $path = $sbase . 'topics/' . $tk . '/';
-$paper = $country['paper'] === 'letter' ? 'Letter' : 'A4';
+$paper = $country['paper'] === 'letter' ? ($country['lang'] === 'es-MX' ? 'tamaño carta' : 'Letter') : 'A4';
 $crumbs = array(array(T('worksheets'), ''), array($country['name'], $seg[0] . '/'),
                 array($subject['name'], $sbase), array($name, $path));
 
@@ -32,7 +32,7 @@ $de = $country['lang'] === 'de';
 $fr = $country['lang'] === 'fr';
 $it = $country['lang'] === 'it';
 $pt = $country['lang'] === 'pt-BR';
-$es = $country['lang'] === 'es';
+$es = strpos($country['lang'], 'es') === 0;
 if ($es) {
     $faq = array(
         array('q' => '¿Qué fichas sobre «' . $name . '» hay aquí?',

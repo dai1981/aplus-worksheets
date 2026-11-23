@@ -363,7 +363,7 @@ function preview_route($seg, $kind = 'preview') {
         'label' => gs($grade['name'], $subject['name'])
                    . ($u['standard_code'] ? ' · ' . preg_replace('/^' . preg_quote($grade['name'], '/') . '\s*[:·]\s*/u', '', $u['standard_code']) : ''),
         'title' => $u['short_title'],
-        'chips' => array(T('pv_lesson'), T('pv_100'), sprintf(T('pv_print'), $paper === 'LETTER' ? 'Letter' : $paper), T('pv_key')),
+        'chips' => array(T('pv_lesson'), T('pv_100'), sprintf(T('pv_print'), $paper === 'LETTER' ? ($country['lang'] === 'es-MX' ? 'carta' : 'Letter') : $paper), T('pv_key')),
         'paper_title' => $u['short_title'], 'paper_sub' => sprintf(T('pv_practice'), $grade['name']),
         'lines' => $lines, 'mode' => 'quiz', 'foot' => $foot));
     exit;

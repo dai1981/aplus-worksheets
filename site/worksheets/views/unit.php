@@ -149,6 +149,9 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 } elseif (preg_match('/^(\d)-primaria$/', $grade['slug'], $gm) && $country['code'] === 'es') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Spain: 4.º de Primaria = age 9-10
     $lr['educationalLevel'] = array($grade['name'], 'Educación Primaria');
+} elseif (preg_match('/^(\d)-primaria$/', $grade['slug'], $gm) && $country['code'] === 'mx') {
+    $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // México: 3.er grado de primaria = age 8-9
+    $lr['educationalLevel'] = array($grade['name'], 'Educación primaria');
 } elseif (preg_match('/^(\d)-eso$/', $grade['slug'], $gm) && $country['code'] === 'es') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 11) . '-' . ((int)$gm[1] + 12);   // Spain: 1.º de ESO = age 12-13
     $lr['educationalLevel'] = array($grade['name'], 'Educación Secundaria Obligatoria');

@@ -223,7 +223,8 @@ function topic_defs_es() {
             'blurb' => 'Leer, escribir y descomponer números, valor posicional, comparar, ordenar y redondear, números romanos.'),
         'suma-y-resta' => array('name' => 'Suma y resta',
             'in' => '/suma|resta|calculo-mental/', 'out' => '/fraccion|decimal/',
-            'blurb' => 'Cálculo mental, sumas y restas en vertical con llevadas, estimaciones y problemas de sumar y restar.'),
+            'blurb' => 'Cálculo mental, sumas y restas en vertical con llevadas, estimaciones y problemas de sumar y restar.',
+            'blurb_mx' => 'Cálculo mental, sumas y restas en vertical con reagrupación, estimaciones y problemas de sumar y restar.'),
         'multiplicacion-y-division' => array('name' => 'Multiplicación y división',
             'in' => '/multiplica|division|divisiones|tablas-de-multiplicar|multiplos|divisores|repartos|dobles|divisibilidad/', 'out' => '/fraccion|decimal/',
             'blurb' => 'Tablas de multiplicar, multiplicaciones y divisiones por una y dos cifras, la prueba de la división, múltiplos y divisores.'),
@@ -235,7 +236,8 @@ function topic_defs_es() {
             'blurb' => 'Problemas de una y dos operaciones con datos de la vida diaria: compras, viajes, recetas y repartos.'),
         'magnitudes-y-medida' => array('name' => 'Magnitudes y medida',
             'in' => '/longitud|masa|capacidad|medida|tiempo|reloj|dinero|monedas|medir|perimetro|area|superficie/', 'out' => '/poligonos-y-areas|integrales/',
-            'blurb' => 'Longitud, masa y capacidad, cambio de unidades, perímetro y área, el reloj y el tiempo, el dinero en euros.'),
+            'blurb' => 'Longitud, masa y capacidad, cambio de unidades, perímetro y área, el reloj y el tiempo, el dinero en euros.',
+            'blurb_mx' => 'Longitud, masa y capacidad, cambio de unidades, perímetro y área, el reloj y el tiempo, el dinero en pesos.'),
         'geometria' => array('name' => 'Geometría',
             'in' => '/angulos|rectas|poligonos|triangulos|cuadrilateros|cuerpos|simetria|coordenadas|figuras|circunferencia|posiciones|orientacion|pitagoras|semejanza|trigonometria|movimientos|analitica|espacio|vectores|conicas|triangulos|planos|distancias/', 'out' => '/^area-|volumenes-de-cuerpos|graficas/',
             'blurb' => 'Rectas y ángulos, polígonos, triángulos y cuadriláteros, circunferencia y círculo, cuerpos geométricos, simetría y coordenadas.'),
@@ -249,7 +251,7 @@ function topic_defs_es() {
             'in' => '/funciones|coordenadas-y-graficas/', 'out' => '/^$/',
             'blurb' => 'Coordenadas y gráficas, dominio, crecimiento, máximos y mínimos, funciones lineales, cuadráticas, exponenciales y logarítmicas.'),
         'estadistica-y-probabilidad' => array('name' => 'Estadística y probabilidad',
-            'in' => '/graficos|tablas-de|estadistica|probabilidad|media|seguro-posible|combinatoria|distribucion|muestreo|intervalos-de-confianza/', 'out' => '/tablas-de-multiplicar/',
+            'in' => '/graficos|tablas-y-graficas|tablas-de|estadistica|probabilidad|media|seguro-posible|combinatoria|distribucion|muestreo|intervalos-de-confianza/', 'out' => '/tablas-de-multiplicar/',
             'blurb' => 'Tablas de frecuencias, gráficos de barras y de líneas, la media y la moda, sucesos seguros, posibles e imposibles.'),
     );
 }
@@ -292,7 +294,7 @@ function topic_defs_br() {
 
 function topic_defs($country = null) {
     if ($country === 'br') return topic_defs_br();
-    if ($country === 'es') return topic_defs_es();
+    if ($country === 'es' || $country === 'mx') return topic_defs_es();
     if ($country === 'tw') return topic_defs_tw();
     if ($country === 'de') return topic_defs_de();
     if ($country === 'fr') return topic_defs_fr();
@@ -484,6 +486,7 @@ function topic_name($t, $country) {
     return $t['name'];
 }
 function topic_blurb($t, $country) {
+    if ($country === 'mx' && isset($t['blurb_mx'])) return $t['blurb_mx'];
     return (topic_gb($country) && isset($t['blurb_gb'])) ? $t['blurb_gb'] : $t['blurb'];
 }
 
@@ -532,7 +535,7 @@ function topic_range($units) {
     if ($units[0]['country'] === 'tw') return $first . '到' . $last;
     if ($units[0]['country'] === 'fr') return 'du ' . $first . ' au ' . $last;
     if ($units[0]['country'] === 'br') return 'do ' . $first . ' ao ' . $last;
-    if ($units[0]['country'] === 'es') return 'de ' . $first . ' a ' . $last;
+    if ($units[0]['country'] === 'es' || $units[0]['country'] === 'mx') return 'de ' . $first . ' a ' . $last;
     if ($units[0]['country'] === 'it') return 'dalla ' . strtolower($first) . ' alla ' . strtolower($last);
     return $units[0]['country'] === 'de' ? $first . ' bis ' . $last : $first . ' to ' . $last;
 }

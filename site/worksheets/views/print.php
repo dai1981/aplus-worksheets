@@ -129,7 +129,7 @@ function sheet_foot($u, $kind, $upath, $pg) {
 $title = sprintf(T('pr_h'), $u['short_title'], $grade['name']);
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
-    'title' => sprintf(T('pr_title'), $grade['name'], $u['short_title'], $letter ? 'Letter' : 'A4') . ' | ' . SITE_NAME,
+    'title' => sprintf(T('pr_title'), $grade['name'], $u['short_title'], $letter ? ($country['lang'] === 'es-MX' ? 'tamaño carta' : 'Letter') : 'A4') . ' | ' . SITE_NAME,
     'desc' => sprintf(T('pr_desc'), $grade['name'], lc($u['short_title']),
                       $u['standard_code'] ? sprintf(T('paren'), $u['standard_code']) : '', $QN),
     'canonical' => $path, 'og_type' => 'article', 'css' => 'ws-print.css', 'image' => preview_path($upath),

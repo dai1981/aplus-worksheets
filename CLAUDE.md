@@ -1566,7 +1566,17 @@ ES / Matemáticas Aplicadas a las Ciencias Sociales I・II（Real Decreto 243/20
 2.º CCSS（PAU）: 1. matrices ✓ 2. sistemas-de-ecuaciones-lineales ✓ 3. programacion-lineal ✓ 4. limites-y-continuidad ✓ 5. derivadas-y-aplicaciones ✓ 6. integrales ✓ 7. probabilidad ✓ 8. muestreo-y-distribucion-de-medias ✓ 9. intervalos-de-confianza ✓
 トピック：mercantil→fracciones-y-decimales、programacion-lineal→algebra-y-proporcionalidad、muestreo・intervalos-de-confianza→estadistica-y-probabilidad
 
-ES / Matemáticas は 1.º de Primaria〜2.º de Bachillerato（Ciencias y Tecnología と CCSS）まで完了。次は GDP 順で次の国
+ES / Matemáticas は 1.º de Primaria〜2.º de Bachillerato（Ciencias y Tecnología と CCSS）まで完了。次は GDP 順で次の国（メキシコ）
+
+MX / Matemáticas（SEP、Plan de Estudio 2022・Nueva Escuela Mexicana、Programa sintético 2024。算数は Saberes y Pensamiento Científico の中の contenidos）— country `mx`（name「México」、lang `es-MX`、hreflang es-mx、standard「NEM」、paper letter＝「tamaño carta」）、subject `matematicas`、grade `N-primaria`（name「3.er grado de primaria」、N+5〜N+6 歳、unit.php）。
+生成スクリプトは `gen_mx_matematicas_N_*`（seed は 63NNN）、共通部品は `tools/mx_common.py`（num（SEP と同じく 1 000 以上はノーブレークスペース区切り）・dec（小数は点 2.5）・peso（$25、$3.50、50 centavos）・hora_letra（「cuarto para las cuatro」「diez para las dos」）・Kids（メキシコの名前）・dinero_svg（50¢・$1・$2・$5・$10・$20 硬貨、$20〜$1 000 札）・make_unit／unit（standard_code「Fase 4, 3.er grado · Suma y resta, su relación como operaciones inversas」、standard_url は Programa sintético Fase 4 の PDF、domain は contenido の短い名前））。
+スペインの生成スクリプトの問題関数を `src(モジュール名, seed, *関数名, lv=, mx_=最大の数, sin_=, extra=, patch=)` で再利用する。src は mx_text() で €→$・céntimos→centavos・小数のコンマ→点・4 桁の区切り・「:」→「÷」・resto→residuo・語（zumo→jugo、autobús→camión、agujas→manecillas、gráfico→gráfica、colegio→escuela、スペインの地名→メキシコの都市）を直し、LEAKS・LEAK_RE（「las cuatro menos cuarto」・vosotros・tarta など）が残る問題は落とす。sin_ は q の HTML も見る（「cL」は class に当たる）ので、単位の除外は extra に正規表現で書く。patch={"dicho": hora_letra} で時刻の言い方をメキシコ式に。
+年（nació・año・cumple を含む問題の 1950〜2050）は区切らない。トピックは topic_defs_es() を共用（blurb_mx あり）。core.php の T・J に 'es-MX'（Grados、Respuestas、Encierra en un círculo、El mejor de México）
+
+MX / Matemáticas / 3.er grado de primaria（Fase 4。9 999 まで、足し算は 3 桁、かけ算の積は 3 桁、わり算は 2 桁 ÷ 1 桁、分数は 2・4・8・16）
+1. numeros-hasta-9999 ✓ 2. comparar-y-ordenar-numeros ✓ 3. suma-y-resta ✓ 4. calculo-mental ✓ 5. tablas-de-multiplicar ✓ 6. multiplicacion ✓ 7. division ✓ 8. problemas ✓ 9. fracciones ✓
+10. cuerpos-geometricos ✓ 11. figuras-geometricas ✓ 12. medidas-de-longitud ✓ 13. masa-y-capacidad ✓ 14. perimetro ✓ 15. el-reloj-y-el-tiempo ✓ 16. el-dinero ✓ 17. tablas-y-graficas ✓ 18. sucesiones-y-patrones ✓
+次は 4.º grado（Fase 4）、その後 5.º・6.º（Fase 5）、1.º・2.º（Fase 3）、secundaria（Fase 6）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

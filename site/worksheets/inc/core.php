@@ -377,6 +377,19 @@ function T($key = null) {
     if (!isset($T['en-SG'])) $T['en-SG'] = array_merge($T['en-GB'], array(   // Singapore: British spelling, Primary 1-6 levels
         'grades' => 'Levels', 'pick_grade' => 'Choose a level', 'clear_grade' => 'Clear scores for this level', 'by_grade' => 'by Level',
     ));
+    if (!isset($T['es-MX'])) $T['es-MX'] = array_merge($T['es'], array(   // México: grados, respuestas, programa de la SEP
+        'grades' => 'Grados', 'pick_grade' => 'Elige un grado', 'clear_grade' => 'Borrar las puntuaciones de este grado', 'by_grade' => 'por grado',
+        'standard' => 'Programa SEP', 'p_key' => 'Respuestas', 'pv_key' => 'Respuestas', 'pv_keys' => 'respuestas',
+        'circle' => 'Encierra en un círculo el número de la respuesta correcta.', 'printable_of' => 'Ficha para imprimir con respuestas',
+        'license' => 'Gratis para imprimir y fotocopiar en casa y en el salón de clases.',
+        'grade_desc' => 'Fichas de %2$s gratis para %1$s, según la %3$s: %4$s. 100 ejercicios por tema y respuestas para imprimir.',
+        'pin_unit' => 'Ficha gratis de %2$s de %1$s, %3$s: lección breve, 100 ejercicios y respuestas.',
+        'pr_title' => 'Ficha de %2$s, %1$s: ejercicios con respuestas (para imprimir, %3$s)',
+        'pr_pin' => 'Ficha gratis para imprimir: %2$s, %1$s, con respuestas.',
+        'pv_cta_unit' => 'GRATIS · lección + 100 ejercicios + respuestas', 'pv_cta_topic' => 'GRATIS · %d temas con respuestas',
+        'pr_desc' => 'Ficha gratis para imprimir: %2$s, %1$s%3$s. %4$d ejercicios en 3 páginas y una página de respuestas. Imprímela directamente o guárdala en PDF.',
+        'date_fmt' => 'd/m/Y',
+    ));
     if (!isset($T['en-CA'])) $T['en-CA'] = array_merge($T['en'], array('hook_go' => 'Start practising'));   // Canada: grades like the US, British -ise verbs
     static $lang = 'en';
     if (is_array($key)) { $lang = isset($T[$key[0]]) ? $key[0] : 'en'; return null; } // set language
@@ -650,6 +663,13 @@ function js_text($lang) {
         'tier' => array('above' => 'Above Average', 'sight' => 'Top in Sight', 'class' => 'Top of the Class',
                         'grade' => 'Top of the Level', 'state' => 'Top of the School',
                         'nation' => 'Top in Singapore', 'world' => 'Top in the World'),
+    ));
+    $J['es-MX'] = array_merge($J['es'], array(
+        'confirm' => '¿Borrar todas las puntuaciones guardadas de este grado?',
+        'ngWords' => array('¡Casi!', '¡Vamos por la siguiente!', '¡Sigue así!'),
+        'tier' => array('above' => 'Por encima del promedio', 'sight' => 'La cima está cerca', 'class' => 'El mejor del salón',
+                        'grade' => 'El mejor del grado', 'state' => 'El mejor del estado',
+                        'nation' => 'El mejor de México', 'world' => 'El mejor del mundo'),
     ));
     $J['en-CA'] = array_merge($J['en'], array(
         'tier' => array('above' => 'Above Average', 'sight' => 'Top in Sight', 'class' => 'Top of the Class',

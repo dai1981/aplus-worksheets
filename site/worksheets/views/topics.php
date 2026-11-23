@@ -13,7 +13,7 @@ $de = $country['lang'] === 'de';
 $fr = $country['lang'] === 'fr';
 $it = $country['lang'] === 'it';
 $pt = $country['lang'] === 'pt-BR';
-$es = $country['lang'] === 'es';
+$es = strpos($country['lang'], 'es') === 0;
 $sbase = $seg[0] . '/' . $seg[1] . '/';
 $path = $sbase . 'topics/';
 $crumbs = array(array(T('worksheets'), ''), array($country['name'], $seg[0] . '/'),
