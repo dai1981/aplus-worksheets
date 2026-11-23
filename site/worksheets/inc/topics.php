@@ -239,7 +239,7 @@ function topic_defs_es() {
             'blurb' => 'Longitud, masa y capacidad, cambio de unidades, perímetro y área, el reloj y el tiempo, el dinero en euros.',
             'blurb_mx' => 'Longitud, masa y capacidad, cambio de unidades, perímetro y área, el reloj y el tiempo, el dinero en pesos.'),
         'geometria' => array('name' => 'Geometría',
-            'in' => '/angulos|rectas|poligonos|triangulos|cuadrilateros|cuerpos|simetria|coordenadas|figuras|circunferencia|posiciones|orientacion|pitagoras|semejanza|trigonometria|movimientos|analitica|espacio|vectores|conicas|triangulos|planos|distancias/', 'out' => '/^area-|volumenes-de-cuerpos|graficas/',
+            'in' => '/angulos|rectas|poligonos|prismas|piramides|triangulos|cuadrilateros|cuerpos|simetria|coordenadas|figuras|circunferencia|posiciones|orientacion|pitagoras|semejanza|trigonometria|movimientos|analitica|espacio|vectores|conicas|triangulos|planos|distancias/', 'out' => '/^area-|volumenes-de-cuerpos|graficas/',
             'blurb' => 'Rectas y ángulos, polígonos, triángulos y cuadriláteros, circunferencia y círculo, cuerpos geométricos, simetría y coordenadas.'),
         'algebra-y-proporcionalidad' => array('name' => 'Álgebra y proporcionalidad',
             'in' => '/patrones|ecuaciones|expresiones|proporcionalidad|algebraico|polinomios|inecuaciones|sucesiones|matrices|determinantes|gauss|programacion-lineal/', 'out' => '/^$/',

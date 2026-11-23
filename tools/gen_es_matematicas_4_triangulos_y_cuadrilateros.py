@@ -135,7 +135,7 @@ def s3_cuad():
            "trapecio rectángulo": "solo dos lados paralelos y dos ángulos rectos", "trapezoide": "ningún lado paralelo a otro"}[k]
     w = [x for x in CUAD if x != k]
     R.shuffle(w)
-    return mcq(shape(k, rot) + "¿Cómo se llama este cuadrilátero? (las rayitas indican lados iguales)", k, near + w, "Tiene %s: es un <b>%s</b>." % (why, k))
+    return mcq(shape(k, rot) + "¿Cómo se llama este cuadrilátero? (las rayitas indican lados iguales)", k, near + w, ("No tiene %s: es un <b>%s</b>." if why.startswith("ningún") else "Tiene %s: es un <b>%s</b>.") % (why, k))
 
 
 s4_prop = bank(R, [

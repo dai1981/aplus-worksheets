@@ -1576,7 +1576,13 @@ MX / Matemáticas（SEP、Plan de Estudio 2022・Nueva Escuela Mexicana、Progra
 MX / Matemáticas / 3.er grado de primaria（Fase 4。9 999 まで、足し算は 3 桁、かけ算の積は 3 桁、わり算は 2 桁 ÷ 1 桁、分数は 2・4・8・16）
 1. numeros-hasta-9999 ✓ 2. comparar-y-ordenar-numeros ✓ 3. suma-y-resta ✓ 4. calculo-mental ✓ 5. tablas-de-multiplicar ✓ 6. multiplicacion ✓ 7. division ✓ 8. problemas ✓ 9. fracciones ✓
 10. cuerpos-geometricos ✓ 11. figuras-geometricas ✓ 12. medidas-de-longitud ✓ 13. masa-y-capacidad ✓ 14. perimetro ✓ 15. el-reloj-y-el-tiempo ✓ 16. el-dinero ✓ 17. tablas-y-graficas ✓ 18. sucesiones-y-patrones ✓
-次は 4.º grado（Fase 4）、その後 5.º・6.º（Fase 5）、1.º・2.º（Fase 3）、secundaria（Fase 6）
+
+MX / Matemáticas / 4.º grado de primaria（Fase 4。99 999 まで、ordinales は vigésimo まで、かけ算は 3 桁 × 2 桁、わり算は 3 桁 ÷ 1・2 桁、分数は tercios・quintos・sextos・novenos・décimos、小数は centésimos まで）— 生成スクリプトは `gen_mx_matematicas_4_*`（seed は 640NN、ES 4.º の再利用は 642NN、ES 5.º（ES6 の build を lv=5）は 643NN、自前の R は 641NN）。
+mx_common の WORDS で décimas→décimos・centésimas→centésimos、coma debajo de coma→punto debajo de punto、hucha→alcancía、ortoedro→prisma rectangular、valla→cerca、baldosa→loseta、forma compleja→con dos unidades、ha recorrido→recorrió などの完了形も直す。年（año・nació を含む問題の 1000〜2100）は区切らない。
+src の filter は ES の書式（小数はコンマ）の文に効くので、小数の正規表現は [.,] にする。答えと同じ値の分数の誤答は落とす（suma-y-resta-de-fracciones の mcq）
+1. numeros-hasta-99999 ✓ 2. comparar-y-redondear-numeros ✓ 3. suma-y-resta ✓ 4. multiplicacion ✓ 5. division ✓ 6. dobles-triples-y-mitades ✓ 7. problemas ✓ 8. fracciones ✓ 9. fracciones-equivalentes ✓
+10. numeros-decimales ✓ 11. suma-y-resta-de-decimales ✓ 12. suma-y-resta-de-fracciones ✓ 13. longitud-masa-y-capacidad ✓ 14. el-tiempo ✓ 15. perimetro-y-area ✓ 16. prismas-y-piramides ✓ 17. cuadrilateros ✓ 18. tablas-y-graficas ✓
+次は 5.º・6.º（Fase 5、https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/6.pdf。mx_common の CONT に Q・U・L5・V・B を足してある）、その後 1.º・2.º（Fase 3）、secundaria（Fase 6）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

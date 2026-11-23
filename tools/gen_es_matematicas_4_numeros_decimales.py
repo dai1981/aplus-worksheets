@@ -81,7 +81,7 @@ def s3_comparar():
         if b % 10 == 0 or b // 10 == a:
             return None
         x, y = e * 100 + a * 10, e * 100 + b
-        A, B = dz(x, 1), dz(y, 2)
+        A, B = dz(x // 10, 1), dz(y, 2)
         ok = "%s %s %s" % (A, "&lt;" if x < y else "&gt;", B)
         return mcq("Compara %s y %s. ¿Qué es correcto?" % (A, B), ok, ["%s %s %s" % (A, "&gt;" if x < y else "&lt;", B), "%s = %s" % (A, B), "no se pueden comparar"],
                    "%s = %s; comparamos las décimas: <b>%s</b>." % (A, dz(x, 2, keep=True), ok))

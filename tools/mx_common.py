@@ -16,7 +16,9 @@ import es_common as ES
 from es_common import mix, lesson, letra, nomfrac, keep, lim, sin, bank, relabel, NB  # noqa: F401
 
 UPDATED = "2026-11-24"
-STD_URL = {3: "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/5.pdf", 4: "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/5.pdf"}
+F4 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/5.pdf"
+F5 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/6.pdf"
+STD_URL = {3: F4, 4: F4, 5: F5, 6: F5}
 FASE = {1: 3, 2: 3, 3: 4, 4: 4, 5: 5, 6: 5}
 GRADE_NAME = {1: "1.er grado de primaria", 2: "2.º grado de primaria", 3: "3.er grado de primaria", 4: "4.º grado de primaria", 5: "5.º grado de primaria", 6: "6.º grado de primaria"}
 GRADE_SHORT = {1: "1.er grado", 2: "2.º grado", 3: "3.er grado", 4: "4.º grado", 5: "5.º grado", 6: "6.º grado"}
@@ -31,6 +33,12 @@ CONT = {
     "A": ("Medición", "Cálculo de perímetro y área"),
     "T": ("Medición", "Medición del tiempo"),
     "D": ("Organización e interpretación de datos", "Organización e interpretación de datos"),
+    # Fase 5
+    "Q": ("Multiplicación y división", "Relaciones de proporcionalidad"),
+    "U": ("Figuras y cuerpos geométricos", "Ubicación espacial"),
+    "L5": ("Medición", "Medición de la longitud, masa y capacidad"),
+    "V": ("Medición", "Perímetro, área y noción de volumen"),
+    "B": ("Organización e interpretación de datos", "Nociones de probabilidad"),
 }
 GIRLS = ["Ximena", "Valentina", "Regina", "Camila", "Renata", "Sofía", "Fernanda", "Natalia", "Andrea", "Itzel", "Daniela", "Paola", "Lupita", "Mariana"]
 BOYS = ["Santiago", "Diego", "Emiliano", "Leonardo", "Sebastián", "Mateo", "Luis", "Jorge", "Rodrigo", "Carlos", "Emilio", "Ángel", "Josué", "Iván"]
@@ -104,7 +112,11 @@ def pl(n, s, p):
 
 
 # ------------------------------------------------------------ España → México
-WORDS = [("zumos", "jugos"), ("zumo", "jugo"), ("gominolas", "dulces"), ("chuches", "dulces"), ("caramelos", "dulces"), ("caramelo", "dulce"),
+WORDS = [("ha redondeado", "redondeó"), ("montañeros", "alpinistas"), ("huchas", "alcancías"), ("baloncesto", "basquetbol"), ("en forma compleja", "con dos unidades"), ("prisma rectangular (ortoedro)", "prisma rectangular"), ("ortoedros", "prismas rectangulares"), ("ortoedro", "prisma rectangular"), ("vallas", "cercas"), ("valla", "cerca"), ("baldosas", "losetas"), ("baldosa", "loseta"), ("hucha", "alcancía"),
+         ("coma debajo de coma", "punto debajo de punto"), ("1 décima", "1 décimo"), ("1 centésima", "1 centésimo"), ("1 milésima", "1 milésimo"),
+         ("ha recorrido", "recorrió"), ("han comido", "comieron"), ("han pintado", "pintaron"), ("han recogido", "recogieron"), ("ha comprado", "compró"), ("han ocupado", "ocuparon"),
+         ("han quedado", "quedaron"), ("Iker", "Iván"), ("la coma", "el punto"), ("una décima", "un décimo"), ("una centésima", "un centésimo"), ("una milésima", "un milésimo"),
+         ("las décimas", "los décimos"), ("las centésimas", "los centésimos"), ("las milésimas", "los milésimos"), ("décimas", "décimos"), ("centésimas", "centésimos"), ("milésimas", "milésimos"), ("zumos", "jugos"), ("zumo", "jugo"), ("gominolas", "dulces"), ("chuches", "dulces"), ("caramelos", "dulces"), ("caramelo", "dulce"),
          ("autobuses", "camiones"), ("autobús", "camión"), ("patatas", "papas"), ("patata", "papa"), ("melocotones", "duraznos"), ("melocotón", "durazno"),
          ("bolígrafos", "plumones"), ("bolígrafo", "plumón"), ("rotuladores", "marcadores"), ("rotulador", "marcador"),
          ("pegatinas", "estampas"), ("pegatina", "estampa"), ("mariquitas", "catarinas"), ("mariquita", "catarina"), ("móviles", "celulares"), ("móvil", "celular"),
@@ -126,7 +138,8 @@ WORDS = [("zumos", "jugos"), ("zumo", "jugo"), ("gominolas", "dulces"), ("chuche
          ("ha durado", "duró"), ("han durado", "duraron"), ("ha tardado", "tardó"),
          ("llevadas", "reagrupaciones"), ("con llevada", "con reagrupación"), ("sin llevada", "sin reagrupación"), ("llevada", "reagrupación")]
 LEAKS = ["€", "euro", "céntimo", "España", "vosotros", "habéis", "tenéis", "sabéis", "CCAA", "LOMLOE", "4.º", "5.º", "6.º", "Primaria",
-         "tarta", "gominola", "chuche", "cromo", "tiza", "estuche", "bocadillo", "gafas", "folio", "ordenador", "zapatilla", "cole ", "el cole", "gorro", "nata", "judías", "tebeo", "chaqueta", "jersey", "AVE", "Renfe", "colegio", "metro de Madrid", "Galicia", "Andaluc", "Canarias", "Asturias", "Cataluña", "Comunidad"]
+         "tarta", "gominola", "chuche", "cromo", "tiza", "estuche", "bocadillo", "gafas", "folio", "ordenador", "zapatilla", "cole ", "el cole", "gorro", "nata", "judías", "tebeo", "chaqueta", "jersey", "AVE", "Renfe", "colegio", "metro de Madrid", "Galicia", "Andaluc", "Canarias", "Asturias", "Cataluña", "Comunidad",
+         "Betis", "Athletic", "Real Sociedad", "Atlético", "Real Madrid", "Real Ciudad", "Teide", "Mulhacén", "Moncayo", "cucurucho", "Aneto", "Pirineo"]
 LEAK_RE = [r"gr[áa]fico", r"\b(la|las) (una|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|once|doce) menos\b", r"\bos\b", r"\bvuestr"]
 
 
@@ -155,7 +168,7 @@ def _txt(t, yr_all=False):
     t = re.sub(r"céntimo", "centavo", t)
     t = re.sub(r"(?<=\d),(?=\d)", ".", t)                                # 2,5 → 2.5
     yr = yr_all or re.search(r"nac|año|cumpl", t)
-    t = re.sub(r"(?<![\d$])(?<!\d[.,:" + NB + r" ])(\d)(\d{3})(?!\d|[.,:]\d)", lambda m: m.group(0) if yr and 1950 <= int(m.group(0)) <= 2050 else m.group(1) + NB + m.group(2), t)   # 4536 → 4 536（años no）
+    t = re.sub(r"(?<![\d$])(?<!\d[.,:" + NB + r" ])(\d)(\d{3})(?!\d|[.,:]\d)", lambda m: m.group(0) if yr and 1000 <= int(m.group(0)) <= 2100 else m.group(1) + NB + m.group(2), t)   # 4536 → 4 536（años no）
     t = re.sub(r"\b1 (unidad|decena|centena)es de millar", r"1 \1 de millar", t)
     t = re.sub(r"\b1 (decena|centena)s\b", r"1 \1", t)
     t = re.sub(r"(?<=[\d)]) : (?=[\d(])", " ÷ ", t)                        # 12 : 3 → 12 ÷ 3

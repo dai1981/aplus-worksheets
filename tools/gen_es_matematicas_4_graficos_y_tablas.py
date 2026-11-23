@@ -150,7 +150,7 @@ def lineal(vals, labels, unit):
     for v in range(0, top + 1, step):
         y = y0 + H - v / float(top) * H
         s.append("<line x1='%d' y1='%.1f' x2='%d' y2='%.1f' stroke='#ddd'/><text x='%d' y='%.1f' font-size='11' text-anchor='end' fill='#333'>%d</text>" % (x0, y, W - 6, y, x0 - 4, y + 4, v))
-    gap = (W - x0 - 20) / float(len(vals) - 1)
+    gap = (W - x0 - 36) / float(len(vals) - 1)
     pts = []
     for i, (v, l) in enumerate(zip(vals, labels)):
         x = x0 + 10 + i * gap
