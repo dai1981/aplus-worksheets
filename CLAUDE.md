@@ -1533,7 +1533,14 @@ ES / Matemáticas / 1.º・2.º・3.º de Primaria（primer ciclo と 3.º）—
 3.º: 1. numeros-hasta-9999 ✓ 2. comparar-ordenar-y-redondear ✓ 3. suma-y-resta ✓ 4. calculo-mental ✓ 5. tablas-de-multiplicar ✓ 6. multiplicacion ✓ 7. division ✓ 8. problemas ✓ 9. fracciones ✓ 10. patrones-e-igualdades ✓
 11. medidas-de-longitud ✓ 12. masa-y-capacidad ✓ 13. el-reloj-y-el-calendario ✓ 14. el-dinero ✓ 15. perimetro ✓ 16. rectas-y-angulos ✓ 17. poligonos ✓ 18. cuerpos-geometricos ✓ 19. orientacion-y-simetria ✓ 20. graficos-y-tablas ✓ 21. probabilidad ✓
 
-ES の次: 2.º → 1.º（作成済み：1.º numeros-hasta-99・comparar-y-ordenar-numeros・sumas-y-restas-hasta-20、2.º numeros-hasta-999・comparar-y-ordenar-numeros・suma-y-resta-con-llevadas・la-multiplicacion）
+2.º・1.º だけの単元は `gen_es_matematicas_2_*`（build(lv)、lv = 1・2）、`gen_es_matematicas_1_*` は build(1) を呼ぶだけ。2.º の probabilidad・orientación・gráficos は es_low.src で 4.º を再利用（rep で 4.º → 2.º）。
+絵と名詞を合わせる（problemas の DIBUJO：canicas→ball など。合う絵がなければ絵なし）。トピック：dobles・repartos→multiplicacion-y-division、mitad-tercio→fracciones-y-decimales、monedas・medir→magnitudes-y-medida（numeros の out に medir）、posiciones・orientacion→geometria、seguro-posible→estadistica-y-probabilidad
+2.º: 1. numeros-hasta-999 ✓ 2. comparar-y-ordenar-numeros ✓ 3. suma-y-resta-con-llevadas ✓ 4. calculo-mental ✓ 5. la-multiplicacion ✓ 6. repartos ✓ 7. problemas ✓ 8. mitad-tercio-y-cuarto ✓ 9. patrones-y-series ✓
+11. longitud-masa-y-capacidad ✓ 12. el-reloj-y-el-calendario ✓ 13. el-dinero ✓ 14. figuras-planas ✓ 15. cuerpos-geometricos ✓ 16. orientacion-en-el-espacio ✓ 17. graficos-y-tablas ✓ 18. seguro-posible-o-imposible ✓
+1.º: 1. numeros-hasta-99 ✓ 2. comparar-y-ordenar-numeros ✓ 3. sumas-y-restas-hasta-20 ✓ 4. sumas-y-restas-hasta-99 ✓ 5. problemas ✓ 6. dobles-y-mitades ✓ 7. patrones-y-series ✓ 8. medir-y-comparar ✓
+9. el-reloj ✓ 10. monedas-y-billetes ✓ 11. figuras-planas ✓ 12. cuerpos-geometricos ✓ 13. posiciones ✓ 14. recuento-y-graficos ✓
+
+ES / Matemáticas は 1.º〜6.º de Primaria まで完了。次は ESO（Real Decreto 217/2022）か、GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

@@ -1,0 +1,2 @@
+from gen_es_matematicas_3_tablas_de_multiplicar import build
+build(2)
