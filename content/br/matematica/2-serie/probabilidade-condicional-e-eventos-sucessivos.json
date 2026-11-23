@@ -1,0 +1,1157 @@
+{
+ "slug": "probabilidade-condicional-e-eventos-sucessivos",
+ "title": "Probabilidade condicional e eventos sucessivos",
+ "seo_title": "Probabilidade condicional – 2ª série: atividades de matemática com gabarito",
+ "short_title": "Probabilidade condicional",
+ "domain": "Probabilidade e estatística",
+ "standard_code": "EM13MAT312, EM13MAT106",
+ "standard_url": "http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf",
+ "standard_text": "Resolver e elaborar problemas que envolvem o cálculo de probabilidade de eventos em experimentos aleatórios sucessivos; identificar situações da vida cotidiana nas quais seja necessário fazer escolhas levando-se em conta os riscos probabilísticos (usar este ou aquele método contraceptivo, optar por um tratamento médico em detrimento de outro etc.) (BNCC, Matemática, 2ª série)",
+ "meta_desc": "Atividades de matemática para a 2ª série do Ensino Médio sobre probabilidade de eventos sucessivos: independentes e dependentes, árvore, probabilidade condicional em tabelas, repetições e riscos como falsos positivos. 100 exercícios com gabarito.",
+ "key_big": "Em sequência, multiplique",
+ "key_sub": "Condicional: divida pelos casos da condição.",
+ "body_html": "<h2>Como pensar</h2><p>Em experimentos <b>sucessivos</b>, multiplique as probabilidades ao longo de cada caminho da árvore.</p><p><b>Independentes</b> (com reposição, moedas, dados): P(A e B) = P(A) · P(B). <b>Dependentes</b> (sem reposição): depois do 1º, o total muda.</p><p><b>Condicional</b>: P(A | B) = casos de A e B ÷ casos de B. Numa tabela, olhe só a linha ou a coluna de B.</p><p>Exatamente k sucessos em n tentativas: C(n, k) · pᵏ · (1 − p)ⁿ⁻ᵏ.</p><p>Para decidir com riscos, compare probabilidades: um exame positivo numa doença rara pode ser, muitas vezes, falso positivo.</p><div class='sn-ex'><span class='sn-ex-t'>Exemplo</span><p class='sn-ex-q'>Urna com 3 azuis e 2 vermelhas, sem reposição: duas azuis</p><p class='sn-ex-s'>3/5 · 2/4</p><p class='sn-ex-a'>Resposta: 3/10</p></div><div class='sn-ex'><span class='sn-ex-t'>Exemplo</span><p class='sn-ex-q'>3 moedas: exatamente 2 caras</p><p class='sn-ex-s'>C(3, 2) · (1/2)³ = 3/8</p><p class='sn-ex-a'>Resposta: 3/8</p></div><h2>Erros comuns</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erro comum</th><th>O que fazer</th></tr></thead><tbody><tr><td>Somar quando é «e»</td><td>Em sequência, multiplique.</td></tr><tr><td>Esquecer que o total diminui</td><td>Sem reposição, o 2º sorteio tem uma bola a menos.</td></tr><tr><td>Dividir pelo total geral</td><td>Na condicional, divida pelo número de casos da condição.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "O que é probabilidade condicional?",
+   "a": "É a probabilidade de A sabendo que B aconteceu. Calcula-se só dentro dos casos de B: P(A | B) = casos de A e B ÷ casos de B."
+  },
+  {
+   "q": "O que a BNCC pede?",
+   "a": "Resolver e elaborar problemas que envolvem o cálculo de probabilidade de eventos em experimentos aleatórios sucessivos (EM13MAT312) e identificar situações da vida cotidiana nas quais seja necessário fazer escolhas levando-se em conta os riscos probabilísticos (EM13MAT106)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Eventos independentes",
+   "items": [
+    {
+     "q": "Um exame com 99% de acerto pode ter muitos falsos positivos quando…",
+     "c": [
+      "a doença é muito rara",
+      "a doença é muito comum",
+      "o resultado é negativo",
+      "o exame é caro"
+     ],
+     "a": 0,
+     "e": "Resposta: <b>a doença é muito rara</b>."
+    },
+    {
+     "q": "Uma urna tem 6 bolas amarelas e 7 azuis. Tira-se uma bola, anota-se a cor e ela é <b>devolvida</b>. Tira-se outra. Qual é a probabilidade de sair uma bola amarela e depois uma azul?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>42</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>42</span><span class='fd'>169</span></span>"
+     ],
+     "a": 3,
+     "e": "Com reposição, os eventos são independentes: 6/13 · 7/13 = <b>42/169</b>."
+    },
+    {
+     "q": "Uma urna tem 5 bolas amarelas e 7 pretas. Tira-se uma bola, anota-se a cor e ela é <b>devolvida</b>. Tira-se outra. Qual é a probabilidade de sair uma bola amarela e depois uma preta?",
+     "c": [
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>132</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>12</span></span>"
+     ],
+     "a": 0,
+     "e": "Com reposição, os eventos são independentes: 5/12 · 7/12 = <b>35/144</b>."
+    },
+    {
+     "q": "Uma urna tem 4 bolas vermelhas e 4 azuis. Tira-se uma bola, anota-se a cor e ela é <b>devolvida</b>. Tira-se outra. Qual é a probabilidade de sair uma bola vermelha e depois uma azul?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>"
+     ],
+     "a": 1,
+     "e": "Com reposição, os eventos são independentes: 4/8 · 4/8 = <b>1/4</b>."
+    },
+    {
+     "q": "Lançando 4 moedas, qual é a probabilidade de sair cara em todas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "Eventos independentes: (1/2) · (1/2) · (1/2) · (1/2) = <b>1/16</b>."
+    },
+    {
+     "q": "Uma urna tem 3 bolas verdes e 2 amarelas. Tira-se uma bola, anota-se a cor e ela é <b>devolvida</b>. Tira-se outra. Qual é a probabilidade de sair uma bola verde e depois uma amarela?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Com reposição, os eventos são independentes: 3/5 · 2/5 = <b>6/25</b>."
+    },
+    {
+     "q": "Lançando dois dados comuns, qual é a probabilidade de sair 1 no primeiro e 4 no segundo?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Uma urna tem 6 bolas brancas e 3 azuis. Tira-se uma bola, anota-se a cor e ela é <b>devolvida</b>. Tira-se outra. Qual é a probabilidade de sair uma bola branca e depois uma azul?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "Com reposição, os eventos são independentes: 6/9 · 3/9 = <b>2/9</b>."
+    },
+    {
+     "q": "Numa árvore de probabilidades, ao longo de um caminho as probabilidades são…",
+     "c": [
+      "somadas",
+      "multiplicadas",
+      "subtraídas",
+      "divididas"
+     ],
+     "a": 1,
+     "e": "Resposta: <b>multiplicadas</b>."
+    },
+    {
+     "q": "Lançando dois dados comuns, qual é a probabilidade de sair 1 no primeiro e 3 no segundo?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Lançando 3 moedas, qual é a probabilidade de sair cara em todas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 2,
+     "e": "Eventos independentes: (1/2) · (1/2) · (1/2) = <b>1/8</b>."
+    },
+    {
+     "q": "Lançando dois dados comuns, qual é a probabilidade de sair 3 no primeiro e 3 no segundo?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 0,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Uma urna tem 5 bolas brancas e 2 verdes. Tira-se uma bola, anota-se a cor e ela é <b>devolvida</b>. Tira-se outra. Qual é a probabilidade de sair uma bola branca e depois uma verde?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>49</span></span>"
+     ],
+     "a": 3,
+     "e": "Com reposição, os eventos são independentes: 5/7 · 2/7 = <b>10/49</b>."
+    },
+    {
+     "q": "Lançando 2 moedas, qual é a probabilidade de sair cara nas duas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Eventos independentes: (1/2) · (1/2) = <b>1/4</b>."
+    },
+    {
+     "q": "Lançando dois dados comuns, qual é a probabilidade de sair 3 no primeiro e 1 no segundo?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 2,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Lançando dois dados comuns, qual é a probabilidade de sair 2 no primeiro e 1 no segundo?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Uma moeda deu cara 5 vezes seguidas. A probabilidade de cara no próximo lançamento é…",
+     "c": [
+      "maior que 1/2",
+      "menor que 1/2",
+      "1/2",
+      "0"
+     ],
+     "a": 2,
+     "e": "Resposta: <b>1/2</b>."
+    },
+    {
+     "q": "Tirar duas bolas de uma urna sem reposição gera eventos…",
+     "c": [
+      "independentes",
+      "dependentes",
+      "complementares",
+      "impossíveis"
+     ],
+     "a": 1,
+     "e": "Resposta: <b>dependentes</b>."
+    },
+    {
+     "q": "Uma urna tem 6 bolas pretas e 2 azuis. Tira-se uma bola, anota-se a cor e ela é <b>devolvida</b>. Tira-se outra. Qual é a probabilidade de sair uma bola preta e depois uma azul?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span>"
+     ],
+     "a": 1,
+     "e": "Com reposição, os eventos são independentes: 6/8 · 2/8 = <b>3/16</b>."
+    },
+    {
+     "q": "Uma urna tem 3 bolas pretas e 4 amarelas. Tira-se uma bola, anota-se a cor e ela é <b>devolvida</b>. Tira-se outra. Qual é a probabilidade de sair uma bola preta e depois uma amarela?",
+     "c": [
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Com reposição, os eventos são independentes: 3/7 · 4/7 = <b>12/49</b>."
+    }
+   ]
+  },
+  {
+   "title": "Eventos dependentes",
+   "items": [
+    {
+     "q": "Uma urna tem 3 bolas brancas e 2 azuis. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser branca e a 2ª ser azul?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "Depois da 1ª, sobram 4 bolas: 3/5 · 2/4 = <b>3/10</b>."
+    },
+    {
+     "q": "Uma urna tem 5 bolas vermelhas e 5 amarelas. Tiram-se duas bolas, sem reposição. Qual é a probabilidade de as duas serem vermelhas?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "5/10 · 4/9 = <b>2/9</b>."
+    },
+    {
+     "q": "Uma urna tem 5 bolas amarelas e 3 vermelhas. Tiram-se duas bolas, sem reposição. Qual é a probabilidade de as duas serem amarelas?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>64</span></span>"
+     ],
+     "a": 2,
+     "e": "5/8 · 4/7 = <b>5/14</b>."
+    },
+    {
+     "q": "Uma urna tem 3 bolas pretas e 7 brancas. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser preta e a 2ª ser branca?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Depois da 1ª, sobram 9 bolas: 3/10 · 7/9 = <b>7/30</b>."
+    },
+    {
+     "q": "Uma urna tem 3 bolas vermelhas e 3 pretas. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser vermelha e a 2ª ser preta?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "Depois da 1ª, sobram 5 bolas: 3/6 · 3/5 = <b>3/10</b>."
+    },
+    {
+     "q": "Uma urna tem 4 bolas azuis e 5 brancas. Tiram-se duas bolas, sem reposição. Qual é a probabilidade de as duas serem azuis?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>17</span></span>"
+     ],
+     "a": 0,
+     "e": "4/9 · 3/8 = <b>1/6</b>."
+    },
+    {
+     "q": "Uma urna tem 4 bolas azuis e 2 verdes. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser azul e a 2ª ser verde?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>"
+     ],
+     "a": 1,
+     "e": "Depois da 1ª, sobram 5 bolas: 4/6 · 2/5 = <b>4/15</b>."
+    },
+    {
+     "q": "Uma urna tem 5 bolas brancas e 5 azuis. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser branca e a 2ª ser azul?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "Depois da 1ª, sobram 9 bolas: 5/10 · 5/9 = <b>5/18</b>."
+    },
+    {
+     "q": "Uma urna tem 3 bolas vermelhas e 3 amarelas. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser vermelha e a 2ª ser amarela?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "Depois da 1ª, sobram 5 bolas: 3/6 · 3/5 = <b>3/10</b>."
+    },
+    {
+     "q": "Uma urna tem 2 bolas verdes e 2 pretas. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser verde e a 2ª ser preta?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 0,
+     "e": "Depois da 1ª, sobram 3 bolas: 2/4 · 2/3 = <b>1/3</b>."
+    },
+    {
+     "q": "Uma urna tem 3 bolas verdes e 7 vermelhas. Tiram-se duas bolas, sem reposição. Qual é a probabilidade de as duas serem verdes?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "3/10 · 2/9 = <b>1/15</b>."
+    },
+    {
+     "q": "Uma urna tem 5 bolas pretas e 3 amarelas. Tiram-se duas bolas, sem reposição. Qual é a probabilidade de as duas serem pretas?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>"
+     ],
+     "a": 3,
+     "e": "5/8 · 4/7 = <b>5/14</b>."
+    },
+    {
+     "q": "Uma urna tem 5 bolas brancas e 2 verdes. Tiram-se duas bolas, sem reposição. Qual é a probabilidade de as duas serem brancas?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>49</span></span>"
+     ],
+     "a": 1,
+     "e": "5/7 · 4/6 = <b>10/21</b>."
+    },
+    {
+     "q": "Uma urna tem 2 bolas azuis e 3 pretas. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser azul e a 2ª ser preta?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Depois da 1ª, sobram 4 bolas: 2/5 · 3/4 = <b>3/10</b>."
+    },
+    {
+     "q": "Uma urna tem 6 bolas vermelhas e 4 pretas. Tiram-se duas bolas, sem reposição. Qual é a probabilidade de as duas serem vermelhas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>19</span></span>"
+     ],
+     "a": 0,
+     "e": "6/10 · 5/9 = <b>1/3</b>."
+    },
+    {
+     "q": "Uma urna tem 2 bolas amarelas e 2 verdes. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser amarela e a 2ª ser verde?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "Depois da 1ª, sobram 3 bolas: 2/4 · 2/3 = <b>1/3</b>."
+    },
+    {
+     "q": "Uma urna tem 2 bolas brancas e 2 verdes. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser branca e a 2ª ser verde?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Depois da 1ª, sobram 3 bolas: 2/4 · 2/3 = <b>1/3</b>."
+    },
+    {
+     "q": "Uma urna tem 2 bolas vermelhas e 7 verdes. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser vermelha e a 2ª ser verde?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>17</span></span>"
+     ],
+     "a": 2,
+     "e": "Depois da 1ª, sobram 8 bolas: 2/9 · 7/8 = <b>7/36</b>."
+    },
+    {
+     "q": "Uma urna tem 5 bolas brancas e 5 pretas. Tiram-se duas bolas, uma depois da outra, <b>sem reposição</b>. Qual é a probabilidade de a 1ª ser branca e a 2ª ser preta?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "Depois da 1ª, sobram 9 bolas: 5/10 · 5/9 = <b>5/18</b>."
+    },
+    {
+     "q": "Uma urna tem 7 bolas verdes e 4 amarelas. Tiram-se duas bolas, sem reposição. Qual é a probabilidade de as duas serem verdes?",
+     "c": [
+      "<span class='fr'><span class='fn'>42</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>55</span></span>"
+     ],
+     "a": 3,
+     "e": "7/11 · 6/10 = <b>21/55</b>."
+    }
+   ]
+  },
+  {
+   "title": "Probabilidade condicional",
+   "items": [
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>7</td><td>23</td><td>30</td></tr><tr><td>Meninos</td><td>8</td><td>30</td><td>38</td></tr><tr><td>Total</td><td>15</td><td>53</td><td>68</td></tr></tbody></table>Sorteando um aluno que pratica esporte, qual é a probabilidade de ser menina?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>68</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>68</span></span>"
+     ],
+     "a": 2,
+     "e": "Só entre os que praticam (15): 7 ÷ 15 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>14</td><td>22</td><td>36</td></tr><tr><td>Meninos</td><td>19</td><td>15</td><td>34</td></tr><tr><td>Total</td><td>33</td><td>37</td><td>70</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ser menina e praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>297</span><span class='fd'>1225</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>33</span></span>"
+     ],
+     "a": 1,
+     "e": "14 ÷ 70 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>19</td><td>11</td><td>30</td></tr><tr><td>Meninos</td><td>5</td><td>19</td><td>24</td></tr><tr><td>Total</td><td>24</td><td>30</td><td>54</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ele não praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>54</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "30 ÷ 54 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>22</td><td>8</td><td>30</td></tr><tr><td>Meninos</td><td>5</td><td>15</td><td>20</td></tr><tr><td>Total</td><td>27</td><td>23</td><td>50</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ele não praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>23</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>50</span></span>"
+     ],
+     "a": 3,
+     "e": "23 ÷ 50 = <b><span class='fr'><span class='fn'>23</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>21</td><td>13</td><td>34</td></tr><tr><td>Meninos</td><td>25</td><td>14</td><td>39</td></tr><tr><td>Total</td><td>46</td><td>27</td><td>73</td></tr></tbody></table>Sorteando um aluno que pratica esporte, qual é a probabilidade de ser menina?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>34</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>46</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>73</span></span>",
+      "<span class='fr'><span class='fn'>46</span><span class='fd'>73</span></span>"
+     ],
+     "a": 1,
+     "e": "Só entre os que praticam (46): 21 ÷ 46 = <b><span class='fr'><span class='fn'>21</span><span class='fd'>46</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>30</td><td>16</td><td>46</td></tr><tr><td>Meninos</td><td>6</td><td>8</td><td>14</td></tr><tr><td>Total</td><td>36</td><td>24</td><td>60</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ser menina e praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>23</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>50</span></span>"
+     ],
+     "a": 2,
+     "e": "30 ÷ 60 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>30</td><td>12</td><td>42</td></tr><tr><td>Meninos</td><td>22</td><td>20</td><td>42</td></tr><tr><td>Total</td><td>52</td><td>32</td><td>84</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ser menina e praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>42</span></span>"
+     ],
+     "a": 0,
+     "e": "30 ÷ 84 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>16</td><td>9</td><td>25</td></tr><tr><td>Meninos</td><td>28</td><td>10</td><td>38</td></tr><tr><td>Total</td><td>44</td><td>19</td><td>63</td></tr></tbody></table>Sorteando um menino, qual é a probabilidade de ele praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "Só entre os meninos (38): 28 ÷ 38 = <b><span class='fr'><span class='fn'>14</span><span class='fd'>19</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>19</td><td>19</td><td>38</td></tr><tr><td>Meninos</td><td>13</td><td>5</td><td>18</td></tr><tr><td>Total</td><td>32</td><td>24</td><td>56</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ele não praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>24</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>56</span></span>"
+     ],
+     "a": 1,
+     "e": "24 ÷ 56 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>25</td><td>7</td><td>32</td></tr><tr><td>Meninos</td><td>10</td><td>30</td><td>40</td></tr><tr><td>Total</td><td>35</td><td>37</td><td>72</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ele não praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>72</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>72</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>37</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>72</span></span>"
+     ],
+     "a": 0,
+     "e": "37 ÷ 72 = <b><span class='fr'><span class='fn'>37</span><span class='fd'>72</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>30</td><td>5</td><td>35</td></tr><tr><td>Meninos</td><td>20</td><td>17</td><td>37</td></tr><tr><td>Total</td><td>50</td><td>22</td><td>72</td></tr></tbody></table>Sorteando um aluno que pratica esporte, qual é a probabilidade de ser menina?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>"
+     ],
+     "a": 0,
+     "e": "Só entre os que praticam (50): 30 ÷ 50 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>30</td><td>8</td><td>38</td></tr><tr><td>Meninos</td><td>17</td><td>14</td><td>31</td></tr><tr><td>Total</td><td>47</td><td>22</td><td>69</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ser menina e praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>1786</span><span class='fd'>4761</span></span>",
+      "<span class='fr'><span class='fn'>30</span><span class='fd'>47</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>23</span></span>"
+     ],
+     "a": 3,
+     "e": "30 ÷ 69 = <b><span class='fr'><span class='fn'>10</span><span class='fd'>23</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>14</td><td>6</td><td>20</td></tr><tr><td>Meninos</td><td>15</td><td>7</td><td>22</td></tr><tr><td>Total</td><td>29</td><td>13</td><td>42</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ser menina e praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>145</span><span class='fd'>441</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "14 ÷ 42 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>9</td><td>23</td><td>32</td></tr><tr><td>Meninos</td><td>9</td><td>19</td><td>28</td></tr><tr><td>Total</td><td>18</td><td>42</td><td>60</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ser menina e praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>"
+     ],
+     "a": 3,
+     "e": "9 ÷ 60 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>30</td><td>18</td><td>48</td></tr><tr><td>Meninos</td><td>8</td><td>18</td><td>26</td></tr><tr><td>Total</td><td>38</td><td>36</td><td>74</td></tr></tbody></table>Sorteando um aluno que pratica esporte, qual é a probabilidade de ser menina?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>37</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>37</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>19</span></span>"
+     ],
+     "a": 3,
+     "e": "Só entre os que praticam (38): 30 ÷ 38 = <b><span class='fr'><span class='fn'>15</span><span class='fd'>19</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>17</td><td>24</td><td>41</td></tr><tr><td>Meninos</td><td>5</td><td>19</td><td>24</td></tr><tr><td>Total</td><td>22</td><td>43</td><td>65</td></tr></tbody></table>Sorteando um menino, qual é a probabilidade de ele praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>24</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>24</span></span>"
+     ],
+     "a": 0,
+     "e": "Só entre os meninos (24): 5 ÷ 24 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>24</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>15</td><td>6</td><td>21</td></tr><tr><td>Meninos</td><td>22</td><td>11</td><td>33</td></tr><tr><td>Total</td><td>37</td><td>17</td><td>54</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ele não praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>54</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>54</span></span>"
+     ],
+     "a": 3,
+     "e": "17 ÷ 54 = <b><span class='fr'><span class='fn'>17</span><span class='fd'>54</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>9</td><td>25</td><td>34</td></tr><tr><td>Meninos</td><td>11</td><td>26</td><td>37</td></tr><tr><td>Total</td><td>20</td><td>51</td><td>71</td></tr></tbody></table>Sorteando um menino, qual é a probabilidade de ele praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>37</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>71</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>37</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>20</span></span>"
+     ],
+     "a": 0,
+     "e": "Só entre os meninos (37): 11 ÷ 37 = <b><span class='fr'><span class='fn'>11</span><span class='fd'>37</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>21</td><td>6</td><td>27</td></tr><tr><td>Meninos</td><td>8</td><td>19</td><td>27</td></tr><tr><td>Total</td><td>29</td><td>25</td><td>54</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ser menina e praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>108</span></span>"
+     ],
+     "a": 2,
+     "e": "21 ÷ 54 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th></th><th>Pratica esporte</th><th>Não pratica</th><th>Total</th></tr><tr><td>Meninas</td><td>6</td><td>21</td><td>27</td></tr><tr><td>Meninos</td><td>24</td><td>7</td><td>31</td></tr><tr><td>Total</td><td>30</td><td>28</td><td>58</td></tr></tbody></table>Sorteando um aluno qualquer, qual é a probabilidade de ele não praticar esporte?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>58</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "28 ÷ 58 = <b><span class='fr'><span class='fn'>14</span><span class='fd'>29</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Repetir um experimento",
+   "items": [
+    {
+     "q": "Um atleta acerta o alvo com probabilidade <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> em cada tiro. Em 3 tiros, qual é a probabilidade de acertar exatamente 2?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "C(3, 2) · (<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)² · (<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)¹ = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Um atleta acerta o alvo com probabilidade <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> em cada tiro. Em 3 tiros, qual é a probabilidade de acertar exatamente 1?",
+     "c": [
+      "<span class='fr'><span class='fn'>54</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>125</span></span>"
+     ],
+     "a": 0,
+     "e": "C(3, 1) · (<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)¹ · (<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>)² = <b><span class='fr'><span class='fn'>54</span><span class='fd'>125</span></span></b>."
+    },
+    {
+     "q": "Lançando um dado 3 vezes, qual é a probabilidade de sair o número 6 exatamente 2 vezes?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>72</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "C(3, 2) · (1/6)² · (5/6)¹ = <b><span class='fr'><span class='fn'>5</span><span class='fd'>72</span></span></b>."
+    },
+    {
+     "q": "Lançando 6 moedas, qual é a probabilidade de sair pelo menos uma cara?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>63</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span>"
+     ],
+     "a": 2,
+     "e": "1 − P(nenhuma cara) = 1 − (1/2)⁶ = <b><span class='fr'><span class='fn'>63</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "Um atleta acerta o alvo com probabilidade <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> em cada tiro. Em 2 tiros, qual é a probabilidade de acertar exatamente 1?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "C(2, 1) · (<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)¹ · (<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)¹ = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Se P(A) = 0,3 e P(B) = 0,5 e A e B são independentes, P(A e B) = …",
+     "c": [
+      "0,35",
+      "0,8",
+      "0,2",
+      "0,15"
+     ],
+     "a": 3,
+     "e": "Resposta: <b>0,15</b>."
+    },
+    {
+     "q": "Lançando 4 moedas, qual é a probabilidade de sair exatamente 3 caras?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "C(4, 3) · (1/2)⁴ = 4 ÷ 16 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Um atleta acerta o alvo com probabilidade <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> em cada tiro. Em 3 tiros, qual é a probabilidade de acertar exatamente 2?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span>"
+     ],
+     "a": 2,
+     "e": "C(3, 2) · (<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)² · (<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)¹ = <b><span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "Lançando 4 moedas, qual é a probabilidade de sair pelo menos uma cara?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "1 − P(nenhuma cara) = 1 − (1/2)⁴ = <b><span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Lançando 5 moedas, qual é a probabilidade de sair exatamente 1 cara?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "C(5, 1) · (1/2)⁵ = 5 ÷ 32 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "Um atleta acerta o alvo com probabilidade <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> em cada tiro. Em 2 tiros, qual é a probabilidade de acertar exatamente 2?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "C(2, 2) · (<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)² · (<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>)⁰ = <b><span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Na probabilidade condicional P(A | B), dividimos pelo número de casos…",
+     "c": [
+      "em que B acontece",
+      "em que A acontece",
+      "do total geral",
+      "em que nenhum acontece"
+     ],
+     "a": 0,
+     "e": "Resposta: <b>em que B acontece</b>."
+    },
+    {
+     "q": "Dois eventos são independentes quando…",
+     "c": [
+      "a soma é 1",
+      "têm a mesma probabilidade",
+      "um não muda a probabilidade do outro",
+      "não podem acontecer juntos"
+     ],
+     "a": 2,
+     "e": "Resposta: <b>um não muda a probabilidade do outro</b>."
+    },
+    {
+     "q": "Lançando 4 moedas, qual é a probabilidade de sair exatamente 2 caras?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "C(4, 2) · (1/2)⁴ = 6 ÷ 16 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Numa prova com 5 questões de 2 alternativas, um aluno chuta todas. Qual é a probabilidade de acertar todas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "(1/2)⁵ = <b><span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "Lançando 3 moedas, qual é a probabilidade de sair exatamente 2 caras?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "C(3, 2) · (1/2)³ = 3 ÷ 8 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Lançando 3 moedas, qual é a probabilidade de sair exatamente 1 cara?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "C(3, 1) · (1/2)³ = 3 ÷ 8 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Um atleta acerta o alvo com probabilidade <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> em cada tiro. Em 3 tiros, qual é a probabilidade de acertar exatamente 0?",
+     "c": [
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>64</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "C(3, 0) · (<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)⁰ · (<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)³ = <b><span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "Lançando 5 moedas, qual é a probabilidade de sair exatamente 2 caras?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>"
+     ],
+     "a": 3,
+     "e": "C(5, 2) · (1/2)⁵ = 10 ÷ 32 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Lançando 5 moedas, qual é a probabilidade de sair pelo menos uma cara?",
+     "c": [
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>"
+     ],
+     "a": 0,
+     "e": "1 − P(nenhuma cara) = 1 − (1/2)⁵ = <b><span class='fr'><span class='fn'>31</span><span class='fd'>32</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Riscos e decisões",
+   "items": [
+    {
+     "q": "Numa turma há 11 meninos e 15 meninas. Sorteiam-se dois estudantes diferentes. Qual é a probabilidade de serem duas meninas?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>65</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>225</span><span class='fd'>676</span></span>"
+     ],
+     "a": 0,
+     "e": "15/26 · 14/25 = <b>21/65</b>."
+    },
+    {
+     "q": "A chance de um carro ser roubado num ano é 2%. O carro vale R$ 80.000. Qual é a perda esperada por ano (probabilidade × valor)?",
+     "c": [
+      "R$ 80.000",
+      "R$ 16.000",
+      "R$ 800",
+      "R$ 1.600"
+     ],
+     "a": 3,
+     "e": "0,02 × 80.000 = <b>R$ 1.600</b>."
+    },
+    {
+     "q": "A chance de chover no sábado é 25% e, de modo independente, no domingo é 40%. Qual é a probabilidade de chover nos dois dias?",
+     "c": [
+      "32,5%",
+      "1%",
+      "10%",
+      "65%"
+     ],
+     "a": 2,
+     "e": "0,25 · 0,4 = 0,1 = <b>10%</b>."
+    },
+    {
+     "q": "Num estudo, 4 de cada 1.000 vacinados e 40 de cada 1.000 não vacinados ficaram doentes. Quantas vezes o risco é menor entre os vacinados?",
+     "c": [
+      "10 vezes",
+      "o risco é igual",
+      "36 vezes",
+      "4 vezes"
+     ],
+     "a": 0,
+     "e": "40 ÷ 4 = <b>10 vezes</b>."
+    },
+    {
+     "q": "Numa população de 2.000 pessoas, 2% têm uma doença. Um exame dá positivo em 95% dos doentes e, por engano, em 5% dos sadios. Uma pessoa testou positivo. Qual é a probabilidade de ela ter a doença, aproximadamente?",
+     "c": [
+      "cerca de 2%",
+      "cerca de 28%",
+      "cerca de 95%",
+      "cerca de 29%"
+     ],
+     "a": 1,
+     "e": "Doentes positivos: 38; sadios positivos: 98; 38 ÷ 136 ≈ <b>28%</b>."
+    },
+    {
+     "q": "Numa população de 2.000 pessoas, 5% têm uma doença. Um exame dá positivo em 90% dos doentes e, por engano, em 10% dos sadios. Uma pessoa testou positivo. Qual é a probabilidade de ela ter a doença, aproximadamente?",
+     "c": [
+      "cerca de 33%",
+      "cerca de 90%",
+      "cerca de 5%",
+      "cerca de 32%"
+     ],
+     "a": 3,
+     "e": "Doentes positivos: 90; sadios positivos: 190; 90 ÷ 280 ≈ <b>32%</b>."
+    },
+    {
+     "q": "Numa turma há 16 meninos e 15 meninas. Sorteiam-se dois estudantes diferentes. Qual é a probabilidade de serem duas meninas?",
+     "c": [
+      "<span class='fr'><span class='fn'>225</span><span class='fd'>961</span></span>",
+      "<span class='fr'><span class='fn'>30</span><span class='fd'>61</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>31</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>31</span></span>"
+     ],
+     "a": 2,
+     "e": "15/31 · 14/30 = <b>7/31</b>."
+    },
+    {
+     "q": "Numa população de 10.000 pessoas, 1% têm uma doença. Um exame dá positivo em 90% dos doentes e, por engano, em 10% dos sadios. Uma pessoa testou positivo. Qual é a probabilidade de ela ter a doença, aproximadamente?",
+     "c": [
+      "cerca de 9%",
+      "cerca de 8%",
+      "cerca de 90%",
+      "cerca de 1%"
+     ],
+     "a": 1,
+     "e": "Doentes positivos: 90; sadios positivos: 990; 90 ÷ 1080 ≈ <b>8%</b>."
+    },
+    {
+     "q": "A chance de chover no sábado é 60% e, de modo independente, no domingo é 50%. Qual é a probabilidade de chover nos dois dias?",
+     "c": [
+      "110%",
+      "3%",
+      "30%",
+      "55%"
+     ],
+     "a": 2,
+     "e": "0,6 · 0,5 = 0,3 = <b>30%</b>."
+    },
+    {
+     "q": "Num estudo, 5 de cada 1.000 vacinados e 50 de cada 1.000 não vacinados ficaram doentes. Quantas vezes o risco é menor entre os vacinados?",
+     "c": [
+      "o risco é igual",
+      "10 vezes",
+      "45 vezes",
+      "5 vezes"
+     ],
+     "a": 1,
+     "e": "50 ÷ 5 = <b>10 vezes</b>."
+    },
+    {
+     "q": "Num estudo, 20 de cada 1.000 vacinados e 100 de cada 1.000 não vacinados ficaram doentes. Quantas vezes o risco é menor entre os vacinados?",
+     "c": [
+      "5 vezes",
+      "o risco é igual",
+      "80 vezes",
+      "20 vezes"
+     ],
+     "a": 0,
+     "e": "100 ÷ 20 = <b>5 vezes</b>."
+    },
+    {
+     "q": "Numa turma há 8 meninos e 8 meninas. Sorteiam-se dois estudantes diferentes. Qual é a probabilidade de serem duas meninas?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>31</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "8/16 · 7/15 = <b>7/30</b>."
+    },
+    {
+     "q": "Numa população de 10.000 pessoas, 1% têm uma doença. Um exame dá positivo em 95% dos doentes e, por engano, em 5% dos sadios. Uma pessoa testou positivo. Qual é a probabilidade de ela ter a doença, aproximadamente?",
+     "c": [
+      "cerca de 16%",
+      "cerca de 1%",
+      "cerca de 17%",
+      "cerca de 95%"
+     ],
+     "a": 0,
+     "e": "Doentes positivos: 95; sadios positivos: 495; 95 ÷ 590 ≈ <b>16%</b>."
+    },
+    {
+     "q": "Numa turma de 40 alunos, sorteiam-se dois alunos diferentes para representante e vice. Qual é a probabilidade de Lucas ser o representante e Bia a vice?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1560</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1600</span></span>"
+     ],
+     "a": 2,
+     "e": "1/40 · 1/39 = <b>1/1560</b> (sem reposição)."
+    },
+    {
+     "q": "Numa população de 1.000 pessoas, 1% têm uma doença. Um exame dá positivo em 95% dos doentes e, por engano, em 10% dos sadios. Uma pessoa testou positivo. Qual é a probabilidade de ela ter a doença, aproximadamente?",
+     "c": [
+      "cerca de 95%",
+      "cerca de 8%",
+      "cerca de 90%",
+      "cerca de 1%"
+     ],
+     "a": 1,
+     "e": "Doentes positivos: 9; sadios positivos: 99; 9 ÷ 108 ≈ <b>8%</b>."
+    },
+    {
+     "q": "Numa população de 1.000 pessoas, 1% têm uma doença. Um exame dá positivo em 99% dos doentes e, por engano, em 10% dos sadios. Uma pessoa testou positivo. Qual é a probabilidade de ela ter a doença, aproximadamente?",
+     "c": [
+      "cerca de 99%",
+      "cerca de 8%",
+      "cerca de 90%",
+      "cerca de 1%"
+     ],
+     "a": 1,
+     "e": "Doentes positivos: 9; sadios positivos: 99; 9 ÷ 108 ≈ <b>8%</b>."
+    },
+    {
+     "q": "A chance de um carro ser roubado num ano é 2%. O carro vale R$ 50.000. Qual é a perda esperada por ano (probabilidade × valor)?",
+     "c": [
+      "R$ 500",
+      "R$ 50.000",
+      "R$ 1.000",
+      "R$ 10.000"
+     ],
+     "a": 2,
+     "e": "0,02 × 50.000 = <b>R$ 1.000</b>."
+    },
+    {
+     "q": "Numa população de 10.000 pessoas, 1% têm uma doença. Um exame dá positivo em 90% dos doentes e, por engano, em 5% dos sadios. Uma pessoa testou positivo. Qual é a probabilidade de ela ter a doença, aproximadamente?",
+     "c": [
+      "cerca de 95%",
+      "cerca de 90%",
+      "cerca de 1%",
+      "cerca de 15%"
+     ],
+     "a": 3,
+     "e": "Doentes positivos: 90; sadios positivos: 495; 90 ÷ 585 ≈ <b>15%</b>."
+    },
+    {
+     "q": "Numa turma há 15 meninos e 16 meninas. Sorteiam-se dois estudantes diferentes. Qual é a probabilidade de serem duas meninas?",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>61</span></span>",
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>961</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>31</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>31</span></span>"
+     ],
+     "a": 3,
+     "e": "16/31 · 15/30 = <b>8/31</b>."
+    },
+    {
+     "q": "Numa turma de 30 alunos, sorteiam-se dois alunos diferentes para representante e vice. Qual é a probabilidade de Lucas ser o representante e Bia a vice?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>900</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>870</span></span>"
+     ],
+     "a": 3,
+     "e": "1/30 · 1/29 = <b>1/870</b> (sem reposição)."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 14,
+ "updated": "2026-11-23",
+ "country": "br",
+ "subject": "matematica",
+ "grade": "2-serie"
+}

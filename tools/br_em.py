@@ -61,3 +61,60 @@ def sg(x):
 
 def unit(R, slug, dom, codes, std, title, short, meta, kb, ks, body, faq, sets, sort, grade):
     make_unit(R, slug, dom, codes, std, title, short, meta, kb, ks, body, faq, sets, sort, grade=grade)
+
+
+def tri_ret(cb, ca, sides=(), ang=None, label="triângulo retângulo", W=340, H=220):
+    """triângulo ABC com ângulo reto em C (C embaixo à esquerda, B à direita, A em cima).
+    cb, ca: comprimentos (só para a forma); sides: [(P, Q, texto)]; ang: texto do ângulo em B"""
+    sc = min((W - 140) / float(cb), (H - 70) / float(ca))
+    x0, y0 = 60 + (W - 140 - cb * sc) / 2.0, H - 34
+    P = {"C": (x0, y0), "B": (x0 + cb * sc, y0), "A": (x0, y0 - ca * sc)}
+    sh = {"pts": P, "poly": "ABC", "sides": list(sides), "right": [("C", "A", "B")]}
+    if ang:
+        sh["angles"] = [("B", "A", "C", ang)]
+    return formas([sh], W, H, label)
+
+
+def tri(a, b, c, sides=(), angles=(), label="triângulo ABC", W=360, H=230):
+    """triângulo com BC = a, CA = b, AB = c (números, só para a forma); sides [(P, Q, texto)], angles [(V, texto)]"""
+    import math as _mm
+    xa = (a * a + c * c - b * b) / (2.0 * a)
+    ya = _mm.sqrt(max(c * c - xa * xa, 0))
+    xs = [0, a, xa]
+    sc = min((W - 120) / float(max(xs) - min(xs)), (H - 70) / float(ya or 1))
+    x0 = 60 - min(xs) * sc + ((W - 120) - (max(xs) - min(xs)) * sc) / 2.0
+    y0 = H - 34
+    P = tri_pts(a, b, c, x0, y0, sc)
+    other = {"A": ("B", "C"), "B": ("A", "C"), "C": ("A", "B")}
+    sh = {"pts": P, "poly": "ABC", "sides": list(sides), "angles": [(v, other[v][0], other[v][1], t) for v, t in angles]}
+    return formas([sh], W, H, label)
+
+
+def pit(v):
+    """múltiplo de π (Fraction) → «3π/4», «−π/2», «2π»"""
+    v = F(v)
+    if v == 0:
+        return "0"
+    s = MINUS if v < 0 else ""
+    v = abs(v)
+    z = ("" if v.numerator == 1 else str(v.numerator)) + "π"
+    return s + (z if v.denominator == 1 else "%s/%d" % (z, v.denominator))
+
+
+def trig(deg, fn):
+    """valor exato de sen/cos/tg de um ângulo notável em graus → texto («√3/2», «−1/2»); None se não existir"""
+    import math as _mm
+    r = _mm.radians(deg)
+    if fn == "tg":
+        if abs(_mm.cos(r)) < 1e-9:
+            return None
+        v = _mm.tan(r)
+        tab_ = [(0, "0"), (1, "1"), (-1, MINUS + "1"), (_mm.sqrt(3), "√3"), (-_mm.sqrt(3), MINUS + "√3"), (_mm.sqrt(3) / 3, "√3/3"), (-_mm.sqrt(3) / 3, MINUS + "√3/3")]
+    else:
+        v = (_mm.sin if fn == "sen" else _mm.cos)(r)
+        tab_ = [(0, "0"), (1, "1"), (-1, MINUS + "1"), (0.5, "1/2"), (-0.5, MINUS + "1/2"), (_mm.sqrt(2) / 2, "√2/2"), (-_mm.sqrt(2) / 2, MINUS + "√2/2"),
+                (_mm.sqrt(3) / 2, "√3/2"), (-_mm.sqrt(3) / 2, MINUS + "√3/2")]
+    for x, s in tab_:
+        if abs(v - x) < 1e-9:
+            return s
+    return None

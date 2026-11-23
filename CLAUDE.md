@@ -1494,7 +1494,11 @@ BR / Matemática / 1ª série
 1. notacao-cientifica-e-medidas ✓ 2. grandezas-compostas ✓ 3. funcoes-e-taxa-de-variacao ✓ 4. funcao-afim ✓ 5. funcao-quadratica ✓ 6. maximo-e-minimo-da-funcao-quadratica ✓ 7. funcoes-definidas-por-partes ✓
 8. progressao-aritmetica ✓ 9. progressao-geometrica ✓ 10. funcao-exponencial ✓ 11. logaritmos ✓ 12. funcao-logaritmica ✓ 13. sistemas-lineares ✓ 14. tabelas-e-graficos-estatisticos ✓ 15. medidas-de-tendencia-central-e-dispersao ✓
 
-BR の次: 2ª série（trigonometria, leis do seno e do cosseno, ciclo trigonométrico, funções seno e cosseno, transformações e homotetias, áreas, prismas e pirâmides, corpos redondos, Cavalieri, contagem, combinatória, probabilidade）、3ª série（juros, finanças, índices, modelos, box-plot, pesquisa amostral, regressão, algoritmos, programação, cartografia, polígonos regulares, riscos）
+BR / Matemática / 2ª série（br_em に tri_ret（直角三角形、直角は C）・tri（三辺から三角形）・pit（π の倍数）・trig（特別角の sen/cos/tg の文字列））。トピック trigonometria を足した（geometria に isometricas・cilindros・trigonometria-no・leis-dos-senos、grandezas-e-medidas に cilindros・superficies、probabilidade の principio は principio-multiplicativo|principio-fundamental に絞った（Cavalieri に当たらない））
+1. trigonometria-no-triangulo-retangulo ✓ 2. leis-dos-senos-e-dos-cossenos ✓ 3. ciclo-trigonometrico-e-radianos ✓ 4. funcoes-seno-e-cosseno ✓ 5. transformacoes-isometricas-e-homotetias ✓ 6. areas-de-superficies ✓ 7. poligonos-regulares-e-ladrilhamentos ✓
+8. prismas-e-piramides ✓ 9. cilindros-cones-e-esferas ✓ 10. volumes-e-principio-de-cavalieri ✓ 11. principio-fundamental-da-contagem ✓ 12. permutacoes-arranjos-e-combinacoes ✓ 13. probabilidade-e-espaco-amostral ✓ 14. probabilidade-condicional-e-eventos-sucessivos ✓
+
+BR の次: 3ª série（juros, finanças, índices, modelos, box-plot, pesquisa amostral, regressão, algoritmos, programação, cartografia, polígonos regulares, riscos）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

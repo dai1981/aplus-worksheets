@@ -1,0 +1,1157 @@
+{
+ "slug": "permutacoes-arranjos-e-combinacoes",
+ "title": "Permutações, arranjos e combinações",
+ "seo_title": "Permutações, arranjos e combinações – 2ª série: atividades de matemática com gabarito",
+ "short_title": "Permutações, arranjos e combinações",
+ "domain": "Probabilidade e estatística",
+ "standard_code": "EM13MAT310",
+ "standard_url": "http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf",
+ "standard_text": "Resolver e elaborar problemas de contagem envolvendo agrupamentos ordenáveis ou não de elementos, por meio dos princípios multiplicativo e aditivo, recorrendo a estratégias diversas, como o diagrama de árvore (BNCC, Matemática, 2ª série)",
+ "meta_desc": "Atividades de matemática para a 2ª série do Ensino Médio sobre análise combinatória: permutações, anagramas, arranjos, combinações, comissões, pódios e loterias. 100 exercícios com gabarito.",
+ "key_big": "Ordem importa: arranjo; não importa: combinação",
+ "key_sub": "C(n, p) = n! ÷ (p!(n − p)!).",
+ "body_html": "<h2>Como pensar</h2><p><b>Permutação</b>: ordenar todos os n elementos: Pₙ = n!. Com repetição: divida pelos fatoriais das repetições (BANANA: 6! ÷ (3! · 2!) = 60).</p><p><b>Arranjo</b> (a ordem importa): A(n, p) = n! ÷ (n − p)!. Ex.: presidente e vice, pódio, senhas sem repetição.</p><p><b>Combinação</b> (a ordem não importa): C(n, p) = n! ÷ (p!(n − p)!). Ex.: comissões, sabores de pizza, loteria.</p><p>Teste: trocar a ordem dá outro resultado? Se sim, arranjo; se não, combinação.</p><div class='sn-ex'><span class='sn-ex-t'>Exemplo</span><p class='sn-ex-q'>Comissão de 3 entre 8</p><p class='sn-ex-s'>C(8, 3) = 8 · 7 · 6 ÷ 3!</p><p class='sn-ex-a'>Resposta: 56</p></div><div class='sn-ex'><span class='sn-ex-t'>Exemplo</span><p class='sn-ex-q'>Presidente, vice e tesoureiro entre 8</p><p class='sn-ex-s'>A(8, 3) = 8 · 7 · 6</p><p class='sn-ex-a'>Resposta: 336</p></div><h2>Erros comuns</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erro comum</th><th>O que fazer</th></tr></thead><tbody><tr><td>Arranjo quando a ordem não importa</td><td>Comissão {Ana, Bia} = {Bia, Ana}: é combinação.</td></tr><tr><td>Esquecer as letras repetidas</td><td>Divida por k! para cada letra que aparece k vezes.</td></tr><tr><td>Confundir C(n, p) e A(n, p)</td><td>C = A ÷ p!.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Qual é a diferença entre arranjo e combinação?",
+   "a": "No arranjo a ordem importa (pódio, cargos); na combinação não importa (comissão, loteria). Por isso C(n, p) = A(n, p) ÷ p!."
+  },
+  {
+   "q": "O que a BNCC pede?",
+   "a": "Resolver e elaborar problemas de contagem envolvendo agrupamentos ordenáveis ou não de elementos, por meio dos princípios multiplicativo e aditivo, recorrendo a estratégias diversas, como o diagrama de árvore (EM13MAT310)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Permutações e anagramas",
+   "items": [
+    {
+     "q": "Quantos anagramas tem a palavra CABANA?",
+     "c": [
+      "120",
+      "60",
+      "720",
+      "36"
+     ],
+     "a": 0,
+     "e": "6 letras com A repetida 3 vezes: 6! ÷ 3! = <b>120</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra CAJU?",
+     "c": [
+      "12",
+      "16",
+      "24",
+      "48"
+     ],
+     "a": 2,
+     "e": "4 letras, todas diferentes: 4! = <b>24</b>."
+    },
+    {
+     "q": "Quantos anagramas da palavra CAJU começam por C?",
+     "c": [
+      "24",
+      "3",
+      "2",
+      "6"
+     ],
+     "a": 3,
+     "e": "C fixo; as outras 3 letras: 3! = <b>6</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra ARARA?",
+     "c": [
+      "5",
+      "10",
+      "120",
+      "25"
+     ],
+     "a": 1,
+     "e": "5 letras com A repetida 3 vezes, R repetida 2 vezes: 5! ÷ 3! ÷ 2! = <b>10</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra MACACO?",
+     "c": [
+      "36",
+      "720",
+      "90",
+      "180"
+     ],
+     "a": 3,
+     "e": "6 letras com A repetida 2 vezes, C repetida 2 vezes: 6! ÷ 2! ÷ 2! = <b>180</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra PIPOCA?",
+     "c": [
+      "36",
+      "360",
+      "180",
+      "720"
+     ],
+     "a": 1,
+     "e": "6 letras com P repetida 2 vezes: 6! ÷ 2! = <b>360</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra BRASIL?",
+     "c": [
+      "1.440",
+      "720",
+      "36",
+      "360"
+     ],
+     "a": 1,
+     "e": "6 letras, todas diferentes: 6! = <b>720</b>."
+    },
+    {
+     "q": "Quantos anagramas da palavra SOL começam por S?",
+     "c": [
+      "2",
+      "3",
+      "6",
+      "1"
+     ],
+     "a": 0,
+     "e": "S fixo; as outras 2 letras: 2! = <b>2</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra PATO?",
+     "c": [
+      "12",
+      "16",
+      "24",
+      "48"
+     ],
+     "a": 2,
+     "e": "4 letras, todas diferentes: 4! = <b>24</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra LIVRO?",
+     "c": [
+      "120",
+      "240",
+      "60",
+      "25"
+     ],
+     "a": 0,
+     "e": "5 letras, todas diferentes: 5! = <b>120</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra ESCOLA?",
+     "c": [
+      "36",
+      "1.440",
+      "360",
+      "720"
+     ],
+     "a": 3,
+     "e": "6 letras, todas diferentes: 6! = <b>720</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra GATO?",
+     "c": [
+      "24",
+      "16",
+      "12",
+      "48"
+     ],
+     "a": 0,
+     "e": "4 letras, todas diferentes: 4! = <b>24</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra SOL?",
+     "c": [
+      "12",
+      "3",
+      "6",
+      "9"
+     ],
+     "a": 2,
+     "e": "3 letras, todas diferentes: 3! = <b>6</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra MAPA?",
+     "c": [
+      "24",
+      "6",
+      "12",
+      "16"
+     ],
+     "a": 2,
+     "e": "4 letras com A repetida 2 vezes: 4! ÷ 2! = <b>12</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra PANELA?",
+     "c": [
+      "360",
+      "36",
+      "180",
+      "720"
+     ],
+     "a": 0,
+     "e": "6 letras com A repetida 2 vezes: 6! ÷ 2! = <b>360</b>."
+    },
+    {
+     "q": "Quantos anagramas da palavra PATO começam por P?",
+     "c": [
+      "24",
+      "3",
+      "6",
+      "2"
+     ],
+     "a": 2,
+     "e": "P fixo; as outras 3 letras: 3! = <b>6</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra SAPATO?",
+     "c": [
+      "720",
+      "180",
+      "36",
+      "360"
+     ],
+     "a": 3,
+     "e": "6 letras com A repetida 2 vezes: 6! ÷ 2! = <b>360</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra BANANA?",
+     "c": [
+      "720",
+      "30",
+      "36",
+      "60"
+     ],
+     "a": 3,
+     "e": "6 letras com A repetida 3 vezes, N repetida 2 vezes: 6! ÷ 3! ÷ 2! = <b>60</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra AMOR?",
+     "c": [
+      "16",
+      "24",
+      "12",
+      "48"
+     ],
+     "a": 1,
+     "e": "4 letras, todas diferentes: 4! = <b>24</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra RECIFE?",
+     "c": [
+      "720",
+      "360",
+      "36",
+      "180"
+     ],
+     "a": 1,
+     "e": "6 letras com E repetida 2 vezes: 6! ÷ 2! = <b>360</b>."
+    }
+   ]
+  },
+  {
+   "title": "Arranjo ou combinação?",
+   "items": [
+    {
+     "q": "Formar senhas de 4 algarismos distintos com 0 a 9 é um problema de…",
+     "c": [
+      "permutação com repetição",
+      "arranjo",
+      "fatorial de 4",
+      "combinação"
+     ],
+     "a": 1,
+     "e": "Resposta: <b>arranjo</b>."
+    },
+    {
+     "q": "Quantas diagonais tem um polígono convexo de 5 lados?",
+     "c": [
+      "2",
+      "6",
+      "10",
+      "5"
+     ],
+     "a": 3,
+     "e": "C(5, 2) − 5 lados = 10 − 5 = <b>5</b>."
+    },
+    {
+     "q": "Numa reunião com 14 pessoas, cada uma aperta a mão de todas as outras uma vez. Quantos apertos de mão há?",
+     "c": [
+      "196",
+      "14",
+      "91",
+      "182"
+     ],
+     "a": 2,
+     "e": "C(14, 2) = 14 · 13 ÷ 2 = <b>91</b>."
+    },
+    {
+     "q": "De quantas maneiras se pode formar uma comissão de 4 pessoas escolhidas entre 7?",
+     "c": [
+      "35",
+      "28",
+      "840",
+      "36"
+     ],
+     "a": 0,
+     "e": "A ordem não importa: C(7, 4) = 840 ÷ 4! = <b>35</b>."
+    },
+    {
+     "q": "Uma pizzaria tem 10 sabores. Quantas pizzas de 3 sabores diferentes podem ser montadas?",
+     "c": [
+      "720",
+      "30",
+      "1.000",
+      "120"
+     ],
+     "a": 3,
+     "e": "A ordem dos sabores não importa: C(10, 3) = <b>120</b>."
+    },
+    {
+     "q": "C(n, p) = A(n, p) ÷ …",
+     "c": [
+      "2",
+      "p!",
+      "(n − p)!",
+      "n!"
+     ],
+     "a": 1,
+     "e": "Resposta: <b>p!</b>."
+    },
+    {
+     "q": "Uma turma tem 7 meninas e 8 meninos. Quantas equipes com 1 menina e 2 meninos podem ser formadas?",
+     "c": [
+      "196",
+      "35",
+      "455",
+      "392"
+     ],
+     "a": 0,
+     "e": "C(7, 1) · C(8, 2) = 7 · 28 = <b>196</b>."
+    },
+    {
+     "q": "Numa competição com 10 equipes, quantos pódios (ouro, prata e bronze) são possíveis?",
+     "c": [
+      "30",
+      "1.000",
+      "120",
+      "720"
+     ],
+     "a": 3,
+     "e": "A ordem importa: 10 · 9 · 8 = <b>720</b>."
+    },
+    {
+     "q": "Na Quina, escolhem-se 5 números entre 80. A ordem importa?",
+     "c": [
+      "não, é uma combinação C(80, 5)",
+      "não, é 80 · 5",
+      "sim, é uma permutação 80!",
+      "sim, é um arranjo A(80, 5)"
+     ],
+     "a": 0,
+     "e": "Sorteio de números sem ordem: <b>combinação</b>."
+    },
+    {
+     "q": "Uma turma tem 4 meninas e 7 meninos. Quantas equipes com 2 meninas e 2 meninos podem ser formadas?",
+     "c": [
+      "330",
+      "504",
+      "126",
+      "27"
+     ],
+     "a": 2,
+     "e": "C(4, 2) · C(7, 2) = 6 · 21 = <b>126</b>."
+    },
+    {
+     "q": "No arranjo, a ordem dos elementos…",
+     "c": [
+      "não existe",
+      "é sempre alfabética",
+      "não importa",
+      "importa"
+     ],
+     "a": 3,
+     "e": "Resposta: <b>importa</b>."
+    },
+    {
+     "q": "Quantos subconjuntos de 2 elementos tem um conjunto de 4 elementos?",
+     "c": [
+      "12",
+      "6",
+      "4",
+      "8"
+     ],
+     "a": 1,
+     "e": "Resposta: <b>6</b>."
+    },
+    {
+     "q": "Numa reunião com 18 pessoas, cada uma aperta a mão de todas as outras uma vez. Quantos apertos de mão há?",
+     "c": [
+      "18",
+      "324",
+      "306",
+      "153"
+     ],
+     "a": 3,
+     "e": "C(18, 2) = 18 · 17 ÷ 2 = <b>153</b>."
+    },
+    {
+     "q": "Na combinação, a ordem dos elementos…",
+     "c": [
+      "importa",
+      "não importa",
+      "é sempre crescente",
+      "importa só no início"
+     ],
+     "a": 1,
+     "e": "Resposta: <b>não importa</b>."
+    },
+    {
+     "q": "Escolher capitão e goleiro entre 11 jogadores é um problema de…",
+     "c": [
+      "arranjo",
+      "combinação",
+      "princípio aditivo",
+      "permutação de 11"
+     ],
+     "a": 0,
+     "e": "Resposta: <b>arranjo</b>."
+    },
+    {
+     "q": "Quantas diagonais tem um polígono convexo de 8 lados?",
+     "c": [
+      "20",
+      "28",
+      "5",
+      "40"
+     ],
+     "a": 0,
+     "e": "C(8, 2) − 8 lados = 28 − 8 = <b>20</b>."
+    },
+    {
+     "q": "Organizar 6 livros diferentes numa prateleira é um problema de…",
+     "c": [
+      "arranjo de 6 tomados 2 a 2",
+      "princípio aditivo",
+      "permutação",
+      "combinação"
+     ],
+     "a": 2,
+     "e": "Resposta: <b>permutação</b>."
+    },
+    {
+     "q": "Escolher 3 livros de uma estante de 10 para levar numa viagem é um problema de…",
+     "c": [
+      "princípio aditivo",
+      "permutação",
+      "combinação",
+      "arranjo"
+     ],
+     "a": 2,
+     "e": "Resposta: <b>combinação</b>."
+    },
+    {
+     "q": "Num grupo de 7 pessoas, de quantas maneiras se pode escolher presidente, vice e tesoureiro?",
+     "c": [
+      "35",
+      "210",
+      "21",
+      "343"
+     ],
+     "a": 1,
+     "e": "A ordem importa (cargos diferentes): A(7, 3) = <b>210</b>."
+    },
+    {
+     "q": "Quantas diagonais tem um polígono convexo de 6 lados?",
+     "c": [
+      "3",
+      "15",
+      "9",
+      "18"
+     ],
+     "a": 2,
+     "e": "C(6, 2) − 6 lados = 15 − 6 = <b>9</b>."
+    }
+   ]
+  },
+  {
+   "title": "Calcular A, C e P",
+   "items": [
+    {
+     "q": "Quanto vale P₇?",
+     "c": [
+      "5.040",
+      "720",
+      "128",
+      "49"
+     ],
+     "a": 0,
+     "e": "P₇ = 7! = <b>5.040</b>."
+    },
+    {
+     "q": "C(5, 3) é igual a…",
+     "c": [
+      "C(2, 3)",
+      "C(5, 2)",
+      "C(5, 4)",
+      "A(5, 3)"
+     ],
+     "a": 1,
+     "e": "Escolher 3 é o mesmo que deixar de fora 2: <b>C(5, 2)</b> (combinações complementares)."
+    },
+    {
+     "q": "Quanto vale C(9, 2)?",
+     "c": [
+      "18",
+      "84",
+      "72",
+      "36"
+     ],
+     "a": 3,
+     "e": "C(n, p) = n! ÷ (p!(n − p)!) = <b>36</b>."
+    },
+    {
+     "q": "Quanto vale A(5, 3)?",
+     "c": [
+      "10",
+      "60",
+      "125",
+      "20"
+     ],
+     "a": 1,
+     "e": "A(n, p) = n! ÷ (n − p)! = 5 · 4 · 3 = <b>60</b>."
+    },
+    {
+     "q": "Quanto vale C(6, 2)?",
+     "c": [
+      "15",
+      "20",
+      "30",
+      "12"
+     ],
+     "a": 0,
+     "e": "C(n, p) = n! ÷ (p!(n − p)!) = <b>15</b>."
+    },
+    {
+     "q": "Quanto vale A(6, 2)?",
+     "c": [
+      "6",
+      "36",
+      "15",
+      "30"
+     ],
+     "a": 3,
+     "e": "A(n, p) = n! ÷ (n − p)! = 6 · 5 = <b>30</b>."
+    },
+    {
+     "q": "Quanto vale C(9, 3)?",
+     "c": [
+      "126",
+      "84",
+      "27",
+      "504"
+     ],
+     "a": 1,
+     "e": "C(n, p) = n! ÷ (p!(n − p)!) = <b>84</b>."
+    },
+    {
+     "q": "Quanto vale A(10, 3)?",
+     "c": [
+      "120",
+      "90",
+      "720",
+      "1.000"
+     ],
+     "a": 2,
+     "e": "A(n, p) = n! ÷ (n − p)! = 10 · 9 · 8 = <b>720</b>."
+    },
+    {
+     "q": "Quanto vale C(10, 4)?",
+     "c": [
+      "252",
+      "210",
+      "5.040",
+      "40"
+     ],
+     "a": 1,
+     "e": "C(n, p) = n! ÷ (p!(n − p)!) = <b>210</b>."
+    },
+    {
+     "q": "C(6, 3) é igual a…",
+     "c": [
+      "C(6, 3)",
+      "A(6, 3)",
+      "C(6, 4)",
+      "C(3, 3)"
+     ],
+     "a": 0,
+     "e": "Escolher 3 é o mesmo que deixar de fora 3: <b>C(6, 3)</b> (combinações complementares)."
+    },
+    {
+     "q": "Quanto vale C(11, 4)?",
+     "c": [
+      "462",
+      "7.920",
+      "44",
+      "330"
+     ],
+     "a": 3,
+     "e": "C(n, p) = n! ÷ (p!(n − p)!) = <b>330</b>."
+    },
+    {
+     "q": "Quanto vale A(6, 4)?",
+     "c": [
+      "15",
+      "120",
+      "1.296",
+      "360"
+     ],
+     "a": 3,
+     "e": "A(n, p) = n! ÷ (n − p)! = 6 · 5 · 4 · 3 = <b>360</b>."
+    },
+    {
+     "q": "Quanto vale C(10, 2)?",
+     "c": [
+      "120",
+      "45",
+      "20",
+      "90"
+     ],
+     "a": 1,
+     "e": "C(n, p) = n! ÷ (p!(n − p)!) = <b>45</b>."
+    },
+    {
+     "q": "Quanto vale P₅?",
+     "c": [
+      "120",
+      "25",
+      "32",
+      "24"
+     ],
+     "a": 0,
+     "e": "P₅ = 5! = <b>120</b>."
+    },
+    {
+     "q": "C(9, 4) é igual a…",
+     "c": [
+      "C(9, 5)",
+      "A(9, 4)",
+      "C(8, 4)",
+      "C(5, 4)"
+     ],
+     "a": 0,
+     "e": "Escolher 4 é o mesmo que deixar de fora 5: <b>C(9, 5)</b> (combinações complementares)."
+    },
+    {
+     "q": "Quanto vale A(6, 3)?",
+     "c": [
+      "20",
+      "216",
+      "120",
+      "30"
+     ],
+     "a": 2,
+     "e": "A(n, p) = n! ÷ (n − p)! = 6 · 5 · 4 = <b>120</b>."
+    },
+    {
+     "q": "Quanto vale P₄?",
+     "c": [
+      "16",
+      "6",
+      "25",
+      "24"
+     ],
+     "a": 3,
+     "e": "P₄ = 4! = <b>24</b>."
+    },
+    {
+     "q": "Quanto vale A(5, 2)?",
+     "c": [
+      "5",
+      "25",
+      "20",
+      "10"
+     ],
+     "a": 2,
+     "e": "A(n, p) = n! ÷ (n − p)! = 5 · 4 = <b>20</b>."
+    },
+    {
+     "q": "C(12, 4) é igual a…",
+     "c": [
+      "C(12, 5)",
+      "A(12, 4)",
+      "C(12, 8)",
+      "C(8, 4)"
+     ],
+     "a": 2,
+     "e": "Escolher 4 é o mesmo que deixar de fora 8: <b>C(12, 8)</b> (combinações complementares)."
+    },
+    {
+     "q": "C(6, 4) é igual a…",
+     "c": [
+      "A(6, 4)",
+      "C(2, 4)",
+      "C(6, 2)",
+      "C(6, 5)"
+     ],
+     "a": 2,
+     "e": "Escolher 4 é o mesmo que deixar de fora 2: <b>C(6, 2)</b> (combinações complementares)."
+    }
+   ]
+  },
+  {
+   "title": "Problemas de combinação",
+   "items": [
+    {
+     "q": "Uma turma tem 8 meninas e 6 meninos. Quantas equipes com 2 meninas e 3 meninos podem ser formadas?",
+     "c": [
+      "6.720",
+      "2.002",
+      "48",
+      "560"
+     ],
+     "a": 3,
+     "e": "C(8, 2) · C(6, 3) = 28 · 20 = <b>560</b>."
+    },
+    {
+     "q": "Num grupo de 10 pessoas, de quantas maneiras se pode escolher presidente e vice?",
+     "c": [
+      "20",
+      "45",
+      "90",
+      "100"
+     ],
+     "a": 2,
+     "e": "A ordem importa (cargos diferentes): A(10, 2) = <b>90</b>."
+    },
+    {
+     "q": "Numa competição com 7 equipes, quantos pódios (ouro, prata e bronze) são possíveis?",
+     "c": [
+      "343",
+      "35",
+      "210",
+      "21"
+     ],
+     "a": 2,
+     "e": "A ordem importa: 7 · 6 · 5 = <b>210</b>."
+    },
+    {
+     "q": "Uma turma tem 5 meninas e 7 meninos. Quantas equipes com 1 menina e 2 meninos podem ser formadas?",
+     "c": [
+      "105",
+      "26",
+      "210",
+      "220"
+     ],
+     "a": 0,
+     "e": "C(5, 1) · C(7, 2) = 5 · 21 = <b>105</b>."
+    },
+    {
+     "q": "Na Mega-Sena, escolhem-se 6 números entre 60. A ordem importa?",
+     "c": [
+      "não, é 60 · 6",
+      "não, é uma combinação C(60, 6)",
+      "sim, é um arranjo A(60, 6)",
+      "sim, é uma permutação 60!"
+     ],
+     "a": 1,
+     "e": "Sorteio de números sem ordem: <b>combinação</b>."
+    },
+    {
+     "q": "Num grupo de 7 pessoas, de quantas maneiras se pode escolher presidente e vice?",
+     "c": [
+      "21",
+      "14",
+      "49",
+      "42"
+     ],
+     "a": 3,
+     "e": "A ordem importa (cargos diferentes): A(7, 2) = <b>42</b>."
+    },
+    {
+     "q": "Num grupo de 8 pessoas, de quantas maneiras se pode escolher presidente, vice e tesoureiro?",
+     "c": [
+      "336",
+      "512",
+      "56",
+      "24"
+     ],
+     "a": 0,
+     "e": "A ordem importa (cargos diferentes): A(8, 3) = <b>336</b>."
+    },
+    {
+     "q": "Num grupo de 11 pessoas, de quantas maneiras se pode escolher presidente e vice?",
+     "c": [
+      "110",
+      "55",
+      "22",
+      "121"
+     ],
+     "a": 0,
+     "e": "A ordem importa (cargos diferentes): A(11, 2) = <b>110</b>."
+    },
+    {
+     "q": "Numa reunião com 10 pessoas, cada uma aperta a mão de todas as outras uma vez. Quantos apertos de mão há?",
+     "c": [
+      "10",
+      "45",
+      "90",
+      "100"
+     ],
+     "a": 1,
+     "e": "C(10, 2) = 10 · 9 ÷ 2 = <b>45</b>."
+    },
+    {
+     "q": "Uma pizzaria tem 12 sabores. Quantas pizzas de 2 sabores diferentes podem ser montadas?",
+     "c": [
+      "24",
+      "66",
+      "144",
+      "132"
+     ],
+     "a": 1,
+     "e": "A ordem dos sabores não importa: C(12, 2) = <b>66</b>."
+    },
+    {
+     "q": "Numa competição com 9 equipes, quantos pódios (ouro, prata e bronze) são possíveis?",
+     "c": [
+      "729",
+      "27",
+      "504",
+      "84"
+     ],
+     "a": 2,
+     "e": "A ordem importa: 9 · 8 · 7 = <b>504</b>."
+    },
+    {
+     "q": "De quantas maneiras se pode formar uma comissão de 4 pessoas escolhidas entre 12?",
+     "c": [
+      "11.880",
+      "495",
+      "220",
+      "48"
+     ],
+     "a": 1,
+     "e": "A ordem não importa: C(12, 4) = 11.880 ÷ 4! = <b>495</b>."
+    },
+    {
+     "q": "De quantas maneiras se pode formar uma comissão de 3 pessoas escolhidas entre 6?",
+     "c": [
+      "20",
+      "18",
+      "120",
+      "15"
+     ],
+     "a": 0,
+     "e": "A ordem não importa: C(6, 3) = 120 ÷ 3! = <b>20</b>."
+    },
+    {
+     "q": "Numa competição com 12 equipes, quantos pódios (ouro, prata e bronze) são possíveis?",
+     "c": [
+      "36",
+      "1.320",
+      "1.728",
+      "220"
+     ],
+     "a": 1,
+     "e": "A ordem importa: 12 · 11 · 10 = <b>1.320</b>."
+    },
+    {
+     "q": "Numa competição com 11 equipes, quantos pódios (ouro, prata e bronze) são possíveis?",
+     "c": [
+      "165",
+      "1.331",
+      "33",
+      "990"
+     ],
+     "a": 3,
+     "e": "A ordem importa: 11 · 10 · 9 = <b>990</b>."
+    },
+    {
+     "q": "Numa reunião com 15 pessoas, cada uma aperta a mão de todas as outras uma vez. Quantos apertos de mão há?",
+     "c": [
+      "210",
+      "15",
+      "105",
+      "225"
+     ],
+     "a": 2,
+     "e": "C(15, 2) = 15 · 14 ÷ 2 = <b>105</b>."
+    },
+    {
+     "q": "Uma turma tem 7 meninas e 4 meninos. Quantas equipes com 3 meninas e 2 meninos podem ser formadas?",
+     "c": [
+      "41",
+      "2.520",
+      "210",
+      "462"
+     ],
+     "a": 2,
+     "e": "C(7, 3) · C(4, 2) = 35 · 6 = <b>210</b>."
+    },
+    {
+     "q": "Quantas diagonais tem um polígono convexo de 7 lados?",
+     "c": [
+      "28",
+      "21",
+      "4",
+      "14"
+     ],
+     "a": 3,
+     "e": "C(7, 2) − 7 lados = 21 − 7 = <b>14</b>."
+    },
+    {
+     "q": "De quantas maneiras se pode formar uma comissão de 2 pessoas escolhidas entre 7?",
+     "c": [
+      "21",
+      "7",
+      "42",
+      "14"
+     ],
+     "a": 0,
+     "e": "A ordem não importa: C(7, 2) = 42 ÷ 2! = <b>21</b>."
+    },
+    {
+     "q": "De quantas maneiras se pode formar uma comissão de 4 pessoas escolhidas entre 10?",
+     "c": [
+      "5.040",
+      "40",
+      "120",
+      "210"
+     ],
+     "a": 3,
+     "e": "A ordem não importa: C(10, 4) = 5.040 ÷ 4! = <b>210</b>."
+    }
+   ]
+  },
+  {
+   "title": "Revisão",
+   "items": [
+    {
+     "q": "Num grupo de 12 pessoas, de quantas maneiras se pode escolher presidente e vice?",
+     "c": [
+      "66",
+      "24",
+      "132",
+      "144"
+     ],
+     "a": 2,
+     "e": "A ordem importa (cargos diferentes): A(12, 2) = <b>132</b>."
+    },
+    {
+     "q": "Quantos anagramas da palavra GATO começam por G?",
+     "c": [
+      "24",
+      "6",
+      "2",
+      "3"
+     ],
+     "a": 1,
+     "e": "G fixo; as outras 3 letras: 3! = <b>6</b>."
+    },
+    {
+     "q": "C(10, 3) é igual a…",
+     "c": [
+      "A(10, 3)",
+      "C(10, 7)",
+      "C(7, 3)",
+      "C(10, 4)"
+     ],
+     "a": 1,
+     "e": "Escolher 3 é o mesmo que deixar de fora 7: <b>C(10, 7)</b> (combinações complementares)."
+    },
+    {
+     "q": "Num jogo, escolhem-se 5 números entre 50. A ordem importa?",
+     "c": [
+      "não, é uma combinação C(50, 5)",
+      "sim, é um arranjo A(50, 5)",
+      "sim, é uma permutação 50!",
+      "não, é 50 · 5"
+     ],
+     "a": 0,
+     "e": "Sorteio de números sem ordem: <b>combinação</b>."
+    },
+    {
+     "q": "C(8, 4) é igual a…",
+     "c": [
+      "C(4, 4)",
+      "C(8, 4)",
+      "A(8, 4)",
+      "C(8, 5)"
+     ],
+     "a": 1,
+     "e": "Escolher 4 é o mesmo que deixar de fora 4: <b>C(8, 4)</b> (combinações complementares)."
+    },
+    {
+     "q": "De quantas maneiras se pode formar uma comissão de 2 pessoas escolhidas entre 9?",
+     "c": [
+      "18",
+      "9",
+      "72",
+      "36"
+     ],
+     "a": 3,
+     "e": "A ordem não importa: C(9, 2) = 72 ÷ 2! = <b>36</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra BOLO?",
+     "c": [
+      "6",
+      "12",
+      "24",
+      "16"
+     ],
+     "a": 1,
+     "e": "4 letras com O repetida 2 vezes: 4! ÷ 2! = <b>12</b>."
+    },
+    {
+     "q": "Quantos anagramas da palavra LIVRO começam por L?",
+     "c": [
+      "6",
+      "24",
+      "120",
+      "4"
+     ],
+     "a": 1,
+     "e": "L fixo; as outras 4 letras: 4! = <b>24</b>."
+    },
+    {
+     "q": "Quanto vale C(12, 3)?",
+     "c": [
+      "1.320",
+      "36",
+      "495",
+      "220"
+     ],
+     "a": 3,
+     "e": "C(n, p) = n! ÷ (p!(n − p)!) = <b>220</b>."
+    },
+    {
+     "q": "Quantas diagonais tem um polígono convexo de 10 lados?",
+     "c": [
+      "7",
+      "45",
+      "35",
+      "70"
+     ],
+     "a": 2,
+     "e": "C(10, 2) − 10 lados = 45 − 10 = <b>35</b>."
+    },
+    {
+     "q": "Quantos anagramas da palavra ESCOLA começam por E?",
+     "c": [
+      "24",
+      "5",
+      "720",
+      "120"
+     ],
+     "a": 3,
+     "e": "E fixo; as outras 5 letras: 5! = <b>120</b>."
+    },
+    {
+     "q": "Quantos anagramas tem a palavra CASA?",
+     "c": [
+      "12",
+      "6",
+      "16",
+      "24"
+     ],
+     "a": 0,
+     "e": "4 letras com A repetida 2 vezes: 4! ÷ 2! = <b>12</b>."
+    },
+    {
+     "q": "Uma pizzaria tem 6 sabores. Quantas pizzas de 3 sabores diferentes podem ser montadas?",
+     "c": [
+      "18",
+      "120",
+      "20",
+      "216"
+     ],
+     "a": 2,
+     "e": "A ordem dos sabores não importa: C(6, 3) = <b>20</b>."
+    },
+    {
+     "q": "Quanto vale C(8, 3)?",
+     "c": [
+      "24",
+      "70",
+      "336",
+      "56"
+     ],
+     "a": 3,
+     "e": "C(n, p) = n! ÷ (p!(n − p)!) = <b>56</b>."
+    },
+    {
+     "q": "De quantas maneiras se pode formar uma comissão de 2 pessoas escolhidas entre 10?",
+     "c": [
+      "45",
+      "20",
+      "90",
+      "10"
+     ],
+     "a": 0,
+     "e": "A ordem não importa: C(10, 2) = 90 ÷ 2! = <b>45</b>."
+    },
+    {
+     "q": "Numa reunião com 6 pessoas, cada uma aperta a mão de todas as outras uma vez. Quantos apertos de mão há?",
+     "c": [
+      "30",
+      "36",
+      "6",
+      "15"
+     ],
+     "a": 3,
+     "e": "C(6, 2) = 6 · 5 ÷ 2 = <b>15</b>."
+    },
+    {
+     "q": "Numa competição com 6 equipes, quantos pódios (ouro, prata e bronze) são possíveis?",
+     "c": [
+      "120",
+      "20",
+      "216",
+      "18"
+     ],
+     "a": 0,
+     "e": "A ordem importa: 6 · 5 · 4 = <b>120</b>."
+    },
+    {
+     "q": "Uma pizzaria tem 8 sabores. Quantas pizzas de 2 sabores diferentes podem ser montadas?",
+     "c": [
+      "16",
+      "56",
+      "28",
+      "64"
+     ],
+     "a": 2,
+     "e": "A ordem dos sabores não importa: C(8, 2) = <b>28</b>."
+    },
+    {
+     "q": "De quantas maneiras se pode formar uma comissão de 2 pessoas escolhidas entre 6?",
+     "c": [
+      "15",
+      "30",
+      "6",
+      "12"
+     ],
+     "a": 0,
+     "e": "A ordem não importa: C(6, 2) = 30 ÷ 2! = <b>15</b>."
+    },
+    {
+     "q": "Quantos anagramas da palavra AMOR começam por A?",
+     "c": [
+      "2",
+      "24",
+      "6",
+      "3"
+     ],
+     "a": 2,
+     "e": "A fixo; as outras 3 letras: 3! = <b>6</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 12,
+ "updated": "2026-11-23",
+ "country": "br",
+ "subject": "matematica",
+ "grade": "2-serie"
+}
