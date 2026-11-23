@@ -1,0 +1,1157 @@
+{
+ "slug": "probabilita-condizionata-e-bayes",
+ "title": "Probabilità condizionata e teorema di Bayes",
+ "seo_title": "Probabilità condizionata e Bayes quarta liceo: schede di matematica con soluzioni",
+ "short_title": "Probabilità condizionata e Bayes",
+ "domain": "Dati e previsioni",
+ "standard_code": "Quarta liceo · Dati e previsioni",
+ "standard_url": "https://www.gazzettaufficiale.it/eli/id/2010/12/14/010G0232/sg",
+ "standard_text": "Probabilità condizionata e composta, formula di Bayes e sue applicazioni (sintesi degli obiettivi specifici di apprendimento di matematica del liceo scientifico, Indicazioni nazionali, DM 211/2010)",
+ "meta_desc": "Schede di matematica per la quarta liceo sulla probabilità condizionata: formula e tabelle a doppia entrata, teorema del prodotto, eventi indipendenti, estrazioni senza reimmissione, probabilità totali, teorema di Bayes. 100 esercizi con soluzioni.",
+ "key_big": "P(A|B) = P(A ∩ B) / P(B)",
+ "key_sub": "Bayes: P(A|B) = P(A) · P(B|A) / P(B).",
+ "body_html": "<h2>Come si fa</h2><p>La <b>probabilità condizionata</b> P(A|B) è la probabilità di A sapendo che B si è verificato: P(A|B) = P(A ∩ B) / P(B). In una tabella si guarda solo la riga (o colonna) di B.</p><p><b>Teorema del prodotto</b>: P(A ∩ B) = P(A) · P(B|A). A e B sono <b>indipendenti</b> se P(A|B) = P(A), cioè P(A ∩ B) = P(A) · P(B).</p><p><b>Probabilità totali</b>: se A e Ā dividono i casi, P(B) = P(A)P(B|A) + P(Ā)P(B|Ā). Nel diagramma ad albero si moltiplica lungo i rami e si sommano i percorsi.</p><p><b>Teorema di Bayes</b>: P(A|B) = P(A)P(B|A) / P(B). Permette di «tornare indietro» dall’effetto alla causa.</p><div class='sn-ex'><span class='sn-ex-t'>Esempio</span><p class='sn-ex-q'>P(B) = 0,4, P(A ∩ B) = 0,1</p><p class='sn-ex-s'>0,1 / 0,4</p><p class='sn-ex-a'>Risposta: P(A|B) = 1/4</p></div><div class='sn-ex'><span class='sn-ex-t'>Esempio</span><p class='sn-ex-q'>Malattia 1%, test positivo 99% malati, 5% sani</p><p class='sn-ex-s'>P(+) = 0,0099 + 0,0495</p><p class='sn-ex-s'>0,0099 / 0,0594</p><p class='sn-ex-a'>Risposta: P(M|+) = 1/6</p></div><h2>Errori frequenti</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Errore frequente</th><th>Che cosa fare</th></tr></thead><tbody><tr><td>P(A|B) = P(B|A)</td><td>Sono diverse: «malato se positivo» non è «positivo se malato».</td></tr><tr><td>Dividere per il totale generale</td><td>Nella condizionata si divide per i casi di B.</td></tr><tr><td>Sommare lungo i rami</td><td>Lungo un ramo si moltiplica; si sommano i rami diversi.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Perché un test molto preciso può dare tanti falsi allarmi?",
+   "a": "Se la malattia è rara, i sani sono moltissimi: anche una piccola percentuale di falsi positivi tra loro supera i veri positivi. Il teorema di Bayes lo mostra."
+  },
+  {
+   "q": "Eventi indipendenti e incompatibili sono la stessa cosa?",
+   "a": "No. Incompatibili: non possono accadere insieme. Indipendenti: il verificarsi di uno non cambia la probabilità dell’altro. Due eventi incompatibili con probabilità positive non sono mai indipendenti."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Probabilità condizionata",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Fa sport</th><th>Non fa sport</th><th>Totale</th></tr></thead><tbody><tr><td>Maschi</td><td>29</td><td>15</td><td>44</td></tr><tr><td>Femmine</td><td>5</td><td>33</td><td>38</td></tr><tr><td>Totale</td><td>34</td><td>48</td><td>82</td></tr></tbody></table></div>Si sceglie a caso una persona che fa sport. Qual è la probabilità che sia tra i «Maschi»?",
+     "c": [
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>34</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>44</span></span>",
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>41</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>82</span></span>"
+     ],
+     "a": 0,
+     "e": "Si guarda solo la colonna «Fa sport»: 29 su 34, <b><span class='fr'><span class='fn'>29</span><span class='fd'>34</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Fa sport</th><th>Non fa sport</th><th>Totale</th></tr></thead><tbody><tr><td>Maschi</td><td>8</td><td>29</td><td>37</td></tr><tr><td>Femmine</td><td>14</td><td>19</td><td>33</td></tr><tr><td>Totale</td><td>22</td><td>48</td><td>70</td></tr></tbody></table></div>Si sceglie a caso una persona tra i «Maschi». Qual è la probabilità che faccia sport?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>37</span></span>"
+     ],
+     "a": 3,
+     "e": "Si guarda solo la riga «Maschi»: 8 su 37, <b><span class='fr'><span class='fn'>8</span><span class='fd'>37</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,4 e P(B|A) = 0,2. Calcola P(A ∩ B).",
+     "c": [
+      "0,32",
+      "0,5",
+      "0,6",
+      "0,08"
+     ],
+     "a": 3,
+     "e": "Teorema del prodotto: P(A ∩ B) = P(A) · P(B|A) = <b>0,08</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Liceo</td><td>11</td><td>28</td><td>39</td></tr><tr><td>Istituto tecnico</td><td>5</td><td>30</td><td>35</td></tr><tr><td>Totale</td><td>16</td><td>58</td><td>74</td></tr></tbody></table></div>Si sceglie a caso una persona che usa il bus. Qual è la probabilità che sia tra i «Liceo»?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>74</span></span>",
+      "<span class='fr'><span class='fn'>39</span><span class='fd'>74</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>39</span></span>"
+     ],
+     "a": 0,
+     "e": "Si guarda solo la colonna «Usa il bus»: 11 su 16, <b><span class='fr'><span class='fn'>11</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Maschi</td><td>40</td><td>26</td><td>66</td></tr><tr><td>Femmine</td><td>21</td><td>29</td><td>50</td></tr><tr><td>Totale</td><td>61</td><td>55</td><td>116</td></tr></tbody></table></div>Si sceglie a caso una persona tra i «Maschi». Qual è la probabilità che usi il bus?",
+     "c": [
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>61</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>61</span><span class='fd'>116</span></span>"
+     ],
+     "a": 0,
+     "e": "Si guarda solo la riga «Maschi»: 40 su 66, <b><span class='fr'><span class='fn'>20</span><span class='fd'>33</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Liceo</td><td>33</td><td>19</td><td>52</td></tr><tr><td>Istituto tecnico</td><td>7</td><td>39</td><td>46</td></tr><tr><td>Totale</td><td>40</td><td>58</td><td>98</td></tr></tbody></table></div>Si sceglie a caso una persona che usa il bus. Qual è la probabilità che sia tra i «Liceo»?",
+     "c": [
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>98</span></span>",
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>52</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>49</span></span>"
+     ],
+     "a": 1,
+     "e": "Si guarda solo la colonna «Usa il bus»: 33 su 40, <b><span class='fr'><span class='fn'>33</span><span class='fd'>40</span></span></b>."
+    },
+    {
+     "q": "Si sa che P(B) = 0,7 e P(A ∩ B) = 0,5. Calcola P(A|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A|B) = P(A ∩ B) / P(B) = 0,5 / 0,7 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Fa sport</th><th>Non fa sport</th><th>Totale</th></tr></thead><tbody><tr><td>Maschi</td><td>32</td><td>37</td><td>69</td></tr><tr><td>Femmine</td><td>7</td><td>25</td><td>32</td></tr><tr><td>Totale</td><td>39</td><td>62</td><td>101</td></tr></tbody></table></div>Si sceglie a caso una persona tra i «Maschi». Qual è la probabilità che faccia sport?",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>101</span></span>",
+      "<span class='fr'><span class='fn'>39</span><span class='fd'>101</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>39</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>69</span></span>"
+     ],
+     "a": 3,
+     "e": "Si guarda solo la riga «Maschi»: 32 su 69, <b><span class='fr'><span class='fn'>32</span><span class='fd'>69</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,8 e P(B|A) = 0,3. Calcola P(A ∩ B).",
+     "c": [
+      "0,76",
+      "0,24",
+      "0,56",
+      "0,375"
+     ],
+     "a": 1,
+     "e": "Teorema del prodotto: P(A ∩ B) = P(A) · P(B|A) = <b>0,24</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Fa sport</th><th>Non fa sport</th><th>Totale</th></tr></thead><tbody><tr><td>Liceo</td><td>8</td><td>23</td><td>31</td></tr><tr><td>Istituto tecnico</td><td>15</td><td>26</td><td>41</td></tr><tr><td>Totale</td><td>23</td><td>49</td><td>72</td></tr></tbody></table></div>Si sceglie a caso una persona tra i «Liceo». Qual è la probabilità che faccia sport?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>72</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>31</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>23</span></span>"
+     ],
+     "a": 2,
+     "e": "Si guarda solo la riga «Liceo»: 8 su 31, <b><span class='fr'><span class='fn'>8</span><span class='fd'>31</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Maschi</td><td>19</td><td>31</td><td>50</td></tr><tr><td>Femmine</td><td>14</td><td>23</td><td>37</td></tr><tr><td>Totale</td><td>33</td><td>54</td><td>87</td></tr></tbody></table></div>Si sceglie a caso una persona che usa il bus. Qual è la probabilità che sia tra i «Maschi»?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>87</span></span>",
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>87</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>33</span></span>"
+     ],
+     "a": 3,
+     "e": "Si guarda solo la colonna «Usa il bus»: 19 su 33, <b><span class='fr'><span class='fn'>19</span><span class='fd'>33</span></span></b>."
+    },
+    {
+     "q": "Si sa che P(B) = 0,9 e P(A ∩ B) = 0,8. Calcola P(A|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A|B) = P(A ∩ B) / P(B) = 0,8 / 0,9 = <b><span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,5 e P(B|A) = 0,8. Calcola P(A ∩ B).",
+     "c": [
+      "0,4",
+      "0,65",
+      "0,1",
+      "0,6"
+     ],
+     "a": 0,
+     "e": "Teorema del prodotto: P(A ∩ B) = P(A) · P(B|A) = <b>0,4</b>."
+    },
+    {
+     "q": "Si sa che P(B) = 0,4 e P(A ∩ B) = 0,3. Calcola P(A|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A|B) = P(A ∩ B) / P(B) = 0,3 / 0,4 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Si sa che P(B) = 0,5 e P(A ∩ B) = 0,1. Calcola P(A|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A|B) = P(A ∩ B) / P(B) = 0,1 / 0,5 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Si sa che P(B) = 0,7 e P(A ∩ B) = 0,6. Calcola P(A|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A|B) = P(A ∩ B) / P(B) = 0,6 / 0,7 = <b><span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Fa sport</th><th>Non fa sport</th><th>Totale</th></tr></thead><tbody><tr><td>Liceo</td><td>17</td><td>25</td><td>42</td></tr><tr><td>Istituto tecnico</td><td>34</td><td>6</td><td>40</td></tr><tr><td>Totale</td><td>51</td><td>31</td><td>82</td></tr></tbody></table></div>Si sceglie a caso una persona che fa sport. Qual è la probabilità che sia tra i «Liceo»?",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>82</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>42</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>41</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Si guarda solo la colonna «Fa sport»: 17 su 51, <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,6 e P(B|A) = 0,7. Calcola P(A ∩ B).",
+     "c": [
+      "0,28",
+      "0,18",
+      "0,42",
+      "0,58"
+     ],
+     "a": 2,
+     "e": "Teorema del prodotto: P(A ∩ B) = P(A) · P(B|A) = <b>0,42</b>."
+    },
+    {
+     "q": "Si sa che P(B) = 0,4 e P(A ∩ B) = 0,1. Calcola P(A|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "P(A|B) = P(A ∩ B) / P(B) = 0,1 / 0,4 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Fa sport</th><th>Non fa sport</th><th>Totale</th></tr></thead><tbody><tr><td>Maschi</td><td>21</td><td>31</td><td>52</td></tr><tr><td>Femmine</td><td>17</td><td>19</td><td>36</td></tr><tr><td>Totale</td><td>38</td><td>50</td><td>88</td></tr></tbody></table></div>Si sceglie a caso una persona che fa sport. Qual è la probabilità che sia tra i «Maschi»?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>52</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>38</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>88</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>22</span></span>"
+     ],
+     "a": 1,
+     "e": "Si guarda solo la colonna «Fa sport»: 21 su 38, <b><span class='fr'><span class='fn'>21</span><span class='fd'>38</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Eventi indipendenti ed estrazioni",
+   "items": [
+    {
+     "q": "Un’urna contiene 5 palline rosse e 7 bianche. Si estraggono due palline senza reimmissione, senza guardare la prima. Qual è la probabilità che la seconda sia rossa?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>"
+     ],
+     "a": 3,
+     "e": "Probabilità totali: 5/12 · 4/11 + 7/12 · 5/11 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></b> (come per la prima estrazione)."
+    },
+    {
+     "q": "Un’urna contiene 7 palline rosse e 3 bianche. Si estraggono due palline senza reimmissione. Qual è la probabilità che siano di colori diversi?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "Due casi: (R, B) oppure (B, R): 7/10 · 3/9 + 3/10 · 7/9 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Un’urna contiene 2 palline rosse e 3 bianche. Si estraggono due palline senza reimmissione. Qual è la probabilità che siano entrambe rosse?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "P(R<sub>1</sub>) · P(R<sub>2</sub>|R<sub>1</sub>) = 2/5 · 1/4 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Un’urna contiene 6 palline rosse e 7 bianche. Si estraggono due palline senza reimmissione. Qual è la probabilità che siano di colori diversi?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>84</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Due casi: (R, B) oppure (B, R): 6/13 · 7/12 + 7/13 · 6/12 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "Un’urna contiene 4 palline rosse e 6 bianche. Si estraggono due palline senza reimmissione, senza guardare la prima. Qual è la probabilità che la seconda sia rossa?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Probabilità totali: 4/10 · 3/9 + 6/10 · 4/9 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b> (come per la prima estrazione)."
+    },
+    {
+     "q": "P(A) = 0,2, P(B) = 0,8, P(A ∩ B) = 0,15. Gli eventi A e B sono indipendenti?",
+     "c": [
+      "no",
+      "sì",
+      "sono incompatibili",
+      "non si può stabilire"
+     ],
+     "a": 0,
+     "e": "Indipendenti se P(A ∩ B) = P(A) · P(B) = 0,16: è diverso, quindi <b>no</b>."
+    },
+    {
+     "q": "P(A) = 0,5, P(B) = 0,2, P(A ∩ B) = 0,11. Gli eventi A e B sono indipendenti?",
+     "c": [
+      "non si può stabilire",
+      "sono incompatibili",
+      "no",
+      "sì"
+     ],
+     "a": 2,
+     "e": "Indipendenti se P(A ∩ B) = P(A) · P(B) = 0,1: è diverso, quindi <b>no</b>."
+    },
+    {
+     "q": "Un’urna contiene 7 palline rosse e 6 bianche. Si estraggono due palline senza reimmissione, senza guardare la prima. Qual è la probabilità che la seconda sia rossa?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>"
+     ],
+     "a": 1,
+     "e": "Probabilità totali: 7/13 · 6/12 + 6/13 · 7/12 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span></b> (come per la prima estrazione)."
+    },
+    {
+     "q": "Un’urna contiene 3 palline rosse e 5 bianche. Si estraggono due palline senza reimmissione. Qual è la probabilità che siano di colori diversi?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Due casi: (R, B) oppure (B, R): 3/8 · 5/7 + 5/8 · 3/7 = <b><span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "Un’urna contiene 6 palline rosse e 7 bianche. Si estraggono due palline senza reimmissione. Qual è la probabilità che siano entrambe rosse?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>36</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>30</span><span class='fd'>169</span></span>"
+     ],
+     "a": 2,
+     "e": "P(R<sub>1</sub>) · P(R<sub>2</sub>|R<sub>1</sub>) = 6/13 · 5/12 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>26</span></span></b>."
+    },
+    {
+     "q": "Un’urna contiene 4 palline rosse e 2 bianche. Si estraggono due palline senza reimmissione. Qual è la probabilità che siano di colori diversi?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "Due casi: (R, B) oppure (B, R): 4/6 · 2/5 + 2/6 · 4/5 = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,2, P(B) = 0,9, P(A ∩ B) = 0,19. Gli eventi A e B sono indipendenti?",
+     "c": [
+      "sì",
+      "sono incompatibili",
+      "no",
+      "non si può stabilire"
+     ],
+     "a": 2,
+     "e": "Indipendenti se P(A ∩ B) = P(A) · P(B) = 0,18: è diverso, quindi <b>no</b>."
+    },
+    {
+     "q": "P(A) = 0,1, P(B) = 0,4, P(A ∩ B) = 0,04. Gli eventi A e B sono indipendenti?",
+     "c": [
+      "sì",
+      "no",
+      "non si può stabilire",
+      "sono incompatibili"
+     ],
+     "a": 0,
+     "e": "Indipendenti se P(A ∩ B) = P(A) · P(B) = 0,04: è uguale, quindi <b>sì</b>."
+    },
+    {
+     "q": "Un’urna contiene 6 palline rosse e 5 bianche. Si estraggono due palline senza reimmissione, senza guardare la prima. Qual è la probabilità che la seconda sia rossa?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>"
+     ],
+     "a": 3,
+     "e": "Probabilità totali: 6/11 · 5/10 + 5/11 · 6/10 = <b><span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span></b> (come per la prima estrazione)."
+    },
+    {
+     "q": "P(A) = 0,6, P(B) = 0,1, P(A ∩ B) = 0,07. Gli eventi A e B sono indipendenti?",
+     "c": [
+      "non si può stabilire",
+      "sì",
+      "no",
+      "sono incompatibili"
+     ],
+     "a": 2,
+     "e": "Indipendenti se P(A ∩ B) = P(A) · P(B) = 0,06: è diverso, quindi <b>no</b>."
+    },
+    {
+     "q": "P(A) = 0,8, P(B) = 0,5, P(A ∩ B) = 0,41. Gli eventi A e B sono indipendenti?",
+     "c": [
+      "non si può stabilire",
+      "no",
+      "sì",
+      "sono incompatibili"
+     ],
+     "a": 1,
+     "e": "Indipendenti se P(A ∩ B) = P(A) · P(B) = 0,4: è diverso, quindi <b>no</b>."
+    },
+    {
+     "q": "Un’urna contiene 6 palline rosse e 4 bianche. Si estraggono due palline senza reimmissione, senza guardare la prima. Qual è la probabilità che la seconda sia rossa?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Probabilità totali: 6/10 · 5/9 + 4/10 · 6/9 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b> (come per la prima estrazione)."
+    },
+    {
+     "q": "P(A) = 0,3, P(B) = 0,9, P(A ∩ B) = 0,26. Gli eventi A e B sono indipendenti?",
+     "c": [
+      "sì",
+      "no",
+      "non si può stabilire",
+      "sono incompatibili"
+     ],
+     "a": 1,
+     "e": "Indipendenti se P(A ∩ B) = P(A) · P(B) = 0,27: è diverso, quindi <b>no</b>."
+    },
+    {
+     "q": "P(A) = 0,9, P(B) = 0,6, P(A ∩ B) = 0,54. Gli eventi A e B sono indipendenti?",
+     "c": [
+      "non si può stabilire",
+      "sì",
+      "sono incompatibili",
+      "no"
+     ],
+     "a": 1,
+     "e": "Indipendenti se P(A ∩ B) = P(A) · P(B) = 0,54: è uguale, quindi <b>sì</b>."
+    },
+    {
+     "q": "Un’urna contiene 3 palline rosse e 5 bianche. Si estraggono due palline senza reimmissione, senza guardare la prima. Qual è la probabilità che la seconda sia rossa?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>"
+     ],
+     "a": 0,
+     "e": "Probabilità totali: 3/8 · 2/7 + 5/8 · 3/7 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b> (come per la prima estrazione)."
+    }
+   ]
+  },
+  {
+   "title": "Tabelle a doppia entrata",
+   "items": [
+    {
+     "q": "Si sa che P(B) = 0,7 e P(A ∩ B) = 0,1. Calcola P(A|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A|B) = P(A ∩ B) / P(B) = 0,1 / 0,7 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Fa sport</th><th>Non fa sport</th><th>Totale</th></tr></thead><tbody><tr><td>Maschi</td><td>16</td><td>40</td><td>56</td></tr><tr><td>Femmine</td><td>16</td><td>37</td><td>53</td></tr><tr><td>Totale</td><td>32</td><td>77</td><td>109</td></tr></tbody></table></div>Si sceglie a caso una persona che fa sport. Qual è la probabilità che sia tra i «Maschi»?",
+     "c": [
+      "<span class='fr'><span class='fn'>56</span><span class='fd'>109</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>109</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "Si guarda solo la colonna «Fa sport»: 16 su 32, <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Si sa che P(B) = 0,5 e P(A ∩ B) = 0,4. Calcola P(A|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "P(A|B) = P(A ∩ B) / P(B) = 0,4 / 0,5 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,9 e P(B|A) = 0,9. Calcola P(A ∩ B).",
+     "c": [
+      "0,19",
+      "0,9",
+      "0,81",
+      "0,09"
+     ],
+     "a": 2,
+     "e": "Teorema del prodotto: P(A ∩ B) = P(A) · P(B|A) = <b>0,81</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Liceo</td><td>5</td><td>18</td><td>23</td></tr><tr><td>Istituto tecnico</td><td>36</td><td>20</td><td>56</td></tr><tr><td>Totale</td><td>41</td><td>38</td><td>79</td></tr></tbody></table></div>Si sceglie a caso una persona che usa il bus. Qual è la probabilità che sia tra i «Liceo»?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>23</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>41</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>79</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>79</span></span>"
+     ],
+     "a": 1,
+     "e": "Si guarda solo la colonna «Usa il bus»: 5 su 41, <b><span class='fr'><span class='fn'>5</span><span class='fd'>41</span></span></b>."
+    },
+    {
+     "q": "Si sa che P(B) = 0,3 e P(A ∩ B) = 0,1. Calcola P(A|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A|B) = P(A ∩ B) / P(B) = 0,1 / 0,3 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Liceo</td><td>30</td><td>30</td><td>60</td></tr><tr><td>Istituto tecnico</td><td>13</td><td>36</td><td>49</td></tr><tr><td>Totale</td><td>43</td><td>66</td><td>109</td></tr></tbody></table></div>Si sceglie a caso una persona tra i «Liceo». Qual è la probabilità che usi il bus?",
+     "c": [
+      "<span class='fr'><span class='fn'>30</span><span class='fd'>109</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>109</span></span>",
+      "<span class='fr'><span class='fn'>30</span><span class='fd'>43</span></span>"
+     ],
+     "a": 1,
+     "e": "Si guarda solo la riga «Liceo»: 30 su 60, <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Maschi</td><td>23</td><td>19</td><td>42</td></tr><tr><td>Femmine</td><td>13</td><td>32</td><td>45</td></tr><tr><td>Totale</td><td>36</td><td>51</td><td>87</td></tr></tbody></table></div>Si sceglie a caso una persona tra i «Maschi». Qual è la probabilità che usi il bus?",
+     "c": [
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>42</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>87</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>29</span></span>"
+     ],
+     "a": 0,
+     "e": "Si guarda solo la riga «Maschi»: 23 su 42, <b><span class='fr'><span class='fn'>23</span><span class='fd'>42</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Liceo</td><td>23</td><td>38</td><td>61</td></tr><tr><td>Istituto tecnico</td><td>20</td><td>13</td><td>33</td></tr><tr><td>Totale</td><td>43</td><td>51</td><td>94</td></tr></tbody></table></div>Si sceglie a caso una persona che usa il bus. Qual è la probabilità che sia tra i «Liceo»?",
+     "c": [
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>61</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>43</span></span>",
+      "<span class='fr'><span class='fn'>61</span><span class='fd'>94</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>94</span></span>"
+     ],
+     "a": 1,
+     "e": "Si guarda solo la colonna «Usa il bus»: 23 su 43, <b><span class='fr'><span class='fn'>23</span><span class='fd'>43</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Liceo</td><td>5</td><td>7</td><td>12</td></tr><tr><td>Istituto tecnico</td><td>33</td><td>18</td><td>51</td></tr><tr><td>Totale</td><td>38</td><td>25</td><td>63</td></tr></tbody></table></div>Si sceglie a caso una persona tra i «Liceo». Qual è la probabilità che usi il bus?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>38</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>63</span></span>",
+      "<span class='fr'><span class='fn'>38</span><span class='fd'>63</span></span>"
+     ],
+     "a": 1,
+     "e": "Si guarda solo la riga «Liceo»: 5 su 12, <b><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Liceo</td><td>22</td><td>38</td><td>60</td></tr><tr><td>Istituto tecnico</td><td>39</td><td>31</td><td>70</td></tr><tr><td>Totale</td><td>61</td><td>69</td><td>130</td></tr></tbody></table></div>Si sceglie a caso una persona che usa il bus. Qual è la probabilità che sia tra i «Liceo»?",
+     "c": [
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>61</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>65</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span>"
+     ],
+     "a": 0,
+     "e": "Si guarda solo la colonna «Usa il bus»: 22 su 61, <b><span class='fr'><span class='fn'>22</span><span class='fd'>61</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Fa sport</th><th>Non fa sport</th><th>Totale</th></tr></thead><tbody><tr><td>Liceo</td><td>21</td><td>17</td><td>38</td></tr><tr><td>Istituto tecnico</td><td>30</td><td>33</td><td>63</td></tr><tr><td>Totale</td><td>51</td><td>50</td><td>101</td></tr></tbody></table></div>Si sceglie a caso una persona tra i «Liceo». Qual è la probabilità che faccia sport?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>38</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>101</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>101</span></span>"
+     ],
+     "a": 0,
+     "e": "Si guarda solo la riga «Liceo»: 21 su 38, <b><span class='fr'><span class='fn'>21</span><span class='fd'>38</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Fa sport</th><th>Non fa sport</th><th>Totale</th></tr></thead><tbody><tr><td>Liceo</td><td>9</td><td>23</td><td>32</td></tr><tr><td>Istituto tecnico</td><td>28</td><td>22</td><td>50</td></tr><tr><td>Totale</td><td>37</td><td>45</td><td>82</td></tr></tbody></table></div>Si sceglie a caso una persona tra i «Liceo». Qual è la probabilità che faccia sport?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>37</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>82</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>82</span></span>"
+     ],
+     "a": 1,
+     "e": "Si guarda solo la riga «Liceo»: 9 su 32, <b><span class='fr'><span class='fn'>9</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Maschi</td><td>38</td><td>29</td><td>67</td></tr><tr><td>Femmine</td><td>5</td><td>37</td><td>42</td></tr><tr><td>Totale</td><td>43</td><td>66</td><td>109</td></tr></tbody></table></div>Si sceglie a caso una persona che usa il bus. Qual è la probabilità che sia tra i «Maschi»?",
+     "c": [
+      "<span class='fr'><span class='fn'>38</span><span class='fd'>109</span></span>",
+      "<span class='fr'><span class='fn'>38</span><span class='fd'>67</span></span>",
+      "<span class='fr'><span class='fn'>67</span><span class='fd'>109</span></span>",
+      "<span class='fr'><span class='fn'>38</span><span class='fd'>43</span></span>"
+     ],
+     "a": 3,
+     "e": "Si guarda solo la colonna «Usa il bus»: 38 su 43, <b><span class='fr'><span class='fn'>38</span><span class='fd'>43</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,2 e P(B|A) = 0,8. Calcola P(A ∩ B).",
+     "c": [
+      "0,04",
+      "0,84",
+      "0,64",
+      "0,16"
+     ],
+     "a": 3,
+     "e": "Teorema del prodotto: P(A ∩ B) = P(A) · P(B|A) = <b>0,16</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa il bus</th><th>Non usa il bus</th><th>Totale</th></tr></thead><tbody><tr><td>Maschi</td><td>35</td><td>16</td><td>51</td></tr><tr><td>Femmine</td><td>21</td><td>17</td><td>38</td></tr><tr><td>Totale</td><td>56</td><td>33</td><td>89</td></tr></tbody></table></div>Si sceglie a caso una persona tra i «Maschi». Qual è la probabilità che usi il bus?",
+     "c": [
+      "<span class='fr'><span class='fn'>56</span><span class='fd'>89</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>51</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>89</span></span>"
+     ],
+     "a": 2,
+     "e": "Si guarda solo la riga «Maschi»: 35 su 51, <b><span class='fr'><span class='fn'>35</span><span class='fd'>51</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Fa sport</th><th>Non fa sport</th><th>Totale</th></tr></thead><tbody><tr><td>Maschi</td><td>14</td><td>36</td><td>50</td></tr><tr><td>Femmine</td><td>7</td><td>9</td><td>16</td></tr><tr><td>Totale</td><td>21</td><td>45</td><td>66</td></tr></tbody></table></div>Si sceglie a caso una persona tra i «Maschi». Qual è la probabilità che faccia sport?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "Si guarda solo la riga «Maschi»: 14 su 50, <b><span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Si sa che P(B) = 0,8 e P(A ∩ B) = 0,3. Calcola P(A|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "P(A|B) = P(A ∩ B) / P(B) = 0,3 / 0,8 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Si sa che P(B) = 0,9 e P(A ∩ B) = 0,7. Calcola P(A|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>63</span><span class='fd'>100</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A|B) = P(A ∩ B) / P(B) = 0,7 / 0,9 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,4 e P(B|A) = 0,3. Calcola P(A ∩ B).",
+     "c": [
+      "0,7",
+      "0,75",
+      "0,12",
+      "0,28"
+     ],
+     "a": 2,
+     "e": "Teorema del prodotto: P(A ∩ B) = P(A) · P(B|A) = <b>0,12</b>."
+    }
+   ]
+  },
+  {
+   "title": "Probabilità totali",
+   "items": [
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Si sceglie l’urna A con probabilità 0,6 (altrimenti l’urna Ā). La probabilità di estrarre una pallina bianca (B) è 0,5 dall’urna A e 0,4 dall’altra. Qual è la probabilità di estrarre una pallina bianca?",
+     "c": [
+      "0,45",
+      "0,9",
+      "0,3",
+      "0,46"
+     ],
+     "a": 3,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,6 · 0,5 + 0,4 · 0,4 = <b>0,46</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Una macchina A produce il 30% dei pezzi, la macchina Ā il resto. I pezzi buoni (B) sono l’80% per A e il 30% per Ā. Qual è la probabilità che un pezzo a caso sia buono?",
+     "c": [
+      "0,24",
+      "0,45",
+      "0,55",
+      "0,54"
+     ],
+     "a": 1,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,3 · 0,8 + 0,7 · 0,3 = <b>0,45</b>."
+    },
+    {
+     "q": "Un’urna contiene 3 palline rosse e 7 bianche. Si estraggono due palline senza reimmissione, senza guardare la prima. Qual è la probabilità che la seconda sia rossa?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>"
+     ],
+     "a": 1,
+     "e": "Probabilità totali: 3/10 · 2/9 + 7/10 · 3/9 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b> (come per la prima estrazione)."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Si sceglie l’urna A con probabilità 0,4 (altrimenti l’urna Ā). La probabilità di estrarre una pallina bianca (B) è 0,6 dall’urna A e 0,4 dall’altra. Qual è la probabilità di estrarre una pallina bianca?",
+     "c": [
+      "0,64",
+      "0,5",
+      "0,48",
+      "0,24"
+     ],
+     "a": 2,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,4 · 0,6 + 0,6 · 0,4 = <b>0,48</b>."
+    },
+    {
+     "q": "Un’urna contiene 6 palline rosse e 3 bianche. Si estraggono due palline senza reimmissione. Qual è la probabilità che siano di colori diversi?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "Due casi: (R, B) oppure (B, R): 6/9 · 3/8 + 3/9 · 6/8 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Si sceglie l’urna A con probabilità 0,1 (altrimenti l’urna Ā). La probabilità di estrarre una pallina bianca (B) è 0,7 dall’urna A e 0,4 dall’altra. Qual è la probabilità di estrarre una pallina bianca?",
+     "c": [
+      "0,43",
+      "0,55",
+      "0,07",
+      "0,47"
+     ],
+     "a": 0,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,1 · 0,7 + 0,9 · 0,4 = <b>0,43</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Una macchina A produce il 30% dei pezzi, la macchina Ā il resto. I pezzi buoni (B) sono il 50% per A e il 10% per Ā. Qual è la probabilità che un pezzo a caso sia buono?",
+     "c": [
+      "0,3",
+      "0,6",
+      "0,15",
+      "0,22"
+     ],
+     "a": 3,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,3 · 0,5 + 0,7 · 0,1 = <b>0,22</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Una macchina A produce il 10% dei pezzi, la macchina Ā il resto. I pezzi buoni (B) sono l’80% per A e il 40% per Ā. Qual è la probabilità che un pezzo a caso sia buono?",
+     "c": [
+      "0,48",
+      "0,6",
+      "0,44",
+      "0,08"
+     ],
+     "a": 2,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,1 · 0,8 + 0,9 · 0,4 = <b>0,44</b>."
+    },
+    {
+     "q": "Un’urna contiene 4 palline rosse e 6 bianche. Si estraggono due palline senza reimmissione. Qual è la probabilità che siano entrambe rosse?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "P(R<sub>1</sub>) · P(R<sub>2</sub>|R<sub>1</sub>) = 4/10 · 3/9 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Si sceglie l’urna A con probabilità 0,2 (altrimenti l’urna Ā). La probabilità di estrarre una pallina bianca (B) è 0,6 dall’urna A e 0,2 dall’altra. Qual è la probabilità di estrarre una pallina bianca?",
+     "c": [
+      "0,8",
+      "0,4",
+      "0,28",
+      "0,12"
+     ],
+     "a": 2,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,2 · 0,6 + 0,8 · 0,2 = <b>0,28</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Una macchina A produce il 40% dei pezzi, la macchina Ā il resto. I pezzi buoni (B) sono l’80% per A e il 30% per Ā. Qual è la probabilità che un pezzo a caso sia buono?",
+     "c": [
+      "0,32",
+      "0,5",
+      "0,62",
+      "0,55"
+     ],
+     "a": 1,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,4 · 0,8 + 0,6 · 0,3 = <b>0,5</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Una macchina A produce il 20% dei pezzi, la macchina Ā il resto. I pezzi buoni (B) sono il 90% per A e il 30% per Ā. Qual è la probabilità che un pezzo a caso sia buono?",
+     "c": [
+      "0,42",
+      "0,18",
+      "0,6",
+      "0,48"
+     ],
+     "a": 0,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,2 · 0,9 + 0,8 · 0,3 = <b>0,42</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Si sceglie l’urna A con probabilità 0,4 (altrimenti l’urna Ā). La probabilità di estrarre una pallina bianca (B) è 0,9 dall’urna A e 0,2 dall’altra. Qual è la probabilità di estrarre una pallina bianca?",
+     "c": [
+      "0,48",
+      "0,56",
+      "0,36",
+      "0,55"
+     ],
+     "a": 0,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,4 · 0,9 + 0,6 · 0,2 = <b>0,48</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Una macchina A produce il 60% dei pezzi, la macchina Ā il resto. I pezzi buoni (B) sono l’80% per A e il 30% per Ā. Qual è la probabilità che un pezzo a caso sia buono?",
+     "c": [
+      "0,48",
+      "0,6",
+      "0,55",
+      "0,78"
+     ],
+     "a": 1,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,6 · 0,8 + 0,4 · 0,3 = <b>0,6</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>La probabilità che domani piova (A) è 0,1. Se piove, Luca prende l’autobus (B) con probabilità 0,6; se non piove, con probabilità 0,4. Qual è la probabilità che prenda l’autobus?",
+     "c": [
+      "0,46",
+      "0,06",
+      "0,42",
+      "0,5"
+     ],
+     "a": 2,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,1 · 0,6 + 0,9 · 0,4 = <b>0,42</b>."
+    },
+    {
+     "q": "Un’urna contiene 4 palline rosse e 7 bianche. Si estraggono due palline senza reimmissione. Qual è la probabilità che siano entrambe rosse?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>121</span></span>"
+     ],
+     "a": 0,
+     "e": "P(R<sub>1</sub>) · P(R<sub>2</sub>|R<sub>1</sub>) = 4/11 · 3/10 = <b><span class='fr'><span class='fn'>6</span><span class='fd'>55</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Si sceglie l’urna A con probabilità 0,2 (altrimenti l’urna Ā). La probabilità di estrarre una pallina bianca (B) è 0,6 dall’urna A e 0,1 dall’altra. Qual è la probabilità di estrarre una pallina bianca?",
+     "c": [
+      "0,2",
+      "0,12",
+      "0,7",
+      "0,35"
+     ],
+     "a": 0,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,2 · 0,6 + 0,8 · 0,1 = <b>0,2</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Una macchina A produce il 40% dei pezzi, la macchina Ā il resto. I pezzi buoni (B) sono il 70% per A e il 20% per Ā. Qual è la probabilità che un pezzo a caso sia buono?",
+     "c": [
+      "0,45",
+      "0,28",
+      "0,9",
+      "0,4"
+     ],
+     "a": 3,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,4 · 0,7 + 0,6 · 0,2 = <b>0,4</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Si sceglie l’urna A con probabilità 0,3 (altrimenti l’urna Ā). La probabilità di estrarre una pallina bianca (B) è 0,8 dall’urna A e 0,4 dall’altra. Qual è la probabilità di estrarre una pallina bianca?",
+     "c": [
+      "0,64",
+      "0,6",
+      "0,52",
+      "0,24"
+     ],
+     "a": 2,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,3 · 0,8 + 0,7 · 0,4 = <b>0,52</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Si sceglie l’urna A con probabilità 0,4 (altrimenti l’urna Ā). La probabilità di estrarre una pallina bianca (B) è 0,6 dall’urna A e 0,2 dall’altra. Qual è la probabilità di estrarre una pallina bianca?",
+     "c": [
+      "0,8",
+      "0,36",
+      "0,24",
+      "0,4"
+     ],
+     "a": 1,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,4 · 0,6 + 0,6 · 0,2 = <b>0,36</b>."
+    }
+   ]
+  },
+  {
+   "title": "Teorema di Bayes",
+   "items": [
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Si sceglie l’urna A con probabilità 0,3 (altrimenti l’urna Ā). La probabilità di estrarre una pallina bianca (B) è 0,5 dall’urna A e 0,1 dall’altra. Qual è la probabilità di estrarre una pallina bianca?",
+     "c": [
+      "0,22",
+      "0,6",
+      "0,15",
+      "0,3"
+     ],
+     "a": 0,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,3 · 0,5 + 0,7 · 0,1 = <b>0,22</b>."
+    },
+    {
+     "q": "Una malattia colpisce l’1% della popolazione. Un test è positivo nel 90% dei malati e nel 2% dei sani (falsi positivi). Una persona risulta positiva: qual è la probabilità che sia malata?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "Bayes: P(M|+) = P(M)P(+|M) / P(+) = 0,009 / (0,009 + 0,0198) = <b><span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span></b> (≈ 31,2%): molto meno di 90%!"
+    },
+    {
+     "q": "La macchina A produce il 30% dei pezzi e la macchina B il resto. Sono difettosi il 4% dei pezzi di A e il 4% di quelli di B. Un pezzo è difettoso: qual è la probabilità che venga da A?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>250</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A|D) = P(A)P(D|A) / [P(A)P(D|A) + P(B)P(D|B)] = 0,012 / (0,012 + 0,028) = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "La macchina A produce il 40% dei pezzi e la macchina B il resto. Sono difettosi il 4% dei pezzi di A e il 3% di quelli di B. Un pezzo è difettoso: qual è la probabilità che venga da A?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A|D) = P(A)P(D|A) / [P(A)P(D|A) + P(B)P(D|B)] = 0,016 / (0,016 + 0,018) = <b><span class='fr'><span class='fn'>8</span><span class='fd'>17</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>La probabilità che domani piova (A) è 0,4. Se piove, Luca prende l’autobus (B) con probabilità 0,7; se non piove, con probabilità 0,2. Qual è la probabilità che prenda l’autobus?",
+     "c": [
+      "0,28",
+      "0,45",
+      "0,4",
+      "0,9"
+     ],
+     "a": 2,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,4 · 0,7 + 0,6 · 0,2 = <b>0,4</b>."
+    },
+    {
+     "q": "La macchina A produce il 70% dei pezzi e la macchina B il resto. Sono difettosi il 3% dei pezzi di A e il 5% di quelli di B. Un pezzo è difettoso: qual è la probabilità che venga da A?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>1000</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>100</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A|D) = P(A)P(D|A) / [P(A)P(D|A) + P(B)P(D|B)] = 0,021 / (0,021 + 0,015) = <b><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Una malattia colpisce il 2% della popolazione. Un test è positivo nel 90% dei malati e nel 2% dei sani (falsi positivi). Una persona risulta positiva: qual è la probabilità che sia malata?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>94</span></span>"
+     ],
+     "a": 3,
+     "e": "Bayes: P(M|+) = P(M)P(+|M) / P(+) = 0,018 / (0,018 + 0,0196) = <b><span class='fr'><span class='fn'>45</span><span class='fd'>94</span></span></b> (≈ 47,9%): molto meno di 90%!"
+    },
+    {
+     "q": "Una malattia colpisce il 10% della popolazione. Un test è positivo nel 95% dei malati e nel 10% dei sani (falsi positivi). Una persona risulta positiva: qual è la probabilità che sia malata?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>37</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "Bayes: P(M|+) = P(M)P(+|M) / P(+) = 0,095 / (0,095 + 0,09) = <b><span class='fr'><span class='fn'>19</span><span class='fd'>37</span></span></b> (≈ 51,4%): molto meno di 95%!"
+    },
+    {
+     "q": "La macchina A produce il 40% dei pezzi e la macchina B il resto. Sono difettosi il 3% dei pezzi di A e il 3% di quelli di B. Un pezzo è difettoso: qual è la probabilità che venga da A?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>250</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>100</span></span>"
+     ],
+     "a": 0,
+     "e": "P(A|D) = P(A)P(D|A) / [P(A)P(D|A) + P(B)P(D|B)] = 0,012 / (0,012 + 0,018) = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Una malattia colpisce il 5% della popolazione. Un test è positivo nel 95% dei malati e nel 10% dei sani (falsi positivi). Una persona risulta positiva: qual è la probabilità che sia malata?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>"
+     ],
+     "a": 2,
+     "e": "Bayes: P(M|+) = P(M)P(+|M) / P(+) = 0,0475 / (0,0475 + 0,095) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b> (≈ 33,3%): molto meno di 95%!"
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,3</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,7</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>Si sceglie l’urna A con probabilità 0,1 (altrimenti l’urna Ā). La probabilità di estrarre una pallina bianca (B) è 0,5 dall’urna A e 0,3 dall’altra. Qual è la probabilità di estrarre una pallina bianca?",
+     "c": [
+      "0,32",
+      "0,4",
+      "0,05",
+      "0,8"
+     ],
+     "a": 0,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,1 · 0,5 + 0,9 · 0,3 = <b>0,32</b>."
+    },
+    {
+     "q": "La macchina A produce il 40% dei pezzi e la macchina B il resto. Sono difettosi l’1% dei pezzi di A e il 3% di quelli di B. Un pezzo è difettoso: qual è la probabilità che venga da A?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>250</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A|D) = P(A)P(D|A) / [P(A)P(D|A) + P(B)P(D|B)] = 0,004 / (0,004 + 0,018) = <b><span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,5</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>La probabilità che domani piova (A) è 0,6. Se piove, Luca prende l’autobus (B) con probabilità 0,5; se non piove, con probabilità 0,4. Qual è la probabilità che prenda l’autobus?",
+     "c": [
+      "0,9",
+      "0,45",
+      "0,46",
+      "0,3"
+     ],
+     "a": 2,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,6 · 0,5 + 0,4 · 0,4 = <b>0,46</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,8</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,2</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>La probabilità che domani piova (A) è 0,2. Se piove, Luca prende l’autobus (B) con probabilità 0,8; se non piove, con probabilità 0,4. Qual è la probabilità che prenda l’autobus?",
+     "c": [
+      "0,6",
+      "0,56",
+      "0,48",
+      "0,16"
+     ],
+     "a": 2,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,2 · 0,8 + 0,8 · 0,4 = <b>0,48</b>."
+    },
+    {
+     "q": "Una malattia colpisce il 5% della popolazione. Un test è positivo nel 90% dei malati e nel 5% dei sani (falsi positivi). Una persona risulta positiva: qual è la probabilità che sia malata?",
+     "c": [
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>37</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "Bayes: P(M|+) = P(M)P(+|M) / P(+) = 0,045 / (0,045 + 0,0475) = <b><span class='fr'><span class='fn'>18</span><span class='fd'>37</span></span></b> (≈ 48,6%): molto meno di 90%!"
+    },
+    {
+     "q": "La macchina A produce il 70% dei pezzi e la macchina B il resto. Sono difettosi l’1% dei pezzi di A e l’1% di quelli di B. Un pezzo è difettoso: qual è la probabilità che venga da A?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>1000</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A|D) = P(A)P(D|A) / [P(A)P(D|A) + P(B)P(D|B)] = 0,007 / (0,007 + 0,003) = <b><span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Una malattia colpisce il 2% della popolazione. Un test è positivo nel 99% dei malati e nel 5% dei sani (falsi positivi). Una persona risulta positiva: qual è la probabilità che sia malata?",
+     "c": [
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>344</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>"
+     ],
+     "a": 1,
+     "e": "Bayes: P(M|+) = P(M)P(+|M) / P(+) = 0,0198 / (0,0198 + 0,049) = <b><span class='fr'><span class='fn'>99</span><span class='fd'>344</span></span></b> (≈ 28,8%): molto meno di 99%!"
+    },
+    {
+     "q": "Una malattia colpisce il 5% della popolazione. Un test è positivo nel 90% dei malati e nel 2% dei sani (falsi positivi). Una persona risulta positiva: qual è la probabilità che sia malata?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>64</span></span>"
+     ],
+     "a": 3,
+     "e": "Bayes: P(M|+) = P(M)P(+|M) / P(+) = 0,045 / (0,045 + 0,019) = <b><span class='fr'><span class='fn'>45</span><span class='fd'>64</span></span></b> (≈ 70,3%): molto meno di 90%!"
+    },
+    {
+     "q": "La macchina A produce il 40% dei pezzi e la macchina B il resto. Sono difettosi il 5% dei pezzi di A e l’1% di quelli di B. Un pezzo è difettoso: qual è la probabilità che venga da A?",
+     "c": [
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>"
+     ],
+     "a": 0,
+     "e": "P(A|D) = P(A)P(D|A) / [P(A)P(D|A) + P(B)P(D|B)] = 0,02 / (0,02 + 0,006) = <b><span class='fr'><span class='fn'>10</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 220' width='440' height='220' role='img' aria-label='diagramma ad albero'><g font-family='Arial, Helvetica, sans-serif'><line x1='24.0' y1='110.0' x2='156.0' y2='55.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='74.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,4</text><text x='170.0' y='61.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>A</text><line x1='24.0' y1='110.0' x2='156.0' y2='165.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='93.0' y='157.5' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,6</text><text x='170.0' y='171.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Ā</text><line x1='184.0' y1='55.0' x2='346.0' y2='25.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='34.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='31.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='55.0' x2='346.0' y2='85.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='88.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='91.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text><line x1='184.0' y1='165.0' x2='346.0' y2='135.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='144.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,1</text><text x='360.0' y='141.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='184.0' y1='165.0' x2='346.0' y2='195.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='271.0' y='198.0' font-size='14' font-weight='600' fill='#1f5fa8' text-anchor='middle'>0,9</text><text x='360.0' y='201.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B̄</text></g></svg></div>La probabilità che domani piova (A) è 0,4. Se piove, Luca prende l’autobus (B) con probabilità 0,9; se non piove, con probabilità 0,1. Qual è la probabilità che prenda l’autobus?",
+     "c": [
+      "0,5",
+      "0,46",
+      "0,36",
+      "0,42"
+     ],
+     "a": 3,
+     "e": "Probabilità totali: P(B) = P(A)P(B|A) + P(Ā)P(B|Ā) = 0,4 · 0,9 + 0,6 · 0,1 = <b>0,42</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 11,
+ "updated": "2026-11-23",
+ "country": "it",
+ "subject": "matematica",
+ "grade": "quarta-liceo"
+}

@@ -1,0 +1,1157 @@
+{
+ "slug": "calcolo-combinatorio",
+ "title": "Calcolo combinatorio",
+ "seo_title": "Calcolo combinatorio quarta liceo: schede di matematica con soluzioni",
+ "short_title": "Calcolo combinatorio",
+ "domain": "Dati e previsioni",
+ "standard_code": "Quarta liceo · Dati e previsioni",
+ "standard_url": "https://www.gazzettaufficiale.it/eli/id/2010/12/14/010G0232/sg",
+ "standard_text": "Elementi di calcolo combinatorio: permutazioni, disposizioni, combinazioni, coefficienti binomiali (sintesi degli obiettivi specifici di apprendimento di matematica del liceo scientifico, Indicazioni nazionali, DM 211/2010)",
+ "meta_desc": "Schede di matematica per la quarta liceo sul calcolo combinatorio: fattoriale, permutazioni e anagrammi, disposizioni semplici e con ripetizione, combinazioni, coefficienti binomiali e loro proprietà, problemi. 100 esercizi con soluzioni.",
+ "key_big": "Conta l’ordine? Disposizioni. Non conta? Combinazioni.",
+ "key_sub": "Dₙ,ₖ = n!/(n − k)!, Cₙ,ₖ = n!/(k!(n − k)!).",
+ "body_html": "<h2>Come si fa</h2><p><b>Principio moltiplicativo</b>: se una scelta si fa in m modi e una seconda in n modi, insieme si fanno in m · n modi.</p><p><b>Permutazioni</b> di n oggetti: n! = n · (n − 1) · … · 1. Con oggetti ripetuti (anagrammi) si divide per i fattoriali delle ripetizioni.</p><p><b>Disposizioni</b> (conta l’ordine): semplici D<sub>n,k</sub> = n!/(n − k)!, con ripetizione n<sup>k</sup>. <b>Combinazioni</b> (l’ordine non conta): C<sub>n,k</sub> = n!/(k!(n − k)!).</p><p>Domanda chiave: <b>conta l’ordine?</b> Se sì, disposizioni; se no, combinazioni.</p><div class='sn-ex'><span class='sn-ex-t'>Esempio</span><p class='sn-ex-q'>Podio con 8 atleti</p><p class='sn-ex-s'>Conta l’ordine</p><p class='sn-ex-s'>8 · 7 · 6</p><p class='sn-ex-a'>Risposta: 336</p></div><div class='sn-ex'><span class='sn-ex-t'>Esempio</span><p class='sn-ex-q'>Gruppi di 3 da 8 persone</p><p class='sn-ex-s'>L’ordine non conta</p><p class='sn-ex-s'>336 / 3!</p><p class='sn-ex-a'>Risposta: 56</p></div><h2>Errori frequenti</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Errore frequente</th><th>Che cosa fare</th></tr></thead><tbody><tr><td>Usare D quando l’ordine non conta</td><td>Un gruppo {A, B, C} è uno solo: si divide per k!, cioè si usano le combinazioni.</td></tr><tr><td>Anagrammi di ANNA = 4!</td><td>Le lettere ripetute vanno divise: 4!/(2! · 2!) = 6.</td></tr><tr><td>D<sub>n,k</sub> = n!/k!</td><td>D<sub>n,k</sub> = n!/(n − k)!.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Che differenza c’è tra disposizioni e combinazioni?",
+   "a": "Nelle disposizioni conta l’ordine (podio, password); nelle combinazioni no (gruppi, mani di carte). Ogni combinazione di k elementi corrisponde a k! disposizioni."
+  },
+  {
+   "q": "Perché 0! = 1?",
+   "a": "Per convenzione, così le formule valgono anche quando k = n: c’è un solo modo di ordinare zero oggetti, e C<sub>n,n</sub> = n!/(n! · 0!) = 1."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Fattoriale e permutazioni",
+   "items": [
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola PISA?",
+     "c": [
+      "16",
+      "48",
+      "28",
+      "24"
+     ],
+     "a": 3,
+     "e": "4! (lettere tutte diverse) = <b>24</b>."
+    },
+    {
+     "q": "In quanti modi si possono ordinare 5 libri diversi su uno scaffale?",
+     "c": [
+      "20",
+      "120",
+      "25",
+      "32"
+     ],
+     "a": 1,
+     "e": "Permutazioni di 5 oggetti: P<sub>5</sub> = 5! = <b>120</b>."
+    },
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola PALLA?",
+     "c": [
+      "30",
+      "25",
+      "15",
+      "120"
+     ],
+     "a": 0,
+     "e": "5! / (2! · 2!) = <b>30</b>."
+    },
+    {
+     "q": "Calcola 12! / 9!",
+     "c": [
+      "6",
+      "12",
+      "3",
+      "1320"
+     ],
+     "a": 3,
+     "e": "Si semplifica 9!: restano i fattori da 10 a 12, <b>1320</b>."
+    },
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola MATEMATICA?",
+     "c": [
+      "3 628 800",
+      "100",
+      "75 600",
+      "151 200"
+     ],
+     "a": 3,
+     "e": "10! / (2! · 3! · 2!) = <b>151 200</b>."
+    },
+    {
+     "q": "In quanti modi 8 amici possono sedersi in fila su 8 sedie?",
+     "c": [
+      "256",
+      "64",
+      "40 320",
+      "56"
+     ],
+     "a": 2,
+     "e": "Permutazioni di 8 oggetti: P<sub>8</sub> = 8! = <b>40 320</b>."
+    },
+    {
+     "q": "In quanti modi si possono ordinare 8 libri diversi su uno scaffale?",
+     "c": [
+      "56",
+      "40 320",
+      "64",
+      "256"
+     ],
+     "a": 1,
+     "e": "Permutazioni di 8 oggetti: P<sub>8</sub> = 8! = <b>40 320</b>."
+    },
+    {
+     "q": "Calcola 12! / 10!",
+     "c": [
+      "1452",
+      "2",
+      "132",
+      "12"
+     ],
+     "a": 2,
+     "e": "Si semplifica 10!: restano i fattori da 11 a 12, <b>132</b>."
+    },
+    {
+     "q": "Calcola 6!",
+     "c": [
+      "720",
+      "30",
+      "36",
+      "120"
+     ],
+     "a": 0,
+     "e": "6! = 6 · 5 · 4 · 3 · 2 · 1 = <b>720</b>."
+    },
+    {
+     "q": "Calcola 7! / 5!",
+     "c": [
+      "252",
+      "7",
+      "2",
+      "42"
+     ],
+     "a": 3,
+     "e": "Si semplifica 5!: restano i fattori da 6 a 7, <b>42</b>."
+    },
+    {
+     "q": "Calcola 8! / 6!",
+     "c": [
+      "2",
+      "56",
+      "392",
+      "8"
+     ],
+     "a": 1,
+     "e": "Si semplifica 6!: restano i fattori da 7 a 8, <b>56</b>."
+    },
+    {
+     "q": "Calcola 7!",
+     "c": [
+      "5040",
+      "49",
+      "42",
+      "720"
+     ],
+     "a": 0,
+     "e": "7! = 7 · 6 · 5 · 4 · 3 · 2 · 1 = <b>5040</b>."
+    },
+    {
+     "q": "In quanti modi 7 amici possono sedersi in fila su 7 sedie?",
+     "c": [
+      "5040",
+      "42",
+      "128",
+      "49"
+     ],
+     "a": 0,
+     "e": "Permutazioni di 7 oggetti: P<sub>7</sub> = 7! = <b>5040</b>."
+    },
+    {
+     "q": "In quanti modi 4 amici possono sedersi in fila su 4 sedie?",
+     "c": [
+      "6",
+      "16",
+      "24",
+      "12"
+     ],
+     "a": 2,
+     "e": "Permutazioni di 4 oggetti: P<sub>4</sub> = 4! = <b>24</b>."
+    },
+    {
+     "q": "In quanti modi 5 amici possono sedersi in fila su 5 sedie?",
+     "c": [
+      "32",
+      "120",
+      "25",
+      "20"
+     ],
+     "a": 1,
+     "e": "Permutazioni di 5 oggetti: P<sub>5</sub> = 5! = <b>120</b>."
+    },
+    {
+     "q": "In quanti modi si possono ordinare 4 libri diversi su uno scaffale?",
+     "c": [
+      "16",
+      "6",
+      "12",
+      "24"
+     ],
+     "a": 3,
+     "e": "Permutazioni di 4 oggetti: P<sub>4</sub> = 4! = <b>24</b>."
+    },
+    {
+     "q": "In quanti modi si possono ordinare 6 libri diversi su uno scaffale?",
+     "c": [
+      "30",
+      "720",
+      "64",
+      "36"
+     ],
+     "a": 1,
+     "e": "Permutazioni di 6 oggetti: P<sub>6</sub> = 6! = <b>720</b>."
+    },
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola LECCE?",
+     "c": [
+      "15",
+      "120",
+      "30",
+      "25"
+     ],
+     "a": 2,
+     "e": "5! / (2! · 2!) = <b>30</b>."
+    },
+    {
+     "q": "Calcola 11! / 8!",
+     "c": [
+      "990",
+      "6",
+      "3",
+      "11"
+     ],
+     "a": 0,
+     "e": "Si semplifica 8!: restano i fattori da 9 a 11, <b>990</b>."
+    },
+    {
+     "q": "Calcola 8!",
+     "c": [
+      "64",
+      "5040",
+      "40 320",
+      "56"
+     ],
+     "a": 2,
+     "e": "8! = 8 · 7 · 6 · 5 · 4 · 3 · 2 · 1 = <b>40 320</b>."
+    }
+   ]
+  },
+  {
+   "title": "Disposizioni",
+   "items": [
+    {
+     "q": "Una classe di 13 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "26",
+      "78",
+      "169",
+      "156"
+     ],
+     "a": 3,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>13,2</sub> = 13 · 12 = <b>156</b>."
+    },
+    {
+     "q": "In una gara ci sono 9 atleti. In quanti modi diversi si può formare il podio (1°, 2°, 3°)?",
+     "c": [
+      "27",
+      "729",
+      "84",
+      "504"
+     ],
+     "a": 3,
+     "e": "Conta l’ordine e non ci sono ripetizioni: D<sub>9,3</sub> = 9 · 8 · 7 = <b>504</b>."
+    },
+    {
+     "q": "Si lancia una moneta 10 volte. Quante sono le sequenze possibili di testa e croce?",
+     "c": [
+      "1024",
+      "21",
+      "100",
+      "20"
+     ],
+     "a": 0,
+     "e": "Disposizioni con ripetizione di 2 oggetti a 10 a 10: 2<sup>10</sup> = <b>1024</b>."
+    },
+    {
+     "q": "Una classe di 17 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "34",
+      "136",
+      "272",
+      "289"
+     ],
+     "a": 2,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>17,2</sub> = 17 · 16 = <b>272</b>."
+    },
+    {
+     "q": "In una gara ci sono 5 atleti. In quanti modi diversi si può formare il podio (1°, 2°, 3°)?",
+     "c": [
+      "10",
+      "125",
+      "15",
+      "60"
+     ],
+     "a": 3,
+     "e": "Conta l’ordine e non ci sono ripetizioni: D<sub>5,3</sub> = 5 · 4 · 3 = <b>60</b>."
+    },
+    {
+     "q": "In una gara ci sono 8 atleti. In quanti modi diversi si può formare il podio (1°, 2°, 3°)?",
+     "c": [
+      "512",
+      "24",
+      "336",
+      "56"
+     ],
+     "a": 2,
+     "e": "Conta l’ordine e non ci sono ripetizioni: D<sub>8,3</sub> = 8 · 7 · 6 = <b>336</b>."
+    },
+    {
+     "q": "Quanti codici di 5 cifre (da 0 a 9, anche ripetute) si possono formare?",
+     "c": [
+      "50",
+      "100 000",
+      "252",
+      "30 240"
+     ],
+     "a": 1,
+     "e": "Disposizioni con ripetizione: 10<sup>5</sup> = <b>100 000</b>."
+    },
+    {
+     "q": "Si lancia un dado 3 volte. Quante sono le sequenze possibili dei risultati?",
+     "c": [
+      "729",
+      "18",
+      "216",
+      "120"
+     ],
+     "a": 2,
+     "e": "Disposizioni con ripetizione di 6 oggetti a 3 a 3: 6<sup>3</sup> = <b>216</b>."
+    },
+    {
+     "q": "Una schedina ha 4 partite con 3 risultati possibili (1, X, 2). Quante schedine diverse si possono compilare?",
+     "c": [
+      "12",
+      "13",
+      "81",
+      "64"
+     ],
+     "a": 2,
+     "e": "Disposizioni con ripetizione di 3 oggetti a 4 a 4: 3<sup>4</sup> = <b>81</b>."
+    },
+    {
+     "q": "Una classe di 14 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "196",
+      "28",
+      "91",
+      "182"
+     ],
+     "a": 3,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>14,2</sub> = 14 · 13 = <b>182</b>."
+    },
+    {
+     "q": "In una gara ci sono 11 atleti. In quanti modi diversi si può formare il podio (1°, 2°, 3°)?",
+     "c": [
+      "990",
+      "165",
+      "1331",
+      "33"
+     ],
+     "a": 0,
+     "e": "Conta l’ordine e non ci sono ripetizioni: D<sub>11,3</sub> = 11 · 10 · 9 = <b>990</b>."
+    },
+    {
+     "q": "In una gara ci sono 13 atleti. In quanti modi diversi si può formare il podio (1°, 2°, 3°)?",
+     "c": [
+      "2197",
+      "39",
+      "286",
+      "1716"
+     ],
+     "a": 3,
+     "e": "Conta l’ordine e non ci sono ripetizioni: D<sub>13,3</sub> = 13 · 12 · 11 = <b>1716</b>."
+    },
+    {
+     "q": "Quanti codici di 4 cifre (da 0 a 9, anche ripetute) si possono formare?",
+     "c": [
+      "210",
+      "40",
+      "10 000",
+      "5040"
+     ],
+     "a": 2,
+     "e": "Disposizioni con ripetizione: 10<sup>4</sup> = <b>10 000</b>."
+    },
+    {
+     "q": "Si lancia una moneta 8 volte. Quante sono le sequenze possibili di testa e croce?",
+     "c": [
+      "256",
+      "64",
+      "16",
+      "17"
+     ],
+     "a": 0,
+     "e": "Disposizioni con ripetizione di 2 oggetti a 8 a 8: 2<sup>8</sup> = <b>256</b>."
+    },
+    {
+     "q": "Una classe di 19 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "38",
+      "342",
+      "171",
+      "361"
+     ],
+     "a": 1,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>19,2</sub> = 19 · 18 = <b>342</b>."
+    },
+    {
+     "q": "Una classe di 26 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "325",
+      "650",
+      "52",
+      "676"
+     ],
+     "a": 1,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>26,2</sub> = 26 · 25 = <b>650</b>."
+    },
+    {
+     "q": "Una classe di 25 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "600",
+      "300",
+      "50",
+      "625"
+     ],
+     "a": 0,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>25,2</sub> = 25 · 24 = <b>600</b>."
+    },
+    {
+     "q": "Quanti codici di 3 cifre (da 0 a 9, anche ripetute) si possono formare?",
+     "c": [
+      "120",
+      "1000",
+      "30",
+      "720"
+     ],
+     "a": 1,
+     "e": "Disposizioni con ripetizione: 10<sup>3</sup> = <b>1000</b>."
+    },
+    {
+     "q": "Una classe di 8 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "56",
+      "16",
+      "64",
+      "28"
+     ],
+     "a": 0,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>8,2</sub> = 8 · 7 = <b>56</b>."
+    },
+    {
+     "q": "Una classe di 28 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "56",
+      "756",
+      "378",
+      "784"
+     ],
+     "a": 1,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>28,2</sub> = 28 · 27 = <b>756</b>."
+    }
+   ]
+  },
+  {
+   "title": "Combinazioni",
+   "items": [
+    {
+     "q": "Una pizzeria offre 10 ingredienti. Quante pizze diverse si possono fare con 2 ingredienti diversi?",
+     "c": [
+      "45",
+      "100",
+      "90",
+      "20"
+     ],
+     "a": 0,
+     "e": "Conta solo quali ingredienti, non l’ordine: C<sub>10,2</sub> = <b>45</b>."
+    },
+    {
+     "q": "A una festa ci sono 5 persone e ognuna stringe la mano a tutte le altre una volta. Quante strette di mano ci sono?",
+     "c": [
+      "4",
+      "25",
+      "20",
+      "10"
+     ],
+     "a": 3,
+     "e": "Ogni stretta è una coppia non ordinata: C<sub>5,2</sub> = 5 · 4 / 2 = <b>10</b>."
+    },
+    {
+     "q": "Calcola il coefficiente binomiale (12 su 6), cioè C<sub>12,6</sub>.",
+     "c": [
+      "72",
+      "665 280",
+      "924",
+      "792"
+     ],
+     "a": 2,
+     "e": "C<sub>n,k</sub> = n!/(k!(n − k)!) = 12!/(6! · 6!) = <b>924</b>."
+    },
+    {
+     "q": "A una festa ci sono 11 persone e ognuna stringe la mano a tutte le altre una volta. Quante strette di mano ci sono?",
+     "c": [
+      "121",
+      "55",
+      "10",
+      "110"
+     ],
+     "a": 1,
+     "e": "Ogni stretta è una coppia non ordinata: C<sub>11,2</sub> = 11 · 10 / 2 = <b>55</b>."
+    },
+    {
+     "q": "Da una classe di 10 studenti si sceglie un gruppo di 3 per un progetto. Quanti gruppi diversi si possono formare?",
+     "c": [
+      "720",
+      "30",
+      "120",
+      "1000"
+     ],
+     "a": 2,
+     "e": "L’ordine non conta: combinazioni C<sub>10,3</sub> = <b>120</b>."
+    },
+    {
+     "q": "Una pizzeria offre 9 ingredienti. Quante pizze diverse si possono fare con 4 ingredienti diversi?",
+     "c": [
+      "3024",
+      "6561",
+      "126",
+      "36"
+     ],
+     "a": 2,
+     "e": "Conta solo quali ingredienti, non l’ordine: C<sub>9,4</sub> = <b>126</b>."
+    },
+    {
+     "q": "A una festa ci sono 20 persone e ognuna stringe la mano a tutte le altre una volta. Quante strette di mano ci sono?",
+     "c": [
+      "380",
+      "400",
+      "190",
+      "19"
+     ],
+     "a": 2,
+     "e": "Ogni stretta è una coppia non ordinata: C<sub>20,2</sub> = 20 · 19 / 2 = <b>190</b>."
+    },
+    {
+     "q": "A una festa ci sono 6 persone e ognuna stringe la mano a tutte le altre una volta. Quante strette di mano ci sono?",
+     "c": [
+      "36",
+      "30",
+      "5",
+      "15"
+     ],
+     "a": 3,
+     "e": "Ogni stretta è una coppia non ordinata: C<sub>6,2</sub> = 6 · 5 / 2 = <b>15</b>."
+    },
+    {
+     "q": "A una festa ci sono 14 persone e ognuna stringe la mano a tutte le altre una volta. Quante strette di mano ci sono?",
+     "c": [
+      "91",
+      "13",
+      "196",
+      "182"
+     ],
+     "a": 0,
+     "e": "Ogni stretta è una coppia non ordinata: C<sub>14,2</sub> = 14 · 13 / 2 = <b>91</b>."
+    },
+    {
+     "q": "Una pizzeria offre 7 ingredienti. Quante pizze diverse si possono fare con 2 ingredienti diversi?",
+     "c": [
+      "21",
+      "14",
+      "49",
+      "42"
+     ],
+     "a": 0,
+     "e": "Conta solo quali ingredienti, non l’ordine: C<sub>7,2</sub> = <b>21</b>."
+    },
+    {
+     "q": "Calcola il coefficiente binomiale (7 su 4), cioè C<sub>7,4</sub>.",
+     "c": [
+      "210",
+      "840",
+      "28",
+      "35"
+     ],
+     "a": 3,
+     "e": "C<sub>n,k</sub> = n!/(k!(n − k)!) = 7!/(4! · 3!) = <b>35</b>."
+    },
+    {
+     "q": "Da una classe di 9 studenti si sceglie un gruppo di 3 per un progetto. Quanti gruppi diversi si possono formare?",
+     "c": [
+      "729",
+      "84",
+      "27",
+      "504"
+     ],
+     "a": 1,
+     "e": "L’ordine non conta: combinazioni C<sub>9,3</sub> = <b>84</b>."
+    },
+    {
+     "q": "Calcola il coefficiente binomiale (8 su 6), cioè C<sub>8,6</sub>.",
+     "c": [
+      "48",
+      "56",
+      "20 160",
+      "28"
+     ],
+     "a": 3,
+     "e": "C<sub>n,k</sub> = n!/(k!(n − k)!) = 8!/(6! · 2!) = <b>28</b>."
+    },
+    {
+     "q": "Nel gioco del lotto si estraggono 5 numeri da 90. Quante sono le cinquine possibili (senza ordine)?",
+     "c": [
+      "5 904 900",
+      "5 273 912 160",
+      "2 555 190",
+      "43 949 268"
+     ],
+     "a": 3,
+     "e": "C<sub>90,5</sub> = 90 · 89 · 88 · 87 · 86 / 5! = <b>43 949 268</b>."
+    },
+    {
+     "q": "Da una classe di 8 studenti si sceglie un gruppo di 3 per un progetto. Quanti gruppi diversi si possono formare?",
+     "c": [
+      "336",
+      "56",
+      "24",
+      "512"
+     ],
+     "a": 1,
+     "e": "L’ordine non conta: combinazioni C<sub>8,3</sub> = <b>56</b>."
+    },
+    {
+     "q": "Calcola il coefficiente binomiale (7 su 5), cioè C<sub>7,5</sub>.",
+     "c": [
+      "42",
+      "21",
+      "35",
+      "2520"
+     ],
+     "a": 1,
+     "e": "C<sub>n,k</sub> = n!/(k!(n − k)!) = 7!/(5! · 2!) = <b>21</b>."
+    },
+    {
+     "q": "Calcola il coefficiente binomiale (9 su 2), cioè C<sub>9,2</sub>.",
+     "c": [
+      "36",
+      "181 440",
+      "72",
+      "9"
+     ],
+     "a": 0,
+     "e": "C<sub>n,k</sub> = n!/(k!(n − k)!) = 9!/(2! · 7!) = <b>36</b>."
+    },
+    {
+     "q": "A una festa ci sono 18 persone e ognuna stringe la mano a tutte le altre una volta. Quante strette di mano ci sono?",
+     "c": [
+      "306",
+      "153",
+      "17",
+      "324"
+     ],
+     "a": 1,
+     "e": "Ogni stretta è una coppia non ordinata: C<sub>18,2</sub> = 18 · 17 / 2 = <b>153</b>."
+    },
+    {
+     "q": "Calcola il coefficiente binomiale (11 su 2), cioè C<sub>11,2</sub>.",
+     "c": [
+      "55",
+      "110",
+      "11",
+      "19 958 400"
+     ],
+     "a": 0,
+     "e": "C<sub>n,k</sub> = n!/(k!(n − k)!) = 11!/(2! · 9!) = <b>55</b>."
+    },
+    {
+     "q": "A una festa ci sono 19 persone e ognuna stringe la mano a tutte le altre una volta. Quante strette di mano ci sono?",
+     "c": [
+      "342",
+      "361",
+      "171",
+      "18"
+     ],
+     "a": 2,
+     "e": "Ogni stretta è una coppia non ordinata: C<sub>19,2</sub> = 19 · 18 / 2 = <b>171</b>."
+    }
+   ]
+  },
+  {
+   "title": "Anagrammi e proprietà",
+   "items": [
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola OTTO?",
+     "c": [
+      "3",
+      "24",
+      "6",
+      "16"
+     ],
+     "a": 2,
+     "e": "4! / (2! · 2!) = <b>6</b>."
+    },
+    {
+     "q": "Quale coefficiente binomiale è uguale a C<sub>19,16</sub>?",
+     "c": [
+      "C<sub>19,3</sub>",
+      "C<sub>3,16</sub>",
+      "C<sub>35,16</sub>",
+      "C<sub>19,17</sub>"
+     ],
+     "a": 0,
+     "e": "Scegliere 16 elementi equivale a scegliere i 3 che restano fuori: C<sub>n,k</sub> = C<sub>n,n−k</sub>, quindi <b>C<sub>19,3</sub></b>."
+    },
+    {
+     "q": "In quanti modi si possono ordinare 7 libri diversi su uno scaffale?",
+     "c": [
+      "5040",
+      "128",
+      "42",
+      "49"
+     ],
+     "a": 0,
+     "e": "Permutazioni di 7 oggetti: P<sub>7</sub> = 7! = <b>5040</b>."
+    },
+    {
+     "q": "Quale coefficiente binomiale è uguale a C<sub>16,8</sub>?",
+     "c": [
+      "C<sub>24,8</sub>",
+      "C<sub>16,8</sub>",
+      "C<sub>8,8</sub>",
+      "C<sub>16,9</sub>"
+     ],
+     "a": 1,
+     "e": "Scegliere 8 elementi equivale a scegliere i 8 che restano fuori: C<sub>n,k</sub> = C<sub>n,n−k</sub>, quindi <b>C<sub>16,8</sub></b>."
+    },
+    {
+     "q": "Quale coefficiente binomiale è uguale a C<sub>18,8</sub>?",
+     "c": [
+      "C<sub>18,9</sub>",
+      "C<sub>18,10</sub>",
+      "C<sub>10,8</sub>",
+      "C<sub>26,8</sub>"
+     ],
+     "a": 1,
+     "e": "Scegliere 8 elementi equivale a scegliere i 10 che restano fuori: C<sub>n,k</sub> = C<sub>n,n−k</sub>, quindi <b>C<sub>18,10</sub></b>."
+    },
+    {
+     "q": "In quanti modi 6 amici possono sedersi in fila su 6 sedie?",
+     "c": [
+      "36",
+      "30",
+      "720",
+      "64"
+     ],
+     "a": 2,
+     "e": "Permutazioni di 6 oggetti: P<sub>6</sub> = 6! = <b>720</b>."
+    },
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola ANNA?",
+     "c": [
+      "6",
+      "16",
+      "3",
+      "24"
+     ],
+     "a": 0,
+     "e": "4! / (2! · 2!) = <b>6</b>."
+    },
+    {
+     "q": "Quale coefficiente binomiale è uguale a C<sub>18,4</sub>?",
+     "c": [
+      "C<sub>14,4</sub>",
+      "C<sub>18,5</sub>",
+      "C<sub>18,14</sub>",
+      "C<sub>22,4</sub>"
+     ],
+     "a": 2,
+     "e": "Scegliere 4 elementi equivale a scegliere i 14 che restano fuori: C<sub>n,k</sub> = C<sub>n,n−k</sub>, quindi <b>C<sub>18,14</sub></b>."
+    },
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola BOLOGNA?",
+     "c": [
+      "2520",
+      "49",
+      "1260",
+      "5040"
+     ],
+     "a": 0,
+     "e": "7! / (2!) = <b>2520</b>."
+    },
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola ROMA?",
+     "c": [
+      "28",
+      "48",
+      "24",
+      "16"
+     ],
+     "a": 2,
+     "e": "4! (lettere tutte diverse) = <b>24</b>."
+    },
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola GENOVA?",
+     "c": [
+      "726",
+      "1440",
+      "36",
+      "720"
+     ],
+     "a": 3,
+     "e": "6! (lettere tutte diverse) = <b>720</b>."
+    },
+    {
+     "q": "A che cosa è uguale C<sub>14,6</sub> + C<sub>14,7</sub>?",
+     "c": [
+      "C<sub>28,13</sub>",
+      "C<sub>14,8</sub>",
+      "C<sub>15,6</sub>",
+      "C<sub>15,7</sub>"
+     ],
+     "a": 3,
+     "e": "Formula di Stifel (triangolo di Tartaglia): C<sub>n,k</sub> + C<sub>n,k+1</sub> = C<sub>n+1,k+1</sub>: <b>C<sub>15,7</sub></b>."
+    },
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola SASSO?",
+     "c": [
+      "10",
+      "25",
+      "120",
+      "20"
+     ],
+     "a": 3,
+     "e": "5! / (3!) = <b>20</b>."
+    },
+    {
+     "q": "Quale coefficiente binomiale è uguale a C<sub>14,2</sub>?",
+     "c": [
+      "C<sub>14,3</sub>",
+      "C<sub>14,12</sub>",
+      "C<sub>12,2</sub>",
+      "C<sub>16,2</sub>"
+     ],
+     "a": 1,
+     "e": "Scegliere 2 elementi equivale a scegliere i 12 che restano fuori: C<sub>n,k</sub> = C<sub>n,n−k</sub>, quindi <b>C<sub>14,12</sub></b>."
+    },
+    {
+     "q": "Quale coefficiente binomiale è uguale a C<sub>11,7</sub>?",
+     "c": [
+      "C<sub>18,7</sub>",
+      "C<sub>11,4</sub>",
+      "C<sub>11,8</sub>",
+      "C<sub>4,7</sub>"
+     ],
+     "a": 1,
+     "e": "Scegliere 7 elementi equivale a scegliere i 4 che restano fuori: C<sub>n,k</sub> = C<sub>n,n−k</sub>, quindi <b>C<sub>11,4</sub></b>."
+    },
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola BARI?",
+     "c": [
+      "16",
+      "48",
+      "28",
+      "24"
+     ],
+     "a": 3,
+     "e": "4! (lettere tutte diverse) = <b>24</b>."
+    },
+    {
+     "q": "A che cosa è uguale C<sub>20,7</sub> + C<sub>20,8</sub>?",
+     "c": [
+      "C<sub>21,8</sub>",
+      "C<sub>40,15</sub>",
+      "C<sub>20,9</sub>",
+      "C<sub>21,7</sub>"
+     ],
+     "a": 0,
+     "e": "Formula di Stifel (triangolo di Tartaglia): C<sub>n,k</sub> + C<sub>n,k+1</sub> = C<sub>n+1,k+1</sub>: <b>C<sub>21,8</sub></b>."
+    },
+    {
+     "q": "Quale coefficiente binomiale è uguale a C<sub>11,2</sub>?",
+     "c": [
+      "C<sub>13,2</sub>",
+      "C<sub>11,9</sub>",
+      "C<sub>11,3</sub>",
+      "C<sub>9,2</sub>"
+     ],
+     "a": 1,
+     "e": "Scegliere 2 elementi equivale a scegliere i 9 che restano fuori: C<sub>n,k</sub> = C<sub>n,n−k</sub>, quindi <b>C<sub>11,9</sub></b>."
+    },
+    {
+     "q": "Quanti anagrammi (anche senza senso) si possono formare con le lettere della parola NAPOLI?",
+     "c": [
+      "36",
+      "726",
+      "1440",
+      "720"
+     ],
+     "a": 3,
+     "e": "6! (lettere tutte diverse) = <b>720</b>."
+    },
+    {
+     "q": "Quanti sottoinsiemi ha un insieme di 9 elementi (somma di tutti i C<sub>9,k</sub>)?",
+     "c": [
+      "362 880",
+      "18",
+      "512",
+      "81"
+     ],
+     "a": 2,
+     "e": "C<sub>n,0</sub> + C<sub>n,1</sub> + … + C<sub>n,n</sub> = 2<sup>n</sup> = <b>512</b>."
+    }
+   ]
+  },
+  {
+   "title": "Problemi misti",
+   "items": [
+    {
+     "q": "In una gara ci sono 12 atleti. In quanti modi diversi si può formare il podio (1°, 2°, 3°)?",
+     "c": [
+      "220",
+      "1728",
+      "36",
+      "1320"
+     ],
+     "a": 3,
+     "e": "Conta l’ordine e non ci sono ripetizioni: D<sub>12,3</sub> = 12 · 11 · 10 = <b>1320</b>."
+    },
+    {
+     "q": "Quale coefficiente binomiale è uguale a C<sub>14,6</sub>?",
+     "c": [
+      "C<sub>20,6</sub>",
+      "C<sub>14,8</sub>",
+      "C<sub>14,7</sub>",
+      "C<sub>8,6</sub>"
+     ],
+     "a": 1,
+     "e": "Scegliere 6 elementi equivale a scegliere i 8 che restano fuori: C<sub>n,k</sub> = C<sub>n,n−k</sub>, quindi <b>C<sub>14,8</sub></b>."
+    },
+    {
+     "q": "Una pizzeria offre 6 ingredienti. Quante pizze diverse si possono fare con 3 ingredienti diversi?",
+     "c": [
+      "120",
+      "20",
+      "216",
+      "18"
+     ],
+     "a": 1,
+     "e": "Conta solo quali ingredienti, non l’ordine: C<sub>6,3</sub> = <b>20</b>."
+    },
+    {
+     "q": "Calcola il coefficiente binomiale (8 su 4), cioè C<sub>8,4</sub>.",
+     "c": [
+      "56",
+      "32",
+      "70",
+      "1680"
+     ],
+     "a": 2,
+     "e": "C<sub>n,k</sub> = n!/(k!(n − k)!) = 8!/(4! · 4!) = <b>70</b>."
+    },
+    {
+     "q": "Calcola il coefficiente binomiale (11 su 4), cioè C<sub>11,4</sub>.",
+     "c": [
+      "1 663 200",
+      "165",
+      "7920",
+      "330"
+     ],
+     "a": 3,
+     "e": "C<sub>n,k</sub> = n!/(k!(n − k)!) = 11!/(4! · 7!) = <b>330</b>."
+    },
+    {
+     "q": "A che cosa è uguale C<sub>17,5</sub> + C<sub>17,6</sub>?",
+     "c": [
+      "C<sub>18,5</sub>",
+      "C<sub>17,7</sub>",
+      "C<sub>18,6</sub>",
+      "C<sub>34,11</sub>"
+     ],
+     "a": 2,
+     "e": "Formula di Stifel (triangolo di Tartaglia): C<sub>n,k</sub> + C<sub>n,k+1</sub> = C<sub>n+1,k+1</sub>: <b>C<sub>18,6</sub></b>."
+    },
+    {
+     "q": "A che cosa è uguale C<sub>6,2</sub> + C<sub>6,3</sub>?",
+     "c": [
+      "C<sub>7,3</sub>",
+      "C<sub>6,4</sub>",
+      "C<sub>12,5</sub>",
+      "C<sub>7,2</sub>"
+     ],
+     "a": 0,
+     "e": "Formula di Stifel (triangolo di Tartaglia): C<sub>n,k</sub> + C<sub>n,k+1</sub> = C<sub>n+1,k+1</sub>: <b>C<sub>7,3</sub></b>."
+    },
+    {
+     "q": "In una gara ci sono 6 atleti. In quanti modi diversi si può formare il podio (1°, 2°, 3°)?",
+     "c": [
+      "18",
+      "216",
+      "20",
+      "120"
+     ],
+     "a": 3,
+     "e": "Conta l’ordine e non ci sono ripetizioni: D<sub>6,3</sub> = 6 · 5 · 4 = <b>120</b>."
+    },
+    {
+     "q": "Da una classe di 9 studenti si sceglie un gruppo di 4 per un progetto. Quanti gruppi diversi si possono formare?",
+     "c": [
+      "36",
+      "3024",
+      "6561",
+      "126"
+     ],
+     "a": 3,
+     "e": "L’ordine non conta: combinazioni C<sub>9,4</sub> = <b>126</b>."
+    },
+    {
+     "q": "Una classe di 22 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "44",
+      "231",
+      "462",
+      "484"
+     ],
+     "a": 2,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>22,2</sub> = 22 · 21 = <b>462</b>."
+    },
+    {
+     "q": "A che cosa è uguale C<sub>16,8</sub> + C<sub>16,9</sub>?",
+     "c": [
+      "C<sub>16,10</sub>",
+      "C<sub>32,17</sub>",
+      "C<sub>17,9</sub>",
+      "C<sub>17,8</sub>"
+     ],
+     "a": 2,
+     "e": "Formula di Stifel (triangolo di Tartaglia): C<sub>n,k</sub> + C<sub>n,k+1</sub> = C<sub>n+1,k+1</sub>: <b>C<sub>17,9</sub></b>."
+    },
+    {
+     "q": "Da una classe di 15 studenti si sceglie un gruppo di 3 per un progetto. Quanti gruppi diversi si possono formare?",
+     "c": [
+      "455",
+      "45",
+      "3375",
+      "2730"
+     ],
+     "a": 0,
+     "e": "L’ordine non conta: combinazioni C<sub>15,3</sub> = <b>455</b>."
+    },
+    {
+     "q": "Una classe di 9 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "81",
+      "72",
+      "18",
+      "36"
+     ],
+     "a": 1,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>9,2</sub> = 9 · 8 = <b>72</b>."
+    },
+    {
+     "q": "A una festa ci sono 8 persone e ognuna stringe la mano a tutte le altre una volta. Quante strette di mano ci sono?",
+     "c": [
+      "7",
+      "28",
+      "56",
+      "64"
+     ],
+     "a": 1,
+     "e": "Ogni stretta è una coppia non ordinata: C<sub>8,2</sub> = 8 · 7 / 2 = <b>28</b>."
+    },
+    {
+     "q": "A una festa ci sono 15 persone e ognuna stringe la mano a tutte le altre una volta. Quante strette di mano ci sono?",
+     "c": [
+      "105",
+      "225",
+      "14",
+      "210"
+     ],
+     "a": 0,
+     "e": "Ogni stretta è una coppia non ordinata: C<sub>15,2</sub> = 15 · 14 / 2 = <b>105</b>."
+    },
+    {
+     "q": "Una classe di 24 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "576",
+      "552",
+      "48",
+      "276"
+     ],
+     "a": 1,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>24,2</sub> = 24 · 23 = <b>552</b>."
+    },
+    {
+     "q": "Una classe di 7 studenti deve eleggere un rappresentante e un vice. In quanti modi?",
+     "c": [
+      "14",
+      "49",
+      "42",
+      "21"
+     ],
+     "a": 2,
+     "e": "Due ruoli diversi, quindi conta l’ordine: D<sub>7,2</sub> = 7 · 6 = <b>42</b>."
+    },
+    {
+     "q": "In una gara ci sono 10 atleti. In quanti modi diversi si può formare il podio (1°, 2°, 3°)?",
+     "c": [
+      "1000",
+      "120",
+      "30",
+      "720"
+     ],
+     "a": 3,
+     "e": "Conta l’ordine e non ci sono ripetizioni: D<sub>10,3</sub> = 10 · 9 · 8 = <b>720</b>."
+    },
+    {
+     "q": "Calcola il coefficiente binomiale (7 su 2), cioè C<sub>7,2</sub>.",
+     "c": [
+      "21",
+      "42",
+      "7",
+      "2520"
+     ],
+     "a": 0,
+     "e": "C<sub>n,k</sub> = n!/(k!(n − k)!) = 7!/(2! · 5!) = <b>21</b>."
+    },
+    {
+     "q": "In una gara ci sono 7 atleti. In quanti modi diversi si può formare il podio (1°, 2°, 3°)?",
+     "c": [
+      "210",
+      "21",
+      "343",
+      "35"
+     ],
+     "a": 0,
+     "e": "Conta l’ordine e non ci sono ripetizioni: D<sub>7,3</sub> = 7 · 6 · 5 = <b>210</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 10,
+ "updated": "2026-11-23",
+ "country": "it",
+ "subject": "matematica",
+ "grade": "quarta-liceo"
+}
