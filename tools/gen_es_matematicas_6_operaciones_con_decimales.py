@@ -61,7 +61,7 @@ def s3_mult():
         r = a * n
         ka = len(S(a).split(",")[1])
         return M("Calcula: %s %s %d" % (S(a), POR, n), S(r), [S(r * 10), S(r / 10), S(r + a), S(r + 1)],
-                 "Multiplicamos como si no hubiera coma y separamos %d %s decimales: <b>%s</b>." % (ka, "cifra" if ka == 1 else "cifras", S(r)))
+                 "Multiplicamos como si no hubiera coma y separamos %d %s: <b>%s</b>." % (ka, "cifra decimal" if ka == 1 else "cifras decimales", S(r)))
     a, b = dx(1), dx(1)
     r = a * b
     return M("Calcula: %s %s %s" % (S(a), POR, S(b)), S(r), [S(r * 10), S(r / 10), S(a + b), S(r + F(1, 10))],
@@ -74,6 +74,8 @@ def s4_div():
         n = R.randint(2, 9)
         q = F(R.randint(11, 999), 100)
         a = q * n
+        if a.denominator == 1:
+            return None
         return M("Calcula: %s %s %d" % (S(a), DIV, n), S(q), [S(q * 10), S(q / 10), S(q + F(1, 10)), S(q + 1)], "Dividimos y, al bajar la primera cifra decimal, ponemos la coma en el cociente: <b>%s</b>." % S(q))
     if k == "nat_nat":
         n = R.choice([2, 4, 5, 8, 10, 20, 25])

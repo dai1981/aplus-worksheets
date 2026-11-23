@@ -9,7 +9,19 @@ Erros: esquecer resultados do espaço amostral, usar «favoráveis ÷ desfavorá
 import random
 from fractions import Fraction as Fr
 import gen_br_matematica_3_probabilidade as P3
-from br_common import mcq, lesson, make_unit, mix, fr, Kids
+import re
+from br_common import mcq as _mcq, lesson, make_unit, mix, fr, Kids
+
+
+def _val(h):
+    m = re.fullmatch(r"\s*<span class='fr'><span class='fn'>(\d+)</span><span class='fd'>(\d+)</span></span>\s*", h)
+    return Fr(int(m.group(1)), int(m.group(2))) if m else None
+
+
+def mcq(q, correct, cands, e, *a, **k):
+    """os distratores com o mesmo valor que a resposta (2/4 e 1/2) também seriam corretos: tira-os"""
+    v = _val(correct)
+    return _mcq(q, correct, [c for c in cands if v is None or _val(c) != v], e, *a, **k)
 
 R = random.Random(80521)
 K = Kids(R)

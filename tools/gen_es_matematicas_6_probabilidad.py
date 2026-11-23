@@ -18,7 +18,7 @@ def s1_laplace():
     k = R.choice(["dado", "dado", "baraja", "letras", "numeros"])
     if k == "dado":
         q, f = R.choice([("un número par", 3), ("un número mayor que 4", 2), ("un múltiplo de 3", 2), ("un número primo", 3), ("un 6", 1), ("un número menor que 5", 4), ("un divisor de 6", 4), ("un número impar mayor que 1", 2)])
-        return M("Lanzas un dado de seis caras. ¿Qué probabilidad hay de sacar %s?" % q, fq(F(f, 6)), [fr(f, 6) if F(f, 6).denominator != 6 else fr(f + 1, 6), fq(F(6 - f, 6)), fr(1, f) if f > 1 else fr(1, 2), fr(f, 12)],
+        return M("Lanzas un dado de seis caras. ¿Qué probabilidad hay de sacar %s?" % q, fq(F(f, 6)), [fr(f + 1, 6), fq(F(6 - f, 6)), fr(1, f) if f > 1 else fr(1, 2), fr(f, 12)],
                  "Casos favorables: %d; posibles: 6. P = %s%s." % (f, fr(f, 6), " = <b>%s</b>" % fq(F(f, 6)) if F(f, 6).denominator != 6 else ""))
     if k == "baraja":
         q, f = R.choice([("una carta de oros", 10), ("un as", 4), ("una figura (sota, caballo o rey)", 12), ("el rey de copas", 1), ("una carta que no sea de espadas", 30), ("un 7", 4)])

@@ -37,7 +37,7 @@ def s2_regla():
         ans = "%s €" % d(yb)
         w = ["%s €" % d(ya + b - a) if ya + b - a > 0 else None, "%s €" % d(ya * b), "%s €" % d(yb + k), "%s €" % d(F(b, a))]
     else:
-        txt = "Si en %d %s hay %s %s, ¿cuántos %s hay en %d %s?" % (a, nm, d(ya), u, u, b, nm)
+        txt = "Si en %d %s hay %s %s, ¿%s %s hay en %d %s?" % (a, nm, d(ya), u, "cuántas" if u == "botellas" else "cuántos", u, b, nm)
         ans = "%s %s" % (d(yb), u)
         w = ["%s %s" % (d(ya + b - a), u) if ya + b - a > 0 else None, "%s %s" % (d(ya * b), u), "%s %s" % (d(yb + k), u)]
     return M(txt, ans, w, "Reducimos a la unidad: 1 → %s : %d = %s; %d → %s × %d = <b>%s</b>." % (d(ya), a, d(F(k)), b, d(F(k)), b, ans))

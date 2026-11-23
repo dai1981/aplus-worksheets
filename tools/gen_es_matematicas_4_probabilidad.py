@@ -113,7 +113,8 @@ def s3_fraccion():
         tot = sum(ns)
         i = R.randrange(len(cs))
         return mcq(bolsa(list(zip(cs, ns))) + "Sacas una bola sin mirar. ¿Qué probabilidad hay de que sea %s?" % SING[cs[i]], fr(ns[i], tot),
-                   [fr(ns[i], tot - ns[i]) if tot - ns[i] != ns[i] else fr(ns[i], tot + 1), fr(tot - ns[i], tot), fr(1, ns[i]) if ns[i] > 1 else fr(1, tot + 1), fr(ns[i], 10) if tot != 10 else fr(ns[i] + 1, tot)],
+                   [fr(a, b) for a, b in [(ns[i], tot - ns[i]) if tot - ns[i] != ns[i] else (ns[i], tot + 1), (tot - ns[i], tot), (1, ns[i]) if ns[i] > 1 else (1, tot + 1), (ns[i], 10) if tot != 10 else (ns[i] + 1, tot)]
+                    if a * tot != b * ns[i]],
                    "Casos favorables: %d; casos posibles: %d. Probabilidad: <b>%s</b>." % (ns[i], tot, fr(ns[i], tot)))
     if k == "dado":
         q, f, n = R.choice([("un 3", 1, "1 número"), ("un número par", 3, "3 números (2, 4 y 6)"), ("un número mayor que 4", 2, "2 números (5 y 6)"), ("un número menor que 3", 2, "2 números (1 y 2)"),

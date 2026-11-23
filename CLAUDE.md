@@ -1582,7 +1582,15 @@ mx_common の WORDS で décimas→décimos・centésimas→centésimos、coma d
 src の filter は ES の書式（小数はコンマ）の文に効くので、小数の正規表現は [.,] にする。答えと同じ値の分数の誤答は落とす（suma-y-resta-de-fracciones の mcq）
 1. numeros-hasta-99999 ✓ 2. comparar-y-redondear-numeros ✓ 3. suma-y-resta ✓ 4. multiplicacion ✓ 5. division ✓ 6. dobles-triples-y-mitades ✓ 7. problemas ✓ 8. fracciones ✓ 9. fracciones-equivalentes ✓
 10. numeros-decimales ✓ 11. suma-y-resta-de-decimales ✓ 12. suma-y-resta-de-fracciones ✓ 13. longitud-masa-y-capacidad ✓ 14. el-tiempo ✓ 15. perimetro-y-area ✓ 16. prismas-y-piramides ✓ 17. cuadrilateros ✓ 18. tablas-y-graficas ✓
-次は 5.º・6.º（Fase 5、https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/6.pdf。mx_common の CONT に Q・U・L5・V・B を足してある）、その後 1.º・2.º（Fase 3）、secundaria（Fase 6）
+
+MX / Matemáticas / 5.º・6.º grado de primaria（Fase 5、STD_URL は 2024/08/6.pdf。CONT の Fase 5 の内容: Q Relaciones de proporcionalidad、U Ubicación espacial、L5 Medición de la longitud, masa y capacidad、V Perímetro, área y noción de volumen、B Nociones de probabilidad）— 生成スクリプトは `gen_mx_matematicas_5_*`・`gen_mx_matematicas_6_*`（seed は 650NN・660NN、ES 6.º の build を lv=5 / lv=6 で再利用するのは 653NN・663NN、ES 4.º は 652NN・662NN、自前の R は 651NN・661NN）。
+ES6 の numeros_grandes は LV ではなく D（桁数）を使うので src の patch={"D": 9}。mx_common.mx_text は「 : 」（数・語・かっこの前後に空白）を ÷ に、「escala 1 : 100」を 1:100 に直す。4 桁の数は小数点の前でも区切る（1 133.54）
+6.º の numeración maya は自前の SVG（maya_svg：punto・raya・caracol、下から上へ 1・20・400）。plano-cartesiano は自前の第 1 象限の SVG（data-pf='lg'）
+5.º: 1. numeros-hasta-cientos-de-millones ✓ 2. multiplicacion-y-division ✓ 3. numeros-decimales ✓ 4. operaciones-con-decimales ✓ 5. fracciones ✓ 6. suma-y-resta-de-fracciones ✓ 7. multiplicacion-de-fracciones-por-un-natural ✓ 8. proporcionalidad ✓
+9. porcentajes ✓ 10. longitud-masa-y-capacidad ✓ 11. perimetro-y-area ✓ 12. volumen ✓ 13. angulos ✓ 14. poligonos-y-circulo ✓ 15. tablas-y-graficas ✓ 16. probabilidad ✓
+6.º: 1. sistemas-de-numeracion ✓ 2. fracciones-y-decimales ✓ 3. suma-y-resta-de-fracciones ✓ 4. operaciones-con-decimales ✓ 5. division-de-fracciones-entre-naturales ✓ 6. proporcionalidad ✓ 7. porcentajes ✓ 8. circunferencia-y-pi ✓
+9. poligonos-regulares ✓ 10. plano-cartesiano ✓ 11. perimetro-y-area ✓ 12. volumen ✓ 13. graficas-circulares ✓ 14. media-moda-y-rango ✓ 15. probabilidad ✓
+次は 1.º・2.º（Fase 3、2024/08/4.pdf）、その後 secundaria（Fase 6）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

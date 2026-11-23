@@ -114,7 +114,9 @@ def pl(n, s, p):
 # ------------------------------------------------------------ España → México
 WORDS = [("ha redondeado", "redondeó"), ("montañeros", "alpinistas"), ("huchas", "alcancías"), ("baloncesto", "basquetbol"), ("en forma compleja", "con dos unidades"), ("prisma rectangular (ortoedro)", "prisma rectangular"), ("ortoedros", "prismas rectangulares"), ("ortoedro", "prisma rectangular"), ("vallas", "cercas"), ("valla", "cerca"), ("baldosas", "losetas"), ("baldosa", "loseta"), ("hucha", "alcancía"),
          ("coma debajo de coma", "punto debajo de punto"), ("1 décima", "1 décimo"), ("1 centésima", "1 centésimo"), ("1 milésima", "1 milésimo"),
-         ("ha recorrido", "recorrió"), ("han comido", "comieron"), ("han pintado", "pintaron"), ("han recogido", "recogieron"), ("ha comprado", "compró"), ("han ocupado", "ocuparon"),
+         ("ha recorrido", "recorrió"), ("ha acertado", "acertó"), ("ha volado", "voló"), ("sin comas", "sin el punto"), ("numerador : denominador", "numerador ÷ denominador"), ("se han recorrido", "se recorrieron"), ("ha ahorrado", "ahorró"), ("ha leído", "leyó"), ("han leído", "leyeron"), ("ha gastado", "gastó"), ("han gastado", "gastaron"), ("ha ganado", "ganó"), ("ha vendido", "vendió"), ("han vendido", "vendieron"), ("ha corrido", "corrió"), ("ha sacado", "sacó"), ("ha obtenido", "obtuvo"), ("Un grifo", "Una llave"), ("En rebajas", "En oferta"), ("Una noria", "Una rueda de la fortuna"), ("una noria", "una rueda de la fortuna"), ("La noria", "La rueda de la fortuna"), ("la noria", "la rueda de la fortuna"), ("ha girado", "giró"), ("césped", "pasto"), ("sin solaparse", "sin encimarse"), ("tejado", "techo"), ("Un brik", "Un envase de cartón"), ("un brik", "un envase de cartón"), ("Cara o cruz", "Águila o sol"), ("cara o cruz", "águila o sol"), ("sacar cruz", "sacar sol"), ("salga cruz", "salga sol"), ("sale cruz", "sale sol"),
+         ("sacar cara", "sacar águila"), ("salga cara", "salga águila"), ("sale cara", "sale águila"), ("«cruz»", "«sol»"), ("«cara»", "«águila»"), ("sucesos", "eventos"), ("suceso", "evento"),
+         ("se ha anotado", "se anotó"), ("ha salido cara", "ha caído águila"), ("cara, porque", "águila, porque"), ("cruz, porque", "sol, porque"), ("cara y cruz", "águila y sol"), ("ha caído águila", "cayó águila"), ("ha salido", "salió"), ("han salido", "salieron"), ("ha anotado", "anotó"), ("en rebajas", "en oferta"), ("un grifo", "una llave"), ("el grifo", "la llave"), ("han recorrido", "recorrieron"), ("como si no hubiera coma", "como si no hubiera punto"), ("se alquilan", "se rentan"), ("alquilan", "rentan"), ("alquila", "renta"), ("alquilar", "rentar"), ("alquiler", "renta"), ("sin la coma", "sin el punto"), ("chinchetas", "tachuelas"), ("chincheta", "tachuela"), ("han comido", "comieron"), ("han pintado", "pintaron"), ("han recogido", "recogieron"), ("ha comprado", "compró"), ("han ocupado", "ocuparon"),
          ("han quedado", "quedaron"), ("Iker", "Iván"), ("la coma", "el punto"), ("una décima", "un décimo"), ("una centésima", "un centésimo"), ("una milésima", "un milésimo"),
          ("las décimas", "los décimos"), ("las centésimas", "los centésimos"), ("las milésimas", "los milésimos"), ("décimas", "décimos"), ("centésimas", "centésimos"), ("milésimas", "milésimos"), ("zumos", "jugos"), ("zumo", "jugo"), ("gominolas", "dulces"), ("chuches", "dulces"), ("caramelos", "dulces"), ("caramelo", "dulce"),
          ("autobuses", "camiones"), ("autobús", "camión"), ("patatas", "papas"), ("patata", "papa"), ("melocotones", "duraznos"), ("melocotón", "durazno"),
@@ -139,7 +141,7 @@ WORDS = [("ha redondeado", "redondeó"), ("montañeros", "alpinistas"), ("huchas
          ("llevadas", "reagrupaciones"), ("con llevada", "con reagrupación"), ("sin llevada", "sin reagrupación"), ("llevada", "reagrupación")]
 LEAKS = ["€", "euro", "céntimo", "España", "vosotros", "habéis", "tenéis", "sabéis", "CCAA", "LOMLOE", "4.º", "5.º", "6.º", "Primaria",
          "tarta", "gominola", "chuche", "cromo", "tiza", "estuche", "bocadillo", "gafas", "folio", "ordenador", "zapatilla", "cole ", "el cole", "gorro", "nata", "judías", "tebeo", "chaqueta", "jersey", "AVE", "Renfe", "colegio", "metro de Madrid", "Galicia", "Andaluc", "Canarias", "Asturias", "Cataluña", "Comunidad",
-         "Betis", "Athletic", "Real Sociedad", "Atlético", "Real Madrid", "Real Ciudad", "Teide", "Mulhacén", "Moncayo", "cucurucho", "Aneto", "Pirineo"]
+         "Betis", "Athletic", "Real Sociedad", "Atlético", "Real Madrid", "Real Ciudad", "Teide", "Mulhacén", "Moncayo", "cucurucho", "baraja española", "Aneto", "Pirineo"]
 LEAK_RE = [r"gr[áa]fico", r"\b(la|las) (una|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|once|doce) menos\b", r"\bos\b", r"\bvuestr"]
 
 
@@ -168,10 +170,12 @@ def _txt(t, yr_all=False):
     t = re.sub(r"céntimo", "centavo", t)
     t = re.sub(r"(?<=\d),(?=\d)", ".", t)                                # 2,5 → 2.5
     yr = yr_all or re.search(r"nac|año|cumpl", t)
-    t = re.sub(r"(?<![\d$])(?<!\d[.,:" + NB + r" ])(\d)(\d{3})(?!\d|[.,:]\d)", lambda m: m.group(0) if yr and 1000 <= int(m.group(0)) <= 2100 else m.group(1) + NB + m.group(2), t)   # 4536 → 4 536（años no）
+    t = re.sub(r"(?<![\d$])(?<!\d[.,:" + NB + r" ])(\d)(\d{3})(?!\d|[,:]\d)", lambda m: m.group(0) if yr and 1000 <= int(m.group(0)) <= 2100 else m.group(1) + NB + m.group(2), t)   # 4536 → 4 536（años no）
     t = re.sub(r"\b1 (unidad|decena|centena)es de millar", r"1 \1 de millar", t)
     t = re.sub(r"\b1 (decena|centena)s\b", r"1 \1", t)
-    t = re.sub(r"(?<=[\d)]) : (?=[\d(])", " ÷ ", t)                        # 12 : 3 → 12 ÷ 3
+    t = re.sub(r"(escala(?: de)?) 1[ " + NB + r"]?:[ " + NB + r"]?(?=\d)", r"\1 1:", t)          # escala 1 : 100 → 1:100
+    t = re.sub(r"(^|\s): (1[ " + NB + r"]000|100|10)(?=:)", r"\1÷ \2", t)          # «: 1 000: 7 dm³»
+    t = re.sub(r"(?<=\S) : (?=[\d(])", " ÷ ", t)                                  # 12 : 3, L : 3.14, diámetro : 2 → ÷                        # 12 : 3 → 12 ÷ 3
     t = re.sub(r"(?<=[\d)])" + NB + ":" + NB + r"(?=[\d(])", NB + "÷" + NB, t)
     t = t.replace(" y resto ", " y residuo ").replace("resto ", "residuo ").replace(" resto", " residuo")
     for a, b in WORDS:
@@ -185,7 +189,9 @@ def mx_text(s):
     """convierte solo el texto fuera de las etiquetas (también el texto de los SVG)"""
     parts = re.split(r"(<[^>]*>)", s)
     yr = bool(re.search(r"nac|año|cumpl", re.sub(r"<[^>]*>", " ", s)))
-    return "".join(p if p.startswith("<") else _txt(p, yr) for p in parts)
+    out = "".join(p if p.startswith("<") else _txt(p, yr) for p in parts)
+    sp = "[ " + NB + "]"
+    return re.sub(r"(</span>|\d|\)|°)(" + sp + "):(" + sp + r")(?=<span class='fr'>|\d|\()", r"\1\2÷\3", out)   # 2/5 : 1/2 → 2/5 ÷ 1/2
 
 
 def ok(it):
