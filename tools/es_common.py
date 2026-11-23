@@ -28,6 +28,7 @@ GRADE_NAME.update({"%d-eso" % i: "%d.º de ESO" % i for i in range(1, 5)})
 STD_URL_ESO = "https://www.boe.es/buscar/act.php?id=BOE-A-2022-4975"
 GRADE_NAME.update({"%d-bachillerato" % i: "%d.º de Bachillerato" % i for i in range(1, 3)})
 STD_URL_BACH = "https://www.boe.es/buscar/act.php?id=BOE-A-2022-5521"
+GRADE_NAME.update({"%d-bachillerato-ccss" % i: "%d.º de Bachillerato CCSS" % i for i in range(1, 3)})
 CICLO = {1: "primer ciclo", 2: "primer ciclo", 3: "segundo ciclo", 4: "segundo ciclo", 5: "tercer ciclo", 6: "tercer ciclo"}
 GIRLS = ["Lucía", "Sofía", "Martina", "María", "Julia", "Paula", "Valeria", "Emma", "Daniela", "Carla", "Alba", "Noa", "Olivia", "Vega"]
 BOYS = ["Hugo", "Martín", "Lucas", "Mateo", "Leo", "Daniel", "Alejandro", "Pablo", "Manuel", "Álvaro", "Adrián", "Mario", "Diego", "Marcos"]
@@ -218,6 +219,7 @@ def make_unit(rnd, slug, dom, std_text, title, short_title, meta_desc,
     lvl = int(grade.split("-")[0])
     eso = grade.endswith("-eso")
     bach = grade.endswith("-bachillerato")
+    ccss = grade.endswith("-bachillerato-ccss")
     seo_title = "%s – %s: fichas de matemáticas con soluciones" % (short_title, gname)
     title, seo_title, short_title, meta_desc, key_big, key_sub = [plain_text(x) for x in (title, seo_title, short_title, meta_desc, key_big, key_sub)]
     # la parte de arriba de la página: frases cortas
@@ -225,10 +227,12 @@ def make_unit(rnd, slug, dom, std_text, title, short_title, meta_desc,
     dname = DOMAIN[dom]
     write_unit("es", "matematicas", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
-        "domain": dname, "standard_code": "%s · %s" % ("Matemáticas I" if lvl == 1 else "Matemáticas II", dname) if bach else "%s · %s" % (gname, dname),
-        "standard_url": STD_URL_BACH if bach else STD_URL_ESO if eso else STD_URL,
+        "domain": dname, "standard_code": "%s · %s" % ("Matemáticas I" if lvl == 1 else "Matemáticas II", dname) if bach else
+            "%s · %s" % ("Matemáticas Aplicadas a las CC. SS. I" if lvl == 1 else "Matemáticas Aplicadas a las CC. SS. II", dname) if ccss else "%s · %s" % (gname, dname),
+        "standard_url": STD_URL_BACH if bach or ccss else STD_URL_ESO if eso else STD_URL,
         "standard_text": std_text + (
             (" (resumen de los saberes básicos de Matemáticas %s del Bachillerato de Ciencias y Tecnología, Real Decreto 243/2022)" % ("I" if lvl == 1 else "II")) if bach else
+            (" (resumen de los saberes básicos de Matemáticas Aplicadas a las Ciencias Sociales %s, Real Decreto 243/2022)" % ("I" if lvl == 1 else "II")) if ccss else
             (" (resumen de los saberes básicos de Matemáticas de %s de ESO, Real Decreto 217/2022)" % ("1.º a 3.º" if lvl < 4 else "4.º")) if eso else
             (" (resumen de los saberes básicos de Matemáticas del %s de Educación Primaria, Real Decreto 157/2022)" % CICLO[lvl])),
         "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,

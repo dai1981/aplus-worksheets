@@ -228,7 +228,7 @@ function topic_defs_es() {
             'in' => '/multiplica|division|divisiones|tablas-de-multiplicar|multiplos|divisores|repartos|dobles|divisibilidad/', 'out' => '/fraccion|decimal/',
             'blurb' => 'Tablas de multiplicar, multiplicaciones y divisiones por una y dos cifras, la prueba de la división, múltiplos y divisores.'),
         'fracciones-y-decimales' => array('name' => 'Fracciones y decimales',
-            'in' => '/fraccion|decimal|porcentaje|mitad-tercio/', 'out' => '/proporcionalidad|algebraicas/',
+            'in' => '/fraccion|decimal|porcentaje|mitad-tercio|mercantil/', 'out' => '/proporcionalidad|algebraicas/',
             'blurb' => 'Fracciones de la unidad y de una cantidad, fracciones equivalentes, décimas y centésimas, sumar y restar decimales.'),
         'problemas' => array('name' => 'Problemas',
             'in' => '/problemas/', 'out' => '/^$/',
@@ -240,7 +240,7 @@ function topic_defs_es() {
             'in' => '/angulos|rectas|poligonos|triangulos|cuadrilateros|cuerpos|simetria|coordenadas|figuras|circunferencia|posiciones|orientacion|pitagoras|semejanza|trigonometria|movimientos|analitica|espacio|vectores|conicas|triangulos|planos|distancias/', 'out' => '/^area-|volumenes-de-cuerpos|graficas/',
             'blurb' => 'Rectas y ángulos, polígonos, triángulos y cuadriláteros, circunferencia y círculo, cuerpos geométricos, simetría y coordenadas.'),
         'algebra-y-proporcionalidad' => array('name' => 'Álgebra y proporcionalidad',
-            'in' => '/patrones|ecuaciones|expresiones|proporcionalidad|algebraico|polinomios|inecuaciones|sucesiones|matrices|determinantes|gauss/', 'out' => '/^$/',
+            'in' => '/patrones|ecuaciones|expresiones|proporcionalidad|algebraico|polinomios|inecuaciones|sucesiones|matrices|determinantes|gauss|programacion-lineal/', 'out' => '/^$/',
             'blurb' => 'Series y patrones, expresiones con letras, ecuaciones, sistemas e inecuaciones, polinomios, sucesiones y proporcionalidad.'),
         'analisis' => array('name' => 'Límites, derivadas e integrales',
             'in' => '/limites|derivadas|integrales/', 'out' => '/^$/',
@@ -249,7 +249,7 @@ function topic_defs_es() {
             'in' => '/funciones|coordenadas-y-graficas/', 'out' => '/^$/',
             'blurb' => 'Coordenadas y gráficas, dominio, crecimiento, máximos y mínimos, funciones lineales, cuadráticas, exponenciales y logarítmicas.'),
         'estadistica-y-probabilidad' => array('name' => 'Estadística y probabilidad',
-            'in' => '/graficos|tablas-de|estadistica|probabilidad|media|seguro-posible|combinatoria|distribucion/', 'out' => '/tablas-de-multiplicar/',
+            'in' => '/graficos|tablas-de|estadistica|probabilidad|media|seguro-posible|combinatoria|distribucion|muestreo|intervalos-de-confianza/', 'out' => '/tablas-de-multiplicar/',
             'blurb' => 'Tablas de frecuencias, gráficos de barras y de líneas, la media y la moda, sucesos seguros, posibles e imposibles.'),
     );
 }

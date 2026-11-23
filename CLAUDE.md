@@ -1558,7 +1558,15 @@ límites・derivadas・aplicaciones de las derivadas は 1.º の生成スクリ
 1.º（Matemáticas I）: 1. numeros-reales-y-logaritmos ✓ 2. numeros-complejos ✓ 3. ecuaciones-e-inecuaciones ✓ 4. sistemas-metodo-de-gauss ✓ 5. trigonometria ✓ 6. resolucion-de-triangulos ✓ 7. vectores-en-el-plano ✓ 8. geometria-analitica ✓ 9. lugares-geometricos-y-conicas ✓ 10. funciones ✓ 11. limites-y-continuidad ✓ 12. derivadas ✓ 13. aplicaciones-de-las-derivadas ✓ 14. estadistica-bidimensional ✓
 2.º（Matemáticas II、PAU）: 1. matrices ✓ 2. determinantes ✓ 3. sistemas-de-ecuaciones-lineales ✓ 4. vectores-en-el-espacio ✓ 5. rectas-y-planos-en-el-espacio ✓ 6. posiciones-angulos-y-distancias ✓ 7. limites-y-continuidad ✓ 8. derivadas ✓ 9. aplicaciones-de-las-derivadas ✓ 10. integrales-indefinidas ✓ 11. integrales-definidas-y-areas ✓ 12. probabilidad ✓ 13. distribucion-binomial ✓ 14. distribucion-normal ✓
 
-ES / Matemáticas は 1.º de Primaria〜2.º de Bachillerato まで完了（Matemáticas Aplicadas a las Ciencias Sociales はまだ）。次は GDP 順で次の国
+ES / Matemáticas Aplicadas a las Ciencias Sociales I・II（Real Decreto 243/2022、Bachillerato de Humanidades y Ciencias Sociales）— grade `1-bachillerato-ccss`・`2-bachillerato-ccss`（name「1.º de Bachillerato CCSS」、sort 13・14、unit.php で 16〜18 歳）。standard_code は「Matemáticas Aplicadas a las CC. SS. I · Sentido numérico」、standard_url は BOE-A-2022-5521。
+生成スクリプトは `gen_es_matematicas_{1,2}ccss_*`（seed は 53000＋番号・54000＋番号、use_ で再利用するモジュールは 532xx・541xx・542xx・543xx）、共通部品は `tools/es_ccss.py`（es_bach の上に unit・eu（12 345,60 €）・pc（3,5 %）・dd・phi・Z_CRIT）。
+多くは Matemáticas I・II・3.º ESO の問題関数を use_ で再利用し、社会科学の場面（利子、税、需要と供給、限界費用、調査の分割表）の問題を足す。use_ で 1.º CCSS のモジュールを使うときは、先にそのモジュールを import してから、その中で使う 1bach/2bach のモジュールを自分の seed で use_ する（後から import すると R が戻される）。
+自前: aritmetica-mercantil（IVA 21 %、TAE、préstamo）、programacion-lineal（region() で整数の頂点、pic() で可行領域の SVG）、muestreo、intervalos-de-confianza（z = 1,645／1,96／2,575、E を先に丸めてから区間）。s_contingencia（1.º CCSS probabilidad）は 2.º でも使う
+1.º CCSS: 1. aritmetica-mercantil ✓ 2. numeros-reales-y-logaritmos ✓ 3. ecuaciones-e-inecuaciones ✓ 4. sistemas-de-ecuaciones ✓ 5. funciones ✓ 6. limites-y-continuidad ✓ 7. derivadas ✓ 8. estadistica-bidimensional ✓ 9. probabilidad ✓ 10. distribuciones-binomial-y-normal ✓
+2.º CCSS（PAU）: 1. matrices ✓ 2. sistemas-de-ecuaciones-lineales ✓ 3. programacion-lineal ✓ 4. limites-y-continuidad ✓ 5. derivadas-y-aplicaciones ✓ 6. integrales ✓ 7. probabilidad ✓ 8. muestreo-y-distribucion-de-medias ✓ 9. intervalos-de-confianza ✓
+トピック：mercantil→fracciones-y-decimales、programacion-lineal→algebra-y-proporcionalidad、muestreo・intervalos-de-confianza→estadistica-y-probabilidad
+
+ES / Matemáticas は 1.º de Primaria〜2.º de Bachillerato（Ciencias y Tecnología と CCSS）まで完了。次は GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

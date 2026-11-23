@@ -1,0 +1,1157 @@
+{
+ "slug": "intervalos-de-confianza",
+ "title": "Intervalos de confianza",
+ "seo_title": "Intervalos de confianza – 2.º de Bachillerato CCSS: fichas de matemáticas con soluciones",
+ "short_title": "Intervalos de confianza",
+ "domain": "Sentido estocástico",
+ "standard_code": "Matemáticas Aplicadas a las CC. SS. II · Sentido estocástico",
+ "standard_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-5521",
+ "standard_text": "Inferencia estadística: nivel de confianza, valor crítico, intervalos de confianza para la media y para la proporción, error máximo admisible y tamaño de la muestra (resumen de los saberes básicos de Matemáticas Aplicadas a las Ciencias Sociales II, Real Decreto 243/2022)",
+ "meta_desc": "Fichas de Matemáticas Aplicadas a las Ciencias Sociales II: valor crítico, intervalos para la media y la proporción, error y tamaño de la muestra. 100 ejercicios.",
+ "key_big": "E = z · σ / √n",
+ "key_sub": "Tamaño de la muestra: redondea hacia arriba.",
+ "body_html": "<h2>Cómo se hace</h2><p>Un <b>intervalo de confianza</b> da un rango de valores en el que, con un nivel de confianza 1 − α, está el parámetro de la población.</p><p><b>Valores críticos</b>: 90 % → z<sub>α/2</sub> = 1,645; 95 % → 1,96; 99 % → 2,575.</p><p>Para la media (σ conocida): (x̄ − E, x̄ + E), con <b>E = z<sub>α/2</sub> · σ/√n</b>. Para una proporción: p̂ ± z<sub>α/2</sub> · √(p̂ q̂ / n).</p><p><b>Tamaño de la muestra</b>: n ≥ (z<sub>α/2</sub> · σ/E)², redondeando siempre hacia arriba. Más confianza → intervalo más ancho; más muestra → más estrecho.</p><div class='sn-tw'><table class='sn-table'><thead><tr><th>Nivel de confianza</th><th>α</th><th>z<sub>α/2</sub></th></tr></thead><tbody><tr><td>90 %</td><td>0,10</td><td>1,645</td></tr><tr><td>95 %</td><td>0,05</td><td>1,96</td></tr><tr><td>99 %</td><td>0,01</td><td>2,575</td></tr></tbody></table></div><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>x̄ = 50, σ = 12, n = 36, 95 %</p><p class='sn-ex-s'>E = 1,96 · 12/6 = 3,92</p><p class='sn-ex-a'>Respuesta: (46,08; 53,92)</p></div><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>σ = 10, E &lt; 2, 95 %</p><p class='sn-ex-s'>n ≥ (1,96 · 10/2)² = 96,04</p><p class='sn-ex-a'>Respuesta: n = 97</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Usar σ en lugar de σ/√n</td><td>El error depende de la muestra: se divide entre √n.</td></tr><tr><td>Tomar 1,645 para el 95 %</td><td>1,645 es para el 90 %; para el 95 %, 1,96.</td></tr><tr><td>Redondear n hacia abajo</td><td>Con 96 no se llega: hace falta 97.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Por qué un intervalo y no un solo número?",
+   "a": "Porque la media de una muestra casi nunca coincide con la de la población. El intervalo da un margen y dice cuánta confianza tenemos en él."
+  },
+  {
+   "q": "¿Cómo se consigue un intervalo más estrecho?",
+   "a": "Tomando una muestra más grande (el error baja con √n) o aceptando un nivel de confianza menor."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Nivel de confianza y valor crítico",
+   "items": [
+    {
+     "q": "Para un nivel de confianza del 98 %, ¿cuánto vale α y qué probabilidad deja z<sub>α/2</sub> a su derecha?",
+     "c": [
+      "α = 0,02; 0,02",
+      "α = 0,98; 0,01",
+      "α = 0,02; 0,01",
+      "α = 0,01; 0,02"
+     ],
+     "a": 2,
+     "e": "α = 1 − 0,98 = 0,02; a cada lado queda α/2 = <b>0,01</b>."
+    },
+    {
+     "q": "Para un nivel de confianza del 80 %, ¿cuánto vale α y qué probabilidad deja z<sub>α/2</sub> a su derecha?",
+     "c": [
+      "α = 0,8; 0,1",
+      "α = 0,1; 0,2",
+      "α = 0,2; 0,1",
+      "α = 0,2; 0,2"
+     ],
+     "a": 2,
+     "e": "α = 1 − 0,8 = 0,2; a cada lado queda α/2 = <b>0,1</b>."
+    },
+    {
+     "q": "Si z<sub>α/2</sub> = 2,33, ¿cuál es el nivel de confianza?",
+     "c": [
+      "90 %",
+      "98 %",
+      "95 %",
+      "80 %"
+     ],
+     "a": 1,
+     "e": "P(−2,33 ≤ Z ≤ 2,33) ≈ 0,98: nivel del <b>98 %</b>."
+    },
+    {
+     "q": "¿Cuál es el valor crítico z<sub>α/2</sub> para un nivel de confianza del 90 %?",
+     "c": [
+      "2,33",
+      "1,645",
+      "1,28",
+      "1,96"
+     ],
+     "a": 1,
+     "e": "Se busca z con P(−z ≤ Z ≤ z) = 90 %, es decir, P(Z ≤ z) = 0,95: <b>z = 1,645</b>."
+    },
+    {
+     "q": "Para reducir el error sin perder confianza, hay que…",
+     "c": [
+      "aumentar σ",
+      "aumentar el tamaño de la muestra",
+      "reducir el tamaño de la muestra",
+      "bajar el nivel de confianza"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>aumentar el tamaño de la muestra</b>."
+    },
+    {
+     "q": "Para un nivel de confianza del 95 %, ¿cuánto vale α y qué probabilidad deja z<sub>α/2</sub> a su derecha?",
+     "c": [
+      "α = 0,025; 0,05",
+      "α = 0,95; 0,025",
+      "α = 0,05; 0,025",
+      "α = 0,05; 0,05"
+     ],
+     "a": 2,
+     "e": "α = 1 − 0,95 = 0,05; a cada lado queda α/2 = <b>0,025</b>."
+    },
+    {
+     "q": "Para X = el gasto mensual en ocio de los jóvenes de una ciudad, el intervalo de confianza para la media es (71,08; 78,92). ¿Cuáles son la media muestral y el error?",
+     "c": [
+      "x̄ = 71,08; E = 7,84",
+      "x̄ = 7,84; E = 3,92",
+      "x̄ = 75; E = 3,92",
+      "x̄ = 75; E = 7,84"
+     ],
+     "a": 2,
+     "e": "Centro: (71,08 + 78,92)/2 = 75; error: la mitad de la amplitud, (78,92 − 71,08)/2 = <b>3,92</b>."
+    },
+    {
+     "q": "Si el tamaño de la muestra se multiplica por 9 (con el mismo nivel de confianza), ¿qué le pasa al error?",
+     "c": [
+      "no cambia",
+      "se divide entre 3",
+      "se divide entre 9",
+      "se multiplica por 3"
+     ],
+     "a": 1,
+     "e": "E = z · σ/√n: si n se multiplica por 9, √n se multiplica por 3. <b>Se divide entre 3</b>."
+    },
+    {
+     "q": "Con σ = 6 s y una muestra de 9, ¿cuál es el error máximo admisible al 98 %?",
+     "c": [
+      "4,66 s",
+      "2,00 s",
+      "13,98 s",
+      "1,55 s"
+     ],
+     "a": 0,
+     "e": "E = 2,33 · 6/√9 ≈ <b>4,66 s</b>."
+    },
+    {
+     "q": "Para X = las horas semanales de teletrabajo, el intervalo de confianza para la media es (5,83; 8,17). ¿Cuáles son la media muestral y el error?",
+     "c": [
+      "x̄ = 7; E = 2,34",
+      "x̄ = 2,34; E = 1,17",
+      "x̄ = 5,83; E = 2,34",
+      "x̄ = 7; E = 1,17"
+     ],
+     "a": 3,
+     "e": "Centro: (5,83 + 8,17)/2 = 7; error: la mitad de la amplitud, (8,17 − 5,83)/2 = <b>1,17</b>."
+    },
+    {
+     "q": "¿Cuál es el valor crítico z<sub>α/2</sub> para un nivel de confianza del 80 %?",
+     "c": [
+      "1,28",
+      "1,96",
+      "2,33",
+      "1,645"
+     ],
+     "a": 0,
+     "e": "Se busca z con P(−z ≤ Z ≤ z) = 80 %, es decir, P(Z ≤ z) = 0,9: <b>z = 1,28</b>."
+    },
+    {
+     "q": "¿Qué significa un intervalo de confianza al 95 %?",
+     "c": [
+      "que el 95 % de los datos están dentro",
+      "que la media muestral está dentro con probabilidad 0,95",
+      "que hay un 5 % de error en cada dato",
+      "que el 95 % de los intervalos construidos así contienen la media de la población"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>que el 95 % de los intervalos construidos así contienen la media de la población</b>."
+    },
+    {
+     "q": "Si z<sub>α/2</sub> = 1,645, ¿cuál es el nivel de confianza?",
+     "c": [
+      "90 %",
+      "95 %",
+      "80 %",
+      "98 %"
+     ],
+     "a": 0,
+     "e": "P(−1,645 ≤ Z ≤ 1,645) ≈ 0,9: nivel del <b>90 %</b>."
+    },
+    {
+     "q": "Si z<sub>α/2</sub> = 1,96, ¿cuál es el nivel de confianza?",
+     "c": [
+      "98 %",
+      "90 %",
+      "95 %",
+      "80 %"
+     ],
+     "a": 2,
+     "e": "P(−1,96 ≤ Z ≤ 1,96) ≈ 0,95: nivel del <b>95 %</b>."
+    },
+    {
+     "q": "¿Cuál es el valor crítico z<sub>α/2</sub> para un nivel de confianza del 99 %?",
+     "c": [
+      "1,645",
+      "2,575",
+      "1,96",
+      "1,28"
+     ],
+     "a": 1,
+     "e": "Se busca z con P(−z ≤ Z ≤ z) = 99 %, es decir, P(Z ≤ z) = 0,995: <b>z = 2,575</b>."
+    },
+    {
+     "q": "Si z<sub>α/2</sub> = 2,575, ¿cuál es el nivel de confianza?",
+     "c": [
+      "90 %",
+      "95 %",
+      "80 %",
+      "99 %"
+     ],
+     "a": 3,
+     "e": "P(−2,575 ≤ Z ≤ 2,575) ≈ 0,99: nivel del <b>99 %</b>."
+    },
+    {
+     "q": "Si z<sub>α/2</sub> = 1,28, ¿cuál es el nivel de confianza?",
+     "c": [
+      "98 %",
+      "95 %",
+      "90 %",
+      "80 %"
+     ],
+     "a": 3,
+     "e": "P(−1,28 ≤ Z ≤ 1,28) ≈ 0,8: nivel del <b>80 %</b>."
+    },
+    {
+     "q": "Con la misma muestra, si se pasa del 90 % al 99 % de confianza, el intervalo…",
+     "c": [
+      "se hace más ancho",
+      "se desplaza a la derecha",
+      "se hace más estrecho",
+      "no cambia"
+     ],
+     "a": 0,
+     "e": "Respuesta: <b>se hace más ancho</b>."
+    },
+    {
+     "q": "¿Cuál es el valor crítico z<sub>α/2</sub> para un nivel de confianza del 95 %?",
+     "c": [
+      "1,28",
+      "2,33",
+      "1,645",
+      "1,96"
+     ],
+     "a": 3,
+     "e": "Se busca z con P(−z ≤ Z ≤ z) = 95 %, es decir, P(Z ≤ z) = 0,975: <b>z = 1,96</b>."
+    },
+    {
+     "q": "Si el tamaño de la muestra se multiplica por 25 (con el mismo nivel de confianza), ¿qué le pasa al error?",
+     "c": [
+      "se divide entre 5",
+      "se multiplica por 5",
+      "se divide entre 25",
+      "no cambia"
+     ],
+     "a": 0,
+     "e": "E = z · σ/√n: si n se multiplica por 25, √n se multiplica por 5. <b>Se divide entre 5</b>."
+    }
+   ]
+  },
+  {
+   "title": "Intervalo para la media",
+   "items": [
+    {
+     "q": "X = el precio del alquiler por m² en un barrio sigue una normal con σ = 5 €. Una muestra de 100 da x̄ = 18 €. Halla el intervalo de confianza para la media de X al 98 %.",
+     "c": [
+      "(6,35; 29,65)",
+      "(17,02; 18,98)",
+      "(16,83; 19,17)",
+      "(17,88; 18,12)"
+     ],
+     "a": 2,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,33 · 5/10 ≈ 1,17. Intervalo: 18 ± 1,17 = <b>(16,83; 19,17)</b>."
+    },
+    {
+     "q": "X = el precio del alquiler por m² en un barrio sigue una normal con σ = 2 €. Una muestra de 16 da x̄ = 14 €. Halla el intervalo de confianza para la media de X al 90 %.",
+     "c": [
+      "(10,71; 17,29)",
+      "(13,18; 14,82)",
+      "(12,71; 15,29)",
+      "(13,79; 14,21)"
+     ],
+     "a": 1,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 1,645 · 2/4 ≈ 0,82. Intervalo: 14 ± 0,82 = <b>(13,18; 14,82)</b>."
+    },
+    {
+     "q": "X = el gasto mensual en ocio de los jóvenes de una ciudad sigue una normal con σ = 16 €. Una muestra de 64 da x̄ = 131 €. Halla el intervalo de confianza para la media de X al 90 %.",
+     "c": [
+      "(128,44; 133,56)",
+      "(130,59; 131,41)",
+      "(104,68; 157,32)",
+      "(127,71; 134,29)"
+     ],
+     "a": 3,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 1,645 · 16/8 ≈ 3,29. Intervalo: 131 ± 3,29 = <b>(127,71; 134,29)</b>."
+    },
+    {
+     "q": "X = las horas semanales de teletrabajo sigue una normal con σ = 3 h. Una muestra de 81 da x̄ = 12 h. Halla el intervalo de confianza para la media de X al 98 %.",
+     "c": [
+      "(11,57; 12,43)",
+      "(11,91; 12,09)",
+      "(11,22; 12,78)",
+      "(5,01; 18,99)"
+     ],
+     "a": 2,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,33 · 3/9 ≈ 0,78. Intervalo: 12 ± 0,78 = <b>(11,22; 12,78)</b>."
+    },
+    {
+     "q": "X = las horas semanales de teletrabajo sigue una normal con σ = 3 h. Una muestra de 81 da x̄ = 17 h. Halla el intervalo de confianza para la media de X al 99 %.",
+     "c": [
+      "(9,27; 24,73)",
+      "(16,22; 17,78)",
+      "(16,90; 17,10)",
+      "(16,14; 17,86)"
+     ],
+     "a": 3,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,575 · 3/9 ≈ 0,86. Intervalo: 17 ± 0,86 = <b>(16,14; 17,86)</b>."
+    },
+    {
+     "q": "X = el gasto mensual en ocio de los jóvenes de una ciudad sigue una normal con σ = 24 €. Una muestra de 64 da x̄ = 100 €. Halla el intervalo de confianza para la media de X al 98 %.",
+     "c": [
+      "(96,16; 103,84)",
+      "(44,08; 155,92)",
+      "(99,13; 100,87)",
+      "(93,01; 106,99)"
+     ],
+     "a": 3,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,33 · 24/8 ≈ 6,99. Intervalo: 100 ± 6,99 = <b>(93,01; 106,99)</b>."
+    },
+    {
+     "q": "X = las horas semanales de teletrabajo sigue una normal con σ = 5 h. Una muestra de 100 da x̄ = 10 h. Halla el intervalo de confianza para la media de X al 90 %.",
+     "c": [
+      "(9,92; 10,08)",
+      "(9,18; 10,82)",
+      "(1,78; 18,23)",
+      "(8,71; 11,29)"
+     ],
+     "a": 1,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 1,645 · 5/10 ≈ 0,82. Intervalo: 10 ± 0,82 = <b>(9,18; 10,82)</b>."
+    },
+    {
+     "q": "X = la duración de las llamadas a un servicio de atención sigue una normal con σ = 18 s. Una muestra de 81 da x̄ = 219 s. Halla el intervalo de confianza para la media de X al 95 %.",
+     "c": [
+      "(218,56; 219,44)",
+      "(215,08; 222,92)",
+      "(213,85; 224,15)",
+      "(183,72; 254,28)"
+     ],
+     "a": 1,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 1,96 · 18/9 ≈ 3,92. Intervalo: 219 ± 3,92 = <b>(215,08; 222,92)</b>."
+    },
+    {
+     "q": "X = el tiempo diario de estudio de los alumnos de Bachillerato sigue una normal con σ = 10 min. Una muestra de 25 da x̄ = 164 min. Halla el intervalo de confianza para la media de X al 90 %.",
+     "c": [
+      "(160,71; 167,29)",
+      "(147,55; 180,45)",
+      "(163,34; 164,66)",
+      "(160,08; 167,92)"
+     ],
+     "a": 0,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 1,645 · 10/5 ≈ 3,29. Intervalo: 164 ± 3,29 = <b>(160,71; 167,29)</b>."
+    },
+    {
+     "q": "X = el tiempo diario de estudio de los alumnos de Bachillerato sigue una normal con σ = 14 min. Una muestra de 49 da x̄ = 61 min. Halla el intervalo de confianza para la media de X al 90 %.",
+     "c": [
+      "(58,44; 63,56)",
+      "(60,53; 61,47)",
+      "(57,71; 64,29)",
+      "(37,97; 84,03)"
+     ],
+     "a": 2,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 1,645 · 14/7 ≈ 3,29. Intervalo: 61 ± 3,29 = <b>(57,71; 64,29)</b>."
+    },
+    {
+     "q": "X = el gasto en la compra semanal de las familias sigue una normal con σ = 5 €. Una muestra de 25 da x̄ = 163 €. Halla el intervalo de confianza para la media de X al 90 %.",
+     "c": [
+      "(154,78; 171,23)",
+      "(161,35; 164,65)",
+      "(160,67; 165,33)",
+      "(162,67; 163,33)"
+     ],
+     "a": 1,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 1,645 · 5/5 ≈ 1,65. Intervalo: 163 ± 1,65 = <b>(161,35; 164,65)</b>."
+    },
+    {
+     "q": "X = el gasto mensual en ocio de los jóvenes de una ciudad sigue una normal con σ = 21 €. Una muestra de 49 da x̄ = 66 €. Halla el intervalo de confianza para la media de X al 95 %.",
+     "c": [
+      "(60,12; 71,88)",
+      "(65,16; 66,84)",
+      "(58,28; 73,72)",
+      "(24,84; 107,16)"
+     ],
+     "a": 0,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 1,96 · 21/7 ≈ 5,88. Intervalo: 66 ± 5,88 = <b>(60,12; 71,88)</b>."
+    },
+    {
+     "q": "X = el precio del alquiler por m² en un barrio sigue una normal con σ = 3 €. Una muestra de 36 da x̄ = 18 €. Halla el intervalo de confianza para la media de X al 98 %.",
+     "c": [
+      "(17,81; 18,19)",
+      "(11,01; 24,99)",
+      "(17,02; 18,98)",
+      "(16,83; 19,17)"
+     ],
+     "a": 3,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,33 · 3/6 ≈ 1,17. Intervalo: 18 ± 1,17 = <b>(16,83; 19,17)</b>."
+    },
+    {
+     "q": "X = la duración de las llamadas a un servicio de atención sigue una normal con σ = 18 s. Una muestra de 81 da x̄ = 350 s. Halla el intervalo de confianza para la media de X al 98 %.",
+     "c": [
+      "(346,08; 353,92)",
+      "(308,06; 391,94)",
+      "(345,34; 354,66)",
+      "(349,48; 350,52)"
+     ],
+     "a": 2,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,33 · 18/9 ≈ 4,66. Intervalo: 350 ± 4,66 = <b>(345,34; 354,66)</b>."
+    },
+    {
+     "q": "X = las horas semanales de teletrabajo sigue una normal con σ = 3 h. Una muestra de 81 da x̄ = 10 h. Halla el intervalo de confianza para la media de X al 98 %.",
+     "c": [
+      "(9,22; 10,78)",
+      "(9,91; 10,09)",
+      "(3,01; 16,99)",
+      "(9,57; 10,43)"
+     ],
+     "a": 0,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,33 · 3/9 ≈ 0,78. Intervalo: 10 ± 0,78 = <b>(9,22; 10,78)</b>."
+    },
+    {
+     "q": "X = el gasto mensual en ocio de los jóvenes de una ciudad sigue una normal con σ = 14 €. Una muestra de 49 da x̄ = 75 €. Halla el intervalo de confianza para la media de X al 98 %.",
+     "c": [
+      "(69,85; 80,15)",
+      "(74,33; 75,67)",
+      "(70,34; 79,66)",
+      "(42,38; 107,62)"
+     ],
+     "a": 2,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,33 · 14/7 ≈ 4,66. Intervalo: 75 ± 4,66 = <b>(70,34; 79,66)</b>."
+    },
+    {
+     "q": "X = el gasto en la compra semanal de las familias sigue una normal con σ = 9 €. Una muestra de 81 da x̄ = 150 €. Halla el intervalo de confianza para la media de X al 99 %.",
+     "c": [
+      "(147,42; 152,58)",
+      "(148,72; 151,28)",
+      "(126,83; 173,18)",
+      "(149,71; 150,29)"
+     ],
+     "a": 0,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,575 · 9/9 ≈ 2,58. Intervalo: 150 ± 2,58 = <b>(147,42; 152,58)</b>."
+    },
+    {
+     "q": "X = la duración de las llamadas a un servicio de atención sigue una normal con σ = 20 s. Una muestra de 100 da x̄ = 396 s. Halla el intervalo de confianza para la media de X al 98 %.",
+     "c": [
+      "(395,53; 396,47)",
+      "(390,85; 401,15)",
+      "(349,40; 442,60)",
+      "(391,34; 400,66)"
+     ],
+     "a": 3,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,33 · 20/10 ≈ 4,66. Intervalo: 396 ± 4,66 = <b>(391,34; 400,66)</b>."
+    },
+    {
+     "q": "X = el gasto mensual en ocio de los jóvenes de una ciudad sigue una normal con σ = 8 €. Una muestra de 16 da x̄ = 106 €. Halla el intervalo de confianza para la media de X al 98 %.",
+     "c": [
+      "(103,44; 108,56)",
+      "(101,34; 110,66)",
+      "(104,84; 107,17)",
+      "(87,36; 124,64)"
+     ],
+     "a": 1,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,33 · 8/4 ≈ 4,66. Intervalo: 106 ± 4,66 = <b>(101,34; 110,66)</b>."
+    },
+    {
+     "q": "X = el gasto en la compra semanal de las familias sigue una normal con σ = 10 €. Una muestra de 25 da x̄ = 146 €. Halla el intervalo de confianza para la media de X al 99 %.",
+     "c": [
+      "(140,85; 151,15)",
+      "(144,97; 147,03)",
+      "(142,71; 149,29)",
+      "(120,25; 171,75)"
+     ],
+     "a": 0,
+     "e": "E = z<sub>α/2</sub> · σ/√n = 2,575 · 10/5 ≈ 5,15. Intervalo: 146 ± 5,15 = <b>(140,85; 151,15)</b>."
+    }
+   ]
+  },
+  {
+   "title": "Error máximo admisible",
+   "items": [
+    {
+     "q": "Para X = el tiempo diario de estudio de los alumnos de Bachillerato, el intervalo de confianza para la media es (136,85; 147,15). ¿Cuáles son la media muestral y el error?",
+     "c": [
+      "x̄ = 10,30; E = 5,15",
+      "x̄ = 136,85; E = 10,30",
+      "x̄ = 142; E = 5,15",
+      "x̄ = 142; E = 10,30"
+     ],
+     "a": 2,
+     "e": "Centro: (136,85 + 147,15)/2 = 142; error: la mitad de la amplitud, (147,15 − 136,85)/2 = <b>5,15</b>."
+    },
+    {
+     "q": "Para X = el gasto mensual en ocio de los jóvenes de una ciudad, el intervalo de confianza para la media es (105,71; 112,29). ¿Cuáles son la media muestral y el error?",
+     "c": [
+      "x̄ = 105,71; E = 6,58",
+      "x̄ = 109; E = 6,58",
+      "x̄ = 109; E = 3,29",
+      "x̄ = 6,58; E = 3,29"
+     ],
+     "a": 2,
+     "e": "Centro: (105,71 + 112,29)/2 = 109; error: la mitad de la amplitud, (112,29 − 105,71)/2 = <b>3,29</b>."
+    },
+    {
+     "q": "Con σ = 9 € y una muestra de 81, ¿cuál es el error máximo admisible al 99 %?",
+     "c": [
+      "1,00 €",
+      "23,18 €",
+      "0,29 €",
+      "2,58 €"
+     ],
+     "a": 3,
+     "e": "E = 2,575 · 9/√81 ≈ <b>2,58 €</b>."
+    },
+    {
+     "q": "Para X = el tiempo diario de estudio de los alumnos de Bachillerato, el intervalo de confianza para la media es (105,71; 112,29). ¿Cuáles son la media muestral y el error?",
+     "c": [
+      "x̄ = 109; E = 3,29",
+      "x̄ = 6,58; E = 3,29",
+      "x̄ = 105,71; E = 6,58",
+      "x̄ = 109; E = 6,58"
+     ],
+     "a": 0,
+     "e": "Centro: (105,71 + 112,29)/2 = 109; error: la mitad de la amplitud, (112,29 − 105,71)/2 = <b>3,29</b>."
+    },
+    {
+     "q": "Con σ = 5 € y una muestra de 100, ¿cuál es el error máximo admisible al 98 %?",
+     "c": [
+      "1,17 €",
+      "0,50 €",
+      "11,65 €",
+      "0,12 €"
+     ],
+     "a": 0,
+     "e": "E = 2,33 · 5/√100 ≈ <b>1,17 €</b>."
+    },
+    {
+     "q": "Con σ = 12 s y una muestra de 36, ¿cuál es el error máximo admisible al 90 %?",
+     "c": [
+      "3,29 s",
+      "0,55 s",
+      "2,00 s",
+      "19,74 s"
+     ],
+     "a": 0,
+     "e": "E = 1,645 · 12/√36 ≈ <b>3,29 s</b>."
+    },
+    {
+     "q": "Con σ = 24 s y una muestra de 64, ¿cuál es el error máximo admisible al 98 %?",
+     "c": [
+      "6,99 s",
+      "0,87 s",
+      "55,92 s",
+      "3,00 s"
+     ],
+     "a": 0,
+     "e": "E = 2,33 · 24/√64 ≈ <b>6,99 s</b>."
+    },
+    {
+     "q": "Para X = la duración de las llamadas a un servicio de atención, el intervalo de confianza para la media es (134,08; 141,92). ¿Cuáles son la media muestral y el error?",
+     "c": [
+      "x̄ = 7,84; E = 3,92",
+      "x̄ = 138; E = 7,84",
+      "x̄ = 138; E = 3,92",
+      "x̄ = 134,08; E = 7,84"
+     ],
+     "a": 2,
+     "e": "Centro: (134,08 + 141,92)/2 = 138; error: la mitad de la amplitud, (141,92 − 134,08)/2 = <b>3,92</b>."
+    },
+    {
+     "q": "Con σ = 40 € y una muestra de 100, ¿cuál es el error máximo admisible al 90 %?",
+     "c": [
+      "4,00 €",
+      "6,58 €",
+      "0,66 €",
+      "65,80 €"
+     ],
+     "a": 1,
+     "e": "E = 1,645 · 40/√100 ≈ <b>6,58 €</b>."
+    },
+    {
+     "q": "Si el tamaño de la muestra se multiplica por 16 (con el mismo nivel de confianza), ¿qué le pasa al error?",
+     "c": [
+      "se divide entre 16",
+      "no cambia",
+      "se divide entre 4",
+      "se multiplica por 4"
+     ],
+     "a": 2,
+     "e": "E = z · σ/√n: si n se multiplica por 16, √n se multiplica por 4. <b>Se divide entre 4</b>."
+    },
+    {
+     "q": "Con σ = 40 € y una muestra de 100, ¿cuál es el error máximo admisible al 98 %?",
+     "c": [
+      "4,00 €",
+      "93,20 €",
+      "0,93 €",
+      "9,32 €"
+     ],
+     "a": 3,
+     "e": "E = 2,33 · 40/√100 ≈ <b>9,32 €</b>."
+    },
+    {
+     "q": "Con σ = 5 s y una muestra de 25, ¿cuál es el error máximo admisible al 98 %?",
+     "c": [
+      "1,00 s",
+      "0,47 s",
+      "2,33 s",
+      "11,65 s"
+     ],
+     "a": 2,
+     "e": "E = 2,33 · 5/√25 ≈ <b>2,33 s</b>."
+    },
+    {
+     "q": "Con σ = 10 s y una muestra de 25, ¿cuál es el error máximo admisible al 90 %?",
+     "c": [
+      "16,45 s",
+      "3,29 s",
+      "0,66 s",
+      "2,00 s"
+     ],
+     "a": 1,
+     "e": "E = 1,645 · 10/√25 ≈ <b>3,29 s</b>."
+    },
+    {
+     "q": "Con σ = 2 € y una muestra de 25, ¿cuál es el error máximo admisible al 95 %?",
+     "c": [
+      "3,92 €",
+      "0,40 €",
+      "0,16 €",
+      "0,78 €"
+     ],
+     "a": 3,
+     "e": "E = 1,96 · 2/√25 ≈ <b>0,78 €</b>."
+    },
+    {
+     "q": "Con σ = 5 € y una muestra de 100, ¿cuál es el error máximo admisible al 90 %?",
+     "c": [
+      "0,50 €",
+      "0,82 €",
+      "0,08 €",
+      "8,23 €"
+     ],
+     "a": 1,
+     "e": "E = 1,645 · 5/√100 ≈ <b>0,82 €</b>."
+    },
+    {
+     "q": "Para X = el precio del alquiler por m² en un barrio, el intervalo de confianza para la media es (16,71; 19,29). ¿Cuáles son la media muestral y el error?",
+     "c": [
+      "x̄ = 18; E = 2,58",
+      "x̄ = 18; E = 1,29",
+      "x̄ = 16,71; E = 2,58",
+      "x̄ = 2,58; E = 1,29"
+     ],
+     "a": 1,
+     "e": "Centro: (16,71 + 19,29)/2 = 18; error: la mitad de la amplitud, (19,29 − 16,71)/2 = <b>1,29</b>."
+    },
+    {
+     "q": "Para X = el precio del alquiler por m² en un barrio, el intervalo de confianza para la media es (10,18; 11,82). ¿Cuáles son la media muestral y el error?",
+     "c": [
+      "x̄ = 10,18; E = 1,64",
+      "x̄ = 11; E = 1,64",
+      "x̄ = 1,64; E = 0,82",
+      "x̄ = 11; E = 0,82"
+     ],
+     "a": 3,
+     "e": "Centro: (10,18 + 11,82)/2 = 11; error: la mitad de la amplitud, (11,82 − 10,18)/2 = <b>0,82</b>."
+    },
+    {
+     "q": "Con σ = 4 € y una muestra de 64, ¿cuál es el error máximo admisible al 98 %?",
+     "c": [
+      "0,50 €",
+      "0,15 €",
+      "9,32 €",
+      "1,17 €"
+     ],
+     "a": 3,
+     "e": "E = 2,33 · 4/√64 ≈ <b>1,17 €</b>."
+    },
+    {
+     "q": "Si el tamaño de la muestra se multiplica por 4 (con el mismo nivel de confianza), ¿qué le pasa al error?",
+     "c": [
+      "se divide entre 2",
+      "se divide entre 4",
+      "no cambia",
+      "se multiplica por 2"
+     ],
+     "a": 0,
+     "e": "E = z · σ/√n: si n se multiplica por 4, √n se multiplica por 2. <b>Se divide entre 2</b>."
+    },
+    {
+     "q": "¿Dónde está siempre el centro del intervalo de confianza para la media?",
+     "c": [
+      "en μ",
+      "en la media muestral x̄",
+      "en z<sub>α/2</sub>",
+      "en 0"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>en la media muestral x̄</b>."
+    }
+   ]
+  },
+  {
+   "title": "Tamaño de la muestra",
+   "items": [
+    {
+     "q": "Se quiere estimar el tiempo medio de desplazamiento al trabajo con un error menor que 4 y un nivel de confianza del 98 %. Si σ = 8, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "4",
+      "21",
+      "5",
+      "22"
+     ],
+     "a": 3,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,33 · 8/4)² ≈ 21,72 → <b>n = 22</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el gasto medio en libros con un error menor que 4 y un nivel de confianza del 90 %. Si σ = 25, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "11",
+      "105",
+      "106",
+      "40"
+     ],
+     "a": 2,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (1,645 · 25/4)² ≈ 105,7 → <b>n = 106</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de sueño (en minutos) con un error menor que 1,5 y un nivel de confianza del 99 %. Si σ = 15, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "26",
+      "664",
+      "663",
+      "100"
+     ],
+     "a": 1,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,575 · 15/1,5)² ≈ 663,06 → <b>n = 664</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de desplazamiento al trabajo con un error menor que 2,5 y un nivel de confianza del 95 %. Si σ = 30, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "144",
+      "554",
+      "24",
+      "553"
+     ],
+     "a": 1,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (1,96 · 30/2,5)² ≈ 553,19 → <b>n = 554</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de sueño (en minutos) con un error menor que 2 y un nivel de confianza del 99 %. Si σ = 20, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "26",
+      "100",
+      "664",
+      "663"
+     ],
+     "a": 2,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,575 · 20/2)² ≈ 663,06 → <b>n = 664</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de sueño (en minutos) con un error menor que 2 y un nivel de confianza del 90 %. Si σ = 10, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "67",
+      "68",
+      "25",
+      "9"
+     ],
+     "a": 1,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (1,645 · 10/2)² ≈ 67,65 → <b>n = 68</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de sueño (en minutos) con un error menor que 2 y un nivel de confianza del 95 %. Si σ = 8, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "61",
+      "8",
+      "62",
+      "16"
+     ],
+     "a": 2,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (1,96 · 8/2)² ≈ 61,47 → <b>n = 62</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de desplazamiento al trabajo con un error menor que 5 y un nivel de confianza del 98 %. Si σ = 6, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "3",
+      "2",
+      "7",
+      "8"
+     ],
+     "a": 3,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,33 · 6/5)² ≈ 7,82 → <b>n = 8</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de desplazamiento al trabajo con un error menor que 3 y un nivel de confianza del 98 %. Si σ = 20, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "242",
+      "241",
+      "16",
+      "45"
+     ],
+     "a": 0,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,33 · 20/3)² ≈ 241,28 → <b>n = 242</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de desplazamiento al trabajo con un error menor que 2,5 y un nivel de confianza del 99 %. Si σ = 6, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "39",
+      "7",
+      "6",
+      "38"
+     ],
+     "a": 0,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,575 · 6/2,5)² ≈ 38,19 → <b>n = 39</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el gasto medio en libros con un error menor que 1,5 y un nivel de confianza del 90 %. Si σ = 6, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "44",
+      "7",
+      "16",
+      "43"
+     ],
+     "a": 0,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (1,645 · 6/1,5)² ≈ 43,3 → <b>n = 44</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de desplazamiento al trabajo con un error menor que 1 y un nivel de confianza del 90 %. Si σ = 30, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "50",
+      "2435",
+      "2436",
+      "900"
+     ],
+     "a": 2,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (1,645 · 30/1)² ≈ 2435,42 → <b>n = 2436</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de sueño (en minutos) con un error menor que 4 y un nivel de confianza del 98 %. Si σ = 20, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "25",
+      "12",
+      "136",
+      "135"
+     ],
+     "a": 2,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,33 · 20/4)² ≈ 135,72 → <b>n = 136</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el gasto medio en libros con un error menor que 4 y un nivel de confianza del 95 %. Si σ = 20, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "10",
+      "25",
+      "96",
+      "97"
+     ],
+     "a": 3,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (1,96 · 20/4)² ≈ 96,04 → <b>n = 97</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de desplazamiento al trabajo con un error menor que 2 y un nivel de confianza del 99 %. Si σ = 25, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "33",
+      "157",
+      "1036",
+      "1037"
+     ],
+     "a": 3,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,575 · 25/2)² ≈ 1036,04 → <b>n = 1037</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de sueño (en minutos) con un error menor que 5 y un nivel de confianza del 99 %. Si σ = 10, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "4",
+      "26",
+      "6",
+      "27"
+     ],
+     "a": 3,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,575 · 10/5)² ≈ 26,52 → <b>n = 27</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el gasto medio en libros con un error menor que 1,5 y un nivel de confianza del 99 %. Si σ = 20, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "1179",
+      "1178",
+      "35",
+      "178"
+     ],
+     "a": 0,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,575 · 20/1,5)² ≈ 1178,78 → <b>n = 1179</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de desplazamiento al trabajo con un error menor que 2 y un nivel de confianza del 90 %. Si σ = 20, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "271",
+      "100",
+      "17",
+      "270"
+     ],
+     "a": 0,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (1,645 · 20/2)² ≈ 270,6 → <b>n = 271</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el gasto medio en libros con un error menor que 5 y un nivel de confianza del 98 %. Si σ = 20, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "10",
+      "87",
+      "86",
+      "16"
+     ],
+     "a": 1,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,33 · 20/5)² ≈ 86,86 → <b>n = 87</b> (se redondea hacia arriba)."
+    },
+    {
+     "q": "Se quiere estimar el tiempo medio de desplazamiento al trabajo con un error menor que 5 y un nivel de confianza del 98 %. Si σ = 20, ¿qué tamaño mínimo debe tener la muestra?",
+     "c": [
+      "16",
+      "87",
+      "86",
+      "10"
+     ],
+     "a": 1,
+     "e": "n ≥ (z<sub>α/2</sub> · σ/E)² = (2,33 · 20/5)² ≈ 86,86 → <b>n = 87</b> (se redondea hacia arriba)."
+    }
+   ]
+  },
+  {
+   "title": "Intervalo para una proporción",
+   "items": [
+    {
+     "q": "En una encuesta a 100 personas, 27 usan el transporte público a diario. ¿Cuál es el error máximo al estimar la proporción con un nivel del 98 %?",
+     "c": [
+      "0,103",
+      "1,034",
+      "0,005",
+      "0,044"
+     ],
+     "a": 0,
+     "e": "E = z<sub>α/2</sub> · √(p̂ q̂ / n) = 2,33 · √(0,27 · 0,73/100) ≈ <b>0,103</b>."
+    },
+    {
+     "q": "En una encuesta a 500 personas, 93 leen la prensa digital. Halla el intervalo de confianza al 95 % para la proporción de la población.",
+     "c": [
+      "(0,169; 0,203)",
+      "(0,185; 0,187)",
+      "(0,152; 0,220)",
+      "(0,148; 0,224)"
+     ],
+     "a": 2,
+     "e": "p̂ = 93/500 = 0,186; E = 1,96 · √(0,186 · 0,814/500) ≈ 0,034 → <b>(0,152; 0,220)</b>."
+    },
+    {
+     "q": "En una encuesta a 625 personas, 447 han comprado por internet este mes. Halla el intervalo de confianza al 98 % para la proporción de la población.",
+     "c": [
+      "(0,694; 0,736)",
+      "(0,714; 0,716)",
+      "(0,673; 0,757)",
+      "(0,636; 0,794)"
+     ],
+     "a": 2,
+     "e": "p̂ = 447/625 = 0,715; E = 2,33 · √(0,715 · 0,285/625) ≈ 0,042 → <b>(0,673; 0,757)</b>."
+    },
+    {
+     "q": "En una encuesta a 100 personas, 65 piensan votar en las próximas elecciones municipales. Halla el intervalo de confianza al 95 % para la proporción de la población.",
+     "c": [
+      "(0,604; 0,697)",
+      "(0,646; 0,654)",
+      "(0,492; 0,808)",
+      "(0,557; 0,743)"
+     ],
+     "a": 3,
+     "e": "p̂ = 65/100 = 0,65; E = 1,96 · √(0,65 · 0,35/100) ≈ 0,093 → <b>(0,557; 0,743)</b>."
+    },
+    {
+     "q": "En una encuesta a 250 personas, 95 leen la prensa digital. Halla el intervalo de confianza al 90 % para la proporción de la población.",
+     "c": [
+      "(0,378; 0,382)",
+      "(0,355; 0,405)",
+      "(0,330; 0,430)",
+      "(0,316; 0,444)"
+     ],
+     "a": 2,
+     "e": "p̂ = 95/250 = 0,38; E = 1,645 · √(0,38 · 0,62/250) ≈ 0,050 → <b>(0,330; 0,430)</b>."
+    },
+    {
+     "q": "En una encuesta a 400 personas, 260 están a favor de ampliar el carril bici. Halla el intervalo de confianza al 98 % para la proporción de la población.",
+     "c": [
+      "(0,556; 0,744)",
+      "(0,594; 0,706)",
+      "(0,622; 0,678)",
+      "(0,649; 0,651)"
+     ],
+     "a": 1,
+     "e": "p̂ = 260/400 = 0,65; E = 2,33 · √(0,65 · 0,35/400) ≈ 0,056 → <b>(0,594; 0,706)</b>."
+    },
+    {
+     "q": "En una encuesta a 625 personas, 248 practican deporte cada semana. Halla el intervalo de confianza al 98 % para la proporción de la población.",
+     "c": [
+      "(0,396; 0,398)",
+      "(0,338; 0,456)",
+      "(0,374; 0,420)",
+      "(0,351; 0,443)"
+     ],
+     "a": 3,
+     "e": "p̂ = 248/625 = 0,397; E = 2,33 · √(0,397 · 0,603/625) ≈ 0,046 → <b>(0,351; 0,443)</b>."
+    },
+    {
+     "q": "En una encuesta a 1000 personas, 698 están a favor de ampliar el carril bici. Halla el intervalo de confianza al 99 % para la proporción de la población.",
+     "c": [
+      "(0,680; 0,716)",
+      "(0,630; 0,766)",
+      "(0,661; 0,735)",
+      "(0,697; 0,699)"
+     ],
+     "a": 2,
+     "e": "p̂ = 698/1000 = 0,698; E = 2,575 · √(0,698 · 0,302/1000) ≈ 0,037 → <b>(0,661; 0,735)</b>."
+    },
+    {
+     "q": "En una encuesta a 100 personas, 18 piensan votar en las próximas elecciones municipales. Halla el intervalo de confianza al 99 % para la proporción de la población.",
+     "c": [
+      "(0,176; 0,184)",
+      "(0,081; 0,279)",
+      "(0,131; 0,229)",
+      "(0,071; 0,289)"
+     ],
+     "a": 1,
+     "e": "p̂ = 18/100 = 0,18; E = 2,575 · √(0,18 · 0,82/100) ≈ 0,099 → <b>(0,081; 0,279)</b>."
+    },
+    {
+     "q": "En una encuesta a 400 personas, 61 están a favor de ampliar el carril bici. Halla el intervalo de confianza al 95 % para la proporción de la población.",
+     "c": [
+      "(0,114; 0,191)",
+      "(0,135; 0,170)",
+      "(0,118; 0,188)",
+      "(0,152; 0,153)"
+     ],
+     "a": 2,
+     "e": "p̂ = 61/400 = 0,153; E = 1,96 · √(0,153 · 0,848/400) ≈ 0,035 → <b>(0,118; 0,188)</b>."
+    },
+    {
+     "q": "En una encuesta a 800 personas, 391 están a favor de ampliar el carril bici. Halla el intervalo de confianza al 99 % para la proporción de la población.",
+     "c": [
+      "(0,488; 0,490)",
+      "(0,443; 0,535)",
+      "(0,466; 0,512)",
+      "(0,425; 0,552)"
+     ],
+     "a": 1,
+     "e": "p̂ = 391/800 = 0,489; E = 2,575 · √(0,489 · 0,511/800) ≈ 0,046 → <b>(0,443; 0,535)</b>."
+    },
+    {
+     "q": "En una encuesta a 100 personas, 45 usan el transporte público a diario. Halla el intervalo de confianza al 98 % para la proporción de la población.",
+     "c": [
+      "(0,444; 0,456)",
+      "(0,294; 0,606)",
+      "(0,392; 0,508)",
+      "(0,334; 0,566)"
+     ],
+     "a": 3,
+     "e": "p̂ = 45/100 = 0,45; E = 2,33 · √(0,45 · 0,55/100) ≈ 0,116 → <b>(0,334; 0,566)</b>."
+    },
+    {
+     "q": "En una encuesta a 625 personas, 405 practican deporte cada semana. ¿Cuál es el error máximo al estimar la proporción con un nivel del 90 %?",
+     "c": [
+      "0,031",
+      "0,001",
+      "0,786",
+      "0,019"
+     ],
+     "a": 0,
+     "e": "E = z<sub>α/2</sub> · √(p̂ q̂ / n) = 1,645 · √(0,648 · 0,352/625) ≈ <b>0,031</b>."
+    },
+    {
+     "q": "En una encuesta a 500 personas, 385 piensan votar en las próximas elecciones municipales. Halla el intervalo de confianza al 99 % para la proporción de la población.",
+     "c": [
+      "(0,769; 0,771)",
+      "(0,722; 0,818)",
+      "(0,669; 0,871)",
+      "(0,746; 0,794)"
+     ],
+     "a": 1,
+     "e": "p̂ = 385/500 = 0,77; E = 2,575 · √(0,77 · 0,23/500) ≈ 0,048 → <b>(0,722; 0,818)</b>."
+    },
+    {
+     "q": "En una encuesta a 1000 personas, 139 leen la prensa digital. Halla el intervalo de confianza al 99 % para la proporción de la población.",
+     "c": [
+      "(0,139; 0,139)",
+      "(0,111; 0,167)",
+      "(0,109; 0,169)",
+      "(0,125; 0,153)"
+     ],
+     "a": 1,
+     "e": "p̂ = 139/1000 = 0,139; E = 2,575 · √(0,139 · 0,861/1000) ≈ 0,028 → <b>(0,111; 0,167)</b>."
+    },
+    {
+     "q": "En una encuesta a 500 personas, 428 usan el transporte público a diario. Halla el intervalo de confianza al 95 % para la proporción de la población.",
+     "c": [
+      "(0,168; 1,544)",
+      "(0,856; 0,856)",
+      "(0,775; 0,937)",
+      "(0,825; 0,887)"
+     ],
+     "a": 3,
+     "e": "p̂ = 428/500 = 0,856; E = 1,96 · √(0,856 · 0,144/500) ≈ 0,031 → <b>(0,825; 0,887)</b>."
+    },
+    {
+     "q": "En una encuesta a 625 personas, 414 están a favor de ampliar el carril bici. Halla el intervalo de confianza al 95 % para la proporción de la población.",
+     "c": [
+      "(0,662; 0,663)",
+      "(0,599; 0,726)",
+      "(0,644; 0,681)",
+      "(0,625; 0,699)"
+     ],
+     "a": 3,
+     "e": "p̂ = 414/625 = 0,662; E = 1,96 · √(0,662 · 0,338/625) ≈ 0,037 → <b>(0,625; 0,699)</b>."
+    },
+    {
+     "q": "En una encuesta a 500 personas, 392 están a favor de ampliar el carril bici. Halla el intervalo de confianza al 95 % para la proporción de la población.",
+     "c": [
+      "(0,748; 0,820)",
+      "(0,783; 0,785)",
+      "(0,706; 0,862)",
+      "(0,766; 0,802)"
+     ],
+     "a": 0,
+     "e": "p̂ = 392/500 = 0,784; E = 1,96 · √(0,784 · 0,216/500) ≈ 0,036 → <b>(0,748; 0,820)</b>."
+    },
+    {
+     "q": "En una encuesta a 625 personas, 354 usan el transporte público a diario. Halla el intervalo de confianza al 99 % para la proporción de la población.",
+     "c": [
+      "(0,515; 0,617)",
+      "(0,565; 0,567)",
+      "(0,541; 0,592)",
+      "(0,489; 0,644)"
+     ],
+     "a": 0,
+     "e": "p̂ = 354/625 = 0,566; E = 2,575 · √(0,566 · 0,434/625) ≈ 0,051 → <b>(0,515; 0,617)</b>."
+    },
+    {
+     "q": "En una encuesta a 800 personas, 136 están a favor de ampliar el carril bici. ¿Cuál es el error máximo al estimar la proporción con un nivel del 90 %?",
+     "c": [
+      "0,022",
+      "0,618",
+      "0,013",
+      "0,000"
+     ],
+     "a": 0,
+     "e": "E = z<sub>α/2</sub> · √(p̂ q̂ / n) = 1,645 · √(0,17 · 0,83/800) ≈ <b>0,022</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 9,
+ "updated": "2026-11-23",
+ "country": "es",
+ "subject": "matematicas",
+ "grade": "2-bachillerato-ccss"
+}

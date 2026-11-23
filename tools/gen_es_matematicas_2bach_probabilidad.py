@@ -111,7 +111,7 @@ def s_condicionada():
         return M(tab + "Si un alumno hace deporte, ¿qué probabilidad hay de que sea chico? (%d alumnos)" % n, fq(F(a, a + c)), W([fq(F(a, a + b_)), fq(F(a, n)), fq(F(a + c, n)), fq(F(c, a + c))]), "P(chico | D) = %d/%d = <b>%s</b>." % (a, a + c, fq(F(a, a + c))))
     if k == "inter":
         return M(tab + "¿Qué probabilidad hay de que un alumno elegido al azar sea chico y no haga deporte? (%d alumnos)" % n, fq(F(b_, n)), W([fq(F(b_, a + b_)), fq(F(b_, b_ + d_)), fq(F(a + b_, n) * F(b_ + d_, n)), fq(F(a, n))]), "P = %d/%d = <b>%s</b>." % (b_, n, fq(F(b_, n))))
-    return M(tab + "¿Qué probabilidad hay de que un alumno al azar haga deporte? (%d alumnos)" % n, fq(F(a + c, n)), W([fq(F(a, n)), fq(F(a + c, a + b_)), fq(F(b_ + d_, n)), fq(F(c, n))]), "P(D) = %d/%d = <b>%s</b>." % (a + c, n, fq(F(a + c, n))))
+    return M(tab + "¿Qué probabilidad hay de que un alumno al azar haga deporte? (%d alumnos)" % n, fq(F(a + c, n)), W([fq(F(a, n)), fq(F(a + c, a + b_)) if c <= b_ else fq(F(a, a + c)), fq(F(b_ + d_, n)), fq(F(c, n))]), "P(D) = %d/%d = <b>%s</b>." % (a + c, n, fq(F(a + c, n))))
 
 
 def s_bayes():

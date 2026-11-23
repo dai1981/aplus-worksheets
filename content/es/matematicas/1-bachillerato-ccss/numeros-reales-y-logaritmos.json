@@ -1,0 +1,1157 @@
+{
+ "slug": "numeros-reales-y-logaritmos",
+ "title": "Números reales y logaritmos",
+ "seo_title": "Reales y logaritmos – 1.º de Bachillerato CCSS: fichas de matemáticas con soluciones",
+ "short_title": "Reales y logaritmos",
+ "domain": "Sentido numérico",
+ "standard_code": "Matemáticas Aplicadas a las CC. SS. I · Sentido numérico",
+ "standard_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-5521",
+ "standard_text": "Números reales: intervalos y valor absoluto; logaritmos y sus propiedades; ecuaciones exponenciales y logarítmicas; problemas de crecimiento y depreciación (resumen de los saberes básicos de Matemáticas Aplicadas a las Ciencias Sociales I, Real Decreto 243/2022)",
+ "meta_desc": "Fichas de Matemáticas Aplicadas a las Ciencias Sociales I: intervalos, logaritmos, ecuaciones exponenciales y problemas de población, inflación y depreciación. 100 ejercicios.",
+ "key_big": "t = log k / log (1 + r)",
+ "key_sub": "El tiempo está en el exponente: usa logaritmos.",
+ "body_html": "<h2>Cómo se hace</h2><p>Los <b>números reales</b> llenan la recta. Un trozo de la recta es un <b>intervalo</b>: [a, b] incluye los extremos, (a, b) no.</p><p>log<sub>b</sub> x = y significa b<sup>y</sup> = x. log (ab) = log a + log b; log (a/b) = log a − log b; log a<sup>n</sup> = n · log a.</p><p>Un crecimiento del r % anual multiplica cada año por 1 + r/100; una pérdida del p %, por 1 − p/100.</p><p>Para saber <b>cuántos años</b> hacen falta, se despeja el exponente con logaritmos: t = log (final/inicial) / log (índice).</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Población de 50 000 que crece un 2 % anual: ¿cuándo supera 60 000?</p><p class='sn-ex-s'>1,02<sup>t</sup> = 1,2</p><p class='sn-ex-s'>t = log 1,2 / log 1,02 ≈ 9,21</p><p class='sn-ex-a'>Respuesta: 10 años</p></div><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Coche de 20 000 € que pierde un 15 % al año, 3 años</p><p class='sn-ex-s'>20 000 · 0,85³</p><p class='sn-ex-a'>Respuesta: 12 282,50 €</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>log (a + b) = log a + log b</td><td>Falso: log (ab) = log a + log b.</td></tr><tr><td>Repartir el porcentaje entre los años</td><td>Un 2 % durante 10 años no es un 20 %: es 1,02¹⁰ ≈ 1,219.</td></tr><tr><td>Redondear hacia abajo</td><td>Si t ≈ 9,2, en 9 años aún no se llega: hacen falta 10.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Por qué se usan logaritmos en problemas de población o de dinero?",
+   "a": "Porque el tiempo está en el exponente: (1 + r)ᵗ = k. El logaritmo baja el exponente: t = log k / log (1 + r)."
+  },
+  {
+   "q": "¿Qué es la depreciación?",
+   "a": "La pérdida de valor de un bien con el tiempo. Si pierde un p % cada año, su valor se multiplica por 1 − p/100 cada año."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Intervalos y valor absoluto",
+   "items": [
+    {
+     "q": "Calcula [−5, 2] ∩ (−∞, −2).",
+     "c": [
+      "(−5, −2)",
+      "[−5, −2]",
+      "[−5, −2)",
+      "(−∞, 2]"
+     ],
+     "a": 2,
+     "e": "La intersección son los números que están en los dos: <b>[−5, −2)</b>."
+    },
+    {
+     "q": "Calcula [5, 13] ∪ (−∞, 7).",
+     "c": [
+      "[5, 13]",
+      "(−∞, 13)",
+      "(−∞, 13]",
+      "[5, 7)"
+     ],
+     "a": 2,
+     "e": "La unión son los números que están en alguno: <b>(−∞, 13]</b>."
+    },
+    {
+     "q": "Calcula [3, 7) ∪ (−∞, 6].",
+     "c": [
+      "(−∞, 7]",
+      "[3, 6]",
+      "[3, 7)",
+      "(−∞, 7)"
+     ],
+     "a": 3,
+     "e": "La unión son los números que están en alguno: <b>(−∞, 7)</b>."
+    },
+    {
+     "q": "¿Qué números cumplen |x + 7| &gt; 5?",
+     "c": [
+      "(−2, +∞)",
+      "(−∞, −12) ∪ (−2, +∞)",
+      "(−∞, −12] ∪ [−2, +∞)",
+      "(−12, −2)"
+     ],
+     "a": 1,
+     "e": "Los que están a distancia mayor que 5 de −7: <b>(−∞, −12) ∪ (−2, +∞)</b>."
+    },
+    {
+     "q": "Calcula |16 − 15|.",
+     "c": [
+      "−1",
+      "1",
+      "31",
+      "2"
+     ],
+     "a": 1,
+     "e": "|1| = <b>1</b>."
+    },
+    {
+     "q": "¿Qué números cumplen |x + 8| ≤ 7?",
+     "c": [
+      "(−∞, −15] ∪ [−1, +∞)",
+      "(−15, −1)",
+      "[−7, 7]",
+      "[−15, −1]"
+     ],
+     "a": 3,
+     "e": "Los que están a distancia ≤ 7 de −8: <b>[−15, −1]</b>."
+    },
+    {
+     "q": "¿Cuál es la distancia entre −3 y −4 en la recta real?",
+     "c": [
+      "−1",
+      "1",
+      "7",
+      "8"
+     ],
+     "a": 1,
+     "e": "d = |−3 − (−4)| = <b>1</b>."
+    },
+    {
+     "q": "Calcula (−5, −3] ∩ (−∞, −4].",
+     "c": [
+      "[−5, −4]",
+      "(−5, −4]",
+      "(−∞, −3]",
+      "(−5, −4)"
+     ],
+     "a": 1,
+     "e": "La intersección son los números que están en los dos: <b>(−5, −4]</b>."
+    },
+    {
+     "q": "¿Qué intervalo corresponde a x &gt; −2?",
+     "c": [
+      "(−2, +∞)",
+      "[−2, +∞)",
+      "(−∞, −2)",
+      "(−∞, −2]"
+     ],
+     "a": 0,
+     "e": "Corchete si el extremo se incluye (≤, ≥); paréntesis si no (&lt;, &gt;) y siempre en ∞: <b>(−2, +∞)</b>."
+    },
+    {
+     "q": "¿Qué intervalo corresponde a x &gt; −5?",
+     "c": [
+      "(−∞, −5]",
+      "[−5, +∞)",
+      "(−∞, −5)",
+      "(−5, +∞)"
+     ],
+     "a": 3,
+     "e": "Corchete si el extremo se incluye (≤, ≥); paréntesis si no (&lt;, &gt;) y siempre en ∞: <b>(−5, +∞)</b>."
+    },
+    {
+     "q": "Calcula [−4, 3] ∩ (−9, −2].",
+     "c": [
+      "[−4, −2)",
+      "(−4, −2]",
+      "[−4, −2]",
+      "(−9, 3]"
+     ],
+     "a": 2,
+     "e": "La intersección son los números que están en los dos: <b>[−4, −2]</b>."
+    },
+    {
+     "q": "¿Qué intervalo corresponde a 1 ≤ x &lt; 8?",
+     "c": [
+      "(1, 8)",
+      "(1, 8]",
+      "[1, 8]",
+      "[1, 8)"
+     ],
+     "a": 3,
+     "e": "Corchete si el extremo se incluye (≤, ≥); paréntesis si no (&lt;, &gt;) y siempre en ∞: <b>[1, 8)</b>."
+    },
+    {
+     "q": "¿Qué intervalo corresponde a 5 ≤ x &lt; 6?",
+     "c": [
+      "[5, 6)",
+      "[5, 6]",
+      "(5, 6)",
+      "(5, 6]"
+     ],
+     "a": 0,
+     "e": "Corchete si el extremo se incluye (≤, ≥); paréntesis si no (&lt;, &gt;) y siempre en ∞: <b>[5, 6)</b>."
+    },
+    {
+     "q": "¿Qué números cumplen |x + 1| ≤ 3?",
+     "c": [
+      "[−4, 2]",
+      "[−3, 3]",
+      "(−4, 2)",
+      "(−∞, −4] ∪ [2, +∞)"
+     ],
+     "a": 0,
+     "e": "Los que están a distancia ≤ 3 de −1: <b>[−4, 2]</b>."
+    },
+    {
+     "q": "Calcula [5, 6] ∩ (5, 12].",
+     "c": [
+      "[5, 6]",
+      "[5, 12]",
+      "(5, 6)",
+      "(5, 6]"
+     ],
+     "a": 3,
+     "e": "La intersección son los números que están en los dos: <b>(5, 6]</b>."
+    },
+    {
+     "q": "¿Qué número pertenece al intervalo (−8, −3]?",
+     "c": [
+      "−2",
+      "−4",
+      "−9",
+      "−8"
+     ],
+     "a": 1,
+     "e": "Comprueba los extremos: <b>−4</b> está dentro."
+    },
+    {
+     "q": "Calcula [−4, 2) ∪ (−3, +∞).",
+     "c": [
+      "(−3, 2)",
+      "[−4, 2)",
+      "[−4, +∞)",
+      "(−4, +∞)"
+     ],
+     "a": 2,
+     "e": "La unión son los números que están en alguno: <b>[−4, +∞)</b>."
+    },
+    {
+     "q": "Calcula |11 − (−1)|.",
+     "c": [
+      "12",
+      "−12",
+      "10",
+      "14"
+     ],
+     "a": 0,
+     "e": "|12| = <b>12</b>."
+    },
+    {
+     "q": "¿Qué desigualdad describe el intervalo [−4, −2]?",
+     "c": [
+      "−4 ≤ x &lt; −2",
+      "−4 &lt; x ≤ −2",
+      "−4 ≤ x ≤ −2",
+      "−4 &lt; x &lt; −2"
+     ],
+     "a": 2,
+     "e": "Respuesta: <b>−4 ≤ x ≤ −2</b>."
+    },
+    {
+     "q": "¿Qué desigualdad describe el intervalo (−∞, 3]?",
+     "c": [
+      "x ≤ 3",
+      "x &gt; 3",
+      "x ≥ 3",
+      "x &lt; 3"
+     ],
+     "a": 0,
+     "e": "Respuesta: <b>x ≤ 3</b>."
+    }
+   ]
+  },
+  {
+   "title": "Logaritmos",
+   "items": [
+    {
+     "q": "Calcula log<sub>100</sub> 10.",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "5"
+     ],
+     "a": 1,
+     "e": "10 = 100<sup><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></sup> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Calcula ln e.",
+     "c": [
+      "2",
+      "0",
+      "−1",
+      "1"
+     ],
+     "a": 3,
+     "e": "ln e<sup>k</sup> = k: <b>1</b>."
+    },
+    {
+     "q": "Calcula ln e<sup>-1</sup>.",
+     "c": [
+      "e",
+      "0",
+      "−1",
+      "1"
+     ],
+     "a": 2,
+     "e": "ln e<sup>k</sup> = k: <b>−1</b>."
+    },
+    {
+     "q": "Calcula log<sub>5</sub> 25.",
+     "c": [
+      "3",
+      "5",
+      "10",
+      "2"
+     ],
+     "a": 3,
+     "e": "5<sup>2</sup> = 25 → <b>2</b>."
+    },
+    {
+     "q": "Calcula log<sub>4</sub> (1/256).",
+     "c": [
+      "−4",
+      "4",
+      "−5",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "1/256 = 4<sup>−4</sup> → <b>−4</b>."
+    },
+    {
+     "q": "Calcula log<sub>10</sub> 100.",
+     "c": [
+      "10",
+      "20",
+      "2",
+      "3"
+     ],
+     "a": 2,
+     "e": "10<sup>2</sup> = 100 → <b>2</b>."
+    },
+    {
+     "q": "Calcula log<sub>8</sub> 2.",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "3"
+     ],
+     "a": 1,
+     "e": "2 = 8<sup><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></sup> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Calcula log<sub>9</sub> 3.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "2",
+      "1"
+     ],
+     "a": 0,
+     "e": "3 = 9<sup><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></sup> → <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "¿Qué número x cumple log<sub>5</sub> x = 3?",
+     "c": [
+      "15",
+      "25",
+      "243",
+      "125"
+     ],
+     "a": 3,
+     "e": "x = 5<sup>3</sup> = <b>125</b>."
+    },
+    {
+     "q": "¿Qué número x cumple log<sub>5</sub> x = 4?",
+     "c": [
+      "125",
+      "20",
+      "625",
+      "1024"
+     ],
+     "a": 2,
+     "e": "x = 5<sup>4</sup> = <b>625</b>."
+    },
+    {
+     "q": "Calcula log<sub>3</sub> 27.",
+     "c": [
+      "9",
+      "4",
+      "3",
+      "2"
+     ],
+     "a": 2,
+     "e": "3<sup>3</sup> = 27 → <b>3</b>."
+    },
+    {
+     "q": "¿Qué número x cumple log<sub>10</sub> x = 4?",
+     "c": [
+      "40",
+      "10 000",
+      "1 048 576",
+      "1000"
+     ],
+     "a": 1,
+     "e": "x = 10<sup>4</sup> = <b>10 000</b>."
+    },
+    {
+     "q": "Calcula log<sub>2</sub> (1/8).",
+     "c": [
+      "−4",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "3",
+      "−3"
+     ],
+     "a": 3,
+     "e": "1/8 = 2<sup>−3</sup> → <b>−3</b>."
+    },
+    {
+     "q": "Calcula log<sub>2</sub> 8.",
+     "c": [
+      "6",
+      "3",
+      "4",
+      "2"
+     ],
+     "a": 1,
+     "e": "2<sup>3</sup> = 8 → <b>3</b>."
+    },
+    {
+     "q": "Calcula ln e<sup>2</sup>.",
+     "c": [
+      "e",
+      "−2",
+      "3",
+      "2"
+     ],
+     "a": 3,
+     "e": "ln e<sup>k</sup> = k: <b>2</b>."
+    },
+    {
+     "q": "Calcula ln e<sup>5</sup>.",
+     "c": [
+      "5",
+      "e",
+      "6",
+      "−5"
+     ],
+     "a": 0,
+     "e": "ln e<sup>k</sup> = k: <b>5</b>."
+    },
+    {
+     "q": "¿Qué número x cumple log<sub>2</sub> x = 2?",
+     "c": [
+      "4",
+      "2",
+      "5",
+      "3"
+     ],
+     "a": 0,
+     "e": "x = 2<sup>2</sup> = <b>4</b>."
+    },
+    {
+     "q": "Calcula log<sub>4</sub> (1/4).",
+     "c": [
+      "−2",
+      "0",
+      "−1",
+      "1"
+     ],
+     "a": 2,
+     "e": "1/4 = 4<sup>−1</sup> → <b>−1</b>."
+    },
+    {
+     "q": "Calcula log<sub>4</sub> 8.",
+     "c": [
+      "4",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "2"
+     ],
+     "a": 1,
+     "e": "8 = 4<sup><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></sup> → <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Calcula log<sub>3</sub> (1/9).",
+     "c": [
+      "−2",
+      "−3",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2"
+     ],
+     "a": 0,
+     "e": "1/9 = 3<sup>−2</sup> → <b>−2</b>."
+    }
+   ]
+  },
+  {
+   "title": "Propiedades de los logaritmos",
+   "items": [
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 9.",
+     "c": [
+      "1,054",
+      "1,908",
+      "0,954",
+      "0,955"
+     ],
+     "a": 2,
+     "e": "9 = 3<sup>2</sup> → log 9 = 2 · log 3 ≈ <b>0,954</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 40.",
+     "c": [
+      "1,702",
+      "3,204",
+      "1,602",
+      "1,301"
+     ],
+     "a": 2,
+     "e": "40 = 2<sup>3</sup> · 5 → log 40 = 3 · log 2 + log 5 (log 5 = log 10 − log 2 ≈ 0,699) ≈ <b>1,602</b>."
+    },
+    {
+     "q": "Con la fórmula del cambio de base, calcula log<sub>7</sub> 2 (redondea a las milésimas).",
+     "c": [
+      "0,286",
+      "2,807",
+      "−0,544",
+      "0,356"
+     ],
+     "a": 3,
+     "e": "log<sub>7</sub> 2 = log 2 / log 7 ≈ <b>0,356</b>."
+    },
+    {
+     "q": "Calcula log 25 + log 4.",
+     "c": [
+      "2",
+      "3",
+      "log 29",
+      "1,462"
+     ],
+     "a": 0,
+     "e": "log 25 + log 4 = log 100 = <b>2</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 1,6.",
+     "c": [
+      "0,304",
+      "0,204",
+      "−0,097",
+      "0,408"
+     ],
+     "a": 1,
+     "e": "1,6 = 2<sup>3</sup> / 5 → log 1,6 = 3 · log 2 − log 5 (log 5 = log 10 − log 2 ≈ 0,699) ≈ <b>0,204</b>."
+    },
+    {
+     "q": "Con la fórmula del cambio de base, calcula log<sub>3</sub> 5 (redondea a las milésimas).",
+     "c": [
+      "0,683",
+      "1,667",
+      "0,222",
+      "1,465"
+     ],
+     "a": 3,
+     "e": "log<sub>3</sub> 5 = log 5 / log 3 ≈ <b>1,465</b>."
+    },
+    {
+     "q": "Con la fórmula del cambio de base, calcula log<sub>3</sub> 7 (redondea a las milésimas).",
+     "c": [
+      "1,771",
+      "0,368",
+      "0,565",
+      "2,333"
+     ],
+     "a": 0,
+     "e": "log<sub>3</sub> 7 = log 7 / log 3 ≈ <b>1,771</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 7,2.",
+     "c": [
+      "1,714",
+      "0,353",
+      "0,857",
+      "0,144"
+     ],
+     "a": 2,
+     "e": "7,2 = 2<sup>2</sup> · 3<sup>2</sup> / 5 → log 7,2 = 2 · log 2 + 2 · log 3 − log 5 (log 5 = log 10 − log 2 ≈ 0,699) ≈ <b>0,857</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 8.",
+     "c": [
+      "1,806",
+      "0,903",
+      "1,003",
+      "0,602"
+     ],
+     "a": 1,
+     "e": "8 = 2<sup>3</sup> → log 8 = 3 · log 2 ≈ <b>0,903</b>."
+    },
+    {
+     "q": "Calcula log 20 + log 50.",
+     "c": [
+      "3",
+      "4",
+      "log 70",
+      "1,845"
+     ],
+     "a": 0,
+     "e": "log 20 + log 50 = log 1000 = <b>3</b>."
+    },
+    {
+     "q": "Con la fórmula del cambio de base, calcula log<sub>2</sub> 5 (redondea a las milésimas).",
+     "c": [
+      "2,322",
+      "0,398",
+      "2,5",
+      "0,431"
+     ],
+     "a": 0,
+     "e": "log<sub>2</sub> 5 = log 5 / log 2 ≈ <b>2,322</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 4.",
+     "c": [
+      "0,702",
+      "1,204",
+      "0,602",
+      "0,301"
+     ],
+     "a": 2,
+     "e": "4 = 2<sup>2</sup> → log 4 = 2 · log 2 ≈ <b>0,602</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 60.",
+     "c": [
+      "3,556",
+      "0,144",
+      "0,126",
+      "1,778"
+     ],
+     "a": 3,
+     "e": "60 = 2<sup>2</sup> · 3 · 5 → log 60 = 2 · log 2 + log 3 + log 5 (log 5 = log 10 − log 2 ≈ 0,699) ≈ <b>1,778</b>."
+    },
+    {
+     "q": "Con la fórmula del cambio de base, calcula log<sub>5</sub> 2 (redondea a las milésimas).",
+     "c": [
+      "0,4",
+      "0,431",
+      "−0,398",
+      "2,322"
+     ],
+     "a": 1,
+     "e": "log<sub>5</sub> 2 = log 2 / log 5 ≈ <b>0,431</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 360.",
+     "c": [
+      "0,144",
+      "0,052",
+      "5,112",
+      "2,556"
+     ],
+     "a": 3,
+     "e": "360 = 2<sup>3</sup> · 3<sup>2</sup> · 5 → log 360 = 3 · log 2 + 2 · log 3 + log 5 (log 5 = log 10 − log 2 ≈ 0,699) ≈ <b>2,556</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 3,6.",
+     "c": [
+      "0,654",
+      "0,144",
+      "0,556",
+      "1,112"
+     ],
+     "a": 2,
+     "e": "3,6 = 2 · 3<sup>2</sup> / 5 → log 3,6 = log 2 + 2 · log 3 − log 5 (log 5 = log 10 − log 2 ≈ 0,699) ≈ <b>0,556</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 6.",
+     "c": [
+      "1,556",
+      "0,778",
+      "0,177",
+      "0,144"
+     ],
+     "a": 1,
+     "e": "6 = 2 · 3 → log 6 = log 2 + log 3 ≈ <b>0,778</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 2,4.",
+     "c": [
+      "0,76",
+      "0,38",
+      "0,144",
+      "0,126"
+     ],
+     "a": 1,
+     "e": "2,4 = 2<sup>2</sup> · 3 / 5 → log 2,4 = 2 · log 2 + log 3 − log 5 (log 5 = log 10 − log 2 ≈ 0,699) ≈ <b>0,38</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 2.",
+     "c": [
+      "0,301",
+      "0",
+      "0,401",
+      "0,602"
+     ],
+     "a": 0,
+     "e": "2 = 2 → log 2 = log 2 ≈ <b>0,301</b>."
+    },
+    {
+     "q": "Sabiendo que log 2 ≈ 0,301 y log 3 ≈ 0,477, calcula log 12.",
+     "c": [
+      "0,126",
+      "2,158",
+      "0,144",
+      "1,079"
+     ],
+     "a": 3,
+     "e": "12 = 2<sup>2</sup> · 3 → log 12 = 2 · log 2 + log 3 ≈ <b>1,079</b>."
+    }
+   ]
+  },
+  {
+   "title": "Ecuaciones exponenciales y logarítmicas",
+   "items": [
+    {
+     "q": "Resuelve ln (2x) = 2.",
+     "c": [
+      "x = e<sup>2</sup>/2",
+      "x = 2e<sup>2</sup>",
+      "x = 10<sup>2</sup>/2",
+      "x = 20"
+     ],
+     "a": 0,
+     "e": "2x = e<sup>2</sup> → <b>x = e<sup>2</sup>/2</b>."
+    },
+    {
+     "q": "Resuelve 8<sup>x</sup> = 16.",
+     "c": [
+      "x = 2",
+      "x = <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "x = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "x = 4"
+     ],
+     "a": 1,
+     "e": "8 = 2<sup>3</sup> y 16 = 2<sup>4</sup> → 3x = 4 → <b>x = <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Resuelve 3<sup>2x</sup> − 12 · 3<sup>x</sup> + 27 = 0.",
+     "c": [
+      "x₁ = 1, x₂ = 2",
+      "x₁ = 3, x₂ = 9",
+      "x₁ = −2, x₂ = −1",
+      "x = 2"
+     ],
+     "a": 0,
+     "e": "Cambio t = 3<sup>x</sup>: t² − 12t + 27 = 0 → t = 9 o t = 3 → <b>x₁ = 1, x₂ = 2</b>."
+    },
+    {
+     "q": "Resuelve 3<sup>2x</sup> − 10 · 3<sup>x</sup> + 9 = 0.",
+     "c": [
+      "x = 2",
+      "x₁ = 1, x₂ = 9",
+      "x₁ = −2, x₂ = 0",
+      "x₁ = 0, x₂ = 2"
+     ],
+     "a": 3,
+     "e": "Cambio t = 3<sup>x</sup>: t² − 10t + 9 = 0 → t = 9 o t = 1 → <b>x₁ = 0, x₂ = 2</b>."
+    },
+    {
+     "q": "Resuelve log<sub>2</sub> (x) = 3.",
+     "c": [
+      "x = 9",
+      "x = 6",
+      "x = 3",
+      "x = 8"
+     ],
+     "a": 3,
+     "e": "x = 2<sup>3</sup> = 8 → <b>x = 8</b>."
+    },
+    {
+     "q": "Resuelve 3<sup>x</sup> + 3<sup>x + 1</sup> = 324.",
+     "c": [
+      "x = 5",
+      "x = 3",
+      "x = 54",
+      "x = 4"
+     ],
+     "a": 3,
+     "e": "3<sup>x</sup>(1 + 3) = 324 → 3<sup>x</sup> = 81 → <b>x = 4</b>."
+    },
+    {
+     "q": "Resuelve 2<sup>2x</sup> − 12 · 2<sup>x</sup> + 32 = 0.",
+     "c": [
+      "x₁ = 4, x₂ = 8",
+      "x = 3",
+      "x₁ = 2, x₂ = 3",
+      "x₁ = −3, x₂ = −2"
+     ],
+     "a": 2,
+     "e": "Cambio t = 2<sup>x</sup>: t² − 12t + 32 = 0 → t = 4 o t = 8 → <b>x₁ = 2, x₂ = 3</b>."
+    },
+    {
+     "q": "Resuelve log<sub>5</sub> (x + 5) = 1.",
+     "c": [
+      "x = 2",
+      "x = 0",
+      "x = -4",
+      "x = 1"
+     ],
+     "a": 1,
+     "e": "x + 5 = 5<sup>1</sup> = 5 → <b>x = 0</b>."
+    },
+    {
+     "q": "Resuelve ln (2x) = 6.",
+     "c": [
+      "x = 10<sup>6</sup>/2",
+      "x = 2e<sup>6</sup>",
+      "x = e<sup>6</sup>/2",
+      "x = 60"
+     ],
+     "a": 2,
+     "e": "2x = e<sup>6</sup> → <b>x = e<sup>6</sup>/2</b>."
+    },
+    {
+     "q": "Resuelve 2<sup>2x</sup> = 16.",
+     "c": [
+      "x = 1",
+      "x = 3",
+      "x = 2",
+      "x = 8"
+     ],
+     "a": 2,
+     "e": "16 = 2<sup>4</sup> → 2x = 4 → <b>x = 2</b>."
+    },
+    {
+     "q": "Resuelve 2<sup>x</sup> + 2<sup>x + 1</sup> = 6.",
+     "c": [
+      "x = 1",
+      "x = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "x = 2",
+      "x = 0"
+     ],
+     "a": 0,
+     "e": "2<sup>x</sup>(1 + 2) = 6 → 2<sup>x</sup> = 2 → <b>x = 1</b>."
+    },
+    {
+     "q": "Resuelve 2<sup>x</sup> + 2<sup>x + 1</sup> = 24.",
+     "c": [
+      "x = 3",
+      "x = 6",
+      "x = 4",
+      "x = 2"
+     ],
+     "a": 0,
+     "e": "2<sup>x</sup>(1 + 2) = 24 → 2<sup>x</sup> = 8 → <b>x = 3</b>."
+    },
+    {
+     "q": "Resuelve ln x = 2.",
+     "c": [
+      "x = e<sup>2</sup>",
+      "x = 10<sup>2</sup>",
+      "x = 2/e",
+      "x = 20"
+     ],
+     "a": 0,
+     "e": "x = e<sup>2</sup> → <b>x = e<sup>2</sup></b>."
+    },
+    {
+     "q": "Resuelve log x + log (x − 3) = 1.",
+     "c": [
+      "x = 8",
+      "x = -2",
+      "x = 5",
+      "x₁ = −2, x₂ = 5"
+     ],
+     "a": 2,
+     "e": "x(x − 3) = 10 → x = 5 o x = −2; la negativa no vale (no hay logaritmos de negativos). <b>x = 5</b>."
+    },
+    {
+     "q": "Resuelve 5<sup>2x + 3</sup> = 125.",
+     "c": [
+      "x = 3",
+      "x = 0",
+      "x = 61",
+      "x = 1"
+     ],
+     "a": 1,
+     "e": "125 = 5<sup>3</sup> → 2x + 3 = 3 → <b>x = 0</b>."
+    },
+    {
+     "q": "Resuelve 5<sup>2x − 3</sup> = 125.",
+     "c": [
+      "x = 4",
+      "x = 3",
+      "x = 64",
+      "x = 0"
+     ],
+     "a": 1,
+     "e": "125 = 5<sup>3</sup> → 2x − 3 = 3 → <b>x = 3</b>."
+    },
+    {
+     "q": "Resuelve 4<sup>x</sup> = 32.",
+     "c": [
+      "x = 5",
+      "x = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "x = 8",
+      "x = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "4 = 2<sup>2</sup> y 32 = 2<sup>5</sup> → 2x = 5 → <b>x = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Resuelve ln x = 5.",
+     "c": [
+      "x = 10<sup>5</sup>",
+      "x = 50",
+      "x = e<sup>5</sup>",
+      "x = 5/e"
+     ],
+     "a": 2,
+     "e": "x = e<sup>5</sup> → <b>x = e<sup>5</sup></b>."
+    },
+    {
+     "q": "Resuelve log<sub>3</sub> (x + 1) = 3.",
+     "c": [
+      "x = 27",
+      "x = 8",
+      "x = 2",
+      "x = 26"
+     ],
+     "a": 3,
+     "e": "x + 1 = 3<sup>3</sup> = 27 → <b>x = 26</b>."
+    },
+    {
+     "q": "Resuelve log<sub>3</sub> (x) = 4.",
+     "c": [
+      "x = 4",
+      "x = 81",
+      "x = 64",
+      "x = 12"
+     ],
+     "a": 1,
+     "e": "x = 3<sup>4</sup> = 81 → <b>x = 81</b>."
+    }
+   ]
+  },
+  {
+   "title": "Crecimiento y depreciación",
+   "items": [
+    {
+     "q": "Un pueblo tiene 8500 habitantes y pierde un 3 % cada año. ¿Cuántos años completos pasarán hasta que tenga menos de 4250?",
+     "c": [
+      "25 años",
+      "22 años",
+      "17 años",
+      "23 años"
+     ],
+     "a": 3,
+     "e": "0,97<sup>t</sup> = 0,5 → t = log 0,5 / log 0,97 ≈ 22,76 → <b>23 años</b>."
+    },
+    {
+     "q": "Un municipio tiene 85 000 habitantes y crece un 4 % cada año. ¿Cuántos años completos tardará en superar los 170 000 habitantes?",
+     "c": [
+      "25 años",
+      "17 años",
+      "20 años",
+      "18 años"
+     ],
+     "a": 3,
+     "e": "85 000 · 1,04<sup>t</sup> = 170 000 → t = log 2 / log 1,04 ≈ 17,67. Hacen falta <b>18 años</b>."
+    },
+    {
+     "q": "Con una inflación constante del 4 % anual, ¿cuántos años completos tardan los precios en subir un 20 %?",
+     "c": [
+      "5 años",
+      "8 años",
+      "4 años",
+      "9 años"
+     ],
+     "a": 0,
+     "e": "1,04<sup>t</sup> = 1,2 → t = log 1,2 / log 1,04 ≈ 4,65 → <b>5 años</b>."
+    },
+    {
+     "q": "Una comarca tiene 90 000 habitantes y crece un 2 % cada año. ¿Cuántos años completos tardará en superar los 108 000 habitantes?",
+     "c": [
+      "9 años",
+      "10 años",
+      "12 años",
+      "15 años"
+     ],
+     "a": 1,
+     "e": "90 000 · 1,02<sup>t</sup> = 108 000 → t = log 1,2 / log 1,02 ≈ 9,21. Hacen falta <b>10 años</b>."
+    },
+    {
+     "q": "¿Cuántos años completos tiene que estar un capital de 4000 € al 3 % compuesto para llegar a 8000 €?",
+     "c": [
+      "23 años",
+      "24 años",
+      "33 años",
+      "27 años"
+     ],
+     "a": 1,
+     "e": "1,03<sup>t</sup> = 2 → t = log 2 / log 1,03 ≈ 23,45 → <b>24 años</b>."
+    },
+    {
+     "q": "Un pueblo tiene 5000 habitantes y pierde un 5 % cada año. ¿Cuántos años completos pasarán hasta que tenga menos de 4000?",
+     "c": [
+      "5 años",
+      "7 años",
+      "9 años",
+      "4 años"
+     ],
+     "a": 0,
+     "e": "0,95<sup>t</sup> = 0,8 → t = log 0,8 / log 0,95 ≈ 4,35 → <b>5 años</b>."
+    },
+    {
+     "q": "¿Cuántos años completos tiene que estar un capital de 5000 € al 4 % compuesto para llegar a 7500 €?",
+     "c": [
+      "10 años",
+      "11 años",
+      "14 años",
+      "12 años"
+     ],
+     "a": 1,
+     "e": "1,04<sup>t</sup> = 1,5 → t = log 1,5 / log 1,04 ≈ 10,34 → <b>11 años</b>."
+    },
+    {
+     "q": "Un pueblo tiene 5000 habitantes y pierde un 8 % cada año. ¿Cuántos años completos pasarán hasta que tenga menos de 2500?",
+     "c": [
+      "8 años",
+      "6 años",
+      "9 años",
+      "11 años"
+     ],
+     "a": 2,
+     "e": "0,92<sup>t</sup> = 0,5 → t = log 0,5 / log 0,92 ≈ 8,31 → <b>9 años</b>."
+    },
+    {
+     "q": "Un pueblo tiene 3000 habitantes y pierde un 3 % cada año. ¿Cuántos años completos pasarán hasta que tenga menos de 2400?",
+     "c": [
+      "12 años",
+      "10 años",
+      "8 años",
+      "7 años"
+     ],
+     "a": 2,
+     "e": "0,97<sup>t</sup> = 0,8 → t = log 0,8 / log 0,97 ≈ 7,33 → <b>8 años</b>."
+    },
+    {
+     "q": "Una ciudad tiene 50 000 habitantes y crece un 2,5 % cada año. ¿Cuántos años completos tardará en superar los 75 000 habitantes?",
+     "c": [
+      "17 años",
+      "19 años",
+      "20 años",
+      "16 años"
+     ],
+     "a": 0,
+     "e": "50 000 · 1,025<sup>t</sup> = 75 000 → t = log 1,5 / log 1,025 ≈ 16,42. Hacen falta <b>17 años</b>."
+    },
+    {
+     "q": "Un coche cuesta 19 000 € y pierde un 15 % de su valor cada año. ¿Cuánto valdrá dentro de 3 años?",
+     "c": [
+      "10 450,00 €",
+      "13 727,50 €",
+      "11 668,37 €",
+      "64,12 €"
+     ],
+     "a": 2,
+     "e": "Cada año se multiplica por 0,85: 19 000 € · 0,85<sup>3</sup> = <b>11 668,37 €</b>."
+    },
+    {
+     "q": "Un coche cuesta 28 000 € y pierde un 20 % de su valor cada año. ¿Cuánto valdrá dentro de 4 años?",
+     "c": [
+      "14 336,00 €",
+      "5600,00 €",
+      "44,80 €",
+      "11 468,80 €"
+     ],
+     "a": 3,
+     "e": "Cada año se multiplica por 0,8: 28 000 € · 0,8<sup>4</sup> = <b>11 468,80 €</b>."
+    },
+    {
+     "q": "¿Cuántos años completos tiene que estar un capital de 17 000 € al 4 % compuesto para llegar a 34 000 €?",
+     "c": [
+      "17 años",
+      "18 años",
+      "21 años",
+      "25 años"
+     ],
+     "a": 1,
+     "e": "1,04<sup>t</sup> = 2 → t = log 2 / log 1,04 ≈ 17,67 → <b>18 años</b>."
+    },
+    {
+     "q": "¿Cuántos años completos tiene que estar un capital de 3000 € al 2 % compuesto para llegar a 7500 €?",
+     "c": [
+      "46 años",
+      "50 años",
+      "47 años",
+      "75 años"
+     ],
+     "a": 2,
+     "e": "1,02<sup>t</sup> = 2,5 → t = log 2,5 / log 1,02 ≈ 46,27 → <b>47 años</b>."
+    },
+    {
+     "q": "Un ordenador de una empresa cuesta 28 000 € y pierde un 20 % de su valor cada año. ¿Cuánto valdrá dentro de 5 años?",
+     "c": [
+      "11 468,80 €",
+      "8,96 €",
+      "9175,04 €",
+      "0,00 €"
+     ],
+     "a": 2,
+     "e": "Cada año se multiplica por 0,8: 28 000 € · 0,8<sup>5</sup> = <b>9175,04 €</b>."
+    },
+    {
+     "q": "¿Cuántos años completos tiene que estar un capital de 14 000 € al 2 % compuesto para llegar a 35 000 €?",
+     "c": [
+      "46 años",
+      "75 años",
+      "50 años",
+      "47 años"
+     ],
+     "a": 3,
+     "e": "1,02<sup>t</sup> = 2,5 → t = log 2,5 / log 1,02 ≈ 46,27 → <b>47 años</b>."
+    },
+    {
+     "q": "Una máquina cuesta 22 000 € y pierde un 8 % de su valor cada año. ¿Cuánto valdrá dentro de 4 años?",
+     "c": [
+      "15 760,65 €",
+      "14 960,00 €",
+      "17 131,14 €",
+      "0,90 €"
+     ],
+     "a": 0,
+     "e": "Cada año se multiplica por 0,92: 22 000 € · 0,92<sup>4</sup> = <b>15 760,65 €</b>."
+    },
+    {
+     "q": "Una comarca tiene 50 000 habitantes y crece un 1,5 % cada año. ¿Cuántos años completos tardará en superar los 62 500 habitantes?",
+     "c": [
+      "14 años",
+      "15 años",
+      "20 años",
+      "17 años"
+     ],
+     "a": 1,
+     "e": "50 000 · 1,015<sup>t</sup> = 62 500 → t = log 1,25 / log 1,015 ≈ 14,99. Hacen falta <b>15 años</b>."
+    },
+    {
+     "q": "Una aldea tiene 5500 habitantes y pierde un 5 % cada año. ¿Cuántos años completos pasarán hasta que tenga menos de 4400?",
+     "c": [
+      "9 años",
+      "4 años",
+      "7 años",
+      "5 años"
+     ],
+     "a": 3,
+     "e": "0,95<sup>t</sup> = 0,8 → t = log 0,8 / log 0,95 ≈ 4,35 → <b>5 años</b>."
+    },
+    {
+     "q": "Una ciudad tiene 50 000 habitantes y crece un 1,5 % cada año. ¿Cuántos años completos tardará en superar los 100 000 habitantes?",
+     "c": [
+      "47 años",
+      "49 años",
+      "67 años",
+      "46 años"
+     ],
+     "a": 0,
+     "e": "50 000 · 1,015<sup>t</sup> = 100 000 → t = log 2 / log 1,015 ≈ 46,56. Hacen falta <b>47 años</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 2,
+ "updated": "2026-11-23",
+ "country": "es",
+ "subject": "matematicas",
+ "grade": "1-bachillerato-ccss"
+}

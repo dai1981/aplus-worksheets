@@ -106,7 +106,8 @@ def s_transformacion():
     if a == 0 and b == 0:
         return None
     t = R.choice(["desc", "desc", "graf"])
-    inner = nm.replace("x", "(%s)" % E((1, "x"), (-a, ""))) if a else nm
+    pz = "%s" if nm.startswith("|") else "(%s)"
+    inner = nm.replace("x", pz % E((1, "x"), (-a, ""))) if a else nm
     expr = inner + ((" + %d" % b) if b > 0 else (" − %d" % -b) if b < 0 else "")
     def mov(a, b):
         p = []
@@ -121,7 +122,7 @@ def s_transformacion():
                  "f(x − a) mueve a la derecha si a &gt; 0; sumar b mueve hacia arriba: <b>se traslada %s</b>." % ok)
     g = lambda x: (lambda v: None if v is None else v + b)(f(x - a))
     pic = kurve([(f, "#90a4ae", nm), (g, BLUE, "")], (-6, 6, 1), (-5, 5, 1), W=330, H=280, label="gráfica trasladada")
-    opts = W([expr, (nm.replace("x", "(%s)" % E((1, "x"), (a, ""))) if a else nm) + ((" + %d" % b) if b > 0 else (" − %d" % -b) if b < 0 else ""), inner + ((" + %d" % -b) if -b > 0 else (" − %d" % b) if b > 0 else ""), (nm.replace("x", "(%s)" % E((1, "x"), (b, ""))) if b else nm) + ((" + %d" % a) if a > 0 else (" − %d" % -a) if a < 0 else "")])
+    opts = W([expr, (nm.replace("x", pz % E((1, "x"), (a, ""))) if a else nm) + ((" + %d" % b) if b > 0 else (" − %d" % -b) if b < 0 else ""), inner + ((" + %d" % -b) if -b > 0 else (" − %d" % b) if b > 0 else ""), (nm.replace("x", pz % E((1, "x"), (b, ""))) if b else nm) + ((" + %d" % a) if a > 0 else (" − %d" % -a) if a < 0 else "")])
     return M(pic + "La curva azul es la gris (y = %s) trasladada. ¿Cuál es su ecuación?" % nm, "y = " + expr, ["y = " + o for o in opts if o != expr], "Se ha movido %s: <b>y = %s</b>." % (ok, expr))
 
 
