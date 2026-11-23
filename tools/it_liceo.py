@@ -129,3 +129,14 @@ def show(p, main="x"):
     for k in ks:
         s += mono(p[k], dict(k), s == "")
     return s
+
+
+def W(*xs):
+    """distrattori senza None, senza negativi e senza doppioni (restituisce gli oggetti, non le stringhe)"""
+    out, seen = [], set()
+    for x in xs:
+        if x is None or (isinstance(x, (int, Fr)) and x < 0) or str(x) in seen:
+            continue
+        seen.add(str(x))
+        out.append(x)
+    return out

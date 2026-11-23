@@ -98,9 +98,7 @@ def s2_crit():
     w = [c for c in ALL_C if c != ans]
     if ans.startswith("nessun") and "tre angoli" in ans:
         w = ALL_C[:3]
-    pts = {"A": (0, 0), "B": (5, 0), "C": (1.6, 3.2)}
-    fig = figure(pts, [("A", "B"), ("B", "C"), ("C", "A")], W=260, H=170, label="triangolo ABC")
-    return M("%sNei triangoli ABC e A′B′C′ si sa che %s. Quale criterio permette di dire che sono congruenti?" % (fig, hyp), ans, w,
+    return M("Nei triangoli ABC e A′B′C′ si sa che %s. Quale criterio permette di dire che sono congruenti?" % hyp, ans, w,
              "LAL: due lati e l’angolo <b>compreso</b>; ALA: un lato e i due angoli <b>adiacenti</b>; LLL: tre lati. Qui: <b>%s</b>." % ans)
 
 
