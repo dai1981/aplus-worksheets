@@ -219,7 +219,7 @@ function topic_defs_it() {
 function topic_defs_br() {
     return array(
         'numeros' => array('name' => 'Números',
-            'in' => '/numeros|comparar-e-ordenar|reta-numerica|sequencias|quantidades|dezenas|ordinais|classificar|potencias|radicais|notacao|arredondamento/', 'out' => '/decima|fraco|primos/',
+            'in' => '/numeros|comparar-e-ordenar|reta-numerica|sequencias|quantidades|dezenas|ordinais|classificar|potencias|radicais|notacao|arredondamento/', 'out' => '/decima|fraco|primos|^sequencias$/',
             'blurb' => 'Ler, escrever e decompor números até centenas de milhar, valor posicional, comparar, ordenar e arredondar, sequências numéricas.'),
         'fracoes-e-decimais' => array('name' => 'Frações, decimais e porcentagem',
             'in' => '/fraco|decima|decimos|porcentage|metade-terca|juros/', 'out' => '/^$/',
@@ -231,16 +231,16 @@ function topic_defs_br() {
             'in' => '/multiplica|divisao|tabuada|metade|terca|dobro|proporcionalidade|relacoes-entre|propriedades|multiplos|mmc|operacoes-com-numeros/', 'out' => '/^$/',
             'blurb' => 'Tabuada, multiplicação e divisão com números naturais e decimais, método da chave e resto, proporcionalidade e partilha em partes desiguais.'),
         'geometria' => array('name' => 'Geometria',
-            'in' => '/figuras|solidos|localizacao|trajetos|simetria|angulos|poligonos|cartesiano|ampliacao|prismas|piramides|semelhanca|pitagoras|relacoes-metricas|distancia|vistas|retas/', 'out' => '/^$/',
+            'in' => '/figuras|solidos|localizacao|trajetos|simetria|angulos|poligonos|cartesiano|ampliacao|prismas|piramides|semelhanca|pitagoras|relacoes-metricas|distancia|vistas|retas|circunferencia/', 'out' => '/^$/',
             'blurb' => 'Localização, trajetos e plano cartesiano, figuras espaciais e planificações, prismas e pirâmides, polígonos e ângulos, ampliação e redução.'),
         'grandezas-e-medidas' => array('name' => 'Grandezas e medidas',
             'in' => '/comprimento|massa|capacidade|area|perimetro|volume|horas|tempo|temperatura|sistema-monetario|dinheiro|medida|calendario|periodos/', 'out' => '/^$/',
             'blurb' => 'Comprimento, massa e capacidade, transformação de unidades, perímetro, área e volume, horas e intervalos de tempo, o sistema monetário brasileiro.'),
         'algebra-e-funcoes' => array('name' => 'Álgebra e funções',
-            'in' => '/funcoes|equacoes|produtos-notaveis|fatoracao|grandezas-proporcionais|razoes-entre|partilha/', 'out' => '/^$/',
+            'in' => '/funcoes|equacoes|produtos-notaveis|fatoracao|grandezas-proporcionais|razoes-entre|partilha|algebrica|proporcionalidade-direta|^sequencias$/', 'out' => '/^$/',
             'blurb' => 'Funções e gráficos, razões entre grandezas, grandezas diretamente e inversamente proporcionais, produtos notáveis, fatoração e equações do 2º grau.'),
         'probabilidade-e-estatistica' => array('name' => 'Probabilidade e estatística',
-            'in' => '/graficos|tabelas|probabilidade|pesquisa|contagem/', 'out' => '/^$/',
+            'in' => '/graficos|tabelas|probabilidade|pesquisa|contagem|media/', 'out' => '/^$/',
             'blurb' => 'Tabelas de dupla entrada, gráficos de colunas e de linhas, pesquisas, problemas de contagem, espaço amostral e probabilidade como fração.'),
     );
 }

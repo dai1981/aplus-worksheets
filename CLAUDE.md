@@ -1472,7 +1472,14 @@ BR / Matemática / 6º ano（BNCC EF06MA01〜EF06MA34）— 生成スクリプ�
 8. operacoes-com-decimais ✓ 9. arredondamento-e-estimativa ✓ 10. porcentagem ✓ 11. igualdade-e-partilha ✓ 12. plano-cartesiano ✓ 13. prismas-e-piramides ✓ 14. poligonos-triangulos-e-quadrilateros ✓
 15. ampliacao-e-reducao ✓ 16. retas-paralelas-e-perpendiculares ✓ 17. grandezas-e-medidas ✓ 18. angulos ✓ 19. perimetro-e-area ✓ 20. probabilidade ✓ 21. tabelas-e-graficos ✓
 
-BR の次: 7º・8º ano の順。各学年の BNCC コード（EF07MA01 など）で単元を分ける
+BR / Matemática / 7º ano（BNCC EF07MA01〜EF07MA37）— 生成スクリプトは `gen_br_matematica_7_*`（seed は 870NN、use で再利用する 5º・6º・9º のモジュールの R は 879NN）。
+9º の grandezas-proporcionais・angulos-e-retas-paralelas・poligonos-regulares・volume・graficos・pesquisa-amostral、6º の mmc-e-mdc・probabilidade、5º の volume を use で再利用。
+トピック：circunferencia→geometria、algebrica・proporcionalidade-direta・^sequencias$→algebra-e-funcoes（numeros の out に ^sequencias$）、media→probabilidade-e-estatistica
+1. multiplos-divisores-mmc-e-mdc ✓ 2. numeros-inteiros ✓ 3. operacoes-com-numeros-inteiros ✓ 4. fracoes-e-seus-significados ✓ 5. numeros-racionais ✓ 6. porcentagem-acrescimos-e-descontos ✓ 7. linguagem-algebrica-e-expressoes ✓
+8. sequencias ✓ 9. equacoes-do-1-grau ✓ 10. proporcionalidade-direta-e-inversa ✓ 11. transformacoes-no-plano-cartesiano ✓ 12. angulos-e-retas-paralelas ✓ 13. triangulos ✓ 14. poligonos-e-angulos-internos ✓
+15. circunferencia-e-comprimento ✓ 16. area-de-figuras-planas ✓ 17. volume-de-blocos-retangulares ✓ 18. probabilidade-e-frequencia ✓ 19. media-e-amplitude ✓ 20. graficos-de-setores-e-pesquisa ✓
+
+BR の次: 8º ano。各学年の BNCC コード（EF08MA01 など）で単元を分ける
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
