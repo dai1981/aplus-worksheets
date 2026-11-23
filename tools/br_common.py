@@ -50,6 +50,17 @@ def dec(v, places=None):
     return num(int(ip)) + ("," + fp_ if fp_ else "")
 
 
+def dz(n, k, keep=False):
+    """inteiro n × 10^−k com vírgula: dz(25, 1) → 2,5；dz(250, 2) → 2,5（keep=True で 2,50）"""
+    n = int(n)
+    neg = n < 0
+    ip, fp_ = divmod(abs(n), 10 ** k)
+    f = str(fp_).rjust(k, "0") if k else ""
+    if not keep:
+        f = f.rstrip("0")
+    return ("−" if neg else "") + num(ip) + ("," + f if f else "")
+
+
 def reais(cents, c=False):
     """dinheiro: 350 → R$ 3,50, 300 → R$ 3,00, 45 → 45 centavos（c=True のとき R$ 1 未満は centavos）"""
     cents = int(cents)
@@ -233,12 +244,30 @@ def material_dourado(m, c, d, u):
 
 
 def quadro_valor(n, cols=4):
-    """quadro de valor posicional: UM C D U"""
-    head = ["UM", "C", "D", "U"][4 - cols:]
+    """quadro de valor posicional: CM DM UM C D U（cols は 6 まで）"""
+    head = ["CM", "DM", "UM", "C", "D", "U"][6 - cols:]
     ds = str(n).rjust(cols, " ")
     return ("<table class='sn-table' style='width:auto;margin:6px 0'><thead><tr>%s</tr></thead><tbody><tr>%s</tr></tbody></table>"
             % ("".join("<th>%s</th>" % h for h in head),
                "".join("<td style='text-align:center;min-width:30px'>%s</td>" % (d if d != " " else "") for d in ds)))
+
+
+def quadro_decimal(milesimos, places=3, ints=1):
+    """quadro de valor posicional com decimais: U, d c m（milesimos = valor × 1000）"""
+    head = ["C", "D", "U"][3 - ints:] + ["d", "c", "m"][:places]
+    ip, fp_ = divmod(int(milesimos), 1000)
+    ds = str(ip).rjust(ints, " ") + str(fp_).rjust(3, "0")[:places]
+    cells = []
+    for i, d in enumerate(ds):
+        b = " style='text-align:center;min-width:30px%s'" % (";border-left:3px solid #333" if i == ints else "")
+        cells.append("<td%s>%s</td>" % (b, d if d != " " else ""))
+    return ("<table class='sn-table' style='width:auto;margin:6px 0'><thead><tr>%s</tr></thead><tbody><tr>%s</tr></tbody></table>"
+            % ("".join("<th>%s</th>" % h for h in head), "".join(cells)))
+
+
+def reta_frac(d, units=2, marks=(), width=420):
+    """reta numérica de 0 a units, cada unidade em d partes; marks = [(numerador, letra)]"""
+    return relabel(_F.droite_frac(d, units, marks, width), "reta numérica dividida em partes iguais")
 
 
 def grafico(data, unit_label="", step=None):
@@ -313,11 +342,11 @@ def armada(rows, op="+", label="conta armada", result=None):
 
 
 def faixa(d, k, w=300):
-    return relabel(_F.bande(d, k, w), "faixa dividida em %d partes iguais, %d pintadas" % (d, k))
+    return relabel(_F.bande(d, k, w), "faixa dividida em %d partes iguais, %d %s" % (d, k, "pintada" if k == 1 else "pintadas"))
 
 
 def disco(d, k, r=60):
-    return relabel(_F.disque(d, k, r), "círculo dividido em %d partes iguais, %d pintadas" % (d, k))
+    return relabel(_F.disque(d, k, r), "círculo dividido em %d partes iguais, %d %s" % (d, k, "pintada" if k == 1 else "pintadas"))
 
 
 # ------------------------------------------------------------ números por extenso (até 9.999)

@@ -1431,7 +1431,14 @@ BR / Matemática / 3º ano（BNCC EF03MA01〜EF03MA28）
 9. divisao ✓ 10. metade-terca-e-quarta-parte ✓ 11. sequencias-numericas ✓ 12. igualdade ✓ 13. localizacao-e-trajetos ✓ 14. figuras-geometricas-espaciais ✓ 15. figuras-geometricas-planas ✓
 16. medidas-de-comprimento ✓ 17. massa-e-capacidade ✓ 18. area ✓ 19. horas-e-intervalos-de-tempo ✓ 20. sistema-monetario ✓ 21. tabelas-e-graficos ✓ 22. probabilidade ✓
 
-BR の次: 5º ano（SAEB の学年）→ 4º ano → 2º ano → 1º ano → 9º ano（SAEB）… の順。各学年の BNCC コード（EF05MA01 など）で単元を分ける
+BR / Matemática / 5º ano（SAEB の学年。999.999 まで、小数は milésimos まで、分数・porcentagem は 10%・25%・50%・75%・100%）— 生成スクリプトは `gen_br_matematica_5_*`（seed は 805NN、make_unit に grade="5-ano"）。
+br_common に dz（整数 × 10^−k → コンマの小数）・quadro_decimal（U, d c m）・reta_frac を足し、quadro_valor は 6 列（CM DM UM C D U）まで。3º ano の生成スクリプト（probabilidade の saco・roleta、figuras espaciais の planificações、DE の bauplan）を R を入れ替えて再利用。
+トピック fracoes-e-decimais（Frações, decimais e porcentagem）を足した。contagem→probabilidade-e-estatistica、proporcionalidade→multiplicacao-e-divisao、cartesiano・ampliacao→geometria、perimetro・volume→grandezas-e-medidas
+1. numeros-ate-centenas-de-milhar ✓ 2. numeros-decimais ✓ 3. fracoes ✓ 4. fracoes-equivalentes ✓ 5. comparar-e-ordenar-fracoes-e-decimais ✓ 6. porcentagem ✓ 7. adicao-e-subtracao ✓ 8. multiplicacao ✓
+9. divisao ✓ 10. multiplicacao-e-divisao-com-decimais ✓ 11. problemas-de-contagem ✓ 12. igualdade-e-termo-desconhecido ✓ 13. proporcionalidade-e-partilha ✓ 14. plano-cartesiano ✓
+15. figuras-espaciais-e-planificacoes ✓ 16. poligonos ✓ 17. ampliacao-e-reducao ✓ 18. medidas-e-transformacoes ✓ 19. perimetro-e-area ✓ 20. volume ✓ 21. probabilidade ✓ 22. tabelas-e-graficos ✓
+
+BR の次: 4º ano → 2º ano → 1º ano → 9º ano（SAEB）… の順。各学年の BNCC コード（EF04MA01 など）で単元を分ける
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
