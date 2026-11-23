@@ -1,0 +1,1157 @@
+{
+ "slug": "probabilidad",
+ "title": "Probabilidad condicionada",
+ "seo_title": "Probabilidad – 4.º de ESO: fichas de matemáticas con soluciones",
+ "short_title": "Probabilidad",
+ "domain": "Sentido estocástico",
+ "standard_code": "4.º de ESO · Sentido estocástico",
+ "standard_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-4975",
+ "standard_text": "Probabilidad condicionada; sucesos dependientes e independientes; diagramas de árbol y tablas de contingencia; probabilidad total (resumen de los saberes básicos de Matemáticas de 4.º de ESO, Real Decreto 217/2022)",
+ "meta_desc": "Fichas de matemáticas de 4.º de ESO: tablas de contingencia, probabilidad condicionada, independencia, árboles y probabilidad total. 100 ejercicios con soluciones.",
+ "key_big": "P(A | B) = P(A ∩ B) / P(B)",
+ "key_sub": "Independientes: P(A ∩ B) = P(A) · P(B).",
+ "body_html": "<h2>Cómo se hace</h2><p>P(A | B) es la probabilidad de A sabiendo que ha ocurrido B: P(A | B) = P(A ∩ B) / P(B).</p><p>A y B son <b>independientes</b> si P(A ∩ B) = P(A) · P(B).</p><p><b>Probabilidad total</b>: se suman las probabilidades de todas las ramas que llevan al suceso.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Urna con 3 rojas y 2 azules: dos rojas sin reemplazamiento</p><p class='sn-ex-s'>3/5 · 2/4</p><p class='sn-ex-a'>Respuesta: 6/20 = 3/10</p></div><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Dado: sacar par o mayor que 4</p><p class='sn-ex-s'>{2, 4, 5, 6}</p><p class='sn-ex-a'>Respuesta: 4/6 = 2/3</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Contar mal los casos posibles</td><td>Con dos dados hay 36 casos, no 12.</td></tr><tr><td>Sumar sin restar la intersección</td><td>P(A ∪ B) = P(A) + P(B) − P(A ∩ B).</td></tr><tr><td>Olvidar que sin reemplazamiento cambia el total</td><td>Tras sacar una bola, quedan una menos.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Qué dice la regla de Laplace?",
+   "a": "Que, si todos los resultados son igual de probables, la probabilidad es el número de casos favorables dividido entre el de casos posibles."
+  },
+  {
+   "q": "¿Cómo es la baraja española?",
+   "a": "Tiene 40 cartas de cuatro palos (oros, copas, espadas y bastos): del 1 al 7, sota, caballo y rey."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Tablas de contingencia",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>4</td><td>11</td><td>15</td></tr><tr><td>Chicos</td><td>4</td><td>25</td><td>29</td></tr><tr><td>Total</td><td>8</td><td>36</td><td>44</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>"
+     ],
+     "a": 3,
+     "e": "8 de 44: <b><span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>6</td><td>14</td><td>20</td></tr><tr><td>Chicos</td><td>13</td><td>14</td><td>27</td></tr><tr><td>Total</td><td>19</td><td>28</td><td>47</td></tr></tbody></table></div>Elegimos una chica al azar. ¿Probabilidad de que use gafas? Es P(gafas | chica).",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>47</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>47</span></span>"
+     ],
+     "a": 2,
+     "e": "Solo miramos la fila de chicas: 6 de 20 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>18</td><td>24</td><td>42</td></tr><tr><td>Chicos</td><td>16</td><td>6</td><td>22</td></tr><tr><td>Total</td><td>34</td><td>30</td><td>64</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que sea chica y use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>357</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>17</span></span>"
+     ],
+     "a": 1,
+     "e": "Casilla chica–gafas: 18 de 64: <b><span class='fr'><span class='fn'>9</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>21</td><td>16</td><td>37</td></tr><tr><td>Chicos</td><td>7</td><td>5</td><td>12</td></tr><tr><td>Total</td><td>28</td><td>21</td><td>49</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>37</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>"
+     ],
+     "a": 3,
+     "e": "28 de 49: <b><span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>25</td><td>20</td><td>45</td></tr><tr><td>Chicos</td><td>16</td><td>7</td><td>23</td></tr><tr><td>Total</td><td>41</td><td>27</td><td>68</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que sea chica y use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>41</span></span>",
+      "<span class='fr'><span class='fn'>1845</span><span class='fd'>4624</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>68</span></span>"
+     ],
+     "a": 3,
+     "e": "Casilla chica–gafas: 25 de 68: <b><span class='fr'><span class='fn'>25</span><span class='fd'>68</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>11</td><td>22</td><td>33</td></tr><tr><td>Chicos</td><td>20</td><td>23</td><td>43</td></tr><tr><td>Total</td><td>31</td><td>45</td><td>76</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>76</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>76</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>76</span></span>"
+     ],
+     "a": 2,
+     "e": "31 de 76: <b><span class='fr'><span class='fn'>31</span><span class='fd'>76</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>25</td><td>18</td><td>43</td></tr><tr><td>Chicos</td><td>9</td><td>17</td><td>26</td></tr><tr><td>Total</td><td>34</td><td>35</td><td>69</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que sea chica y use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>69</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>43</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>34</span></span>",
+      "<span class='fr'><span class='fn'>1462</span><span class='fd'>4761</span></span>"
+     ],
+     "a": 0,
+     "e": "Casilla chica–gafas: 25 de 69: <b><span class='fr'><span class='fn'>25</span><span class='fd'>69</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>12</td><td>8</td><td>20</td></tr><tr><td>Chicos</td><td>8</td><td>25</td><td>33</td></tr><tr><td>Total</td><td>20</td><td>33</td><td>53</td></tr></tbody></table></div>Elegimos al azar a una persona que usa gafas. ¿Probabilidad de que sea chico? Es P(chico | gafas).",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>53</span></span>",
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>53</span></span>"
+     ],
+     "a": 1,
+     "e": "Solo la columna de gafas: 8 de 20 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>9</td><td>4</td><td>13</td></tr><tr><td>Chicos</td><td>13</td><td>8</td><td>21</td></tr><tr><td>Total</td><td>22</td><td>12</td><td>34</td></tr></tbody></table></div>Elegimos una chica al azar. ¿Probabilidad de que use gafas? Es P(gafas | chica).",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>34</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>13</span></span>"
+     ],
+     "a": 3,
+     "e": "Solo miramos la fila de chicas: 9 de 13 = <b><span class='fr'><span class='fn'>9</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>11</td><td>6</td><td>17</td></tr><tr><td>Chicos</td><td>19</td><td>21</td><td>40</td></tr><tr><td>Total</td><td>30</td><td>27</td><td>57</td></tr></tbody></table></div>Elegimos una chica al azar. ¿Probabilidad de que use gafas? Es P(gafas | chica).",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>57</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>19</span></span>"
+     ],
+     "a": 1,
+     "e": "Solo miramos la fila de chicas: 11 de 17 = <b><span class='fr'><span class='fn'>11</span><span class='fd'>17</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>7</td><td>9</td><td>16</td></tr><tr><td>Chicos</td><td>11</td><td>21</td><td>32</td></tr><tr><td>Total</td><td>18</td><td>30</td><td>48</td></tr></tbody></table></div>Elegimos al azar a una persona que usa gafas. ¿Probabilidad de que sea chico? Es P(chico | gafas).",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>48</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>32</span></span>"
+     ],
+     "a": 2,
+     "e": "Solo la columna de gafas: 11 de 18 = <b><span class='fr'><span class='fn'>11</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>21</td><td>14</td><td>35</td></tr><tr><td>Chicos</td><td>14</td><td>12</td><td>26</td></tr><tr><td>Total</td><td>35</td><td>26</td><td>61</td></tr></tbody></table></div>Elegimos una chica al azar. ¿Probabilidad de que use gafas? Es P(gafas | chica).",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>61</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>61</span></span>"
+     ],
+     "a": 1,
+     "e": "Solo miramos la fila de chicas: 21 de 35 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>8</td><td>21</td><td>29</td></tr><tr><td>Chicos</td><td>24</td><td>24</td><td>48</td></tr><tr><td>Total</td><td>32</td><td>45</td><td>77</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que sea chica y use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>77</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>928</span><span class='fd'>5929</span></span>"
+     ],
+     "a": 0,
+     "e": "Casilla chica–gafas: 8 de 77: <b><span class='fr'><span class='fn'>8</span><span class='fd'>77</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>5</td><td>14</td><td>19</td></tr><tr><td>Chicos</td><td>18</td><td>22</td><td>40</td></tr><tr><td>Total</td><td>23</td><td>36</td><td>59</td></tr></tbody></table></div>Elegimos una chica al azar. ¿Probabilidad de que use gafas? Es P(gafas | chica).",
+     "c": [
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>59</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>59</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>23</span></span>"
+     ],
+     "a": 2,
+     "e": "Solo miramos la fila de chicas: 5 de 19 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>19</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>19</td><td>25</td><td>44</td></tr><tr><td>Chicos</td><td>19</td><td>25</td><td>44</td></tr><tr><td>Total</td><td>38</td><td>50</td><td>88</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>88</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>44</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>44</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>22</span></span>"
+     ],
+     "a": 1,
+     "e": "38 de 88: <b><span class='fr'><span class='fn'>19</span><span class='fd'>44</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>10</td><td>13</td><td>23</td></tr><tr><td>Chicos</td><td>6</td><td>24</td><td>30</td></tr><tr><td>Total</td><td>16</td><td>37</td><td>53</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>53</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>53</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>53</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>23</span></span>"
+     ],
+     "a": 0,
+     "e": "16 de 53: <b><span class='fr'><span class='fn'>16</span><span class='fd'>53</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>12</td><td>11</td><td>23</td></tr><tr><td>Chicos</td><td>4</td><td>5</td><td>9</td></tr><tr><td>Total</td><td>16</td><td>16</td><td>32</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>23</span></span>"
+     ],
+     "a": 2,
+     "e": "16 de 32: <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>25</td><td>5</td><td>30</td></tr><tr><td>Chicos</td><td>18</td><td>21</td><td>39</td></tr><tr><td>Total</td><td>43</td><td>26</td><td>69</td></tr></tbody></table></div>Elegimos al azar a una persona que usa gafas. ¿Probabilidad de que sea chico? Es P(chico | gafas).",
+     "c": [
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>43</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>23</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>23</span></span>"
+     ],
+     "a": 0,
+     "e": "Solo la columna de gafas: 18 de 43 = <b><span class='fr'><span class='fn'>18</span><span class='fd'>43</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>17</td><td>7</td><td>24</td></tr><tr><td>Chicos</td><td>14</td><td>22</td><td>36</td></tr><tr><td>Total</td><td>31</td><td>29</td><td>60</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>60</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>31</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>60</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>60</span></span>"
+     ],
+     "a": 3,
+     "e": "31 de 60: <b><span class='fr'><span class='fn'>31</span><span class='fd'>60</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>7</td><td>13</td><td>20</td></tr><tr><td>Chicos</td><td>17</td><td>5</td><td>22</td></tr><tr><td>Total</td><td>24</td><td>18</td><td>42</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que sea chica y use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>147</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>24</span></span>"
+     ],
+     "a": 0,
+     "e": "Casilla chica–gafas: 7 de 42: <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Probabilidad condicionada",
+   "items": [
+    {
+     "q": "Si P(A ∩ B) = 0,12 y P(B) = 0,6, ¿cuánto vale P(A | B)?",
+     "c": [
+      "0,12",
+      "0,072",
+      "0,2",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,2</b>."
+    },
+    {
+     "q": "P(A) = 0,2, P(B) = 0,4 y P(A ∩ B) = 0,11. ¿Son A y B independientes?",
+     "c": [
+      "no",
+      "solo si P(A) = P(B)",
+      "sí",
+      "no se puede saber"
+     ],
+     "a": 0,
+     "e": "P(A) · P(B) = 0,08 ≠ P(A ∩ B): <b>no son independientes</b>."
+    },
+    {
+     "q": "El 70 % de los alumnos va en autobús. De ellos, llega tarde el 90 %; de los demás, el 20 %. ¿Qué probabilidad hay de que un alumno al azar llegue tarde?",
+     "c": [
+      "0,63",
+      "0,69",
+      "0,55",
+      "1,1"
+     ],
+     "a": 1,
+     "e": "Probabilidad total: 0,7 · 0,9 + 0,3 · 0,2 = <b>0,69</b>."
+    },
+    {
+     "q": "El 50 % de los alumnos va en autobús. De ellos, llega tarde el 40 %; de los demás, el 40 %. ¿Qué probabilidad hay de que un alumno al azar llegue tarde?",
+     "c": [
+      "0,4",
+      "0,2",
+      "0,8",
+      "0,5"
+     ],
+     "a": 0,
+     "e": "Probabilidad total: 0,5 · 0,4 + 0,5 · 0,4 = <b>0,4</b>."
+    },
+    {
+     "q": "Lanzamos dos dados. Sabiendo que el primero ha salido 2, ¿qué probabilidad hay de que la suma sea 8?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Si el primero es 2, el segundo debe ser 6: 1 caso de 6, <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,28 y P(B) = 0,7, ¿cuánto vale P(A | B)?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "0,28",
+      "0,196",
+      "0,4"
+     ],
+     "a": 3,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,4</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,18 y P(B) = 0,3, ¿cuánto vale P(A | B)?",
+     "c": [
+      "0,054",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "0,6",
+      "0,18"
+     ],
+     "a": 2,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,6</b>."
+    },
+    {
+     "q": "El 30 % de los alumnos va en autobús. De ellos, llega tarde el 20 %; de los demás, el 40 %. ¿Qué probabilidad hay de que un alumno al azar llegue tarde?",
+     "c": [
+      "0,34",
+      "0,06",
+      "0,6",
+      "0,3"
+     ],
+     "a": 0,
+     "e": "Probabilidad total: 0,3 · 0,2 + 0,7 · 0,4 = <b>0,34</b>."
+    },
+    {
+     "q": "El 40 % de los alumnos va en autobús. De ellos, llega tarde el 70 %; de los demás, el 20 %. ¿Qué probabilidad hay de que un alumno al azar llegue tarde?",
+     "c": [
+      "0,45",
+      "0,4",
+      "0,9",
+      "0,28"
+     ],
+     "a": 1,
+     "e": "Probabilidad total: 0,4 · 0,7 + 0,6 · 0,2 = <b>0,4</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,2 y P(B) = 0,5, ¿cuánto vale P(A | B)?",
+     "c": [
+      "0,1",
+      "0,4",
+      "0,2",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,4</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,16 y P(B) = 0,4, ¿cuánto vale P(A | B)?",
+     "c": [
+      "0,064",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "0,16",
+      "0,4"
+     ],
+     "a": 3,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,4</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,24 y P(B) = 0,3, ¿cuánto vale P(A | B)?",
+     "c": [
+      "0,24",
+      "0,072",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "0,8"
+     ],
+     "a": 3,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,8</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,06 y P(B) = 0,3, ¿cuánto vale P(A | B)?",
+     "c": [
+      "0,06",
+      "0,018",
+      "0,2",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,2</b>."
+    },
+    {
+     "q": "Lanzamos dos dados. Sabiendo que el primero ha salido 3, ¿qué probabilidad hay de que la suma sea 8?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>"
+     ],
+     "a": 2,
+     "e": "Si el primero es 3, el segundo debe ser 5: 1 caso de 6, <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,2, P(B) = 0,4 y P(A ∩ B) = 0,08. ¿Son A y B independientes?",
+     "c": [
+      "no se puede saber",
+      "sí",
+      "solo si P(A) = P(B)",
+      "no"
+     ],
+     "a": 1,
+     "e": "P(A) · P(B) = 0,08 = P(A ∩ B): <b>son independientes</b>."
+    },
+    {
+     "q": "El 30 % de los alumnos va en autobús. De ellos, llega tarde el 20 %; de los demás, el 50 %. ¿Qué probabilidad hay de que un alumno al azar llegue tarde?",
+     "c": [
+      "0,7",
+      "0,41",
+      "0,35",
+      "0,06"
+     ],
+     "a": 1,
+     "e": "Probabilidad total: 0,3 · 0,2 + 0,7 · 0,5 = <b>0,41</b>."
+    },
+    {
+     "q": "P(A) = 0,3, P(B) = 0,3 y P(A ∩ B) = 0,09. ¿Son A y B independientes?",
+     "c": [
+      "no se puede saber",
+      "solo si P(A) = P(B)",
+      "no",
+      "sí"
+     ],
+     "a": 3,
+     "e": "P(A) · P(B) = 0,09 = P(A ∩ B): <b>son independientes</b>."
+    },
+    {
+     "q": "P(A) = 0,9, P(B) = 0,3 y P(A ∩ B) = 0,28. ¿Son A y B independientes?",
+     "c": [
+      "sí",
+      "no se puede saber",
+      "solo si P(A) = P(B)",
+      "no"
+     ],
+     "a": 3,
+     "e": "P(A) · P(B) = 0,27 ≠ P(A ∩ B): <b>no son independientes</b>."
+    },
+    {
+     "q": "El 70 % de los alumnos va en autobús. De ellos, llega tarde el 50 %; de los demás, el 40 %. ¿Qué probabilidad hay de que un alumno al azar llegue tarde?",
+     "c": [
+      "0,47",
+      "0,9",
+      "0,45",
+      "0,35"
+     ],
+     "a": 0,
+     "e": "Probabilidad total: 0,7 · 0,5 + 0,3 · 0,4 = <b>0,47</b>."
+    },
+    {
+     "q": "El 40 % de los alumnos va en autobús. De ellos, llega tarde el 70 %; de los demás, el 60 %. ¿Qué probabilidad hay de que un alumno al azar llegue tarde?",
+     "c": [
+      "0,28",
+      "1,3",
+      "0,64",
+      "0,65"
+     ],
+     "a": 2,
+     "e": "Probabilidad total: 0,4 · 0,7 + 0,6 · 0,6 = <b>0,64</b>."
+    }
+   ]
+  },
+  {
+   "title": "Diagramas de árbol",
+   "items": [
+    {
+     "q": "Una urna tiene 6 bolas rojas y 7 azules. Sacamos dos bolas sin devolver la primera. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>36</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>26</span></span>"
+     ],
+     "a": 3,
+     "e": "Sin reemplazamiento: <span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span> · <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>26</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 6 bolas rojas y 4 azules. Sacamos dos sin reemplazamiento. ¿Probabilidad de que sean de distinto color?",
+     "c": [
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "Dos ramas: RA y AR. <span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Lanzamos una moneda y un dado. ¿Probabilidad de obtener cara y un número mayor que 2?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Son independientes: 1/2 · <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 7 bolas rojas y 3 azules. Sacamos dos sin reemplazamiento. ¿Probabilidad de que sean de distinto color?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "Dos ramas: RA y AR. <span class='fr'><span class='fn'>7</span><span class='fd'>30</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>30</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 6 bolas rojas y 6 azules. Sacamos una, la devolvemos y sacamos otra. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Con reemplazamiento: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 4 bolas rojas y 5 azules. Sacamos dos bolas sin devolver la primera. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "Sin reemplazamiento: <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 2 bolas rojas y 3 azules. Sacamos una, la devolvemos y sacamos otra. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Con reemplazamiento: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 7 bolas rojas y 4 azules. Sacamos dos sin reemplazamiento. ¿Probabilidad de que sean de distinto color?",
+     "c": [
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>56</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>55</span></span>"
+     ],
+     "a": 0,
+     "e": "Dos ramas: RA y AR. <span class='fr'><span class='fn'>14</span><span class='fd'>55</span></span> + <span class='fr'><span class='fn'>14</span><span class='fd'>55</span></span> = <b><span class='fr'><span class='fn'>28</span><span class='fd'>55</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 3 bolas rojas y 7 azules. Sacamos dos bolas sin devolver la primera. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Sin reemplazamiento: <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 7 bolas rojas y 3 azules. Sacamos dos bolas sin devolver la primera. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "Sin reemplazamiento: <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 2 bolas rojas y 5 azules. Sacamos una, la devolvemos y sacamos otra. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>"
+     ],
+     "a": 1,
+     "e": "Con reemplazamiento: <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>49</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 7 bolas rojas y 7 azules. Sacamos dos bolas sin devolver la primera. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>"
+     ],
+     "a": 2,
+     "e": "Sin reemplazamiento: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 2 bolas rojas y 2 azules. Sacamos dos bolas sin devolver la primera. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "Sin reemplazamiento: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 3 bolas rojas y 2 azules. Sacamos dos bolas sin devolver la primera. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>"
+     ],
+     "a": 1,
+     "e": "Sin reemplazamiento: <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 5 bolas rojas y 7 azules. Sacamos dos bolas sin devolver la primera. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>"
+     ],
+     "a": 2,
+     "e": "Sin reemplazamiento: <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>33</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 3 bolas rojas y 5 azules. Sacamos dos sin reemplazamiento. ¿Probabilidad de que sean de distinto color?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>32</span></span>"
+     ],
+     "a": 1,
+     "e": "Dos ramas: RA y AR. <span class='fr'><span class='fn'>15</span><span class='fd'>56</span></span> + <span class='fr'><span class='fn'>15</span><span class='fd'>56</span></span> = <b><span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "Lanzamos una moneda y un dado. ¿Probabilidad de obtener cara y un 6?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 0,
+     "e": "Son independientes: 1/2 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 7 bolas rojas y 2 azules. Sacamos dos bolas sin devolver la primera. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "Sin reemplazamiento: <span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 5 bolas rojas y 5 azules. Sacamos una, la devolvemos y sacamos otra. ¿Probabilidad de que las dos sean rojas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "Con reemplazamiento: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 4 bolas rojas y 4 azules. Sacamos dos sin reemplazamiento. ¿Probabilidad de que sean de distinto color?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Dos ramas: RA y AR. <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Independencia y probabilidad total",
+   "items": [
+    {
+     "q": "Lanzamos dos dados. Sabiendo que el primero ha salido 3, ¿qué probabilidad hay de que la suma sea 6?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "Si el primero es 3, el segundo debe ser 3: 1 caso de 6, <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,2, P(B) = 0,5 y P(A ∩ B) = 0,1. ¿Son A y B independientes?",
+     "c": [
+      "sí",
+      "no",
+      "solo si P(A) = P(B)",
+      "no se puede saber"
+     ],
+     "a": 0,
+     "e": "P(A) · P(B) = 0,1 = P(A ∩ B): <b>son independientes</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,14 y P(B) = 0,7, ¿cuánto vale P(A | B)?",
+     "c": [
+      "0,14",
+      "0,2",
+      "0,098",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,2</b>."
+    },
+    {
+     "q": "P(A) = 0,2, P(B) = 0,6 y P(A ∩ B) = 0,12. ¿Son A y B independientes?",
+     "c": [
+      "sí",
+      "solo si P(A) = P(B)",
+      "no",
+      "no se puede saber"
+     ],
+     "a": 0,
+     "e": "P(A) · P(B) = 0,12 = P(A ∩ B): <b>son independientes</b>."
+    },
+    {
+     "q": "P(A) = 0,1, P(B) = 0,8 y P(A ∩ B) = 0,1. ¿Son A y B independientes?",
+     "c": [
+      "sí",
+      "no se puede saber",
+      "solo si P(A) = P(B)",
+      "no"
+     ],
+     "a": 3,
+     "e": "P(A) · P(B) = 0,08 ≠ P(A ∩ B): <b>no son independientes</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,24 y P(B) = 0,4, ¿cuánto vale P(A | B)?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "0,6",
+      "0,24",
+      "0,096"
+     ],
+     "a": 1,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,6</b>."
+    },
+    {
+     "q": "El 30 % de los alumnos va en autobús. De ellos, llega tarde el 30 %; de los demás, el 50 %. ¿Qué probabilidad hay de que un alumno al azar llegue tarde?",
+     "c": [
+      "0,09",
+      "0,8",
+      "0,4",
+      "0,44"
+     ],
+     "a": 3,
+     "e": "Probabilidad total: 0,3 · 0,3 + 0,7 · 0,5 = <b>0,44</b>."
+    },
+    {
+     "q": "P(A) = 0,8, P(B) = 0,6 y P(A ∩ B) = 0,49. ¿Son A y B independientes?",
+     "c": [
+      "no",
+      "no se puede saber",
+      "sí",
+      "solo si P(A) = P(B)"
+     ],
+     "a": 0,
+     "e": "P(A) · P(B) = 0,48 ≠ P(A ∩ B): <b>no son independientes</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,3 y P(B) = 0,5, ¿cuánto vale P(A | B)?",
+     "c": [
+      "0,15",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "0,6",
+      "0,3"
+     ],
+     "a": 2,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,6</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,32 y P(B) = 0,8, ¿cuánto vale P(A | B)?",
+     "c": [
+      "0,32",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "0,4",
+      "0,256"
+     ],
+     "a": 2,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,4</b>."
+    },
+    {
+     "q": "Lanzamos dos dados. Sabiendo que el primero ha salido 1, ¿qué probabilidad hay de que la suma sea 4?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 2,
+     "e": "Si el primero es 1, el segundo debe ser 3: 1 caso de 6, <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Lanzamos dos dados. Sabiendo que el primero ha salido 2, ¿qué probabilidad hay de que la suma sea 6?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "Si el primero es 2, el segundo debe ser 4: 1 caso de 6, <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,7, P(B) = 0,3 y P(A ∩ B) = 0,21. ¿Son A y B independientes?",
+     "c": [
+      "no se puede saber",
+      "sí",
+      "solo si P(A) = P(B)",
+      "no"
+     ],
+     "a": 1,
+     "e": "P(A) · P(B) = 0,21 = P(A ∩ B): <b>son independientes</b>."
+    },
+    {
+     "q": "P(A) = 0,4, P(B) = 0,3 y P(A ∩ B) = 0,13. ¿Son A y B independientes?",
+     "c": [
+      "solo si P(A) = P(B)",
+      "no se puede saber",
+      "no",
+      "sí"
+     ],
+     "a": 2,
+     "e": "P(A) · P(B) = 0,12 ≠ P(A ∩ B): <b>no son independientes</b>."
+    },
+    {
+     "q": "Lanzamos dos dados. Sabiendo que el primero ha salido 6, ¿qué probabilidad hay de que la suma sea 8?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 0,
+     "e": "Si el primero es 6, el segundo debe ser 2: 1 caso de 6, <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0,4, P(B) = 0,6 y P(A ∩ B) = 0,27. ¿Son A y B independientes?",
+     "c": [
+      "solo si P(A) = P(B)",
+      "no",
+      "sí",
+      "no se puede saber"
+     ],
+     "a": 1,
+     "e": "P(A) · P(B) = 0,24 ≠ P(A ∩ B): <b>no son independientes</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,36 y P(B) = 0,6, ¿cuánto vale P(A | B)?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "0,36",
+      "0,6",
+      "0,216"
+     ],
+     "a": 2,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,6</b>."
+    },
+    {
+     "q": "P(A) = 0,1, P(B) = 0,6 y P(A ∩ B) = 0,08. ¿Son A y B independientes?",
+     "c": [
+      "solo si P(A) = P(B)",
+      "no se puede saber",
+      "sí",
+      "no"
+     ],
+     "a": 3,
+     "e": "P(A) · P(B) = 0,06 ≠ P(A ∩ B): <b>no son independientes</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,12 y P(B) = 0,3, ¿cuánto vale P(A | B)?",
+     "c": [
+      "0,4",
+      "0,12",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "0,036"
+     ],
+     "a": 0,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,4</b>."
+    },
+    {
+     "q": "Si P(A ∩ B) = 0,16 y P(B) = 0,2, ¿cuánto vale P(A | B)?",
+     "c": [
+      "0,16",
+      "0,8",
+      "0,032",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A | B) = P(A ∩ B) / P(B) = <b>0,8</b>."
+    }
+   ]
+  },
+  {
+   "title": "Repaso",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>19</td><td>5</td><td>24</td></tr><tr><td>Chicos</td><td>25</td><td>21</td><td>46</td></tr><tr><td>Total</td><td>44</td><td>26</td><td>70</td></tr></tbody></table></div>Elegimos al azar a una persona que usa gafas. ¿Probabilidad de que sea chico? Es P(chico | gafas).",
+     "c": [
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>46</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>44</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>"
+     ],
+     "a": 2,
+     "e": "Solo la columna de gafas: 25 de 44 = <b><span class='fr'><span class='fn'>25</span><span class='fd'>44</span></span></b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número múltiplo de 3 o impar?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 1, 3, 5, 6: <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Lanzamos tres monedas. ¿Cuál es la probabilidad de obtener exactamente 1 cara?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "Hay 3 casos de 8: <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número par o 1?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 1, 2, 4, 6: <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>20</td><td>19</td><td>39</td></tr><tr><td>Chicos</td><td>18</td><td>25</td><td>43</td></tr><tr><td>Total</td><td>38</td><td>44</td><td>82</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que sea chica y use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>41</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>741</span><span class='fd'>3362</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>39</span></span>"
+     ],
+     "a": 0,
+     "e": "Casilla chica–gafas: 20 de 82: <b><span class='fr'><span class='fn'>10</span><span class='fd'>41</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>25</td><td>22</td><td>47</td></tr><tr><td>Chicos</td><td>24</td><td>23</td><td>47</td></tr><tr><td>Total</td><td>49</td><td>45</td><td>94</td></tr></tbody></table></div>Elegimos al azar a una persona que usa gafas. ¿Probabilidad de que sea chico? Es P(chico | gafas).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>47</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>47</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>49</span></span>"
+     ],
+     "a": 3,
+     "e": "Solo la columna de gafas: 24 de 49 = <b><span class='fr'><span class='fn'>24</span><span class='fd'>49</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,45. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,55",
+      "0,45",
+      "0,65",
+      "0,225"
+     ],
+     "a": 0,
+     "e": "P(no A) = 1 − P(A) = <b>0,55</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>15</td><td>8</td><td>23</td></tr><tr><td>Chicos</td><td>10</td><td>23</td><td>33</td></tr><tr><td>Total</td><td>25</td><td>31</td><td>56</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>56</span></span>"
+     ],
+     "a": 2,
+     "e": "25 de 56: <b><span class='fr'><span class='fn'>25</span><span class='fd'>56</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>5</td><td>18</td><td>23</td></tr><tr><td>Chicos</td><td>21</td><td>12</td><td>33</td></tr><tr><td>Total</td><td>26</td><td>30</td><td>56</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que sea chica y use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>299</span><span class='fd'>1568</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>23</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>26</span></span>"
+     ],
+     "a": 1,
+     "e": "Casilla chica–gafas: 5 de 56: <b><span class='fr'><span class='fn'>5</span><span class='fd'>56</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>4</td><td>9</td><td>13</td></tr><tr><td>Chicos</td><td>15</td><td>11</td><td>26</td></tr><tr><td>Total</td><td>19</td><td>20</td><td>39</td></tr></tbody></table></div>Elegimos una chica al azar. ¿Probabilidad de que use gafas? Es P(gafas | chica).",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>39</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>39</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span>"
+     ],
+     "a": 3,
+     "e": "Solo miramos la fila de chicas: 4 de 13 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>16</td><td>17</td><td>33</td></tr><tr><td>Chicos</td><td>20</td><td>17</td><td>37</td></tr><tr><td>Total</td><td>36</td><td>34</td><td>70</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>35</span></span>"
+     ],
+     "a": 1,
+     "e": "36 de 70: <b><span class='fr'><span class='fn'>18</span><span class='fd'>35</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,95. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,05",
+      "0,95",
+      "0,475",
+      "0,15"
+     ],
+     "a": 0,
+     "e": "P(no A) = 1 − P(A) = <b>0,05</b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número menor que 3 o mayor que 4?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 1, 2, 5, 6: <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Lanzamos tres monedas. ¿Cuál es la probabilidad de obtener exactamente 3 caras?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "Hay 1 casos de 8: <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>13</td><td>21</td><td>34</td></tr><tr><td>Chicos</td><td>4</td><td>20</td><td>24</td></tr><tr><td>Total</td><td>17</td><td>41</td><td>58</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que sea chica y use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>34</span></span>",
+      "<span class='fr'><span class='fn'>289</span><span class='fd'>1682</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>58</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>17</span></span>"
+     ],
+     "a": 2,
+     "e": "Casilla chica–gafas: 13 de 58: <b><span class='fr'><span class='fn'>13</span><span class='fd'>58</span></span></b>."
+    },
+    {
+     "q": "Lanzamos dos dados y sumamos los puntos. ¿Cuál es la probabilidad de que la suma sea 2?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 0,
+     "e": "Hay 1 parejas que suman 2 de 36: <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>15</td><td>8</td><td>23</td></tr><tr><td>Chicos</td><td>9</td><td>8</td><td>17</td></tr><tr><td>Total</td><td>24</td><td>16</td><td>40</td></tr></tbody></table></div>Elegimos una persona al azar. ¿Probabilidad de que use gafas?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "24 de 40: <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,25. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,125",
+      "0,75",
+      "0,25",
+      "0,85"
+     ],
+     "a": 1,
+     "e": "P(no A) = 1 − P(A) = <b>0,75</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Usa gafas</th><th>No usa gafas</th><th>Total</th></tr></thead><tbody><tr><td>Chicas</td><td>8</td><td>10</td><td>18</td></tr><tr><td>Chicos</td><td>8</td><td>14</td><td>22</td></tr><tr><td>Total</td><td>16</td><td>24</td><td>40</td></tr></tbody></table></div>Elegimos al azar a una persona que usa gafas. ¿Probabilidad de que sea chico? Es P(chico | gafas).",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>"
+     ],
+     "a": 1,
+     "e": "Solo la columna de gafas: 8 de 16 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,55. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,45",
+      "0,46",
+      "0,275",
+      "0,55"
+     ],
+     "a": 0,
+     "e": "P(no A) = 1 − P(A) = <b>0,45</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 13,
+ "updated": "2026-11-23",
+ "country": "es",
+ "subject": "matematicas",
+ "grade": "4-eso"
+}

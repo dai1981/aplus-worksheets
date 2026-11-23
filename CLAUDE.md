@@ -1540,7 +1540,17 @@ ES / Matemáticas / 1.º・2.º・3.º de Primaria（primer ciclo と 3.º）—
 1.º: 1. numeros-hasta-99 ✓ 2. comparar-y-ordenar-numeros ✓ 3. sumas-y-restas-hasta-20 ✓ 4. sumas-y-restas-hasta-99 ✓ 5. problemas ✓ 6. dobles-y-mitades ✓ 7. patrones-y-series ✓ 8. medir-y-comparar ✓
 9. el-reloj ✓ 10. monedas-y-billetes ✓ 11. figuras-planas ✓ 12. cuerpos-geometricos ✓ 13. posiciones ✓ 14. recuento-y-graficos ✓
 
-ES / Matemáticas は 1.º〜6.º de Primaria まで完了。次は ESO（Real Decreto 217/2022）か、GDP 順で次の国
+ES / Matemáticas / ESO（Real Decreto 217/2022。1.º〜3.º と 4.º の saberes básicos を教科書の一般的な配分で学年に分ける）— grade `1-eso`〜`4-eso`（name「1.º de ESO」、sort 7〜10、unit.php で 12〜16 歳と educationalLevel「Educación Secundaria Obligatoria」）。standard_url は BOE-A-2022-4975（es_common.STD_URL_ESO）。
+生成スクリプトは `gen_es_matematicas_{1,2,3,4}eso_*`、共通部品は `tools/es_eso.py`（es_c3 の上に E・expr・poly・P2・par・sup・nz・rq・raiz（2√3）・sol（x₁ = …, x₂ = …）・kosy・kurve・figure（スペイン語のラベル）・L・tabla・unit(lv, R, slug, dom, …, sort)・use_（他学年の問題関数を R を入れ替えて使い、× を · にする））。
+ESO の掛け算は「·」、負の数は「−」、小数の並びは「; 」で区切る（コンマの小数と紛れないように）。周期小数は `<span class='ov'>3</span>`、連立は `<span class='sys'>…<br>…</span>`。数え上げは C<sub>n,k</sub>・V<sub>n,k</sub>。π は 3,14。
+いくつかの学年で同じ分野の単元は、一番下の学年のファイルに build(lv) を書き、ほかの学年はラッパー（`from gen_es_matematicas_2eso_potencias import build; build(4)`）。seed は 47000（1.º）・48000（2.º）・49000（3.º）・50000（4.º）＋番号、共有ファイルは基準の seed ＋ (lv − 基準の学年) × 1000。
+トピック：funciones（Funciones）を足した。divisibilidad→multiplicacion-y-division、radicales・logaritmos→numeros、algebraico・polinomios・inecuaciones・sucesiones→algebra-y-proporcionalidad、pitagoras・semejanza・trigonometria・movimientos・analitica・espacio→geometria、combinatoria→estadistica-y-probabilidad。poligonos-y-areas は geometria だけ、areas-y-volumenes-de-cuerpos は magnitudes-y-medida だけ
+1.º: 1. divisibilidad ✓ 2. numeros-enteros ✓ 3. potencias-y-raices ✓ 4. fracciones ✓ 5. numeros-decimales ✓ 6. proporcionalidad-y-porcentajes ✓ 7. lenguaje-algebraico ✓ 8. ecuaciones-de-primer-grado ✓ 9. coordenadas-y-graficas ✓ 10. rectas-y-angulos ✓ 11. poligonos-y-areas ✓ 12. circunferencia-y-circulo ✓ 13. estadistica ✓ 14. probabilidad ✓
+2.º: 1. fracciones-y-decimales ✓ 2. potencias-y-notacion-cientifica ✓ 3. proporcionalidad-directa-e-inversa ✓ 4. porcentajes ✓ 5. polinomios-e-identidades-notables ✓ 6. ecuaciones-de-primer-y-segundo-grado ✓ 7. sistemas-de-ecuaciones ✓ 8. funciones-lineales ✓ 9. teorema-de-pitagoras ✓ 10. semejanza-y-teorema-de-tales ✓ 11. areas-y-volumenes-de-cuerpos ✓ 12. estadistica ✓ 13. probabilidad ✓
+3.º: 1. numeros-racionales-e-irracionales ✓ 2. potencias-y-radicales ✓ 3. sucesiones-y-progresiones ✓ 4. polinomios-y-ruffini ✓ 5. ecuaciones-de-segundo-grado ✓ 6. sistemas-de-ecuaciones ✓ 7. funciones-y-sus-propiedades ✓ 8. funciones-lineales-y-cuadraticas ✓ 9. movimientos-en-el-plano ✓ 10. geometria-del-espacio ✓ 11. estadistica ✓ 12. probabilidad ✓
+4.º: 1. numeros-reales-e-intervalos ✓ 2. radicales-y-logaritmos ✓ 3. polinomios-y-fracciones-algebraicas ✓ 4. ecuaciones-y-sistemas ✓ 5. inecuaciones ✓ 6. semejanza ✓ 7. trigonometria ✓ 8. geometria-analitica ✓ 9. funciones-elementales ✓ 10. porcentajes-e-interes-compuesto ✓ 11. estadistica-bidimensional ✓ 12. combinatoria ✓ 13. probabilidad ✓
+
+ES / Matemáticas は 1.º de Primaria〜4.º de ESO まで完了。次は Bachillerato か、GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

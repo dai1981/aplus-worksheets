@@ -1,0 +1,1157 @@
+{
+ "slug": "polinomios-y-ruffini",
+ "title": "Polinomios, Ruffini y teorema del resto",
+ "seo_title": "Polinomios – 3.º de ESO: fichas de matemáticas con soluciones",
+ "short_title": "Polinomios",
+ "domain": "Sentido algebraico",
+ "standard_code": "3.º de ESO · Sentido algebraico",
+ "standard_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-4975",
+ "standard_text": "Polinomios: operaciones, división, regla de Ruffini, teorema del resto; raíces y factorización (resumen de los saberes básicos de Matemáticas de 1.º a 3.º de ESO, Real Decreto 217/2022)",
+ "meta_desc": "Fichas de matemáticas de 3.º de ESO: operar con polinomios, identidades notables, regla de Ruffini, teorema del resto y factorizar. 100 ejercicios con soluciones.",
+ "key_big": "Resto de P(x) : (x − a) = P(a)",
+ "key_sub": "Si P(a) = 0, (x − a) es factor.",
+ "body_html": "<h2>Cómo se hace</h2><p>Para dividir entre (x − a) se usa la <b>regla de Ruffini</b>: se bajan los coeficientes (con 0 en los huecos), se multiplica por a y se suma.</p><p><b>Teorema del resto</b>: el resto de dividir P(x) entre (x − a) es P(a).</p><p>Si P(a) = 0, a es una <b>raíz</b> y (x − a) es un factor. Las raíces enteras son divisores del término independiente.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>(x³ − 2x + 5) : (x − 2)</p><p class='sn-ex-s'>Coeficientes 1, 0, −2, 5</p><p class='sn-ex-s'>Ruffini con 2</p><p class='sn-ex-a'>Respuesta: x² + 2x + 2 y resto 9</p></div><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>x² − x − 6</p><p class='sn-ex-s'>Raíces 3 y −2</p><p class='sn-ex-a'>Respuesta: (x − 3)(x + 2)</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Escribir (a + b)² = a² + b²</td><td>Falta el doble producto 2ab.</td></tr><tr><td>Olvidar los huecos en Ruffini</td><td>x³ − 2x + 5 tiene coeficientes 1, 0, −2, 5.</td></tr><tr><td>Tachar sumandos en una fracción</td><td>Solo se tachan factores que multiplican.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Qué es la regla de Ruffini?",
+   "a": "Un método rápido para dividir un polinomio entre (x − a) usando solo los coeficientes."
+  },
+  {
+   "q": "¿Qué dice el teorema del resto?",
+   "a": "Que el resto de dividir P(x) entre (x − a) es igual a P(a)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Operar con polinomios",
+   "items": [
+    {
+     "q": "Multiplica: (3x² − 5x + 5) · (2x − 4)",
+     "c": [
+      "6x³ − 10x² + 10x − 4",
+      "6x³ + 2x² − 10x + 20",
+      "6x³ − 22x² + 30x − 19",
+      "6x³ − 22x² + 30x − 20"
+     ],
+     "a": 3,
+     "e": "Cada término del primero por cada término del segundo, y reducimos: <b>6x³ − 22x² + 30x − 20</b>."
+    },
+    {
+     "q": "Si P(x) = −x² − 6x + 5 y Q(x) = 5x² + 4x − 1, calcula P(x) − Q(x).",
+     "c": [
+      "−6x² − 10x + 6",
+      "6x² + 10x − 6",
+      "−6x² − 2x + 4",
+      "4x² − 2x + 4"
+     ],
+     "a": 0,
+     "e": "Cambiamos el signo de todos los términos de Q y sumamos: <b>−6x² − 10x + 6</b>."
+    },
+    {
+     "q": "Si P(x) = −5x² − 3 y Q(x) = 3x² + 2x − 6, calcula P(x) + Q(x).",
+     "c": [
+      "−15x⁴ − 10x³ + 21x² − 6x + 18",
+      "−2x² + 2x − 3",
+      "−2x² + 2x − 9",
+      "−8x² − 2x + 3"
+     ],
+     "a": 2,
+     "e": "Sumamos los términos del mismo grado: <b>−2x² + 2x − 9</b>."
+    },
+    {
+     "q": "Si P(x) = 4x² − 4x + 3 y Q(x) = −x + 5, calcula P(x) + Q(x).",
+     "c": [
+      "4x² − 5x + 3",
+      "4x² − 3x − 2",
+      "−4x³ + 24x² − 23x + 15",
+      "4x² − 5x + 8"
+     ],
+     "a": 3,
+     "e": "Sumamos los términos del mismo grado: <b>4x² − 5x + 8</b>."
+    },
+    {
+     "q": "Multiplica: (−5x² − x − 6) · (4x + 4)",
+     "c": [
+      "−20x³ − 24x² − 28x − 23",
+      "−20x³ − 24x² − 28x − 24",
+      "−20x³ − 4x² − 24x + 4",
+      "−20x³ + 16x² − 20x + 24"
+     ],
+     "a": 1,
+     "e": "Cada término del primero por cada término del segundo, y reducimos: <b>−20x³ − 24x² − 28x − 24</b>."
+    },
+    {
+     "q": "Multiplica: (2x² − x + 6) · (−3x − 4)",
+     "c": [
+      "−6x³ − 5x² − 14x − 24",
+      "−6x³ + 11x² − 22x + 24",
+      "−6x³ − 5x² − 14x − 23",
+      "−6x³ + 3x² − 18x − 4"
+     ],
+     "a": 0,
+     "e": "Cada término del primero por cada término del segundo, y reducimos: <b>−6x³ − 5x² − 14x − 24</b>."
+    },
+    {
+     "q": "Multiplica: (−5x² + 5x + 5) · (3x − 2)",
+     "c": [
+      "−15x³ + 15x² + 15x − 2",
+      "−15x³ + 25x² + 5x − 9",
+      "−15x³ + 25x² + 5x − 10",
+      "−15x³ + 5x² + 25x + 10"
+     ],
+     "a": 2,
+     "e": "Cada término del primero por cada término del segundo, y reducimos: <b>−15x³ + 25x² + 5x − 10</b>."
+    },
+    {
+     "q": "Si P(x) = 2x² − 2x − 2 y Q(x) = −x + 1, calcula P(x) − Q(x).",
+     "c": [
+      "−2x² + x + 3",
+      "2x² − x − 3",
+      "2x² − 3x − 1",
+      "2x² − x − 1"
+     ],
+     "a": 1,
+     "e": "Cambiamos el signo de todos los términos de Q y sumamos: <b>2x² − x − 3</b>."
+    },
+    {
+     "q": "Si P(x) = −3x² + 3x − 5 y Q(x) = 5x + 4, calcula P(x) − Q(x).",
+     "c": [
+      "−3x² − 2x − 9",
+      "−3x² + 8x − 1",
+      "−3x² − 2x − 1",
+      "3x² + 2x + 9"
+     ],
+     "a": 0,
+     "e": "Cambiamos el signo de todos los términos de Q y sumamos: <b>−3x² − 2x − 9</b>."
+    },
+    {
+     "q": "Si P(x) = 4x² + 2x + 6 y Q(x) = 5x² + 6x − 5, calcula P(x) + Q(x).",
+     "c": [
+      "20x⁴ + 34x³ + 22x² + 26x − 30",
+      "9x² + 8x + 1",
+      "−x² − 4x + 11",
+      "9x² + 8x + 6"
+     ],
+     "a": 1,
+     "e": "Sumamos los términos del mismo grado: <b>9x² + 8x + 1</b>."
+    },
+    {
+     "q": "Si P(x) = −x² − 2x + 1 y Q(x) = x² − x + 4, calcula P(x) + Q(x).",
+     "c": [
+      "−3x + 1",
+      "−3x + 5",
+      "−x⁴ − x³ − x² − 9x + 4",
+      "−2x² − x − 3"
+     ],
+     "a": 1,
+     "e": "Sumamos los términos del mismo grado: <b>−3x + 5</b>."
+    },
+    {
+     "q": "Si P(x) = −2x² − 2x − 2 y Q(x) = x² + 6x + 5, calcula P(x) + Q(x).",
+     "c": [
+      "−x² + 4x + 3",
+      "−2x⁴ − 14x³ − 24x² − 22x − 10",
+      "−3x² − 8x − 7",
+      "−x² + 4x − 2"
+     ],
+     "a": 0,
+     "e": "Sumamos los términos del mismo grado: <b>−x² + 4x + 3</b>."
+    },
+    {
+     "q": "Multiplica: (−4x² + 3x − 5) · (−2x − 2)",
+     "c": [
+      "8x³ − 6x² + 10x − 2",
+      "8x³ − 14x² + 16x − 10",
+      "8x³ + 2x² + 4x + 11",
+      "8x³ + 2x² + 4x + 10"
+     ],
+     "a": 3,
+     "e": "Cada término del primero por cada término del segundo, y reducimos: <b>8x³ + 2x² + 4x + 10</b>."
+    },
+    {
+     "q": "Si P(x) = 2x² − x − 5 y Q(x) = 4x² + x + 1, calcula P(x) − Q(x).",
+     "c": [
+      "6x² − 4",
+      "2x² + 2x + 6",
+      "−2x² − 2x − 6",
+      "−2x² − 4"
+     ],
+     "a": 2,
+     "e": "Cambiamos el signo de todos los términos de Q y sumamos: <b>−2x² − 2x − 6</b>."
+    },
+    {
+     "q": "Multiplica: (−3x² + x + 4) · (−3x − 4)",
+     "c": [
+      "9x³ − 15x² − 8x + 16",
+      "9x³ + 9x² − 16x − 16",
+      "9x³ + 9x² − 16x − 15",
+      "9x³ − 3x² − 12x − 4"
+     ],
+     "a": 1,
+     "e": "Cada término del primero por cada término del segundo, y reducimos: <b>9x³ + 9x² − 16x − 16</b>."
+    },
+    {
+     "q": "Si P(x) = 4x² − 5x y Q(x) = x² + 4x − 5, calcula P(x) − Q(x).",
+     "c": [
+      "3x² − x − 5",
+      "−3x² + 9x − 5",
+      "3x² − 9x + 5",
+      "5x² − x − 5"
+     ],
+     "a": 2,
+     "e": "Cambiamos el signo de todos los términos de Q y sumamos: <b>3x² − 9x + 5</b>."
+    },
+    {
+     "q": "Multiplica: (−x² − 6x + 3) · (4x)",
+     "c": [
+      "−4x³ − 24x² + 11x",
+      "−4x³ − 24x² + 12x + 1",
+      "−4x³ − 24x² + 13x",
+      "−4x³ − 24x² + 12x"
+     ],
+     "a": 3,
+     "e": "Cada término del primero por cada término del segundo, y reducimos: <b>−4x³ − 24x² + 12x</b>."
+    },
+    {
+     "q": "Multiplica: (−5x² + 3x + 3) · (−3x + 6)",
+     "c": [
+      "15x³ − 39x² + 9x + 18",
+      "15x³ − 39x² + 9x + 19",
+      "15x³ − 9x² − 9x + 6",
+      "15x³ + 21x² − 27x − 18"
+     ],
+     "a": 0,
+     "e": "Cada término del primero por cada término del segundo, y reducimos: <b>15x³ − 39x² + 9x + 18</b>."
+    },
+    {
+     "q": "Multiplica: (2x² − 2x + 1) · (−3x + 2)",
+     "c": [
+      "−6x³ + 10x² − 7x + 3",
+      "−6x³ + 6x² − 3x + 2",
+      "−6x³ + 10x² − 7x + 2",
+      "−6x³ + 2x² + x − 2"
+     ],
+     "a": 2,
+     "e": "Cada término del primero por cada término del segundo, y reducimos: <b>−6x³ + 10x² − 7x + 2</b>."
+    },
+    {
+     "q": "Si P(x) = −4x² + 3x + 5 y Q(x) = 2x² − x + 6, calcula P(x) − Q(x).",
+     "c": [
+      "−6x² + 2x + 11",
+      "−2x² + 2x + 11",
+      "6x² − 4x + 1",
+      "−6x² + 4x − 1"
+     ],
+     "a": 3,
+     "e": "Cambiamos el signo de todos los términos de Q y sumamos: <b>−6x² + 4x − 1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Identidades notables",
+   "items": [
+    {
+     "q": "Desarrolla: (3a − 7)²",
+     "c": [
+      "9a² − 49",
+      "9a² − 42a − 49",
+      "9a² − 42a + 49",
+      "9a² + 42a + 49"
+     ],
+     "a": 2,
+     "e": "(a − b)² = a² − 2ab + b²: <b>9a² − 42a + 49</b>."
+    },
+    {
+     "q": "Desarrolla: (4x − 6)²",
+     "c": [
+      "16x² − 36",
+      "16x² + 48x + 36",
+      "16x² − 48x + 36",
+      "16x² − 48x − 36"
+     ],
+     "a": 2,
+     "e": "(a − b)² = a² − 2ab + b²: <b>16x² − 48x + 36</b>."
+    },
+    {
+     "q": "Desarrolla: (2x + 6)(2x − 6)",
+     "c": [
+      "4x² − 6",
+      "4x² − 24x − 36",
+      "4x² − 36",
+      "4x² + 36"
+     ],
+     "a": 2,
+     "e": "(a + b)(a − b) = a² − b²: <b>4x² − 36</b>."
+    },
+    {
+     "q": "Escribe como cuadrado: 16x² − 24x + 9",
+     "c": [
+      "(4x − 3)²",
+      "(4x + 3)(4x − 3)",
+      "(4x − 9)²",
+      "(4x + 3)²"
+     ],
+     "a": 0,
+     "e": "Es un cuadrado perfecto: a = 4x, b = 3: <b>(4x − 3)²</b>."
+    },
+    {
+     "q": "Escribe como cuadrado: x² − 8x + 16",
+     "c": [
+      "(x + 4)²",
+      "(x − 4)²",
+      "(x − 16)²",
+      "(x + 4)(x − 4)"
+     ],
+     "a": 1,
+     "e": "Es un cuadrado perfecto: a = x, b = 4: <b>(x − 4)²</b>."
+    },
+    {
+     "q": "Desarrolla: (5a + 1)(5a − 1)",
+     "c": [
+      "25a² + 1",
+      "25a² − 1",
+      "25a² − 10a − 1",
+      "25a² − 2"
+     ],
+     "a": 1,
+     "e": "(a + b)(a − b) = a² − b²: <b>25a² − 1</b>."
+    },
+    {
+     "q": "Desarrolla: (x + 7)²",
+     "c": [
+      "x² + 14x + 14",
+      "x² + 14x + 49",
+      "x² + 7x + 49",
+      "x² + 49"
+     ],
+     "a": 1,
+     "e": "(a + b)² = a² + 2ab + b²: <b>x² + 14x + 49</b>."
+    },
+    {
+     "q": "Escribe como cuadrado: 9x² + 54x + 81",
+     "c": [
+      "(3x + 81)²",
+      "(3x + 9)(3x − 9)",
+      "(3x + 9)²",
+      "(3x − 9)²"
+     ],
+     "a": 2,
+     "e": "Es un cuadrado perfecto: a = 3x, b = 9: <b>(3x + 9)²</b>."
+    },
+    {
+     "q": "Desarrolla: (5y + 4)²",
+     "c": [
+      "25y² + 16",
+      "25y² + 20y + 16",
+      "25y² + 40y + 16",
+      "25y² + 40y + 8"
+     ],
+     "a": 2,
+     "e": "(a + b)² = a² + 2ab + b²: <b>25y² + 40y + 16</b>."
+    },
+    {
+     "q": "Factoriza: 9a² − 64",
+     "c": [
+      "(3a − 8)²",
+      "(3a + 8)(3a − 8)",
+      "(3a − 64)(3a − 1)",
+      "(3a + 8)²"
+     ],
+     "a": 1,
+     "e": "Diferencia de cuadrados: a² − b² = (a + b)(a − b): <b>(3a + 8)(3a − 8)</b>."
+    },
+    {
+     "q": "Desarrolla: (2x − 9)²",
+     "c": [
+      "4x² − 36x − 81",
+      "4x² + 36x + 81",
+      "4x² − 81",
+      "4x² − 36x + 81"
+     ],
+     "a": 3,
+     "e": "(a − b)² = a² − 2ab + b²: <b>4x² − 36x + 81</b>."
+    },
+    {
+     "q": "Desarrolla: (y + 8)²",
+     "c": [
+      "y² + 16y + 64",
+      "y² + 8y + 64",
+      "y² + 64",
+      "y² + 16y + 16"
+     ],
+     "a": 0,
+     "e": "(a + b)² = a² + 2ab + b²: <b>y² + 16y + 64</b>."
+    },
+    {
+     "q": "Desarrolla: (y + 4)²",
+     "c": [
+      "y² + 8y + 8",
+      "y² + 4y + 16",
+      "y² + 16",
+      "y² + 8y + 16"
+     ],
+     "a": 3,
+     "e": "(a + b)² = a² + 2ab + b²: <b>y² + 8y + 16</b>."
+    },
+    {
+     "q": "Desarrolla: (3y + 4)(3y − 4)",
+     "c": [
+      "9y² − 24y − 16",
+      "9y² − 4",
+      "9y² + 16",
+      "9y² − 16"
+     ],
+     "a": 3,
+     "e": "(a + b)(a − b) = a² − b²: <b>9y² − 16</b>."
+    },
+    {
+     "q": "Desarrolla: (3a + 9)²",
+     "c": [
+      "9a² + 54a + 81",
+      "9a² + 54a + 18",
+      "9a² + 27a + 81",
+      "9a² + 81"
+     ],
+     "a": 0,
+     "e": "(a + b)² = a² + 2ab + b²: <b>9a² + 54a + 81</b>."
+    },
+    {
+     "q": "Desarrolla: (3a + 7)(3a − 7)",
+     "c": [
+      "9a² − 7",
+      "9a² + 49",
+      "9a² − 42a − 49",
+      "9a² − 49"
+     ],
+     "a": 3,
+     "e": "(a + b)(a − b) = a² − b²: <b>9a² − 49</b>."
+    },
+    {
+     "q": "Desarrolla: (4x + 9)²",
+     "c": [
+      "16x² + 72x + 18",
+      "16x² + 72x + 81",
+      "16x² + 36x + 81",
+      "16x² + 81"
+     ],
+     "a": 1,
+     "e": "(a + b)² = a² + 2ab + b²: <b>16x² + 72x + 81</b>."
+    },
+    {
+     "q": "Desarrolla: (a + 1)²",
+     "c": [
+      "a² + 2a + 1",
+      "a² + 1",
+      "a² + 2a + 2",
+      "a² + a + 1"
+     ],
+     "a": 0,
+     "e": "(a + b)² = a² + 2ab + b²: <b>a² + 2a + 1</b>."
+    },
+    {
+     "q": "Desarrolla: (x − 2)²",
+     "c": [
+      "x² − 4x + 4",
+      "x² − 4",
+      "x² + 4x + 4",
+      "x² − 4x − 4"
+     ],
+     "a": 0,
+     "e": "(a − b)² = a² − 2ab + b²: <b>x² − 4x + 4</b>."
+    },
+    {
+     "q": "Desarrolla: (4a + 8)²",
+     "c": [
+      "16a² + 64a + 16",
+      "16a² + 32a + 64",
+      "16a² + 64",
+      "16a² + 64a + 64"
+     ],
+     "a": 3,
+     "e": "(a + b)² = a² + 2ab + b²: <b>16a² + 64a + 64</b>."
+    }
+   ]
+  },
+  {
+   "title": "División y regla de Ruffini",
+   "items": [
+    {
+     "q": "Aplica la regla de Ruffini: (−4x² − 15x + 27) : (x + 5)",
+     "c": [
+      "4x − 5 y resto 2",
+      "−4x + 5 y resto 2",
+      "−4x + 6 y resto 2",
+      "−4x + 5 y resto −2"
+     ],
+     "a": 1,
+     "e": "Bajamos los coeficientes, multiplicamos por −5 y sumamos: <b>−4x + 5 y resto 2</b>."
+    },
+    {
+     "q": "Divide −3x³ − 15x² + 2x + 1 entre x + 5. ¿Cuál es el cociente?",
+     "c": [
+      "−3x² + 2",
+      "−3x² + 3",
+      "3x² − 2",
+      "−3x³ + 2x"
+     ],
+     "a": 0,
+     "e": "Por Ruffini con −5: cociente <b>−3x² + 2</b> y resto −9."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir 3x² + 12x + 10 entre x + 3?",
+     "c": [
+      "10",
+      "1",
+      "−2",
+      "73"
+     ],
+     "a": 1,
+     "e": "Teorema del resto: el resto es P(−3) = <b>1</b>."
+    },
+    {
+     "q": "Divide −2x³ + 16x² − 34x + 29 entre x − 5. ¿Cuál es el cociente?",
+     "c": [
+      "−2x² + 6x − 4",
+      "−2x² + 6x − 3",
+      "−2x³ + 6x² − 4x",
+      "2x² − 6x + 4"
+     ],
+     "a": 0,
+     "e": "Por Ruffini con 5: cociente <b>−2x² + 6x − 4</b> y resto 9."
+    },
+    {
+     "q": "Aplica la regla de Ruffini: (5x³ + 18x² + 9x − 3) : (x + 3)",
+     "c": [
+      "5x² + 3x y resto 3",
+      "−5x² − 3x y resto −3",
+      "5x² + 3x y resto −3",
+      "5x² + 3x + 1 y resto −3"
+     ],
+     "a": 2,
+     "e": "Bajamos los coeficientes, multiplicamos por −3 y sumamos: <b>5x² + 3x y resto −3</b>."
+    },
+    {
+     "q": "Aplica la regla de Ruffini: (4x³ + 25x² + 29x + 25) : (x + 5)",
+     "c": [
+      "4x² + 5x + 4 y resto 5",
+      "−4x² − 5x − 4 y resto 5",
+      "4x² + 5x + 5 y resto 5",
+      "4x² + 5x + 4 y resto −5"
+     ],
+     "a": 0,
+     "e": "Bajamos los coeficientes, multiplicamos por −5 y sumamos: <b>4x² + 5x + 4 y resto 5</b>."
+    },
+    {
+     "q": "Aplica la regla de Ruffini: (5x³ − 14x² + 12x − 12) : (x − 2)",
+     "c": [
+      "5x² − 4x + 4 y resto 4",
+      "5x² − 4x + 4 y resto −4",
+      "5x² − 4x + 5 y resto −4",
+      "−5x² + 4x − 4 y resto −4"
+     ],
+     "a": 1,
+     "e": "Bajamos los coeficientes, multiplicamos por 2 y sumamos: <b>5x² − 4x + 4 y resto −4</b>."
+    },
+    {
+     "q": "Divide x³ − 3x² − 9x + 2 entre x + 1. ¿Cuál es el cociente?",
+     "c": [
+      "−x² + 4x + 5",
+      "x² − 4x − 4",
+      "x³ − 4x² − 5x",
+      "x² − 4x − 5"
+     ],
+     "a": 3,
+     "e": "Por Ruffini con −1: cociente <b>x² − 4x − 5</b> y resto 7."
+    },
+    {
+     "q": "Divide 5x² + 7x − 15 entre x + 2. ¿Cuál es el cociente?",
+     "c": [
+      "−5x + 3",
+      "5x² − 3x",
+      "5x − 2",
+      "5x − 3"
+     ],
+     "a": 3,
+     "e": "Por Ruffini con −2: cociente <b>5x − 3</b> y resto −9."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir 4x³ + 11x² − 24x − 15 entre x + 4?",
+     "c": [
+      "−3",
+      "321",
+      "1",
+      "−15"
+     ],
+     "a": 2,
+     "e": "Teorema del resto: el resto es P(−4) = <b>1</b>."
+    },
+    {
+     "q": "Aplica la regla de Ruffini: (−4x² + 6x − 2) : (x − 1)",
+     "c": [
+      "−4x + 2 y resto 1",
+      "4x − 2 y resto 0",
+      "−4x + 2 y resto 0",
+      "−4x + 3 y resto 0"
+     ],
+     "a": 2,
+     "e": "Bajamos los coeficientes, multiplicamos por 1 y sumamos: <b>−4x + 2 y resto 0</b>."
+    },
+    {
+     "q": "Divide 3x³ + 20x² + 29x + 21 entre x + 5. ¿Cuál es el cociente?",
+     "c": [
+      "−3x² − 5x − 4",
+      "3x² + 5x + 5",
+      "3x² + 5x + 4",
+      "3x³ + 5x² + 4x"
+     ],
+     "a": 2,
+     "e": "Por Ruffini con −5: cociente <b>3x² + 5x + 4</b> y resto 1."
+    },
+    {
+     "q": "Aplica la regla de Ruffini: (−3x² + 12x − 7) : (x − 3)",
+     "c": [
+      "−3x + 3 y resto −2",
+      "3x − 3 y resto 2",
+      "−3x + 4 y resto 2",
+      "−3x + 3 y resto 2"
+     ],
+     "a": 3,
+     "e": "Bajamos los coeficientes, multiplicamos por 3 y sumamos: <b>−3x + 3 y resto 2</b>."
+    },
+    {
+     "q": "Divide x³ − 3x² − 16x + 34 entre x − 5. ¿Cuál es el cociente?",
+     "c": [
+      "x³ + 2x² − 6x",
+      "x² + 2x − 5",
+      "−x² − 2x + 6",
+      "x² + 2x − 6"
+     ],
+     "a": 3,
+     "e": "Por Ruffini con 5: cociente <b>x² + 2x − 6</b> y resto 4."
+    },
+    {
+     "q": "Divide 2x³ + 13x² + 19x − 5 entre x + 4. ¿Cuál es el cociente?",
+     "c": [
+      "−2x² − 5x + 1",
+      "2x³ + 5x² − x",
+      "2x² + 5x − 1",
+      "2x² + 5x"
+     ],
+     "a": 2,
+     "e": "Por Ruffini con −4: cociente <b>2x² + 5x − 1</b> y resto −1."
+    },
+    {
+     "q": "Divide 4x² + 18x + 20 entre x + 3. ¿Cuál es el cociente?",
+     "c": [
+      "4x + 6",
+      "−4x − 6",
+      "4x² + 6x",
+      "4x + 7"
+     ],
+     "a": 0,
+     "e": "Por Ruffini con −3: cociente <b>4x + 6</b> y resto 2."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir −3x³ + 15x² − x − 1 entre x − 5?",
+     "c": [
+      "−6",
+      "754",
+      "−7",
+      "−1"
+     ],
+     "a": 0,
+     "e": "Teorema del resto: el resto es P(5) = <b>−6</b>."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir −4x³ − 9x² − 1 entre x + 2?",
+     "c": [
+      "−69",
+      "−5",
+      "−1",
+      "−7"
+     ],
+     "a": 1,
+     "e": "Teorema del resto: el resto es P(−2) = <b>−5</b>."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir 5x³ + x² − 9x + 11 entre x − 1?",
+     "c": [
+      "9",
+      "8",
+      "16",
+      "11"
+     ],
+     "a": 1,
+     "e": "Teorema del resto: el resto es P(1) = <b>8</b>."
+    },
+    {
+     "q": "Aplica la regla de Ruffini: (2x³ + 5x² + 3x + 3) : (x + 1)",
+     "c": [
+      "−2x² − 3x y resto 3",
+      "2x² + 3x + 1 y resto 3",
+      "2x² + 3x y resto −3",
+      "2x² + 3x y resto 3"
+     ],
+     "a": 3,
+     "e": "Bajamos los coeficientes, multiplicamos por −1 y sumamos: <b>2x² + 3x y resto 3</b>."
+    }
+   ]
+  },
+  {
+   "title": "Teorema del resto",
+   "items": [
+    {
+     "q": "Divide −2x³ − 7x² − 8x + 3 entre x + 2. ¿Cuál es el cociente?",
+     "c": [
+      "2x² + 3x + 2",
+      "−2x³ − 3x² − 2x",
+      "−2x² − 3x − 1",
+      "−2x² − 3x − 2"
+     ],
+     "a": 3,
+     "e": "Por Ruffini con −2: cociente <b>−2x² − 3x − 2</b> y resto 7."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir 2x³ − 12x² + 12x − 1 entre x − 5?",
+     "c": [
+      "−1",
+      "14",
+      "−611",
+      "9"
+     ],
+     "a": 3,
+     "e": "Teorema del resto: el resto es P(5) = <b>9</b>."
+    },
+    {
+     "q": "Divide 4x² − 23x + 16 entre x − 5. ¿Cuál es el cociente?",
+     "c": [
+      "−4x + 3",
+      "4x − 3",
+      "4x − 2",
+      "4x² − 3x"
+     ],
+     "a": 1,
+     "e": "Por Ruffini con 5: cociente <b>4x − 3</b> y resto 1."
+    },
+    {
+     "q": "Aplica la regla de Ruffini: (x³ − 3x² − 7x − 23) : (x − 5)",
+     "c": [
+      "x² + 2x + 3 y resto 8",
+      "−x² − 2x − 3 y resto −8",
+      "x² + 2x + 3 y resto −8",
+      "x² + 2x + 4 y resto −8"
+     ],
+     "a": 2,
+     "e": "Bajamos los coeficientes, multiplicamos por 5 y sumamos: <b>x² + 2x + 3 y resto −8</b>."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir −x³ + 2x² − 5x + 9 entre x − 2?",
+     "c": [
+      "9",
+      "−1",
+      "1",
+      "35"
+     ],
+     "a": 1,
+     "e": "Teorema del resto: el resto es P(2) = <b>−1</b>."
+    },
+    {
+     "q": "Aplica la regla de Ruffini: (−5x² − 4x + 3) : (x + 1)",
+     "c": [
+      "−5x + 1 y resto 2",
+      "−5x + 1 y resto −2",
+      "5x − 1 y resto 2",
+      "−5x + 2 y resto 2"
+     ],
+     "a": 0,
+     "e": "Bajamos los coeficientes, multiplicamos por −1 y sumamos: <b>−5x + 1 y resto 2</b>."
+    },
+    {
+     "q": "Divide x² + 2x − 11 entre x − 3. ¿Cuál es el cociente?",
+     "c": [
+      "x + 6",
+      "−x − 5",
+      "x² + 5x",
+      "x + 5"
+     ],
+     "a": 3,
+     "e": "Por Ruffini con 3: cociente <b>x + 5</b> y resto 4."
+    },
+    {
+     "q": "Divide −3x³ − x² + x + 6 entre x + 1. ¿Cuál es el cociente?",
+     "c": [
+      "−3x² + 2x",
+      "−3x³ + 2x² − x",
+      "−3x² + 2x − 1",
+      "3x² − 2x + 1"
+     ],
+     "a": 2,
+     "e": "Por Ruffini con −1: cociente <b>−3x² + 2x − 1</b> y resto 7."
+    },
+    {
+     "q": "Divide −2x² + 6x − 12 entre x − 2. ¿Cuál es el cociente?",
+     "c": [
+      "−2x + 2",
+      "−2x + 3",
+      "2x − 2",
+      "−2x² + 2x"
+     ],
+     "a": 0,
+     "e": "Por Ruffini con 2: cociente <b>−2x + 2</b> y resto −8."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir 3x² − 11x + 8 entre x − 3?",
+     "c": [
+      "2",
+      "68",
+      "5",
+      "8"
+     ],
+     "a": 0,
+     "e": "Teorema del resto: el resto es P(3) = <b>2</b>."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir −5x² − 3x + 6 entre x + 1?",
+     "c": [
+      "4",
+      "6",
+      "−2",
+      "3"
+     ],
+     "a": 0,
+     "e": "Teorema del resto: el resto es P(−1) = <b>4</b>."
+    },
+    {
+     "q": "Aplica la regla de Ruffini: (−2x² − 12x − 12) : (x + 3)",
+     "c": [
+      "2x + 6 y resto 6",
+      "−2x − 6 y resto 6",
+      "−2x − 6 y resto −6",
+      "−2x − 5 y resto 6"
+     ],
+     "a": 1,
+     "e": "Bajamos los coeficientes, multiplicamos por −3 y sumamos: <b>−2x − 6 y resto 6</b>."
+    },
+    {
+     "q": "Divide 2x³ − x² + 4x − 8 entre x − 1. ¿Cuál es el cociente?",
+     "c": [
+      "2x³ + x² + 5x",
+      "2x² + x + 5",
+      "−2x² − x − 5",
+      "2x² + x + 6"
+     ],
+     "a": 1,
+     "e": "Por Ruffini con 1: cociente <b>2x² + x + 5</b> y resto −3."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir −5x² + 12x + 5 entre x − 2?",
+     "c": [
+      "11",
+      "−39",
+      "9",
+      "5"
+     ],
+     "a": 2,
+     "e": "Teorema del resto: el resto es P(2) = <b>9</b>."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir −x³ + 11x² − 32x + 19 entre x − 5?",
+     "c": [
+      "9",
+      "14",
+      "19",
+      "579"
+     ],
+     "a": 0,
+     "e": "Teorema del resto: el resto es P(5) = <b>9</b>."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir x³ + 2x² − 3x − 5 entre x + 1?",
+     "c": [
+      "−3",
+      "−2",
+      "−1",
+      "−5"
+     ],
+     "a": 2,
+     "e": "Teorema del resto: el resto es P(−1) = <b>−1</b>."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir 4x² − 11x − 17 entre x − 4?",
+     "c": [
+      "91",
+      "3",
+      "7",
+      "−17"
+     ],
+     "a": 1,
+     "e": "Teorema del resto: el resto es P(4) = <b>3</b>."
+    },
+    {
+     "q": "¿Cuál es el resto de dividir 4x³ + 7x² + 8x + 8 entre x + 1?",
+     "c": [
+      "8",
+      "2",
+      "3",
+      "27"
+     ],
+     "a": 2,
+     "e": "Teorema del resto: el resto es P(−1) = <b>3</b>."
+    },
+    {
+     "q": "Divide 3x² + 6x − 23 entre x + 4. ¿Cuál es el cociente?",
+     "c": [
+      "3x − 5",
+      "−3x + 6",
+      "3x² − 6x",
+      "3x − 6"
+     ],
+     "a": 3,
+     "e": "Por Ruffini con −4: cociente <b>3x − 6</b> y resto 1."
+    },
+    {
+     "q": "Aplica la regla de Ruffini: (−3x² − 11x − 16) : (x + 2)",
+     "c": [
+      "−3x − 4 y resto −6",
+      "3x + 5 y resto −6",
+      "−3x − 5 y resto 6",
+      "−3x − 5 y resto −6"
+     ],
+     "a": 3,
+     "e": "Bajamos los coeficientes, multiplicamos por −2 y sumamos: <b>−3x − 5 y resto −6</b>."
+    }
+   ]
+  },
+  {
+   "title": "Factorizar polinomios",
+   "items": [
+    {
+     "q": "¿Cuáles son las raíces enteras de x³ − 13x + 12?",
+     "c": [
+      "−4, 1",
+      "−3, −1, 4",
+      "−3, 1, 3",
+      "−4, 1, 3"
+     ],
+     "a": 3,
+     "e": "Probamos con los divisores del término independiente (12): <b>−4, 1, 3</b>."
+    },
+    {
+     "q": "¿Qué valor de k hace que −2x² + k sea divisible por (x − 2)?",
+     "c": [
+      "k = 8",
+      "k = 2",
+      "k = −8",
+      "k = 10"
+     ],
+     "a": 0,
+     "e": "Debe ser P(2) = 0: −8 + k = 0, <b>k = 8</b>."
+    },
+    {
+     "q": "Saca factor común: −20x³ − 28x²",
+     "c": [
+      "4(−5x³ − 7x²)",
+      "4x³(−5 − 7)",
+      "4x²(−5x − 7)",
+      "4x(−5x² − 7x)"
+     ],
+     "a": 2,
+     "e": "El factor común es 4x²: <b>4x²(−5x − 7)</b>."
+    },
+    {
+     "q": "¿Qué valor de k hace que −2x² + 2x + k sea divisible por (x − 3)?",
+     "c": [
+      "k = 12",
+      "k = 15",
+      "k = 3",
+      "k = −12"
+     ],
+     "a": 0,
+     "e": "Debe ser P(3) = 0: −12 + k = 0, <b>k = 12</b>."
+    },
+    {
+     "q": "Saca factor común: −9x³ − 15x²",
+     "c": [
+      "3x(−3x² − 5x)",
+      "3x²(−3x − 5)",
+      "3(−3x³ − 5x²)",
+      "3x³(−3 − 5)"
+     ],
+     "a": 1,
+     "e": "El factor común es 3x²: <b>3x²(−3x − 5)</b>."
+    },
+    {
+     "q": "Saca factor común: 30x² − 42x",
+     "c": [
+      "6x(5x − 7)",
+      "x(30x − 42)",
+      "6x²(5 − 7)",
+      "6(5x² − 7x)"
+     ],
+     "a": 0,
+     "e": "El factor común es 6x: <b>6x(5x − 7)</b>."
+    },
+    {
+     "q": "¿Cuáles son las raíces enteras de x³ − 8x² + 19x − 12?",
+     "c": [
+      "−4, −3, −1",
+      "1, 3",
+      "2, 3, 4",
+      "1, 3, 4"
+     ],
+     "a": 3,
+     "e": "Probamos con los divisores del término independiente (−12): <b>1, 3, 4</b>."
+    },
+    {
+     "q": "Saca factor común: −4x + 16",
+     "c": [
+      "4x(−1 + 4)",
+      "4(−x + 4)",
+      "4(−x + 16)",
+      "x(−4 + 16)"
+     ],
+     "a": 1,
+     "e": "Dividimos cada término entre 4: <b>4(−x + 4)</b>."
+    },
+    {
+     "q": "Saca factor común: −4x − 4",
+     "c": [
+      "x(−4 − 4)",
+      "4x(−1 − 1)",
+      "4(−x − 1)",
+      "4(−x − 4)"
+     ],
+     "a": 2,
+     "e": "Dividimos cada término entre 4: <b>4(−x − 1)</b>."
+    },
+    {
+     "q": "Saca factor común: 18x − 30",
+     "c": [
+      "18(x − 5)",
+      "6x(3 − 5)",
+      "6(3x − 5)",
+      "6(3x − 30)"
+     ],
+     "a": 2,
+     "e": "Dividimos cada término entre 6: <b>6(3x − 5)</b>."
+    },
+    {
+     "q": "¿Es x = −2 raíz de P(x) = x³ − 9x² + 26x − 24?",
+     "c": [
+      "no se puede saber",
+      "solo si es positivo",
+      "sí",
+      "no"
+     ],
+     "a": 3,
+     "e": "P(−2) = −120: <b>no</b>."
+    },
+    {
+     "q": "¿Cuáles son las raíces enteras de x² − 8x + 15?",
+     "c": [
+      "−5, −3",
+      "3, 6",
+      "3",
+      "3, 5"
+     ],
+     "a": 3,
+     "e": "Probamos con los divisores del término independiente (15): <b>3, 5</b>."
+    },
+    {
+     "q": "¿Cuáles son las raíces enteras de x³ − 7x + 6?",
+     "c": [
+      "−2, −1, 3",
+      "−3, 1, 2",
+      "−3, 1, 3",
+      "−3, 1"
+     ],
+     "a": 1,
+     "e": "Probamos con los divisores del término independiente (6): <b>−3, 1, 2</b>."
+    },
+    {
+     "q": "¿Qué valor de k hace que −x² + 2x + k sea divisible por (x − 1)?",
+     "c": [
+      "k = −2",
+      "k = −1",
+      "k = 0",
+      "k = 1"
+     ],
+     "a": 1,
+     "e": "Debe ser P(1) = 0: 1 + k = 0, <b>k = −1</b>."
+    },
+    {
+     "q": "¿Es x = 2 raíz de P(x) = x² − 5x + 6?",
+     "c": [
+      "sí",
+      "no se puede saber",
+      "solo si es positivo",
+      "no"
+     ],
+     "a": 0,
+     "e": "P(2) = 0: <b>sí</b>."
+    },
+    {
+     "q": "Factoriza: x³ + 2x² − 16x − 32",
+     "c": [
+      "x(x + 2)(x − 4)",
+      "(x + 4)(x + 2)(x − 4)",
+      "(x + 4)(x + 2)(x − 5)",
+      "(x − 4)(x − 2)(x + 4)"
+     ],
+     "a": 1,
+     "e": "Las raíces son −4, −2, 4: <b>(x + 4)(x + 2)(x − 4)</b>."
+    },
+    {
+     "q": "¿Cuáles son las raíces enteras de x³ − 9x² + 26x − 24?",
+     "c": [
+      "−4, −3, −2",
+      "2, 3",
+      "2, 3, 4",
+      "2, 4, 4"
+     ],
+     "a": 2,
+     "e": "Probamos con los divisores del término independiente (−24): <b>2, 3, 4</b>."
+    },
+    {
+     "q": "¿Qué valor de k hace que −4x² + 2x + k sea divisible por (x − 3)?",
+     "c": [
+      "k = 3",
+      "k = 33",
+      "k = −30",
+      "k = 30"
+     ],
+     "a": 3,
+     "e": "Debe ser P(3) = 0: −30 + k = 0, <b>k = 30</b>."
+    },
+    {
+     "q": "Saca factor común: −24x + 24",
+     "c": [
+      "6(−4x + 4)",
+      "6(−4x + 24)",
+      "x(−24 + 24)",
+      "6x(−4 + 4)"
+     ],
+     "a": 0,
+     "e": "Dividimos cada término entre 6: <b>6(−4x + 4)</b>."
+    },
+    {
+     "q": "Saca factor común: 4x³ − 6x²",
+     "c": [
+      "2x(2x² − 3x)",
+      "2x³(2 − 3)",
+      "2x²(2x − 3)",
+      "2(2x³ − 3x²)"
+     ],
+     "a": 2,
+     "e": "El factor común es 2x²: <b>2x²(2x − 3)</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 4,
+ "updated": "2026-11-23",
+ "country": "es",
+ "subject": "matematicas",
+ "grade": "3-eso"
+}

@@ -1,0 +1,1157 @@
+{
+ "slug": "combinatoria",
+ "title": "Combinatoria",
+ "seo_title": "Combinatoria – 4.º de ESO: fichas de matemáticas con soluciones",
+ "short_title": "Combinatoria",
+ "domain": "Sentido estocástico",
+ "standard_code": "4.º de ESO · Sentido estocástico",
+ "standard_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-4975",
+ "standard_text": "Técnicas de recuento: principio multiplicativo, diagramas de árbol, permutaciones, variaciones y combinaciones; aplicación al cálculo de probabilidades (resumen de los saberes básicos de Matemáticas de 4.º de ESO, Real Decreto 217/2022)",
+ "meta_desc": "Fichas de matemáticas de 4.º de ESO: principio multiplicativo, factorial, permutaciones, variaciones, combinaciones y probabilidad. 100 ejercicios con soluciones.",
+ "key_big": "¿Importa el orden? ¿Se repiten?",
+ "key_sub": "Variaciones, permutaciones o combinaciones.",
+ "body_html": "<h2>Cómo se hace</h2><p><b>Principio multiplicativo</b>: si una elección tiene a opciones y otra b, juntas tienen a · b.</p><p><b>Permutaciones</b> (ordenar todos): P<sub>n</sub> = n! = n · (n − 1) · … · 1.</p><p><b>Variaciones</b> (elegir k de n, importa el orden): V<sub>n,k</sub> = n · (n − 1) · … (k factores). Con repetición: n<sup>k</sup>.</p><p><b>Combinaciones</b> (elegir k de n, no importa el orden): C<sub>n,k</sub> = n! / (k! · (n − k)!).</p><p>Preguntas clave: ¿importa el orden? ¿se pueden repetir? ¿entran todos los elementos?</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Oro, plata y bronce entre 8</p><p class='sn-ex-s'>importa el orden</p><p class='sn-ex-a'>Respuesta: V<sub>8,3</sub> = 8 · 7 · 6 = 336</p></div><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Grupo de 3 entre 8</p><p class='sn-ex-s'>no importa el orden</p><p class='sn-ex-a'>Respuesta: C<sub>8,3</sub> = 56</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Usar combinaciones cuando importa el orden</td><td>Delegado y subdelegado no es lo mismo que subdelegado y delegado.</td></tr><tr><td>Olvidar si se repiten</td><td>Un PIN puede repetir cifras: 10⁴.</td></tr><tr><td>Calcular n! como n · 2</td><td>5! = 5 · 4 · 3 · 2 · 1 = 120.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Cuál es la diferencia entre variaciones y combinaciones?",
+   "a": "En las variaciones importa el orden (podio); en las combinaciones no (un grupo)."
+  },
+  {
+   "q": "¿Para qué sirve la combinatoria en probabilidad?",
+   "a": "Para contar los casos posibles y los favorables cuando son muchos y aplicar la regla de Laplace."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Principio multiplicativo",
+   "items": [
+    {
+     "q": "¿Cuántos códigos de 4 cifras (del 0 al 9) se pueden formar si las cifras se pueden repetir?",
+     "c": [
+      "10 000",
+      "210",
+      "40",
+      "5040"
+     ],
+     "a": 0,
+     "e": "10 posibilidades en cada cifra: 10<sup>4</sup> = <b>10 000</b>."
+    },
+    {
+     "q": "Un menú tiene 3 primeros, 6 segundos y 3 postres. ¿Cuántos menús distintos se pueden elegir?",
+     "c": [
+      "21",
+      "220",
+      "12",
+      "54"
+     ],
+     "a": 3,
+     "e": "Principio multiplicativo: 3 · 6 · 3 = <b>54</b>."
+    },
+    {
+     "q": "Tienes 7 camisetas, 4 pantalones y 2 pares de zapatillas. ¿De cuántas formas puedes vestirte?",
+     "c": [
+      "56",
+      "28",
+      "22",
+      "13"
+     ],
+     "a": 0,
+     "e": "7 · 4 · 2 = <b>56</b>."
+    },
+    {
+     "q": "¿Cuántos códigos de 3 cifras (del 0 al 9) se pueden formar si las cifras se pueden repetir?",
+     "c": [
+      "720",
+      "30",
+      "120",
+      "1000"
+     ],
+     "a": 3,
+     "e": "10 posibilidades en cada cifra: 10<sup>3</sup> = <b>1000</b>."
+    },
+    {
+     "q": "Se lanzan 2 dados. ¿Cuántos resultados distintos (en orden) hay?",
+     "c": [
+      "12",
+      "30",
+      "36",
+      "21"
+     ],
+     "a": 2,
+     "e": "6<sup>2</sup> = <b>36</b>."
+    },
+    {
+     "q": "De A a B hay 3 caminos y de B a C hay 2. ¿De cuántas formas se puede ir de A a C pasando por B, y volver por caminos distintos a los de ida?",
+     "c": [
+      "36",
+      "13",
+      "12",
+      "6"
+     ],
+     "a": 2,
+     "e": "Ida: 3 · 2; vuelta: 1 · 2. Total: <b>12</b>."
+    },
+    {
+     "q": "Un menú tiene 5 primeros, 3 segundos y 4 postres. ¿Cuántos menús distintos se pueden elegir?",
+     "c": [
+      "60",
+      "19",
+      "220",
+      "12"
+     ],
+     "a": 0,
+     "e": "Principio multiplicativo: 5 · 3 · 4 = <b>60</b>."
+    },
+    {
+     "q": "Un menú tiene 2 primeros, 5 segundos y 3 postres. ¿Cuántos menús distintos se pueden elegir?",
+     "c": [
+      "120",
+      "13",
+      "10",
+      "30"
+     ],
+     "a": 3,
+     "e": "Principio multiplicativo: 2 · 5 · 3 = <b>30</b>."
+    },
+    {
+     "q": "De A a B hay 4 caminos y de B a C hay 4. ¿De cuántas formas se puede ir de A a C pasando por B, y volver por caminos distintos a los de ida?",
+     "c": [
+      "16",
+      "144",
+      "32",
+      "256"
+     ],
+     "a": 1,
+     "e": "Ida: 4 · 4; vuelta: 3 · 3. Total: <b>144</b>."
+    },
+    {
+     "q": "Las matrículas españolas tienen 4 cifras y 3 letras (de un alfabeto de 20 letras). ¿Cuántas matrículas distintas hay?",
+     "c": [
+      "18 000",
+      "2400",
+      "80 000 000",
+      "34 473 600"
+     ],
+     "a": 2,
+     "e": "10⁴ · 20³ = 10 000 · 8000 = <b>80 000 000</b>."
+    },
+    {
+     "q": "¿Cuántos códigos de 6 cifras (del 0 al 9) se pueden formar si las cifras se pueden repetir?",
+     "c": [
+      "210",
+      "60",
+      "151 200",
+      "1 000 000"
+     ],
+     "a": 3,
+     "e": "10 posibilidades en cada cifra: 10<sup>6</sup> = <b>1 000 000</b>."
+    },
+    {
+     "q": "¿Cuántos códigos de 5 cifras (del 0 al 9) se pueden formar si las cifras se pueden repetir?",
+     "c": [
+      "100 000",
+      "252",
+      "50",
+      "30 240"
+     ],
+     "a": 0,
+     "e": "10 posibilidades en cada cifra: 10<sup>5</sup> = <b>100 000</b>."
+    },
+    {
+     "q": "De A a B hay 5 caminos y de B a C hay 5. ¿De cuántas formas se puede ir de A a C pasando por B, y volver por caminos distintos a los de ida?",
+     "c": [
+      "50",
+      "625",
+      "400",
+      "25"
+     ],
+     "a": 2,
+     "e": "Ida: 5 · 5; vuelta: 4 · 4. Total: <b>400</b>."
+    },
+    {
+     "q": "Se lanzan 4 dados. ¿Cuántos resultados distintos (en orden) hay?",
+     "c": [
+      "360",
+      "1296",
+      "24",
+      "126"
+     ],
+     "a": 1,
+     "e": "6<sup>4</sup> = <b>1296</b>."
+    },
+    {
+     "q": "De A a B hay 5 caminos y de B a C hay 3. ¿De cuántas formas se puede ir de A a C pasando por B, y volver por caminos distintos a los de ida?",
+     "c": [
+      "30",
+      "120",
+      "15",
+      "225"
+     ],
+     "a": 1,
+     "e": "Ida: 5 · 3; vuelta: 2 · 4. Total: <b>120</b>."
+    },
+    {
+     "q": "Se lanzan 3 dados. ¿Cuántos resultados distintos (en orden) hay?",
+     "c": [
+      "56",
+      "216",
+      "18",
+      "120"
+     ],
+     "a": 1,
+     "e": "6<sup>3</sup> = <b>216</b>."
+    },
+    {
+     "q": "Un menú tiene 5 primeros, 6 segundos y 3 postres. ¿Cuántos menús distintos se pueden elegir?",
+     "c": [
+      "90",
+      "14",
+      "364",
+      "33"
+     ],
+     "a": 0,
+     "e": "Principio multiplicativo: 5 · 6 · 3 = <b>90</b>."
+    },
+    {
+     "q": "De A a B hay 5 caminos y de B a C hay 2. ¿De cuántas formas se puede ir de A a C pasando por B, y volver por caminos distintos a los de ida?",
+     "c": [
+      "20",
+      "100",
+      "10",
+      "40"
+     ],
+     "a": 3,
+     "e": "Ida: 5 · 2; vuelta: 1 · 4. Total: <b>40</b>."
+    },
+    {
+     "q": "Tienes 2 camisetas, 2 pantalones y 4 pares de zapatillas. ¿De cuántas formas puedes vestirte?",
+     "c": [
+      "17",
+      "8",
+      "16",
+      "4"
+     ],
+     "a": 2,
+     "e": "2 · 2 · 4 = <b>16</b>."
+    },
+    {
+     "q": "Tienes 5 camisetas, 6 pantalones y 4 pares de zapatillas. ¿De cuántas formas puedes vestirte?",
+     "c": [
+      "15",
+      "120",
+      "30",
+      "44"
+     ],
+     "a": 1,
+     "e": "5 · 6 · 4 = <b>120</b>."
+    }
+   ]
+  },
+  {
+   "title": "Factorial y permutaciones",
+   "items": [
+    {
+     "q": "¿De cuántas formas se pueden sentar 6 personas alrededor de una mesa redonda (importa solo quién está al lado de quién)?",
+     "c": [
+      "120",
+      "30",
+      "720",
+      "360"
+     ],
+     "a": 0,
+     "e": "Permutación circular: (6 − 1)! = <b>120</b>."
+    },
+    {
+     "q": "Calcula 7! / 3!.",
+     "c": [
+      "28",
+      "4",
+      "24",
+      "840"
+     ],
+     "a": 3,
+     "e": "Se simplifica: 7 · 6 · 5 · 4 = <b>840</b>."
+    },
+    {
+     "q": "¿Cuántas palabras distintas (con o sin sentido) se pueden formar con las letras de ANA?",
+     "c": [
+      "6",
+      "3",
+      "9",
+      "2"
+     ],
+     "a": 1,
+     "e": "Permutaciones con repetición: 3! / 2! = <b>3</b>."
+    },
+    {
+     "q": "¿Cuánto vale 3!?",
+     "c": [
+      "7",
+      "6",
+      "5",
+      "2"
+     ],
+     "a": 1,
+     "e": "3 · 2 · 1 = <b>6</b>."
+    },
+    {
+     "q": "¿De cuántas formas se pueden ordenar 5 letras distintas de una palabra?",
+     "c": [
+      "20",
+      "25",
+      "120",
+      "3125"
+     ],
+     "a": 2,
+     "e": "Permutaciones: P<sub>5</sub> = 5! = <b>120</b>."
+    },
+    {
+     "q": "Calcula 13! / 9!.",
+     "c": [
+      "17 160",
+      "24",
+      "4",
+      "52"
+     ],
+     "a": 0,
+     "e": "Se simplifica: 13 · 12 · 11 · 10 = <b>17 160</b>."
+    },
+    {
+     "q": "¿De cuántas formas se pueden ordenar 7 letras distintas de una palabra?",
+     "c": [
+      "42",
+      "823 543",
+      "5040",
+      "49"
+     ],
+     "a": 2,
+     "e": "Permutaciones: P<sub>7</sub> = 7! = <b>5040</b>."
+    },
+    {
+     "q": "¿De cuántas formas se pueden ordenar 6 corredores en la llegada (sin empates)?",
+     "c": [
+      "46 656",
+      "30",
+      "36",
+      "720"
+     ],
+     "a": 3,
+     "e": "Permutaciones: P<sub>6</sub> = 6! = <b>720</b>."
+    },
+    {
+     "q": "¿De cuántas formas se pueden sentar 7 personas alrededor de una mesa redonda (importa solo quién está al lado de quién)?",
+     "c": [
+      "5040",
+      "2520",
+      "42",
+      "720"
+     ],
+     "a": 3,
+     "e": "Permutación circular: (7 − 1)! = <b>720</b>."
+    },
+    {
+     "q": "¿De cuántas formas se pueden ordenar 7 corredores en la llegada (sin empates)?",
+     "c": [
+      "42",
+      "5040",
+      "823 543",
+      "49"
+     ],
+     "a": 1,
+     "e": "Permutaciones: P<sub>7</sub> = 7! = <b>5040</b>."
+    },
+    {
+     "q": "¿De cuántas formas se pueden ordenar 7 libros en una estantería?",
+     "c": [
+      "823 543",
+      "5040",
+      "49",
+      "42"
+     ],
+     "a": 1,
+     "e": "Permutaciones: P<sub>7</sub> = 7! = <b>5040</b>."
+    },
+    {
+     "q": "Calcula 6! / 4!.",
+     "c": [
+      "30",
+      "31",
+      "2",
+      "12"
+     ],
+     "a": 0,
+     "e": "Se simplifica: 6 · 5 = <b>30</b>."
+    },
+    {
+     "q": "¿De cuántas formas se pueden ordenar 8 amigos en una fila de butacas?",
+     "c": [
+      "56",
+      "64",
+      "40 320",
+      "16 777 216"
+     ],
+     "a": 2,
+     "e": "Permutaciones: P<sub>8</sub> = 8! = <b>40 320</b>."
+    },
+    {
+     "q": "¿De cuántas formas se pueden sentar 8 personas alrededor de una mesa redonda (importa solo quién está al lado de quién)?",
+     "c": [
+      "56",
+      "40 320",
+      "20 160",
+      "5040"
+     ],
+     "a": 3,
+     "e": "Permutación circular: (8 − 1)! = <b>5040</b>."
+    },
+    {
+     "q": "¿De cuántas formas se pueden sentar 4 personas alrededor de una mesa redonda (importa solo quién está al lado de quién)?",
+     "c": [
+      "6",
+      "12",
+      "7",
+      "24"
+     ],
+     "a": 0,
+     "e": "Permutación circular: (4 − 1)! = <b>6</b>."
+    },
+    {
+     "q": "¿De cuántas formas se pueden ordenar 6 letras distintas de una palabra?",
+     "c": [
+      "46 656",
+      "36",
+      "30",
+      "720"
+     ],
+     "a": 3,
+     "e": "Permutaciones: P<sub>6</sub> = 6! = <b>720</b>."
+    },
+    {
+     "q": "¿De cuántas formas se pueden ordenar 5 corredores en la llegada (sin empates)?",
+     "c": [
+      "25",
+      "120",
+      "20",
+      "3125"
+     ],
+     "a": 1,
+     "e": "Permutaciones: P<sub>5</sub> = 5! = <b>120</b>."
+    },
+    {
+     "q": "¿Cuánto vale 4!?",
+     "c": [
+      "8",
+      "6",
+      "24",
+      "12"
+     ],
+     "a": 2,
+     "e": "4 · 3 · 2 · 1 = <b>24</b>."
+    },
+    {
+     "q": "¿Cuántas palabras distintas (con o sin sentido) se pueden formar con las letras de CASA?",
+     "c": [
+      "24",
+      "16",
+      "12",
+      "6"
+     ],
+     "a": 2,
+     "e": "Permutaciones con repetición: 4! / 2! = <b>12</b>."
+    },
+    {
+     "q": "¿Cuánto vale 5!?",
+     "c": [
+      "120",
+      "10",
+      "20",
+      "24"
+     ],
+     "a": 0,
+     "e": "5 · 4 · 3 · 2 · 1 = <b>120</b>."
+    }
+   ]
+  },
+  {
+   "title": "Variaciones",
+   "items": [
+    {
+     "q": "En una clase de 15 alumnos se elige delegado y subdelegado. ¿De cuántas formas?",
+     "c": [
+      "210",
+      "225",
+      "30",
+      "105"
+     ],
+     "a": 0,
+     "e": "V<sub>15,2</sub> = 15 · 14 = <b>210</b>."
+    },
+    {
+     "q": "Un código de 6 símbolos usa solo 0 y 1. ¿Cuántas posibilidades hay?",
+     "c": [
+      "64",
+      "12",
+      "36",
+      "20 160"
+     ],
+     "a": 0,
+     "e": "Variaciones con repetición: 2<sup>6</sup> = <b>64</b>."
+    },
+    {
+     "q": "En una clase de 10 alumnos se elige delegado y subdelegado. ¿De cuántas formas?",
+     "c": [
+      "45",
+      "100",
+      "20",
+      "90"
+     ],
+     "a": 3,
+     "e": "V<sub>10,2</sub> = 10 · 9 = <b>90</b>."
+    },
+    {
+     "q": "En una clase de 21 alumnos se elige delegado y subdelegado. ¿De cuántas formas?",
+     "c": [
+      "210",
+      "42",
+      "420",
+      "441"
+     ],
+     "a": 2,
+     "e": "V<sub>21,2</sub> = 21 · 20 = <b>420</b>."
+    },
+    {
+     "q": "En una clase de 14 alumnos se elige delegado y subdelegado. ¿De cuántas formas?",
+     "c": [
+      "91",
+      "182",
+      "28",
+      "196"
+     ],
+     "a": 1,
+     "e": "V<sub>14,2</sub> = 14 · 13 = <b>182</b>."
+    },
+    {
+     "q": "En una clase de 7 alumnos se elige delegado y subdelegado. ¿De cuántas formas?",
+     "c": [
+      "49",
+      "21",
+      "42",
+      "14"
+     ],
+     "a": 2,
+     "e": "V<sub>7,2</sub> = 7 · 6 = <b>42</b>."
+    },
+    {
+     "q": "Con 4 colores distintos, ¿cuántas banderas de 3 franjas horizontales de colores distintos se pueden hacer?",
+     "c": [
+      "24",
+      "81",
+      "64",
+      "4"
+     ],
+     "a": 0,
+     "e": "V<sub>4,3</sub> = 4 · 3 · 2 = <b>24</b>."
+    },
+    {
+     "q": "En una carrera participan 6 atletas. ¿De cuántas formas se pueden repartir el oro, la plata y el bronce?",
+     "c": [
+      "20",
+      "18",
+      "120",
+      "216"
+     ],
+     "a": 2,
+     "e": "Importa el orden y no se repite: V<sub>6,3</sub> = 6 · 5 · 4 = <b>120</b>."
+    },
+    {
+     "q": "¿Cuántos números de 2 cifras distintas se pueden formar con las cifras 3, 5, 6, 8?",
+     "c": [
+      "6",
+      "12",
+      "16",
+      "24"
+     ],
+     "a": 1,
+     "e": "Importa el orden y no se repiten: V<sub>4,2</sub> = <b>12</b>."
+    },
+    {
+     "q": "En una carrera participan 8 atletas. ¿De cuántas formas se pueden repartir el oro, la plata y el bronce?",
+     "c": [
+      "512",
+      "24",
+      "336",
+      "56"
+     ],
+     "a": 2,
+     "e": "Importa el orden y no se repite: V<sub>8,3</sub> = 8 · 7 · 6 = <b>336</b>."
+    },
+    {
+     "q": "Con 5 colores distintos, ¿cuántas banderas de 3 franjas horizontales de colores distintos se pueden hacer?",
+     "c": [
+      "10",
+      "60",
+      "125",
+      "243"
+     ],
+     "a": 1,
+     "e": "V<sub>5,3</sub> = 5 · 4 · 3 = <b>60</b>."
+    },
+    {
+     "q": "En una carrera participan 7 atletas. ¿De cuántas formas se pueden repartir el oro, la plata y el bronce?",
+     "c": [
+      "21",
+      "343",
+      "35",
+      "210"
+     ],
+     "a": 3,
+     "e": "Importa el orden y no se repite: V<sub>7,3</sub> = 7 · 6 · 5 = <b>210</b>."
+    },
+    {
+     "q": "En una carrera participan 10 atletas. ¿De cuántas formas se pueden repartir el oro, la plata y el bronce?",
+     "c": [
+      "1000",
+      "720",
+      "120",
+      "30"
+     ],
+     "a": 1,
+     "e": "Importa el orden y no se repite: V<sub>10,3</sub> = 10 · 9 · 8 = <b>720</b>."
+    },
+    {
+     "q": "Con 7 colores distintos, ¿cuántas banderas de 3 franjas horizontales de colores distintos se pueden hacer?",
+     "c": [
+      "210",
+      "35",
+      "2187",
+      "343"
+     ],
+     "a": 0,
+     "e": "V<sub>7,3</sub> = 7 · 6 · 5 = <b>210</b>."
+    },
+    {
+     "q": "En una carrera participan 5 atletas. ¿De cuántas formas se pueden repartir el oro, la plata y el bronce?",
+     "c": [
+      "125",
+      "10",
+      "15",
+      "60"
+     ],
+     "a": 3,
+     "e": "Importa el orden y no se repite: V<sub>5,3</sub> = 5 · 4 · 3 = <b>60</b>."
+    },
+    {
+     "q": "Un código de 4 símbolos usa solo 0 y 1. ¿Cuántas posibilidades hay?",
+     "c": [
+      "16",
+      "360",
+      "17",
+      "8"
+     ],
+     "a": 0,
+     "e": "Variaciones con repetición: 2<sup>4</sup> = <b>16</b>."
+    },
+    {
+     "q": "¿Cuántos números de 3 cifras distintas se pueden formar con las cifras 1, 2, 5, 7?",
+     "c": [
+      "25",
+      "4",
+      "64",
+      "24"
+     ],
+     "a": 3,
+     "e": "Importa el orden y no se repiten: V<sub>4,3</sub> = <b>24</b>."
+    },
+    {
+     "q": "En una carrera participan 9 atletas. ¿De cuántas formas se pueden repartir el oro, la plata y el bronce?",
+     "c": [
+      "729",
+      "84",
+      "504",
+      "27"
+     ],
+     "a": 2,
+     "e": "Importa el orden y no se repite: V<sub>9,3</sub> = 9 · 8 · 7 = <b>504</b>."
+    },
+    {
+     "q": "En una clase de 17 alumnos se elige delegado y subdelegado. ¿De cuántas formas?",
+     "c": [
+      "136",
+      "34",
+      "289",
+      "272"
+     ],
+     "a": 3,
+     "e": "V<sub>17,2</sub> = 17 · 16 = <b>272</b>."
+    },
+    {
+     "q": "Un código de 3 símbolos usa solo 0 y 1. ¿Cuántas posibilidades hay?",
+     "c": [
+      "6",
+      "8",
+      "60",
+      "9"
+     ],
+     "a": 1,
+     "e": "Variaciones con repetición: 2<sup>3</sup> = <b>8</b>."
+    }
+   ]
+  },
+  {
+   "title": "Combinaciones",
+   "items": [
+    {
+     "q": "¿De cuántas formas se puede elegir un grupo de 2 alumnos entre 10?",
+     "c": [
+      "45",
+      "100",
+      "20",
+      "90"
+     ],
+     "a": 0,
+     "e": "No importa el orden: C<sub>10,2</sub> = <b>45</b>."
+    },
+    {
+     "q": "En un sorteo se eligen 6 números distintos entre 1 y 49, sin importar el orden. ¿Cuántas combinaciones posibles hay?",
+     "c": [
+      "13 983 816",
+      "10 068 347 520",
+      "13 841 287 201",
+      "294"
+     ],
+     "a": 0,
+     "e": "C<sub>49,6</sub> = <b>13 983 816</b>."
+    },
+    {
+     "q": "En una reunión hay 7 personas y cada una saluda a todas las demás una vez. ¿Cuántos saludos hay?",
+     "c": [
+      "42",
+      "21",
+      "6",
+      "49"
+     ],
+     "a": 1,
+     "e": "Cada saludo es una pareja: C<sub>7,2</sub> = 7 · 6 / 2 = <b>21</b>."
+    },
+    {
+     "q": "En una reunión hay 12 personas y cada una saluda a todas las demás una vez. ¿Cuántos saludos hay?",
+     "c": [
+      "11",
+      "144",
+      "132",
+      "66"
+     ],
+     "a": 3,
+     "e": "Cada saludo es una pareja: C<sub>12,2</sub> = 12 · 11 / 2 = <b>66</b>."
+    },
+    {
+     "q": "Calcula C<sub>8,2</sub> (combinaciones de 8 elementos tomados de 2 en 2).",
+     "c": [
+      "56",
+      "28",
+      "16",
+      "8"
+     ],
+     "a": 1,
+     "e": "C<sub>8,2</sub> = 8! / (2! · 6!) = <b>28</b>."
+    },
+    {
+     "q": "Calcula C<sub>4,2</sub> (combinaciones de 4 elementos tomados de 2 en 2).",
+     "c": [
+      "12",
+      "4",
+      "6",
+      "8"
+     ],
+     "a": 2,
+     "e": "C<sub>4,2</sub> = 4! / (2! · 2!) = <b>6</b>."
+    },
+    {
+     "q": "Calcula C<sub>5,3</sub> (combinaciones de 5 elementos tomados de 3 en 3).",
+     "c": [
+      "15",
+      "11",
+      "60",
+      "10"
+     ],
+     "a": 3,
+     "e": "C<sub>5,3</sub> = 5! / (3! · 2!) = <b>10</b>."
+    },
+    {
+     "q": "¿De cuántas formas se puede elegir un grupo de 4 alumnos entre 6?",
+     "c": [
+      "15",
+      "360",
+      "24",
+      "1296"
+     ],
+     "a": 0,
+     "e": "No importa el orden: C<sub>6,4</sub> = <b>15</b>."
+    },
+    {
+     "q": "En un sorteo se eligen 3 números distintos entre 1 y 20, sin importar el orden. ¿Cuántas combinaciones posibles hay?",
+     "c": [
+      "60",
+      "6840",
+      "8000",
+      "1140"
+     ],
+     "a": 3,
+     "e": "C<sub>20,3</sub> = <b>1140</b>."
+    },
+    {
+     "q": "Una pizzería ofrece 9 ingredientes. ¿Cuántas pizzas distintas de 2 ingredientes diferentes se pueden pedir?",
+     "c": [
+      "36",
+      "81",
+      "72",
+      "2"
+     ],
+     "a": 0,
+     "e": "No importa el orden: C<sub>9,2</sub> = <b>36</b>."
+    },
+    {
+     "q": "En un sorteo se eligen 5 números distintos entre 1 y 50, sin importar el orden. ¿Cuántas combinaciones posibles hay?",
+     "c": [
+      "250",
+      "2 118 760",
+      "254 251 200",
+      "312 500 000"
+     ],
+     "a": 1,
+     "e": "C<sub>50,5</sub> = <b>2 118 760</b>."
+    },
+    {
+     "q": "¿De cuántas formas se puede elegir un grupo de 3 alumnos entre 14?",
+     "c": [
+      "2184",
+      "42",
+      "2744",
+      "364"
+     ],
+     "a": 3,
+     "e": "No importa el orden: C<sub>14,3</sub> = <b>364</b>."
+    },
+    {
+     "q": "En un sorteo se eligen 4 números distintos entre 1 y 30, sin importar el orden. ¿Cuántas combinaciones posibles hay?",
+     "c": [
+      "657 720",
+      "810 000",
+      "27 405",
+      "120"
+     ],
+     "a": 2,
+     "e": "C<sub>30,4</sub> = <b>27 405</b>."
+    },
+    {
+     "q": "En una reunión hay 20 personas y cada una saluda a todas las demás una vez. ¿Cuántos saludos hay?",
+     "c": [
+      "400",
+      "380",
+      "190",
+      "19"
+     ],
+     "a": 2,
+     "e": "Cada saludo es una pareja: C<sub>20,2</sub> = 20 · 19 / 2 = <b>190</b>."
+    },
+    {
+     "q": "Calcula C<sub>9,4</sub> (combinaciones de 9 elementos tomados de 4 en 4).",
+     "c": [
+      "36",
+      "84",
+      "126",
+      "3024"
+     ],
+     "a": 2,
+     "e": "C<sub>9,4</sub> = 9! / (4! · 5!) = <b>126</b>."
+    },
+    {
+     "q": "En un sorteo se eligen 5 números distintos entre 1 y 40, sin importar el orden. ¿Cuántas combinaciones posibles hay?",
+     "c": [
+      "102 400 000",
+      "658 008",
+      "200",
+      "78 960 960"
+     ],
+     "a": 1,
+     "e": "C<sub>40,5</sub> = <b>658 008</b>."
+    },
+    {
+     "q": "Calcula C<sub>11,3</sub> (combinaciones de 11 elementos tomados de 3 en 3).",
+     "c": [
+      "990",
+      "33",
+      "55",
+      "165"
+     ],
+     "a": 3,
+     "e": "C<sub>11,3</sub> = 11! / (3! · 8!) = <b>165</b>."
+    },
+    {
+     "q": "Calcula C<sub>10,8</sub> (combinaciones de 10 elementos tomados de 8 en 8).",
+     "c": [
+      "45",
+      "120",
+      "80",
+      "1 814 400"
+     ],
+     "a": 0,
+     "e": "C<sub>10,8</sub> = 10! / (8! · 2!) = <b>45</b>."
+    },
+    {
+     "q": "¿De cuántas formas se puede elegir un grupo de 3 alumnos entre 12?",
+     "c": [
+      "36",
+      "1728",
+      "220",
+      "1320"
+     ],
+     "a": 2,
+     "e": "No importa el orden: C<sub>12,3</sub> = <b>220</b>."
+    },
+    {
+     "q": "Calcula C<sub>8,6</sub> (combinaciones de 8 elementos tomados de 6 en 6).",
+     "c": [
+      "20 160",
+      "28",
+      "48",
+      "56"
+     ],
+     "a": 1,
+     "e": "C<sub>8,6</sub> = 8! / (6! · 2!) = <b>28</b>."
+    }
+   ]
+  },
+  {
+   "title": "Elegir la técnica y probabilidad",
+   "items": [
+    {
+     "q": "Se eligen al azar 2 alumnos entre 9. ¿Qué probabilidad hay de que salgan Ana y Luis (que están en el grupo)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>72</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "1 pareja favorable entre C<sub>9,2</sub> = 36: <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Se eligen al azar 2 alumnos entre 6. ¿Qué probabilidad hay de que salgan Ana y Luis (que están en el grupo)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>"
+     ],
+     "a": 2,
+     "e": "1 pareja favorable entre C<sub>6,2</sub> = 15: <b><span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "En una carrera de 5 corredores igual de buenos, ¿qué probabilidad hay de acertar el orden exacto de los tres primeros?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>60</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "1 entre V<sub>5,3</sub> = 60: <b><span class='fr'><span class='fn'>1</span><span class='fd'>60</span></span></b>."
+    },
+    {
+     "q": "Se eligen al azar 2 alumnos entre 7. ¿Qué probabilidad hay de que salgan Ana y Luis (que están en el grupo)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>42</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>"
+     ],
+     "a": 1,
+     "e": "1 pareja favorable entre C<sub>7,2</sub> = 21: <b><span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span></b>."
+    },
+    {
+     "q": "Un candado tiene una clave de 4 cifras. Si pruebas una al azar, ¿qué probabilidad tienes de acertar?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5040</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10000</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "Casos posibles 10<sup>4</sup>: P = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10000</span></span></b>."
+    },
+    {
+     "q": "¿Qué técnica de recuento hay que usar? Ordenar a 6 personas en una foto.",
+     "c": [
+      "permutaciones",
+      "variaciones con repetición",
+      "combinaciones",
+      "variaciones sin repetición"
+     ],
+     "a": 0,
+     "e": "¿Importa el orden? ¿Se pueden repetir? ¿Entran todos? <b>permutaciones</b>."
+    },
+    {
+     "q": "Un candado tiene una clave de 3 cifras. Si pruebas una al azar, ¿qué probabilidad tienes de acertar?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>720</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1000</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "Casos posibles 10<sup>3</sup>: P = <b><span class='fr'><span class='fn'>1</span><span class='fd'>1000</span></span></b>."
+    },
+    {
+     "q": "Se eligen al azar 2 alumnos entre 11. ¿Qué probabilidad hay de que salgan Ana y Luis (que están en el grupo)?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>110</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>55</span></span>"
+     ],
+     "a": 3,
+     "e": "1 pareja favorable entre C<sub>11,2</sub> = 55: <b><span class='fr'><span class='fn'>1</span><span class='fd'>55</span></span></b>."
+    },
+    {
+     "q": "¿Qué técnica de recuento hay que usar? Crear un PIN de 4 cifras.",
+     "c": [
+      "variaciones con repetición",
+      "variaciones sin repetición",
+      "permutaciones",
+      "combinaciones"
+     ],
+     "a": 0,
+     "e": "¿Importa el orden? ¿Se pueden repetir? ¿Entran todos? <b>variaciones con repetición</b>."
+    },
+    {
+     "q": "Se colocan al azar 6 libros distintos en una estantería. ¿Cuál es la probabilidad de que queden en orden alfabético?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>360</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>720</span></span>"
+     ],
+     "a": 3,
+     "e": "Solo 1 de las 6! = 720 ordenaciones: <b><span class='fr'><span class='fn'>1</span><span class='fd'>720</span></span></b>."
+    },
+    {
+     "q": "¿Qué técnica de recuento hay que usar? Elegir 3 libros para llevar de vacaciones entre 10.",
+     "c": [
+      "variaciones sin repetición",
+      "variaciones con repetición",
+      "combinaciones",
+      "permutaciones"
+     ],
+     "a": 2,
+     "e": "¿Importa el orden? ¿Se pueden repetir? ¿Entran todos? <b>combinaciones</b>."
+    },
+    {
+     "q": "¿Qué técnica de recuento hay que usar? Elegir 2 sabores de helado distintos entre 8.",
+     "c": [
+      "permutaciones",
+      "variaciones con repetición",
+      "combinaciones",
+      "variaciones sin repetición"
+     ],
+     "a": 2,
+     "e": "¿Importa el orden? ¿Se pueden repetir? ¿Entran todos? <b>combinaciones</b>."
+    },
+    {
+     "q": "Se colocan al azar 4 libros distintos en una estantería. ¿Cuál es la probabilidad de que queden en orden alfabético?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>24</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>"
+     ],
+     "a": 2,
+     "e": "Solo 1 de las 4! = 24 ordenaciones: <b><span class='fr'><span class='fn'>1</span><span class='fd'>24</span></span></b>."
+    },
+    {
+     "q": "En una carrera de 10 corredores igual de buenos, ¿qué probabilidad hay de acertar el orden exacto de los tres primeros?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1000</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>120</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>720</span></span>"
+     ],
+     "a": 3,
+     "e": "1 entre V<sub>10,3</sub> = 720: <b><span class='fr'><span class='fn'>1</span><span class='fd'>720</span></span></b>."
+    },
+    {
+     "q": "Se colocan al azar 3 libros distintos en una estantería. ¿Cuál es la probabilidad de que queden en orden alfabético?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "Solo 1 de las 3! = 6 ordenaciones: <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Se eligen al azar 2 alumnos entre 12. ¿Qué probabilidad hay de que salgan Ana y Luis (que están en el grupo)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>66</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>132</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 0,
+     "e": "1 pareja favorable entre C<sub>12,2</sub> = 66: <b><span class='fr'><span class='fn'>1</span><span class='fd'>66</span></span></b>."
+    },
+    {
+     "q": "En una carrera de 8 corredores igual de buenos, ¿qué probabilidad hay de acertar el orden exacto de los tres primeros?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>336</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>512</span></span>"
+     ],
+     "a": 2,
+     "e": "1 entre V<sub>8,3</sub> = 336: <b><span class='fr'><span class='fn'>1</span><span class='fd'>336</span></span></b>."
+    },
+    {
+     "q": "¿Qué técnica de recuento hay que usar? Colocar 7 coches distintos en 7 plazas de garaje.",
+     "c": [
+      "combinaciones",
+      "permutaciones",
+      "variaciones con repetición",
+      "variaciones sin repetición"
+     ],
+     "a": 1,
+     "e": "¿Importa el orden? ¿Se pueden repetir? ¿Entran todos? <b>permutaciones</b>."
+    },
+    {
+     "q": "¿Qué técnica de recuento hay que usar? Escribir números de 4 cifras con las cifras del 1 al 5, pudiendo repetir.",
+     "c": [
+      "combinaciones",
+      "variaciones sin repetición",
+      "permutaciones",
+      "variaciones con repetición"
+     ],
+     "a": 3,
+     "e": "¿Importa el orden? ¿Se pueden repetir? ¿Entran todos? <b>variaciones con repetición</b>."
+    },
+    {
+     "q": "En una carrera de 6 corredores igual de buenos, ¿qué probabilidad hay de acertar el orden exacto de los tres primeros?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>120</span></span>"
+     ],
+     "a": 3,
+     "e": "1 entre V<sub>6,3</sub> = 120: <b><span class='fr'><span class='fn'>1</span><span class='fd'>120</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 12,
+ "updated": "2026-11-23",
+ "country": "es",
+ "subject": "matematicas",
+ "grade": "4-eso"
+}

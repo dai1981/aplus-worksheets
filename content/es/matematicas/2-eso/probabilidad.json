@@ -1,0 +1,1157 @@
+{
+ "slug": "probabilidad",
+ "title": "Probabilidad: sucesos y Laplace",
+ "seo_title": "Probabilidad – 2.º de ESO: fichas de matemáticas con soluciones",
+ "short_title": "Probabilidad",
+ "domain": "Sentido estocástico",
+ "standard_code": "2.º de ESO · Sentido estocástico",
+ "standard_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-4975",
+ "standard_text": "Experimentos aleatorios; regla de Laplace; suceso contrario, unión e intersección; frecuencia relativa y ley de los grandes números (resumen de los saberes básicos de Matemáticas de 1.º a 3.º de ESO, Real Decreto 217/2022)",
+ "meta_desc": "Fichas de matemáticas de 2.º de ESO: regla de Laplace, suceso contrario, unión de sucesos, dos dados y frecuencia relativa. 100 ejercicios con soluciones.",
+ "key_big": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)",
+ "key_sub": "P(no A) = 1 − P(A).",
+ "body_html": "<h2>Cómo se hace</h2><p>P(A) = casos favorables / casos posibles, si todos los casos son igual de probables.</p><p>P(no A) = 1 − P(A).</p><p>Unión: P(A ∪ B) = P(A) + P(B) − P(A ∩ B). Si A y B no tienen casos comunes, basta con sumar.</p><p>Al repetir un experimento muchas veces, la frecuencia relativa se acerca a la probabilidad.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Urna con 3 rojas y 2 azules: dos rojas sin reemplazamiento</p><p class='sn-ex-s'>3/5 · 2/4</p><p class='sn-ex-a'>Respuesta: 6/20 = 3/10</p></div><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Dado: sacar par o mayor que 4</p><p class='sn-ex-s'>{2, 4, 5, 6}</p><p class='sn-ex-a'>Respuesta: 4/6 = 2/3</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Contar mal los casos posibles</td><td>Con dos dados hay 36 casos, no 12.</td></tr><tr><td>Sumar sin restar la intersección</td><td>P(A ∪ B) = P(A) + P(B) − P(A ∩ B).</td></tr><tr><td>Olvidar que sin reemplazamiento cambia el total</td><td>Tras sacar una bola, quedan una menos.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Qué dice la regla de Laplace?",
+   "a": "Que, si todos los resultados son igual de probables, la probabilidad es el número de casos favorables dividido entre el de casos posibles."
+  },
+  {
+   "q": "¿Cómo es la baraja española?",
+   "a": "Tiene 40 cartas de cuatro palos (oros, copas, espadas y bastos): del 1 al 7, sota, caballo y rey."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Regla de Laplace",
+   "items": [
+    {
+     "q": "Una ruleta tiene 5 sectores iguales y 1 son rojos. ¿Cuál es la probabilidad de que salga rojo?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "<b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 2 bolas verdes, 2 negras y 1 azules. Sacamos una al azar. ¿Cuál es la probabilidad de que sea verde?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "2 favorables de 5 posibles: <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Sacamos una carta de una baraja española de 40 cartas. ¿Cuál es la probabilidad de que sea un 7?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "4 casos favorables de 40: <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 2 bolas rojas, 7 negras y 1 azules. Sacamos una al azar. ¿Cuál es la probabilidad de que sea azul?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "1 favorables de 10 posibles: <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 7 bolas azules, 3 blancas y 6 negras. Sacamos una al azar. ¿Cuál es la probabilidad de que sea blanca?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span>"
+     ],
+     "a": 1,
+     "e": "3 favorables de 16 posibles: <b><span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Una ruleta tiene 6 sectores iguales y 2 son rojos. ¿Cuál es la probabilidad de que salga rojo?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "<b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 3 bolas verdes, 2 rojas y 8 azules. Sacamos una al azar. ¿Cuál es la probabilidad de que sea azul?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>13</span></span>"
+     ],
+     "a": 3,
+     "e": "8 favorables de 13 posibles: <b><span class='fr'><span class='fn'>8</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "Una ruleta tiene 10 sectores iguales y 7 son rojos. ¿Cuál es la probabilidad de que salga rojo?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "<b><span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Sacamos una carta de una baraja española de 40 cartas. ¿Cuál es la probabilidad de que sea una carta de oros?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>24</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>26</span></span>"
+     ],
+     "a": 0,
+     "e": "10 casos favorables de 40: <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 3 bolas negras, 3 rojas y 2 azules. Sacamos una al azar. ¿Cuál es la probabilidad de que sea negra?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "3 favorables de 8 posibles: <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Sacamos una carta de una baraja española de 40 cartas. ¿Cuál es la probabilidad de que sea una figura de bastos?",
+     "c": [
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>52</span></span>"
+     ],
+     "a": 1,
+     "e": "3 casos favorables de 40: <b><span class='fr'><span class='fn'>3</span><span class='fd'>40</span></span></b>."
+    },
+    {
+     "q": "Sacamos una carta de una baraja española de 40 cartas. ¿Cuál es la probabilidad de que sea un as?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 2,
+     "e": "4 casos favorables de 40: <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 4 bolas negras, 7 blancas y 9 verdes. Sacamos una al azar. ¿Cuál es la probabilidad de que sea verde?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>11</span></span>"
+     ],
+     "a": 2,
+     "e": "9 favorables de 20 posibles: <b><span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "Una ruleta tiene 4 sectores iguales y 1 son rojos. ¿Cuál es la probabilidad de que salga rojo?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "<b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Una ruleta tiene 6 sectores iguales y 4 son rojos. ¿Cuál es la probabilidad de que salga rojo?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "<b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número menor que 5?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Casos favorables 4 de 6: <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Sacamos una carta de una baraja española de 40 cartas. ¿Cuál es la probabilidad de que sea un número menor que 4?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "12 casos favorables de 40: <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 1 bolas rojas, 5 negras y 5 verdes. Sacamos una al azar. ¿Cuál es la probabilidad de que sea roja?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "1 favorables de 11 posibles: <b><span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "Una ruleta tiene 6 sectores iguales y 3 son rojos. ¿Cuál es la probabilidad de que salga rojo?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "<b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 2 bolas blancas, 9 negras y 6 verdes. Sacamos una al azar. ¿Cuál es la probabilidad de que sea verde?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>17</span></span>"
+     ],
+     "a": 1,
+     "e": "6 favorables de 17 posibles: <b><span class='fr'><span class='fn'>6</span><span class='fd'>17</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Suceso contrario y unión",
+   "items": [
+    {
+     "q": "Lanzamos dos dados y sumamos los puntos. ¿Cuál es la probabilidad de que la suma sea 8?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>"
+     ],
+     "a": 0,
+     "e": "Hay 5 parejas que suman 8 de 36: <b><span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,05. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,025",
+      "0,95",
+      "0,05",
+      "0,5"
+     ],
+     "a": 1,
+     "e": "P(no A) = 1 − P(A) = <b>0,95</b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número menor que 3 o mayor que 4?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 1, 2, 5, 6: <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,5. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,4",
+      "0,6",
+      "0,5",
+      "0,25"
+     ],
+     "a": 2,
+     "e": "P(no A) = 1 − P(A) = <b>0,5</b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,25. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,75",
+      "0,85",
+      "0,25",
+      "0,125"
+     ],
+     "a": 0,
+     "e": "P(no A) = 1 − P(A) = <b>0,75</b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número par o mayor que 3?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 2, 4, 5, 6: <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número múltiplo de 3 o impar?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 1, 3, 5, 6: <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,7. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,7",
+      "0,4",
+      "0,3",
+      "0,35"
+     ],
+     "a": 2,
+     "e": "P(no A) = 1 − P(A) = <b>0,3</b>."
+    },
+    {
+     "q": "Lanzamos tres monedas. ¿Cuál es la probabilidad de obtener exactamente 2 caras?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "Hay 3 casos de 8: <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,85. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,15",
+      "0,425",
+      "0,25",
+      "0,85"
+     ],
+     "a": 0,
+     "e": "P(no A) = 1 − P(A) = <b>0,15</b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,1. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,05",
+      "0,9",
+      "1",
+      "0,1"
+     ],
+     "a": 1,
+     "e": "P(no A) = 1 − P(A) = <b>0,9</b>."
+    },
+    {
+     "q": "Lanzamos dos dados y sumamos los puntos. ¿Cuál es la probabilidad de que la suma sea 3?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "Hay 2 parejas que suman 3 de 36: <b><span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "Lanzamos tres monedas. ¿Cuál es la probabilidad de obtener exactamente 3 caras?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "Hay 1 casos de 8: <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Lanzamos dos dados y sumamos los puntos. ¿Cuál es la probabilidad de que la suma sea 12?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>"
+     ],
+     "a": 0,
+     "e": "Hay 1 parejas que suman 12 de 36: <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número par o 1?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "0"
+     ],
+     "a": 2,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 1, 2, 4, 6: <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número primo o par?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 2, 3, 4, 5, 6: <b><span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Lanzamos tres monedas. ¿Cuál es la probabilidad de obtener exactamente 0 caras?",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "Hay 1 casos de 8: <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,6. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,3",
+      "0,5",
+      "0,6",
+      "0,4"
+     ],
+     "a": 3,
+     "e": "P(no A) = 1 − P(A) = <b>0,4</b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,95. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,05",
+      "0,475",
+      "0,95",
+      "0,15"
+     ],
+     "a": 0,
+     "e": "P(no A) = 1 − P(A) = <b>0,05</b>."
+    },
+    {
+     "q": "Lanzamos dos dados y sumamos los puntos. ¿Cuál es la probabilidad de que la suma sea 7?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>"
+     ],
+     "a": 2,
+     "e": "Hay 6 parejas que suman 7 de 36: <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Dos dados y monedas",
+   "items": [
+    {
+     "q": "Lanzamos dos dados y sumamos los puntos. ¿Cuál es la probabilidad de que la suma sea 5?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "Hay 4 parejas que suman 5 de 36: <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número mayor que 1?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "Casos favorables 5 de 6: <b><span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,2. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,9",
+      "0,2",
+      "0,8",
+      "0,1"
+     ],
+     "a": 2,
+     "e": "P(no A) = 1 − P(A) = <b>0,8</b>."
+    },
+    {
+     "q": "Lanzamos tres monedas. ¿Cuál es la probabilidad de obtener exactamente 1 cara?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "Hay 3 casos de 8: <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Lanzamos dos dados y sumamos los puntos. ¿Cuál es la probabilidad de que la suma sea 2?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>"
+     ],
+     "a": 0,
+     "e": "Hay 1 parejas que suman 2 de 36: <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 9 bolas rojas, 1 blancas y 6 verdes. Sacamos una al azar. ¿Cuál es la probabilidad de que sea roja?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "9 favorables de 16 posibles: <b><span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 4 bolas negras, 7 rojas y 9 azules. Sacamos una al azar. ¿Cuál es la probabilidad de que sea azul?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>11</span></span>"
+     ],
+     "a": 2,
+     "e": "9 favorables de 20 posibles: <b><span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "Sacamos una carta de una baraja española de 40 cartas. ¿Cuál es la probabilidad de que sea el rey de copas?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>48</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>52</span></span>",
+      "<span class='fr'><span class='fn'>39</span><span class='fd'>40</span></span>"
+     ],
+     "a": 0,
+     "e": "1 casos favorables de 40: <b><span class='fr'><span class='fn'>1</span><span class='fd'>40</span></span></b>."
+    },
+    {
+     "q": "Una ruleta tiene 8 sectores iguales y 3 son rojos. ¿Cuál es la probabilidad de que salga rojo?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 2,
+     "e": "<b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 2 bolas azules, 5 verdes y 5 negras. Sacamos una al azar. ¿Cuál es la probabilidad de que sea negra?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "5 favorables de 12 posibles: <b><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un divisor de 6?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "Casos favorables 4 de 6: <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 5 bolas verdes, 7 negras y 4 blancas. Sacamos una al azar. ¿Cuál es la probabilidad de que sea blanca?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "4 favorables de 16 posibles: <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Una urna tiene 8 bolas verdes, 8 azules y 5 blancas. Sacamos una al azar. ¿Cuál es la probabilidad de que sea azul?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>21</span></span>"
+     ],
+     "a": 1,
+     "e": "8 favorables de 21 posibles: <b><span class='fr'><span class='fn'>8</span><span class='fd'>21</span></span></b>."
+    },
+    {
+     "q": "Lanzamos dos dados y sumamos los puntos. ¿Cuál es la probabilidad de que la suma sea 11?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>"
+     ],
+     "a": 3,
+     "e": "Hay 2 parejas que suman 11 de 36: <b><span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,55. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,275",
+      "0,55",
+      "0,45",
+      "0,46"
+     ],
+     "a": 2,
+     "e": "P(no A) = 1 − P(A) = <b>0,45</b>."
+    },
+    {
+     "q": "Lanzamos dos dados y sumamos los puntos. ¿Cuál es la probabilidad de que la suma sea 4?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>"
+     ],
+     "a": 0,
+     "e": "Hay 3 parejas que suman 4 de 36: <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,8. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,3",
+      "0,4",
+      "0,8",
+      "0,2"
+     ],
+     "a": 3,
+     "e": "P(no A) = 1 − P(A) = <b>0,2</b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,9. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,1",
+      "0,45",
+      "0,9",
+      "0,2"
+     ],
+     "a": 0,
+     "e": "P(no A) = 1 − P(A) = <b>0,1</b>."
+    },
+    {
+     "q": "Una ruleta tiene 10 sectores iguales y 2 son rojos. ¿Cuál es la probabilidad de que salga rojo?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "<b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "La probabilidad de que llueva mañana es 0,3. ¿Cuál es la probabilidad de que no llueva?",
+     "c": [
+      "0,7",
+      "0,8",
+      "0,15",
+      "0,3"
+     ],
+     "a": 0,
+     "e": "P(no A) = 1 − P(A) = <b>0,7</b>."
+    }
+   ]
+  },
+  {
+   "title": "Frecuencia y probabilidad",
+   "items": [
+    {
+     "q": "La probabilidad de que un tornillo salga defectuoso es <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. ¿Cuántos defectuosos esperamos en 500 tornillos?",
+     "c": [
+      "100",
+      "1",
+      "200",
+      "400"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> · 500 = <b>100</b>."
+    },
+    {
+     "q": "Lanzamos una chincheta 200 veces y cae con la punta hacia arriba 50 veces. ¿Cuál es la frecuencia relativa de «punta arriba»?",
+     "c": [
+      "0,25",
+      "0,75",
+      "0,05",
+      "50"
+     ],
+     "a": 0,
+     "e": "f = 50 / 200 = <b>0,25</b>."
+    },
+    {
+     "q": "Lanzamos una chincheta 400 veces y cae con la punta hacia arriba 95 veces. ¿Cuál es la frecuencia relativa de «punta arriba»?",
+     "c": [
+      "0,095",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>80</span></span>",
+      "95",
+      "<span class='fr'><span class='fn'>61</span><span class='fd'>80</span></span>"
+     ],
+     "a": 1,
+     "e": "f = 95 / 400 = <b><span class='fr'><span class='fn'>19</span><span class='fd'>80</span></span></b>."
+    },
+    {
+     "q": "Lanzamos una chincheta 200 veces y cae con la punta hacia arriba 77 veces. ¿Cuál es la frecuencia relativa de «punta arriba»?",
+     "c": [
+      "0,077",
+      "<span class='fr'><span class='fn'>77</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>123</span><span class='fd'>200</span></span>",
+      "77"
+     ],
+     "a": 1,
+     "e": "f = 77 / 200 = <b><span class='fr'><span class='fn'>77</span><span class='fd'>200</span></span></b>."
+    },
+    {
+     "q": "Al repetir un experimento muchas veces, la frecuencia relativa de un suceso…",
+     "c": [
+      "es siempre 0,5",
+      "vale siempre 1",
+      "se aleja de su probabilidad",
+      "se acerca a su probabilidad"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>se acerca a su probabilidad</b>."
+    },
+    {
+     "q": "La probabilidad de que un tornillo salga defectuoso es <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>. ¿Cuántos defectuosos esperamos en 300 tornillos?",
+     "c": [
+      "120",
+      "360",
+      "180",
+      "3"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · 300 = <b>180</b>."
+    },
+    {
+     "q": "Lanzamos una chincheta 100 veces y cae con la punta hacia arriba 30 veces. ¿Cuál es la frecuencia relativa de «punta arriba»?",
+     "c": [
+      "0,7",
+      "0,3",
+      "30",
+      "0,03"
+     ],
+     "a": 1,
+     "e": "f = 30 / 100 = <b>0,3</b>."
+    },
+    {
+     "q": "La probabilidad de que un tornillo salga defectuoso es <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>. ¿Cuántos defectuosos esperamos en 200 tornillos?",
+     "c": [
+      "3",
+      "120",
+      "140",
+      "60"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · 200 = <b>60</b>."
+    },
+    {
+     "q": "Lanzamos una chincheta 50 veces y cae con la punta hacia arriba 5 veces. ¿Cuál es la frecuencia relativa de «punta arriba»?",
+     "c": [
+      "0,9",
+      "0,1",
+      "0,005",
+      "5"
+     ],
+     "a": 1,
+     "e": "f = 5 / 50 = <b>0,1</b>."
+    },
+    {
+     "q": "Lanzamos una moneda 10 veces y sale cara 7 veces. ¿Está trucada seguro?",
+     "c": [
+      "sí, seguro",
+      "sí, porque 7 &gt; 5",
+      "no: con pocas tiradas pueden salir resultados así",
+      "no, porque las monedas no se trucan"
+     ],
+     "a": 2,
+     "e": "Respuesta: <b>no: con pocas tiradas pueden salir resultados así</b>."
+    },
+    {
+     "q": "Si ha salido cruz 5 veces seguidas, la probabilidad de cara en la siguiente tirada es…",
+     "c": [
+      "mayor que 1/2",
+      "1",
+      "menor que 1/2",
+      "1/2"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>1/2</b>."
+    },
+    {
+     "q": "La probabilidad de que un tornillo salga defectuoso es <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. ¿Cuántos defectuosos esperamos en 200 tornillos?",
+     "c": [
+      "100",
+      "150",
+      "50",
+      "1"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> · 200 = <b>50</b>."
+    },
+    {
+     "q": "La probabilidad de que un tornillo salga defectuoso es <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. ¿Cuántos defectuosos esperamos en 500 tornillos?",
+     "c": [
+      "251",
+      "250",
+      "1",
+      "500"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · 500 = <b>250</b>."
+    },
+    {
+     "q": "La probabilidad de que un tornillo salga defectuoso es <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. ¿Cuántos defectuosos esperamos en 500 tornillos?",
+     "c": [
+      "200",
+      "300",
+      "2",
+      "400"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · 500 = <b>200</b>."
+    },
+    {
+     "q": "Lanzamos una chincheta 500 veces y cae con la punta hacia arriba 198 veces. ¿Cuál es la frecuencia relativa de «punta arriba»?",
+     "c": [
+      "0,396",
+      "0,198",
+      "0,604",
+      "198"
+     ],
+     "a": 0,
+     "e": "f = 198 / 500 = <b>0,396</b>."
+    },
+    {
+     "q": "La probabilidad de que un tornillo salga defectuoso es <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. ¿Cuántos defectuosos esperamos en 1000 tornillos?",
+     "c": [
+      "400",
+      "1",
+      "200",
+      "800"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> · 1000 = <b>200</b>."
+    },
+    {
+     "q": "Lanzamos una chincheta 100 veces y cae con la punta hacia arriba 13 veces. ¿Cuál es la frecuencia relativa de «punta arriba»?",
+     "c": [
+      "13",
+      "0,013",
+      "0,87",
+      "0,13"
+     ],
+     "a": 3,
+     "e": "f = 13 / 100 = <b>0,13</b>."
+    },
+    {
+     "q": "Lanzamos una chincheta 100 veces y cae con la punta hacia arriba 43 veces. ¿Cuál es la frecuencia relativa de «punta arriba»?",
+     "c": [
+      "0,43",
+      "43",
+      "0,043",
+      "0,57"
+     ],
+     "a": 0,
+     "e": "f = 43 / 100 = <b>0,43</b>."
+    },
+    {
+     "q": "La probabilidad de que un tornillo salga defectuoso es <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>. ¿Cuántos defectuosos esperamos en 1000 tornillos?",
+     "c": [
+      "3",
+      "700",
+      "600",
+      "300"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · 1000 = <b>300</b>."
+    },
+    {
+     "q": "Lanzamos una chincheta 500 veces y cae con la punta hacia arriba 100 veces. ¿Cuál es la frecuencia relativa de «punta arriba»?",
+     "c": [
+      "100",
+      "0,1",
+      "0,2",
+      "0,8"
+     ],
+     "a": 2,
+     "e": "f = 100 / 500 = <b>0,2</b>."
+    }
+   ]
+  },
+  {
+   "title": "Repaso",
+   "items": [
+    {
+     "q": "En la baraja española, ¿cuántas cartas hay de cada palo?",
+     "c": [
+      "12",
+      "10",
+      "13",
+      "4"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>10</b>."
+    },
+    {
+     "q": "Sacar un 7 al lanzar un dado normal es un suceso…",
+     "c": [
+      "probable",
+      "elemental",
+      "imposible",
+      "seguro"
+     ],
+     "a": 2,
+     "e": "Respuesta: <b>imposible</b>."
+    },
+    {
+     "q": "¿Cuál es el espacio muestral al lanzar una moneda?",
+     "c": [
+      "E = {1, 2}",
+      "E = {cara, cruz}",
+      "E = {cara}",
+      "E = {cara, cruz, canto}"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>E = {cara, cruz}</b>."
+    },
+    {
+     "q": "Una urna tiene 5 bolas blancas, 8 verdes y 9 rojas. Sacamos una al azar. ¿Cuál es la probabilidad de que sea roja?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>13</span></span>"
+     ],
+     "a": 0,
+     "e": "9 favorables de 22 posibles: <b><span class='fr'><span class='fn'>9</span><span class='fd'>22</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es el suceso contrario de «sacar par» al lanzar un dado?",
+     "c": [
+      "sacar un 6",
+      "sacar par",
+      "no lanzar",
+      "sacar impar"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>sacar impar</b>."
+    },
+    {
+     "q": "¿Cuántas cartas tiene la baraja española?",
+     "c": [
+      "40",
+      "36",
+      "48",
+      "52"
+     ],
+     "a": 0,
+     "e": "Respuesta: <b>40</b>."
+    },
+    {
+     "q": "Sacamos una carta de una baraja española de 40 cartas. ¿Cuál es la probabilidad de que sea una figura (sota, caballo o rey)?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "12 casos favorables de 40: <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número mayor que 4?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Casos favorables 2 de 6: <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Si P(A) = 0,3, ¿cuánto vale P(no A)?",
+     "c": [
+      "0,03",
+      "1,3",
+      "0,7",
+      "0,3"
+     ],
+     "a": 2,
+     "e": "Respuesta: <b>0,7</b>."
+    },
+    {
+     "q": "¿Cuántos resultados posibles hay al lanzar dos monedas?",
+     "c": [
+      "3",
+      "2",
+      "8",
+      "4"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>4</b>."
+    },
+    {
+     "q": "Lanzar un dado y anotar el número es un experimento…",
+     "c": [
+      "aleatorio",
+      "determinista",
+      "seguro",
+      "imposible"
+     ],
+     "a": 0,
+     "e": "Respuesta: <b>aleatorio</b>."
+    },
+    {
+     "q": "¿Cuántos elementos tiene el espacio muestral al lanzar un dado?",
+     "c": [
+      "36",
+      "6",
+      "12",
+      "1"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>6</b>."
+    },
+    {
+     "q": "Una ruleta tiene 5 sectores iguales y 2 son rojos. ¿Cuál es la probabilidad de que salga rojo?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "<b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un 6?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "Casos favorables 1 de 6: <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Sacamos una carta de una baraja española de 40 cartas. ¿Cuál es la probabilidad de que sea una carta que no sea de espadas?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "30 casos favorables de 40: <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "¿Cuánto vale la probabilidad de un suceso imposible?",
+     "c": [
+      "1/2",
+      "1",
+      "−1",
+      "0"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>0</b>."
+    },
+    {
+     "q": "Una urna tiene 4 bolas blancas, 8 negras y 4 azules. Sacamos una al azar. ¿Cuál es la probabilidad de que sea azul?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "4 favorables de 16 posibles: <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "¿Cuántos resultados posibles hay al lanzar dos dados?",
+     "c": [
+      "36",
+      "11",
+      "6",
+      "12"
+     ],
+     "a": 0,
+     "e": "Respuesta: <b>36</b>."
+    },
+    {
+     "q": "Lanzamos un dado. ¿Cuál es la probabilidad de sacar un número par?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Casos favorables 3 de 6: <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Calentar agua a 100 °C a nivel del mar y ver si hierve es un experimento…",
+     "c": [
+      "aleatorio",
+      "compuesto",
+      "determinista",
+      "imposible"
+     ],
+     "a": 2,
+     "e": "Respuesta: <b>determinista</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 13,
+ "updated": "2026-11-23",
+ "country": "es",
+ "subject": "matematicas",
+ "grade": "2-eso"
+}
