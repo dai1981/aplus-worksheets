@@ -1,0 +1,1157 @@
+{
+ "slug": "matrices",
+ "title": "Matrices",
+ "seo_title": "Matrices – 2.º de Bachillerato: fichas de matemáticas con soluciones",
+ "short_title": "Matrices",
+ "domain": "Sentido algebraico",
+ "standard_code": "Matemáticas II · Sentido algebraico",
+ "standard_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-5521",
+ "standard_text": "Matrices: operaciones, producto, potencias, matriz inversa, ecuaciones matriciales y rango (resumen de los saberes básicos de Matemáticas II del Bachillerato de Ciencias y Tecnología, Real Decreto 243/2022)",
+ "meta_desc": "Fichas de Matemáticas II (2.º de Bachillerato): operaciones con matrices, producto, traspuesta, potencias, inversa, ecuaciones matriciales y rango. 100 ejercicios.",
+ "key_big": "A · B ≠ B · A",
+ "key_sub": "A · X = B → X = A⁻¹ · B",
+ "body_html": "<h2>Cómo se hace</h2><p>Una <b>matriz</b> m × n tiene m filas y n columnas. Se suman elemento a elemento si tienen la misma dimensión.</p><p><b>Producto</b> A · B: fila de A por columna de B. Solo existe si las columnas de A coinciden con las filas de B. En general A · B ≠ B · A.</p><p><b>Inversa</b> de una matriz 2 × 2: A⁻¹ = (1/|A|) · [[d, −b], [−c, a]]. Existe solo si |A| ≠ 0.</p><p><b>Ecuaciones</b>: de A · X = B sale X = A⁻¹ · B (por la izquierda); de X · A = B, X = B · A⁻¹.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>A = [[2, 1], [5, 3]]</p><p class='sn-ex-s'>|A| = 6 − 5 = 1</p><p class='sn-ex-a'>Respuesta: A⁻¹ = [[3, −1], [−5, 2]]</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>A · B = B · A</td><td>El producto no es conmutativo.</td></tr><tr><td>Multiplicar elemento a elemento</td><td>Es fila por columna.</td></tr><tr><td>X = B / A</td><td>No se divide: se multiplica por A⁻¹ en el lado correcto.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Para qué sirven las matrices?",
+   "a": "Para organizar datos, resolver sistemas de ecuaciones, describir transformaciones geométricas y en informática y economía."
+  },
+  {
+   "q": "¿Cuándo tiene inversa una matriz?",
+   "a": "Cuando es cuadrada y su determinante es distinto de 0 (rango máximo)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Tipos y operaciones",
+   "items": [
+    {
+     "q": "Calcula −2A − B con A = <span class='mx m2'><span>2</span><span>2</span><span>5</span><span>4</span></span> y B = <span class='mx m2'><span>5</span><span>4</span><span>1</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>6</span><span>4</span><span>−8</span><span>−8</span></span>",
+      "<span class='mx m2'><span>−9</span><span>−8</span><span>−11</span><span>−8</span></span>",
+      "<span class='mx m2'><span>12</span><span>10</span><span>7</span><span>4</span></span>",
+      "<span class='mx m2'><span>1</span><span>0</span><span>−9</span><span>−8</span></span>"
+     ],
+     "a": 1,
+     "e": "Multiplicamos A por −2 y restamos B: <b><span class='mx m2'><span>−9</span><span>−8</span><span>−11</span><span>−8</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la traspuesta de A = <span class='mx m3'><span>−4</span><span>0</span><span>5</span><span>2</span><span>−2</span><span>−3</span></span>?",
+     "c": [
+      "<span class='mx m2'><span>2</span><span>−4</span><span>−2</span><span>0</span><span>−3</span><span>5</span></span>",
+      "<span class='mx m2'><span>−4</span><span>2</span><span>0</span><span>−2</span><span>5</span><span>−3</span></span>",
+      "<span class='mx m3'><span>4</span><span>0</span><span>−5</span><span>−2</span><span>2</span><span>3</span></span>",
+      "<span class='mx m3'><span>5</span><span>0</span><span>−4</span><span>−3</span><span>−2</span><span>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Las filas pasan a ser columnas: <b><span class='mx m2'><span>−4</span><span>2</span><span>0</span><span>−2</span><span>5</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "¿Qué dimensión tiene la matriz A = <span class='mx m4'><span>2</span><span>−1</span><span>5</span><span>2</span><span>−4</span><span>0</span><span>−2</span><span>5</span><span>2</span><span>−3</span><span>0</span><span>−1</span><span>−1</span><span>−3</span><span>5</span><span>4</span></span>?",
+     "c": [
+      "5 × 4",
+      "16",
+      "4 × 4",
+      "4 × 5"
+     ],
+     "a": 2,
+     "e": "Filas × columnas: <b>4 × 4</b>."
+    },
+    {
+     "q": "Calcula A + B con A = <span class='mx m2'><span>4</span><span>−4</span><span>4</span><span>2</span></span> y B = <span class='mx m2'><span>1</span><span>4</span><span>−2</span><span>−2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>3</span><span>−8</span><span>6</span><span>4</span></span>",
+      "<span class='mx m2'><span>5</span><span>0</span><span>2</span><span>0</span></span>",
+      "<span class='mx m2'><span>5</span><span>2</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>4</span><span>−16</span><span>−8</span><span>−4</span></span>"
+     ],
+     "a": 1,
+     "e": "Sumamos elemento a elemento: <b><span class='mx m2'><span>5</span><span>0</span><span>2</span><span>0</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la traspuesta de A = <span class='mx m3'><span>3</span><span>3</span><span>4</span><span>5</span><span>2</span><span>−4</span></span>?",
+     "c": [
+      "<span class='mx m3'><span>4</span><span>3</span><span>3</span><span>−4</span><span>2</span><span>5</span></span>",
+      "<span class='mx m2'><span>3</span><span>5</span><span>3</span><span>2</span><span>4</span><span>−4</span></span>",
+      "<span class='mx m2'><span>5</span><span>3</span><span>2</span><span>3</span><span>−4</span><span>4</span></span>",
+      "<span class='mx m3'><span>−3</span><span>−3</span><span>−4</span><span>−5</span><span>−2</span><span>4</span></span>"
+     ],
+     "a": 1,
+     "e": "Las filas pasan a ser columnas: <b><span class='mx m2'><span>3</span><span>5</span><span>3</span><span>2</span><span>4</span><span>−4</span></span></b>."
+    },
+    {
+     "q": "Calcula −2A − B con A = <span class='mx m2'><span>−4</span><span>0</span><span>2</span><span>3</span></span> y B = <span class='mx m2'><span>5</span><span>0</span><span>−1</span><span>2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>13</span><span>0</span><span>−5</span><span>−4</span></span>",
+      "<span class='mx m2'><span>6</span><span>0</span><span>0</span><span>7</span></span>",
+      "<span class='mx m2'><span>3</span><span>0</span><span>−3</span><span>−8</span></span>",
+      "<span class='mx m2'><span>18</span><span>0</span><span>−6</span><span>−2</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiplicamos A por −2 y restamos B: <b><span class='mx m2'><span>3</span><span>0</span><span>−3</span><span>−8</span></span></b>."
+    },
+    {
+     "q": "Calcula −2A − B con A = <span class='mx m2'><span>−1</span><span>−3</span><span>−1</span><span>5</span></span> y B = <span class='mx m2'><span>2</span><span>5</span><span>2</span><span>−3</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>6</span><span>16</span><span>6</span><span>−16</span></span>",
+      "<span class='mx m2'><span>4</span><span>11</span><span>4</span><span>−13</span></span>",
+      "<span class='mx m2'><span>0</span><span>1</span><span>0</span><span>−7</span></span>",
+      "<span class='mx m2'><span>3</span><span>7</span><span>3</span><span>−1</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiplicamos A por −2 y restamos B: <b><span class='mx m2'><span>0</span><span>1</span><span>0</span><span>−7</span></span></b>."
+    },
+    {
+     "q": "Calcula 2A − B con A = <span class='mx m2'><span>2</span><span>3</span><span>−1</span><span>4</span></span> y B = <span class='mx m2'><span>5</span><span>−1</span><span>2</span><span>−1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>8</span><span>−6</span><span>10</span></span>",
+      "<span class='mx m2'><span>9</span><span>5</span><span>0</span><span>7</span></span>",
+      "<span class='mx m2'><span>−1</span><span>7</span><span>−4</span><span>9</span></span>",
+      "<span class='mx m2'><span>−8</span><span>5</span><span>−5</span><span>6</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiplicamos A por 2 y restamos B: <b><span class='mx m2'><span>−1</span><span>7</span><span>−4</span><span>9</span></span></b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>5</span><span>2</span><span>−4</span><span>4</span><span>3</span><span>−4</span><span>5</span><span>−4</span><span>4</span></span>, ¿cuánto vale a<sub>23</sub>?",
+     "c": [
+      "−3",
+      "3",
+      "4",
+      "−4"
+     ],
+     "a": 3,
+     "e": "a<sub>23</sub> está en la fila 2, columna 3: <b>−4</b>."
+    },
+    {
+     "q": "Calcula A + B con A = <span class='mx m2'><span>−4</span><span>0</span><span>−2</span><span>4</span></span> y B = <span class='mx m2'><span>3</span><span>−2</span><span>−3</span><span>4</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−12</span><span>0</span><span>6</span><span>16</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−5</span><span>−2</span><span>8</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−2</span><span>−5</span><span>8</span></span>",
+      "<span class='mx m2'><span>−7</span><span>2</span><span>1</span><span>0</span></span>"
+     ],
+     "a": 2,
+     "e": "Sumamos elemento a elemento: <b><span class='mx m2'><span>−1</span><span>−2</span><span>−5</span><span>8</span></span></b>."
+    },
+    {
+     "q": "¿Qué dimensión tiene la matriz A = <span class='mx m2'><span>1</span><span>−2</span><span>2</span><span>0</span></span>?",
+     "c": [
+      "2 × 2",
+      "2 × 3",
+      "4",
+      "3 × 2"
+     ],
+     "a": 0,
+     "e": "Filas × columnas: <b>2 × 2</b>."
+    },
+    {
+     "q": "Calcula A + B con A = <span class='mx m2'><span>0</span><span>0</span><span>−1</span><span>0</span></span> y B = <span class='mx m2'><span>0</span><span>−3</span><span>−3</span><span>2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>−3</span><span>−4</span><span>2</span></span>",
+      "<span class='mx m2'><span>0</span><span>3</span><span>2</span><span>−2</span></span>",
+      "<span class='mx m2'><span>0</span><span>−4</span><span>−3</span><span>2</span></span>",
+      "<span class='mx m2'><span>0</span><span>0</span><span>3</span><span>0</span></span>"
+     ],
+     "a": 0,
+     "e": "Sumamos elemento a elemento: <b><span class='mx m2'><span>0</span><span>−3</span><span>−4</span><span>2</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la traspuesta de A = <span class='mx m3'><span>−3</span><span>5</span><span>0</span><span>2</span><span>1</span><span>−3</span></span>?",
+     "c": [
+      "<span class='mx m3'><span>3</span><span>−5</span><span>0</span><span>−2</span><span>−1</span><span>3</span></span>",
+      "<span class='mx m3'><span>0</span><span>5</span><span>−3</span><span>−3</span><span>1</span><span>2</span></span>",
+      "<span class='mx m2'><span>2</span><span>−3</span><span>1</span><span>5</span><span>−3</span><span>0</span></span>",
+      "<span class='mx m2'><span>−3</span><span>2</span><span>5</span><span>1</span><span>0</span><span>−3</span></span>"
+     ],
+     "a": 3,
+     "e": "Las filas pasan a ser columnas: <b><span class='mx m2'><span>−3</span><span>2</span><span>5</span><span>1</span><span>0</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la traspuesta de A = <span class='mx m3'><span>−1</span><span>4</span><span>2</span><span>−4</span><span>−4</span><span>5</span></span>?",
+     "c": [
+      "<span class='mx m3'><span>2</span><span>4</span><span>−1</span><span>5</span><span>−4</span><span>−4</span></span>",
+      "<span class='mx m3'><span>1</span><span>−4</span><span>−2</span><span>4</span><span>4</span><span>−5</span></span>",
+      "<span class='mx m2'><span>−4</span><span>−1</span><span>−4</span><span>4</span><span>5</span><span>2</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−4</span><span>4</span><span>−4</span><span>2</span><span>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Las filas pasan a ser columnas: <b><span class='mx m2'><span>−1</span><span>−4</span><span>4</span><span>−4</span><span>2</span><span>5</span></span></b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>−1</span><span>−4</span><span>5</span><span>4</span><span>−2</span><span>4</span><span>−3</span><span>0</span><span>2</span></span>, ¿cuánto vale a<sub>31</sub>?",
+     "c": [
+      "−1",
+      "5",
+      "2",
+      "−3"
+     ],
+     "a": 3,
+     "e": "a<sub>31</sub> está en la fila 3, columna 1: <b>−3</b>."
+    },
+    {
+     "q": "¿Qué dimensión tiene la matriz A = <span class='mx m4'><span>−3</span><span>2</span><span>−1</span><span>−3</span><span>0</span><span>2</span><span>−3</span><span>−4</span><span>5</span><span>4</span><span>−1</span><span>−1</span><span>−1</span><span>−3</span><span>2</span><span>−1</span></span>?",
+     "c": [
+      "4 × 5",
+      "4 × 4",
+      "16",
+      "5 × 4"
+     ],
+     "a": 1,
+     "e": "Filas × columnas: <b>4 × 4</b>."
+    },
+    {
+     "q": "¿Cuál es la traspuesta de A = <span class='mx m3'><span>−4</span><span>−2</span><span>1</span><span>−1</span><span>−3</span><span>3</span></span>?",
+     "c": [
+      "<span class='mx m2'><span>−4</span><span>−1</span><span>−2</span><span>−3</span><span>1</span><span>3</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−4</span><span>−3</span><span>−2</span><span>3</span><span>1</span></span>",
+      "<span class='mx m3'><span>4</span><span>2</span><span>−1</span><span>1</span><span>3</span><span>−3</span></span>",
+      "<span class='mx m3'><span>1</span><span>−2</span><span>−4</span><span>3</span><span>−3</span><span>−1</span></span>"
+     ],
+     "a": 0,
+     "e": "Las filas pasan a ser columnas: <b><span class='mx m2'><span>−4</span><span>−1</span><span>−2</span><span>−3</span><span>1</span><span>3</span></span></b>."
+    },
+    {
+     "q": "Calcula A + B con A = <span class='mx m2'><span>−2</span><span>4</span><span>0</span><span>3</span></span> y B = <span class='mx m2'><span>3</span><span>5</span><span>2</span><span>−1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>9</span><span>2</span><span>2</span></span>",
+      "<span class='mx m2'><span>−6</span><span>20</span><span>0</span><span>−3</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−1</span><span>−2</span><span>4</span></span>",
+      "<span class='mx m2'><span>1</span><span>2</span><span>9</span><span>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Sumamos elemento a elemento: <b><span class='mx m2'><span>1</span><span>9</span><span>2</span><span>2</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la traspuesta de A = <span class='mx m3'><span>0</span><span>3</span><span>−2</span><span>−3</span><span>1</span><span>−3</span></span>?",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>−3</span><span>3</span><span>1</span><span>−2</span><span>−3</span></span>",
+      "<span class='mx m2'><span>−3</span><span>0</span><span>1</span><span>3</span><span>−3</span><span>−2</span></span>",
+      "<span class='mx m3'><span>−2</span><span>3</span><span>0</span><span>−3</span><span>1</span><span>−3</span></span>",
+      "<span class='mx m3'><span>0</span><span>−3</span><span>2</span><span>3</span><span>−1</span><span>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Las filas pasan a ser columnas: <b><span class='mx m2'><span>0</span><span>−3</span><span>3</span><span>1</span><span>−2</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>−3</span><span>4</span><span>5</span><span>−1</span><span>4</span><span>−1</span><span>1</span><span>−4</span><span>−4</span></span>, ¿cuánto vale a<sub>31</sub>?",
+     "c": [
+      "−4",
+      "5",
+      "−3",
+      "1"
+     ],
+     "a": 3,
+     "e": "a<sub>31</sub> está en la fila 3, columna 1: <b>1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Producto de matrices",
+   "items": [
+    {
+     "q": "(A · B)<sup>t</sup> es igual a…",
+     "c": [
+      "A · B",
+      "B · A",
+      "B<sup>t</sup> · A<sup>t</sup>",
+      "A<sup>t</sup> · B<sup>t</sup>"
+     ],
+     "a": 2,
+     "e": "Respuesta: <b>B<sup>t</sup> · A<sup>t</sup></b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m2'><span>−1</span><span>−1</span><span>−3</span><span>0</span></span> y B = <span class='mx m2'><span>0</span><span>−1</span><span>2</span><span>3</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>1</span><span>−6</span><span>0</span></span>",
+      "<span class='mx m2'><span>−2</span><span>0</span><span>−2</span><span>3</span></span>",
+      "<span class='mx m2'><span>−2</span><span>−2</span><span>0</span><span>3</span></span>",
+      "<span class='mx m2'><span>3</span><span>0</span><span>−11</span><span>−2</span></span>"
+     ],
+     "a": 2,
+     "e": "Fila por columna: c<sub>11</sub> = −1 · 0 + (−1) · 2 = −2, … <b><span class='mx m2'><span>−2</span><span>−2</span><span>0</span><span>3</span></span></b>."
+    },
+    {
+     "q": "Si A es 4 × 3 y B es 3 × 1, ¿qué dimensión tiene A · B?",
+     "c": [
+      "1 × 4",
+      "4 × 1",
+      "no se pueden multiplicar",
+      "3 × 3"
+     ],
+     "a": 1,
+     "e": "Las columnas de A deben coincidir con las filas de B: <b>4 × 1</b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m3'><span>−2</span><span>0</span><span>2</span><span>3</span><span>0</span><span>0</span></span> y B = <span class='mx m1'><span>0</span><span>1</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m1'><span>2</span><span>0</span></span>",
+      "<span class='mx m1'><span>0</span><span>2</span></span>",
+      "no se puede multiplicar",
+      "<span class='mx m1'><span>0</span><span>3</span></span>"
+     ],
+     "a": 0,
+     "e": "(2 × 3) · (3 × 1) = 2 × 1: <b><span class='mx m1'><span>2</span><span>0</span></span></b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m2'><span>1</span><span>2</span><span>4</span><span>4</span></span> y B = <span class='mx m2'><span>−1</span><span>4</span><span>1</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>8</span><span>4</span><span>4</span></span>",
+      "<span class='mx m2'><span>15</span><span>14</span><span>5</span><span>6</span></span>",
+      "<span class='mx m2'><span>1</span><span>6</span><span>0</span><span>20</span></span>",
+      "<span class='mx m2'><span>1</span><span>0</span><span>6</span><span>20</span></span>"
+     ],
+     "a": 2,
+     "e": "Fila por columna: c<sub>11</sub> = 1 · (−1) + 2 · 1 = 1, … <b><span class='mx m2'><span>1</span><span>6</span><span>0</span><span>20</span></span></b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m2'><span>−2</span><span>2</span><span>1</span><span>−3</span></span> y B = <span class='mx m2'><span>0</span><span>2</span><span>0</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>−4</span><span>0</span><span>2</span></span>",
+      "<span class='mx m2'><span>2</span><span>−6</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>4</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>0</span><span>−4</span><span>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Fila por columna: c<sub>11</sub> = −2 · 0 + 2 · 0 = 0, … <b><span class='mx m2'><span>0</span><span>−4</span><span>0</span><span>2</span></span></b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m2'><span>−3</span><span>4</span><span>3</span><span>−1</span></span> y B = <span class='mx m2'><span>2</span><span>0</span><span>−2</span><span>−3</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>8</span><span>−3</span><span>−5</span></span>",
+      "<span class='mx m2'><span>−14</span><span>8</span><span>−12</span><span>3</span></span>",
+      "<span class='mx m2'><span>−14</span><span>−12</span><span>8</span><span>3</span></span>",
+      "<span class='mx m2'><span>−6</span><span>0</span><span>−6</span><span>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Fila por columna: c<sub>11</sub> = −3 · 2 + 4 · (−2) = −14, … <b><span class='mx m2'><span>−14</span><span>−12</span><span>8</span><span>3</span></span></b>."
+    },
+    {
+     "q": "En general, ¿A · B = B · A?",
+     "c": [
+      "sí, siempre",
+      "solo si son simétricas",
+      "solo si son 2 × 2",
+      "no, el producto de matrices no es conmutativo"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>no, el producto de matrices no es conmutativo</b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m2'><span>1</span><span>−2</span><span>0</span><span>4</span></span> y B = <span class='mx m2'><span>0</span><span>−1</span><span>4</span><span>−2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−8</span><span>16</span><span>3</span><span>−8</span></span>",
+      "<span class='mx m2'><span>−8</span><span>3</span><span>16</span><span>−8</span></span>",
+      "<span class='mx m2'><span>0</span><span>−4</span><span>4</span><span>−16</span></span>",
+      "<span class='mx m2'><span>0</span><span>2</span><span>0</span><span>−8</span></span>"
+     ],
+     "a": 1,
+     "e": "Fila por columna: c<sub>11</sub> = 1 · 0 + (−2) · 4 = −8, … <b><span class='mx m2'><span>−8</span><span>3</span><span>16</span><span>−8</span></span></b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m2'><span>3</span><span>−1</span><span>4</span><span>3</span></span> y B = <span class='mx m2'><span>4</span><span>1</span><span>1</span><span>4</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>12</span><span>−1</span><span>4</span><span>12</span></span>",
+      "<span class='mx m2'><span>11</span><span>−1</span><span>19</span><span>16</span></span>",
+      "<span class='mx m2'><span>16</span><span>−1</span><span>19</span><span>11</span></span>",
+      "<span class='mx m2'><span>11</span><span>19</span><span>−1</span><span>16</span></span>"
+     ],
+     "a": 1,
+     "e": "Fila por columna: c<sub>11</sub> = 3 · 4 + (−1) · 1 = 11, … <b><span class='mx m2'><span>11</span><span>−1</span><span>19</span><span>16</span></span></b>."
+    },
+    {
+     "q": "Si A es 3 × 1 y B es 1 × 4, ¿qué dimensión tiene A · B?",
+     "c": [
+      "1 × 1",
+      "4 × 3",
+      "3 × 4",
+      "no se pueden multiplicar"
+     ],
+     "a": 2,
+     "e": "Las columnas de A deben coincidir con las filas de B: <b>3 × 4</b>."
+    },
+    {
+     "q": "(A · B)⁻¹ es igual a…",
+     "c": [
+      "B⁻¹ · A⁻¹",
+      "A · B",
+      "A⁻¹ · B⁻¹",
+      "(B · A)<sup>t</sup>"
+     ],
+     "a": 0,
+     "e": "Respuesta: <b>B⁻¹ · A⁻¹</b>."
+    },
+    {
+     "q": "Si A es 4 × 1 y B es 1 × 1, ¿qué dimensión tiene A · B?",
+     "c": [
+      "1 × 1",
+      "no se pueden multiplicar",
+      "1 × 4",
+      "4 × 1"
+     ],
+     "a": 3,
+     "e": "Las columnas de A deben coincidir con las filas de B: <b>4 × 1</b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m3'><span>1</span><span>−2</span><span>2</span><span>−2</span><span>2</span><span>−1</span></span> y B = <span class='mx m1'><span>−2</span><span>2</span><span>2</span></span>.",
+     "c": [
+      "<span class='mx m1'><span>−2</span><span>6</span></span>",
+      "<span class='mx m1'><span>6</span><span>−2</span></span>",
+      "<span class='mx m1'><span>1</span><span>−1</span></span>",
+      "no se puede multiplicar"
+     ],
+     "a": 0,
+     "e": "(2 × 3) · (3 × 1) = 2 × 1: <b><span class='mx m1'><span>−2</span><span>6</span></span></b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m2'><span>1</span><span>0</span><span>−2</span><span>−3</span></span> y B = <span class='mx m2'><span>1</span><span>−1</span><span>−2</span><span>−1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>4</span><span>−1</span><span>5</span></span>",
+      "<span class='mx m2'><span>1</span><span>0</span><span>4</span><span>3</span></span>",
+      "<span class='mx m2'><span>3</span><span>3</span><span>0</span><span>3</span></span>",
+      "<span class='mx m2'><span>1</span><span>−1</span><span>4</span><span>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Fila por columna: c<sub>11</sub> = 1 · 1 + 0 · (−2) = 1, … <b><span class='mx m2'><span>1</span><span>−1</span><span>4</span><span>5</span></span></b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m2'><span>1</span><span>−1</span><span>−1</span><span>3</span></span> y B = <span class='mx m2'><span>1</span><span>−2</span><span>−1</span><span>−3</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>3</span><span>−7</span><span>2</span><span>−8</span></span>",
+      "<span class='mx m2'><span>1</span><span>2</span><span>1</span><span>−9</span></span>",
+      "<span class='mx m2'><span>2</span><span>−4</span><span>1</span><span>−7</span></span>",
+      "<span class='mx m2'><span>2</span><span>1</span><span>−4</span><span>−7</span></span>"
+     ],
+     "a": 3,
+     "e": "Fila por columna: c<sub>11</sub> = 1 · 1 + (−1) · (−1) = 2, … <b><span class='mx m2'><span>2</span><span>1</span><span>−4</span><span>−7</span></span></b>."
+    },
+    {
+     "q": "¿Qué matriz es el elemento neutro del producto?",
+     "c": [
+      "la identidad I",
+      "la traspuesta",
+      "la matriz nula",
+      "la inversa"
+     ],
+     "a": 0,
+     "e": "Respuesta: <b>la identidad I</b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m2'><span>4</span><span>3</span><span>1</span><span>1</span></span> y B = <span class='mx m2'><span>0</span><span>−3</span><span>2</span><span>4</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>−9</span><span>2</span><span>4</span></span>",
+      "<span class='mx m2'><span>6</span><span>0</span><span>2</span><span>1</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−3</span><span>12</span><span>10</span></span>",
+      "<span class='mx m2'><span>6</span><span>2</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 1,
+     "e": "Fila por columna: c<sub>11</sub> = 4 · 0 + 3 · 2 = 6, … <b><span class='mx m2'><span>6</span><span>0</span><span>2</span><span>1</span></span></b>."
+    },
+    {
+     "q": "Si A es 2 × 3 y B es 4 × 4, ¿qué dimensión tiene A · B?",
+     "c": [
+      "2 × 4",
+      "3 × 4",
+      "4 × 2",
+      "no se pueden multiplicar"
+     ],
+     "a": 3,
+     "e": "Las columnas de A deben coincidir con las filas de B: <b>no se pueden multiplicar</b>."
+    },
+    {
+     "q": "Calcula A · B con A = <span class='mx m2'><span>3</span><span>4</span><span>2</span><span>−1</span></span> y B = <span class='mx m2'><span>3</span><span>0</span><span>2</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>17</span><span>4</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>17</span><span>0</span><span>4</span><span>0</span></span>",
+      "<span class='mx m2'><span>9</span><span>12</span><span>6</span><span>8</span></span>",
+      "<span class='mx m2'><span>9</span><span>0</span><span>4</span><span>0</span></span>"
+     ],
+     "a": 1,
+     "e": "Fila por columna: c<sub>11</sub> = 3 · 3 + 4 · 2 = 17, … <b><span class='mx m2'><span>17</span><span>0</span><span>4</span><span>0</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Potencias",
+   "items": [
+    {
+     "q": "Calcula A<sup>11</sup> con A = <span class='mx m2'><span>1</span><span>4</span><span>0</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>15</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>44</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>11</span><span>44</span><span>0</span><span>11</span></span>",
+      "<span class='mx m2'><span>1</span><span>4 194 304</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 1,
+     "e": "A² = <span class='mx m2'><span>1</span><span>8</span><span>0</span><span>1</span></span>, A³ = <span class='mx m2'><span>1</span><span>12</span><span>0</span><span>1</span></span>… → A<sup>n</sup> = <span class='mx m2'><span>1</span><span>4n</span><span>0</span><span>1</span></span>: <b><span class='mx m2'><span>1</span><span>44</span><span>0</span><span>1</span></span></b>."
+    },
+    {
+     "q": "Calcula A² con A = <span class='mx m2'><span>3</span><span>−2</span><span>1</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>7</span><span>4</span><span>−8</span><span>−1</span></span>",
+      "<span class='mx m2'><span>9</span><span>4</span><span>1</span><span>1</span></span>",
+      "<span class='mx m2'><span>7</span><span>−8</span><span>4</span><span>−1</span></span>",
+      "<span class='mx m2'><span>6</span><span>−4</span><span>2</span><span>2</span></span>"
+     ],
+     "a": 2,
+     "e": "A² = A · A (no se elevan los elementos): <b><span class='mx m2'><span>7</span><span>−8</span><span>4</span><span>−1</span></span></b>."
+    },
+    {
+     "q": "Calcula A² con A = <span class='mx m2'><span>−2</span><span>1</span><span>−2</span><span>−2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>2</span><span>−4</span><span>8</span><span>2</span></span>",
+      "<span class='mx m2'><span>2</span><span>8</span><span>−4</span><span>2</span></span>",
+      "<span class='mx m2'><span>−4</span><span>2</span><span>−4</span><span>−4</span></span>",
+      "<span class='mx m2'><span>4</span><span>1</span><span>4</span><span>4</span></span>"
+     ],
+     "a": 0,
+     "e": "A² = A · A (no se elevan los elementos): <b><span class='mx m2'><span>2</span><span>−4</span><span>8</span><span>2</span></span></b>."
+    },
+    {
+     "q": "Calcula A² con A = <span class='mx m2'><span>2</span><span>2</span><span>−1</span><span>−1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>4</span><span>4</span><span>−2</span><span>−2</span></span>",
+      "<span class='mx m2'><span>4</span><span>4</span><span>1</span><span>1</span></span>",
+      "<span class='mx m2'><span>2</span><span>2</span><span>−1</span><span>−1</span></span>",
+      "<span class='mx m2'><span>2</span><span>−1</span><span>2</span><span>−1</span></span>"
+     ],
+     "a": 2,
+     "e": "A² = A · A (no se elevan los elementos): <b><span class='mx m2'><span>2</span><span>2</span><span>−1</span><span>−1</span></span></b>."
+    },
+    {
+     "q": "Calcula A² con A = <span class='mx m2'><span>2</span><span>2</span><span>−3</span><span>2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−2</span><span>8</span><span>−12</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−2</span><span>−12</span><span>8</span><span>−2</span></span>",
+      "<span class='mx m2'><span>4</span><span>4</span><span>−6</span><span>4</span></span>",
+      "<span class='mx m2'><span>4</span><span>4</span><span>9</span><span>4</span></span>"
+     ],
+     "a": 0,
+     "e": "A² = A · A (no se elevan los elementos): <b><span class='mx m2'><span>−2</span><span>8</span><span>−12</span><span>−2</span></span></b>."
+    },
+    {
+     "q": "Calcula A<sup>6</sup> con A = <span class='mx m2'><span>1</span><span>1</span><span>0</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>1</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>7</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>6</span><span>6</span><span>0</span><span>6</span></span>",
+      "<span class='mx m2'><span>1</span><span>6</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 3,
+     "e": "A² = <span class='mx m2'><span>1</span><span>2</span><span>0</span><span>1</span></span>, A³ = <span class='mx m2'><span>1</span><span>3</span><span>0</span><span>1</span></span>… → A<sup>n</sup> = <span class='mx m2'><span>1</span><span>n</span><span>0</span><span>1</span></span>: <b><span class='mx m2'><span>1</span><span>6</span><span>0</span><span>1</span></span></b>."
+    },
+    {
+     "q": "Calcula A² con A = <span class='mx m2'><span>0</span><span>−3</span><span>−2</span><span>2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>9</span><span>4</span><span>4</span></span>",
+      "<span class='mx m2'><span>0</span><span>−6</span><span>−4</span><span>4</span></span>",
+      "<span class='mx m2'><span>6</span><span>−6</span><span>−4</span><span>10</span></span>",
+      "<span class='mx m2'><span>6</span><span>−4</span><span>−6</span><span>10</span></span>"
+     ],
+     "a": 2,
+     "e": "A² = A · A (no se elevan los elementos): <b><span class='mx m2'><span>6</span><span>−6</span><span>−4</span><span>10</span></span></b>."
+    },
+    {
+     "q": "Calcula A<sup>11</sup> con A = <span class='mx m2'><span>0</span><span>3</span><span>0</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>3</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>33</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>0</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>177 147</span><span>0</span><span>0</span></span>"
+     ],
+     "a": 2,
+     "e": "A² = 0 (matriz nula), así que todas las potencias siguientes también: <b>la matriz nula</b>."
+    },
+    {
+     "q": "Calcula A<sup>4</sup> con A = <span class='mx m2'><span>0</span><span>5</span><span>0</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>0</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>20</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>5</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>625</span><span>0</span><span>0</span></span>"
+     ],
+     "a": 0,
+     "e": "A² = 0 (matriz nula), así que todas las potencias siguientes también: <b>la matriz nula</b>."
+    },
+    {
+     "q": "Calcula A² con A = <span class='mx m2'><span>0</span><span>0</span><span>1</span><span>−2</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>0</span><span>1</span><span>4</span></span>",
+      "<span class='mx m2'><span>0</span><span>0</span><span>2</span><span>−4</span></span>",
+      "<span class='mx m2'><span>0</span><span>0</span><span>−2</span><span>4</span></span>",
+      "<span class='mx m2'><span>0</span><span>−2</span><span>0</span><span>4</span></span>"
+     ],
+     "a": 2,
+     "e": "A² = A · A (no se elevan los elementos): <b><span class='mx m2'><span>0</span><span>0</span><span>−2</span><span>4</span></span></b>."
+    },
+    {
+     "q": "Calcula A<sup>11</sup> con A = <span class='mx m2'><span>1</span><span>2</span><span>0</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>11</span><span>22</span><span>0</span><span>11</span></span>",
+      "<span class='mx m2'><span>1</span><span>13</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>2048</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>22</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 3,
+     "e": "A² = <span class='mx m2'><span>1</span><span>4</span><span>0</span><span>1</span></span>, A³ = <span class='mx m2'><span>1</span><span>6</span><span>0</span><span>1</span></span>… → A<sup>n</sup> = <span class='mx m2'><span>1</span><span>2n</span><span>0</span><span>1</span></span>: <b><span class='mx m2'><span>1</span><span>22</span><span>0</span><span>1</span></span></b>."
+    },
+    {
+     "q": "Calcula A<sup>12</sup> con A = <span class='mx m2'><span>0</span><span>−1</span><span>1</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>1</span><span>1</span><span>0</span></span>",
+      "<span class='mx m2'><span>1</span><span>0</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>−1</span><span>0</span><span>0</span><span>−1</span></span>",
+      "<span class='mx m2'><span>0</span><span>−1</span><span>1</span><span>0</span></span>"
+     ],
+     "a": 1,
+     "e": "A⁴ = I; 12 = 4 · 3 + 0 → A<sup>12</sup> = A<sup>0</sup>: <b><span class='mx m2'><span>1</span><span>0</span><span>0</span><span>1</span></span></b>."
+    },
+    {
+     "q": "Calcula A<sup>8</sup> con A = <span class='mx m2'><span>0</span><span>2</span><span>0</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>16</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>0</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>256</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>2</span><span>0</span><span>0</span></span>"
+     ],
+     "a": 1,
+     "e": "A² = 0 (matriz nula), así que todas las potencias siguientes también: <b>la matriz nula</b>."
+    },
+    {
+     "q": "Calcula A<sup>4</sup> con A = <span class='mx m2'><span>1</span><span>1</span><span>0</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>4</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>1</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>4</span><span>4</span><span>0</span><span>4</span></span>",
+      "<span class='mx m2'><span>1</span><span>5</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 0,
+     "e": "A² = <span class='mx m2'><span>1</span><span>2</span><span>0</span><span>1</span></span>, A³ = <span class='mx m2'><span>1</span><span>3</span><span>0</span><span>1</span></span>… → A<sup>n</sup> = <span class='mx m2'><span>1</span><span>n</span><span>0</span><span>1</span></span>: <b><span class='mx m2'><span>1</span><span>4</span><span>0</span><span>1</span></span></b>."
+    },
+    {
+     "q": "Calcula A<sup>10</sup> con A = <span class='mx m2'><span>1</span><span>3</span><span>0</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>59 049</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>30</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>10</span><span>30</span><span>0</span><span>10</span></span>",
+      "<span class='mx m2'><span>1</span><span>13</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 1,
+     "e": "A² = <span class='mx m2'><span>1</span><span>6</span><span>0</span><span>1</span></span>, A³ = <span class='mx m2'><span>1</span><span>9</span><span>0</span><span>1</span></span>… → A<sup>n</sup> = <span class='mx m2'><span>1</span><span>3n</span><span>0</span><span>1</span></span>: <b><span class='mx m2'><span>1</span><span>30</span><span>0</span><span>1</span></span></b>."
+    },
+    {
+     "q": "Calcula A² con A = <span class='mx m2'><span>1</span><span>2</span><span>−2</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>4</span><span>4</span><span>1</span></span>",
+      "<span class='mx m2'><span>2</span><span>4</span><span>−4</span><span>2</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−4</span><span>4</span><span>−3</span></span>",
+      "<span class='mx m2'><span>−3</span><span>4</span><span>−4</span><span>−3</span></span>"
+     ],
+     "a": 3,
+     "e": "A² = A · A (no se elevan los elementos): <b><span class='mx m2'><span>−3</span><span>4</span><span>−4</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "Calcula A<sup>8</sup> con A = <span class='mx m2'><span>0</span><span>−1</span><span>1</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>1</span><span>1</span><span>0</span></span>",
+      "<span class='mx m2'><span>1</span><span>0</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>0</span><span>−1</span><span>1</span><span>0</span></span>",
+      "<span class='mx m2'><span>−1</span><span>0</span><span>0</span><span>−1</span></span>"
+     ],
+     "a": 1,
+     "e": "A⁴ = I; 8 = 4 · 2 + 0 → A<sup>8</sup> = A<sup>0</sup>: <b><span class='mx m2'><span>1</span><span>0</span><span>0</span><span>1</span></span></b>."
+    },
+    {
+     "q": "Calcula A<sup>3</sup> con A = <span class='mx m2'><span>1</span><span>3</span><span>0</span><span>1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>9</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>27</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>6</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>3</span><span>9</span><span>0</span><span>3</span></span>"
+     ],
+     "a": 0,
+     "e": "A² = <span class='mx m2'><span>1</span><span>6</span><span>0</span><span>1</span></span>, A³ = <span class='mx m2'><span>1</span><span>9</span><span>0</span><span>1</span></span>… → A<sup>n</sup> = <span class='mx m2'><span>1</span><span>3n</span><span>0</span><span>1</span></span>: <b><span class='mx m2'><span>1</span><span>9</span><span>0</span><span>1</span></span></b>."
+    },
+    {
+     "q": "Calcula A<sup>10</sup> con A = <span class='mx m2'><span>0</span><span>3</span><span>0</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>3</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>30</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>59 049</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>0</span><span>0</span><span>0</span></span>"
+     ],
+     "a": 3,
+     "e": "A² = 0 (matriz nula), así que todas las potencias siguientes también: <b>la matriz nula</b>."
+    },
+    {
+     "q": "Calcula A² con A = <span class='mx m2'><span>2</span><span>−2</span><span>2</span><span>−1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>2</span><span>−2</span><span>−3</span></span>",
+      "<span class='mx m2'><span>4</span><span>−4</span><span>4</span><span>−2</span></span>",
+      "<span class='mx m2'><span>4</span><span>4</span><span>4</span><span>1</span></span>",
+      "<span class='mx m2'><span>0</span><span>−2</span><span>2</span><span>−3</span></span>"
+     ],
+     "a": 3,
+     "e": "A² = A · A (no se elevan los elementos): <b><span class='mx m2'><span>0</span><span>−2</span><span>2</span><span>−3</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Matriz inversa",
+   "items": [
+    {
+     "q": "Si A = <span class='mx m2'><span>−2</span><span>0</span><span>0</span><span>−1</span></span>, ¿cuál es A⁻¹?",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>0</span><span>0</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−1</span><span>0</span><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span><span>0</span><span>−1</span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 2,
+     "e": "A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup> con |A| = 2: <b><span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>0</span><span>0</span><span>−1</span></span></b>."
+    },
+    {
+     "q": "Calcula la inversa de A = <span class='mx m2'><span>−4</span><span>−1</span><span>3</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>1</span><span><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></span></span>",
+      "<span class='mx m2'><span>0</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>−1</span><span>−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></span></span>",
+      "<span class='mx m2'><span>0</span><span>−1</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></span></span>",
+      "<span class='mx m2'><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>1</span><span>−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></span></span>"
+     ],
+     "a": 1,
+     "e": "|A| = 3. Se cambian los elementos de la diagonal, se cambia el signo de los otros dos y se divide entre |A|: <b><span class='mx m2'><span>0</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>−1</span><span>−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></span></span></b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m2'><span>4</span><span>4</span><span>4</span><span>k</span></span>?",
+     "c": [
+      "k = 0",
+      "k = 5",
+      "k = −4",
+      "k = 4"
+     ],
+     "a": 3,
+     "e": "|A| = 4k − 16 = 0 → <b>k = 4</b>."
+    },
+    {
+     "q": "Si A = <span class='mx m2'><span>1</span><span>0</span><span>5</span><span>1</span></span>, ¿cuál es A⁻¹?",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>−5</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>0</span><span>5</span><span>1</span></span>",
+      "<span class='mx m2'><span>−1</span><span>0</span><span>5</span><span>−1</span></span>",
+      "<span class='mx m2'><span>1</span><span>0</span><span>−5</span><span>1</span></span>"
+     ],
+     "a": 3,
+     "e": "A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup> con |A| = 1: <b><span class='mx m2'><span>1</span><span>0</span><span>−5</span><span>1</span></span></b>."
+    },
+    {
+     "q": "Calcula la inversa de A = <span class='mx m2'><span>−3</span><span>−4</span><span>3</span><span>3</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></span><span>1</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></span><span>−1</span><span>−1</span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span></span>",
+      "<span class='mx m2'><span>1</span><span>−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></span><span>1</span><span>−1</span></span>"
+     ],
+     "a": 1,
+     "e": "|A| = 3. Se cambian los elementos de la diagonal, se cambia el signo de los otros dos y se divide entre |A|: <b><span class='mx m2'><span>1</span><span><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></span><span>−1</span><span>−1</span></span></b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m2'><span>2</span><span>3</span><span>3</span><span>k</span></span>?",
+     "c": [
+      "k = 2",
+      "k = 0",
+      "k = <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "k = −<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "|A| = 2k − 9 = 0 → <b>k = <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m2'><span>1</span><span>2</span><span>3</span><span>k</span></span>?",
+     "c": [
+      "k = 6",
+      "k = 0",
+      "k = −6",
+      "k = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "|A| = 1k − 6 = 0 → <b>k = 6</b>."
+    },
+    {
+     "q": "Calcula la inversa de A = <span class='mx m2'><span>1</span><span>1</span><span>0</span><span>−1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>0</span><span>1</span><span>−1</span></span>",
+      "<span class='mx m2'><span>1</span><span>−1</span><span>0</span><span>−1</span></span>",
+      "<span class='mx m2'><span>1</span><span>1</span><span>0</span><span>−1</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−1</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 2,
+     "e": "|A| = −1. Se cambian los elementos de la diagonal, se cambia el signo de los otros dos y se divide entre |A|: <b><span class='mx m2'><span>1</span><span>1</span><span>0</span><span>−1</span></span></b>."
+    },
+    {
+     "q": "Calcula la inversa de A = <span class='mx m2'><span>2</span><span>5</span><span>−1</span><span>−1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></span><span>−1</span><span>−1</span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span></span>"
+     ],
+     "a": 1,
+     "e": "|A| = 3. Se cambian los elementos de la diagonal, se cambia el signo de los otros dos y se divide entre |A|: <b><span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span></span></b>."
+    },
+    {
+     "q": "Si A = <span class='mx m2'><span>0</span><span>1</span><span>3</span><span>5</span></span>, ¿cuál es A⁻¹?",
+     "c": [
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>1</span><span>0</span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></span><span>1</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>0</span></span>",
+      "<span class='mx m2'><span>5</span><span>−1</span><span>−3</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>−1</span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></span></span>"
+     ],
+     "a": 0,
+     "e": "A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup> con |A| = −3: <b><span class='mx m2'><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>1</span><span>0</span></span></b>."
+    },
+    {
+     "q": "Calcula la inversa de A = <span class='mx m2'><span>−4</span><span>5</span><span>2</span><span>−3</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−1</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>1</span><span>−2</span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>1</span><span>2</span></span>"
+     ],
+     "a": 0,
+     "e": "|A| = 2. Se cambian los elementos de la diagonal, se cambia el signo de los otros dos y se divide entre |A|: <b><span class='mx m2'><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−1</span><span>−2</span></span></b>."
+    },
+    {
+     "q": "Si A = <span class='mx m2'><span>0</span><span>3</span><span>1</span><span>−1</span></span>, ¿cuál es A⁻¹?",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>−3</span><span>−1</span><span>0</span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>1</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>−1</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>1</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>0</span></span>"
+     ],
+     "a": 3,
+     "e": "A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup> con |A| = −3: <b><span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>1</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>0</span></span></b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m2'><span>2</span><span>1</span><span>1</span><span>k</span></span>?",
+     "c": [
+      "k = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "k = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "k = 0",
+      "k = 2"
+     ],
+     "a": 1,
+     "e": "|A| = 2k − 1 = 0 → <b>k = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Calcula la inversa de A = <span class='mx m2'><span>2</span><span>−3</span><span>2</span><span>−4</span></span>.",
+     "c": [
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span></span>",
+      "<span class='mx m2'><span>2</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−1</span><span>−1</span></span>",
+      "<span class='mx m2'><span>−2</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−1</span><span>1</span></span>",
+      "<span class='mx m2'><span>2</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>1</span><span>−1</span></span>"
+     ],
+     "a": 3,
+     "e": "|A| = −2. Se cambian los elementos de la diagonal, se cambia el signo de los otros dos y se divide entre |A|: <b><span class='mx m2'><span>2</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>1</span><span>−1</span></span></b>."
+    },
+    {
+     "q": "Calcula la inversa de A = <span class='mx m2'><span>−3</span><span>0</span><span>−2</span><span>−1</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>0</span><span>−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span><span>−1</span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>0</span><span>−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span><span>1</span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>0</span><span><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span><span>−1</span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span><span>0</span><span>−1</span></span>"
+     ],
+     "a": 2,
+     "e": "|A| = 3. Se cambian los elementos de la diagonal, se cambia el signo de los otros dos y se divide entre |A|: <b><span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>0</span><span><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span><span>−1</span></span></b>."
+    },
+    {
+     "q": "Si A = <span class='mx m2'><span>2</span><span>3</span><span>−3</span><span>−4</span></span>, ¿cuál es A⁻¹?",
+     "c": [
+      "<span class='mx m2'><span>−4</span><span>−3</span><span>3</span><span>2</span></span>",
+      "<span class='mx m2'><span>2</span><span>3</span><span>−3</span><span>−4</span></span>",
+      "<span class='mx m2'><span>−4</span><span>3</span><span>−3</span><span>2</span></span>",
+      "<span class='mx m2'><span>4</span><span>3</span><span>−3</span><span>−2</span></span>"
+     ],
+     "a": 0,
+     "e": "A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup> con |A| = 1: <b><span class='mx m2'><span>−4</span><span>−3</span><span>3</span><span>2</span></span></b>."
+    },
+    {
+     "q": "Si A = <span class='mx m2'><span>−2</span><span>1</span><span>−1</span><span>2</span></span>, ¿cuál es A⁻¹?",
+     "c": [
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span></span>",
+      "<span class='mx m2'><span>2</span><span>−1</span><span>1</span><span>−2</span></span>"
+     ],
+     "a": 2,
+     "e": "A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup> con |A| = −3: <b><span class='mx m2'><span>−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></span></span></b>."
+    },
+    {
+     "q": "Calcula la inversa de A = <span class='mx m2'><span>5</span><span>−2</span><span>1</span><span>0</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>1</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>0</span><span>−1</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>0</span><span>−1</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>0</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>1</span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span></span>"
+     ],
+     "a": 0,
+     "e": "|A| = 2. Se cambian los elementos de la diagonal, se cambia el signo de los otros dos y se divide entre |A|: <b><span class='mx m2'><span>0</span><span>1</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span></span></b>."
+    },
+    {
+     "q": "Calcula la inversa de A = <span class='mx m2'><span>1</span><span>1</span><span>3</span><span>5</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>1</span><span>1</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>"
+     ],
+     "a": 3,
+     "e": "|A| = 2. Se cambian los elementos de la diagonal, se cambia el signo de los otros dos y se divide entre |A|: <b><span class='mx m2'><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span></b>."
+    },
+    {
+     "q": "Calcula la inversa de A = <span class='mx m2'><span>4</span><span>−3</span><span>5</span><span>−4</span></span>.",
+     "c": [
+      "<span class='mx m2'><span>−4</span><span>3</span><span>−5</span><span>4</span></span>",
+      "<span class='mx m2'><span>4</span><span>−3</span><span>5</span><span>−4</span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></span></span>",
+      "<span class='mx m2'><span>4</span><span>3</span><span>−5</span><span>−4</span></span>"
+     ],
+     "a": 1,
+     "e": "|A| = −1. Se cambian los elementos de la diagonal, se cambia el signo de los otros dos y se divide entre |A|: <b><span class='mx m2'><span>4</span><span>−3</span><span>5</span><span>−4</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Ecuaciones matriciales y rango",
+   "items": [
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>2</span><span>−1</span><span>2</span><span>4</span><span>−2</span><span>−2</span><span>−4</span><span>2</span></span>?",
+     "c": [
+      "3",
+      "2",
+      "1",
+      "0"
+     ],
+     "a": 2,
+     "e": "Número de filas linealmente independientes (por Gauss o con menores): <b>1</b>."
+    },
+    {
+     "q": "Resuelve A · X = B con A = <span class='mx m2'><span>−3</span><span>1</span><span>−2</span><span>1</span></span> y B = <span class='mx m2'><span>−1</span><span>6</span><span>−1</span><span>4</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>0</span><span>−2</span><span>−1</span><span>0</span></span>",
+      "X = <span class='mx m2'><span>−11</span><span>17</span><span>−7</span><span>11</span></span>",
+      "X = <span class='mx m2'><span>2</span><span>5</span><span>1</span><span>3</span></span>",
+      "X = <span class='mx m2'><span>0</span><span>−1</span><span>−2</span><span>0</span></span>"
+     ],
+     "a": 0,
+     "e": "X = A⁻¹ · B (A⁻¹ por la izquierda): <b>X = <span class='mx m2'><span>0</span><span>−2</span><span>−1</span><span>0</span></span></b>."
+    },
+    {
+     "q": "Resuelve A · X = B con A = <span class='mx m2'><span>3</span><span>1</span><span>−2</span><span>−1</span></span> y B = <span class='mx m2'><span>3</span><span>9</span><span>−1</span><span>−7</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>2</span><span>2</span><span>−3</span><span>3</span></span>",
+      "X = <span class='mx m2'><span>2</span><span>−3</span><span>2</span><span>3</span></span>",
+      "X = <span class='mx m2'><span>−15</span><span>−24</span><span>13</span><span>20</span></span>",
+      "X = <span class='mx m2'><span>0</span><span>8</span><span>1</span><span>−6</span></span>"
+     ],
+     "a": 0,
+     "e": "X = A⁻¹ · B (A⁻¹ por la izquierda): <b>X = <span class='mx m2'><span>2</span><span>2</span><span>−3</span><span>3</span></span></b>."
+    },
+    {
+     "q": "Resuelve X · A = B con A = <span class='mx m2'><span>4</span><span>1</span><span>−1</span><span>0</span></span> y B = <span class='mx m2'><span>−15</span><span>−3</span><span>−6</span><span>−2</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>−19</span><span>−4</span><span>−5</span><span>−2</span></span>",
+      "X = <span class='mx m2'><span>−3</span><span>3</span><span>−2</span><span>−2</span></span>",
+      "X = <span class='mx m2'><span>6</span><span>2</span><span>−39</span><span>−11</span></span>",
+      "X = <span class='mx m2'><span>−3</span><span>−2</span><span>3</span><span>−2</span></span>"
+     ],
+     "a": 1,
+     "e": "X = B · A⁻¹ (A⁻¹ por la derecha): <b>X = <span class='mx m2'><span>−3</span><span>3</span><span>−2</span><span>−2</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>3</span><span>−2</span><span>3</span><span>6</span><span>−4</span><span>6</span><span>12</span><span>−8</span><span>12</span></span>?",
+     "c": [
+      "2",
+      "0",
+      "3",
+      "1"
+     ],
+     "a": 3,
+     "e": "Número de filas linealmente independientes (por Gauss o con menores): <b>1</b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>2</span><span>3</span><span>−2</span><span>4</span><span>6</span><span>−4</span><span>8</span><span>12</span><span>−8</span></span>?",
+     "c": [
+      "2",
+      "1",
+      "3",
+      "0"
+     ],
+     "a": 1,
+     "e": "Número de filas linealmente independientes (por Gauss o con menores): <b>1</b>."
+    },
+    {
+     "q": "Resuelve 2X + B = C con B = <span class='mx m2'><span>4</span><span>4</span><span>−3</span><span>−1</span></span> y C = <span class='mx m2'><span>12</span><span>8</span><span>−3</span><span>−7</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>4</span><span>0</span><span>2</span><span>−3</span></span>",
+      "X = <span class='mx m2'><span>8</span><span>4</span><span>0</span><span>−6</span></span>",
+      "X = <span class='mx m2'><span>4</span><span>2</span><span>0</span><span>−3</span></span>",
+      "X = <span class='mx m2'><span>16</span><span>12</span><span>−6</span><span>−8</span></span>"
+     ],
+     "a": 2,
+     "e": "X = (C − B)/2 = <b><span class='mx m2'><span>4</span><span>2</span><span>0</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "Resuelve X · A = B con A = <span class='mx m2'><span>−3</span><span>−2</span><span>2</span><span>1</span></span> y B = <span class='mx m2'><span>0</span><span>1</span><span>3</span><span>3</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>6</span><span>7</span><span>−9</span><span>−11</span></span>",
+      "X = <span class='mx m2'><span>2</span><span>3</span><span>3</span><span>3</span></span>",
+      "X = <span class='mx m2'><span>−2</span><span>−3</span><span>−3</span><span>−3</span></span>",
+      "X = <span class='mx m2'><span>3</span><span>3</span><span>1</span><span>2</span></span>"
+     ],
+     "a": 2,
+     "e": "X = B · A⁻¹ (A⁻¹ por la derecha): <b>X = <span class='mx m2'><span>−2</span><span>−3</span><span>−3</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "Resuelve 3X + B = C con B = <span class='mx m2'><span>−2</span><span>−2</span><span>−4</span><span>1</span></span> y C = <span class='mx m2'><span>−5</span><span>7</span><span>−1</span><span>10</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>−1</span><span>3</span><span>1</span><span>3</span></span>",
+      "X = <span class='mx m2'><span>−7</span><span>5</span><span>−5</span><span>11</span></span>",
+      "X = <span class='mx m2'><span>−1</span><span>1</span><span>3</span><span>3</span></span>",
+      "X = <span class='mx m2'><span>−3</span><span>9</span><span>3</span><span>9</span></span>"
+     ],
+     "a": 0,
+     "e": "X = (C − B)/3 = <b><span class='mx m2'><span>−1</span><span>3</span><span>1</span><span>3</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>−2</span><span>0</span><span>0</span><span>1</span><span>3</span><span>−1</span><span>3</span><span>3</span></span>?",
+     "c": [
+      "0",
+      "1",
+      "3",
+      "2"
+     ],
+     "a": 3,
+     "e": "Número de filas linealmente independientes (por Gauss o con menores): <b>2</b>."
+    },
+    {
+     "q": "Resuelve X · A = B con A = <span class='mx m2'><span>0</span><span>1</span><span>1</span><span>−3</span></span> y B = <span class='mx m2'><span>−3</span><span>6</span><span>−1</span><span>1</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>−3</span><span>5</span><span>−2</span><span>4</span></span>",
+      "X = <span class='mx m2'><span>−10</span><span>19</span><span>−3</span><span>6</span></span>",
+      "X = <span class='mx m2'><span>−3</span><span>−2</span><span>−3</span><span>−1</span></span>",
+      "X = <span class='mx m2'><span>−3</span><span>−3</span><span>−2</span><span>−1</span></span>"
+     ],
+     "a": 3,
+     "e": "X = B · A⁻¹ (A⁻¹ por la derecha): <b>X = <span class='mx m2'><span>−3</span><span>−3</span><span>−2</span><span>−1</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>−1</span><span>1</span><span>0</span><span>1</span><span>−3</span><span>2</span><span>1</span><span>−7</span></span>?",
+     "c": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "a": 2,
+     "e": "Número de filas linealmente independientes (por Gauss o con menores): <b>2</b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>−1</span><span>1</span><span>3</span><span>−3</span><span>3</span><span>4</span><span>−4</span><span>4</span></span>?",
+     "c": [
+      "3",
+      "1",
+      "2",
+      "0"
+     ],
+     "a": 1,
+     "e": "Número de filas linealmente independientes (por Gauss o con menores): <b>1</b>."
+    },
+    {
+     "q": "Resuelve A · X = B con A = <span class='mx m2'><span>−1</span><span>0</span><span>−1</span><span>−1</span></span> y B = <span class='mx m2'><span>0</span><span>3</span><span>0</span><span>6</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>0</span><span>−3</span><span>0</span><span>−3</span></span>",
+      "X = <span class='mx m2'><span>3</span><span>−3</span><span>6</span><span>−6</span></span>",
+      "X = <span class='mx m2'><span>1</span><span>3</span><span>1</span><span>7</span></span>",
+      "X = <span class='mx m2'><span>0</span><span>0</span><span>−3</span><span>−3</span></span>"
+     ],
+     "a": 0,
+     "e": "X = A⁻¹ · B (A⁻¹ por la izquierda): <b>X = <span class='mx m2'><span>0</span><span>−3</span><span>0</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "Resuelve A · X = B con A = <span class='mx m2'><span>−1</span><span>−1</span><span>−1</span><span>−2</span></span> y B = <span class='mx m2'><span>1</span><span>−1</span><span>−1</span><span>−3</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>2</span><span>0</span><span>0</span><span>−1</span></span>",
+      "X = <span class='mx m2'><span>−3</span><span>−1</span><span>2</span><span>2</span></span>",
+      "X = <span class='mx m2'><span>−3</span><span>2</span><span>−1</span><span>2</span></span>",
+      "X = <span class='mx m2'><span>3</span><span>1</span><span>−2</span><span>−2</span></span>"
+     ],
+     "a": 1,
+     "e": "X = A⁻¹ · B (A⁻¹ por la izquierda): <b>X = <span class='mx m2'><span>−3</span><span>−1</span><span>2</span><span>2</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>2</span><span>−2</span><span>3</span><span>7</span><span>−8</span><span>0</span><span>0</span><span>1</span></span>?",
+     "c": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "a": 3,
+     "e": "Número de filas linealmente independientes (por Gauss o con menores): <b>3</b>."
+    },
+    {
+     "q": "Resuelve A · X = B con A = <span class='mx m2'><span>−1</span><span>0</span><span>0</span><span>−1</span></span> y B = <span class='mx m2'><span>−1</span><span>−2</span><span>−1</span><span>−3</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>1</span><span>1</span><span>2</span><span>3</span></span>",
+      "X = <span class='mx m2'><span>0</span><span>−2</span><span>−1</span><span>−2</span></span>",
+      "X = <span class='mx m2'><span>1</span><span>2</span><span>1</span><span>3</span></span>",
+      "X = <span class='mx m2'><span>−1</span><span>−2</span><span>−1</span><span>−3</span></span>"
+     ],
+     "a": 2,
+     "e": "X = A⁻¹ · B (A⁻¹ por la izquierda): <b>X = <span class='mx m2'><span>1</span><span>2</span><span>1</span><span>3</span></span></b>."
+    },
+    {
+     "q": "Resuelve X · A = B con A = <span class='mx m2'><span>1</span><span>0</span><span>3</span><span>−1</span></span> y B = <span class='mx m2'><span>11</span><span>−3</span><span>3</span><span>0</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>2</span><span>3</span><span>3</span><span>0</span></span>",
+      "X = <span class='mx m2'><span>−2</span><span>−3</span><span>−3</span><span>0</span></span>",
+      "X = <span class='mx m2'><span>10</span><span>−3</span><span>0</span><span>1</span></span>",
+      "X = <span class='mx m2'><span>11</span><span>−3</span><span>30</span><span>−9</span></span>"
+     ],
+     "a": 0,
+     "e": "X = B · A⁻¹ (A⁻¹ por la derecha): <b>X = <span class='mx m2'><span>2</span><span>3</span><span>3</span><span>0</span></span></b>."
+    },
+    {
+     "q": "Resuelve 2X + B = C con B = <span class='mx m2'><span>−1</span><span>−1</span><span>4</span><span>4</span></span> y C = <span class='mx m2'><span>−3</span><span>5</span><span>−4</span><span>−4</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>−1</span><span>−4</span><span>3</span><span>−4</span></span>",
+      "X = <span class='mx m2'><span>−1</span><span>3</span><span>−4</span><span>−4</span></span>",
+      "X = <span class='mx m2'><span>−4</span><span>4</span><span>0</span><span>0</span></span>",
+      "X = <span class='mx m2'><span>−2</span><span>6</span><span>−8</span><span>−8</span></span>"
+     ],
+     "a": 1,
+     "e": "X = (C − B)/2 = <b><span class='mx m2'><span>−1</span><span>3</span><span>−4</span><span>−4</span></span></b>."
+    },
+    {
+     "q": "Resuelve A · X = B con A = <span class='mx m2'><span>−1</span><span>0</span><span>3</span><span>1</span></span> y B = <span class='mx m2'><span>3</span><span>0</span><span>−11</span><span>0</span></span>.",
+     "c": [
+      "X = <span class='mx m2'><span>−3</span><span>0</span><span>11</span><span>0</span></span>",
+      "X = <span class='mx m2'><span>−3</span><span>−2</span><span>0</span><span>0</span></span>",
+      "X = <span class='mx m2'><span>4</span><span>0</span><span>−14</span><span>−1</span></span>",
+      "X = <span class='mx m2'><span>−3</span><span>0</span><span>−2</span><span>0</span></span>"
+     ],
+     "a": 3,
+     "e": "X = A⁻¹ · B (A⁻¹ por la izquierda): <b>X = <span class='mx m2'><span>−3</span><span>0</span><span>−2</span><span>0</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 1,
+ "updated": "2026-11-23",
+ "country": "es",
+ "subject": "matematicas",
+ "grade": "2-bachillerato"
+}

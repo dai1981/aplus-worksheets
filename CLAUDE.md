@@ -1550,7 +1550,15 @@ ESO の掛け算は「·」、負の数は「−」、小数の並びは「; 」
 3.º: 1. numeros-racionales-e-irracionales ✓ 2. potencias-y-radicales ✓ 3. sucesiones-y-progresiones ✓ 4. polinomios-y-ruffini ✓ 5. ecuaciones-de-segundo-grado ✓ 6. sistemas-de-ecuaciones ✓ 7. funciones-y-sus-propiedades ✓ 8. funciones-lineales-y-cuadraticas ✓ 9. movimientos-en-el-plano ✓ 10. geometria-del-espacio ✓ 11. estadistica ✓ 12. probabilidad ✓
 4.º: 1. numeros-reales-e-intervalos ✓ 2. radicales-y-logaritmos ✓ 3. polinomios-y-fracciones-algebraicas ✓ 4. ecuaciones-y-sistemas ✓ 5. inecuaciones ✓ 6. semejanza ✓ 7. trigonometria ✓ 8. geometria-analitica ✓ 9. funciones-elementales ✓ 10. porcentajes-e-interes-compuesto ✓ 11. estadistica-bidimensional ✓ 12. combinatoria ✓ 13. probabilidad ✓
 
-ES / Matemáticas は 1.º de Primaria〜4.º de ESO まで完了。次は Bachillerato か、GDP 順で次の国
+ES / Matemáticas / Bachillerato（Real Decreto 243/2022、Bachillerato de Ciencias y Tecnología の Matemáticas I・II）— grade `1-bachillerato`・`2-bachillerato`（name「1.º de Bachillerato」、sort 11・12、unit.php で 16〜18 歳と educationalLevel「Bachillerato」）。standard_url は BOE-A-2022-5521（es_common.STD_URL_BACH）、standard_code は「Matemáticas I · Sentido algebraico」形式。
+生成スクリプトは `gen_es_matematicas_{1,2}bach_*`（seed は 51000＋番号・52000＋番号）、共通部品は `tools/es_bach.py`（es_eso の上に unit（grade を -bachillerato に）・r2（四捨五入、コンマ）・nf・mat・det_h（行列と行列式、ws.css の .mx）・V・pi_txt・det2・det3・mmul・tr・W）と `tools/es_espacio.py`（空間の V・add・esc・cruz・mod2・plano・param・continua・simp）。
+límites・derivadas・aplicaciones de las derivadas は 1.º の生成スクリプトに build(lv) を書き、2.º はラッパー（2.º は L'Hôpital・Bolzano・curvatura・Rolle などを足す）。distribución binomial・normal は gen_es_matematicas_2bach_distribuciones.py の build(kind)。
+確率の選択肢は 0〜1 の外を Wp で落とす。「y = x² y y = 3x」のように接続詞の y と変数の y が並ぶ文は「la parábola y = x² y la recta y = 3x」「r: … y s: …」と書く。
+トピック：analisis（Límites, derivadas e integrales）を足した。matrices・determinantes・gauss→algebra-y-proporcionalidad、vectores・conicas・triangulos・planos・distancias→geometria、distribucion→estadistica-y-probabilidad、magnitudes-y-medida の out に integrales
+1.º（Matemáticas I）: 1. numeros-reales-y-logaritmos ✓ 2. numeros-complejos ✓ 3. ecuaciones-e-inecuaciones ✓ 4. sistemas-metodo-de-gauss ✓ 5. trigonometria ✓ 6. resolucion-de-triangulos ✓ 7. vectores-en-el-plano ✓ 8. geometria-analitica ✓ 9. lugares-geometricos-y-conicas ✓ 10. funciones ✓ 11. limites-y-continuidad ✓ 12. derivadas ✓ 13. aplicaciones-de-las-derivadas ✓ 14. estadistica-bidimensional ✓
+2.º（Matemáticas II、PAU）: 1. matrices ✓ 2. determinantes ✓ 3. sistemas-de-ecuaciones-lineales ✓ 4. vectores-en-el-espacio ✓ 5. rectas-y-planos-en-el-espacio ✓ 6. posiciones-angulos-y-distancias ✓ 7. limites-y-continuidad ✓ 8. derivadas ✓ 9. aplicaciones-de-las-derivadas ✓ 10. integrales-indefinidas ✓ 11. integrales-definidas-y-areas ✓ 12. probabilidad ✓ 13. distribucion-binomial ✓ 14. distribucion-normal ✓
+
+ES / Matemáticas は 1.º de Primaria〜2.º de Bachillerato まで完了（Matemáticas Aplicadas a las Ciencias Sociales はまだ）。次は GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

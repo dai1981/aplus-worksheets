@@ -1,0 +1,1157 @@
+{
+ "slug": "determinantes",
+ "title": "Determinantes",
+ "seo_title": "Determinantes – 2.º de Bachillerato: fichas de matemáticas con soluciones",
+ "short_title": "Determinantes",
+ "domain": "Sentido algebraico",
+ "standard_code": "Matemáticas II · Sentido algebraico",
+ "standard_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-5521",
+ "standard_text": "Determinantes: cálculo de orden 2 y 3, propiedades, adjuntos, cálculo de la matriz inversa y del rango (resumen de los saberes básicos de Matemáticas II del Bachillerato de Ciencias y Tecnología, Real Decreto 243/2022)",
+ "meta_desc": "Fichas de Matemáticas II (2.º de Bachillerato): determinantes de orden 2 y 3, Sarrus, propiedades, adjuntos, matriz inversa y rango. 100 ejercicios con soluciones.",
+ "key_big": "|A| ≠ 0 ⇔ A tiene inversa",
+ "key_sub": "|kA| = kⁿ · |A|",
+ "body_html": "<h2>Cómo se hace</h2><p><b>Orden 2</b>: |a b; c d| = ad − bc. <b>Orden 3</b>: regla de Sarrus (tres productos con +, tres con −) o desarrollo por una fila.</p><p><b>Adjunto</b>: A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub>, donde α<sub>ij</sub> es el determinante que queda al tachar la fila i y la columna j.</p><p><b>Propiedades</b>: |A<sup>t</sup>| = |A|; |A · B| = |A| · |B|; |kA| = kⁿ|A|; si se cambian dos filas, cambia el signo; dos filas proporcionales → 0.</p><p>A tiene inversa ⇔ |A| ≠ 0, y A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup>.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>|1 2 0; 3 1 2; 0 1 1|</p><p class='sn-ex-s'>(1 + 0 + 0) − (0 + 2 + 6)</p><p class='sn-ex-a'>Respuesta: −7</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>|2A| = 2|A| en 3 × 3</td><td>|2A| = 2³|A| = 8|A|.</td></tr><tr><td>Olvidar el signo del adjunto</td><td>(−1)<sup>i+j</sup>: + − + en la primera fila.</td></tr><tr><td>|A + B| = |A| + |B|</td><td>No es cierto en general.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Qué significa que el determinante sea 0?",
+   "a": "Que las filas (o columnas) son linealmente dependientes: la matriz no tiene inversa y su rango no es máximo."
+  },
+  {
+   "q": "¿Para qué se usan los determinantes?",
+   "a": "Para saber si una matriz tiene inversa, calcular rangos, resolver sistemas (Cramer) y calcular áreas y volúmenes."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Determinantes de orden 2",
+   "items": [
+    {
+     "q": "¿Qué valor de k cumple <span class='mx det m2'><span>5</span><span>−1</span><span>5</span><span>k</span></span> = −3?",
+     "c": [
+      "k = −<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "k = −<span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span>",
+      "k = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "k = <span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "5k − (−5) = −3 → <b>k = −<span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "¿Qué valor de k cumple <span class='mx det m2'><span>1</span><span>2</span><span>3</span><span>k</span></span> = 7?",
+     "c": [
+      "k = 1",
+      "k = 7",
+      "k = 13",
+      "k = −13"
+     ],
+     "a": 2,
+     "e": "k − 6 = 7 → <b>k = 13</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>5</span><span>−1</span><span>1</span><span>3</span></span>.",
+     "c": [
+      "14",
+      "−8",
+      "−16",
+      "16"
+     ],
+     "a": 3,
+     "e": "5 · 3 − −1 · 1 = <b>16</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>3</span><span>1</span><span>−3</span><span>5</span></span>.",
+     "c": [
+      "−18",
+      "18",
+      "12",
+      "19"
+     ],
+     "a": 1,
+     "e": "3 · 5 − 1 · (−3) = <b>18</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>1</span><span>5</span><span>−2</span><span>−6</span></span>.",
+     "c": [
+      "−4",
+      "−16",
+      "−7",
+      "4"
+     ],
+     "a": 3,
+     "e": "1 · (−6) − 5 · (−2) = <b>4</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>5</span><span>1</span><span>5</span><span>−6</span></span>.",
+     "c": [
+      "35",
+      "−25",
+      "−34",
+      "−35"
+     ],
+     "a": 3,
+     "e": "5 · (−6) − 1 · 5 = <b>−35</b>."
+    },
+    {
+     "q": "¿Qué valor de k cumple <span class='mx det m2'><span>2</span><span>−2</span><span>4</span><span>k</span></span> = 9?",
+     "c": [
+      "k = <span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span>",
+      "k = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "k = <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "k = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "2k − (−8) = 9 → <b>k = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>−5</span><span>−6</span><span>−4</span><span>−3</span></span>.",
+     "c": [
+      "18",
+      "−9",
+      "39",
+      "9"
+     ],
+     "a": 1,
+     "e": "−5 · (−3) − −6 · (−4) = <b>−9</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>0</span><span>−5</span><span>−2</span><span>3</span></span>.",
+     "c": [
+      "6",
+      "−10",
+      "−9",
+      "10"
+     ],
+     "a": 1,
+     "e": "0 · 3 − −5 · (−2) = <b>−10</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>5</span><span>−2</span><span>0</span><span>−3</span></span>.",
+     "c": [
+      "−14",
+      "−10",
+      "−15",
+      "15"
+     ],
+     "a": 2,
+     "e": "5 · (−3) − −2 · 0 = <b>−15</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>6</span><span>3</span><span>4</span><span>−1</span></span>.",
+     "c": [
+      "−18",
+      "6",
+      "22",
+      "18"
+     ],
+     "a": 0,
+     "e": "6 · (−1) − 3 · 4 = <b>−18</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>4</span><span>−6</span><span>3</span><span>0</span></span>.",
+     "c": [
+      "18",
+      "19",
+      "−24",
+      "−18"
+     ],
+     "a": 0,
+     "e": "4 · 0 − −6 · 3 = <b>18</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>7</span><span>−4</span><span>2</span><span>−3</span></span>.",
+     "c": [
+      "−29",
+      "−22",
+      "−13",
+      "13"
+     ],
+     "a": 2,
+     "e": "7 · (−3) − −4 · 2 = <b>−13</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>−2</span><span>−4</span><span>−6</span><span>0</span></span>.",
+     "c": [
+      "24",
+      "−23",
+      "−24",
+      "8"
+     ],
+     "a": 2,
+     "e": "−2 · 0 − −4 · (−6) = <b>−24</b>."
+    },
+    {
+     "q": "¿Qué valor de k cumple <span class='mx det m2'><span>5</span><span>−4</span><span>5</span><span>k</span></span> = −5?",
+     "c": [
+      "k = −1",
+      "k = 3",
+      "k = 5",
+      "k = −5"
+     ],
+     "a": 3,
+     "e": "5k − (−20) = −5 → <b>k = −5</b>."
+    },
+    {
+     "q": "¿Qué valor de k cumple <span class='mx det m2'><span>5</span><span>4</span><span>−1</span><span>k</span></span> = −1?",
+     "c": [
+      "k = 1",
+      "k = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "k = −1",
+      "k = −<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "5k − (−4) = −1 → <b>k = −1</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m2'><span>4</span><span>3</span><span>−5</span><span>0</span></span>.",
+     "c": [
+      "15",
+      "12",
+      "16",
+      "−15"
+     ],
+     "a": 0,
+     "e": "4 · 0 − 3 · (−5) = <b>15</b>."
+    },
+    {
+     "q": "¿Qué valor de k cumple <span class='mx det m2'><span>1</span><span>−3</span><span>5</span><span>k</span></span> = 4?",
+     "c": [
+      "k = −11",
+      "k = 11",
+      "k = 4",
+      "k = 19"
+     ],
+     "a": 0,
+     "e": "k − (−15) = 4 → <b>k = −11</b>."
+    },
+    {
+     "q": "¿Qué valor de k cumple <span class='mx det m2'><span>1</span><span>1</span><span>3</span><span>k</span></span> = −5?",
+     "c": [
+      "k = −5",
+      "k = −8",
+      "k = 2",
+      "k = −2"
+     ],
+     "a": 3,
+     "e": "k − 3 = −5 → <b>k = −2</b>."
+    },
+    {
+     "q": "¿Qué valor de k cumple <span class='mx det m2'><span>2</span><span>−2</span><span>−4</span><span>k</span></span> = −6?",
+     "c": [
+      "k = 1",
+      "k = −7",
+      "k = −3",
+      "k = −1"
+     ],
+     "a": 0,
+     "e": "2k − 8 = −6 → <b>k = 1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Regla de Sarrus",
+   "items": [
+    {
+     "q": "Calcula <span class='mx det m3'><span>−1</span><span>1</span><span>−2</span><span>0</span><span>−2</span><span>1</span><span>3</span><span>2</span><span>1</span></span>.",
+     "c": [
+      "5",
+      "−3",
+      "−5",
+      "15"
+     ],
+     "a": 2,
+     "e": "Sarrus: (5) − (10) = <b>−5</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>3</span><span>−2</span><span>1</span><span>0</span><span>2</span><span>1</span><span>0</span><span>0</span><span>−1</span></span>.",
+     "c": [
+      "−6",
+      "0",
+      "4",
+      "−8"
+     ],
+     "a": 0,
+     "e": "Es triangular: el determinante es el producto de la diagonal, <b>−6</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>3</span><span>3</span><span>2</span><span>−1</span><span>−1</span><span>0</span><span>1</span><span>−1</span><span>0</span></span>.",
+     "c": [
+      "−4",
+      "4",
+      "0",
+      "2"
+     ],
+     "a": 1,
+     "e": "Sarrus: (2) − (−2) = <b>4</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>3</span><span>2</span><span>1</span><span>3</span><span>−1</span><span>1</span><span>−2</span><span>1</span><span>0</span></span>.",
+     "c": [
+      "6",
+      "−1",
+      "4",
+      "−6"
+     ],
+     "a": 3,
+     "e": "Sarrus: (−1) − (5) = <b>−6</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>1</span><span>−2</span><span>1</span><span>0</span><span>2</span><span>−2</span><span>2</span><span>−2</span><span>3</span></span>.",
+     "c": [
+      "14",
+      "22",
+      "−6",
+      "6"
+     ],
+     "a": 3,
+     "e": "Sarrus: (14) − (8) = <b>6</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>3</span><span>0</span><span>−1</span><span>3</span><span>−2</span><span>2</span><span>1</span><span>−2</span><span>0</span></span>.",
+     "c": [
+      "6",
+      "−16",
+      "16",
+      "−4"
+     ],
+     "a": 2,
+     "e": "Sarrus: (6) − (−10) = <b>16</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>0</span><span>0</span><span>−1</span><span>1</span><span>3</span><span>0</span><span>2</span><span>0</span><span>0</span></span>.",
+     "c": [
+      "−6",
+      "6",
+      "8",
+      "0"
+     ],
+     "a": 1,
+     "e": "Sarrus: (0) − (−6) = <b>6</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>1</span><span>1</span><span>2</span><span>−2</span><span>3</span><span>−1</span><span>2</span><span>0</span><span>−1</span></span>.",
+     "c": [
+      "−19",
+      "19",
+      "9",
+      "−5"
+     ],
+     "a": 0,
+     "e": "Sarrus: (−5) − (14) = <b>−19</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>2</span><span>−2</span><span>−2</span><span>0</span><span>−2</span><span>−1</span><span>0</span><span>−1</span><span>2</span></span>.",
+     "c": [
+      "10",
+      "−6",
+      "−8",
+      "−10"
+     ],
+     "a": 3,
+     "e": "Sarrus: (−8) − (2) = <b>−10</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>3</span><span>0</span><span>−3</span><span>0</span><span>1</span><span>−1</span><span>0</span><span>0</span><span>2</span></span>.",
+     "c": [
+      "0",
+      "7",
+      "6",
+      "−6"
+     ],
+     "a": 2,
+     "e": "Es triangular: el determinante es el producto de la diagonal, <b>6</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>4</span><span>−3</span><span>−1</span><span>0</span><span>−3</span><span>0</span><span>0</span><span>0</span><span>−3</span></span>.",
+     "c": [
+      "0",
+      "36",
+      "−2",
+      "33"
+     ],
+     "a": 1,
+     "e": "Es triangular: el determinante es el producto de la diagonal, <b>36</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>−2</span><span>−2</span><span>0</span><span>−1</span><span>−1</span><span>−2</span><span>−2</span><span>1</span><span>1</span></span>.",
+     "c": [
+      "0",
+      "−12",
+      "−6",
+      "12"
+     ],
+     "a": 1,
+     "e": "Sarrus: (−6) − (6) = <b>−12</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>2</span><span>2</span><span>2</span><span>0</span><span>3</span><span>2</span><span>0</span><span>0</span><span>1</span></span>.",
+     "c": [
+      "8",
+      "0",
+      "−6",
+      "6"
+     ],
+     "a": 3,
+     "e": "Es triangular: el determinante es el producto de la diagonal, <b>6</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>0</span><span>0</span><span>−2</span><span>1</span><span>−1</span><span>−2</span><span>1</span><span>1</span><span>3</span></span>.",
+     "c": [
+      "0",
+      "4",
+      "−2",
+      "−4"
+     ],
+     "a": 3,
+     "e": "Sarrus: (−2) − (2) = <b>−4</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>2</span><span>−2</span><span>−3</span><span>0</span><span>−1</span><span>−3</span><span>0</span><span>0</span><span>1</span></span>.",
+     "c": [
+      "−2",
+      "−4",
+      "0",
+      "2"
+     ],
+     "a": 0,
+     "e": "Es triangular: el determinante es el producto de la diagonal, <b>−2</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>3</span><span>−1</span><span>−2</span><span>1</span><span>1</span><span>1</span><span>1</span><span>2</span><span>−1</span></span>.",
+     "c": [
+      "−8",
+      "−3",
+      "−13",
+      "13"
+     ],
+     "a": 2,
+     "e": "Sarrus: (−8) − (5) = <b>−13</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>2</span><span>1</span><span>−2</span><span>−2</span><span>2</span><span>−2</span><span>3</span><span>−1</span><span>0</span></span>.",
+     "c": [
+      "2",
+      "−18",
+      "−2",
+      "−10"
+     ],
+     "a": 2,
+     "e": "Sarrus: (−10) − (−8) = <b>−2</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>0</span><span>2</span><span>3</span><span>3</span><span>3</span><span>1</span><span>1</span><span>2</span><span>2</span></span>.",
+     "c": [
+      "20",
+      "−1",
+      "1",
+      "41"
+     ],
+     "a": 1,
+     "e": "Sarrus: (20) − (21) = <b>−1</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>−1</span><span>−1</span><span>0</span><span>0</span><span>3</span><span>3</span><span>3</span><span>1</span><span>−1</span></span>.",
+     "c": [
+      "−3",
+      "3",
+      "−6",
+      "−9"
+     ],
+     "a": 0,
+     "e": "Sarrus: (−6) − (−3) = <b>−3</b>."
+    },
+    {
+     "q": "Calcula <span class='mx det m3'><span>1</span><span>−3</span><span>−3</span><span>0</span><span>2</span><span>−1</span><span>0</span><span>0</span><span>4</span></span>.",
+     "c": [
+      "8",
+      "7",
+      "5",
+      "0"
+     ],
+     "a": 0,
+     "e": "Es triangular: el determinante es el producto de la diagonal, <b>8</b>."
+    }
+   ]
+  },
+  {
+   "title": "Propiedades",
+   "items": [
+    {
+     "q": "Si |A| = 2, ¿cuánto vale |A⁻¹|?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2",
+      "−2",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "|A⁻¹| = 1/|A| = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Una matriz cuadrada tiene inversa si y solo si…",
+     "c": [
+      "|A| = 1",
+      "es simétrica",
+      "|A| = 0",
+      "|A| ≠ 0"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>|A| ≠ 0</b>."
+    },
+    {
+     "q": "Si |A| = 5 y |B| = −3 (matrices 2 × 2), ¿cuánto vale |A · B|?",
+     "c": [
+      "2",
+      "−15",
+      "no se puede saber",
+      "−30"
+     ],
+     "a": 1,
+     "e": "|A · B| = |A| · |B| = <b>−15</b>."
+    },
+    {
+     "q": "Si A es una matriz 3 × 3 con |A| = −1, ¿cuánto vale |3A|?",
+     "c": [
+      "−27",
+      "−81",
+      "−3",
+      "2"
+     ],
+     "a": 0,
+     "e": "|kA| = kⁿ · |A| = (3)³ · −1 = <b>−27</b>."
+    },
+    {
+     "q": "Si A es una matriz 2 × 2 con |A| = 3, ¿cuánto vale |2A|?",
+     "c": [
+      "5",
+      "24",
+      "12",
+      "6"
+     ],
+     "a": 2,
+     "e": "|kA| = kⁿ · |A| = (2)² · 3 = <b>12</b>."
+    },
+    {
+     "q": "Si A es una matriz 3 × 3 con |A| = −2, ¿cuánto vale |−A|?",
+     "c": [
+      "−2",
+      "3",
+      "2",
+      "−3"
+     ],
+     "a": 2,
+     "e": "|kA| = kⁿ · |A| = (−1)³ · −2 = <b>2</b>."
+    },
+    {
+     "q": "Si |A| = 3 y |B| = 2 (matrices 2 × 2), ¿cuánto vale |A · B|?",
+     "c": [
+      "6",
+      "5",
+      "no se puede saber",
+      "12"
+     ],
+     "a": 0,
+     "e": "|A · B| = |A| · |B| = <b>6</b>."
+    },
+    {
+     "q": "Si A es una matriz 2 × 2 con |A| = 3, ¿cuánto vale |−A|?",
+     "c": [
+      "2",
+      "−3",
+      "3",
+      "4"
+     ],
+     "a": 2,
+     "e": "|kA| = kⁿ · |A| = (−1)² · 3 = <b>3</b>."
+    },
+    {
+     "q": "Si A es una matriz 3 × 3 con |A| = 4, ¿cuánto vale |2A|?",
+     "c": [
+      "6",
+      "64",
+      "8",
+      "32"
+     ],
+     "a": 3,
+     "e": "|kA| = kⁿ · |A| = (2)³ · 4 = <b>32</b>."
+    },
+    {
+     "q": "|A + B| es igual a…",
+     "c": [
+      "0",
+      "en general, no se puede calcular solo con |A| y |B|",
+      "|A| + |B|",
+      "|A| · |B|"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>en general, no se puede calcular solo con |A| y |B|</b>."
+    },
+    {
+     "q": "Si en A (|A| = −2) se intercambian dos filas, ¿cuánto vale el nuevo determinante?",
+     "c": [
+      "0",
+      "2",
+      "−2",
+      "−4"
+     ],
+     "a": 1,
+     "e": "Propiedad de los determinantes: <b>2</b>."
+    },
+    {
+     "q": "Si |A| = 5, ¿cuánto vale |A<sup>t</sup>|?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "5",
+      "0",
+      "−5"
+     ],
+     "a": 1,
+     "e": "El determinante de la traspuesta es el mismo: <b>5</b>."
+    },
+    {
+     "q": "Si A es una matriz 2 × 2 con |A| = 2, ¿cuánto vale |−2A|?",
+     "c": [
+      "0",
+      "8",
+      "−16",
+      "−4"
+     ],
+     "a": 1,
+     "e": "|kA| = kⁿ · |A| = (−2)² · 2 = <b>8</b>."
+    },
+    {
+     "q": "Si |A| = 4, ¿cuánto vale |A⁻¹|?",
+     "c": [
+      "4",
+      "−4",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "|A⁻¹| = 1/|A| = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Si |A| = 2, ¿cuánto vale |A<sup>t</sup>|?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "0",
+      "2",
+      "−2"
+     ],
+     "a": 2,
+     "e": "El determinante de la traspuesta es el mismo: <b>2</b>."
+    },
+    {
+     "q": "Si a una fila se le suma otra multiplicada por un número, el determinante…",
+     "c": [
+      "cambia de signo",
+      "se multiplica por ese número",
+      "no cambia",
+      "se anula"
+     ],
+     "a": 2,
+     "e": "Propiedad de los determinantes: <b>no cambia</b>."
+    },
+    {
+     "q": "Si |A| = −2 y |B| = 2 (matrices 3 × 3), ¿cuánto vale |A · B|?",
+     "c": [
+      "−4",
+      "no se puede saber",
+      "0",
+      "−12"
+     ],
+     "a": 0,
+     "e": "|A · B| = |A| · |B| = <b>−4</b>."
+    },
+    {
+     "q": "Si A es una matriz 2 × 2 con |A| = −1, ¿cuánto vale |3A|?",
+     "c": [
+      "−27",
+      "2",
+      "−3",
+      "−9"
+     ],
+     "a": 3,
+     "e": "|kA| = kⁿ · |A| = (3)² · −1 = <b>−9</b>."
+    },
+    {
+     "q": "Si una matriz tiene dos filas iguales (o proporcionales), su determinante es…",
+     "c": [
+      "0",
+      "negativo",
+      "1",
+      "el doble"
+     ],
+     "a": 0,
+     "e": "Propiedad de los determinantes: <b>0</b>."
+    },
+    {
+     "q": "Si A es una matriz 3 × 3 con |A| = −1, ¿cuánto vale |2A|?",
+     "c": [
+      "−8",
+      "−2",
+      "−16",
+      "1"
+     ],
+     "a": 0,
+     "e": "|kA| = kⁿ · |A| = (2)³ · −1 = <b>−8</b>."
+    }
+   ]
+  },
+  {
+   "title": "Menores y adjuntos",
+   "items": [
+    {
+     "q": "En A = <span class='mx m3'><span>−2</span><span>−3</span><span>4</span><span>−2</span><span>0</span><span>−3</span><span>2</span><span>4</span><span>3</span></span>, calcula el adjunto A<sub>33</sub>.",
+     "c": [
+      "−18",
+      "−6",
+      "6",
+      "−56"
+     ],
+     "a": 1,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = +1 · (−6) = <b>−6</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>1</span><span>0</span><span>−2</span><span>0</span><span>−1</span><span>−2</span><span>−2</span><span>−1</span><span>4</span></span>, calcula el adjunto A<sub>32</sub>.",
+     "c": [
+      "−2",
+      "3",
+      "1",
+      "2"
+     ],
+     "a": 3,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = −1 · (−2) = <b>2</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>−1</span><span>2</span><span>2</span><span>−2</span><span>−3</span><span>1</span><span>0</span><span>0</span><span>4</span></span>, calcula el menor complementario α<sub>13</sub>.",
+     "c": [
+      "1",
+      "28",
+      "2",
+      "0"
+     ],
+     "a": 3,
+     "e": "Tachamos la fila 1 y la columna 3: <span class='mx det m2'><span>−2</span><span>−3</span><span>0</span><span>0</span></span> = <b>0</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>1</span><span>1</span><span>0</span><span>−2</span><span>−3</span><span>4</span><span>0</span><span>−3</span><span>0</span></span>, calcula el adjunto A<sub>33</sub>.",
+     "c": [
+      "12",
+      "−1",
+      "−2",
+      "1"
+     ],
+     "a": 1,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = +1 · (−1) = <b>−1</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>3</span><span>2</span><span>4</span><span>−3</span><span>−1</span><span>−1</span><span>−2</span><span>2</span><span>−3</span></span>, calcula el adjunto A<sub>32</sub>.",
+     "c": [
+      "−9",
+      "9",
+      "−31",
+      "−18"
+     ],
+     "a": 0,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = −1 · 9 = <b>−9</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>0</span><span>0</span><span>3</span><span>2</span><span>2</span><span>−3</span><span>4</span><span>−1</span><span>4</span></span>, calcula el menor complementario α<sub>31</sub>.",
+     "c": [
+      "6",
+      "4",
+      "−6",
+      "−2"
+     ],
+     "a": 2,
+     "e": "Tachamos la fila 3 y la columna 1: <span class='mx det m2'><span>0</span><span>3</span><span>2</span><span>−3</span></span> = <b>−6</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>1</span><span>0</span><span>−1</span><span>−2</span><span>0</span><span>4</span><span>3</span><span>1</span><span>−2</span></span>, calcula el menor complementario α<sub>12</sub>.",
+     "c": [
+      "0",
+      "−2",
+      "8",
+      "−8"
+     ],
+     "a": 3,
+     "e": "Tachamos la fila 1 y la columna 2: <span class='mx det m2'><span>−2</span><span>4</span><span>3</span><span>−2</span></span> = <b>−8</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>0</span><span>1</span><span>4</span><span>1</span><span>−1</span><span>−1</span><span>0</span><span>−2</span><span>0</span></span>, calcula el adjunto A<sub>23</sub>.",
+     "c": [
+      "−8",
+      "0",
+      "1",
+      "2"
+     ],
+     "a": 1,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = −1 · 0 = <b>0</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>3</span><span>1</span><span>4</span><span>1</span><span>4</span><span>1</span><span>0</span><span>1</span><span>1</span></span>, calcula el adjunto A<sub>32</sub>.",
+     "c": [
+      "1",
+      "3",
+      "−1",
+      "12"
+     ],
+     "a": 0,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = −1 · (−1) = <b>1</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>0</span><span>−3</span><span>4</span><span>−3</span><span>−2</span><span>−2</span><span>−2</span><span>−1</span><span>−1</span></span>, calcula el menor complementario α<sub>13</sub>.",
+     "c": [
+      "−1",
+      "4",
+      "1",
+      "3"
+     ],
+     "a": 0,
+     "e": "Tachamos la fila 1 y la columna 3: <span class='mx det m2'><span>−3</span><span>−2</span><span>−2</span><span>−1</span></span> = <b>−1</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>4</span><span>3</span><span>2</span><span>−2</span><span>2</span><span>2</span><span>4</span><span>4</span><span>2</span></span>, calcula el adjunto A<sub>32</sub>.",
+     "c": [
+      "−13",
+      "−48",
+      "−12",
+      "12"
+     ],
+     "a": 2,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = −1 · 12 = <b>−12</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>−2</span><span>−1</span><span>1</span><span>1</span><span>−2</span><span>1</span><span>4</span><span>−1</span><span>−2</span></span>, calcula el adjunto A<sub>33</sub>.",
+     "c": [
+      "−10",
+      "−9",
+      "−5",
+      "5"
+     ],
+     "a": 3,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = +1 · 5 = <b>5</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>4</span><span>−1</span><span>1</span><span>1</span><span>−3</span><span>4</span><span>2</span><span>−3</span><span>−3</span></span>, calcula el adjunto A<sub>22</sub>.",
+     "c": [
+      "−14",
+      "76",
+      "42",
+      "14"
+     ],
+     "a": 0,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = +1 · (−14) = <b>−14</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>1</span><span>−1</span><span>3</span><span>4</span><span>−2</span><span>3</span><span>1</span><span>4</span><span>0</span></span>, calcula el menor complementario α<sub>13</sub>.",
+     "c": [
+      "3",
+      "21",
+      "18",
+      "−18"
+     ],
+     "a": 2,
+     "e": "Tachamos la fila 1 y la columna 3: <span class='mx det m2'><span>4</span><span>−2</span><span>1</span><span>4</span></span> = <b>18</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>−2</span><span>−3</span><span>1</span><span>−1</span><span>3</span><span>0</span><span>3</span><span>0</span><span>4</span></span>, calcula el menor complementario α<sub>23</sub>.",
+     "c": [
+      "−9",
+      "0",
+      "−45",
+      "9"
+     ],
+     "a": 3,
+     "e": "Tachamos la fila 2 y la columna 3: <span class='mx det m2'><span>−2</span><span>−3</span><span>3</span><span>0</span></span> = <b>9</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>−3</span><span>2</span><span>−2</span><span>3</span><span>−1</span><span>4</span><span>1</span><span>−3</span><span>2</span></span>, calcula el adjunto A<sub>13</sub>.",
+     "c": [
+      "−8",
+      "8",
+      "−18",
+      "16"
+     ],
+     "a": 0,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = +1 · (−8) = <b>−8</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>−3</span><span>1</span><span>−3</span><span>3</span><span>−2</span><span>−1</span><span>3</span><span>4</span><span>1</span></span>, calcula el adjunto A<sub>32</sub>.",
+     "c": [
+      "−66",
+      "−12",
+      "12",
+      "−48"
+     ],
+     "a": 1,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = −1 · 12 = <b>−12</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>0</span><span>−1</span><span>3</span><span>3</span><span>−1</span><span>−2</span><span>4</span><span>−1</span><span>−2</span></span>, calcula el adjunto A<sub>31</sub>.",
+     "c": [
+      "4",
+      "−5",
+      "5",
+      "20"
+     ],
+     "a": 2,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = +1 · 5 = <b>5</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>3</span><span>−3</span><span>−1</span><span>0</span><span>−2</span><span>−2</span><span>2</span><span>2</span><span>1</span></span>, calcula el adjunto A<sub>23</sub>.",
+     "c": [
+      "14",
+      "24",
+      "−12",
+      "12"
+     ],
+     "a": 2,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = −1 · 12 = <b>−12</b>."
+    },
+    {
+     "q": "En A = <span class='mx m3'><span>0</span><span>−2</span><span>0</span><span>−3</span><span>−1</span><span>3</span><span>0</span><span>−3</span><span>3</span></span>, calcula el adjunto A<sub>23</sub>.",
+     "c": [
+      "1",
+      "0",
+      "2",
+      "−18"
+     ],
+     "a": 1,
+     "e": "A<sub>ij</sub> = (−1)<sup>i+j</sup> · α<sub>ij</sub> = −1 · 0 = <b>0</b>."
+    }
+   ]
+  },
+  {
+   "title": "Inversa y rango con determinantes",
+   "items": [
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>1</span><span>2</span><span>2</span><span>2</span><span>4</span><span>−1</span><span>−1</span><span>−2</span></span>?",
+     "c": [
+      "1",
+      "3",
+      "2",
+      "0"
+     ],
+     "a": 0,
+     "e": "todas las filas son proporcionales: <b>1</b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m3'><span>1</span><span>0</span><span>3</span><span>0</span><span>k</span><span>1</span><span>1</span><span>1</span><span>1</span></span>?",
+     "c": [
+      "k = −<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "k = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "k = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "k = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "|A| = k − 1 − 3k = 0 → <b>k = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m3'><span>1</span><span>0</span><span>2</span><span>0</span><span>k</span><span>3</span><span>1</span><span>1</span><span>1</span></span>?",
+     "c": [
+      "k = −1",
+      "k = −3",
+      "k = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "k = 3"
+     ],
+     "a": 1,
+     "e": "|A| = k − 3 − 2k = 0 → <b>k = −3</b>."
+    },
+    {
+     "q": "Si A = <span class='mx m3'><span>2</span><span>2</span><span>−2</span><span>0</span><span>3</span><span>2</span><span>0</span><span>1</span><span>1</span></span>, ¿cuánto vale el elemento (3, 2) de A⁻¹?",
+     "c": [
+      "1",
+      "−1",
+      "−2",
+      "−3"
+     ],
+     "a": 1,
+     "e": "A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup>; |A| = 2 y el adjunto que va en esa posición es A<sub>23</sub> = −2: <b>−1</b>."
+    },
+    {
+     "q": "Si A = <span class='mx m3'><span>2</span><span>0</span><span>0</span><span>0</span><span>2</span><span>1</span><span>2</span><span>3</span><span>2</span></span>, ¿cuánto vale el elemento (2, 3) de A⁻¹?",
+     "c": [
+      "1",
+      "−2",
+      "−1",
+      "−3"
+     ],
+     "a": 2,
+     "e": "A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup>; |A| = 2 y el adjunto que va en esa posición es A<sub>32</sub> = −2: <b>−1</b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m3'><span>1</span><span>0</span><span>2</span><span>0</span><span>k</span><span>−1</span><span>1</span><span>1</span><span>1</span></span>?",
+     "c": [
+      "k = −1",
+      "k = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "k = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "k = 1"
+     ],
+     "a": 3,
+     "e": "|A| = k − (−1) − 2k = 0 → <b>k = 1</b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>3</span><span>2</span><span>0</span><span>1</span><span>1</span><span>1</span><span>4</span><span>3</span></span>?",
+     "c": [
+      "0",
+      "2",
+      "1",
+      "3"
+     ],
+     "a": 1,
+     "e": "|A| = 0 y hay un menor de orden 2 no nulo: <b>2</b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m3'><span>1</span><span>0</span><span>3</span><span>0</span><span>k</span><span>2</span><span>1</span><span>1</span><span>1</span></span>?",
+     "c": [
+      "k = 1",
+      "k = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "k = −1",
+      "k = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "|A| = k − 2 − 3k = 0 → <b>k = −1</b>."
+    },
+    {
+     "q": "Si A = <span class='mx m3'><span>2</span><span>0</span><span>1</span><span>2</span><span>1</span><span>1</span><span>3</span><span>−1</span><span>1</span></span>, ¿cuánto vale el elemento (1, 2) de A⁻¹?",
+     "c": [
+      "2",
+      "−1",
+      "1",
+      "0"
+     ],
+     "a": 2,
+     "e": "A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup>; |A| = −1 y el adjunto que va en esa posición es A<sub>21</sub> = −1: <b>1</b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>4</span><span>2</span><span>2</span><span>8</span><span>4</span><span>−1</span><span>−4</span><span>−2</span></span>?",
+     "c": [
+      "3",
+      "2",
+      "0",
+      "1"
+     ],
+     "a": 3,
+     "e": "todas las filas son proporcionales: <b>1</b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m3'><span>1</span><span>0</span><span>3</span><span>0</span><span>k</span><span>−2</span><span>1</span><span>1</span><span>1</span></span>?",
+     "c": [
+      "k = −<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "k = 1",
+      "k = −1",
+      "k = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "|A| = k − (−2) − 3k = 0 → <b>k = 1</b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>2</span><span>2</span><span>0</span><span>1</span><span>1</span><span>1</span><span>3</span><span>3</span></span>?",
+     "c": [
+      "2",
+      "0",
+      "3",
+      "1"
+     ],
+     "a": 0,
+     "e": "|A| = 0 y hay un menor de orden 2 no nulo: <b>2</b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m3'><span>1</span><span>0</span><span>2</span><span>0</span><span>k</span><span>−2</span><span>1</span><span>1</span><span>1</span></span>?",
+     "c": [
+      "k = −1",
+      "k = −2",
+      "k = 2",
+      "k = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "|A| = k − (−2) − 2k = 0 → <b>k = 2</b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m3'><span>1</span><span>0</span><span>3</span><span>0</span><span>k</span><span>0</span><span>1</span><span>1</span><span>1</span></span>?",
+     "c": [
+      "k = 0",
+      "k = 1",
+      "k = 3",
+      "k = 2"
+     ],
+     "a": 0,
+     "e": "|A| = k − 0 − 3k = 0 → <b>k = 0</b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span><span>2</span><span>3</span><span>1</span><span>1</span></span>?",
+     "c": [
+      "3",
+      "1",
+      "2",
+      "0"
+     ],
+     "a": 0,
+     "e": "|A| ≠ 0: <b>3</b>."
+    },
+    {
+     "q": "¿Para qué valor de k no tiene inversa A = <span class='mx m3'><span>1</span><span>0</span><span>3</span><span>0</span><span>k</span><span>3</span><span>1</span><span>1</span><span>1</span></span>?",
+     "c": [
+      "k = −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "k = 1",
+      "k = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "k = −<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "|A| = k − 3 − 3k = 0 → <b>k = −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Si A = <span class='mx m3'><span>1</span><span>1</span><span>0</span><span>−2</span><span>1</span><span>−1</span><span>2</span><span>0</span><span>1</span></span>, ¿cuánto vale el elemento (1, 3) de A⁻¹?",
+     "c": [
+      "1",
+      "0",
+      "−2",
+      "−1"
+     ],
+     "a": 3,
+     "e": "A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup>; |A| = 1 y el adjunto que va en esa posición es A<sub>31</sub> = −1: <b>−1</b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span><span>2</span><span>2</span><span>1</span><span>−1</span></span>?",
+     "c": [
+      "0",
+      "3",
+      "2",
+      "1"
+     ],
+     "a": 1,
+     "e": "|A| ≠ 0: <b>3</b>."
+    },
+    {
+     "q": "Si A = <span class='mx m3'><span>0</span><span>−2</span><span>−2</span><span>−2</span><span>2</span><span>3</span><span>3</span><span>2</span><span>0</span></span>, ¿cuánto vale el elemento (1, 1) de A⁻¹?",
+     "c": [
+      "0",
+      "−2",
+      "3",
+      "−3"
+     ],
+     "a": 3,
+     "e": "A⁻¹ = (1/|A|) · Adj(A)<sup>t</sup>; |A| = 2 y el adjunto que va en esa posición es A<sub>11</sub> = −6: <b>−3</b>."
+    },
+    {
+     "q": "¿Cuál es el rango de A = <span class='mx m3'><span>1</span><span>1</span><span>2</span><span>0</span><span>1</span><span>1</span><span>1</span><span>2</span><span>3</span></span>?",
+     "c": [
+      "3",
+      "0",
+      "2",
+      "1"
+     ],
+     "a": 2,
+     "e": "|A| = 0 y hay un menor de orden 2 no nulo: <b>2</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 2,
+ "updated": "2026-11-23",
+ "country": "es",
+ "subject": "matematicas",
+ "grade": "2-bachillerato"
+}

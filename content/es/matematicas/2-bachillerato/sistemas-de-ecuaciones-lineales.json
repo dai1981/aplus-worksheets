@@ -1,0 +1,1157 @@
+{
+ "slug": "sistemas-de-ecuaciones-lineales",
+ "title": "Sistemas de ecuaciones lineales",
+ "seo_title": "Sistemas lineales – 2.º de Bachillerato: fichas de matemáticas con soluciones",
+ "short_title": "Sistemas lineales",
+ "domain": "Sentido algebraico",
+ "standard_code": "Matemáticas II · Sentido algebraico",
+ "standard_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-5521",
+ "standard_text": "Sistemas de ecuaciones lineales: expresión matricial, teorema de Rouché-Frobenius, regla de Cramer, discusión con parámetros y resolución de problemas (resumen de los saberes básicos de Matemáticas II del Bachillerato de Ciencias y Tecnología, Real Decreto 243/2022)",
+ "meta_desc": "Fichas de Matemáticas II (2.º de Bachillerato): forma matricial, Rouché-Frobenius, regla de Cramer, discusión con parámetros y problemas. 100 ejercicios con soluciones.",
+ "key_big": "Compatible ⇔ rango(A) = rango(A*)",
+ "key_sub": "Cramer: x = |Aₓ| / |A| (si |A| ≠ 0)",
+ "body_html": "<h2>Cómo se hace</h2><p>Un sistema se escribe A · X = B. A es la matriz de coeficientes y A* (ampliada) añade la columna B.</p><p><b>Rouché-Frobenius</b>: si rango(A) = rango(A*) = n.º de incógnitas, compatible determinado; si rango(A) = rango(A*) &lt; n.º de incógnitas, compatible indeterminado; si rango(A) ≠ rango(A*), incompatible.</p><p><b>Cramer</b> (si |A| ≠ 0): cada incógnita es |A<sub>i</sub>|/|A|, donde A<sub>i</sub> cambia la columna i por los términos independientes.</p><p>Para <b>discutir</b> con un parámetro, se buscan los valores que anulan |A| y se estudia cada caso aparte.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>x + y = 3; 2x − y = 0</p><p class='sn-ex-s'>|A| = −3</p><p class='sn-ex-s'>x = |3 1; 0 −1| / (−3) = 1</p><p class='sn-ex-a'>Respuesta: x = 1, y = 2</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Comparar el rango con el n.º de ecuaciones</td><td>Se compara con el número de incógnitas.</td></tr><tr><td>Usar Cramer con |A| = 0</td><td>Cramer solo vale si |A| ≠ 0.</td></tr><tr><td>Olvidar el caso especial</td><td>Estudia aparte el valor del parámetro que anula |A|.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Qué método es mejor, Gauss o Cramer?",
+   "a": "Gauss sirve siempre y es más rápido con muchas incógnitas; Cramer da fórmulas directas cuando |A| ≠ 0."
+  },
+  {
+   "q": "¿Qué es discutir un sistema?",
+   "a": "Decir, según el valor de un parámetro, si tiene una solución, infinitas o ninguna."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Expresión matricial",
+   "items": [
+    {
+     "q": "¿Cuál es la matriz de coeficientes del sistema? <span class='sys'>3x + 2y − 2z = −3<br>−2x + 2y + 3z = −2<br>−2x + y + 2z = −2</span>",
+     "c": [
+      "<span class='mx m3'><span>3</span><span>2</span><span>−2</span><span>−2</span><span>2</span><span>3</span><span>−2</span><span>1</span><span>2</span></span>",
+      "<span class='mx m4'><span>3</span><span>2</span><span>−2</span><span>−3</span><span>−2</span><span>2</span><span>3</span><span>−2</span><span>−2</span><span>1</span><span>2</span><span>−2</span></span>",
+      "<span class='mx m1'><span>−3</span><span>−2</span><span>−2</span></span>",
+      "<span class='mx m3'><span>3</span><span>−2</span><span>−2</span><span>2</span><span>2</span><span>1</span><span>−2</span><span>3</span><span>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Se escriben los coeficientes de x, y, z por filas: <b><span class='mx m3'><span>3</span><span>2</span><span>−2</span><span>−2</span><span>2</span><span>3</span><span>−2</span><span>1</span><span>2</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz ampliada del sistema? <span class='sys'>−x − 2y + 2z = 7<br>−3y + 3z = 1<br>y = 6</span>",
+     "c": [
+      "<span class='mx m4'><span>7</span><span>−1</span><span>−2</span><span>2</span><span>1</span><span>0</span><span>−3</span><span>3</span><span>6</span><span>0</span><span>1</span><span>0</span></span>",
+      "<span class='mx m4'><span>−1</span><span>−2</span><span>2</span><span>−7</span><span>0</span><span>−3</span><span>3</span><span>−1</span><span>0</span><span>1</span><span>0</span><span>−6</span></span>",
+      "<span class='mx m3'><span>−1</span><span>−2</span><span>2</span><span>0</span><span>−3</span><span>3</span><span>0</span><span>1</span><span>0</span></span>",
+      "<span class='mx m4'><span>−1</span><span>−2</span><span>2</span><span>7</span><span>0</span><span>−3</span><span>3</span><span>1</span><span>0</span><span>1</span><span>0</span><span>6</span></span>"
+     ],
+     "a": 3,
+     "e": "Se añade la columna de términos independientes: <b><span class='mx m4'><span>−1</span><span>−2</span><span>2</span><span>7</span><span>0</span><span>−3</span><span>3</span><span>1</span><span>0</span><span>1</span><span>0</span><span>6</span></span></b>."
+    },
+    {
+     "q": "¿Cómo se escribe en forma matricial el sistema? <span class='sys'>2x = 4<br>2x + 2y = −3</span>",
+     "c": [
+      "<span class='mx m1'><span>x</span><span>y</span></span> · <span class='mx m2'><span>2</span><span>0</span><span>2</span><span>2</span></span> = <span class='mx m1'><span>4</span><span>−3</span></span>",
+      "<span class='mx m2'><span>2</span><span>0</span><span>2</span><span>2</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>4</span><span>−3</span></span>",
+      "<span class='mx m2'><span>2</span><span>0</span><span>2</span><span>2</span></span> · <span class='mx m1'><span>4</span><span>−3</span></span> = <span class='mx m1'><span>x</span><span>y</span></span>",
+      "<span class='mx m2'><span>2</span><span>2</span><span>0</span><span>2</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>4</span><span>−3</span></span>"
+     ],
+     "a": 1,
+     "e": "A · X = B: <b><span class='mx m2'><span>2</span><span>0</span><span>2</span><span>2</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>4</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz de coeficientes del sistema? <span class='sys'>3x + y − 2z = 6<br>2x + y − z = −3<br>4x − y − 3z = 3</span>",
+     "c": [
+      "<span class='mx m3'><span>3</span><span>2</span><span>4</span><span>1</span><span>1</span><span>−1</span><span>−2</span><span>−1</span><span>−3</span></span>",
+      "<span class='mx m1'><span>6</span><span>−3</span><span>3</span></span>",
+      "<span class='mx m4'><span>3</span><span>1</span><span>−2</span><span>6</span><span>2</span><span>1</span><span>−1</span><span>−3</span><span>4</span><span>−1</span><span>−3</span><span>3</span></span>",
+      "<span class='mx m3'><span>3</span><span>1</span><span>−2</span><span>2</span><span>1</span><span>−1</span><span>4</span><span>−1</span><span>−3</span></span>"
+     ],
+     "a": 3,
+     "e": "Se escriben los coeficientes de x, y, z por filas: <b><span class='mx m3'><span>3</span><span>1</span><span>−2</span><span>2</span><span>1</span><span>−1</span><span>4</span><span>−1</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "¿Cómo se escribe en forma matricial el sistema? <span class='sys'>3x + y = 3<br>2x + y = −2</span>",
+     "c": [
+      "<span class='mx m1'><span>x</span><span>y</span></span> · <span class='mx m2'><span>3</span><span>1</span><span>2</span><span>1</span></span> = <span class='mx m1'><span>3</span><span>−2</span></span>",
+      "<span class='mx m2'><span>3</span><span>1</span><span>2</span><span>1</span></span> · <span class='mx m1'><span>3</span><span>−2</span></span> = <span class='mx m1'><span>x</span><span>y</span></span>",
+      "<span class='mx m2'><span>3</span><span>1</span><span>2</span><span>1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>3</span><span>−2</span></span>",
+      "<span class='mx m2'><span>3</span><span>2</span><span>1</span><span>1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>3</span><span>−2</span></span>"
+     ],
+     "a": 2,
+     "e": "A · X = B: <b><span class='mx m2'><span>3</span><span>1</span><span>2</span><span>1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>3</span><span>−2</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz ampliada del sistema? <span class='sys'>2x − 2y − 2z = 6<br>3x + 2y = −2<br>2x − y − 2z = −5</span>",
+     "c": [
+      "<span class='mx m3'><span>2</span><span>−2</span><span>−2</span><span>3</span><span>2</span><span>0</span><span>2</span><span>−1</span><span>−2</span></span>",
+      "<span class='mx m4'><span>2</span><span>−2</span><span>−2</span><span>−6</span><span>3</span><span>2</span><span>0</span><span>2</span><span>2</span><span>−1</span><span>−2</span><span>5</span></span>",
+      "<span class='mx m4'><span>2</span><span>−2</span><span>−2</span><span>6</span><span>3</span><span>2</span><span>0</span><span>−2</span><span>2</span><span>−1</span><span>−2</span><span>−5</span></span>",
+      "<span class='mx m4'><span>6</span><span>2</span><span>−2</span><span>−2</span><span>−2</span><span>3</span><span>2</span><span>0</span><span>−5</span><span>2</span><span>−1</span><span>−2</span></span>"
+     ],
+     "a": 2,
+     "e": "Se añade la columna de términos independientes: <b><span class='mx m4'><span>2</span><span>−2</span><span>−2</span><span>6</span><span>3</span><span>2</span><span>0</span><span>−2</span><span>2</span><span>−1</span><span>−2</span><span>−5</span></span></b>."
+    },
+    {
+     "q": "¿Cómo se escribe en forma matricial el sistema? <span class='sys'>2x − 2y = −1<br>4x + y = 5</span>",
+     "c": [
+      "<span class='mx m1'><span>x</span><span>y</span></span> · <span class='mx m2'><span>2</span><span>−2</span><span>4</span><span>1</span></span> = <span class='mx m1'><span>−1</span><span>5</span></span>",
+      "<span class='mx m2'><span>2</span><span>−2</span><span>4</span><span>1</span></span> · <span class='mx m1'><span>−1</span><span>5</span></span> = <span class='mx m1'><span>x</span><span>y</span></span>",
+      "<span class='mx m2'><span>2</span><span>4</span><span>−2</span><span>1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−1</span><span>5</span></span>",
+      "<span class='mx m2'><span>2</span><span>−2</span><span>4</span><span>1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−1</span><span>5</span></span>"
+     ],
+     "a": 3,
+     "e": "A · X = B: <b><span class='mx m2'><span>2</span><span>−2</span><span>4</span><span>1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−1</span><span>5</span></span></b>."
+    },
+    {
+     "q": "¿Cómo se escribe en forma matricial el sistema? <span class='sys'>−3x − 3y = 1<br>x + y = 3</span>",
+     "c": [
+      "<span class='mx m2'><span>−3</span><span>−3</span><span>1</span><span>1</span></span> · <span class='mx m1'><span>1</span><span>3</span></span> = <span class='mx m1'><span>x</span><span>y</span></span>",
+      "<span class='mx m1'><span>x</span><span>y</span></span> · <span class='mx m2'><span>−3</span><span>−3</span><span>1</span><span>1</span></span> = <span class='mx m1'><span>1</span><span>3</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−3</span><span>1</span><span>1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>1</span><span>3</span></span>",
+      "<span class='mx m2'><span>−3</span><span>1</span><span>−3</span><span>1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>1</span><span>3</span></span>"
+     ],
+     "a": 2,
+     "e": "A · X = B: <b><span class='mx m2'><span>−3</span><span>−3</span><span>1</span><span>1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>1</span><span>3</span></span></b>."
+    },
+    {
+     "q": "¿Cómo se escribe en forma matricial el sistema? <span class='sys'>2x − 3y = 6<br>2x + 4y = −3</span>",
+     "c": [
+      "<span class='mx m2'><span>2</span><span>−3</span><span>2</span><span>4</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>6</span><span>−3</span></span>",
+      "<span class='mx m2'><span>2</span><span>−3</span><span>2</span><span>4</span></span> · <span class='mx m1'><span>6</span><span>−3</span></span> = <span class='mx m1'><span>x</span><span>y</span></span>",
+      "<span class='mx m1'><span>x</span><span>y</span></span> · <span class='mx m2'><span>2</span><span>−3</span><span>2</span><span>4</span></span> = <span class='mx m1'><span>6</span><span>−3</span></span>",
+      "<span class='mx m2'><span>2</span><span>2</span><span>−3</span><span>4</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>6</span><span>−3</span></span>"
+     ],
+     "a": 0,
+     "e": "A · X = B: <b><span class='mx m2'><span>2</span><span>−3</span><span>2</span><span>4</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>6</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz de coeficientes del sistema? <span class='sys'>−2x + 4y = 2<br>3x − y = 1<br>2x + 2y − z = 8</span>",
+     "c": [
+      "<span class='mx m1'><span>2</span><span>1</span><span>8</span></span>",
+      "<span class='mx m3'><span>−2</span><span>4</span><span>0</span><span>3</span><span>−1</span><span>0</span><span>2</span><span>2</span><span>−1</span></span>",
+      "<span class='mx m4'><span>−2</span><span>4</span><span>0</span><span>2</span><span>3</span><span>−1</span><span>0</span><span>1</span><span>2</span><span>2</span><span>−1</span><span>8</span></span>",
+      "<span class='mx m3'><span>−2</span><span>3</span><span>2</span><span>4</span><span>−1</span><span>2</span><span>0</span><span>0</span><span>−1</span></span>"
+     ],
+     "a": 1,
+     "e": "Se escriben los coeficientes de x, y, z por filas: <b><span class='mx m3'><span>−2</span><span>4</span><span>0</span><span>3</span><span>−1</span><span>0</span><span>2</span><span>2</span><span>−1</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz de coeficientes del sistema? <span class='sys'>4x − 3y − 2z = 6<br>y + 2z = −6<br>−2x + 3y + 3z = −6</span>",
+     "c": [
+      "<span class='mx m3'><span>4</span><span>0</span><span>−2</span><span>−3</span><span>1</span><span>3</span><span>−2</span><span>2</span><span>3</span></span>",
+      "<span class='mx m1'><span>6</span><span>−6</span><span>−6</span></span>",
+      "<span class='mx m3'><span>4</span><span>−3</span><span>−2</span><span>0</span><span>1</span><span>2</span><span>−2</span><span>3</span><span>3</span></span>",
+      "<span class='mx m4'><span>4</span><span>−3</span><span>−2</span><span>6</span><span>0</span><span>1</span><span>2</span><span>−6</span><span>−2</span><span>3</span><span>3</span><span>−6</span></span>"
+     ],
+     "a": 2,
+     "e": "Se escriben los coeficientes de x, y, z por filas: <b><span class='mx m3'><span>4</span><span>−3</span><span>−2</span><span>0</span><span>1</span><span>2</span><span>−2</span><span>3</span><span>3</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz de coeficientes del sistema? <span class='sys'>3y + 3z = −1<br>−x + 4y − 2z = −5<br>x + 3z = 3</span>",
+     "c": [
+      "<span class='mx m3'><span>0</span><span>3</span><span>3</span><span>−1</span><span>4</span><span>−2</span><span>1</span><span>0</span><span>3</span></span>",
+      "<span class='mx m3'><span>0</span><span>−1</span><span>1</span><span>3</span><span>4</span><span>0</span><span>3</span><span>−2</span><span>3</span></span>",
+      "<span class='mx m4'><span>0</span><span>3</span><span>3</span><span>−1</span><span>−1</span><span>4</span><span>−2</span><span>−5</span><span>1</span><span>0</span><span>3</span><span>3</span></span>",
+      "<span class='mx m1'><span>−1</span><span>−5</span><span>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Se escriben los coeficientes de x, y, z por filas: <b><span class='mx m3'><span>0</span><span>3</span><span>3</span><span>−1</span><span>4</span><span>−2</span><span>1</span><span>0</span><span>3</span></span></b>."
+    },
+    {
+     "q": "¿Cómo se escribe en forma matricial el sistema? <span class='sys'>2x + 3y = −4<br>−x = 2</span>",
+     "c": [
+      "<span class='mx m2'><span>2</span><span>3</span><span>−1</span><span>0</span></span> · <span class='mx m1'><span>−4</span><span>2</span></span> = <span class='mx m1'><span>x</span><span>y</span></span>",
+      "<span class='mx m1'><span>x</span><span>y</span></span> · <span class='mx m2'><span>2</span><span>3</span><span>−1</span><span>0</span></span> = <span class='mx m1'><span>−4</span><span>2</span></span>",
+      "<span class='mx m2'><span>2</span><span>−1</span><span>3</span><span>0</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−4</span><span>2</span></span>",
+      "<span class='mx m2'><span>2</span><span>3</span><span>−1</span><span>0</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−4</span><span>2</span></span>"
+     ],
+     "a": 3,
+     "e": "A · X = B: <b><span class='mx m2'><span>2</span><span>3</span><span>−1</span><span>0</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−4</span><span>2</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz ampliada del sistema? <span class='sys'>−2x + 3y + 2z = −5<br>−3x + 2y − 3z = −3<br>4x − 2y = 8</span>",
+     "c": [
+      "<span class='mx m3'><span>−2</span><span>3</span><span>2</span><span>−3</span><span>2</span><span>−3</span><span>4</span><span>−2</span><span>0</span></span>",
+      "<span class='mx m4'><span>−5</span><span>−2</span><span>3</span><span>2</span><span>−3</span><span>−3</span><span>2</span><span>−3</span><span>8</span><span>4</span><span>−2</span><span>0</span></span>",
+      "<span class='mx m4'><span>−2</span><span>3</span><span>2</span><span>−5</span><span>−3</span><span>2</span><span>−3</span><span>−3</span><span>4</span><span>−2</span><span>0</span><span>8</span></span>",
+      "<span class='mx m4'><span>−2</span><span>3</span><span>2</span><span>5</span><span>−3</span><span>2</span><span>−3</span><span>3</span><span>4</span><span>−2</span><span>0</span><span>−8</span></span>"
+     ],
+     "a": 2,
+     "e": "Se añade la columna de términos independientes: <b><span class='mx m4'><span>−2</span><span>3</span><span>2</span><span>−5</span><span>−3</span><span>2</span><span>−3</span><span>−3</span><span>4</span><span>−2</span><span>0</span><span>8</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz de coeficientes del sistema? <span class='sys'>4x + y − z = 7<br>−x + 4y − z = 4<br>−3x − 2y − 3z = 7</span>",
+     "c": [
+      "<span class='mx m3'><span>4</span><span>−1</span><span>−3</span><span>1</span><span>4</span><span>−2</span><span>−1</span><span>−1</span><span>−3</span></span>",
+      "<span class='mx m3'><span>4</span><span>1</span><span>−1</span><span>−1</span><span>4</span><span>−1</span><span>−3</span><span>−2</span><span>−3</span></span>",
+      "<span class='mx m1'><span>7</span><span>4</span><span>7</span></span>",
+      "<span class='mx m4'><span>4</span><span>1</span><span>−1</span><span>7</span><span>−1</span><span>4</span><span>−1</span><span>4</span><span>−3</span><span>−2</span><span>−3</span><span>7</span></span>"
+     ],
+     "a": 1,
+     "e": "Se escriben los coeficientes de x, y, z por filas: <b><span class='mx m3'><span>4</span><span>1</span><span>−1</span><span>−1</span><span>4</span><span>−1</span><span>−3</span><span>−2</span><span>−3</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz ampliada del sistema? <span class='sys'>2x − y = 8<br>−2x + 4y + 2z = 7<br>3x − 2z = 5</span>",
+     "c": [
+      "<span class='mx m3'><span>2</span><span>−1</span><span>0</span><span>−2</span><span>4</span><span>2</span><span>3</span><span>0</span><span>−2</span></span>",
+      "<span class='mx m4'><span>2</span><span>−1</span><span>0</span><span>−8</span><span>−2</span><span>4</span><span>2</span><span>−7</span><span>3</span><span>0</span><span>−2</span><span>−5</span></span>",
+      "<span class='mx m4'><span>8</span><span>2</span><span>−1</span><span>0</span><span>7</span><span>−2</span><span>4</span><span>2</span><span>5</span><span>3</span><span>0</span><span>−2</span></span>",
+      "<span class='mx m4'><span>2</span><span>−1</span><span>0</span><span>8</span><span>−2</span><span>4</span><span>2</span><span>7</span><span>3</span><span>0</span><span>−2</span><span>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Se añade la columna de términos independientes: <b><span class='mx m4'><span>2</span><span>−1</span><span>0</span><span>8</span><span>−2</span><span>4</span><span>2</span><span>7</span><span>3</span><span>0</span><span>−2</span><span>5</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz ampliada del sistema? <span class='sys'>−3x + 2y + z = 1<br>4x − 3z = 4<br>x + y − 3z = 4</span>",
+     "c": [
+      "<span class='mx m4'><span>−3</span><span>2</span><span>1</span><span>1</span><span>4</span><span>0</span><span>−3</span><span>4</span><span>1</span><span>1</span><span>−3</span><span>4</span></span>",
+      "<span class='mx m3'><span>−3</span><span>2</span><span>1</span><span>4</span><span>0</span><span>−3</span><span>1</span><span>1</span><span>−3</span></span>",
+      "<span class='mx m4'><span>1</span><span>−3</span><span>2</span><span>1</span><span>4</span><span>4</span><span>0</span><span>−3</span><span>4</span><span>1</span><span>1</span><span>−3</span></span>",
+      "<span class='mx m4'><span>−3</span><span>2</span><span>1</span><span>−1</span><span>4</span><span>0</span><span>−3</span><span>−4</span><span>1</span><span>1</span><span>−3</span><span>−4</span></span>"
+     ],
+     "a": 0,
+     "e": "Se añade la columna de términos independientes: <b><span class='mx m4'><span>−3</span><span>2</span><span>1</span><span>1</span><span>4</span><span>0</span><span>−3</span><span>4</span><span>1</span><span>1</span><span>−3</span><span>4</span></span></b>."
+    },
+    {
+     "q": "¿Cómo se escribe en forma matricial el sistema? <span class='sys'>−3x − y = −3<br>3x − y = 5</span>",
+     "c": [
+      "<span class='mx m2'><span>−3</span><span>−1</span><span>3</span><span>−1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−3</span><span>5</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−1</span><span>3</span><span>−1</span></span> · <span class='mx m1'><span>−3</span><span>5</span></span> = <span class='mx m1'><span>x</span><span>y</span></span>",
+      "<span class='mx m1'><span>x</span><span>y</span></span> · <span class='mx m2'><span>−3</span><span>−1</span><span>3</span><span>−1</span></span> = <span class='mx m1'><span>−3</span><span>5</span></span>",
+      "<span class='mx m2'><span>−3</span><span>3</span><span>−1</span><span>−1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−3</span><span>5</span></span>"
+     ],
+     "a": 0,
+     "e": "A · X = B: <b><span class='mx m2'><span>−3</span><span>−1</span><span>3</span><span>−1</span></span> · <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−3</span><span>5</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz de coeficientes del sistema? <span class='sys'>3x + 2y = 2<br>−2x + 4y − z = 7<br>4x − 3y + 2z = 2</span>",
+     "c": [
+      "<span class='mx m4'><span>3</span><span>2</span><span>0</span><span>2</span><span>−2</span><span>4</span><span>−1</span><span>7</span><span>4</span><span>−3</span><span>2</span><span>2</span></span>",
+      "<span class='mx m3'><span>3</span><span>2</span><span>0</span><span>−2</span><span>4</span><span>−1</span><span>4</span><span>−3</span><span>2</span></span>",
+      "<span class='mx m3'><span>3</span><span>−2</span><span>4</span><span>2</span><span>4</span><span>−3</span><span>0</span><span>−1</span><span>2</span></span>",
+      "<span class='mx m1'><span>2</span><span>7</span><span>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Se escriben los coeficientes de x, y, z por filas: <b><span class='mx m3'><span>3</span><span>2</span><span>0</span><span>−2</span><span>4</span><span>−1</span><span>4</span><span>−3</span><span>2</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es la matriz de coeficientes del sistema? <span class='sys'>−x + 3y + 2z = 0<br>4x + 3y = −4<br>3x − 3y − 2z = −1</span>",
+     "c": [
+      "<span class='mx m4'><span>−1</span><span>3</span><span>2</span><span>0</span><span>4</span><span>3</span><span>0</span><span>−4</span><span>3</span><span>−3</span><span>−2</span><span>−1</span></span>",
+      "<span class='mx m3'><span>−1</span><span>3</span><span>2</span><span>4</span><span>3</span><span>0</span><span>3</span><span>−3</span><span>−2</span></span>",
+      "<span class='mx m3'><span>−1</span><span>4</span><span>3</span><span>3</span><span>3</span><span>−3</span><span>2</span><span>0</span><span>−2</span></span>",
+      "<span class='mx m1'><span>0</span><span>−4</span><span>−1</span></span>"
+     ],
+     "a": 1,
+     "e": "Se escriben los coeficientes de x, y, z por filas: <b><span class='mx m3'><span>−1</span><span>3</span><span>2</span><span>4</span><span>3</span><span>0</span><span>3</span><span>−3</span><span>−2</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Teorema de Rouché-Frobenius",
+   "items": [
+    {
+     "q": "Si |A| ≠ 0 en un sistema de 3 × 3, el sistema es…",
+     "c": [
+      "incompatible",
+      "compatible indeterminado",
+      "no se puede saber",
+      "compatible determinado"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>compatible determinado</b>."
+    },
+    {
+     "q": "Un sistema de 4 ecuaciones con 2 incógnitas tiene rango(A) = 2 y rango(A*) = 2. ¿Cómo es?",
+     "c": [
+      "compatible determinado",
+      "compatible indeterminado",
+      "no se puede saber",
+      "incompatible"
+     ],
+     "a": 0,
+     "e": "Rouché-Frobenius: rangos iguales al número de incógnitas → <b>compatible determinado</b>."
+    },
+    {
+     "q": "Un sistema de 4 ecuaciones con 3 incógnitas tiene rango(A) = 3 y rango(A*) = 4. ¿Cómo es?",
+     "c": [
+      "incompatible",
+      "compatible indeterminado",
+      "compatible determinado",
+      "no se puede saber"
+     ],
+     "a": 0,
+     "e": "Rouché-Frobenius: rangos distintos → <b>incompatible</b>."
+    },
+    {
+     "q": "Según Rouché-Frobenius, un sistema es compatible si…",
+     "c": [
+      "rango(A) = 3",
+      "|A| = 0",
+      "rango(A*) &gt; rango(A)",
+      "rango(A) = rango(A*)"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>rango(A) = rango(A*)</b>."
+    },
+    {
+     "q": "Un sistema homogéneo (términos independientes 0) siempre es…",
+     "c": [
+      "compatible determinado",
+      "compatible",
+      "indeterminado",
+      "incompatible"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>compatible</b>."
+    },
+    {
+     "q": "Un sistema de 4 ecuaciones con 4 incógnitas tiene rango(A) = 4 y rango(A*) = 4. ¿Cómo es?",
+     "c": [
+      "incompatible",
+      "no se puede saber",
+      "compatible determinado",
+      "compatible indeterminado"
+     ],
+     "a": 2,
+     "e": "Rouché-Frobenius: rangos iguales al número de incógnitas → <b>compatible determinado</b>."
+    },
+    {
+     "q": "Un sistema de 2 ecuaciones con 2 incógnitas tiene rango(A) = 2 y rango(A*) = 2. ¿Cómo es?",
+     "c": [
+      "no se puede saber",
+      "compatible indeterminado",
+      "compatible determinado",
+      "incompatible"
+     ],
+     "a": 2,
+     "e": "Rouché-Frobenius: rangos iguales al número de incógnitas → <b>compatible determinado</b>."
+    },
+    {
+     "q": "Un sistema de 3 ecuaciones con 2 incógnitas tiene rango(A) = 2 y rango(A*) = 3. ¿Cómo es?",
+     "c": [
+      "compatible indeterminado",
+      "no se puede saber",
+      "compatible determinado",
+      "incompatible"
+     ],
+     "a": 3,
+     "e": "Rouché-Frobenius: rangos distintos → <b>incompatible</b>."
+    },
+    {
+     "q": "Un sistema de 4 ecuaciones con 4 incógnitas tiene rango(A) = 2 y rango(A*) = 2. ¿Cómo es?",
+     "c": [
+      "incompatible",
+      "no se puede saber",
+      "compatible indeterminado (con 2 parámetros)",
+      "compatible determinado"
+     ],
+     "a": 2,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 2 parámetros)."
+    },
+    {
+     "q": "Un sistema de 3 ecuaciones con 4 incógnitas tiene rango(A) = 3 y rango(A*) = 3. ¿Cómo es?",
+     "c": [
+      "compatible determinado",
+      "compatible indeterminado (con 1 parámetro)",
+      "no se puede saber",
+      "incompatible"
+     ],
+     "a": 1,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 1 parámetro)."
+    },
+    {
+     "q": "Un sistema de 3 ecuaciones con 2 incógnitas tiene rango(A) = 1 y rango(A*) = 1. ¿Cómo es?",
+     "c": [
+      "compatible indeterminado (con 1 parámetro)",
+      "incompatible",
+      "compatible determinado",
+      "no se puede saber"
+     ],
+     "a": 0,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 1 parámetro)."
+    },
+    {
+     "q": "Un sistema de 2 ecuaciones con 4 incógnitas tiene rango(A) = 1 y rango(A*) = 1. ¿Cómo es?",
+     "c": [
+      "compatible indeterminado (con 3 parámetros)",
+      "no se puede saber",
+      "compatible determinado",
+      "incompatible"
+     ],
+     "a": 0,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 3 parámetros)."
+    },
+    {
+     "q": "Un sistema de 4 ecuaciones con 3 incógnitas tiene rango(A) = 3 y rango(A*) = 3. ¿Cómo es?",
+     "c": [
+      "no se puede saber",
+      "compatible determinado",
+      "compatible indeterminado",
+      "incompatible"
+     ],
+     "a": 1,
+     "e": "Rouché-Frobenius: rangos iguales al número de incógnitas → <b>compatible determinado</b>."
+    },
+    {
+     "q": "Un sistema de 3 ecuaciones con 3 incógnitas tiene rango(A) = 3 y rango(A*) = 3. ¿Cómo es?",
+     "c": [
+      "no se puede saber",
+      "compatible indeterminado",
+      "compatible determinado",
+      "incompatible"
+     ],
+     "a": 2,
+     "e": "Rouché-Frobenius: rangos iguales al número de incógnitas → <b>compatible determinado</b>."
+    },
+    {
+     "q": "Un sistema de 3 ecuaciones con 3 incógnitas tiene rango(A) = 1 y rango(A*) = 2. ¿Cómo es?",
+     "c": [
+      "compatible determinado",
+      "no se puede saber",
+      "compatible indeterminado",
+      "incompatible"
+     ],
+     "a": 3,
+     "e": "Rouché-Frobenius: rangos distintos → <b>incompatible</b>."
+    },
+    {
+     "q": "Un sistema de 3 ecuaciones con 4 incógnitas tiene rango(A) = 2 y rango(A*) = 2. ¿Cómo es?",
+     "c": [
+      "compatible determinado",
+      "no se puede saber",
+      "incompatible",
+      "compatible indeterminado (con 2 parámetros)"
+     ],
+     "a": 3,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 2 parámetros)."
+    },
+    {
+     "q": "Un sistema de 3 ecuaciones con 2 incógnitas tiene rango(A) = 2 y rango(A*) = 2. ¿Cómo es?",
+     "c": [
+      "compatible indeterminado",
+      "compatible determinado",
+      "no se puede saber",
+      "incompatible"
+     ],
+     "a": 1,
+     "e": "Rouché-Frobenius: rangos iguales al número de incógnitas → <b>compatible determinado</b>."
+    },
+    {
+     "q": "Si rango(A) = rango(A*) = 2 y hay 3 incógnitas, la solución depende de…",
+     "c": [
+      "3 parámetros",
+      "2 parámetros",
+      "1 parámetro",
+      "ningún parámetro"
+     ],
+     "a": 2,
+     "e": "Respuesta: <b>1 parámetro</b>."
+    },
+    {
+     "q": "Un sistema de 2 ecuaciones con 2 incógnitas tiene rango(A) = 1 y rango(A*) = 2. ¿Cómo es?",
+     "c": [
+      "incompatible",
+      "compatible determinado",
+      "compatible indeterminado",
+      "no se puede saber"
+     ],
+     "a": 0,
+     "e": "Rouché-Frobenius: rangos distintos → <b>incompatible</b>."
+    },
+    {
+     "q": "Un sistema de 2 ecuaciones con 3 incógnitas tiene rango(A) = 2 y rango(A*) = 2. ¿Cómo es?",
+     "c": [
+      "no se puede saber",
+      "compatible indeterminado (con 1 parámetro)",
+      "incompatible",
+      "compatible determinado"
+     ],
+     "a": 1,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 1 parámetro)."
+    }
+   ]
+  },
+  {
+   "title": "Regla de Cramer",
+   "items": [
+    {
+     "q": "Resuelve por Cramer: <span class='sys'>−2x + 5y = −35<br>−4y = 20</span>",
+     "c": [
+      "x = 5, y = 5",
+      "x = 5, y = −5",
+      "x = −5, y = −5",
+      "x = −5, y = 5"
+     ],
+     "a": 1,
+     "e": "|A| = 8; x = |A<sub>x</sub>|/|A| = 40/8 = 5; y análogamente. <b>x = 5, y = −5</b>."
+    },
+    {
+     "q": "Resuelve por Cramer: <span class='sys'>2x + 2y = 4<br>−2x − 4y = 4</span>",
+     "c": [
+      "x = −4, y = 6",
+      "x = 6, y = −4",
+      "x = −6, y = −4",
+      "x = 6, y = 4"
+     ],
+     "a": 1,
+     "e": "|A| = −4; x = |A<sub>x</sub>|/|A| = −24/(−4) = 6; y análogamente. <b>x = 6, y = −4</b>."
+    },
+    {
+     "q": "En el sistema <span class='sys'>−x + 3y = 6<br>−x − 2y + 2z = −7<br>2x − 2z = 4</span> ¿cuánto vale y por Cramer?",
+     "c": [
+      "y = 1",
+      "y = −3",
+      "y = 3",
+      "y = 6"
+     ],
+     "a": 2,
+     "e": "|A| = 2 y |A<sub>y</sub>| = 6: y = 6/2 = <b>3</b>."
+    },
+    {
+     "q": "En el sistema <span class='sys'>2x − y + 2z = −3<br>−x − 2z = 3<br>2x − y + 3z = −7</span> ¿cuánto vale y por Cramer?",
+     "c": [
+      "y = −5",
+      "y = 5",
+      "y = −4",
+      "y = 6"
+     ],
+     "a": 1,
+     "e": "|A| = −1 y |A<sub>y</sub>| = −5: y = −5/(−1) = <b>5</b>."
+    },
+    {
+     "q": "Resuelve el sistema: <span class='sys'>−x − 2z = 4<br>−2x + 2y + 2z = 2<br>−y + 3z = −3</span>",
+     "c": [
+      "(2, 0, −1)",
+      "(0, −2, −1)",
+      "(−2, 0, −1)",
+      "(−2, 0, 1)"
+     ],
+     "a": 2,
+     "e": "|A| = −12 ≠ 0: es compatible determinado; por Cramer o Gauss, <b>(−2, 0, −1)</b>."
+    },
+    {
+     "q": "Resuelve el sistema: <span class='sys'>−2x + 3y − 2z = 3<br>−2x + 3y = −3<br>2x − y + 3z = −12</span>",
+     "c": [
+      "(−3, −3, −4)",
+      "(−3, −3, 3)",
+      "(−3, −3, −3)",
+      "(3, −3, −3)"
+     ],
+     "a": 2,
+     "e": "|A| = 8 ≠ 0: es compatible determinado; por Cramer o Gauss, <b>(−3, −3, −3)</b>."
+    },
+    {
+     "q": "Resuelve por Cramer: <span class='sys'>−x + 2y = −7<br>3x + y = 7</span>",
+     "c": [
+      "x = −2, y = 3",
+      "x = 3, y = 2",
+      "x = −3, y = −2",
+      "x = 3, y = −2"
+     ],
+     "a": 3,
+     "e": "|A| = −7; x = |A<sub>x</sub>|/|A| = −21/(−7) = 3; y análogamente. <b>x = 3, y = −2</b>."
+    },
+    {
+     "q": "Resuelve por Cramer: <span class='sys'>−2x + 5y = 10<br>−x + 5y = 5</span>",
+     "c": [
+      "x = −5, y = 0",
+      "x = 0, y = −5",
+      "x = −4, y = 0",
+      "x = 5, y = 0"
+     ],
+     "a": 0,
+     "e": "|A| = −5; x = |A<sub>x</sub>|/|A| = 25/(−5) = −5; y análogamente. <b>x = −5, y = 0</b>."
+    },
+    {
+     "q": "Resuelve el sistema: <span class='sys'>−x + y + 3z = 18<br>2x − z = −8<br>−2x + y + 2z = 16</span>",
+     "c": [
+      "(−2, 4, −4)",
+      "(4, −2, 4)",
+      "(−2, 4, 4)",
+      "(2, 4, 4)"
+     ],
+     "a": 2,
+     "e": "|A| = 3 ≠ 0: es compatible determinado; por Cramer o Gauss, <b>(−2, 4, 4)</b>."
+    },
+    {
+     "q": "Resuelve por Cramer: <span class='sys'>4x + 2y = 16<br>−x + 5y = −26</span>",
+     "c": [
+      "x = 6, y = −4",
+      "x = −4, y = 6",
+      "x = −6, y = −4",
+      "x = 6, y = 4"
+     ],
+     "a": 0,
+     "e": "|A| = 22; x = |A<sub>x</sub>|/|A| = 132/22 = 6; y análogamente. <b>x = 6, y = −4</b>."
+    },
+    {
+     "q": "En el sistema <span class='sys'>3x + y = −1<br>−x − 2z = 1<br>−2y + 2z = −4</span> ¿cuánto vale z por Cramer?",
+     "c": [
+      "z = −1",
+      "z = 1",
+      "z = 2",
+      "z = 0"
+     ],
+     "a": 3,
+     "e": "|A| = −10 y |A<sub>z</sub>| = 0: z = 0/(−10) = <b>0</b>."
+    },
+    {
+     "q": "Resuelve por Cramer: <span class='sys'>−3x = 12<br>3x + y = −10</span>",
+     "c": [
+      "x = −4, y = −2",
+      "x = 2, y = −4",
+      "x = 4, y = 2",
+      "x = −4, y = 2"
+     ],
+     "a": 3,
+     "e": "|A| = −3; x = |A<sub>x</sub>|/|A| = 12/(−3) = −4; y análogamente. <b>x = −4, y = 2</b>."
+    },
+    {
+     "q": "Resuelve por Cramer: <span class='sys'>2x + 5y = 22<br>3x + 2y = 0</span>",
+     "c": [
+      "x = 4, y = 6",
+      "x = −4, y = 6",
+      "x = 6, y = −4",
+      "x = −4, y = −6"
+     ],
+     "a": 1,
+     "e": "|A| = −11; x = |A<sub>x</sub>|/|A| = 44/(−11) = −4; y análogamente. <b>x = −4, y = 6</b>."
+    },
+    {
+     "q": "Resuelve el sistema: <span class='sys'>2y + z = 4<br>−2y + z = −12<br>2x + y − z = 16</span>",
+     "c": [
+      "(4, 4, −4)",
+      "(4, 4, 4)",
+      "(−4, 4, −4)",
+      "(−4, 4, 4)"
+     ],
+     "a": 0,
+     "e": "|A| = 8 ≠ 0: es compatible determinado; por Cramer o Gauss, <b>(4, 4, −4)</b>."
+    },
+    {
+     "q": "Resuelve el sistema: <span class='sys'>−2x − y − 2z = 5<br>2x + 2y + 3z = −10<br>−x + 2y − z = 0</span>",
+     "c": [
+      "(−1, 2, −4)",
+      "(2, −1, 4)",
+      "(−2, −1, −4)",
+      "(2, −1, −4)"
+     ],
+     "a": 3,
+     "e": "|A| = 5 ≠ 0: es compatible determinado; por Cramer o Gauss, <b>(2, −1, −4)</b>."
+    },
+    {
+     "q": "Resuelve por Cramer: <span class='sys'>x − 3y = −11<br>4x + y = 21</span>",
+     "c": [
+      "x = −4, y = 5",
+      "x = 4, y = −5",
+      "x = 4, y = 5",
+      "x = 5, y = 4"
+     ],
+     "a": 2,
+     "e": "|A| = 13; x = |A<sub>x</sub>|/|A| = 52/13 = 4; y análogamente. <b>x = 4, y = 5</b>."
+    },
+    {
+     "q": "Resuelve por Cramer: <span class='sys'>y = 0<br>−x = 4</span>",
+     "c": [
+      "x = −3, y = 0",
+      "x = −4, y = 0",
+      "x = 4, y = 0",
+      "x = 0, y = −4"
+     ],
+     "a": 1,
+     "e": "|A| = 1; x = |A<sub>x</sub>|/|A| = −4/1 = −4; y análogamente. <b>x = −4, y = 0</b>."
+    },
+    {
+     "q": "Resuelve por Cramer: <span class='sys'>−x + 4y = 9<br>3x + 2y = 15</span>",
+     "c": [
+      "x = −3, y = 3",
+      "x = 4, y = 3",
+      "x = 3, y = −3",
+      "x = 3, y = 3"
+     ],
+     "a": 3,
+     "e": "|A| = −14; x = |A<sub>x</sub>|/|A| = −42/(−14) = 3; y análogamente. <b>x = 3, y = 3</b>."
+    },
+    {
+     "q": "Resuelve el sistema: <span class='sys'>−2x = −4<br>3y = −3<br>x + 3y + z = −5</span>",
+     "c": [
+      "(2, −1, −4)",
+      "(2, −1, 4)",
+      "(−1, 2, −4)",
+      "(−2, −1, −4)"
+     ],
+     "a": 0,
+     "e": "|A| = −6 ≠ 0: es compatible determinado; por Cramer o Gauss, <b>(2, −1, −4)</b>."
+    },
+    {
+     "q": "Resuelve por Cramer: <span class='sys'>5x − 3y = 22<br>−4x − 3y = −23</span>",
+     "c": [
+      "x = 5, y = 1",
+      "x = −5, y = 1",
+      "x = 5, y = −1",
+      "x = 1, y = 5"
+     ],
+     "a": 0,
+     "e": "|A| = −27; x = |A<sub>x</sub>|/|A| = −135/(−27) = 5; y análogamente. <b>x = 5, y = 1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Discusión con parámetros",
+   "items": [
+    {
+     "q": "¿Para qué valor de m tiene el sistema homogéneo soluciones distintas de (0, 0)? <span class='sys'>x + 4y = 0<br>−2x + my = 0</span>",
+     "c": [
+      "m = 0",
+      "m = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "m = −8",
+      "m = 8"
+     ],
+     "a": 2,
+     "e": "Hace falta |A| = 0: m − (−8) = 0 → <b>m = −8</b>."
+    },
+    {
+     "q": "Un sistema de 4 ecuaciones con 3 incógnitas tiene rango(A) = 1 y rango(A*) = 1. ¿Cómo es?",
+     "c": [
+      "compatible indeterminado (con 2 parámetros)",
+      "no se puede saber",
+      "compatible determinado",
+      "incompatible"
+     ],
+     "a": 0,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 2 parámetros)."
+    },
+    {
+     "q": "Un sistema de 4 ecuaciones con 2 incógnitas tiene rango(A) = 1 y rango(A*) = 1. ¿Cómo es?",
+     "c": [
+      "compatible indeterminado (con 1 parámetro)",
+      "incompatible",
+      "no se puede saber",
+      "compatible determinado"
+     ],
+     "a": 0,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 1 parámetro)."
+    },
+    {
+     "q": "Discute el sistema según m: <span class='sys'>x + y = 3<br>2x + 2y = m</span>",
+     "c": [
+      "m = 6: compatible determinado; m ≠ 6: incompatible",
+      "m = 6: compatible indeterminado; m ≠ 6: incompatible",
+      "m = 6: incompatible; m ≠ 6: compatible indeterminado",
+      "siempre compatible determinado"
+     ],
+     "a": 1,
+     "e": "rango(A) = 1. Si m = 6, rango(A*) = 1 (infinitas soluciones); si no, rango(A*) = 2 (sin solución)."
+    },
+    {
+     "q": "¿Para qué valor de m tiene el sistema homogéneo soluciones distintas de (0, 0)? <span class='sys'>x + 2y = 0<br>−3x + my = 0</span>",
+     "c": [
+      "m = 6",
+      "m = −6",
+      "m = −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "m = 0"
+     ],
+     "a": 1,
+     "e": "Hace falta |A| = 0: m − (−6) = 0 → <b>m = −6</b>."
+    },
+    {
+     "q": "Discute el sistema según m: <span class='sys'>x + 4y = 6<br>2x + 8y = m</span>",
+     "c": [
+      "m = 12: compatible indeterminado; m ≠ 12: incompatible",
+      "siempre compatible determinado",
+      "m = 12: compatible determinado; m ≠ 12: incompatible",
+      "m = 12: incompatible; m ≠ 12: compatible indeterminado"
+     ],
+     "a": 0,
+     "e": "rango(A) = 1. Si m = 12, rango(A*) = 1 (infinitas soluciones); si no, rango(A*) = 2 (sin solución)."
+    },
+    {
+     "q": "¿Para qué valores de m es compatible determinado el sistema? <span class='sys'>x + y + z = 4<br>x + my + z = 4<br>x + y + mz = 4</span>",
+     "c": [
+      "para todo m",
+      "m ≠ 1",
+      "m ≠ 0",
+      "m = 1"
+     ],
+     "a": 1,
+     "e": "|A| = (m − 1)²: se anula solo en m = 1. <b>m ≠ 1</b> (para m = 1 es compatible indeterminado)."
+    },
+    {
+     "q": "Un sistema de 4 ecuaciones con 3 incógnitas tiene rango(A) = 2 y rango(A*) = 2. ¿Cómo es?",
+     "c": [
+      "incompatible",
+      "compatible indeterminado (con 1 parámetro)",
+      "compatible determinado",
+      "no se puede saber"
+     ],
+     "a": 1,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 1 parámetro)."
+    },
+    {
+     "q": "¿Para qué valores de m es compatible determinado el sistema? <span class='sys'>x + y + z = 1<br>x + my + z = 1<br>x + y + mz = 1</span>",
+     "c": [
+      "para todo m",
+      "m ≠ 0",
+      "m ≠ 1",
+      "m = 1"
+     ],
+     "a": 2,
+     "e": "|A| = (m − 1)²: se anula solo en m = 1. <b>m ≠ 1</b> (para m = 1 es compatible indeterminado)."
+    },
+    {
+     "q": "Un sistema de 2 ecuaciones con 3 incógnitas tiene rango(A) = 1 y rango(A*) = 1. ¿Cómo es?",
+     "c": [
+      "compatible determinado",
+      "no se puede saber",
+      "compatible indeterminado (con 2 parámetros)",
+      "incompatible"
+     ],
+     "a": 2,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 2 parámetros)."
+    },
+    {
+     "q": "Un sistema de 4 ecuaciones con 4 incógnitas tiene rango(A) = 1 y rango(A*) = 1. ¿Cómo es?",
+     "c": [
+      "compatible determinado",
+      "incompatible",
+      "no se puede saber",
+      "compatible indeterminado (con 3 parámetros)"
+     ],
+     "a": 3,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 3 parámetros)."
+    },
+    {
+     "q": "Discute el sistema según m: <span class='sys'>x + 2y = 3<br>2x + my = 4</span>",
+     "c": [
+      "m = 4: compatible determinado",
+      "m ≠ 4: compatible determinado; m = 4: compatible indeterminado",
+      "siempre compatible determinado",
+      "m ≠ 4: compatible determinado; m = 4: incompatible"
+     ],
+     "a": 3,
+     "e": "|A| = m − 4. Si m ≠ 4, |A| ≠ 0 → compatible determinado. Si m = 4, las ecuaciones son incompatibles (4 ≠ 6). "
+    },
+    {
+     "q": "¿Para qué valores de m es compatible determinado el sistema? <span class='sys'>x + y + z = 2<br>x + my + z = 2<br>x + y + mz = 2</span>",
+     "c": [
+      "m = 1",
+      "para todo m",
+      "m ≠ 1",
+      "m ≠ 0"
+     ],
+     "a": 2,
+     "e": "|A| = (m − 1)²: se anula solo en m = 1. <b>m ≠ 1</b> (para m = 1 es compatible indeterminado)."
+    },
+    {
+     "q": "Discute el sistema según m: <span class='sys'>x + 3y = 1<br>2x + my = -5</span>",
+     "c": [
+      "m ≠ 6: compatible determinado; m = 6: incompatible",
+      "m = 6: compatible determinado",
+      "siempre compatible determinado",
+      "m ≠ 6: compatible determinado; m = 6: compatible indeterminado"
+     ],
+     "a": 0,
+     "e": "|A| = m − 6. Si m ≠ 6, |A| ≠ 0 → compatible determinado. Si m = 6, las ecuaciones son incompatibles (-5 ≠ 2). "
+    },
+    {
+     "q": "¿Para qué valor de m tiene el sistema homogéneo soluciones distintas de (0, 0)? <span class='sys'>x + 3y = 0<br>x + my = 0</span>",
+     "c": [
+      "m = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "m = 3",
+      "m = 0",
+      "m = −3"
+     ],
+     "a": 1,
+     "e": "Hace falta |A| = 0: m − 3 = 0 → <b>m = 3</b>."
+    },
+    {
+     "q": "Discute el sistema según m: <span class='sys'>x + 4y = 3<br>2x + 8y = m</span>",
+     "c": [
+      "m = 6: compatible indeterminado; m ≠ 6: incompatible",
+      "m = 6: compatible determinado; m ≠ 6: incompatible",
+      "siempre compatible determinado",
+      "m = 6: incompatible; m ≠ 6: compatible indeterminado"
+     ],
+     "a": 0,
+     "e": "rango(A) = 1. Si m = 6, rango(A*) = 1 (infinitas soluciones); si no, rango(A*) = 2 (sin solución)."
+    },
+    {
+     "q": "Un sistema de 3 ecuaciones con 4 incógnitas tiene rango(A) = 1 y rango(A*) = 1. ¿Cómo es?",
+     "c": [
+      "compatible determinado",
+      "incompatible",
+      "compatible indeterminado (con 3 parámetros)",
+      "no se puede saber"
+     ],
+     "a": 2,
+     "e": "Rouché-Frobenius: rangos iguales, menores que el número de incógnitas → <b>compatible indeterminado</b> (con 3 parámetros)."
+    },
+    {
+     "q": "Discute el sistema según m: <span class='sys'>x + y = 3<br>2x + my = -4</span>",
+     "c": [
+      "m ≠ 2: compatible determinado; m = 2: compatible indeterminado",
+      "m = 2: compatible determinado",
+      "siempre compatible determinado",
+      "m ≠ 2: compatible determinado; m = 2: incompatible"
+     ],
+     "a": 3,
+     "e": "|A| = m − 2. Si m ≠ 2, |A| ≠ 0 → compatible determinado. Si m = 2, las ecuaciones son incompatibles (-4 ≠ 6). "
+    },
+    {
+     "q": "Si |A| = 0 en un sistema homogéneo de 3 × 3, entonces…",
+     "c": [
+      "no tiene solución",
+      "es incompatible",
+      "solo tiene la solución (0, 0, 0)",
+      "tiene infinitas soluciones"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>tiene infinitas soluciones</b>."
+    },
+    {
+     "q": "Un sistema de 2 ecuaciones con 3 incógnitas tiene rango(A) = 1 y rango(A*) = 2. ¿Cómo es?",
+     "c": [
+      "compatible indeterminado",
+      "no se puede saber",
+      "compatible determinado",
+      "incompatible"
+     ],
+     "a": 3,
+     "e": "Rouché-Frobenius: rangos distintos → <b>incompatible</b>."
+    }
+   ]
+  },
+  {
+   "title": "Problemas",
+   "items": [
+    {
+     "q": "Se mezclan tres tipos de café de 3 €, 5 € y 8 € el kilo para obtener 60 kg que cuestan 340 €. Del tercer tipo hay 10 kg más que del primero. ¿Cuántos kg hay de cada tipo?",
+     "c": [
+      "20, 20 y 20 kg",
+      "30, 10 y 20 kg",
+      "10, 30 y 20 kg",
+      "20, 30 y 10 kg"
+     ],
+     "a": 2,
+     "e": "x + y + z = 60; 3x + 5y + 8z = 340; z = x + 10 → <b>10, 30 y 20 kg</b>."
+    },
+    {
+     "q": "Se invierten 10 000 € en tres fondos al 2 %, 3 % y 5 % anual y se obtienen 370 € de intereses. En el tercero se invierte lo mismo que en los otros dos juntos. ¿Cuánto se invierte en cada fondo?",
+     "c": [
+      "3000 €, 2000 € y 5000 €",
+      "5000 €, 2000 € y 3000 €",
+      "2000 €, 3000 € y 5000 €",
+      "3000 €, 5000 € y 2000 €"
+     ],
+     "a": 0,
+     "e": "x + y + z = 10 000; 0,02x + 0,03y + 0,05z = 370; z = x + y → <b>3000 €, 2000 € y 5000 €</b>."
+    },
+    {
+     "q": "Se mezclan tres tipos de café de 3 €, 5 € y 8 € el kilo para obtener 90 kg que cuestan 500 €. Del tercer tipo hay 10 kg más que del primero. ¿Cuántos kg hay de cada tipo?",
+     "c": [
+      "30, 40 y 20 kg",
+      "40, 20 y 30 kg",
+      "30, 30 y 30 kg",
+      "20, 40 y 30 kg"
+     ],
+     "a": 3,
+     "e": "x + y + z = 90; 3x + 5y + 8z = 500; z = x + 10 → <b>20, 40 y 30 kg</b>."
+    },
+    {
+     "q": "Se invierten 12 000 € en tres fondos al 2 %, 3 % y 5 % anual y se obtienen 440 € de intereses. En el tercero se invierte lo mismo que en los otros dos juntos. ¿Cuánto se invierte en cada fondo?",
+     "c": [
+      "6000 €, 2000 € y 4000 €",
+      "4000 €, 6000 € y 2000 €",
+      "4000 €, 2000 € y 6000 €",
+      "2000 €, 4000 € y 6000 €"
+     ],
+     "a": 2,
+     "e": "x + y + z = 12 000; 0,02x + 0,03y + 0,05z = 440; z = x + y → <b>4000 €, 2000 € y 6000 €</b>."
+    },
+    {
+     "q": "Se mezclan tres tipos de café de 3 €, 5 € y 8 € el kilo para obtener 110 kg que cuestan 620 €. Del tercer tipo hay 10 kg más que del primero. ¿Cuántos kg hay de cada tipo?",
+     "c": [
+      "50, 10 y 50 kg",
+      "50, 20 y 40 kg",
+      "20, 40 y 50 kg",
+      "40, 20 y 50 kg"
+     ],
+     "a": 3,
+     "e": "x + y + z = 110; 3x + 5y + 8z = 620; z = x + 10 → <b>40, 20 y 50 kg</b>."
+    },
+    {
+     "q": "Se invierten 8000 € en tres fondos al 2 %, 3 % y 5 % anual y se obtienen 290 € de intereses. En el tercero se invierte lo mismo que en los otros dos juntos. ¿Cuánto se invierte en cada fondo?",
+     "c": [
+      "3000 €, 4000 € y 1000 €",
+      "1000 €, 3000 € y 4000 €",
+      "3000 €, 1000 € y 4000 €",
+      "4000 €, 1000 € y 3000 €"
+     ],
+     "a": 2,
+     "e": "x + y + z = 8000; 0,02x + 0,03y + 0,05z = 290; z = x + y → <b>3000 €, 1000 € y 4000 €</b>."
+    },
+    {
+     "q": "Se mezclan tres tipos de café de 3 €, 5 € y 8 € el kilo para obtener 80 kg que cuestan 450 €. Del tercer tipo hay 10 kg más que del primero. ¿Cuántos kg hay de cada tipo?",
+     "c": [
+      "20, 30 y 30 kg",
+      "20, 40 y 20 kg",
+      "30, 20 y 30 kg",
+      "30, 30 y 20 kg"
+     ],
+     "a": 0,
+     "e": "x + y + z = 80; 3x + 5y + 8z = 450; z = x + 10 → <b>20, 30 y 30 kg</b>."
+    },
+    {
+     "q": "Un café, un zumo y un bocadillo cuestan 21 €. Dos cafés y un zumo, 23 €. Un zumo y dos bocadillos, 19 €. ¿Cuánto cuesta cada cosa (café, zumo, bocadillo)?",
+     "c": [
+      "7 €, 8 € y 6 €",
+      "6 €, 7 € y 8 €",
+      "8 €, 6 € y 7 €",
+      "8 €, 7 € y 6 €"
+     ],
+     "a": 3,
+     "e": "x + y + z = 21; 2x + y = 23; y + 2z = 19 → <b>8 €, 7 € y 6 €</b>."
+    },
+    {
+     "q": "Se mezclan tres tipos de café de 3 €, 5 € y 8 € el kilo para obtener 60 kg que cuestan 370 €. Del tercer tipo hay 20 kg más que del primero. ¿Cuántos kg hay de cada tipo?",
+     "c": [
+      "10, 30 y 20 kg",
+      "30, 20 y 10 kg",
+      "20, 10 y 30 kg",
+      "10, 20 y 30 kg"
+     ],
+     "a": 3,
+     "e": "x + y + z = 60; 3x + 5y + 8z = 370; z = x + 20 → <b>10, 20 y 30 kg</b>."
+    },
+    {
+     "q": "Se invierten 12 000 € en tres fondos al 2 %, 3 % y 5 % anual y se obtienen 460 € de intereses. En el tercero se invierte lo mismo que en los otros dos juntos. ¿Cuánto se invierte en cada fondo?",
+     "c": [
+      "2000 €, 6000 € y 4000 €",
+      "2000 €, 4000 € y 6000 €",
+      "4000 €, 2000 € y 6000 €",
+      "6000 €, 4000 € y 2000 €"
+     ],
+     "a": 1,
+     "e": "x + y + z = 12 000; 0,02x + 0,03y + 0,05z = 460; z = x + y → <b>2000 €, 4000 € y 6000 €</b>."
+    },
+    {
+     "q": "Se invierten 10 000 € en tres fondos al 2 %, 3 % y 5 % anual y se obtienen 360 € de intereses. En el tercero se invierte lo mismo que en los otros dos juntos. ¿Cuánto se invierte en cada fondo?",
+     "c": [
+      "4000 €, 1000 € y 5000 €",
+      "4000 €, 5000 € y 1000 €",
+      "1000 €, 4000 € y 5000 €",
+      "5000 €, 1000 € y 4000 €"
+     ],
+     "a": 0,
+     "e": "x + y + z = 10 000; 0,02x + 0,03y + 0,05z = 360; z = x + y → <b>4000 €, 1000 € y 5000 €</b>."
+    },
+    {
+     "q": "Se mezclan tres tipos de café de 3 €, 5 € y 8 € el kilo para obtener 110 kg que cuestan 670 €. Del tercer tipo hay 30 kg más que del primero. ¿Cuántos kg hay de cada tipo?",
+     "c": [
+      "60, 20 y 30 kg",
+      "20, 30 y 60 kg",
+      "40, 10 y 60 kg",
+      "30, 20 y 60 kg"
+     ],
+     "a": 3,
+     "e": "x + y + z = 110; 3x + 5y + 8z = 670; z = x + 30 → <b>30, 20 y 60 kg</b>."
+    },
+    {
+     "q": "Un café, un zumo y un bocadillo cuestan 17 €. Dos cafés y un zumo, 18 €. Un zumo y dos bocadillos, 16 €. ¿Cuánto cuesta cada cosa (café, zumo, bocadillo)?",
+     "c": [
+      "2 €, 8 € y 7 €",
+      "8 €, 2 € y 7 €",
+      "7 €, 2 € y 8 €",
+      "8 €, 7 € y 2 €"
+     ],
+     "a": 1,
+     "e": "x + y + z = 17; 2x + y = 18; y + 2z = 16 → <b>8 €, 2 € y 7 €</b>."
+    },
+    {
+     "q": "Un café, un zumo y un bocadillo cuestan 15 €. Dos cafés y un zumo, 9 €. Un zumo y dos bocadillos, 21 €. ¿Cuánto cuesta cada cosa (café, zumo, bocadillo)?",
+     "c": [
+      "8 €, 5 € y 2 €",
+      "2 €, 8 € y 5 €",
+      "2 €, 5 € y 8 €",
+      "5 €, 2 € y 8 €"
+     ],
+     "a": 2,
+     "e": "x + y + z = 15; 2x + y = 9; y + 2z = 21 → <b>2 €, 5 € y 8 €</b>."
+    },
+    {
+     "q": "Se invierten 10 000 € en tres fondos al 2 %, 3 % y 5 % anual y se obtienen 390 € de intereses. En el tercero se invierte lo mismo que en los otros dos juntos. ¿Cuánto se invierte en cada fondo?",
+     "c": [
+      "4000 €, 1000 € y 5000 €",
+      "5000 €, 4000 € y 1000 €",
+      "1000 €, 4000 € y 5000 €",
+      "1000 €, 5000 € y 4000 €"
+     ],
+     "a": 2,
+     "e": "x + y + z = 10 000; 0,02x + 0,03y + 0,05z = 390; z = x + y → <b>1000 €, 4000 € y 5000 €</b>."
+    },
+    {
+     "q": "Se invierten 14 000 € en tres fondos al 2 %, 3 % y 5 % anual y se obtienen 520 € de intereses. En el tercero se invierte lo mismo que en los otros dos juntos. ¿Cuánto se invierte en cada fondo?",
+     "c": [
+      "4000 €, 7000 € y 3000 €",
+      "4000 €, 3000 € y 7000 €",
+      "3000 €, 4000 € y 7000 €",
+      "7000 €, 3000 € y 4000 €"
+     ],
+     "a": 1,
+     "e": "x + y + z = 14 000; 0,02x + 0,03y + 0,05z = 520; z = x + y → <b>4000 €, 3000 € y 7000 €</b>."
+    },
+    {
+     "q": "Se mezclan tres tipos de café de 3 €, 5 € y 8 € el kilo para obtener 110 kg que cuestan 680 €. Del tercer tipo hay 40 kg más que del primero. ¿Cuántos kg hay de cada tipo?",
+     "c": [
+      "10, 50 y 50 kg",
+      "50, 10 y 50 kg",
+      "50, 50 y 10 kg",
+      "20, 40 y 50 kg"
+     ],
+     "a": 0,
+     "e": "x + y + z = 110; 3x + 5y + 8z = 680; z = x + 40 → <b>10, 50 y 50 kg</b>."
+    },
+    {
+     "q": "Se invierten 10 000 € en tres fondos al 2 %, 3 % y 5 % anual y se obtienen 380 € de intereses. En el tercero se invierte lo mismo que en los otros dos juntos. ¿Cuánto se invierte en cada fondo?",
+     "c": [
+      "2000 €, 3000 € y 5000 €",
+      "3000 €, 2000 € y 5000 €",
+      "5000 €, 3000 € y 2000 €",
+      "2000 €, 5000 € y 3000 €"
+     ],
+     "a": 0,
+     "e": "x + y + z = 10 000; 0,02x + 0,03y + 0,05z = 380; z = x + y → <b>2000 €, 3000 € y 5000 €</b>."
+    },
+    {
+     "q": "Se invierten 6000 € en tres fondos al 2 %, 3 % y 5 % anual y se obtienen 230 € de intereses. En el tercero se invierte lo mismo que en los otros dos juntos. ¿Cuánto se invierte en cada fondo?",
+     "c": [
+      "1000 €, 3000 € y 2000 €",
+      "1000 €, 2000 € y 3000 €",
+      "3000 €, 2000 € y 1000 €",
+      "2000 €, 1000 € y 3000 €"
+     ],
+     "a": 1,
+     "e": "x + y + z = 6000; 0,02x + 0,03y + 0,05z = 230; z = x + y → <b>1000 €, 2000 € y 3000 €</b>."
+    },
+    {
+     "q": "Se mezclan tres tipos de café de 3 €, 5 € y 8 € el kilo para obtener 80 kg que cuestan 460 €. Del tercer tipo hay 10 kg más que del primero. ¿Cuántos kg hay de cada tipo?",
+     "c": [
+      "40, 0 y 40 kg",
+      "30, 10 y 40 kg",
+      "40, 10 y 30 kg",
+      "10, 30 y 40 kg"
+     ],
+     "a": 1,
+     "e": "x + y + z = 80; 3x + 5y + 8z = 460; z = x + 10 → <b>30, 10 y 40 kg</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 3,
+ "updated": "2026-11-23",
+ "country": "es",
+ "subject": "matematicas",
+ "grade": "2-bachillerato"
+}

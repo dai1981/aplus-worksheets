@@ -1,0 +1,1157 @@
+{
+ "slug": "estadistica-bidimensional",
+ "title": "Estadística bidimensional",
+ "seo_title": "Estadística bidimensional – 1.º de Bachillerato: fichas de matemáticas con soluciones",
+ "short_title": "Estadística bidimensional",
+ "domain": "Sentido estocástico",
+ "standard_code": "Matemáticas I · Sentido estocástico",
+ "standard_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-5521",
+ "standard_text": "Estadística bidimensional: nube de puntos, covarianza, coeficiente de correlación lineal, recta de regresión y estimaciones (resumen de los saberes básicos de Matemáticas I del Bachillerato de Ciencias y Tecnología, Real Decreto 243/2022)",
+ "meta_desc": "Fichas de Matemáticas I (1.º de Bachillerato): nube de puntos, covarianza, correlación de Pearson, recta de regresión y estimaciones. 100 ejercicios con soluciones.",
+ "key_big": "r cerca de ±1: relación fuerte",
+ "key_sub": "Correlación no implica causalidad.",
+ "body_html": "<h2>Cómo se hace</h2><p>Una <b>variable bidimensional</b> (x, y) se representa con una <b>nube de puntos</b>. Su centro de gravedad es (x̄, ȳ).</p><p><b>Covarianza</b>: σ<sub>xy</sub> = Σxy/n − x̄ · ȳ. Su signo indica si la relación es directa (+) o inversa (−).</p><p><b>Coeficiente de correlación</b>: r = σ<sub>xy</sub>/(σ<sub>x</sub>σ<sub>y</sub>), entre −1 y 1. Cuanto más cerca de ±1, más fuerte es la relación lineal.</p><p><b>Recta de regresión</b> de y sobre x: y − ȳ = (σ<sub>xy</sub>/σ<sub>x</sub>²)(x − x̄). Sirve para estimar y a partir de x.</p><div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220' width='300' height='220' role='img' aria-label='nube de puntos'><g font-family='Arial, Helvetica, sans-serif'><line x1='40.0' y1='190.0' x2='285.0' y2='190.0' stroke='#263238' stroke-width='2'/><line x1='40.0' y1='190.0' x2='40.0' y2='20.0' stroke='#263238' stroke-width='2'/><text x='288.0' y='194.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='36.0' y='18.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><text x='40.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='88.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='136.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='184.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='232.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>8</text><text x='280.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>10</text><circle cx='64.0' cy='154.4' r='4.5' fill='#1565c0'/><circle cx='88.0' cy='136.7' r='4.5' fill='#1565c0'/><circle cx='136.0' cy='101.1' r='4.5' fill='#1565c0'/><circle cx='160.0' cy='101.1' r='4.5' fill='#1565c0'/><circle cx='208.0' cy='47.8' r='4.5' fill='#1565c0'/><circle cx='232.0' cy='30.0' r='4.5' fill='#1565c0'/></g></svg></div><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>x̄ = 4, ȳ = 10, σ<sub>xy</sub> = 6, σ<sub>x</sub>² = 2</p><p class='sn-ex-s'>m = 6/2 = 3</p><p class='sn-ex-s'>y − 10 = 3(x − 4)</p><p class='sn-ex-a'>Respuesta: y = 3x − 2</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Correlación = causalidad</td><td>Dos variables pueden ir juntas por un tercer factor.</td></tr><tr><td>Estimar muy lejos de los datos</td><td>La recta solo es fiable dentro del rango.</td></tr><tr><td>r y covarianza con signos distintos</td><td>Siempre tienen el mismo signo.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Qué diferencia hay entre covarianza y correlación?",
+   "a": "La covarianza depende de las unidades; r no tiene unidades y siempre está entre −1 y 1, por eso permite comparar."
+  },
+  {
+   "q": "¿Qué es la recta de regresión?",
+   "a": "La recta que mejor se ajusta a la nube de puntos (minimiza los cuadrados de las distancias verticales)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Medias y desviación típica",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>7</th><th>8</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>4</td><td>5</td><td>9</td><td>7</td><td>10</td></tr></tbody></table></div>Calcula la media de x.",
+     "c": [
+      "8",
+      "7",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "x̄ = 35/5 = <b>7</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>16</td><td>19</td><td>21</td><td>25</td><td>24</td></tr></tbody></table></div>Calcula la desviación típica de x (a las centésimas).",
+     "c": [
+      "0,71",
+      "2",
+      "1,58",
+      "1,41"
+     ],
+     "a": 3,
+     "e": "σ<sub>x</sub> = √(Σx²/n − x̄²) = √2 ≈ <b>1,41</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>4</th><th>5</th><th>7</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>21</td><td>25</td><td>30</td><td>36</td><td>38</td></tr></tbody></table></div>Calcula la desviación típica de x (a las centésimas).",
+     "c": [
+      "5,2",
+      "2,28",
+      "1,14",
+      "2,55"
+     ],
+     "a": 1,
+     "e": "σ<sub>x</sub> = √(Σx²/n − x̄²) = √5,2 ≈ <b>2,28</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>3</th><th>4</th><th>7</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>8</td><td>10</td><td>13</td><td>23</td><td>31</td></tr></tbody></table></div>Calcula la desviación típica de x (a las centésimas).",
+     "c": [
+      "2,61",
+      "1,3",
+      "6,8",
+      "2,92"
+     ],
+     "a": 0,
+     "e": "σ<sub>x</sub> = √(Σx²/n − x̄²) = √6,8 ≈ <b>2,61</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>4</th><th>7</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>13</td><td>13</td><td>20</td><td>24</td><td>25</td></tr></tbody></table></div>Calcula la desviación típica de x (a las centésimas).",
+     "c": [
+      "6,8",
+      "2,92",
+      "1,3",
+      "2,61"
+     ],
+     "a": 3,
+     "e": "σ<sub>x</sub> = √(Σx²/n − x̄²) = √6,8 ≈ <b>2,61</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>4</th><th>5</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>12</td><td>10</td><td>15</td><td>16</td><td>22</td></tr></tbody></table></div>Calcula la media de x.",
+     "c": [
+      "4",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "5",
+      "15"
+     ],
+     "a": 0,
+     "e": "x̄ = 20/5 = <b>4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>4</th><th>5</th><th>7</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>3</td><td>11</td><td>14</td><td>22</td><td>25</td></tr></tbody></table></div>Calcula la media de y.",
+     "c": [
+      "15",
+      "5",
+      "16",
+      "<span class='fr'><span class='fn'>75</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "ȳ = 75/5 = <b>15</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>3</th><th>4</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>3</td><td>7</td><td>8</td><td>17</td><td>20</td></tr></tbody></table></div>Calcula la media de x.",
+     "c": [
+      "6",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span>",
+      "5",
+      "11"
+     ],
+     "a": 2,
+     "e": "x̄ = 25/5 = <b>5</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>4</th><th>6</th><th>7</th><th>8</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>9</td><td>12</td><td>13</td><td>15</td><td>16</td></tr></tbody></table></div>Calcula la media de y.",
+     "c": [
+      "7",
+      "13",
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>4</span></span>",
+      "14"
+     ],
+     "a": 1,
+     "e": "ȳ = 65/5 = <b>13</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead><tbody><tr><td>y</td><td>−1</td><td>−5</td><td>−5</td><td>−3</td><td>−6</td></tr></tbody></table></div>Calcula la media de y.",
+     "c": [
+      "−3",
+      "5",
+      "−4",
+      "−5"
+     ],
+     "a": 2,
+     "e": "ȳ = -20/5 = <b>−4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>3</th><th>5</th><th>6</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>−1</td><td>−1</td><td>−2</td><td>−7</td><td>−9</td></tr></tbody></table></div>¿Cuál es el centro de gravedad de la nube de puntos?",
+     "c": [
+      "(5, −3)",
+      "(−4, 5)",
+      "(5, −4)",
+      "(<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>, −5)"
+     ],
+     "a": 2,
+     "e": "Es el punto (x̄, ȳ) = <b>(5, −4)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>5</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>5</td><td>8</td><td>14</td><td>17</td><td>21</td></tr></tbody></table></div>¿Cuál es el centro de gravedad de la nube de puntos?",
+     "c": [
+      "(13, 5)",
+      "(5, 13)",
+      "(5, 12)",
+      "(5, 14)"
+     ],
+     "a": 1,
+     "e": "Es el punto (x̄, ȳ) = <b>(5, 13)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>4</th><th>6</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>4</td><td>7</td><td>11</td><td>15</td><td>13</td></tr></tbody></table></div>Calcula la media de x.",
+     "c": [
+      "7",
+      "10",
+      "6",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "x̄ = 30/5 = <b>6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>3</th><th>4</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>7</td><td>11</td><td>11</td><td>12</td><td>14</td></tr></tbody></table></div>Calcula la media de y.",
+     "c": [
+      "<span class='fr'><span class='fn'>55</span><span class='fd'>4</span></span>",
+      "5",
+      "11",
+      "12"
+     ],
+     "a": 2,
+     "e": "ȳ = 55/5 = <b>11</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>4</th><th>6</th><th>7</th></tr></thead><tbody><tr><td>y</td><td>10</td><td>12</td><td>16</td><td>19</td><td>23</td></tr></tbody></table></div>Calcula la media de x.",
+     "c": [
+      "3",
+      "5",
+      "16",
+      "4"
+     ],
+     "a": 3,
+     "e": "x̄ = 20/5 = <b>4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>5</th><th>6</th><th>7</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>5</td><td>9</td><td>11</td><td>17</td><td>23</td></tr></tbody></table></div>Calcula la media de x.",
+     "c": [
+      "7",
+      "6",
+      "13",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "x̄ = 30/5 = <b>6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>4</th><th>5</th><th>6</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>5</td><td>13</td><td>14</td><td>19</td><td>24</td></tr></tbody></table></div>¿Cuál es el centro de gravedad de la nube de puntos?",
+     "c": [
+      "(5, 15)",
+      "(5, <span class='fr'><span class='fn'>29</span><span class='fd'>2</span></span>)",
+      "(5, 16)",
+      "(15, 5)"
+     ],
+     "a": 0,
+     "e": "Es el punto (x̄, ȳ) = <b>(5, 15)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>6</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>−2</td><td>−3</td><td>−6</td><td>−11</td><td>−13</td></tr></tbody></table></div>Calcula la media de x.",
+     "c": [
+      "5",
+      "−7",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "4"
+     ],
+     "a": 3,
+     "e": "x̄ = 20/5 = <b>4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead><tbody><tr><td>y</td><td>8</td><td>11</td><td>13</td><td>14</td><td>14</td></tr></tbody></table></div>Calcula la media de y.",
+     "c": [
+      "12",
+      "15",
+      "13",
+      "5"
+     ],
+     "a": 0,
+     "e": "ȳ = 60/5 = <b>12</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>4</th><th>6</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>9</td><td>17</td><td>20</td><td>25</td><td>29</td></tr></tbody></table></div>Calcula la media de x.",
+     "c": [
+      "7",
+      "20",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "6"
+     ],
+     "a": 3,
+     "e": "x̄ = 30/5 = <b>6</b>."
+    }
+   ]
+  },
+  {
+   "title": "Covarianza",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>15</td><td>19</td><td>18</td><td>19</td><td>24</td></tr></tbody></table></div>¿Qué signo tiene la covarianza?",
+     "c": [
+      "cero",
+      "no se puede saber",
+      "positiva (relación directa)",
+      "negativa (relación inversa)"
+     ],
+     "a": 2,
+     "e": "Cuando x crece, y tiende a crecer: <b>positiva (relación directa)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>4</th><th>6</th><th>8</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>1</td><td>3</td><td>7</td><td>5</td><td>9</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "−7,2",
+      "37,2",
+      "9",
+      "7,2"
+     ],
+     "a": 3,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = 37,2 − 6 · 5 = <b>7,2</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>4</th><th>8</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>2</td><td>3</td><td>11</td><td>23</td><td>26</td></tr></tbody></table></div>¿Qué signo tiene la covarianza?",
+     "c": [
+      "positiva (relación directa)",
+      "negativa (relación inversa)",
+      "cero",
+      "no se puede saber"
+     ],
+     "a": 0,
+     "e": "Cuando x crece, y tiende a crecer: <b>positiva (relación directa)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>6</th><th>8</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>2</td><td>11</td><td>15</td><td>18</td><td>19</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "17,4",
+      "−17,4",
+      "108,4",
+      "21,75"
+     ],
+     "a": 0,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = 108,4 − 7 · 13 = <b>17,4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>5</th><th>7</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>4</td><td>20</td><td>25</td><td>26</td><td>30</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "151,4",
+      "−25,4",
+      "31,75",
+      "25,4"
+     ],
+     "a": 3,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = 151,4 − 6 · 21 = <b>25,4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>4</th><th>6</th><th>8</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>8</td><td>9</td><td>7</td><td>11</td><td>10</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "−2,4",
+      "3",
+      "56,4",
+      "2,4"
+     ],
+     "a": 3,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = 56,4 − 6 · 9 = <b>2,4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>4</th><th>8</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>0</td><td>3</td><td>8</td><td>12</td><td>17</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "20,8",
+      "60,8",
+      "−20,8",
+      "26"
+     ],
+     "a": 0,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = 60,8 − 5 · 8 = <b>20,8</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>y</td><td>10</td><td>16</td><td>15</td><td>21</td><td>23</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "7,75",
+      "−6,2",
+      "6,2",
+      "74,2"
+     ],
+     "a": 2,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = 74,2 − 4 · 17 = <b>6,2</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>3</th><th>5</th><th>7</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>9</td><td>12</td><td>18</td><td>21</td><td>25</td></tr></tbody></table></div>¿Qué signo tiene la covarianza?",
+     "c": [
+      "cero",
+      "positiva (relación directa)",
+      "no se puede saber",
+      "negativa (relación inversa)"
+     ],
+     "a": 1,
+     "e": "Cuando x crece, y tiende a crecer: <b>positiva (relación directa)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>3</th><th>5</th><th>7</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>4</td><td>5</td><td>9</td><td>16</td><td>16</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "11,6",
+      "−11,6",
+      "61,6",
+      "14,5"
+     ],
+     "a": 0,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = 61,6 − 5 · 10 = <b>11,6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>3</th><th>4</th><th>6</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>7</td><td>6</td><td>11</td><td>12</td><td>14</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "−7,6",
+      "7,6",
+      "9,5",
+      "57,6"
+     ],
+     "a": 1,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = 57,6 − 5 · 10 = <b>7,6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>21</td><td>21</td><td>27</td><td>29</td><td>32</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "6",
+      "7,5",
+      "214",
+      "−6"
+     ],
+     "a": 0,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = 214 − 8 · 26 = <b>6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>4</td><td>7</td><td>6</td><td>13</td><td>15</td></tr></tbody></table></div>¿Qué signo tiene la covarianza?",
+     "c": [
+      "no se puede saber",
+      "positiva (relación directa)",
+      "negativa (relación inversa)",
+      "cero"
+     ],
+     "a": 1,
+     "e": "Cuando x crece, y tiende a crecer: <b>positiva (relación directa)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3</th><th>6</th><th>7</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>0</td><td>−1</td><td>−2</td><td>−6</td><td>−6</td></tr></tbody></table></div>¿Qué signo tiene la covarianza?",
+     "c": [
+      "positiva (relación directa)",
+      "cero",
+      "no se puede saber",
+      "negativa (relación inversa)"
+     ],
+     "a": 3,
+     "e": "Cuando x crece, y tiende a decrecer: <b>negativa (relación inversa)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3</th><th>5</th><th>6</th><th>7</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>16</td><td>22</td><td>25</td><td>29</td><td>33</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "−11,6",
+      "11,6",
+      "14,5",
+      "161,6"
+     ],
+     "a": 1,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = 161,6 − 6 · 25 = <b>11,6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3</th><th>6</th><th>7</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>6</td><td>14</td><td>20</td><td>27</td><td>28</td></tr></tbody></table></div>¿Qué signo tiene la covarianza?",
+     "c": [
+      "negativa (relación inversa)",
+      "cero",
+      "positiva (relación directa)",
+      "no se puede saber"
+     ],
+     "a": 2,
+     "e": "Cuando x crece, y tiende a crecer: <b>positiva (relación directa)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>3</th><th>4</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>0</td><td>−2</td><td>−1</td><td>0</td><td>3</td></tr></tbody></table></div>¿Qué signo tiene la covarianza?",
+     "c": [
+      "cero",
+      "no se puede saber",
+      "positiva (relación directa)",
+      "negativa (relación inversa)"
+     ],
+     "a": 2,
+     "e": "Cuando x crece, y tiende a crecer: <b>positiva (relación directa)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>3</th><th>5</th><th>7</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>−7</td><td>−6</td><td>−7</td><td>−9</td><td>−11</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "3,6",
+      "−43,6",
+      "−4,5",
+      "−3,6"
+     ],
+     "a": 3,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = −43,6 − 5 · −8 = <b>−3,6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>3</th><th>7</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>3</td><td>9</td><td>18</td><td>23</td><td>22</td></tr></tbody></table></div>Calcula la covarianza σ<sub>xy</sub> (a las centésimas).",
+     "c": [
+      "−26,6",
+      "26,6",
+      "33,25",
+      "116,6"
+     ],
+     "a": 1,
+     "e": "σ<sub>xy</sub> = Σxy/n − x̄ · ȳ = 116,6 − 6 · 15 = <b>26,6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>3</th><th>6</th><th>7</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>0</td><td>−2</td><td>−6</td><td>−7</td><td>−5</td></tr></tbody></table></div>¿Qué signo tiene la covarianza?",
+     "c": [
+      "positiva (relación directa)",
+      "cero",
+      "negativa (relación inversa)",
+      "no se puede saber"
+     ],
+     "a": 2,
+     "e": "Cuando x crece, y tiende a decrecer: <b>negativa (relación inversa)</b>."
+    }
+   ]
+  },
+  {
+   "title": "Coeficiente de correlación",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>3</th><th>5</th><th>6</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>8</td><td>12</td><td>21</td><td>24</td><td>30</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "0,98",
+      "−0,98",
+      "0,96",
+      "19,2"
+     ],
+     "a": 0,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = 19,2 / (2,45 · 8) ≈ <b>0,98</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220' width='300' height='220' role='img' aria-label='nube de puntos'><g font-family='Arial, Helvetica, sans-serif'><line x1='40.0' y1='190.0' x2='285.0' y2='190.0' stroke='#263238' stroke-width='2'/><line x1='40.0' y1='190.0' x2='40.0' y2='20.0' stroke='#263238' stroke-width='2'/><text x='288.0' y='194.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='36.0' y='18.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><text x='40.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='88.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='136.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='184.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='232.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>8</text><text x='280.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>10</text><circle cx='112.0' cy='122.6' r='4.5' fill='#1565c0'/><circle cx='136.0' cy='97.4' r='4.5' fill='#1565c0'/><circle cx='184.0' cy='88.9' r='4.5' fill='#1565c0'/><circle cx='208.0' cy='63.7' r='4.5' fill='#1565c0'/><circle cx='280.0' cy='30.0' r='4.5' fill='#1565c0'/></g></svg></div>¿Qué tipo de correlación muestra esta nube de puntos? (x = 3 … 10)",
+     "c": [
+      "negativa",
+      "nula",
+      "positiva",
+      "funcional (exacta)"
+     ],
+     "a": 2,
+     "e": "Los puntos suben hacia la derecha: <b>positiva</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>4</th><th>6</th><th>7</th></tr></thead><tbody><tr><td>y</td><td>4</td><td>5</td><td>9</td><td>9</td><td>8</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "0,84",
+      "0,7",
+      "−0,84",
+      "4"
+     ],
+     "a": 0,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = 4 / (2,28 · 2,1) ≈ <b>0,84</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>4</th><th>7</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>7</td><td>12</td><td>14</td><td>17</td><td>15</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "0,92",
+      "0,85",
+      "−0,92",
+      "8,2"
+     ],
+     "a": 0,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = 8,2 / (2,61 · 3,41) ≈ <b>0,92</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220' width='300' height='220' role='img' aria-label='nube de puntos'><g font-family='Arial, Helvetica, sans-serif'><line x1='40.0' y1='190.0' x2='285.0' y2='190.0' stroke='#263238' stroke-width='2'/><line x1='40.0' y1='190.0' x2='40.0' y2='20.0' stroke='#263238' stroke-width='2'/><text x='288.0' y='194.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='36.0' y='18.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><text x='40.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='88.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='136.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='184.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='232.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>8</text><text x='280.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>10</text><circle cx='64.0' cy='59.1' r='4.5' fill='#1565c0'/><circle cx='112.0' cy='30.0' r='4.5' fill='#1565c0'/><circle cx='208.0' cy='102.7' r='4.5' fill='#1565c0'/><circle cx='256.0' cy='131.8' r='4.5' fill='#1565c0'/><circle cx='280.0' cy='190.0' r='4.5' fill='#1565c0'/></g></svg></div>¿Qué tipo de correlación muestra esta nube de puntos? (x = 1 … 10)",
+     "c": [
+      "funcional (exacta)",
+      "positiva",
+      "negativa",
+      "nula"
+     ],
+     "a": 2,
+     "e": "Los puntos bajan hacia la derecha: <b>negativa</b>."
+    },
+    {
+     "q": "Si r = −0,08, ¿cómo es la correlación?",
+     "c": [
+      "fuerte e inversa",
+      "muy débil (casi no hay relación lineal)",
+      "débil o moderada",
+      "fuerte y directa"
+     ],
+     "a": 1,
+     "e": "|r| cerca de 1: fuerte; cerca de 0: débil. El signo indica si es directa o inversa: <b>muy débil (casi no hay relación lineal)</b>."
+    },
+    {
+     "q": "Si r = −0,85, ¿cómo es la correlación?",
+     "c": [
+      "fuerte e inversa",
+      "débil o moderada",
+      "fuerte y directa",
+      "muy débil (casi no hay relación lineal)"
+     ],
+     "a": 0,
+     "e": "|r| cerca de 1: fuerte; cerca de 0: débil. El signo indica si es directa o inversa: <b>fuerte e inversa</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>3</td><td>−2</td><td>−3</td><td>−5</td><td>−8</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "0,78",
+      "−12",
+      "0,88",
+      "−0,88"
+     ],
+     "a": 3,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = −12 / (3,74 · 3,63) ≈ <b>−0,88</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220' width='300' height='220' role='img' aria-label='nube de puntos'><g font-family='Arial, Helvetica, sans-serif'><line x1='40.0' y1='190.0' x2='285.0' y2='190.0' stroke='#263238' stroke-width='2'/><line x1='40.0' y1='190.0' x2='40.0' y2='20.0' stroke='#263238' stroke-width='2'/><text x='288.0' y='194.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='36.0' y='18.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><text x='40.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='88.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='136.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='184.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='232.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>8</text><text x='280.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>10</text><circle cx='64.0' cy='134.3' r='4.5' fill='#1565c0'/><circle cx='88.0' cy='127.4' r='4.5' fill='#1565c0'/><circle cx='160.0' cy='64.8' r='4.5' fill='#1565c0'/><circle cx='232.0' cy='37.0' r='4.5' fill='#1565c0'/><circle cx='256.0' cy='30.0' r='4.5' fill='#1565c0'/></g></svg></div>¿Qué tipo de correlación muestra esta nube de puntos? (x = 1 … 9)",
+     "c": [
+      "positiva",
+      "funcional (exacta)",
+      "negativa",
+      "nula"
+     ],
+     "a": 0,
+     "e": "Los puntos suben hacia la derecha: <b>positiva</b>."
+    },
+    {
+     "q": "Si r = −0,6, ¿cómo es la correlación?",
+     "c": [
+      "fuerte e inversa",
+      "muy débil (casi no hay relación lineal)",
+      "débil o moderada",
+      "fuerte y directa"
+     ],
+     "a": 2,
+     "e": "|r| cerca de 1: fuerte; cerca de 0: débil. El signo indica si es directa o inversa: <b>débil o moderada</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>4</th><th>6</th><th>8</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>−5</td><td>−8</td><td>−8</td><td>−9</td><td>−15</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "−8,4",
+      "0,9",
+      "0,82",
+      "−0,9"
+     ],
+     "a": 3,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = −8,4 / (2,83 · 3,29) ≈ <b>−0,9</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>4</th><th>5</th><th>7</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>5</td><td>9</td><td>13</td><td>15</td><td>18</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "−0,98",
+      "11",
+      "0,98",
+      "0,97"
+     ],
+     "a": 2,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = 11 / (2,45 · 4,56) ≈ <b>0,98</b>."
+    },
+    {
+     "q": "Si r = 1, los puntos…",
+     "c": [
+      "forman una parábola",
+      "están muy dispersos",
+      "están sobre una recta decreciente",
+      "están todos sobre una recta creciente"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>están todos sobre una recta creciente</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>10</td><td>11</td><td>10</td><td>15</td><td>19</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "0,89",
+      "0,94",
+      "12,4",
+      "−0,94"
+     ],
+     "a": 1,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = 12,4 / (3,74 · 3,52) ≈ <b>0,94</b>."
+    },
+    {
+     "q": "Si r = 0,88, ¿cómo es la correlación?",
+     "c": [
+      "débil o moderada",
+      "fuerte y directa",
+      "muy débil (casi no hay relación lineal)",
+      "fuerte e inversa"
+     ],
+     "a": 1,
+     "e": "|r| cerca de 1: fuerte; cerca de 0: débil. El signo indica si es directa o inversa: <b>fuerte y directa</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220' width='300' height='220' role='img' aria-label='nube de puntos'><g font-family='Arial, Helvetica, sans-serif'><line x1='40.0' y1='190.0' x2='285.0' y2='190.0' stroke='#263238' stroke-width='2'/><line x1='40.0' y1='190.0' x2='40.0' y2='20.0' stroke='#263238' stroke-width='2'/><text x='288.0' y='194.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='36.0' y='18.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><text x='40.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='88.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='136.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='184.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='232.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>8</text><text x='280.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>10</text><circle cx='112.0' cy='132.9' r='4.5' fill='#1565c0'/><circle cx='136.0' cy='110.0' r='4.5' fill='#1565c0'/><circle cx='184.0' cy='81.4' r='4.5' fill='#1565c0'/><circle cx='208.0' cy='81.4' r='4.5' fill='#1565c0'/><circle cx='280.0' cy='30.0' r='4.5' fill='#1565c0'/></g></svg></div>¿Qué tipo de correlación muestra esta nube de puntos? (x = 3 … 10)",
+     "c": [
+      "nula",
+      "positiva",
+      "funcional (exacta)",
+      "negativa"
+     ],
+     "a": 1,
+     "e": "Los puntos suben hacia la derecha: <b>positiva</b>."
+    },
+    {
+     "q": "Si la covarianza es negativa, r es…",
+     "c": [
+      "positivo",
+      "negativo",
+      "mayor que 1",
+      "cero"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>negativo</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220' width='300' height='220' role='img' aria-label='nube de puntos'><g font-family='Arial, Helvetica, sans-serif'><line x1='40.0' y1='190.0' x2='285.0' y2='190.0' stroke='#263238' stroke-width='2'/><line x1='40.0' y1='190.0' x2='40.0' y2='20.0' stroke='#263238' stroke-width='2'/><text x='288.0' y='194.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='36.0' y='18.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><text x='40.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='88.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='136.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='184.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='232.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>8</text><text x='280.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>10</text><circle cx='64.0' cy='116.7' r='4.5' fill='#1565c0'/><circle cx='136.0' cy='83.3' r='4.5' fill='#1565c0'/><circle cx='160.0' cy='83.3' r='4.5' fill='#1565c0'/><circle cx='208.0' cy='30.0' r='4.5' fill='#1565c0'/><circle cx='232.0' cy='36.7' r='4.5' fill='#1565c0'/></g></svg></div>¿Qué tipo de correlación muestra esta nube de puntos? (x = 1 … 8)",
+     "c": [
+      "negativa",
+      "nula",
+      "funcional (exacta)",
+      "positiva"
+     ],
+     "a": 3,
+     "e": "Los puntos suben hacia la derecha: <b>positiva</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>4</th><th>7</th><th>8</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>1</td><td>7</td><td>17</td><td>15</td><td>20</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "21,6",
+      "0,96",
+      "−0,98",
+      "0,98"
+     ],
+     "a": 3,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = 21,6 / (3,16 · 6,99) ≈ <b>0,98</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3</th><th>5</th><th>6</th><th>7</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>1</td><td>−3</td><td>0</td><td>−3</td><td>−5</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "−3,6",
+      "0,82",
+      "−0,82",
+      "0,67"
+     ],
+     "a": 2,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = −3,6 / (2 · 2,19) ≈ <b>−0,82</b>."
+    }
+   ]
+  },
+  {
+   "title": "Recta de regresión",
+   "items": [
+    {
+     "q": "¿Qué signo tiene la pendiente de la recta de regresión si r &lt; 0?",
+     "c": [
+      "cero",
+      "positivo",
+      "depende de la media",
+      "negativo"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>negativo</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>4</th><th>5</th><th>6</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>5</td><td>3</td><td>4</td><td>7</td><td>6</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 1,4x − 2",
+      "y = 1,43x + 3,25",
+      "y = 0,35x + 3,25",
+      "y = 0,35x − 3,25"
+     ],
+     "a": 2,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 0,35; pasa por (x̄, ȳ) = (5, 5): <b>y = 0,35x + 3,25</b>."
+    },
+    {
+     "q": "¿Por qué punto pasa siempre la recta de regresión?",
+     "c": [
+      "por el centro de gravedad (x̄, ȳ)",
+      "por el punto (σ<sub>x</sub>, σ<sub>y</sub>)",
+      "por el origen",
+      "por el primer dato"
+     ],
+     "a": 0,
+     "e": "Respuesta: <b>por el centro de gravedad (x̄, ȳ)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>7</th><th>8</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>10</td><td>28</td><td>31</td><td>35</td><td>36</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 2,99x + 7,14",
+      "y = 29,8x − 180,6",
+      "y = 2,98x + 7,14",
+      "y = 2,98x − 7,14"
+     ],
+     "a": 2,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 2,98; pasa por (x̄, ȳ) = (7, 28): <b>y = 2,98x + 7,14</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>−4</td><td>−5</td><td>−9</td><td>−10</td><td>−7</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = −1,1x + 1,8. Estima y para x = 11.",
+     "c": [
+      "−12,1",
+      "−11,4",
+      "−8,36",
+      "−10,3"
+     ],
+     "a": 3,
+     "e": "y = −1,1 · 11 + 1,8 ≈ <b>−10,3</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead><tbody><tr><td>y</td><td>10</td><td>11</td><td>12</td><td>17</td><td>15</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 1,6x + 5",
+      "y = 1,6x − 5",
+      "y = 2,13x + 5",
+      "y = 3,2x − 3"
+     ],
+     "a": 0,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 1,6; pasa por (x̄, ȳ) = (5, 13): <b>y = 1,6x + 5</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>1</td><td>1</td><td>5</td><td>11</td><td>27</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 3,11x − 3,16",
+      "y = 3,04x − 3,16",
+      "y = 3,04x + 3,16",
+      "y = 30,4x − 112,6"
+     ],
+     "a": 1,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 3,04; pasa por (x̄, ȳ) = (4, 9): <b>y = 3,04x − 3,16</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><td>y</td><td>10</td><td>12</td><td>14</td><td>13</td><td>16</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 2,6x + 5,2",
+      "y = 1,3x − 9,1",
+      "y = 1,54x + 9,1",
+      "y = 1,3x + 9,1"
+     ],
+     "a": 3,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 1,3; pasa por (x̄, ȳ) = (3, 13): <b>y = 1,3x + 9,1</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>5</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>2</td><td>6</td><td>9</td><td>17</td><td>26</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = 3x. Estima y para x = 8.",
+     "c": [
+      "24",
+      "25",
+      "27",
+      "2,67"
+     ],
+     "a": 0,
+     "e": "y = 3 · 8 ≈ <b>24</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>3</th><th>5</th><th>6</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>−3</td><td>0</td><td>2</td><td>1</td><td>0</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 0,33x − 1,67",
+      "y = 2x − 10",
+      "y = 1,4x − 1,67",
+      "y = 0,33x + 1,67"
+     ],
+     "a": 0,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 0,33; pasa por (x̄, ȳ) = (5, 0): <b>y = 0,33x − 1,67</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>8</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>3</td><td>7</td><td>25</td><td>28</td><td>32</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 43,8x − 243,8",
+      "y = 3,91x + 0,23",
+      "y = 3,13x − 0,23",
+      "y = 3,13x + 0,23"
+     ],
+     "a": 3,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 3,13; pasa por (x̄, ȳ) = (6, 19): <b>y = 3,13x + 0,23</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>5</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>3</td><td>4</td><td>5</td><td>11</td><td>17</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = 1,85x + 0,6. Estima y para x = 8.",
+     "c": [
+      "17,25",
+      "14,8",
+      "15,4",
+      "4"
+     ],
+     "a": 2,
+     "e": "y = 1,85 · 8 + 0,6 ≈ <b>15,4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>3</th><th>5</th><th>6</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>11</td><td>18</td><td>22</td><td>28</td><td>36</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = 2,78x + 9,09. Estima y para x = 5.",
+     "c": [
+      "13,91",
+      "25,78",
+      "23",
+      "−1,47"
+     ],
+     "a": 2,
+     "e": "y = 2,78 · 5 + 9,09 ≈ <b>23</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>6</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>−2</td><td>1</td><td>4</td><td>15</td><td>22</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 3,47x + 5,88",
+      "y = 3,47x − 5,88",
+      "y = 4,34x − 5,88",
+      "y = 23,6x − 86,4"
+     ],
+     "a": 1,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 3,47; pasa por (x̄, ȳ) = (4, 8): <b>y = 3,47x − 5,88</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3</th><th>4</th><th>6</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>1</td><td>5</td><td>10</td><td>13</td><td>16</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = 2,35x − 5,08. Estima y para x = 7.",
+     "c": [
+      "5,15",
+      "16,42",
+      "13,69",
+      "11,35"
+     ],
+     "a": 3,
+     "e": "y = 2,35 · 7 − 5,08 ≈ <b>11,35</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>3</th><th>5</th><th>6</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>8</td><td>11</td><td>12</td><td>13</td><td>16</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 0,85x − 7,76",
+      "y = 0,85x + 7,76",
+      "y = 7,8x − 27",
+      "y = 0,87x + 7,76"
+     ],
+     "a": 1,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 0,85; pasa por (x̄, ȳ) = (5, 12): <b>y = 0,85x + 7,76</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>5</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>11</td><td>12</td><td>16</td><td>22</td><td>24</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 1,64x − 8,8",
+      "y = 1,64x + 8,8",
+      "y = 1,66x + 8,8",
+      "y = 16,4x − 65"
+     ],
+     "a": 1,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 1,64; pasa por (x̄, ȳ) = (5, 17): <b>y = 1,64x + 8,8</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>4</th><th>5</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>1</td><td>−2</td><td>−2</td><td>−7</td><td>−5</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = −0,85x + 2,09. Estima y para x = 7.",
+     "c": [
+      "−5,79",
+      "−4,7",
+      "−3,85",
+      "−5,93"
+     ],
+     "a": 2,
+     "e": "y = −0,85 · 7 + 2,09 ≈ <b>−3,85</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>3</th><th>7</th><th>8</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>7</td><td>5</td><td>9</td><td>8</td><td>11</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = 0,57x + 4,61. Estima y para x = 8.",
+     "c": [
+      "9,13",
+      "9,7",
+      "4,52",
+      "6"
+     ],
+     "a": 0,
+     "e": "y = 0,57 · 8 + 4,61 ≈ <b>9,13</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>8</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>0</td><td>−1</td><td>1</td><td>4</td><td>6</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 0,6x + 1,6",
+      "y = 0,6x − 1,6",
+      "y = 0,81x − 1,6",
+      "y = 8,4x − 48,4"
+     ],
+     "a": 1,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 0,6; pasa por (x̄, ȳ) = (6, 2): <b>y = 0,6x − 1,6</b>."
+    }
+   ]
+  },
+  {
+   "title": "Interpretar y estimar",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3</th><th>5</th><th>6</th><th>7</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>7</td><td>14</td><td>18</td><td>18</td><td>23</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = 2,6x + 0,4. Estima y para x = 7.",
+     "c": [
+      "18,6",
+      "18,2",
+      "2,54",
+      "21,2"
+     ],
+     "a": 0,
+     "e": "y = 2,6 · 7 + 0,4 ≈ <b>18,6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>3</th><th>5</th><th>7</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>7</td><td>8</td><td>14</td><td>17</td><td>19</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 1,65x − 4,75",
+      "y = 1,65x + 4,75",
+      "y = 13,2x − 53",
+      "y = 1,73x + 4,75"
+     ],
+     "a": 1,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 1,65; pasa por (x̄, ȳ) = (5, 13): <b>y = 1,65x + 4,75</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220' width='300' height='220' role='img' aria-label='nube de puntos'><g font-family='Arial, Helvetica, sans-serif'><line x1='40.0' y1='190.0' x2='285.0' y2='190.0' stroke='#263238' stroke-width='2'/><line x1='40.0' y1='190.0' x2='40.0' y2='20.0' stroke='#263238' stroke-width='2'/><text x='288.0' y='194.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='36.0' y='18.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><text x='40.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='88.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='136.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='184.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='232.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>8</text><text x='280.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>10</text><circle cx='64.0' cy='118.9' r='4.5' fill='#1565c0'/><circle cx='112.0' cy='65.6' r='4.5' fill='#1565c0'/><circle cx='136.0' cy='83.3' r='4.5' fill='#1565c0'/><circle cx='208.0' cy='30.0' r='4.5' fill='#1565c0'/><circle cx='280.0' cy='30.0' r='4.5' fill='#1565c0'/></g></svg></div>¿Qué tipo de correlación muestra esta nube de puntos? (x = 1 … 10)",
+     "c": [
+      "negativa",
+      "funcional (exacta)",
+      "nula",
+      "positiva"
+     ],
+     "a": 3,
+     "e": "Los puntos suben hacia la derecha: <b>positiva</b>."
+    },
+    {
+     "q": "¿Entre qué valores está siempre r?",
+     "c": [
+      "entre 0 y 100",
+      "entre −1 y 1",
+      "entre 0 y 1",
+      "entre −∞ y +∞"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>entre −1 y 1</b>."
+    },
+    {
+     "q": "Hay una correlación fuerte entre las ventas de helados y los ahogamientos en verano. ¿Significa que los helados causan ahogamientos?",
+     "c": [
+      "sí, si r &gt; 0,9",
+      "sí, claramente",
+      "solo si r = 1",
+      "no: correlación no implica causalidad (los dos dependen del calor)"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>no: correlación no implica causalidad (los dos dependen del calor)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>5</th><th>7</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>−3</td><td>−3</td><td>−7</td><td>−10</td><td>−12</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = −1,09x − 1,54. Estima y para x = 12.",
+     "c": [
+      "−15,74",
+      "−14,65",
+      "−13,11",
+      "−12,39"
+     ],
+     "a": 1,
+     "e": "y = −1,09 · 12 − 1,54 ≈ <b>−14,65</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>3</th><th>6</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>10</td><td>9</td><td>11</td><td>17</td><td>18</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "0,95",
+      "0,9",
+      "−0,95",
+      "11,2"
+     ],
+     "a": 0,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = 11,2 / (3,16 · 3,74) ≈ <b>0,95</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220' width='300' height='220' role='img' aria-label='nube de puntos'><g font-family='Arial, Helvetica, sans-serif'><line x1='40.0' y1='190.0' x2='285.0' y2='190.0' stroke='#263238' stroke-width='2'/><line x1='40.0' y1='190.0' x2='40.0' y2='20.0' stroke='#263238' stroke-width='2'/><text x='288.0' y='194.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='36.0' y='18.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><text x='40.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='88.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='136.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='184.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='232.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>8</text><text x='280.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>10</text><circle cx='88.0' cy='116.2' r='4.5' fill='#1565c0'/><circle cx='112.0' cy='128.5' r='4.5' fill='#1565c0'/><circle cx='136.0' cy='66.9' r='4.5' fill='#1565c0'/><circle cx='208.0' cy='54.6' r='4.5' fill='#1565c0'/><circle cx='256.0' cy='30.0' r='4.5' fill='#1565c0'/></g></svg></div>¿Qué tipo de correlación muestra esta nube de puntos? (x = 2 … 9)",
+     "c": [
+      "positiva",
+      "funcional (exacta)",
+      "nula",
+      "negativa"
+     ],
+     "a": 0,
+     "e": "Los puntos suben hacia la derecha: <b>positiva</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220' width='300' height='220' role='img' aria-label='nube de puntos'><g font-family='Arial, Helvetica, sans-serif'><line x1='40.0' y1='190.0' x2='285.0' y2='190.0' stroke='#263238' stroke-width='2'/><line x1='40.0' y1='190.0' x2='40.0' y2='20.0' stroke='#263238' stroke-width='2'/><text x='288.0' y='194.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='36.0' y='18.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><text x='40.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='88.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='136.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='184.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='232.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>8</text><text x='280.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>10</text><circle cx='112.0' cy='124.1' r='4.5' fill='#1565c0'/><circle cx='136.0' cy='105.3' r='4.5' fill='#1565c0'/><circle cx='184.0' cy='95.9' r='4.5' fill='#1565c0'/><circle cx='232.0' cy='30.0' r='4.5' fill='#1565c0'/><circle cx='256.0' cy='30.0' r='4.5' fill='#1565c0'/></g></svg></div>¿Qué tipo de correlación muestra esta nube de puntos? (x = 3 … 9)",
+     "c": [
+      "negativa",
+      "nula",
+      "funcional (exacta)",
+      "positiva"
+     ],
+     "a": 3,
+     "e": "Los puntos suben hacia la derecha: <b>positiva</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3</th><th>4</th><th>6</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>7</td><td>11</td><td>10</td><td>10</td><td>12</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 1,08x + 7",
+      "y = 0,5x − 7",
+      "y = 0,5x + 7",
+      "y = 2,6x − 5,6"
+     ],
+     "a": 2,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 0,5; pasa por (x̄, ȳ) = (6, 10): <b>y = 0,5x + 7</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>4</th><th>5</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>3</td><td>2</td><td>−1</td><td>−4</td><td>−5</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = −1,23x + 3,93. Estima y para x = 6.",
+     "c": [
+      "−7,4",
+      "−4,7",
+      "−3,47",
+      "−1,68"
+     ],
+     "a": 2,
+     "e": "y = −1,23 · 6 + 3,93 ≈ <b>−3,47</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>5</th><th>8</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>6</td><td>11</td><td>12</td><td>16</td><td>15</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 1,02x − 6,9",
+      "y = 1,02x + 6,9",
+      "y = 1,22x + 6,9",
+      "y = 10,2x − 39"
+     ],
+     "a": 1,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 1,02; pasa por (x̄, ȳ) = (5, 12): <b>y = 1,02x + 6,9</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3</th><th>5</th><th>8</th><th>9</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>9</td><td>14</td><td>27</td><td>27</td><td>33</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = 3,41x − 1,88",
+      "y = 3,41x + 1,88",
+      "y = 23,2x − 140,4",
+      "y = 3,48x − 1,88"
+     ],
+     "a": 0,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = 3,41; pasa por (x̄, ȳ) = (7, 22): <b>y = 3,41x − 1,88</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>4</th><th>6</th><th>7</th></tr></thead><tbody><tr><td>y</td><td>4</td><td>2</td><td>1</td><td>0</td><td>−2</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = −0,85x + 4,38. Estima y para x = 11.",
+     "c": [
+      "−9,31",
+      "−5,77",
+      "−7,82",
+      "−4,92"
+     ],
+     "a": 3,
+     "e": "y = −0,85 · 11 + 4,38 ≈ <b>−4,92</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>3</th><th>6</th><th>7</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>1</td><td>4</td><td>2</td><td>2</td><td>6</td></tr></tbody></table></div>La recta de regresión de y sobre x es y = 0,35x + 1,24. Estima y para x = 4.",
+     "c": [
+      "3",
+      "2,65",
+      "7,83",
+      "1,41"
+     ],
+     "a": 1,
+     "e": "y = 0,35 · 4 + 1,24 ≈ <b>2,65</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220' width='300' height='220' role='img' aria-label='nube de puntos'><g font-family='Arial, Helvetica, sans-serif'><line x1='40.0' y1='190.0' x2='285.0' y2='190.0' stroke='#263238' stroke-width='2'/><line x1='40.0' y1='190.0' x2='40.0' y2='20.0' stroke='#263238' stroke-width='2'/><text x='288.0' y='194.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='36.0' y='18.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><text x='40.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='88.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='136.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='184.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='232.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>8</text><text x='280.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>10</text><circle cx='88.0' cy='190.0' r='4.5' fill='#1565c0'/><circle cx='184.0' cy='130.0' r='4.5' fill='#1565c0'/><circle cx='232.0' cy='130.0' r='4.5' fill='#1565c0'/><circle cx='256.0' cy='30.0' r='4.5' fill='#1565c0'/><circle cx='280.0' cy='70.0' r='4.5' fill='#1565c0'/></g></svg></div>¿Qué tipo de correlación muestra esta nube de puntos? (x = 2 … 10)",
+     "c": [
+      "nula",
+      "negativa",
+      "positiva",
+      "funcional (exacta)"
+     ],
+     "a": 2,
+     "e": "Los puntos suben hacia la derecha: <b>positiva</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220' width='300' height='220' role='img' aria-label='nube de puntos'><g font-family='Arial, Helvetica, sans-serif'><line x1='40.0' y1='190.0' x2='285.0' y2='190.0' stroke='#263238' stroke-width='2'/><line x1='40.0' y1='190.0' x2='40.0' y2='20.0' stroke='#263238' stroke-width='2'/><text x='288.0' y='194.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><text x='36.0' y='18.0' font-size='14' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><text x='40.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>0</text><text x='88.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>2</text><text x='136.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>4</text><text x='184.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>6</text><text x='232.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>8</text><text x='280.0' y='206.0' font-size='11' font-weight='700' fill='#2b2b2b' text-anchor='middle'>10</text><circle cx='64.0' cy='30.0' r='4.5' fill='#1565c0'/><circle cx='136.0' cy='66.9' r='4.5' fill='#1565c0'/><circle cx='184.0' cy='91.5' r='4.5' fill='#1565c0'/><circle cx='256.0' cy='140.8' r='4.5' fill='#1565c0'/><circle cx='280.0' cy='190.0' r='4.5' fill='#1565c0'/></g></svg></div>¿Qué tipo de correlación muestra esta nube de puntos? (x = 1 … 10)",
+     "c": [
+      "positiva",
+      "funcional (exacta)",
+      "nula",
+      "negativa"
+     ],
+     "a": 3,
+     "e": "Los puntos bajan hacia la derecha: <b>negativa</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>6</th><th>8</th></tr></thead><tbody><tr><td>y</td><td>−6</td><td>−4</td><td>−6</td><td>−10</td><td>−9</td></tr></tbody></table></div>Halla la recta de regresión de y sobre x (coeficientes a las centésimas).",
+     "c": [
+      "y = −1x − 4,18",
+      "y = −0,71x + 4,18",
+      "y = −0,71x − 4,18",
+      "y = −4,8x + 12,2"
+     ],
+     "a": 2,
+     "e": "m = σ<sub>xy</sub>/σ<sub>x</sub>² = −0,71; pasa por (x̄, ȳ) = (4, −7): <b>y = −0,71x − 4,18</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2</th><th>3</th><th>4</th><th>7</th><th>9</th></tr></thead><tbody><tr><td>y</td><td>1</td><td>1</td><td>2</td><td>7</td><td>9</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "8,6",
+      "0,97",
+      "0,99",
+      "−0,99"
+     ],
+     "a": 2,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = 8,6 / (2,61 · 3,35) ≈ <b>0,99</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>1</th><th>2</th><th>4</th><th>8</th><th>10</th></tr></thead><tbody><tr><td>y</td><td>3</td><td>5</td><td>15</td><td>24</td><td>33</td></tr></tbody></table></div>Calcula el coeficiente de correlación r (a las centésimas).",
+     "c": [
+      "0,99",
+      "0,98",
+      "39",
+      "−0,99"
+     ],
+     "a": 0,
+     "e": "r = σ<sub>xy</sub> / (σ<sub>x</sub> · σ<sub>y</sub>) = 39 / (3,46 · 11,35) ≈ <b>0,99</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 14,
+ "updated": "2026-11-23",
+ "country": "es",
+ "subject": "matematicas",
+ "grade": "1-bachillerato"
+}

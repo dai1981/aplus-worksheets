@@ -1,0 +1,1157 @@
+{
+ "slug": "integrales-indefinidas",
+ "title": "Integrales indefinidas",
+ "seo_title": "Integrales indefinidas – 2.º de Bachillerato: fichas de matemáticas con soluciones",
+ "short_title": "Integrales indefinidas",
+ "domain": "Sentido algebraico",
+ "standard_code": "Matemáticas II · Sentido algebraico",
+ "standard_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-5521",
+ "standard_text": "Primitivas: integrales inmediatas, casi inmediatas, cambio de variable, integración por partes e integrales racionales sencillas (resumen de los saberes básicos de Matemáticas II del Bachillerato de Ciencias y Tecnología, Real Decreto 243/2022)",
+ "meta_desc": "Fichas de Matemáticas II (2.º de Bachillerato): integrales inmediatas, cambio de variable, integración por partes, racionales y primitivas con condiciones. 100 ejercicios.",
+ "key_big": "∫ f(x) dx = F(x) + C, con F′ = f",
+ "key_sub": "Comprueba derivando el resultado.",
+ "body_html": "<h2>Cómo se hace</h2><p>Una <b>primitiva</b> de f es una función F con F′ = f. La integral indefinida es ∫ f(x) dx = F(x) + C.</p><p>Inmediatas: ∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C (n ≠ −1); ∫ 1/x dx = ln |x| + C; ∫ eˣ dx = eˣ + C; ∫ cos x dx = sen x + C; ∫ sen x dx = −cos x + C.</p><p><b>Casi inmediatas</b>: si aparece la derivada de lo de dentro, ∫ f(u) u′ dx = F(u) + C (se ajustan las constantes).</p><p><b>Por partes</b>: ∫ u dv = u · v − ∫ v du. <b>Racionales</b>: se descomponen en fracciones simples.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>∫ x eˣ dx</p><p class='sn-ex-s'>u = x, dv = eˣ dx</p><p class='sn-ex-s'>x eˣ − ∫ eˣ dx</p><p class='sn-ex-a'>Respuesta: eˣ(x − 1) + C</p></div><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>∫ 2x/(x² + 1) dx</p><p class='sn-ex-s'>u′/u</p><p class='sn-ex-a'>Respuesta: ln (x² + 1) + C</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Olvidar + C</td><td>Toda primitiva lleva su constante.</td></tr><tr><td>Usar xⁿ⁺¹/(n + 1) con n = −1</td><td>∫ 1/x dx = ln |x| + C.</td></tr><tr><td>No compensar la derivada de dentro</td><td>∫ e<sup>3x</sup> dx = (1/3)e<sup>3x</sup> + C.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Cómo sé qué método usar?",
+   "a": "Primero mira si es inmediata o si aparece la derivada de lo de dentro; si es un producto de tipos distintos (x · eˣ), por partes; si es un cociente de polinomios, fracciones simples."
+  },
+  {
+   "q": "¿Cómo compruebo una integral?",
+   "a": "Derivando el resultado: debe salir la función de partida."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Integrales inmediatas",
+   "items": [
+    {
+     "q": "Calcula ∫ 4 cos x dx.",
+     "c": [
+      "−4 sen x + C",
+      "4 tg x + C",
+      "4 cos x + C",
+      "4 sen x + C"
+     ],
+     "a": 3,
+     "e": "Integral inmediata: <b>4 sen x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (−3x³ + 3x² − 3x − 3) dx.",
+     "c": [
+      "−9x² + 6x − 3 + C",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>x⁴ + x³ − <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² − 3x + C",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>x⁴ + x³ − <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² − 3x",
+      "−3x⁴ + 3x³ − 3x² − 3x + C"
+     ],
+     "a": 1,
+     "e": "∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C, término a término: <b>−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>x⁴ + x³ − <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² − 3x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (6x² + 3x − 2) dx.",
+     "c": [
+      "2x³ + <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² − 2x + C",
+      "6x³ + 3x² − 2x + C",
+      "12x + 3 + C",
+      "2x³ + <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² − 2x"
+     ],
+     "a": 0,
+     "e": "∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C, término a término: <b>2x³ + <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² − 2x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 4/x⁴ dx.",
+     "c": [
+      "−16/x⁵ + C",
+      "4 ln x⁴ + C",
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>/x³ + C",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>/x⁵ + C"
+     ],
+     "a": 2,
+     "e": "4/x⁴ = 4x<sup>−4</sup> → 4x<sup>−3</sup>/(−3) = <b>−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>/x³ + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 3/x² dx.",
+     "c": [
+      "−3/x + C",
+      "3 ln x² + C",
+      "1/x³ + C",
+      "−6/x³ + C"
+     ],
+     "a": 0,
+     "e": "3/x² = 3x<sup>−2</sup> → 3x<sup>−1</sup>/(−1) = <b>−3/x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 6√x dx.",
+     "c": [
+      "3/√x + C",
+      "9x√x + C",
+      "3√x + C",
+      "4x√x + C"
+     ],
+     "a": 3,
+     "e": "√x = x<sup>1/2</sup> → x<sup>3/2</sup>/(3/2) = (2/3)x√x: <b>4x√x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 1/(1 + x²) dx.",
+     "c": [
+      "1/(2x) + C",
+      "ln (1 + x²) + C",
+      "arctg x + C",
+      "x + x³/3 + C"
+     ],
+     "a": 2,
+     "e": "Integral inmediata: <b>arctg x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 7/x dx.",
+     "c": [
+      "7 ln |x| + C",
+      "7/x² + C",
+      "7x<sup>0</sup> + C",
+      "7x ln x + C"
+     ],
+     "a": 0,
+     "e": "∫ 1/x dx = ln |x| + C (la regla de las potencias no vale para n = −1): <b>7 ln |x| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 6e<sup>x</sup> dx.",
+     "c": [
+      "e<sup>x</sup> + C",
+      "6e<sup>x</sup> + C",
+      "6e<sup>x + 1</sup>/(x + 1) + C",
+      "6xe<sup>x</sup> + C"
+     ],
+     "a": 1,
+     "e": "∫ eˣ dx = eˣ + C: <b>6e<sup>x</sup> + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 5/x dx.",
+     "c": [
+      "5x<sup>0</sup> + C",
+      "5/x² + C",
+      "5 ln |x| + C",
+      "5x ln x + C"
+     ],
+     "a": 2,
+     "e": "∫ 1/x dx = ln |x| + C (la regla de las potencias no vale para n = −1): <b>5 ln |x| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 5/x³ dx.",
+     "c": [
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>/x² + C",
+      "5 ln x³ + C",
+      "−15/x⁴ + C",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>/x⁴ + C"
+     ],
+     "a": 0,
+     "e": "5/x³ = 5x<sup>−3</sup> → 5x<sup>−2</sup>/(−2) = <b>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>/x² + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (2x³ − 3x² − 3x + 4) dx.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x⁴ − x³ − <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² + 4x",
+      "2x⁴ − 3x³ − 3x² + 4x + C",
+      "6x² − 6x − 3 + C",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x⁴ − x³ − <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² + 4x + C"
+     ],
+     "a": 3,
+     "e": "∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C, término a término: <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x⁴ − x³ − <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² + 4x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 9/x dx.",
+     "c": [
+      "9x<sup>0</sup> + C",
+      "9/x² + C",
+      "9x ln x + C",
+      "9 ln |x| + C"
+     ],
+     "a": 3,
+     "e": "∫ 1/x dx = ln |x| + C (la regla de las potencias no vale para n = −1): <b>9 ln |x| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (4x² − 3x + 2) dx.",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>x³ − <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² + 2x + C",
+      "8x − 3 + C",
+      "4x³ − 3x² + 2x + C",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>x³ − <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² + 2x"
+     ],
+     "a": 0,
+     "e": "∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C, término a término: <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>x³ − <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² + 2x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (−2x² − 2x + 2) dx.",
+     "c": [
+      "−4x − 2 + C",
+      "−2x³ − 2x² + 2x + C",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>x³ − x² + 2x",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>x³ − x² + 2x + C"
+     ],
+     "a": 3,
+     "e": "∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C, término a término: <b>−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>x³ − x² + 2x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 4e<sup>x</sup> dx.",
+     "c": [
+      "4xe<sup>x</sup> + C",
+      "4e<sup>x + 1</sup>/(x + 1) + C",
+      "4e<sup>x</sup> + C",
+      "e<sup>x</sup> + C"
+     ],
+     "a": 2,
+     "e": "∫ eˣ dx = eˣ + C: <b>4e<sup>x</sup> + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 6/x³ dx.",
+     "c": [
+      "6 ln x³ + C",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>/x⁴ + C",
+      "−3/x² + C",
+      "−18/x⁴ + C"
+     ],
+     "a": 2,
+     "e": "6/x³ = 6x<sup>−3</sup> → 6x<sup>−2</sup>/(−2) = <b>−3/x² + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 5e<sup>x</sup> dx.",
+     "c": [
+      "e<sup>x</sup> + C",
+      "5e<sup>x</sup> + C",
+      "5e<sup>x + 1</sup>/(x + 1) + C",
+      "5xe<sup>x</sup> + C"
+     ],
+     "a": 1,
+     "e": "∫ eˣ dx = eˣ + C: <b>5e<sup>x</sup> + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (4x² − 6x + 1) dx.",
+     "c": [
+      "4x³ − 6x² + x + C",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>x³ − 3x² + x + C",
+      "8x − 6 + C",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>x³ − 3x² + x"
+     ],
+     "a": 1,
+     "e": "∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C, término a término: <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>x³ − 3x² + x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 6/x² dx.",
+     "c": [
+      "−12/x³ + C",
+      "−6/x + C",
+      "2/x³ + C",
+      "6 ln x² + C"
+     ],
+     "a": 1,
+     "e": "6/x² = 6x<sup>−2</sup> → 6x<sup>−1</sup>/(−1) = <b>−6/x + C</b>."
+    }
+   ]
+  },
+  {
+   "title": "Casi inmediatas y cambio de variable",
+   "items": [
+    {
+     "q": "Calcula ∫ 1/(5x + 2) dx.",
+     "c": [
+      "ln |5x + 2| + C",
+      "(1/5) ln |5x + 2| + C",
+      "5 ln |5x + 2| + C",
+      "−1/(5x + 2)² + C"
+     ],
+     "a": 1,
+     "e": "∫ u′/u = ln |u|; aquí u′ = 5, así que dividimos entre 5: <b>(1/5) ln |5x + 2| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (6x)⁵ dx.",
+     "c": [
+      "(6x)⁶/37 + C",
+      "30(6x)⁴ + C",
+      "(6x)⁶/6 + C",
+      "(6x)⁶/36 + C"
+     ],
+     "a": 3,
+     "e": "u = 6x, du = 6 dx: u⁶/(6 · 6) = <b>(6x)⁶/36 + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 1/(4x − 3) dx.",
+     "c": [
+      "4 ln |4x − 3| + C",
+      "ln |4x − 3| + C",
+      "−1/(4x − 3)² + C",
+      "(1/4) ln |4x − 3| + C"
+     ],
+     "a": 3,
+     "e": "∫ u′/u = ln |u|; aquí u′ = 4, así que dividimos entre 4: <b>(1/4) ln |4x − 3| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 1/(5x − 1) dx.",
+     "c": [
+      "(1/5) ln |5x − 1| + C",
+      "ln |5x − 1| + C",
+      "−1/(5x − 1)² + C",
+      "5 ln |5x − 1| + C"
+     ],
+     "a": 0,
+     "e": "∫ u′/u = ln |u|; aquí u′ = 5, así que dividimos entre 5: <b>(1/5) ln |5x − 1| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 4x · e<sup>x²</sup> dx.",
+     "c": [
+      "e<sup>x³/3</sup> + C",
+      "4e<sup>x²</sup> + C",
+      "4x² e<sup>x²</sup> + C",
+      "(2)e<sup>x²</sup> + C"
+     ],
+     "a": 3,
+     "e": "u = x², du = 2x dx: <b>(2)e<sup>x²</sup> + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 2x/(x² + 9) dx.",
+     "c": [
+      "2 ln (x² + 9) + C",
+      "x²/(x²/2 + 9x) + C",
+      "1/(x² + 9) + C",
+      "ln (x² + 9) + C"
+     ],
+     "a": 3,
+     "e": "El numerador es la derivada del denominador: ∫ u′/u = <b>ln (x² + 9) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 1/(3x + 2) dx.",
+     "c": [
+      "−1/(3x + 2)² + C",
+      "ln |3x + 2| + C",
+      "(1/3) ln |3x + 2| + C",
+      "3 ln |3x + 2| + C"
+     ],
+     "a": 2,
+     "e": "∫ u′/u = ln |u|; aquí u′ = 3, así que dividimos entre 3: <b>(1/3) ln |3x + 2| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 2x/(x² + 7) dx.",
+     "c": [
+      "ln (x² + 7) + C",
+      "x²/(x²/2 + 7x) + C",
+      "1/(x² + 7) + C",
+      "2 ln (x² + 7) + C"
+     ],
+     "a": 0,
+     "e": "El numerador es la derivada del denominador: ∫ u′/u = <b>ln (x² + 7) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 2x/(x² + 8) dx.",
+     "c": [
+      "2 ln (x² + 8) + C",
+      "ln (x² + 8) + C",
+      "x²/(x²/2 + 8x) + C",
+      "1/(x² + 8) + C"
+     ],
+     "a": 1,
+     "e": "El numerador es la derivada del denominador: ∫ u′/u = <b>ln (x² + 8) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 1/(2x + 2) dx.",
+     "c": [
+      "−1/(2x + 2)² + C",
+      "ln |2x + 2| + C",
+      "2 ln |2x + 2| + C",
+      "(1/2) ln |2x + 2| + C"
+     ],
+     "a": 3,
+     "e": "∫ u′/u = ln |u|; aquí u′ = 2, así que dividimos entre 2: <b>(1/2) ln |2x + 2| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ e<sup>5x − 4</sup> dx.",
+     "c": [
+      "e<sup>5x − 4</sup>/(5x − 4) + C",
+      "e<sup>5x − 4</sup> + C",
+      "(1/5)e<sup>5x − 4</sup> + C",
+      "5e<sup>5x − 4</sup> + C"
+     ],
+     "a": 2,
+     "e": "Falta la derivada de dentro (5): se divide entre 5. <b>(1/5)e<sup>5x − 4</sup> + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 1/(6x + 3) dx.",
+     "c": [
+      "(1/6) ln |6x + 3| + C",
+      "6 ln |6x + 3| + C",
+      "ln |6x + 3| + C",
+      "−1/(6x + 3)² + C"
+     ],
+     "a": 0,
+     "e": "∫ u′/u = ln |u|; aquí u′ = 6, así que dividimos entre 6: <b>(1/6) ln |6x + 3| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ e<sup>4x + 3</sup> dx.",
+     "c": [
+      "4e<sup>4x + 3</sup> + C",
+      "e<sup>4x + 3</sup> + C",
+      "(1/4)e<sup>4x + 3</sup> + C",
+      "e<sup>4x + 3</sup>/(4x + 3) + C"
+     ],
+     "a": 2,
+     "e": "Falta la derivada de dentro (4): se divide entre 4. <b>(1/4)e<sup>4x + 3</sup> + C</b>."
+    },
+    {
+     "q": "Calcula ∫ e<sup>4x − 2</sup> dx.",
+     "c": [
+      "e<sup>4x − 2</sup> + C",
+      "(1/4)e<sup>4x − 2</sup> + C",
+      "4e<sup>4x − 2</sup> + C",
+      "e<sup>4x − 2</sup>/(4x − 2) + C"
+     ],
+     "a": 1,
+     "e": "Falta la derivada de dentro (4): se divide entre 4. <b>(1/4)e<sup>4x − 2</sup> + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 1/(6x + 5) dx.",
+     "c": [
+      "−1/(6x + 5)² + C",
+      "(1/6) ln |6x + 5| + C",
+      "ln |6x + 5| + C",
+      "6 ln |6x + 5| + C"
+     ],
+     "a": 1,
+     "e": "∫ u′/u = ln |u|; aquí u′ = 6, así que dividimos entre 6: <b>(1/6) ln |6x + 5| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ sen (5x − 1) dx.",
+     "c": [
+      "−(1/5) cos (5x − 1) + C",
+      "(1/5) cos (5x − 1) + C",
+      "−5 cos (5x − 1) + C",
+      "cos (5x − 1) + C"
+     ],
+     "a": 0,
+     "e": "Dividimos entre la derivada de dentro (5): <b>−(1/5) cos (5x − 1) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ sen (2x − 1) dx.",
+     "c": [
+      "(1/2) cos (2x − 1) + C",
+      "cos (2x − 1) + C",
+      "−(1/2) cos (2x − 1) + C",
+      "−2 cos (2x − 1) + C"
+     ],
+     "a": 2,
+     "e": "Dividimos entre la derivada de dentro (2): <b>−(1/2) cos (2x − 1) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ cos (4x − 1) dx.",
+     "c": [
+      "sen (4x − 1) + C",
+      "4 sen (4x − 1) + C",
+      "(1/4) sen (4x − 1) + C",
+      "−(1/4) sen (4x − 1) + C"
+     ],
+     "a": 2,
+     "e": "Dividimos entre la derivada de dentro (4): <b>(1/4) sen (4x − 1) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ e<sup>4x − 5</sup> dx.",
+     "c": [
+      "4e<sup>4x − 5</sup> + C",
+      "(1/4)e<sup>4x − 5</sup> + C",
+      "e<sup>4x − 5</sup> + C",
+      "e<sup>4x − 5</sup>/(4x − 5) + C"
+     ],
+     "a": 1,
+     "e": "Falta la derivada de dentro (4): se divide entre 4. <b>(1/4)e<sup>4x − 5</sup> + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 1/(4x) dx.",
+     "c": [
+      "(1/4) ln |4x| + C",
+      "ln |4x| + C",
+      "−1/(4x)² + C",
+      "4 ln |4x| + C"
+     ],
+     "a": 0,
+     "e": "∫ u′/u = ln |u|; aquí u′ = 4, así que dividimos entre 4: <b>(1/4) ln |4x| + C</b>."
+    }
+   ]
+  },
+  {
+   "title": "Integración por partes",
+   "items": [
+    {
+     "q": "Halla la primitiva de f(x) = 2x + 3 que pasa por el punto (1, −6).",
+     "c": [
+      "F(x) = 2x² + 3x − 10",
+      "F(x) = x² + 3x + 10",
+      "F(x) = x² + 3x − 10",
+      "F(x) = x² + 3x − 6"
+     ],
+     "a": 2,
+     "e": "F(x) = x² + 3x + C y F(1) = −6 → C = −10. <b>F(x) = x² + 3x − 10</b>."
+    },
+    {
+     "q": "Calcula ∫ 3x · ln x dx (por partes).",
+     "c": [
+      "3 ln x + 3 + C",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² ln x − <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>x² + C",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² ln x + C",
+      "3x ln x − 3x + C"
+     ],
+     "a": 1,
+     "e": "u = ln x, dv = 3x dx: <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>x² ln x − <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>x² + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 5x · ln x dx (por partes).",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>x² ln x + C",
+      "5 ln x + 5 + C",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>x² ln x − <span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>x² + C",
+      "5x ln x − 5x + C"
+     ],
+     "a": 2,
+     "e": "u = ln x, dv = 5x dx: <b><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>x² ln x − <span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>x² + C</b>."
+    },
+    {
+     "q": "¿Por qué se escribe + C?",
+     "c": [
+      "porque es obligatorio",
+      "porque C = 1",
+      "para indicar el área",
+      "porque la derivada de una constante es 0"
+     ],
+     "a": 3,
+     "e": "Respuesta: <b>porque la derivada de una constante es 0</b>."
+    },
+    {
+     "q": "Halla la primitiva de f(x) = 6x − 5 que pasa por el punto (−1, 6).",
+     "c": [
+      "F(x) = 6x² − 5x − 2",
+      "F(x) = 3x² − 5x + 2",
+      "F(x) = 3x² − 5x − 2",
+      "F(x) = 3x² − 5x + 6"
+     ],
+     "a": 2,
+     "e": "F(x) = 3x² − 5x + C y F(−1) = 6 → C = −2. <b>F(x) = 3x² − 5x − 2</b>."
+    },
+    {
+     "q": "¿Es cierto que ∫ f · g dx = ∫ f dx · ∫ g dx?",
+     "c": [
+      "sí, si f = g",
+      "no, para productos se usa por partes o cambio de variable",
+      "sí, siempre",
+      "solo si son polinomios"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>no, para productos se usa por partes o cambio de variable</b>."
+    },
+    {
+     "q": "Calcula ∫ x · cos x dx (por partes).",
+     "c": [
+      "(x²/2) cos x + C",
+      "x sen x − cos x + C",
+      "x sen x + cos x + C",
+      "−x sen x + C"
+     ],
+     "a": 2,
+     "e": "∫ u dv = uv − ∫ v du, eligiendo u la parte que se simplifica al derivar: <b>x sen x + cos x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ x · e<sup>4x</sup> dx (por partes).",
+     "c": [
+      "e<sup>4x</sup>(x/4 − 1/16) + C",
+      "e<sup>4x</sup>(x + 1) + C",
+      "(x²/2)e<sup>4x</sup> + C",
+      "x · e<sup>4x</sup>/4 + C"
+     ],
+     "a": 0,
+     "e": "∫ u dv = uv − ∫ v du, eligiendo u la parte que se simplifica al derivar: <b>e<sup>4x</sup>(x/4 − 1/16) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ x · ln x dx (por partes).",
+     "c": [
+      "x ln x − x + C",
+      "(x²/2) ln x − x²/4 + C",
+      "ln x + 1 + C",
+      "(x²/2) ln x + C"
+     ],
+     "a": 1,
+     "e": "∫ u dv = uv − ∫ v du, eligiendo u la parte que se simplifica al derivar: <b>(x²/2) ln x − x²/4 + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (x − 1) · e<sup>x</sup> dx (por partes).",
+     "c": [
+      "e<sup>x</sup>(x + 2) + C",
+      "e<sup>x</sup>(x) + C",
+      "(x − 1) · e<sup>x</sup> + C",
+      "e<sup>x</sup>(x − 2) + C"
+     ],
+     "a": 3,
+     "e": "u = x − 1, dv = eˣ dx: (x − 1)eˣ − ∫ eˣ dx = <b>e<sup>x</sup>(x − 2) + C</b>."
+    },
+    {
+     "q": "¿Cuántas primitivas tiene una función continua?",
+     "c": [
+      "infinitas (se diferencian en una constante)",
+      "una",
+      "dos",
+      "ninguna"
+     ],
+     "a": 0,
+     "e": "Respuesta: <b>infinitas (se diferencian en una constante)</b>."
+    },
+    {
+     "q": "Calcula ∫ (x − 3) · e<sup>x</sup> dx (por partes).",
+     "c": [
+      "e<sup>x</sup>(x + 4) + C",
+      "(x − 3) · e<sup>x</sup> + C",
+      "e<sup>x</sup>(x − 2) + C",
+      "e<sup>x</sup>(x − 4) + C"
+     ],
+     "a": 3,
+     "e": "u = x − 3, dv = eˣ dx: (x − 3)eˣ − ∫ eˣ dx = <b>e<sup>x</sup>(x − 4) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (x + 3) · e<sup>x</sup> dx (por partes).",
+     "c": [
+      "(x + 3) · e<sup>x</sup> + C",
+      "e<sup>x</sup>(x + 4) + C",
+      "e<sup>x</sup>(x − 2) + C",
+      "e<sup>x</sup>(x + 2) + C"
+     ],
+     "a": 3,
+     "e": "u = x + 3, dv = eˣ dx: (x + 3)eˣ − ∫ eˣ dx = <b>e<sup>x</sup>(x + 2) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ x · e<sup>2x</sup> dx (por partes).",
+     "c": [
+      "x · e<sup>2x</sup>/2 + C",
+      "e<sup>2x</sup>(x/2 − 1/4) + C",
+      "(x²/2)e<sup>2x</sup> + C",
+      "e<sup>2x</sup>(x + 1) + C"
+     ],
+     "a": 1,
+     "e": "∫ u dv = uv − ∫ v du, eligiendo u la parte que se simplifica al derivar: <b>e<sup>2x</sup>(x/2 − 1/4) + C</b>."
+    },
+    {
+     "q": "Si F es una primitiva de f, ¿qué cumple?",
+     "c": [
+      "F(x) = f(x) + 1",
+      "F′(x) = f(x)",
+      "f′(x) = F(x)",
+      "F(x) · f(x) = 1"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>F′(x) = f(x)</b>."
+    },
+    {
+     "q": "Calcula ∫ (x − 2) · e<sup>x</sup> dx (por partes).",
+     "c": [
+      "e<sup>x</sup>(x − 3) + C",
+      "e<sup>x</sup>(x + 3) + C",
+      "e<sup>x</sup>(x − 1) + C",
+      "(x − 2) · e<sup>x</sup> + C"
+     ],
+     "a": 0,
+     "e": "u = x − 2, dv = eˣ dx: (x − 2)eˣ − ∫ eˣ dx = <b>e<sup>x</sup>(x − 3) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ ln x dx (por partes).",
+     "c": [
+      "x ln x − x + C",
+      "(ln x)²/2 + C",
+      "1/x + C",
+      "x ln x + C"
+     ],
+     "a": 0,
+     "e": "∫ u dv = uv − ∫ v du, eligiendo u la parte que se simplifica al derivar: <b>x ln x − x + C</b>."
+    },
+    {
+     "q": "Halla la primitiva de f(x) = 4x + 1 que pasa por el punto (−1, −5).",
+     "c": [
+      "F(x) = 4x² + x − 6",
+      "F(x) = 2x² + x − 5",
+      "F(x) = 2x² + x + 6",
+      "F(x) = 2x² + x − 6"
+     ],
+     "a": 3,
+     "e": "F(x) = 2x² + x + C y F(−1) = −5 → C = −6. <b>F(x) = 2x² + x − 6</b>."
+    },
+    {
+     "q": "Halla la primitiva de f(x) = 6x que pasa por el punto (0, −2).",
+     "c": [
+      "F(x) = 3x² − 3",
+      "F(x) = 6x² − 2",
+      "F(x) = 3x² − 2",
+      "F(x) = 3x² + 2"
+     ],
+     "a": 2,
+     "e": "F(x) = 3x² + C y F(0) = −2 → C = −2. <b>F(x) = 3x² − 2</b>."
+    },
+    {
+     "q": "Calcula ∫ x · sen x dx (por partes).",
+     "c": [
+      "−x cos x + sen x + C",
+      "−x cos x − sen x + C",
+      "(x²/2) sen x + C",
+      "x cos x + C"
+     ],
+     "a": 0,
+     "e": "∫ u dv = uv − ∫ v du, eligiendo u la parte que se simplifica al derivar: <b>−x cos x + sen x + C</b>."
+    }
+   ]
+  },
+  {
+   "title": "Integrales racionales",
+   "items": [
+    {
+     "q": "Calcula ∫ (5x − 3)² dx.",
+     "c": [
+      "10(5x − 3) + C",
+      "(5x − 3)³/15 + C",
+      "(5x − 3)³/3 + C",
+      "(5x − 3)³/5 + C"
+     ],
+     "a": 1,
+     "e": "u = 5x − 3, du = 5 dx: u³/(3 · 5) = <b>(5x − 3)³/15 + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (5x + 17)/(x² + 7x + 12) dx.",
+     "c": [
+      "2 ln |x + 4| + 3 ln |x + 3| + C",
+      "3 ln |x + 4| − 2 ln |x + 3| + C",
+      "ln |x² + 7x + 12| + C",
+      "3 ln |x + 4| + 2 ln |x + 3| + C"
+     ],
+     "a": 3,
+     "e": "Descomponemos en fracciones simples: 3/(x + 4) + 2/(x + 3). <b>3 ln |x + 4| + 2 ln |x + 3| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (x + 9)/(x + 3) dx.",
+     "c": [
+      "ln |x + 9| + C",
+      "6 ln |x + 3| + C",
+      "x + ln |x + 3| + C",
+      "x + 6 ln |x + 3| + C"
+     ],
+     "a": 3,
+     "e": "Dividimos: 1 + 6/(x + 3). <b>x + 6 ln |x + 3| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (x + 8)/(x + 2) dx.",
+     "c": [
+      "x + 6 ln |x + 2| + C",
+      "ln |x + 8| + C",
+      "6 ln |x + 2| + C",
+      "x + ln |x + 2| + C"
+     ],
+     "a": 0,
+     "e": "Dividimos: 1 + 6/(x + 2). <b>x + 6 ln |x + 2| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (4x + 4)⁴ dx.",
+     "c": [
+      "16(4x + 4)³ + C",
+      "(4x + 4)⁵/20 + C",
+      "(4x + 4)⁵/4 + C",
+      "(4x + 4)⁵/5 + C"
+     ],
+     "a": 1,
+     "e": "u = 4x + 4, du = 4 dx: u⁵/(5 · 4) = <b>(4x + 4)⁵/20 + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (3x − 1)/(x² + 2x − 15) dx.",
+     "c": [
+      " ln |x + 5| + 2 ln |x − 3| + C",
+      "2 ln |x + 5| +  ln |x − 3| + C",
+      "ln |x² + 2x − 15| + C",
+      "2 ln |x + 5| −  ln |x − 3| + C"
+     ],
+     "a": 1,
+     "e": "Descomponemos en fracciones simples: 2/(x + 5) + 1/(x − 3). <b>2 ln |x + 5| +  ln |x − 3| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 2x/(x² + 6) dx.",
+     "c": [
+      "1/(x² + 6) + C",
+      "x²/(x²/2 + 6x) + C",
+      "2 ln (x² + 6) + C",
+      "ln (x² + 6) + C"
+     ],
+     "a": 3,
+     "e": "El numerador es la derivada del denominador: ∫ u′/u = <b>ln (x² + 6) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (7x − 7)/(x² − x − 12) dx.",
+     "c": [
+      "4 ln |x + 3| − 3 ln |x − 4| + C",
+      "4 ln |x + 3| + 3 ln |x − 4| + C",
+      "3 ln |x + 3| + 4 ln |x − 4| + C",
+      "ln |x² − x − 12| + C"
+     ],
+     "a": 1,
+     "e": "Descomponemos en fracciones simples: 4/(x + 3) + 3/(x − 4). <b>4 ln |x + 3| + 3 ln |x − 4| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 1/(5x) dx.",
+     "c": [
+      "(1/5) ln |5x| + C",
+      "ln |5x| + C",
+      "5 ln |5x| + C",
+      "−1/(5x)² + C"
+     ],
+     "a": 0,
+     "e": "∫ u′/u = ln |u|; aquí u′ = 5, así que dividimos entre 5: <b>(1/5) ln |5x| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 1/(4x + 4) dx.",
+     "c": [
+      "−1/(4x + 4)² + C",
+      "4 ln |4x + 4| + C",
+      "(1/4) ln |4x + 4| + C",
+      "ln |4x + 4| + C"
+     ],
+     "a": 2,
+     "e": "∫ u′/u = ln |u|; aquí u′ = 4, así que dividimos entre 4: <b>(1/4) ln |4x + 4| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (7x + 25)/(x² + 7x + 12) dx.",
+     "c": [
+      "3 ln |x + 4| − 4 ln |x + 3| + C",
+      "4 ln |x + 4| + 3 ln |x + 3| + C",
+      "3 ln |x + 4| + 4 ln |x + 3| + C",
+      "ln |x² + 7x + 12| + C"
+     ],
+     "a": 2,
+     "e": "Descomponemos en fracciones simples: 3/(x + 4) + 4/(x + 3). <b>3 ln |x + 4| + 4 ln |x + 3| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (x + 6)/(x + 1) dx.",
+     "c": [
+      "5 ln |x + 1| + C",
+      "ln |x + 6| + C",
+      "x + 5 ln |x + 1| + C",
+      "x + ln |x + 1| + C"
+     ],
+     "a": 2,
+     "e": "Dividimos: 1 + 5/(x + 1). <b>x + 5 ln |x + 1| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ sen (3x − 5) dx.",
+     "c": [
+      "cos (3x − 5) + C",
+      "(1/3) cos (3x − 5) + C",
+      "−(1/3) cos (3x − 5) + C",
+      "−3 cos (3x − 5) + C"
+     ],
+     "a": 2,
+     "e": "Dividimos entre la derivada de dentro (3): <b>−(1/3) cos (3x − 5) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 2x · e<sup>x²</sup> dx.",
+     "c": [
+      "e<sup>x³/3</sup> + C",
+      "2e<sup>x²</sup> + C",
+      "(1)e<sup>x²</sup> + C",
+      "2x² e<sup>x²</sup> + C"
+     ],
+     "a": 2,
+     "e": "u = x², du = 2x dx: <b>(1)e<sup>x²</sup> + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (5x − 1)/(x² + x − 12) dx.",
+     "c": [
+      "3 ln |x + 4| + 2 ln |x − 3| + C",
+      "3 ln |x + 4| − 2 ln |x − 3| + C",
+      "2 ln |x + 4| + 3 ln |x − 3| + C",
+      "ln |x² + x − 12| + C"
+     ],
+     "a": 0,
+     "e": "Descomponemos en fracciones simples: 3/(x + 4) + 2/(x − 3). <b>3 ln |x + 4| + 2 ln |x − 3| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (4x + 2)/(x² + 2x) dx.",
+     "c": [
+      "3 ln |x + 2| +  ln |x| + C",
+      "ln |x² + 2x| + C",
+      " ln |x + 2| + 3 ln |x| + C",
+      "3 ln |x + 2| −  ln |x| + C"
+     ],
+     "a": 0,
+     "e": "Descomponemos en fracciones simples: 3/(x + 2) + 1/(x). <b>3 ln |x + 2| +  ln |x| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (5x − 11)/(x² − 2x − 3) dx.",
+     "c": [
+      " ln |x + 1| + 4 ln |x − 3| + C",
+      "4 ln |x + 1| +  ln |x − 3| + C",
+      "4 ln |x + 1| −  ln |x − 3| + C",
+      "ln |x² − 2x − 3| + C"
+     ],
+     "a": 1,
+     "e": "Descomponemos en fracciones simples: 4/(x + 1) + 1/(x − 3). <b>4 ln |x + 1| +  ln |x − 3| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (x + 4)/(x + 3) dx.",
+     "c": [
+      "x + 1 ln |x + 3| + C",
+      "ln |x + 4| + C",
+      "1 ln |x + 3| + C",
+      "x + ln |x + 3| + C"
+     ],
+     "a": 0,
+     "e": "Dividimos: 1 + 1/(x + 3). <b>x + 1 ln |x + 3| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (4x + 7)/(x² + 5x + 4) dx.",
+     "c": [
+      "3 ln |x + 4| −  ln |x + 1| + C",
+      "ln |x² + 5x + 4| + C",
+      " ln |x + 4| + 3 ln |x + 1| + C",
+      "3 ln |x + 4| +  ln |x + 1| + C"
+     ],
+     "a": 3,
+     "e": "Descomponemos en fracciones simples: 3/(x + 4) + 1/(x + 1). <b>3 ln |x + 4| +  ln |x + 1| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ x · e<sup>x²</sup> dx.",
+     "c": [
+      "x² e<sup>x²</sup> + C",
+      "e<sup>x³/3</sup> + C",
+      "e<sup>x²</sup> + C",
+      "(1/2)e<sup>x²</sup> + C"
+     ],
+     "a": 3,
+     "e": "u = x², du = 2x dx: <b>(1/2)e<sup>x²</sup> + C</b>."
+    }
+   ]
+  },
+  {
+   "title": "Primitivas con condiciones",
+   "items": [
+    {
+     "q": "Calcula ∫ (x + 5) · e<sup>x</sup> dx (por partes).",
+     "c": [
+      "e<sup>x</sup>(x + 6) + C",
+      "e<sup>x</sup>(x + 4) + C",
+      "e<sup>x</sup>(x − 4) + C",
+      "(x + 5) · e<sup>x</sup> + C"
+     ],
+     "a": 1,
+     "e": "u = x + 5, dv = eˣ dx: (x + 5)eˣ − ∫ eˣ dx = <b>e<sup>x</sup>(x + 4) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ 6/x dx.",
+     "c": [
+      "6/x² + C",
+      "6x<sup>0</sup> + C",
+      "6x ln x + C",
+      "6 ln |x| + C"
+     ],
+     "a": 3,
+     "e": "∫ 1/x dx = ln |x| + C (la regla de las potencias no vale para n = −1): <b>6 ln |x| + C</b>."
+    },
+    {
+     "q": "Halla la primitiva de f(x) = 2x + 2 que pasa por el punto (0, 4).",
+     "c": [
+      "F(x) = x² + 2x + 5",
+      "F(x) = x² + 2x + 4",
+      "F(x) = x² + 2x − 4",
+      "F(x) = 2x² + 2x + 4"
+     ],
+     "a": 1,
+     "e": "F(x) = x² + 2x + C y F(0) = 4 → C = 4. <b>F(x) = x² + 2x + 4</b>."
+    },
+    {
+     "q": "Calcula ∫ (x + 4) · e<sup>x</sup> dx (por partes).",
+     "c": [
+      "e<sup>x</sup>(x + 5) + C",
+      "e<sup>x</sup>(x − 3) + C",
+      "(x + 4) · e<sup>x</sup> + C",
+      "e<sup>x</sup>(x + 3) + C"
+     ],
+     "a": 3,
+     "e": "u = x + 4, dv = eˣ dx: (x + 4)eˣ − ∫ eˣ dx = <b>e<sup>x</sup>(x + 3) + C</b>."
+    },
+    {
+     "q": "Halla la primitiva de f(x) = 4x + 2 que pasa por el punto (0, −6).",
+     "c": [
+      "F(x) = 2x² + 2x − 6",
+      "F(x) = 2x² + 2x + 6",
+      "F(x) = 2x² + 2x − 7",
+      "F(x) = 4x² + 2x − 6"
+     ],
+     "a": 0,
+     "e": "F(x) = 2x² + 2x + C y F(0) = −6 → C = −6. <b>F(x) = 2x² + 2x − 6</b>."
+    },
+    {
+     "q": "Calcula ∫ 3√x dx.",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>x√x + C",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>/√x + C",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>√x + C",
+      "2x√x + C"
+     ],
+     "a": 3,
+     "e": "√x = x<sup>1/2</sup> → x<sup>3/2</sup>/(3/2) = (2/3)x√x: <b>2x√x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ x · e<sup>x</sup> dx (por partes).",
+     "c": [
+      "x · e<sup>x</sup> + C",
+      "e<sup>x</sup>(x − 1) + C",
+      "e<sup>x</sup>(x + 1) + C",
+      "(x²/2)e<sup>x</sup> + C"
+     ],
+     "a": 1,
+     "e": "∫ u dv = uv − ∫ v du, eligiendo u la parte que se simplifica al derivar: <b>e<sup>x</sup>(x − 1) + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (−x² − 2x − 1) dx.",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x³ − x² − x + C",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x³ − x² − x",
+      "−2x − 2 + C",
+      "−x³ − 2x² − x + C"
+     ],
+     "a": 0,
+     "e": "∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C, término a término: <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x³ − x² − x + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (x − 4) · e<sup>x</sup> dx (por partes).",
+     "c": [
+      "e<sup>x</sup>(x − 3) + C",
+      "e<sup>x</sup>(x + 5) + C",
+      "e<sup>x</sup>(x − 5) + C",
+      "(x − 4) · e<sup>x</sup> + C"
+     ],
+     "a": 2,
+     "e": "u = x − 4, dv = eˣ dx: (x − 4)eˣ − ∫ eˣ dx = <b>e<sup>x</sup>(x − 5) + C</b>."
+    },
+    {
+     "q": "Halla la primitiva de f(x) = 4x − 4 que pasa por el punto (1, 4).",
+     "c": [
+      "F(x) = 2x² − 4x + 4",
+      "F(x) = 2x² − 4x + 6",
+      "F(x) = 4x² − 4x + 6",
+      "F(x) = 2x² − 4x − 6"
+     ],
+     "a": 1,
+     "e": "F(x) = 2x² − 4x + C y F(1) = 4 → C = 6. <b>F(x) = 2x² − 4x + 6</b>."
+    },
+    {
+     "q": "Calcula ∫ (x + 2) · e<sup>x</sup> dx (por partes).",
+     "c": [
+      "(x + 2) · e<sup>x</sup> + C",
+      "e<sup>x</sup>(x − 1) + C",
+      "e<sup>x</sup>(x + 1) + C",
+      "e<sup>x</sup>(x + 3) + C"
+     ],
+     "a": 2,
+     "e": "u = x + 2, dv = eˣ dx: (x + 2)eˣ − ∫ eˣ dx = <b>e<sup>x</sup>(x + 1) + C</b>."
+    },
+    {
+     "q": "Halla la primitiva de f(x) = 6x − 1 que pasa por el punto (1, −5).",
+     "c": [
+      "F(x) = 3x² − x + 7",
+      "F(x) = 3x² − x − 5",
+      "F(x) = 3x² − x − 7",
+      "F(x) = 6x² − x − 7"
+     ],
+     "a": 2,
+     "e": "F(x) = 3x² − x + C y F(1) = −5 → C = −7. <b>F(x) = 3x² − x − 7</b>."
+    },
+    {
+     "q": "Calcula ∫ 6 cos x dx.",
+     "c": [
+      "6 sen x + C",
+      "6 cos x + C",
+      "6 tg x + C",
+      "−6 sen x + C"
+     ],
+     "a": 0,
+     "e": "Integral inmediata: <b>6 sen x + C</b>."
+    },
+    {
+     "q": "Halla la primitiva de f(x) = 4x + 5 que pasa por el punto (−1, −4).",
+     "c": [
+      "F(x) = 2x² + 5x − 1",
+      "F(x) = 4x² + 5x − 1",
+      "F(x) = 2x² + 5x − 4",
+      "F(x) = 2x² + 5x + 1"
+     ],
+     "a": 0,
+     "e": "F(x) = 2x² + 5x + C y F(−1) = −4 → C = −1. <b>F(x) = 2x² + 5x − 1</b>."
+    },
+    {
+     "q": "Halla la primitiva de f(x) = 6x + 5 que pasa por el punto (−2, 4).",
+     "c": [
+      "F(x) = 3x² + 5x − 2",
+      "F(x) = 6x² + 5x + 2",
+      "F(x) = 3x² + 5x + 2",
+      "F(x) = 3x² + 5x + 4"
+     ],
+     "a": 2,
+     "e": "F(x) = 3x² + 5x + C y F(−2) = 4 → C = 2. <b>F(x) = 3x² + 5x + 2</b>."
+    },
+    {
+     "q": "Calcula ∫ x · e<sup>3x</sup> dx (por partes).",
+     "c": [
+      "(x²/2)e<sup>3x</sup> + C",
+      "e<sup>3x</sup>(x + 1) + C",
+      "x · e<sup>3x</sup>/3 + C",
+      "e<sup>3x</sup>(x/3 − 1/9) + C"
+     ],
+     "a": 3,
+     "e": "∫ u dv = uv − ∫ v du, eligiendo u la parte que se simplifica al derivar: <b>e<sup>3x</sup>(x/3 − 1/9) + C</b>."
+    },
+    {
+     "q": "Halla la primitiva de f(x) = 6x que pasa por el punto (3, 5).",
+     "c": [
+      "F(x) = 3x² + 5",
+      "F(x) = 3x² − 22",
+      "F(x) = 3x² + 22",
+      "F(x) = 6x² − 22"
+     ],
+     "a": 1,
+     "e": "F(x) = 3x² + C y F(3) = 5 → C = −22. <b>F(x) = 3x² − 22</b>."
+    },
+    {
+     "q": "Halla la primitiva de f(x) = 2x + 5 que pasa por el punto (3, −5).",
+     "c": [
+      "F(x) = x² + 5x + 29",
+      "F(x) = x² + 5x − 5",
+      "F(x) = x² + 5x − 29",
+      "F(x) = 2x² + 5x − 29"
+     ],
+     "a": 2,
+     "e": "F(x) = x² + 5x + C y F(3) = −5 → C = −29. <b>F(x) = x² + 5x − 29</b>."
+    },
+    {
+     "q": "Calcula ∫ 4/x dx.",
+     "c": [
+      "4 ln |x| + C",
+      "4/x² + C",
+      "4x ln x + C",
+      "4x<sup>0</sup> + C"
+     ],
+     "a": 0,
+     "e": "∫ 1/x dx = ln |x| + C (la regla de las potencias no vale para n = −1): <b>4 ln |x| + C</b>."
+    },
+    {
+     "q": "Calcula ∫ (x² + 4x − 2) dx.",
+     "c": [
+      "2x + 4 + C",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x³ + 2x² − 2x",
+      "x³ + 4x² − 2x + C",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x³ + 2x² − 2x + C"
+     ],
+     "a": 3,
+     "e": "∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C, término a término: <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x³ + 2x² − 2x + C</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 10,
+ "updated": "2026-11-23",
+ "country": "es",
+ "subject": "matematicas",
+ "grade": "2-bachillerato"
+}
