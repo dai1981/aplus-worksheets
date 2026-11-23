@@ -103,8 +103,32 @@ def kosy(lines=(), pts=(), lo=-5, hi=5, label="plano cartesiano"):
     return de_k8.kosy(lines, pts, lo, hi, label=label)
 
 
-def unit(R, slug, dom, codes, std, title, short, meta, kb, ks, body, faq, sets, sort):
-    make_unit(R, slug, dom, codes, std, title, short, meta, kb, ks, body, faq, sets, sort, grade="9-ano")
+def unit(R, slug, dom, codes, std, title, short, meta, kb, ks, body, faq, sets, sort, grade="9-ano"):
+    make_unit(R, slug, dom, codes, std, title, short, meta, kb, ks, body, faq, sets, sort, grade=grade)
+
+
+def bank(R, items, name="bank"):
+    """gerador que sorteia de uma lista [(pergunta, resposta, [erradas])]"""
+    def mk():
+        q, a, w = R.choice(items)
+        return M(q, a, w, "Resposta: <b>%s</b>." % a)
+    mk.__name__ = name
+    return mk
+
+
+def tab(rows, head=True):
+    """tabela pequena: rows = [[célula, ...], ...]; a 1ª linha é o cabeçalho"""
+    out = []
+    for i, r in enumerate(rows):
+        tag = "th" if (head and i == 0) else "td"
+        out.append("<tr>%s</tr>" % "".join("<%s>%s</%s>" % (tag, c, tag) for c in r))
+    return "<table class='sn-table' style='width:auto;margin:6px 0'><tbody>%s</tbody></table>" % "".join(out)
+
+
+def ntab(xs, ys, hx="x", hy="y"):
+    """tabela horizontal de duas linhas"""
+    return "<table class='sn-table' style='width:auto;margin:6px 0'><tbody><tr><th>%s</th>%s</tr><tr><th>%s</th>%s</tr></tbody></table>" % (
+        hx, "".join("<td>%s</td>" % x for x in xs), hy, "".join("<td>%s</td>" % y for y in ys))
 
 
 # ---------- figuras de geometria (SVG próprio) ----------

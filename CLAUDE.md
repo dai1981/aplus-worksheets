@@ -1465,7 +1465,14 @@ BR / Matemática / 9º ano（SAEB の学年。BNCC EF09MA01〜EF09MA23。負の�
 9. equacoes-do-2-grau ✓ 10. angulos-e-retas-paralelas ✓ 11. angulos-na-circunferencia ✓ 12. semelhanca-de-triangulos ✓ 13. relacoes-metricas-no-triangulo-retangulo ✓ 14. teorema-de-pitagoras ✓ 15. poligonos-regulares ✓
 16. distancia-e-ponto-medio ✓ 17. vistas-ortogonais ✓ 18. unidades-de-medida-muito-grandes-e-pequenas ✓ 19. volume-de-prismas-e-cilindros ✓ 20. probabilidade ✓ 21. graficos-e-estatistica ✓ 22. pesquisa-amostral ✓
 
-BR の次: 6º・7º・8º ano の順。各学年の BNCC コード（EF06MA01 など）で単元を分ける
+BR / Matemática / 6º ano（BNCC EF06MA01〜EF06MA34）— 生成スクリプトは `gen_br_matematica_6_*`（seed は 860NN、use で再利用する 5º・9º のモジュールの R は 869NN）。共通部品は br_9（unit に grade="6-ano"、bank（[(問, 答, [誤答])] から選ぶ問題関数）・tab・ntab を足した）。
+5º の問題関数（figuras espaciais・poligonos・ampliacao・perimetro e area・medidas・probabilidade・tabelas e graficos）と 9º の graficos を use で再利用。5º perimetro-e-area の L 字の図の文字切れを直した。
+トピック：arredondamento→numeros（numeros の out に primos）、mmc・operacoes-com-numeros→multiplicacao-e-divisao、retas→geometria、partilha→algebra-e-funcoes（adicao の out に partilha）
+1. numeros-naturais-e-sistema-de-numeracao ✓ 2. operacoes-com-numeros-naturais ✓ 3. multiplos-divisores-e-numeros-primos ✓ 4. mmc-e-mdc ✓ 5. fracoes ✓ 6. operacoes-com-fracoes ✓ 7. numeros-decimais ✓
+8. operacoes-com-decimais ✓ 9. arredondamento-e-estimativa ✓ 10. porcentagem ✓ 11. igualdade-e-partilha ✓ 12. plano-cartesiano ✓ 13. prismas-e-piramides ✓ 14. poligonos-triangulos-e-quadrilateros ✓
+15. ampliacao-e-reducao ✓ 16. retas-paralelas-e-perpendiculares ✓ 17. grandezas-e-medidas ✓ 18. angulos ✓ 19. perimetro-e-area ✓ 20. probabilidade ✓ 21. tabelas-e-graficos ✓
+
+BR の次: 7º・8º ano の順。各学年の BNCC コード（EF07MA01 など）で単元を分ける
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

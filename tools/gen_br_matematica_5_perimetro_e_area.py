@@ -164,11 +164,11 @@ def s4_composta():
     k = R.choice(["area", "per"])
     s = 14.0 * min(1, 16.0 / max(a, b))
     W, Hh = a * s, b * s
-    x0, y0 = 30, 20
+    x0, y0 = 56, 20
     pts = [(x0, y0), (x0 + W - c * s, y0), (x0 + W - c * s, y0 + d * s), (x0 + W, y0 + d * s), (x0 + W, y0 + Hh), (x0, y0 + Hh)]
     body = "<polygon points='%s' fill='%s' stroke='%s' stroke-width='2.4'/>" % (" ".join("%.1f,%.1f" % p for p in pts), R.choice(COLS), INK)
     body += text(x0 + W / 2, y0 + Hh + 18, "%d cm" % a, 14) + text(x0 - 6, y0 + Hh / 2, "%d cm" % b, 14, anchor="end")
-    body += text(x0 + W - c * s / 2, y0 + d * s - 6, "%d cm" % c, 13) + text(x0 + W - c * s + 4, y0 + d * s / 2 + 4, "%d cm" % d, 13, anchor="start")
+    body += text(x0 + W - c * s / 2, y0 + d * s + 16, "%d cm" % c, 13) + text(x0 + W - c * s + 4, y0 + d * s / 2 + 4, "%d cm" % d, 13, anchor="start")
     pic = wrap(int(x0 + W + 60), int(y0 + Hh + 30), body, "figura em forma de L com medidas", lg=True)
     if k == "area":
         return mcq(pic + "A figura é um retângulo de %d cm por %d cm sem um canto de %d cm por %d cm. Qual é a área?" % (a, b, c, d), "%d cm²" % A,
