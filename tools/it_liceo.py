@@ -132,11 +132,16 @@ def show(p, main="x"):
 
 
 def W(*xs):
-    """distrattori senza None, senza negativi e senza doppioni (restituisce gli oggetti, non le stringhe)"""
+    """distrattori senza None e senza doppioni (restituisce gli oggetti, non le stringhe); i negativi restano"""
     out, seen = [], set()
     for x in xs:
-        if x is None or (isinstance(x, (int, Fr)) and x < 0) or str(x) in seen:
+        if x is None or str(x) in seen:
             continue
         seen.add(str(x))
         out.append(x)
     return out
+
+
+def WP(*xs):
+    """come W, ma solo valori positivi (lunghezze, aree, conteggi)"""
+    return [x for x in W(*xs) if not (isinstance(x, (int, Fr)) and x <= 0)]
