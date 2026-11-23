@@ -24,6 +24,7 @@ DIV = "÷"
 STD_URL = "http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
 DOMAIN = {"N": "Números", "A": "Álgebra", "G": "Geometria", "M": "Grandezas e medidas", "E": "Probabilidade e estatística"}
 GRADE_NAME = {"%d-ano" % i: "%dº ano" % i for i in range(1, 10)}
+GRADE_NAME.update({"%d-serie" % i: "%dª série" % i for i in range(1, 4)})   # Ensino Médio
 GIRLS = ["Helena", "Alice", "Laura", "Maria", "Valentina", "Heloísa", "Sofia", "Manuela", "Júlia", "Lívia", "Cecília", "Beatriz", "Lara", "Isabela"]
 BOYS = ["Miguel", "Arthur", "Gael", "Heitor", "Theo", "Davi", "Gabriel", "Bernardo", "Samuel", "João", "Pedro", "Lucas", "Rafael", "Enzo"]
 

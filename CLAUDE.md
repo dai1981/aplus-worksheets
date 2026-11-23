@@ -1486,7 +1486,15 @@ use は問題関数だけを包むので、図の関数（9º volume の cil な
 8. sistemas-de-equacoes ✓ 9. equacoes-do-2-grau-do-tipo-ax2-b ✓ 10. sequencias-recursivas-e-nao-recursivas ✓ 11. grandezas-proporcionais ✓ 12. congruencia-de-triangulos ✓ 13. mediatriz-bissetriz-e-construcoes ✓
 14. transformacoes-geometricas ✓ 15. area-de-figuras-planas-e-do-circulo ✓ 16. volume-e-capacidade ✓ 17. probabilidade ✓ 18. graficos-e-classes-de-frequencia ✓ 19. medidas-de-tendencia-central ✓ 20. pesquisa-amostral ✓
 
-BR / Matemática は 1º〜9º ano まで完了。次は Ensino Médio（BNCC EM13MAT…、1ª〜3ª série）か、GDP 順で次の国
+BR / Matemática / Ensino Médio（BNCC EM13MAT101〜EM13MAT511。BNCC の EM は学年に分かれていないので、教科書の一般的な配分で 1ª〜3ª série に分ける）— grade `1-serie`・`2-serie`・`3-serie`（name「1ª série」…、sort 10〜12、unit.php で 15〜18 歳と educationalLevel「Ensino Médio」）。
+生成スクリプトは `gen_br_matematica_em1_*`（2ª は em2、3ª は em3。seed は 910NN・920NN・930NN、use で再利用する 8º・9º のモジュールの R は 919NN・929NN・939NN）、共通部品は `tools/br_em.py`（br_9・br_common の上に curva（de_k10.kurve、数を 1.000 の形に）・R2（Fraction → R$ 1.234,56）・pc・sg・unit（grade を必ず渡す））。standard_code は EM13MAT のコード、standard_url は BNCC の PDF（EF と同じ）。
+key_big・key_sub・faq は生の < >（q・c・e・body は &lt; &gt;）。トピック：funcao・progressao・sistemas-lineares・logaritmos・maximo-e-minimo→algebra-e-funcoes、grandezas-compostas→grandezas-e-medidas
+
+BR / Matemática / 1ª série
+1. notacao-cientifica-e-medidas ✓ 2. grandezas-compostas ✓ 3. funcoes-e-taxa-de-variacao ✓ 4. funcao-afim ✓ 5. funcao-quadratica ✓ 6. maximo-e-minimo-da-funcao-quadratica ✓ 7. funcoes-definidas-por-partes ✓
+8. progressao-aritmetica ✓ 9. progressao-geometrica ✓ 10. funcao-exponencial ✓ 11. logaritmos ✓ 12. funcao-logaritmica ✓ 13. sistemas-lineares ✓ 14. tabelas-e-graficos-estatisticos ✓ 15. medidas-de-tendencia-central-e-dispersao ✓
+
+BR の次: 2ª série（trigonometria, leis do seno e do cosseno, ciclo trigonométrico, funções seno e cosseno, transformações e homotetias, áreas, prismas e pirâmides, corpos redondos, Cavalieri, contagem, combinatória, probabilidade）、3ª série（juros, finanças, índices, modelos, box-plot, pesquisa amostral, regressão, algoritmos, programação, cartografia, polígonos regulares, riscos）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

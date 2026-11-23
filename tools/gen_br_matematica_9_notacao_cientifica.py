@@ -90,11 +90,11 @@ def s4_operar():
         e = e1 + e2
         if p >= 10:
             return None
-        return M("Calcule: (%s) · (%s)" % (nc(a, e1), nc(b, e2)), nc(p, e), [nc(p, e1 * e2), nc(a + b, e), nc(p, e1 - e2)],
+        return M("Calcule: (%s) · (%s)" % (nc(a, e1), nc(b, e2)), nc(p, e), [nc(p, e1 * e2), nc(a + b, e), nc(p, e1 - e2), nc(p, e + 1), nc(p, e - 1)],
                  "%d · %d = %d e some os expoentes: %d + (%d) = %d. Resposta: <b>%s</b>." % (a, b, p, e1, e2, e, nc(p, e)))
     p = a * b
     e = e1 - e2
-    return M("Calcule: (%s) ÷ (%s)" % (nc(p, e1), nc(b, e2)), nc(a, e), [nc(a, e1 + e2), nc(p - b, e), nc(a, e2 - e1)],
+    return M("Calcule: (%s) ÷ (%s)" % (nc(p, e1), nc(b, e2)), nc(a, e), [nc(a, e1 + e2), nc(p - b, e), nc(a, e2 - e1), nc(a, e + 1), nc(a, e - 1)],
              "%d ÷ %d = %d e subtraia os expoentes: %d − (%d) = %d. Resposta: <b>%s</b>." % (p, b, a, e1, e2, e, nc(a, e)))
 
 
