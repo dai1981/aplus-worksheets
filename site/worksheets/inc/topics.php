@@ -215,6 +215,36 @@ function topic_defs_it() {
     );
 }
 
+/* Spain: Spanish unit slugs, Spanish names (LOMLOE) */
+function topic_defs_es() {
+    return array(
+        'numeros' => array('name' => 'Números',
+            'in' => '/numeros|comparar|redondeo|romanos/', 'out' => '/decimal|fraccion/',
+            'blurb' => 'Leer, escribir y descomponer números, valor posicional, comparar, ordenar y redondear, números romanos.'),
+        'suma-y-resta' => array('name' => 'Suma y resta',
+            'in' => '/suma|resta|calculo-mental/', 'out' => '/fraccion|decimal/',
+            'blurb' => 'Cálculo mental, sumas y restas en vertical con llevadas, estimaciones y problemas de sumar y restar.'),
+        'multiplicacion-y-division' => array('name' => 'Multiplicación y división',
+            'in' => '/multiplica|division|divisiones|tablas-de-multiplicar|multiplos|divisores/', 'out' => '/fraccion|decimal/',
+            'blurb' => 'Tablas de multiplicar, multiplicaciones y divisiones por una y dos cifras, la prueba de la división, múltiplos y divisores.'),
+        'fracciones-y-decimales' => array('name' => 'Fracciones y decimales',
+            'in' => '/fraccion|decimal|porcentaje/', 'out' => '/^$/',
+            'blurb' => 'Fracciones de la unidad y de una cantidad, fracciones equivalentes, décimas y centésimas, sumar y restar decimales.'),
+        'problemas' => array('name' => 'Problemas',
+            'in' => '/problemas/', 'out' => '/^$/',
+            'blurb' => 'Problemas de una y dos operaciones con datos de la vida diaria: compras, viajes, recetas y repartos.'),
+        'magnitudes-y-medida' => array('name' => 'Magnitudes y medida',
+            'in' => '/longitud|masa|capacidad|medida|tiempo|reloj|dinero|perimetro|area|superficie/', 'out' => '/^$/',
+            'blurb' => 'Longitud, masa y capacidad, cambio de unidades, perímetro y área, el reloj y el tiempo, el dinero en euros.'),
+        'geometria' => array('name' => 'Geometría',
+            'in' => '/angulos|rectas|poligonos|triangulos|cuadrilateros|cuerpos|simetria|coordenadas|figuras|circunferencia/', 'out' => '/^$/',
+            'blurb' => 'Rectas y ángulos, polígonos, triángulos y cuadriláteros, circunferencia y círculo, cuerpos geométricos, simetría y coordenadas.'),
+        'estadistica-y-probabilidad' => array('name' => 'Estadística y probabilidad',
+            'in' => '/graficos|tablas-de|estadistica|probabilidad|media/', 'out' => '/^$/',
+            'blurb' => 'Tablas de frecuencias, gráficos de barras y de líneas, la media y la moda, sucesos seguros, posibles e imposibles.'),
+    );
+}
+
 /* Brazil: Portuguese unit slugs, Portuguese names (BNCC) */
 function topic_defs_br() {
     return array(
@@ -253,6 +283,7 @@ function topic_defs_br() {
 
 function topic_defs($country = null) {
     if ($country === 'br') return topic_defs_br();
+    if ($country === 'es') return topic_defs_es();
     if ($country === 'tw') return topic_defs_tw();
     if ($country === 'de') return topic_defs_de();
     if ($country === 'fr') return topic_defs_fr();
@@ -492,6 +523,7 @@ function topic_range($units) {
     if ($units[0]['country'] === 'tw') return $first . '到' . $last;
     if ($units[0]['country'] === 'fr') return 'du ' . $first . ' au ' . $last;
     if ($units[0]['country'] === 'br') return 'do ' . $first . ' ao ' . $last;
+    if ($units[0]['country'] === 'es') return 'de ' . $first . ' a ' . $last;
     if ($units[0]['country'] === 'it') return 'dalla ' . strtolower($first) . ' alla ' . strtolower($last);
     return $units[0]['country'] === 'de' ? $first . ' bis ' . $last : $first . ' to ' . $last;
 }

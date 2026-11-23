@@ -1504,6 +1504,21 @@ BR / Matemática / 3ª série（br_em に code（Python・アルゴリズムの 
 
 BR / Matemática は 1º ano〜3ª série まで完了（EM13MAT のスキルはすべてどこかの単元に入っている）。次は GDP 順で次の国（juros, finanças, índices, modelos, box-plot, pesquisa amostral, regressão, algoritmos, programação, cartografia, polígonos regulares, riscos）
 
+ES / Matemáticas（LOMLOE、Real Decreto 157/2022 の Educación Primaria の saberes básicos）— country `es`（name「España」、lang `es`、hreflang es-es、standard「LOMLOE」）、subject `matematicas`（Matemáticas）、grade `N-primaria`（name「4.º de Primaria」、N+5〜N+6 歳、unit.php）、A4。
+生成スクリプトは `gen_es_matematicas_N_*`（seed は 44NNN：4.º は 44001〜）、共通部品は `tools/es_common.py`（num（4 桁はそのまま 4536、5 桁以上はノーブレークスペース 12 345。RAE）・dec・dz（コンマの小数）・eur（3,50 €、c=True で 45 céntimos）・hora（8:15）・dur（1 h 25 min）・pl・Kids（名前と ella/él）・ao・mcq（ES_WARN=1 で FILL）・bank・lesson（Cómo se hace → Ejemplo → Errores frecuentes）・make_unit（seo_title「Fracciones – 4.º de Primaria: fichas de matemáticas con soluciones」、standard_code「4.º de Primaria · Sentido numérico」）・letra（999 999 までの数詞、veintiún mil）・nomfrac（3/4 → tres cuartos）・図：recta（every は値の単位：every=5 * step）・bloques・tabla_valor（CM DM UM C D U）・tabla_decimal・grafico・dinero_svg・cuerpo_svg・reloj・vertical（筆算）・tira・circulo）と測定の部品 `tools/es_medida.py`（LON・MAS・CAP、conv・compound・comparar）。
+スペイン語（スペイン）、tú で話しかける短い文。記号は × と :（割り算）、余りは「23 : 5 = 4 y resto 3」。時刻は「las tres y cuarto」「las cuatro menos veinte」、24 時間制は 17:30。単位は km hm dam m dm cm mm、kg g t、L dL cL mL。
+domain は LOMLOE の sentidos（N Sentido numérico／M Sentido de la medida／E Sentido espacial／A Sentido algebraico／S Sentido estocástico）、standard_text は saberes básicos の要約、standard_url は BOE-A-2022-3296。角度・三角形・四角形の図は `gen_au_maths_y5_angles`（angle_fig・protractor_svg・tri_pts・shape_svg）を relabel で使う。
+q・c・e の中の < > は &lt; &gt;。選択肢は必ず 4 つ（「<」「>」「=」の 3 択は文の比較にする）。同じ文の問題は重複扱いなので、数を問題文に入れる。
+UI 文言は core.php の 'es'（js の桁区切りはノーブレークスペース）、トピックは topics.php の `topic_defs_es()`（numeros・suma-y-resta・multiplicacion-y-division・fracciones-y-decimales・problemas・magnitudes-y-medida・geometria・estadistica-y-probabilidad）、topic.php・topics.php に $es の文言
+
+ES / Matemáticas / 4.º de Primaria（segundo ciclo の最後の学年。数は 999 999 まで、小数は centésimas まで）
+1. numeros-de-hasta-seis-cifras ✓ 2. comparar-y-redondear-numeros ✓ 3. numeros-romanos ✓ 4. suma-y-resta ✓ 5. calculo-mental-y-estimacion ✓ 6. multiplicacion ✓ 7. division ✓
+8. multiplos-y-divisores ✓ 9. problemas-de-dos-operaciones ✓ 10. fracciones ✓ 11. fracciones-equivalentes ✓ 12. numeros-decimales ✓ 13. suma-y-resta-de-decimales ✓
+14. medidas-de-longitud ✓ 15. masa-y-capacidad ✓ 16. el-tiempo-y-el-reloj ✓ 17. el-dinero ✓ 18. angulos ✓ 19. triangulos-y-cuadrilateros ✓ 20. perimetro-y-area ✓
+21. cuerpos-geometricos ✓ 22. simetria-y-coordenadas ✓ 23. patrones-e-igualdades ✓ 24. graficos-y-tablas ✓ 25. probabilidad ✓
+
+ES の次: 6.º de Primaria（tercer ciclo の最後）→ 5.º → 3.º → 2.º → 1.º。学年は catalog.json に足す。patrones-e-igualdades はまだどのトピックにも入らない（algebra の単元が 3 つたまったらトピックを足す）
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
