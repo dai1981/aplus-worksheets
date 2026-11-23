@@ -192,7 +192,7 @@ def main():
               "Medida del tiempo: lectura de relojes analógicos y digitales; unidades de tiempo (segundo, minuto, hora, día, semana, mes, año, década y siglo) y sus equivalencias; cálculo de duraciones; resolución de problemas",
               "El tiempo y el reloj", "El tiempo y el reloj",
               "Fichas de matemáticas de 4.º de Primaria: leer el reloj de agujas y el digital, la hora de 24 horas, horas, minutos y segundos, duraciones, calendario y siglos. 100 ejercicios con soluciones.",
-              "La aguja corta marca la hora; la larga, los minutos", "1 h = 60 min. Por la tarde, suma 12.",
+              "Aguja corta: horas; larga: minutos", "1 h = 60 min. Por la tarde, suma 12.",
               body, faq, sets, 16)
 
 

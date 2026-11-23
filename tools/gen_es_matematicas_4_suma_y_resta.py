@@ -191,7 +191,7 @@ def main():
               "Estrategias y algoritmos de suma y resta con números naturales de hasta seis cifras; propiedades de la suma; relación entre suma y resta; resolución de problemas",
               "Suma y resta con llevadas", "Suma y resta",
               "Fichas de matemáticas de 4.º de Primaria: sumas y restas en vertical con llevadas hasta seis cifras, términos, prueba de la resta, número que falta y problemas. 100 ejercicios con soluciones.",
-              "Alinea las cifras por la derecha", "Suma o resta columna a columna, desde las unidades.",
+              "Alinea las cifras por la derecha", "Empieza por las unidades.",
               body, faq, sets, 4)
 
 

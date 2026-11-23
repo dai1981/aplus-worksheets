@@ -231,7 +231,7 @@ def main():
               "Recogida, organización y representación de datos: recuento, tablas de frecuencias y de doble entrada, gráficos de barras, pictogramas y gráficos lineales; interpretación de datos; la moda",
               "Gráficos y tablas", "Gráficos y tablas",
               "Fichas de matemáticas de 4.º de Primaria: recuento, tablas de frecuencias y de doble entrada, gráficos de barras, pictogramas, gráficos lineales y la moda. 100 ejercicios con soluciones.",
-              "Mira siempre la escala y la leyenda", "Frecuencia: cuántas veces aparece un dato. Moda: el que más se repite.",
+              "Mira la escala y la leyenda", "Moda: el dato que más se repite.",
               body, faq, sets, 24)
 
 

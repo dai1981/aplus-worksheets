@@ -133,7 +133,7 @@ def main():
               "Ángulos: elementos, clasificación (recto, agudo, obtuso, llano y completo), medida en grados con el transportador, estimación; giros",
               "Ángulos: tipos y medida", "Ángulos",
               "Fichas de matemáticas de 4.º de Primaria: ángulos recto, agudo, obtuso, llano y completo, medir con el transportador, estimar, complementarios, suplementarios y giros. 100 ejercicios con soluciones.",
-              "Recto 90°, llano 180°, completo 360°", "Agudo: menos de 90°; obtuso: entre 90° y 180°.",
+              "Recto 90°, llano 180°, completo 360°", "Agudo: menos de 90°. Obtuso: más de 90°.",
               body, faq, sets, 18)
 
 

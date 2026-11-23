@@ -195,7 +195,7 @@ def main():
               "Números decimales hasta las centésimas: relación con las fracciones decimales, lectura, escritura, valor posicional, comparación, ordenación, representación en la recta y redondeo; uso en contextos de dinero y medida",
               "Números decimales: décimas y centésimas", "Números decimales",
               "Fichas de matemáticas de 4.º de Primaria: décimas y centésimas, fracciones decimales, leer y escribir decimales, comparar, ordenar, redondear y decimales en euros y medidas. 100 ejercicios con soluciones.",
-              "La coma separa las unidades de las décimas", "Para comparar, iguala las cifras decimales: 2,5 = 2,50.",
+              "La coma separa unidades y décimas", "Para comparar: 2,5 = 2,50.",
               body, faq, sets, 12)
 
 

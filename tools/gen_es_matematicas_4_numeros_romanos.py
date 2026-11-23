@@ -192,7 +192,7 @@ def main():
               "El sistema de numeración romano: lectura y escritura de números romanos; reglas de suma y resta; uso en la vida cotidiana",
               "Números romanos", "Números romanos",
               "Fichas de matemáticas de 4.º de Primaria: números romanos. Valor de I, V, X, L, C, D y M, leer y escribir números romanos, reglas y siglos. 100 ejercicios con soluciones.",
-              "I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000", "Delante de una letra mayor resta (IV = 4); detrás, suma (VI = 6).",
+              "Delante resta; detrás suma", "IV = 4 y VI = 6.",
               body, faq, sets, 3)
 
 

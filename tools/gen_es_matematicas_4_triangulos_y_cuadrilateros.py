@@ -216,7 +216,7 @@ def main():
               "Figuras planas: polígonos y sus elementos; clasificación de triángulos según sus lados y sus ángulos; clasificación de cuadriláteros; la circunferencia y el círculo",
               "Triángulos, cuadriláteros y polígonos", "Triángulos y cuadriláteros",
               "Fichas de matemáticas de 4.º de Primaria: polígonos, triángulos equiláteros, isósceles y escalenos, acutángulos, rectángulos y obtusángulos, cuadriláteros, circunferencia y círculo. 100 ejercicios con soluciones.",
-              "Los ángulos de un triángulo suman 180°", "Paralelogramos, trapecios y trapezoides: mira los lados paralelos.",
+              "Triángulo: sus ángulos suman 180°", "Cuadriláteros: mira los lados paralelos.",
               body, faq, sets, 19)
 
 

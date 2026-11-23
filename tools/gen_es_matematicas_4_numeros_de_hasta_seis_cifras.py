@@ -153,7 +153,7 @@ def main():
               "Lectura, escritura, representación y comparación de números naturales de hasta seis cifras; valor posicional de las cifras; composición y descomposición",
               "Números de hasta seis cifras", "Números de hasta seis cifras",
               "Fichas de matemáticas de 4.º de Primaria: leer y escribir números de hasta seis cifras, valor posicional, descomposición, anterior y posterior, series y recta numérica. 100 ejercicios con soluciones.",
-              "Cada cifra vale según su posición", "CM, DM, UM, C, D, U: escribe 0 si falta un orden.",
+              "Cada cifra vale según su posición", "Si falta un orden, escribe 0.",
               body, faq, sets, 1)
 
 

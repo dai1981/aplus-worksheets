@@ -218,7 +218,7 @@ def main():
               "Patrones: identificación, descripción y extensión de patrones numéricos y geométricos; relaciones de igualdad: el signo igual; igualdades con un término desconocido; tablas de entrada y salida",
               "Patrones, series e igualdades", "Patrones e igualdades",
               "Fichas de matemáticas de 4.º de Primaria: series de números, reglas, patrones con figuras, igualdades con hueco, el signo igual, tablas de entrada y salida y problemas. 100 ejercicios con soluciones.",
-              "El signo = es una balanza en equilibrio", "En una serie, comprueba la regla con todos los números.",
+              "El = es una balanza equilibrada", "Comprueba la regla con todos los números.",
               body, faq, sets, 23)
 
 

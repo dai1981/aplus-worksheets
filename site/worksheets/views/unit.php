@@ -62,11 +62,6 @@ site_header($crumbs);
   </div>
   <p class="ws-share"><?= pin_link($path, sprintf(T('pin_unit'), $grade['name'], lc($subject['name']), lc($u['short_title']))) ?></p>
 
-  <?php if ($u['standard_code']): ?>
-  <p class="ws-std"><span><?= h($std_name) ?></span>
-    <?php if ($u['standard_url']): ?><a href="<?= h($u['standard_url']) ?>" rel="noopener" target="_blank"><?= h($u['standard_code']) ?></a><?php else: ?><b><?= h($u['standard_code']) ?></b><?php endif; ?>
-    <?= h($u['standard_text']) ?></p>
-  <?php endif; ?>
 
   <?= $u['body_html'] /* trusted: written by us in content/*.json */ ?>
 
@@ -79,6 +74,12 @@ site_header($crumbs);
   <div class="sn-quiz" data-quiz="s<?= $n ?>"></div>
   <script type="application/json" data-quiz-for="s<?= $n ?>"><?= json_encode(array('title' => $s['title'], 'key' => $pkey . '-' . $n, 'grade' => prog_key($seg[0], $seg[1], $seg[2]), 'items' => $s['items']), $JF) ?></script>
 <?php endforeach; ?>
+
+  <?php if ($u['standard_code']): ?>
+  <p class="ws-std"><span><?= h($std_name) ?></span>
+    <?php if ($u['standard_url']): ?><a href="<?= h($u['standard_url']) ?>" rel="noopener" target="_blank"><?= h($u['standard_code']) ?></a><?php else: ?><b><?= h($u['standard_code']) ?></b><?php endif; ?>
+    <?= h($u['standard_text']) ?></p>
+  <?php endif; ?>
 
 <?php if ($faq): ?>
   <section class="sn-faq">

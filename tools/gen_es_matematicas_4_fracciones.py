@@ -168,7 +168,7 @@ def main():
               "Fracciones: significado, lectura, escritura y representación; comparación de fracciones; fracciones y la unidad; fracción de una cantidad; suma y resta de fracciones con igual denominador",
               "Fracciones", "Fracciones",
               "Fichas de matemáticas de 4.º de Primaria: leer y representar fracciones, comparar, fracciones y la unidad, número mixto, fracción de un número y sumar y restar fracciones. 100 ejercicios con soluciones.",
-              "Numerador: las partes que tomas; denominador: en cuántas partes divides", "Mismo denominador: suma o resta los numeradores.",
+              "Abajo: partes; arriba: las que tomas", "Mismo denominador: opera solo los numeradores.",
               body, faq, sets, 10)
 
 

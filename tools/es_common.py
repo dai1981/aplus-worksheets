@@ -214,6 +214,8 @@ def make_unit(rnd, slug, dom, std_text, title, short_title, meta_desc,
     lvl = int(grade.split("-")[0])
     seo_title = "%s – %s: fichas de matemáticas con soluciones" % (short_title, gname)
     title, seo_title, short_title, meta_desc, key_big, key_sub = [plain_text(x) for x in (title, seo_title, short_title, meta_desc, key_big, key_sub)]
+    # la parte de arriba de la página: frases cortas
+    assert len(key_big) <= 36 and len(key_sub) <= 50 and len(title) <= 50, (slug, key_big, key_sub, title)
     dname = DOMAIN[dom]
     write_unit("es", "matematicas", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
@@ -248,8 +250,8 @@ def bloques(m, c, d, u):
 
 
 def tabla_valor(n, cols=4):
-    """tabla de valor posicional: CM DM UM C D U"""
-    head = ["CM", "DM", "UM", "C", "D", "U"][6 - cols:]
+    """tabla de valor posicional: CMi DMi UMi CM DM UM C D U"""
+    head = ["CMi", "DMi", "UMi", "CM", "DM", "UM", "C", "D", "U"][9 - cols:]
     ds = str(n).rjust(cols, " ")
     return ("<table class='sn-table' style='width:auto;margin:6px 0'><thead><tr>%s</tr></thead><tbody><tr>%s</tr></tbody></table>"
             % ("".join("<th>%s</th>" % h for h in head),
@@ -391,3 +393,20 @@ def nomfrac(n, d):
     elif t.endswith("uno"):
         t = t[:-1]
     return "%s %ss" % (t, w)
+
+
+def letra_big(n):
+    """hasta 999 999 999: 2 345 000 → dos millones trescientos cuarenta y cinco mil"""
+    m, r = divmod(n, 10 ** 6)
+    if not m:
+        return letra(n)
+    if m == 1:
+        out = "un millón"
+    else:
+        w = letra(m)
+        w = re.sub(r"veintiuno$", "veintiún", w)
+        w = re.sub(r"(^|\s)uno$", r"\1un", w)
+        out = w + " millones"
+    if r:
+        out += " " + letra(r)
+    return out

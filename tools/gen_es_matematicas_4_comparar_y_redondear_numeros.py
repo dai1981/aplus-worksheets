@@ -202,7 +202,7 @@ def main():
               "Comparación y ordenación de números naturales de hasta seis cifras utilizando los signos < y >; redondeo y estimación de números naturales",
               "Comparar, ordenar y redondear números", "Comparar y redondear números",
               "Fichas de matemáticas de 4.º de Primaria: comparar números con < y >, ordenar de mayor a menor, redondear a decenas, centenas y millares, recta numérica y problemas. 100 ejercicios con soluciones.",
-              "Compara de izquierda a derecha", "Para redondear, mira la cifra siguiente: de 5 en adelante, hacia arriba.",
+              "Compara de izquierda a derecha", "Redondeo: de 5 en adelante, hacia arriba.",
               body, faq, sets, 2)
 
 

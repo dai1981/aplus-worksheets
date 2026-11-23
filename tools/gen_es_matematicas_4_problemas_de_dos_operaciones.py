@@ -191,7 +191,7 @@ def main():
               "Resolución de problemas de la vida cotidiana que requieren dos operaciones con números naturales; uso del paréntesis; jerarquía de las operaciones",
               "Problemas de dos operaciones", "Problemas de dos operaciones",
               "Fichas de matemáticas de 4.º de Primaria: problemas de dos operaciones con suma, resta, multiplicación y división, operaciones combinadas con paréntesis. 100 ejercicios con soluciones.",
-              "Primero el paréntesis", "Busca el dato que falta y después responde a la pregunta.",
+              "Primero el paréntesis", "Calcula el dato que falta y responde.",
               body, faq, sets, 9)
 
 

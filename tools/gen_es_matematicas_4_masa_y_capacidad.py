@@ -186,7 +186,7 @@ def main():
               "Unidades del Sistema Métrico Decimal de masa y capacidad: equivalencias y conversiones; medición con instrumentos; estimación; resolución de problemas",
               "Masa y capacidad", "Masa y capacidad",
               "Fichas de matemáticas de 4.º de Primaria: kilogramos, gramos y toneladas, litros, centilitros y mililitros, medio y cuarto, básculas y jarras, y problemas. 100 ejercicios con soluciones.",
-              "1 kg = 1000 g y 1 L = 1000 mL", "Pasa las medidas a la misma unidad antes de sumar o restar.",
+              "1 kg = 1000 g y 1 L = 1000 mL", "Usa la misma unidad antes de operar.",
               body, faq, sets, 15)
 
 

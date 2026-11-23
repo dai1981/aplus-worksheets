@@ -152,7 +152,7 @@ def main():
               "Fracciones equivalentes: reconocimiento y obtención por amplificación y simplificación; comparación de fracciones",
               "Fracciones equivalentes", "Fracciones equivalentes",
               "Fichas de matemáticas de 4.º de Primaria: fracciones equivalentes con dibujos, amplificar y simplificar fracciones, productos cruzados y comparar fracciones. 100 ejercicios con soluciones.",
-              "Multiplica o divide arriba y abajo por el mismo número", "Equivalentes: los productos cruzados son iguales.",
+              "Lo mismo arriba y abajo", "Multiplica o divide los dos por el mismo número.",
               body, faq, sets, 11)
 
 

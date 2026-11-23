@@ -183,7 +183,7 @@ def main():
               "Cuerpos geométricos: poliedros (prismas y pirámides) y cuerpos redondos (cilindro, cono y esfera); elementos (caras, aristas y vértices); identificación en objetos del entorno; desarrollos planos",
               "Cuerpos geométricos: poliedros y cuerpos redondos", "Cuerpos geométricos",
               "Fichas de matemáticas de 4.º de Primaria: poliedros y cuerpos redondos, prismas y pirámides, caras, aristas y vértices, objetos de la vida diaria y desarrollos planos. 100 ejercicios con soluciones.",
-              "Poliedros: caras planas. Cuerpos redondos: superficie curva", "Prisma: 2 bases. Pirámide: 1 base y un vértice.",
+              "Poliedro: caras planas", "Cuerpo redondo: alguna superficie curva.",
               body, faq, sets, 21)
 
 

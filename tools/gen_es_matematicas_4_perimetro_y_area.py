@@ -214,7 +214,7 @@ def main():
               "Perímetro de polígonos; medida de superficies con unidades no convencionales y convencionales (cm², m²); área del cuadrado y del rectángulo; resolución de problemas",
               "Perímetro y área", "Perímetro y área",
               "Fichas de matemáticas de 4.º de Primaria: perímetro de polígonos, área contando cuadraditos, cm² y m², área del cuadrado y del rectángulo, lados que faltan y problemas. 100 ejercicios con soluciones.",
-              "Perímetro: suma los lados. Área: largo × ancho", "El perímetro se mide en cm; el área, en cm².",
+              "Área del rectángulo: largo × ancho", "Perímetro: suma de los lados (en cm).",
               body, faq, sets, 20)
 
 

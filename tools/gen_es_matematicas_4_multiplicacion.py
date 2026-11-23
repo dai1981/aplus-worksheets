@@ -161,7 +161,7 @@ def main():
               "Estrategias y algoritmo de la multiplicación de números naturales por números de una, dos y tres cifras; propiedades de la multiplicación; resolución de problemas",
               "Multiplicación por una, dos y tres cifras", "Multiplicación",
               "Fichas de matemáticas de 4.º de Primaria: tablas, multiplicar por una, dos y tres cifras, por 10, 100 y 1000, propiedades de la multiplicación y problemas. 100 ejercicios con soluciones.",
-              "Desplaza una columna cada producto parcial", "Primero por las unidades, después por las decenas, y suma.",
+              "Desplaza una columna cada producto", "Primero unidades, luego decenas; después suma.",
               body, faq, sets, 6)
 
 

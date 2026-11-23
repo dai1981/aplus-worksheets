@@ -190,7 +190,7 @@ def main():
               "Incertidumbre: sucesos seguros, posibles e imposibles; comparación de la probabilidad de sucesos; identificación de casos posibles y favorables en experimentos aleatorios sencillos; aproximación a la probabilidad con fracciones",
               "Probabilidad: seguro, posible e imposible", "Probabilidad",
               "Fichas de matemáticas de 4.º de Primaria: sucesos seguros, posibles e imposibles, más y menos probable, bolsas, ruletas y dados, contar casos y probabilidad con fracciones. 100 ejercicios con soluciones.",
-              "Probabilidad = casos favorables / casos posibles", "Más casos a favor, más probable.",
+              "Favorables / posibles", "Más casos a favor, más probable.",
               body, faq, sets, 25)
 
 

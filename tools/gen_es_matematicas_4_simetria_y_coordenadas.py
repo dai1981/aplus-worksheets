@@ -172,7 +172,7 @@ def main():
               "Localización y desplazamientos en el plano: coordenadas en una cuadrícula e itinerarios; simetría axial: ejes de simetría y figuras simétricas en la cuadrícula",
               "Simetría y coordenadas", "Simetría y coordenadas",
               "Fichas de matemáticas de 4.º de Primaria: coordenadas de puntos en una cuadrícula, desplazamientos, ejes de simetría, figuras simétricas y el simétrico de un punto. 100 ejercicios con soluciones.",
-              "Coordenadas: primero hacia la derecha, después hacia arriba", "El simétrico está a la misma distancia del eje.",
+              "(derecha, arriba)", "Simétrico: a la misma distancia del eje.",
               body, faq, sets, 22)
 
 

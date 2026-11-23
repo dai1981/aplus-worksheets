@@ -175,7 +175,7 @@ def main():
               "Unidades del Sistema Métrico Decimal de longitud: el metro, sus múltiplos y submúltiplos; equivalencias y conversiones; medición con instrumentos; estimación de longitudes; resolución de problemas",
               "Medidas de longitud", "Medidas de longitud",
               "Fichas de matemáticas de 4.º de Primaria: km, hm, dam, m, dm, cm y mm, medir con la regla, pasar de una unidad a otra, comparar longitudes y problemas. 100 ejercicios con soluciones.",
-              "km, hm, dam, m, dm, cm, mm: cada unidad vale 10 veces la siguiente", "A una unidad menor, multiplica; a una mayor, divide.",
+              "Cada unidad vale 10 de la siguiente", "A una menor, multiplica; a una mayor, divide.",
               body, faq, sets, 14)
 
 

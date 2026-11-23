@@ -175,7 +175,7 @@ def main():
               "Múltiplos y divisores de números naturales; relación entre múltiplo y divisor; criterios de divisibilidad; números primos y compuestos",
               "Múltiplos y divisores", "Múltiplos y divisores",
               "Fichas de matemáticas de 4.º de Primaria: múltiplos y divisores, criterios de divisibilidad por 2, 3, 5 y 10, números pares e impares, primos y compuestos, y problemas. 100 ejercicios con soluciones.",
-              "Si 24 = 6 × 4, 24 es múltiplo de 6 y 6 es divisor de 24", "Primo: solo dos divisores, el 1 y él mismo.",
+              "24 = 6 × 4: 24 es múltiplo de 6", "Y 6 es divisor de 24.",
               body, faq, sets, 8)
 
 
