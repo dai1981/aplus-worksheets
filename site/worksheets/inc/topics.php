@@ -234,17 +234,20 @@ function topic_defs_br() {
             'in' => '/figuras|solidos|localizacao|trajetos|simetria|angulos|poligonos|cartesiano|ampliacao|prismas|piramides|semelhanca|pitagoras|relacoes-metricas|distancia|vistas|retas|circunferencia|transformacoes-geometricas|mediatriz|isometricas|cilindros|trigonometria-no|leis-dos-senos/', 'out' => '/^$/',
             'blurb' => 'Localização, trajetos e plano cartesiano, figuras espaciais e planificações, prismas e pirâmides, polígonos e ângulos, ampliação e redução.'),
         'grandezas-e-medidas' => array('name' => 'Grandezas e medidas',
-            'in' => '/comprimento|massa|capacidade|area|perimetro|volume|horas|tempo|temperatura|sistema-monetario|dinheiro|medida|calendario|periodos|grandezas-compostas|cilindros|superficies/', 'out' => '/tendencia/',
+            'in' => '/comprimento|massa|capacidade|area|perimetro|volume|horas|tempo|temperatura|sistema-monetario|dinheiro|medida|calendario|periodos|grandezas-compostas|cilindros|superficies|escalas/', 'out' => '/tendencia/',
             'blurb' => 'Comprimento, massa e capacidade, transformação de unidades, perímetro, área e volume, horas e intervalos de tempo, o sistema monetário brasileiro.'),
         'algebra-e-funcoes' => array('name' => 'Álgebra e funções',
             'in' => '/funcoes|equacoes|produtos-notaveis|fatoracao|grandezas-proporcionais|razoes-entre|partilha|algebrica|proporcionalidade-direta|^sequencias$|sequencias-recursivas|funcao|progressao|sistemas-lineares|logaritmos|maximo-e-minimo/', 'out' => '/^$/',
             'blurb' => 'Funções e gráficos, razões entre grandezas, grandezas diretamente e inversamente proporcionais, produtos notáveis, fatoração e equações do 2º grau.'),
         'probabilidade-e-estatistica' => array('name' => 'Probabilidade e estatística',
-            'in' => '/graficos|tabelas|probabilidade|pesquisa|contagem|principio-multiplicativo|principio-fundamental|permutacoes|(^|-)media(-|$)|tendencia/', 'out' => '/^$/',
+            'in' => '/graficos|tabelas|probabilidade|pesquisa|contagem|principio-multiplicativo|principio-fundamental|permutacoes|(^|-)media(-|$)|tendencia|correlacao|histograma|box-plot/', 'out' => '/^$/',
             'blurb' => 'Tabelas de dupla entrada, gráficos de colunas e de linhas, pesquisas, problemas de contagem, espaço amostral e probabilidade como fração.'),
         'trigonometria' => array('name' => 'Trigonometria',
             'in' => '/trigonometri|senos|seno-e-cosseno/', 'out' => '/^$/',
             'blurb' => 'Seno, cosseno e tangente no triângulo retângulo, ângulos notáveis, leis dos senos e dos cossenos, ciclo trigonométrico, radianos e funções periódicas.'),
+        'matematica-financeira' => array('name' => 'Matemática financeira',
+            'in' => '/juros|orcamento|financiamento|taxas-e-indices/', 'out' => '/^$/',
+            'blurb' => 'Acréscimos e descontos, juros simples e compostos, compras à vista e a prazo, orçamento doméstico, inflação e índices socioeconômicos.'),
     );
 }
 

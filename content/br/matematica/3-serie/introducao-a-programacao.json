@@ -1,0 +1,1157 @@
+{
+ "slug": "introducao-a-programacao",
+ "title": "Introdução à programação com Python",
+ "seo_title": "Introdução à programação – 3ª série: atividades de matemática com gabarito",
+ "short_title": "Introdução à programação",
+ "domain": "Álgebra",
+ "standard_code": "EM13MAT405",
+ "standard_url": "http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf",
+ "standard_text": "Utilizar conceitos iniciais de uma linguagem de programação na implementação de algoritmos escritos em linguagem corrente e/ou matemática (BNCC, Matemática, 3ª série)",
+ "meta_desc": "Atividades de matemática para a 3ª série do Ensino Médio sobre programação em Python: variáveis, operações, condicionais, laços for e while, listas e funções. 100 exercícios com gabarito.",
+ "key_big": "range(a, b) vai de a até b − 1",
+ "key_sub": "= atribui; == compara.",
+ "body_html": "<h2>Como pensar</h2><p>Um programa executa instruções em ordem. <b>x = 5</b> guarda 5 em x (atribuição); <b>x == 5</b> pergunta se x vale 5 (comparação).</p><p>Operações em Python: + − * /, <b>//</b> (quociente inteiro), <b>%</b> (resto), <b>**</b> (potência).</p><p><b>if/else</b> escolhe um caminho. <b>for i in range(a, b)</b> repete com i de a até b − 1. <b>while</b> repete enquanto a condição for verdadeira.</p><p><b>def</b> cria uma função; <b>return</b> devolve o resultado.</p><div class='sn-ex'><span class='sn-ex-t'>Exemplo</span><p class='sn-ex-q'>for i in range(1, 5): s = s + i (s começa em 0)</p><p class='sn-ex-s'>i = 1, 2, 3, 4</p><p class='sn-ex-a'>Resposta: s = 10</p></div><div class='sn-ex'><span class='sn-ex-t'>Exemplo</span><p class='sn-ex-q'>print(17 // 5, 17 % 5)</p><p class='sn-ex-s'>17 = 3 · 5 + 2</p><p class='sn-ex-a'>Resposta: 3 2</p></div><h2>Erros comuns</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Erro comum</th><th>O que fazer</th></tr></thead><tbody><tr><td>Achar que range(1, n) inclui n</td><td>Vai até n − 1.</td></tr><tr><td>Usar = para comparar</td><td>Comparação é ==.</td></tr><tr><td>Confundir / e //</td><td>17 / 5 = 3.4; 17 // 5 = 3.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Por que range(1, 10) não inclui o 10?",
+   "a": "Em Python, range(a, b) começa em a e para antes de b. Para ir de 1 a 10, use range(1, 11)."
+  },
+  {
+   "q": "O que a BNCC pede?",
+   "a": "Utilizar conceitos iniciais de uma linguagem de programação na implementação de algoritmos escritos em linguagem corrente e/ou matemática (EM13MAT405)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Variáveis e operações",
+   "items": [
+    {
+     "q": "<span class='code'>a = 4<br>b = 4<br>a = a + b<br>b = a * 2<br>print(b)</span>O que o programa mostra?",
+     "c": [
+      "16",
+      "8",
+      "17",
+      "15"
+     ],
+     "a": 0,
+     "e": "a vira 8; b = 8 · 2 = <b>16</b>."
+    },
+    {
+     "q": "<span class='code'>n = 37<br>if n &gt;= 20:<br>    print('A')<br>else:<br>    print('B')</span>O que o programa mostra?",
+     "c": [
+      "nada",
+      "A",
+      "B",
+      "AB"
+     ],
+     "a": 1,
+     "e": "37 ≥ 20: <b>A</b>."
+    },
+    {
+     "q": "<span class='code'>v = [16, 2, 28, 25, 27]<br>print(v[3])</span>O que o programa mostra?",
+     "c": [
+      "3",
+      "27",
+      "25",
+      "28"
+     ],
+     "a": 2,
+     "e": "Os índices começam em 0: v[3] = <b>25</b>."
+    },
+    {
+     "q": "<span class='code'>p = 1<br>for i in range(1, 6):<br>    p = p * i<br>print(p)</span>O que o programa mostra?",
+     "c": [
+      "120",
+      "15",
+      "5",
+      "720"
+     ],
+     "a": 0,
+     "e": "1 · 2 · … · 5 = <b>120</b>."
+    },
+    {
+     "q": "<span class='code'>v = [28, 20, 4, 17, 11]<br>print(v[4])</span>O que o programa mostra?",
+     "c": [
+      "11",
+      "28",
+      "4",
+      "17"
+     ],
+     "a": 0,
+     "e": "Os índices começam em 0: v[4] = <b>11</b>."
+    },
+    {
+     "q": "<span class='code'>v = [17, 8, 10, 14, 2]<br>print(sum(v))</span>O que o programa mostra?",
+     "c": [
+      "2",
+      "17",
+      "6",
+      "51"
+     ],
+     "a": 3,
+     "e": "sum soma os elementos: <b>51</b>."
+    },
+    {
+     "q": "<span class='code'>n = 9<br>if n &gt;= 20:<br>    print('A')<br>else:<br>    print('B')</span>O que o programa mostra?",
+     "c": [
+      "nada",
+      "AB",
+      "A",
+      "B"
+     ],
+     "a": 3,
+     "e": "9 &lt; 20: <b>B</b>."
+    },
+    {
+     "q": "<span class='code'>x = 5<br>while x &lt; 100:<br>    x = x * 3<br>print(x)</span>O que o programa mostra?",
+     "c": [
+      "405",
+      "45",
+      "135",
+      "100"
+     ],
+     "a": 2,
+     "e": "Multiplica por 3 até passar de 100: <b>135</b>."
+    },
+    {
+     "q": "<span class='code'>n = 1<br>if n &gt;= 18:<br>    print('A')<br>else:<br>    print('B')</span>O que o programa mostra?",
+     "c": [
+      "AB",
+      "B",
+      "nada",
+      "A"
+     ],
+     "a": 1,
+     "e": "1 &lt; 18: <b>B</b>."
+    },
+    {
+     "q": "<span class='code'>x = 4<br>while x &lt; 50:<br>    x = x * 3<br>print(x)</span>O que o programa mostra?",
+     "c": [
+      "50",
+      "36",
+      "324",
+      "108"
+     ],
+     "a": 3,
+     "e": "Multiplica por 3 até passar de 50: <b>108</b>."
+    },
+    {
+     "q": "<span class='code'>v = [10, 15, 5, 17, 21]<br>print(max(v))</span>O que o programa mostra?",
+     "c": [
+      "5",
+      "21",
+      "6",
+      "22"
+     ],
+     "a": 1,
+     "e": "max dá o maior: <b>21</b>."
+    },
+    {
+     "q": "<span class='code'>x = 3<br>while x &lt; 30:<br>    x = x * 3<br>print(x)</span>O que o programa mostra?",
+     "c": [
+      "81",
+      "30",
+      "243",
+      "27"
+     ],
+     "a": 0,
+     "e": "Multiplica por 3 até passar de 30: <b>81</b>."
+    },
+    {
+     "q": "<span class='code'>a = 2<br>b = 5<br>a = a + b<br>b = a * 2<br>print(b)</span>O que o programa mostra?",
+     "c": [
+      "7",
+      "4",
+      "14",
+      "10"
+     ],
+     "a": 2,
+     "e": "a vira 7; b = 7 · 2 = <b>14</b>."
+    },
+    {
+     "q": "<span class='code'>print(4 ** 3)</span>O que o programa mostra?",
+     "c": [
+      "12",
+      "7",
+      "64",
+      "81"
+     ],
+     "a": 2,
+     "e": "** é potência: 4³ = <b>64</b>."
+    },
+    {
+     "q": "<span class='code'>a = 8<br>b = 6<br>a = a + b<br>b = a * 2<br>print(b)</span>O que o programa mostra?",
+     "c": [
+      "14",
+      "16",
+      "12",
+      "28"
+     ],
+     "a": 3,
+     "e": "a vira 14; b = 14 · 2 = <b>28</b>."
+    },
+    {
+     "q": "<span class='code'>a = 8<br>b = 4<br>a = a + b<br>b = a * 2<br>print(b)</span>O que o programa mostra?",
+     "c": [
+      "12",
+      "24",
+      "16",
+      "8"
+     ],
+     "a": 1,
+     "e": "a vira 12; b = 12 · 2 = <b>24</b>."
+    },
+    {
+     "q": "<span class='code'>x = 1<br>while x &lt; 30:<br>    x = x * 3<br>print(x)</span>O que o programa mostra?",
+     "c": [
+      "243",
+      "81",
+      "30",
+      "27"
+     ],
+     "a": 1,
+     "e": "Multiplica por 3 até passar de 30: <b>81</b>."
+    },
+    {
+     "q": "<span class='code'>a = 9<br>b = 2<br>a = a + b<br>b = a * 2<br>print(b)</span>O que o programa mostra?",
+     "c": [
+      "11",
+      "4",
+      "18",
+      "22"
+     ],
+     "a": 3,
+     "e": "a vira 11; b = 11 · 2 = <b>22</b>."
+    },
+    {
+     "q": "<span class='code'>a = 5<br>b = 8<br>a = a + b<br>b = a * 2<br>print(b)</span>O que o programa mostra?",
+     "c": [
+      "16",
+      "10",
+      "26",
+      "13"
+     ],
+     "a": 2,
+     "e": "a vira 13; b = 13 · 2 = <b>26</b>."
+    },
+    {
+     "q": "<span class='code'>s = 0<br>for i in range(2, 10):<br>    s = s + i<br>print(s)</span>O que o programa mostra?",
+     "c": [
+      "44",
+      "54",
+      "42",
+      "8"
+     ],
+     "a": 0,
+     "e": "range(2, 10) vai de 2 a 9: soma <b>44</b>."
+    }
+   ]
+  },
+  {
+   "title": "Condicionais e laços",
+   "items": [
+    {
+     "q": "<span class='code'>print(18 // 5)</span>O que o programa mostra?",
+     "c": [
+      "4",
+      "3",
+      "3,6",
+      "90"
+     ],
+     "a": 1,
+     "e": "// é o quociente inteiro: <b>3</b>."
+    },
+    {
+     "q": "<span class='code'>s = 0<br>for i in range(4, 6):<br>    s = s + i<br>print(s)</span>O que o programa mostra?",
+     "c": [
+      "9",
+      "15",
+      "5",
+      "2"
+     ],
+     "a": 0,
+     "e": "range(4, 6) vai de 4 a 5: soma <b>9</b>."
+    },
+    {
+     "q": "<span class='code'>s = 0<br>for i in range(1, 6):<br>    s = s + i<br>print(s)</span>O que o programa mostra?",
+     "c": [
+      "21",
+      "14",
+      "15",
+      "5"
+     ],
+     "a": 2,
+     "e": "range(1, 6) vai de 1 a 5: soma <b>15</b>."
+    },
+    {
+     "q": "<span class='code'>s = 0<br>for i in range(3, 5):<br>    s = s + i<br>print(s)</span>O que o programa mostra?",
+     "c": [
+      "12",
+      "4",
+      "2",
+      "7"
+     ],
+     "a": 3,
+     "e": "range(3, 5) vai de 3 a 4: soma <b>7</b>."
+    },
+    {
+     "q": "<span class='code'>n = 5<br>if n &gt;= 25:<br>    print('A')<br>else:<br>    print('B')</span>O que o programa mostra?",
+     "c": [
+      "nada",
+      "A",
+      "B",
+      "AB"
+     ],
+     "a": 2,
+     "e": "5 &lt; 25: <b>B</b>."
+    },
+    {
+     "q": "<span class='code'>a = 5<br>b = 2<br>a = a + b<br>b = a * 2<br>print(b)</span>O que o programa mostra?",
+     "c": [
+      "14",
+      "10",
+      "4",
+      "7"
+     ],
+     "a": 0,
+     "e": "a vira 7; b = 7 · 2 = <b>14</b>."
+    },
+    {
+     "q": "<span class='code'>n = 22<br>if n &gt;= 18:<br>    print('A')<br>else:<br>    print('B')</span>O que o programa mostra?",
+     "c": [
+      "AB",
+      "A",
+      "B",
+      "nada"
+     ],
+     "a": 1,
+     "e": "22 ≥ 18: <b>A</b>."
+    },
+    {
+     "q": "<span class='code'>v = [29, 18, 6, 26, 28]<br>print(len(v))</span>O que o programa mostra?",
+     "c": [
+      "28",
+      "29",
+      "107",
+      "5"
+     ],
+     "a": 3,
+     "e": "len dá a quantidade de elementos: <b>5</b>."
+    },
+    {
+     "q": "<span class='code'>print(4 ** 2)</span>O que o programa mostra?",
+     "c": [
+      "8",
+      "17",
+      "6",
+      "16"
+     ],
+     "a": 3,
+     "e": "** é potência: 4² = <b>16</b>."
+    },
+    {
+     "q": "<span class='code'>v = [4, 3, 13, 1, 28]<br>print(v[0])</span>O que o programa mostra?",
+     "c": [
+      "5",
+      "3",
+      "0",
+      "4"
+     ],
+     "a": 3,
+     "e": "Os índices começam em 0: v[0] = <b>4</b>."
+    },
+    {
+     "q": "<span class='code'>x = 1<br>while x &lt; 100:<br>    x = x * 3<br>print(x)</span>O que o programa mostra?",
+     "c": [
+      "243",
+      "100",
+      "81",
+      "729"
+     ],
+     "a": 0,
+     "e": "Multiplica por 3 até passar de 100: <b>243</b>."
+    },
+    {
+     "q": "<span class='code'>print(5 ** 4)</span>O que o programa mostra?",
+     "c": [
+      "9",
+      "20",
+      "625",
+      "1024"
+     ],
+     "a": 2,
+     "e": "** é potência: 5⁴ = <b>625</b>."
+    },
+    {
+     "q": "<span class='code'>a = 4<br>b = 2<br>a = a + b<br>b = a * 2<br>print(b)</span>O que o programa mostra?",
+     "c": [
+      "8",
+      "6",
+      "12",
+      "4"
+     ],
+     "a": 2,
+     "e": "a vira 6; b = 6 · 2 = <b>12</b>."
+    },
+    {
+     "q": "<span class='code'>print(5 ** 2)</span>O que o programa mostra?",
+     "c": [
+      "25",
+      "10",
+      "7",
+      "32"
+     ],
+     "a": 0,
+     "e": "** é potência: 5² = <b>25</b>."
+    },
+    {
+     "q": "<span class='code'>v = [3, 18, 2, 4, 17]<br>print(max(v))</span>O que o programa mostra?",
+     "c": [
+      "17",
+      "18",
+      "6",
+      "2"
+     ],
+     "a": 1,
+     "e": "max dá o maior: <b>18</b>."
+    },
+    {
+     "q": "<span class='code'>n = 12<br>if n &gt;= 18:<br>    print('A')<br>else:<br>    print('B')</span>O que o programa mostra?",
+     "c": [
+      "A",
+      "B",
+      "AB",
+      "nada"
+     ],
+     "a": 1,
+     "e": "12 &lt; 18: <b>B</b>."
+    },
+    {
+     "q": "<span class='code'>print(47 % 6)</span>O que o programa mostra?",
+     "c": [
+      "5",
+      "282",
+      "7,83",
+      "7"
+     ],
+     "a": 0,
+     "e": "% é o resto da divisão: <b>5</b>."
+    },
+    {
+     "q": "<span class='code'>c = 0<br>for i in range(8):<br>    c = c + 2<br>print(c)</span>O que o programa mostra?",
+     "c": [
+      "18",
+      "16",
+      "14",
+      "8"
+     ],
+     "a": 1,
+     "e": "range(8) repete 8 vezes: <b>16</b>."
+    },
+    {
+     "q": "<span class='code'>s = 0<br>for i in range(4, 8):<br>    s = s + i<br>print(s)</span>O que o programa mostra?",
+     "c": [
+      "18",
+      "30",
+      "4",
+      "22"
+     ],
+     "a": 3,
+     "e": "range(4, 8) vai de 4 a 7: soma <b>22</b>."
+    },
+    {
+     "q": "<span class='code'>x = 2<br>while x &lt; 100:<br>    x = x * 3<br>print(x)</span>O que o programa mostra?",
+     "c": [
+      "486",
+      "54",
+      "162",
+      "100"
+     ],
+     "a": 2,
+     "e": "Multiplica por 3 até passar de 100: <b>162</b>."
+    }
+   ]
+  },
+  {
+   "title": "Funções",
+   "items": [
+    {
+     "q": "<span class='code'>def g(x):<br>    return x ** 2 - 2<br>print(g(0))</span>O que o programa mostra?",
+     "c": [
+      "−1",
+      "2",
+      "−3",
+      "−2"
+     ],
+     "a": 3,
+     "e": "g(0) = 0 − 2 = <b>−2</b>."
+    },
+    {
+     "q": "<span class='code'>def f(x):<br>    return 6 * x - 5<br>print(f(4))</span>O que o programa mostra?",
+     "c": [
+      "19",
+      "29",
+      "−6",
+      "5"
+     ],
+     "a": 0,
+     "e": "f(4) = 6 · 4 − 5 = <b>19</b>."
+    },
+    {
+     "q": "<span class='code'>def f(x):<br>    return 2 * x - 1<br>print(f(1))</span>O que o programa mostra?",
+     "c": [
+      "3",
+      "2",
+      "1",
+      "0"
+     ],
+     "a": 2,
+     "e": "f(1) = 2 · 1 − 1 = <b>1</b>."
+    },
+    {
+     "q": "<span class='code'>def h(x):<br>    if x &gt; 0:<br>        return x<br>    else:<br>        return -x<br>print(h(4))</span>O que o programa mostra?",
+     "c": [
+      "16",
+      "0",
+      "−4",
+      "4"
+     ],
+     "a": 3,
+     "e": "h é o valor absoluto: <b>4</b>."
+    },
+    {
+     "q": "<span class='code'>def h(x):<br>    if x &gt; 0:<br>        return x<br>    else:<br>        return -x<br>print(h(5))</span>O que o programa mostra?",
+     "c": [
+      "5",
+      "0",
+      "−5",
+      "25"
+     ],
+     "a": 0,
+     "e": "h é o valor absoluto: <b>5</b>."
+    },
+    {
+     "q": "<span class='code'>def f(x):<br>    return 4 * x + 5<br>print(f(-1))</span>O que o programa mostra?",
+     "c": [
+      "8",
+      "1",
+      "16",
+      "−9"
+     ],
+     "a": 1,
+     "e": "f(-1) = 4 · (-1) + 5 = <b>1</b>."
+    },
+    {
+     "q": "<span class='code'>def h(x):<br>    if x &gt; 0:<br>        return x<br>    else:<br>        return -x<br>print(h(3))</span>O que o programa mostra?",
+     "c": [
+      "9",
+      "3",
+      "−3",
+      "0"
+     ],
+     "a": 1,
+     "e": "h é o valor absoluto: <b>3</b>."
+    },
+    {
+     "q": "<span class='code'>def g(x):<br>    return x ** 2 - 2<br>print(g(5))</span>O que o programa mostra?",
+     "c": [
+      "8",
+      "23",
+      "−27",
+      "27"
+     ],
+     "a": 1,
+     "e": "g(5) = 25 − 2 = <b>23</b>."
+    },
+    {
+     "q": "<span class='code'>def h(x):<br>    if x &gt; 0:<br>        return x<br>    else:<br>        return -x<br>print(h(-2))</span>O que o programa mostra?",
+     "c": [
+      "−2",
+      "4",
+      "2",
+      "0"
+     ],
+     "a": 2,
+     "e": "h é o valor absoluto: <b>2</b>."
+    },
+    {
+     "q": "<span class='code'>def g(x):<br>    return x ** 2 - 4<br>print(g(-3))</span>O que o programa mostra?",
+     "c": [
+      "13",
+      "−10",
+      "5",
+      "−13"
+     ],
+     "a": 2,
+     "e": "g(-3) = 9 − 4 = <b>5</b>."
+    },
+    {
+     "q": "<span class='code'>def f(x):<br>    return 4 * x + 4<br>print(f(0))</span>O que o programa mostra?",
+     "c": [
+      "4",
+      "16",
+      "8",
+      "−4"
+     ],
+     "a": 0,
+     "e": "f(0) = 4 · 0 + 4 = <b>4</b>."
+    },
+    {
+     "q": "<span class='code'>def g(x):<br>    return x ** 2 - 3<br>print(g(3))</span>O que o programa mostra?",
+     "c": [
+      "3",
+      "−12",
+      "6",
+      "12"
+     ],
+     "a": 2,
+     "e": "g(3) = 9 − 3 = <b>6</b>."
+    },
+    {
+     "q": "<span class='code'>def f(x):<br>    return 3 * x - 4<br>print(f(6))</span>O que o programa mostra?",
+     "c": [
+      "5",
+      "22",
+      "6",
+      "14"
+     ],
+     "a": 3,
+     "e": "f(6) = 3 · 6 − 4 = <b>14</b>."
+    },
+    {
+     "q": "<span class='code'>def f(x):<br>    return 2 * x + 5<br>print(f(0))</span>O que o programa mostra?",
+     "c": [
+      "10",
+      "7",
+      "5",
+      "−5"
+     ],
+     "a": 2,
+     "e": "f(0) = 2 · 0 + 5 = <b>5</b>."
+    },
+    {
+     "q": "<span class='code'>def f(x):<br>    return 4 * x - 4<br>print(f(0))</span>O que o programa mostra?",
+     "c": [
+      "0",
+      "4",
+      "−16",
+      "−4"
+     ],
+     "a": 3,
+     "e": "f(0) = 4 · 0 − 4 = <b>−4</b>."
+    },
+    {
+     "q": "<span class='code'>def h(x):<br>    if x &gt; 0:<br>        return x<br>    else:<br>        return -x<br>print(h(-1))</span>O que o programa mostra?",
+     "c": [
+      "1",
+      "2",
+      "0",
+      "−1"
+     ],
+     "a": 0,
+     "e": "h é o valor absoluto: <b>1</b>."
+    },
+    {
+     "q": "<span class='code'>def g(x):<br>    return x ** 2 - 4<br>print(g(2))</span>O que o programa mostra?",
+     "c": [
+      "−8",
+      "8",
+      "1",
+      "0"
+     ],
+     "a": 3,
+     "e": "g(2) = 4 − 4 = <b>0</b>."
+    },
+    {
+     "q": "<span class='code'>def h(x):<br>    if x &gt; 0:<br>        return x<br>    else:<br>        return -x<br>print(h(6))</span>O que o programa mostra?",
+     "c": [
+      "−6",
+      "6",
+      "36",
+      "0"
+     ],
+     "a": 1,
+     "e": "h é o valor absoluto: <b>6</b>."
+    },
+    {
+     "q": "<span class='code'>def g(x):<br>    return x ** 2 - 2<br>print(g(4))</span>O que o programa mostra?",
+     "c": [
+      "14",
+      "6",
+      "−18",
+      "18"
+     ],
+     "a": 0,
+     "e": "g(4) = 16 − 2 = <b>14</b>."
+    },
+    {
+     "q": "<span class='code'>def g(x):<br>    return x ** 2 - 6<br>print(g(1))</span>O que o programa mostra?",
+     "c": [
+      "7",
+      "−5",
+      "−7",
+      "−4"
+     ],
+     "a": 1,
+     "e": "g(1) = 1 − 6 = <b>−5</b>."
+    }
+   ]
+  },
+  {
+   "title": "Completar programas",
+   "items": [
+    {
+     "q": "<span class='code'>def f(x):<br>    return 2 * x + 1<br>print(f(1))</span>O que o programa mostra?",
+     "c": [
+      "3",
+      "1",
+      "4",
+      "2"
+     ],
+     "a": 0,
+     "e": "f(1) = 2 · 1 + 1 = <b>3</b>."
+    },
+    {
+     "q": "<span class='code'>def f(x):<br>    return 2 * x + 7<br>print(f(3))</span>O que o programa mostra?",
+     "c": [
+      "12",
+      "−1",
+      "20",
+      "13"
+     ],
+     "a": 3,
+     "e": "f(3) = 2 · 3 + 7 = <b>13</b>."
+    },
+    {
+     "q": "Qual linha calcula a área de um círculo de raio r (com pi = 3.14)?",
+     "c": [
+      "area = 3.14 * r * 2",
+      "area = 3.14 * r ** 2",
+      "area = (3.14 * r) ** 2",
+      "area = 3.14 * 2 * r"
+     ],
+     "a": 1,
+     "e": "Resposta: <b>area = 3.14 * r ** 2</b>."
+    },
+    {
+     "q": "<span class='code'>def h(x):<br>    if x &gt; 0:<br>        return x<br>    else:<br>        return -x<br>print(h(1))</span>O que o programa mostra?",
+     "c": [
+      "−1",
+      "1",
+      "0",
+      "2"
+     ],
+     "a": 1,
+     "e": "h é o valor absoluto: <b>1</b>."
+    },
+    {
+     "q": "Qual linha completa o programa para mostrar a tabuada do 7 (7, 14, …, 70)?<span class='code'>for i in range(1, 11):<br>    ______</span>",
+     "c": [
+      "print(i)",
+      "print(7 ** i)",
+      "print(7 + i)",
+      "print(7 * i)"
+     ],
+     "a": 3,
+     "e": "Resposta: <b>print(7 * i)</b>."
+    },
+    {
+     "q": "Em Python, qual símbolo compara se dois valores são iguais?",
+     "c": [
+      "=",
+      "=>",
+      "==",
+      "!="
+     ],
+     "a": 2,
+     "e": "Resposta: <b>==</b>."
+    },
+    {
+     "q": "<span class='code'>def f(x):<br>    return 6 * x + 9<br>print(f(1))</span>O que o programa mostra?",
+     "c": [
+      "15",
+      "60",
+      "−3",
+      "16"
+     ],
+     "a": 0,
+     "e": "f(1) = 6 · 1 + 9 = <b>15</b>."
+    },
+    {
+     "q": "Qual linha completa o programa para calcular a média de três notas a, b e c?<span class='code'>a, b, c = 6, 8, 7<br>media = ______<br>print(media)</span>",
+     "c": [
+      "a + b + c / 3",
+      "(a + b + c) / 3",
+      "a + b + c * 3",
+      "(a + b + c) // 3"
+     ],
+     "a": 1,
+     "e": "Resposta: <b>(a + b + c) / 3</b>."
+    },
+    {
+     "q": "Qual comando lê um número inteiro digitado pelo usuário?",
+     "c": [
+      "n = input(int)",
+      "n == input()",
+      "print(n)",
+      "n = int(input())"
+     ],
+     "a": 3,
+     "e": "Resposta: <b>n = int(input())</b>."
+    },
+    {
+     "q": "Qual linha completa o programa para mostrar se n é par?<span class='code'>n = int(input())<br>if ______:<br>    print('par')</span>",
+     "c": [
+      "n % 2 == 0",
+      "n % 2 = 0",
+      "n / 2 == 0",
+      "n // 2 == 1"
+     ],
+     "a": 0,
+     "e": "Resposta: <b>n % 2 == 0</b>."
+    },
+    {
+     "q": "<span class='code'>def f(x):<br>    return 3 * x + 1<br>print(f(6))</span>O que o programa mostra?",
+     "c": [
+      "19",
+      "17",
+      "21",
+      "10"
+     ],
+     "a": 0,
+     "e": "f(6) = 3 · 6 + 1 = <b>19</b>."
+    },
+    {
+     "q": "<span class='code'>def f(x):<br>    return 5 * x + 2<br>print(f(5))</span>O que o programa mostra?",
+     "c": [
+      "35",
+      "12",
+      "27",
+      "23"
+     ],
+     "a": 2,
+     "e": "f(5) = 5 · 5 + 2 = <b>27</b>."
+    },
+    {
+     "q": "Qual linha completa o programa para somar os números de 1 a 100?<span class='code'>s = 0<br>for i in range(______):<br>    s = s + i</span>",
+     "c": [
+      "100",
+      "1, 100",
+      "0, 100",
+      "1, 101"
+     ],
+     "a": 3,
+     "e": "Resposta: <b>1, 101</b>."
+    },
+    {
+     "q": "<span class='code'>def g(x):<br>    return x ** 2 - 3<br>print(g(2))</span>O que o programa mostra?",
+     "c": [
+      "7",
+      "2",
+      "1",
+      "−7"
+     ],
+     "a": 2,
+     "e": "g(2) = 4 − 3 = <b>1</b>."
+    },
+    {
+     "q": "Qual linha completa a função que devolve o dobro de x?<span class='code'>def dobro(x):<br>    ______</span>",
+     "c": [
+      "print(x)",
+      "return 2 * x",
+      "return x + x * x",
+      "x = 2"
+     ],
+     "a": 1,
+     "e": "Resposta: <b>return 2 * x</b>."
+    },
+    {
+     "q": "Qual comando repete um bloco 10 vezes?",
+     "c": [
+      "if i < 10:",
+      "for i in range(1, 10):",
+      "for i in range(10):",
+      "while i = 10:"
+     ],
+     "a": 2,
+     "e": "Resposta: <b>for i in range(10):</b>."
+    },
+    {
+     "q": "<span class='code'>def g(x):<br>    return x ** 2 - 3<br>print(g(6))</span>O que o programa mostra?",
+     "c": [
+      "−39",
+      "33",
+      "9",
+      "39"
+     ],
+     "a": 1,
+     "e": "g(6) = 36 − 3 = <b>33</b>."
+    },
+    {
+     "q": "Qual condição testa se x é múltiplo de 5?",
+     "c": [
+      "x * 5 == 0",
+      "x // 5 == 0",
+      "x / 5 == 0",
+      "x % 5 == 0"
+     ],
+     "a": 3,
+     "e": "Resposta: <b>x % 5 == 0</b>."
+    },
+    {
+     "q": "<span class='code'>def g(x):<br>    return x ** 2 - 4<br>print(g(3))</span>O que o programa mostra?",
+     "c": [
+      "5",
+      "−13",
+      "13",
+      "2"
+     ],
+     "a": 0,
+     "e": "g(3) = 9 − 4 = <b>5</b>."
+    },
+    {
+     "q": "<span class='code'>def g(x):<br>    return x ** 2 - 5<br>print(g(-3))</span>O que o programa mostra?",
+     "c": [
+      "−11",
+      "−14",
+      "4",
+      "14"
+     ],
+     "a": 2,
+     "e": "g(-3) = 9 − 5 = <b>4</b>."
+    }
+   ]
+  },
+  {
+   "title": "Revisão",
+   "items": [
+    {
+     "q": "<span class='code'>a = 5<br>b = 9<br>a = a + b<br>b = a * 2<br>print(b)</span>O que o programa mostra?",
+     "c": [
+      "10",
+      "28",
+      "14",
+      "18"
+     ],
+     "a": 1,
+     "e": "a vira 14; b = 14 · 2 = <b>28</b>."
+    },
+    {
+     "q": "<span class='code'>n = 11<br>if n &gt;= 20:<br>    print('A')<br>else:<br>    print('B')</span>O que o programa mostra?",
+     "c": [
+      "A",
+      "AB",
+      "B",
+      "nada"
+     ],
+     "a": 2,
+     "e": "11 &lt; 20: <b>B</b>."
+    },
+    {
+     "q": "<span class='code'>n = 28<br>if n &gt;= 25:<br>    print('A')<br>else:<br>    print('B')</span>O que o programa mostra?",
+     "c": [
+      "B",
+      "nada",
+      "A",
+      "AB"
+     ],
+     "a": 2,
+     "e": "28 ≥ 25: <b>A</b>."
+    },
+    {
+     "q": "<span class='code'>x = 4<br>while x &lt; 30:<br>    x = x * 3<br>print(x)</span>O que o programa mostra?",
+     "c": [
+      "108",
+      "12",
+      "30",
+      "36"
+     ],
+     "a": 3,
+     "e": "Multiplica por 3 até passar de 30: <b>36</b>."
+    },
+    {
+     "q": "<span class='code'>x = 3<br>while x &lt; 50:<br>    x = x * 3<br>print(x)</span>O que o programa mostra?",
+     "c": [
+      "81",
+      "27",
+      "243",
+      "50"
+     ],
+     "a": 0,
+     "e": "Multiplica por 3 até passar de 50: <b>81</b>."
+    },
+    {
+     "q": "<span class='code'>v = [26, 9, 6, 21, 28]<br>print(max(v))</span>O que o programa mostra?",
+     "c": [
+      "27",
+      "6",
+      "29",
+      "28"
+     ],
+     "a": 3,
+     "e": "max dá o maior: <b>28</b>."
+    },
+    {
+     "q": "<span class='code'>p = 1<br>for i in range(1, 7):<br>    p = p * i<br>print(p)</span>O que o programa mostra?",
+     "c": [
+      "21",
+      "5040",
+      "6",
+      "720"
+     ],
+     "a": 3,
+     "e": "1 · 2 · … · 6 = <b>720</b>."
+    },
+    {
+     "q": "<span class='code'>print(2 ** 2)</span>O que o programa mostra?",
+     "c": [
+      "3",
+      "4",
+      "6",
+      "5"
+     ],
+     "a": 1,
+     "e": "** é potência: 2² = <b>4</b>."
+    },
+    {
+     "q": "<span class='code'>print(39 % 5)</span>O que o programa mostra?",
+     "c": [
+      "7,8",
+      "7",
+      "195",
+      "4"
+     ],
+     "a": 3,
+     "e": "% é o resto da divisão: <b>4</b>."
+    },
+    {
+     "q": "<span class='code'>a = 7<br>b = 9<br>a = a + b<br>b = a * 2<br>print(b)</span>O que o programa mostra?",
+     "c": [
+      "14",
+      "32",
+      "18",
+      "16"
+     ],
+     "a": 1,
+     "e": "a vira 16; b = 16 · 2 = <b>32</b>."
+    },
+    {
+     "q": "<span class='code'>n = 6<br>if n &gt;= 18:<br>    print('A')<br>else:<br>    print('B')</span>O que o programa mostra?",
+     "c": [
+      "AB",
+      "nada",
+      "B",
+      "A"
+     ],
+     "a": 2,
+     "e": "6 &lt; 18: <b>B</b>."
+    },
+    {
+     "q": "<span class='code'>print(33 % 3)</span>O que o programa mostra?",
+     "c": [
+      "0",
+      "11",
+      "1",
+      "99"
+     ],
+     "a": 0,
+     "e": "% é o resto da divisão: <b>0</b>."
+    },
+    {
+     "q": "<span class='code'>v = [22, 4, 7, 28, 6]<br>print(max(v))</span>O que o programa mostra?",
+     "c": [
+      "6",
+      "28",
+      "29",
+      "4"
+     ],
+     "a": 1,
+     "e": "max dá o maior: <b>28</b>."
+    },
+    {
+     "q": "<span class='code'>s = 0<br>for i in range(1, 7):<br>    s = s + i<br>print(s)</span>O que o programa mostra?",
+     "c": [
+      "6",
+      "28",
+      "21",
+      "20"
+     ],
+     "a": 2,
+     "e": "range(1, 7) vai de 1 a 6: soma <b>21</b>."
+    },
+    {
+     "q": "<span class='code'>c = 0<br>for i in range(9):<br>    c = c + 2<br>print(c)</span>O que o programa mostra?",
+     "c": [
+      "18",
+      "9",
+      "20",
+      "16"
+     ],
+     "a": 0,
+     "e": "range(9) repete 9 vezes: <b>18</b>."
+    },
+    {
+     "q": "<span class='code'>x = 4<br>while x &lt; 100:<br>    x = x * 3<br>print(x)</span>O que o programa mostra?",
+     "c": [
+      "36",
+      "100",
+      "108",
+      "324"
+     ],
+     "a": 2,
+     "e": "Multiplica por 3 até passar de 100: <b>108</b>."
+    },
+    {
+     "q": "<span class='code'>v = [17, 29, 9, 6, 1]<br>print(len(v))</span>O que o programa mostra?",
+     "c": [
+      "1",
+      "5",
+      "17",
+      "62"
+     ],
+     "a": 1,
+     "e": "len dá a quantidade de elementos: <b>5</b>."
+    },
+    {
+     "q": "<span class='code'>s = 0<br>for i in range(1, 9):<br>    s = s + i<br>print(s)</span>O que o programa mostra?",
+     "c": [
+      "45",
+      "35",
+      "8",
+      "36"
+     ],
+     "a": 3,
+     "e": "range(1, 9) vai de 1 a 8: soma <b>36</b>."
+    },
+    {
+     "q": "<span class='code'>v = [25, 22, 20, 1, 13]<br>print(len(v))</span>O que o programa mostra?",
+     "c": [
+      "5",
+      "25",
+      "81",
+      "13"
+     ],
+     "a": 0,
+     "e": "len dá a quantidade de elementos: <b>5</b>."
+    },
+    {
+     "q": "<span class='code'>n = 8<br>if n &gt;= 18:<br>    print('A')<br>else:<br>    print('B')</span>O que o programa mostra?",
+     "c": [
+      "B",
+      "A",
+      "AB",
+      "nada"
+     ],
+     "a": 0,
+     "e": "8 &lt; 18: <b>B</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 9,
+ "updated": "2026-11-23",
+ "country": "br",
+ "subject": "matematica",
+ "grade": "3-serie"
+}

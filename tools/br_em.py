@@ -118,3 +118,37 @@ def trig(deg, fn):
         if abs(v - x) < 1e-9:
             return s
     return None
+
+
+def code(*lines):
+    """código ou algoritmo em bloco (recuo com espaços)"""
+    out = []
+    for ln in lines:
+        ind = len(ln) - len(ln.lstrip(" "))
+        out.append(NB * ind + ln.lstrip(" ").replace("<", "&lt;").replace(">", "&gt;"))
+    return "<span class='code'>%s</span>" % "<br>".join(out)
+
+
+def fluxo(nodes, label="fluxograma"):
+    """nodes: [(tipo, texto)] com tipo 'ini' (oval), 'proc' (retângulo), 'dec' (losango), 'es' (paralelogramo); em coluna"""
+    W, bh, gap = 340, 40, 22
+    H = 20 + len(nodes) * (bh + gap)
+    s = []
+    cx = W / 2
+    for i, (tp, txt) in enumerate(nodes):
+        y = 14 + i * (bh + gap)
+        txt = txt.replace("<", "&lt;").replace(">", "&gt;")
+        if tp == "ini":
+            s.append("<rect x='%d' y='%d' width='160' height='%d' rx='20' fill='#e8f3e8' stroke='%s' stroke-width='2'/>" % (cx - 80, y, bh, INK))
+        elif tp == "dec":
+            s.append("<polygon points='%.1f,%d %.1f,%.1f %.1f,%d %.1f,%.1f' fill='#fff4d6' stroke='%s' stroke-width='2'/>" % (cx, y - 4, cx + 120, y + bh / 2.0, cx, y + bh + 4, cx - 120, y + bh / 2.0, INK))
+        elif tp == "es":
+            s.append("<polygon points='%.1f,%d %.1f,%d %.1f,%d %.1f,%d' fill='#eef4fb' stroke='%s' stroke-width='2'/>" % (cx - 100, y + bh, cx - 80, y, cx + 100, y, cx + 80, y + bh, INK))
+        else:
+            s.append("<rect x='%d' y='%d' width='220' height='%d' fill='#eef4fb' stroke='%s' stroke-width='2'/>" % (cx - 110, y, bh, INK))
+        s.append(_t(cx, y + bh / 2.0 + 5, txt, 13, INK, bold=False))
+        if i + 1 < len(nodes):
+            y2 = y + bh + gap
+            s.append(_ln(cx, y + bh + (4 if tp == "dec" else 0), cx, y2 - 2, INK, 1.6))
+            s.append("<polygon points='%.1f,%.1f %.1f,%.1f %.1f,%.1f' fill='%s'/>" % (cx - 4, y2 - 8, cx + 4, y2 - 8, cx, y2 - 1, INK))
+    return _svg(W, H, "".join(s), label)

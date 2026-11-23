@@ -1498,7 +1498,11 @@ BR / Matemática / 2ª série（br_em に tri_ret（直角三角形、直角は 
 1. trigonometria-no-triangulo-retangulo ✓ 2. leis-dos-senos-e-dos-cossenos ✓ 3. ciclo-trigonometrico-e-radianos ✓ 4. funcoes-seno-e-cosseno ✓ 5. transformacoes-isometricas-e-homotetias ✓ 6. areas-de-superficies ✓ 7. poligonos-regulares-e-ladrilhamentos ✓
 8. prismas-e-piramides ✓ 9. cilindros-cones-e-esferas ✓ 10. volumes-e-principio-de-cavalieri ✓ 11. principio-fundamental-da-contagem ✓ 12. permutacoes-arranjos-e-combinacoes ✓ 13. probabilidade-e-espaco-amostral ✓ 14. probabilidade-condicional-e-eventos-sucessivos ✓
 
-BR の次: 3ª série（juros, finanças, índices, modelos, box-plot, pesquisa amostral, regressão, algoritmos, programação, cartografia, polígonos regulares, riscos）
+BR / Matemática / 3ª série（br_em に code（Python・アルゴリズムの <span class='code'>）・fluxo（フローチャートの SVG）。トピック matematica-financeira（juros・orcamento・financiamento・taxas-e-indices）を足した。probabilidade に correlacao・histograma・box-plot、grandezas-e-medidas に escalas。algoritmos・programacao はトピックなし。グラフの縦軸が 4 桁になるときは千単位にする（左が切れる））
+1. juros-simples-e-compostos ✓ 2. orcamento-e-financiamentos ✓ 3. taxas-e-indices ✓ 4. modelos-com-funcoes ✓ 5. histograma-box-plot-e-ramo-e-folhas ✓ 6. pesquisa-amostral-e-relatorio ✓ 7. correlacao-e-reta-de-ajuste ✓
+8. algoritmos-e-fluxogramas ✓ 9. introducao-a-programacao ✓ 10. escalas-e-projecoes-cartograficas ✓
+
+BR / Matemática は 1º ano〜3ª série まで完了（EM13MAT のスキルはすべてどこかの単元に入っている）。次は GDP 順で次の国（juros, finanças, índices, modelos, box-plot, pesquisa amostral, regressão, algoritmos, programação, cartografia, polígonos regulares, riscos）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
