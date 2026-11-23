@@ -124,10 +124,12 @@ def fig_seq(k, n):
     s, x = [], 10
     for i in range(n):
         m = 1 + k * i
+        w = max(min(m, 5) * 16, 56)
+        x0 = x + (w - min(m, 5) * 16) // 2
         for j in range(m):
-            s.append("<rect x='%d' y='%d' width='14' height='14' fill='%s' stroke='%s' stroke-width='1.2'/>" % (x + (j % 5) * 16, 10 + (j // 5) * 16, FILL, GREEN))
-        s.append(text(x + min(m, 5) * 8, 10 + ((m - 1) // 5 + 1) * 16 + 18, "Figura %d" % (i + 1), 12, col=INK))
-        x += min(m, 5) * 16 + 24
+            s.append("<rect x='%d' y='%d' width='14' height='14' fill='%s' stroke='%s' stroke-width='1.2'/>" % (x0 + (j % 5) * 16, 10 + (j // 5) * 16, FILL, GREEN))
+        s.append(text(x + w / 2, 10 + ((m - 1) // 5 + 1) * 16 + 18, "Figura %d" % (i + 1), 12, col=INK))
+        x += w + 24
     return wrap(x, 10 + ((1 + k * (n - 1) - 1) // 5 + 1) * 16 + 30, "".join(s), "sequência de figuras feitas de quadradinhos", lg=True)
 
 

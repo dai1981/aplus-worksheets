@@ -1445,7 +1445,15 @@ simetria は DE Klasse 3 の Achsensymmetrie の図を使う。5º poligonos の
 9. decimos-e-centesimos ✓ 10. sequencias-e-multiplos ✓ 11. igualdade ✓ 12. localizacao-e-movimentacao ✓ 13. prismas-e-piramides ✓ 14. angulos-retos-e-nao-retos ✓ 15. simetria-de-reflexao ✓
 16. medidas-de-comprimento-massa-e-capacidade ✓ 17. area ✓ 18. horas-e-intervalos-de-tempo ✓ 19. temperatura ✓ 20. sistema-monetario ✓ 21. probabilidade ✓ 22. tabelas-e-graficos ✓
 
-BR の次: 2º ano → 1º ano → 9º ano（SAEB）… の順。各学年の BNCC コード（EF02MA01 など）で単元を分ける
+BR / Matemática / 2º ano（BNCC EF02MA01〜EF02MA23。1.000 まで。文は短く、絵を多く）— 生成スクリプトは `gen_br_matematica_2_*`（seed は 802NN、use で再利用する 3º のモジュールの R は 809NN（80901〜80915））、共通部品は `tools/br_2.py`（parts・wrong（3 桁の誤答）・md（cubo grande なしの material dourado）・cdu、padrao（f_common.pattern_svg に図形と色の名前）・opcoes・FORMAS・CORES、mes_svg（月のカレンダー、日曜始まり、marks で丸）・dia_semana・DIAS・MESES）。
+多くの単元は 3º ano の問題関数を `use(..., preds=(lim(999, 0),))` で再利用。図形の問題では quadrado も retângulo なので、retângulo を問うときに quadrado を出さない。かけ算は 2・3・4・5 だけ、÷ は使わない（metade・terça parte は「2 つ・3 つの等しいグループに分ける」）。
+トピック：quantidades→numeros、calendario→grandezas-e-medidas
+1. numeros-ate-1000 ✓ 2. comparar-e-ordenar-numeros ✓ 3. compor-e-decompor-numeros ✓ 4. estimar-e-comparar-quantidades ✓ 5. fatos-basicos-de-adicao-e-subtracao ✓ 6. adicao-e-subtracao ✓
+7. problemas-de-adicao-e-subtracao ✓ 8. multiplicacao-por-2-3-4-e-5 ✓ 9. dobro-metade-triplo-e-terca-parte ✓ 10. sequencias-numericas ✓ 11. padroes-e-sequencias-repetitivas ✓
+12. localizacao-e-trajetos ✓ 13. figuras-geometricas-espaciais ✓ 14. figuras-geometricas-planas ✓ 15. medidas-de-comprimento ✓ 16. massa-e-capacidade ✓ 17. calendario ✓
+18. horas-e-intervalos-de-tempo ✓ 19. sistema-monetario ✓ 20. probabilidade ✓ 21. tabelas-e-graficos ✓ 22. pesquisa-e-organizacao-de-dados ✓
+
+BR の次: 1º ano → 9º ano（SAEB）… の順。各学年の BNCC コード（EF01MA01 など）で単元を分ける
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

@@ -115,7 +115,7 @@ def s4_pesquisa():
     tb = "<p><b>Pesquisa: %s</b></p>" % t + table([k.capitalize(), "Contagem"], [[c, "<span style='font-family:monospace;letter-spacing:1px'>%s</span>" % tracos(v)] for c, v in zip(cats, vals)])
     return mcq(tb + "Cada tracinho é um voto e cada grupo cortado vale 5. Quantos votos teve «%s»?" % cats[i], str(vals[i]),
                [str(vals[i] + 1), str(vals[i] - 1), str(vals[i] // 5 + vals[i] % 5)],
-               "%s de 5 e %s: <b>%d</b>." % (pl(vals[i] // 5, "grupo", "grupos"), pl(vals[i] % 5, "tracinho", "tracinhos"), vals[i]))
+               "%s: <b>%d</b>." % (" e ".join(x for x in (pl(vals[i] // 5, "grupo de 5", "grupos de 5") if vals[i] >= 5 else "", pl(vals[i] % 5, "tracinho", "tracinhos") if vals[i] % 5 else "") if x), vals[i]))
 
 
 ESCOLHA = [("Para mostrar quantos alunos preferem cada fruta, o melhor é…", "um gráfico de colunas", ["uma lista de nomes", "um relógio", "uma régua"]),

@@ -219,7 +219,7 @@ function topic_defs_it() {
 function topic_defs_br() {
     return array(
         'numeros' => array('name' => 'Números',
-            'in' => '/numeros|comparar-e-ordenar|reta-numerica|sequencias/', 'out' => '/decima|fraco/',
+            'in' => '/numeros|comparar-e-ordenar|reta-numerica|sequencias|quantidades/', 'out' => '/decima|fraco/',
             'blurb' => 'Ler, escrever e decompor números até centenas de milhar, valor posicional, comparar, ordenar e arredondar, sequências numéricas.'),
         'fracoes-e-decimais' => array('name' => 'Frações, decimais e porcentagem',
             'in' => '/fraco|decima|decimos|porcentagem|metade-terca/', 'out' => '/^$/',
@@ -234,7 +234,7 @@ function topic_defs_br() {
             'in' => '/figuras|solidos|localizacao|trajetos|simetria|angulos|poligonos|cartesiano|ampliacao|prismas|piramides/', 'out' => '/^$/',
             'blurb' => 'Localização, trajetos e plano cartesiano, figuras espaciais e planificações, prismas e pirâmides, polígonos e ângulos, ampliação e redução.'),
         'grandezas-e-medidas' => array('name' => 'Grandezas e medidas',
-            'in' => '/comprimento|massa|capacidade|area|perimetro|volume|horas|tempo|temperatura|sistema-monetario|dinheiro|medidas/', 'out' => '/^$/',
+            'in' => '/comprimento|massa|capacidade|area|perimetro|volume|horas|tempo|temperatura|sistema-monetario|dinheiro|medidas|calendario/', 'out' => '/^$/',
             'blurb' => 'Comprimento, massa e capacidade, transformação de unidades, perímetro, área e volume, horas e intervalos de tempo, o sistema monetário brasileiro.'),
         'probabilidade-e-estatistica' => array('name' => 'Probabilidade e estatística',
             'in' => '/graficos|tabelas|probabilidade|pesquisa|contagem/', 'out' => '/^$/',

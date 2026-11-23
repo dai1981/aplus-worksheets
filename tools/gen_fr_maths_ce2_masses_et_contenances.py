@@ -95,10 +95,11 @@ def balance_svg(obj, weights):
          "<path d='M0 80 h80 l-10 14 h-60 Z' fill='#dddddd' stroke='%s'/>" % INK, "<path d='M220 80 h80 l-10 14 h-60 Z' fill='#dddddd' stroke='%s'/>" % INK,
          "<rect x='14' y='44' width='52' height='36' rx='4' fill='%s' stroke='%s' stroke-width='1.5'/>" % (FILL, GREEN), text(40, 67, obj, 12)]
     x = 222
-    for w in weights:
+    for i, w in enumerate(weights):
         ww = 18 if w < 100 else 22 if w < 1000 else 28
         s.append("<rect x='%d' y='%d' width='%d' height='%d' fill='#b9b9b9' stroke='%s'/>" % (x, 80 - ww, ww, ww, INK))
-        s.append(text(x + ww / 2.0, 80 - ww - 4, ("%d kg" % (w // 1000) if w >= 1000 else "%d g" % w).replace(" ", NB), 10))
+        # étiquettes alternées au-dessus et au-dessous du plateau pour qu'elles ne se chevauchent pas
+        s.append(text(x + ww / 2.0, 80 - ww - 4 if i % 2 == 0 else 108, ("%d kg" % (w // 1000) if w >= 1000 else "%d g" % w).replace(" ", NB), 10))
         x += ww + 3
     return wrap(max(304, x + 6), 168, "".join(s), "balance en équilibre", lg=True)
 

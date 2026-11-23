@@ -48,17 +48,18 @@ def s1_instrumento():
 
 
 def s2_palmo():
-    (p1, _), (p2, _) = K.two()
+    (p1, g1), (p2, g2) = K.two()
+    dois = "as duas" if g1 == g2 == "ela" else "os dois"
     a = R.randint(6, 9)
     b = a + R.randint(2, 4)
     k = R.choice(["quem", "porque", "padrao"])
     if k == "quem":
         return mcq("%s mediu a mesa e encontrou %d palmos. %s mediu a mesma mesa e encontrou %d palmos. Quem tem o palmo maior?" % (p1, a, p2, b), p1,
-                   [p2, "os dois têm o mesmo palmo", "não dá para saber"],
+                   [p2, "%s têm o mesmo palmo" % dois, "não dá para saber"],
                    "Quem precisou de <b>menos</b> palmos para a mesma mesa tem o palmo maior: <b>%s</b>." % p1)
     if k == "porque":
         return mcq("%s e %s mediram o mesmo corredor com passos: deu %d passos e %d passos. Por que deu diferente?" % (p1, p2, a * 2, b * 2),
-                   "porque os passos dos dois têm tamanhos diferentes", ["porque um dos dois errou a conta", "porque o corredor mudou de tamanho", "porque passo não serve para medir"],
+                   "porque os passos d%s têm tamanhos diferentes" % dois, ["porque um%s d%s errou a conta" % ("a" if dois == "as duas" else "", dois), "porque o corredor mudou de tamanho", "porque passo não serve para medir"],
                    "O resultado da medida depende da unidade usada: <b>os passos têm tamanhos diferentes</b>.")
     return mcq("Por que usamos o metro em vez do palmo para comprar um tecido?", "porque o metro é igual para todos", ["porque o palmo é muito pequeno", "porque o metro é mais bonito", "porque o palmo só serve para crianças"],
                "O metro é uma unidade <b>padronizada</b>: é igual para todos, então todo mundo encontra a mesma medida.")

@@ -40,7 +40,8 @@ def s1_objeto():
     thing, ans = R.choice(OBJ)
     w = [x for x in ["esfera", "cilindro", "bloco retangular", "cubo", "cone", "pirâmide"] if x != ans]
     R.shuffle(w)
-    return mcq("Com que figura geométrica espacial se parece %s?" % thing, ans, w, "%s parece %s: <b>%s</b>." % (thing[0].upper() + thing[1:], ART[ans], ans))
+    v = "parecem" if thing.startswith(("as ", "os ")) else "parece"
+    return mcq("Com que figura geométrica espacial se %s %s?" % (v, thing), ans, w, "%s %s %s: <b>%s</b>." % (thing[0].upper() + thing[1:], v, ART[ans], ans))
 
 
 def s2_contar():

@@ -30,7 +30,7 @@ def s1_juntar():
     if k == "figurinhas":
         (p1, _), (p2, _) = K.two()
         a, b = R.randint(45, 180), R.randint(45, 180)
-        return mcq("%s tem %d figurinhas e %s tem %d. Quantas figurinhas os dois têm juntos?" % (p1, a, p2, b), num(a + b), wr(a + b, a, b),
+        return mcq("%s tem %d figurinhas e %s tem %d. Quantas figurinhas há ao todo?" % (p1, a, p2, b), num(a + b), wr(a + b, a, b),
                    "Juntar: %d + %d = <b>%s</b>." % (a, b, num(a + b)))
     a, b = R.randint(130, 600), R.randint(130, 600)
     return mcq("Um sítio recolheu %s ovos brancos e %s ovos vermelhos. Quantos ovos recolheu?" % (num(a), num(b)), num(a + b), wr(a + b, a, b),
