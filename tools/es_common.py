@@ -410,3 +410,28 @@ def letra_big(n):
     if r:
         out += " " + letra(r)
     return out
+
+
+def _nums(it):
+    t = it["q"] + " " + " ".join(it["c"]) + " " + it["e"]
+    t = re.sub(r"<[^>]*>", " ", t)
+    t = re.sub(r"(\d)[   ](?=\d{3}\b)", r"\1", t)
+    return [int(x) for x in re.findall(r"\d+", t)]
+
+
+def lim(mx, dec=True):
+    """filtro para use()/keep(): ningún número mayor que mx; dec=False quita los decimales"""
+    def ok(it):
+        t = re.sub(r"<[^>]*>", " ", it["q"] + " " + " ".join(it["c"]))
+        if not dec and re.search(r"\d,\d", t):
+            return False
+        return all(n <= mx for n in _nums(it))
+    return ok
+
+
+def sin(*words):
+    """filtro: quita las preguntas que contienen alguna de estas palabras"""
+    def ok(it):
+        t = (it["q"] + " " + " ".join(it["c"])).lower()
+        return not any(w.lower() in t for w in words)
+    return ok

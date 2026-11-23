@@ -1526,7 +1526,14 @@ ES / Matemáticas / 5.º・6.º de Primaria（tercer ciclo）— 生成スクリ
 6.º: 1. numeros-grandes ✓ 2. numeros-enteros ✓ 3. potencias-y-raiz-cuadrada ✓ 4. multiplos-divisores-mcm-y-mcd ✓ 5. jerarquia-de-las-operaciones ✓ 6. fracciones ✓ 7. operaciones-con-fracciones ✓ 8. numeros-decimales ✓ 9. operaciones-con-decimales ✓ 10. porcentajes ✓ 11. proporcionalidad ✓ 12. expresiones-y-ecuaciones ✓
 13. medidas-de-longitud-masa-y-capacidad ✓ 14. medidas-de-superficie ✓ 15. angulos ✓ 16. poligonos-y-circulo ✓ 17. area-de-figuras-planas ✓ 18. longitud-y-area-del-circulo ✓ 19. cuerpos-y-volumen ✓ 20. coordenadas-y-movimientos ✓ 21. estadistica ✓ 22. probabilidad ✓
 
-ES の次: 3.º → 2.º → 1.º。学年は catalog.json に足す（intro は 1 行）
+ES / Matemáticas / 1.º・2.º・3.º de Primaria（primer ciclo と 3.º）— 1.º・2.º と共有する単元は `gen_es_matematicas_3_*` に `build(lv)`（lv = 1〜3、seed は 30000 + 1000 × lv + 番号）、`gen_es_matematicas_2_*`・`_1_*` は build を呼ぶだけ。
+3.º は 4.º と同じ segundo ciclo なので、多くの単元は `tools/es_low.py` の `src(4.º の生成スクリプト名, seed, 関数名…, mx=9999, sin=(…), rep=[(古い文字, 新しい文字)])` で 4.º の問題関数を数の上限・語の除外・文字の置き換え付きで再利用し、`unit(lv, slug, sort, …, spec, seed, pic)` で作る（4.º A → 3.º A など）。
+絵は `tools/es_pics.py`（k_pics の絵にスペイン語の aria-label：COSAS（名詞と性）・cuantos・cosas、fila・disperso・marco10・dados・dos_grupos・tachados・torres・lapices・caja・regletas・salto・grupos・matriz・plato）。範囲：1.º は 99 まで（計算は 20 まで）、2.º は 999 まで（かけ算は 2・3・4・5・10 の段）、3.º は 9999 まで。
+トピック：estadistica-y-probabilidad の out に tablas-de-multiplicar
+3.º: 1. numeros-hasta-9999 ✓ 2. comparar-ordenar-y-redondear ✓ 3. suma-y-resta ✓ 4. calculo-mental ✓ 5. tablas-de-multiplicar ✓ 6. multiplicacion ✓ 7. division ✓ 8. problemas ✓ 9. fracciones ✓ 10. patrones-e-igualdades ✓
+11. medidas-de-longitud ✓ 12. masa-y-capacidad ✓ 13. el-reloj-y-el-calendario ✓ 14. el-dinero ✓ 15. perimetro ✓ 16. rectas-y-angulos ✓ 17. poligonos ✓ 18. cuerpos-geometricos ✓ 19. orientacion-y-simetria ✓ 20. graficos-y-tablas ✓ 21. probabilidad ✓
+
+ES の次: 2.º → 1.º（作成済み：1.º numeros-hasta-99・comparar-y-ordenar-numeros・sumas-y-restas-hasta-20、2.º numeros-hasta-999・comparar-y-ordenar-numeros・suma-y-resta-con-llevadas・la-multiplicacion）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

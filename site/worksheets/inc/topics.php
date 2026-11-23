@@ -243,7 +243,7 @@ function topic_defs_es() {
             'in' => '/patrones|ecuaciones|expresiones|proporcionalidad/', 'out' => '/^$/',
             'blurb' => 'Series y patrones, igualdades, expresiones con letras, ecuaciones sencillas, proporcionalidad y escalas.'),
         'estadistica-y-probabilidad' => array('name' => 'Estadística y probabilidad',
-            'in' => '/graficos|tablas-de|estadistica|probabilidad|media/', 'out' => '/^$/',
+            'in' => '/graficos|tablas-de|estadistica|probabilidad|media/', 'out' => '/tablas-de-multiplicar/',
             'blurb' => 'Tablas de frecuencias, gráficos de barras y de líneas, la media y la moda, sucesos seguros, posibles e imposibles.'),
     );
 }

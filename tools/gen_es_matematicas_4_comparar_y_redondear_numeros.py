@@ -181,7 +181,7 @@ def s5_problema():
 def main():
     seen = set()
     sets = [
-        ("Comparar con &lt; y &gt;", mix(R, seen, [(s1_signo, 14), (s1_verdad, 6)])),
+        ("Comparar números", mix(R, seen, [(s1_signo, 14), (s1_verdad, 6)])),
         ("Ordenar números", mix(R, seen, [(s2_orden, 20)])),
         ("Redondear", mix(R, seen, [(s3_redondear, 20)])),
         ("Recta numérica y aproximaciones", mix(R, seen, [(s4_recta, 10), (s4_entre, 10)])),
