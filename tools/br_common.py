@@ -9,6 +9,7 @@ Brasil (Ensino Fundamental, BNCC) の単元生成の共通部品。
 ・HTML の属性はシングルクォート、バックスラッシュなし（check.py と同じルール）
 """
 import math
+import random
 import os
 import re
 from ws_common import (fig, svg_wrap, text, line, balance, write_unit, fr,   # noqa: F401
@@ -421,3 +422,57 @@ def grupos(g, k, kind):
 def linha(n, kind, per_row=10):
     import k_pics
     return _pic(k_pics.row_svg(n, kind, per_row), coisas(kind, n))
+
+
+# ------------------------------------------------------------ reutilizar geradores de outros anos
+_BRNUM = re.compile(r"(?<![\d.,])(\d{1,3}(?:\.\d{3})+|\d+)(?:,(\d+))?(?![\d])")
+
+
+def nums_in(it):
+    """números (inteiros e decimais) do texto visível de q, c e e"""
+    txt = re.sub(r"<[^>]+>", " ", " ".join([it["q"], it["e"]] + list(it["c"])))
+    txt = re.sub(r"(?:EF0\dMA\d\d|\d+º|\d+ª)", " ", txt)
+    out = []
+    for m in _BRNUM.finditer(txt):
+        out.append((int(m.group(1).replace(".", "")), len(m.group(2)) if m.group(2) else 0))
+    return out
+
+
+def lim(maxn=99999, places=2):
+    """predicado: nenhum número maior que maxn nem com mais de «places» casas decimais"""
+    def ok(it):
+        return all(v <= maxn and p <= places for v, p in nums_in(it))
+    return ok
+
+
+def keep(maker, *preds):
+    """envolve um gerador: devolve None quando o item não passa nos filtros"""
+    def mk():
+        it = maker()
+        if it is None:
+            return None
+        for p in preds:
+            if not p(it):
+                return None
+        return it
+    mk.__name__ = getattr(maker, "__name__", "mk")
+    return mk
+
+
+def swap(mod, seed):
+    """troca o R (e o K, se houver) de um gerador importado"""
+    mod.R = random.Random(seed)
+    if hasattr(mod, "K"):
+        mod.K = Kids(mod.R)
+    return mod
+
+
+def use(modname, seed, *names, preds=()):
+    """importa um gerador de outro ano, troca o R e devolve os geradores pedidos (com filtros)"""
+    import importlib
+    m = importlib.import_module(modname)
+    if getattr(m, "_br_seed", None) != seed:
+        swap(m, seed)
+        m._br_seed = seed
+    out = [keep(getattr(m, n), *preds) for n in names]
+    return out[0] if len(out) == 1 else out

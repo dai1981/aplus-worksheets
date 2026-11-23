@@ -100,7 +100,7 @@ def s2_def():
 
 
 def angulo_svg(g):
-    cx, cy = 100, 130
+    cx, cy = 120, 130
     a = math.radians(g)
     s = [line(cx, cy, cx + 130, cy, INK, 2.6), line(cx, cy, cx + 110 * math.cos(-a), cy + 110 * math.sin(-a), INK, 2.6)]
     if g == 90:
@@ -108,7 +108,7 @@ def angulo_svg(g):
     else:
         r = 26
         s.append("<path d='M%.1f %.1f A%d %d 0 0 0 %.1f %.1f' fill='none' stroke='%s' stroke-width='1.6'/>" % (cx + r, cy, r, r, cx + r * math.cos(-a), cy + r * math.sin(-a), RED))
-    return wrap(240, 145, "".join(s), "ângulo")
+    return wrap(260, 145, "".join(s), "ângulo")
 
 
 def s3_angulo():

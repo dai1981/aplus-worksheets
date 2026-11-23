@@ -1438,7 +1438,14 @@ br_common に dz（整数 × 10^−k → コンマの小数）・quadro_decimal�
 9. divisao ✓ 10. multiplicacao-e-divisao-com-decimais ✓ 11. problemas-de-contagem ✓ 12. igualdade-e-termo-desconhecido ✓ 13. proporcionalidade-e-partilha ✓ 14. plano-cartesiano ✓
 15. figuras-espaciais-e-planificacoes ✓ 16. poligonos ✓ 17. ampliacao-e-reducao ✓ 18. medidas-e-transformacoes ✓ 19. perimetro-e-area ✓ 20. volume ✓ 21. probabilidade ✓ 22. tabelas-e-graficos ✓
 
-BR の次: 4º ano → 2º ano → 1º ano → 9º ano（SAEB）… の順。各学年の BNCC コード（EF04MA01 など）で単元を分ける
+BR / Matemática / 4º ano（BNCC EF04MA01〜EF04MA28。99.999 まで、小数は centésimos まで、分数は単位分数、確率は分数なし）— 生成スクリプトは `gen_br_matematica_4_*`（seed は 804NN、再利用する他学年のモジュールの R は 809NN、make_unit に grade="4-ano"）。
+br_common に use(モジュール名, seed, 関数名…, preds=…)（他学年の生成スクリプトを import して R を入れ替え、問題関数を返す）・keep・lim(最大の数, 小数の桁)・nums_in を足した。多くの単元は 3º・5º ano の問題関数を use で再利用（同じ関数を 2 回使うときは同じ seed）。
+simetria は DE Klasse 3 の Achsensymmetrie の図を使う。5º poligonos の角度の図は左にはみ出さないように頂点を右へ寄せた。トピック：decimos→fracoes-e-decimais、relacoes-entre・propriedades・multiplos→multiplicacao-e-divisao、prismas→geometria、temperatura→grandezas-e-medidas
+1. numeros-ate-dezenas-de-milhar ✓ 2. adicao-e-subtracao ✓ 3. relacoes-entre-as-operacoes ✓ 4. propriedades-e-calculo-mental ✓ 5. multiplicacao ✓ 6. divisao ✓ 7. problemas-de-contagem ✓ 8. fracoes-unitarias ✓
+9. decimos-e-centesimos ✓ 10. sequencias-e-multiplos ✓ 11. igualdade ✓ 12. localizacao-e-movimentacao ✓ 13. prismas-e-piramides ✓ 14. angulos-retos-e-nao-retos ✓ 15. simetria-de-reflexao ✓
+16. medidas-de-comprimento-massa-e-capacidade ✓ 17. area ✓ 18. horas-e-intervalos-de-tempo ✓ 19. temperatura ✓ 20. sistema-monetario ✓ 21. probabilidade ✓ 22. tabelas-e-graficos ✓
+
+BR の次: 2º ano → 1º ano → 9º ano（SAEB）… の順。各学年の BNCC コード（EF02MA01 など）で単元を分ける
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
