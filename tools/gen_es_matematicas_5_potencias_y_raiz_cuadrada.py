@@ -1,0 +1,2 @@
+from gen_es_matematicas_6_potencias_y_raiz_cuadrada import build
+build(5)

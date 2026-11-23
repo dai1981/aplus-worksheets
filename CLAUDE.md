@@ -1517,7 +1517,16 @@ ES / Matemáticas / 4.º de Primaria（segundo ciclo の最後の学年。数は
 14. medidas-de-longitud ✓ 15. masa-y-capacidad ✓ 16. el-tiempo-y-el-reloj ✓ 17. el-dinero ✓ 18. angulos ✓ 19. triangulos-y-cuadrilateros ✓ 20. perimetro-y-area ✓
 21. cuerpos-geometricos ✓ 22. simetria-y-coordenadas ✓ 23. patrones-e-igualdades ✓ 24. graficos-y-tablas ✓ 25. probabilidad ✓
 
-ES の次: 6.º de Primaria（tercer ciclo の最後）→ 5.º → 3.º → 2.º → 1.º。学年は catalog.json に足す。patrones-e-igualdades はまだどのトピックにも入らない（algebra の単元が 3 つたまったらトピックを足す）
+ES / Matemáticas / 5.º・6.º de Primaria（tercer ciclo）— 生成スクリプトは `gen_es_matematicas_6_*` に `build(lv)`（lv = 5 または 6、seed は 40000 + 1000 × lv + 番号）、`gen_es_matematicas_5_*` は `build(5)` を呼ぶだけ（5.º だけの medida-del-tiempo、6.º だけの longitud-y-area-del-circulo は自前）。
+共通部品は `tools/es_c3.py`（es_common の上に fq（Fraction → 分数の HTML、mixto=True で帯分数）・d（Fraction → コンマの小数、割り切れないと ValueError）・sg（−3）・W・M（neg=True の mcq））。es_common に letra_big（999 999 999 まで）、tabla_valor は 9 列（CMi DMi UMi …）。4.º の生成スクリプトの問題関数は es_common.use で R を入れ替えて再利用（triangulos-y-cuadrilateros・cuerpos-geometricos・probabilidad）。
+範囲：5.º は 9 999 999・小数 3 桁・分母 10 まで・porcentajes は 10/20/25/50/75 %、6.º は 999 999 999・負の数・m.c.m./m.c.d.・分数の × ÷・π = 3,14・m³。
+ページ上部（title ≤ 50 字・key_big ≤ 36 字・key_sub ≤ 50 字）は make_unit が assert で止める。トピックに algebra-y-proporcionalidad（patrones・ecuaciones・expresiones・proporcionalidad）を足した。potencias・jerarquia→numeros、area- は magnitudes-y-medida だけ
+5.º: 1. numeros-grandes ✓ 2. numeros-enteros ✓ 3. potencias ✓ 4. multiplos-divisores-y-primos ✓ 5. jerarquia-de-las-operaciones ✓ 6. fracciones ✓ 7. operaciones-con-fracciones ✓ 8. numeros-decimales ✓ 9. operaciones-con-decimales ✓ 10. porcentajes ✓ 11. proporcionalidad ✓ 12. expresiones-y-ecuaciones ✓
+13. medidas-de-longitud-masa-y-capacidad ✓ 14. medidas-de-superficie ✓ 15. angulos ✓ 16. poligonos-y-circulo ✓ 17. area-de-figuras-planas ✓ 19. cuerpos-y-volumen ✓ 20. coordenadas-y-movimientos ✓ 21. estadistica ✓ 22. probabilidad ✓ 23. medida-del-tiempo ✓
+6.º: 1. numeros-grandes ✓ 2. numeros-enteros ✓ 3. potencias-y-raiz-cuadrada ✓ 4. multiplos-divisores-mcm-y-mcd ✓ 5. jerarquia-de-las-operaciones ✓ 6. fracciones ✓ 7. operaciones-con-fracciones ✓ 8. numeros-decimales ✓ 9. operaciones-con-decimales ✓ 10. porcentajes ✓ 11. proporcionalidad ✓ 12. expresiones-y-ecuaciones ✓
+13. medidas-de-longitud-masa-y-capacidad ✓ 14. medidas-de-superficie ✓ 15. angulos ✓ 16. poligonos-y-circulo ✓ 17. area-de-figuras-planas ✓ 18. longitud-y-area-del-circulo ✓ 19. cuerpos-y-volumen ✓ 20. coordenadas-y-movimientos ✓ 21. estadistica ✓ 22. probabilidad ✓
+
+ES の次: 3.º → 2.º → 1.º。学年は catalog.json に足す（intro は 1 行）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

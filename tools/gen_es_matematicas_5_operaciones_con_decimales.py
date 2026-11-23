@@ -1,0 +1,2 @@
+from gen_es_matematicas_6_operaciones_con_decimales import build
+build(5)

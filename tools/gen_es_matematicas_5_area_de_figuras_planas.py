@@ -1,0 +1,2 @@
+from gen_es_matematicas_6_area_de_figuras_planas import build
+build(5)

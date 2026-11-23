@@ -219,7 +219,7 @@ function topic_defs_it() {
 function topic_defs_es() {
     return array(
         'numeros' => array('name' => 'Números',
-            'in' => '/numeros|comparar|redondeo|romanos/', 'out' => '/decimal|fraccion/',
+            'in' => '/numeros|comparar|redondeo|romanos|potencias|jerarquia/', 'out' => '/decimal|fraccion/',
             'blurb' => 'Leer, escribir y descomponer números, valor posicional, comparar, ordenar y redondear, números romanos.'),
         'suma-y-resta' => array('name' => 'Suma y resta',
             'in' => '/suma|resta|calculo-mental/', 'out' => '/fraccion|decimal/',
@@ -237,8 +237,11 @@ function topic_defs_es() {
             'in' => '/longitud|masa|capacidad|medida|tiempo|reloj|dinero|perimetro|area|superficie/', 'out' => '/^$/',
             'blurb' => 'Longitud, masa y capacidad, cambio de unidades, perímetro y área, el reloj y el tiempo, el dinero en euros.'),
         'geometria' => array('name' => 'Geometría',
-            'in' => '/angulos|rectas|poligonos|triangulos|cuadrilateros|cuerpos|simetria|coordenadas|figuras|circunferencia/', 'out' => '/^$/',
+            'in' => '/angulos|rectas|poligonos|triangulos|cuadrilateros|cuerpos|simetria|coordenadas|figuras|circunferencia/', 'out' => '/^area-/',
             'blurb' => 'Rectas y ángulos, polígonos, triángulos y cuadriláteros, circunferencia y círculo, cuerpos geométricos, simetría y coordenadas.'),
+        'algebra-y-proporcionalidad' => array('name' => 'Álgebra y proporcionalidad',
+            'in' => '/patrones|ecuaciones|expresiones|proporcionalidad/', 'out' => '/^$/',
+            'blurb' => 'Series y patrones, igualdades, expresiones con letras, ecuaciones sencillas, proporcionalidad y escalas.'),
         'estadistica-y-probabilidad' => array('name' => 'Estadística y probabilidad',
             'in' => '/graficos|tablas-de|estadistica|probabilidad|media/', 'out' => '/^$/',
             'blurb' => 'Tablas de frecuencias, gráficos de barras y de líneas, la media y la moda, sucesos seguros, posibles e imposibles.'),
