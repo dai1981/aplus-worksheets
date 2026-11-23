@@ -1459,7 +1459,13 @@ BR / Matemática / 1º ano（BNCC EF01MA01〜EF01MA22。100 まで、計算は 2
 8. problemas-de-adicao-e-subtracao ✓ 9. classificar-e-ordenar-objetos ✓ 10. sequencias-e-padroes ✓ 11. localizacao ✓ 12. figuras-geometricas-espaciais ✓ 13. figuras-geometricas-planas ✓
 14. comprimento-massa-e-capacidade ✓ 15. periodos-do-dia ✓ 16. calendario-e-datas ✓ 17. sistema-monetario ✓ 18. probabilidade ✓ 19. tabelas-e-graficos ✓ 20. pesquisa ✓
 
-BR の次: 9º ano（SAEB）→ 6º・7º・8º ano の順。各学年の BNCC コード（EF09MA01 など）で単元を分ける
+BR / Matemática / 9º ano（SAEB の学年。BNCC EF09MA01〜EF09MA23。負の数は「−」）— 生成スクリプトは `gen_br_matematica_9_*`（seed は 890NN）、共通部品は `tools/br_9.py`（d（Fraction → ブラジル式の小数。places を付けると末尾の 0 を消す、keep=True で残す）・fq・expr・P2・par・sq（√ の簡約）・M（neg=True の mcq、重複と "None" を落とす）・figure（fr_c4）・kosy（de_k8）・paralelas（平行線と横断線の 8 つの角）・circulo（円と中心角・円周角）・formas（三角形などをまとめて描く。辺の文字は各図形の外側）・tri_pts・unit）。
+座標の分数は fq（「(5/2, 3)」の形。小数のコンマと座標のコンマが混ざらないように）。vistas-ortogonais は UK Year 9 plans-and-elevations の問題関数（UK.R を入れ替え、文と図の文字をポルトガル語に置換）。トピック algebra-e-funcoes（Álgebra e funções）を足した
+1. numeros-reais ✓ 2. potencias-e-radicais ✓ 3. notacao-cientifica ✓ 4. porcentagens-e-juros-compostos ✓ 5. funcoes ✓ 6. razoes-entre-grandezas ✓ 7. grandezas-proporcionais ✓ 8. produtos-notaveis-e-fatoracao ✓
+9. equacoes-do-2-grau ✓ 10. angulos-e-retas-paralelas ✓ 11. angulos-na-circunferencia ✓ 12. semelhanca-de-triangulos ✓ 13. relacoes-metricas-no-triangulo-retangulo ✓ 14. teorema-de-pitagoras ✓ 15. poligonos-regulares ✓
+16. distancia-e-ponto-medio ✓ 17. vistas-ortogonais ✓ 18. unidades-de-medida-muito-grandes-e-pequenas ✓ 19. volume-de-prismas-e-cilindros ✓ 20. probabilidade ✓ 21. graficos-e-estatistica ✓ 22. pesquisa-amostral ✓
+
+BR の次: 6º・7º・8º ano の順。各学年の BNCC コード（EF06MA01 など）で単元を分ける
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
