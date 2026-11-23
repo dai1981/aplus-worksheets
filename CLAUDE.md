@@ -1479,7 +1479,14 @@ BR / Matemática / 7º ano（BNCC EF07MA01〜EF07MA37）— 生成スクリプ�
 8. sequencias ✓ 9. equacoes-do-1-grau ✓ 10. proporcionalidade-direta-e-inversa ✓ 11. transformacoes-no-plano-cartesiano ✓ 12. angulos-e-retas-paralelas ✓ 13. triangulos ✓ 14. poligonos-e-angulos-internos ✓
 15. circunferencia-e-comprimento ✓ 16. area-de-figuras-planas ✓ 17. volume-de-blocos-retangulares ✓ 18. probabilidade-e-frequencia ✓ 19. media-e-amplitude ✓ 20. graficos-de-setores-e-pesquisa ✓
 
-BR の次: 8º ano。各学年の BNCC コード（EF08MA01 など）で単元を分ける
+BR / Matemática / 8º ano（BNCC EF08MA01〜EF08MA27）— 生成スクリプトは `gen_br_matematica_8_*`（seed は 880NN、use で再利用する 6º・7º・9º のモジュールの R は 889NN）。共通部品は br_9（unit に grade="8-ano"）。
+use は問題関数だけを包むので、図の関数（9º volume の cil など）はモジュールを import して直接使う。histograma は graficos-e-classes-de-frequencia の histo、classes は「10 ⊢ 20」。
+トピック：radiciacao→numeros、dizimas→fracoes-e-decimais、principio・tendencia→probabilidade-e-estatistica（media は (^|-)media(-|$)、mediatriz に当たらないように）、sequencias-recursivas→algebra-e-funcoes、transformacoes-geometricas・mediatriz→geometria、grandezas-e-medidas の out に tendencia
+1. potencias-e-notacao-cientifica ✓ 2. radiciacao ✓ 3. principio-multiplicativo ✓ 4. porcentagens ✓ 5. dizimas-periodicas ✓ 6. expressoes-algebricas-e-polinomios ✓ 7. equacoes-com-duas-incognitas ✓
+8. sistemas-de-equacoes ✓ 9. equacoes-do-2-grau-do-tipo-ax2-b ✓ 10. sequencias-recursivas-e-nao-recursivas ✓ 11. grandezas-proporcionais ✓ 12. congruencia-de-triangulos ✓ 13. mediatriz-bissetriz-e-construcoes ✓
+14. transformacoes-geometricas ✓ 15. area-de-figuras-planas-e-do-circulo ✓ 16. volume-e-capacidade ✓ 17. probabilidade ✓ 18. graficos-e-classes-de-frequencia ✓ 19. medidas-de-tendencia-central ✓ 20. pesquisa-amostral ✓
+
+BR / Matemática は 1º〜9º ano まで完了。次は Ensino Médio（BNCC EM13MAT…、1ª〜3ª série）か、GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

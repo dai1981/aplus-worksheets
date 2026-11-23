@@ -32,7 +32,7 @@ def s1_espaco():
                  "6%s = <b>%d</b>." % ("".join(" · 6" for _ in range(n - 1)), 6 ** n))
     if k == "roupas":
         a, b, c = R.randint(2, 5), R.randint(2, 4), R.randint(1, 3)
-        return M("Ana tem %d blusas, %d saias e %d pares de tênis. De quantas maneiras ela pode se vestir com uma peça de cada?" % (a, b, c), d(a * b * c), [d(a + b + c), d(a * b), d(a * b + c)],
+        return M("Ana tem %d blusas, %d saias e %s de tênis. De quantas maneiras ela pode se vestir com uma peça de cada?" % (a, b, "1 par" if c == 1 else "%d pares" % c), d(a * b * c), [d(a + b + c), d(a * b), d(a * b + c)],
                  "Princípio multiplicativo: %d · %d · %d = <b>%d</b>." % (a, b, c, a * b * c))
     if k == "senha":
         n = R.choice([2, 3, 4])
