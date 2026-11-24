@@ -7,7 +7,7 @@ from mx_common import src, unit, nomoney, noplanta  # noqa: F401
 
 S.setup(random.Random(67121))
 MON = [("{cara, cruz, canto}", "{águila, sol, canto}"), ("{cara, cruz}", "{águila, sol}"), ("{cara}", "{águila}"), ("caras", "águilas"), ("cara", "águila"), ("cruces", "soles"), ("cruz", "sol")]
-con, lap, fre, cont = src("gen_es_matematicas_1eso_probabilidad", 67501, "s_conceptos", "s_laplace", "s_frecuencia", "s_contrario", lv=1, rep=MON, extra=(lambda it: " y 1 son" not in it["q"] and not re.search(r"\b1 bolas", it["q"]),))
+con, lap, fre, cont = src("gen_es_matematicas_1eso_probabilidad", 67501, "s_conceptos", "s_laplace", "s_frecuencia", "s_contrario", lv=1, rep=MON, extra=(lambda it: " y 1 son" not in it["q"] and not re.search(r"(?<![\d.])1 (bolas|negras|rojas|azules|verdes|blancas|amarillas)", it["q"]),))
 
 unit("probabilidad", 21, "6AZ",
      "Compara cualitativamente dos o más eventos a partir de sus resultados posibles («es más probable que», «es menos probable que»); identifica eventos de azar, determina el espacio muestral y registra resultados de experimentos en tablas de frecuencia",

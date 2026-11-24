@@ -159,7 +159,7 @@ WORDS = [("En un recuento se han hecho", "En un conteo se hicieron"), ("marcas d
          ("del colegio", "de la escuela"), ("al colegio", "a la escuela"), ("el colegio", "la escuela"), ("un colegio", "una escuela"), ("este colegio", "esta escuela"),
          ("mi colegio", "mi escuela"), ("su colegio", "su escuela"), ("coches", "carros"), ("coche", "carro"),
          ("ha durado", "duró"), ("han durado", "duraron"), ("ha tardado", "tardó"),
-         ("m.c.d.", "MCD"), ("octogonal", "octagonal"), ("chicas", "alumnas"), ("chicos", "alumnos"), ("nota media", "calificación promedio"), ("notas", "calificaciones"), ("ascensor", "elevador"), ("aparcamiento", "estacionamiento"), ("se ha aplicado", "se aplicó"), ("han aprobado", "aprobaron"), ("ha aprobado", "aprobó"), ("grifos", "llaves"), ("depósitos", "tinacos"), ("depósito", "tinaco"), ("abrigos", "chamarras"), ("abrigo", "chamarra"), ("m.c.m.", "mcm"), ("llevadas", "reagrupaciones"), ("con llevada", "con reagrupación"), ("sin llevada", "sin reagrupación"), ("llevada", "reagrupación")]
+         ("m.c.d.", "MCD"), ("sin techo ni suelo", "sin techo ni piso"), ("farolas", "postes de luz"), ("farola", "poste de luz"), ("octogonal", "octagonal"), ("chicas", "alumnas"), ("chicos", "alumnos"), ("nota media", "calificación promedio"), ("notas", "calificaciones"), ("ascensor", "elevador"), ("aparcamiento", "estacionamiento"), ("se ha aplicado", "se aplicó"), ("han aprobado", "aprobaron"), ("ha aprobado", "aprobó"), ("grifos", "llaves"), ("depósitos", "tinacos"), ("depósito", "tinaco"), ("abrigos", "chamarras"), ("abrigo", "chamarra"), ("m.c.m.", "mcm"), ("llevadas", "reagrupaciones"), ("con llevada", "con reagrupación"), ("sin llevada", "sin reagrupación"), ("llevada", "reagrupación")]
 LEAKS = ["€", "euro", "céntimo", "España", "vosotros", "habéis", "tenéis", "sabéis", "CCAA", "LOMLOE", "4.º", "5.º", "6.º", "Primaria", "ESO", "Bachillerato", "IVA", "Hacienda", "comunidad autónoma",
          "tarta", "gominola", "chuche", "cromo", "tiza", "estuche", "bocadillo", "gafas", "folio", "ordenador", "zapatilla", "cole ", "el cole", "gorro", "nata", "judías", "tebeo", "chaqueta", "jersey", "AVE", "Renfe", "colegio", "metro de Madrid", "Galicia", "Andaluc", "Canarias", "Asturias", "Cataluña", "Comunidad",
          "Betis", "Athletic", "Real Sociedad", "Atlético", "Real Madrid", "Real Ciudad", "Teide", "Mulhacén", "Moncayo", "cucurucho", "baraja española", "Aneto", "Pirineo"]
@@ -237,6 +237,7 @@ def mx_item(it):
     it["e"] = it["e"].replace(" <i hidden>año</i>", "")
     it["c"] = [mx_text(c + (" <i hidden>año</i>" if yr else "")).replace(" <i hidden>año</i>", "") for c in it["c"]]
     it["c"] = [re.sub(r"^-(?=\d)", "−", c) for c in it["c"]]
+    it["c"] = [re.sub(r"(?<![\d.,])1(?=[a-z]\b|[a-z][²³⁴⁵])", "", c) if not c.startswith("<") else c for c in it["c"]]   # 1x → x
     it["q"] = it["q"].replace("aria-label='gráfico de barras", "aria-label='gráfica de barras").replace("aria-label='gráfico circular", "aria-label='gráfica circular").replace("aria-label='gráfico", "aria-label='gráfica")
     labels = " ".join(re.findall(r"aria-label='([^']*)'", it["q"]))
     if not ok(it) or any(w in labels for w in ("€", "euro", "céntimo")):

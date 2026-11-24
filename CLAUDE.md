@@ -1605,7 +1605,15 @@ ES の問題関数は src() で再利用。スペインの値段は pesos にす
 15. rectas-notables-de-la-circunferencia ✓ 16. perimetro-y-area-de-poligonos ✓ 17. perimetro-y-area-del-circulo ✓ 18. conversion-de-unidades ✓ 19. tablas-y-graficas ✓ 20. frecuencias-y-medidas-de-tendencia-central ✓ 21. probabilidad ✓
 トピック：construcciones→geometria、conversion-de-unidades→magnitudes-y-medida、mcd-y-mcm→multiplicacion-y-division、tendencia-central→estadistica-y-probabilidad（magnitudes の out）、geometria の out に perimetro-y-area
 
-MX / Matemáticas は primaria 1.º〜6.º と secundaria 1.er grado まで完了。次は secundaria 2.º grado（Fase 6 の PDA の 2.º の列）
+MX / Matemáticas / 2.º・3.er grado de secundaria（Fase 6。grade `2-secundaria`（sort 8）・`3-secundaria`（sort 9）、lv=8・9）— 生成スクリプトは `gen_mx_matematicas_2s_*`（seed 681NN、ES は 683NN〜684NN）・`gen_mx_matematicas_3s_*`（seed 691NN、ES は 693NN〜694NN）、自前の問題は `tools/mx_s2.py`（setup(R)。rn_recta・prop_ops・alg_figuras・desig・prop_inv・ang_cruce・notables・triangulos・circ_ang・distancias・graf_linea・histograma・prob2・jerarquia・seq_cuad・alg_vol・reparto・variacion・poligonos・solidos・esfera・compuestas・dispersion・prob3・ec2_problema・trig_calc。種類を引数で選ぶ）。
+mix の重複チェックは単元全体で共有なので、同じ問題関数を複数のセットで使うときは合計数がその関数の作れる問題数を超えないようにする。ES の因数分解は答えと同じ式を順番違いで誤答にすることがあるので extra=(S.nocommute,)。mx_item は選択肢の「1x」を「x」に直す。三角比は 0〜90° だけ（tg→tan）
+2.º: 1. numeros-con-signo-en-la-recta ✓ 2. propiedades-de-las-operaciones ✓ 3. potencias-y-raiz-cuadrada ✓ 4. notacion-cientifica ✓ 5. expresiones-algebraicas-de-perimetros-y-areas ✓ 6. operaciones-con-polinomios ✓ 7. desigualdades ✓ 8. sistemas-de-ecuaciones ✓ 9. proporcionalidad-directa-e-inversa ✓
+10. funciones-lineales ✓ 11. angulos-entre-rectas ✓ 12. rectas-y-puntos-notables-del-triangulo ✓ 13. triangulos-y-cuadrilateros ✓ 14. angulos-en-la-circunferencia ✓ 15. distancias-y-desigualdad-del-triangulo ✓ 16. histogramas-y-graficas-de-linea ✓ 17. media-mediana-moda-y-rango ✓ 18. probabilidad-de-eventos ✓
+3.º: 1. jerarquia-de-operaciones ✓ 2. sucesiones-cuadraticas ✓ 3. productos-notables-y-factorizacion ✓ 4. areas-y-volumenes-con-expresiones-algebraicas ✓ 5. ecuaciones-cuadraticas ✓ 6. problemas-con-ecuaciones-cuadraticas ✓ 7. variacion-lineal-cuadratica-e-inversa ✓ 8. reparto-proporcional ✓ 9. poligonos-regulares-y-teselados ✓ 10. congruencia-y-semejanza-de-triangulos ✓
+11. solidos-de-revolucion-y-desarrollos-planos ✓ 12. volumen-de-prismas-piramides-y-cilindros ✓ 13. esfera-cono-y-cilindro ✓ 14. perimetro-y-area-de-figuras-compuestas ✓ 15. teorema-de-pitagoras ✓ 16. razones-trigonometricas ✓ 17. interpretacion-de-graficas ✓ 18. medidas-de-dispersion ✓ 19. eventos-independientes-y-juegos-justos ✓
+トピック（topic_defs_es）：notacion-cientifica・propiedades-de-las-operaciones→numeros、desigualdades・productos-notables・factorizacion・reparto-proporcional→algebra、variacion-→funciones、esfera・trigonometric→geometria、volumen-de-→magnitudes（geometria の out）、histogramas・interpretacion-de-graficas・eventos・dispersion→estadistica（magnitudes の out に con-expresiones・expresiones-algebraicas・dispersion）
+
+MX / Matemáticas は primaria 1.º〜6.º と secundaria 1.º〜3.º まで完了。次は GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
