@@ -1605,6 +1605,8 @@ MX / Matemáticas は primaria 1.º〜6.º まで完了。次は secundaria（Fa
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
 - 集計テーブルは mq.php と同じ DB の qz_area・qz_done・qz_stat・qz_unit（mq.php が自動で作る。qz_stat・qz_unit は足すだけ）
+- クラス：先生の端末に名前なしのクラス番号（16けた）を残し（localStorage の mq:cls、クラス名は端末の中だけ）、結果を qz_cres（クラス番号×単元×日、足すだけ）に記録。クラスの継続比較・上位 ◯% の表示はまだ（データだけためている）
+- 文言は ja・en・zh・de・fr・it・es・pt（mq.js の W、mq-rank.js の T）。apu2 のランキングは ?lang=de などで言語を切り替え
 - 国・地域のコードは mq-geo.js と mq.php の MQ_GEO をそろえる（新しい国を足したら両方に）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
