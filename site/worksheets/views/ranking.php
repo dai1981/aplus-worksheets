@@ -38,14 +38,14 @@ page_head(array(
 ));
 site_header(array());
 ?>
-<main class="sn-wrap">
+<main class="rk-wrap">
 <div id="mq-rank-app"></div>
 <p class="mqr-intro"><?= h($tx[2]) ?></p>
 </main>
-<style>.mqr-intro{max-width:860px;margin:18px auto 30px;font-size:14px;line-height:1.9;color:#5b5249}</style>
+<style>.rk-wrap{padding:24px 14px}.mqr-intro{max-width:860px;margin:18px auto 0;font-size:14px;line-height:1.9;color:#5b5249}</style>
 <script>window.MQR_CONF = { api: "<?= url('api/mq.php') ?>", lang: "<?= h($lang) ?>", quiz: "<?= url('') ?>" };</script>
-<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261124b"></script>
-<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261124b"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261124d"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261124d"></script>
 <?php site_footer($lang === 'es-MX' ? 'es' : $lang, false); ?>
 </body>
 </html>
