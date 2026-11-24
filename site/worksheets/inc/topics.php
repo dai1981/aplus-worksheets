@@ -219,14 +219,14 @@ function topic_defs_it() {
 function topic_defs_es() {
     return array(
         'numeros' => array('name' => 'Números',
-            'in' => '/numeros|numeracion|comparar|redondeo|romanos|potencias|jerarquia|radicales|logaritmos|notacion-cientifica|propiedades-de-las-operaciones/', 'out' => '/decimal|fraccion|medir/',
+            'in' => '/numeros|numeracion|comparar|contar-hasta|redondeo|romanos|potencias|jerarquia|radicales|logaritmos|notacion-cientifica|propiedades-de-las-operaciones/', 'out' => '/decimal|fraccion|medir/',
             'blurb' => 'Leer, escribir y descomponer números, valor posicional, comparar, ordenar y redondear, números romanos.'),
         'suma-y-resta' => array('name' => 'Suma y resta',
-            'in' => '/suma|resta|calculo-mental/', 'out' => '/fraccion|decimal|riemann/',
+            'in' => '/suma|resta|calculo-mental|agregar-y-quitar/', 'out' => '/fraccion|decimal|riemann/',
             'blurb' => 'Cálculo mental, sumas y restas en vertical con llevadas, estimaciones y problemas de sumar y restar.',
             'blurb_mx' => 'Cálculo mental, sumas y restas en vertical con reagrupación, estimaciones y problemas de sumar y restar.'),
         'multiplicacion-y-division' => array('name' => 'Multiplicación y división',
-            'in' => '/multiplica|division|divisiones|tablas-de-multiplicar|multiplos|divisores|repartos|dobles|divisibilidad|mcd-y-mcm/', 'out' => '/fraccion|decimal/',
+            'in' => '/multiplica|division|divisiones|tablas-de-multiplicar|multiplos|divisores|repartos|separar-y-repartir|dobles|divisibilidad|mcd-y-mcm/', 'out' => '/fraccion|decimal/',
             'blurb' => 'Tablas de multiplicar, multiplicaciones y divisiones por una y dos cifras, la prueba de la división, múltiplos y divisores.'),
         'fracciones-y-decimales' => array('name' => 'Fracciones y decimales',
             'in' => '/fraccion|decimal|porcentaje|mitad-tercio|mercantil|matematica-financiera/', 'out' => '/proporcionalidad|algebraicas/',
@@ -251,7 +251,7 @@ function topic_defs_es() {
             'in' => '/funciones|coordenadas-y-graficas|variacion-/', 'out' => '/^$/',
             'blurb' => 'Coordenadas y gráficas, dominio, crecimiento, máximos y mínimos, funciones lineales, cuadráticas, exponenciales y logarítmicas.'),
         'estadistica-y-probabilidad' => array('name' => 'Estadística y probabilidad',
-            'in' => '/graficos|pictogramas|graficas-circulares|tablas-y-graficas|tablas-de|estadistica|probabilidad|media|seguro-posible|combinatoria|distribucion|muestreo|intervalos-de-confianza|tendencia-central|histogramas|interpretacion-de-graficas|eventos|dispersion|correlacion|estudios-observacionales|hipotesis|tecnicas-de-conteo|tipos-de-variables|valores-atipicos|variabilidad-y-toma/', 'out' => '/tablas-de-multiplicar/',
+            'in' => '/graficos|pictogramas|clasificar-y-registrar|graficas-circulares|tablas-y-graficas|tablas-de|estadistica|probabilidad|media|seguro-posible|combinatoria|distribucion|muestreo|intervalos-de-confianza|tendencia-central|histogramas|interpretacion-de-graficas|eventos|dispersion|correlacion|estudios-observacionales|hipotesis|tecnicas-de-conteo|tipos-de-variables|valores-atipicos|variabilidad-y-toma/', 'out' => '/tablas-de-multiplicar/',
             'blurb' => 'Tablas de frecuencias, gráficos de barras y de líneas, la media y la moda, sucesos seguros, posibles e imposibles.'),
     );
 }

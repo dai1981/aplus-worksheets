@@ -20,11 +20,12 @@ F3 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/06/Programa_Sin
 F4 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/5.pdf"
 F5 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/6.pdf"
 F6 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/7.pdf"
-STD_URL = {1: F3, 2: F3, 3: F4, 4: F4, 5: F5, 6: F5, 7: F6, 8: F6, 9: F6}
-FASE = {1: 3, 2: 3, 3: 4, 4: 4, 5: 5, 6: 5, 7: 6, 8: 6, 9: 6}
-GRADE_NAME = {1: "1.er grado de primaria", 2: "2.º grado de primaria", 3: "3.er grado de primaria", 4: "4.º grado de primaria", 5: "5.º grado de primaria", 6: "6.º grado de primaria",
+F2 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/3.pdf"
+STD_URL = {0: F2, 1: F3, 2: F3, 3: F4, 4: F4, 5: F5, 6: F5, 7: F6, 8: F6, 9: F6}
+FASE = {0: 2, 1: 3, 2: 3, 3: 4, 4: 4, 5: 5, 6: 5, 7: 6, 8: 6, 9: 6}
+GRADE_NAME = {0: "3.er grado de preescolar", 1: "1.er grado de primaria", 2: "2.º grado de primaria", 3: "3.er grado de primaria", 4: "4.º grado de primaria", 5: "5.º grado de primaria", 6: "6.º grado de primaria",
               7: "1.er grado de secundaria", 8: "2.º grado de secundaria", 9: "3.er grado de secundaria"}
-GRADE_SHORT = {1: "1.er grado", 2: "2.º grado", 3: "3.er grado", 4: "4.º grado", 5: "5.º grado", 6: "6.º grado", 7: "1.er grado", 8: "2.º grado", 9: "3.er grado"}
+GRADE_SHORT = {0: "3.er grado de preescolar", 1: "1.er grado", 2: "2.º grado", 3: "3.er grado", 4: "4.º grado", 5: "5.º grado", 6: "6.º grado", 7: "1.er grado", 8: "2.º grado", 9: "3.er grado"}
 # contenidos de Saberes y Pensamiento Científico (Programa sintético): clave → (grupo en la página del grado, nombre del contenido)
 # bachillerato (MCCEMS, Pensamiento Matemático; Temas Selectos de Matemáticas de la DGB)
 PMURL = "https://educacionmediasuperior.sep.gob.mx/work/models/sems/Resource/13634/1/images/Progresiones%20de%20aprendizaje%20-%20Pensamiento%20matematico(1).pdf"
@@ -45,6 +46,11 @@ CONT = {
     "A": ("Medición", "Cálculo de perímetro y área"),
     "T": ("Medición", "Medición del tiempo"),
     "D": ("Organización e interpretación de datos", "Organización e interpretación de datos"),
+    # Fase 2 (preescolar)
+    "P0N": ("Números", "Los saberes numéricos como herramienta para resolver situaciones del entorno, en diversos contextos socioculturales"),
+    "P0E": ("Espacio y formas", "El dominio del espacio y reconocimiento de formas en el entorno desde diversos puntos de observación y mediante desplazamientos o recorridos"),
+    "P0M": ("Medidas", "Las magnitudes de longitud, peso, capacidad y tiempo en situaciones cotidianas del hogar y del entorno sociocultural"),
+    "P0C": ("Clasificación y datos", "Clasificación y experimentación con objetos y elementos del entorno que reflejan la diversidad de la comunidad o región"),
     # Fase 3
     "S3": ("Suma y resta", "Construcción de la noción de suma y resta, y su relación como operaciones inversas"),
     "P3": ("Multiplicación y división", "Construcción de la noción de multiplicación y división, y su relación como operaciones inversas"),
@@ -168,19 +174,31 @@ WORDS = [("En un recuento se han hecho", "En un conteo se hicieron"), ("marcas d
          ("del colegio", "de la escuela"), ("al colegio", "a la escuela"), ("el colegio", "la escuela"), ("un colegio", "una escuela"), ("este colegio", "esta escuela"),
          ("mi colegio", "mi escuela"), ("su colegio", "su escuela"), ("coches", "carros"), ("coche", "carro"),
          ("ha durado", "duró"), ("han durado", "duraron"), ("ha tardado", "tardó"),
-         ("m.c.d.", "MCD"), ("tasas de variación media", "razones de cambio promedio"), ("tasa de variación media", "razón de cambio promedio"), ("tasa de variación instantánea", "razón de cambio instantánea"), ("más deprisa", "más rápido"), ("deprisa", "rápido"), ("Un abrigo", "Una chamarra"), ("un abrigo", "una chamarra"), ("El abrigo", "La chamarra"), ("el abrigo", "la chamarra"), ("beneficio sea máximo", "ganancia sea máxima"), ("coste", "costo"), ("costes", "costos"), ("una farola", "un poste de luz"), ("la farola", "el poste de luz"), ("La farola", "El poste de luz"), ("índice de variación", "factor multiplicador"), ("fontanero", "plomero"), ("fontanera", "plomera"), ("el pienso", "el alimento"), ("pienso", "alimento"), ("Una cometa", "Un papalote"), ("una cometa", "un papalote"), ("La cometa", "El papalote"), ("la cometa", "el papalote"), ("de beneficio", "de ganancia"), ("el beneficio", "la ganancia"), ("El beneficio", "La ganancia"), ("beneficio", "ganancia"), ("técnica de recuento", "técnica de conteo"), ("técnicas de recuento", "técnicas de conteo"), ("sea chico", "sea alumno"), ("sea chica", "sea alumna"), ("Qué nota", "Qué calificación"), ("nota", "calificación"), ("desviaciones típicas", "desviaciones estándar"), ("desviación típica", "desviación estándar"), ("tipificar", "estandarizar"), ("tipificada", "estandarizada"), ("tipificado", "estandarizado"), ("tipificación", "estandarización"), ("tipifica", "estandariza"), ("tipificamos", "estandarizamos"), ("incompatibles", "mutuamente excluyentes"), ("nota del examen", "calificación del examen"), ("la nota", "la calificación"), ("una nota", "una calificación"), ("sin techo ni suelo", "sin techo ni piso"), ("farolas", "postes de luz"), ("farola", "poste de luz"), ("octogonal", "octagonal"), ("chicas", "alumnas"), ("chicos", "alumnos"), ("nota media", "calificación promedio"), ("notas", "calificaciones"), ("ascensor", "elevador"), ("aparcamiento", "estacionamiento"), ("se ha aplicado", "se aplicó"), ("han aprobado", "aprobaron"), ("ha aprobado", "aprobó"), ("grifos", "llaves"), ("depósitos", "tinacos"), ("depósito", "tinaco"), ("abrigos", "chamarras"), ("abrigo", "chamarra"), ("m.c.m.", "mcm"), ("llevadas", "reagrupaciones"), ("con llevada", "con reagrupación"), ("sin llevada", "sin reagrupación"), ("llevada", "reagrupación")]
+         ("m.c.d.", "MCD"), ("tasas de variación media", "razones de cambio promedio"), ("tasa de variación media", "razón de cambio promedio"), ("tasa de variación instantánea", "razón de cambio instantánea"), ("más deprisa", "más rápido"), ("deprisa", "rápido"), ("Un abrigo", "Una chamarra"), ("un abrigo", "una chamarra"), ("El abrigo", "La chamarra"), ("el abrigo", "la chamarra"), ("beneficio sea máximo", "ganancia sea máxima"), ("coste", "costo"), ("costes", "costos"), ("una farola", "un poste de luz"), ("la farola", "el poste de luz"), ("La farola", "El poste de luz"), ("índice de variación", "factor multiplicador"), ("fontanero", "plomero"), ("fontanera", "plomera"), ("el pienso", "el alimento"), ("pienso", "alimento"), ("Una cometa", "Un papalote"), ("una cometa", "un papalote"), ("La cometa", "El papalote"), ("la cometa", "el papalote"), ("de beneficio", "de ganancia"), ("el beneficio", "la ganancia"), ("El beneficio", "La ganancia"), ("beneficio", "ganancia"), ("técnica de recuento", "técnica de conteo"), ("técnicas de recuento", "técnicas de conteo"), ("sea chico", "sea alumno"), ("sea chica", "sea alumna"), ("Qué nota", "Qué calificación"), ("desviaciones típicas", "desviaciones estándar"), ("desviación típica", "desviación estándar"), ("tipificar", "estandarizar"), ("tipificada", "estandarizada"), ("tipificado", "estandarizado"), ("tipificación", "estandarización"), ("tipifica", "estandariza"), ("tipificamos", "estandarizamos"), ("incompatibles", "mutuamente excluyentes"), ("nota del examen", "calificación del examen"), ("la nota", "la calificación"), ("una nota", "una calificación"), ("sin techo ni suelo", "sin techo ni piso"), ("farolas", "postes de luz"), ("farola", "poste de luz"), ("octogonal", "octagonal"), ("chicas", "alumnas"), ("chicos", "alumnos"), ("nota media", "calificación promedio"), ("notas", "calificaciones"), ("ascensor", "elevador"), ("aparcamiento", "estacionamiento"), ("se ha aplicado", "se aplicó"), ("han aprobado", "aprobaron"), ("ha aprobado", "aprobó"), ("grifos", "llaves"), ("depósitos", "tinacos"), ("depósito", "tinaco"), ("abrigos", "chamarras"), ("abrigo", "chamarra"), ("m.c.m.", "mcm"), ("llevadas", "reagrupaciones"), ("con llevada", "con reagrupación"), ("sin llevada", "sin reagrupación"), ("llevada", "reagrupación"), ("nota", "calificación")]
 LEAKS = ["€", "euro", "céntimo", "España", "vosotros", "habéis", "tenéis", "sabéis", "CCAA", "LOMLOE", "4.º", "5.º", "6.º", "Primaria", "ESO", "Bachillerato", "IVA", "Hacienda", "comunidad autónoma",
          "tarta", "gominola", "chuche", "cromo", "tiza", "estuche", "bocadillo", "gafas", "folio", "ordenador", "zapatilla", "cole ", "el cole", "gorro", "nata", "judías", "tebeo", "chaqueta", "jersey", "AVE", "Renfe", "colegio", "metro de Madrid", "Galicia", "Andaluc", "Canarias", "Asturias", "Cataluña", "Comunidad",
          "Betis", "Athletic", "Real Sociedad", "Atlético", "Real Madrid", "Real Ciudad", "Teide", "Mulhacén", "Moncayo", "cucurucho", "baraja española", "Aneto", "Pirineo"]
 LEAK_RE = [r"gr[áa]fico", r"\b(la|las) (una|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|once|doce) menos\b", r"\bos\b", r"\bvuestr"]
 
 
+_WC = {}
+
+
+def _wp(a):
+    p = _WC.get(a)
+    if p is None:
+        p = _WC[a] = re.compile(r"(?<![\wÁÉÍÓÚáéíóúñÑ])" + re.escape(a) + r"(?![\wáéíóúñ])")
+    return p
+
+
 def _w(s, a, b):
+    if a not in s and (a[0].upper() + a[1:]) not in s:
+        return s
     if a[0].isupper():
-        return re.sub(r"(?<![\wÁÉÍÓÚáéíóúñÑ])" + re.escape(a) + r"(?![\wáéíóúñ])", b, s)
-    s = re.sub(r"(?<![\wÁÉÍÓÚáéíóúñÑ])" + re.escape(a) + r"(?![\wáéíóúñ])", b, s)
+        return _wp(a).sub(lambda m: b, s)
+    s = _wp(a).sub(lambda m: b, s)
     A, B = a[0].upper() + a[1:], b[0].upper() + b[1:]
-    return re.sub(r"(?<![\wÁÉÍÓÚáéíóúñÑ])" + re.escape(A) + r"(?![\wáéíóúñ])", B, s)
+    return _wp(A).sub(lambda m: B, s)
 
 
 def _money(m):
@@ -211,8 +229,9 @@ def _txt(t, yr_all=False):
     t = t.replace(" y resto ", " y residuo ").replace("resto ", "residuo ").replace(" resto", " residuo")
     for a, b in WORDS:
         t = _w(t, a, b)
-    t = re.sub(r"(?<![\d.,])1 (punto|hora|minuto|metro|kilo|litro|grado|alumno|persona)s\b", r"1 \1", t)
+    t = re.sub(r"(?<![\d.,])1 (punto|hora|minuto|metro|kilo|litro|grado|alumno|persona|canica|paleta|galleta|globo|carrito|manzana|crayola|pelota|tachada|tachado)s\b", r"1 \1", t)
     t = re.sub(r"(?<![\d.,])1 unidades\b", "1 unidad", t)
+    t = re.sub(r"(?<![\d.,])1 lápices\b", "1 lápiz", t)
     t = re.sub(r"\b([2-9]|\d{2,}) unidad\b", r"\1 unidades", t)
     t = re.sub(r"\b([Ee])l ganancia\b", lambda m: ("L" if m.group(1) == "E" else "l") + "a ganancia", t)
     t = re.sub(r"\b([Uu])n ganancia\b", lambda m: m.group(1) + "na ganancia", t)
@@ -227,7 +246,7 @@ def mx_text(s):
     """convierte solo el texto fuera de las etiquetas (también el texto de los SVG)"""
     parts = re.split(r"(<[^>]*>)", s)
     yr = bool(re.search(r"nac|año|cumpl", re.sub(r"<[^>]*>", " ", s)))
-    out = "".join(p if p.startswith("<") else _txt(p, yr) for p in parts)
+    out = "".join(p if p.startswith("<") or re.fullmatch(r"[\s\d" + NB + r"]{0,3}", p) else _txt(p, yr) for p in parts)
     out = re.sub(r"(\d),(?=<span class='ov'>)", r"\1.", out)                    # 4,<span class='ov'>17</span> → 4.17 periódico
     sp = "[ " + NB + "]"
     return re.sub(r"(</span>|\d|\)|°)(" + sp + "):(" + sp + r")(?=<span class='fr'>|\d|\()", r"\1\2÷\3", out)   # 2/5 : 1/2 → 2/5 ÷ 1/2
@@ -404,7 +423,7 @@ def make_unit(rnd, slug, cont, std_text, title, short_title, meta_desc, key_big,
         })
         return
     grp, full = CONT[cont]
-    write_unit("mx", "matematicas", "%d-primaria" % lv if lv <= 6 else "%d-secundaria" % (lv - 6), {
+    write_unit("mx", "matematicas", "preescolar" if lv == 0 else "%d-primaria" % lv if lv <= 6 else "%d-secundaria" % (lv - 6), {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
         "domain": grp, "standard_code": "Fase %d, %s · %s" % (FASE[lv], GRADE_SHORT[lv], full),
         "standard_url": STD_URL[lv],

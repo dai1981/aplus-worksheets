@@ -1622,7 +1622,13 @@ Pensamiento Matemático III（seed 1201NN・ES 1203NN、自前は `tools/mx_pm3.
 Temas Selectos de Matemáticas I（4.º semestre、seed 1301NN・ES 1303NN、自前は `tools/mx_tsm.py` の t1〜t9）: 1. geometria-y-razones-trigonometricas ✓ 2. leyes-de-senos-y-cosenos ✓ 3. geometria-euclidiana-y-no-euclidiana ✓ 4. rectas-y-sistemas-de-ecuaciones ✓ 5. parabola ✓ 6. circunferencia ✓ 7. elipse ✓ 8. ecuacion-general-de-segundo-grado ✓ 9. fractales ✓
 Temas Selectos de Matemáticas II（6.º semestre、seed 1401NN・ES 1403NN、自前は mx_tsm の u1〜u7 と mx_pm3）: 1. composicion-y-sistemas-dinamicos ✓ 2. sucesiones-y-series ✓ 3. sumas-de-riemann ✓ 4. integral-indefinida ✓ 5. integral-definida-y-teorema-fundamental ✓ 6. ecuaciones-diferenciales ✓ 7. metodos-numericos ✓
 bachillerato の make_unit は自前の問題の 4 桁以上の数も nums_mx で 1 000 区切りにする（「en 2015」などの年は除く）。src の rep は ES の原文（mx_text の前）に効く
-MX / Matemáticas は primaria・secundaria・bachillerato（Pensamiento Matemático I〜III、Temas Selectos I・II）まで完了。次は GDP 順で次の国
+MX / Matemáticas / Preescolar（3.er grado de preescolar、Fase 2、STD_URL は 2024/08/3.pdf。5〜6歳。grade `preescolar`（sort 0、lv=0）。CONT は P0N Números・P0E Espacio y formas・P0M Medidas・P0C Clasificación y datos）— 10 まで（数えるのは 20 まで）。とても短い文、ほぼ全問に絵。
+生成スクリプトは `gen_mx_matematicas_pre_*`（build(slug) を呼ぶだけ）、単元の定義は `tools/mx_pre_units.py`（spec(slug)。ES 2.º の問題関数は es(mod, *names, n=上限) で lv=1・all_le(n) 付きで再利用、seed は 59900＋モジュール名）、自前の問題は `tools/mx_pre.py`（setup(R)。contar・palabra・antes_despues・serie・salta・comparar・ordinal・ordinal_carrera・historia・descomponer・repartir・dinero・tiempo・medir・clasificar。種類を引数で選ぶ）。
+mx_common の単数の修正に canica・paleta・lápiz など。unit.php で educationalLevel「Educación preescolar」
+1. contar-hasta-10 ✓ 2. numeros-hasta-el-20 ✓ 3. comparar-colecciones ✓ 4. numeros-ordinales ✓ 5. agregar-y-quitar ✓ 6. separar-y-repartir ✓ 7. monedas-y-billetes ✓ 8. posiciones-y-recorridos ✓ 9. figuras-y-cuerpos ✓ 10. patrones ✓ 11. longitud-peso-y-capacidad ✓ 12. el-tiempo ✓ 13. clasificar-y-registrar-datos ✓
+トピック：contar-hasta→numeros、agregar-y-quitar→suma-y-resta、separar-y-repartir→multiplicacion-y-division、clasificar-y-registrar→estadistica-y-probabilidad
+
+MX / Matemáticas は preescolar・primaria・secundaria・bachillerato（Pensamiento Matemático I〜III、Temas Selectos I・II）まで完了。次は GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
