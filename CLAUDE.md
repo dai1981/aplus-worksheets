@@ -1613,7 +1613,11 @@ mix の重複チェックは単元全体で共有なので、同じ問題関数�
 11. solidos-de-revolucion-y-desarrollos-planos ✓ 12. volumen-de-prismas-piramides-y-cilindros ✓ 13. esfera-cono-y-cilindro ✓ 14. perimetro-y-area-de-figuras-compuestas ✓ 15. teorema-de-pitagoras ✓ 16. razones-trigonometricas ✓ 17. interpretacion-de-graficas ✓ 18. medidas-de-dispersion ✓ 19. eventos-independientes-y-juegos-justos ✓
 トピック（topic_defs_es）：notacion-cientifica・propiedades-de-las-operaciones→numeros、desigualdades・productos-notables・factorizacion・reparto-proporcional→algebra、variacion-→funciones、esfera・trigonometric→geometria、volumen-de-→magnitudes（geometria の out）、histogramas・interpretacion-de-graficas・eventos・dispersion→estadistica（magnitudes の out に con-expresiones・expresiones-algebraicas・dispersion）
 
-MX / Matemáticas は primaria 1.º〜6.º と secundaria 1.º〜3.º まで完了。次は GDP 順で次の国
+MX / Matemáticas / Bachillerato（MCCEMS、Pensamiento Matemático の progresiones de aprendizaje（SEP 2023）と DGB の Temas Selectos de Matemáticas（2024））— grade は科目ごと：`pensamiento-matematico-1`（sort 10、1.er semestre）・`-2`（11）・`-3`（12）・`temas-selectos-1`（13）・`temas-selectos-2`（14）。lv = 10〜14（mx_common.BACH に名前・URL）。
+1 単元 = 1 progresión。unit の cont は (グループ, progresión の番号, 名前) のタプルで、standard_code は「Pensamiento Matemático I · Progresión 4: Técnicas de conteo」。unit.php で 15〜18 歳と educationalLevel「Educación media superior (bachillerato)」。
+生成スクリプトは `gen_mx_matematicas_pm1_*`（seed は 1001NN、ES の再利用は 1003NN）、自前の問題は `tools/mx_pm1.py`（setup(R)。p1〜p15 に種類を渡す：S.p13("sd")）。bank 型の問題は文が同じだと重複扱いなので、数や場面を文に入れる
+Pensamiento Matemático I: 1. variabilidad-y-toma-de-decisiones ✓ 2. probabilidad-frecuencial ✓ 3. probabilidad-teorica ✓ 4. tecnicas-de-conteo ✓ 5. probabilidad-condicional-y-teorema-de-bayes ✓ 6. tipos-de-variables ✓ 7. graficas-estadisticas ✓ 8. tablas-de-doble-entrada ✓ 9. correlacion-y-recta-de-ajuste ✓ 10. valores-atipicos-y-paradoja-de-simpson ✓ 11. muestreo ✓ 12. estudios-observacionales-y-experimentos ✓ 13. medidas-de-tendencia-central-y-dispersion ✓ 14. distribucion-normal ✓ 15. prueba-de-hipotesis ✓
+Pensamiento Matemático II（aritmético, algebraico y geométrico、14 progresiones）・III（variacional：funciones, límites, derivadas、15）・Temas Selectos I（trigonometría, cónicas, fractales、9）・II（sistemas dinámicos, sucesiones, integrales, ecuaciones diferenciales, métodos numéricos、7）は次に作る
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

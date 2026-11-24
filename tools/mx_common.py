@@ -26,6 +26,15 @@ GRADE_NAME = {1: "1.er grado de primaria", 2: "2.º grado de primaria", 3: "3.er
               7: "1.er grado de secundaria", 8: "2.º grado de secundaria", 9: "3.er grado de secundaria"}
 GRADE_SHORT = {1: "1.er grado", 2: "2.º grado", 3: "3.er grado", 4: "4.º grado", 5: "5.º grado", 6: "6.º grado", 7: "1.er grado", 8: "2.º grado", 9: "3.er grado"}
 # contenidos de Saberes y Pensamiento Científico (Programa sintético): clave → (grupo en la página del grado, nombre del contenido)
+# bachillerato (MCCEMS, Pensamiento Matemático; Temas Selectos de Matemáticas de la DGB)
+PMURL = "https://educacionmediasuperior.sep.gob.mx/work/models/sems/Resource/13634/1/images/Progresiones%20de%20aprendizaje%20-%20Pensamiento%20matematico(1).pdf"
+BACH = {
+    10: ("pensamiento-matematico-1", "Pensamiento Matemático I", PMURL, "de aprendizaje de Pensamiento Matemático I (MCCEMS, SEP 2023)"),
+    11: ("pensamiento-matematico-2", "Pensamiento Matemático II", PMURL, "de aprendizaje de Pensamiento Matemático II (MCCEMS, SEP 2023)"),
+    12: ("pensamiento-matematico-3", "Pensamiento Matemático III", PMURL, "de aprendizaje de Pensamiento Matemático III (MCCEMS, SEP 2023)"),
+    13: ("temas-selectos-1", "Temas Selectos de Matemáticas I", "https://dgb.sep.gob.mx/storage/recursos/2024/11/KdQ64JkOk7-Temas-Selectos-de-Matematicas-I.pdf", "del programa de Temas Selectos de Matemáticas I (DGB, SEP 2024)"),
+    14: ("temas-selectos-2", "Temas Selectos de Matemáticas II", "https://dgb.sep.gob.mx/storage/recursos/2024/11/6N3XjApvTB-Temas-Selectos-de-Matematicas-II.pdf", "del programa de Temas Selectos de Matemáticas II (DGB, SEP 2024)"),
+}
 CONT = {
     "N": ("Estudio de los números", "Estudio de los números"),
     "S": ("Suma y resta", "Suma y resta, su relación como operaciones inversas"),
@@ -159,7 +168,7 @@ WORDS = [("En un recuento se han hecho", "En un conteo se hicieron"), ("marcas d
          ("del colegio", "de la escuela"), ("al colegio", "a la escuela"), ("el colegio", "la escuela"), ("un colegio", "una escuela"), ("este colegio", "esta escuela"),
          ("mi colegio", "mi escuela"), ("su colegio", "su escuela"), ("coches", "carros"), ("coche", "carro"),
          ("ha durado", "duró"), ("han durado", "duraron"), ("ha tardado", "tardó"),
-         ("m.c.d.", "MCD"), ("sin techo ni suelo", "sin techo ni piso"), ("farolas", "postes de luz"), ("farola", "poste de luz"), ("octogonal", "octagonal"), ("chicas", "alumnas"), ("chicos", "alumnos"), ("nota media", "calificación promedio"), ("notas", "calificaciones"), ("ascensor", "elevador"), ("aparcamiento", "estacionamiento"), ("se ha aplicado", "se aplicó"), ("han aprobado", "aprobaron"), ("ha aprobado", "aprobó"), ("grifos", "llaves"), ("depósitos", "tinacos"), ("depósito", "tinaco"), ("abrigos", "chamarras"), ("abrigo", "chamarra"), ("m.c.m.", "mcm"), ("llevadas", "reagrupaciones"), ("con llevada", "con reagrupación"), ("sin llevada", "sin reagrupación"), ("llevada", "reagrupación")]
+         ("m.c.d.", "MCD"), ("técnica de recuento", "técnica de conteo"), ("técnicas de recuento", "técnicas de conteo"), ("sea chico", "sea alumno"), ("sea chica", "sea alumna"), ("Qué nota", "Qué calificación"), ("nota", "calificación"), ("desviaciones típicas", "desviaciones estándar"), ("desviación típica", "desviación estándar"), ("tipificar", "estandarizar"), ("tipificada", "estandarizada"), ("tipificado", "estandarizado"), ("tipificación", "estandarización"), ("tipifica", "estandariza"), ("tipificamos", "estandarizamos"), ("incompatibles", "mutuamente excluyentes"), ("nota del examen", "calificación del examen"), ("la nota", "la calificación"), ("una nota", "una calificación"), ("sin techo ni suelo", "sin techo ni piso"), ("farolas", "postes de luz"), ("farola", "poste de luz"), ("octogonal", "octagonal"), ("chicas", "alumnas"), ("chicos", "alumnos"), ("nota media", "calificación promedio"), ("notas", "calificaciones"), ("ascensor", "elevador"), ("aparcamiento", "estacionamiento"), ("se ha aplicado", "se aplicó"), ("han aprobado", "aprobaron"), ("ha aprobado", "aprobó"), ("grifos", "llaves"), ("depósitos", "tinacos"), ("depósito", "tinaco"), ("abrigos", "chamarras"), ("abrigo", "chamarra"), ("m.c.m.", "mcm"), ("llevadas", "reagrupaciones"), ("con llevada", "con reagrupación"), ("sin llevada", "sin reagrupación"), ("llevada", "reagrupación")]
 LEAKS = ["€", "euro", "céntimo", "España", "vosotros", "habéis", "tenéis", "sabéis", "CCAA", "LOMLOE", "4.º", "5.º", "6.º", "Primaria", "ESO", "Bachillerato", "IVA", "Hacienda", "comunidad autónoma",
          "tarta", "gominola", "chuche", "cromo", "tiza", "estuche", "bocadillo", "gafas", "folio", "ordenador", "zapatilla", "cole ", "el cole", "gorro", "nata", "judías", "tebeo", "chaqueta", "jersey", "AVE", "Renfe", "colegio", "metro de Madrid", "Galicia", "Andaluc", "Canarias", "Asturias", "Cataluña", "Comunidad",
          "Betis", "Athletic", "Real Sociedad", "Atlético", "Real Madrid", "Real Ciudad", "Teide", "Mulhacén", "Moncayo", "cucurucho", "baraja española", "Aneto", "Pirineo"]
@@ -202,6 +211,7 @@ def _txt(t, yr_all=False):
     t = t.replace(" y resto ", " y residuo ").replace("resto ", "residuo ").replace(" resto", " residuo")
     for a, b in WORDS:
         t = _w(t, a, b)
+    t = re.sub(r"(?<![\d.,])1 (punto|hora|minuto|metro|kilo|litro|grado|alumno|persona)s\b", r"1 \1", t)
     t = re.sub(r"\b([Dd])e el\b", r"\1el", t)
     t = re.sub(r"\b([Aa]) el\b", r"\1l", t)
     return t
@@ -350,10 +360,24 @@ def make_unit(rnd, slug, cont, std_text, title, short_title, meta_desc, key_big,
             for x in [it["q"], it["e"]] + it["c"]:
                 assert "€" not in x and "céntimo" not in x, x
     balance(sets, rnd)
-    gname = GRADE_NAME[lv]
+    gname = GRADE_NAME[lv] if lv < 10 else BACH[lv][1]
     seo_title = "%s – %s: ejercicios de matemáticas con respuestas" % (short_title, gname)
     title, seo_title, short_title, meta_desc, key_big, key_sub = [ES.plain_text(x) for x in (title, seo_title, short_title, meta_desc, key_big, key_sub)]
     assert len(key_big) <= 36 and len(key_sub) <= 50 and len(title) <= 50, (slug, key_big, key_sub, title)
+    if lv >= 10:
+        gslug, gname, surl, ssuf = BACH[lv]
+        grp, n, full = cont
+        scode = "%s · Progresión %d: %s" % (gname, n, full)
+        stext = std_text + " (resumen de la progresión %d %s)" % (n, ssuf)
+        seo_title = "%s – %s: ejercicios con respuestas" % (short_title, gname)
+        title, seo_title, short_title = [ES.plain_text(x) for x in (title, seo_title, short_title)]
+        write_unit("mx", "matematicas", gslug, {
+            "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
+            "domain": grp, "standard_code": scode, "standard_url": surl, "standard_text": stext,
+            "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
+            "body_html": body_html, "faq": [{"q": q, "a": a} for q, a in faq], "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
+        })
+        return
     grp, full = CONT[cont]
     write_unit("mx", "matematicas", "%d-primaria" % lv if lv <= 6 else "%d-secundaria" % (lv - 6), {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,

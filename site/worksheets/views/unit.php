@@ -155,6 +155,10 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 } elseif (preg_match('/^(\d)-secundaria$/', $grade['slug'], $gm) && $country['code'] === 'mx') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 11) . '-' . ((int)$gm[1] + 12);   // México: 1.er grado de secundaria = age 12-13
     $lr['educationalLevel'] = array($grade['name'], 'Educación secundaria');
+} elseif ($country['code'] === 'mx' && isset(array('pensamiento-matematico-1' => 1, 'pensamiento-matematico-2' => 1, 'pensamiento-matematico-3' => 1, 'temas-selectos-1' => 1, 'temas-selectos-2' => 1)[$grade['slug']])) {
+    $ages = array('pensamiento-matematico-1' => '15-16', 'pensamiento-matematico-2' => '15-16', 'pensamiento-matematico-3' => '16-17', 'temas-selectos-1' => '16-17', 'temas-selectos-2' => '17-18');
+    $lr['typicalAgeRange'] = $ages[$grade['slug']];   // México, bachillerato (MCCEMS): Pensamiento Matemático I = 1.er semestre
+    $lr['educationalLevel'] = array($grade['name'], 'Educación media superior (bachillerato)');
 } elseif (preg_match('/^(\d)-eso$/', $grade['slug'], $gm) && $country['code'] === 'es') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 11) . '-' . ((int)$gm[1] + 12);   // Spain: 1.º de ESO = age 12-13
     $lr['educationalLevel'] = array($grade['name'], 'Educación Secundaria Obligatoria');

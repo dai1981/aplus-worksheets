@@ -251,7 +251,7 @@ function topic_defs_es() {
             'in' => '/funciones|coordenadas-y-graficas|variacion-/', 'out' => '/^$/',
             'blurb' => 'Coordenadas y gráficas, dominio, crecimiento, máximos y mínimos, funciones lineales, cuadráticas, exponenciales y logarítmicas.'),
         'estadistica-y-probabilidad' => array('name' => 'Estadística y probabilidad',
-            'in' => '/graficos|pictogramas|graficas-circulares|tablas-y-graficas|tablas-de|estadistica|probabilidad|media|seguro-posible|combinatoria|distribucion|muestreo|intervalos-de-confianza|tendencia-central|histogramas|interpretacion-de-graficas|eventos|dispersion/', 'out' => '/tablas-de-multiplicar/',
+            'in' => '/graficos|pictogramas|graficas-circulares|tablas-y-graficas|tablas-de|estadistica|probabilidad|media|seguro-posible|combinatoria|distribucion|muestreo|intervalos-de-confianza|tendencia-central|histogramas|interpretacion-de-graficas|eventos|dispersion|correlacion|estudios-observacionales|hipotesis|tecnicas-de-conteo|tipos-de-variables|valores-atipicos|variabilidad-y-toma/', 'out' => '/tablas-de-multiplicar/',
             'blurb' => 'Tablas de frecuencias, gráficos de barras y de líneas, la media y la moda, sucesos seguros, posibles e imposibles.'),
     );
 }

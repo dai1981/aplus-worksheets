@@ -1,0 +1,1157 @@
+{
+ "slug": "prueba-de-hipotesis",
+ "title": "Prueba de hipótesis y valor p",
+ "seo_title": "Prueba de hipótesis – Pensamiento Matemático I: ejercicios con respuestas",
+ "short_title": "Prueba de hipótesis",
+ "domain": "Estadística",
+ "standard_code": "Pensamiento Matemático I · Progresión 15: Estadística inferencial y prueba de hipótesis",
+ "standard_url": "https://educacionmediasuperior.sep.gob.mx/work/models/sems/Resource/13634/1/images/Progresiones%20de%20aprendizaje%20-%20Pensamiento%20matematico(1).pdf",
+ "standard_text": "Usa propiedades de la distribución normal y simulaciones para hacer inferencias y decidir sobre hipótesis con el valor p y el nivel de significancia (resumen de la progresión 15 de aprendizaje de Pensamiento Matemático I (MCCEMS, SEP 2023))",
+ "meta_desc": "Ejercicios de Pensamiento Matemático I: hipótesis nula y alternativa, nivel de significancia, valor p, simulaciones, estadístico z y errores tipo I y II. 100 ejercicios con respuestas.",
+ "key_big": "Si p < α, se rechaza H₀",
+ "key_sub": "p pequeño: datos raros si H₀ fuera cierta.",
+ "body_html": "<h2>Cómo se hace</h2><p><b>H₀</b> (hipótesis nula) es lo que se afirma, con «=». <b>H₁</b> (alternativa) es lo que se sospecha: &lt;, &gt; o ≠.</p><p>El <b>valor p</b> es la probabilidad de obtener datos tan extremos si H₀ fuera cierta. Se puede estimar con una <b>simulación</b>.</p><p>Se fija α (por ejemplo 0.05). Si p &lt; α, se <b>rechaza H₀</b>. Con σ conocida: z = (x̄ − μ₀) ÷ (σ/√n).</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Moneda: 16 águilas de 20. En 1 000 simulaciones justas, 6 dieron 16 o más.</p><p class='sn-ex-s'>p ≈ 6 ÷ 1 000 = 0.006</p><p class='sn-ex-s'>0.006 &lt; 0.05</p><p class='sn-ex-a'>Respuesta: se rechaza H₀: parece cargada</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Decir que H₀ quedó demostrada</td><td>Solo no hay evidencia para rechazarla.</td></tr><tr><td>Poner la sospecha en H₀</td><td>La sospecha va en H₁.</td></tr><tr><td>Comparar z con α</td><td>Compara p con α, o z con el valor crítico.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Qué valor de α se usa más?",
+   "a": "0.05 (5 %). En estudios médicos a veces se usa 0.01."
+  },
+  {
+   "q": "¿Qué relación hay con los intervalos de confianza?",
+   "a": "Si el valor de H₀ queda fuera del intervalo de confianza del 95 %, se rechaza H₀ con α = 0.05 (prueba bilateral)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Plantear hipótesis",
+   "items": [
+    {
+     "q": "En una prueba con nivel de significancia α = 0.1 se obtuvo un valor p = 0.07. ¿Qué se decide?",
+     "c": [
+      "no se rechaza H₀",
+      "se rechaza H₀",
+      "se rechaza H₁ y se demuestra H₀",
+      "se acepta que H₀ es falsa sin duda"
+     ],
+     "a": 1,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.07 &lt; 0.1: <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.01 se obtuvo un valor p = 0.3. ¿Qué se decide?",
+     "c": [
+      "no se rechaza H₀",
+      "se acepta que H₀ es falsa sin duda",
+      "se rechaza H₀",
+      "se rechaza H₁ y se demuestra H₀"
+     ],
+     "a": 0,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.3 ≥ 0.01: <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "El nivel de significancia α es…",
+     "c": [
+      "la probabilidad de rechazar H₀ siendo verdadera",
+      "el tamaño de la muestra",
+      "la media de la muestra",
+      "la probabilidad de que H₀ sea verdadera"
+     ],
+     "a": 0,
+     "e": "α es el riesgo de error tipo I que aceptamos (por ejemplo 0.05)."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.1 se obtuvo un valor p = 0.04. ¿Qué se decide?",
+     "c": [
+      "se acepta que H₀ es falsa sin duda",
+      "no se rechaza H₀",
+      "se rechaza H₀",
+      "se rechaza H₁ y se demuestra H₀"
+     ],
+     "a": 2,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.04 &lt; 0.1: <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.05 se obtuvo un valor p = 0.001. ¿Qué se decide?",
+     "c": [
+      "se acepta que H₀ es falsa sin duda",
+      "no se rechaza H₀",
+      "se rechaza H₁ y se demuestra H₀",
+      "se rechaza H₀"
+     ],
+     "a": 3,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.001 &lt; 0.05: <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "No rechazar H₀ cuando en realidad es falsa se llama…",
+     "c": [
+      "valor atípico",
+      "sesgo de muestreo",
+      "error tipo II",
+      "error tipo I"
+     ],
+     "a": 2,
+     "e": "El error tipo II es un «falso negativo»."
+    },
+    {
+     "q": "Rechazar H₀ cuando en realidad es verdadera se llama…",
+     "c": [
+      "nivel de confianza",
+      "error tipo I",
+      "valor p",
+      "error tipo II"
+     ],
+     "a": 1,
+     "e": "El error tipo I es un «falso positivo». Su probabilidad es α."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.1 se obtuvo un valor p = 0.008. ¿Qué se decide?",
+     "c": [
+      "se rechaza H₀",
+      "se acepta que H₀ es falsa sin duda",
+      "se rechaza H₁ y se demuestra H₀",
+      "no se rechaza H₀"
+     ],
+     "a": 0,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.008 &lt; 0.1: <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "Se dice que el 30 % de los alumnos usa transporte público; crees que el porcentaje cambió. ¿Cuáles son las hipótesis?",
+     "c": [
+      "H₀: p = 0.3; H₁: p ≠ 0.3",
+      "H₀: μ = 1 000; H₁: μ &lt; 1 000",
+      "H₀: p = 0.5; H₁: p &gt; 0.5",
+      "H₁: p = 0.3; H₀: p ≠ 0.3"
+     ],
+     "a": 0,
+     "e": "H₀ es lo que se afirma (con =); H₁ es lo que se sospecha: <b>H₀: p = 0.3; H₁: p ≠ 0.3</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.01 se obtuvo un valor p = 0.12. ¿Qué se decide?",
+     "c": [
+      "se acepta que H₀ es falsa sin duda",
+      "se rechaza H₁ y se demuestra H₀",
+      "no se rechaza H₀",
+      "se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.12 ≥ 0.01: <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "Si α baja de 0.05 a 0.01, rechazar H₀…",
+     "c": [
+      "se vuelve más fácil",
+      "es obligatorio",
+      "no cambia",
+      "se vuelve más difícil"
+     ],
+     "a": 3,
+     "e": "Con α menor hace falta más evidencia (un valor p más pequeño)."
+    },
+    {
+     "q": "Una empresa dice que sus focos duran en promedio 1 000 horas. Crees que duran menos. ¿Cuáles son las hipótesis?",
+     "c": [
+      "H₀: μ = 75; H₁: μ &lt; 75",
+      "H₀: μ = 1 000; H₁: μ &lt; 1 000",
+      "H₀: μ = 600; H₁: μ &gt; 600",
+      "H₁: μ = 1 000; H₀: μ &lt; 1 000"
+     ],
+     "a": 1,
+     "e": "H₀ es lo que se afirma (con =); H₁ es lo que se sospecha: <b>H₀: μ = 1 000; H₁: μ &lt; 1 000</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.01 se obtuvo un valor p = 0.003. ¿Qué se decide?",
+     "c": [
+      "no se rechaza H₀",
+      "se rechaza H₀",
+      "se acepta que H₀ es falsa sin duda",
+      "se rechaza H₁ y se demuestra H₀"
+     ],
+     "a": 1,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.003 &lt; 0.01: <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "Un valor p pequeño significa que…",
+     "c": [
+      "H₀ es verdadera",
+      "la muestra es pequeña",
+      "no hay variabilidad",
+      "los datos serían muy raros si H₀ fuera verdadera"
+     ],
+     "a": 3,
+     "e": "El valor p mide qué tan raros son los datos suponiendo H₀."
+    },
+    {
+     "q": "Una moneda parece cargada hacia águila. ¿Cuáles son las hipótesis?",
+     "c": [
+      "H₀: μ = 600; H₁: μ &gt; 600",
+      "H₀: p = 0.3; H₁: p ≠ 0.3",
+      "H₁: p = 0.5; H₀: p &gt; 0.5",
+      "H₀: p = 0.5; H₁: p &gt; 0.5"
+     ],
+     "a": 3,
+     "e": "H₀ es lo que se afirma (con =); H₁ es lo que se sospecha: <b>H₀: p = 0.5; H₁: p &gt; 0.5</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.05 se obtuvo un valor p = 0.12. ¿Qué se decide?",
+     "c": [
+      "no se rechaza H₀",
+      "se acepta que H₀ es falsa sin duda",
+      "se rechaza H₁ y se demuestra H₀",
+      "se rechaza H₀"
+     ],
+     "a": 0,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.12 ≥ 0.05: <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "Un fabricante afirma que sus botellas tienen 600 ml; un inspector sospecha que traen más. ¿Cuáles son las hipótesis?",
+     "c": [
+      "H₁: μ = 600; H₀: μ &gt; 600",
+      "H₀: μ = 600; H₁: μ &gt; 600",
+      "H₀: p = 0.3; H₁: p ≠ 0.3",
+      "H₀: μ = 1 000; H₁: μ &lt; 1 000"
+     ],
+     "a": 1,
+     "e": "H₀ es lo que se afirma (con =); H₁ es lo que se sospecha: <b>H₀: μ = 600; H₁: μ &gt; 600</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.01 se obtuvo un valor p = 0.07. ¿Qué se decide?",
+     "c": [
+      "se rechaza H₀",
+      "se rechaza H₁ y se demuestra H₀",
+      "no se rechaza H₀",
+      "se acepta que H₀ es falsa sin duda"
+     ],
+     "a": 2,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.07 ≥ 0.01: <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "Una escuela afirma que su promedio de examen es 75; un padre cree que es menor. ¿Cuáles son las hipótesis?",
+     "c": [
+      "H₀: p = 0.3; H₁: p ≠ 0.3",
+      "H₁: μ = 75; H₀: μ &lt; 75",
+      "H₀: μ = 75; H₁: μ &lt; 75",
+      "H₀: p = 0.5; H₁: p &gt; 0.5"
+     ],
+     "a": 2,
+     "e": "H₀ es lo que se afirma (con =); H₁ es lo que se sospecha: <b>H₀: μ = 75; H₁: μ &lt; 75</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.1 se obtuvo un valor p = 0.02. ¿Qué se decide?",
+     "c": [
+      "no se rechaza H₀",
+      "se acepta que H₀ es falsa sin duda",
+      "se rechaza H₁ y se demuestra H₀",
+      "se rechaza H₀"
+     ],
+     "a": 3,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.02 &lt; 0.1: <b>se rechaza H₀</b>."
+    }
+   ]
+  },
+  {
+   "title": "Valor p y simulación",
+   "items": [
+    {
+     "q": "Una moneda cayó águila 21 de 30 veces. Se simularon 1 000 series de 30 lanzamientos con una moneda justa, y en 8 series salieron 21 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no, porque salieron más águilas",
+      "no hay evidencia suficiente: p ≈ 0.008 no es menor que 0.05",
+      "sí, porque p ≈ 0.008 es menor que 0.05",
+      "sí, porque 21 es más de la mitad"
+     ],
+     "a": 2,
+     "e": "Valor p ≈ 8 ÷ 1 000 = 0.008. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 21 de 30 veces. Se simularon 1 000 series de 30 lanzamientos con una moneda justa, y en 300 series salieron 21 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque p ≈ 0.3 es menor que 0.05",
+      "no hay evidencia suficiente: p ≈ 0.3 no es menor que 0.05",
+      "sí, porque 21 es más de la mitad",
+      "no, porque salieron más águilas"
+     ],
+     "a": 1,
+     "e": "Valor p ≈ 300 ÷ 1 000 = 0.3. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 30 de 40 veces. Se simularon 500 series de 40 lanzamientos con una moneda justa, y en 300 series salieron 30 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque 30 es más de la mitad",
+      "no, porque salieron más águilas",
+      "no hay evidencia suficiente: p ≈ 0.6 no es menor que 0.05",
+      "sí, porque p ≈ 0.6 es menor que 0.05"
+     ],
+     "a": 2,
+     "e": "Valor p ≈ 300 ÷ 500 = 0.6. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 16 de 20 veces. Se simularon 2 000 series de 20 lanzamientos con una moneda justa, y en 300 series salieron 16 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque 16 es más de la mitad",
+      "no, porque salieron más águilas",
+      "sí, porque p ≈ 0.15 es menor que 0.05",
+      "no hay evidencia suficiente: p ≈ 0.15 no es menor que 0.05"
+     ],
+     "a": 3,
+     "e": "Valor p ≈ 300 ÷ 2 000 = 0.15. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 14 de 20 veces. Se simularon 500 series de 20 lanzamientos con una moneda justa, y en 15 series salieron 14 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque p ≈ 0.03 es menor que 0.05",
+      "sí, porque 14 es más de la mitad",
+      "no, porque salieron más águilas",
+      "no hay evidencia suficiente: p ≈ 0.03 no es menor que 0.05"
+     ],
+     "a": 0,
+     "e": "Valor p ≈ 15 ÷ 500 = 0.03. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 15 de 20 veces. Se simularon 2 000 series de 20 lanzamientos con una moneda justa, y en 15 series salieron 15 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque p ≈ 0.007 es menor que 0.05",
+      "no, porque salieron más águilas",
+      "no hay evidencia suficiente: p ≈ 0.007 no es menor que 0.05",
+      "sí, porque 15 es más de la mitad"
+     ],
+     "a": 0,
+     "e": "Valor p ≈ 15 ÷ 2 000 = 0.007. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 14 de 20 veces. Se simularon 2 000 series de 20 lanzamientos con una moneda justa, y en 3 series salieron 14 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no hay evidencia suficiente: p ≈ 0.002 no es menor que 0.05",
+      "sí, porque 14 es más de la mitad",
+      "sí, porque p ≈ 0.002 es menor que 0.05",
+      "no, porque salieron más águilas"
+     ],
+     "a": 2,
+     "e": "Valor p ≈ 3 ÷ 2 000 = 0.002. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 28 de 40 veces. Se simularon 2 000 series de 40 lanzamientos con una moneda justa, y en 25 series salieron 28 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque 28 es más de la mitad",
+      "no, porque salieron más águilas",
+      "no hay evidencia suficiente: p ≈ 0.013 no es menor que 0.05",
+      "sí, porque p ≈ 0.013 es menor que 0.05"
+     ],
+     "a": 3,
+     "e": "Valor p ≈ 25 ÷ 2 000 = 0.013. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 22 de 30 veces. Se simularon 500 series de 30 lanzamientos con una moneda justa, y en 8 series salieron 22 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque p ≈ 0.016 es menor que 0.05",
+      "no hay evidencia suficiente: p ≈ 0.016 no es menor que 0.05",
+      "sí, porque 22 es más de la mitad",
+      "no, porque salieron más águilas"
+     ],
+     "a": 0,
+     "e": "Valor p ≈ 8 ÷ 500 = 0.016. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 21 de 30 veces. Se simularon 500 series de 30 lanzamientos con una moneda justa, y en 3 series salieron 21 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no hay evidencia suficiente: p ≈ 0.006 no es menor que 0.05",
+      "no, porque salieron más águilas",
+      "sí, porque 21 es más de la mitad",
+      "sí, porque p ≈ 0.006 es menor que 0.05"
+     ],
+     "a": 3,
+     "e": "Valor p ≈ 3 ÷ 500 = 0.006. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 28 de 40 veces. Se simularon 500 series de 40 lanzamientos con una moneda justa, y en 90 series salieron 28 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no, porque salieron más águilas",
+      "no hay evidencia suficiente: p ≈ 0.18 no es menor que 0.05",
+      "sí, porque 28 es más de la mitad",
+      "sí, porque p ≈ 0.18 es menor que 0.05"
+     ],
+     "a": 1,
+     "e": "Valor p ≈ 90 ÷ 500 = 0.18. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 15 de 20 veces. Se simularon 1 000 series de 20 lanzamientos con una moneda justa, y en 40 series salieron 15 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no hay evidencia suficiente: p ≈ 0.04 no es menor que 0.05",
+      "no, porque salieron más águilas",
+      "sí, porque p ≈ 0.04 es menor que 0.05",
+      "sí, porque 15 es más de la mitad"
+     ],
+     "a": 2,
+     "e": "Valor p ≈ 40 ÷ 1 000 = 0.04. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 15 de 20 veces. Se simularon 1 000 series de 20 lanzamientos con una moneda justa, y en 8 series salieron 15 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no hay evidencia suficiente: p ≈ 0.008 no es menor que 0.05",
+      "sí, porque p ≈ 0.008 es menor que 0.05",
+      "sí, porque 15 es más de la mitad",
+      "no, porque salieron más águilas"
+     ],
+     "a": 1,
+     "e": "Valor p ≈ 8 ÷ 1 000 = 0.008. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 15 de 20 veces. Se simularon 1 000 series de 20 lanzamientos con una moneda justa, y en 90 series salieron 15 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no hay evidencia suficiente: p ≈ 0.09 no es menor que 0.05",
+      "no, porque salieron más águilas",
+      "sí, porque 15 es más de la mitad",
+      "sí, porque p ≈ 0.09 es menor que 0.05"
+     ],
+     "a": 0,
+     "e": "Valor p ≈ 90 ÷ 1 000 = 0.09. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 21 de 30 veces. Se simularon 2 000 series de 30 lanzamientos con una moneda justa, y en 25 series salieron 21 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque 21 es más de la mitad",
+      "no, porque salieron más águilas",
+      "sí, porque p ≈ 0.013 es menor que 0.05",
+      "no hay evidencia suficiente: p ≈ 0.013 no es menor que 0.05"
+     ],
+     "a": 2,
+     "e": "Valor p ≈ 25 ÷ 2 000 = 0.013. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 30 de 40 veces. Se simularon 500 series de 40 lanzamientos con una moneda justa, y en 25 series salieron 30 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no hay evidencia suficiente: p ≈ 0.05 no es menor que 0.05",
+      "sí, porque 30 es más de la mitad",
+      "sí, porque p ≈ 0.05 es menor que 0.05",
+      "no, porque salieron más águilas"
+     ],
+     "a": 0,
+     "e": "Valor p ≈ 25 ÷ 500 = 0.05. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 24 de 30 veces. Se simularon 2 000 series de 30 lanzamientos con una moneda justa, y en 25 series salieron 24 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no hay evidencia suficiente: p ≈ 0.013 no es menor que 0.05",
+      "sí, porque 24 es más de la mitad",
+      "no, porque salieron más águilas",
+      "sí, porque p ≈ 0.013 es menor que 0.05"
+     ],
+     "a": 3,
+     "e": "Valor p ≈ 25 ÷ 2 000 = 0.013. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 21 de 30 veces. Se simularon 1 000 series de 30 lanzamientos con una moneda justa, y en 40 series salieron 21 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque 21 es más de la mitad",
+      "sí, porque p ≈ 0.04 es menor que 0.05",
+      "no, porque salieron más águilas",
+      "no hay evidencia suficiente: p ≈ 0.04 no es menor que 0.05"
+     ],
+     "a": 1,
+     "e": "Valor p ≈ 40 ÷ 1 000 = 0.04. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 21 de 30 veces. Se simularon 2 000 series de 30 lanzamientos con una moneda justa, y en 300 series salieron 21 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no, porque salieron más águilas",
+      "no hay evidencia suficiente: p ≈ 0.15 no es menor que 0.05",
+      "sí, porque p ≈ 0.15 es menor que 0.05",
+      "sí, porque 21 es más de la mitad"
+     ],
+     "a": 1,
+     "e": "Valor p ≈ 300 ÷ 2 000 = 0.15. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 14 de 20 veces. Se simularon 2 000 series de 20 lanzamientos con una moneda justa, y en 40 series salieron 14 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque 14 es más de la mitad",
+      "no hay evidencia suficiente: p ≈ 0.02 no es menor que 0.05",
+      "no, porque salieron más águilas",
+      "sí, porque p ≈ 0.02 es menor que 0.05"
+     ],
+     "a": 3,
+     "e": "Valor p ≈ 40 ÷ 2 000 = 0.02. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    }
+   ]
+  },
+  {
+   "title": "Estadístico z",
+   "items": [
+    {
+     "q": "H₀: μ = 1 000, con σ = 60. Una muestra de 36 datos dio x̄ = 990. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −6; se rechaza H₀",
+      "z = −0.17; no se rechaza H₀",
+      "z = −1; se rechaza H₀",
+      "z = −1; no se rechaza H₀"
+     ],
+     "a": 3,
+     "e": "σ/√n = 60 ÷ 6 = 10. z = (990 − 1 000) ÷ 10 = −1. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 1 000, con σ = 60. Una muestra de 36 datos dio x̄ = 1 025. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 15; se rechaza H₀",
+      "z = 2.5; no se rechaza H₀",
+      "z = 2.5; se rechaza H₀",
+      "z = 0.42; no se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "σ/√n = 60 ÷ 6 = 10. z = (1 025 − 1 000) ÷ 10 = 2.5. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 250, con σ = 15. Una muestra de 25 datos dio x̄ = 254.5. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 1.5; no se rechaza H₀",
+      "z = 0.3; no se rechaza H₀",
+      "z = 1.5; se rechaza H₀",
+      "z = 7.5; se rechaza H₀"
+     ],
+     "a": 0,
+     "e": "σ/√n = 15 ÷ 5 = 3. z = (254.5 − 250) ÷ 3 = 1.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 75, con σ = 12. Una muestra de 36 datos dio x̄ = 76. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 0.5; no se rechaza H₀",
+      "z = 0.08; no se rechaza H₀",
+      "z = 3; se rechaza H₀",
+      "z = 0.5; se rechaza H₀"
+     ],
+     "a": 0,
+     "e": "σ/√n = 12 ÷ 6 = 2. z = (76 − 75) ÷ 2 = 0.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 75, con σ = 12. Una muestra de 36 datos dio x̄ = 71. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −0.33; no se rechaza H₀",
+      "z = −12; se rechaza H₀",
+      "z = −2; no se rechaza H₀",
+      "z = −2; se rechaza H₀"
+     ],
+     "a": 3,
+     "e": "σ/√n = 12 ÷ 6 = 2. z = (71 − 75) ÷ 2 = −2. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 500, con σ = 20. Una muestra de 64 datos dio x̄ = 507.5. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 0.375; no se rechaza H₀",
+      "z = 3; no se rechaza H₀",
+      "z = 24; se rechaza H₀",
+      "z = 3; se rechaza H₀"
+     ],
+     "a": 3,
+     "e": "σ/√n = 20 ÷ 8 = 2.5. z = (507.5 − 500) ÷ 2.5 = 3. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 80, con σ = 8. Una muestra de 16 datos dio x̄ = 86. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 0.75; no se rechaza H₀",
+      "z = 3; no se rechaza H₀",
+      "z = 3; se rechaza H₀",
+      "z = 12; se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "σ/√n = 8 ÷ 4 = 2. z = (86 − 80) ÷ 2 = 3. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 250, con σ = 15. Una muestra de 25 datos dio x̄ = 242.5. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −2.5; se rechaza H₀",
+      "z = −12.5; se rechaza H₀",
+      "z = −0.5; no se rechaza H₀",
+      "z = −2.5; no se rechaza H₀"
+     ],
+     "a": 0,
+     "e": "σ/√n = 15 ÷ 5 = 3. z = (242.5 − 250) ÷ 3 = −2.5. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 250, con σ = 15. Una muestra de 25 datos dio x̄ = 257.5. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 12.5; se rechaza H₀",
+      "z = 0.5; no se rechaza H₀",
+      "z = 2.5; no se rechaza H₀",
+      "z = 2.5; se rechaza H₀"
+     ],
+     "a": 3,
+     "e": "σ/√n = 15 ÷ 5 = 3. z = (257.5 − 250) ÷ 3 = 2.5. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 1 000, con σ = 60. Una muestra de 36 datos dio x̄ = 975. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −0.42; no se rechaza H₀",
+      "z = −2.5; se rechaza H₀",
+      "z = −15; se rechaza H₀",
+      "z = −2.5; no se rechaza H₀"
+     ],
+     "a": 1,
+     "e": "σ/√n = 60 ÷ 6 = 10. z = (975 − 1 000) ÷ 10 = −2.5. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 1 000, con σ = 60. Una muestra de 36 datos dio x̄ = 1 015. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 1.5; se rechaza H₀",
+      "z = 1.5; no se rechaza H₀",
+      "z = 9; se rechaza H₀",
+      "z = 0.25; no se rechaza H₀"
+     ],
+     "a": 1,
+     "e": "σ/√n = 60 ÷ 6 = 10. z = (1 015 − 1 000) ÷ 10 = 1.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 1 000, con σ = 60. Una muestra de 36 datos dio x̄ = 1 005. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 3; se rechaza H₀",
+      "z = 0.5; se rechaza H₀",
+      "z = 0.5; no se rechaza H₀",
+      "z = 0.08; no se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "σ/√n = 60 ÷ 6 = 10. z = (1 005 − 1 000) ÷ 10 = 0.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 500, con σ = 20. Una muestra de 64 datos dio x̄ = 496.25. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −12; se rechaza H₀",
+      "z = −1.5; no se rechaza H₀",
+      "z = −0.1875; no se rechaza H₀",
+      "z = −1.5; se rechaza H₀"
+     ],
+     "a": 1,
+     "e": "σ/√n = 20 ÷ 8 = 2.5. z = (496.25 − 500) ÷ 2.5 = −1.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 1 000, con σ = 60. Una muestra de 36 datos dio x̄ = 985. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −1.5; no se rechaza H₀",
+      "z = −1.5; se rechaza H₀",
+      "z = −9; se rechaza H₀",
+      "z = −0.25; no se rechaza H₀"
+     ],
+     "a": 0,
+     "e": "σ/√n = 60 ÷ 6 = 10. z = (985 − 1 000) ÷ 10 = −1.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 250, con σ = 15. Una muestra de 25 datos dio x̄ = 256. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 0.4; no se rechaza H₀",
+      "z = 10; se rechaza H₀",
+      "z = 2; no se rechaza H₀",
+      "z = 2; se rechaza H₀"
+     ],
+     "a": 3,
+     "e": "σ/√n = 15 ÷ 5 = 3. z = (256 − 250) ÷ 3 = 2. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 75, con σ = 12. Una muestra de 36 datos dio x̄ = 70. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −2.5; no se rechaza H₀",
+      "z = −2.5; se rechaza H₀",
+      "z = −0.42; no se rechaza H₀",
+      "z = −15; se rechaza H₀"
+     ],
+     "a": 1,
+     "e": "σ/√n = 12 ÷ 6 = 2. z = (70 − 75) ÷ 2 = −2.5. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 80, con σ = 8. Una muestra de 16 datos dio x̄ = 77. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −1.5; se rechaza H₀",
+      "z = −6; se rechaza H₀",
+      "z = −1.5; no se rechaza H₀",
+      "z = −0.375; no se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "σ/√n = 8 ÷ 4 = 2. z = (77 − 80) ÷ 2 = −1.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 80, con σ = 8. Una muestra de 16 datos dio x̄ = 78. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −1; no se rechaza H₀",
+      "z = −4; se rechaza H₀",
+      "z = −1; se rechaza H₀",
+      "z = −0.25; no se rechaza H₀"
+     ],
+     "a": 0,
+     "e": "σ/√n = 8 ÷ 4 = 2. z = (78 − 80) ÷ 2 = −1. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 500, con σ = 20. Una muestra de 64 datos dio x̄ = 497.5. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −0.125; no se rechaza H₀",
+      "z = −1; no se rechaza H₀",
+      "z = −8; se rechaza H₀",
+      "z = −1; se rechaza H₀"
+     ],
+     "a": 1,
+     "e": "σ/√n = 20 ÷ 8 = 2.5. z = (497.5 − 500) ÷ 2.5 = −1. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 75, con σ = 12. Una muestra de 36 datos dio x̄ = 72. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −1.5; se rechaza H₀",
+      "z = −9; se rechaza H₀",
+      "z = −1.5; no se rechaza H₀",
+      "z = −0.25; no se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "σ/√n = 12 ÷ 6 = 2. z = (72 − 75) ÷ 2 = −1.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    }
+   ]
+  },
+  {
+   "title": "Valores críticos",
+   "items": [
+    {
+     "q": "En una prueba con nivel de significancia α = 0.1 se obtuvo un valor p = 0.003. ¿Qué se decide?",
+     "c": [
+      "no se rechaza H₀",
+      "se rechaza H₀",
+      "se rechaza H₁ y se demuestra H₀",
+      "se acepta que H₀ es falsa sin duda"
+     ],
+     "a": 1,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.003 &lt; 0.1: <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.1 se obtuvo un valor p = 0.3. ¿Qué se decide?",
+     "c": [
+      "se rechaza H₁ y se demuestra H₀",
+      "se acepta que H₀ es falsa sin duda",
+      "no se rechaza H₀",
+      "se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.3 ≥ 0.1: <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.05 se obtuvo un valor p = 0.07. ¿Qué se decide?",
+     "c": [
+      "no se rechaza H₀",
+      "se rechaza H₁ y se demuestra H₀",
+      "se acepta que H₀ es falsa sin duda",
+      "se rechaza H₀"
+     ],
+     "a": 0,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.07 ≥ 0.05: <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 80, con σ = 8. Una muestra de 16 datos dio x̄ = 81. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 0.5; no se rechaza H₀",
+      "z = 0.5; se rechaza H₀",
+      "z = 2; se rechaza H₀",
+      "z = 0.125; no se rechaza H₀"
+     ],
+     "a": 0,
+     "e": "σ/√n = 8 ÷ 4 = 2. z = (81 − 80) ÷ 2 = 0.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.05 se obtuvo un valor p = 0.04. ¿Qué se decide?",
+     "c": [
+      "se acepta que H₀ es falsa sin duda",
+      "no se rechaza H₀",
+      "se rechaza H₁ y se demuestra H₀",
+      "se rechaza H₀"
+     ],
+     "a": 3,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.04 &lt; 0.05: <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "Si z<sub>α/2</sub> = 1.28, ¿cuál es el nivel de confianza?",
+     "c": [
+      "95 %",
+      "80 %",
+      "98 %",
+      "90 %"
+     ],
+     "a": 1,
+     "e": "P(−1.28 ≤ Z ≤ 1.28) ≈ 0.8: nivel del <b>80 %</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.05 se obtuvo un valor p = 0.003. ¿Qué se decide?",
+     "c": [
+      "no se rechaza H₀",
+      "se rechaza H₀",
+      "se acepta que H₀ es falsa sin duda",
+      "se rechaza H₁ y se demuestra H₀"
+     ],
+     "a": 1,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.003 &lt; 0.05: <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 75, con σ = 12. Una muestra de 36 datos dio x̄ = 80. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 0.42; no se rechaza H₀",
+      "z = 15; se rechaza H₀",
+      "z = 2.5; se rechaza H₀",
+      "z = 2.5; no se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "σ/√n = 12 ÷ 6 = 2. z = (80 − 75) ÷ 2 = 2.5. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "¿Cuál es el valor crítico z<sub>α/2</sub> para un nivel de confianza del 90 %?",
+     "c": [
+      "1.645",
+      "2.33",
+      "1.28",
+      "1.96"
+     ],
+     "a": 0,
+     "e": "Se busca z con P(−z ≤ Z ≤ z) = 90 %, es decir, P(Z ≤ z) = 0.95: <b>z = 1.645</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.01 se obtuvo un valor p = 0.04. ¿Qué se decide?",
+     "c": [
+      "se acepta que H₀ es falsa sin duda",
+      "se rechaza H₀",
+      "se rechaza H₁ y se demuestra H₀",
+      "no se rechaza H₀"
+     ],
+     "a": 3,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.04 ≥ 0.01: <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 80, con σ = 8. Una muestra de 16 datos dio x̄ = 83. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 1.5; se rechaza H₀",
+      "z = 6; se rechaza H₀",
+      "z = 0.375; no se rechaza H₀",
+      "z = 1.5; no se rechaza H₀"
+     ],
+     "a": 3,
+     "e": "σ/√n = 8 ÷ 4 = 2. z = (83 − 80) ÷ 2 = 1.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 500, con σ = 20. Una muestra de 64 datos dio x̄ = 503.75. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 1.5; se rechaza H₀",
+      "z = 12; se rechaza H₀",
+      "z = 1.5; no se rechaza H₀",
+      "z = 0.1875; no se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "σ/√n = 20 ÷ 8 = 2.5. z = (503.75 − 500) ÷ 2.5 = 1.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.1 se obtuvo un valor p = 0.12. ¿Qué se decide?",
+     "c": [
+      "no se rechaza H₀",
+      "se rechaza H₀",
+      "se acepta que H₀ es falsa sin duda",
+      "se rechaza H₁ y se demuestra H₀"
+     ],
+     "a": 0,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.12 ≥ 0.1: <b>no se rechaza H₀</b>."
+    },
+    {
+     "q": "En una prueba con nivel de significancia α = 0.1 se obtuvo un valor p = 0.001. ¿Qué se decide?",
+     "c": [
+      "se acepta que H₀ es falsa sin duda",
+      "se rechaza H₁ y se demuestra H₀",
+      "se rechaza H₀",
+      "no se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "Si p &lt; α se rechaza H₀. Aquí 0.001 &lt; 0.1: <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "¿Cuál es el valor crítico z<sub>α/2</sub> para un nivel de confianza del 99 %?",
+     "c": [
+      "1.645",
+      "2.575",
+      "1.28",
+      "1.96"
+     ],
+     "a": 1,
+     "e": "Se busca z con P(−z ≤ Z ≤ z) = 99 %, es decir, P(Z ≤ z) = 0.995: <b>z = 2.575</b>."
+    },
+    {
+     "q": "¿Cuál es el valor crítico z<sub>α/2</sub> para un nivel de confianza del 98 %?",
+     "c": [
+      "1.96",
+      "2.33",
+      "1.645",
+      "1.28"
+     ],
+     "a": 1,
+     "e": "Se busca z con P(−z ≤ Z ≤ z) = 98 %, es decir, P(Z ≤ z) = 0.99: <b>z = 2.33</b>."
+    },
+    {
+     "q": "H₀: μ = 1 000, con σ = 60. Una muestra de 36 datos dio x̄ = 1 020. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 0.33; no se rechaza H₀",
+      "z = 2; no se rechaza H₀",
+      "z = 12; se rechaza H₀",
+      "z = 2; se rechaza H₀"
+     ],
+     "a": 3,
+     "e": "σ/√n = 60 ÷ 6 = 10. z = (1 020 − 1 000) ÷ 10 = 2. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "¿Cuál es el valor crítico z<sub>α/2</sub> para un nivel de confianza del 95 %?",
+     "c": [
+      "1.96",
+      "1.645",
+      "1.28",
+      "2.33"
+     ],
+     "a": 0,
+     "e": "Se busca z con P(−z ≤ Z ≤ z) = 95 %, es decir, P(Z ≤ z) = 0.975: <b>z = 1.96</b>."
+    },
+    {
+     "q": "¿Cuál es el valor crítico z<sub>α/2</sub> para un nivel de confianza del 80 %?",
+     "c": [
+      "1.96",
+      "2.33",
+      "1.645",
+      "1.28"
+     ],
+     "a": 3,
+     "e": "Se busca z con P(−z ≤ Z ≤ z) = 80 %, es decir, P(Z ≤ z) = 0.9: <b>z = 1.28</b>."
+    },
+    {
+     "q": "H₀: μ = 250, con σ = 15. Una muestra de 25 datos dio x̄ = 245.5. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −1.5; se rechaza H₀",
+      "z = −0.3; no se rechaza H₀",
+      "z = −1.5; no se rechaza H₀",
+      "z = −7.5; se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "σ/√n = 15 ÷ 5 = 3. z = (245.5 − 250) ÷ 3 = −1.5. |z| ≤ 1.96 → <b>no se rechaza H₀</b>."
+    }
+   ]
+  },
+  {
+   "title": "Repaso",
+   "items": [
+    {
+     "q": "H₀: μ = 75, con σ = 12. Una muestra de 36 datos dio x̄ = 79. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 2; se rechaza H₀",
+      "z = 12; se rechaza H₀",
+      "z = 0.33; no se rechaza H₀",
+      "z = 2; no se rechaza H₀"
+     ],
+     "a": 0,
+     "e": "σ/√n = 12 ÷ 6 = 2. z = (79 − 75) ÷ 2 = 2. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "H₀: μ = 1 000, con σ = 60. Una muestra de 36 datos dio x̄ = 980. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = −12; se rechaza H₀",
+      "z = −2; no se rechaza H₀",
+      "z = −2; se rechaza H₀",
+      "z = −0.33; no se rechaza H₀"
+     ],
+     "a": 2,
+     "e": "σ/√n = 60 ÷ 6 = 10. z = (980 − 1 000) ÷ 10 = −2. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 16 de 20 veces. Se simularon 500 series de 20 lanzamientos con una moneda justa, y en 90 series salieron 16 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque p ≈ 0.18 es menor que 0.05",
+      "no hay evidencia suficiente: p ≈ 0.18 no es menor que 0.05",
+      "no, porque salieron más águilas",
+      "sí, porque 16 es más de la mitad"
+     ],
+     "a": 1,
+     "e": "Valor p ≈ 90 ÷ 500 = 0.18. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 16 de 20 veces. Se simularon 500 series de 20 lanzamientos con una moneda justa, y en 15 series salieron 16 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque p ≈ 0.03 es menor que 0.05",
+      "no hay evidencia suficiente: p ≈ 0.03 no es menor que 0.05",
+      "sí, porque 16 es más de la mitad",
+      "no, porque salieron más águilas"
+     ],
+     "a": 0,
+     "e": "Valor p ≈ 15 ÷ 500 = 0.03. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 22 de 30 veces. Se simularon 500 series de 30 lanzamientos con una moneda justa, y en 300 series salieron 22 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque p ≈ 0.6 es menor que 0.05",
+      "no, porque salieron más águilas",
+      "sí, porque 22 es más de la mitad",
+      "no hay evidencia suficiente: p ≈ 0.6 no es menor que 0.05"
+     ],
+     "a": 3,
+     "e": "Valor p ≈ 300 ÷ 500 = 0.6. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 30 de 40 veces. Se simularon 1 000 series de 40 lanzamientos con una moneda justa, y en 90 series salieron 30 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no hay evidencia suficiente: p ≈ 0.09 no es menor que 0.05",
+      "no, porque salieron más águilas",
+      "sí, porque p ≈ 0.09 es menor que 0.05",
+      "sí, porque 30 es más de la mitad"
+     ],
+     "a": 0,
+     "e": "Valor p ≈ 90 ÷ 1 000 = 0.09. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 24 de 30 veces. Se simularon 2 000 series de 30 lanzamientos con una moneda justa, y en 8 series salieron 24 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque 24 es más de la mitad",
+      "no, porque salieron más águilas",
+      "sí, porque p ≈ 0.004 es menor que 0.05",
+      "no hay evidencia suficiente: p ≈ 0.004 no es menor que 0.05"
+     ],
+     "a": 2,
+     "e": "Valor p ≈ 8 ÷ 2 000 = 0.004. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 32 de 40 veces. Se simularon 2 000 series de 40 lanzamientos con una moneda justa, y en 300 series salieron 32 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque p ≈ 0.15 es menor que 0.05",
+      "sí, porque 32 es más de la mitad",
+      "no hay evidencia suficiente: p ≈ 0.15 no es menor que 0.05",
+      "no, porque salieron más águilas"
+     ],
+     "a": 2,
+     "e": "Valor p ≈ 300 ÷ 2 000 = 0.15. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Al aumentar el tamaño de la muestra, una diferencia real pequeña…",
+     "c": [
+      "desaparece",
+      "es más difícil de detectar",
+      "es más fácil de detectar",
+      "se vuelve un error tipo I"
+     ],
+     "a": 2,
+     "e": "Con más datos, el error estándar σ/√n es menor."
+    },
+    {
+     "q": "Una moneda cayó águila 15 de 20 veces. Se simularon 500 series de 20 lanzamientos con una moneda justa, y en 150 series salieron 15 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque p ≈ 0.3 es menor que 0.05",
+      "no hay evidencia suficiente: p ≈ 0.3 no es menor que 0.05",
+      "no, porque salieron más águilas",
+      "sí, porque 15 es más de la mitad"
+     ],
+     "a": 1,
+     "e": "Valor p ≈ 150 ÷ 500 = 0.3. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 28 de 40 veces. Se simularon 500 series de 40 lanzamientos con una moneda justa, y en 25 series salieron 28 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque p ≈ 0.05 es menor que 0.05",
+      "sí, porque 28 es más de la mitad",
+      "no, porque salieron más águilas",
+      "no hay evidencia suficiente: p ≈ 0.05 no es menor que 0.05"
+     ],
+     "a": 3,
+     "e": "Valor p ≈ 25 ÷ 500 = 0.05. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "La estadística inferencial sirve para…",
+     "c": [
+      "sacar conclusiones de una población a partir de una muestra",
+      "hacer gráficas",
+      "evitar la variabilidad",
+      "describir solo la muestra"
+     ],
+     "a": 0,
+     "e": "Inferir: usar la muestra para hablar de la población, con un margen de error."
+    },
+    {
+     "q": "Un intervalo de confianza del 95 % para la media es (48; 56). ¿Cuál es la estimación puntual?",
+     "c": [
+      "52",
+      "56",
+      "95",
+      "48"
+     ],
+     "a": 0,
+     "e": "Es el centro del intervalo: (48 + 56) ÷ 2 = 52."
+    },
+    {
+     "q": "«No rechazar H₀» significa que…",
+     "c": [
+      "H₀ quedó demostrada",
+      "H₁ es verdadera",
+      "el estudio está mal hecho",
+      "no hay evidencia suficiente contra H₀"
+     ],
+     "a": 3,
+     "e": "No rechazar no prueba H₀; solo indica que faltó evidencia."
+    },
+    {
+     "q": "H₀: μ = 500, con σ = 20. Una muestra de 64 datos dio x̄ = 505. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 16; se rechaza H₀",
+      "z = 2; se rechaza H₀",
+      "z = 0.25; no se rechaza H₀",
+      "z = 2; no se rechaza H₀"
+     ],
+     "a": 1,
+     "e": "σ/√n = 20 ÷ 8 = 2.5. z = (505 − 500) ÷ 2.5 = 2. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 14 de 20 veces. Se simularon 500 series de 20 lanzamientos con una moneda justa, y en 150 series salieron 14 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque p ≈ 0.3 es menor que 0.05",
+      "no hay evidencia suficiente: p ≈ 0.3 no es menor que 0.05",
+      "no, porque salieron más águilas",
+      "sí, porque 14 es más de la mitad"
+     ],
+     "a": 1,
+     "e": "Valor p ≈ 150 ÷ 500 = 0.3. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    },
+    {
+     "q": "H₀: μ = 250, con σ = 15. Una muestra de 25 datos dio x̄ = 259. Calcula z = (x̄ − μ) ÷ (σ/√n) y decide con α = 0.05 (bilateral, |z| &gt; 1.96).",
+     "c": [
+      "z = 3; no se rechaza H₀",
+      "z = 3; se rechaza H₀",
+      "z = 0.6; no se rechaza H₀",
+      "z = 15; se rechaza H₀"
+     ],
+     "a": 1,
+     "e": "σ/√n = 15 ÷ 5 = 3. z = (259 − 250) ÷ 3 = 3. |z| &gt; 1.96 → <b>se rechaza H₀</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 16 de 20 veces. Se simularon 2 000 series de 20 lanzamientos con una moneda justa, y en 25 series salieron 16 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque 16 es más de la mitad",
+      "no hay evidencia suficiente: p ≈ 0.013 no es menor que 0.05",
+      "no, porque salieron más águilas",
+      "sí, porque p ≈ 0.013 es menor que 0.05"
+     ],
+     "a": 3,
+     "e": "Valor p ≈ 25 ÷ 2 000 = 0.013. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 30 de 40 veces. Se simularon 2 000 series de 40 lanzamientos con una moneda justa, y en 25 series salieron 30 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "sí, porque 30 es más de la mitad",
+      "no, porque salieron más águilas",
+      "sí, porque p ≈ 0.013 es menor que 0.05",
+      "no hay evidencia suficiente: p ≈ 0.013 no es menor que 0.05"
+     ],
+     "a": 2,
+     "e": "Valor p ≈ 25 ÷ 2 000 = 0.013. Es muy raro con una moneda justa: <b>parece cargada</b>."
+    },
+    {
+     "q": "Una moneda cayó águila 14 de 20 veces. Se simularon 500 series de 20 lanzamientos con una moneda justa, y en 90 series salieron 14 águilas o más. Con α = 0.05, ¿la moneda parece cargada?",
+     "c": [
+      "no, porque salieron más águilas",
+      "sí, porque p ≈ 0.18 es menor que 0.05",
+      "sí, porque 14 es más de la mitad",
+      "no hay evidencia suficiente: p ≈ 0.18 no es menor que 0.05"
+     ],
+     "a": 3,
+     "e": "Valor p ≈ 90 ÷ 500 = 0.18. No es tan raro con una moneda justa: <b>no hay evidencia suficiente</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 15,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "pensamiento-matematico-1"
+}

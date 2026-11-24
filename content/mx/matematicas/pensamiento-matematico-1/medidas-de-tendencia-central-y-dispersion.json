@@ -1,0 +1,1157 @@
+{
+ "slug": "medidas-de-tendencia-central-y-dispersion",
+ "title": "Media, varianza y desviación estándar",
+ "seo_title": "Tendencia central y dispersión – Pensamiento Matemático I: ejercicios con respuestas",
+ "short_title": "Tendencia central y dispersión",
+ "domain": "Estadística",
+ "standard_code": "Pensamiento Matemático I · Progresión 13: Medidas de tendencia central y de dispersión",
+ "standard_url": "https://educacionmediasuperior.sep.gob.mx/work/models/sems/Resource/13634/1/images/Progresiones%20de%20aprendizaje%20-%20Pensamiento%20matematico(1).pdf",
+ "standard_text": "Describe fenómenos con la media, la mediana, la moda, la varianza, la desviación estándar y el rango intercuartílico, e interpreta lo que indican (resumen de la progresión 13 de aprendizaje de Pensamiento Matemático I (MCCEMS, SEP 2023))",
+ "meta_desc": "Ejercicios de Pensamiento Matemático I: media, mediana, cuartiles, rango intercuartílico, varianza y desviación estándar, e interpretación de la dispersión. 100 ejercicios con respuestas.",
+ "key_big": "σ = √(promedio de (x − x̄)²)",
+ "key_sub": "Mayor σ: datos más dispersos.",
+ "body_html": "<h2>Cómo se hace</h2><p><b>Centro</b>: media (suma ÷ n), mediana (dato central ordenado) y moda (el más frecuente).</p><p><b>Varianza</b> σ²: promedio de los cuadrados de las distancias a la media. <b>Desviación estándar</b> σ = √σ².</p><p><b>Rango intercuartílico</b>: RIC = Q₃ − Q₁; mide la dispersión del 50 % central y no le afectan los atípicos.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Datos 4, 6, 8, 10, 12 (media 8)</p><p class='sn-ex-s'>Distancias: −4, −2, 0, 2, 4</p><p class='sn-ex-s'>Cuadrados: 16 + 4 + 0 + 4 + 16 = 40</p><p class='sn-ex-s'>σ² = 40 ÷ 5 = 8</p><p class='sn-ex-a'>Respuesta: σ = √8 ≈ 2.83</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Olvidar elevar al cuadrado</td><td>Las distancias con signo suman 0.</td></tr><tr><td>Confundir varianza con desviación estándar</td><td>σ es la raíz de σ².</td></tr><tr><td>No ordenar para la mediana</td><td>Ordena antes de buscar el centro.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Por qué a veces se divide entre n − 1?",
+   "a": "En una muestra, dividir entre n − 1 da una mejor estimación de la varianza de la población (varianza muestral)."
+  },
+  {
+   "q": "¿Qué indica una desviación estándar grande?",
+   "a": "Que los datos están muy separados de la media."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Media y mediana",
+   "items": [
+    {
+     "q": "Calcula la mediana de: 8, 12, 17, 14, 9.",
+     "c": [
+      "12",
+      "12.5",
+      "17",
+      "11"
+     ],
+     "a": 0,
+     "e": "Ordenados: 8, 9, 12, 14, 17. Mediana = <b>12</b>."
+    },
+    {
+     "q": "Calcula la mediana de: 9, 20, 20, 11, 7.",
+     "c": [
+      "20",
+      "13.4",
+      "11.5",
+      "11"
+     ],
+     "a": 3,
+     "e": "Ordenados: 7, 9, 11, 20, 20. Mediana = <b>11</b>."
+    },
+    {
+     "q": "Calcula la mediana de: 20, 10, 18, 15, 13, 12, 13, 10.",
+     "c": [
+      "14",
+      "13.875",
+      "13",
+      "13.5"
+     ],
+     "a": 2,
+     "e": "Ordenados: 10, 10, 12, 13, 13, 15, 18, 20. Mediana = <b>13</b>."
+    },
+    {
+     "q": "Calcula la media de: 12, 8, 3, 15, 11, 12, 20, 3.",
+     "c": [
+      "11",
+      "12",
+      "11.5",
+      "10.5"
+     ],
+     "a": 3,
+     "e": "Media = 84 ÷ 8 = <b>10.5</b>."
+    },
+    {
+     "q": "Calcula la mediana de: 2, 16, 19, 10, 16, 2, 14.",
+     "c": [
+      "14.5",
+      "14",
+      "11.29",
+      "10"
+     ],
+     "a": 1,
+     "e": "Ordenados: 2, 2, 10, 14, 16, 16, 19. Mediana = <b>14</b>."
+    },
+    {
+     "q": "Calcula la media de: 14, 8, 6, 19, 11, 8, 6, 11.",
+     "c": [
+      "10.875",
+      "10.375",
+      "11.86",
+      "9.5"
+     ],
+     "a": 1,
+     "e": "Media = 83 ÷ 8 = <b>10.375</b>."
+    },
+    {
+     "q": "Calcula la media de: 20, 20, 17, 12, 18.",
+     "c": [
+      "18",
+      "21.75",
+      "17.4",
+      "17.9"
+     ],
+     "a": 2,
+     "e": "Media = 87 ÷ 5 = <b>17.4</b>."
+    },
+    {
+     "q": "Calcula la media de: 4, 11, 8, 2, 2.",
+     "c": [
+      "4",
+      "6.75",
+      "5.9",
+      "5.4"
+     ],
+     "a": 3,
+     "e": "Media = 27 ÷ 5 = <b>5.4</b>."
+    },
+    {
+     "q": "Calcula la media de: 2, 19, 15, 10, 3, 14.",
+     "c": [
+      "10.5",
+      "12.6",
+      "12",
+      "11"
+     ],
+     "a": 0,
+     "e": "Media = 63 ÷ 6 = <b>10.5</b>."
+    },
+    {
+     "q": "Calcula la mediana de: 12, 16, 4, 3, 5.",
+     "c": [
+      "5.5",
+      "8",
+      "4",
+      "5"
+     ],
+     "a": 3,
+     "e": "Ordenados: 3, 4, 5, 12, 16. Mediana = <b>5</b>."
+    },
+    {
+     "q": "Calcula la mediana de: 10, 10, 5, 6, 18, 16.",
+     "c": [
+      "6",
+      "10",
+      "10.5",
+      "10.83"
+     ],
+     "a": 1,
+     "e": "Ordenados: 5, 6, 10, 10, 16, 18. Mediana = <b>10</b>."
+    },
+    {
+     "q": "Calcula la mediana de: 7, 12, 7, 7, 17, 7.",
+     "c": [
+      "7",
+      "8",
+      "7.5",
+      "9.5"
+     ],
+     "a": 0,
+     "e": "Ordenados: 7, 7, 7, 7, 12, 17. Mediana = <b>7</b>."
+    },
+    {
+     "q": "Calcula la media de: 12, 15, 11, 16, 8, 16, 9, 11.",
+     "c": [
+      "14",
+      "11.5",
+      "12.25",
+      "12.75"
+     ],
+     "a": 2,
+     "e": "Media = 98 ÷ 8 = <b>12.25</b>."
+    },
+    {
+     "q": "Calcula la media de: 3, 8, 4, 4, 5, 16, 4, 8.",
+     "c": [
+      "7",
+      "7.43",
+      "6.5",
+      "4.5"
+     ],
+     "a": 2,
+     "e": "Media = 52 ÷ 8 = <b>6.5</b>."
+    },
+    {
+     "q": "Calcula la media de: 11, 2, 14, 7, 4, 9, 6, 14.",
+     "c": [
+      "9.57",
+      "8.875",
+      "8",
+      "8.375"
+     ],
+     "a": 3,
+     "e": "Media = 67 ÷ 8 = <b>8.375</b>."
+    },
+    {
+     "q": "Calcula la mediana de: 4, 5, 16, 16, 13, 8, 7, 10.",
+     "c": [
+      "9.875",
+      "9",
+      "9.5",
+      "13"
+     ],
+     "a": 1,
+     "e": "Ordenados: 4, 5, 7, 8, 10, 13, 16, 16. Mediana = <b>9</b>."
+    },
+    {
+     "q": "Calcula la mediana de: 4, 8, 20, 14, 18.",
+     "c": [
+      "14",
+      "14.5",
+      "20",
+      "12.8"
+     ],
+     "a": 0,
+     "e": "Ordenados: 4, 8, 14, 18, 20. Mediana = <b>14</b>."
+    },
+    {
+     "q": "Calcula la media de: 12, 9, 9, 2, 19, 12, 13, 7.",
+     "c": [
+      "11.86",
+      "10.375",
+      "10.5",
+      "10.875"
+     ],
+     "a": 1,
+     "e": "Media = 83 ÷ 8 = <b>10.375</b>."
+    },
+    {
+     "q": "Calcula la mediana de: 11, 10, 20, 18, 15, 11, 17.",
+     "c": [
+      "14.57",
+      "18",
+      "15",
+      "15.5"
+     ],
+     "a": 2,
+     "e": "Ordenados: 10, 11, 11, 15, 17, 18, 20. Mediana = <b>15</b>."
+    },
+    {
+     "q": "Calcula la media de: 10, 5, 4, 7, 11, 15, 11, 8.",
+     "c": [
+      "8.875",
+      "10.14",
+      "9.375",
+      "9"
+     ],
+     "a": 0,
+     "e": "Media = 71 ÷ 8 = <b>8.875</b>."
+    }
+   ]
+  },
+  {
+   "title": "Cuartiles y RIC",
+   "items": [
+    {
+     "q": "Datos ordenados: 5, 9, 20, 26, 29, 30, 43, 46. Calcula el rango intercuartílico (Q₃ − Q₁).",
+     "c": [
+      "41",
+      "22",
+      "36.5",
+      "13"
+     ],
+     "a": 1,
+     "e": "Q₁ = mediana de la primera mitad = 14.5; Q₃ = 36.5. RIC = <b>22</b>."
+    },
+    {
+     "q": "Datos ordenados: 3, 4, 10, 18, 32, 33, 41, 43. Calcula el rango intercuartílico (Q₃ − Q₁).",
+     "c": [
+      "37",
+      "40",
+      "18",
+      "30"
+     ],
+     "a": 3,
+     "e": "Q₁ = mediana de la primera mitad = 7; Q₃ = 37. RIC = <b>30</b>."
+    },
+    {
+     "q": "Calcula el tercer cuartil Q₃ de: 27, 6, 14, 26, 27, 3, 27, 24, 24, 13, 11, 7, 13",
+     "c": [
+      "26",
+      "14",
+      "27",
+      "11"
+     ],
+     "a": 0,
+     "e": "Ordenados, Q₃ ocupa el lugar 10: <b>26</b>."
+    },
+    {
+     "q": "Calcula la mediana de: 2, 15, 11, 15, 20, 6, 30, 19, 10, 12, 1, 13, 16",
+     "c": [
+      "12",
+      "29",
+      "13.08",
+      "13"
+     ],
+     "a": 3,
+     "e": "Ordenamos (1, 2, 6, 10, 11, 12, 13, 15, 15, 16, 19, 20, 30); el central es <b>13</b>."
+    },
+    {
+     "q": "Calcula el tercer cuartil Q₃ de: 28, 22, 16, 4, 7, 24, 1",
+     "c": [
+      "24",
+      "4",
+      "16",
+      "28"
+     ],
+     "a": 0,
+     "e": "Ordenados, Q₃ ocupa el lugar 6: <b>24</b>."
+    },
+    {
+     "q": "<div class='qfig'><svg viewBox='0 0 340 110' width='340' role='img' aria-label='diagrama de caja y bigotes'><line x1='20' y1='80' x2='324' y2='80' stroke='#333'/><line x1='20.0' y1='76' x2='20.0' y2='84' stroke='#333'/><text x='20.0' y='100' font-size='12' text-anchor='middle' font-family='Arial, Helvetica, sans-serif'>0</text><line x1='58.0' y1='76' x2='58.0' y2='84' stroke='#333'/><text x='58.0' y='100' font-size='12' text-anchor='middle' font-family='Arial, Helvetica, sans-serif'>4</text><line x1='96.0' y1='76' x2='96.0' y2='84' stroke='#333'/><text x='96.0' y='100' font-size='12' text-anchor='middle' font-family='Arial, Helvetica, sans-serif'>8</text><line x1='134.0' y1='76' x2='134.0' y2='84' stroke='#333'/><text x='134.0' y='100' font-size='12' text-anchor='middle' font-family='Arial, Helvetica, sans-serif'>12</text><line x1='172.0' y1='76' x2='172.0' y2='84' stroke='#333'/><text x='172.0' y='100' font-size='12' text-anchor='middle' font-family='Arial, Helvetica, sans-serif'>16</text><line x1='210.0' y1='76' x2='210.0' y2='84' stroke='#333'/><text x='210.0' y='100' font-size='12' text-anchor='middle' font-family='Arial, Helvetica, sans-serif'>20</text><line x1='248.0' y1='76' x2='248.0' y2='84' stroke='#333'/><text x='248.0' y='100' font-size='12' text-anchor='middle' font-family='Arial, Helvetica, sans-serif'>24</text><line x1='286.0' y1='76' x2='286.0' y2='84' stroke='#333'/><text x='286.0' y='100' font-size='12' text-anchor='middle' font-family='Arial, Helvetica, sans-serif'>28</text><line x1='324.0' y1='76' x2='324.0' y2='84' stroke='#333'/><text x='324.0' y='100' font-size='12' text-anchor='middle' font-family='Arial, Helvetica, sans-serif'>32</text><line x1='58.0' y1='40' x2='134.0' y2='40' stroke='#1565c0' stroke-width='2'/><line x1='295.5' y1='40' x2='305.0' y2='40' stroke='#1565c0' stroke-width='2'/><rect x='134.0' y='25' width='161.5' height='30' fill='#d6e2f6' stroke='#1565c0' stroke-width='2'/><line x1='229.0' y1='25' x2='229.0' y2='55' stroke='#c62828' stroke-width='3'/><line x1='58.0' y1='32' x2='58.0' y2='48' stroke='#1565c0' stroke-width='2'/><line x1='305.0' y1='32' x2='305.0' y2='48' stroke='#1565c0' stroke-width='2'/></svg></div>¿Qué valor marca la mediana en este diagrama de caja?",
+     "c": [
+      "12",
+      "4",
+      "22",
+      "29"
+     ],
+     "a": 2,
+     "e": "La caja va de Q₁ a Q₃ y la línea roja es la mediana: <b>22</b>."
+    },
+    {
+     "q": "Calcula el tercer cuartil Q₃ de: 20, 22, 2, 11, 5, 22, 1",
+     "c": [
+      "21",
+      "22",
+      "11",
+      "2"
+     ],
+     "a": 1,
+     "e": "Ordenados, Q₃ ocupa el lugar 6: <b>22</b>."
+    },
+    {
+     "q": "Datos ordenados: 2, 20, 21, 29, 37, 38, 53, 54. Calcula el rango intercuartílico (Q₃ − Q₁).",
+     "c": [
+      "52",
+      "25",
+      "45.5",
+      "12.5"
+     ],
+     "a": 1,
+     "e": "Q₁ = mediana de la primera mitad = 20.5; Q₃ = 45.5. RIC = <b>25</b>."
+    },
+    {
+     "q": "Datos ordenados: 2, 4, 9, 29, 33, 36, 50, 53. Calcula el rango intercuartílico (Q₃ − Q₁).",
+     "c": [
+      "51",
+      "36.5",
+      "43",
+      "24.5"
+     ],
+     "a": 1,
+     "e": "Q₁ = mediana de la primera mitad = 6.5; Q₃ = 43. RIC = <b>36.5</b>."
+    },
+    {
+     "q": "Datos ordenados: 2, 9, 13, 17, 21, 34, 43, 49. Calcula el rango intercuartílico (Q₃ − Q₁).",
+     "c": [
+      "27.5",
+      "8",
+      "38.5",
+      "47"
+     ],
+     "a": 0,
+     "e": "Q₁ = mediana de la primera mitad = 11; Q₃ = 38.5. RIC = <b>27.5</b>."
+    },
+    {
+     "q": "Calcula el primer cuartil Q₁ de: 4, 16, 7, 7, 23, 17, 29, 15, 16",
+     "c": [
+      "16",
+      "15",
+      "7",
+      "17"
+     ],
+     "a": 2,
+     "e": "Ordenados, Q₁ ocupa el lugar 3 (el primero que deja al menos el 25 % por debajo): <b>7</b>."
+    },
+    {
+     "q": "Datos ordenados: 12, 14, 15, 19, 26, 28, 39, 47. Calcula el rango intercuartílico (Q₃ − Q₁).",
+     "c": [
+      "35",
+      "33.5",
+      "19",
+      "8"
+     ],
+     "a": 2,
+     "e": "Q₁ = mediana de la primera mitad = 14.5; Q₃ = 33.5. RIC = <b>19</b>."
+    },
+    {
+     "q": "Datos ordenados: 3, 12, 23, 24, 29, 34, 45, 52. Calcula el rango intercuartílico (Q₃ − Q₁).",
+     "c": [
+      "49",
+      "9",
+      "22",
+      "39.5"
+     ],
+     "a": 2,
+     "e": "Q₁ = mediana de la primera mitad = 17.5; Q₃ = 39.5. RIC = <b>22</b>."
+    },
+    {
+     "q": "Datos ordenados: 2, 3, 10, 16, 19, 44, 54, 55. Calcula el rango intercuartílico (Q₃ − Q₁).",
+     "c": [
+      "42.5",
+      "49",
+      "53",
+      "11"
+     ],
+     "a": 0,
+     "e": "Q₁ = mediana de la primera mitad = 6.5; Q₃ = 49. RIC = <b>42.5</b>."
+    },
+    {
+     "q": "Datos ordenados: 3, 9, 26, 31, 41, 45, 57, 59. Calcula el rango intercuartílico (Q₃ − Q₁).",
+     "c": [
+      "33.5",
+      "56",
+      "51",
+      "18.5"
+     ],
+     "a": 0,
+     "e": "Q₁ = mediana de la primera mitad = 17.5; Q₃ = 51. RIC = <b>33.5</b>."
+    },
+    {
+     "q": "Datos ordenados: 4, 9, 9, 13, 14, 25, 26, 26, 29. ¿Cuál es el rango intercuartílico Q₃ − Q₁?",
+     "c": [
+      "5",
+      "25",
+      "35",
+      "17"
+     ],
+     "a": 3,
+     "e": "Q₁ = 9 y Q₃ = 26: <b>17</b>."
+    },
+    {
+     "q": "Datos ordenados: 8, 11, 12, 14, 19, 21, 28. ¿Cuál es el rango intercuartílico Q₃ − Q₁?",
+     "c": [
+      "20",
+      "10",
+      "32",
+      "3"
+     ],
+     "a": 1,
+     "e": "Q₁ = 11 y Q₃ = 21: <b>10</b>."
+    },
+    {
+     "q": "Datos ordenados: 8, 9, 10, 11, 13, 16, 18, 21, 23, 23, 25, 25, 30. ¿Cuál es el rango intercuartílico Q₃ − Q₁?",
+     "c": [
+      "22",
+      "7",
+      "34",
+      "12"
+     ],
+     "a": 3,
+     "e": "Q₁ = 11 y Q₃ = 23: <b>12</b>."
+    },
+    {
+     "q": "Datos ordenados: 3, 8, 23, 26, 27, 29, 35, 58. Calcula el rango intercuartílico (Q₃ − Q₁).",
+     "c": [
+      "55",
+      "32",
+      "11",
+      "16.5"
+     ],
+     "a": 3,
+     "e": "Q₁ = mediana de la primera mitad = 15.5; Q₃ = 32. RIC = <b>16.5</b>."
+    },
+    {
+     "q": "Calcula el primer cuartil Q₁ de: 9, 22, 1, 5, 16, 19, 11",
+     "c": [
+      "9",
+      "19",
+      "5",
+      "11"
+     ],
+     "a": 2,
+     "e": "Ordenados, Q₁ ocupa el lugar 2 (el primero que deja al menos el 25 % por debajo): <b>5</b>."
+    }
+   ]
+  },
+  {
+   "title": "Varianza",
+   "items": [
+    {
+     "q": "Datos: 5, 9, 13, 7, 11 (media 9). Calcula la varianza poblacional σ².",
+     "c": [
+      "10",
+      "2.83",
+      "8",
+      "2.4"
+     ],
+     "a": 2,
+     "e": "σ² = (16 + 4 + 0 + 4 + 16) ÷ 5 = 40 ÷ 5 = <b>8</b>."
+    },
+    {
+     "q": "Datos: 8, 8, 12, 12 (media 10). Calcula la varianza poblacional σ².",
+     "c": [
+      "4",
+      "5.33",
+      "2",
+      "5"
+     ],
+     "a": 0,
+     "e": "σ² = (4 + 4 + 4 + 4) ÷ 4 = 16 ÷ 4 = <b>4</b>."
+    },
+    {
+     "q": "Datos: 11, 9, 11, 9 (media 10). Calcula la varianza poblacional σ².",
+     "c": [
+      "1",
+      "2",
+      "1.33",
+      "3"
+     ],
+     "a": 0,
+     "e": "σ² = (1 + 1 + 1 + 1) ÷ 4 = 4 ÷ 4 = <b>1</b>."
+    },
+    {
+     "q": "Datos: 13, 7, 3, 9 (media 8). Calcula la varianza poblacional σ².",
+     "c": [
+      "3.61",
+      "13",
+      "17.33",
+      "3"
+     ],
+     "a": 1,
+     "e": "σ² = (25 + 1 + 1 + 25) ÷ 4 = 52 ÷ 4 = <b>13</b>."
+    },
+    {
+     "q": "Datos: 9, 13, 7, 11 (media 10). Calcula la varianza poblacional σ².",
+     "c": [
+      "6.67",
+      "2.24",
+      "2",
+      "5"
+     ],
+     "a": 3,
+     "e": "σ² = (9 + 1 + 1 + 9) ÷ 4 = 20 ÷ 4 = <b>5</b>."
+    },
+    {
+     "q": "Datos: 13, 7, 19 (media 13). Calcula la varianza poblacional σ².",
+     "c": [
+      "36",
+      "4",
+      "24",
+      "4.9"
+     ],
+     "a": 2,
+     "e": "σ² = (36 + 0 + 36) ÷ 3 = 72 ÷ 3 = <b>24</b>."
+    },
+    {
+     "q": "Datos: 7, 19, 13 (media 13). Calcula la varianza poblacional σ².",
+     "c": [
+      "4.9",
+      "24",
+      "36",
+      "4"
+     ],
+     "a": 1,
+     "e": "σ² = (36 + 0 + 36) ÷ 3 = 72 ÷ 3 = <b>24</b>."
+    },
+    {
+     "q": "Datos: 8, 10, 6, 2, 4 (media 6). Calcula la varianza poblacional σ².",
+     "c": [
+      "10",
+      "2.4",
+      "2.83",
+      "8"
+     ],
+     "a": 3,
+     "e": "σ² = (16 + 4 + 0 + 4 + 16) ÷ 5 = 40 ÷ 5 = <b>8</b>."
+    },
+    {
+     "q": "Datos: 6, 6, 10, 2 (media 6). Calcula la varianza poblacional σ².",
+     "c": [
+      "10.67",
+      "2",
+      "8",
+      "2.83"
+     ],
+     "a": 2,
+     "e": "σ² = (16 + 0 + 0 + 16) ÷ 4 = 32 ÷ 4 = <b>8</b>."
+    },
+    {
+     "q": "Datos: 16, 14, 14, 16 (media 15). Calcula la varianza poblacional σ².",
+     "c": [
+      "1.33",
+      "1",
+      "2",
+      "3"
+     ],
+     "a": 1,
+     "e": "σ² = (1 + 1 + 1 + 1) ÷ 4 = 4 ÷ 4 = <b>1</b>."
+    },
+    {
+     "q": "Datos: 10, 16, 4 (media 10). Calcula la varianza poblacional σ².",
+     "c": [
+      "4",
+      "4.9",
+      "24",
+      "36"
+     ],
+     "a": 2,
+     "e": "σ² = (36 + 0 + 36) ÷ 3 = 72 ÷ 3 = <b>24</b>."
+    },
+    {
+     "q": "Datos: 9, 11, 9, 11 (media 10). Calcula la varianza poblacional σ².",
+     "c": [
+      "2",
+      "3",
+      "1.33",
+      "1"
+     ],
+     "a": 3,
+     "e": "σ² = (1 + 1 + 1 + 1) ÷ 4 = 4 ÷ 4 = <b>1</b>."
+    },
+    {
+     "q": "Datos: 13, 16, 13, 10 (media 13). Calcula la varianza poblacional σ².",
+     "c": [
+      "1.5",
+      "2.12",
+      "4.5",
+      "6"
+     ],
+     "a": 2,
+     "e": "σ² = (9 + 0 + 0 + 9) ÷ 4 = 18 ÷ 4 = <b>4.5</b>."
+    },
+    {
+     "q": "Datos: 11, 17, 15, 9, 13 (media 13). Calcula la varianza poblacional σ².",
+     "c": [
+      "8",
+      "2.4",
+      "2.83",
+      "10"
+     ],
+     "a": 0,
+     "e": "σ² = (16 + 4 + 0 + 4 + 16) ÷ 5 = 40 ÷ 5 = <b>8</b>."
+    },
+    {
+     "q": "Datos: 9, 19, 15, 13 (media 14). Calcula la varianza poblacional σ².",
+     "c": [
+      "13",
+      "3",
+      "3.61",
+      "17.33"
+     ],
+     "a": 0,
+     "e": "σ² = (25 + 1 + 1 + 25) ÷ 4 = 52 ÷ 4 = <b>13</b>."
+    },
+    {
+     "q": "Datos: 12, 14, 16, 10 (media 13). Calcula la varianza poblacional σ².",
+     "c": [
+      "2.24",
+      "5",
+      "2",
+      "6.67"
+     ],
+     "a": 1,
+     "e": "σ² = (9 + 1 + 1 + 9) ÷ 4 = 20 ÷ 4 = <b>5</b>."
+    },
+    {
+     "q": "Datos: 14, 10, 14, 10 (media 12). Calcula la varianza poblacional σ².",
+     "c": [
+      "4",
+      "2",
+      "5",
+      "5.33"
+     ],
+     "a": 0,
+     "e": "σ² = (4 + 4 + 4 + 4) ÷ 4 = 16 ÷ 4 = <b>4</b>."
+    },
+    {
+     "q": "Datos: 15, 3, 9 (media 9). Calcula la varianza poblacional σ².",
+     "c": [
+      "4",
+      "4.9",
+      "36",
+      "24"
+     ],
+     "a": 3,
+     "e": "σ² = (36 + 0 + 36) ÷ 3 = 72 ÷ 3 = <b>24</b>."
+    },
+    {
+     "q": "Datos: 12, 14, 12, 14 (media 13). Calcula la varianza poblacional σ².",
+     "c": [
+      "1.33",
+      "3",
+      "2",
+      "1"
+     ],
+     "a": 3,
+     "e": "σ² = (1 + 1 + 1 + 1) ÷ 4 = 4 ÷ 4 = <b>1</b>."
+    },
+    {
+     "q": "Datos: 9, 1, 5, 5 (media 5). Calcula la varianza poblacional σ².",
+     "c": [
+      "10.67",
+      "8",
+      "2.83",
+      "2"
+     ],
+     "a": 1,
+     "e": "σ² = (16 + 0 + 0 + 16) ÷ 4 = 32 ÷ 4 = <b>8</b>."
+    }
+   ]
+  },
+  {
+   "title": "Desviación estándar",
+   "items": [
+    {
+     "q": "Datos: 10, 10, 6, 6 (media 8). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "2",
+      "1",
+      "3",
+      "4"
+     ],
+     "a": 0,
+     "e": "σ² = 16 ÷ 4 = 4; σ = √4 = <b>2</b>."
+    },
+    {
+     "q": "Datos: 6, 4, 4, 6 (media 5). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "3",
+      "4",
+      "1",
+      "2"
+     ],
+     "a": 2,
+     "e": "σ² = 4 ÷ 4 = 1; σ = √1 = <b>1</b>."
+    },
+    {
+     "q": "Datos: 13, 13, 15, 15 (media 14). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "2",
+      "3",
+      "1",
+      "4"
+     ],
+     "a": 2,
+     "e": "σ² = 4 ÷ 4 = 1; σ = √1 = <b>1</b>."
+    },
+    {
+     "q": "Datos: 6, 8, 6, 8 (media 7). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "3",
+      "4",
+      "1",
+      "2"
+     ],
+     "a": 2,
+     "e": "σ² = 4 ÷ 4 = 1; σ = √1 = <b>1</b>."
+    },
+    {
+     "q": "Datos: 16, 12, 16, 12 (media 14). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "2",
+      "1",
+      "3",
+      "4"
+     ],
+     "a": 0,
+     "e": "σ² = 16 ÷ 4 = 4; σ = √4 = <b>2</b>."
+    },
+    {
+     "q": "Datos: 8, 2, 2, 8 (media 5). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "6",
+      "3",
+      "9",
+      "4"
+     ],
+     "a": 1,
+     "e": "σ² = 36 ÷ 4 = 9; σ = √9 = <b>3</b>."
+    },
+    {
+     "q": "Datos: 8, 8, 14, 14 (media 11). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "6",
+      "4",
+      "3",
+      "9"
+     ],
+     "a": 2,
+     "e": "σ² = 36 ÷ 4 = 9; σ = √9 = <b>3</b>."
+    },
+    {
+     "q": "Datos: 7, 7, 9, 9 (media 8). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "2",
+      "3",
+      "1",
+      "4"
+     ],
+     "a": 2,
+     "e": "σ² = 4 ÷ 4 = 1; σ = √1 = <b>1</b>."
+    },
+    {
+     "q": "Datos: 4, 10, 10, 4 (media 7). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "3",
+      "4",
+      "6",
+      "9"
+     ],
+     "a": 0,
+     "e": "σ² = 36 ÷ 4 = 9; σ = √9 = <b>3</b>."
+    },
+    {
+     "q": "Datos: 10, 6, 10, 6 (media 8). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "4",
+      "2",
+      "3",
+      "1"
+     ],
+     "a": 1,
+     "e": "σ² = 16 ÷ 4 = 4; σ = √4 = <b>2</b>."
+    },
+    {
+     "q": "Datos: 10, 10, 14, 14 (media 12). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "3",
+      "2",
+      "1",
+      "4"
+     ],
+     "a": 1,
+     "e": "σ² = 16 ÷ 4 = 4; σ = √4 = <b>2</b>."
+    },
+    {
+     "q": "Datos: 14, 16, 16, 14 (media 15). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "4",
+      "1",
+      "2",
+      "3"
+     ],
+     "a": 1,
+     "e": "σ² = 4 ÷ 4 = 1; σ = √1 = <b>1</b>."
+    },
+    {
+     "q": "Datos: 18, 12, 12, 18 (media 15). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "9",
+      "3",
+      "4",
+      "6"
+     ],
+     "a": 1,
+     "e": "σ² = 36 ÷ 4 = 9; σ = √9 = <b>3</b>."
+    },
+    {
+     "q": "Datos: 6, 6, 12, 12 (media 9). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "9",
+      "6",
+      "4",
+      "3"
+     ],
+     "a": 3,
+     "e": "σ² = 36 ÷ 4 = 9; σ = √9 = <b>3</b>."
+    },
+    {
+     "q": "Datos: 4, 6, 4, 6 (media 5). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "4",
+      "3",
+      "2",
+      "1"
+     ],
+     "a": 3,
+     "e": "σ² = 4 ÷ 4 = 1; σ = √1 = <b>1</b>."
+    },
+    {
+     "q": "Datos: 10, 10, 16, 16 (media 13). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "9",
+      "4",
+      "6",
+      "3"
+     ],
+     "a": 3,
+     "e": "σ² = 36 ÷ 4 = 9; σ = √9 = <b>3</b>."
+    },
+    {
+     "q": "Datos: 15, 11, 11, 15 (media 13). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "2",
+      "3",
+      "1",
+      "4"
+     ],
+     "a": 0,
+     "e": "σ² = 16 ÷ 4 = 4; σ = √4 = <b>2</b>."
+    },
+    {
+     "q": "Datos: 12, 12, 18, 18 (media 15). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "3",
+      "9",
+      "6",
+      "4"
+     ],
+     "a": 0,
+     "e": "σ² = 36 ÷ 4 = 9; σ = √9 = <b>3</b>."
+    },
+    {
+     "q": "Datos: 6, 8, 8, 6 (media 7). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "4",
+      "2",
+      "3",
+      "1"
+     ],
+     "a": 3,
+     "e": "σ² = 4 ÷ 4 = 1; σ = √1 = <b>1</b>."
+    },
+    {
+     "q": "Datos: 12, 12, 10, 10 (media 11). Calcula la desviación estándar poblacional σ.",
+     "c": [
+      "3",
+      "2",
+      "4",
+      "1"
+     ],
+     "a": 3,
+     "e": "σ² = 4 ÷ 4 = 1; σ = √1 = <b>1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Comparar e interpretar",
+   "items": [
+    {
+     "q": "Datos: 16, 2, 5, 15, 12 (media 10). ¿Cuál es la varianza?",
+     "c": [
+      "5.2",
+      "5.55",
+      "38.5",
+      "30.8"
+     ],
+     "a": 3,
+     "e": "σ² = Σ(xᵢ − x̄)² / N = 154 / 5 ≈ <b>30.8</b>."
+    },
+    {
+     "q": "Datos: 7, 20, 14, 4, 20 (media 13). ¿Cuál es la varianza?",
+     "c": [
+      "43.2",
+      "54",
+      "6",
+      "6.57"
+     ],
+     "a": 0,
+     "e": "σ² = Σ(xᵢ − x̄)² / N = 216 / 5 ≈ <b>43.2</b>."
+    },
+    {
+     "q": "La desviación estándar es 0 cuando…",
+     "c": [
+      "la media es 0",
+      "hay datos negativos",
+      "hay pocos datos",
+      "todos los datos son iguales"
+     ],
+     "a": 3,
+     "e": "σ = 0 significa que no hay variación."
+    },
+    {
+     "q": "¿Qué relación hay entre varianza y desviación estándar?",
+     "c": [
+      "la varianza es la mitad",
+      "la desviación estándar es el cuadrado de la varianza",
+      "la desviación estándar es la raíz cuadrada de la varianza",
+      "son iguales"
+     ],
+     "a": 2,
+     "e": "σ = √σ². La σ tiene las mismas unidades que los datos."
+    },
+    {
+     "q": "Si a todos los datos se les suma 5, la desviación estándar…",
+     "c": [
+      "no cambia",
+      "aumenta en 5",
+      "disminuye",
+      "se multiplica por 5"
+     ],
+     "a": 0,
+     "e": "Sumar lo mismo mueve todos los datos, pero no cambia qué tan separados están."
+    },
+    {
+     "q": "Grupo A: media 53, σ = 1. Grupo B: media 50, σ = 8. ¿Qué grupo es más homogéneo (menor coeficiente de variación)?",
+     "c": [
+      "el grupo B",
+      "los dos igual",
+      "el grupo A",
+      "el de mayor media"
+     ],
+     "a": 2,
+     "e": "CV A ≈ 1.89 %, CV B ≈ 16 %: <b>el grupo A</b>."
+    },
+    {
+     "q": "Unos datos tienen media 7 y desviación estándar 5.87. ¿Cuál es su coeficiente de variación?",
+     "c": [
+      "0.84 %",
+      "41.12 %",
+      "83.91 %",
+      "119.18 %"
+     ],
+     "a": 2,
+     "e": "CV = σ / x̄ × 100 = 5.87 / 7 × 100 ≈ <b>83.91 %</b>."
+    },
+    {
+     "q": "Datos: 12, 8, 12, 4 (media 9). ¿Cuál es la desviación estándar?",
+     "c": [
+      "3",
+      "3.83",
+      "11",
+      "3.32"
+     ],
+     "a": 3,
+     "e": "σ = √(Σ(xᵢ − x̄)² / N) = √11 ≈ <b>3.32</b>."
+    },
+    {
+     "q": "Unos datos tienen media 10 y desviación estándar 6.16. ¿Cuál es su coeficiente de variación?",
+     "c": [
+      "61.65 %",
+      "0.62 %",
+      "162.22 %",
+      "61.64 %"
+     ],
+     "a": 3,
+     "e": "CV = σ / x̄ × 100 = 6.16 / 10 × 100 ≈ <b>61.64 %</b>."
+    },
+    {
+     "q": "Datos: 14, 19, 13, 2 (media 12). ¿Cuál es la desviación estándar?",
+     "c": [
+      "6.2",
+      "38.5",
+      "7.16",
+      "5"
+     ],
+     "a": 0,
+     "e": "σ = √(Σ(xᵢ − x̄)² / N) = √38.5 ≈ <b>6.2</b>."
+    },
+    {
+     "q": "Grupo A: media 54, σ = 1. Grupo B: media 37, σ = 6. ¿Qué grupo es más homogéneo (menor coeficiente de variación)?",
+     "c": [
+      "el grupo B",
+      "el grupo A",
+      "el de mayor media",
+      "los dos igual"
+     ],
+     "a": 1,
+     "e": "CV A ≈ 1.85 %, CV B ≈ 16.22 %: <b>el grupo A</b>."
+    },
+    {
+     "q": "Si todos los datos se multiplican por 3, la desviación estándar…",
+     "c": [
+      "se multiplica por 9",
+      "se multiplica por 3",
+      "aumenta en 3",
+      "no cambia"
+     ],
+     "a": 1,
+     "e": "Multiplicar estira la separación: σ se multiplica por 3 (y la varianza por 9)."
+    },
+    {
+     "q": "¿Qué medida de tendencia central conviene para la variable «marca de celular favorita»?",
+     "c": [
+      "la mediana",
+      "la moda",
+      "la media",
+      "la desviación estándar"
+     ],
+     "a": 1,
+     "e": "Para datos cualitativos nominales solo tiene sentido la moda."
+    },
+    {
+     "q": "Datos: 14, 17, 19, 14 (media 16). ¿Cuál es la varianza?",
+     "c": [
+      "2",
+      "6",
+      "4.5",
+      "2.12"
+     ],
+     "a": 2,
+     "e": "σ² = Σ(xᵢ − x̄)² / N = 18 / 4 ≈ <b>4.5</b>."
+    },
+    {
+     "q": "Datos: 10, 3, 4, 7 (media 6). ¿Cuál es la varianza?",
+     "c": [
+      "2.5",
+      "10",
+      "2.74",
+      "7.5"
+     ],
+     "a": 3,
+     "e": "σ² = Σ(xᵢ − x̄)² / N = 30 / 4 ≈ <b>7.5</b>."
+    },
+    {
+     "q": "Datos: 8, 13, 16, 17, 6 (media 12). ¿Cuál es la varianza?",
+     "c": [
+      "18.8",
+      "4.34",
+      "23.5",
+      "4"
+     ],
+     "a": 0,
+     "e": "σ² = Σ(xᵢ − x̄)² / N = 94 / 5 ≈ <b>18.8</b>."
+    },
+    {
+     "q": "Unos datos tienen media 10 y desviación estándar 6.32. ¿Cuál es su coeficiente de variación?",
+     "c": [
+      "63.26 %",
+      "63.25 %",
+      "0.63 %",
+      "158.11 %"
+     ],
+     "a": 1,
+     "e": "CV = σ / x̄ × 100 = 6.32 / 10 × 100 ≈ <b>63.25 %</b>."
+    },
+    {
+     "q": "Unos datos tienen media 11 y desviación estándar 5.9. ¿Cuál es su coeficiente de variación?",
+     "c": [
+      "53.63 %",
+      "186.47 %",
+      "64.89 %",
+      "0.54 %"
+     ],
+     "a": 0,
+     "e": "CV = σ / x̄ × 100 = 5.9 / 11 × 100 ≈ <b>53.63 %</b>."
+    },
+    {
+     "q": "Datos: 7, 9, 3, 7, 16, 12 (media 9). ¿Cuál es la desviación estándar?",
+     "c": [
+      "4.52",
+      "4.12",
+      "3.33",
+      "17"
+     ],
+     "a": 1,
+     "e": "σ = √(Σ(xᵢ − x̄)² / N) = √17 ≈ <b>4.12</b>."
+    },
+    {
+     "q": "Dos grupos tienen la misma media en un examen; el grupo A tiene σ = 2 y el B tiene σ = 9. ¿Qué significa?",
+     "c": [
+      "el grupo A tiene más alumnos",
+      "los dos grupos son iguales",
+      "las calificaciones de A están más concentradas cerca de la media",
+      "el grupo B tiene mejores calificaciones"
+     ],
+     "a": 2,
+     "e": "Una σ menor indica datos más cercanos a la media."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 13,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "pensamiento-matematico-1"
+}

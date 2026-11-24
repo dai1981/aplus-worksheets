@@ -1,0 +1,1157 @@
+{
+ "slug": "tablas-de-doble-entrada",
+ "title": "Tablas de doble entrada y riesgo relativo",
+ "seo_title": "Tablas de doble entrada – Pensamiento Matemático I: ejercicios con respuestas",
+ "short_title": "Tablas de doble entrada",
+ "domain": "Estadística",
+ "standard_code": "Pensamiento Matemático I · Progresión 8: Variables categóricas y tablas de doble entrada",
+ "standard_url": "https://educacionmediasuperior.sep.gob.mx/work/models/sems/Resource/13634/1/images/Progresiones%20de%20aprendizaje%20-%20Pensamiento%20matematico(1).pdf",
+ "standard_text": "Analiza la relación entre dos variables categóricas con tablas de doble entrada, proporciones condicionales y riesgo relativo, y decide si son independientes (resumen de la progresión 8 de aprendizaje de Pensamiento Matemático I (MCCEMS, SEP 2023))",
+ "meta_desc": "Ejercicios de Pensamiento Matemático I: tablas de doble entrada, totales y proporciones, independencia de variables categóricas y riesgo relativo. 100 ejercicios con respuestas.",
+ "key_big": "Compara proporciones por fila",
+ "key_sub": "Iguales: independientes. RR = riesgo ÷ riesgo.",
+ "body_html": "<h2>Cómo se hace</h2><p>Una <b>tabla de doble entrada</b> cruza dos variables categóricas. Los totales están en la última fila y columna.</p><p>Para ver si hay relación, compara las <b>proporciones por fila</b>. Si son iguales, las variables son <b>independientes</b>.</p><p><b>Riesgo relativo</b>: RR = riesgo en el grupo expuesto ÷ riesgo en el no expuesto. RR = 1: no hay diferencia; RR = 2: el doble.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Fuman: 20 de 100 con tos. No fuman: 10 de 200 con tos.</p><p class='sn-ex-s'>0.2 ÷ 0.05</p><p class='sn-ex-a'>Respuesta: RR = 4</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Comparar números absolutos</td><td>Compara proporciones: los grupos tienen distinto tamaño.</td></tr><tr><td>Dividir entre el total de la tabla</td><td>El riesgo se calcula dentro de cada grupo.</td></tr><tr><td>Concluir causa</td><td>Una relación en la tabla no prueba que una cause la otra.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿RR menor que 1 qué indica?",
+   "a": "Que el riesgo es menor en el grupo expuesto: el factor podría ser protector (por ejemplo, una vacuna)."
+  },
+  {
+   "q": "¿Independiente significa que no hay relación?",
+   "a": "Sí: saber el valor de una variable no cambia las proporciones de la otra."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Leer la tabla",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se cansa en clase</th><th>No se cansa</th><th>Total</th></tr></thead><tbody><tr><td>Desayuna</td><td>8</td><td>42</td><td>50</td></tr><tr><td>No desayuna</td><td>11</td><td>39</td><td>50</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «se cansa en clase»?",
+     "c": [
+      "0.16",
+      "0.38",
+      "0.421",
+      "0.19"
+     ],
+     "a": 3,
+     "e": "(8 + 11) ÷ 100 = <b>0.19</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se cansa en clase</th><th>No se cansa</th><th>Total</th></tr></thead><tbody><tr><td>Desayuna</td><td>29</td><td>171</td><td>200</td></tr><tr><td>No desayuna</td><td>22</td><td>58</td><td>80</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «se cansa en clase»?",
+     "c": [
+      "0.182",
+      "0.255",
+      "0.569",
+      "0.145"
+     ],
+     "a": 0,
+     "e": "(29 + 22) ÷ 280 = <b>0.182</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>21</td><td>99</td><td>120</td></tr><tr><td>Duerme 6 h o más</td><td>47</td><td>53</td><td>100</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «reprueba»?",
+     "c": [
+      "0.310",
+      "0.309",
+      "0.175",
+      "0.567"
+     ],
+     "a": 1,
+     "e": "(21 + 47) ÷ 220 = <b>0.309</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Celular</th><th>Otro</th><th>Total</th></tr></thead><tbody><tr><td>&lt; 40 años</td><td>50</td><td>50</td><td>100</td></tr><tr><td>≥ 40 años</td><td>75</td><td>75</td><td>150</td></tr><tr><td>Total</td><td>125</td><td>125</td><td>250</td></tr></tbody></table></div>Se pregunta a 250 clientes de un supermercado y se elige uno al azar. Sean A = «tiene menos de 40 años» y B = «paga con el celular». ¿Son A y B independientes?",
+     "c": [
+      "sí, porque P(A ∩ B) = P(A) × P(B)",
+      "no, porque son mutuamente excluyentes",
+      "no, porque P(A ∩ B) ≠ P(A) × P(B)",
+      "sí, porque P(A ∩ B) ≠ 0"
+     ],
+     "a": 0,
+     "e": "P(A ∩ B) = 0.2 y P(A) × P(B) = 0.4 × 0.5 = 0.2: <b>sí, porque P(A ∩ B) = P(A) × P(B)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Economía</th><th>No</th><th>Total</th></tr></thead><tbody><tr><td>Papel</td><td>60</td><td>40</td><td>100</td></tr><tr><td>Internet</td><td>90</td><td>60</td><td>150</td></tr><tr><td>Total</td><td>150</td><td>100</td><td>250</td></tr></tbody></table></div>Se pregunta a 250 lectores de un periódico y se elige uno al azar. Sean A = «lo lee en papel» y B = «lee la sección de economía». Calcula P(B|A).",
+     "c": [
+      "0.7",
+      "0.24",
+      "0.6",
+      "0.4"
+     ],
+     "a": 2,
+     "e": "Solo cuenta la fila «Papel»: 60/100 = <b>0.6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>4</td><td>96</td><td>100</td></tr><tr><td>Duerme 6 h o más</td><td>14</td><td>86</td><td>100</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «reprueba»?",
+     "c": [
+      "0.04",
+      "0.09",
+      "0.18",
+      "0.222"
+     ],
+     "a": 1,
+     "e": "(4 + 14) ÷ 200 = <b>0.09</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Economía</th><th>No</th><th>Total</th></tr></thead><tbody><tr><td>Papel</td><td>89</td><td>18</td><td>107</td></tr><tr><td>Internet</td><td>15</td><td>178</td><td>193</td></tr><tr><td>Total</td><td>104</td><td>196</td><td>300</td></tr></tbody></table></div>Se pregunta a 300 lectores de un periódico y se elige uno al azar. Sean A = «lo lee en papel» y B = «lee la sección de economía». Calcula P(B|A).",
+     "c": [
+      "<span class='fr'><span class='fn'>89</span><span class='fd'>107</span></span>",
+      "<span class='fr'><span class='fn'>89</span><span class='fd'>104</span></span>",
+      "<span class='fr'><span class='fn'>89</span><span class='fd'>300</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>75</span></span>"
+     ],
+     "a": 0,
+     "e": "Solo cuenta la fila «Papel»: 89/107 = <b><span class='fr'><span class='fn'>89</span><span class='fd'>107</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Economía</th><th>No</th><th>Total</th></tr></thead><tbody><tr><td>Papel</td><td>45</td><td>20</td><td>65</td></tr><tr><td>Internet</td><td>26</td><td>59</td><td>85</td></tr><tr><td>Total</td><td>71</td><td>79</td><td>150</td></tr></tbody></table></div>Se pregunta a 150 lectores de un periódico y se elige uno al azar. Sean A = «lo lee en papel» y B = «lee la sección de economía». ¿Son A y B independientes?",
+     "c": [
+      "no, porque son mutuamente excluyentes",
+      "sí, porque P(A ∩ B) ≠ 0",
+      "no, porque P(A ∩ B) ≠ P(A) × P(B)",
+      "sí, porque P(A ∩ B) = P(A) × P(B)"
+     ],
+     "a": 2,
+     "e": "P(A ∩ B) = 0.3 y P(A) × P(B) = <span class='fr'><span class='fn'>13</span><span class='fd'>30</span></span> × <span class='fr'><span class='fn'>71</span><span class='fd'>150</span></span> = <span class='fr'><span class='fn'>923</span><span class='fd'>4 500</span></span>: <b>no, porque P(A ∩ B) ≠ P(A) × P(B)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>62</td><td>188</td><td>250</td></tr><tr><td>Duerme 6 h o más</td><td>70</td><td>130</td><td>200</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «reprueba»?",
+     "c": [
+      "0.528",
+      "0.47",
+      "0.293",
+      "0.248"
+     ],
+     "a": 2,
+     "e": "(62 + 70) ÷ 450 = <b>0.293</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>41</td><td>159</td><td>200</td></tr><tr><td>No usa casco</td><td>15</td><td>35</td><td>50</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «lesión grave»?",
+     "c": [
+      "0.732",
+      "0.28",
+      "0.205",
+      "0.224"
+     ],
+     "a": 3,
+     "e": "(41 + 15) ÷ 250 = <b>0.224</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>3</td><td>97</td><td>100</td></tr><tr><td>No fuma</td><td>30</td><td>170</td><td>200</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «tos crónica»?",
+     "c": [
+      "0.33",
+      "0.11",
+      "0.091",
+      "0.03"
+     ],
+     "a": 1,
+     "e": "(3 + 30) ÷ 300 = <b>0.11</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>38</td><td>42</td><td>80</td></tr><tr><td>No usa casco</td><td>3</td><td>197</td><td>200</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «lesión grave»?",
+     "c": [
+      "0.927",
+      "0.146",
+      "0.5125",
+      "0.475"
+     ],
+     "a": 1,
+     "e": "(38 + 3) ÷ 280 = <b>0.146</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>36</td><td>64</td><td>100</td></tr><tr><td>No se vacunó</td><td>49</td><td>51</td><td>100</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «se enfermó»?",
+     "c": [
+      "0.424",
+      "0.36",
+      "0.425",
+      "0.85"
+     ],
+     "a": 2,
+     "e": "(36 + 49) ÷ 200 = <b>0.425</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>24</td><td>56</td><td>80</td></tr><tr><td>No se vacunó</td><td>22</td><td>78</td><td>100</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «se enfermó»?",
+     "c": [
+      "0.3",
+      "0.575",
+      "0.522",
+      "0.256"
+     ],
+     "a": 3,
+     "e": "(24 + 22) ÷ 180 = <b>0.256</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Celular</th><th>Otro</th><th>Total</th></tr></thead><tbody><tr><td>&lt; 40 años</td><td>26</td><td>9</td><td>35</td></tr><tr><td>≥ 40 años</td><td>11</td><td>54</td><td>65</td></tr><tr><td>Total</td><td>37</td><td>63</td><td>100</td></tr></tbody></table></div>Se pregunta a 100 clientes de un supermercado y se elige uno al azar. Sean A = «tiene menos de 40 años» y B = «paga con el celular». Calcula P(B).",
+     "c": [
+      "0.37",
+      "0.63",
+      "0.26",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>35</span></span>"
+     ],
+     "a": 0,
+     "e": "Total de la columna «Celular» entre el total: 37/100 = <b>0.37</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>70</td><td>130</td><td>200</td></tr><tr><td>No usa casco</td><td>10</td><td>90</td><td>100</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «lesión grave»?",
+     "c": [
+      "0.875",
+      "0.4",
+      "0.35",
+      "0.267"
+     ],
+     "a": 3,
+     "e": "(70 + 10) ÷ 300 = <b>0.267</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Teletrabaja</th><th>No</th><th>Total</th></tr></thead><tbody><tr><td>Mañana</td><td>45</td><td>65</td><td>110</td></tr><tr><td>Tarde</td><td>65</td><td>75</td><td>140</td></tr><tr><td>Total</td><td>110</td><td>140</td><td>250</td></tr></tbody></table></div>Se pregunta a 250 trabajadores de una empresa y se elige uno al azar. Sean A = «trabaja de mañana» y B = «teletrabaja algún día». Calcula P(B|A).",
+     "c": [
+      "0.18",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>22</span></span>",
+      "0.44"
+     ],
+     "a": 1,
+     "e": "Solo cuenta la fila «Mañana»: 45/110 = <b><span class='fr'><span class='fn'>9</span><span class='fd'>22</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Bici</th><th>No bici</th><th>Total</th></tr></thead><tbody><tr><td>Centro</td><td>58</td><td>33</td><td>91</td></tr><tr><td>Afueras</td><td>62</td><td>97</td><td>159</td></tr><tr><td>Total</td><td>120</td><td>130</td><td>250</td></tr></tbody></table></div>Se pregunta a 250 vecinos de un municipio y se elige uno al azar. Sean A = «vive en el centro» y B = «usa la bicicleta». Calcula P(B|A).",
+     "c": [
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>60</span></span>",
+      "0.48",
+      "0.232",
+      "<span class='fr'><span class='fn'>58</span><span class='fd'>91</span></span>"
+     ],
+     "a": 3,
+     "e": "Solo cuenta la fila «Centro»: 58/91 = <b><span class='fr'><span class='fn'>58</span><span class='fd'>91</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se cansa en clase</th><th>No se cansa</th><th>Total</th></tr></thead><tbody><tr><td>Desayuna</td><td>34</td><td>46</td><td>80</td></tr><tr><td>No desayuna</td><td>123</td><td>177</td><td>300</td></tr></tbody></table></div>¿Qué proporción de <b>todas</b> las personas tiene «se cansa en clase»?",
+     "c": [
+      "0.413",
+      "0.217",
+      "0.425",
+      "1.9625"
+     ],
+     "a": 0,
+     "e": "(34 + 123) ÷ 380 = <b>0.413</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Celular</th><th>Otro</th><th>Total</th></tr></thead><tbody><tr><td>&lt; 40 años</td><td>30</td><td>120</td><td>150</td></tr><tr><td>≥ 40 años</td><td>20</td><td>80</td><td>100</td></tr><tr><td>Total</td><td>50</td><td>200</td><td>250</td></tr></tbody></table></div>Se pregunta a 250 clientes de un supermercado y se elige uno al azar. Sean A = «tiene menos de 40 años» y B = «paga con el celular». Calcula P(B|A).",
+     "c": [
+      "0.12",
+      "0.6",
+      "0.2",
+      "0.8"
+     ],
+     "a": 2,
+     "e": "Solo cuenta la fila «&lt; 40 años»: 30/150 = <b>0.2</b>."
+    }
+   ]
+  },
+  {
+   "title": "Riesgo en cada grupo",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se cansa en clase</th><th>No se cansa</th><th>Total</th></tr></thead><tbody><tr><td>Desayuna</td><td>14</td><td>86</td><td>100</td></tr><tr><td>No desayuna</td><td>10</td><td>40</td><td>50</td></tr></tbody></table></div>¿Cuál es el riesgo de «se cansa en clase» en el grupo «desayuna»?",
+     "c": [
+      "0.583",
+      "0.2",
+      "0.093",
+      "0.14"
+     ],
+     "a": 3,
+     "e": "Riesgo = 14 ÷ 100 = <b>0.14</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>6</td><td>144</td><td>150</td></tr><tr><td>Duerme 6 h o más</td><td>25</td><td>175</td><td>200</td></tr></tbody></table></div>¿Cuál es el riesgo de «reprueba» en el grupo «duerme menos de 6 h»?",
+     "c": [
+      "0.04",
+      "0.017",
+      "0.125",
+      "0.194"
+     ],
+     "a": 0,
+     "e": "Riesgo = 6 ÷ 150 = <b>0.04</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se cansa en clase</th><th>No se cansa</th><th>Total</th></tr></thead><tbody><tr><td>Desayuna</td><td>25</td><td>25</td><td>50</td></tr><tr><td>No desayuna</td><td>26</td><td>74</td><td>100</td></tr></tbody></table></div>¿Cuál es el riesgo de «se cansa en clase» en el grupo «desayuna»?",
+     "c": [
+      "0.49",
+      "0.167",
+      "0.5",
+      "0.26"
+     ],
+     "a": 2,
+     "e": "Riesgo = 25 ÷ 50 = <b>0.5</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>79</td><td>171</td><td>250</td></tr><tr><td>No fuma</td><td>2</td><td>198</td><td>200</td></tr></tbody></table></div>¿Cuál es el riesgo de «tos crónica» en el grupo «fuma»?",
+     "c": [
+      "0.01",
+      "0.975",
+      "0.176",
+      "0.316"
+     ],
+     "a": 3,
+     "e": "Riesgo = 79 ÷ 250 = <b>0.316</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>24</td><td>26</td><td>50</td></tr><tr><td>No se vacunó</td><td>28</td><td>172</td><td>200</td></tr></tbody></table></div>¿Cuál es el riesgo de «se enfermó» en el grupo «se vacunó»?",
+     "c": [
+      "0.096",
+      "0.462",
+      "0.48",
+      "0.14"
+     ],
+     "a": 2,
+     "e": "Riesgo = 24 ÷ 50 = <b>0.48</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>22</td><td>58</td><td>80</td></tr><tr><td>No usa casco</td><td>15</td><td>35</td><td>50</td></tr></tbody></table></div>¿Cuál es el riesgo de «lesión grave» en el grupo «usa casco»?",
+     "c": [
+      "0.275",
+      "0.3",
+      "0.595",
+      "0.169"
+     ],
+     "a": 0,
+     "e": "Riesgo = 22 ÷ 80 = <b>0.275</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>15</td><td>35</td><td>50</td></tr><tr><td>Duerme 6 h o más</td><td>95</td><td>105</td><td>200</td></tr></tbody></table></div>¿Cuál es el riesgo de «reprueba» en el grupo «duerme menos de 6 h»?",
+     "c": [
+      "0.136",
+      "0.06",
+      "0.475",
+      "0.3"
+     ],
+     "a": 3,
+     "e": "Riesgo = 15 ÷ 50 = <b>0.3</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>15</td><td>105</td><td>120</td></tr><tr><td>No se vacunó</td><td>19</td><td>81</td><td>100</td></tr></tbody></table></div>¿Cuál es el riesgo de «se enfermó» en el grupo «se vacunó»?",
+     "c": [
+      "0.441",
+      "0.125",
+      "0.19",
+      "0.068"
+     ],
+     "a": 1,
+     "e": "Riesgo = 15 ÷ 120 = <b>0.125</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se cansa en clase</th><th>No se cansa</th><th>Total</th></tr></thead><tbody><tr><td>Desayuna</td><td>41</td><td>209</td><td>250</td></tr><tr><td>No desayuna</td><td>126</td><td>174</td><td>300</td></tr></tbody></table></div>¿Cuál es el riesgo de «se cansa en clase» en el grupo «desayuna»?",
+     "c": [
+      "0.075",
+      "0.246",
+      "0.42",
+      "0.164"
+     ],
+     "a": 3,
+     "e": "Riesgo = 41 ÷ 250 = <b>0.164</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>9</td><td>41</td><td>50</td></tr><tr><td>No fuma</td><td>37</td><td>163</td><td>200</td></tr></tbody></table></div>¿Cuál es el riesgo de «tos crónica» en el grupo «fuma»?",
+     "c": [
+      "0.196",
+      "0.18",
+      "0.036",
+      "0.185"
+     ],
+     "a": 1,
+     "e": "Riesgo = 9 ÷ 50 = <b>0.18</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>19</td><td>81</td><td>100</td></tr><tr><td>No usa casco</td><td>33</td><td>267</td><td>300</td></tr></tbody></table></div>¿Cuál es el riesgo de «lesión grave» en el grupo «usa casco»?",
+     "c": [
+      "0.365",
+      "0.11",
+      "0.19",
+      "0.048"
+     ],
+     "a": 2,
+     "e": "Riesgo = 19 ÷ 100 = <b>0.19</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se cansa en clase</th><th>No se cansa</th><th>Total</th></tr></thead><tbody><tr><td>Desayuna</td><td>61</td><td>139</td><td>200</td></tr><tr><td>No desayuna</td><td>28</td><td>52</td><td>80</td></tr></tbody></table></div>¿Cuál es el riesgo de «se cansa en clase» en el grupo «desayuna»?",
+     "c": [
+      "0.305",
+      "0.685",
+      "0.218",
+      "0.35"
+     ],
+     "a": 0,
+     "e": "Riesgo = 61 ÷ 200 = <b>0.305</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>16</td><td>84</td><td>100</td></tr><tr><td>Duerme 6 h o más</td><td>8</td><td>192</td><td>200</td></tr></tbody></table></div>¿Cuál es el riesgo de «reprueba» en el grupo «duerme menos de 6 h»?",
+     "c": [
+      "0.053",
+      "0.16",
+      "0.667",
+      "0.04"
+     ],
+     "a": 1,
+     "e": "Riesgo = 16 ÷ 100 = <b>0.16</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>12</td><td>108</td><td>120</td></tr><tr><td>No fuma</td><td>65</td><td>135</td><td>200</td></tr></tbody></table></div>¿Cuál es el riesgo de «tos crónica» en el grupo «fuma»?",
+     "c": [
+      "0.1",
+      "0.325",
+      "0.156",
+      "0.037"
+     ],
+     "a": 0,
+     "e": "Riesgo = 12 ÷ 120 = <b>0.1</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>5</td><td>45</td><td>50</td></tr><tr><td>No se vacunó</td><td>44</td><td>56</td><td>100</td></tr></tbody></table></div>¿Cuál es el riesgo de «se enfermó» en el grupo «se vacunó»?",
+     "c": [
+      "0.102",
+      "0.033",
+      "0.44",
+      "0.1"
+     ],
+     "a": 3,
+     "e": "Riesgo = 5 ÷ 50 = <b>0.1</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>3</td><td>97</td><td>100</td></tr><tr><td>No se vacunó</td><td>15</td><td>35</td><td>50</td></tr></tbody></table></div>¿Cuál es el riesgo de «se enfermó» en el grupo «se vacunó»?",
+     "c": [
+      "0.02",
+      "0.03",
+      "0.3",
+      "0.167"
+     ],
+     "a": 1,
+     "e": "Riesgo = 3 ÷ 100 = <b>0.03</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>56</td><td>194</td><td>250</td></tr><tr><td>Duerme 6 h o más</td><td>24</td><td>26</td><td>50</td></tr></tbody></table></div>¿Cuál es el riesgo de «reprueba» en el grupo «duerme menos de 6 h»?",
+     "c": [
+      "0.48",
+      "0.7",
+      "0.224",
+      "0.187"
+     ],
+     "a": 2,
+     "e": "Riesgo = 56 ÷ 250 = <b>0.224</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>10</td><td>90</td><td>100</td></tr><tr><td>Duerme 6 h o más</td><td>39</td><td>161</td><td>200</td></tr></tbody></table></div>¿Cuál es el riesgo de «reprueba» en el grupo «duerme menos de 6 h»?",
+     "c": [
+      "0.204",
+      "0.195",
+      "0.1",
+      "0.033"
+     ],
+     "a": 2,
+     "e": "Riesgo = 10 ÷ 100 = <b>0.1</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>15</td><td>235</td><td>250</td></tr><tr><td>No se vacunó</td><td>24</td><td>76</td><td>100</td></tr></tbody></table></div>¿Cuál es el riesgo de «se enfermó» en el grupo «se vacunó»?",
+     "c": [
+      "0.385",
+      "0.06",
+      "0.043",
+      "0.24"
+     ],
+     "a": 1,
+     "e": "Riesgo = 15 ÷ 250 = <b>0.06</b> (casos con el resultado ÷ total del grupo)."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>13</td><td>37</td><td>50</td></tr><tr><td>No fuma</td><td>12</td><td>38</td><td>50</td></tr></tbody></table></div>¿Cuál es el riesgo de «tos crónica» en el grupo «fuma»?",
+     "c": [
+      "0.26",
+      "0.13",
+      "0.24",
+      "0.52"
+     ],
+     "a": 0,
+     "e": "Riesgo = 13 ÷ 50 = <b>0.26</b> (casos con el resultado ÷ total del grupo)."
+    }
+   ]
+  },
+  {
+   "title": "Riesgo relativo",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>14</td><td>86</td><td>100</td></tr><tr><td>No se vacunó</td><td>38</td><td>42</td><td>80</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «se enfermó» para «se vacunó» respecto a «no se vacunó» (a dos decimales).",
+     "c": [
+      "0.29",
+      "3.39",
+      "0.37",
+      "−0.34"
+     ],
+     "a": 0,
+     "e": "RR = (14/100) ÷ (38/80) = 0.14 ÷ 0.475 ≈ <b>0.29</b>."
+    },
+    {
+     "q": "En un estudio, el riesgo relativo de enfermarse para quienes viven cerca de una fábrica es RR = 3. ¿Qué significa?",
+     "c": [
+      "el riesgo es el triple en el grupo expuesto",
+      "el riesgo es el doble en el grupo expuesto",
+      "el riesgo es la mitad en el grupo expuesto",
+      "el riesgo es igual en los dos grupos"
+     ],
+     "a": 0,
+     "e": "RR = riesgo expuestos ÷ riesgo no expuestos = 3 → <b>el riesgo es el triple en el grupo expuesto</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>4</td><td>96</td><td>100</td></tr><tr><td>Duerme 6 h o más</td><td>6</td><td>44</td><td>50</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «reprueba» para «duerme menos de 6 h» respecto a «duerme 6 h o más» (a dos decimales).",
+     "c": [
+      "−0.08",
+      "0.33",
+      "3",
+      "0.67"
+     ],
+     "a": 1,
+     "e": "RR = (4/100) ÷ (6/50) = 0.04 ÷ 0.12 ≈ <b>0.33</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>4</td><td>46</td><td>50</td></tr><tr><td>No usa casco</td><td>38</td><td>42</td><td>80</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «lesión grave» para «usa casco» respecto a «no usa casco» (a dos decimales).",
+     "c": [
+      "0.11",
+      "−0.4",
+      "5.94",
+      "0.17"
+     ],
+     "a": 3,
+     "e": "RR = (4/50) ÷ (38/80) = 0.08 ÷ 0.475 ≈ <b>0.17</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>18</td><td>32</td><td>50</td></tr><tr><td>No fuma</td><td>114</td><td>186</td><td>300</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «tos crónica» para «fuma» respecto a «no fuma» (a dos decimales).",
+     "c": [
+      "0.95",
+      "1.06",
+      "0.16",
+      "−0.02"
+     ],
+     "a": 0,
+     "e": "RR = (18/50) ÷ (114/300) = 0.36 ÷ 0.38 ≈ <b>0.95</b>."
+    },
+    {
+     "q": "En un estudio, el riesgo relativo de enfermarse para quienes viven cerca de una fábrica es RR = 1.5. ¿Qué significa?",
+     "c": [
+      "el riesgo es el triple en el grupo expuesto",
+      "el riesgo es el doble en el grupo expuesto",
+      "el riesgo es 1.5 veces mayor en el grupo expuesto",
+      "el riesgo es igual en los dos grupos"
+     ],
+     "a": 2,
+     "e": "RR = riesgo expuestos ÷ riesgo no expuestos = 1.5 → <b>el riesgo es 1.5 veces mayor en el grupo expuesto</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se cansa en clase</th><th>No se cansa</th><th>Total</th></tr></thead><tbody><tr><td>Desayuna</td><td>18</td><td>32</td><td>50</td></tr><tr><td>No desayuna</td><td>6</td><td>44</td><td>50</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «se cansa en clase» para «desayuna» respecto a «no desayuna» (a dos decimales).",
+     "c": [
+      "0.33",
+      "4",
+      "0.24",
+      "3"
+     ],
+     "a": 3,
+     "e": "RR = (18/50) ÷ (6/50) = 0.36 ÷ 0.12 ≈ <b>3</b>."
+    },
+    {
+     "q": "En un estudio, el riesgo relativo de enfermarse para quienes viven cerca de una fábrica es RR = 0.25. ¿Qué significa?",
+     "c": [
+      "el riesgo es el doble en el grupo expuesto",
+      "el riesgo es la cuarta parte en el grupo expuesto",
+      "el riesgo es igual en los dos grupos",
+      "el riesgo es el triple en el grupo expuesto"
+     ],
+     "a": 1,
+     "e": "RR = riesgo expuestos ÷ riesgo no expuestos = 0.25 → <b>el riesgo es la cuarta parte en el grupo expuesto</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>64</td><td>186</td><td>250</td></tr><tr><td>No se vacunó</td><td>12</td><td>288</td><td>300</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «se enfermó» para «se vacunó» respecto a «no se vacunó» (a dos decimales).",
+     "c": [
+      "0.22",
+      "6.4",
+      "5.33",
+      "0.16"
+     ],
+     "a": 1,
+     "e": "RR = (64/250) ÷ (12/300) = 0.256 ÷ 0.04 ≈ <b>6.4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>35</td><td>215</td><td>250</td></tr><tr><td>No se vacunó</td><td>22</td><td>58</td><td>80</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «se enfermó» para «se vacunó» respecto a «no se vacunó» (a dos decimales).",
+     "c": [
+      "1.96",
+      "−0.14",
+      "0.51",
+      "1.59"
+     ],
+     "a": 2,
+     "e": "RR = (35/250) ÷ (22/80) = 0.14 ÷ 0.275 ≈ <b>0.51</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>83</td><td>117</td><td>200</td></tr><tr><td>No se vacunó</td><td>12</td><td>38</td><td>50</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «se enfermó» para «se vacunó» respecto a «no se vacunó» (a dos decimales).",
+     "c": [
+      "0.17",
+      "6.92",
+      "0.58",
+      "1.73"
+     ],
+     "a": 3,
+     "e": "RR = (83/200) ÷ (12/50) = 0.415 ÷ 0.24 ≈ <b>1.73</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>27</td><td>223</td><td>250</td></tr><tr><td>No fuma</td><td>18</td><td>62</td><td>80</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «tos crónica» para «fuma» respecto a «no fuma» (a dos decimales).",
+     "c": [
+      "0.48",
+      "1.5",
+      "2.08",
+      "−0.12"
+     ],
+     "a": 0,
+     "e": "RR = (27/250) ÷ (18/80) = 0.108 ÷ 0.225 ≈ <b>0.48</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>32</td><td>68</td><td>100</td></tr><tr><td>No usa casco</td><td>10</td><td>70</td><td>80</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «lesión grave» para «usa casco» respecto a «no usa casco» (a dos decimales).",
+     "c": [
+      "2.56",
+      "0.39",
+      "3.2",
+      "0.2"
+     ],
+     "a": 0,
+     "e": "RR = (32/100) ÷ (10/80) = 0.32 ÷ 0.125 ≈ <b>2.56</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>67</td><td>133</td><td>200</td></tr><tr><td>Duerme 6 h o más</td><td>23</td><td>27</td><td>50</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «reprueba» para «duerme menos de 6 h» respecto a «duerme 6 h o más» (a dos decimales).",
+     "c": [
+      "−0.12",
+      "2.91",
+      "1.37",
+      "0.73"
+     ],
+     "a": 3,
+     "e": "RR = (67/200) ÷ (23/50) = 0.335 ÷ 0.46 ≈ <b>0.73</b>."
+    },
+    {
+     "q": "En un estudio, el riesgo relativo de enfermarse para quienes viven cerca de una fábrica es RR = 2. ¿Qué significa?",
+     "c": [
+      "el riesgo es igual en los dos grupos",
+      "el riesgo es la mitad en el grupo expuesto",
+      "el riesgo es el doble en el grupo expuesto",
+      "el riesgo es el triple en el grupo expuesto"
+     ],
+     "a": 2,
+     "e": "RR = riesgo expuestos ÷ riesgo no expuestos = 2 → <b>el riesgo es el doble en el grupo expuesto</b>."
+    },
+    {
+     "q": "En un estudio, el riesgo relativo de enfermarse para quienes viven cerca de una fábrica es RR = 0.5. ¿Qué significa?",
+     "c": [
+      "el riesgo es el triple en el grupo expuesto",
+      "el riesgo es el doble en el grupo expuesto",
+      "el riesgo es la mitad en el grupo expuesto",
+      "el riesgo es igual en los dos grupos"
+     ],
+     "a": 2,
+     "e": "RR = riesgo expuestos ÷ riesgo no expuestos = 0.5 → <b>el riesgo es la mitad en el grupo expuesto</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>51</td><td>69</td><td>120</td></tr><tr><td>No se vacunó</td><td>25</td><td>75</td><td>100</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «se enfermó» para «se vacunó» respecto a «no se vacunó» (a dos decimales).",
+     "c": [
+      "0.17",
+      "1.7",
+      "0.59",
+      "2.04"
+     ],
+     "a": 1,
+     "e": "RR = (51/120) ÷ (25/100) = 0.425 ÷ 0.25 ≈ <b>1.7</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se cansa en clase</th><th>No se cansa</th><th>Total</th></tr></thead><tbody><tr><td>Desayuna</td><td>4</td><td>46</td><td>50</td></tr><tr><td>No desayuna</td><td>21</td><td>29</td><td>50</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «se cansa en clase» para «desayuna» respecto a «no desayuna» (a dos decimales).",
+     "c": [
+      "5.25",
+      "0.20",
+      "0.19",
+      "−0.34"
+     ],
+     "a": 2,
+     "e": "RR = (4/50) ÷ (21/50) = 0.08 ÷ 0.42 ≈ <b>0.19</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>4</td><td>76</td><td>80</td></tr><tr><td>Duerme 6 h o más</td><td>15</td><td>85</td><td>100</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «reprueba» para «duerme menos de 6 h» respecto a «duerme 6 h o más» (a dos decimales).",
+     "c": [
+      "0.27",
+      "−0.1",
+      "3",
+      "0.33"
+     ],
+     "a": 3,
+     "e": "RR = (4/80) ÷ (15/100) = 0.05 ÷ 0.15 ≈ <b>0.33</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>53</td><td>197</td><td>250</td></tr><tr><td>No fuma</td><td>33</td><td>117</td><td>150</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «tos crónica» para «fuma» respecto a «no fuma» (a dos decimales).",
+     "c": [
+      "1.04",
+      "0.96",
+      "−0.01",
+      "1.61"
+     ],
+     "a": 1,
+     "e": "RR = (53/250) ÷ (33/150) = 0.212 ÷ 0.22 ≈ <b>0.96</b>."
+    }
+   ]
+  },
+  {
+   "title": "¿Son independientes?",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>94</td><td>106</td><td>200</td></tr><tr><td>No fuma</td><td>94</td><td>106</td><td>200</td></tr></tbody></table></div>¿Las variables «fuma o no» y «tos crónica o no» parecen independientes?",
+     "c": [
+      "solo si los totales son iguales",
+      "no son independientes",
+      "no se puede saber con una tabla",
+      "son independientes"
+     ],
+     "a": 3,
+     "e": "Comparamos proporciones: 94/200 = 0.47 y 94/200 = 0.47. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>56</td><td>64</td><td>120</td></tr><tr><td>No se vacunó</td><td>28</td><td>52</td><td>80</td></tr></tbody></table></div>¿Las variables «se vacunó o no» y «se enfermó o no» parecen independientes?",
+     "c": [
+      "solo si los totales son iguales",
+      "son independientes",
+      "no se puede saber con una tabla",
+      "no son independientes"
+     ],
+     "a": 3,
+     "e": "Comparamos proporciones: 56/120 = 0.467 y 28/80 = 0.35. Son distintas → <b>no son independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>23</td><td>77</td><td>100</td></tr><tr><td>Duerme 6 h o más</td><td>69</td><td>231</td><td>300</td></tr></tbody></table></div>¿Las variables «duerme menos de 6 h o no» y «reprueba o no» parecen independientes?",
+     "c": [
+      "son independientes",
+      "solo si los totales son iguales",
+      "no son independientes",
+      "no se puede saber con una tabla"
+     ],
+     "a": 0,
+     "e": "Comparamos proporciones: 23/100 = 0.23 y 69/300 = 0.23. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>33</td><td>217</td><td>250</td></tr><tr><td>No fuma</td><td>99</td><td>651</td><td>750</td></tr></tbody></table></div>¿Las variables «fuma o no» y «tos crónica o no» parecen independientes?",
+     "c": [
+      "no son independientes",
+      "solo si los totales son iguales",
+      "son independientes",
+      "no se puede saber con una tabla"
+     ],
+     "a": 2,
+     "e": "Comparamos proporciones: 33/250 = 0.132 y 99/750 = 0.132. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>84</td><td>116</td><td>200</td></tr><tr><td>No fuma</td><td>84</td><td>116</td><td>200</td></tr></tbody></table></div>¿Las variables «fuma o no» y «tos crónica o no» parecen independientes?",
+     "c": [
+      "son independientes",
+      "no son independientes",
+      "solo si los totales son iguales",
+      "no se puede saber con una tabla"
+     ],
+     "a": 0,
+     "e": "Comparamos proporciones: 84/200 = 0.42 y 84/200 = 0.42. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>35</td><td>45</td><td>80</td></tr><tr><td>No fuma</td><td>105</td><td>135</td><td>240</td></tr></tbody></table></div>¿Las variables «fuma o no» y «tos crónica o no» parecen independientes?",
+     "c": [
+      "solo si los totales son iguales",
+      "son independientes",
+      "no son independientes",
+      "no se puede saber con una tabla"
+     ],
+     "a": 1,
+     "e": "Comparamos proporciones: 35/80 = 0.4375 y 105/240 = 0.4375. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>25</td><td>25</td><td>50</td></tr><tr><td>No usa casco</td><td>50</td><td>50</td><td>100</td></tr></tbody></table></div>¿Las variables «usa casco o no» y «lesión grave o no» parecen independientes?",
+     "c": [
+      "no son independientes",
+      "solo si los totales son iguales",
+      "no se puede saber con una tabla",
+      "son independientes"
+     ],
+     "a": 3,
+     "e": "Comparamos proporciones: 25/50 = 0.5 y 50/100 = 0.5. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>32</td><td>88</td><td>120</td></tr><tr><td>No fuma</td><td>52</td><td>98</td><td>150</td></tr></tbody></table></div>¿Las variables «fuma o no» y «tos crónica o no» parecen independientes?",
+     "c": [
+      "solo si los totales son iguales",
+      "no se puede saber con una tabla",
+      "son independientes",
+      "no son independientes"
+     ],
+     "a": 3,
+     "e": "Comparamos proporciones: 32/120 = 0.267 y 52/150 = 0.347. Son distintas → <b>no son independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>39</td><td>61</td><td>100</td></tr><tr><td>Duerme 6 h o más</td><td>39</td><td>61</td><td>100</td></tr></tbody></table></div>¿Las variables «duerme menos de 6 h o no» y «reprueba o no» parecen independientes?",
+     "c": [
+      "solo si los totales son iguales",
+      "no se puede saber con una tabla",
+      "son independientes",
+      "no son independientes"
+     ],
+     "a": 2,
+     "e": "Comparamos proporciones: 39/100 = 0.39 y 39/100 = 0.39. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>3</td><td>47</td><td>50</td></tr><tr><td>No fuma</td><td>10</td><td>90</td><td>100</td></tr></tbody></table></div>¿Las variables «fuma o no» y «tos crónica o no» parecen independientes?",
+     "c": [
+      "no se puede saber con una tabla",
+      "son independientes",
+      "no son independientes",
+      "solo si los totales son iguales"
+     ],
+     "a": 2,
+     "e": "Comparamos proporciones: 3/50 = 0.06 y 10/100 = 0.1. Son distintas → <b>no son independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>7</td><td>93</td><td>100</td></tr><tr><td>No se vacunó</td><td>104</td><td>196</td><td>300</td></tr></tbody></table></div>¿Las variables «se vacunó o no» y «se enfermó o no» parecen independientes?",
+     "c": [
+      "no son independientes",
+      "solo si los totales son iguales",
+      "son independientes",
+      "no se puede saber con una tabla"
+     ],
+     "a": 0,
+     "e": "Comparamos proporciones: 7/100 = 0.07 y 104/300 = 0.347. Son distintas → <b>no son independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se cansa en clase</th><th>No se cansa</th><th>Total</th></tr></thead><tbody><tr><td>Desayuna</td><td>33</td><td>167</td><td>200</td></tr><tr><td>No desayuna</td><td>66</td><td>334</td><td>400</td></tr></tbody></table></div>¿Las variables «desayuna o no» y «se cansa en clase o no» parecen independientes?",
+     "c": [
+      "solo si los totales son iguales",
+      "son independientes",
+      "no son independientes",
+      "no se puede saber con una tabla"
+     ],
+     "a": 1,
+     "e": "Comparamos proporciones: 33/200 = 0.165 y 66/400 = 0.165. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>34</td><td>116</td><td>150</td></tr><tr><td>No se vacunó</td><td>2</td><td>298</td><td>300</td></tr></tbody></table></div>¿Las variables «se vacunó o no» y «se enfermó o no» parecen independientes?",
+     "c": [
+      "no se puede saber con una tabla",
+      "son independientes",
+      "no son independientes",
+      "solo si los totales son iguales"
+     ],
+     "a": 2,
+     "e": "Comparamos proporciones: 34/150 = 0.227 y 2/300 = 0.007. Son distintas → <b>no son independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>4</td><td>146</td><td>150</td></tr><tr><td>No usa casco</td><td>8</td><td>292</td><td>300</td></tr></tbody></table></div>¿Las variables «usa casco o no» y «lesión grave o no» parecen independientes?",
+     "c": [
+      "son independientes",
+      "no son independientes",
+      "solo si los totales son iguales",
+      "no se puede saber con una tabla"
+     ],
+     "a": 0,
+     "e": "Comparamos proporciones: 4/150 = 0.027 y 8/300 = 0.027. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>59</td><td>91</td><td>150</td></tr><tr><td>No usa casco</td><td>59</td><td>91</td><td>150</td></tr></tbody></table></div>¿Las variables «usa casco o no» y «lesión grave o no» parecen independientes?",
+     "c": [
+      "no son independientes",
+      "son independientes",
+      "solo si los totales son iguales",
+      "no se puede saber con una tabla"
+     ],
+     "a": 1,
+     "e": "Comparamos proporciones: 59/150 = 0.393 y 59/150 = 0.393. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>6</td><td>44</td><td>50</td></tr><tr><td>No usa casco</td><td>124</td><td>176</td><td>300</td></tr></tbody></table></div>¿Las variables «usa casco o no» y «lesión grave o no» parecen independientes?",
+     "c": [
+      "solo si los totales son iguales",
+      "no son independientes",
+      "no se puede saber con una tabla",
+      "son independientes"
+     ],
+     "a": 1,
+     "e": "Comparamos proporciones: 6/50 = 0.12 y 124/300 = 0.413. Son distintas → <b>no son independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>23</td><td>57</td><td>80</td></tr><tr><td>No fuma</td><td>23</td><td>57</td><td>80</td></tr></tbody></table></div>¿Las variables «fuma o no» y «tos crónica o no» parecen independientes?",
+     "c": [
+      "no se puede saber con una tabla",
+      "solo si los totales son iguales",
+      "no son independientes",
+      "son independientes"
+     ],
+     "a": 3,
+     "e": "Comparamos proporciones: 23/80 = 0.2875 y 23/80 = 0.2875. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se cansa en clase</th><th>No se cansa</th><th>Total</th></tr></thead><tbody><tr><td>Desayuna</td><td>43</td><td>57</td><td>100</td></tr><tr><td>No desayuna</td><td>43</td><td>57</td><td>100</td></tr></tbody></table></div>¿Las variables «desayuna o no» y «se cansa en clase o no» parecen independientes?",
+     "c": [
+      "no se puede saber con una tabla",
+      "no son independientes",
+      "son independientes",
+      "solo si los totales son iguales"
+     ],
+     "a": 2,
+     "e": "Comparamos proporciones: 43/100 = 0.43 y 43/100 = 0.43. Son iguales → <b>independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>9</td><td>71</td><td>80</td></tr><tr><td>No usa casco</td><td>22</td><td>28</td><td>50</td></tr></tbody></table></div>¿Las variables «usa casco o no» y «lesión grave o no» parecen independientes?",
+     "c": [
+      "no se puede saber con una tabla",
+      "no son independientes",
+      "son independientes",
+      "solo si los totales son iguales"
+     ],
+     "a": 1,
+     "e": "Comparamos proporciones: 9/80 = 0.1125 y 22/50 = 0.44. Son distintas → <b>no son independientes</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>29</td><td>121</td><td>150</td></tr><tr><td>No fuma</td><td>83</td><td>117</td><td>200</td></tr></tbody></table></div>¿Las variables «fuma o no» y «tos crónica o no» parecen independientes?",
+     "c": [
+      "no son independientes",
+      "no se puede saber con una tabla",
+      "solo si los totales son iguales",
+      "son independientes"
+     ],
+     "a": 0,
+     "e": "Comparamos proporciones: 29/150 = 0.193 y 83/200 = 0.415. Son distintas → <b>no son independientes</b>."
+    }
+   ]
+  },
+  {
+   "title": "Probabilidades con tablas",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Bici</th><th>No bici</th><th>Total</th></tr></thead><tbody><tr><td>Centro</td><td>30</td><td>33</td><td>63</td></tr><tr><td>Afueras</td><td>39</td><td>48</td><td>87</td></tr><tr><td>Total</td><td>69</td><td>81</td><td>150</td></tr></tbody></table></div>Se pregunta a 150 vecinos de un municipio y se elige uno al azar. Sean A = «vive en el centro» y B = «usa la bicicleta». Calcula P(Ā|B).",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>29</span></span>",
+      "0.26",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>23</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>23</span></span>"
+     ],
+     "a": 2,
+     "e": "Solo cuenta la columna «Bici»; Ā es la fila «Afueras»: 39/69 = <b><span class='fr'><span class='fn'>13</span><span class='fd'>23</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>44</td><td>156</td><td>200</td></tr><tr><td>No fuma</td><td>27</td><td>173</td><td>200</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «tos crónica» para «fuma» respecto a «no fuma» (a dos decimales).",
+     "c": [
+      "1.64",
+      "1.63",
+      "0.61",
+      "0.09"
+     ],
+     "a": 1,
+     "e": "RR = (44/200) ÷ (27/200) = 0.22 ÷ 0.135 ≈ <b>1.63</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>104</td><td>146</td><td>250</td></tr><tr><td>No se vacunó</td><td>48</td><td>152</td><td>200</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «se enfermó» para «se vacunó» respecto a «no se vacunó» (a dos decimales).",
+     "c": [
+      "2.17",
+      "1.73",
+      "0.18",
+      "0.58"
+     ],
+     "a": 1,
+     "e": "RR = (104/250) ÷ (48/200) = 0.416 ÷ 0.24 ≈ <b>1.73</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>24</td><td>56</td><td>80</td></tr><tr><td>Duerme 6 h o más</td><td>9</td><td>41</td><td>50</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «reprueba» para «duerme menos de 6 h» respecto a «duerme 6 h o más» (a dos decimales).",
+     "c": [
+      "0.6",
+      "2.67",
+      "0.12",
+      "1.67"
+     ],
+     "a": 3,
+     "e": "RR = (24/80) ÷ (9/50) = 0.3 ÷ 0.18 ≈ <b>1.67</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Se enfermó</th><th>No se enfermó</th><th>Total</th></tr></thead><tbody><tr><td>Se vacunó</td><td>91</td><td>109</td><td>200</td></tr><tr><td>No se vacunó</td><td>31</td><td>69</td><td>100</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «se enfermó» para «se vacunó» respecto a «no se vacunó» (a dos decimales).",
+     "c": [
+      "0.14",
+      "1.47",
+      "0.68",
+      "2.94"
+     ],
+     "a": 1,
+     "e": "RR = (91/200) ÷ (31/100) = 0.455 ÷ 0.31 ≈ <b>1.47</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Celular</th><th>Otro</th><th>Total</th></tr></thead><tbody><tr><td>&lt; 40 años</td><td>10</td><td>11</td><td>21</td></tr><tr><td>≥ 40 años</td><td>32</td><td>97</td><td>129</td></tr><tr><td>Total</td><td>42</td><td>108</td><td>150</td></tr></tbody></table></div>Se pregunta a 150 clientes de un supermercado y se elige uno al azar. Sean A = «tiene menos de 40 años» y B = «paga con el celular». ¿Son A y B independientes?",
+     "c": [
+      "no, porque P(A ∩ B) ≠ P(A) × P(B)",
+      "sí, porque P(A ∩ B) ≠ 0",
+      "sí, porque P(A ∩ B) = P(A) × P(B)",
+      "no, porque son mutuamente excluyentes"
+     ],
+     "a": 0,
+     "e": "P(A ∩ B) = <span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span> y P(A) × P(B) = 0.14 × 0.28 = 0.0392: <b>no, porque P(A ∩ B) ≠ P(A) × P(B)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Celular</th><th>Otro</th><th>Total</th></tr></thead><tbody><tr><td>&lt; 40 años</td><td>43</td><td>30</td><td>73</td></tr><tr><td>≥ 40 años</td><td>36</td><td>41</td><td>77</td></tr><tr><td>Total</td><td>79</td><td>71</td><td>150</td></tr></tbody></table></div>Se pregunta a 150 clientes de un supermercado y se elige uno al azar. Sean A = «tiene menos de 40 años» y B = «paga con el celular». Calcula P(B|A).",
+     "c": [
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>150</span></span>",
+      "<span class='fr'><span class='fn'>79</span><span class='fd'>150</span></span>",
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>79</span></span>",
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>73</span></span>"
+     ],
+     "a": 3,
+     "e": "Solo cuenta la fila «&lt; 40 años»: 43/73 = <b><span class='fr'><span class='fn'>43</span><span class='fd'>73</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>36</td><td>44</td><td>80</td></tr><tr><td>No fuma</td><td>14</td><td>66</td><td>80</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «tos crónica» para «fuma» respecto a «no fuma» (a dos decimales).",
+     "c": [
+      "2.58",
+      "0.28",
+      "2.57",
+      "0.39"
+     ],
+     "a": 2,
+     "e": "RR = (36/80) ÷ (14/80) = 0.45 ÷ 0.175 ≈ <b>2.57</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Tos crónica</th><th>Sin tos</th><th>Total</th></tr></thead><tbody><tr><td>Fuma</td><td>78</td><td>172</td><td>250</td></tr><tr><td>No fuma</td><td>48</td><td>102</td><td>150</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «tos crónica» para «fuma» respecto a «no fuma» (a dos decimales).",
+     "c": [
+      "1.03",
+      "1.62",
+      "0.97",
+      "−0.01"
+     ],
+     "a": 2,
+     "e": "RR = (78/250) ÷ (48/150) = 0.312 ÷ 0.32 ≈ <b>0.97</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Teletrabaja</th><th>No</th><th>Total</th></tr></thead><tbody><tr><td>Mañana</td><td>61</td><td>91</td><td>152</td></tr><tr><td>Tarde</td><td>17</td><td>131</td><td>148</td></tr><tr><td>Total</td><td>78</td><td>222</td><td>300</td></tr></tbody></table></div>Se pregunta a 300 trabajadores de una empresa y se elige uno al azar. Sean A = «trabaja de mañana» y B = «teletrabaja algún día». ¿Son A y B independientes?",
+     "c": [
+      "sí, porque P(A ∩ B) ≠ 0",
+      "no, porque son mutuamente excluyentes",
+      "no, porque P(A ∩ B) ≠ P(A) × P(B)",
+      "sí, porque P(A ∩ B) = P(A) × P(B)"
+     ],
+     "a": 2,
+     "e": "P(A ∩ B) = <span class='fr'><span class='fn'>61</span><span class='fd'>300</span></span> y P(A) × P(B) = <span class='fr'><span class='fn'>38</span><span class='fd'>75</span></span> × 0.26 = <span class='fr'><span class='fn'>247</span><span class='fd'>1 875</span></span>: <b>no, porque P(A ∩ B) ≠ P(A) × P(B)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Teletrabaja</th><th>No</th><th>Total</th></tr></thead><tbody><tr><td>Mañana</td><td>57</td><td>52</td><td>109</td></tr><tr><td>Tarde</td><td>30</td><td>111</td><td>141</td></tr><tr><td>Total</td><td>87</td><td>163</td><td>250</td></tr></tbody></table></div>Se pregunta a 250 trabajadores de una empresa y se elige uno al azar. Sean A = «trabaja de mañana» y B = «teletrabaja algún día». Calcula P(B|A).",
+     "c": [
+      "<span class='fr'><span class='fn'>57</span><span class='fd'>109</span></span>",
+      "0.228",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>29</span></span>",
+      "0.348"
+     ],
+     "a": 0,
+     "e": "Solo cuenta la fila «Mañana»: 57/109 = <b><span class='fr'><span class='fn'>57</span><span class='fd'>109</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Teletrabaja</th><th>No</th><th>Total</th></tr></thead><tbody><tr><td>Mañana</td><td>63</td><td>58</td><td>121</td></tr><tr><td>Tarde</td><td>24</td><td>105</td><td>129</td></tr><tr><td>Total</td><td>87</td><td>163</td><td>250</td></tr></tbody></table></div>Se pregunta a 250 trabajadores de una empresa y se elige uno al azar. Sean A = «trabaja de mañana» y B = «teletrabaja algún día». Calcula P(B).",
+     "c": [
+      "0.652",
+      "<span class='fr'><span class='fn'>87</span><span class='fd'>121</span></span>",
+      "0.252",
+      "0.348"
+     ],
+     "a": 3,
+     "e": "Total de la columna «Teletrabaja» entre el total: 87/250 = <b>0.348</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Bici</th><th>No bici</th><th>Total</th></tr></thead><tbody><tr><td>Centro</td><td>8</td><td>16</td><td>24</td></tr><tr><td>Afueras</td><td>16</td><td>60</td><td>76</td></tr><tr><td>Total</td><td>24</td><td>76</td><td>100</td></tr></tbody></table></div>Se pregunta a 100 vecinos de un municipio y se elige uno al azar. Sean A = «vive en el centro» y B = «usa la bicicleta». Calcula P(B|A).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "0.24",
+      "0.08"
+     ],
+     "a": 0,
+     "e": "Solo cuenta la fila «Centro»: 8/24 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Teletrabaja</th><th>No</th><th>Total</th></tr></thead><tbody><tr><td>Mañana</td><td>20</td><td>32</td><td>52</td></tr><tr><td>Tarde</td><td>32</td><td>16</td><td>48</td></tr><tr><td>Total</td><td>52</td><td>48</td><td>100</td></tr></tbody></table></div>Se pregunta a 100 trabajadores de una empresa y se elige uno al azar. Sean A = «trabaja de mañana» y B = «teletrabaja algún día». Calcula P(B|A).",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>13</span></span>",
+      "0.2",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>13</span></span>",
+      "0.52"
+     ],
+     "a": 0,
+     "e": "Solo cuenta la fila «Mañana»: 20/52 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Teletrabaja</th><th>No</th><th>Total</th></tr></thead><tbody><tr><td>Mañana</td><td>8</td><td>23</td><td>31</td></tr><tr><td>Tarde</td><td>24</td><td>95</td><td>119</td></tr><tr><td>Total</td><td>32</td><td>118</td><td>150</td></tr></tbody></table></div>Se pregunta a 150 trabajadores de una empresa y se elige uno al azar. Sean A = «trabaja de mañana» y B = «teletrabaja algún día». ¿Son A y B independientes?",
+     "c": [
+      "sí, porque P(A ∩ B) ≠ 0",
+      "no, porque P(A ∩ B) ≠ P(A) × P(B)",
+      "sí, porque P(A ∩ B) = P(A) × P(B)",
+      "no, porque son mutuamente excluyentes"
+     ],
+     "a": 1,
+     "e": "P(A ∩ B) = <span class='fr'><span class='fn'>4</span><span class='fd'>75</span></span> y P(A) × P(B) = <span class='fr'><span class='fn'>31</span><span class='fd'>150</span></span> × <span class='fr'><span class='fn'>16</span><span class='fd'>75</span></span> = <span class='fr'><span class='fn'>248</span><span class='fd'>5 625</span></span>: <b>no, porque P(A ∩ B) ≠ P(A) × P(B)</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Reprueba</th><th>Aprueba</th><th>Total</th></tr></thead><tbody><tr><td>Duerme menos de 6 h</td><td>48</td><td>72</td><td>120</td></tr><tr><td>Duerme 6 h o más</td><td>6</td><td>194</td><td>200</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «reprueba» para «duerme menos de 6 h» respecto a «duerme 6 h o más» (a dos decimales).",
+     "c": [
+      "8",
+      "13.33",
+      "0.07",
+      "0.37"
+     ],
+     "a": 1,
+     "e": "RR = (48/120) ÷ (6/200) = 0.4 ÷ 0.03 ≈ <b>13.33</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Celular</th><th>Otro</th><th>Total</th></tr></thead><tbody><tr><td>&lt; 40 años</td><td>60</td><td>53</td><td>113</td></tr><tr><td>≥ 40 años</td><td>82</td><td>55</td><td>137</td></tr><tr><td>Total</td><td>142</td><td>108</td><td>250</td></tr></tbody></table></div>Se pregunta a 250 clientes de un supermercado y se elige uno al azar. Sean A = «tiene menos de 40 años» y B = «paga con el celular». Calcula P(B|A).",
+     "c": [
+      "<span class='fr'><span class='fn'>60</span><span class='fd'>113</span></span>",
+      "0.568",
+      "0.24",
+      "<span class='fr'><span class='fn'>30</span><span class='fd'>71</span></span>"
+     ],
+     "a": 0,
+     "e": "Solo cuenta la fila «&lt; 40 años»: 60/113 = <b><span class='fr'><span class='fn'>60</span><span class='fd'>113</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Celular</th><th>Otro</th><th>Total</th></tr></thead><tbody><tr><td>&lt; 40 años</td><td>15</td><td>30</td><td>45</td></tr><tr><td>≥ 40 años</td><td>14</td><td>61</td><td>75</td></tr><tr><td>Total</td><td>29</td><td>91</td><td>120</td></tr></tbody></table></div>Se pregunta a 120 clientes de un supermercado y se elige uno al azar. Sean A = «tiene menos de 40 años» y B = «paga con el celular». Calcula P(B).",
+     "c": [
+      "0.125",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>45</span></span>",
+      "<span class='fr'><span class='fn'>91</span><span class='fd'>120</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>120</span></span>"
+     ],
+     "a": 3,
+     "e": "Total de la columna «Celular» entre el total: 29/120 = <b><span class='fr'><span class='fn'>29</span><span class='fd'>120</span></span></b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Lesión grave</th><th>Sin lesión grave</th><th>Total</th></tr></thead><tbody><tr><td>Usa casco</td><td>35</td><td>65</td><td>100</td></tr><tr><td>No usa casco</td><td>36</td><td>44</td><td>80</td></tr></tbody></table></div>Calcula el <b>riesgo relativo</b> de «lesión grave» para «usa casco» respecto a «no usa casco» (a dos decimales).",
+     "c": [
+      "1.29",
+      "−0.1",
+      "0.97",
+      "0.78"
+     ],
+     "a": 3,
+     "e": "RR = (35/100) ÷ (36/80) = 0.35 ÷ 0.45 ≈ <b>0.78</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th></th><th>Economía</th><th>No</th><th>Total</th></tr></thead><tbody><tr><td>Papel</td><td>60</td><td>20</td><td>80</td></tr><tr><td>Internet</td><td>240</td><td>80</td><td>320</td></tr><tr><td>Total</td><td>300</td><td>100</td><td>400</td></tr></tbody></table></div>Se pregunta a 400 lectores de un periódico y se elige uno al azar. Sean A = «lo lee en papel» y B = «lee la sección de economía». Calcula P(B).",
+     "c": [
+      "0.25",
+      "3.75",
+      "0.75",
+      "0.15"
+     ],
+     "a": 2,
+     "e": "Total de la columna «Economía» entre el total: 300/400 = <b>0.75</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 8,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "pensamiento-matematico-1"
+}
