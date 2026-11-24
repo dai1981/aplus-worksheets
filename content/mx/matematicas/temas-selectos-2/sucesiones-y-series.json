@@ -1,0 +1,1157 @@
+{
+ "slug": "sucesiones-y-series",
+ "title": "Sucesiones, series y convergencia",
+ "seo_title": "Sucesiones y series – Temas Selectos de Matemáticas II: ejercicios con respuestas",
+ "short_title": "Sucesiones y series",
+ "domain": "Sucesiones y sistemas dinámicos",
+ "standard_code": "Temas Selectos de Matemáticas II · Progresión 2: Sucesiones y series",
+ "standard_url": "https://dgb.sep.gob.mx/storage/recursos/2024/11/6N3XjApvTB-Temas-Selectos-de-Matematicas-II.pdf",
+ "standard_text": "Analiza sucesiones y series: límite y convergencia, progresiones aritméticas y geométricas, series geométricas infinitas, Fibonacci y el triángulo de Sierpiński (resumen de la progresión 2 del programa de Temas Selectos de Matemáticas II (DGB, SEP 2024))",
+ "meta_desc": "Ejercicios de Temas Selectos de Matemáticas II: límite de una sucesión, progresiones aritméticas y geométricas, sumas, series geométricas infinitas, Fibonacci y Sierpiński. 100 ejercicios con respuestas.",
+ "key_big": "S = a ÷ (1 − r), si |r| < 1",
+ "key_sub": "Una serie infinita puede dar un número finito.",
+ "body_html": "<h2>Cómo se hace</h2><p>Una <b>sucesión</b> converge si sus términos se acercan a un número (su límite). Por ejemplo (2n + 1)/n → 2.</p><p><b>Aritmética</b>: aₙ = a₁ + (n − 1)d. <b>Geométrica</b>: aₙ = a₁·rⁿ⁻¹. Una <b>serie</b> es la suma de los términos.</p><p>La serie geométrica infinita converge si |r| &lt; 1: S = a₁ ÷ (1 − r). En Sierpiński el área tiende a 0 mientras el perímetro crece sin límite.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>4 + 2 + 1 + 1/2 + …</p><p class='sn-ex-s'>a = 4, r = 1/2</p><p class='sn-ex-s'>S = 4 ÷ (1/2)</p><p class='sn-ex-a'>Respuesta: 8</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Usar la fórmula infinita con |r| ≥ 1</td><td>Esa serie no converge.</td></tr><tr><td>Confundir sucesión con serie</td><td>La serie es la suma.</td></tr><tr><td>Creer que si los términos van a 0 la serie converge</td><td>La serie armónica 1 + 1/2 + 1/3 + … diverge.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Qué es la razón áurea?",
+   "a": "φ ≈ 1.618, el número al que se acercan los cocientes de términos de Fibonacci."
+  },
+  {
+   "q": "¿Por qué 0.999… = 1?",
+   "a": "Porque es la serie 0.9 + 0.09 + … = 0.9 ÷ (1 − 0.1) = 1."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Límite de una sucesión",
+   "items": [
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (4n + 9)/(3n + 1) cuando n → ∞?",
+     "c": [
+      "9",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "∞",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Para n muy grande mandan los términos con n: 4/3 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−5n − 1)/(3n + 6) cuando n → ∞?",
+     "c": [
+      "∞",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "Para n muy grande mandan los términos con n: −5/3 = <b>−<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (n + 5)/(4n − 2) cuando n → ∞?",
+     "c": [
+      "∞",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "4"
+     ],
+     "a": 2,
+     "e": "Para n muy grande mandan los términos con n: 1/4 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (3n − 3)/(5n + 9) cuando n → ∞?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "∞"
+     ],
+     "a": 0,
+     "e": "Para n muy grande mandan los términos con n: 3/5 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (3n − 4)/(5n + 2) cuando n → ∞?",
+     "c": [
+      "∞",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "−2"
+     ],
+     "a": 2,
+     "e": "Para n muy grande mandan los términos con n: 3/5 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−2n − 4)/(5n + 6) cuando n → ∞?",
+     "c": [
+      "∞",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "Para n muy grande mandan los términos con n: −2/5 = <b>−<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−4n − 3)/(3n − 4) cuando n → ∞?",
+     "c": [
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "∞",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "Para n muy grande mandan los términos con n: −4/3 = <b>−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−n + 6)/(3n + 7) cuando n → ∞?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−3",
+      "∞",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>"
+     ],
+     "a": 0,
+     "e": "Para n muy grande mandan los términos con n: −1/3 = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (5n − 7)/(3n + 4) cuando n → ∞?",
+     "c": [
+      "∞",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "Para n muy grande mandan los términos con n: 5/3 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (3n + 5)/(2n − 1) cuando n → ∞?",
+     "c": [
+      "∞",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−5"
+     ],
+     "a": 2,
+     "e": "Para n muy grande mandan los términos con n: 3/2 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−4n − 9)/(n + 5) cuando n → ∞?",
+     "c": [
+      "−4",
+      "∞",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Para n muy grande mandan los términos con n: −4/1 = <b>−4</b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−2n)/(5n − 3) cuando n → ∞?",
+     "c": [
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "∞",
+      "0"
+     ],
+     "a": 1,
+     "e": "Para n muy grande mandan los términos con n: −2/5 = <b>−<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−5n − 9)/(n + 3) cuando n → ∞?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "−3",
+      "∞",
+      "−5"
+     ],
+     "a": 3,
+     "e": "Para n muy grande mandan los términos con n: −5/1 = <b>−5</b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−3n − 1)/(2n − 4) cuando n → ∞?",
+     "c": [
+      "∞",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "Para n muy grande mandan los términos con n: −3/2 = <b>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−4n + 6)/(6n + 4) cuando n → ∞?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "∞",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Para n muy grande mandan los términos con n: −4/6 = <b>−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−n − 7)/(2n + 3) cuando n → ∞?",
+     "c": [
+      "−<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−2",
+      "∞"
+     ],
+     "a": 1,
+     "e": "Para n muy grande mandan los términos con n: −1/2 = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−5n − 1)/(5n + 1) cuando n → ∞?",
+     "c": [
+      "−3",
+      "∞",
+      "−1",
+      "−2"
+     ],
+     "a": 2,
+     "e": "Para n muy grande mandan los términos con n: −5/5 = <b>−1</b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−6n + 8)/(4n − 6) cuando n → ∞?",
+     "c": [
+      "∞",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "Para n muy grande mandan los términos con n: −6/4 = <b>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (3n − 4)/(3n + 8) cuando n → ∞?",
+     "c": [
+      "∞",
+      "1",
+      "2",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Para n muy grande mandan los términos con n: 3/3 = <b>1</b>."
+    },
+    {
+     "q": "¿A qué número se acerca a<sub>n</sub> = (−6n + 1)/(6n − 3) cuando n → ∞?",
+     "c": [
+      "−1",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "∞",
+      "−2"
+     ],
+     "a": 0,
+     "e": "Para n muy grande mandan los términos con n: −6/6 = <b>−1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Progresiones aritméticas",
+   "items": [
+    {
+     "q": "Calcula la suma de los 4 primeros términos de la progresión geométrica 3; 6; 12; 24; …",
+     "c": [
+      "21",
+      "48",
+      "93",
+      "45"
+     ],
+     "a": 3,
+     "e": "S = 3 × (2<sup>4</sup> − 1) / (2 − 1) = <b>45</b>."
+    },
+    {
+     "q": "En una progresión aritmética, a<sub>1</sub> = 25 y a<sub>7</sub> = 13. ¿Cuál es la diferencia d?",
+     "c": [
+      "2",
+      "−<span class='fr'><span class='fn'>12</span><span class='fd'>7</span></span>",
+      "−2",
+      "−12"
+     ],
+     "a": 2,
+     "e": "(13 − 25) / 6 = <b>−2</b>."
+    },
+    {
+     "q": "En una progresión aritmética, a<sub>6</sub> = −2 y d = 2. ¿Cuánto vale a<sub>1</sub>?",
+     "c": [
+      "−4",
+      "−14",
+      "−12",
+      "8"
+     ],
+     "a": 2,
+     "e": "a<sub>1</sub> = −2 − (6 − 1) × 2 = <b>−12</b>."
+    },
+    {
+     "q": "En una progresión aritmética, a<sub>7</sub> = −13 y d = −6. ¿Cuánto vale a<sub>1</sub>?",
+     "c": [
+      "23",
+      "−7",
+      "29",
+      "−49"
+     ],
+     "a": 0,
+     "e": "a<sub>1</sub> = −13 − (7 − 1) × (−6) = <b>23</b>."
+    },
+    {
+     "q": "En una progresión aritmética, a<sub>12</sub> = −16 y d = −3. ¿Cuánto vale a<sub>1</sub>?",
+     "c": [
+      "20",
+      "−49",
+      "−13",
+      "17"
+     ],
+     "a": 3,
+     "e": "a<sub>1</sub> = −16 − (12 − 1) × (−3) = <b>17</b>."
+    },
+    {
+     "q": "En una progresión aritmética, a<sub>1</sub> = −9 y a<sub>7</sub> = −33. ¿Cuál es la diferencia d?",
+     "c": [
+      "−24",
+      "−4",
+      "−<span class='fr'><span class='fn'>24</span><span class='fd'>7</span></span>",
+      "4"
+     ],
+     "a": 1,
+     "e": "(−33 − (−9)) / 6 = <b>−4</b>."
+    },
+    {
+     "q": "Calcula la suma de los 28 primeros términos de la progresión aritmética −4; −7; −10; −13; …",
+     "c": [
+      "−2 492",
+      "−2 380",
+      "−1 246",
+      "−1 288"
+     ],
+     "a": 2,
+     "e": "a<sub>28</sub> = −85; S = (−4 + (−85)) × 28 / 2 = <b>−1 246</b>."
+    },
+    {
+     "q": "En una progresión aritmética, a<sub>1</sub> = −15 y d = 2. ¿Cuánto vale a<sub>18</sub>?",
+     "c": [
+      "36",
+      "19",
+      "−268",
+      "21"
+     ],
+     "a": 1,
+     "e": "a<sub>18</sub> = −15 + (18 − 1) × 2 = <b>19</b>."
+    },
+    {
+     "q": "Calcula la suma de los 23 primeros términos de la progresión aritmética 10; 14; 18; 22; …",
+     "c": [
+      "2 484",
+      "1 242",
+      "1 288",
+      "2 254"
+     ],
+     "a": 1,
+     "e": "a<sub>23</sub> = 98; S = (10 + 98) × 23 / 2 = <b>1 242</b>."
+    },
+    {
+     "q": "Calcula la suma de los 7 primeros términos de la progresión geométrica 4; −8; 16; −32; …",
+     "c": [
+      "172",
+      "−512",
+      "−84",
+      "−340"
+     ],
+     "a": 0,
+     "e": "S = 4 × ((−2)<sup>7</sup> − 1) / (−2 − 1) = <b>172</b>."
+    },
+    {
+     "q": "En la progresión −3; 2; 7; 12; … ¿qué lugar ocupa el término 47?",
+     "c": [
+      "el 10.º",
+      "el 13.º",
+      "el 12.º",
+      "el 11.º"
+     ],
+     "a": 3,
+     "e": "47 = −3 + (n − 1) × 5 → n − 1 = 10 → <b>n = 11</b>."
+    },
+    {
+     "q": "En una progresión aritmética, a<sub>8</sub> = 46 y d = 4. ¿Cuánto vale a<sub>1</sub>?",
+     "c": [
+      "42",
+      "74",
+      "18",
+      "14"
+     ],
+     "a": 2,
+     "e": "a<sub>1</sub> = 46 − (8 − 1) × 4 = <b>18</b>."
+    },
+    {
+     "q": "Calcula la suma de los 27 primeros términos de la progresión aritmética 16; 21; 26; 31; …",
+     "c": [
+      "2 187",
+      "4 374",
+      "3 942",
+      "2 333"
+     ],
+     "a": 0,
+     "e": "a<sub>27</sub> = 146; S = (16 + 146) × 27 / 2 = <b>2 187</b>."
+    },
+    {
+     "q": "En una progresión aritmética, a<sub>1</sub> = −15 y a<sub>3</sub> = −19. ¿Cuál es la diferencia d?",
+     "c": [
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "−4",
+      "2",
+      "−2"
+     ],
+     "a": 3,
+     "e": "(−19 − (−15)) / 2 = <b>−2</b>."
+    },
+    {
+     "q": "Calcula la suma de los 5 primeros términos de la progresión geométrica 3; −6; 12; −24; …",
+     "c": [
+      "−96",
+      "−63",
+      "33",
+      "−15"
+     ],
+     "a": 2,
+     "e": "S = 3 × ((−2)<sup>5</sup> − 1) / (−2 − 1) = <b>33</b>."
+    },
+    {
+     "q": "En la progresión 7; 4; 1; −2; … ¿qué lugar ocupa el término −74?",
+     "c": [
+      "el 28.º",
+      "el 29.º",
+      "el 30.º",
+      "el 27.º"
+     ],
+     "a": 0,
+     "e": "−74 = 7 + (n − 1) × −3 → n − 1 = 27 → <b>n = 28</b>."
+    },
+    {
+     "q": "Calcula la suma de los 30 primeros términos de la progresión aritmética 13; 10; 7; 4; …",
+     "c": [
+      "−2 220",
+      "−1 830",
+      "−960",
+      "−915"
+     ],
+     "a": 3,
+     "e": "a<sub>30</sub> = −74; S = (13 + (−74)) × 30 / 2 = <b>−915</b>."
+    },
+    {
+     "q": "En una progresión aritmética, a<sub>1</sub> = 14 y a<sub>4</sub> = −4. ¿Cuál es la diferencia d?",
+     "c": [
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "−6",
+      "6",
+      "−18"
+     ],
+     "a": 1,
+     "e": "(−4 − 14) / 3 = <b>−6</b>."
+    },
+    {
+     "q": "En una progresión aritmética, a<sub>1</sub> = 4 y a<sub>5</sub> = 16. ¿Cuál es la diferencia d?",
+     "c": [
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span>",
+      "3",
+      "−3",
+      "12"
+     ],
+     "a": 1,
+     "e": "(16 − 4) / 4 = <b>3</b>."
+    },
+    {
+     "q": "Calcula la suma de los 24 primeros términos de la progresión aritmética 17; 15; 13; 11; …",
+     "c": [
+      "−144",
+      "−168",
+      "−696",
+      "−288"
+     ],
+     "a": 0,
+     "e": "a<sub>24</sub> = −29; S = (17 + (−29)) × 24 / 2 = <b>−144</b>."
+    }
+   ]
+  },
+  {
+   "title": "Progresiones geométricas",
+   "items": [
+    {
+     "q": "¿Cuál es la razón de la progresión geométrica 3; 12; 48; 192; …",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "9",
+      "4",
+      "−4"
+     ],
+     "a": 2,
+     "e": "12 ÷ 3 = <b>4</b>."
+    },
+    {
+     "q": "¿Cuál es el siguiente término de 160; 80; 40; 20; …",
+     "c": [
+      "10",
+      "0",
+      "5",
+      "40"
+     ],
+     "a": 0,
+     "e": "Se multiplica por <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>: <b>10</b>."
+    },
+    {
+     "q": "¿Qué tipo de sucesión es 2; 6; 18; 54; …",
+     "c": [
+      "geométrica",
+      "aritmética",
+      "ni aritmética ni geométrica",
+      "aritmética y geométrica"
+     ],
+     "a": 0,
+     "e": "Diferencias: 4, 12, 36. Cocientes: 3, 3, 3. <b>geométrica</b>."
+    },
+    {
+     "q": "¿Cuál es la razón de la progresión geométrica 2; 6; 18; 54; …",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−3",
+      "4",
+      "3"
+     ],
+     "a": 3,
+     "e": "6 ÷ 2 = <b>3</b>."
+    },
+    {
+     "q": "En una progresión geométrica, a<sub>1</sub> = 2 y r = −3. ¿Cuánto vale a<sub>3</sub>?",
+     "c": [
+      "−12",
+      "18",
+      "−54",
+      "−4"
+     ],
+     "a": 1,
+     "e": "a<sub>3</sub> = 2 × (−3)<sup>2</sup> = <b>18</b>."
+    },
+    {
+     "q": "¿Cuál es la razón de la progresión geométrica 1; 2; 4; 8; …",
+     "c": [
+      "−2",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "1",
+      "2"
+     ],
+     "a": 3,
+     "e": "2 ÷ 1 = <b>2</b>."
+    },
+    {
+     "q": "En una progresión geométrica, a<sub>1</sub> = −1 y r = 4. ¿Cuánto vale a<sub>5</sub>?",
+     "c": [
+      "−16",
+      "−256",
+      "15",
+      "−1 024"
+     ],
+     "a": 1,
+     "e": "a<sub>5</sub> = −1 × 4<sup>4</sup> = <b>−256</b>."
+    },
+    {
+     "q": "En una progresión geométrica, a<sub>1</sub> = −2 y r = −3. ¿Cuánto vale a<sub>3</sub>?",
+     "c": [
+      "12",
+      "54",
+      "−18",
+      "−8"
+     ],
+     "a": 2,
+     "e": "a<sub>3</sub> = −2 × (−3)<sup>2</sup> = <b>−18</b>."
+    },
+    {
+     "q": "En una progresión geométrica, a<sub>1</sub> = −3 y r = 5. ¿Cuánto vale a<sub>5</sub>?",
+     "c": [
+      "−1 875",
+      "−9 375",
+      "17",
+      "−60"
+     ],
+     "a": 0,
+     "e": "a<sub>5</sub> = −3 × 5<sup>4</sup> = <b>−1 875</b>."
+    },
+    {
+     "q": "En una progresión geométrica, a<sub>1</sub> = −1 y r = −3. ¿Cuánto vale a<sub>7</sub>?",
+     "c": [
+      "18",
+      "−729",
+      "−19",
+      "2 187"
+     ],
+     "a": 1,
+     "e": "a<sub>7</sub> = −1 × (−3)<sup>6</sup> = <b>−729</b>."
+    },
+    {
+     "q": "¿Cuál es la razón de la progresión geométrica −3; −9; −27; −81; …",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "3",
+      "−6",
+      "−3"
+     ],
+     "a": 1,
+     "e": "−9 ÷ (−3) = <b>3</b>."
+    },
+    {
+     "q": "¿Cuál es el siguiente término de 243; 81; 27; 9; …",
+     "c": [
+      "1",
+      "27",
+      "3",
+      "−9"
+     ],
+     "a": 2,
+     "e": "Se multiplica por <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>: <b>3</b>."
+    },
+    {
+     "q": "¿Qué tipo de sucesión es 7; 12; 17; 22; …",
+     "c": [
+      "ni aritmética ni geométrica",
+      "aritmética y geométrica",
+      "aritmética",
+      "geométrica"
+     ],
+     "a": 2,
+     "e": "Diferencias: 5, 5, 5. Cocientes: <span class='fr'><span class='fn'>12</span><span class='fd'>7</span></span>, <span class='fr'><span class='fn'>17</span><span class='fd'>12</span></span>, <span class='fr'><span class='fn'>22</span><span class='fd'>17</span></span>. <b>aritmética</b>."
+    },
+    {
+     "q": "¿Cuál es la razón de la progresión geométrica −2; 4; −8; 16; …",
+     "c": [
+      "2",
+      "6",
+      "−2",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "4 ÷ (−2) = <b>−2</b>."
+    },
+    {
+     "q": "¿Qué tipo de sucesión es 5; 25; 125; 625; …",
+     "c": [
+      "geométrica",
+      "aritmética y geométrica",
+      "ni aritmética ni geométrica",
+      "aritmética"
+     ],
+     "a": 0,
+     "e": "Diferencias: 20, 100, 500. Cocientes: 5, 5, 5. <b>geométrica</b>."
+    },
+    {
+     "q": "¿Qué tipo de sucesión es 5; 8; 13; 20; …",
+     "c": [
+      "ni aritmética ni geométrica",
+      "aritmética y geométrica",
+      "geométrica",
+      "aritmética"
+     ],
+     "a": 0,
+     "e": "Diferencias: 3, 5, 7. Cocientes: <span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span>, <span class='fr'><span class='fn'>13</span><span class='fd'>8</span></span>, <span class='fr'><span class='fn'>20</span><span class='fd'>13</span></span>. <b>ni aritmética ni geométrica</b>."
+    },
+    {
+     "q": "En una progresión geométrica, a<sub>1</sub> = −3 y r = −3. ¿Cuánto vale a<sub>6</sub>?",
+     "c": [
+      "−18",
+      "45",
+      "−2 187",
+      "729"
+     ],
+     "a": 3,
+     "e": "a<sub>6</sub> = −3 × (−3)<sup>5</sup> = <b>729</b>."
+    },
+    {
+     "q": "¿Cuál es la razón de la progresión geométrica 1; 5; 25; 125; …",
+     "c": [
+      "4",
+      "5",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "−5"
+     ],
+     "a": 1,
+     "e": "5 ÷ 1 = <b>5</b>."
+    },
+    {
+     "q": "En una progresión geométrica, a<sub>1</sub> = 3 y r = 10. ¿Cuánto vale a<sub>3</sub>?",
+     "c": [
+      "23",
+      "3 000",
+      "60",
+      "300"
+     ],
+     "a": 3,
+     "e": "a<sub>3</sub> = 3 × 10<sup>2</sup> = <b>300</b>."
+    },
+    {
+     "q": "¿Cuál es el siguiente término de 128; 64; 32; 16; …",
+     "c": [
+      "32",
+      "4",
+      "0",
+      "8"
+     ],
+     "a": 3,
+     "e": "Se multiplica por <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>: <b>8</b>."
+    }
+   ]
+  },
+  {
+   "title": "Series infinitas",
+   "items": [
+    {
+     "q": "Calcula la suma de la serie infinita 5 + <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> + …",
+     "c": [
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span>",
+      "∞"
+     ],
+     "a": 1,
+     "e": "Serie geométrica con a = 5 y r = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b><span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 6 + 2 + <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> + …",
+     "c": [
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>3</span></span>",
+      "9",
+      "∞",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Serie geométrica con a = 6 y r = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b>9</b>."
+    },
+    {
+     "q": "¿Converge la serie 1 + 1/2 + 1/3 + 1/4 + … (serie armónica)?",
+     "c": [
+      "sí, a 2",
+      "no, crece sin límite aunque muy despacio",
+      "sí, a e",
+      "sí, a 1"
+     ],
+     "a": 1,
+     "e": "Es un resultado famoso de Oresme (siglo XIV)."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 1 + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + …",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>",
+      "∞"
+     ],
+     "a": 1,
+     "e": "Serie geométrica con a = 1 y r = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b>2</b>."
+    },
+    {
+     "q": "Si los términos de una sucesión no se acercan a 0, la serie…",
+     "c": [
+      "siempre converge",
+      "no converge",
+      "converge a 0",
+      "converge a 1"
+     ],
+     "a": 1,
+     "e": "Es una condición necesaria para converger."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 5 + <span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>45</span><span class='fd'>16</span></span> + …",
+     "c": [
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>7</span></span>",
+      "∞",
+      "20",
+      "<span class='fr'><span class='fn'>185</span><span class='fd'>16</span></span>"
+     ],
+     "a": 2,
+     "e": "Serie geométrica con a = 5 y r = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b>20</b>."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 10 + <span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>40</span><span class='fd'>9</span></span> + …",
+     "c": [
+      "30",
+      "6",
+      "∞",
+      "<span class='fr'><span class='fn'>190</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "Serie geométrica con a = 10 y r = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b>30</b>."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 6 + <span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span> + …",
+     "c": [
+      "∞",
+      "<span class='fr'><span class='fn'>186</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "5"
+     ],
+     "a": 2,
+     "e": "Serie geométrica con a = 6 y r = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b><span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "La serie 1 + 1/2 + 1/4 + 1/8 + … converge a…",
+     "c": [
+      "2",
+      "1",
+      "∞",
+      "1.5"
+     ],
+     "a": 0,
+     "e": "Geométrica con r = 1/2: 1 ÷ (1 − 1/2) = 2."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 4 + 3 + <span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span> + …",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>7</span></span>",
+      "∞",
+      "16",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "Serie geométrica con a = 4 y r = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b>16</b>."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 8 − 4 + 2 + …",
+     "c": [
+      "∞",
+      "6",
+      "16",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Serie geométrica con a = 8 y r = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b><span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "El cociente entre términos consecutivos de Fibonacci se acerca a…",
+     "c": [
+      "1",
+      "2",
+      "π",
+      "la razón áurea φ ≈ 1.618"
+     ],
+     "a": 3,
+     "e": "8/5 = 1.6, 13/8 = 1.625, 21/13 ≈ 1.615…"
+    },
+    {
+     "q": "0.999… (con nueves infinitos) es igual a…",
+     "c": [
+      "1",
+      "0.9",
+      "no es un número",
+      "casi 1, pero menor"
+     ],
+     "a": 0,
+     "e": "Es la serie 9/10 + 9/100 + … = 0.9 ÷ (1 − 0.1) = 1."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 1 + <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span> + …",
+     "c": [
+      "∞",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "Serie geométrica con a = 1 y r = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b><span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 4 + 2 + 1 + …",
+     "c": [
+      "7",
+      "∞",
+      "8",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Serie geométrica con a = 4 y r = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b>8</b>."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 2 + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> + …",
+     "c": [
+      "∞",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Serie geométrica con a = 2 y r = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b><span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 4 + 1 + <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + …",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>",
+      "∞",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Serie geométrica con a = 4 y r = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b><span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 6 + <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> + …",
+     "c": [
+      "<span class='fr'><span class='fn'>63</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>5</span></span>",
+      "8",
+      "∞"
+     ],
+     "a": 2,
+     "e": "Serie geométrica con a = 6 y r = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b>8</b>."
+    },
+    {
+     "q": "Calcula la suma de la serie infinita 10 + <span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>10</span><span class='fd'>9</span></span> + …",
+     "c": [
+      "<span class='fr'><span class='fn'>130</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "∞",
+      "15"
+     ],
+     "a": 3,
+     "e": "Serie geométrica con a = 10 y r = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> (|r| &lt; 1): S = a ÷ (1 − r) = <b>15</b>."
+    },
+    {
+     "q": "Una serie geométrica converge si…",
+     "c": [
+      "|r| &lt; 1",
+      "r = 1",
+      "su primer término es 0",
+      "r &gt; 1"
+     ],
+     "a": 0,
+     "e": "Si |r| ≥ 1 los términos no se hacen pequeños."
+    }
+   ]
+  },
+  {
+   "title": "Fibonacci y Sierpiński",
+   "items": [
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 3, 5, y cada término es la suma de los dos anteriores. ¿Cuál es el término 7?",
+     "c": [
+      "55",
+      "89",
+      "34",
+      "54"
+     ],
+     "a": 0,
+     "e": "3, 5, 8, 13, 21, 34, 55 → <b>55</b>."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, ¿qué fracción del área original queda después de 6 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>729</span><span class='fd'>4 096</span></span>",
+      "<span class='fr'><span class='fn'>2 187</span><span class='fd'>16 384</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4 096</span></span>",
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "(3/4)<sup>6</sup> = <b><span class='fr'><span class='fn'>729</span><span class='fd'>4 096</span></span></b>. El área tiende a 0."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, ¿qué fracción del área original queda después de 4 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>1 024</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>256</span></span>"
+     ],
+     "a": 3,
+     "e": "(3/4)<sup>4</sup> = <b><span class='fr'><span class='fn'>81</span><span class='fd'>256</span></span></b>. El área tiende a 0."
+    },
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 2, 3, y cada término es la suma de los dos anteriores. ¿Cuál es el término 6?",
+     "c": [
+      "34",
+      "13",
+      "20",
+      "21"
+     ],
+     "a": 3,
+     "e": "2, 3, 5, 8, 13, 21 → <b>21</b>."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, la suma de los perímetros de los triángulos es 3 × (3/2)<sup>n</sup>. ¿Cuánto vale con n = 3?",
+     "c": [
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "3 × (3/2)<sup>3</sup> = <b><span class='fr'><span class='fn'>81</span><span class='fd'>8</span></span></b>. El perímetro crece sin límite mientras el área tiende a 0."
+    },
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 3, 1, y cada término es la suma de los dos anteriores. ¿Cuál es el término 7?",
+     "c": [
+      "23",
+      "37",
+      "14",
+      "22"
+     ],
+     "a": 0,
+     "e": "3, 1, 4, 5, 9, 14, 23 → <b>23</b>."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, la suma de los perímetros de los triángulos es 3 × (3/2)<sup>n</sup>. ¿Cuánto vale con n = 2?",
+     "c": [
+      "9",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "3 × (3/2)<sup>2</sup> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>4</span></span></b>. El perímetro crece sin límite mientras el área tiende a 0."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, la suma de los perímetros de los triángulos es 3 × (3/2)<sup>n</sup>. ¿Cuánto vale con n = 4?",
+     "c": [
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>729</span><span class='fd'>32</span></span>",
+      "18"
+     ],
+     "a": 0,
+     "e": "3 × (3/2)<sup>4</sup> = <b><span class='fr'><span class='fn'>243</span><span class='fd'>16</span></span></b>. El perímetro crece sin límite mientras el área tiende a 0."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, la suma de los perímetros de los triángulos es 3 × (3/2)<sup>n</sup>. ¿Cuánto vale con n = 5?",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>729</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2 187</span><span class='fd'>64</span></span>"
+     ],
+     "a": 1,
+     "e": "3 × (3/2)<sup>5</sup> = <b><span class='fr'><span class='fn'>729</span><span class='fd'>32</span></span></b>. El perímetro crece sin límite mientras el área tiende a 0."
+    },
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 5, 6, y cada término es la suma de los dos anteriores. ¿Cuál es el término 9?",
+     "c": [
+      "118",
+      "191",
+      "190",
+      "309"
+     ],
+     "a": 1,
+     "e": "5, 6, 11, 17, 28, 45, 73, 118, 191 → <b>191</b>."
+    },
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 2, 3, y cada término es la suma de los dos anteriores. ¿Cuál es el término 8?",
+     "c": [
+      "89",
+      "54",
+      "55",
+      "34"
+     ],
+     "a": 2,
+     "e": "2, 3, 5, 8, 13, 21, 34, 55 → <b>55</b>."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, ¿qué fracción del área original queda después de 3 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>13</span></span>"
+     ],
+     "a": 0,
+     "e": "(3/4)<sup>3</sup> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span></b>. El área tiende a 0."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, ¿qué fracción del área original queda después de 5 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1 024</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>729</span><span class='fd'>4 096</span></span>",
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>1 024</span></span>"
+     ],
+     "a": 3,
+     "e": "(3/4)<sup>5</sup> = <b><span class='fr'><span class='fn'>243</span><span class='fd'>1 024</span></span></b>. El área tiende a 0."
+    },
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 3, 8, y cada término es la suma de los dos anteriores. ¿Cuál es el término 7?",
+     "c": [
+      "49",
+      "79",
+      "128",
+      "78"
+     ],
+     "a": 1,
+     "e": "3, 8, 11, 19, 30, 49, 79 → <b>79</b>."
+    },
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 2, 5, y cada término es la suma de los dos anteriores. ¿Cuál es el término 9?",
+     "c": [
+      "81",
+      "212",
+      "131",
+      "130"
+     ],
+     "a": 2,
+     "e": "2, 5, 7, 12, 19, 31, 50, 81, 131 → <b>131</b>."
+    },
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 3, 3, y cada término es la suma de los dos anteriores. ¿Cuál es el término 8?",
+     "c": [
+      "102",
+      "39",
+      "62",
+      "63"
+     ],
+     "a": 3,
+     "e": "3, 3, 6, 9, 15, 24, 39, 63 → <b>63</b>."
+    },
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 2, 6, y cada término es la suma de los dos anteriores. ¿Cuál es el término 9?",
+     "c": [
+      "151",
+      "246",
+      "94",
+      "152"
+     ],
+     "a": 3,
+     "e": "2, 6, 8, 14, 22, 36, 58, 94, 152 → <b>152</b>."
+    },
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 5, 5, y cada término es la suma de los dos anteriores. ¿Cuál es el término 8?",
+     "c": [
+      "65",
+      "170",
+      "105",
+      "104"
+     ],
+     "a": 2,
+     "e": "5, 5, 10, 15, 25, 40, 65, 105 → <b>105</b>."
+    },
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 5, 7, y cada término es la suma de los dos anteriores. ¿Cuál es el término 8?",
+     "c": [
+      "212",
+      "131",
+      "81",
+      "130"
+     ],
+     "a": 1,
+     "e": "5, 7, 12, 19, 31, 50, 81, 131 → <b>131</b>."
+    },
+    {
+     "q": "Una sucesión tipo Fibonacci empieza 5, 1, y cada término es la suma de los dos anteriores. ¿Cuál es el término 9?",
+     "c": [
+      "53",
+      "85",
+      "86",
+      "139"
+     ],
+     "a": 2,
+     "e": "5, 1, 6, 7, 13, 20, 33, 53, 86 → <b>86</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 2,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "temas-selectos-2"
+}

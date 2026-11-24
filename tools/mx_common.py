@@ -353,7 +353,26 @@ def dinero_svg(items, label=None):
 
 
 # ------------------------------------------------------------ la unidad
+def _grp(t):
+    """4536 → 4 536 en el texto (no en años: «en 2015», «año 2020»)"""
+    def f(m):
+        v = m.group(2)
+        if 1900 <= int(v) <= 2100 and re.search(r"(año|años|en|de|desde|hasta)\s*$", m.group(1)):
+            return m.group(0)
+        return m.group(1) + num(int(v))
+    return re.sub(r"((?:^|[^\d.,\w" + NB + r"])[^\d]{0,8}?)(\d{4,})(?!\d)", f, t)
+
+
+def nums_mx(s):
+    parts = re.split(r"(<[^>]*>)", s)
+    return "".join(p if p.startswith("<") else _grp(p) for p in parts)
+
+
 def make_unit(rnd, slug, cont, std_text, title, short_title, meta_desc, key_big, key_sub, body_html, faq, sets, sort, lv=3):
+    if lv >= 10:
+        for _, items in sets:
+            for it in items:
+                it["q"], it["e"], it["c"] = nums_mx(it["q"]), nums_mx(it["e"]), [nums_mx(c) for c in it["c"]]
     sets = [{"title": t, "items": items} for t, items in sets]
     assert len(sets) == 5, slug
     allq = set()

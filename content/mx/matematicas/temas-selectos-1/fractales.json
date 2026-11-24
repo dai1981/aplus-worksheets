@@ -1,0 +1,1157 @@
+{
+ "slug": "fractales",
+ "title": "Cantor, Sierpiński, Koch y Mandelbrot",
+ "seo_title": "Fractales – Temas Selectos de Matemáticas I: ejercicios con respuestas",
+ "short_title": "Fractales",
+ "domain": "Fractales",
+ "standard_code": "Temas Selectos de Matemáticas I · Progresión 9: Fractales",
+ "standard_url": "https://dgb.sep.gob.mx/storage/recursos/2024/11/KdQ64JkOk7-Temas-Selectos-de-Matematicas-I.pdf",
+ "standard_text": "Explora fractales como el conjunto de Cantor, el triángulo de Sierpiński, el copo de Koch y los conjuntos de Mandelbrot y Julia: autosimilitud, iteración y dimensión (resumen de la progresión 9 del programa de Temas Selectos de Matemáticas I (DGB, SEP 2024))",
+ "meta_desc": "Ejercicios de Temas Selectos de Matemáticas I: pasos del conjunto de Cantor, triángulo de Sierpiński y copo de Koch, dimensión de autosimilitud y conjunto de Mandelbrot. 100 ejercicios con respuestas.",
+ "key_big": "Se repite a cualquier escala",
+ "key_sub": "D = log N ÷ log s",
+ "body_html": "<h2>Cómo se hace</h2><p>Un <b>fractal</b> es una figura autosimilar: sus partes son copias reducidas del todo. Se construye repitiendo una regla (iteración).</p><p><b>Cantor</b>: se quita el tercio central (quedan 2ⁿ segmentos). <b>Sierpiński</b>: se quita el triángulo central (quedan 3ⁿ). <b>Koch</b>: cada lado se vuelve 4 de 1/3.</p><p>La <b>dimensión</b> D = log N ÷ log s (N copias reducidas a 1/s) suele no ser entera. <b>Mandelbrot</b>: los c para los que z → z² + c, desde 0, no se va al infinito.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>Copo de Koch, perímetro inicial 3</p><p class='sn-ex-s'>Cada paso × 4/3</p><p class='sn-ex-s'>2 pasos: 3 × 16/9</p><p class='sn-ex-a'>Respuesta: 16/3</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Sumar en vez de multiplicar en cada paso</td><td>Cada paso multiplica por el mismo factor.</td></tr><tr><td>Pensar que perímetro infinito implica área infinita</td><td>El copo de Koch tiene área finita.</td></tr><tr><td>Usar log s ÷ log N</td><td>Es log N ÷ log s.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Dónde hay fractales en la naturaleza?",
+   "a": "En helechos, brócoli romanesco, costas, rayos, ramas de árboles y vasos sanguíneos."
+  },
+  {
+   "q": "¿Quién acuñó la palabra fractal?",
+   "a": "Benoît Mandelbrot, en 1975."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Conjunto de Cantor",
+   "items": [
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 9. ¿Cuánta longitud queda después de 7 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>243</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>729</span></span>"
+     ],
+     "a": 0,
+     "e": "En cada paso queda 2/3 de la longitud: 9 × (2/3)<sup>7</sup> = <b><span class='fr'><span class='fn'>128</span><span class='fd'>243</span></span></b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 27. ¿Cuánta longitud queda después de 2 pasos?",
+     "c": [
+      "9",
+      "3",
+      "8",
+      "12"
+     ],
+     "a": 3,
+     "e": "En cada paso queda 2/3 de la longitud: 27 × (2/3)<sup>2</sup> = <b>12</b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "En el conjunto de Cantor se quita el tercio central de cada segmento. Empezando con 1 segmento, ¿cuántos segmentos hay después de 4 pasos?",
+     "c": [
+      "81",
+      "32",
+      "16",
+      "8"
+     ],
+     "a": 2,
+     "e": "Cada segmento se convierte en 2: 2<sup>4</sup> = <b>16</b>."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 9. ¿Cuánta longitud queda después de 1 pasos?",
+     "c": [
+      "4",
+      "7",
+      "6",
+      "3"
+     ],
+     "a": 2,
+     "e": "En cada paso queda 2/3 de la longitud: 9 × (2/3)<sup>1</sup> = <b>6</b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "En el conjunto de Cantor se quita el tercio central de cada segmento. Empezando con 1 segmento, ¿cuántos segmentos hay después de 3 pasos?",
+     "c": [
+      "8",
+      "6",
+      "27",
+      "16"
+     ],
+     "a": 0,
+     "e": "Cada segmento se convierte en 2: 2<sup>3</sup> = <b>8</b>."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 27. ¿Cuánta longitud queda después de 3 pasos?",
+     "c": [
+      "8",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>",
+      "1",
+      "0"
+     ],
+     "a": 0,
+     "e": "En cada paso queda 2/3 de la longitud: 27 × (2/3)<sup>3</sup> = <b>8</b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 9. ¿Cuánta longitud queda después de 5 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>81</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>27</span></span>"
+     ],
+     "a": 3,
+     "e": "En cada paso queda 2/3 de la longitud: 9 × (2/3)<sup>5</sup> = <b><span class='fr'><span class='fn'>32</span><span class='fd'>27</span></span></b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 81. ¿Cuánta longitud queda después de 1 pasos?",
+     "c": [
+      "36",
+      "27",
+      "54",
+      "55"
+     ],
+     "a": 2,
+     "e": "En cada paso queda 2/3 de la longitud: 81 × (2/3)<sup>1</sup> = <b>54</b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "En el conjunto de Cantor se quita el tercio central de cada segmento. Empezando con 1 segmento, ¿cuántos segmentos hay después de 2 pasos?",
+     "c": [
+      "5",
+      "4",
+      "8",
+      "9"
+     ],
+     "a": 1,
+     "e": "Cada segmento se convierte en 2: 2<sup>2</sup> = <b>4</b>."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 27. ¿Cuánta longitud queda después de 5 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>27</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "En cada paso queda 2/3 de la longitud: 27 × (2/3)<sup>5</sup> = <b><span class='fr'><span class='fn'>32</span><span class='fd'>9</span></span></b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "En el conjunto de Cantor se quita el tercio central de cada segmento. Empezando con 1 segmento, ¿cuántos segmentos hay después de 7 pasos?",
+     "c": [
+      "2 187",
+      "128",
+      "14",
+      "256"
+     ],
+     "a": 1,
+     "e": "Cada segmento se convierte en 2: 2<sup>7</sup> = <b>128</b>."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 1. ¿Cuánta longitud queda después de 7 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>2 187</span></span>",
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>6 561</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2 187</span></span>",
+      "0"
+     ],
+     "a": 0,
+     "e": "En cada paso queda 2/3 de la longitud: 1 × (2/3)<sup>7</sup> = <b><span class='fr'><span class='fn'>128</span><span class='fd'>2 187</span></span></b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "En el conjunto de Cantor se quita el tercio central de cada segmento. Empezando con 1 segmento, ¿cuántos segmentos hay después de 8 pasos?",
+     "c": [
+      "16",
+      "6 561",
+      "256",
+      "512"
+     ],
+     "a": 2,
+     "e": "Cada segmento se convierte en 2: 2<sup>8</sup> = <b>256</b>."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 3. ¿Cuánta longitud queda después de 8 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2 187</span></span>",
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>2 187</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>512</span><span class='fd'>6 561</span></span>"
+     ],
+     "a": 1,
+     "e": "En cada paso queda 2/3 de la longitud: 3 × (2/3)<sup>8</sup> = <b><span class='fr'><span class='fn'>256</span><span class='fd'>2 187</span></span></b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 27. ¿Cuánta longitud queda después de 6 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>81</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>27</span></span>"
+     ],
+     "a": 3,
+     "e": "En cada paso queda 2/3 de la longitud: 27 × (2/3)<sup>6</sup> = <b><span class='fr'><span class='fn'>64</span><span class='fd'>27</span></span></b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "En el conjunto de Cantor se quita el tercio central de cada segmento. Empezando con 1 segmento, ¿cuántos segmentos hay después de 1 pasos?",
+     "c": [
+      "2",
+      "4",
+      "3",
+      "1"
+     ],
+     "a": 0,
+     "e": "Cada segmento se convierte en 2: 2<sup>1</sup> = <b>2</b>."
+    },
+    {
+     "q": "En el conjunto de Cantor se quita el tercio central de cada segmento. Empezando con 1 segmento, ¿cuántos segmentos hay después de 5 pasos?",
+     "c": [
+      "10",
+      "64",
+      "243",
+      "32"
+     ],
+     "a": 3,
+     "e": "Cada segmento se convierte en 2: 2<sup>5</sup> = <b>32</b>."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 27. ¿Cuánta longitud queda después de 1 pasos?",
+     "c": [
+      "9",
+      "18",
+      "12",
+      "19"
+     ],
+     "a": 1,
+     "e": "En cada paso queda 2/3 de la longitud: 27 × (2/3)<sup>1</sup> = <b>18</b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "En el conjunto de Cantor se quita el tercio central de cada segmento. Empezando con 1 segmento, ¿cuántos segmentos hay después de 6 pasos?",
+     "c": [
+      "729",
+      "12",
+      "64",
+      "128"
+     ],
+     "a": 2,
+     "e": "Cada segmento se convierte en 2: 2<sup>6</sup> = <b>64</b>."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 9. ¿Cuánta longitud queda después de 6 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>81</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>243</span></span>"
+     ],
+     "a": 1,
+     "e": "En cada paso queda 2/3 de la longitud: 9 × (2/3)<sup>6</sup> = <b><span class='fr'><span class='fn'>64</span><span class='fd'>81</span></span></b>. Con infinitos pasos la longitud tiende a 0."
+    }
+   ]
+  },
+  {
+   "title": "Triángulo de Sierpiński",
+   "items": [
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 16 cm². ¿Qué área queda después de 4 pasos?",
+     "c": [
+      "0.0625 cm²",
+      "1 cm²",
+      "5.0625 cm²",
+      "3.796875 cm²"
+     ],
+     "a": 2,
+     "e": "Cada paso deja 3/4 del área: 16 × (3/4)<sup>4</sup> = <b>5.0625 cm²</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 32 cm². ¿Qué área queda después de 3 pasos?",
+     "c": [
+      "2.67 cm²",
+      "10.125 cm²",
+      "13.5 cm²",
+      "0.5 cm²"
+     ],
+     "a": 2,
+     "e": "Cada paso deja 3/4 del área: 32 × (3/4)<sup>3</sup> = <b>13.5 cm²</b>."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, cada triángulo se divide en 4 y se quita el central. ¿Cuántos triángulos negros hay después de 3 pasos?",
+     "c": [
+      "64",
+      "8",
+      "27",
+      "9"
+     ],
+     "a": 2,
+     "e": "Cada triángulo deja 3: 3<sup>3</sup> = <b>27</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 32 cm². ¿Qué área queda después de 8 pasos?",
+     "c": [
+      "0 cm²",
+      "1 cm²",
+      "2.4 cm²",
+      "3.2 cm²"
+     ],
+     "a": 3,
+     "e": "Cada paso deja 3/4 del área: 32 × (3/4)<sup>8</sup> = <b>3.2 cm²</b>."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, cada triángulo se divide en 4 y se quita el central. ¿Cuántos triángulos negros hay después de 1 pasos?",
+     "c": [
+      "5",
+      "2",
+      "4",
+      "3"
+     ],
+     "a": 3,
+     "e": "Cada triángulo deja 3: 3<sup>1</sup> = <b>3</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 16 cm². ¿Qué área queda después de 2 pasos?",
+     "c": [
+      "2 cm²",
+      "1 cm²",
+      "9 cm²",
+      "6.75 cm²"
+     ],
+     "a": 2,
+     "e": "Cada paso deja 3/4 del área: 16 × (3/4)<sup>2</sup> = <b>9 cm²</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 32 cm². ¿Qué área queda después de 1 pasos?",
+     "c": [
+      "24 cm²",
+      "8 cm²",
+      "18 cm²",
+      "25 cm²"
+     ],
+     "a": 0,
+     "e": "Cada paso deja 3/4 del área: 32 × (3/4)<sup>1</sup> = <b>24 cm²</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 64 cm². ¿Qué área queda después de 1 pasos?",
+     "c": [
+      "36 cm²",
+      "16 cm²",
+      "49 cm²",
+      "48 cm²"
+     ],
+     "a": 3,
+     "e": "Cada paso deja 3/4 del área: 64 × (3/4)<sup>1</sup> = <b>48 cm²</b>."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, cada triángulo se divide en 4 y se quita el central. ¿Cuántos triángulos negros hay después de 5 pasos?",
+     "c": [
+      "243",
+      "15",
+      "32",
+      "1 024"
+     ],
+     "a": 0,
+     "e": "Cada triángulo deja 3: 3<sup>5</sup> = <b>243</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 16 cm². ¿Qué área queda después de 1 pasos?",
+     "c": [
+      "12 cm²",
+      "9 cm²",
+      "4 cm²",
+      "13 cm²"
+     ],
+     "a": 0,
+     "e": "Cada paso deja 3/4 del área: 16 × (3/4)<sup>1</sup> = <b>12 cm²</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 32 cm². ¿Qué área queda después de 6 pasos?",
+     "c": [
+      "5.7 cm²",
+      "1.33 cm²",
+      "0.01 cm²",
+      "4.27 cm²"
+     ],
+     "a": 0,
+     "e": "Cada paso deja 3/4 del área: 32 × (3/4)<sup>6</sup> = <b>5.7 cm²</b>."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, cada triángulo se divide en 4 y se quita el central. ¿Cuántos triángulos negros hay después de 2 pasos?",
+     "c": [
+      "6",
+      "4",
+      "9",
+      "16"
+     ],
+     "a": 2,
+     "e": "Cada triángulo deja 3: 3<sup>2</sup> = <b>9</b>."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, cada triángulo se divide en 4 y se quita el central. ¿Cuántos triángulos negros hay después de 7 pasos?",
+     "c": [
+      "16 384",
+      "2 187",
+      "128",
+      "21"
+     ],
+     "a": 1,
+     "e": "Cada triángulo deja 3: 3<sup>7</sup> = <b>2 187</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 256 cm². ¿Qué área queda después de 4 pasos?",
+     "c": [
+      "60.75 cm²",
+      "81 cm²",
+      "1 cm²",
+      "16 cm²"
+     ],
+     "a": 1,
+     "e": "Cada paso deja 3/4 del área: 256 × (3/4)<sup>4</sup> = <b>81 cm²</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 256 cm². ¿Qué área queda después de 8 pasos?",
+     "c": [
+      "25.63 cm²",
+      "8 cm²",
+      "0 cm²",
+      "19.22 cm²"
+     ],
+     "a": 0,
+     "e": "Cada paso deja 3/4 del área: 256 × (3/4)<sup>8</sup> = <b>25.63 cm²</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 128 cm². ¿Qué área queda después de 4 pasos?",
+     "c": [
+      "30.375 cm²",
+      "0.5 cm²",
+      "8 cm²",
+      "40.5 cm²"
+     ],
+     "a": 3,
+     "e": "Cada paso deja 3/4 del área: 128 × (3/4)<sup>4</sup> = <b>40.5 cm²</b>."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, cada triángulo se divide en 4 y se quita el central. ¿Cuántos triángulos negros hay después de 6 pasos?",
+     "c": [
+      "18",
+      "729",
+      "64",
+      "4 096"
+     ],
+     "a": 1,
+     "e": "Cada triángulo deja 3: 3<sup>6</sup> = <b>729</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 256 cm². ¿Qué área queda después de 3 pasos?",
+     "c": [
+      "81 cm²",
+      "21.33 cm²",
+      "4 cm²",
+      "108 cm²"
+     ],
+     "a": 3,
+     "e": "Cada paso deja 3/4 del área: 256 × (3/4)<sup>3</sup> = <b>108 cm²</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 32 cm². ¿Qué área queda después de 4 pasos?",
+     "c": [
+      "0.125 cm²",
+      "10.125 cm²",
+      "2 cm²",
+      "7.59375 cm²"
+     ],
+     "a": 1,
+     "e": "Cada paso deja 3/4 del área: 32 × (3/4)<sup>4</sup> = <b>10.125 cm²</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 64 cm². ¿Qué área queda después de 4 pasos?",
+     "c": [
+      "4 cm²",
+      "20.25 cm²",
+      "0.25 cm²",
+      "15.1875 cm²"
+     ],
+     "a": 1,
+     "e": "Cada paso deja 3/4 del área: 64 × (3/4)<sup>4</sup> = <b>20.25 cm²</b>."
+    }
+   ]
+  },
+  {
+   "title": "Copo de Koch",
+   "items": [
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 12. ¿Cuál es el perímetro después de 8 pasos?",
+     "c": [
+      "119.86",
+      "20",
+      "1.2",
+      "159.82"
+     ],
+     "a": 0,
+     "e": "Cada paso multiplica el perímetro por 4/3: 12 × (4/3)<sup>8</sup> = <b>119.86</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "En el copo de Koch, cada segmento se reemplaza por 4 segmentos de 1/3 de su longitud. Empezando con un triángulo (3 lados), ¿cuántos segmentos hay después de 5 pasos?",
+     "c": [
+      "3 072",
+      "1 024",
+      "60",
+      "729"
+     ],
+     "a": 0,
+     "e": "3 × 4<sup>5</sup> = <b>3 072</b>."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 27. ¿Cuál es el perímetro después de 7 pasos?",
+     "c": [
+      "269.7",
+      "34",
+      "3.6",
+      "202.27"
+     ],
+     "a": 3,
+     "e": "Cada paso multiplica el perímetro por 4/3: 27 × (4/3)<sup>7</sup> = <b>202.27</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "En el copo de Koch, cada segmento se reemplaza por 4 segmentos de 1/3 de su longitud. Empezando con un triángulo (3 lados), ¿cuántos segmentos hay después de 7 pasos?",
+     "c": [
+      "6 561",
+      "16 384",
+      "84",
+      "49 152"
+     ],
+     "a": 3,
+     "e": "3 × 4<sup>7</sup> = <b>49 152</b>."
+    },
+    {
+     "q": "En el copo de Koch, cada segmento se reemplaza por 4 segmentos de 1/3 de su longitud. Empezando con un triángulo (3 lados), ¿cuántos segmentos hay después de 2 pasos?",
+     "c": [
+      "27",
+      "24",
+      "48",
+      "16"
+     ],
+     "a": 2,
+     "e": "3 × 4<sup>2</sup> = <b>48</b>."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 12. ¿Cuál es el perímetro después de 5 pasos?",
+     "c": [
+      "67.42",
+      "2.85",
+      "50.57",
+      "17"
+     ],
+     "a": 2,
+     "e": "Cada paso multiplica el perímetro por 4/3: 12 × (4/3)<sup>5</sup> = <b>50.57</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 12. ¿Cuál es el perímetro después de 2 pasos?",
+     "c": [
+      "6.75",
+      "21.33",
+      "28.44",
+      "14"
+     ],
+     "a": 1,
+     "e": "Cada paso multiplica el perímetro por 4/3: 12 × (4/3)<sup>2</sup> = <b>21.33</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 6. ¿Cuál es el perímetro después de 8 pasos?",
+     "c": [
+      "59.93",
+      "0.6",
+      "79.91",
+      "14"
+     ],
+     "a": 0,
+     "e": "Cada paso multiplica el perímetro por 4/3: 6 × (4/3)<sup>8</sup> = <b>59.93</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "En el copo de Koch, cada segmento se reemplaza por 4 segmentos de 1/3 de su longitud. Empezando con un triángulo (3 lados), ¿cuántos segmentos hay después de 3 pasos?",
+     "c": [
+      "36",
+      "192",
+      "81",
+      "64"
+     ],
+     "a": 1,
+     "e": "3 × 4<sup>3</sup> = <b>192</b>."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 9. ¿Cuál es el perímetro después de 8 pasos?",
+     "c": [
+      "17",
+      "119.86",
+      "0.9",
+      "89.9"
+     ],
+     "a": 3,
+     "e": "Cada paso multiplica el perímetro por 4/3: 9 × (4/3)<sup>8</sup> = <b>89.9</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 3. ¿Cuál es el perímetro después de 2 pasos?",
+     "c": [
+      "5.33",
+      "1.6875",
+      "7.11",
+      "5"
+     ],
+     "a": 0,
+     "e": "Cada paso multiplica el perímetro por 4/3: 3 × (4/3)<sup>2</sup> = <b>5.33</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 27. ¿Cuál es el perímetro después de 8 pasos?",
+     "c": [
+      "2.7",
+      "359.59",
+      "35",
+      "269.7"
+     ],
+     "a": 3,
+     "e": "Cada paso multiplica el perímetro por 4/3: 27 × (4/3)<sup>8</sup> = <b>269.7</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "En el copo de Koch, cada segmento se reemplaza por 4 segmentos de 1/3 de su longitud. Empezando con un triángulo (3 lados), ¿cuántos segmentos hay después de 8 pasos?",
+     "c": [
+      "19 683",
+      "96",
+      "196 608",
+      "65 536"
+     ],
+     "a": 2,
+     "e": "3 × 4<sup>8</sup> = <b>196 608</b>."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 9. ¿Cuál es el perímetro después de 7 pasos?",
+     "c": [
+      "16",
+      "67.42",
+      "89.9",
+      "1.2"
+     ],
+     "a": 1,
+     "e": "Cada paso multiplica el perímetro por 4/3: 9 × (4/3)<sup>7</sup> = <b>67.42</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "En el copo de Koch, cada segmento se reemplaza por 4 segmentos de 1/3 de su longitud. Empezando con un triángulo (3 lados), ¿cuántos segmentos hay después de 1 pasos?",
+     "c": [
+      "4",
+      "9",
+      "12",
+      "13"
+     ],
+     "a": 2,
+     "e": "3 × 4<sup>1</sup> = <b>12</b>."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 3. ¿Cuál es el perímetro después de 4 pasos?",
+     "c": [
+      "12.64",
+      "9.48",
+      "7",
+      "0.95"
+     ],
+     "a": 1,
+     "e": "Cada paso multiplica el perímetro por 4/3: 3 × (4/3)<sup>4</sup> = <b>9.48</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "En el copo de Koch, cada segmento se reemplaza por 4 segmentos de 1/3 de su longitud. Empezando con un triángulo (3 lados), ¿cuántos segmentos hay después de 4 pasos?",
+     "c": [
+      "256",
+      "48",
+      "768",
+      "243"
+     ],
+     "a": 2,
+     "e": "3 × 4<sup>4</sup> = <b>768</b>."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 6. ¿Cuál es el perímetro después de 1 pasos?",
+     "c": [
+      "7",
+      "4.5",
+      "10.67",
+      "8"
+     ],
+     "a": 3,
+     "e": "Cada paso multiplica el perímetro por 4/3: 6 × (4/3)<sup>1</sup> = <b>8</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "En el copo de Koch, cada segmento se reemplaza por 4 segmentos de 1/3 de su longitud. Empezando con un triángulo (3 lados), ¿cuántos segmentos hay después de 6 pasos?",
+     "c": [
+      "2 187",
+      "12 288",
+      "4 096",
+      "72"
+     ],
+     "a": 1,
+     "e": "3 × 4<sup>6</sup> = <b>12 288</b>."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 9. ¿Cuál es el perímetro después de 3 pasos?",
+     "c": [
+      "21.33",
+      "3.796875",
+      "28.44",
+      "12"
+     ],
+     "a": 0,
+     "e": "Cada paso multiplica el perímetro por 4/3: 9 × (4/3)<sup>3</sup> = <b>21.33</b>. El perímetro crece sin límite, pero el área no."
+    }
+   ]
+  },
+  {
+   "title": "Dimensión fractal",
+   "items": [
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 9. ¿Cuánta longitud queda después de 2 pasos?",
+     "c": [
+      "4",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "1",
+      "3"
+     ],
+     "a": 0,
+     "e": "En cada paso queda 2/3 de la longitud: 9 × (2/3)<sup>2</sup> = <b>4</b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 6. ¿Cuál es el perímetro después de 2 pasos?",
+     "c": [
+      "8",
+      "14.22",
+      "10.67",
+      "3.375"
+     ],
+     "a": 2,
+     "e": "Cada paso multiplica el perímetro por 4/3: 6 × (4/3)<sup>2</sup> = <b>10.67</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "El cubo está formado por 8 copias reducidas a 1/2. ¿Cuál es su dimensión de autosimilitud D = log N ÷ log s? (a los centésimos)",
+     "c": [
+      "4",
+      "2",
+      "3",
+      "0.33"
+     ],
+     "a": 2,
+     "e": "D = log 8 ÷ log 2 ≈ <b>3</b>. Da un entero: no es un fractal."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 1. ¿Cuánta longitud queda después de 6 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>2 187</span></span>",
+      "0"
+     ],
+     "a": 1,
+     "e": "En cada paso queda 2/3 de la longitud: 1 × (2/3)<sup>6</sup> = <b><span class='fr'><span class='fn'>64</span><span class='fd'>729</span></span></b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 1. ¿Cuánta longitud queda después de 3 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "0"
+     ],
+     "a": 0,
+     "e": "En cada paso queda 2/3 de la longitud: 1 × (2/3)<sup>3</sup> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span></b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "El cuadrado está formado por 4 copias reducidas a 1/2. ¿Cuál es su dimensión de autosimilitud D = log N ÷ log s? (a los centésimos)",
+     "c": [
+      "3",
+      "2",
+      "1",
+      "0.5"
+     ],
+     "a": 1,
+     "e": "D = log 4 ÷ log 2 ≈ <b>2</b>. Da un entero: no es un fractal."
+    },
+    {
+     "q": "El conjunto de Cantor está formado por 2 copias reducidas a 1/3. ¿Cuál es su dimensión de autosimilitud D = log N ÷ log s? (a los centésimos)",
+     "c": [
+      "0.67",
+      "1.58",
+      "1.63",
+      "0.63"
+     ],
+     "a": 3,
+     "e": "D = log 2 ÷ log 3 ≈ <b>0.63</b>. Es un número no entero: por eso se llama fractal."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 3. ¿Cuál es el perímetro después de 1 pasos?",
+     "c": [
+      "5",
+      "4",
+      "2.25",
+      "5.33"
+     ],
+     "a": 1,
+     "e": "Cada paso multiplica el perímetro por 4/3: 3 × (4/3)<sup>1</sup> = <b>4</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "El segmento está formado por 2 copias reducidas a 1/2. ¿Cuál es su dimensión de autosimilitud D = log N ÷ log s? (a los centésimos)",
+     "c": [
+      "1",
+      "4",
+      "3",
+      "2"
+     ],
+     "a": 0,
+     "e": "D = log 2 ÷ log 2 ≈ <b>1</b>. Da un entero: no es un fractal."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 9. ¿Cuánta longitud queda después de 8 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>729</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>512</span><span class='fd'>2 187</span></span>"
+     ],
+     "a": 2,
+     "e": "En cada paso queda 2/3 de la longitud: 9 × (2/3)<sup>8</sup> = <b><span class='fr'><span class='fn'>256</span><span class='fd'>729</span></span></b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 3. ¿Cuál es el perímetro después de 7 pasos?",
+     "c": [
+      "0.4",
+      "10",
+      "22.47",
+      "29.97"
+     ],
+     "a": 2,
+     "e": "Cada paso multiplica el perímetro por 4/3: 3 × (4/3)<sup>7</sup> = <b>22.47</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "El curva de Koch está formado por 4 copias reducidas a 1/3. ¿Cuál es su dimensión de autosimilitud D = log N ÷ log s? (a los centésimos)",
+     "c": [
+      "0.79",
+      "2.26",
+      "1.33",
+      "1.26"
+     ],
+     "a": 3,
+     "e": "D = log 4 ÷ log 3 ≈ <b>1.26</b>. Es un número no entero: por eso se llama fractal."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 3. ¿Cuánta longitud queda después de 1 pasos?",
+     "c": [
+      "1",
+      "3",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "2"
+     ],
+     "a": 3,
+     "e": "En cada paso queda 2/3 de la longitud: 3 × (2/3)<sup>1</sup> = <b>2</b>. Con infinitos pasos la longitud tiende a 0."
+    },
+    {
+     "q": "El triángulo de Sierpiński está formado por 3 copias reducidas a 1/2. ¿Cuál es su dimensión de autosimilitud D = log N ÷ log s? (a los centésimos)",
+     "c": [
+      "1.58",
+      "1.5",
+      "0.63",
+      "2.58"
+     ],
+     "a": 0,
+     "e": "D = log 3 ÷ log 2 ≈ <b>1.58</b>. Es un número no entero: por eso se llama fractal."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 27. ¿Cuál es el perímetro después de 2 pasos?",
+     "c": [
+      "15.1875",
+      "29",
+      "48",
+      "64"
+     ],
+     "a": 2,
+     "e": "Cada paso multiplica el perímetro por 4/3: 27 × (4/3)<sup>2</sup> = <b>48</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 6. ¿Cuál es el perímetro después de 5 pasos?",
+     "c": [
+      "33.71",
+      "11",
+      "1.42",
+      "25.28"
+     ],
+     "a": 3,
+     "e": "Cada paso multiplica el perímetro por 4/3: 6 × (4/3)<sup>5</sup> = <b>25.28</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "El esponja de Menger está formado por 20 copias reducidas a 1/3. ¿Cuál es su dimensión de autosimilitud D = log N ÷ log s? (a los centésimos)",
+     "c": [
+      "0.37",
+      "3.73",
+      "6.67",
+      "2.73"
+     ],
+     "a": 3,
+     "e": "D = log 20 ÷ log 3 ≈ <b>2.73</b>. Es un número no entero: por eso se llama fractal."
+    },
+    {
+     "q": "El copo de Koch empieza con un triángulo de perímetro 6. ¿Cuál es el perímetro después de 4 pasos?",
+     "c": [
+      "10",
+      "18.96",
+      "25.28",
+      "1.9"
+     ],
+     "a": 1,
+     "e": "Cada paso multiplica el perímetro por 4/3: 6 × (4/3)<sup>4</sup> = <b>18.96</b>. El perímetro crece sin límite, pero el área no."
+    },
+    {
+     "q": "El alfombra de Sierpiński está formado por 8 copias reducidas a 1/3. ¿Cuál es su dimensión de autosimilitud D = log N ÷ log s? (a los centésimos)",
+     "c": [
+      "2.89",
+      "1.89",
+      "2.67",
+      "0.53"
+     ],
+     "a": 1,
+     "e": "D = log 8 ÷ log 3 ≈ <b>1.89</b>. Es un número no entero: por eso se llama fractal."
+    },
+    {
+     "q": "Se construye el conjunto de Cantor sobre un segmento de longitud 9. ¿Cuánta longitud queda después de 3 pasos?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "En cada paso queda 2/3 de la longitud: 9 × (2/3)<sup>3</sup> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span></b>. Con infinitos pasos la longitud tiende a 0."
+    }
+   ]
+  },
+  {
+   "title": "Mandelbrot y Julia",
+   "items": [
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 64 cm². ¿Qué área queda después de 5 pasos?",
+     "c": [
+      "11.390625 cm²",
+      "0.0625 cm²",
+      "3.2 cm²",
+      "15.1875 cm²"
+     ],
+     "a": 3,
+     "e": "Cada paso deja 3/4 del área: 64 × (3/4)<sup>5</sup> = <b>15.1875 cm²</b>."
+    },
+    {
+     "q": "Al iterar z → z² + c desde z = 0 con c = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> se obtiene <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>, <span class='fr'><span class='fn'>17</span><span class='fd'>16</span></span>, <span class='fr'><span class='fn'>417</span><span class='fd'>256</span></span>, … ¿El número c pertenece al conjunto de Mandelbrot?",
+     "c": [
+      "no se puede saber nunca",
+      "sí, porque los valores no se van al infinito",
+      "no, porque los valores crecen sin límite",
+      "solo si c es positivo"
+     ],
+     "a": 2,
+     "e": "c está en el conjunto de Mandelbrot si la sucesión se mantiene acotada: aquí crece sin límite."
+    },
+    {
+     "q": "Al iterar z → z² + c desde z = 0 con c = −2 se obtiene −2, 2, 2, 2, … ¿El número c pertenece al conjunto de Mandelbrot?",
+     "c": [
+      "sí, porque los valores no se van al infinito",
+      "solo si c es positivo",
+      "no se puede saber nunca",
+      "no, porque los valores crecen sin límite"
+     ],
+     "a": 0,
+     "e": "c está en el conjunto de Mandelbrot si la sucesión se mantiene acotada: aquí se mantiene acotada."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 16 cm². ¿Qué área queda después de 7 pasos?",
+     "c": [
+      "2.14 cm²",
+      "0 cm²",
+      "1.6 cm²",
+      "0.57 cm²"
+     ],
+     "a": 0,
+     "e": "Cada paso deja 3/4 del área: 16 × (3/4)<sup>7</sup> = <b>2.14 cm²</b>."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 32 cm². ¿Qué área queda después de 7 pasos?",
+     "c": [
+      "0 cm²",
+      "1.14 cm²",
+      "3.2 cm²",
+      "4.27 cm²"
+     ],
+     "a": 3,
+     "e": "Cada paso deja 3/4 del área: 32 × (3/4)<sup>7</sup> = <b>4.27 cm²</b>."
+    },
+    {
+     "q": "Al iterar z → z² + c desde z = 0 con c = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> se obtiene <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, <span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>, <span class='fr'><span class='fn'>89</span><span class='fd'>256</span></span>, <span class='fr'><span class='fn'>24 305</span><span class='fd'>65 536</span></span>, … ¿El número c pertenece al conjunto de Mandelbrot?",
+     "c": [
+      "no, porque los valores crecen sin límite",
+      "solo si c es positivo",
+      "no se puede saber nunca",
+      "sí, porque los valores no se van al infinito"
+     ],
+     "a": 3,
+     "e": "c está en el conjunto de Mandelbrot si la sucesión se mantiene acotada: aquí se mantiene acotada."
+    },
+    {
+     "q": "Al iterar z → z² + c desde z = 0 con c = 1 se obtiene 1, 2, 5, 26, … ¿El número c pertenece al conjunto de Mandelbrot?",
+     "c": [
+      "no se puede saber nunca",
+      "solo si c es positivo",
+      "no, porque los valores crecen sin límite",
+      "sí, porque los valores no se van al infinito"
+     ],
+     "a": 2,
+     "e": "c está en el conjunto de Mandelbrot si la sucesión se mantiene acotada: aquí crece sin límite."
+    },
+    {
+     "q": "Para el conjunto de Mandelbrot se itera z → z² + c desde z = 0. Con c = −2, ¿cuáles son los primeros tres valores?",
+     "c": [
+      "−2, 4, −8",
+      "−1, 3, 3",
+      "−2, 2, 2",
+      "−2, −4, −6"
+     ],
+     "a": 2,
+     "e": "z₁ = 0² + c = −2; z₂ = −2² + c = 2; z₃ = 2."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, cada triángulo se divide en 4 y se quita el central. ¿Cuántos triángulos negros hay después de 4 pasos?",
+     "c": [
+      "81",
+      "16",
+      "12",
+      "256"
+     ],
+     "a": 0,
+     "e": "Cada triángulo deja 3: 3<sup>4</sup> = <b>81</b>."
+    },
+    {
+     "q": "Al iterar z → z² + c desde z = 0 con c = −1 se obtiene −1, 0, −1, 0, … ¿El número c pertenece al conjunto de Mandelbrot?",
+     "c": [
+      "no, porque los valores crecen sin límite",
+      "solo si c es positivo",
+      "sí, porque los valores no se van al infinito",
+      "no se puede saber nunca"
+     ],
+     "a": 2,
+     "e": "c está en el conjunto de Mandelbrot si la sucesión se mantiene acotada: aquí se mantiene acotada."
+    },
+    {
+     "q": "Un triángulo de Sierpiński empieza con área 16 cm². ¿Qué área queda después de 5 pasos?",
+     "c": [
+      "2.85 cm²",
+      "3.796875 cm²",
+      "0.015625 cm²",
+      "0.8 cm²"
+     ],
+     "a": 1,
+     "e": "Cada paso deja 3/4 del área: 16 × (3/4)<sup>5</sup> = <b>3.796875 cm²</b>."
+    },
+    {
+     "q": "Para el conjunto de Mandelbrot se itera z → z² + c desde z = 0. Con c = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, ¿cuáles son los primeros tres valores?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>, <span class='fr'><span class='fn'>33</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>, <span class='fr'><span class='fn'>17</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, 1, <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "z₁ = 0² + c = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>; z₂ = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>² + c = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>; z₃ = <span class='fr'><span class='fn'>17</span><span class='fd'>16</span></span>."
+    },
+    {
+     "q": "Para el conjunto de Mandelbrot se itera z → z² + c desde z = 0. Con c = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, ¿cuáles son los primeros tres valores?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, <span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>, <span class='fr'><span class='fn'>89</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>, <span class='fr'><span class='fn'>21</span><span class='fd'>16</span></span>, <span class='fr'><span class='fn'>345</span><span class='fd'>256</span></span>"
+     ],
+     "a": 1,
+     "e": "z₁ = 0² + c = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>; z₂ = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>² + c = <span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>; z₃ = <span class='fr'><span class='fn'>89</span><span class='fd'>256</span></span>."
+    },
+    {
+     "q": "Al iterar z → z² + c desde z = 0 con c = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> se obtiene −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, −<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, −<span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span>, −<span class='fr'><span class='fn'>79</span><span class='fd'>256</span></span>, … ¿El número c pertenece al conjunto de Mandelbrot?",
+     "c": [
+      "no, porque los valores crecen sin límite",
+      "solo si c es positivo",
+      "no se puede saber nunca",
+      "sí, porque los valores no se van al infinito"
+     ],
+     "a": 3,
+     "e": "c está en el conjunto de Mandelbrot si la sucesión se mantiene acotada: aquí se mantiene acotada."
+    },
+    {
+     "q": "Para el conjunto de Mandelbrot se itera z → z² + c desde z = 0. Con c = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, ¿cuáles son los primeros tres valores?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, −<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, −<span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, −1, −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, −<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>, <span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>"
+     ],
+     "a": 0,
+     "e": "z₁ = 0² + c = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>; z₂ = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>² + c = −<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>; z₃ = −<span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span>."
+    },
+    {
+     "q": "Para el conjunto de Mandelbrot se itera z → z² + c desde z = 0. Con c = −1, ¿cuáles son los primeros tres valores?",
+     "c": [
+      "−1, −2, −3",
+      "−1, 0, −1",
+      "−1, 1, −1",
+      "0, 1, 0"
+     ],
+     "a": 1,
+     "e": "z₁ = 0² + c = −1; z₂ = −1² + c = 0; z₃ = −1."
+    },
+    {
+     "q": "En el triángulo de Sierpiński, cada triángulo se divide en 4 y se quita el central. ¿Cuántos triángulos negros hay después de 8 pasos?",
+     "c": [
+      "24",
+      "65 536",
+      "6 561",
+      "256"
+     ],
+     "a": 2,
+     "e": "Cada triángulo deja 3: 3<sup>8</sup> = <b>6 561</b>."
+    },
+    {
+     "q": "Al iterar z → z² + c desde z = 0 con c = −3 se obtiene −3, 6, 33, 1 086, … ¿El número c pertenece al conjunto de Mandelbrot?",
+     "c": [
+      "sí, porque los valores no se van al infinito",
+      "solo si c es positivo",
+      "no se puede saber nunca",
+      "no, porque los valores crecen sin límite"
+     ],
+     "a": 3,
+     "e": "c está en el conjunto de Mandelbrot si la sucesión se mantiene acotada: aquí crece sin límite."
+    },
+    {
+     "q": "Al iterar z → z² + c desde z = 0 con c = 0 se obtiene 0, 0, 0, 0, … ¿El número c pertenece al conjunto de Mandelbrot?",
+     "c": [
+      "sí, porque los valores no se van al infinito",
+      "solo si c es positivo",
+      "no, porque los valores crecen sin límite",
+      "no se puede saber nunca"
+     ],
+     "a": 0,
+     "e": "c está en el conjunto de Mandelbrot si la sucesión se mantiene acotada: aquí se mantiene acotada."
+    },
+    {
+     "q": "Para el conjunto de Mandelbrot se itera z → z² + c desde z = 0. Con c = 1, ¿cuáles son los primeros tres valores?",
+     "c": [
+      "1, 1, 1",
+      "1, 2, 5",
+      "1, 2, 3",
+      "2, 3, 6"
+     ],
+     "a": 1,
+     "e": "z₁ = 0² + c = 1; z₂ = 1² + c = 2; z₃ = 5."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 9,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "temas-selectos-1"
+}

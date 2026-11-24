@@ -1,0 +1,1157 @@
+{
+ "slug": "composicion-y-sistemas-dinamicos",
+ "title": "Iteración, órbitas y puntos fijos",
+ "seo_title": "Sistemas dinámicos – Temas Selectos de Matemáticas II: ejercicios con respuestas",
+ "short_title": "Sistemas dinámicos",
+ "domain": "Sucesiones y sistemas dinámicos",
+ "standard_code": "Temas Selectos de Matemáticas II · Progresión 1: Composición de funciones y sistemas dinámicos discretos",
+ "standard_url": "https://dgb.sep.gob.mx/storage/recursos/2024/11/6N3XjApvTB-Temas-Selectos-de-Matematicas-II.pdf",
+ "standard_text": "Compone una función consigo misma para obtener sistemas dinámicos discretos: iteraciones, órbitas, puntos fijos, recurrencias y sensibilidad a las condiciones iniciales (resumen de la progresión 1 del programa de Temas Selectos de Matemáticas II (DGB, SEP 2024))",
+ "meta_desc": "Ejercicios de Temas Selectos de Matemáticas II: composición de funciones, iterar f(f(x)), órbitas, puntos fijos, sucesiones recurrentes, modelo logístico y caos. 100 ejercicios con respuestas.",
+ "key_big": "xₙ₊₁ = f(xₙ)",
+ "key_sub": "Un punto fijo cumple f(x) = x.",
+ "body_html": "<h2>Cómo se hace</h2><p>Un <b>sistema dinámico discreto</b> aplica la misma regla una y otra vez: x₁ = f(x₀), x₂ = f(x₁) = f(f(x₀)), …</p><p>La sucesión de valores es la <b>órbita</b> de x₀. Un <b>punto fijo</b> cumple f(x) = x: si llegas a él, ya no cambias.</p><p>Algunas reglas sencillas, como el modelo logístico xₙ₊₁ = r·xₙ(1 − xₙ), producen comportamientos caóticos: pequeñas diferencias iniciales crecen mucho.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>f(x) = x/2 + 3, x₀ = 2</p><p class='sn-ex-s'>x₁ = 4, x₂ = 5, x₃ = 5.5</p><p class='sn-ex-s'>Punto fijo: x = x/2 + 3 → x = 6</p><p class='sn-ex-a'>Respuesta: la órbita se acerca a 6</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Confundir f(f(x)) con f(x)²</td><td>Componer es aplicar f al resultado.</td></tr><tr><td>Resolver f(x) = 0 para el punto fijo</td><td>Es f(x) = x.</td></tr><tr><td>Creer que una regla sencilla siempre da algo predecible</td><td>Puede producir caos.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Qué es el efecto mariposa?",
+   "a": "La idea de que un cambio mínimo al inicio (el aleteo de una mariposa) puede cambiar mucho el resultado, como en el clima."
+  },
+  {
+   "q": "¿Dónde se usan?",
+   "a": "En poblaciones, economía, clima y en gráficos de fractales."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Composición",
+   "items": [
+    {
+     "q": "Si f(x) = 3x − 2 y g(x) = x² + 4, ¿cuál es (f ∘ g)(x)?",
+     "c": [
+      "3x² − 2",
+      "3x² + 10",
+      "(3x − 2)(x² + 4)",
+      "(3x − 2)² + 4"
+     ],
+     "a": 1,
+     "e": "(f ∘ g)(x) = f(g(x)) = 3(x² + 4) − 2 → <b>3x² + 10</b>."
+    },
+    {
+     "q": "Si f(x) = 5x − 5 y g(x) = x² + 1, ¿cuál es (g ∘ f)(x)?",
+     "c": [
+      "x² + 1 + 5x − 5",
+      "(5x − 5)(x² + 1)",
+      "(5x − 5)² + 1",
+      "5x²"
+     ],
+     "a": 2,
+     "e": "(g ∘ f)(x) = g(f(x)): sustituimos x por 5x − 5 en g. <b>(5x − 5)² + 1</b>."
+    },
+    {
+     "q": "Si f(x) = 2x − 2 y g(x) = x² − 4, ¿cuál es (f ∘ g)(x)?",
+     "c": [
+      "(2x − 2)² − 4",
+      "(2x − 2)(x² − 4)",
+      "2x² − 10",
+      "2x² − 2"
+     ],
+     "a": 2,
+     "e": "(f ∘ g)(x) = f(g(x)) = 2(x² − 4) − 2 → <b>2x² − 10</b>."
+    },
+    {
+     "q": "Si f(x) = 2x − 3 y g(x) = x² + 4, ¿cuál es (f ∘ g)(x)?",
+     "c": [
+      "2x² + 5",
+      "(2x − 3)² + 4",
+      "(2x − 3)(x² + 4)",
+      "2x² − 3"
+     ],
+     "a": 0,
+     "e": "(f ∘ g)(x) = f(g(x)) = 2(x² + 4) − 3 → <b>2x² + 5</b>."
+    },
+    {
+     "q": "Si f(x) = 4x + 2 y g(x) = x² + 1, calcula (g ∘ f)(−2).",
+     "c": [
+      "22",
+      "−30",
+      "−1",
+      "37"
+     ],
+     "a": 3,
+     "e": "f(−2) = −6 y g(−6) = 37: <b>37</b>."
+    },
+    {
+     "q": "Si f(x) = 3x − 4 y g(x) = x² + 1, ¿cuál es (g ∘ f)(x)?",
+     "c": [
+      "3x² − 1",
+      "x² + 1 + 3x − 4",
+      "(3x − 4)(x² + 1)",
+      "(3x − 4)² + 1"
+     ],
+     "a": 3,
+     "e": "(g ∘ f)(x) = g(f(x)): sustituimos x por 3x − 4 en g. <b>(3x − 4)² + 1</b>."
+    },
+    {
+     "q": "Si f(x) = 2x − 2 y g(x) = x² − 2, ¿cuál es (f ∘ g)(x)?",
+     "c": [
+      "(2x − 2)(x² − 2)",
+      "2x² − 2",
+      "2x² − 6",
+      "(2x − 2)² − 2"
+     ],
+     "a": 2,
+     "e": "(f ∘ g)(x) = f(g(x)) = 2(x² − 2) − 2 → <b>2x² − 6</b>."
+    },
+    {
+     "q": "Si f(x) = 5x − 3 y g(x) = x² + 2, calcula (g ∘ f)(−3).",
+     "c": [
+      "326",
+      "−198",
+      "52",
+      "−7"
+     ],
+     "a": 0,
+     "e": "f(−3) = −18 y g(−18) = 326: <b>326</b>."
+    },
+    {
+     "q": "Si f(x) = 2x − 2 y g(x) = x² − 4, calcula (g ∘ f)(1).",
+     "c": [
+      "0",
+      "−8",
+      "−3",
+      "−4"
+     ],
+     "a": 3,
+     "e": "f(1) = 0 y g(0) = −4: <b>−4</b>."
+    },
+    {
+     "q": "Si f(x) = 2x y g(x) = x² − 1, calcula (g ∘ f)(−2).",
+     "c": [
+      "6",
+      "15",
+      "−12",
+      "−1"
+     ],
+     "a": 1,
+     "e": "f(−2) = −4 y g(−4) = 15: <b>15</b>."
+    },
+    {
+     "q": "Si f(x) = 3x y g(x) = x² + 1, ¿cuál es (g ∘ f)(x)?",
+     "c": [
+      "(3x)(x² + 1)",
+      "3x² + 3",
+      "x² + 1 + 3x",
+      "(3x)² + 1"
+     ],
+     "a": 3,
+     "e": "(g ∘ f)(x) = g(f(x)): sustituimos x por 3x en g. <b>(3x)² + 1</b>."
+    },
+    {
+     "q": "Si f(x) = 2x − 2 y g(x) = x² − 2, calcula (g ∘ f)(−2).",
+     "c": [
+      "2",
+      "−12",
+      "34",
+      "−4"
+     ],
+     "a": 2,
+     "e": "f(−2) = −6 y g(−6) = 34: <b>34</b>."
+    },
+    {
+     "q": "Si f(x) = 4x + 1 y g(x) = x² + 3, ¿cuál es (f ∘ g)(x)?",
+     "c": [
+      "(4x + 1)(x² + 3)",
+      "4x² + 13",
+      "(4x + 1)² + 3",
+      "4x² + 1"
+     ],
+     "a": 1,
+     "e": "(f ∘ g)(x) = f(g(x)) = 4(x² + 3) + 1 → <b>4x² + 13</b>."
+    },
+    {
+     "q": "Si f(x) = 2x + 3 y g(x) = x² − 2, ¿cuál es (g ∘ f)(x)?",
+     "c": [
+      "(2x + 3)(x² − 2)",
+      "(2x + 3)² − 2",
+      "x² − 2 + 2x + 3",
+      "2x² − 1"
+     ],
+     "a": 1,
+     "e": "(g ∘ f)(x) = g(f(x)): sustituimos x por 2x + 3 en g. <b>(2x + 3)² − 2</b>."
+    },
+    {
+     "q": "Si f(x) = 5x + 5 y g(x) = x² − 2, calcula (f ∘ g)(1).",
+     "c": [
+      "0",
+      "9",
+      "−10",
+      "98"
+     ],
+     "a": 0,
+     "e": "g(1) = −1 y f(−1) = 0: <b>0</b>."
+    },
+    {
+     "q": "Si f(x) = 4x + 4 y g(x) = x² − 3, ¿cuál es (g ∘ f)(x)?",
+     "c": [
+      "(4x + 4)(x² − 3)",
+      "(4x + 4)² − 3",
+      "x² − 3 + 4x + 4",
+      "4x² − 8"
+     ],
+     "a": 1,
+     "e": "(g ∘ f)(x) = g(f(x)): sustituimos x por 4x + 4 en g. <b>(4x + 4)² − 3</b>."
+    },
+    {
+     "q": "Si f(x) = 2x − 2 y g(x) = x² − 3, calcula (f ∘ g)(1).",
+     "c": [
+      "−6",
+      "−2",
+      "0",
+      "−3"
+     ],
+     "a": 0,
+     "e": "g(1) = −2 y f(−2) = −6: <b>−6</b>."
+    },
+    {
+     "q": "Si f(x) = 5x + 1 y g(x) = x², calcula (g ∘ f)(0).",
+     "c": [
+      "1",
+      "2",
+      "3",
+      "0"
+     ],
+     "a": 0,
+     "e": "f(0) = 1 y g(1) = 1: <b>1</b>."
+    },
+    {
+     "q": "Si f(x) = 4x + 3 y g(x) = x² − 1, calcula (f ∘ g)(−1).",
+     "c": [
+      "−1",
+      "4",
+      "0",
+      "3"
+     ],
+     "a": 3,
+     "e": "g(−1) = 0 y f(0) = 3: <b>3</b>."
+    },
+    {
+     "q": "Si f(x) = 5x − 3 y g(x) = x² + 2, ¿cuál es (g ∘ f)(x)?",
+     "c": [
+      "x² + 2 + 5x − 3",
+      "(5x − 3)(x² + 2)",
+      "(5x − 3)² + 2",
+      "5x² + 7"
+     ],
+     "a": 2,
+     "e": "(g ∘ f)(x) = g(f(x)): sustituimos x por 5x − 3 en g. <b>(5x − 3)² + 2</b>."
+    }
+   ]
+  },
+  {
+   "title": "Iterar una función",
+   "items": [
+    {
+     "q": "Si f(x) = −x + 2, ¿cuánto vale f(f(f(x₀))) con x₀ = 0?",
+     "c": [
+      "3",
+      "1",
+      "6",
+      "2"
+     ],
+     "a": 3,
+     "e": "Se aplica f 3 veces: 0 → 2 → 0 → 2 → <b>2</b>."
+    },
+    {
+     "q": "Si f(x) = −3x + 1, ¿cuánto vale f(f(x₀)) con x₀ = 2?",
+     "c": [
+      "−5",
+      "16",
+      "−10",
+      "13"
+     ],
+     "a": 1,
+     "e": "Se aplica f 2 veces: 2 → −5 → 16 → <b>16</b>."
+    },
+    {
+     "q": "Si f(x) = 3x + 3, ¿cuánto vale f(f(f(x₀))) con x₀ = 3?",
+     "c": [
+      "123",
+      "12",
+      "120",
+      "36"
+     ],
+     "a": 2,
+     "e": "Se aplica f 3 veces: 3 → 12 → 39 → 120 → <b>120</b>."
+    },
+    {
+     "q": "Si f(x) = −3x − 4, ¿cuánto vale f(f(f(x₀))) con x₀ = 0?",
+     "c": [
+      "−12",
+      "−4",
+      "−28",
+      "−31"
+     ],
+     "a": 2,
+     "e": "Se aplica f 3 veces: 0 → −4 → 8 → −28 → <b>−28</b>."
+    },
+    {
+     "q": "Si f(x) = −2x − 3, ¿cuánto vale f(f(x₀)) con x₀ = 1?",
+     "c": [
+      "5",
+      "7",
+      "−5",
+      "−10"
+     ],
+     "a": 1,
+     "e": "Se aplica f 2 veces: 1 → −5 → 7 → <b>7</b>."
+    },
+    {
+     "q": "Si f(x) = −3x + 3, ¿cuánto vale f(f(x₀)) con x₀ = 1?",
+     "c": [
+      "3",
+      "0",
+      "4",
+      "2"
+     ],
+     "a": 0,
+     "e": "Se aplica f 2 veces: 1 → 0 → 3 → <b>3</b>."
+    },
+    {
+     "q": "Si f(x) = x + 1, ¿cuánto vale f(f(x₀)) con x₀ = −3?",
+     "c": [
+      "−1",
+      "−2",
+      "−4",
+      "0"
+     ],
+     "a": 0,
+     "e": "Se aplica f 2 veces: −3 → −2 → −1 → <b>−1</b>."
+    },
+    {
+     "q": "Si f(x) = x − 2, ¿cuánto vale f(f(x₀)) con x₀ = 2?",
+     "c": [
+      "−1",
+      "−2",
+      "0",
+      "−3"
+     ],
+     "a": 1,
+     "e": "Se aplica f 2 veces: 2 → 0 → −2 → <b>−2</b>."
+    },
+    {
+     "q": "Si f(x) = x + 2, ¿cuánto vale f(f(x₀)) con x₀ = 2?",
+     "c": [
+      "7",
+      "6",
+      "8",
+      "4"
+     ],
+     "a": 1,
+     "e": "Se aplica f 2 veces: 2 → 4 → 6 → <b>6</b>."
+    },
+    {
+     "q": "Si f(x) = −2x + 1, ¿cuánto vale f(f(f(x₀))) con x₀ = 2?",
+     "c": [
+      "−9",
+      "−15",
+      "−13",
+      "−3"
+     ],
+     "a": 2,
+     "e": "Se aplica f 3 veces: 2 → −3 → 7 → −13 → <b>−13</b>."
+    },
+    {
+     "q": "Si f(x) = 3x − 1, ¿cuánto vale f(f(x₀)) con x₀ = 1?",
+     "c": [
+      "8",
+      "2",
+      "5",
+      "4"
+     ],
+     "a": 2,
+     "e": "Se aplica f 2 veces: 1 → 2 → 5 → <b>5</b>."
+    },
+    {
+     "q": "Si f(x) = −x + 3, ¿cuánto vale f(f(f(x₀))) con x₀ = 3?",
+     "c": [
+      "2",
+      "1",
+      "0",
+      "−1"
+     ],
+     "a": 2,
+     "e": "Se aplica f 3 veces: 3 → 0 → 3 → 0 → <b>0</b>."
+    },
+    {
+     "q": "Si f(x) = −x + 4, ¿cuánto vale f(f(f(x₀))) con x₀ = −1?",
+     "c": [
+      "15",
+      "5",
+      "6",
+      "4"
+     ],
+     "a": 1,
+     "e": "Se aplica f 3 veces: −1 → 5 → −1 → 5 → <b>5</b>."
+    },
+    {
+     "q": "Si f(x) = −3x + 5, ¿cuánto vale f(f(x₀)) con x₀ = −3?",
+     "c": [
+      "28",
+      "14",
+      "−40",
+      "−37"
+     ],
+     "a": 3,
+     "e": "Se aplica f 2 veces: −3 → 14 → −37 → <b>−37</b>."
+    },
+    {
+     "q": "Si f(x) = −3x − 1, ¿cuánto vale f(f(f(x₀))) con x₀ = 1?",
+     "c": [
+      "−34",
+      "−37",
+      "−4",
+      "−12"
+     ],
+     "a": 0,
+     "e": "Se aplica f 3 veces: 1 → −4 → 11 → −34 → <b>−34</b>."
+    },
+    {
+     "q": "Si f(x) = 2x, ¿cuánto vale f(f(f(x₀))) con x₀ = 3?",
+     "c": [
+      "6",
+      "26",
+      "18",
+      "24"
+     ],
+     "a": 3,
+     "e": "Se aplica f 3 veces: 3 → 6 → 12 → 24 → <b>24</b>."
+    },
+    {
+     "q": "Si f(x) = −3x + 5, ¿cuánto vale f(f(f(x₀))) con x₀ = −2?",
+     "c": [
+      "89",
+      "86",
+      "11",
+      "33"
+     ],
+     "a": 0,
+     "e": "Se aplica f 3 veces: −2 → 11 → −28 → 89 → <b>89</b>."
+    },
+    {
+     "q": "Si f(x) = x − 5, ¿cuánto vale f(f(f(x₀))) con x₀ = 1?",
+     "c": [
+      "−12",
+      "−4",
+      "−13",
+      "−14"
+     ],
+     "a": 3,
+     "e": "Se aplica f 3 veces: 1 → −4 → −9 → −14 → <b>−14</b>."
+    },
+    {
+     "q": "Si f(x) = −2x + 4, ¿cuánto vale f(f(f(x₀))) con x₀ = 1?",
+     "c": [
+      "4",
+      "5",
+      "2",
+      "6"
+     ],
+     "a": 0,
+     "e": "Se aplica f 3 veces: 1 → 2 → 0 → 4 → <b>4</b>."
+    },
+    {
+     "q": "Si f(x) = 2x + 2, ¿cuánto vale f(f(x₀)) con x₀ = −3?",
+     "c": [
+      "−8",
+      "−4",
+      "−7",
+      "−6"
+     ],
+     "a": 3,
+     "e": "Se aplica f 2 veces: −3 → −4 → −6 → <b>−6</b>."
+    }
+   ]
+  },
+  {
+   "title": "Puntos fijos y órbitas",
+   "items": [
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = −x − 1 (el valor con f(x) = x)?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−1"
+     ],
+     "a": 0,
+     "e": "x = −x − 1 → x(1 − −1) = -1 → <b>x = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "La órbita de x₀ = 16 con f(x) = 2x es 16, 32, 64, 128, … ¿Qué pasa a la larga?",
+     "c": [
+      "se acerca a 0",
+      "crece sin límite",
+      "se repite cada 2 pasos",
+      "se queda en 16"
+     ],
+     "a": 1,
+     "e": "|2| &gt; 1, así que la órbita <b>crece sin límite</b>."
+    },
+    {
+     "q": "La órbita de x₀ = -8 con f(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x es −8, −4, −2, −1, … ¿Qué pasa a la larga?",
+     "c": [
+      "se queda en -8",
+      "se acerca a 0",
+      "crece sin límite",
+      "se repite cada 2 pasos"
+     ],
+     "a": 1,
+     "e": "|<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>| &lt; 1, así que la órbita <b>se acerca a 0</b>."
+    },
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x − 2 (el valor con f(x) = x)?",
+     "c": [
+      "3",
+      "−3",
+      "−2",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "x = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x − 2 → x(1 − <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>) = -2 → <b>x = −3</b>."
+    },
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = 3x − 3 (el valor con f(x) = x)?",
+     "c": [
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−3"
+     ],
+     "a": 2,
+     "e": "x = 3x − 3 → x(1 − 3) = -3 → <b>x = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "La órbita de x₀ = 24 con f(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x es 24, 8, <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>, <span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>, … ¿Qué pasa a la larga?",
+     "c": [
+      "se repite cada 2 pasos",
+      "crece sin límite",
+      "se acerca a 0",
+      "se queda en 24"
+     ],
+     "a": 2,
+     "e": "|<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>| &lt; 1, así que la órbita <b>se acerca a 0</b>."
+    },
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = −2x − 6 (el valor con f(x) = x)?",
+     "c": [
+      "−2",
+      "6",
+      "−6",
+      "2"
+     ],
+     "a": 0,
+     "e": "x = −2x − 6 → x(1 − −2) = -6 → <b>x = −2</b>."
+    },
+    {
+     "q": "La órbita de x₀ = 8 con f(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x es 8, <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>, <span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>, <span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>, … ¿Qué pasa a la larga?",
+     "c": [
+      "se queda en 8",
+      "crece sin límite",
+      "se acerca a 0",
+      "se repite cada 2 pasos"
+     ],
+     "a": 2,
+     "e": "|<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>| &lt; 1, así que la órbita <b>se acerca a 0</b>."
+    },
+    {
+     "q": "La órbita de x₀ = -8 con f(x) = 2x es −8, −16, −32, −64, … ¿Qué pasa a la larga?",
+     "c": [
+      "se queda en -8",
+      "se repite cada 2 pasos",
+      "crece sin límite",
+      "se acerca a 0"
+     ],
+     "a": 2,
+     "e": "|2| &gt; 1, así que la órbita <b>crece sin límite</b>."
+    },
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x + 0 (el valor con f(x) = x)?",
+     "c": [
+      "2",
+      "0",
+      "1",
+      "3"
+     ],
+     "a": 1,
+     "e": "x = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x + 0 → x(1 − <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>) = 0 → <b>x = 0</b>."
+    },
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = −2x + 6 (el valor con f(x) = x)?",
+     "c": [
+      "−6",
+      "−2",
+      "6",
+      "2"
+     ],
+     "a": 3,
+     "e": "x = −2x + 6 → x(1 − −2) = 6 → <b>x = 2</b>."
+    },
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = 2x − 2 (el valor con f(x) = x)?",
+     "c": [
+      "−2",
+      "3",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "2"
+     ],
+     "a": 3,
+     "e": "x = 2x − 2 → x(1 − 2) = -2 → <b>x = 2</b>."
+    },
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = 2x − 1 (el valor con f(x) = x)?",
+     "c": [
+      "2",
+      "−1",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "1"
+     ],
+     "a": 3,
+     "e": "x = 2x − 1 → x(1 − 2) = -1 → <b>x = 1</b>."
+    },
+    {
+     "q": "La órbita de x₀ = 8 con f(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x es 8, 4, 2, 1, … ¿Qué pasa a la larga?",
+     "c": [
+      "se repite cada 2 pasos",
+      "se acerca a 0",
+      "crece sin límite",
+      "se queda en 8"
+     ],
+     "a": 1,
+     "e": "|<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>| &lt; 1, así que la órbita <b>se acerca a 0</b>."
+    },
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = 3x − 4 (el valor con f(x) = x)?",
+     "c": [
+      "2",
+      "−2",
+      "−1",
+      "−4"
+     ],
+     "a": 0,
+     "e": "x = 3x − 4 → x(1 − 3) = -4 → <b>x = 2</b>."
+    },
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = −x + 4 (el valor con f(x) = x)?",
+     "c": [
+      "4",
+      "0",
+      "−2",
+      "2"
+     ],
+     "a": 3,
+     "e": "x = −x + 4 → x(1 − −1) = 4 → <b>x = 2</b>."
+    },
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = 3x + 4 (el valor con f(x) = x)?",
+     "c": [
+      "2",
+      "4",
+      "1",
+      "−2"
+     ],
+     "a": 3,
+     "e": "x = 3x + 4 → x(1 − 3) = 4 → <b>x = −2</b>."
+    },
+    {
+     "q": "La órbita de x₀ = -8 con f(x) = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x es −8, 4, −2, 1, … ¿Qué pasa a la larga?",
+     "c": [
+      "se acerca a 0",
+      "se queda en -8",
+      "se repite cada 2 pasos",
+      "crece sin límite"
+     ],
+     "a": 0,
+     "e": "|−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>| &lt; 1, así que la órbita <b>se acerca a 0</b>."
+    },
+    {
+     "q": "¿Cuál es el punto fijo de f(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x − 1 (el valor con f(x) = x)?",
+     "c": [
+      "−2",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "2",
+      "−1"
+     ],
+     "a": 0,
+     "e": "x = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x − 1 → x(1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = -1 → <b>x = −2</b>."
+    },
+    {
+     "q": "La órbita de x₀ = -8 con f(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x es −8, −<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>, −<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>, −<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>, … ¿Qué pasa a la larga?",
+     "c": [
+      "se queda en -8",
+      "crece sin límite",
+      "se acerca a 0",
+      "se repite cada 2 pasos"
+     ],
+     "a": 2,
+     "e": "|<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>| &lt; 1, así que la órbita <b>se acerca a 0</b>."
+    }
+   ]
+  },
+  {
+   "title": "Recurrencias",
+   "items": [
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = −1·a<sub>n</sub> + 4 y a₀ = 3. ¿Cuánto vale a₃?",
+     "c": [
+      "−3",
+      "1",
+      "5",
+      "3"
+     ],
+     "a": 1,
+     "e": "a₁ = 1, a₂ = 3, a₃ = <b>1</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = −1·a<sub>n</sub> − 3 y a₀ = 1. ¿Cuánto vale a₃?",
+     "c": [
+      "1",
+      "−7",
+      "−4",
+      "−1"
+     ],
+     "a": 2,
+     "e": "a₁ = −4, a₂ = 1, a₃ = <b>−4</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>·a<sub>n</sub> + 4 y a₀ = −3. ¿Cuánto vale a₃?",
+     "c": [
+      "<span class='fr'><span class='fn'>53</span><span class='fd'>8</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>85</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "a₁ = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>, a₂ = <span class='fr'><span class='fn'>21</span><span class='fd'>4</span></span>, a₃ = <b><span class='fr'><span class='fn'>53</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = 2·a<sub>n</sub> − 4 y a₀ = 5. ¿Cuánto vale a₃?",
+     "c": [
+      "40",
+      "13",
+      "8",
+      "12"
+     ],
+     "a": 3,
+     "e": "a₁ = 6, a₂ = 8, a₃ = <b>12</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>·a<sub>n</sub> + 2 y a₀ = 5. ¿Cuánto vale a₃?",
+     "c": [
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "a₁ = <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>, a₂ = <span class='fr'><span class='fn'>17</span><span class='fd'>4</span></span>, a₃ = <b><span class='fr'><span class='fn'>33</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = −1·a<sub>n</sub> + 2 y a₀ = 1. ¿Cuánto vale a₃?",
+     "c": [
+      "−1",
+      "2",
+      "1",
+      "3"
+     ],
+     "a": 2,
+     "e": "a₁ = 1, a₂ = 1, a₃ = <b>1</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = −1·a<sub>n</sub> + 4 y a₀ = 4. ¿Cuánto vale a₃?",
+     "c": [
+      "1",
+      "0",
+      "4",
+      "−4"
+     ],
+     "a": 1,
+     "e": "a₁ = 0, a₂ = 4, a₃ = <b>0</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = 3·a<sub>n</sub> + 1 y a₀ = 5. ¿Cuánto vale a₃?",
+     "c": [
+      "49",
+      "149",
+      "148",
+      "135"
+     ],
+     "a": 2,
+     "e": "a₁ = 16, a₂ = 49, a₃ = <b>148</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = 3·a<sub>n</sub> + 4 y a₀ = −4. ¿Cuánto vale a₃?",
+     "c": [
+      "−56",
+      "−52",
+      "−108",
+      "−20"
+     ],
+     "a": 0,
+     "e": "a₁ = −8, a₂ = −20, a₃ = <b>−56</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = 3·a<sub>n</sub> − 5 y a₀ = −3. ¿Cuánto vale a₃?",
+     "c": [
+      "−47",
+      "−146",
+      "−151",
+      "−81"
+     ],
+     "a": 1,
+     "e": "a₁ = −14, a₂ = −47, a₃ = <b>−146</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>·a<sub>n</sub> − 2 y a₀ = 0. ¿Cuánto vale a₃?",
+     "c": [
+      "0",
+      "−<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "−3"
+     ],
+     "a": 1,
+     "e": "a₁ = −2, a₂ = −3, a₃ = <b>−<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = 2·a<sub>n</sub> − 2 y a₀ = −3. ¿Cuánto vale a₃?",
+     "c": [
+      "−24",
+      "−18",
+      "−40",
+      "−38"
+     ],
+     "a": 3,
+     "e": "a₁ = −8, a₂ = −18, a₃ = <b>−38</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = −1·a<sub>n</sub> + 1 y a₀ = 2. ¿Cuánto vale a₃?",
+     "c": [
+      "0",
+      "−2",
+      "2",
+      "−1"
+     ],
+     "a": 3,
+     "e": "a₁ = −1, a₂ = 2, a₃ = <b>−1</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>·a<sub>n</sub> + 2 y a₀ = 0. ¿Cuánto vale a₃?",
+     "c": [
+      "3",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "0"
+     ],
+     "a": 2,
+     "e": "a₁ = 2, a₂ = 3, a₃ = <b><span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = 2·a<sub>n</sub> + 1 y a₀ = 0. ¿Cuánto vale a₃?",
+     "c": [
+      "8",
+      "3",
+      "0",
+      "7"
+     ],
+     "a": 3,
+     "e": "a₁ = 1, a₂ = 3, a₃ = <b>7</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>·a<sub>n</sub> + 3 y a₀ = 3. ¿Cuánto vale a₃?",
+     "c": [
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>69</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "a₁ = <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>, a₂ = <span class='fr'><span class='fn'>21</span><span class='fd'>4</span></span>, a₃ = <b><span class='fr'><span class='fn'>45</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>·a<sub>n</sub> − 5 y a₀ = −2. ¿Cuánto vale a₃?",
+     "c": [
+      "−8",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "−14",
+      "−9"
+     ],
+     "a": 3,
+     "e": "a₁ = −6, a₂ = −8, a₃ = <b>−9</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>·a<sub>n</sub> + 2 y a₀ = −1. ¿Cuánto vale a₃?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>8</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 2,
+     "e": "a₁ = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, a₂ = <span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>, a₃ = <b><span class='fr'><span class='fn'>27</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = −1·a<sub>n</sub> − 4 y a₀ = 1. ¿Cuánto vale a₃?",
+     "c": [
+      "−5",
+      "−1",
+      "1",
+      "−9"
+     ],
+     "a": 0,
+     "e": "a₁ = −5, a₂ = 1, a₃ = <b>−5</b>."
+    },
+    {
+     "q": "Una sucesión cumple a<sub>n+1</sub> = −1·a<sub>n</sub> + 2 y a₀ = 5. ¿Cuánto vale a₃?",
+     "c": [
+      "−1",
+      "−3",
+      "−5",
+      "5"
+     ],
+     "a": 1,
+     "e": "a₁ = −3, a₂ = 5, a₃ = <b>−3</b>."
+    }
+   ]
+  },
+  {
+   "title": "Modelo logístico y caos",
+   "items": [
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> y x₀ = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "x₁ = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "La órbita de x₀ bajo f es…",
+     "c": [
+      "la gráfica de f",
+      "el área bajo f",
+      "el dominio de f",
+      "la sucesión x₀, f(x₀), f(f(x₀)), …"
+     ],
+     "a": 3,
+     "e": "Son los valores que se obtienen al iterar."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = 2 y x₀ = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "x₁ = 2 × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = 2 y x₀ = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "x₁ = 2 × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> y x₀ = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>20</span></span>"
+     ],
+     "a": 1,
+     "e": "x₁ = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>200</span></span></b>."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span> y x₀ = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "x₁ = <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> y x₀ = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>"
+     ],
+     "a": 2,
+     "e": "x₁ = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>40</span></span></b>."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = 4 y x₀ = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "x₁ = 4 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Iterar f(x) = x/2 desde cualquier número hace que los valores…",
+     "c": [
+      "cambien de signo",
+      "se acerquen a 0",
+      "crezcan sin límite",
+      "se queden igual"
+     ],
+     "a": 1,
+     "e": "Cada vez es la mitad."
+    },
+    {
+     "q": "Un punto fijo de f es…",
+     "c": [
+      "un valor con f(x) = 0",
+      "un valor x con f(x) = x",
+      "el máximo de f",
+      "el valor inicial"
+     ],
+     "a": 1,
+     "e": "Si llegas a él, la iteración ya no cambia."
+    },
+    {
+     "q": "Un sistema dinámico discreto es…",
+     "c": [
+      "una ecuación sin solución",
+      "una gráfica de barras",
+      "una regla que se aplica una y otra vez para obtener el siguiente estado",
+      "un sistema de dos ecuaciones lineales"
+     ],
+     "a": 2,
+     "e": "Por ejemplo x<sub>n+1</sub> = f(x<sub>n</sub>)."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> y x₀ = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>"
+     ],
+     "a": 2,
+     "e": "x₁ = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>15</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> y x₀ = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "x₁ = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> y x₀ = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>"
+     ],
+     "a": 0,
+     "e": "x₁ = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "¿Quién descubrió el atractor que lleva su nombre al estudiar el clima?",
+     "c": [
+      "Isaac Newton",
+      "Carl Friedrich Gauss",
+      "Edward Lorenz",
+      "Benoît Mandelbrot"
+     ],
+     "a": 2,
+     "e": "Lorenz notó en los años 60 que pequeños redondeos cambiaban el pronóstico."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = 2 y x₀ = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "x₁ = 2 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span> y x₀ = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "x₁ = <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = 4 y x₀ = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "1",
+      "3",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "2"
+     ],
+     "a": 0,
+     "e": "x₁ = 4 × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b>1</b>."
+    },
+    {
+     "q": "En el modelo logístico discreto x<sub>n+1</sub> = r·x<sub>n</sub>(1 − x<sub>n</sub>), con r = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> y x₀ = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>, ¿cuánto vale x₁?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "x₁ = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "La «sensibilidad a las condiciones iniciales» significa que…",
+     "c": [
+      "dos inicios casi iguales pueden terminar muy distintos",
+      "el resultado no depende del inicio",
+      "la función es lineal",
+      "siempre se llega al mismo punto"
+     ],
+     "a": 0,
+     "e": "Es la marca del caos (efecto mariposa)."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 1,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "temas-selectos-2"
+}

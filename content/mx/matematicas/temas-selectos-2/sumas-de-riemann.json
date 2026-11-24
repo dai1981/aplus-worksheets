@@ -1,0 +1,1157 @@
+{
+ "slug": "sumas-de-riemann",
+ "title": "Sumas de Riemann e integral definida",
+ "seo_title": "Sumas de Riemann – Temas Selectos de Matemáticas II: ejercicios con respuestas",
+ "short_title": "Sumas de Riemann",
+ "domain": "Integral",
+ "standard_code": "Temas Selectos de Matemáticas II · Progresión 3: Sumas de Riemann e integral definida",
+ "standard_url": "https://dgb.sep.gob.mx/storage/recursos/2024/11/6N3XjApvTB-Temas-Selectos-de-Matematicas-II.pdf",
+ "standard_text": "Aproxima el área bajo una curva con sumas de rectángulos (sumas de Riemann) y define la integral definida como el límite de esas sumas (resumen de la progresión 3 del programa de Temas Selectos de Matemáticas II (DGB, SEP 2024))",
+ "meta_desc": "Ejercicios de Temas Selectos de Matemáticas II: ancho de los subintervalos, sumas de Riemann con extremo derecho y punto medio, notación sigma y propiedades de la integral definida. 100 ejercicios con respuestas.",
+ "key_big": "∫ f dx = lím Σ f(xᵢ)Δx",
+ "key_sub": "Más rectángulos, mejor aproximación.",
+ "body_html": "<h2>Cómo se hace</h2><p>Para aproximar el área bajo f en [a, b], se divide en n partes de ancho <b>Δx = (b − a)/n</b> y se suman rectángulos de altura f(xᵢ).</p><p>La altura puede tomarse en el extremo izquierdo, el derecho o el punto medio de cada subintervalo. La suma se escribe con <b>Σ</b>.</p><p>La <b>integral definida</b> es el límite de estas sumas cuando n → ∞.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>f(x) = x² en [0, 2], n = 2, extremo derecho</p><p class='sn-ex-s'>Δx = 1</p><p class='sn-ex-s'>f(1) + f(2) = 1 + 4</p><p class='sn-ex-a'>Respuesta: 5 (el área exacta es 8/3)</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Olvidar multiplicar por Δx</td><td>Cada rectángulo es altura × ancho.</td></tr><tr><td>Usar el extremo equivocado</td><td>Lee si es izquierdo, derecho o medio.</td></tr><tr><td>Pensar que la aproximación es exacta</td><td>Solo en el límite se obtiene el valor exacto.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Por qué el punto medio suele aproximar mejor?",
+   "a": "Porque los excesos y faltantes de cada rectángulo se compensan."
+  },
+  {
+   "q": "¿Qué significa el símbolo ∫?",
+   "a": "Es una «S» alargada de «suma», introducida por Leibniz."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Ancho de los rectángulos",
+   "items": [
+    {
+     "q": "Se divide [0, 3] en 3 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "1",
+      "4",
+      "3",
+      "2"
+     ],
+     "a": 0,
+     "e": "Δx = (b − a) ÷ n = 3 ÷ 3 = <b>1</b>."
+    },
+    {
+     "q": "Se divide [0, 6] en 6 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "4",
+      "1",
+      "2",
+      "3"
+     ],
+     "a": 1,
+     "e": "Δx = (b − a) ÷ n = 6 ÷ 6 = <b>1</b>."
+    },
+    {
+     "q": "Se divide [1, 5] en 4 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "1",
+      "3",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "2"
+     ],
+     "a": 0,
+     "e": "Δx = (b − a) ÷ n = 4 ÷ 4 = <b>1</b>."
+    },
+    {
+     "q": "Se divide [2, 6] en 2 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "3",
+      "4",
+      "2"
+     ],
+     "a": 3,
+     "e": "Δx = (b − a) ÷ n = 4 ÷ 2 = <b>2</b>."
+    },
+    {
+     "q": "Se divide [2, 5] en 3 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "2",
+      "3",
+      "1",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Δx = (b − a) ÷ n = 3 ÷ 3 = <b>1</b>."
+    },
+    {
+     "q": "Se divide [2, 6] en 4 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "2",
+      "3",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "1"
+     ],
+     "a": 3,
+     "e": "Δx = (b − a) ÷ n = 4 ÷ 4 = <b>1</b>."
+    },
+    {
+     "q": "Se divide [1, 5] en 3 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "Δx = (b − a) ÷ n = 4 ÷ 3 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Se divide [1, 4] en 6 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "1"
+     ],
+     "a": 0,
+     "e": "Δx = (b − a) ÷ n = 3 ÷ 6 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Se divide [3, 9] en 3 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "4",
+      "3",
+      "2"
+     ],
+     "a": 3,
+     "e": "Δx = (b − a) ÷ n = 6 ÷ 3 = <b>2</b>."
+    },
+    {
+     "q": "Se divide [0, 2] en 2 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "2",
+      "4",
+      "1",
+      "3"
+     ],
+     "a": 2,
+     "e": "Δx = (b − a) ÷ n = 2 ÷ 2 = <b>1</b>."
+    },
+    {
+     "q": "Se divide [3, 5] en 2 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "2",
+      "3"
+     ],
+     "a": 0,
+     "e": "Δx = (b − a) ÷ n = 2 ÷ 2 = <b>1</b>."
+    },
+    {
+     "q": "Se divide [1, 7] en 3 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "4"
+     ],
+     "a": 1,
+     "e": "Δx = (b − a) ÷ n = 6 ÷ 3 = <b>2</b>."
+    },
+    {
+     "q": "Se divide [1, 7] en 4 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "3",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "Δx = (b − a) ÷ n = 6 ÷ 4 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Se divide [1, 5] en 2 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "2",
+      "4",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Δx = (b − a) ÷ n = 4 ÷ 2 = <b>2</b>."
+    },
+    {
+     "q": "Se divide [2, 8] en 6 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "2",
+      "3",
+      "1",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Δx = (b − a) ÷ n = 6 ÷ 6 = <b>1</b>."
+    },
+    {
+     "q": "Se divide [2, 5] en 4 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "Δx = (b − a) ÷ n = 3 ÷ 4 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Se divide [3, 7] en 6 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "Δx = (b − a) ÷ n = 4 ÷ 6 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Se divide [3, 5] en 6 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "3"
+     ],
+     "a": 2,
+     "e": "Δx = (b − a) ÷ n = 2 ÷ 6 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Se divide [2, 8] en 2 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "3",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "6",
+      "4"
+     ],
+     "a": 0,
+     "e": "Δx = (b − a) ÷ n = 6 ÷ 2 = <b>3</b>."
+    },
+    {
+     "q": "Se divide [3, 5] en 4 subintervalos iguales. ¿Cuánto mide cada uno (Δx)?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2",
+      "1"
+     ],
+     "a": 1,
+     "e": "Δx = (b − a) ÷ n = 2 ÷ 4 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Extremo derecho",
+   "items": [
+    {
+     "q": "Aproxima ∫ de 1 a 3 de (x² + 1) dx con 3 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "20.22",
+      "13.48",
+      "10.67",
+      "8.15"
+     ],
+     "a": 1,
+     "e": "Δx = 0.67; puntos 1.67, 2.33, 3. Suma = Δx × Σ f = <b>13.48</b> (el valor exacto es 10.67)."
+    },
+    {
+     "q": "Aproxima ∫ de 1 a 7 de (x²) dx con 4 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "114",
+      "152.25",
+      "80.25",
+      "101.5"
+     ],
+     "a": 1,
+     "e": "Δx = 1.5; puntos 2.5, 4, 5.5, 7. Suma = Δx × Σ f = <b>152.25</b> (el valor exacto es 114)."
+    },
+    {
+     "q": "Aproxima ∫ de 1 a 3 de (x² + 3) dx con 4 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "14.67",
+      "16.75",
+      "33.5",
+      "12.75"
+     ],
+     "a": 1,
+     "e": "Δx = 0.5; puntos 1.5, 2, 2.5, 3. Suma = Δx × Σ f = <b>16.75</b> (el valor exacto es 14.67)."
+    },
+    {
+     "q": "Aproxima ∫ de 0 a 2 de (x² + 5) dx con 3 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "14.15",
+      "12.67",
+      "11.48",
+      "21.22"
+     ],
+     "a": 0,
+     "e": "Δx = 0.67; puntos 0.67, 1.33, 2. Suma = Δx × Σ f = <b>14.15</b> (el valor exacto es 12.67)."
+    },
+    {
+     "q": "Aproxima ∫ de 1 a 4 de (2x² + 2) dx con 2 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "27.75",
+      "48",
+      "48.5",
+      "72.75"
+     ],
+     "a": 3,
+     "e": "Δx = 1.5; puntos 2.5, 4. Suma = Δx × Σ f = <b>72.75</b> (el valor exacto es 48)."
+    },
+    {
+     "q": "Aproxima ∫ de 2 a 6 de (2x² + 2) dx con 6 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "168.59",
+      "252.89",
+      "125.93",
+      "146.67"
+     ],
+     "a": 0,
+     "e": "Δx = 0.67; puntos 2.67, 3.33, 4, 4.67, 5.33, 6. Suma = Δx × Σ f = <b>168.59</b> (el valor exacto es 146.67)."
+    },
+    {
+     "q": "Aproxima ∫ de 3 a 9 de (x² + 3) dx con 4 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "308.25",
+      "200.25",
+      "252",
+      "205.5"
+     ],
+     "a": 0,
+     "e": "Δx = 1.5; puntos 4.5, 6, 7.5, 9. Suma = Δx × Σ f = <b>308.25</b> (el valor exacto es 252)."
+    },
+    {
+     "q": "Aproxima ∫ de 3 a 6 de (x² + 5) dx con 3 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "65",
+      "93",
+      "78",
+      "92"
+     ],
+     "a": 3,
+     "e": "Δx = 1; puntos 4, 5, 6. Suma = Δx × Σ f = <b>92</b> (el valor exacto es 78)."
+    },
+    {
+     "q": "Aproxima ∫ de 1 a 5 de (2x²) dx con 2 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "68",
+      "40",
+      "136",
+      "82.67"
+     ],
+     "a": 2,
+     "e": "Δx = 2; puntos 3, 5. Suma = Δx × Σ f = <b>136</b> (el valor exacto es 82.67)."
+    },
+    {
+     "q": "Aproxima ∫ de 3 a 5 de (3x²) dx con 4 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "220.5",
+      "98",
+      "110.25",
+      "86.25"
+     ],
+     "a": 2,
+     "e": "Δx = 0.5; puntos 3.5, 4, 4.5, 5. Suma = Δx × Σ f = <b>110.25</b> (el valor exacto es 98)."
+    },
+    {
+     "q": "Aproxima ∫ de 3 a 9 de (3x² + 2) dx con 3 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "942",
+      "510",
+      "471",
+      "714"
+     ],
+     "a": 0,
+     "e": "Δx = 2; puntos 5, 7, 9. Suma = Δx × Σ f = <b>942</b> (el valor exacto es 714)."
+    },
+    {
+     "q": "Aproxima ∫ de 2 a 4 de (3x² + 5) dx con 3 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "117.67",
+      "54.44",
+      "66",
+      "78.44"
+     ],
+     "a": 3,
+     "e": "Δx = 0.67; puntos 2.67, 3.33, 4. Suma = Δx × Σ f = <b>78.44</b> (el valor exacto es 66)."
+    },
+    {
+     "q": "Aproxima ∫ de 1 a 7 de (3x² + 2) dx con 4 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "354",
+      "468.75",
+      "312.5",
+      "252.75"
+     ],
+     "a": 1,
+     "e": "Δx = 1.5; puntos 2.5, 4, 5.5, 7. Suma = Δx × Σ f = <b>468.75</b> (el valor exacto es 354)."
+    },
+    {
+     "q": "Aproxima ∫ de 1 a 5 de (3x²) dx con 2 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "124",
+      "204",
+      "60",
+      "102"
+     ],
+     "a": 1,
+     "e": "Δx = 2; puntos 3, 5. Suma = Δx × Σ f = <b>204</b> (el valor exacto es 124)."
+    },
+    {
+     "q": "Aproxima ∫ de 3 a 5 de (3x²) dx con 6 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "106.11",
+      "90.11",
+      "318.33",
+      "98"
+     ],
+     "a": 0,
+     "e": "Δx = 0.33; puntos 3.33, 3.67, 4, 4.33, 4.67, 5. Suma = Δx × Σ f = <b>106.11</b> (el valor exacto es 98)."
+    },
+    {
+     "q": "Aproxima ∫ de 0 a 3 de (2x² + 1) dx con 6 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "21",
+      "51.5",
+      "25.75",
+      "16.75"
+     ],
+     "a": 2,
+     "e": "Δx = 0.5; puntos 0.5, 1, 1.5, 2, 2.5, 3. Suma = Δx × Σ f = <b>25.75</b> (el valor exacto es 21)."
+    },
+    {
+     "q": "Aproxima ∫ de 0 a 6 de (2x² + 3) dx con 3 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "121",
+      "98",
+      "162",
+      "242"
+     ],
+     "a": 3,
+     "e": "Δx = 2; puntos 2, 4, 6. Suma = Δx × Σ f = <b>242</b> (el valor exacto es 162)."
+    },
+    {
+     "q": "Aproxima ∫ de 1 a 4 de (3x² + 4) dx con 3 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "75",
+      "100",
+      "99",
+      "54"
+     ],
+     "a": 2,
+     "e": "Δx = 1; puntos 2, 3, 4. Suma = Δx × Σ f = <b>99</b> (el valor exacto es 75)."
+    },
+    {
+     "q": "Aproxima ∫ de 0 a 6 de (x² + 4) dx con 2 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "51",
+      "96",
+      "53",
+      "159"
+     ],
+     "a": 3,
+     "e": "Δx = 3; puntos 3, 6. Suma = Δx × Σ f = <b>159</b> (el valor exacto es 96)."
+    },
+    {
+     "q": "Aproxima ∫ de 3 a 6 de (3x² + 4) dx con 2 rectángulos, usando el extremo derecho de cada subintervalo.",
+     "c": [
+      "201",
+      "176.75",
+      "265.125",
+      "143.625"
+     ],
+     "a": 2,
+     "e": "Δx = 1.5; puntos 4.5, 6. Suma = Δx × Σ f = <b>265.125</b> (el valor exacto es 201)."
+    }
+   ]
+  },
+  {
+   "title": "Punto medio",
+   "items": [
+    {
+     "q": "Aproxima ∫ de 0 a 3 de (3x² + 2) dx con 2 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "33",
+      "16.125",
+      "31.3125",
+      "20.875"
+     ],
+     "a": 2,
+     "e": "Δx = 1.5; puntos 0.75, 2.25. Suma = Δx × Σ f = <b>31.3125</b> (el valor exacto es 33)."
+    },
+    {
+     "q": "Aproxima ∫ de 2 a 4 de (3x² + 5) dx con 3 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "54.44",
+      "66",
+      "98.67",
+      "65.78"
+     ],
+     "a": 3,
+     "e": "Δx = 0.67; puntos 2.33, 3, 3.67. Suma = Δx × Σ f = <b>65.78</b> (el valor exacto es 66)."
+    },
+    {
+     "q": "Aproxima ∫ de 3 a 5 de (2x² + 1) dx con 6 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "201.89",
+      "67.33",
+      "62.07",
+      "67.3"
+     ],
+     "a": 3,
+     "e": "Δx = 0.33; puntos 3.17, 3.5, 3.83, 4.17, 4.5, 4.83. Suma = Δx × Σ f = <b>67.3</b> (el valor exacto es 67.33)."
+    },
+    {
+     "q": "Aproxima ∫ de 0 a 4 de (3x² + 4) dx con 6 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "79.56",
+      "64.89",
+      "119.33",
+      "80"
+     ],
+     "a": 0,
+     "e": "Δx = 0.67; puntos 0.33, 1, 1.67, 2.33, 3, 3.67. Suma = Δx × Σ f = <b>79.56</b> (el valor exacto es 80)."
+    },
+    {
+     "q": "Aproxima ∫ de 3 a 7 de (3x² + 3) dx con 2 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "328",
+      "216",
+      "324",
+      "162"
+     ],
+     "a": 2,
+     "e": "Δx = 2; puntos 4, 6. Suma = Δx × Σ f = <b>324</b> (el valor exacto es 328)."
+    },
+    {
+     "q": "Aproxima el área bajo f(x) = 3x² entre 0 y 3 con 4 rectángulos de igual ancho, usando el extremo izquierdo de cada uno.",
+     "c": [
+      "17.71875 u²",
+      "23.625 u²",
+      "37.96875 u²",
+      "27 u²"
+     ],
+     "a": 0,
+     "e": "Ancho 0.75; alturas f(0, 0.75, 1.5, 2.25). Suma = 0.75 × (0 + 1.6875 + 6.75 + 15.1875) = <b>17.71875 u²</b>. Con más rectángulos se acerca a 27."
+    },
+    {
+     "q": "Aproxima ∫ de 2 a 4 de (3x² + 1) dx con 2 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "57.6",
+      "58",
+      "57.5",
+      "41"
+     ],
+     "a": 2,
+     "e": "Δx = 1; puntos 2.5, 3.5. Suma = Δx × Σ f = <b>57.5</b> (el valor exacto es 58)."
+    },
+    {
+     "q": "Aproxima ∫ de 1 a 7 de (3x² + 3) dx con 6 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "291",
+      "358.6",
+      "360",
+      "358.5"
+     ],
+     "a": 3,
+     "e": "Δx = 1; puntos 1.5, 2.5, 3.5, 4.5, 5.5, 6.5. Suma = Δx × Σ f = <b>358.5</b> (el valor exacto es 360)."
+    },
+    {
+     "q": "Aproxima el área bajo f(x) = x² entre 0 y 2 con 4 rectángulos de igual ancho, usando el extremo izquierdo de cada uno.",
+     "c": [
+      "3.75 u²",
+      "1.75 u²",
+      "3.5 u²",
+      "2.67 u²"
+     ],
+     "a": 1,
+     "e": "Ancho 0.5; alturas f(0, 0.5, 1, 1.5). Suma = 0.5 × (0 + 0.25 + 1 + 2.25) = <b>1.75 u²</b>. Con más rectángulos se acerca a 2.67."
+    },
+    {
+     "q": "Aproxima ∫ de 2 a 8 de (2x²) dx con 4 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "336",
+      "250.5",
+      "333.75",
+      "222.5"
+     ],
+     "a": 2,
+     "e": "Δx = 1.5; puntos 2.75, 4.25, 5.75, 7.25. Suma = Δx × Σ f = <b>333.75</b> (el valor exacto es 336)."
+    },
+    {
+     "q": "Aproxima el área bajo f(x) = x² entre 0 y 4 con 2 rectángulos de igual ancho, usando el extremo derecho de cada uno.",
+     "c": [
+      "40 u²",
+      "21.33 u²",
+      "8 u²",
+      "20 u²"
+     ],
+     "a": 0,
+     "e": "Ancho 2; alturas f(2, 4). Suma = 2 × (4 + 16) = <b>40 u²</b>. Con más rectángulos se acerca a 21.33."
+    },
+    {
+     "q": "Aproxima el área bajo f(x) = x² entre 0 y 6 con 4 rectángulos de igual ancho, usando el extremo derecho de cada uno.",
+     "c": [
+      "101.25 u²",
+      "67.5 u²",
+      "72 u²",
+      "47.25 u²"
+     ],
+     "a": 0,
+     "e": "Ancho 1.5; alturas f(1.5, 3, 4.5, 6). Suma = 1.5 × (2.25 + 9 + 20.25 + 36) = <b>101.25 u²</b>. Con más rectángulos se acerca a 72."
+    },
+    {
+     "q": "Aproxima ∫ de 3 a 6 de (2x² + 2) dx con 6 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "132",
+      "131.875",
+      "118.75",
+      "263.75"
+     ],
+     "a": 1,
+     "e": "Δx = 0.5; puntos 3.25, 3.75, 4.25, 4.75, 5.25, 5.75. Suma = Δx × Σ f = <b>131.875</b> (el valor exacto es 132)."
+    },
+    {
+     "q": "Aproxima ∫ de 2 a 4 de (2x² + 1) dx con 3 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "39.19",
+      "31.63",
+      "39.33",
+      "58.78"
+     ],
+     "a": 0,
+     "e": "Δx = 0.67; puntos 2.33, 3, 3.67. Suma = Δx × Σ f = <b>39.19</b> (el valor exacto es 39.33)."
+    },
+    {
+     "q": "Aproxima ∫ de 2 a 6 de (x² + 1) dx con 6 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "109.78",
+      "62.96",
+      "73.33",
+      "73.19"
+     ],
+     "a": 3,
+     "e": "Δx = 0.67; puntos 2.33, 3, 3.67, 4.33, 5, 5.67. Suma = Δx × Σ f = <b>73.19</b> (el valor exacto es 73.33)."
+    },
+    {
+     "q": "Aproxima ∫ de 2 a 4 de (3x²) dx con 4 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "111.75",
+      "55.875",
+      "47.25",
+      "56"
+     ],
+     "a": 1,
+     "e": "Δx = 0.5; puntos 2.25, 2.75, 3.25, 3.75. Suma = Δx × Σ f = <b>55.875</b> (el valor exacto es 56)."
+    },
+    {
+     "q": "Aproxima ∫ de 2 a 6 de (2x²) dx con 3 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "98.37",
+      "137.48",
+      "103.11",
+      "138.67"
+     ],
+     "a": 1,
+     "e": "Δx = 1.33; puntos 2.67, 4, 5.33. Suma = Δx × Σ f = <b>137.48</b> (el valor exacto es 138.67)."
+    },
+    {
+     "q": "Aproxima ∫ de 3 a 6 de (x² + 2) dx con 3 rectángulos, usando el punto medio de cada subintervalo.",
+     "c": [
+      "69",
+      "68.75",
+      "68.76",
+      "56"
+     ],
+     "a": 1,
+     "e": "Δx = 1; puntos 3.5, 4.5, 5.5. Suma = Δx × Σ f = <b>68.75</b> (el valor exacto es 69)."
+    },
+    {
+     "q": "Aproxima el área bajo f(x) = 2x² entre 0 y 6 con 4 rectángulos de igual ancho, usando el extremo izquierdo de cada uno.",
+     "c": [
+      "202.5 u²",
+      "144 u²",
+      "63 u²",
+      "94.5 u²"
+     ],
+     "a": 3,
+     "e": "Ancho 1.5; alturas f(0, 1.5, 3, 4.5). Suma = 1.5 × (0 + 4.5 + 18 + 40.5) = <b>94.5 u²</b>. Con más rectángulos se acerca a 144."
+    },
+    {
+     "q": "Aproxima el área bajo f(x) = x² entre 0 y 4 con 4 rectángulos de igual ancho, usando el extremo izquierdo de cada uno.",
+     "c": [
+      "21.33 u²",
+      "15 u²",
+      "14 u²",
+      "30 u²"
+     ],
+     "a": 2,
+     "e": "Ancho 1; alturas f(0, 1, 2, 3). Suma = 1 × (0 + 1 + 4 + 9) = <b>14 u²</b>. Con más rectángulos se acerca a 21.33."
+    }
+   ]
+  },
+  {
+   "title": "Notación sigma",
+   "items": [
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>5</sup> (4i − 1).",
+     "c": [
+      "19",
+      "55",
+      "120",
+      "54"
+     ],
+     "a": 1,
+     "e": "Se suman los valores para i = 1, …, 5: <b>55</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>8</sup> (4i + 1).",
+     "c": [
+      "288",
+      "152",
+      "153",
+      "33"
+     ],
+     "a": 1,
+     "e": "Se suman los valores para i = 1, …, 8: <b>152</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>4</sup> (i − 3).",
+     "c": [
+      "−5",
+      "1",
+      "−2",
+      "20"
+     ],
+     "a": 2,
+     "e": "Se suman los valores para i = 1, …, 4: <b>−2</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>8</sup> (3i + 2).",
+     "c": [
+      "124",
+      "216",
+      "126",
+      "26"
+     ],
+     "a": 0,
+     "e": "Se suman los valores para i = 1, …, 8: <b>124</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>8</sup> (3i + 1).",
+     "c": [
+      "25",
+      "117",
+      "216",
+      "116"
+     ],
+     "a": 3,
+     "e": "Se suman los valores para i = 1, …, 8: <b>116</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>5</sup> (2i + 3).",
+     "c": [
+      "45",
+      "48",
+      "60",
+      "13"
+     ],
+     "a": 0,
+     "e": "Se suman los valores para i = 1, …, 5: <b>45</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>8</sup> (2i + 5).",
+     "c": [
+      "117",
+      "112",
+      "21",
+      "144"
+     ],
+     "a": 1,
+     "e": "Se suman los valores para i = 1, …, 8: <b>112</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>4</sup> (3i − 3).",
+     "c": [
+      "60",
+      "15",
+      "9",
+      "18"
+     ],
+     "a": 3,
+     "e": "Se suman los valores para i = 1, …, 4: <b>18</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>3</sup> (i + 5).",
+     "c": [
+      "21",
+      "26",
+      "12",
+      "8"
+     ],
+     "a": 0,
+     "e": "Se suman los valores para i = 1, …, 3: <b>21</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>7</sup> (4i + 2).",
+     "c": [
+      "30",
+      "224",
+      "126",
+      "128"
+     ],
+     "a": 2,
+     "e": "Se suman los valores para i = 1, …, 7: <b>126</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>7</sup> (3i − 2).",
+     "c": [
+      "70",
+      "19",
+      "168",
+      "68"
+     ],
+     "a": 0,
+     "e": "Se suman los valores para i = 1, …, 7: <b>70</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>4</sup> (4i + 1).",
+     "c": [
+      "80",
+      "45",
+      "44",
+      "17"
+     ],
+     "a": 2,
+     "e": "Se suman los valores para i = 1, …, 4: <b>44</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>4</sup> (2i − 1).",
+     "c": [
+      "15",
+      "40",
+      "16",
+      "7"
+     ],
+     "a": 2,
+     "e": "Se suman los valores para i = 1, …, 4: <b>16</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>3</sup> (2i + 2).",
+     "c": [
+      "18",
+      "24",
+      "8",
+      "20"
+     ],
+     "a": 0,
+     "e": "Se suman los valores para i = 1, …, 3: <b>18</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>4</sup> (i + 5).",
+     "c": [
+      "35",
+      "9",
+      "20",
+      "30"
+     ],
+     "a": 3,
+     "e": "Se suman los valores para i = 1, …, 4: <b>30</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>5</sup> (i + 4).",
+     "c": [
+      "30",
+      "9",
+      "35",
+      "39"
+     ],
+     "a": 2,
+     "e": "Se suman los valores para i = 1, …, 5: <b>35</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>4</sup> (2i).",
+     "c": [
+      "21",
+      "20",
+      "8",
+      "40"
+     ],
+     "a": 1,
+     "e": "Se suman los valores para i = 1, …, 4: <b>20</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>7</sup> (i + 4).",
+     "c": [
+      "11",
+      "57",
+      "60",
+      "56"
+     ],
+     "a": 3,
+     "e": "Se suman los valores para i = 1, …, 7: <b>56</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>6</sup> (5i + 2).",
+     "c": [
+      "119",
+      "117",
+      "32",
+      "210"
+     ],
+     "a": 1,
+     "e": "Se suman los valores para i = 1, …, 6: <b>117</b>."
+    },
+    {
+     "q": "Calcula Σ<sub>i=1</sub><sup>7</sup> (3i − 1).",
+     "c": [
+      "168",
+      "76",
+      "20",
+      "77"
+     ],
+     "a": 3,
+     "e": "Se suman los valores para i = 1, …, 7: <b>77</b>."
+    }
+   ]
+  },
+  {
+   "title": "Propiedades e ideas",
+   "items": [
+    {
+     "q": "Si ∫<sub>−2</sub><sup>4</sup> f = −2 y ∫<sub>4</sub><sup>7</sup> f = −5, ¿cuánto vale ∫<sub>−2</sub><sup>7</sup> f?",
+     "c": [
+      "−3",
+      "10",
+      "−7",
+      "3"
+     ],
+     "a": 2,
+     "e": "Se suman los intervalos contiguos: <b>−7</b>."
+    },
+    {
+     "q": "Si el número de rectángulos de una suma de Riemann tiende a infinito, la suma tiende a…",
+     "c": [
+      "la integral definida (el área exacta)",
+      "la derivada",
+      "0",
+      "infinito"
+     ],
+     "a": 0,
+     "e": "Esa es la definición de la integral de Riemann."
+    },
+    {
+     "q": "Si ∫<sub>0</sub><sup>2</sup> f(x) dx = −2, ¿cuánto vale ∫<sub>0</sub><sup>2</sup> 2 f(x) dx?",
+     "c": [
+      "0",
+      "−1",
+      "−2",
+      "−4"
+     ],
+     "a": 3,
+     "e": "Las constantes salen fuera: 2 × (−2) = <b>−4</b>."
+    },
+    {
+     "q": "Si ∫<sub>−2</sub><sup>−1</sup> f(x) dx = 6, ¿cuánto vale ∫<sub>−2</sub><sup>−1</sup> 5 f(x) dx?",
+     "c": [
+      "6",
+      "30",
+      "11",
+      "35"
+     ],
+     "a": 1,
+     "e": "Las constantes salen fuera: 5 × 6 = <b>30</b>."
+    },
+    {
+     "q": "Si ∫<sub>3</sub><sup>6</sup> f(x) dx = −4, ¿cuánto vale ∫<sub>3</sub><sup>6</sup> −2 f(x) dx?",
+     "c": [
+      "−4",
+      "8",
+      "6",
+      "−6"
+     ],
+     "a": 1,
+     "e": "Las constantes salen fuera: −2 × (−4) = <b>8</b>."
+    },
+    {
+     "q": "Con la función creciente f(x) = x² en [0, 2], usar el extremo izquierdo de cada rectángulo da…",
+     "c": [
+      "una aproximación por encima",
+      "una aproximación por debajo del área real",
+      "un número negativo",
+      "el valor exacto"
+     ],
+     "a": 1,
+     "e": "En una función creciente el lado izquierdo es el más bajo."
+    },
+    {
+     "q": "Calcula ∫<sub>−1</sub><sup>1</sup> x⁵ dx.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "1",
+      "0"
+     ],
+     "a": 3,
+     "e": "x⁵ es impar: las áreas a cada lado se compensan, <b>0</b>."
+    },
+    {
+     "q": "Si f es negativa en un intervalo, la integral definida en él es…",
+     "c": [
+      "infinita",
+      "siempre positiva",
+      "cero",
+      "negativa"
+     ],
+     "a": 3,
+     "e": "Los rectángulos quedan por debajo del eje x."
+    },
+    {
+     "q": "¿Quién formalizó la integral como límite de sumas en el siglo XIX?",
+     "c": [
+      "Blaise Pascal",
+      "Bernhard Riemann",
+      "Pitágoras",
+      "René Descartes"
+     ],
+     "a": 1,
+     "e": "Por eso se llaman sumas de Riemann."
+    },
+    {
+     "q": "Si F(x) = ∫<sub>0</sub><sup>x</sup> f(t) dt con f continua, entonces F′(x) es…",
+     "c": [
+      "f(x)",
+      "F(x)",
+      "0",
+      "f′(x)"
+     ],
+     "a": 0,
+     "e": "Teorema fundamental del cálculo y propiedades: <b>f(x)</b>."
+    },
+    {
+     "q": "En la suma de Riemann Σ f(xᵢ)Δx, el factor Δx representa…",
+     "c": [
+      "el ancho de cada rectángulo",
+      "la altura de cada rectángulo",
+      "el número de rectángulos",
+      "el área total"
+     ],
+     "a": 0,
+     "e": "f(xᵢ) es la altura."
+    },
+    {
+     "q": "Si ∫<sub>−1</sub><sup>2</sup> f(x) dx = 5, ¿cuánto vale ∫<sub>2</sub><sup>−1</sup> f(x) dx?",
+     "c": [
+      "−5",
+      "5",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Al cambiar los límites cambia el signo: <b>−5</b>."
+    },
+    {
+     "q": "Si ∫<sub>−2</sub><sup>−1</sup> f = 5 y ∫<sub>−1</sub><sup>1</sup> f = 6, ¿cuánto vale ∫<sub>−2</sub><sup>1</sup> f?",
+     "c": [
+      "−1",
+      "30",
+      "11",
+      "1"
+     ],
+     "a": 2,
+     "e": "Se suman los intervalos contiguos: <b>11</b>."
+    },
+    {
+     "q": "Si f(x) ≥ 0 en [a, b], ∫<sub>a</sub><sup>b</sup> f(x) dx es…",
+     "c": [
+      "negativa",
+      "el área bajo la curva (mayor o igual que 0)",
+      "f(b) − f(a)",
+      "la pendiente media"
+     ],
+     "a": 1,
+     "e": "Teorema fundamental del cálculo y propiedades: <b>el área bajo la curva (mayor o igual que 0)</b>."
+    },
+    {
+     "q": "Calcula ∫<sub>−3</sub><sup>3</sup> x⁵ dx.",
+     "c": [
+      "243",
+      "1",
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>2</span></span>",
+      "0"
+     ],
+     "a": 3,
+     "e": "x⁵ es impar: las áreas a cada lado se compensan, <b>0</b>."
+    },
+    {
+     "q": "Si ∫<sub>−1</sub><sup>1</sup> f(x) dx = 8, ¿cuánto vale ∫<sub>1</sub><sup>−1</sup> f(x) dx?",
+     "c": [
+      "−8",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "0",
+      "8"
+     ],
+     "a": 0,
+     "e": "Al cambiar los límites cambia el signo: <b>−8</b>."
+    },
+    {
+     "q": "Si ∫<sub>0</sub><sup>1</sup> f(x) dx = 8, ¿cuánto vale ∫<sub>1</sub><sup>0</sup> f(x) dx?",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "8",
+      "−8"
+     ],
+     "a": 3,
+     "e": "Al cambiar los límites cambia el signo: <b>−8</b>."
+    },
+    {
+     "q": "Si ∫<sub>2</sub><sup>3</sup> f(x) dx = −6, ¿cuánto vale ∫<sub>3</sub><sup>2</sup> f(x) dx?",
+     "c": [
+      "0",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "6",
+      "−6"
+     ],
+     "a": 2,
+     "e": "Al cambiar los límites cambia el signo: <b>6</b>."
+    },
+    {
+     "q": "Si ∫<sub>1</sub><sup>4</sup> f(x) dx = 6, ¿cuánto vale ∫<sub>1</sub><sup>4</sup> 3 f(x) dx?",
+     "c": [
+      "6",
+      "9",
+      "18",
+      "21"
+     ],
+     "a": 2,
+     "e": "Las constantes salen fuera: 3 × 6 = <b>18</b>."
+    },
+    {
+     "q": "Calcula ∫<sub>−4</sub><sup>4</sup> x⁵ dx.",
+     "c": [
+      "1 024",
+      "<span class='fr'><span class='fn'>2 048</span><span class='fd'>3</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>4 096</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "x⁵ es impar: las áreas a cada lado se compensan, <b>0</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 3,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "temas-selectos-2"
+}

@@ -1,0 +1,1157 @@
+{
+ "slug": "metodos-numericos",
+ "title": "Bisección, punto fijo y Newton-Raphson",
+ "seo_title": "Métodos numéricos – Temas Selectos de Matemáticas II: ejercicios con respuestas",
+ "short_title": "Métodos numéricos",
+ "domain": "Modelos y métodos numéricos",
+ "standard_code": "Temas Selectos de Matemáticas II · Progresión 7: Métodos numéricos",
+ "standard_url": "https://dgb.sep.gob.mx/storage/recursos/2024/11/6N3XjApvTB-Temas-Selectos-de-Matematicas-II.pdf",
+ "standard_text": "Aproxima soluciones de ecuaciones con los métodos de bisección, aproximaciones sucesivas y Newton-Raphson, y reconoce la sensibilidad a las condiciones iniciales (resumen de la progresión 7 del programa de Temas Selectos de Matemáticas II (DGB, SEP 2024))",
+ "meta_desc": "Ejercicios de Temas Selectos de Matemáticas II: localizar raíces, método de bisección, aproximaciones sucesivas, método de Newton-Raphson y cuándo fallan. 100 ejercicios con respuestas.",
+ "key_big": "xₙ₊₁ = xₙ − f(xₙ) ÷ f′(xₙ)",
+ "key_sub": "Newton usa la tangente; bisección, la mitad.",
+ "body_html": "<h2>Cómo se hace</h2><p><b>Bisección</b>: si f cambia de signo en [a, b], se evalúa el punto medio y se conserva la mitad donde sigue el cambio de signo.</p><p><b>Aproximaciones sucesivas</b>: se escribe la ecuación como x = g(x) y se itera xₙ₊₁ = g(xₙ) hasta que se estabiliza.</p><p><b>Newton-Raphson</b>: xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ). Es muy rápido, pero depende del punto inicial.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>√5 con f(x) = x² − 5 y x₀ = 2</p><p class='sn-ex-s'>f(2) = −1, f′(2) = 4</p><p class='sn-ex-s'>x₁ = 2 + 1/4</p><p class='sn-ex-a'>Respuesta: x₁ = 2.25 (√5 ≈ 2.236)</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Quedarse con la mitad sin cambio de signo</td><td>El cero está donde f cambia de signo.</td></tr><tr><td>Olvidar el signo menos en Newton</td><td>Es xₙ − f/f′.</td></tr><tr><td>Usar Newton con f′ = 0</td><td>No se puede dividir entre 0: cambia de punto inicial.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Cuál método es mejor?",
+   "a": "Bisección siempre funciona pero es lenta; Newton es rápido pero puede fallar si la tangente es casi horizontal."
+  },
+  {
+   "q": "¿Dónde se usan?",
+   "a": "En calculadoras, computadoras e ingeniería para resolver ecuaciones que no tienen fórmula."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Localizar raíces",
+   "items": [
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − 5x + 5?",
+     "c": [
+      "[0, 1]",
+      "[2, 3]",
+      "[1, 2]",
+      "[−3, −2]"
+     ],
+     "a": 3,
+     "e": "f(−3) = −7 y f(−2) = 7: cambia de signo, así que hay un cero en <b>[−3, −2]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ + 3x² − 6?",
+     "c": [
+      "[−2, −1]",
+      "[1, 2]",
+      "[0, 1]",
+      "[−3, −2]"
+     ],
+     "a": 1,
+     "e": "f(1) = −2 y f(2) = 14: cambia de signo, así que hay un cero en <b>[1, 2]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − 2x² + 6x + 2?",
+     "c": [
+      "[−3, −2]",
+      "[2, 3]",
+      "[−1, 0]",
+      "[0, 1]"
+     ],
+     "a": 2,
+     "e": "f(−1) = −7 y f(0) = 2: cambia de signo, así que hay un cero en <b>[−1, 0]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − 2x² − x + 3?",
+     "c": [
+      "[−1, 0]",
+      "[1, 2]",
+      "[−2, −1]",
+      "[−3, −2]"
+     ],
+     "a": 2,
+     "e": "f(−2) = −11 y f(−1) = 1: cambia de signo, así que hay un cero en <b>[−2, −1]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − 3x² + 4x + 3?",
+     "c": [
+      "[−1, 0]",
+      "[2, 3]",
+      "[−2, −1]",
+      "[−3, −2]"
+     ],
+     "a": 0,
+     "e": "f(−1) = −5 y f(0) = 3: cambia de signo, así que hay un cero en <b>[−1, 0]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ + 3x² + 6x − 5?",
+     "c": [
+      "[−2, −1]",
+      "[0, 1]",
+      "[−3, −2]",
+      "[−1, 0]"
+     ],
+     "a": 1,
+     "e": "f(0) = −5 y f(1) = 5: cambia de signo, así que hay un cero en <b>[0, 1]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − 2x² + 2x − 2?",
+     "c": [
+      "[−2, −1]",
+      "[−1, 0]",
+      "[0, 1]",
+      "[1, 2]"
+     ],
+     "a": 3,
+     "e": "f(1) = −1 y f(2) = 2: cambia de signo, así que hay un cero en <b>[1, 2]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − 2x² + 6x + 1?",
+     "c": [
+      "[−1, 0]",
+      "[2, 3]",
+      "[0, 1]",
+      "[1, 2]"
+     ],
+     "a": 0,
+     "e": "f(−1) = −8 y f(0) = 1: cambia de signo, así que hay un cero en <b>[−1, 0]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − x² + 2x + 2?",
+     "c": [
+      "[−3, −2]",
+      "[2, 3]",
+      "[1, 2]",
+      "[−1, 0]"
+     ],
+     "a": 3,
+     "e": "f(−1) = −2 y f(0) = 2: cambia de signo, así que hay un cero en <b>[−1, 0]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ + 3x² + 6x − 6?",
+     "c": [
+      "[−3, −2]",
+      "[0, 1]",
+      "[1, 2]",
+      "[2, 3]"
+     ],
+     "a": 1,
+     "e": "f(0) = −6 y f(1) = 4: cambia de signo, así que hay un cero en <b>[0, 1]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − 3x² + 2x − 4?",
+     "c": [
+      "[2, 3]",
+      "[−3, −2]",
+      "[−1, 0]",
+      "[1, 2]"
+     ],
+     "a": 0,
+     "e": "f(2) = −4 y f(3) = 2: cambia de signo, así que hay un cero en <b>[2, 3]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − 3x² + 3x − 4?",
+     "c": [
+      "[−3, −2]",
+      "[2, 3]",
+      "[0, 1]",
+      "[1, 2]"
+     ],
+     "a": 1,
+     "e": "f(2) = −2 y f(3) = 5: cambia de signo, así que hay un cero en <b>[2, 3]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ + x² − 2x + 5?",
+     "c": [
+      "[0, 1]",
+      "[−2, −1]",
+      "[1, 2]",
+      "[−3, −2]"
+     ],
+     "a": 3,
+     "e": "f(−3) = −7 y f(−2) = 5: cambia de signo, así que hay un cero en <b>[−3, −2]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − x² + 1?",
+     "c": [
+      "[1, 2]",
+      "[−2, −1]",
+      "[0, 1]",
+      "[−1, 0]"
+     ],
+     "a": 3,
+     "e": "f(−1) = −1 y f(0) = 1: cambia de signo, así que hay un cero en <b>[−1, 0]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − 2x² + 3x + 2?",
+     "c": [
+      "[0, 1]",
+      "[−1, 0]",
+      "[−3, −2]",
+      "[2, 3]"
+     ],
+     "a": 1,
+     "e": "f(−1) = −4 y f(0) = 2: cambia de signo, así que hay un cero en <b>[−1, 0]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ + 3x² + 4x − 2?",
+     "c": [
+      "[−1, 0]",
+      "[1, 2]",
+      "[0, 1]",
+      "[2, 3]"
+     ],
+     "a": 2,
+     "e": "f(0) = −2 y f(1) = 6: cambia de signo, así que hay un cero en <b>[0, 1]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − x² − 1?",
+     "c": [
+      "[−2, −1]",
+      "[2, 3]",
+      "[1, 2]",
+      "[−1, 0]"
+     ],
+     "a": 2,
+     "e": "f(1) = −1 y f(2) = 3: cambia de signo, así que hay un cero en <b>[1, 2]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ + x² + 4x − 4?",
+     "c": [
+      "[−3, −2]",
+      "[−1, 0]",
+      "[0, 1]",
+      "[2, 3]"
+     ],
+     "a": 2,
+     "e": "f(0) = −4 y f(1) = 2: cambia de signo, así que hay un cero en <b>[0, 1]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − 3x² + 5x + 3?",
+     "c": [
+      "[−1, 0]",
+      "[0, 1]",
+      "[−2, −1]",
+      "[1, 2]"
+     ],
+     "a": 0,
+     "e": "f(−1) = −6 y f(0) = 3: cambia de signo, así que hay un cero en <b>[−1, 0]</b>."
+    },
+    {
+     "q": "¿En qué intervalo tiene un cero f(x) = x³ − 4?",
+     "c": [
+      "[1, 2]",
+      "[−3, −2]",
+      "[−1, 0]",
+      "[0, 1]"
+     ],
+     "a": 0,
+     "e": "f(1) = −3 y f(2) = 4: cambia de signo, así que hay un cero en <b>[1, 2]</b>."
+    }
+   ]
+  },
+  {
+   "title": "Método de bisección",
+   "items": [
+    {
+     "q": "Con el método de bisección para f(x) = x³ − x² − x − 8 en [1, 3] (f(1) = −9, f(3) = 7), se evalúa el punto medio x = 2. ¿Qué intervalo sigue?",
+     "c": [
+      "[0, 1]",
+      "[1, 2]",
+      "[2, 3]",
+      "[1, 3]"
+     ],
+     "a": 2,
+     "e": "f(2) = −6. El cero está donde hay cambio de signo: <b>[2, 3]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ + 3x² + 6x − 2 en [−1, 1] (f(−1) = −6, f(1) = 8), se evalúa el punto medio x = 0. ¿Qué intervalo sigue?",
+     "c": [
+      "[−1, 0]",
+      "[0, 1]",
+      "[−1, 1]",
+      "[−2, −1]"
+     ],
+     "a": 1,
+     "e": "f(0) = −2. El cero está donde hay cambio de signo: <b>[0, 1]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − x² − 4x − 8 en [2, 4] (f(2) = −12, f(4) = 24), se evalúa el punto medio x = 3. ¿Qué intervalo sigue?",
+     "c": [
+      "[3, 4]",
+      "[2, 4]",
+      "[1, 2]",
+      "[2, 3]"
+     ],
+     "a": 0,
+     "e": "f(3) = −2. El cero está donde hay cambio de signo: <b>[3, 4]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 2x² + 2x + 3 en [−2, 0] (f(−2) = −17, f(0) = 3), se evalúa el punto medio x = −1. ¿Qué intervalo sigue?",
+     "c": [
+      "[−2, 0]",
+      "[−2, −1]",
+      "[−3, −2]",
+      "[−1, 0]"
+     ],
+     "a": 3,
+     "e": "f(−1) = −2. El cero está donde hay cambio de signo: <b>[−1, 0]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − x² − 2x − 8 en [1, 3] (f(1) = −10, f(3) = 4), se evalúa el punto medio x = 2. ¿Qué intervalo sigue?",
+     "c": [
+      "[1, 2]",
+      "[2, 3]",
+      "[1, 3]",
+      "[0, 1]"
+     ],
+     "a": 1,
+     "e": "f(2) = −8. El cero está donde hay cambio de signo: <b>[2, 3]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 3x² − 5x + 1 en [0, 2] (f(0) = 1, f(2) = −13), se evalúa el punto medio x = 1. ¿Qué intervalo sigue?",
+     "c": [
+      "[−1, 0]",
+      "[0, 2]",
+      "[1, 2]",
+      "[0, 1]"
+     ],
+     "a": 3,
+     "e": "f(1) = −6. El cero está donde hay cambio de signo: <b>[0, 1]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ + 3x² + 5x − 1 en [0, 2] (f(0) = −1, f(2) = 29), se evalúa el punto medio x = 1. ¿Qué intervalo sigue?",
+     "c": [
+      "[1, 2]",
+      "[0, 1]",
+      "[0, 2]",
+      "[−1, 0]"
+     ],
+     "a": 1,
+     "e": "f(1) = 8. El cero está donde hay cambio de signo: <b>[0, 1]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − x² − 4x + 8 en [−3, −1] (f(−3) = −16, f(−1) = 10), se evalúa el punto medio x = −2. ¿Qué intervalo sigue?",
+     "c": [
+      "[−2, −1]",
+      "[−4, −3]",
+      "[−3, −2]",
+      "[−3, −1]"
+     ],
+     "a": 2,
+     "e": "f(−2) = 4. El cero está donde hay cambio de signo: <b>[−3, −2]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 2x² − 5x + 2 en [−1, 1] (f(−1) = 4, f(1) = −4), se evalúa el punto medio x = 0. ¿Qué intervalo sigue?",
+     "c": [
+      "[−1, 1]",
+      "[0, 1]",
+      "[−1, 0]",
+      "[−2, −1]"
+     ],
+     "a": 1,
+     "e": "f(0) = 2. El cero está donde hay cambio de signo: <b>[0, 1]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ + 6x + 3 en [−2, 0] (f(−2) = −17, f(0) = 3), se evalúa el punto medio x = −1. ¿Qué intervalo sigue?",
+     "c": [
+      "[−2, 0]",
+      "[−1, 0]",
+      "[−2, −1]",
+      "[−3, −2]"
+     ],
+     "a": 1,
+     "e": "f(−1) = −4. El cero está donde hay cambio de signo: <b>[−1, 0]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 3x + 1 en [1, 3] (f(1) = −1, f(3) = 19), se evalúa el punto medio x = 2. ¿Qué intervalo sigue?",
+     "c": [
+      "[1, 2]",
+      "[0, 1]",
+      "[1, 3]",
+      "[2, 3]"
+     ],
+     "a": 0,
+     "e": "f(2) = 3. El cero está donde hay cambio de signo: <b>[1, 2]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 2x² − 3x + 1 en [1, 3] (f(1) = −3, f(3) = 1), se evalúa el punto medio x = 2. ¿Qué intervalo sigue?",
+     "c": [
+      "[2, 3]",
+      "[1, 2]",
+      "[0, 1]",
+      "[1, 3]"
+     ],
+     "a": 0,
+     "e": "f(2) = −5. El cero está donde hay cambio de signo: <b>[2, 3]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 2x² − 4x − 7 en [2, 4] (f(2) = −15, f(4) = 9), se evalúa el punto medio x = 3. ¿Qué intervalo sigue?",
+     "c": [
+      "[2, 3]",
+      "[2, 4]",
+      "[1, 2]",
+      "[3, 4]"
+     ],
+     "a": 3,
+     "e": "f(3) = −10. El cero está donde hay cambio de signo: <b>[3, 4]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 4x² − 4x + 3 en [−3, −1] (f(−3) = −48, f(−1) = 2), se evalúa el punto medio x = −2. ¿Qué intervalo sigue?",
+     "c": [
+      "[−2, −1]",
+      "[−4, −3]",
+      "[−3, −1]",
+      "[−3, −2]"
+     ],
+     "a": 0,
+     "e": "f(−2) = −13. El cero está donde hay cambio de signo: <b>[−2, −1]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ + 4x² + 3x − 2 en [−1, 1] (f(−1) = −2, f(1) = 6), se evalúa el punto medio x = 0. ¿Qué intervalo sigue?",
+     "c": [
+      "[−1, 1]",
+      "[−2, −1]",
+      "[0, 1]",
+      "[−1, 0]"
+     ],
+     "a": 2,
+     "e": "f(0) = −2. El cero está donde hay cambio de signo: <b>[0, 1]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ + 3x² − 4x − 6 en [1, 3] (f(1) = −6, f(3) = 36), se evalúa el punto medio x = 2. ¿Qué intervalo sigue?",
+     "c": [
+      "[2, 3]",
+      "[1, 3]",
+      "[1, 2]",
+      "[0, 1]"
+     ],
+     "a": 2,
+     "e": "f(2) = 6. El cero está donde hay cambio de signo: <b>[1, 2]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 2x² + 2x + 7 en [−2, 0] (f(−2) = −13, f(0) = 7), se evalúa el punto medio x = −1. ¿Qué intervalo sigue?",
+     "c": [
+      "[−3, −2]",
+      "[−2, 0]",
+      "[−1, 0]",
+      "[−2, −1]"
+     ],
+     "a": 3,
+     "e": "f(−1) = 2. El cero está donde hay cambio de signo: <b>[−2, −1]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ + x² − x − 6 en [1, 3] (f(1) = −5, f(3) = 27), se evalúa el punto medio x = 2. ¿Qué intervalo sigue?",
+     "c": [
+      "[1, 2]",
+      "[2, 3]",
+      "[0, 1]",
+      "[1, 3]"
+     ],
+     "a": 0,
+     "e": "f(2) = 4. El cero está donde hay cambio de signo: <b>[1, 2]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ + 3x² − 3x − 2 en [0, 2] (f(0) = −2, f(2) = 12), se evalúa el punto medio x = 1. ¿Qué intervalo sigue?",
+     "c": [
+      "[−1, 0]",
+      "[0, 2]",
+      "[0, 1]",
+      "[1, 2]"
+     ],
+     "a": 3,
+     "e": "f(1) = −1. El cero está donde hay cambio de signo: <b>[1, 2]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ + 2x² + 3x − 8 en [0, 2] (f(0) = −8, f(2) = 14), se evalúa el punto medio x = 1. ¿Qué intervalo sigue?",
+     "c": [
+      "[0, 1]",
+      "[−1, 0]",
+      "[1, 2]",
+      "[0, 2]"
+     ],
+     "a": 2,
+     "e": "f(1) = −2. El cero está donde hay cambio de signo: <b>[1, 2]</b>."
+    }
+   ]
+  },
+  {
+   "title": "Aproximaciones sucesivas",
+   "items": [
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/3 + 5 y x₀ = 1, ¿cuánto vale x₂?",
+     "c": [
+      "5.33",
+      "7.5",
+      "6.78",
+      "11.78"
+     ],
+     "a": 2,
+     "e": "x₁ = 1/3 + 5 = 5.33; x₂ = 5.33/3 + 5 = <b>6.78</b>. Se acerca al punto fijo 7.5."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/3 + 6 y x₀ = 5, ¿cuánto vale x₂?",
+     "c": [
+      "8.56",
+      "14.56",
+      "9",
+      "7.67"
+     ],
+     "a": 0,
+     "e": "x₁ = 5/3 + 6 = 7.67; x₂ = 7.67/3 + 6 = <b>8.56</b>. Se acerca al punto fijo 9."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/4 + 9 y x₀ = 5, ¿cuánto vale x₂?",
+     "c": [
+      "20.5625",
+      "11.5625",
+      "12",
+      "10.25"
+     ],
+     "a": 1,
+     "e": "x₁ = 5/4 + 9 = 10.25; x₂ = 10.25/4 + 9 = <b>11.5625</b>. Se acerca al punto fijo 12."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/5 + 3 y x₀ = 2, ¿cuánto vale x₂?",
+     "c": [
+      "3.4",
+      "6.68",
+      "3.68",
+      "3.75"
+     ],
+     "a": 2,
+     "e": "x₁ = 2/5 + 3 = 3.4; x₂ = 3.4/5 + 3 = <b>3.68</b>. Se acerca al punto fijo 3.75."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/2 + 2 y x₀ = 6, ¿cuánto vale x₂?",
+     "c": [
+      "4.5",
+      "4",
+      "6.5",
+      "5"
+     ],
+     "a": 0,
+     "e": "x₁ = 6/2 + 2 = 5; x₂ = 5/2 + 2 = <b>4.5</b>. Se acerca al punto fijo 4."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/3 + 6 y x₀ = 0, ¿cuánto vale x₂?",
+     "c": [
+      "9",
+      "6",
+      "8",
+      "14"
+     ],
+     "a": 2,
+     "e": "x₁ = 0/3 + 6 = 6; x₂ = 6/3 + 6 = <b>8</b>. Se acerca al punto fijo 9."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/3 + 8 y x₀ = 2, ¿cuánto vale x₂?",
+     "c": [
+      "8.67",
+      "12",
+      "18.89",
+      "10.89"
+     ],
+     "a": 3,
+     "e": "x₁ = 2/3 + 8 = 8.67; x₂ = 8.67/3 + 8 = <b>10.89</b>. Se acerca al punto fijo 12."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/3 + 4 y x₀ = 6, ¿cuánto vale x₂?",
+     "c": [
+      "10",
+      "6",
+      "5",
+      "7"
+     ],
+     "a": 1,
+     "e": "x₁ = 6/3 + 4 = 6; x₂ = 6/3 + 4 = <b>6</b>. Se acerca al punto fijo 6."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/2 + 5 y x₀ = 6, ¿cuánto vale x₂?",
+     "c": [
+      "10",
+      "8",
+      "9",
+      "14"
+     ],
+     "a": 2,
+     "e": "x₁ = 6/2 + 5 = 8; x₂ = 8/2 + 5 = <b>9</b>. Se acerca al punto fijo 10."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/3 + 7 y x₀ = 2, ¿cuánto vale x₂?",
+     "c": [
+      "16.56",
+      "10.5",
+      "9.56",
+      "7.67"
+     ],
+     "a": 2,
+     "e": "x₁ = 2/3 + 7 = 7.67; x₂ = 7.67/3 + 7 = <b>9.56</b>. Se acerca al punto fijo 10.5."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/4 + 3 y x₀ = 6, ¿cuánto vale x₂?",
+     "c": [
+      "4.125",
+      "7.125",
+      "4",
+      "4.5"
+     ],
+     "a": 0,
+     "e": "x₁ = 6/4 + 3 = 4.5; x₂ = 4.5/4 + 3 = <b>4.125</b>. Se acerca al punto fijo 4."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/3 + 7 y x₀ = 4, ¿cuánto vale x₂?",
+     "c": [
+      "9.78",
+      "10.5",
+      "8.33",
+      "16.78"
+     ],
+     "a": 0,
+     "e": "x₁ = 4/3 + 7 = 8.33; x₂ = 8.33/3 + 7 = <b>9.78</b>. Se acerca al punto fijo 10.5."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/5 + 4 y x₀ = 2, ¿cuánto vale x₂?",
+     "c": [
+      "8.88",
+      "4.4",
+      "5",
+      "4.88"
+     ],
+     "a": 3,
+     "e": "x₁ = 2/5 + 4 = 4.4; x₂ = 4.4/5 + 4 = <b>4.88</b>. Se acerca al punto fijo 5."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/2 + 8 y x₀ = 6, ¿cuánto vale x₂?",
+     "c": [
+      "21.5",
+      "11",
+      "16",
+      "13.5"
+     ],
+     "a": 3,
+     "e": "x₁ = 6/2 + 8 = 11; x₂ = 11/2 + 8 = <b>13.5</b>. Se acerca al punto fijo 16."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/4 + 8 y x₀ = 0, ¿cuánto vale x₂?",
+     "c": [
+      "8",
+      "18",
+      "10.67",
+      "10"
+     ],
+     "a": 3,
+     "e": "x₁ = 0/4 + 8 = 8; x₂ = 8/4 + 8 = <b>10</b>. Se acerca al punto fijo 10.67."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/3 + 7 y x₀ = 5, ¿cuánto vale x₂?",
+     "c": [
+      "16.89",
+      "9.89",
+      "10.5",
+      "8.67"
+     ],
+     "a": 1,
+     "e": "x₁ = 5/3 + 7 = 8.67; x₂ = 8.67/3 + 7 = <b>9.89</b>. Se acerca al punto fijo 10.5."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/4 + 1 y x₀ = 3, ¿cuánto vale x₂?",
+     "c": [
+      "1.33",
+      "1.4375",
+      "2.4375",
+      "1.75"
+     ],
+     "a": 1,
+     "e": "x₁ = 3/4 + 1 = 1.75; x₂ = 1.75/4 + 1 = <b>1.4375</b>. Se acerca al punto fijo 1.33."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/4 + 7 y x₀ = 0, ¿cuánto vale x₂?",
+     "c": [
+      "15.75",
+      "8.75",
+      "9.33",
+      "7"
+     ],
+     "a": 1,
+     "e": "x₁ = 0/4 + 7 = 7; x₂ = 7/4 + 7 = <b>8.75</b>. Se acerca al punto fijo 9.33."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/5 + 6 y x₀ = 5, ¿cuánto vale x₂?",
+     "c": [
+      "7",
+      "7.5",
+      "13.4",
+      "7.4"
+     ],
+     "a": 3,
+     "e": "x₁ = 5/5 + 6 = 7; x₂ = 7/5 + 6 = <b>7.4</b>. Se acerca al punto fijo 7.5."
+    },
+    {
+     "q": "Con aproximaciones sucesivas x<sub>n+1</sub> = x<sub>n</sub>/3 + 8 y x₀ = 1, ¿cuánto vale x₂?",
+     "c": [
+      "10.78",
+      "8.33",
+      "12",
+      "18.78"
+     ],
+     "a": 0,
+     "e": "x₁ = 1/3 + 8 = 8.33; x₂ = 8.33/3 + 8 = <b>10.78</b>. Se acerca al punto fijo 12."
+    }
+   ]
+  },
+  {
+   "title": "Newton-Raphson",
+   "items": [
+    {
+     "q": "Para aproximar √10 se usa Newton-Raphson con f(x) = x² − 10 y x₀ = 2: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "3.6",
+      "0.5",
+      "5",
+      "3.5"
+     ],
+     "a": 3,
+     "e": "f(2) = −6, f′(2) = 4. x₁ = 2 − (−6)/4 = <b>3.5</b> (√10 ≈ 3.162)."
+    },
+    {
+     "q": "Para aproximar √13 se usa Newton-Raphson con f(x) = x² − 13 y x₀ = 1: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "−5",
+      "8",
+      "7",
+      "13"
+     ],
+     "a": 2,
+     "e": "f(1) = −12, f′(1) = 2. x₁ = 1 − (−12)/2 = <b>7</b> (√13 ≈ 3.606)."
+    },
+    {
+     "q": "Para aproximar √6 se usa Newton-Raphson con f(x) = x² − 6 y x₀ = 1: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "−1.5",
+      "6",
+      "3.6",
+      "3.5"
+     ],
+     "a": 3,
+     "e": "f(1) = −5, f′(1) = 2. x₁ = 1 − (−5)/2 = <b>3.5</b> (√6 ≈ 2.449)."
+    },
+    {
+     "q": "Para aproximar √6 se usa Newton-Raphson con f(x) = x² − 6 y x₀ = 4: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "2.75",
+      "2.76",
+      "5.25",
+      "1.5"
+     ],
+     "a": 0,
+     "e": "f(4) = 10, f′(4) = 8. x₁ = 4 − (10)/8 = <b>2.75</b> (√6 ≈ 2.449)."
+    },
+    {
+     "q": "Para aproximar √10 se usa Newton-Raphson con f(x) = x² − 10 y x₀ = 3: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "3.18",
+      "3.17",
+      "2.83",
+      "3.33"
+     ],
+     "a": 1,
+     "e": "f(3) = −1, f′(3) = 6. x₁ = 3 − (−1)/6 = <b>3.17</b> (√10 ≈ 3.162)."
+    },
+    {
+     "q": "Para aproximar √3 se usa Newton-Raphson con f(x) = x² − 3 y x₀ = 4: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "0.75",
+      "2.376",
+      "5.625",
+      "2.375"
+     ],
+     "a": 3,
+     "e": "f(4) = 13, f′(4) = 8. x₁ = 4 − (13)/8 = <b>2.375</b> (√3 ≈ 1.732)."
+    },
+    {
+     "q": "Para aproximar √13 se usa Newton-Raphson con f(x) = x² − 13 y x₀ = 4: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "3.626",
+      "4.375",
+      "3.25",
+      "3.625"
+     ],
+     "a": 3,
+     "e": "f(4) = 3, f′(4) = 8. x₁ = 4 − (3)/8 = <b>3.625</b> (√13 ≈ 3.606)."
+    },
+    {
+     "q": "Para aproximar √11 se usa Newton-Raphson con f(x) = x² − 11 y x₀ = 2: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "3.75",
+      "0.25",
+      "3.76",
+      "5.5"
+     ],
+     "a": 0,
+     "e": "f(2) = −7, f′(2) = 4. x₁ = 2 − (−7)/4 = <b>3.75</b> (√11 ≈ 3.317)."
+    },
+    {
+     "q": "Para aproximar √6 se usa Newton-Raphson con f(x) = x² − 6 y x₀ = 3: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "2.5",
+      "2",
+      "2.6",
+      "3.5"
+     ],
+     "a": 0,
+     "e": "f(3) = 3, f′(3) = 6. x₁ = 3 − (3)/6 = <b>2.5</b> (√6 ≈ 2.449)."
+    },
+    {
+     "q": "Para aproximar √3 se usa Newton-Raphson con f(x) = x² − 3 y x₀ = 3: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "3",
+      "2",
+      "4",
+      "1"
+     ],
+     "a": 1,
+     "e": "f(3) = 6, f′(3) = 6. x₁ = 3 − (6)/6 = <b>2</b> (√3 ≈ 1.732)."
+    },
+    {
+     "q": "Para aproximar √10 se usa Newton-Raphson con f(x) = x² − 10 y x₀ = 1: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "10",
+      "−3.5",
+      "5.5",
+      "5.6"
+     ],
+     "a": 2,
+     "e": "f(1) = −9, f′(1) = 2. x₁ = 1 − (−9)/2 = <b>5.5</b> (√10 ≈ 3.162)."
+    },
+    {
+     "q": "Para aproximar √11 se usa Newton-Raphson con f(x) = x² − 11 y x₀ = 4: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "3.375",
+      "4.625",
+      "2.75",
+      "3.376"
+     ],
+     "a": 0,
+     "e": "f(4) = 5, f′(4) = 8. x₁ = 4 − (5)/8 = <b>3.375</b> (√11 ≈ 3.317)."
+    },
+    {
+     "q": "Para aproximar √2 se usa Newton-Raphson con f(x) = x² − 2 y x₀ = 3: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "1.84",
+      "4.17",
+      "1.83",
+      "0.67"
+     ],
+     "a": 2,
+     "e": "f(3) = 7, f′(3) = 6. x₁ = 3 − (7)/6 = <b>1.83</b> (√2 ≈ 1.414)."
+    },
+    {
+     "q": "Para aproximar √17 se usa Newton-Raphson con f(x) = x² − 17 y x₀ = 3: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "1.67",
+      "4.33",
+      "4.34",
+      "5.67"
+     ],
+     "a": 1,
+     "e": "f(3) = −8, f′(3) = 6. x₁ = 3 − (−8)/6 = <b>4.33</b> (√17 ≈ 4.123)."
+    },
+    {
+     "q": "Para aproximar √17 se usa Newton-Raphson con f(x) = x² − 17 y x₀ = 1: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "−7",
+      "10",
+      "9",
+      "17"
+     ],
+     "a": 2,
+     "e": "f(1) = −16, f′(1) = 2. x₁ = 1 − (−16)/2 = <b>9</b> (√17 ≈ 4.123)."
+    },
+    {
+     "q": "Para aproximar √3 se usa Newton-Raphson con f(x) = x² − 3 y x₀ = 2: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "1.75",
+      "1.5",
+      "1.76",
+      "2.25"
+     ],
+     "a": 0,
+     "e": "f(2) = 1, f′(2) = 4. x₁ = 2 − (1)/4 = <b>1.75</b> (√3 ≈ 1.732)."
+    },
+    {
+     "q": "Para aproximar √2 se usa Newton-Raphson con f(x) = x² − 2 y x₀ = 2: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "1",
+      "1.6",
+      "1.5",
+      "2.5"
+     ],
+     "a": 2,
+     "e": "f(2) = 2, f′(2) = 4. x₁ = 2 − (2)/4 = <b>1.5</b> (√2 ≈ 1.414)."
+    },
+    {
+     "q": "Para aproximar √3 se usa Newton-Raphson con f(x) = x² − 3 y x₀ = 1: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "0",
+      "2",
+      "1",
+      "3"
+     ],
+     "a": 1,
+     "e": "f(1) = −2, f′(1) = 2. x₁ = 1 − (−2)/2 = <b>2</b> (√3 ≈ 1.732)."
+    },
+    {
+     "q": "Para aproximar √5 se usa Newton-Raphson con f(x) = x² − 5 y x₀ = 3: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "2.34",
+      "2.33",
+      "3.67",
+      "1.67"
+     ],
+     "a": 1,
+     "e": "f(3) = 4, f′(3) = 6. x₁ = 3 − (4)/6 = <b>2.33</b> (√5 ≈ 2.236)."
+    },
+    {
+     "q": "Para aproximar √13 se usa Newton-Raphson con f(x) = x² − 13 y x₀ = 2: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "6.5",
+      "4.26",
+      "−0.25",
+      "4.25"
+     ],
+     "a": 3,
+     "e": "f(2) = −9, f′(2) = 4. x₁ = 2 − (−9)/4 = <b>4.25</b> (√13 ≈ 3.606)."
+    }
+   ]
+  },
+  {
+   "title": "Comparar métodos",
+   "items": [
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 2x² − 2x + 3 en [−2, 0] (f(−2) = −9, f(0) = 3), se evalúa el punto medio x = −1. ¿Qué intervalo sigue?",
+     "c": [
+      "[−2, −1]",
+      "[−2, 0]",
+      "[−1, 0]",
+      "[−3, −2]"
+     ],
+     "a": 0,
+     "e": "f(−1) = 2. El cero está donde hay cambio de signo: <b>[−2, −1]</b>."
+    },
+    {
+     "q": "Para aproximar √2 se usa Newton-Raphson con f(x) = x² − 2 y x₀ = 1: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "0.5",
+      "2",
+      "1.5",
+      "1.6"
+     ],
+     "a": 2,
+     "e": "f(1) = −1, f′(1) = 2. x₁ = 1 − (−1)/2 = <b>1.5</b> (√2 ≈ 1.414)."
+    },
+    {
+     "q": "Comparado con bisección, Newton-Raphson suele…",
+     "c": [
+      "no necesitar derivada",
+      "funcionar siempre",
+      "converger mucho más rápido",
+      "ser más lento"
+     ],
+     "a": 2,
+     "e": "Cuando funciona, duplica las cifras correctas en cada paso."
+    },
+    {
+     "q": "En cada paso del método de bisección, el intervalo…",
+     "c": [
+      "no cambia",
+      "se reduce a la mitad",
+      "se duplica",
+      "se reduce a un tercio"
+     ],
+     "a": 1,
+     "e": "Por eso converge, aunque despacio."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ + 4x² − 5x − 8 en [0, 2] (f(0) = −8, f(2) = 6), se evalúa el punto medio x = 1. ¿Qué intervalo sigue?",
+     "c": [
+      "[1, 2]",
+      "[−1, 0]",
+      "[0, 1]",
+      "[0, 2]"
+     ],
+     "a": 0,
+     "e": "f(1) = −8. El cero está donde hay cambio de signo: <b>[1, 2]</b>."
+    },
+    {
+     "q": "Para aproximar √11 se usa Newton-Raphson con f(x) = x² − 11 y x₀ = 3: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "2.67",
+      "3.67",
+      "3.34",
+      "3.33"
+     ],
+     "a": 3,
+     "e": "f(3) = −2, f′(3) = 6. x₁ = 3 − (−2)/6 = <b>3.33</b> (√11 ≈ 3.317)."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ + 3x² − x − 2 en [0, 2] (f(0) = −2, f(2) = 16), se evalúa el punto medio x = 1. ¿Qué intervalo sigue?",
+     "c": [
+      "[0, 1]",
+      "[−1, 0]",
+      "[1, 2]",
+      "[0, 2]"
+     ],
+     "a": 0,
+     "e": "f(1) = 1. El cero está donde hay cambio de signo: <b>[0, 1]</b>."
+    },
+    {
+     "q": "Para aproximar √13 se usa Newton-Raphson con f(x) = x² − 13 y x₀ = 3: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "4.33",
+      "2.33",
+      "3.67",
+      "3.68"
+     ],
+     "a": 2,
+     "e": "f(3) = −4, f′(3) = 6. x₁ = 3 − (−4)/6 = <b>3.67</b> (√13 ≈ 3.606)."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 2x² + 5x − 3 en [0, 2] (f(0) = −3, f(2) = 7), se evalúa el punto medio x = 1. ¿Qué intervalo sigue?",
+     "c": [
+      "[0, 1]",
+      "[1, 2]",
+      "[0, 2]",
+      "[−1, 0]"
+     ],
+     "a": 0,
+     "e": "f(1) = 1. El cero está donde hay cambio de signo: <b>[0, 1]</b>."
+    },
+    {
+     "q": "Para aproximar √6 se usa Newton-Raphson con f(x) = x² − 6 y x₀ = 2: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "3",
+      "2.5",
+      "2.6",
+      "1.5"
+     ],
+     "a": 1,
+     "e": "f(2) = −2, f′(2) = 4. x₁ = 2 − (−2)/4 = <b>2.5</b> (√6 ≈ 2.449)."
+    },
+    {
+     "q": "El método de Newton-Raphson usa…",
+     "c": [
+      "rectas paralelas al eje x",
+      "la recta tangente para acercarse al cero",
+      "áreas bajo la curva",
+      "solo el punto medio"
+     ],
+     "a": 1,
+     "e": "x₁ es donde la tangente en x₀ corta al eje x."
+    },
+    {
+     "q": "¿Para qué sirven los métodos numéricos?",
+     "c": [
+      "para evitar usar calculadora",
+      "para dibujar gráficas de barras",
+      "para calcular medias",
+      "para aproximar soluciones que no se pueden obtener con una fórmula"
+     ],
+     "a": 3,
+     "e": "Las computadoras los usan todo el tiempo."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ + x² − 5x + 1 en [−3, −1] (f(−3) = −2, f(−1) = 6), se evalúa el punto medio x = −2. ¿Qué intervalo sigue?",
+     "c": [
+      "[−2, −1]",
+      "[−3, −1]",
+      "[−4, −3]",
+      "[−3, −2]"
+     ],
+     "a": 3,
+     "e": "f(−2) = 7. El cero está donde hay cambio de signo: <b>[−3, −2]</b>."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 3x² − 4x + 8 en [0, 2] (f(0) = 8, f(2) = −4), se evalúa el punto medio x = 1. ¿Qué intervalo sigue?",
+     "c": [
+      "[0, 2]",
+      "[−1, 0]",
+      "[0, 1]",
+      "[1, 2]"
+     ],
+     "a": 3,
+     "e": "f(1) = 2. El cero está donde hay cambio de signo: <b>[1, 2]</b>."
+    },
+    {
+     "q": "Newton-Raphson puede fallar si…",
+     "c": [
+      "el número inicial es positivo",
+      "la raíz es entera",
+      "f′(x) es 0 cerca de la aproximación",
+      "f es un polinomio"
+     ],
+     "a": 2,
+     "e": "Habría que dividir entre 0 o la tangente es casi horizontal."
+    },
+    {
+     "q": "Para aproximar √7 se usa Newton-Raphson con f(x) = x² − 7 y x₀ = 4: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "1.75",
+      "2.875",
+      "5.125",
+      "2.876"
+     ],
+     "a": 1,
+     "e": "f(4) = 9, f′(4) = 8. x₁ = 4 − (9)/8 = <b>2.875</b> (√7 ≈ 2.646)."
+    },
+    {
+     "q": "Para aproximar √10 se usa Newton-Raphson con f(x) = x² − 10 y x₀ = 4: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "2.5",
+      "4.75",
+      "3.25",
+      "3.26"
+     ],
+     "a": 2,
+     "e": "f(4) = 6, f′(4) = 8. x₁ = 4 − (6)/8 = <b>3.25</b> (√10 ≈ 3.162)."
+    },
+    {
+     "q": "Para aproximar √5 se usa Newton-Raphson con f(x) = x² − 5 y x₀ = 1: x₁ = x₀ − f(x₀)/f′(x₀). ¿Cuánto vale x₁?",
+     "c": [
+      "5",
+      "3",
+      "4",
+      "−1"
+     ],
+     "a": 1,
+     "e": "f(1) = −4, f′(1) = 2. x₁ = 1 − (−4)/2 = <b>3</b> (√5 ≈ 2.236)."
+    },
+    {
+     "q": "Con el método de bisección para f(x) = x³ − 4x² − 2x + 6 en [−2, 0] (f(−2) = −14, f(0) = 6), se evalúa el punto medio x = −1. ¿Qué intervalo sigue?",
+     "c": [
+      "[−2, −1]",
+      "[−3, −2]",
+      "[−2, 0]",
+      "[−1, 0]"
+     ],
+     "a": 0,
+     "e": "f(−1) = 3. El cero está donde hay cambio de signo: <b>[−2, −1]</b>."
+    },
+    {
+     "q": "El método de bisección siempre funciona si…",
+     "c": [
+      "el intervalo empieza en 0",
+      "f es un polinomio de grado 2",
+      "f es derivable en todo ℝ",
+      "f es continua y cambia de signo en el intervalo"
+     ],
+     "a": 3,
+     "e": "Se apoya en el teorema del valor intermedio."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 7,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "temas-selectos-2"
+}

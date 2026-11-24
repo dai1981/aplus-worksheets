@@ -1,0 +1,1157 @@
+{
+ "slug": "rectas-y-sistemas-de-ecuaciones",
+ "title": "Rectas, regla de Cramer y Gauss-Jordan",
+ "seo_title": "Rectas y sistemas – Temas Selectos de Matemáticas I: ejercicios con respuestas",
+ "short_title": "Rectas y sistemas",
+ "domain": "Geometría analítica",
+ "standard_code": "Temas Selectos de Matemáticas I · Progresión 4: Rectas y sistemas de ecuaciones",
+ "standard_url": "https://dgb.sep.gob.mx/storage/recursos/2024/11/KdQ64JkOk7-Temas-Selectos-de-Matematicas-I.pdf",
+ "standard_text": "Determina ecuaciones de rectas y su posición relativa, y resuelve sistemas de ecuaciones lineales con la regla de Cramer y el método de Gauss-Jordan (resumen de la progresión 4 del programa de Temas Selectos de Matemáticas I (DGB, SEP 2024))",
+ "meta_desc": "Ejercicios de Temas Selectos de Matemáticas I: ecuaciones de la recta, pendiente, rectas paralelas y perpendiculares, determinantes, regla de Cramer y Gauss-Jordan. 100 ejercicios con respuestas.",
+ "key_big": "x = Δₓ/Δ,  y = Δᵧ/Δ",
+ "key_sub": "Si Δ = 0, no hay solución única.",
+ "body_html": "<h2>Cómo se hace</h2><p>Una recta se escribe y = mx + b (pendiente m) o Ax + By + C = 0. Paralelas: misma pendiente; perpendiculares: m₁ · m₂ = −1.</p><p><b>Regla de Cramer</b> (2 × 2): Δ = ad − bc; Δₓ y Δᵧ cambian la columna de x o de y por los términos independientes. x = Δₓ/Δ, y = Δᵧ/Δ.</p><p><b>Gauss-Jordan</b>: se combinan ecuaciones para dejar una incógnita en cada ecuación.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>2x + y = 7; x − y = 2</p><p class='sn-ex-s'>Δ = 2(−1) − 1(1) = −3</p><p class='sn-ex-s'>Δₓ = −9, Δᵧ = −3</p><p class='sn-ex-a'>Respuesta: x = 3, y = 1</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Cambiar la columna equivocada</td><td>Para Δₓ se sustituye la columna de x.</td></tr><tr><td>Olvidar que Δ = 0 no tiene solución única</td><td>Las rectas son paralelas o la misma.</td></tr><tr><td>Errores de signo en ad − bc</td><td>Multiplica en cruz con cuidado.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Cuándo conviene Cramer?",
+   "a": "En sistemas pequeños con coeficientes enteros; para sistemas grandes se usa Gauss-Jordan."
+  },
+  {
+   "q": "¿Qué es un determinante?",
+   "a": "Un número que se calcula con los coeficientes; si es 0, el sistema no tiene una solución única."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Ecuaciones de la recta",
+   "items": [
+    {
+     "q": "¿Cuál es la pendiente de 3x + 2y + 2 = 0?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "m = −A/B = <b>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "¿Cuál es un vector director de la recta 2x − 5y + 9 = 0?",
+     "c": [
+      "(−5, 2)",
+      "(2, −5)",
+      "(−2, −5)",
+      "(5, 2)"
+     ],
+     "a": 3,
+     "e": "Si la recta es Ax + By + C = 0, un vector director es (−B, A): <b>(5, 2)</b>."
+    },
+    {
+     "q": "Halla la ecuación general de la recta que pasa por P(4, 0) con vector director (5, −3).",
+     "c": [
+      "3x − 5y − 12 = 0",
+      "3x + 5y + 12 = 0",
+      "5x − 3y − 20 = 0",
+      "3x + 5y − 12 = 0"
+     ],
+     "a": 3,
+     "e": "Con v = (a, b) la recta es b·x − a·y + C = 0; sustituyendo P: <b>3x + 5y − 12 = 0</b>."
+    },
+    {
+     "q": "¿Qué recta pasa por P(−4, 1) y tiene pendiente <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>?",
+     "c": [
+      "y = −<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>x − 9",
+      "y = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>x + 1",
+      "y = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>x − 11",
+      "y = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>x + 11"
+     ],
+     "a": 3,
+     "e": "y − 1 = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>(x + 4) → <b>y = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>x + 11</b>."
+    },
+    {
+     "q": "¿Cuál es la pendiente de −5x + 5y + 8 = 0?",
+     "c": [
+      "−<span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span>",
+      "1",
+      "2",
+      "−1"
+     ],
+     "a": 1,
+     "e": "m = −A/B = <b>1</b>."
+    },
+    {
+     "q": "¿Qué recta pasa por P(2, −4) y tiene pendiente <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>?",
+     "c": [
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x − 4",
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x + 5",
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x − 5",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x − 3"
+     ],
+     "a": 2,
+     "e": "y + 4 = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>(x − 2) → <b>y = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x − 5</b>."
+    },
+    {
+     "q": "Halla la ecuación explícita de la recta que pasa por A(−3, 5) y B(0, 4).",
+     "c": [
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x − 4",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x + 4",
+      "y = −3x + 4",
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x + 4"
+     ],
+     "a": 1,
+     "e": "m = −1/3 = −<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>; n = 4. <b>y = −<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x + 4</b>."
+    },
+    {
+     "q": "Halla la ecuación general de la recta que pasa por P(4, 4) con vector director (3, 3).",
+     "c": [
+      "x − y = 0",
+      "x + y − 8 = 0",
+      "x − y + 1 = 0",
+      "3x + 3y − 24 = 0"
+     ],
+     "a": 0,
+     "e": "Con v = (a, b) la recta es b·x − a·y + C = 0; sustituyendo P: <b>x − y = 0</b>."
+    },
+    {
+     "q": "¿Qué pendiente tiene una recta que forma un ángulo de 60° con el eje X?",
+     "c": [
+      "m = 1",
+      "m = √3",
+      "m = √3/3",
+      "m = −√3"
+     ],
+     "a": 1,
+     "e": "m = tg 60° = <b>√3</b>."
+    },
+    {
+     "q": "¿Cuál es la pendiente de −4x + 3y − 4 = 0?",
+     "c": [
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "m = −A/B = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Escribe la ecuación continua de la recta que pasa por P(3, −4) con vector director (−3, 3).",
+     "c": [
+      "(x − 3)/−3 = (y + 4)/3",
+      "(x − 3)/3 = (y + 4)/−3",
+      "(x + 3)/3 = (y − 3)/−4",
+      "(x + 3)/−3 = (y − 4)/3"
+     ],
+     "a": 0,
+     "e": "(x − x₀)/v₁ = (y − y₀)/v₂: <b>(x − 3)/−3 = (y + 4)/3</b>."
+    },
+    {
+     "q": "¿Qué pendiente tiene una recta que forma un ángulo de 120° con el eje X?",
+     "c": [
+      "m = 1",
+      "m = −√3",
+      "m = √3",
+      "m = √3/3"
+     ],
+     "a": 1,
+     "e": "m = tg 120° = <b>−√3</b>."
+    },
+    {
+     "q": "¿Qué recta pasa por P(−5, 2) y tiene pendiente −2?",
+     "c": [
+      "y = −2x − 8",
+      "y = −2x + 8",
+      "y = 2x + 12",
+      "y = −2x + 2"
+     ],
+     "a": 0,
+     "e": "y − 2 = −2(x + 5) → <b>y = −2x − 8</b>."
+    },
+    {
+     "q": "Escribe la ecuación continua de la recta que pasa por P(−4, 2) con vector director (−2, 2).",
+     "c": [
+      "(x + 4)/2 = (y − 2)/−2",
+      "(x + 2)/−4 = (y − 2)/2",
+      "(x + 4)/−2 = (y − 2)/2",
+      "(x − 4)/−2 = (y + 2)/2"
+     ],
+     "a": 2,
+     "e": "(x − x₀)/v₁ = (y − y₀)/v₂: <b>(x + 4)/−2 = (y − 2)/2</b>."
+    },
+    {
+     "q": "¿Qué pendiente tiene una recta que forma un ángulo de 45° con el eje X?",
+     "c": [
+      "m = −√3",
+      "m = √3/3",
+      "m = √3",
+      "m = 1"
+     ],
+     "a": 3,
+     "e": "m = tg 45° = <b>1</b>."
+    },
+    {
+     "q": "¿Cuál es un vector director de la recta 4x + 2y + 9 = 0?",
+     "c": [
+      "(2, 4)",
+      "(−4, 2)",
+      "(−2, 4)",
+      "(4, 2)"
+     ],
+     "a": 2,
+     "e": "Si la recta es Ax + By + C = 0, un vector director es (−B, A): <b>(−2, 4)</b>."
+    },
+    {
+     "q": "Escribe las ecuaciones paramétricas de la recta que pasa por P(3, 5) con vector director (4, 4).",
+     "c": [
+      "x = 3 − 4t, y = 5 + 4t",
+      "x = 3 + 4t, y = 5 + 4t",
+      "x = 4 + 3t, y = 4 + 5t",
+      "x = 3 + 4t, y = 5 + 5t"
+     ],
+     "a": 1,
+     "e": "(x, y) = P + t·v: <b>x = 3 + 4t, y = 5 + 4t</b>."
+    },
+    {
+     "q": "Escribe las ecuaciones paramétricas de la recta que pasa por P(−3, 5) con vector director (−1, −2).",
+     "c": [
+      "x = −3 + t, y = 5 − 2t",
+      "x = −1 − 3t, y = −2 + 5t",
+      "x = −3 − t, y = 5 − 2t",
+      "x = −3 − 2t, y = 5 − t"
+     ],
+     "a": 2,
+     "e": "(x, y) = P + t·v: <b>x = −3 − t, y = 5 − 2t</b>."
+    },
+    {
+     "q": "Escribe las ecuaciones paramétricas de la recta que pasa por P(1, −4) con vector director (2, −3).",
+     "c": [
+      "x = 1 + 2t, y = −4 − 3t",
+      "x = 2 + t, y = −3 − 4t",
+      "x = 1 − 2t, y = −4 − 3t",
+      "x = 1 − 3t, y = −4 + 2t"
+     ],
+     "a": 0,
+     "e": "(x, y) = P + t·v: <b>x = 1 + 2t, y = −4 − 3t</b>."
+    },
+    {
+     "q": "Escribe la ecuación continua de la recta que pasa por P(2, −4) con vector director (4, 1).",
+     "c": [
+      "(x − 2)/4 = (y + 4)/1",
+      "(x − 4)/2 = (y − 1)/−4",
+      "(x − 2)/1 = (y + 4)/4",
+      "(x + 2)/4 = (y − 4)/1"
+     ],
+     "a": 0,
+     "e": "(x − x₀)/v₁ = (y − y₀)/v₂: <b>(x − 2)/4 = (y + 4)/1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Posición de rectas",
+   "items": [
+    {
+     "q": "Halla el punto de corte de r: y = 3x + 12 y s: y = 2x + 7.",
+     "c": [
+      "(−3, −5)",
+      "(−5, 12)",
+      "(−5, −3)",
+      "(0, 12)"
+     ],
+     "a": 2,
+     "e": "Igualamos y despejamos x = −5; y = −3. <b>(−5, −3)</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: −3x + y = 0 y s: x + 3y − 2 = 0?",
+     "c": [
+      "secantes",
+      "secantes y perpendiculares",
+      "paralelas",
+      "coincidentes"
+     ],
+     "a": 1,
+     "e": "Comparamos A, B y C: <b>secantes y perpendiculares</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: x + y − 1 = 0 y s: 3x + 3y + 2 = 0?",
+     "c": [
+      "secantes",
+      "coincidentes",
+      "secantes y perpendiculares",
+      "paralelas"
+     ],
+     "a": 3,
+     "e": "Comparamos A, B y C: <b>paralelas</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: −2x + y − 2 = 0 y s: x + 2y + 5 = 0?",
+     "c": [
+      "secantes y perpendiculares",
+      "paralelas",
+      "coincidentes",
+      "secantes"
+     ],
+     "a": 0,
+     "e": "Comparamos A, B y C: <b>secantes y perpendiculares</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: −3x + 2y + 8 = 0 y s: 2x + 3y = 0?",
+     "c": [
+      "coincidentes",
+      "secantes y perpendiculares",
+      "paralelas",
+      "secantes"
+     ],
+     "a": 1,
+     "e": "Comparamos A, B y C: <b>secantes y perpendiculares</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: −3x + y + 5 = 0 y s: 6x − 2y − 10 = 0?",
+     "c": [
+      "secantes y perpendiculares",
+      "paralelas",
+      "coincidentes",
+      "secantes"
+     ],
+     "a": 2,
+     "e": "Comparamos A, B y C: <b>coincidentes</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: 2x + y + 4 = 0 y s: 6x + 3y + 12 = 0?",
+     "c": [
+      "coincidentes",
+      "secantes y perpendiculares",
+      "paralelas",
+      "secantes"
+     ],
+     "a": 0,
+     "e": "Comparamos A, B y C: <b>coincidentes</b>."
+    },
+    {
+     "q": "Halla el punto de corte de r: y = −2x − 4 y s: y = 3x + 1.",
+     "c": [
+      "(−2, −1)",
+      "(0, −4)",
+      "(−1, −2)",
+      "(−1, −4)"
+     ],
+     "a": 2,
+     "e": "Igualamos y despejamos x = −1; y = −2. <b>(−1, −2)</b>."
+    },
+    {
+     "q": "Halla el punto de corte de r: y = −3x y s: y = x + 4.",
+     "c": [
+      "(−1, 3)",
+      "(0, 0)",
+      "(−1, 0)",
+      "(3, −1)"
+     ],
+     "a": 0,
+     "e": "Igualamos y despejamos x = −1; y = 3. <b>(−1, 3)</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: −3x + y + 1 = 0 y s: −6x + 2y + 4 = 0?",
+     "c": [
+      "coincidentes",
+      "paralelas",
+      "secantes",
+      "secantes y perpendiculares"
+     ],
+     "a": 1,
+     "e": "Comparamos A, B y C: <b>paralelas</b>."
+    },
+    {
+     "q": "Halla la recta paralela a y = −2x + 6 que pasa por P(0, 4).",
+     "c": [
+      "y = −2x − 4",
+      "y = −2x + 6",
+      "y = 2x + 4",
+      "y = −2x + 4"
+     ],
+     "a": 3,
+     "e": "Paralela: m = −2; pasa por P → n = 4. <b>y = −2x + 4</b>."
+    },
+    {
+     "q": "Halla el punto de corte de r: y = 2x + 5 y s: y = −3x + 5.",
+     "c": [
+      "(1, 5)",
+      "(0, 5)",
+      "(0, −5)",
+      "(5, 0)"
+     ],
+     "a": 1,
+     "e": "Igualamos y despejamos x = 0; y = 5. <b>(0, 5)</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: −x + y − 4 = 0 y s: −3x + 3y − 10 = 0?",
+     "c": [
+      "paralelas",
+      "coincidentes",
+      "secantes y perpendiculares",
+      "secantes"
+     ],
+     "a": 0,
+     "e": "Comparamos A, B y C: <b>paralelas</b>."
+    },
+    {
+     "q": "Halla el punto de corte de r: y = −3x − 14 y s: y = x + 6.",
+     "c": [
+      "(0, −14)",
+      "(1, −5)",
+      "(−5, −14)",
+      "(−5, 1)"
+     ],
+     "a": 3,
+     "e": "Igualamos y despejamos x = −5; y = 1. <b>(−5, 1)</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: x + 2y = 0 y s: 3x + 6y + 1 = 0?",
+     "c": [
+      "secantes",
+      "secantes y perpendiculares",
+      "coincidentes",
+      "paralelas"
+     ],
+     "a": 3,
+     "e": "Comparamos A, B y C: <b>paralelas</b>."
+    },
+    {
+     "q": "Halla la recta paralela a y = 2x + 4 que pasa por P(0, 3).",
+     "c": [
+      "y = 2x + 4",
+      "y = 2x − 3",
+      "y = 2x + 3",
+      "y = −2x + 3"
+     ],
+     "a": 2,
+     "e": "Paralela: m = 2; pasa por P → n = 3. <b>y = 2x + 3</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: −x + y − 3 = 0 y s: 2x − 2y + 6 = 0?",
+     "c": [
+      "paralelas",
+      "coincidentes",
+      "secantes",
+      "secantes y perpendiculares"
+     ],
+     "a": 1,
+     "e": "Comparamos A, B y C: <b>coincidentes</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: 2x + y + 1 = 0 y s: 3x + y = 0?",
+     "c": [
+      "coincidentes",
+      "paralelas",
+      "secantes",
+      "secantes y perpendiculares"
+     ],
+     "a": 2,
+     "e": "Comparamos A, B y C: <b>secantes</b>."
+    },
+    {
+     "q": "Halla el punto de corte de r: y = −3x + 7 y s: y = 3x + 1.",
+     "c": [
+      "(1, 7)",
+      "(4, 1)",
+      "(0, 7)",
+      "(1, 4)"
+     ],
+     "a": 3,
+     "e": "Igualamos y despejamos x = 1; y = 4. <b>(1, 4)</b>."
+    },
+    {
+     "q": "¿Cuál es la posición relativa de r: −3x + y − 1 = 0 y s: −6x + 2y − 2 = 0?",
+     "c": [
+      "coincidentes",
+      "paralelas",
+      "secantes",
+      "secantes y perpendiculares"
+     ],
+     "a": 0,
+     "e": "Comparamos A, B y C: <b>coincidentes</b>."
+    }
+   ]
+  },
+  {
+   "title": "Determinantes",
+   "items": [
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>3x − 2y = −5<br>2x − y = −4</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "1",
+      "−1",
+      "−4",
+      "−7"
+     ],
+     "a": 0,
+     "e": "Δ = (3)(−1) − (−2)(2) = <b>1</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>4x − 3y = −28<br>−6x + 3y = 36</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "−6",
+      "−7",
+      "30",
+      "6"
+     ],
+     "a": 0,
+     "e": "Δ = (4)(3) − (−3)(−6) = <b>−6</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>5x − 6y = −36<br>6x + 2y = 12</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "−42",
+      "46",
+      "−46",
+      "−26"
+     ],
+     "a": 1,
+     "e": "Δ = (5)(2) − (−6)(6) = <b>46</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>−3x − 6y = 6<br>−3x + 6y = −42</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "0",
+      "−37",
+      "−36",
+      "36"
+     ],
+     "a": 2,
+     "e": "Δ = (−3)(6) − (−6)(−3) = <b>−36</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>−3x − y = −8<br>3x + 2y = 13</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "3",
+      "−3",
+      "−4",
+      "−9"
+     ],
+     "a": 1,
+     "e": "Δ = (−3)(2) − (−1)(3) = <b>−3</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>6x + y = −3<br>2x − 2y = 6</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "10",
+      "14",
+      "−10",
+      "−14"
+     ],
+     "a": 3,
+     "e": "Δ = (6)(−2) − (1)(2) = <b>−14</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>2x − 2y = −8<br>2x + 6y = 0</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "16",
+      "17",
+      "8",
+      "−16"
+     ],
+     "a": 0,
+     "e": "Δ = (2)(6) − (−2)(2) = <b>16</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>6x + 2y = −24<br>−6x + y = 24</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "−18",
+      "18",
+      "−6",
+      "19"
+     ],
+     "a": 1,
+     "e": "Δ = (6)(1) − (2)(−6) = <b>18</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>3x − 3y = −9<br>5x − 6y = −12</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "−33",
+      "3",
+      "21",
+      "−3"
+     ],
+     "a": 3,
+     "e": "Δ = (3)(−6) − (−3)(5) = <b>−3</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>−4x + 6y = −48<br>−4x + 3y = −36</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "13",
+      "−12",
+      "−36",
+      "12"
+     ],
+     "a": 3,
+     "e": "Δ = (−4)(3) − (6)(−4) = <b>12</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>6x + 5y = 9<br>4x − 3y = 25</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "38",
+      "42",
+      "−38",
+      "2"
+     ],
+     "a": 2,
+     "e": "Δ = (6)(−3) − (5)(4) = <b>−38</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>x + 5y = −14<br>4x − 6y = −4</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "26",
+      "29",
+      "−26",
+      "14"
+     ],
+     "a": 2,
+     "e": "Δ = (1)(−6) − (5)(4) = <b>−26</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>3x + 4y = 5<br>−3x − 2y = 5</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "−6",
+      "6",
+      "7",
+      "−18"
+     ],
+     "a": 1,
+     "e": "Δ = (3)(−2) − (4)(−3) = <b>6</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>x − 3y = 6<br>−6x + y = 32</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "3",
+      "17",
+      "19",
+      "−17"
+     ],
+     "a": 3,
+     "e": "Δ = (1)(1) − (−3)(−6) = <b>−17</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>2x + 4y = −12<br>6x − 5y = −36</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "14",
+      "38",
+      "34",
+      "−34"
+     ],
+     "a": 3,
+     "e": "Δ = (2)(−5) − (4)(6) = <b>−34</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>2x − 3y = 24<br>−5x + 6y = −54</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "3",
+      "27",
+      "−3",
+      "24"
+     ],
+     "a": 2,
+     "e": "Δ = (2)(6) − (−3)(−5) = <b>−3</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>5x − 2y = −28<br>−6x + 3y = 33</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "3",
+      "8",
+      "27",
+      "−3"
+     ],
+     "a": 0,
+     "e": "Δ = (5)(3) − (−2)(−6) = <b>3</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>−6x − 5y = −15<br>2x − 6y = −18</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "46",
+      "42",
+      "−46",
+      "26"
+     ],
+     "a": 0,
+     "e": "Δ = (−6)(−6) − (−5)(2) = <b>46</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>5x − 3y = 14<br>5x + 6y = 32</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "15",
+      "45",
+      "−45",
+      "46"
+     ],
+     "a": 1,
+     "e": "Δ = (5)(6) − (−3)(5) = <b>45</b>. Como Δ ≠ 0, hay una solución."
+    },
+    {
+     "q": "Para resolver por Cramer el sistema <span class='sys'>−4x − 2y = −10<br>2x − 6y = 12</span>, ¿cuánto vale el determinante del sistema Δ = ad − bc?",
+     "c": [
+      "−28",
+      "29",
+      "28",
+      "20"
+     ],
+     "a": 2,
+     "e": "Δ = (−4)(−6) − (−2)(2) = <b>28</b>. Como Δ ≠ 0, hay una solución."
+    }
+   ]
+  },
+  {
+   "title": "Regla de Cramer",
+   "items": [
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>6x + 4y = −46<br>−x − 5y = 25</span>",
+     "c": [
+      "x = 5, y = −4",
+      "x = −5, y = 4",
+      "x = −5, y = −4",
+      "x = −4, y = −5"
+     ],
+     "a": 2,
+     "e": "Δ = −26, Δ<sub>x</sub> = 130, Δ<sub>y</sub> = 104. x = −5, y = −4."
+    },
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>5x − 4y = −35<br>6x − y = −23</span>",
+     "c": [
+      "x = −3, y = −5",
+      "x = 5, y = −3",
+      "x = −3, y = 5",
+      "x = 3, y = 5"
+     ],
+     "a": 2,
+     "e": "Δ = 19, Δ<sub>x</sub> = −57, Δ<sub>y</sub> = 95. x = −3, y = 5."
+    },
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>5x + 6y = 54<br>−6x + y = −32</span>",
+     "c": [
+      "x = 6, y = −4",
+      "x = 6, y = 4",
+      "x = 4, y = 6",
+      "x = −6, y = 4"
+     ],
+     "a": 1,
+     "e": "Δ = 41, Δ<sub>x</sub> = 246, Δ<sub>y</sub> = 164. x = 6, y = 4."
+    },
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>−3x + y = −7<br>−2x − 3y = −23</span>",
+     "c": [
+      "x = −4, y = 5",
+      "x = 4, y = −5",
+      "x = 5, y = 4",
+      "x = 4, y = 5"
+     ],
+     "a": 3,
+     "e": "Δ = 11, Δ<sub>x</sub> = 44, Δ<sub>y</sub> = 55. x = 4, y = 5."
+    },
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>−2x + 6y = 30<br>−4x + 2y = 0</span>",
+     "c": [
+      "x = 6, y = 3",
+      "x = 3, y = 6",
+      "x = −3, y = 6",
+      "x = 3, y = −6"
+     ],
+     "a": 1,
+     "e": "Δ = 20, Δ<sub>x</sub> = 60, Δ<sub>y</sub> = 120. x = 3, y = 6."
+    },
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>−6x − 2y = 10<br>4x + 4y = −20</span>",
+     "c": [
+      "x = −5, y = 0",
+      "x = 0, y = 5",
+      "x = 0, y = −6",
+      "x = 0, y = −5"
+     ],
+     "a": 3,
+     "e": "Δ = −16, Δ<sub>x</sub> = 0, Δ<sub>y</sub> = 80. x = 0, y = −5."
+    },
+    {
+     "q": "Resuelve por Cramer el sistema <span class='sys'>−x + 6y = −42<br>−4x − 2y = −12</span>. ¿Cuánto vale Δ<sub>x</sub> (se cambia la columna de x por los términos independientes)?",
+     "c": [
+      "26",
+      "−156",
+      "156",
+      "157"
+     ],
+     "a": 2,
+     "e": "Δ<sub>x</sub> = (−42)(−2) − (6)(−12) = <b>156</b>; x = Δ<sub>x</sub>/Δ = 6."
+    },
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>−6x + 2y = 24<br>x − 3y = 4</span>",
+     "c": [
+      "x = −5, y = 3",
+      "x = −5, y = −3",
+      "x = −3, y = −5",
+      "x = 5, y = −3"
+     ],
+     "a": 1,
+     "e": "Δ = 16, Δ<sub>x</sub> = −80, Δ<sub>y</sub> = −48. x = −5, y = −3."
+    },
+    {
+     "q": "Resuelve por Cramer el sistema <span class='sys'>5x − y = −14<br>−3x + y = 8</span>. ¿Cuánto vale Δ<sub>x</sub> (se cambia la columna de x por los términos independientes)?",
+     "c": [
+      "−2",
+      "6",
+      "2",
+      "−6"
+     ],
+     "a": 3,
+     "e": "Δ<sub>x</sub> = (−14)(1) − (−1)(8) = <b>−6</b>; x = Δ<sub>x</sub>/Δ = −3."
+    },
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>−x − 2y = −3<br>2x + 2y = 2</span>",
+     "c": [
+      "x = −1, y = 2",
+      "x = −1, y = −2",
+      "x = 1, y = 2",
+      "x = 2, y = −1"
+     ],
+     "a": 0,
+     "e": "Δ = 2, Δ<sub>x</sub> = −2, Δ<sub>y</sub> = 4. x = −1, y = 2."
+    },
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>−x − 3y = −9<br>x + 5y = 17</span>",
+     "c": [
+      "x = 3, y = 4",
+      "x = 4, y = −3",
+      "x = −3, y = −4",
+      "x = −3, y = 4"
+     ],
+     "a": 3,
+     "e": "Δ = −2, Δ<sub>x</sub> = 6, Δ<sub>y</sub> = −8. x = −3, y = 4."
+    },
+    {
+     "q": "Resuelve por Cramer el sistema <span class='sys'>6x − y = 26<br>−x + 5y = 15</span>. ¿Cuánto vale Δ<sub>x</sub> (se cambia la columna de x por los términos independientes)?",
+     "c": [
+      "116",
+      "145",
+      "−145",
+      "29"
+     ],
+     "a": 1,
+     "e": "Δ<sub>x</sub> = (26)(5) − (−1)(15) = <b>145</b>; x = Δ<sub>x</sub>/Δ = 5."
+    },
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>−x + 6y = −5<br>−x − 6y = 7</span>",
+     "c": [
+      "x = −1, y = 1",
+      "x = −1, y = −1",
+      "x = −1, y = −2",
+      "x = 1, y = −1"
+     ],
+     "a": 1,
+     "e": "Δ = 12, Δ<sub>x</sub> = −12, Δ<sub>y</sub> = −12. x = −1, y = −1."
+    },
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>4x + 4y = −24<br>3x − 2y = −3</span>",
+     "c": [
+      "x = −3, y = −3",
+      "x = −3, y = 3",
+      "x = −3, y = −4",
+      "x = 3, y = −3"
+     ],
+     "a": 0,
+     "e": "Δ = −20, Δ<sub>x</sub> = 60, Δ<sub>y</sub> = 60. x = −3, y = −3."
+    },
+    {
+     "q": "Resuelve por Cramer el sistema <span class='sys'>−5x − y = −14<br>−6x − 5y = −13</span>. ¿Cuánto vale Δ<sub>x</sub> (se cambia la columna de x por los términos independientes)?",
+     "c": [
+      "19",
+      "−57",
+      "−19",
+      "57"
+     ],
+     "a": 3,
+     "e": "Δ<sub>x</sub> = (−14)(−5) − (−1)(−13) = <b>57</b>; x = Δ<sub>x</sub>/Δ = 3."
+    },
+    {
+     "q": "Resuelve por Cramer el sistema <span class='sys'>−6x − 2y = −28<br>−5x − 5y = −40</span>. ¿Cuánto vale Δ<sub>x</sub> (se cambia la columna de x por los términos independientes)?",
+     "c": [
+      "100",
+      "−60",
+      "60",
+      "20"
+     ],
+     "a": 2,
+     "e": "Δ<sub>x</sub> = (−28)(−5) − (−2)(−40) = <b>60</b>; x = Δ<sub>x</sub>/Δ = 3."
+    },
+    {
+     "q": "Resuelve por Cramer el sistema <span class='sys'>3x + 6y = 12<br>2x − 4y = 16</span>. ¿Cuánto vale Δ<sub>x</sub> (se cambia la columna de x por los términos independientes)?",
+     "c": [
+      "24",
+      "−24",
+      "−144",
+      "144"
+     ],
+     "a": 2,
+     "e": "Δ<sub>x</sub> = (12)(−4) − (6)(16) = <b>−144</b>; x = Δ<sub>x</sub>/Δ = 6."
+    },
+    {
+     "q": "Resuelve por Cramer el sistema <span class='sys'>6x − y = −1<br>−2x + 4y = 4</span>. ¿Cuánto vale Δ<sub>x</sub> (se cambia la columna de x por los términos independientes)?",
+     "c": [
+      "0",
+      "2",
+      "1",
+      "22"
+     ],
+     "a": 0,
+     "e": "Δ<sub>x</sub> = (−1)(4) − (−1)(4) = <b>0</b>; x = Δ<sub>x</sub>/Δ = 0."
+    },
+    {
+     "q": "Resuelve por Cramer el sistema <span class='sys'>−x − 2y = −7<br>4x + 6y = 18</span>. ¿Cuánto vale Δ<sub>x</sub> (se cambia la columna de x por los términos independientes)?",
+     "c": [
+      "−6",
+      "2",
+      "10",
+      "6"
+     ],
+     "a": 0,
+     "e": "Δ<sub>x</sub> = (−7)(6) − (−2)(18) = <b>−6</b>; x = Δ<sub>x</sub>/Δ = −3."
+    },
+    {
+     "q": "Resuelve por la regla de Cramer: <span class='sys'>−4x − 3y = −27<br>−3x − y = −19</span>",
+     "c": [
+      "x = 6, y = 1",
+      "x = 1, y = 6",
+      "x = 6, y = −1",
+      "x = −6, y = 1"
+     ],
+     "a": 0,
+     "e": "Δ = −5, Δ<sub>x</sub> = −30, Δ<sub>y</sub> = −5. x = 6, y = 1."
+    }
+   ]
+  },
+  {
+   "title": "Gauss-Jordan",
+   "items": [
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x − 3y − z = 4<br>−x + 3y − 3z = −28<br>3x − 2y + 3z = 27</span>",
+     "c": [
+      "(−1, −3, 6)",
+      "(1, 3, −6)",
+      "(−3, 1, 6)",
+      "(1, −3, 6)"
+     ],
+     "a": 3,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(1, −3, 6)</b>."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x − 3y = −1<br>3x + y + 3z = 2<br>2x + 3z = −5</span>",
+     "c": [
+      "(5, 2, −5)",
+      "(−5, 2, −5)",
+      "(2, 5, −5)",
+      "(5, −2, 5)"
+     ],
+     "a": 0,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(5, 2, −5)</b>."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x − 2y − 2z = 5<br>2x − 2y = 0<br>−3x − y + 2z = −10</span>",
+     "c": [
+      "(1, −1, 3)",
+      "(−1, 1, −3)",
+      "(1, 1, −3)",
+      "(1, 1, −2)"
+     ],
+     "a": 2,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(1, 1, −3)</b>."
+    },
+    {
+     "q": "Resuelve por Gauss y da el valor de z: <span class='sys'>x − 2y − 3z = −15<br>−2x − 2y + 3z = 0<br>3x + 3y + 2z = 26</span>",
+     "c": [
+      "z = 3",
+      "z = 5",
+      "z = −4",
+      "z = 4"
+     ],
+     "a": 3,
+     "e": "Haciendo ceros bajo la diagonal y despejando: <b>z = 4</b> (x = 3, y = 3)."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x + 2y + 3z = −8<br>3x + y + 2z = −8<br>2x − 3y + z = −8</span>",
+     "c": [
+      "(−1, 1, −3)",
+      "(1, 1, −3)",
+      "(1, −1, −3)",
+      "(−1, −1, 3)"
+     ],
+     "a": 0,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(−1, 1, −3)</b>."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x − 2y + 2z = 3<br>−2x − 3y − z = −4<br>3x + y + 4z = 10</span>",
+     "c": [
+      "(1, 1, 3)",
+      "(−1, 1, 3)",
+      "(1, −1, 3)",
+      "(−1, −1, −3)"
+     ],
+     "a": 1,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(−1, 1, 3)</b>."
+    },
+    {
+     "q": "Resuelve por Gauss y da el valor de z: <span class='sys'>x − 2y + 2z = 24<br>x + 3y − 3z = −26<br>3x + 2y + 2z = 16</span>",
+     "c": [
+      "z = −4",
+      "z = 4",
+      "z = 6",
+      "z = −6"
+     ],
+     "a": 2,
+     "e": "Haciendo ceros bajo la diagonal y despejando: <b>z = 6</b> (x = 4, y = −4)."
+    },
+    {
+     "q": "Resuelve por Gauss y da el valor de z: <span class='sys'>x + 2y − 2z = 0<br>4x + 3y = 10<br>−3x − 2y − 3z = −8</span>",
+     "c": [
+      "z = 0",
+      "z = 4",
+      "z = 1",
+      "z = −2"
+     ],
+     "a": 0,
+     "e": "Haciendo ceros bajo la diagonal y despejando: <b>z = 0</b> (x = 4, y = −2)."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x + 4y + 2z = −29<br>−2x + 4y = −10<br>4x + 3y + 2z = −39</span>",
+     "c": [
+      "(5, −5, −2)",
+      "(−5, 5, 2)",
+      "(−5, −5, −1)",
+      "(−5, −5, −2)"
+     ],
+     "a": 3,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(−5, −5, −2)</b>."
+    },
+    {
+     "q": "Resuelve por Gauss y da el valor de z: <span class='sys'>x − 2y − 3z = −3<br>−2x − 3y = −17<br>3y − 3z = 21</span>",
+     "c": [
+      "z = 1",
+      "z = 2",
+      "z = −2",
+      "z = 5"
+     ],
+     "a": 2,
+     "e": "Haciendo ceros bajo la diagonal y despejando: <b>z = −2</b> (x = 1, y = 5)."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x − 2y + z = 3<br>2x − 2y + z = 5<br>2x + 2y + z = 1</span>",
+     "c": [
+      "(−1, 2, −1)",
+      "(2, 1, 1)",
+      "(−2, −1, −1)",
+      "(2, −1, −1)"
+     ],
+     "a": 3,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(2, −1, −1)</b>."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x + 3y + 2z = 14<br>x + z = −2<br>2x + y − z = −2</span>",
+     "c": [
+      "(5, −3, 1)",
+      "(3, 5, 1)",
+      "(−3, −5, −1)",
+      "(−3, 5, 1)"
+     ],
+     "a": 3,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(−3, 5, 1)</b>."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x + y + 4z = −3<br>x + 2y + 2z = −1<br>x − 2y + 2z = −9</span>",
+     "c": [
+      "(−5, 2, 0)",
+      "(2, −5, 0)",
+      "(−5, −2, 0)",
+      "(5, 2, 0)"
+     ],
+     "a": 0,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(−5, 2, 0)</b>."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x − 3y + 2z = −20<br>−3x + 3y + z = 16<br>2x − 2y + 2z = −16</span>",
+     "c": [
+      "(−1, −5, 2)",
+      "(5, −1, −2)",
+      "(−1, 5, −2)",
+      "(1, 5, −2)"
+     ],
+     "a": 2,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(−1, 5, −2)</b>."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x − y = 2<br>2x + 3y − 2z = −9<br>−3x + 4y = −9</span>",
+     "c": [
+      "(−1, 3, 1)",
+      "(1, −3, −1)",
+      "(−1, −3, −1)",
+      "(−3, −1, −1)"
+     ],
+     "a": 2,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(−1, −3, −1)</b>."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x − y = 0<br>−3x + 3y − 3z = −6<br>4x + 2z = 24</span>",
+     "c": [
+      "(−5, 5, 2)",
+      "(5, 5, 2)",
+      "(5, 5, 3)",
+      "(5, −5, −2)"
+     ],
+     "a": 1,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(5, 5, 2)</b>."
+    },
+    {
+     "q": "Resuelve por Gauss y da el valor de z: <span class='sys'>x + 4y + 2z = −31<br>−2x + 3z = −5<br>3x − y − z = −6</span>",
+     "c": [
+      "z = 5",
+      "z = −5",
+      "z = −6",
+      "z = −4"
+     ],
+     "a": 1,
+     "e": "Haciendo ceros bajo la diagonal y despejando: <b>z = −5</b> (x = −5, y = −4)."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>−x − y = −3<br>x − 2y − z = −20<br>y + 4z = 26</span>",
+     "c": [
+      "(6, −3, 5)",
+      "(−3, 6, 5)",
+      "(−3, −6, −5)",
+      "(3, 6, 5)"
+     ],
+     "a": 1,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(−3, 6, 5)</b>."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>x + y − z = 1<br>−x − 2y − 3z = 24<br>−3x + y − z = −3</span>",
+     "c": [
+      "(1, 5, 5)",
+      "(1, −5, −5)",
+      "(−5, 1, −5)",
+      "(−1, −5, −5)"
+     ],
+     "a": 1,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(1, −5, −5)</b>."
+    },
+    {
+     "q": "Resuelve por el método de Gauss-Jordan: <span class='sys'>−x + 4y − 3z = 27<br>x = 1<br>−3x − y − z = −3</span>",
+     "c": [
+      "(1, 4, −4)",
+      "(−1, 4, −4)",
+      "(4, 1, −4)",
+      "(1, −4, 4)"
+     ],
+     "a": 0,
+     "e": "Usamos la 1.ª ecuación para eliminar x en las otras, luego la 2.ª para eliminar y: <b>(1, 4, −4)</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 4,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "temas-selectos-1"
+}
