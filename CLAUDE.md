@@ -1724,7 +1724,13 @@ CN / Math / 三年级: hours-minutes-seconds, add-subtract-within-10000, measure
 CN / Math / 四年级: large-numbers, hectares-and-square-kilometers, measuring-angles, three-digit-by-two-digit, parallel-perpendicular-and-quadrilaterals, divide-by-two-digit, bar-graphs-and-averages, order-of-operations, laws-of-operations, meaning-and-properties-of-decimals, triangles, adding-and-subtracting-decimals, axial-symmetry, rounding-and-approximate-numbers, chickens-and-rabbits, observing-objects ✓
 CN / Math / 五年级: multiplying-decimals, position-ordered-pairs, dividing-decimals, likelihood, simple-equations, area-of-polygons, factors-and-multiples, cuboids-and-cubes, meaning-and-properties-of-fractions, rotation, adding-and-subtracting-fractions, line-graphs ✓
 CN / Math / 六年级: multiplying-fractions, position-and-direction-2, dividing-fractions, ratios, circles, percentages, pie-charts, negative-numbers, discounts-and-interest, cylinders-and-cones, proportion, pigeonhole-principle ✓
-CN の次: 七〜九年级（初中）。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に cn があるか確認する
+CN / Math / 七〜九年级（初中、第四学段。domain は 数与代数／图形与几何／统计与概率（cn_common.DOMAIN_JH、dom は N・A・G・T・D））— 生成スクリプトは `tools/cn_g7.py`〜`cn_g9.py`（seed は 97101〜・98101〜・99101〜）。台湾の國中の生成スクリプトを adopt で再利用（TERMS で 同旁内角・消元法・方程组・科学记数法・垂直平分线・频数/频率・直角边（股）・勾股定理・≌・∽・≤ ≥・概率・公式法 などに直す。筝形・筊・列联表は no() で落とす）。
+自前の問題は `tools/cn_jh.py`（平方根・立方根、不等式组、一元一次方程の応用、分式、加权平均数・方差、旋转・中心对称、反比例函数、锐角三角函数、投影、用频率估计概率）。負の数は台湾版と同じ「－」。build_sets の maker も負の数で「最大 |数| 問」。
+小学と同じ slug は使わない（トピックが slug だけで決まるため：八年级は algebraic-fractions・triangles-and-polygons、九年级は circle-geometry）。
+CN / Math / 七年级: rational-numbers, adding-and-subtracting-rational-numbers, multiplying-and-dividing-rational-numbers, powers-and-scientific-notation, algebraic-expressions, linear-equations, linear-equation-word-problems, geometric-figures, intersecting-and-parallel-lines, real-numbers, coordinate-plane, systems-of-linear-equations, inequalities, data-collection-and-description ✓
+CN / Math / 八年级: triangles-and-polygons, congruent-triangles, axial-symmetry, multiplying-polynomials, multiplication-formulas, factorization, algebraic-fractions, quadratic-radicals, pythagorean-theorem, parallelograms, linear-functions, data-analysis ✓
+CN / Math / 九年级: quadratic-equations, quadratic-functions, rotation, circle-geometry, probability, inverse-proportion-functions, similarity, trigonometric-functions, projections-and-views ✓
+CN の次: 高中（普通高中数学课程标准）。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に cn があるか確認する
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
