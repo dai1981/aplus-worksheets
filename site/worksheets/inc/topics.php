@@ -4,6 +4,28 @@
    Units join a topic when their slug matches 'in' and does not match 'out'.
    Nothing here is stored in the database: the list is built from ws_unit on each request. */
 
+/* Korea (ko): 2022 개정 교육과정. Slugs are English, like Taiwan */
+function topic_defs_kr() {
+    return array(
+        'whole-numbers' => array('name' => '큰 수와 자릿값', 'in' => '/numbers-to|large-numbers|place-value/', 'out' => '/^$/',
+            'blurb' => '100까지의 수부터 만, 억, 조까지 자릿값을 알고 수를 읽고 쓰며 크기를 비교합니다.'),
+        'addition-and-subtraction' => array('name' => '덧셈과 뺄셈', 'in' => '/add|subtract/', 'out' => '/fraction|decimal|integer|polynom/',
+            'blurb' => '덧셈과 뺄셈의 뜻부터 받아올림, 받아내림이 있는 세 자리 수의 덧셈과 뺄셈까지 익힙니다.'),
+        'multiplication-and-division' => array('name' => '곱셈과 나눗셈', 'in' => '/multipl|divi/', 'out' => '/fraction|decimal|integer|polynom/',
+            'blurb' => '곱셈구구, 곱셈과 나눗셈의 관계, 세로셈 곱셈, 몫과 나머지가 있는 나눗셈을 연습합니다.'),
+        'fractions-and-decimals' => array('name' => '분수와 소수', 'in' => '/fraction|decimal/', 'out' => '/^$/',
+            'blurb' => '똑같이 나누기로 분수를 알고, 단위분수, 진분수, 가분수, 대분수와 소수 한 자리 수를 배웁니다.'),
+        'estimation' => array('name' => '어림하기', 'in' => '/estimat|round/', 'out' => '/^$/',
+            'blurb' => '몇십, 몇백으로 어림하여 계산 결과를 짐작하고 답이 맞는지 확인합니다.'),
+        'shapes' => array('name' => '도형', 'in' => '/lines|angles|rectangles|squares|circles|triangles|quadrilaterals|polygons|shapes/', 'out' => '/^$/',
+            'blurb' => '선분, 직선, 반직선, 각과 직각, 직사각형과 정사각형, 원의 중심과 반지름을 알아봅니다.'),
+        'measurement' => array('name' => '측정', 'in' => '/length|time|capacity|weight|mass/', 'out' => '/^$/',
+            'blurb' => 'mm와 km, 초 단위의 시간, L와 mL, kg과 g을 알고 단위를 바꾸어 계산합니다.'),
+        'data' => array('name' => '자료와 가능성', 'in' => '/graph|data|tables|likelihood|chance/', 'out' => '/^$/',
+            'blurb' => '자료를 모아 표, 그림그래프, 막대그래프로 나타내고 그래프를 읽고 해석합니다.'),
+    );
+}
+
 /* Taiwan (zh-TW): its own topic set, because its slugs and grade span (國小一年級 to 國中九年級) differ */
 function topic_defs_tw() {
     return array(
@@ -296,6 +318,7 @@ function topic_defs($country = null) {
     if ($country === 'br') return topic_defs_br();
     if ($country === 'es' || $country === 'mx') return topic_defs_es();
     if ($country === 'tw') return topic_defs_tw();
+    if ($country === 'kr') return topic_defs_kr();
     if ($country === 'de') return topic_defs_de();
     if ($country === 'fr') return topic_defs_fr();
     if ($country === 'it') return topic_defs_it();
@@ -533,6 +556,7 @@ function topic_range($units) {
     $last = $units[count($units) - 1]['grade_name'];
     if ($first === $last) return $first;
     if ($units[0]['country'] === 'tw') return $first . '到' . $last;
+    if ($units[0]['country'] === 'kr') return $first . '~' . $last;
     if ($units[0]['country'] === 'fr') return 'du ' . $first . ' au ' . $last;
     if ($units[0]['country'] === 'br') return 'do ' . $first . ' ao ' . $last;
     if ($units[0]['country'] === 'es' || $units[0]['country'] === 'mx') return 'de ' . $first . ' a ' . $last;

@@ -1630,6 +1630,21 @@ mx_common の単数の修正に canica・paleta・lápiz など。unit.php で e
 
 MX / Matemáticas は preescolar・primaria・secundaria・bachillerato（Pensamiento Matemático I〜III、Temas Selectos I・II）まで完了。次は GDP 順で次の国
 
+KR / Math（2022 개정 수학과 교육과정。初等 3〜4学年は 2025 年度、5〜6 学年は 2026 年度から）— country `kr`（name「대한민국」、lang `ko`、hreflang ko-kr、standard「2022 개정 교육과정」）、subject `math`（수학）、grade `grade-N`（name「초등 3학년」、unit.php の年齢は US と同じ）、A4。
+生成スクリプトは `gen_kr_math_gN_*`、共通部品は `tools/kr_common.py`（num（4 桁はそのまま、5 桁以上はカンマ）・dnum・won・josa（名前・語の助詞：josa('사과', '을/를')）・Names・mcq（誤答が足りないと None）・lesson（생각하는 방법 → 예제 → 자주 하는 실수）・unit(grade, slug, sort, code, std, title, short, meta, key_big, key_sub, think, examples, mist, faq, spec, seed)（seo_title「… | 초등 3학년 수학 학습지 (정답 포함)」と domain は code から自動）・clock（sec で초바늘）・ff・read_num（수 읽기））と図 `tools/kr_pics.py`（点の名前は ㄱㄴㄷ…：line_kind（선분・반직선・직선）・poly（直角の印）・grid_poly・ruler（cm と mm）・beaker・scale（저울）・circle_fig・pic_graph（그림그래프）・frac_bar・frac_circle・number_line、k_pics の絵に韓国語の aria-label：groups・row・array）。
+unit() は出力の文を tidy で直す：**数・単位・分数の直後の助詞は自動で読みに合わせる**（12를・13을、3 kg을・5 cm를、8로・6으로、<b>7</b>이）。名前や語の後は josa() を使う。
+1 単元のまとまりは kr_g3_mul.py（곱셈 3 単元）・kr_g3_div.py（나눗셈 2）・kr_g3_frac.py（분수・소수 5）・kr_g3_meas.py（들이・무게 2）の build(which)、gen_ はそれを呼ぶだけ。
+pick_unique は問題文（q）で重複を判定するので、q に数や名前を入れて変化させる（文が固定の ○× などは数が限られる）。
+standard_code は成就基準コード「[4수01-03]」（複数は空白区切り）、standard_text は成就基準の原文、standard_url は NCIC の 2022 수학과 교육과정（kr_common.STD_URL）。domain は 수와 연산／변화와 관계／도형과 측정／자료와 가능성。
+UI 文言は core.php の 'ko'（T と js_text）と ko_josa()、トピックは topics.php の `topic_defs_kr()`（whole-numbers・addition-and-subtraction・multiplication-and-division・fractions-and-decimals・estimation・shapes・measurement・data）、topic.php・topics.php に $ko の文言。
+プレビュー画像は Noto Sans KR のサブセット（preview.php の PV_CJK = 'kr'、韓国語は空白で改行）。**kr の単元を足したら `python3 tools/build_cjk_font.py` を実行してフォントもコミット**（TC と KR の両方を作る。TC には ハングル、KR には漢字を入れない）
+
+KR / Math / 초등 3학년（3-1 → 3-2 の順）
+1. add-and-subtract-three-digit-numbers ✓ 2. lines-rays-and-angles ✓ 3. right-triangles-rectangles-and-squares ✓ 4. meaning-of-division ✓ 5. multiply-two-digit-by-one-digit ✓ 6. length-mm-and-km ✓ 7. time-in-seconds ✓
+8. fractions ✓ 9. decimals ✓ 10. multiply-three-digit-by-one-digit ✓ 11. multiply-two-digit-by-two-digit ✓ 12. division-with-remainders ✓ 13. divide-three-digit-by-one-digit ✓ 14. circles ✓
+15. fraction-of-a-number ✓ 16. proper-improper-and-mixed-fractions ✓ 17. comparing-fractions ✓ 18. capacity-liters-and-milliliters ✓ 19. weight-kilograms-and-grams ✓ 20. picture-graphs ✓ 21. estimation ✓
+次は 초등 4학년（[4수01-01] 큰 수、[4수01-07] 나누는 수가 두 자리 수、[4수01-13] 소수 두・세 자리、[4수01-15][4수01-16] 分数・小数の덧셈と뺄셈、[4수02-01〜03] 규칙과 등호、[4수03-02][4수03-24][4수03-25] 각도、[4수03-03] 수직과 평행、[4수03-04] 평면도형의 이동、[4수03-05] 위치と方向、[4수03-08][4수03-09] 삼각형、[4수03-10] 사각형、[4수03-11] 다각형、[4수03-12] 모양 채우기、[4수04-01] 막대그래프、[4수04-02][4수04-03] 꺾은선그래프）
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）

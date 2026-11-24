@@ -365,6 +365,52 @@ function T($key = null) {
             'pv_foot' => 'Gratis · apu2.com/worksheets',
             'gs' => '%2$s de %1$s', 'range' => 'de %1$s a %2$s',
         ),
+        // Korea: Korean (2022 개정 교육과정)
+        'ko' => array(
+            'home' => '학습지', 'grades' => '학년', 'units' => '단원',
+            'questions' => '문제', 'points' => '핵심 정리', 'quiz100' => '100문제 연습',
+            'quiz_lead' => '5회, 회마다 20문제. 답을 고르면 바로 정답과 풀이를 볼 수 있어요.',
+            'learn_quiz' => '개념 + 100문제', 'print' => '인쇄', 'pdf' => 'PDF',
+            'your_score' => '내 점수', 'clear_grade' => '이 학년의 점수 지우기',
+            'hook_title' => '100문제 연습', 'hook_sub' => '20문제 × 5회 · 바로 채점',
+            'hook_go' => '연습 시작', 'faq' => '자주 묻는 질문',
+            'related' => '이어서 공부하기', 'prev' => '이전', 'next_u' => '다음',
+            'all_units' => '전체 단원:', 'printable_of' => '인쇄용 학습지(정답 포함)',
+            'standard' => '교육과정', 'updated' => '업데이트', 'by' => '만든 곳',
+            'pick_grade' => '학년 선택', 'pick_subject' => '과목 선택',
+            'print_sheets' => '인쇄용 학습지',
+            'print_note' => '4쪽: 준비 문제, 연습 1, 연습 2, 정답',
+            'print_btn' => '인쇄 / PDF로 저장', 'pdf_btn' => 'PDF 내려받기',
+            'lesson_link' => '개념 정리와 온라인 연습',
+            'p_warmup' => '준비 문제', 'p_prac1' => '연습 1', 'p_prac2' => '연습 2',
+            'p_key' => '정답', 'name' => '이름', 'date' => '날짜', 'score' => '점수',
+            'circle' => '알맞은 답의 번호에 ○표 하세요.', 'total_q' => '%d문제',
+            'for_check' => '채점용',
+            'license' => '가정과 교실에서 무료로 인쇄하고 복사할 수 있습니다.',
+            'worksheets' => '학습지', 'grade_ws' => '%s %s 학습지',
+            'notfound' => '페이지를 찾을 수 없습니다', 'back_home' => '전체 학습지로 돌아가기',
+            'skills_count' => '%d개 단원', 'free' => '무료 · 회원 가입 없음',
+            'by_grade' => '학년별', 'pin_save' => 'Pinterest에 저장',
+            'grade_title_sfx' => ' | 무료 인쇄 학습지 + 온라인 연습',
+            'grade_desc' => '%1$s %2$s 무료 학습지. %3$s에 맞춘 단원: %4$s. 단원마다 100문제와 인쇄용 정답이 있습니다.',
+            'list_sep' => ', ', 'paren' => ' (%s)', 'topics_all' => '모든 %s의 주제', 'pages4' => '4쪽',
+            'subj_title' => '%1$s 학습지 | %2$s 무료 (%3$s)', 'subj_h1' => '%s 학습지', 'browse_topic' => '주제별로 찾기',
+            'country_title' => '%1$s 무료 학습지 (%2$s)', 'country_h1' => '%s 학습지',
+            'topic_ws' => '%1$s 학습지: %2$s', 'topic_h1' => '%s 학습지',
+            'pin_unit' => '무료 %1$s %2$s 「%3$s」 학습지: 개념 정리, 100문제, 인쇄용 정답.',
+            'date_fmt' => 'Y년 n월 j일',
+            'pr_title' => '%1$s 「%2$s」 학습지 (정답 포함 · %3$s 인쇄)',
+            'pr_desc' => '무료로 인쇄하는 %1$s 「%2$s」 학습지%3$s: 3쪽 %4$d문제와 정답 1쪽. 바로 인쇄하거나 PDF로 저장할 수 있습니다.',
+            'pr_h' => '%1$s 학습지 (%2$s)', 'pr_pin' => '무료 인쇄 %1$s 「%2$s」 학습지 (정답 포함)',
+            'pv_brand' => '%s 학습지', 'pv_cta_unit' => '무료 · 개념 정리 + 100문제 + 정답',
+            'pv_cta_grade' => '무료 · 인쇄용 학습지 %d개', 'pv_cta_topic' => '무료 · %d개 단원 (정답 포함)',
+            'pv_skills' => '%d개 단원', 'pv_100each' => '단원마다 100문제', 'pv_keys' => '정답 포함',
+            'pv_lesson' => '개념 정리', 'pv_lessons' => '개념 정리', 'pv_100' => '100문제', 'pv_print' => '%s 인쇄',
+            'pv_key' => '정답 포함', 'pv_practice' => '연습 · %s',
+            'pv_name1' => '이름 ______________   날짜 ________', 'pv_name2' => '이름 ____________________    날짜 __________',
+            'pv_foot' => '무료 · apu2.com/worksheets',
+            'lc' => 'keep', 'range' => '%1$s ~ %2$s',
+        ),
     );
     // British English (UK pages): same as 'en' except these words
     if (!isset($T['en-GB'])) {
@@ -395,6 +441,16 @@ function T($key = null) {
     if (is_array($key)) { $lang = isset($T[$key[0]]) ? $key[0] : 'en'; return null; } // set language
     if ($key === null) return $T[$lang];
     return isset($T[$lang][$key]) ? $T[$lang][$key] : $key;
+}
+
+/* Korean particle after a word: ko_josa('분수', '은', '는') -> '분수는' (batchim decides) */
+function ko_josa($w, $with, $without) {
+    $c = mb_substr(preg_replace('/[^\x{AC00}-\x{D7A3}0-9A-Za-z]+$/u', '', $w), -1);
+    if ($c === '') return $w . $without;
+    $o = mb_ord($c);
+    if ($o >= 0xAC00 && $o <= 0xD7A3) $has = (($o - 0xAC00) % 28) !== 0;
+    else $has = strpos('013678LMNlmn', $c) !== false;   // 영, 일, 삼, 육, 칠, 팔 / -l, -m, -n
+    return $w . ($has ? $with : $without);
 }
 
 /* "Grade 3 Math" / "Mathe Klasse 3": grade and subject in the order of the page language */
@@ -645,6 +701,39 @@ function js_text($lang) {
             'achieved' => 'Obiettivo raggiunto!', 'ask' => 'Prossimo obiettivo: <b>{t}</b> ({l})?',
             'goFor' => 'Andiamo', 'later' => 'Più tardi', 'notStarted' => 'Non ancora iniziato',
             'sep' => ' ',
+    );
+    $J['ko'] = array(
+            'ok' => '정답!', 'ng' => '다시 생각해 봐요', 'ans' => '정답: ', 'next' => '다음 문제',
+            'result' => '결과 보기', 'done' => '끝', 'practice' => '연습',
+            'score' => '{n}문제 중 <b>{o}</b>문제 정답', 'best' => '최고 기록: {o} / {t}',
+            'm100' => '모두 맞혔어요! 다음 회에 도전해 보세요.',
+            'm80' => '조금만 더! 틀린 문제를 다시 풀어 보세요.',
+            'mlow' => '위의 예제를 다시 읽고 이 회에 한 번 더 도전해 보세요.',
+            'redoMiss' => '틀린 {n}문제만 다시 풀기', 'redoAll' => '처음부터 다시 풀기',
+            'loadErr' => '문제를 불러오지 못했습니다.', 'notYet' => '아직 시작 전',
+            'total' => '<b>{o}</b> / {t}문제 정답', 'mastered' => '(모두 맞힌 단원 {c} / {u})',
+            'confirm' => '이 학년에 저장된 점수를 모두 지울까요?',
+            'hook0' => '아직 시작하지 않았어요. 1회(20문제)부터 시작해 보세요.',
+            'hookAll' => '5회 모두 만점! 언제든지 다시 복습하세요.',
+            'hookSome' => '{n}회 중 {d}회 만점. {r}회만 더 하면 끝!',
+            'okWords' => array('정답!', '잘했어요!', '대단해요!', '훌륭해요!', '멋져요!'),
+            'ngWords' => array('아깝다!', '다음 문제는 할 수 있어요!', '힘내요!'),
+            'streak' => array('3' => '3문제 연속 정답!', '5' => '5문제 연속 정답!', '10' => '10문제 연속 정답!',
+                              '15' => '15문제 연속 정답!', '20' => '한 회 모두 정답!'),
+            'perfect' => '만점!', 'good' => '아주 잘했어요!',
+            'tier' => array('above' => '평균 이상', 'sight' => '상위권이 눈앞', 'class' => '반에서 1등',
+                            'grade' => '학년에서 1등', 'state' => '시·도에서 1등',
+                            'nation' => '전국 1등', 'world' => '세계 1등'),
+            'start' => '출발', 'yourRank' => '나의 {name} 등급', 'rankOf' => '{name} 등급',
+            'correct' => '문제 정답', 'todayPlus' => '오늘 +{n}',
+            'more' => '<b>{n}</b>문제 더 맞히면 「{t}」',
+            'toGo' => '「{t}」까지 {n}문제', 'reachedBtn' => '달성! 다음 목표 보기',
+            'allDone' => '모든 등급을 달성했어요!', 'lap' => '{n}바퀴', 'laps' => '{n}바퀴',
+            'ranks' => '등급', 'moreAfter' => '「{t}」 다음에도 등급이 더 있어요', 'unlocksAfter' => '「{t}」 다음에 열려요', 'reached' => '달성', 'toGoShort' => '{n}문제 남음', 'you' => '나',
+            'how' => '1바퀴 = {name}의 모든 문제를 한 번씩 맞히기(모두 {n}문제). 단원마다 지금 바퀴 수까지만 세니까 모든 단원을 골고루 연습하세요.',
+            'levelUp' => '등급 상승!', 'keepGoing' => '다음 목표 「{t}」까지 계속', 'yay' => '좋아요',
+            'achieved' => '목표 달성!', 'ask' => '다음 목표 「<b>{t}</b>」에 도전할까요? ({l})',
+            'goFor' => '도전', 'later' => '나중에', 'notStarted' => '아직 시작 전',
     );
     $J['en-GB'] = array_merge($J['en'], array(
         'confirm' => 'Clear all saved scores for this year?',

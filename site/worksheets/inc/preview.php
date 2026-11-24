@@ -34,13 +34,16 @@ function pv_text($html) {
 
 function pv_font($w) {
     $d = __DIR__ . '/../assets/fonts/';
-    if (!empty($GLOBALS['PV_CJK'])) {           // Chinese pages: Noto Sans TC (subset made by tools/build_cjk_font.py)
-        return $d . ($w === 'b' ? 'NotoSansTC-Bold.otf' : 'NotoSansTC-Regular.otf');
+    if (!empty($GLOBALS['PV_CJK'])) {           // Chinese / Korean pages: Noto Sans TC / KR (subsets made by tools/build_cjk_font.py)
+        $f = $GLOBALS['PV_CJK'] === 'kr' ? 'NotoSansKR' : 'NotoSansTC';
+        return $d . $f . ($w === 'b' ? '-Bold.otf' : '-Regular.otf');
     }
     return $d . ($w === 'b' ? 'Inter-Bold.otf' : ($w === 'm' ? 'DejaVuSans.ttf' : 'Inter-Regular.otf'));
 }
 /* Chinese has no spaces between words: wrap at any character */
-function pv_is_cjk($s) { return preg_match('/[\x{3000}-\x{9fff}\x{ff00}-\x{ffef}]/u', $s) === 1; }
+function pv_is_cjk($s) {   // Korean has spaces between words: wrap at spaces
+    return preg_match('/[\x{AC00}-\x{D7A3}]/u', $s) !== 1 && preg_match('/[\x{3000}-\x{9fff}\x{ff00}-\x{ffef}]/u', $s) === 1;
+}
 /* Inter has no glyph for a few maths signs: use DejaVu for those lines */
 function pv_face($s, $w) {
     if (!empty($GLOBALS['PV_CJK'])) return pv_font($w);
@@ -301,7 +304,7 @@ function preview_route($seg, $kind = 'preview') {
     $subject = $country ? get_subject($seg[0], $seg[1]) : null;
     if (!$subject) { http_response_code(404); exit; }
     T(array($country['lang']));
-    $GLOBALS['PV_CJK'] = strpos($country['lang'], 'zh') === 0;
+    $GLOBALS['PV_CJK'] = strpos($country['lang'], 'zh') === 0 ? 'tc' : ($country['lang'] === 'ko' ? 'kr' : '');
     $paper = strtoupper($country['paper']);
     $foot = T('pv_foot');
 
