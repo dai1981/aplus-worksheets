@@ -1671,7 +1671,25 @@ KR / Math / 초등 2학년（2-1 → 2-2）
 7. addition-subtraction-relationship-and-missing-numbers ✓ 8. measuring-length-in-cm ✓ 9. sorting ✓ 10. meaning-of-multiplication ✓ 11. four-digit-numbers ✓ 12. multiplication-tables ✓
 13. length-in-meters-and-centimeters ✓ 14. telling-time-to-the-minute ✓ 15. calendar-days-weeks-months-and-years ✓ 16. tables-and-graphs ✓ 17. patterns ✓
 
-KR / Math は초등 1〜6학년まで完了。次は 중학교（2022 개정 중학교 수학）か、GDP 順で次の国
+KR / Math / 중학교 1〜3학년（2022 개정 중학교 수학。grade は grade-7〜grade-9、name「중학교 N학년」、sort 7〜9、unit.php の年齢は N+5〜N+6）— 生成スクリプトは `gen_kr_math_g7_*`〜`g9_*`（2 行のラッパー）、本体は `tools/kr_m1a.py`・`kr_m1b.py`（중1）、`kr_m2a.py`・`kr_m2b.py`（중2）、`kr_m3a.py`・`kr_m3b.py`（중3）の build(key)、seed は 827NN・828NN・829NN。
+共通部品は `tools/kr_mid.py`（kr_low・kr_common の上に sup・neg（−、分数）・par・sg・dec・P（多項式）・rt（√ の簡約）・M（4 択、誤答が 3 つそろわないと None）・N（数の答え）・figure（fr_c4）・kosy（de_k8）・kurve（de_k10）。tidy を拡張して「(6, 1)은」「(−3)을」のかっこの後の助詞と、x²을・(2a²)³을 のように上付き数字（제곱）の後の助詞を直す。cm²・m³ はそのまま）。
+standard_code は成就基準「[9수02-13]」、domain は 9수01〜04 から自動。助詞の対は받침ありを先に書く（josa(w, "과/와")）。誤答に正解と同じ式が順番違いで入らないようにする（因数分解は (x + 大)(x + 小) にそろえる）。q の文が同じ問題は重複扱いなので、選択肢を q に並べるか数を入れる。
+トピック（topic_defs_kr）に number-systems（정수, 유리수, 실수）・algebra（문자와 식）・equations（방정식과 부등식）・functions（함수와 그래프）を足した。shapes・data は中学校の slug も入る（data の out に function|coordinates）。ratios-and-proportions は (^|-)ratios?(-|$)（operations・rational に当たらない）
+
+KR / Math / 중학교 1학년
+1. prime-factorization ✓ 2. integers-and-rational-numbers ✓ 3. adding-and-subtracting-integers-and-rational-numbers ✓ 4. multiplying-and-dividing-integers-and-rational-numbers ✓ 5. algebraic-expressions ✓ 6. linear-equations ✓
+7. linear-equation-word-problems ✓ 8. coordinates-and-graphs ✓ 9. direct-and-inverse-proportion ✓ 10. points-lines-planes-and-angles ✓ 11. constructions-and-congruent-triangles ✓ 12. polygons ✓
+13. circles-and-sectors ✓ 14. polyhedra-and-solids-of-revolution ✓ 15. surface-area-and-volume ✓ 16. representative-values ✓ 17. frequency-distributions-and-histograms ✓ 18. relative-frequency ✓
+KR / Math / 중학교 2학년
+1. repeating-decimals ✓ 2. exponent-laws-and-monomials ✓ 3. polynomial-operations ✓ 4. linear-inequalities ✓ 5. systems-of-linear-equations ✓ 6. systems-of-equations-word-problems ✓
+7. linear-functions ✓ 8. graphs-of-linear-functions ✓ 9. linear-functions-and-equations ✓ 10. isosceles-triangles ✓ 11. circumcenter-and-incenter ✓ 12. properties-of-quadrilaterals ✓
+13. similar-figures ✓ 14. parallel-lines-and-segment-ratios ✓ 15. pythagorean-theorem ✓ 16. counting ✓ 17. probability ✓
+KR / Math / 중학교 3학년（이차함수의 최댓값・최솟값は高校なので「증가와 감소」にした）
+1. square-roots ✓ 2. irrational-and-real-numbers ✓ 3. operations-with-radicals ✓ 4. multiplying-polynomials ✓ 5. factoring ✓ 6. quadratic-equations ✓
+7. quadratic-equation-word-problems ✓ 8. quadratic-functions ✓ 9. graphs-of-quadratic-functions ✓ 10. trigonometric-ratios ✓ 11. applications-of-trigonometric-ratios ✓ 12. chords-and-tangents ✓
+13. inscribed-angles ✓ 14. variance-and-standard-deviation ✓ 15. box-plots ✓ 16. scatter-plots-and-correlation ✓
+
+KR / Math は초등 1학년〜중학교 3학년まで完了。次は 고등학교（2022 개정 공통수학 1・2）か、GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
