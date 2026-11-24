@@ -19,10 +19,12 @@ UPDATED = "2026-11-24"
 F3 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/06/Programa_Sintetico_Fase_3.pdf"
 F4 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/5.pdf"
 F5 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/6.pdf"
-STD_URL = {1: F3, 2: F3, 3: F4, 4: F4, 5: F5, 6: F5}
-FASE = {1: 3, 2: 3, 3: 4, 4: 4, 5: 5, 6: 5}
-GRADE_NAME = {1: "1.er grado de primaria", 2: "2.º grado de primaria", 3: "3.er grado de primaria", 4: "4.º grado de primaria", 5: "5.º grado de primaria", 6: "6.º grado de primaria"}
-GRADE_SHORT = {1: "1.er grado", 2: "2.º grado", 3: "3.er grado", 4: "4.º grado", 5: "5.º grado", 6: "6.º grado"}
+F6 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/7.pdf"
+STD_URL = {1: F3, 2: F3, 3: F4, 4: F4, 5: F5, 6: F5, 7: F6, 8: F6, 9: F6}
+FASE = {1: 3, 2: 3, 3: 4, 4: 4, 5: 5, 6: 5, 7: 6, 8: 6, 9: 6}
+GRADE_NAME = {1: "1.er grado de primaria", 2: "2.º grado de primaria", 3: "3.er grado de primaria", 4: "4.º grado de primaria", 5: "5.º grado de primaria", 6: "6.º grado de primaria",
+              7: "1.er grado de secundaria", 8: "2.º grado de secundaria", 9: "3.er grado de secundaria"}
+GRADE_SHORT = {1: "1.er grado", 2: "2.º grado", 3: "3.er grado", 4: "4.º grado", 5: "5.º grado", 6: "6.º grado", 7: "1.er grado", 8: "2.º grado", 9: "3.er grado"}
 # contenidos de Saberes y Pensamiento Científico (Programa sintético): clave → (grupo en la página del grado, nombre del contenido)
 CONT = {
     "N": ("Estudio de los números", "Estudio de los números"),
@@ -43,6 +45,21 @@ CONT = {
     "L5": ("Medición", "Medición de la longitud, masa y capacidad"),
     "V": ("Medición", "Perímetro, área y noción de volumen"),
     "B": ("Organización e interpretación de datos", "Nociones de probabilidad"),
+    # Fase 6 (secundaria)
+    "6FD": ("Números", "Expresión de fracciones como decimales y de decimales como fracciones"),
+    "6PN": ("Números", "Extensión de los números a positivos y negativos y su orden"),
+    "6OP": ("Números", "Extensión del significado de las operaciones y sus relaciones inversas"),
+    "6RP": ("Álgebra", "Regularidades y patrones"),
+    "6IA": ("Álgebra", "Introducción al álgebra"),
+    "6EC": ("Álgebra", "Ecuaciones lineales y cuadráticas"),
+    "6FU": ("Proporcionalidad y funciones", "Funciones"),
+    "6RA": ("Geometría", "Rectas y ángulos"),
+    "6CF": ("Geometría", "Construcción y propiedades de las figuras planas y cuerpos"),
+    "6CC": ("Geometría", "Circunferencia, círculo y esfera"),
+    "6ME": ("Medición", "Medición y cálculo en diferentes contextos"),
+    "6OR": ("Estadística y probabilidad", "Obtención y representación de información"),
+    "6TC": ("Estadística y probabilidad", "Interpretación de la información a través de medidas de tendencia central y de dispersión"),
+    "6AZ": ("Estadística y probabilidad", "Azar y probabilidad"),
 }
 GIRLS = ["Ximena", "Valentina", "Regina", "Camila", "Renata", "Sofía", "Fernanda", "Natalia", "Andrea", "Itzel", "Daniela", "Paola", "Lupita", "Mariana"]
 BOYS = ["Santiago", "Diego", "Emiliano", "Leonardo", "Sebastián", "Mateo", "Luis", "Jorge", "Rodrigo", "Carlos", "Emilio", "Ángel", "Josué", "Iván"]
@@ -142,8 +159,8 @@ WORDS = [("En un recuento se han hecho", "En un conteo se hicieron"), ("marcas d
          ("del colegio", "de la escuela"), ("al colegio", "a la escuela"), ("el colegio", "la escuela"), ("un colegio", "una escuela"), ("este colegio", "esta escuela"),
          ("mi colegio", "mi escuela"), ("su colegio", "su escuela"), ("coches", "carros"), ("coche", "carro"),
          ("ha durado", "duró"), ("han durado", "duraron"), ("ha tardado", "tardó"),
-         ("llevadas", "reagrupaciones"), ("con llevada", "con reagrupación"), ("sin llevada", "sin reagrupación"), ("llevada", "reagrupación")]
-LEAKS = ["€", "euro", "céntimo", "España", "vosotros", "habéis", "tenéis", "sabéis", "CCAA", "LOMLOE", "4.º", "5.º", "6.º", "Primaria",
+         ("m.c.d.", "MCD"), ("octogonal", "octagonal"), ("chicas", "alumnas"), ("chicos", "alumnos"), ("nota media", "calificación promedio"), ("notas", "calificaciones"), ("ascensor", "elevador"), ("aparcamiento", "estacionamiento"), ("se ha aplicado", "se aplicó"), ("han aprobado", "aprobaron"), ("ha aprobado", "aprobó"), ("grifos", "llaves"), ("depósitos", "tinacos"), ("depósito", "tinaco"), ("abrigos", "chamarras"), ("abrigo", "chamarra"), ("m.c.m.", "mcm"), ("llevadas", "reagrupaciones"), ("con llevada", "con reagrupación"), ("sin llevada", "sin reagrupación"), ("llevada", "reagrupación")]
+LEAKS = ["€", "euro", "céntimo", "España", "vosotros", "habéis", "tenéis", "sabéis", "CCAA", "LOMLOE", "4.º", "5.º", "6.º", "Primaria", "ESO", "Bachillerato", "IVA", "Hacienda", "comunidad autónoma",
          "tarta", "gominola", "chuche", "cromo", "tiza", "estuche", "bocadillo", "gafas", "folio", "ordenador", "zapatilla", "cole ", "el cole", "gorro", "nata", "judías", "tebeo", "chaqueta", "jersey", "AVE", "Renfe", "colegio", "metro de Madrid", "Galicia", "Andaluc", "Canarias", "Asturias", "Cataluña", "Comunidad",
          "Betis", "Athletic", "Real Sociedad", "Atlético", "Real Madrid", "Real Ciudad", "Teide", "Mulhacén", "Moncayo", "cucurucho", "baraja española", "Aneto", "Pirineo"]
 LEAK_RE = [r"gr[áa]fico", r"\b(la|las) (una|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|once|doce) menos\b", r"\bos\b", r"\bvuestr"]
@@ -181,6 +198,7 @@ def _txt(t, yr_all=False):
     t = re.sub(r"(^|\s): (1[ " + NB + r"]000|100|10)(?=:)", r"\1÷ \2", t)          # «: 1 000: 7 dm³»
     t = re.sub(r"(?<=\S) : (?=[\d(])", " ÷ ", t)                                  # 12 : 3, L : 3.14, diámetro : 2 → ÷                        # 12 : 3 → 12 ÷ 3
     t = re.sub(r"(?<=[\d)])" + NB + ":" + NB + r"(?=[\d(])", NB + "÷" + NB, t)
+    t = re.sub("([ " + NB + "])·([ " + NB + "])", r"\1×\2", t)                    # 3 · 4 → 3 × 4（secundaria de España）
     t = t.replace(" y resto ", " y residuo ").replace("resto ", "residuo ").replace(" resto", " residuo")
     for a, b in WORDS:
         t = _w(t, a, b)
@@ -194,6 +212,7 @@ def mx_text(s):
     parts = re.split(r"(<[^>]*>)", s)
     yr = bool(re.search(r"nac|año|cumpl", re.sub(r"<[^>]*>", " ", s)))
     out = "".join(p if p.startswith("<") else _txt(p, yr) for p in parts)
+    out = re.sub(r"(\d),(?=<span class='ov'>)", r"\1.", out)                    # 4,<span class='ov'>17</span> → 4.17 periódico
     sp = "[ " + NB + "]"
     return re.sub(r"(</span>|\d|\)|°)(" + sp + "):(" + sp + r")(?=<span class='fr'>|\d|\()", r"\1\2÷\3", out)   # 2/5 : 1/2 → 2/5 ÷ 1/2
 
@@ -217,6 +236,7 @@ def mx_item(it):
     it["q"], it["e"] = mx_text(it["q"] if not yr else it["q"]), mx_text(it["e"] + (" <i hidden>año</i>" if yr else ""))
     it["e"] = it["e"].replace(" <i hidden>año</i>", "")
     it["c"] = [mx_text(c + (" <i hidden>año</i>" if yr else "")).replace(" <i hidden>año</i>", "") for c in it["c"]]
+    it["c"] = [re.sub(r"^-(?=\d)", "−", c) for c in it["c"]]
     it["q"] = it["q"].replace("aria-label='gráfico de barras", "aria-label='gráfica de barras").replace("aria-label='gráfico circular", "aria-label='gráfica circular").replace("aria-label='gráfico", "aria-label='gráfica")
     labels = " ".join(re.findall(r"aria-label='([^']*)'", it["q"]))
     if not ok(it) or any(w in labels for w in ("€", "euro", "céntimo")):
@@ -253,7 +273,10 @@ def src(modname, seed, *names, lv=None, mx_=9999, dec_=True, sin_=(), rep=(), ex
         mk = keep(getattr(m, n), *preds)
 
         def f(mk=mk):
-            it = mk()
+            try:
+                it = mk()
+            except (ValueError, ZeroDivisionError, IndexError, KeyError, AssertionError):
+                return None
             if it and rep:
                 it = dict(it)
                 for a, b in rep:
@@ -263,6 +286,16 @@ def src(modname, seed, *names, lv=None, mx_=9999, dec_=True, sin_=(), rep=(), ex
         f.__name__ = n
         out.append(f)
     return out[0] if len(out) == 1 else out
+
+
+def nomoney(it):
+    """quita los problemas con precios de España (pasados a pesos quedan irreales)"""
+    t = it["q"] + " ".join(it["c"])
+    return "$" not in t and "€" not in t and "euro" not in t
+
+
+def noplanta(it):
+    return "planta" not in it["q"] and "sótano" not in it["q"]
 
 
 def mcq(q, correct, cands, e, neg=False):
@@ -321,7 +354,7 @@ def make_unit(rnd, slug, cont, std_text, title, short_title, meta_desc, key_big,
     title, seo_title, short_title, meta_desc, key_big, key_sub = [ES.plain_text(x) for x in (title, seo_title, short_title, meta_desc, key_big, key_sub)]
     assert len(key_big) <= 36 and len(key_sub) <= 50 and len(title) <= 50, (slug, key_big, key_sub, title)
     grp, full = CONT[cont]
-    write_unit("mx", "matematicas", "%d-primaria" % lv, {
+    write_unit("mx", "matematicas", "%d-primaria" % lv if lv <= 6 else "%d-secundaria" % (lv - 6), {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
         "domain": grp, "standard_code": "Fase %d, %s · %s" % (FASE[lv], GRADE_SHORT[lv], full),
         "standard_url": STD_URL[lv],

@@ -1597,7 +1597,15 @@ mx_common の WORDS で palmo→cuarta、octógono→octágono、STOP→ALTO、r
 2.º: 1. numeros-hasta-1000 ✓ 2. comparar-y-ordenar-numeros ✓ 3. sucesiones-y-patrones ✓ 4. suma-y-resta ✓ 5. calculo-mental ✓ 6. problemas-de-suma-y-resta ✓ 7. multiplicacion ✓ 8. reparto-y-division ✓ 9. dobles-y-mitades ✓ 10. figuras-geometricas ✓ 11. longitud-masa-y-capacidad ✓ 12. calendario ✓ 13. tablas-y-pictogramas ✓
 トピック：calendario・dias-semanas→magnitudes-y-medida、pictogramas→estadistica-y-probabilidad
 
-MX / Matemáticas は primaria 1.º〜6.º まで完了。次は secundaria（Fase 6）
+MX / Matemáticas / 1.er grado de secundaria（Fase 6、STD_URL は 2024/08/7.pdf。CONT は 6FD・6PN・6OP・6RP・6IA・6EC・6FU・6RA・6CF・6CC・6ME・6OR・6TC・6AZ（Fase 6 の 14 contenidos）。grade `1-secundaria`（sort 7、unit.php で 12〜13 歳と educationalLevel「Educación secundaria」）。lv=7（8・9 は 2.º・3.º）
+生成スクリプトは `gen_mx_matematicas_1s_*`（seed は 670NN、ES の再利用は 673NN〜675NN）、自前の問題は `tools/mx_s1.py`（setup(R) してから使う。fd_*・pn_context・ec_problem・pc_problem（IVA 16 %、メキシコの値段）・fu_table・fu_graph・ra_notacion・ra_distancia・cf_construccion・cc_rectas・ingles（yarda・pulgada・galón・onza・libra）・cuerpos・circular・sc_figuras・sc_contexto・az_compara。種類を引数で選べる：S.cuerpos("cvAp")）。
+ES の問題関数は src() で再利用。スペインの値段は pesos にすると不自然なので extra=(nomoney,) で落とす（nomoney は € も見る）。src は ES の関数の ValueError・AssertionError も None にする。ESO の「·」は「×」に、m.c.d.→MCD、m.c.m.→mcm、選択肢の「-3」→「−3」。確率のコインは rep で cara/cruz→águila/sol（WORDS に入れると cuerpos の caras まで変わる）
+1. numeros-con-signo ✓ 2. operaciones-con-numeros-con-signo ✓ 3. fracciones-y-decimales ✓ 4. operaciones-con-fracciones-y-decimales ✓ 5. mcd-y-mcm ✓ 6. sucesiones-aritmeticas ✓ 7. lenguaje-algebraico ✓
+8. ecuaciones-lineales ✓ 9. problemas-con-ecuaciones ✓ 10. porcentajes ✓ 11. proporcionalidad ✓ 12. rectas-y-angulos ✓ 13. construcciones-con-regla-y-compas ✓ 14. cuerpos-geometricos ✓
+15. rectas-notables-de-la-circunferencia ✓ 16. perimetro-y-area-de-poligonos ✓ 17. perimetro-y-area-del-circulo ✓ 18. conversion-de-unidades ✓ 19. tablas-y-graficas ✓ 20. frecuencias-y-medidas-de-tendencia-central ✓ 21. probabilidad ✓
+トピック：construcciones→geometria、conversion-de-unidades→magnitudes-y-medida、mcd-y-mcm→multiplicacion-y-division、tendencia-central→estadistica-y-probabilidad（magnitudes の out）、geometria の out に perimetro-y-area
+
+MX / Matemáticas は primaria 1.º〜6.º と secundaria 1.er grado まで完了。次は secundaria 2.º grado（Fase 6 の PDA の 2.º の列）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
