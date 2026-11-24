@@ -16,9 +16,10 @@ import es_common as ES
 from es_common import mix, lesson, letra, nomfrac, keep, lim, sin, bank, relabel, NB  # noqa: F401
 
 UPDATED = "2026-11-24"
+F3 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/06/Programa_Sintetico_Fase_3.pdf"
 F4 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/5.pdf"
 F5 = "https://educacionbasica.sep.gob.mx/wp-content/uploads/2024/08/6.pdf"
-STD_URL = {3: F4, 4: F4, 5: F5, 6: F5}
+STD_URL = {1: F3, 2: F3, 3: F4, 4: F4, 5: F5, 6: F5}
 FASE = {1: 3, 2: 3, 3: 4, 4: 4, 5: 5, 6: 5}
 GRADE_NAME = {1: "1.er grado de primaria", 2: "2.º grado de primaria", 3: "3.er grado de primaria", 4: "4.º grado de primaria", 5: "5.º grado de primaria", 6: "6.º grado de primaria"}
 GRADE_SHORT = {1: "1.er grado", 2: "2.º grado", 3: "3.er grado", 4: "4.º grado", 5: "5.º grado", 6: "6.º grado"}
@@ -33,6 +34,9 @@ CONT = {
     "A": ("Medición", "Cálculo de perímetro y área"),
     "T": ("Medición", "Medición del tiempo"),
     "D": ("Organización e interpretación de datos", "Organización e interpretación de datos"),
+    # Fase 3
+    "S3": ("Suma y resta", "Construcción de la noción de suma y resta, y su relación como operaciones inversas"),
+    "P3": ("Multiplicación y división", "Construcción de la noción de multiplicación y división, y su relación como operaciones inversas"),
     # Fase 5
     "Q": ("Multiplicación y división", "Relaciones de proporcionalidad"),
     "U": ("Figuras y cuerpos geométricos", "Ubicación espacial"),
@@ -112,9 +116,9 @@ def pl(n, s, p):
 
 
 # ------------------------------------------------------------ España → México
-WORDS = [("ha redondeado", "redondeó"), ("montañeros", "alpinistas"), ("huchas", "alcancías"), ("baloncesto", "basquetbol"), ("en forma compleja", "con dos unidades"), ("prisma rectangular (ortoedro)", "prisma rectangular"), ("ortoedros", "prismas rectangulares"), ("ortoedro", "prisma rectangular"), ("vallas", "cercas"), ("valla", "cerca"), ("baldosas", "losetas"), ("baldosa", "loseta"), ("hucha", "alcancía"),
+WORDS = [("En un recuento se han hecho", "En un conteo se hicieron"), ("marcas de recuento", "marcas de conteo"), ("ha redondeado", "redondeó"), ("montañeros", "alpinistas"), ("huchas", "alcancías"), ("baloncesto", "basquetbol"), ("en forma compleja", "con dos unidades"), ("prisma rectangular (ortoedro)", "prisma rectangular"), ("ortoedros", "prismas rectangulares"), ("ortoedro", "prisma rectangular"), ("vallas", "cercas"), ("valla", "cerca"), ("baldosas", "losetas"), ("baldosa", "loseta"), ("hucha", "alcancía"),
          ("coma debajo de coma", "punto debajo de punto"), ("1 décima", "1 décimo"), ("1 centésima", "1 centésimo"), ("1 milésima", "1 milésimo"),
-         ("ha recorrido", "recorrió"), ("ha acertado", "acertó"), ("ha volado", "voló"), ("sin comas", "sin el punto"), ("numerador : denominador", "numerador ÷ denominador"), ("se han recorrido", "se recorrieron"), ("ha ahorrado", "ahorró"), ("ha leído", "leyó"), ("han leído", "leyeron"), ("ha gastado", "gastó"), ("han gastado", "gastaron"), ("ha ganado", "ganó"), ("ha vendido", "vendió"), ("han vendido", "vendieron"), ("ha corrido", "corrió"), ("ha sacado", "sacó"), ("ha obtenido", "obtuvo"), ("Un grifo", "Una llave"), ("En rebajas", "En oferta"), ("Una noria", "Una rueda de la fortuna"), ("una noria", "una rueda de la fortuna"), ("La noria", "La rueda de la fortuna"), ("la noria", "la rueda de la fortuna"), ("ha girado", "giró"), ("césped", "pasto"), ("sin solaparse", "sin encimarse"), ("tejado", "techo"), ("Un brik", "Un envase de cartón"), ("un brik", "un envase de cartón"), ("Cara o cruz", "Águila o sol"), ("cara o cruz", "águila o sol"), ("sacar cruz", "sacar sol"), ("salga cruz", "salga sol"), ("sale cruz", "sale sol"),
+         ("ha recorrido", "recorrió"), ("ha acertado", "acertó"), ("ha volado", "voló"), ("sin comas", "sin el punto"), ("numerador : denominador", "numerador ÷ denominador"), ("se han recorrido", "se recorrieron"), ("ha ahorrado", "ahorró"), ("ha leído", "leyó"), ("han leído", "leyeron"), ("ha gastado", "gastó"), ("han gastado", "gastaron"), ("ha ganado", "ganó"), ("ha vendido", "vendió"), ("han vendido", "vendieron"), ("ha corrido", "corrió"), ("ha sacado", "sacó"), ("ha obtenido", "obtuvo"), ("Un grifo", "Una llave"), ("Hemos hecho", "Hicimos"), ("Cuántos palmos", "Cuántas cuartas"), ("cuántos palmos", "cuántas cuartas"), ("el palmo", "la cuarta"), ("un palmo", "una cuarta"), ("palmos", "cuartas"), ("palmo", "cuarta"), ("octógonos", "octágonos"), ("octógono", "octágono"), ("señal de STOP", "señal de ALTO"), ("hemos hecho", "hicimos"), ("En rebajas", "En oferta"), ("Una noria", "Una rueda de la fortuna"), ("una noria", "una rueda de la fortuna"), ("La noria", "La rueda de la fortuna"), ("la noria", "la rueda de la fortuna"), ("ha girado", "giró"), ("césped", "pasto"), ("sin solaparse", "sin encimarse"), ("tejado", "techo"), ("Un brik", "Un envase de cartón"), ("un brik", "un envase de cartón"), ("Cara o cruz", "Águila o sol"), ("cara o cruz", "águila o sol"), ("sacar cruz", "sacar sol"), ("salga cruz", "salga sol"), ("sale cruz", "sale sol"),
          ("sacar cara", "sacar águila"), ("salga cara", "salga águila"), ("sale cara", "sale águila"), ("«cruz»", "«sol»"), ("«cara»", "«águila»"), ("sucesos", "eventos"), ("suceso", "evento"),
          ("se ha anotado", "se anotó"), ("ha salido cara", "ha caído águila"), ("cara, porque", "águila, porque"), ("cruz, porque", "sol, porque"), ("cara y cruz", "águila y sol"), ("ha caído águila", "cayó águila"), ("ha salido", "salió"), ("han salido", "salieron"), ("ha anotado", "anotó"), ("en rebajas", "en oferta"), ("un grifo", "una llave"), ("el grifo", "la llave"), ("han recorrido", "recorrieron"), ("como si no hubiera coma", "como si no hubiera punto"), ("se alquilan", "se rentan"), ("alquilan", "rentan"), ("alquila", "renta"), ("alquilar", "rentar"), ("alquiler", "renta"), ("sin la coma", "sin el punto"), ("chinchetas", "tachuelas"), ("chincheta", "tachuela"), ("han comido", "comieron"), ("han pintado", "pintaron"), ("han recogido", "recogieron"), ("ha comprado", "compró"), ("han ocupado", "ocuparon"),
          ("han quedado", "quedaron"), ("Iker", "Iván"), ("la coma", "el punto"), ("una décima", "un décimo"), ("una centésima", "un centésimo"), ("una milésima", "un milésimo"),
@@ -213,6 +217,7 @@ def mx_item(it):
     it["q"], it["e"] = mx_text(it["q"] if not yr else it["q"]), mx_text(it["e"] + (" <i hidden>año</i>" if yr else ""))
     it["e"] = it["e"].replace(" <i hidden>año</i>", "")
     it["c"] = [mx_text(c + (" <i hidden>año</i>" if yr else "")).replace(" <i hidden>año</i>", "") for c in it["c"]]
+    it["q"] = it["q"].replace("aria-label='gráfico de barras", "aria-label='gráfica de barras").replace("aria-label='gráfico circular", "aria-label='gráfica circular").replace("aria-label='gráfico", "aria-label='gráfica")
     labels = " ".join(re.findall(r"aria-label='([^']*)'", it["q"]))
     if not ok(it) or any(w in labels for w in ("€", "euro", "céntimo")):
         return None

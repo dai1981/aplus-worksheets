@@ -109,7 +109,7 @@ def s3_tablas():
     if k == "recuento":
         n = R.randint(6, 28)
         return mcq("En un recuento se han hecho estas marcas: <span style='font-family:monospace;font-size:1.2em'>%s</span>. Cada grupo tachado son 5. ¿Cuántas son?" % marcas(n), str(n),
-                   [str(n + 1), str(n - 1), str(n // 5 + n % 5), str(n + 5)], "%d grupos de 5 y %d sueltas: <b>%d</b>." % (n // 5, n % 5, n))
+                   [str(n + 1), str(n - 1), str(n // 5 + n % 5), str(n + 5)], "%s%s: <b>%d</b>." % ("1 grupo de 5" if n // 5 == 1 else "%d grupos de 5" % (n // 5), "" if n % 5 == 0 else (" y 1 suelta" if n % 5 == 1 else " y %d sueltas" % (n % 5)), n))
     if k == "frec":
         t, cats, u = R.choice([x for x in TEMAS if x[2] == "alumnos"])
         vs = R.sample(range(2, 15), 4)

@@ -1590,7 +1590,14 @@ ES6 の numeros_grandes は LV ではなく D（桁数）を使うので src の
 9. porcentajes ✓ 10. longitud-masa-y-capacidad ✓ 11. perimetro-y-area ✓ 12. volumen ✓ 13. angulos ✓ 14. poligonos-y-circulo ✓ 15. tablas-y-graficas ✓ 16. probabilidad ✓
 6.º: 1. sistemas-de-numeracion ✓ 2. fracciones-y-decimales ✓ 3. suma-y-resta-de-fracciones ✓ 4. operaciones-con-decimales ✓ 5. division-de-fracciones-entre-naturales ✓ 6. proporcionalidad ✓ 7. porcentajes ✓ 8. circunferencia-y-pi ✓
 9. poligonos-regulares ✓ 10. plano-cartesiano ✓ 11. perimetro-y-area ✓ 12. volumen ✓ 13. graficas-circulares ✓ 14. media-moda-y-rango ✓ 15. probabilidad ✓
-次は 1.º・2.º（Fase 3、2024/08/4.pdf）、その後 secundaria（Fase 6）
+
+MX / Matemáticas / 1.er・2.º grado de primaria（Fase 3、STD_URL は 2024/06/Programa_Sintetico_Fase_3.pdf。CONT に S3・P3。1.º は 100 まで（計算は 20 まで、2 桁は繰り上がりなし）、かけ算は答え 10 まで。2.º は 1 000 まで、かけ算・わり算は 10 未満。標準単位（cm・kg・L）とお金はなし）— 1.º・2.º で共有する単元は `gen_mx_matematicas_1_*` に `build(lv)`（seed は 60000 + 1000 × lv + 番号、ES の再利用は 6x9xx）、`gen_mx_matematicas_2_*` はラッパー。共通部品は `tools/mx_12.py`（BIG（src の mx_ に渡す。ES の lim は SVG の数字を数えて落とすので、数の範囲は q_le・all_le で絞る）・std_units（標準単位を落とす）・calendario_svg・s_calendario・s_ayer・s_iguales）。
+mx_common の WORDS で palmo→cuarta、octógono→octágono、STOP→ALTO、recuento→conteo。SVG の aria-label の gráfico も gráfica に
+1.º: 1. numeros-hasta-100 ✓ 2. comparar-y-ordenar-numeros ✓ 3. sucesiones-y-patrones ✓ 4. sumas-y-restas-hasta-20 ✓ 5. calculo-mental ✓ 6. problemas-de-suma-y-resta ✓ 7. sumas-iguales-y-multiplicacion ✓ 8. cuerpos-geometricos ✓ 9. figuras-geometricas ✓ 10. longitud-y-masa ✓ 11. dias-semanas-y-meses ✓ 12. tablas-y-pictogramas ✓
+2.º: 1. numeros-hasta-1000 ✓ 2. comparar-y-ordenar-numeros ✓ 3. sucesiones-y-patrones ✓ 4. suma-y-resta ✓ 5. calculo-mental ✓ 6. problemas-de-suma-y-resta ✓ 7. multiplicacion ✓ 8. reparto-y-division ✓ 9. dobles-y-mitades ✓ 10. figuras-geometricas ✓ 11. longitud-masa-y-capacidad ✓ 12. calendario ✓ 13. tablas-y-pictogramas ✓
+トピック：calendario・dias-semanas→magnitudes-y-medida、pictogramas→estadistica-y-probabilidad
+
+MX / Matemáticas は primaria 1.º〜6.º まで完了。次は secundaria（Fase 6）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

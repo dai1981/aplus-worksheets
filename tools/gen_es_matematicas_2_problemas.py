@@ -90,7 +90,7 @@ def s_completar():
     (p, _), _ = two()
     w, f = R.choice(COSAS)
     a, b = nums()
-    t = R.choice(["album", "quiere"])
+    t = R.choice(["album", "quiere"]) if w in ("cromos", "pegatinas", "fotos") else "quiere"
     if t == "album":
         q = "En un álbum caben %d %s. %s ya tiene %d. %s le faltan para completarlo?" % (a + b, w, p, a, cu(f))
     else:

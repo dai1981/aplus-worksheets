@@ -235,7 +235,7 @@ function topic_defs_es() {
             'in' => '/problemas/', 'out' => '/^$/',
             'blurb' => 'Problemas de una y dos operaciones con datos de la vida diaria: compras, viajes, recetas y repartos.'),
         'magnitudes-y-medida' => array('name' => 'Magnitudes y medida',
-            'in' => '/longitud|masa|capacidad|medida|tiempo|reloj|dinero|monedas|medir|perimetro|area|superficie|^volumen$/', 'out' => '/poligonos-y-areas|integrales/',
+            'in' => '/longitud|masa|capacidad|medida|tiempo|reloj|dinero|monedas|medir|calendario|dias-semanas|perimetro|area|superficie|^volumen$/', 'out' => '/poligonos-y-areas|integrales/',
             'blurb' => 'Longitud, masa y capacidad, cambio de unidades, perímetro y área, el reloj y el tiempo, el dinero en euros.',
             'blurb_mx' => 'Longitud, masa y capacidad, cambio de unidades, perímetro y área, el reloj y el tiempo, el dinero en pesos.'),
         'geometria' => array('name' => 'Geometría',
@@ -251,7 +251,7 @@ function topic_defs_es() {
             'in' => '/funciones|coordenadas-y-graficas/', 'out' => '/^$/',
             'blurb' => 'Coordenadas y gráficas, dominio, crecimiento, máximos y mínimos, funciones lineales, cuadráticas, exponenciales y logarítmicas.'),
         'estadistica-y-probabilidad' => array('name' => 'Estadística y probabilidad',
-            'in' => '/graficos|graficas-circulares|tablas-y-graficas|tablas-de|estadistica|probabilidad|media|seguro-posible|combinatoria|distribucion|muestreo|intervalos-de-confianza/', 'out' => '/tablas-de-multiplicar/',
+            'in' => '/graficos|pictogramas|graficas-circulares|tablas-y-graficas|tablas-de|estadistica|probabilidad|media|seguro-posible|combinatoria|distribucion|muestreo|intervalos-de-confianza/', 'out' => '/tablas-de-multiplicar/',
             'blurb' => 'Tablas de frecuencias, gráficos de barras y de líneas, la media y la moda, sucesos seguros, posibles e imposibles.'),
     );
 }
