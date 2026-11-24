@@ -27,6 +27,7 @@ function qa($sql, $args = array()) {
 }
 
 /* ---------------------------------------------------------------- text */
+$GLOBALS['ZH_CN'] = false;   // set by the router for zh-CN pages (see zt())
 function h($s) { return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 function url($path = '') {           // url('us/math/') -> /worksheets/us/math/
     return BASE_PATH . '/' . ltrim($path, '/');
@@ -134,6 +135,51 @@ function T($key = null) {
             'pv_key' => '附解答', 'pv_practice' => '練習・%s',
             'pv_name1' => '姓名 ______________   日期 ________', 'pv_name2' => '姓名 ____________________    日期 __________',
             'pv_foot' => '免費・apu2.com/worksheets',
+        ),
+        // China mainland: Simplified Chinese (人教版の用語)
+        'zh-CN' => array(
+            'home' => '练习题', 'grades' => '年级', 'units' => '单元',
+            'questions' => '题', 'points' => '重点', 'quiz100' => '100题练习',
+            'quiz_lead' => '共5组，每组20题。作答后马上知道答案和讲解。',
+            'learn_quiz' => '重点＋100题', 'print' => '打印', 'pdf' => 'PDF',
+            'your_score' => '你的成绩', 'clear_grade' => '清除这个年级的成绩',
+            'hook_title' => '100题练习', 'hook_sub' => '每组20题・共5组・马上对答案',
+            'hook_go' => '开始练习', 'faq' => '常见问题',
+            'related' => '继续学习', 'prev' => '上一个', 'next_u' => '下一个',
+            'all_units' => '全部单元：', 'printable_of' => '可打印的练习题（附答案）',
+            'standard' => '课标', 'updated' => '更新', 'by' => '制作',
+            'pick_grade' => '选择年级', 'pick_subject' => '选择科目',
+            'print_sheets' => '可打印的练习题',
+            'print_note' => '共4页：热身、练习1、练习2、答案',
+            'print_btn' => '打印／保存为PDF', 'pdf_btn' => '下载PDF',
+            'lesson_link' => '重点说明与在线练习',
+            'p_warmup' => '热身', 'p_prac1' => '练习1', 'p_prac2' => '练习2',
+            'p_key' => '答案', 'name' => '姓名', 'date' => '日期', 'score' => '得分',
+            'circle' => '请圈出正确答案的号码。', 'total_q' => '共%d题',
+            'for_check' => '对答案用',
+            'license' => '可免费打印、复印，供家庭与教室使用。',
+            'worksheets' => '练习题', 'grade_ws' => '%s%s练习题',
+            'notfound' => '找不到这个页面', 'back_home' => '回到全部练习题',
+            'skills_count' => '%d个单元', 'free' => '免费・免注册',
+            'by_grade' => '按年级', 'pin_save' => '存到 Pinterest',
+            'grade_title_sfx' => '｜免费下载打印＋在线练习',
+            'grade_desc' => '%1$s%2$s免费练习题，依据%3$s编排：%4$s。每个单元100题练习，附可打印的答案。',
+            'list_sep' => '、', 'paren' => '（%s）', 'topics_all' => '各%s的主题', 'pages4' => '4页',
+            'subj_title' => '%1$s练习题｜%2$s免费下载（%3$s）', 'subj_h1' => '%s练习题', 'browse_topic' => '按主题找',
+            'country_title' => '%1$s免费练习题（%2$s）', 'country_h1' => '%s练习题',
+            'topic_ws' => '%1$s练习题：%2$s', 'topic_h1' => '%s练习题',
+            'pin_unit' => '免费%1$s%2$s“%3$s”练习题：重点说明、100题练习、可打印的答案。',
+            'date_fmt' => 'Y年n月j日',
+            'pr_title' => '%1$s“%2$s”练习题（附答案・%3$s打印）',
+            'pr_desc' => '免费打印的%1$s“%2$s”练习题%3$s：3页共%4$d题，最后一页是答案。可以直接打印或保存为PDF。',
+            'pr_h' => '%1$s练习题（%2$s）', 'pr_pin' => '免费打印的%1$s“%2$s”练习题（附答案）',
+            'pv_brand' => '%s 练习题', 'pv_cta_unit' => '免费・重点说明＋100题＋答案',
+            'pv_cta_grade' => '免费・%d份可打印练习题', 'pv_cta_topic' => '免费・%d个单元（附答案）',
+            'pv_skills' => '%d个单元', 'pv_100each' => '每单元100题', 'pv_keys' => '附答案',
+            'pv_lesson' => '重点说明', 'pv_lessons' => '重点说明', 'pv_100' => '100题', 'pv_print' => '%s打印',
+            'pv_key' => '附答案', 'pv_practice' => '练习・%s',
+            'pv_name1' => '姓名 ______________   日期 ________', 'pv_name2' => '姓名 ____________________    日期 __________',
+            'pv_foot' => '免费・apu2.com/worksheets',
         ),
         // Germany: German (Grundschule)
         'de' => array(
@@ -438,7 +484,7 @@ function T($key = null) {
     ));
     if (!isset($T['en-CA'])) $T['en-CA'] = array_merge($T['en'], array('hook_go' => 'Start practising'));   // Canada: grades like the US, British -ise verbs
     static $lang = 'en';
-    if (is_array($key)) { $lang = isset($T[$key[0]]) ? $key[0] : 'en'; return null; } // set language
+    if (is_array($key)) { $lang = isset($T[$key[0]]) ? $key[0] : 'en'; $GLOBALS['ZH_CN'] = ($lang === 'zh-CN'); return null; } // set language
     if ($key === null) return $T[$lang];
     return isset($T[$lang][$key]) ? $T[$lang][$key] : $key;
 }
@@ -451,6 +497,12 @@ function ko_josa($w, $with, $without) {
     if ($o >= 0xAC00 && $o <= 0xD7A3) $has = (($o - 0xAC00) % 28) !== 0;
     else $has = strpos('013678LMNlmn', $c) !== false;   // 영, 일, 삼, 육, 칠, 팔 / -l, -m, -n
     return $w . ($has ? $with : $without);
+}
+
+/* zh-CN pages reuse the Traditional Chinese text of the topic pages: convert it (words first, then characters) */
+function zt($s) {
+    static $m = array('線上練習' => '在线练习', '「' => '“', '」' => '”', '學習單' => '练习题', '列印' => '打印', '解答' => '答案', '依照' => '依据', '依主題找' => '按主题找', '註冊' => '注册', '個' => '个', '冊' => '册', '單' => '单', '嗎' => '吗', '學' => '学', '對' => '对', '幾' => '几', '後' => '后', '從' => '从', '擇' => '择', '簡' => '简', '級' => '级', '組' => '组', '線' => '线', '練' => '练', '習' => '习', '裡' => '里', '註' => '注', '說' => '说', '讀' => '读', '費' => '费', '這' => '这', '選' => '选', '錄' => '录', '錯' => '错', '開' => '开', '頁' => '页', '題' => '题', '麼' => '么');
+    return $GLOBALS['ZH_CN'] ? strtr($s, $m) : $s;
 }
 
 /* "Grade 3 Math" / "Mathe Klasse 3": grade and subject in the order of the page language */
@@ -531,6 +583,39 @@ function js_text($lang) {
             'levelUp' => '升級了！', 'keepGoing' => '繼續朝「{t}」前進', 'yay' => '太棒了',
             'achieved' => '目標達成！', 'ask' => '下一個目標挑戰「<b>{t}</b>」嗎？（{l}）',
             'goFor' => '挑戰', 'later' => '之後再說', 'notStarted' => '還沒開始',
+    );
+    $J['zh-CN'] = array(
+            'ok' => '答对了！', 'ng' => '再想想', 'ans' => '答案：', 'next' => '下一题',
+            'result' => '看结果', 'done' => '完成', 'practice' => '练习',
+            'score' => '答对 <b>{o}</b> 题（共 {n} 题）', 'best' => '最高纪录：{o} / {t}',
+            'm100' => '全部答对！可以挑战下一组了。',
+            'm80' => '差一点点！把答错的题目再做一次。',
+            'mlow' => '先看看上面的例题，再挑战一次这一组。',
+            'redoMiss' => '只重做答错的 {n} 题', 'redoAll' => '从头再做一次',
+            'loadErr' => '题目加载失败。', 'notYet' => '还没开始',
+            'total' => '答对 <b>{o}</b> / {t} 题', 'mastered' => '（全对的单元 {c} / {u}）',
+            'confirm' => '要清除这个年级的全部成绩吗？',
+            'hook0' => '还没开始。先从第1组（20题）开始吧。',
+            'hookAll' => '5组全部答对！随时回来复习。',
+            'hookSome' => '已全对 {d} / {n} 组，再 {r} 组就完成了！',
+            'okWords' => array('答对了！', '很棒！', '太厉害了！', '好样的！', '做得好！'),
+            'ngWords' => array('差一点！', '下一题加油！', '继续努力！'),
+            'streak' => array('3' => '连对3题！', '5' => '连对5题！', '10' => '连对10题！',
+                              '15' => '连对15题！', '20' => '整组全对！'),
+            'perfect' => '满分！', 'good' => '做得很好！',
+            'tier' => array('above' => '高于平均', 'sight' => '前几名在望', 'class' => '班上第一',
+                            'grade' => '年级第一', 'state' => '全市第一',
+                            'nation' => '全国第一', 'world' => '世界第一'),
+            'start' => '起点', 'yourRank' => '你的{name}等级', 'rankOf' => '{name}等级',
+            'correct' => '题答对', 'todayPlus' => '今天 +{n}',
+            'more' => '再答对 <b>{n}</b> 题就到“{t}”',
+            'toGo' => '再 {n} 题到“{t}”', 'reachedBtn' => '达成了！看下一个目标',
+            'allDone' => '所有等级都达成了！', 'lap' => '第{n}轮', 'laps' => '第{n}轮',
+            'ranks' => '等级', 'moreAfter' => '“{t}”之后还有更多等级', 'unlocksAfter' => '“{t}”之后开放', 'reached' => '已达成', 'toGoShort' => '还差 {n} 题', 'you' => '你',
+            'how' => '1轮 = {name}的每一题都答对一次（共 {n} 题）。每个单元最多算到你目前的轮数，所以每个单元都要练习哦。',
+            'levelUp' => '升级了！', 'keepGoing' => '继续朝“{t}”前进', 'yay' => '太棒了',
+            'achieved' => '目标达成！', 'ask' => '下一个目标挑战“<b>{t}</b>”吗？（{l}）',
+            'goFor' => '挑战', 'later' => '之后再说', 'notStarted' => '还没开始',
     );
     $J['de'] = array(
             'ok' => 'Richtig!', 'ng' => 'Noch nicht', 'ans' => 'Lösung:', 'next' => 'Weiter',

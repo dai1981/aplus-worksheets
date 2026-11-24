@@ -35,7 +35,7 @@ function pv_text($html) {
 function pv_font($w) {
     $d = __DIR__ . '/../assets/fonts/';
     if (!empty($GLOBALS['PV_CJK'])) {           // Chinese / Korean pages: Noto Sans TC / KR (subsets made by tools/build_cjk_font.py)
-        $f = $GLOBALS['PV_CJK'] === 'kr' ? 'NotoSansKR' : 'NotoSansTC';
+        $f = $GLOBALS['PV_CJK'] === 'kr' ? 'NotoSansKR' : ($GLOBALS['PV_CJK'] === 'sc' ? 'NotoSansSC' : 'NotoSansTC');
         return $d . $f . ($w === 'b' ? '-Bold.otf' : '-Regular.otf');
     }
     return $d . ($w === 'b' ? 'Inter-Bold.otf' : ($w === 'm' ? 'DejaVuSans.ttf' : 'Inter-Regular.otf'));
@@ -304,7 +304,7 @@ function preview_route($seg, $kind = 'preview') {
     $subject = $country ? get_subject($seg[0], $seg[1]) : null;
     if (!$subject) { http_response_code(404); exit; }
     T(array($country['lang']));
-    $GLOBALS['PV_CJK'] = strpos($country['lang'], 'zh') === 0 ? 'tc' : ($country['lang'] === 'ko' ? 'kr' : '');
+    $GLOBALS['PV_CJK'] = $country['lang'] === 'zh-CN' ? 'sc' : (strpos($country['lang'], 'zh') === 0 ? 'tc' : ($country['lang'] === 'ko' ? 'kr' : ''));
     $paper = strtoupper($country['paper']);
     $foot = T('pv_foot');
 

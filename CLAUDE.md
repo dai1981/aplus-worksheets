@@ -1713,6 +1713,19 @@ kr_common.unit に domain 引数（유치원は 수 세기와 셈／위치와 �
 
 KR / Math は유치원・초등 1학년〜고등학교（공통수학1・2、대수、미적분Ⅰ、확률과 통계）まで完了。次は 미적분Ⅱ・기하 などの選択科目か、GDP 順で次の国
 
+CN / Math（义务教育数学课程标准（2022年版）。単元は人教版の順）— country `cn`（name「中国」、lang `zh-CN`、hreflang zh-cn）、subject `math`（数学）、grade `grade-N`（一年级…六年级）、A4。
+生成スクリプトは `tools/cn_g1.py`〜`cn_g6.py`（1 学年 1 ファイル、`python3 tools/cn_g5.py [slug…]`。seed は 9N1cc）。共通部品は `tools/cn_common.py`（adopt：台湾版の生成スクリプトを新しい seed で動かし、OpenCC で简体字にして PRE・TERMS で大陸の語（厘米・千克・竖式・数轴・条形统计图・乘法口诀・正比例・周长・棱长 など）に直す。LEAKS で台湾の地名・お金を落とす。build_sets の部品は (maker, 数) か ("tw", モジュール, セット番号, 数[, keep])、数 None は 20 問まで埋める、負の数は最大 |数| 問。run_grade・lesson（怎么想 → 例题 → 常见错误）・unit（seo_title「…｜X年级数学练习题（附答案）」、standard_code「第N学段 · 数与运算」））。
+自前の問題は `tools/cn_low.py`（1〜2 年级：位置・数・図形・钟表・人民币・规律）、`cn_mid.py`（竖式・倍・方向・两位数乘法・小数・公顷・鸡兔同笼）、`cn_high.py`（数对・方向和距离・税率利率・圆柱圆锥・鸽巢问题・解方程（正の数だけ））。
+domain は 数与运算／数量关系／图形的认识与测量／图形的位置与运动／统计与概率（1〜2 年级は 数据分类）。数は 4 桁でもカンマなし。π は 3.14。
+UI 文言は core.php の 'zh-CN'（zt() で繁体字の文言を简体字に）、トピックは topics.php の `topic_defs_cn()`。プレビュー画像は Noto Sans SC（PV_CJK = 'sc'）。**cn の単元を足したら `python3 tools/build_cjk_font.py` を実行してフォントもコミット**
+CN / Math / 一年级: position, numbers-within-10, composing-numbers-within-10, addition-and-subtraction-within-10, 3d-shapes, numbers-11-to-20, addition-with-carrying-within-20, telling-time-hours, 2d-shapes, subtraction-with-borrowing-within-20, sorting-and-classifying, numbers-to-100, rmb, add-and-subtract-within-100, finding-patterns, number-sentences ✓
+CN / Math / 二年级: centimeters-and-meters, written-addition-and-subtraction-within-100, angles, meaning-of-multiplication, multiplication-tables, telling-time, data-collection, division-within-tables, mixed-operations, division-with-remainders, numbers-to-10000, grams-and-kilograms, estimation ✓
+CN / Math / 三年级: hours-minutes-seconds, add-subtract-within-10000, measurement-units, meaning-of-times, multiply-by-one-digit, rectangles-and-squares, fractions, directions, divide-by-one-digit, tables, two-digit-by-two-digit-multiplication, area, years-months-days, decimals, estimation, two-step-problems ✓
+CN / Math / 四年级: large-numbers, hectares-and-square-kilometers, measuring-angles, three-digit-by-two-digit, parallel-perpendicular-and-quadrilaterals, divide-by-two-digit, bar-graphs-and-averages, order-of-operations, laws-of-operations, meaning-and-properties-of-decimals, triangles, adding-and-subtracting-decimals, axial-symmetry, rounding-and-approximate-numbers, chickens-and-rabbits, observing-objects ✓
+CN / Math / 五年级: multiplying-decimals, position-ordered-pairs, dividing-decimals, likelihood, simple-equations, area-of-polygons, factors-and-multiples, cuboids-and-cubes, meaning-and-properties-of-fractions, rotation, adding-and-subtracting-fractions, line-graphs ✓
+CN / Math / 六年级: multiplying-fractions, position-and-direction-2, dividing-fractions, ratios, circles, percentages, pie-charts, negative-numbers, discounts-and-interest, cylinders-and-cones, proportion, pigeonhole-principle ✓
+CN の次: 七〜九年级（初中）。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に cn があるか確認する
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）

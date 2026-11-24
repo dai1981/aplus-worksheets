@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 プレビュー画像（preview.png / pin.png）用の中国語・韓国語フォントを作る。
-Noto Sans TC / KR（SIL OFL）から、台湾版・韓国版で実際に使う文字だけを抜き出して
+Noto Sans TC / SC / KR（SIL OFL）から、台湾版・中国版・韓国版で実際に使う文字だけを抜き出して
 site/worksheets/assets/fonts/NotoSans{TC,KR}-{Bold,Regular}.otf に書く（数百KB）。
 
   python3 tools/build_cjk_font.py
 
-台湾・韓国の単元を足したら毎回実行する（新しい文字が増えるため）。
+台湾・中国・韓国の単元を足したら毎回実行する（新しい文字が増えるため）。
 check.py はフォントに無い文字があると WARN を出す。
 """
 import glob, json, os, re, sys, urllib.request
@@ -16,7 +16,7 @@ ROOT = os.path.join(HERE, "..")
 OUT = os.path.join(ROOT, "site", "worksheets", "assets", "fonts")
 SRC = "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/SubsetOTF/%s/NotoSans%s-%s.otf"
 CACHE = os.environ.get("CJK_FONT_CACHE", "/tmp/noto-cjk")
-FONTS = (("TC", ("zh",)), ("KR", ("ko",)))   # (フォント, catalog の lang がこれで始まる国)
+FONTS = (("TC", ("zh-TW",)), ("SC", ("zh-CN",)), ("KR", ("ko",)))   # (フォント, catalog の lang がこれで始まる国)
 
 
 def chars(LANGS):

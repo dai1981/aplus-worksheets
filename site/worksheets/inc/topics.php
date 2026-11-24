@@ -166,6 +166,44 @@ function topic_defs_tw() {
     );
 }
 
+/* China (cn): simplified Chinese topic names and cn unit slugs */
+function topic_defs_cn() {
+    return array(
+        'numbers' => array('name' => '数的认识', 'in' => '/^numbers|large-numbers|composing-numbers|negative-numbers|factors-and-multiples/', 'out' => '/^$/',
+            'blurb' => '从 10 以内的数、100 以内的数到亿以上的数，认识数位和计数单位、数的组成、比大小，因数与倍数，以及负数。'),
+        'addition-and-subtraction' => array('name' => '加法和减法', 'in' => '/add|subtract|carrying|borrowing|number-sentences/', 'out' => '/fraction|decimal/',
+            'blurb' => '从 10 以内的加减法、20 以内的进位加法和退位减法，到 100 以内和万以内的笔算加减。'),
+        'multiplication' => array('name' => '乘法', 'in' => '/multipl|meaning-of-times|three-digit-by-two/', 'out' => '/fraction|decimal|factors/',
+            'blurb' => '乘法的意义、乘法口诀、倍的认识，以及多位数乘一位数、两位数乘两位数和三位数乘两位数。'),
+        'division' => array('name' => '除法', 'in' => '/divi/', 'out' => '/fraction|decimal/',
+            'blurb' => '平均分和除法的意义、用乘法口诀求商、有余数的除法，以及除数是一位数和两位数的除法。'),
+        'order-of-operations' => array('name' => '四则运算和运算律', 'in' => '/order-of-operations|laws-of-operations|mixed-operations/', 'out' => '/^$/',
+            'blurb' => '混合运算的顺序、小括号，以及加法和乘法的交换律、结合律和乘法分配律。'),
+        'word-problems' => array('name' => '解决问题', 'in' => '/two-step|chickens-and-rabbits|pigeonhole|simple-equations/', 'out' => '/^$/',
+            'blurb' => '两步计算的实际问题、列方程解决问题，以及鸡兔同笼、鸽巢问题等数学广角的问题。'),
+        'estimation' => array('name' => '估算和近似数', 'in' => '/estimat|rounding/', 'out' => '/^$/',
+            'blurb' => '加减法和乘除法的估算，用“四舍五入”法求近似数，用“万”“亿”作单位。'),
+        'fractions' => array('name' => '分数', 'in' => '/fraction/', 'out' => '/^$/',
+            'blurb' => '分数的初步认识、分数的意义和性质、约分和通分，以及分数的加减乘除。'),
+        'decimals' => array('name' => '小数', 'in' => '/decimal/', 'out' => '/^$/',
+            'blurb' => '小数的初步认识、小数的意义和性质，以及小数的加减法、乘法和除法。'),
+        'ratios-and-percentages' => array('name' => '比、比例和百分数', 'in' => '/(^|-)ratios?(-|$)|proportion|percent|discounts/', 'out' => '/^$/',
+            'blurb' => '比的意义和化简、按比分配，百分数，折扣、成数、税率和利率，以及正比例、反比例和比例尺。'),
+        'measurement' => array('name' => '常见的量', 'in' => '/centimeters|grams|measurement-units|hectares|^rmb$|telling-time|hours|years-months/', 'out' => '/^$/',
+            'blurb' => '认识人民币，厘米和米、克和千克、吨和千米，时、分、秒和年、月、日，以及公顷和平方千米。'),
+        'area-and-perimeter' => array('name' => '周长和面积', 'in' => '/^area|rectangles-and-squares|^circles$/', 'out' => '/^$/',
+            'blurb' => '长方形和正方形的周长，面积单位，长方形、平行四边形、三角形、梯形的面积，以及圆的周长和面积。'),
+        'shapes' => array('name' => '平面图形', 'in' => '/2d-shapes|angles|parallel-perpendicular|triangles|rectangles-and-squares|^circles$/', 'out' => '/^$/',
+            'blurb' => '认识图形、角的初步认识和角的度量，平行与垂直，三角形、四边形和圆的特征。'),
+        'solids' => array('name' => '立体图形', 'in' => '/3d-shapes|observing|cuboids|cylinders/', 'out' => '/^$/',
+            'blurb' => '认识长方体、正方体、圆柱和球，观察物体，以及长方体、正方体、圆柱和圆锥的表面积和体积。'),
+        'position-and-movement' => array('name' => '图形的位置与运动', 'in' => '/position|directions|symmetry|rotation/', 'out' => '/^$/',
+            'blurb' => '上下前后左右、东南西北，用数对和方向与距离确定位置，以及轴对称、平移和旋转。'),
+        'statistics' => array('name' => '统计与可能性', 'in' => '/sorting|data-collection|^tables$|graphs|charts|likelihood/', 'out' => '/^$/',
+            'blurb' => '分类与整理、数据收集整理、复式统计表、条形统计图、折线统计图、扇形统计图、平均数和可能性。'),
+    );
+}
+
 /* Germany (de): German topic names and German unit slugs */
 function topic_defs_de() {
     return array(
@@ -394,6 +432,7 @@ function topic_defs($country = null) {
     if ($country === 'br') return topic_defs_br();
     if ($country === 'es' || $country === 'mx') return topic_defs_es();
     if ($country === 'tw') return topic_defs_tw();
+    if ($country === 'cn') return topic_defs_cn();
     if ($country === 'kr') return topic_defs_kr_all();
     if ($country === 'de') return topic_defs_de();
     if ($country === 'fr') return topic_defs_fr();
@@ -631,7 +670,7 @@ function topic_range($units) {
     $first = $units[0]['grade_name'];
     $last = $units[count($units) - 1]['grade_name'];
     if ($first === $last) return $first;
-    if ($units[0]['country'] === 'tw') return $first . '到' . $last;
+    if ($units[0]['country'] === 'tw' || $units[0]['country'] === 'cn') return $first . '到' . $last;
     if ($units[0]['country'] === 'kr') return $first . '~' . $last;
     if ($units[0]['country'] === 'fr') return 'du ' . $first . ' au ' . $last;
     if ($units[0]['country'] === 'br') return 'do ' . $first . ' ao ' . $last;

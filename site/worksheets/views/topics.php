@@ -8,7 +8,7 @@ T(array($country['lang']));
 $defs = topic_defs($seg[0]);
 $all = topics_for($seg[0], $seg[1]);
 if (!$all) not_found();
-$zh = $country['lang'] === 'zh-TW';
+$zh = strpos($country['lang'], 'zh') === 0;   // zh-TW and zh-CN (zt() converts the text for zh-CN)
 $ko = $country['lang'] === 'ko';
 $de = $country['lang'] === 'de';
 $fr = $country['lang'] === 'fr';
@@ -18,13 +18,13 @@ $es = strpos($country['lang'], 'es') === 0;
 $sbase = $seg[0] . '/' . $seg[1] . '/';
 $path = $sbase . 'topics/';
 $crumbs = array(array(T('worksheets'), ''), array($country['name'], $seg[0] . '/'),
-                array($subject['name'], $sbase), array($ko ? '주제' : (($pt || $es) ? 'Temas' : ($it ? 'Argomenti' : ($fr ? 'Thèmes' : ($de ? 'Themen' : ($zh ? '主題' : 'Topics'))))), $path));
+                array($subject['name'], $sbase), array($ko ? '주제' : (($pt || $es) ? 'Temas' : ($it ? 'Argomenti' : ($fr ? 'Thèmes' : ($de ? 'Themen' : ($zh ? zt('主題') : 'Topics'))))), $path));
 
 $tnames = array_map(function ($k) use ($defs, $seg) { return topic_name($defs[$k], $seg[0]); }, array_slice(array_keys($all), 0, 6));
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
     'title' => $ko ? $subject['name'] . ' 학습지: 주제별로 찾기 | ' . $country['standard'] . ' | ' . SITE_NAME : ($es ? 'Fichas de ' . mb_strtolower($subject['name']) . ' por temas (' . $country['standard'] . ') | ' . SITE_NAME : ($pt ? 'Atividades de ' . mb_strtolower($subject['name']) . ' por tema (' . $country['standard'] . ') | ' . SITE_NAME : ($it ? 'Schede di ' . strtolower($subject['name']) . ' per argomento (' . $country['standard'] . ') | ' . SITE_NAME : ($fr ? 'Fiches de ' . strtolower($subject['name']) . ' par thème (' . $country['standard'] . ') | ' . SITE_NAME : ($de ? $subject['name'] . '-Arbeitsblätter nach Themen (' . $country['standard'] . ') | ' . SITE_NAME
-             : ($zh ? $subject['name'] . '學習單：依主題找｜' . $country['standard'] . ' | ' . SITE_NAME
+             : ($zh ? $subject['name'] . zt('學習單：依主題找｜') . $country['standard'] . ' | ' . SITE_NAME
                    : $subject['name'] . ' Worksheets by Topic (' . $country['standard'] . ') | ' . SITE_NAME)))))),
     'desc' => $ko ? $country['standard'] . '에 맞춰 주제별로 정리한 무료 ' . $subject['name'] . ' 학습지: ' . implode(', ', $tnames) . ' 등. 단원마다 개념 정리, 연습 문제, 정답이 있습니다.' : ($es ? 'Fichas de ' . mb_strtolower($subject['name']) . ' gratis organizadas por temas, según la ' . $country['standard'] . ': '
                     . implode(', ', $tnames) . ' y más, con lecciones, ejercicios y soluciones.' : ($pt ? 'Atividades de ' . mb_strtolower($subject['name']) . ' grátis organizadas por tema, de acordo com a ' . $country['standard'] . ': '
@@ -32,8 +32,8 @@ page_head(array(
                     . implode(', ', $tnames) . ', ecc., con lezioni, esercizi e soluzioni.' : ($fr ? 'Fiches de ' . strtolower($subject['name']) . ' gratuites classées par thème, conformes aux ' . $country['standard'] . ' : '
                     . implode(', ', $tnames) . ', etc., avec leçons, exercices et corrigés.' : ($de ? 'Kostenlose ' . $subject['name'] . '-Arbeitsblätter nach Themen, passend zu den ' . $country['standard'] . ': '
                     . implode(', ', $tnames) . ' und mehr, mit Erklärungen, Übungen und Lösungen.'
-            : ($zh ? '依主題整理的免費' . $subject['name'] . '學習單，依照' . $country['standard'] . '：' . implode('、', $tnames)
-                    . '等，每個單元都有說明、練習和解答。'
+            : ($zh ? zt('依主題整理的免費') . $subject['name'] . zt('學習單，依照') . $country['standard'] . '：' . implode('、', $tnames)
+                    . zt('等，每個單元都有說明、練習和解答。')
                   : 'Free ' . strtolower($subject['name']) . ' worksheets by topic, aligned to the ' . $country['standard']
                     . ': ' . implode(', ', $tnames) . ' and more, with lessons, practice and answer keys.')))))),
     'canonical' => $path,
@@ -60,8 +60,8 @@ site_header($crumbs);
 <h1><?= h($subject['name']) ?> 학습지: 주제별로 찾기</h1>
 <div class="sx-hero"><p>주제 페이지마다 그 주제의 모든 단원을 처음 배우는 학년부터 마지막 학년까지 모았습니다. <?= h($country['standard']) ?>에 맞췄습니다.</p></div>
 <?php elseif ($zh): ?>
-<h1><?= h($subject['name']) ?>學習單：依主題找</h1>
-<div class="sx-hero"><p>每個主題頁收錄這個主題的所有單元，從最早學到的年級排到最後的年級，依照<?= h($country['standard']) ?>。</p></div>
+<h1><?= h($subject['name']) ?><?= zt('學習單：依主題找') ?></h1>
+<div class="sx-hero"><p><?= zt('每個主題頁收錄這個主題的所有單元，從最早學到的年級排到最後的年級，依照') ?><?= h($country['standard']) ?>。</p></div>
 <?php else: ?>
 <h1><?= h($subject['name']) ?> Worksheets by Topic</h1>
 <div class="sx-hero"><p>Each topic page collects every skill on that topic, from the first <?= h(strtolower(rtrim(T('grades'), 's'))) ?> it is taught to the last, aligned to the <?= h($country['standard']) ?>.</p></div>
@@ -71,7 +71,7 @@ site_header($crumbs);
 <li><div class="m"><span class="t"><?= h(topic_name($defs[$tk], $seg[0])) ?></span>
   <span class="d"><?= h(topic_range($units)) ?> · <?= h(sprintf(T('skills_count'), count($units))) ?></span>
   <span class="k"><?= h(topic_blurb($defs[$tk], $seg[0])) ?></span></div>
-  <p class="act"><a class="q" href="<?= url($tp) ?>"><?= h(topic_name($defs[$tk], $seg[0]) . ($ko ? ' 학습지' : ($es ? ': fichas' : ($pt ? ': atividades' : ($it ? ': schede' : ($fr ? ' : fiches' : ($de ? ': Arbeitsblätter' : ($zh ? '學習單' : ' worksheets')))))))) ?></a></p></li>
+  <p class="act"><a class="q" href="<?= url($tp) ?>"><?= h(topic_name($defs[$tk], $seg[0]) . ($ko ? ' 학습지' : ($es ? ': fichas' : ($pt ? ': atividades' : ($it ? ': schede' : ($fr ? ' : fiches' : ($de ? ': Arbeitsblätter' : ($zh ? zt('學習單') : ' worksheets')))))))) ?></a></p></li>
 <?php endforeach; ?>
 </ul>
 </main>
