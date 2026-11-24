@@ -1647,7 +1647,16 @@ KR / Math / 초등 4학년（4-1 → 4-2。生成スクリプトは `gen_kr_math
 1. large-numbers ✓ 2. comparing-large-numbers ✓ 3. measuring-angles ✓ 4. angle-sums-of-triangles-and-quadrilaterals ✓ 5. multiply-three-digit-by-two-digit ✓ 6. divide-by-two-digit-numbers ✓ 7. sliding-flipping-and-turning-shapes ✓
 8. position-and-direction ✓ 9. bar-graphs ✓ 11. number-patterns ✓ 12. equal-sign-and-equations ✓ 13. adding-and-subtracting-fractions ✓ 14. triangles ✓ 15. decimals-hundredths-and-thousandths ✓
 16. adding-and-subtracting-decimals ✓ 17. perpendicular-and-parallel-lines ✓ 18. quadrilaterals ✓ 19. line-graphs ✓ 20. polygons ✓
-トピック：position→shapes。次は 초등 5학년（2026 年度から 2022 개정）
+トピック：position→shapes
+KR / Math / 초등 5학년（5-1 → 5-2。生成スクリプトは `gen_kr_math_g5_*`、まとまりは kr_g5_num.py（혼합 계산・약수와 배수・최대공약수・수의 범위・어림）・kr_g5_frac.py（약분과 통분・크기 비교・분수의 덧셈과 뺄셈・분수의 곱셈・소수의 곱셈。答えは기약분수）・kr_g5_geo.py（둘레・넓이・합동・대칭・직육면체と전개도）・kr_g5_data.py（규칙과 대응・평균・가능성）。図は `tools/kr_pics56.py`（iso_cubes（앞の矢印つき）・views_panel・box_svg・circle_svg・strip_graph・pie_graph・range_line・sym_grid））
+1. order-of-operations ✓ 2. factors-and-multiples ✓ 3. gcf-and-lcm ✓ 4. rules-and-correspondence ✓ 5. simplifying-and-common-denominators ✓ 6. comparing-fractions-and-decimals ✓ 7. adding-and-subtracting-fractions ✓
+8. perimeter-of-polygons ✓ 9. area-units-and-rectangles ✓ 10. area-of-parallelograms-triangles-trapezoids-and-rhombuses ✓ 11. range-of-numbers ✓ 12. rounding-up-down-and-off ✓ 13. multiplying-fractions ✓
+14. congruent-figures ✓ 15. line-and-point-symmetry ✓ 16. multiplying-decimals ✓ 17. cuboids-and-cubes ✓ 18. averages ✓ 19. likelihood ✓
+KR / Math / 초등 6학년（6-1 → 6-2。生成スクリプトは `gen_kr_math_g6_*`、まとまりは kr_g6_num.py（분수・소수의 나눗셈）・kr_g6_ratio.py（비와 비율・백분율・띠/원그래프・비례식・비례배분）・kr_g6_geo.py（각기둥과 각뿔・겉넓이와 부피・쌓기나무・원주・원의 넓이・원기둥/원뿔/구。원주율 3.14））
+1. dividing-fractions-by-whole-numbers ✓ 2. prisms-and-pyramids ✓ 3. dividing-decimals-by-whole-numbers ✓ 4. ratios-and-rates ✓ 5. percentages ✓ 6. strip-and-circle-graphs ✓ 7. surface-area-and-volume-of-cuboids ✓
+8. dividing-fractions ✓ 9. dividing-decimals ✓ 10. stacking-cubes-and-views ✓ 11. ratios-and-proportions ✓ 12. proportional-distribution ✓ 13. circumference-and-pi ✓ 14. area-of-circles ✓ 15. cylinders-cones-and-spheres ✓
+トピック（topic_defs_kr）：factors-and-multiples（약수와 배수）・ratios-and-proportions（규칙과 비율）を足した。order-of→multiplication、range-of→estimation、congruent・symmetry・cuboids・prisms・cylinders・stacking→shapes、perimeter・area・volume・circumference→measurement、averages→data。
+助詞：ㄱ〜ㅂ（点・面の名前）は받침ありとして「이에요・과」を直接書く。次は 초등 1・2학년（2022 개정、2024 年度から）か、GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
