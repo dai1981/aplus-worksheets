@@ -1,0 +1,1157 @@
+{
+ "slug": "binomial-theorem",
+ "title": "이항정리와 이항계수의 성질",
+ "seo_title": "이항정리와 이항계수의 성질 | 고등학교 확률과 통계 학습지 (정답 포함)",
+ "short_title": "이항정리",
+ "domain": "경우의 수",
+ "standard_code": "[12확통01-03]",
+ "standard_url": "https://ncic.re.kr/inv/org/download.do?year=2022&seq=10003559&orgType=ogi4",
+ "standard_text": "이항정리를 이해하고, 이를 활용하여 문제를 해결할 수 있다.",
+ "meta_desc": "고등학교 확률과 통계 이항정리 문제: (a + b)ⁿ의 일반항, 전개식에서 특정한 항의 계수, 상수항, 이항계수의 합 2ⁿ, 파스칼의 삼각형과 ₙCᵣ = ₙCₙ₋ᵣ까지 100문제와 정답·해설.",
+ "key_big": "(a + b)ⁿ의 일반항 ₙCᵣaⁿ⁻ʳbʳ",
+ "key_sub": "ₙC₀ + ₙC₁ + … + ₙCₙ = 2ⁿ",
+ "body_html": "<h2>생각하는 방법</h2><p>(a + b)<sup>n</sup> = <sub>n</sub>C<sub>0</sub>a<sup>n</sup> + <sub>n</sub>C<sub>1</sub>a<sup>n−1</sup>b + … + <sub>n</sub>C<sub>n</sub>b<sup>n</sup>이에요.</p><p>일반항 <sub>n</sub>C<sub>r</sub>a<sup>n−r</sup>b<sup>r</sup>에서 원하는 차수가 되는 r을 찾아요.</p><p>이항계수의 합은 2<sup>n</sup>, 짝수 번째(홀수 번째) 이항계수의 합은 2<sup>n−1</sup>이에요.</p><p>파스칼의 삼각형: <sub>n</sub>C<sub>r</sub> + <sub>n</sub>C<sub>r+1</sub> = <sub>n+1</sub>C<sub>r+1</sub></p><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>(x + 2)⁵에서 x³의 계수</p><p class='sn-ex-s'>₅C₃ × 2²</p><p class='sn-ex-a'>답: 40</p></div><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>(x + 1/x)⁴의 상수항</p><p class='sn-ex-s'>4 − 2r = 0, r = 2</p><p class='sn-ex-s'>₄C₂</p><p class='sn-ex-a'>답: 6</p></div><h2>자주 하는 실수</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>자주 하는 실수</th><th>바르게 생각하기</th></tr></thead><tbody><tr><td>계수에서 b의 거듭제곱을 빠뜨린다</td><td>₅C₃ × 2²처럼 상수도 거듭제곱해요.</td></tr><tr><td>음수 b의 부호를 놓친다</td><td>(−2)³ = −8처럼 부호까지 계산해요.</td></tr><tr><td>이항계수의 합을 2n으로 쓴다</td><td>2ⁿ이에요.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "이항정리는 어디에 쓰이나요?",
+   "a": "이항분포의 확률 계산과 근삿값 계산에 써요."
+  },
+  {
+   "q": "파스칼의 삼각형의 각 행의 합은?",
+   "a": "2ⁿ이에요."
+  }
+ ],
+ "sets": [
+  {
+   "title": "특정한 항의 계수",
+   "items": [
+    {
+     "q": "<b>(3x − 1)<sup>3</sup></b>의 전개식에서 x<sup>2</sup>의 계수는?",
+     "c": [
+      "27",
+      "3",
+      "−3",
+      "−27"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>3</sub>C<sub>2</sub>(3x)<sup>2</sup>(−1)<sup>1</sup>에서 3 × 9 × (−1). <b>−27</b>"
+    },
+    {
+     "q": "<b>(2x + 3)<sup>5</sup></b>의 전개식에서 x<sup>3</sup>의 계수는?",
+     "c": [
+      "90",
+      "80",
+      "720",
+      "10"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>5</sub>C<sub>3</sub>(2x)<sup>3</sup>(3)<sup>2</sup>에서 10 × 8 × 9. <b>720</b>"
+    },
+    {
+     "q": "<b>(3x − 2)<sup>3</sup></b>의 전개식에서 x<sup>2</sup>의 계수는?",
+     "c": [
+      "−54",
+      "−6",
+      "27",
+      "3"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>3</sub>C<sub>2</sub>(3x)<sup>2</sup>(−2)<sup>1</sup>에서 3 × 9 × (−2). <b>−54</b>"
+    },
+    {
+     "q": "<b>(x + 2)<sup>3</sup></b>의 전개식에서 x<sup>2</sup>의 계수는?",
+     "c": [
+      "3",
+      "−6",
+      "7",
+      "6"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>3</sub>C<sub>2</sub>(x)<sup>2</sup>(2)<sup>1</sup>에서 3 × 1 × 2. <b>6</b>"
+    },
+    {
+     "q": "<b>(3x + 3)<sup>3</sup></b>의 전개식에서 x<sup>1</sup>의 계수는?",
+     "c": [
+      "27",
+      "81",
+      "9",
+      "3"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>3</sub>C<sub>1</sub>(3x)<sup>1</sup>(3)<sup>2</sup>에서 3 × 3 × 9. <b>81</b>"
+    },
+    {
+     "q": "<b>(2x + 2)<sup>5</sup></b>의 전개식에서 x<sup>2</sup>의 계수는?",
+     "c": [
+      "40",
+      "320",
+      "80",
+      "10"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>5</sub>C<sub>2</sub>(2x)<sup>2</sup>(2)<sup>3</sup>에서 10 × 4 × 8. <b>320</b>"
+    },
+    {
+     "q": "<b>(2x + 2)<sup>4</sup></b>의 전개식에서 x<sup>3</sup>의 계수는?",
+     "c": [
+      "8",
+      "4",
+      "64",
+      "32"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>4</sub>C<sub>3</sub>(2x)<sup>3</sup>(2)<sup>1</sup>에서 4 × 8 × 2. <b>64</b>"
+    },
+    {
+     "q": "<b>(2x + 2)<sup>6</sup></b>의 전개식에서 x<sup>3</sup>의 계수는?",
+     "c": [
+      "1280",
+      "−1280",
+      "160",
+      "20"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>6</sub>C<sub>3</sub>(2x)<sup>3</sup>(2)<sup>3</sup>에서 20 × 8 × 8. <b>1280</b>"
+    },
+    {
+     "q": "<b>(2x + 2)<sup>4</sup></b>의 전개식에서 x<sup>2</sup>의 계수는?",
+     "c": [
+      "96",
+      "24",
+      "−96",
+      "6"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>4</sub>C<sub>2</sub>(2x)<sup>2</sup>(2)<sup>2</sup>에서 6 × 4 × 4. <b>96</b>"
+    },
+    {
+     "q": "<b>(3x − 2)<sup>4</sup></b>의 전개식에서 x<sup>1</sup>의 계수는?",
+     "c": [
+      "−96",
+      "−32",
+      "12",
+      "4"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>4</sub>C<sub>1</sub>(3x)<sup>1</sup>(−2)<sup>3</sup>에서 4 × 3 × (−8). <b>−96</b>"
+    },
+    {
+     "q": "<b>(x + 3)<sup>6</sup></b>의 전개식에서 x<sup>2</sup>의 계수는?",
+     "c": [
+      "−1215",
+      "1215",
+      "1216",
+      "15"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>6</sub>C<sub>2</sub>(x)<sup>2</sup>(3)<sup>4</sup>에서 15 × 1 × 81. <b>1215</b>"
+    },
+    {
+     "q": "<b>(2x − 1)<sup>5</sup></b>의 전개식에서 x<sup>4</sup>의 계수는?",
+     "c": [
+      "−5",
+      "80",
+      "5",
+      "−80"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>5</sub>C<sub>4</sub>(2x)<sup>4</sup>(−1)<sup>1</sup>에서 5 × 16 × (−1). <b>−80</b>"
+    },
+    {
+     "q": "<b>(2x − 1)<sup>7</sup></b>의 전개식에서 x<sup>2</sup>의 계수는?",
+     "c": [
+      "21",
+      "84",
+      "−21",
+      "−84"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>7</sub>C<sub>2</sub>(2x)<sup>2</sup>(−1)<sup>5</sup>에서 21 × 4 × (−1). <b>−84</b>"
+    },
+    {
+     "q": "<b>(2x + 3)<sup>7</sup></b>의 전개식에서 x<sup>5</sup>의 계수는?",
+     "c": [
+      "21",
+      "189",
+      "6048",
+      "672"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>7</sub>C<sub>5</sub>(2x)<sup>5</sup>(3)<sup>2</sup>에서 21 × 32 × 9. <b>6048</b>"
+    },
+    {
+     "q": "<b>(x − 2)<sup>6</sup></b>의 전개식에서 x<sup>2</sup>의 계수는?",
+     "c": [
+      "−240",
+      "240",
+      "15",
+      "241"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>6</sub>C<sub>2</sub>(x)<sup>2</sup>(−2)<sup>4</sup>에서 15 × 1 × 16. <b>240</b>"
+    },
+    {
+     "q": "<b>(2x + 2)<sup>3</sup></b>의 전개식에서 x<sup>1</sup>의 계수는?",
+     "c": [
+      "3",
+      "24",
+      "6",
+      "12"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>3</sub>C<sub>1</sub>(2x)<sup>1</sup>(2)<sup>2</sup>에서 3 × 2 × 4. <b>24</b>"
+    },
+    {
+     "q": "<b>(3x − 2)<sup>5</sup></b>의 전개식에서 x<sup>4</sup>의 계수는?",
+     "c": [
+      "−10",
+      "5",
+      "−810",
+      "405"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>5</sub>C<sub>4</sub>(3x)<sup>4</sup>(−2)<sup>1</sup>에서 5 × 81 × (−2). <b>−810</b>"
+    },
+    {
+     "q": "<b>(x + 2)<sup>4</sup></b>의 전개식에서 x<sup>1</sup>의 계수는?",
+     "c": [
+      "33",
+      "−32",
+      "4",
+      "32"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>4</sub>C<sub>1</sub>(x)<sup>1</sup>(2)<sup>3</sup>에서 4 × 1 × 8. <b>32</b>"
+    },
+    {
+     "q": "<b>(2x + 2)<sup>3</sup></b>의 전개식에서 x<sup>2</sup>의 계수는?",
+     "c": [
+      "12",
+      "6",
+      "24",
+      "3"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>3</sub>C<sub>2</sub>(2x)<sup>2</sup>(2)<sup>1</sup>에서 3 × 4 × 2. <b>24</b>"
+    },
+    {
+     "q": "<b>(x + 2)<sup>5</sup></b>의 전개식에서 x<sup>1</sup>의 계수는?",
+     "c": [
+      "80",
+      "81",
+      "5",
+      "−80"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>5</sub>C<sub>1</sub>(x)<sup>1</sup>(2)<sup>4</sup>에서 5 × 1 × 16. <b>80</b>"
+    }
+   ]
+  },
+  {
+   "title": "일반항",
+   "items": [
+    {
+     "q": "<b>(x + y)<sup>6</sup></b>의 전개식에서 x<sup>3</sup>y<sup>3</sup>항은?",
+     "c": [
+      "6x<sup>3</sup>y<sup>3</sup>",
+      "21x<sup>3</sup>y<sup>3</sup>",
+      "120x<sup>3</sup>y<sup>3</sup>",
+      "20x<sup>3</sup>y<sup>3</sup>"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>6</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>20x<sup>3</sup>y<sup>3</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>8</sup></b>의 전개식에서 x<sup>3</sup>y<sup>5</sup>항은?",
+     "c": [
+      "336x<sup>3</sup>y<sup>5</sup>",
+      "8x<sup>3</sup>y<sup>5</sup>",
+      "56x<sup>3</sup>y<sup>5</sup>",
+      "57x<sup>3</sup>y<sup>5</sup>"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>8</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>56x<sup>3</sup>y<sup>5</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>8</sup></b>의 전개식에서 x<sup>5</sup>y<sup>3</sup>항은?",
+     "c": [
+      "56x<sup>5</sup>y<sup>3</sup>",
+      "57x<sup>5</sup>y<sup>3</sup>",
+      "8x<sup>5</sup>y<sup>3</sup>",
+      "6720x<sup>5</sup>y<sup>3</sup>"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>8</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>56x<sup>5</sup>y<sup>3</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>7</sup></b>의 전개식에서 x<sup>2</sup>y<sup>5</sup>항은?",
+     "c": [
+      "42x<sup>2</sup>y<sup>5</sup>",
+      "21x<sup>2</sup>y<sup>5</sup>",
+      "22x<sup>2</sup>y<sup>5</sup>",
+      "7x<sup>2</sup>y<sup>5</sup>"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>7</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>21x<sup>2</sup>y<sup>5</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>7</sup></b>의 전개식에서 x<sup>3</sup>y<sup>4</sup>항은?",
+     "c": [
+      "35x<sup>3</sup>y<sup>4</sup>",
+      "36x<sup>3</sup>y<sup>4</sup>",
+      "7x<sup>3</sup>y<sup>4</sup>",
+      "210x<sup>3</sup>y<sup>4</sup>"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>7</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>35x<sup>3</sup>y<sup>4</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>7</sup></b>의 전개식에서 x<sup>4</sup>y<sup>3</sup>항은?",
+     "c": [
+      "36x<sup>4</sup>y<sup>3</sup>",
+      "840x<sup>4</sup>y<sup>3</sup>",
+      "35x<sup>4</sup>y<sup>3</sup>",
+      "7x<sup>4</sup>y<sup>3</sup>"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>7</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>35x<sup>4</sup>y<sup>3</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>4</sup></b>의 전개식에서 x<sup>2</sup>y<sup>2</sup>항은?",
+     "c": [
+      "4x<sup>2</sup>y<sup>2</sup>",
+      "12x<sup>2</sup>y<sup>2</sup>",
+      "7x<sup>2</sup>y<sup>2</sup>",
+      "6x<sup>2</sup>y<sup>2</sup>"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>4</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>6x<sup>2</sup>y<sup>2</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>6</sup></b>의 전개식에서 x<sup>4</sup>y<sup>2</sup>항은?",
+     "c": [
+      "15x<sup>4</sup>y<sup>2</sup>",
+      "6x<sup>4</sup>y<sup>2</sup>",
+      "16x<sup>4</sup>y<sup>2</sup>",
+      "360x<sup>4</sup>y<sup>2</sup>"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>6</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>15x<sup>4</sup>y<sup>2</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>8</sup></b>의 전개식에서 x<sup>7</sup>y<sup>1</sup>항은?",
+     "c": [
+      "x<sup>7</sup>y<sup>1</sup>",
+      "8x<sup>7</sup>y<sup>1</sup>",
+      "40,320x<sup>7</sup>y<sup>1</sup>",
+      "9x<sup>7</sup>y<sup>1</sup>"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>8</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>8x<sup>7</sup>y<sup>1</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>8</sup></b>의 전개식에서 x<sup>6</sup>y<sup>2</sup>항은?",
+     "c": [
+      "29x<sup>6</sup>y<sup>2</sup>",
+      "8x<sup>6</sup>y<sup>2</sup>",
+      "20,160x<sup>6</sup>y<sup>2</sup>",
+      "28x<sup>6</sup>y<sup>2</sup>"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>8</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>28x<sup>6</sup>y<sup>2</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>4</sup></b>의 전개식에서 x<sup>3</sup>y<sup>1</sup>항은?",
+     "c": [
+      "24x<sup>3</sup>y<sup>1</sup>",
+      "x<sup>3</sup>y<sup>1</sup>",
+      "5x<sup>3</sup>y<sup>1</sup>",
+      "4x<sup>3</sup>y<sup>1</sup>"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>4</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>4x<sup>3</sup>y<sup>1</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>8</sup></b>의 전개식에서 x<sup>4</sup>y<sup>4</sup>항은?",
+     "c": [
+      "1680x<sup>4</sup>y<sup>4</sup>",
+      "8x<sup>4</sup>y<sup>4</sup>",
+      "70x<sup>4</sup>y<sup>4</sup>",
+      "71x<sup>4</sup>y<sup>4</sup>"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>8</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>70x<sup>4</sup>y<sup>4</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>5</sup></b>의 전개식에서 x<sup>3</sup>y<sup>2</sup>항은?",
+     "c": [
+      "60x<sup>3</sup>y<sup>2</sup>",
+      "11x<sup>3</sup>y<sup>2</sup>",
+      "5x<sup>3</sup>y<sup>2</sup>",
+      "10x<sup>3</sup>y<sup>2</sup>"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>5</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>10x<sup>3</sup>y<sup>2</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>5</sup></b>의 전개식에서 x<sup>4</sup>y<sup>1</sup>항은?",
+     "c": [
+      "120x<sup>4</sup>y<sup>1</sup>",
+      "5x<sup>4</sup>y<sup>1</sup>",
+      "x<sup>4</sup>y<sup>1</sup>",
+      "6x<sup>4</sup>y<sup>1</sup>"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>5</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>5x<sup>4</sup>y<sup>1</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>5</sup></b>의 전개식에서 x<sup>2</sup>y<sup>3</sup>항은?",
+     "c": [
+      "5x<sup>2</sup>y<sup>3</sup>",
+      "20x<sup>2</sup>y<sup>3</sup>",
+      "10x<sup>2</sup>y<sup>3</sup>",
+      "11x<sup>2</sup>y<sup>3</sup>"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>5</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>10x<sup>2</sup>y<sup>3</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>7</sup></b>의 전개식에서 x<sup>5</sup>y<sup>2</sup>항은?",
+     "c": [
+      "7x<sup>5</sup>y<sup>2</sup>",
+      "2520x<sup>5</sup>y<sup>2</sup>",
+      "21x<sup>5</sup>y<sup>2</sup>",
+      "22x<sup>5</sup>y<sup>2</sup>"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>7</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>21x<sup>5</sup>y<sup>2</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>6</sup></b>의 전개식에서 x<sup>5</sup>y<sup>1</sup>항은?",
+     "c": [
+      "x<sup>5</sup>y<sup>1</sup>",
+      "6x<sup>5</sup>y<sup>1</sup>",
+      "720x<sup>5</sup>y<sup>1</sup>",
+      "7x<sup>5</sup>y<sup>1</sup>"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>6</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>6x<sup>5</sup>y<sup>1</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>8</sup></b>의 전개식에서 x<sup>2</sup>y<sup>6</sup>항은?",
+     "c": [
+      "8x<sup>2</sup>y<sup>6</sup>",
+      "28x<sup>2</sup>y<sup>6</sup>",
+      "29x<sup>2</sup>y<sup>6</sup>",
+      "56x<sup>2</sup>y<sup>6</sup>"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>8</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>28x<sup>2</sup>y<sup>6</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>7</sup></b>의 전개식에서 x<sup>6</sup>y<sup>1</sup>항은?",
+     "c": [
+      "7x<sup>6</sup>y<sup>1</sup>",
+      "x<sup>6</sup>y<sup>1</sup>",
+      "8x<sup>6</sup>y<sup>1</sup>",
+      "5040x<sup>6</sup>y<sup>1</sup>"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>7</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>7x<sup>6</sup>y<sup>1</sup></b>"
+    },
+    {
+     "q": "<b>(x + y)<sup>6</sup></b>의 전개식에서 x<sup>2</sup>y<sup>4</sup>항은?",
+     "c": [
+      "15x<sup>2</sup>y<sup>4</sup>",
+      "30x<sup>2</sup>y<sup>4</sup>",
+      "16x<sup>2</sup>y<sup>4</sup>",
+      "6x<sup>2</sup>y<sup>4</sup>"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>6</sub>C<sub>r</sub>x<sup>r</sup>y<sup>n−r</sup>. <b>15x<sup>2</sup>y<sup>4</sup></b>"
+    }
+   ]
+  },
+  {
+   "title": "상수항",
+   "items": [
+    {
+     "q": "<b>(x − <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>)<sup>4</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "6",
+      "4",
+      "−24",
+      "24"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>4</sub>C<sub>r</sub>x<sup>4−r</sup>(−2/x)<sup>r</sup>에서 4 − 2r = 0, r = 2. <b>24</b>"
+    },
+    {
+     "q": "<b>(x + 2)<sup>4</sup></b>의 전개식에서 x<sup>2</sup>의 계수는?",
+     "c": [
+      "6",
+      "25",
+      "24",
+      "−24"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>4</sub>C<sub>2</sub>(x)<sup>2</sup>(2)<sup>2</sup>에서 6 × 1 × 4. <b>24</b>"
+    },
+    {
+     "q": "<b>(3x + 3)<sup>7</sup></b>의 전개식에서 x<sup>5</sup>의 계수는?",
+     "c": [
+      "5103",
+      "189",
+      "21",
+      "45,927"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>7</sub>C<sub>5</sub>(3x)<sup>5</sup>(3)<sup>2</sup>에서 21 × 243 × 9. <b>45,927</b>"
+    },
+    {
+     "q": "<b>(x − <span class='fr'><span class='fn'>1</span><span class='fd'>x</span></span>)<sup>8</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "70",
+      "−70",
+      "1",
+      "140"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>8</sub>C<sub>r</sub>x<sup>8−r</sup>(−1/x)<sup>r</sup>에서 8 − 2r = 0, r = 4. <b>70</b>"
+    },
+    {
+     "q": "<b>(x + <span class='fr'><span class='fn'>3</span><span class='fd'>x</span></span>)<sup>8</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "70",
+      "81",
+      "5670",
+      "−5670"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>8</sub>C<sub>r</sub>x<sup>8−r</sup>(3/x)<sup>r</sup>에서 8 − 2r = 0, r = 4. <b>5670</b>"
+    },
+    {
+     "q": "<b>(x − <span class='fr'><span class='fn'>1</span><span class='fd'>x</span></span>)<sup>6</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "−1",
+      "20",
+      "−40",
+      "−20"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>6</sub>C<sub>r</sub>x<sup>6−r</sup>(−1/x)<sup>r</sup>에서 6 − 2r = 0, r = 3. <b>−20</b>"
+    },
+    {
+     "q": "<b>(x − 2)<sup>6</sup></b>의 전개식에서 x<sup>1</sup>의 계수는?",
+     "c": [
+      "−191",
+      "−192",
+      "192",
+      "6"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>6</sub>C<sub>1</sub>(x)<sup>1</sup>(−2)<sup>5</sup>에서 6 × 1 × (−32). <b>−192</b>"
+    },
+    {
+     "q": "<b>(3x + 2)<sup>5</sup></b>의 전개식에서 x<sup>2</sup>의 계수는?",
+     "c": [
+      "720",
+      "10",
+      "80",
+      "90"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>5</sub>C<sub>2</sub>(3x)<sup>2</sup>(2)<sup>3</sup>에서 10 × 9 × 8. <b>720</b>"
+    },
+    {
+     "q": "<b>(x − 2)<sup>6</sup></b>의 전개식에서 x<sup>4</sup>의 계수는?",
+     "c": [
+      "−60",
+      "61",
+      "60",
+      "15"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>6</sub>C<sub>4</sub>(x)<sup>4</sup>(−2)<sup>2</sup>에서 15 × 1 × 4. <b>60</b>"
+    },
+    {
+     "q": "<b>(x − <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>)<sup>6</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "160",
+      "20",
+      "−160",
+      "−8"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>6</sub>C<sub>r</sub>x<sup>6−r</sup>(−2/x)<sup>r</sup>에서 6 − 2r = 0, r = 3. <b>−160</b>"
+    },
+    {
+     "q": "<b>(x + <span class='fr'><span class='fn'>1</span><span class='fd'>x</span></span>)<sup>6</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "−20",
+      "20",
+      "40",
+      "1"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>6</sub>C<sub>r</sub>x<sup>6−r</sup>(1/x)<sup>r</sup>에서 6 − 2r = 0, r = 3. <b>20</b>"
+    },
+    {
+     "q": "<b>(3x − 2)<sup>6</sup></b>의 전개식에서 x<sup>1</sup>의 계수는?",
+     "c": [
+      "18",
+      "−192",
+      "−576",
+      "6"
+     ],
+     "a": 2,
+     "e": "일반항 <sub>6</sub>C<sub>1</sub>(3x)<sup>1</sup>(−2)<sup>5</sup>에서 6 × 3 × (−32). <b>−576</b>"
+    },
+    {
+     "q": "<b>(x + <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>)<sup>6</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "−160",
+      "20",
+      "8",
+      "160"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>6</sub>C<sub>r</sub>x<sup>6−r</sup>(2/x)<sup>r</sup>에서 6 − 2r = 0, r = 3. <b>160</b>"
+    },
+    {
+     "q": "<b>(x + <span class='fr'><span class='fn'>1</span><span class='fd'>x</span></span>)<sup>4</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "−6",
+      "1",
+      "12",
+      "6"
+     ],
+     "a": 3,
+     "e": "일반항 <sub>4</sub>C<sub>r</sub>x<sup>4−r</sup>(1/x)<sup>r</sup>에서 4 − 2r = 0, r = 2. <b>6</b>"
+    },
+    {
+     "q": "<b>(x − <span class='fr'><span class='fn'>1</span><span class='fd'>x</span></span>)<sup>4</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "−6",
+      "6",
+      "1",
+      "12"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>4</sub>C<sub>r</sub>x<sup>4−r</sup>(−1/x)<sup>r</sup>에서 4 − 2r = 0, r = 2. <b>6</b>"
+    },
+    {
+     "q": "<b>(3x + 3)<sup>5</sup></b>의 전개식에서 x<sup>1</sup>의 계수는?",
+     "c": [
+      "1215",
+      "405",
+      "15",
+      "5"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>5</sub>C<sub>1</sub>(3x)<sup>1</sup>(3)<sup>4</sup>에서 5 × 3 × 81. <b>1215</b>"
+    },
+    {
+     "q": "<b>(x + <span class='fr'><span class='fn'>3</span><span class='fd'>x</span></span>)<sup>6</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "540",
+      "20",
+      "−540",
+      "27"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>6</sub>C<sub>r</sub>x<sup>6−r</sup>(3/x)<sup>r</sup>에서 6 − 2r = 0, r = 3. <b>540</b>"
+    },
+    {
+     "q": "<b>(x − <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>)<sup>8</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "1120",
+      "70",
+      "−1120",
+      "16"
+     ],
+     "a": 0,
+     "e": "일반항 <sub>8</sub>C<sub>r</sub>x<sup>8−r</sup>(−2/x)<sup>r</sup>에서 8 − 2r = 0, r = 4. <b>1120</b>"
+    },
+    {
+     "q": "<b>(x + <span class='fr'><span class='fn'>1</span><span class='fd'>x</span></span>)<sup>8</sup></b>의 전개식에서 상수항은?",
+     "c": [
+      "1",
+      "70",
+      "−70",
+      "140"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>8</sub>C<sub>r</sub>x<sup>8−r</sup>(1/x)<sup>r</sup>에서 8 − 2r = 0, r = 4. <b>70</b>"
+    },
+    {
+     "q": "<b>(3x + 3)<sup>7</sup></b>의 전개식에서 x<sup>4</sup>의 계수는?",
+     "c": [
+      "945",
+      "76,545",
+      "35",
+      "2835"
+     ],
+     "a": 1,
+     "e": "일반항 <sub>7</sub>C<sub>4</sub>(3x)<sup>4</sup>(3)<sup>3</sup>에서 35 × 81 × 27. <b>76,545</b>"
+    }
+   ]
+  },
+  {
+   "title": "이항계수의 합",
+   "items": [
+    {
+     "q": "<b><sub>6</sub>C<sub>0</sub> + <sub>6</sub>C<sub>1</sub> + … + <sub>6</sub>C<sub>6</sub></b>의 값은?",
+     "c": [
+      "36",
+      "64",
+      "12",
+      "32"
+     ],
+     "a": 1,
+     "e": "(1 + 1)<sup>6</sup> = <b>64</b>"
+    },
+    {
+     "q": "<b><sub>4</sub>C<sub>1</sub> + <sub>4</sub>C<sub>2</sub> + … + <sub>4</sub>C<sub>4</sub></b>의 값은?",
+     "c": [
+      "15",
+      "14",
+      "8",
+      "16"
+     ],
+     "a": 0,
+     "e": "전체 2<sup>4</sup>에서 <sub>4</sub>C<sub>0</sub> = 1을 빼요. <b>15</b>"
+    },
+    {
+     "q": "<b><sub>8</sub>C<sub>1</sub> + <sub>8</sub>C<sub>2</sub> + … + <sub>8</sub>C<sub>8</sub></b>의 값은?",
+     "c": [
+      "255",
+      "256",
+      "254",
+      "128"
+     ],
+     "a": 0,
+     "e": "전체 2<sup>8</sup>에서 <sub>8</sub>C<sub>0</sub> = 1을 빼요. <b>255</b>"
+    },
+    {
+     "q": "<b><sub>6</sub>C<sub>0</sub> + <sub>6</sub>C<sub>2</sub> + <sub>6</sub>C<sub>4</sub> + …</b>의 값은? (n = 6)",
+     "c": [
+      "16",
+      "64",
+      "15",
+      "32"
+     ],
+     "a": 3,
+     "e": "짝수 번째 이항계수의 합 = 홀수 번째의 합 = 2<sup>n−1</sup>. <b>32</b>"
+    },
+    {
+     "q": "<b><sub>7</sub>C<sub>0</sub> + <sub>7</sub>C<sub>2</sub> + <sub>7</sub>C<sub>4</sub> + …</b>의 값은? (n = 7)",
+     "c": [
+      "21",
+      "128",
+      "64",
+      "32"
+     ],
+     "a": 2,
+     "e": "짝수 번째 이항계수의 합 = 홀수 번째의 합 = 2<sup>n−1</sup>. <b>64</b>"
+    },
+    {
+     "q": "<b><sub>4</sub>C<sub>0</sub> + <sub>4</sub>C<sub>2</sub> + <sub>4</sub>C<sub>4</sub> + …</b>의 값은? (n = 4)",
+     "c": [
+      "16",
+      "8",
+      "6",
+      "4"
+     ],
+     "a": 1,
+     "e": "짝수 번째 이항계수의 합 = 홀수 번째의 합 = 2<sup>n−1</sup>. <b>8</b>"
+    },
+    {
+     "q": "<b><sub>5</sub>C<sub>0</sub> + <sub>5</sub>C<sub>2</sub> + <sub>5</sub>C<sub>4</sub> + …</b>의 값은? (n = 5)",
+     "c": [
+      "16",
+      "10",
+      "8",
+      "32"
+     ],
+     "a": 0,
+     "e": "짝수 번째 이항계수의 합 = 홀수 번째의 합 = 2<sup>n−1</sup>. <b>16</b>"
+    },
+    {
+     "q": "<b><sub>10</sub>C<sub>0</sub> + <sub>10</sub>C<sub>1</sub> + … + <sub>10</sub>C<sub>10</sub></b>의 값은?",
+     "c": [
+      "512",
+      "100",
+      "1024",
+      "20"
+     ],
+     "a": 2,
+     "e": "(1 + 1)<sup>10</sup> = <b>1024</b>"
+    },
+    {
+     "q": "<b><sub>5</sub>C<sub>0</sub> + <sub>5</sub>C<sub>1</sub> + … + <sub>5</sub>C<sub>5</sub></b>의 값은?",
+     "c": [
+      "16",
+      "25",
+      "10",
+      "32"
+     ],
+     "a": 3,
+     "e": "(1 + 1)<sup>5</sup> = <b>32</b>"
+    },
+    {
+     "q": "<b><sub>11</sub>C<sub>1</sub> + <sub>11</sub>C<sub>2</sub> + … + <sub>11</sub>C<sub>11</sub></b>의 값은?",
+     "c": [
+      "2046",
+      "2048",
+      "2047",
+      "1024"
+     ],
+     "a": 2,
+     "e": "전체 2<sup>11</sup>에서 <sub>11</sub>C<sub>0</sub> = 1을 빼요. <b>2047</b>"
+    },
+    {
+     "q": "<b><sub>10</sub>C<sub>0</sub> + <sub>10</sub>C<sub>2</sub> + <sub>10</sub>C<sub>4</sub> + …</b>의 값은? (n = 10)",
+     "c": [
+      "1024",
+      "512",
+      "256",
+      "45"
+     ],
+     "a": 1,
+     "e": "짝수 번째 이항계수의 합 = 홀수 번째의 합 = 2<sup>n−1</sup>. <b>512</b>"
+    },
+    {
+     "q": "<b><sub>7</sub>C<sub>0</sub> + <sub>7</sub>C<sub>1</sub> + … + <sub>7</sub>C<sub>7</sub></b>의 값은?",
+     "c": [
+      "14",
+      "64",
+      "128",
+      "49"
+     ],
+     "a": 2,
+     "e": "(1 + 1)<sup>7</sup> = <b>128</b>"
+    },
+    {
+     "q": "<b><sub>7</sub>C<sub>1</sub> + <sub>7</sub>C<sub>2</sub> + … + <sub>7</sub>C<sub>7</sub></b>의 값은?",
+     "c": [
+      "126",
+      "128",
+      "64",
+      "127"
+     ],
+     "a": 3,
+     "e": "전체 2<sup>7</sup>에서 <sub>7</sub>C<sub>0</sub> = 1을 빼요. <b>127</b>"
+    },
+    {
+     "q": "<b><sub>6</sub>C<sub>1</sub> + <sub>6</sub>C<sub>2</sub> + … + <sub>6</sub>C<sub>6</sub></b>의 값은?",
+     "c": [
+      "62",
+      "63",
+      "64",
+      "32"
+     ],
+     "a": 1,
+     "e": "전체 2<sup>6</sup>에서 <sub>6</sub>C<sub>0</sub> = 1을 빼요. <b>63</b>"
+    },
+    {
+     "q": "<b><sub>12</sub>C<sub>1</sub> + <sub>12</sub>C<sub>2</sub> + … + <sub>12</sub>C<sub>12</sub></b>의 값은?",
+     "c": [
+      "2048",
+      "4096",
+      "4094",
+      "4095"
+     ],
+     "a": 3,
+     "e": "전체 2<sup>12</sup>에서 <sub>12</sub>C<sub>0</sub> = 1을 빼요. <b>4095</b>"
+    },
+    {
+     "q": "<b><sub>9</sub>C<sub>0</sub> + <sub>9</sub>C<sub>1</sub> + … + <sub>9</sub>C<sub>9</sub></b>의 값은?",
+     "c": [
+      "512",
+      "81",
+      "18",
+      "256"
+     ],
+     "a": 0,
+     "e": "(1 + 1)<sup>9</sup> = <b>512</b>"
+    },
+    {
+     "q": "<b><sub>11</sub>C<sub>0</sub> + <sub>11</sub>C<sub>1</sub> + … + <sub>11</sub>C<sub>11</sub></b>의 값은?",
+     "c": [
+      "22",
+      "121",
+      "1024",
+      "2048"
+     ],
+     "a": 3,
+     "e": "(1 + 1)<sup>11</sup> = <b>2048</b>"
+    },
+    {
+     "q": "<b><sub>10</sub>C<sub>1</sub> + <sub>10</sub>C<sub>2</sub> + … + <sub>10</sub>C<sub>10</sub></b>의 값은?",
+     "c": [
+      "1023",
+      "1024",
+      "512",
+      "1022"
+     ],
+     "a": 0,
+     "e": "전체 2<sup>10</sup>에서 <sub>10</sub>C<sub>0</sub> = 1을 빼요. <b>1023</b>"
+    },
+    {
+     "q": "<b><sub>8</sub>C<sub>0</sub> + <sub>8</sub>C<sub>2</sub> + <sub>8</sub>C<sub>4</sub> + …</b>의 값은? (n = 8)",
+     "c": [
+      "28",
+      "64",
+      "128",
+      "256"
+     ],
+     "a": 2,
+     "e": "짝수 번째 이항계수의 합 = 홀수 번째의 합 = 2<sup>n−1</sup>. <b>128</b>"
+    },
+    {
+     "q": "<b><sub>8</sub>C<sub>0</sub> + <sub>8</sub>C<sub>1</sub> + … + <sub>8</sub>C<sub>8</sub></b>의 값은?",
+     "c": [
+      "64",
+      "256",
+      "16",
+      "128"
+     ],
+     "a": 1,
+     "e": "(1 + 1)<sup>8</sup> = <b>256</b>"
+    }
+   ]
+  },
+  {
+   "title": "파스칼의 삼각형",
+   "items": [
+    {
+     "q": "<b><sub>6</sub>C<sub>1</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>6</sub>C<sub>5</sub>",
+      "<sub>5</sub>C<sub>1</sub>",
+      "<sub>6</sub>C<sub>2</sub>",
+      "<sub>6</sub>P<sub>1</sub>"
+     ],
+     "a": 0,
+     "e": "<sub>n</sub>C<sub>r</sub> = <sub>n</sub>C<sub>n−r</sub>. <b><sub>6</sub>C<sub>5</sub></b>"
+    },
+    {
+     "q": "<b><sub>10</sub>C<sub>5</sub> + <sub>10</sub>C<sub>6</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>20</sub>C<sub>11</sub>",
+      "<sub>11</sub>C<sub>5</sub>",
+      "<sub>10</sub>C<sub>7</sub>",
+      "<sub>11</sub>C<sub>6</sub>"
+     ],
+     "a": 3,
+     "e": "파스칼의 삼각형: <sub>n</sub>C<sub>r</sub> + <sub>n</sub>C<sub>r+1</sub> = <sub>n+1</sub>C<sub>r+1</sub>. <b><sub>11</sub>C<sub>6</sub></b>"
+    },
+    {
+     "q": "<b><sub>5</sub>C<sub>2</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>5</sub>C<sub>1</sub>",
+      "<sub>5</sub>C<sub>3</sub>",
+      "<sub>4</sub>C<sub>2</sub>",
+      "<sub>5</sub>P<sub>2</sub>"
+     ],
+     "a": 1,
+     "e": "<sub>n</sub>C<sub>r</sub> = <sub>n</sub>C<sub>n−r</sub>. <b><sub>5</sub>C<sub>3</sub></b>"
+    },
+    {
+     "q": "<b><sub>8</sub>C<sub>4</sub> + <sub>8</sub>C<sub>5</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>16</sub>C<sub>9</sub>",
+      "<sub>8</sub>C<sub>6</sub>",
+      "<sub>9</sub>C<sub>5</sub>",
+      "<sub>9</sub>C<sub>4</sub>"
+     ],
+     "a": 2,
+     "e": "파스칼의 삼각형: <sub>n</sub>C<sub>r</sub> + <sub>n</sub>C<sub>r+1</sub> = <sub>n+1</sub>C<sub>r+1</sub>. <b><sub>9</sub>C<sub>5</sub></b>"
+    },
+    {
+     "q": "<b><sub>6</sub>C<sub>5</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>6</sub>C<sub>1</sub>",
+      "<sub>5</sub>C<sub>5</sub>",
+      "<sub>6</sub>P<sub>5</sub>",
+      "<sub>6</sub>C<sub>6</sub>"
+     ],
+     "a": 0,
+     "e": "<sub>n</sub>C<sub>r</sub> = <sub>n</sub>C<sub>n−r</sub>. <b><sub>6</sub>C<sub>1</sub></b>"
+    },
+    {
+     "q": "<b><sub>10</sub>C<sub>6</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>9</sub>C<sub>6</sub>",
+      "<sub>10</sub>C<sub>7</sub>",
+      "<sub>10</sub>C<sub>4</sub>",
+      "<sub>10</sub>P<sub>6</sub>"
+     ],
+     "a": 2,
+     "e": "<sub>n</sub>C<sub>r</sub> = <sub>n</sub>C<sub>n−r</sub>. <b><sub>10</sub>C<sub>4</sub></b>"
+    },
+    {
+     "q": "<b><sub>4</sub>C<sub>3</sub> + <sub>4</sub>C<sub>4</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>5</sub>C<sub>3</sub>",
+      "<sub>4</sub>C<sub>5</sub>",
+      "<sub>8</sub>C<sub>7</sub>",
+      "<sub>5</sub>C<sub>4</sub>"
+     ],
+     "a": 3,
+     "e": "파스칼의 삼각형: <sub>n</sub>C<sub>r</sub> + <sub>n</sub>C<sub>r+1</sub> = <sub>n+1</sub>C<sub>r+1</sub>. <b><sub>5</sub>C<sub>4</sub></b>"
+    },
+    {
+     "q": "<b><sub>10</sub>C<sub>4</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>10</sub>C<sub>6</sub>",
+      "<sub>9</sub>C<sub>4</sub>",
+      "<sub>10</sub>C<sub>5</sub>",
+      "<sub>10</sub>P<sub>4</sub>"
+     ],
+     "a": 0,
+     "e": "<sub>n</sub>C<sub>r</sub> = <sub>n</sub>C<sub>n−r</sub>. <b><sub>10</sub>C<sub>6</sub></b>"
+    },
+    {
+     "q": "<b><sub>9</sub>C<sub>7</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>9</sub>C<sub>8</sub>",
+      "<sub>9</sub>P<sub>7</sub>",
+      "<sub>9</sub>C<sub>2</sub>",
+      "<sub>8</sub>C<sub>7</sub>"
+     ],
+     "a": 2,
+     "e": "<sub>n</sub>C<sub>r</sub> = <sub>n</sub>C<sub>n−r</sub>. <b><sub>9</sub>C<sub>2</sub></b>"
+    },
+    {
+     "q": "<b><sub>7</sub>C<sub>2</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>7</sub>C<sub>5</sub>",
+      "<sub>7</sub>C<sub>3</sub>",
+      "<sub>6</sub>C<sub>2</sub>",
+      "<sub>7</sub>P<sub>2</sub>"
+     ],
+     "a": 0,
+     "e": "<sub>n</sub>C<sub>r</sub> = <sub>n</sub>C<sub>n−r</sub>. <b><sub>7</sub>C<sub>5</sub></b>"
+    },
+    {
+     "q": "<b><sub>9</sub>C<sub>3</sub> + <sub>9</sub>C<sub>4</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>10</sub>C<sub>3</sub>",
+      "<sub>9</sub>C<sub>5</sub>",
+      "<sub>10</sub>C<sub>4</sub>",
+      "<sub>18</sub>C<sub>7</sub>"
+     ],
+     "a": 2,
+     "e": "파스칼의 삼각형: <sub>n</sub>C<sub>r</sub> + <sub>n</sub>C<sub>r+1</sub> = <sub>n+1</sub>C<sub>r+1</sub>. <b><sub>10</sub>C<sub>4</sub></b>"
+    },
+    {
+     "q": "<b><sub>8</sub>C<sub>6</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>7</sub>C<sub>6</sub>",
+      "<sub>8</sub>P<sub>6</sub>",
+      "<sub>8</sub>C<sub>2</sub>",
+      "<sub>8</sub>C<sub>7</sub>"
+     ],
+     "a": 2,
+     "e": "<sub>n</sub>C<sub>r</sub> = <sub>n</sub>C<sub>n−r</sub>. <b><sub>8</sub>C<sub>2</sub></b>"
+    },
+    {
+     "q": "<b><sub>9</sub>C<sub>1</sub> + <sub>9</sub>C<sub>2</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>9</sub>C<sub>3</sub>",
+      "<sub>10</sub>C<sub>2</sub>",
+      "<sub>10</sub>C<sub>1</sub>",
+      "<sub>18</sub>C<sub>3</sub>"
+     ],
+     "a": 1,
+     "e": "파스칼의 삼각형: <sub>n</sub>C<sub>r</sub> + <sub>n</sub>C<sub>r+1</sub> = <sub>n+1</sub>C<sub>r+1</sub>. <b><sub>10</sub>C<sub>2</sub></b>"
+    },
+    {
+     "q": "<b><sub>5</sub>C<sub>1</sub> + <sub>5</sub>C<sub>2</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>6</sub>C<sub>1</sub>",
+      "<sub>6</sub>C<sub>2</sub>",
+      "<sub>10</sub>C<sub>3</sub>",
+      "<sub>5</sub>C<sub>3</sub>"
+     ],
+     "a": 1,
+     "e": "파스칼의 삼각형: <sub>n</sub>C<sub>r</sub> + <sub>n</sub>C<sub>r+1</sub> = <sub>n+1</sub>C<sub>r+1</sub>. <b><sub>6</sub>C<sub>2</sub></b>"
+    },
+    {
+     "q": "<b><sub>5</sub>C<sub>3</sub> + <sub>5</sub>C<sub>4</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>10</sub>C<sub>7</sub>",
+      "<sub>6</sub>C<sub>4</sub>",
+      "<sub>5</sub>C<sub>5</sub>",
+      "<sub>6</sub>C<sub>3</sub>"
+     ],
+     "a": 1,
+     "e": "파스칼의 삼각형: <sub>n</sub>C<sub>r</sub> + <sub>n</sub>C<sub>r+1</sub> = <sub>n+1</sub>C<sub>r+1</sub>. <b><sub>6</sub>C<sub>4</sub></b>"
+    },
+    {
+     "q": "<b><sub>4</sub>C<sub>3</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>4</sub>C<sub>4</sub>",
+      "<sub>3</sub>C<sub>3</sub>",
+      "<sub>4</sub>P<sub>3</sub>",
+      "<sub>4</sub>C<sub>1</sub>"
+     ],
+     "a": 3,
+     "e": "<sub>n</sub>C<sub>r</sub> = <sub>n</sub>C<sub>n−r</sub>. <b><sub>4</sub>C<sub>1</sub></b>"
+    },
+    {
+     "q": "<b><sub>6</sub>C<sub>3</sub> + <sub>6</sub>C<sub>4</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>12</sub>C<sub>7</sub>",
+      "<sub>7</sub>C<sub>4</sub>",
+      "<sub>6</sub>C<sub>5</sub>",
+      "<sub>7</sub>C<sub>3</sub>"
+     ],
+     "a": 1,
+     "e": "파스칼의 삼각형: <sub>n</sub>C<sub>r</sub> + <sub>n</sub>C<sub>r+1</sub> = <sub>n+1</sub>C<sub>r+1</sub>. <b><sub>7</sub>C<sub>4</sub></b>"
+    },
+    {
+     "q": "<b><sub>5</sub>C<sub>2</sub> + <sub>5</sub>C<sub>3</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>10</sub>C<sub>5</sub>",
+      "<sub>5</sub>C<sub>4</sub>",
+      "<sub>6</sub>C<sub>2</sub>",
+      "<sub>6</sub>C<sub>3</sub>"
+     ],
+     "a": 3,
+     "e": "파스칼의 삼각형: <sub>n</sub>C<sub>r</sub> + <sub>n</sub>C<sub>r+1</sub> = <sub>n+1</sub>C<sub>r+1</sub>. <b><sub>6</sub>C<sub>3</sub></b>"
+    },
+    {
+     "q": "<b><sub>5</sub>C<sub>1</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>5</sub>P<sub>1</sub>",
+      "<sub>4</sub>C<sub>1</sub>",
+      "<sub>5</sub>C<sub>2</sub>",
+      "<sub>5</sub>C<sub>4</sub>"
+     ],
+     "a": 3,
+     "e": "<sub>n</sub>C<sub>r</sub> = <sub>n</sub>C<sub>n−r</sub>. <b><sub>5</sub>C<sub>4</sub></b>"
+    },
+    {
+     "q": "<b><sub>6</sub>C<sub>2</sub> + <sub>6</sub>C<sub>3</sub></b>의 값과 같은 것은?",
+     "c": [
+      "<sub>7</sub>C<sub>3</sub>",
+      "<sub>6</sub>C<sub>4</sub>",
+      "<sub>7</sub>C<sub>2</sub>",
+      "<sub>12</sub>C<sub>5</sub>"
+     ],
+     "a": 0,
+     "e": "파스칼의 삼각형: <sub>n</sub>C<sub>r</sub> + <sub>n</sub>C<sub>r+1</sub> = <sub>n+1</sub>C<sub>r+1</sub>. <b><sub>7</sub>C<sub>3</sub></b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 3,
+ "updated": "2026-11-25",
+ "country": "kr",
+ "subject": "math",
+ "grade": "probability-and-statistics"
+}

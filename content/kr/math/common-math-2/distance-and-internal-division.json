@@ -1,0 +1,1157 @@
+{
+ "slug": "distance-and-internal-division",
+ "title": "두 점 사이의 거리와 선분의 내분점",
+ "seo_title": "두 점 사이의 거리와 선분의 내분점 | 고등학교 공통수학2 학습지 (정답 포함)",
+ "short_title": "거리와 내분점",
+ "domain": "도형의 방정식",
+ "standard_code": "[10공수2-01-01]",
+ "standard_url": "https://ncic.re.kr/inv/org/download.do?year=2022&seq=10003559&orgType=ogi4",
+ "standard_text": "선분의 내분을 이해하고, 내분점의 좌표를 계산할 수 있다.",
+ "meta_desc": "고등학교 공통수학2 두 점 사이의 거리와 내분점 문제: 좌표평면 위의 두 점 사이의 거리, 수직선과 좌표평면에서 선분의 내분점, 중점, 삼각형의 무게중심, 거리 조건으로 좌표 구하기까지 100문제와 정답·해설.",
+ "key_big": "내분점의 x좌표 (mx₂ + nx₁)/(m + n)",
+ "key_sub": "거리는 피타고라스 정리, 무게중심은 세 꼭짓점 좌표의 평균이에요.",
+ "body_html": "<h2>생각하는 방법</h2><p>두 점 A(x₁, y₁), B(x₂, y₂) 사이의 거리는 AB = √((x₂ − x₁)² + (y₂ − y₁)²)이에요.</p><p>선분 AB를 m : n으로 내분하는 점의 좌표는 ((mx₂ + nx₁)/(m + n), (my₂ + ny₁)/(m + n))이에요.</p><p>m = n = 1이면 중점 ((x₁ + x₂)/2, (y₁ + y₂)/2)예요.</p><p>삼각형의 무게중심은 ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3)이에요.</p><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>A(1, 2), B(4, 6) 사이의 거리</p><p class='sn-ex-s'>√(3² + 4²)</p><p class='sn-ex-a'>답: 5</p></div><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>A(1, 2), B(7, 5)를 2 : 1로 내분</p><p class='sn-ex-s'>((2·7 + 1·1)/3, (2·5 + 1·2)/3)</p><p class='sn-ex-a'>답: (5, 4)</p></div><h2>자주 하는 실수</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>자주 하는 실수</th><th>바르게 생각하기</th></tr></thead><tbody><tr><td>내분점에서 m을 x₁에 곱한다</td><td>m은 B 쪽(x₂)에 곱해요.</td></tr><tr><td>거리에서 제곱을 하지 않고 더한다</td><td>가로·세로 차를 제곱해서 더한 뒤 √를 씌워요.</td></tr><tr><td>무게중심을 2로 나눈다</td><td>세 점의 평균이므로 3으로 나눠요.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "내분점은 A와 B 중 어느 쪽에 가깝나요?",
+   "a": "m &lt; n이면 A에 더 가까워요."
+  },
+  {
+   "q": "거리가 같은 점은 어떻게 구하나요?",
+   "a": "거리의 제곱이 같다는 식을 세워 풀어요."
+  }
+ ],
+ "sets": [
+  {
+   "title": "두 점 사이의 거리",
+   "items": [
+    {
+     "q": "두 점 A(3, 4), B(1, 2) 사이의 거리는?",
+     "c": [
+      "2",
+      "8",
+      "2√13",
+      "2√2"
+     ],
+     "a": 3,
+     "e": "AB = √((−2)² + (−2)²) = √8 = <b>2√2</b>"
+    },
+    {
+     "q": "두 점 A(5, −4), B(−3, 2) 사이의 거리는?",
+     "c": [
+      "10",
+      "100",
+      "√14",
+      "2√2"
+     ],
+     "a": 0,
+     "e": "AB = √((−8)² + 6²) = √100 = <b>10</b>"
+    },
+    {
+     "q": "두 점 A(−5, −2), B(5, 3) 사이의 거리는?",
+     "c": [
+      "√15",
+      "5√5",
+      "1",
+      "125"
+     ],
+     "a": 1,
+     "e": "AB = √(10² + 5²) = √125 = <b>5√5</b>"
+    },
+    {
+     "q": "두 점 A(−3, 3), B(−3, −6) 사이의 거리는?",
+     "c": [
+      "9",
+      "81",
+      "3√5",
+      "3"
+     ],
+     "a": 0,
+     "e": "AB = √(0² + (−9)²) = √81 = <b>9</b>"
+    },
+    {
+     "q": "두 점 A(4, 3), B(−2, −5) 사이의 거리는?",
+     "c": [
+      "√14",
+      "10",
+      "2√2",
+      "100"
+     ],
+     "a": 1,
+     "e": "AB = √((−6)² + (−8)²) = √100 = <b>10</b>"
+    },
+    {
+     "q": "두 점 A(2, −5), B(2, 6) 사이의 거리는?",
+     "c": [
+      "√11",
+      "121",
+      "√17",
+      "11"
+     ],
+     "a": 3,
+     "e": "AB = √(0² + 11²) = √121 = <b>11</b>"
+    },
+    {
+     "q": "두 점 A(−2, 3), B(−5, 6) 사이의 거리는?",
+     "c": [
+      "√6",
+      "18",
+      "3√2",
+      "√130"
+     ],
+     "a": 2,
+     "e": "AB = √((−3)² + 3²) = √18 = <b>3√2</b>"
+    },
+    {
+     "q": "두 점 A(0, 3), B(3, −6) 사이의 거리는?",
+     "c": [
+      "90",
+      "3√2",
+      "3√10",
+      "2√3"
+     ],
+     "a": 2,
+     "e": "AB = √(3² + (−9)²) = √90 = <b>3√10</b>"
+    },
+    {
+     "q": "두 점 A(3, 5), B(−1, 4) 사이의 거리는?",
+     "c": [
+      "17",
+      "√85",
+      "√5",
+      "√17"
+     ],
+     "a": 3,
+     "e": "AB = √((−4)² + (−1)²) = <b>√17</b>"
+    },
+    {
+     "q": "두 점 A(1, 4), B(5, −2) 사이의 거리는?",
+     "c": [
+      "√10",
+      "2√13",
+      "2√10",
+      "52"
+     ],
+     "a": 1,
+     "e": "AB = √(4² + (−6)²) = √52 = <b>2√13</b>"
+    },
+    {
+     "q": "두 점 A(2, −1), B(−4, −2) 사이의 거리는?",
+     "c": [
+      "37",
+      "√37",
+      "√13",
+      "√7"
+     ],
+     "a": 1,
+     "e": "AB = √((−6)² + (−1)²) = <b>√37</b>"
+    },
+    {
+     "q": "두 점 A(−1, −6), B(−2, −2) 사이의 거리는?",
+     "c": [
+      "√17",
+      "√73",
+      "17",
+      "√5"
+     ],
+     "a": 0,
+     "e": "AB = √((−1)² + 4²) = <b>√17</b>"
+    },
+    {
+     "q": "두 점 A(6, −6), B(0, −3) 사이의 거리는?",
+     "c": [
+      "45",
+      "3",
+      "3√13",
+      "3√5"
+     ],
+     "a": 3,
+     "e": "AB = √((−6)² + 3²) = √45 = <b>3√5</b>"
+    },
+    {
+     "q": "두 점 A(4, −3), B(−3, 5) 사이의 거리는?",
+     "c": [
+      "113",
+      "√15",
+      "√113",
+      "√5"
+     ],
+     "a": 2,
+     "e": "AB = √((−7)² + 8²) = <b>√113</b>"
+    },
+    {
+     "q": "두 점 A(−4, −3), B(−2, 0) 사이의 거리는?",
+     "c": [
+      "√13",
+      "13",
+      "3√5",
+      "√5"
+     ],
+     "a": 0,
+     "e": "AB = √(2² + 3²) = <b>√13</b>"
+    },
+    {
+     "q": "두 점 A(1, 2), B(−6, −1) 사이의 거리는?",
+     "c": [
+      "√58",
+      "√26",
+      "√10",
+      "58"
+     ],
+     "a": 0,
+     "e": "AB = √((−7)² + (−3)²) = <b>√58</b>"
+    },
+    {
+     "q": "두 점 A(0, −2), B(4, −1) 사이의 거리는?",
+     "c": [
+      "√5",
+      "17",
+      "√17",
+      "5"
+     ],
+     "a": 2,
+     "e": "AB = √(4² + 1²) = <b>√17</b>"
+    },
+    {
+     "q": "두 점 A(3, −2), B(−5, 3) 사이의 거리는?",
+     "c": [
+      "√5",
+      "√89",
+      "89",
+      "√13"
+     ],
+     "a": 1,
+     "e": "AB = √((−8)² + 5²) = <b>√89</b>"
+    },
+    {
+     "q": "두 점 A(2, 6), B(3, 1) 사이의 거리는?",
+     "c": [
+      "26",
+      "√74",
+      "√26",
+      "√6"
+     ],
+     "a": 2,
+     "e": "AB = √(1² + (−5)²) = <b>√26</b>"
+    },
+    {
+     "q": "두 점 A(−5, −4), B(−5, 1) 사이의 거리는?",
+     "c": [
+      "√109",
+      "√5",
+      "25",
+      "5"
+     ],
+     "a": 3,
+     "e": "AB = √(0² + 5²) = √25 = <b>5</b>"
+    }
+   ]
+  },
+  {
+   "title": "수직선 위의 내분점",
+   "items": [
+    {
+     "q": "수직선 위의 두 점 A(−9), B(−1)에 대하여 선분 AB를 2 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>19</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "−5",
+      "−<span class='fr'><span class='fn'>11</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "(2 × (−1) + 1 × (−9)) ÷ 3 = <b>−<span class='fr'><span class='fn'>11</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−8), B(6)에 대하여 선분 AB를 1 : 4로 내분하는 점의 좌표는?",
+     "c": [
+      "<span class='fr'><span class='fn'>38</span><span class='fd'>5</span></span>",
+      "−1",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>26</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "(1 × 6 + 4 × (−8)) ÷ 5 = <b>−<span class='fr'><span class='fn'>26</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(0), B(5)에 대하여 선분 AB를 1 : 3으로 내분하는 점의 좌표는?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "(1 × 5 + 3 × 0) ÷ 4 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−8), B(3)에 대하여 선분 AB를 3 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>21</span><span class='fd'>4</span></span>",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "(3 × 3 + 1 × (−8)) ÷ 4 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−8), B(−5)에 대하여 선분 AB를 3 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>23</span><span class='fd'>4</span></span>",
+      "−<span class='fr'><span class='fn'>13</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>",
+      "−<span class='fr'><span class='fn'>29</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "(3 × (−5) + 1 × (−8)) ÷ 4 = <b>−<span class='fr'><span class='fn'>23</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−5), B(2)에 대하여 선분 AB를 2 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "3",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "(2 × 2 + 1 × (−5)) ÷ 3 = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−4), B(0)에 대하여 선분 AB를 3 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span>",
+      "−2"
+     ],
+     "a": 2,
+     "e": "(3 × 0 + 2 × (−4)) ÷ 5 = <b>−<span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−8), B(−6)에 대하여 선분 AB를 2 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>22</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>",
+      "−7"
+     ],
+     "a": 2,
+     "e": "(2 × (−6) + 1 × (−8)) ÷ 3 = <b>−<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−8), B(1)에 대하여 선분 AB를 2 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "−2",
+      "−5",
+      "−<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "(2 × 1 + 1 × (−8)) ÷ 3 = <b>−2</b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−7), B(3)에 대하여 선분 AB를 3 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "−2",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>5</span></span>",
+      "−3",
+      "−1"
+     ],
+     "a": 3,
+     "e": "(3 × 3 + 2 × (−7)) ÷ 5 = <b>−1</b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−5), B(8)에 대하여 선분 AB를 1 : 4로 내분하는 점의 좌표는?",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "(1 × 8 + 4 × (−5)) ÷ 5 = <b>−<span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(4), B(9)에 대하여 선분 AB를 3 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "7",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>2</span></span>",
+      "6",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "(3 × 9 + 2 × 4) ÷ 5 = <b>7</b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−1), B(8)에 대하여 선분 AB를 1 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "2",
+      "5",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "(1 × 8 + 2 × (−1)) ÷ 3 = <b>2</b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−9), B(5)에 대하여 선분 AB를 3 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "6",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−2",
+      "−<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "(3 × 5 + 1 × (−9)) ÷ 4 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−5), B(7)에 대하여 선분 AB를 1 : 3으로 내분하는 점의 좌표는?",
+     "c": [
+      "1",
+      "−2",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "4"
+     ],
+     "a": 1,
+     "e": "(1 × 7 + 3 × (−5)) ÷ 4 = <b>−2</b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−9), B(−1)에 대하여 선분 AB를 1 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "−5",
+      "−<span class='fr'><span class='fn'>11</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>19</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "(1 × (−1) + 2 × (−9)) ÷ 3 = <b>−<span class='fr'><span class='fn'>19</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(1), B(2)에 대하여 선분 AB를 3 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "(3 × 2 + 1 × 1) ÷ 4 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−6), B(−3)에 대하여 선분 AB를 3 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>24</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>21</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "(3 × (−3) + 2 × (−6)) ÷ 5 = <b>−<span class='fr'><span class='fn'>21</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−4), B(8)에 대하여 선분 AB를 1 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>",
+      "4",
+      "2",
+      "0"
+     ],
+     "a": 3,
+     "e": "(1 × 8 + 2 × (−4)) ÷ 3 = <b>0</b>"
+    },
+    {
+     "q": "수직선 위의 두 점 A(−9), B(0)에 대하여 선분 AB를 1 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "−6",
+      "−3",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "6"
+     ],
+     "a": 0,
+     "e": "(1 × 0 + 2 × (−9)) ÷ 3 = <b>−6</b>"
+    }
+   ]
+  },
+  {
+   "title": "좌표평면 위의 내분점",
+   "items": [
+    {
+     "q": "두 점 A(5, 6), B(5, −3)에 대하여 선분 AB를 1 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "(−<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>, −5)",
+      "(5, <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)",
+      "(5, 0)",
+      "(5, 3)"
+     ],
+     "a": 3,
+     "e": "((1 × 5 + 2 × 5)/3, (1 × (−3) + 2 × 6)/3) = <b>(5, 3)</b>"
+    },
+    {
+     "q": "두 점 A(3, −1), B(3, 4)에 대하여 선분 AB를 2 : 3으로 내분하는 점의 좌표는?",
+     "c": [
+      "(3, <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)",
+      "(3, 1)",
+      "(−<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>, <span class='fr'><span class='fn'>11</span><span class='fd'>5</span></span>)",
+      "(3, 2)"
+     ],
+     "a": 1,
+     "e": "((2 × 3 + 3 × 3)/5, (2 × 4 + 3 × (−1))/5) = <b>(3, 1)</b>"
+    },
+    {
+     "q": "두 점 A(−6, −3), B(2, −3)에 대하여 선분 AB를 3 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "(3, −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)",
+      "(−4, −3)",
+      "(0, −3)",
+      "(−2, −3)"
+     ],
+     "a": 2,
+     "e": "((3 × 2 + 1 × (−6))/4, (3 × (−3) + 1 × (−3))/4) = <b>(0, −3)</b>"
+    },
+    {
+     "q": "두 점 A(−3, 2), B(−6, −4)에 대하여 선분 AB를 2 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "(−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>, −1)",
+      "(−5, −2)",
+      "(−3, −<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>)",
+      "(−4, 0)"
+     ],
+     "a": 1,
+     "e": "((2 × (−6) + 1 × (−3))/3, (2 × (−4) + 1 × 2)/3) = <b>(−5, −2)</b>"
+    },
+    {
+     "q": "두 점 A(−6, −4), B(−2, 4)에 대하여 선분 AB를 1 : 3으로 내분하는 점의 좌표는?",
+     "c": [
+      "(4, 4)",
+      "(−3, 2)",
+      "(−4, 0)",
+      "(−5, −2)"
+     ],
+     "a": 3,
+     "e": "((1 × (−2) + 3 × (−6))/4, (1 × 4 + 3 × (−4))/4) = <b>(−5, −2)</b>"
+    },
+    {
+     "q": "두 점 A(−1, 4), B(−5, 4)에 대하여 선분 AB를 1 : 3으로 내분하는 점의 좌표는?",
+     "c": [
+      "(−2, 4)",
+      "(−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, −2)",
+      "(−3, 4)",
+      "(−4, 4)"
+     ],
+     "a": 0,
+     "e": "((1 × (−5) + 3 × (−1))/4, (1 × 4 + 3 × 4)/4) = <b>(−2, 4)</b>"
+    },
+    {
+     "q": "두 점 A(−6, 2), B(4, 2)에 대하여 선분 AB를 2 : 3으로 내분하는 점의 좌표는?",
+     "c": [
+      "(<span class='fr'><span class='fn'>26</span><span class='fd'>5</span></span>, −<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)",
+      "(−1, 2)",
+      "(−2, 2)",
+      "(0, 2)"
+     ],
+     "a": 2,
+     "e": "((2 × 4 + 3 × (−6))/5, (2 × 2 + 3 × 2)/5) = <b>(−2, 2)</b>"
+    },
+    {
+     "q": "두 점 A(5, −5), B(−1, −2)에 대하여 선분 AB를 1 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "(−<span class='fr'><span class='fn'>11</span><span class='fd'>3</span></span>, <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>)",
+      "(3, −4)",
+      "(1, −3)",
+      "(2, −<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>)"
+     ],
+     "a": 1,
+     "e": "((1 × (−1) + 2 × 5)/3, (1 × (−2) + 2 × (−5))/3) = <b>(3, −4)</b>"
+    },
+    {
+     "q": "두 점 A(0, 5), B(−6, −4)에 대하여 선분 AB를 2 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "(−4, −1)",
+      "(−2, 2)",
+      "(−4, −<span class='fr'><span class='fn'>13</span><span class='fd'>3</span></span>)",
+      "(−3, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)"
+     ],
+     "a": 0,
+     "e": "((2 × (−6) + 1 × 0)/3, (2 × (−4) + 1 × 5)/3) = <b>(−4, −1)</b>"
+    },
+    {
+     "q": "두 점 A(−3, −3), B(6, 0)에 대하여 선분 AB를 2 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "(0, −2)",
+      "(<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)",
+      "(5, 1)",
+      "(3, −1)"
+     ],
+     "a": 3,
+     "e": "((2 × 6 + 1 × (−3))/3, (2 × 0 + 1 × (−3))/3) = <b>(3, −1)</b>"
+    },
+    {
+     "q": "두 점 A(−6, 1), B(0, 1)에 대하여 선분 AB를 2 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "(−4, 1)",
+      "(−2, 1)",
+      "(2, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)",
+      "(−3, 1)"
+     ],
+     "a": 1,
+     "e": "((2 × 0 + 1 × (−6))/3, (2 × 1 + 1 × 1)/3) = <b>(−2, 1)</b>"
+    },
+    {
+     "q": "두 점 A(−5, −6), B(−5, −2)에 대하여 선분 AB를 3 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "(−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>, 0)",
+      "(−5, −4)",
+      "(−5, −5)",
+      "(−5, −3)"
+     ],
+     "a": 3,
+     "e": "((3 × (−5) + 1 × (−5))/4, (3 × (−2) + 1 × (−6))/4) = <b>(−5, −3)</b>"
+    },
+    {
+     "q": "두 점 A(1, 3), B(1, 6)에 대하여 선분 AB를 1 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "(1, 4)",
+      "(1, 5)",
+      "(−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>, 0)",
+      "(1, <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>)"
+     ],
+     "a": 0,
+     "e": "((1 × 1 + 2 × 1)/3, (1 × 6 + 2 × 3)/3) = <b>(1, 4)</b>"
+    },
+    {
+     "q": "두 점 A(−6, 4), B(0, 1)에 대하여 선분 AB를 1 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "(4, −<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>)",
+      "(−4, 3)",
+      "(−3, <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>)",
+      "(−2, 2)"
+     ],
+     "a": 1,
+     "e": "((1 × 0 + 2 × (−6))/3, (1 × 1 + 2 × 4)/3) = <b>(−4, 3)</b>"
+    },
+    {
+     "q": "두 점 A(1, −2), B(−5, −5)에 대하여 선분 AB를 1 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "(−1, −3)",
+      "(−2, −<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>)",
+      "(−<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>, −<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)",
+      "(−3, −4)"
+     ],
+     "a": 0,
+     "e": "((1 × (−5) + 2 × 1)/3, (1 × (−5) + 2 × (−2))/3) = <b>(−1, −3)</b>"
+    },
+    {
+     "q": "두 점 A(0, 4), B(3, −2)에 대하여 선분 AB를 1 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "(<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, 1)",
+      "(2, 0)",
+      "(1, 2)",
+      "(1, −<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>)"
+     ],
+     "a": 2,
+     "e": "((1 × 3 + 2 × 0)/3, (1 × (−2) + 2 × 4)/3) = <b>(1, 2)</b>"
+    },
+    {
+     "q": "두 점 A(−2, 2), B(−2, 5)에 대하여 선분 AB를 2 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "(−2, 3)",
+      "(−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>, <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>)",
+      "(−2, <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>)",
+      "(−2, 4)"
+     ],
+     "a": 3,
+     "e": "((2 × (−2) + 1 × (−2))/3, (2 × 5 + 1 × 2)/3) = <b>(−2, 4)</b>"
+    },
+    {
+     "q": "두 점 A(−6, −1), B(−6, 3)에 대하여 선분 AB를 3 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "(−6, 1)",
+      "(−3, <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>)",
+      "(−6, 2)",
+      "(−6, 0)"
+     ],
+     "a": 2,
+     "e": "((3 × (−6) + 1 × (−6))/4, (3 × 3 + 1 × (−1))/4) = <b>(−6, 2)</b>"
+    },
+    {
+     "q": "두 점 A(−6, 6), B(3, 6)에 대하여 선분 AB를 2 : 1로 내분하는 점의 좌표는?",
+     "c": [
+      "(0, 6)",
+      "(−3, 6)",
+      "(−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, 6)",
+      "(4, 2)"
+     ],
+     "a": 0,
+     "e": "((2 × 3 + 1 × (−6))/3, (2 × 6 + 1 × 6)/3) = <b>(0, 6)</b>"
+    },
+    {
+     "q": "두 점 A(2, −2), B(−4, 4)에 대하여 선분 AB를 1 : 2로 내분하는 점의 좌표는?",
+     "c": [
+      "(−2, 2)",
+      "(−<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>, <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>)",
+      "(0, 0)",
+      "(−1, 1)"
+     ],
+     "a": 2,
+     "e": "((1 × (−4) + 2 × 2)/3, (1 × 4 + 2 × (−2))/3) = <b>(0, 0)</b>"
+    }
+   ]
+  },
+  {
+   "title": "중점과 무게중심",
+   "items": [
+    {
+     "q": "세 점 A(4, −4), B(3, −4), C(2, −4)를 꼭짓점으로 하는 삼각형 ABC의 무게중심의 좌표는?",
+     "c": [
+      "(<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>, −6)",
+      "(3, −4)",
+      "(9, −12)",
+      "(−4, 3)"
+     ],
+     "a": 1,
+     "e": "세 꼭짓점의 좌표의 평균이에요. <b>(3, −4)</b>"
+    },
+    {
+     "q": "두 점 A(−4, 0), B(6, 3)을 이은 선분 AB의 중점의 좌표는?",
+     "c": [
+      "(10, 3)",
+      "(2, 3)",
+      "(5, <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)",
+      "(1, <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)"
+     ],
+     "a": 3,
+     "e": "((x₁ + x₂)/2, (y₁ + y₂)/2) = <b>(1, <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)</b>"
+    },
+    {
+     "q": "두 점 A(0, 1), B(2, −2)를 이은 선분 AB의 중점의 좌표는?",
+     "c": [
+      "(2, −3)",
+      "(1, −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)",
+      "(1, −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)",
+      "(2, −1)"
+     ],
+     "a": 2,
+     "e": "((x₁ + x₂)/2, (y₁ + y₂)/2) = <b>(1, −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)</b>"
+    },
+    {
+     "q": "두 점 A(−1, 1), B(−5, 0)을 이은 선분 AB의 중점의 좌표는?",
+     "c": [
+      "(−4, −1)",
+      "(−6, 1)",
+      "(−3, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)",
+      "(−2, −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)"
+     ],
+     "a": 2,
+     "e": "((x₁ + x₂)/2, (y₁ + y₂)/2) = <b>(−3, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)</b>"
+    },
+    {
+     "q": "두 점 A(−3, 3), B(1, −2)를 이은 선분 AB의 중점의 좌표는?",
+     "c": [
+      "(2, −<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>)",
+      "(4, −5)",
+      "(−1, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)",
+      "(−2, 1)"
+     ],
+     "a": 2,
+     "e": "((x₁ + x₂)/2, (y₁ + y₂)/2) = <b>(−1, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)</b>"
+    },
+    {
+     "q": "세 점 A(4, 5), B(−4, 6), C(6, −2)를 꼭짓점으로 하는 삼각형 ABC의 무게중심의 좌표는?",
+     "c": [
+      "(3, 2)",
+      "(3, <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>)",
+      "(6, 9)",
+      "(2, 3)"
+     ],
+     "a": 3,
+     "e": "세 꼭짓점의 좌표의 평균이에요. <b>(2, 3)</b>"
+    },
+    {
+     "q": "세 점 A(0, 6), B(3, 6), C(6, −6)을 꼭짓점으로 하는 삼각형 ABC의 무게중심의 좌표는?",
+     "c": [
+      "(2, 3)",
+      "(<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>, 3)",
+      "(9, 6)",
+      "(3, 2)"
+     ],
+     "a": 3,
+     "e": "세 꼭짓점의 좌표의 평균이에요. <b>(3, 2)</b>"
+    },
+    {
+     "q": "세 점 A(−6, 0), B(2, 5), C(−5, −2)를 꼭짓점으로 하는 삼각형 ABC의 무게중심의 좌표는?",
+     "c": [
+      "(−3, 1)",
+      "(−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)",
+      "(1, −3)",
+      "(−9, 3)"
+     ],
+     "a": 0,
+     "e": "세 꼭짓점의 좌표의 평균이에요. <b>(−3, 1)</b>"
+    },
+    {
+     "q": "세 점 A(0, −1), B(−3, −2), C(−3, −3)을 꼭짓점으로 하는 삼각형 ABC의 무게중심의 좌표는?",
+     "c": [
+      "(−2, −2)",
+      "(−3, −3)",
+      "(−1, −2)",
+      "(−6, −6)"
+     ],
+     "a": 0,
+     "e": "세 꼭짓점의 좌표의 평균이에요. <b>(−2, −2)</b>"
+    },
+    {
+     "q": "세 점 A(−3, 2), B(5, 5), C(4, 2)를 꼭짓점으로 하는 삼각형 ABC의 무게중심의 좌표는?",
+     "c": [
+      "(3, <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>)",
+      "(2, 3)",
+      "(3, 2)",
+      "(6, 9)"
+     ],
+     "a": 1,
+     "e": "세 꼭짓점의 좌표의 평균이에요. <b>(2, 3)</b>"
+    },
+    {
+     "q": "두 점 A(−3, −4), B(−5, −3)을 이은 선분 AB의 중점의 좌표는?",
+     "c": [
+      "(−4, −<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>)",
+      "(−1, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)",
+      "(−2, 1)",
+      "(−8, −7)"
+     ],
+     "a": 0,
+     "e": "((x₁ + x₂)/2, (y₁ + y₂)/2) = <b>(−4, −<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>)</b>"
+    },
+    {
+     "q": "세 점 A(3, 3), B(4, 0), C(−4, 3)을 꼭짓점으로 하는 삼각형 ABC의 무게중심의 좌표는?",
+     "c": [
+      "(1, 2)",
+      "(2, 1)",
+      "(3, 6)",
+      "(<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, 3)"
+     ],
+     "a": 0,
+     "e": "세 꼭짓점의 좌표의 평균이에요. <b>(1, 2)</b>"
+    },
+    {
+     "q": "세 점 A(−1, 3), B(−4, −3), C(−4, 0)을 꼭짓점으로 하는 삼각형 ABC의 무게중심의 좌표는?",
+     "c": [
+      "(−3, 0)",
+      "(0, −3)",
+      "(−9, 0)",
+      "(−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>, 0)"
+     ],
+     "a": 0,
+     "e": "세 꼭짓점의 좌표의 평균이에요. <b>(−3, 0)</b>"
+    },
+    {
+     "q": "두 점 A(−3, −5), B(0, 1)을 이은 선분 AB의 중점의 좌표는?",
+     "c": [
+      "(−3, −4)",
+      "(3, 6)",
+      "(<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, 3)",
+      "(−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, −2)"
+     ],
+     "a": 3,
+     "e": "((x₁ + x₂)/2, (y₁ + y₂)/2) = <b>(−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, −2)</b>"
+    },
+    {
+     "q": "두 점 A(−4, −5), B(−1, 4)를 이은 선분 AB의 중점의 좌표는?",
+     "c": [
+      "(3, 9)",
+      "(−5, −1)",
+      "(−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>, −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)",
+      "(<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>)"
+     ],
+     "a": 2,
+     "e": "((x₁ + x₂)/2, (y₁ + y₂)/2) = <b>(−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>, −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)</b>"
+    },
+    {
+     "q": "세 점 A(4, −4), B(3, −3), C(5, −2)를 꼭짓점으로 하는 삼각형 ABC의 무게중심의 좌표는?",
+     "c": [
+      "(6, −<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>)",
+      "(4, −3)",
+      "(−3, 4)",
+      "(12, −9)"
+     ],
+     "a": 1,
+     "e": "세 꼭짓점의 좌표의 평균이에요. <b>(4, −3)</b>"
+    },
+    {
+     "q": "두 점 A(4, 4), B(0, 3)을 이은 선분 AB의 중점의 좌표는?",
+     "c": [
+      "(−2, −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)",
+      "(2, <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>)",
+      "(4, 7)",
+      "(−4, −1)"
+     ],
+     "a": 1,
+     "e": "((x₁ + x₂)/2, (y₁ + y₂)/2) = <b>(2, <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>)</b>"
+    },
+    {
+     "q": "두 점 A(1, 1), B(4, 0)을 이은 선분 AB의 중점의 좌표는?",
+     "c": [
+      "(3, −1)",
+      "(5, 1)",
+      "(<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)",
+      "(<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)"
+     ],
+     "a": 3,
+     "e": "((x₁ + x₂)/2, (y₁ + y₂)/2) = <b>(<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)</b>"
+    },
+    {
+     "q": "두 점 A(4, 1), B(3, −3)을 이은 선분 AB의 중점의 좌표는?",
+     "c": [
+      "(−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, −2)",
+      "(<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>, −1)",
+      "(−1, −4)",
+      "(7, −2)"
+     ],
+     "a": 1,
+     "e": "((x₁ + x₂)/2, (y₁ + y₂)/2) = <b>(<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>, −1)</b>"
+    },
+    {
+     "q": "세 점 A(−4, −5), B(5, 3), C(2, −1)을 꼭짓점으로 하는 삼각형 ABC의 무게중심의 좌표는?",
+     "c": [
+      "(<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>, −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>)",
+      "(3, −3)",
+      "(1, −1)",
+      "(−1, 1)"
+     ],
+     "a": 2,
+     "e": "세 꼭짓점의 좌표의 평균이에요. <b>(1, −1)</b>"
+    }
+   ]
+  },
+  {
+   "title": "거리 조건",
+   "items": [
+    {
+     "q": "두 점 A(−5, 1), B(0, a) 사이의 거리가 13이고 a &gt; 1일 때, a의 값은?",
+     "c": [
+      "12",
+      "14",
+      "13",
+      "−11"
+     ],
+     "a": 2,
+     "e": "5² + (a − 1)² = 13² → a − 1 = ±12. a &gt; 1이므로 <b>a = 13</b>"
+    },
+    {
+     "q": "두 점 A(−2, 1), B(−3, 4) 사이의 거리는?",
+     "c": [
+      "2",
+      "5√2",
+      "10",
+      "√10"
+     ],
+     "a": 3,
+     "e": "AB = √((−1)² + 3²) = <b>√10</b>"
+    },
+    {
+     "q": "두 점 A(3, −2), B(9, a) 사이의 거리가 10이고 a &gt; −2일 때, a의 값은?",
+     "c": [
+      "−10",
+      "6",
+      "7",
+      "8"
+     ],
+     "a": 1,
+     "e": "6² + (a − (−2))² = 10² → a − (−2) = ±8. a &gt; −2이므로 <b>a = 6</b>"
+    },
+    {
+     "q": "두 점 A(3, −2), B(−1, 2) 사이의 거리는?",
+     "c": [
+      "2√2",
+      "32",
+      "2",
+      "4√2"
+     ],
+     "a": 3,
+     "e": "AB = √((−4)² + 4²) = √32 = <b>4√2</b>"
+    },
+    {
+     "q": "두 점 A(−2, 6), B(2, a) 사이의 거리가 5이고 a &gt; 6일 때, a의 값은?",
+     "c": [
+      "3",
+      "11",
+      "10",
+      "9"
+     ],
+     "a": 3,
+     "e": "4² + (a − 6)² = 5² → a − 6 = ±3. a &gt; 6이므로 <b>a = 9</b>"
+    },
+    {
+     "q": "두 점 A(1, 5), B(5, 4) 사이의 거리는?",
+     "c": [
+      "3√13",
+      "17",
+      "√17",
+      "√5"
+     ],
+     "a": 2,
+     "e": "AB = √(4² + (−1)²) = <b>√17</b>"
+    },
+    {
+     "q": "두 점 A(3, −2), B(−5, −2) 사이의 거리는?",
+     "c": [
+      "8",
+      "64",
+      "2√2",
+      "2√5"
+     ],
+     "a": 0,
+     "e": "AB = √((−8)² + 0²) = √64 = <b>8</b>"
+    },
+    {
+     "q": "두 점 A(2, −4), B(14, a) 사이의 거리가 13이고 a &gt; −4일 때, a의 값은?",
+     "c": [
+      "9",
+      "1",
+      "−9",
+      "5"
+     ],
+     "a": 1,
+     "e": "12² + (a − (−4))² = 13² → a − (−4) = ±5. a &gt; −4이므로 <b>a = 1</b>"
+    },
+    {
+     "q": "두 점 A(2, 6), B(14, a) 사이의 거리가 13이고 a &gt; 6일 때, a의 값은?",
+     "c": [
+      "1",
+      "19",
+      "5",
+      "11"
+     ],
+     "a": 3,
+     "e": "12² + (a − 6)² = 13² → a − 6 = ±5. a &gt; 6이므로 <b>a = 11</b>"
+    },
+    {
+     "q": "두 점 A(0, −1), B(1, −6) 사이의 거리는?",
+     "c": [
+      "√26",
+      "26",
+      "√6",
+      "5√2"
+     ],
+     "a": 0,
+     "e": "AB = √(1² + (−5)²) = <b>√26</b>"
+    },
+    {
+     "q": "두 점 A(−5, 0), B(3, a) 사이의 거리가 10이고 a &gt; 0일 때, a의 값은?",
+     "c": [
+      "−6",
+      "6",
+      "7",
+      "10"
+     ],
+     "a": 1,
+     "e": "8² + (a − 0)² = 10² → a − 0 = ±6. a &gt; 0이므로 <b>a = 6</b>"
+    },
+    {
+     "q": "두 점 A(0, −4), B(5, a) 사이의 거리가 13이고 a &gt; −4일 때, a의 값은?",
+     "c": [
+      "8",
+      "−16",
+      "12",
+      "9"
+     ],
+     "a": 0,
+     "e": "5² + (a − (−4))² = 13² → a − (−4) = ±12. a &gt; −4이므로 <b>a = 8</b>"
+    },
+    {
+     "q": "두 점 A(−3, 1), B(5, 5) 사이의 거리는?",
+     "c": [
+      "80",
+      "2√10",
+      "4√5",
+      "2√3"
+     ],
+     "a": 2,
+     "e": "AB = √(8² + 4²) = √80 = <b>4√5</b>"
+    },
+    {
+     "q": "두 점 A(5, −5), B(11, a) 사이의 거리가 10이고 a &gt; −5일 때, a의 값은?",
+     "c": [
+      "−13",
+      "3",
+      "5",
+      "8"
+     ],
+     "a": 1,
+     "e": "6² + (a − (−5))² = 10² → a − (−5) = ±8. a &gt; −5이므로 <b>a = 3</b>"
+    },
+    {
+     "q": "두 점 A(1, −3), B(6, −5) 사이의 거리는?",
+     "c": [
+      "√29",
+      "√7",
+      "29",
+      "√113"
+     ],
+     "a": 0,
+     "e": "AB = √(5² + (−2)²) = <b>√29</b>"
+    },
+    {
+     "q": "두 점 A(−1, 5), B(4, a) 사이의 거리가 13이고 a &gt; 5일 때, a의 값은?",
+     "c": [
+      "12",
+      "−7",
+      "18",
+      "17"
+     ],
+     "a": 3,
+     "e": "5² + (a − 5)² = 13² → a − 5 = ±12. a &gt; 5이므로 <b>a = 17</b>"
+    },
+    {
+     "q": "두 점 A(6, 6), B(2, −2)에 대하여 선분 AB를 1 : 3으로 내분하는 점의 좌표는?",
+     "c": [
+      "(4, 2)",
+      "(3, 0)",
+      "(5, 4)",
+      "(−4, −5)"
+     ],
+     "a": 2,
+     "e": "((1 × 2 + 3 × 6)/4, (1 × (−2) + 3 × 6)/4) = <b>(5, 4)</b>"
+    },
+    {
+     "q": "두 점 A(2, 2), B(2, −6) 사이의 거리는?",
+     "c": [
+      "4√2",
+      "8",
+      "2√2",
+      "64"
+     ],
+     "a": 1,
+     "e": "AB = √(0² + (−8)²) = √64 = <b>8</b>"
+    },
+    {
+     "q": "두 점 A(2, −2), B(14, a) 사이의 거리가 13이고 a &gt; −2일 때, a의 값은?",
+     "c": [
+      "5",
+      "11",
+      "3",
+      "−7"
+     ],
+     "a": 2,
+     "e": "12² + (a − (−2))² = 13² → a − (−2) = ±5. a &gt; −2이므로 <b>a = 3</b>"
+    },
+    {
+     "q": "두 점 A(−4, 0), B(−3, −2) 사이의 거리는?",
+     "c": [
+      "√5",
+      "5",
+      "√53",
+      "√3"
+     ],
+     "a": 0,
+     "e": "AB = √(1² + (−2)²) = <b>√5</b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 1,
+ "updated": "2026-11-25",
+ "country": "kr",
+ "subject": "math",
+ "grade": "common-math-2"
+}

@@ -1,0 +1,1157 @@
+{
+ "slug": "derivatives",
+ "title": "평균변화율과 미분계수",
+ "seo_title": "평균변화율과 미분계수 | 고등학교 미적분Ⅰ 학습지 (정답 포함)",
+ "short_title": "미분계수",
+ "domain": "미분",
+ "standard_code": "[12미적Ⅰ-02-01] [12미적Ⅰ-02-02]",
+ "standard_url": "https://ncic.re.kr/inv/org/download.do?year=2022&seq=10003559&orgType=ogi4",
+ "standard_text": "미분계수를 이해하고, 이를 구할 수 있다. 함수의 미분가능성과 연속성의 관계를 설명하고, 이를 활용할 수 있다.",
+ "meta_desc": "고등학교 미적분Ⅰ 미분계수 문제: 평균변화율, 미분계수의 정의 lim (f(a + h) − f(a))/h, 변형된 극한식, 미분가능성과 연속성의 관계, 평균변화율과 미분계수가 같아지는 점까지 100문제와 정답·해설.",
+ "key_big": "f′(a)는 x = a에서의 접선의 기울기",
+ "key_sub": "미분가능하면 연속, 연속이라고 미분가능한 것은 아니에요.",
+ "body_html": "<h2>생각하는 방법</h2><p>x가 a에서 b까지 변할 때의 평균변화율은 (f(b) − f(a)) ÷ (b − a)이고, 두 점을 잇는 직선의 기울기예요.</p><p>미분계수 f′(a) = lim<sub>h→0</sub> (f(a + h) − f(a)) ÷ h는 x = a에서의 접선의 기울기예요.</p><p>lim<sub>h→0</sub> (f(a + kh) − f(a)) ÷ h = k f′(a)처럼 분모를 맞추어 계산해요.</p><p>x = a에서 미분가능하면 연속이에요. |x|는 x = 0에서 연속이지만 미분가능하지 않아요.</p><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>f(x) = x², x: 1 → 3의 평균변화율</p><p class='sn-ex-s'>(9 − 1) ÷ 2</p><p class='sn-ex-a'>답: 4</p></div><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>f(x) = x², lim (f(1 + 2h) − f(1))/h</p><p class='sn-ex-s'>2f′(1) = 2 × 2</p><p class='sn-ex-a'>답: 4</p></div><h2>자주 하는 실수</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>자주 하는 실수</th><th>바르게 생각하기</th></tr></thead><tbody><tr><td>평균변화율에서 b − a로 나누지 않는다</td><td>함숫값의 차를 x의 차로 나눠요.</td></tr><tr><td>f(a + 2h) − f(a)의 극한을 f′(a)로 쓴다</td><td>2를 곱해야 해요.</td></tr><tr><td>연속이면 미분가능하다고 한다</td><td>뾰족한 점은 미분가능하지 않아요.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "미분계수와 도함수의 차이는?",
+   "a": "미분계수는 한 점의 값, 도함수는 각 x에 미분계수를 대응시킨 함수예요."
+  },
+  {
+   "q": "h가 음수여도 되나요?",
+   "a": "h → 0이면 양쪽 모두에서 다가가요."
+  }
+ ],
+ "sets": [
+  {
+   "title": "평균변화율",
+   "items": [
+    {
+     "q": "함수 f(x) = −x² + 2x에서 x의 값이 −2에서 −1까지 변할 때의 평균변화율은?",
+     "c": [
+      "4",
+      "5",
+      "6",
+      "−11"
+     ],
+     "a": 1,
+     "e": "(f(−1) − f(−2)) ÷ (−1 − (−2)) = (−3 − (−8)) ÷ 1. <b>5</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ − 4x² + 2x + 3에서 x의 값이 −2에서 0까지 변할 때의 평균변화율은?",
+     "c": [
+      "2",
+      "12",
+      "6",
+      "−3"
+     ],
+     "a": 2,
+     "e": "(f(0) − f(−2)) ÷ (0 − (−2)) = (3 − (−9)) ÷ 2. <b>6</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ + 4x² − 4x − 2에서 x의 값이 −3에서 2까지 변할 때의 평균변화율은?",
+     "c": [
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>5</span></span>",
+      "24",
+      "−5",
+      "−1"
+     ],
+     "a": 3,
+     "e": "(f(2) − f(−3)) ÷ (2 − (−3)) = (14 − 19) ÷ 5. <b>−1</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x³ + x² − 3x에서 x의 값이 3에서 4까지 변할 때의 평균변화율은?",
+     "c": [
+      "101",
+      "79",
+      "186",
+      "78"
+     ],
+     "a": 3,
+     "e": "(f(4) − f(3)) ÷ (4 − 3) = (132 − 54) ÷ 1. <b>78</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x³ − 2x² + x + 3에서 x의 값이 −2에서 1까지 변할 때의 평균변화율은?",
+     "c": [
+      "9",
+      "27",
+      "3",
+      "−<span class='fr'><span class='fn'>19</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "(f(1) − f(−2)) ÷ (1 − (−2)) = (4 − (−23)) ÷ 3. <b>9</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ − x² − 3x − 1에서 x의 값이 1에서 4까지 변할 때의 평균변화율은?",
+     "c": [
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>3</span></span>",
+      "13",
+      "37",
+      "39"
+     ],
+     "a": 1,
+     "e": "(f(4) − f(1)) ÷ (4 − 1) = (35 − (−4)) ÷ 3. <b>13</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ − x² + 1에서 x의 값이 0에서 4까지 변할 때의 평균변화율은?",
+     "c": [
+      "176",
+      "136",
+      "44",
+      "<span class='fr'><span class='fn'>89</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "(f(4) − f(0)) ÷ (4 − 0) = (177 − 1) ÷ 4. <b>44</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x² + x + 4에서 x의 값이 −1에서 0까지 변할 때의 평균변화율은?",
+     "c": [
+      "−1",
+      "9",
+      "0",
+      "1"
+     ],
+     "a": 0,
+     "e": "(f(0) − f(−1)) ÷ (0 − (−1)) = (4 − 5) ÷ 1. <b>−1</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ + 2x² + 2x + 3에서 x의 값이 0에서 3까지 변할 때의 평균변화율은?",
+     "c": [
+      "51",
+      "19",
+      "17",
+      "41"
+     ],
+     "a": 2,
+     "e": "(f(3) − f(0)) ÷ (3 − 0) = (54 − 3) ÷ 3. <b>17</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² − 1에서 x의 값이 −3에서 0까지 변할 때의 평균변화율은?",
+     "c": [
+      "3",
+      "0",
+      "−<span class='fr'><span class='fn'>11</span><span class='fd'>3</span></span>",
+      "9"
+     ],
+     "a": 0,
+     "e": "(f(0) − f(−3)) ÷ (0 − (−3)) = (−1 − (−10)) ÷ 3. <b>3</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ − 3x² + 3x − 2에서 x의 값이 −2에서 2까지 변할 때의 평균변화율은?",
+     "c": [
+      "28",
+      "7",
+      "−7",
+      "3"
+     ],
+     "a": 1,
+     "e": "(f(2) − f(−2)) ÷ (2 − (−2)) = (0 − (−28)) ÷ 4. <b>7</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x³ + x² − 4에서 x의 값이 −3에서 −2까지 변할 때의 평균변화율은?",
+     "c": [
+      "33",
+      "20",
+      "34",
+      "−65"
+     ],
+     "a": 0,
+     "e": "(f(−2) − f(−3)) ÷ (−2 − (−3)) = (−16 − (−49)) ÷ 1. <b>33</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ + 3x² − 2x − 4에서 x의 값이 0에서 1까지 변할 때의 평균변화율은?",
+     "c": [
+      "−4",
+      "5",
+      "4",
+      "13"
+     ],
+     "a": 2,
+     "e": "(f(1) − f(0)) ÷ (1 − 0) = (0 − (−4)) ÷ 1. <b>4</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² + 3x + 1에서 x의 값이 −3에서 3까지 변할 때의 평균변화율은?",
+     "c": [
+      "−3",
+      "−<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "3",
+      "18"
+     ],
+     "a": 2,
+     "e": "(f(3) − f(−3)) ÷ (3 − (−3)) = (1 − (−17)) ÷ 6. <b>3</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 3x − 4에서 x의 값이 −3에서 4까지 변할 때의 평균변화율은?",
+     "c": [
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>7</span></span>",
+      "11",
+      "28",
+      "4"
+     ],
+     "a": 3,
+     "e": "(f(4) − f(−3)) ÷ (4 − (−3)) = (24 − (−4)) ÷ 7. <b>4</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ + 4x² + 2x − 4에서 x의 값이 −3에서 −1까지 변할 때의 평균변화율은?",
+     "c": [
+      "−3",
+      "−1",
+      "−2",
+      "0"
+     ],
+     "a": 1,
+     "e": "(f(−1) − f(−3)) ÷ (−1 − (−3)) = (−3 − (−1)) ÷ 2. <b>−1</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ + 3x² − 3x − 2에서 x의 값이 −2에서 −1까지 변할 때의 평균변화율은?",
+     "c": [
+      "−19",
+      "−12",
+      "−18",
+      "29"
+     ],
+     "a": 0,
+     "e": "(f(−1) − f(−2)) ÷ (−1 − (−2)) = (5 − 24) ÷ 1. <b>−19</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x² − 1에서 x의 값이 1에서 2까지 변할 때의 평균변화율은?",
+     "c": [
+      "10",
+      "12",
+      "13",
+      "9"
+     ],
+     "a": 3,
+     "e": "(f(2) − f(1)) ÷ (2 − 1) = (11 − 2) ÷ 1. <b>9</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ − x² + 3x에서 x의 값이 −2에서 2까지 변할 때의 평균변화율은?",
+     "c": [
+      "−13",
+      "−4",
+      "−2",
+      "−1"
+     ],
+     "a": 3,
+     "e": "(f(2) − f(−2)) ÷ (2 − (−2)) = (−6 − (−2)) ÷ 4. <b>−1</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ − 4x² + 2x + 4에서 x의 값이 −3에서 −2까지 변할 때의 평균변화율은?",
+     "c": [
+      "30",
+      "41",
+      "42",
+      "−89"
+     ],
+     "a": 1,
+     "e": "(f(−2) − f(−3)) ÷ (−2 − (−3)) = (−24 − (−65)) ÷ 1. <b>41</b>"
+    }
+   ]
+  },
+  {
+   "title": "미분계수의 정의",
+   "items": [
+    {
+     "q": "함수 f(x) = −x² + 3x + 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−1 + h) − f(−1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "5",
+      "−2",
+      "10",
+      "6"
+     ],
+     "a": 0,
+     "e": "미분계수 f′(−1)이에요. f′(x) = −2x + 3이므로 <b>5</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x² − 2x − 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−1 + h) − f(−1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−5",
+      "0",
+      "−12",
+      "−6"
+     ],
+     "a": 3,
+     "e": "미분계수 f′(−1)이에요. f′(x) = 4x − 2이므로 <b>−6</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x² + 1에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−1 + h) − f(−1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−12",
+      "−6",
+      "−5",
+      "4"
+     ],
+     "a": 1,
+     "e": "미분계수 f′(−1)이에요. f′(x) = 6x이므로 <b>−6</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x² + 2x + 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(0 + h) − f(0)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "2",
+      "4",
+      "−2",
+      "3"
+     ],
+     "a": 0,
+     "e": "미분계수 f′(0)이에요. f′(x) = 6x + 2이므로 <b>2</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ + 2x² + 4x − 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−1 + h) − f(−1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "10",
+      "9",
+      "18",
+      "−7"
+     ],
+     "a": 1,
+     "e": "미분계수 f′(−1)이에요. f′(x) = 9x² + 4x + 4이므로 <b>9</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ − 4x − 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(3 + h) − f(3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−31",
+      "−30",
+      "−62",
+      "−43"
+     ],
+     "a": 0,
+     "e": "미분계수 f′(3)이에요. f′(x) = −3x² − 4이므로 <b>−31</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ − 2x² − 2x − 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−2 + h) − f(−2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "43",
+      "84",
+      "−31",
+      "42"
+     ],
+     "a": 3,
+     "e": "미분계수 f′(−2)예요. f′(x) = 9x² − 4x − 2이므로 <b>42</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x² + 2x에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−3 + h) − f(−3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−9",
+      "−20",
+      "−10",
+      "12"
+     ],
+     "a": 2,
+     "e": "미분계수 f′(−3)이에요. f′(x) = 4x + 2이므로 <b>−10</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ + 3x + 1에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−3 + h) − f(−3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "85",
+      "84",
+      "168",
+      "−89"
+     ],
+     "a": 1,
+     "e": "미분계수 f′(−3)이에요. f′(x) = 9x² + 3이므로 <b>84</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ − 3x² + x에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(0 + h) − f(0)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "2",
+      "1",
+      "0",
+      "−1"
+     ],
+     "a": 1,
+     "e": "미분계수 f′(0)이에요. f′(x) = 3x² − 6x + 1이므로 <b>1</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x² − 2x + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−3 + h) − f(−3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−40",
+      "37",
+      "−20",
+      "−19"
+     ],
+     "a": 2,
+     "e": "미분계수 f′(−3)이에요. f′(x) = 6x − 2이므로 <b>−20</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x² − 3x에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−1 + h) − f(−1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "6",
+      "−9",
+      "−18",
+      "−8"
+     ],
+     "a": 1,
+     "e": "미분계수 f′(−1)이에요. f′(x) = 6x − 3이므로 <b>−9</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ − 4x² − 3x + 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(1 + h) − f(1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−28",
+      "−6",
+      "−14",
+      "−13"
+     ],
+     "a": 2,
+     "e": "미분계수 f′(1)이에요. f′(x) = −3x² − 8x − 3이므로 <b>−14</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ + 3x² − x + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(1 + h) − f(1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "16",
+      "9",
+      "8",
+      "7"
+     ],
+     "a": 2,
+     "e": "미분계수 f′(1)이에요. f′(x) = 3x² + 6x − 1이므로 <b>8</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x³ − x² − 3x + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(2 + h) − f(2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "10",
+      "18",
+      "34",
+      "17"
+     ],
+     "a": 3,
+     "e": "미분계수 f′(2)예요. f′(x) = 6x² − 2x − 3이므로 <b>17</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ + 4x² − x − 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(1 + h) − f(1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "20",
+      "11",
+      "2",
+      "10"
+     ],
+     "a": 3,
+     "e": "미분계수 f′(1)이에요. f′(x) = 3x² + 8x − 1이므로 <b>10</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ − 2x² − 3x + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−3 + h) − f(−3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "22",
+      "−36",
+      "−18",
+      "−17"
+     ],
+     "a": 2,
+     "e": "미분계수 f′(−3)이에요. f′(x) = −3x² − 4x − 3이므로 <b>−18</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x² + 3x + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(1 + h) − f(1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "9",
+      "10",
+      "−9",
+      "18"
+     ],
+     "a": 0,
+     "e": "미분계수 f′(1)이에요. f′(x) = 6x + 3이므로 <b>9</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x² + x + 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(1 + h) − f(1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−5",
+      "10",
+      "6",
+      "5"
+     ],
+     "a": 3,
+     "e": "미분계수 f′(1)이에요. f′(x) = 4x + 1이므로 <b>5</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ + x² − x − 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(0 + h) − f(0)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−1",
+      "0",
+      "−2",
+      "−3"
+     ],
+     "a": 0,
+     "e": "미분계수 f′(0)이에요. f′(x) = 9x² + 2x − 1이므로 <b>−1</b>"
+    }
+   ]
+  },
+  {
+   "title": "변형된 극한식",
+   "items": [
+    {
+     "q": "함수 f(x) = 3x² + 2x − 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(0 + 3h) − f(0)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "7",
+      "2",
+      "6",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "f′(0) = 2이고 3배가 돼요. <b>6</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ + x² + 3x + 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−1 + 2h) − f(−1)</span><span class='fd'>−h</span></span></b>의 값은?",
+     "c": [
+      "−2",
+      "8",
+      "4",
+      "−8"
+     ],
+     "a": 3,
+     "e": "f′(−1) = 4이고 −2배가 돼요. <b>−8</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ + 3x² + 4x − 1에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(2 + 3h) − f(2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "84",
+      "85",
+      "28",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "f′(2) = 28이고 3배가 돼요. <b>84</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² + 4x − 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−2 + 3h) − f(−2)</span><span class='fd'>2h</span></span></b>의 값은?",
+     "c": [
+      "12",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>",
+      "8",
+      "24"
+     ],
+     "a": 0,
+     "e": "f′(−2) = 8이고 <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>배가 돼요. <b>12</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x² + 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(2 + 2h) − f(2)</span><span class='fd'>−h</span></span></b>의 값은?",
+     "c": [
+      "−16",
+      "8",
+      "−4",
+      "16"
+     ],
+     "a": 0,
+     "e": "f′(2) = 8이고 −2배가 돼요. <b>−16</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ + x + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(3 + 4h) − f(3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>2</span></span>",
+      "328",
+      "82",
+      "329"
+     ],
+     "a": 1,
+     "e": "f′(3) = 82이고 4배가 돼요. <b>328</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 2x − 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(0 + 2h) − f(0)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−2",
+      "−4",
+      "−1",
+      "−3"
+     ],
+     "a": 1,
+     "e": "f′(0) = −2이고 2배가 돼요. <b>−4</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ + 2x² − 3x − 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(3 + 4h) − f(3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "36",
+      "144",
+      "145",
+      "9"
+     ],
+     "a": 1,
+     "e": "f′(3) = 36이고 4배가 돼요. <b>144</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² − 4x에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(2 + 2h) − f(2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−4",
+      "−8",
+      "−15",
+      "−16"
+     ],
+     "a": 3,
+     "e": "f′(2) = −8이고 2배가 돼요. <b>−16</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ − 3x² − x + 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(3 + 3h) − f(3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−138",
+      "−46",
+      "−<span class='fr'><span class='fn'>46</span><span class='fd'>3</span></span>",
+      "−137"
+     ],
+     "a": 0,
+     "e": "f′(3) = −46이고 3배가 돼요. <b>−138</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ − 2x − 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(2 + 3h) − f(2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−<span class='fr'><span class='fn'>14</span><span class='fd'>3</span></span>",
+      "−41",
+      "−14",
+      "−42"
+     ],
+     "a": 3,
+     "e": "f′(2) = −14이고 3배가 돼요. <b>−42</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ + 3x² + 3x − 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(2 + 4h) − f(2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "51",
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>4</span></span>",
+      "205",
+      "204"
+     ],
+     "a": 3,
+     "e": "f′(2) = 51이고 4배가 돼요. <b>204</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ + x² + 3x − 1에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−1 + 3h) − f(−1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−2",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "−6",
+      "−5"
+     ],
+     "a": 2,
+     "e": "f′(−1) = −2이고 3배가 돼요. <b>−6</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x² − x + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−1 + 2h) − f(−1)</span><span class='fd'>−h</span></span></b>의 값은?",
+     "c": [
+      "−7",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "−14",
+      "14"
+     ],
+     "a": 3,
+     "e": "f′(−1) = −7이고 −2배가 돼요. <b>14</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ − 2x + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(0 + 2h) − f(0)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−3",
+      "−4",
+      "−2",
+      "−1"
+     ],
+     "a": 1,
+     "e": "f′(0) = −2이고 2배가 돼요. <b>−4</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x² + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−1 + 2h) − f(−1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−3",
+      "−6",
+      "−12",
+      "−11"
+     ],
+     "a": 2,
+     "e": "f′(−1) = −6이고 2배가 돼요. <b>−12</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² − x + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−2 + 4h) − f(−2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "13",
+      "12",
+      "3",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "f′(−2) = 3이고 4배가 돼요. <b>12</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ − 3x + 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−2 + h) − f(−2)</span><span class='fd'>2h</span></span></b>의 값은?",
+     "c": [
+      "18",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "9"
+     ],
+     "a": 2,
+     "e": "f′(−2) = 9이고 <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>배가 돼요. <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 4x에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(1 + 2h) − f(1)</span><span class='fd'>−h</span></span></b>의 값은?",
+     "c": [
+      "−12",
+      "12",
+      "−3",
+      "6"
+     ],
+     "a": 0,
+     "e": "f′(1) = 6이고 −2배가 돼요. <b>−12</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ − 3x² − 3x − 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−2 + 2h) − f(−2)</span><span class='fd'>−h</span></span></b>의 값은?",
+     "c": [
+      "−<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span>",
+      "45",
+      "−90",
+      "90"
+     ],
+     "a": 2,
+     "e": "f′(−2) = 45이고 −2배가 돼요. <b>−90</b>"
+    }
+   ]
+  },
+  {
+   "title": "미분가능성과 연속성",
+   "items": [
+    {
+     "q": "함수 f(x) = −x² − 3의 x = −3에서의 미분계수는?",
+     "c": [
+      "7",
+      "6",
+      "−6",
+      "−12"
+     ],
+     "a": 1,
+     "e": "f′(x) = −2x, f′(−3) = <b>6</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 4x에서 x의 값이 0에서 2까지 변할 때의 평균변화율과 x = c에서의 미분계수가 같을 때, c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "0",
+      "1",
+      "2"
+     ],
+     "a": 2,
+     "e": "평균변화율 6 = 2c + 4. <b>c = 1</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ + x² + x − 1의 x = −2에서의 미분계수는?",
+     "c": [
+      "−14",
+      "−15",
+      "15",
+      "9"
+     ],
+     "a": 1,
+     "e": "f′(x) = −3x² + 2x + 1, f′(−2) = <b>−15</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ − 3x² − 2x − 4의 x = 1에서의 미분계수는?",
+     "c": [
+      "−1",
+      "−6",
+      "2",
+      "1"
+     ],
+     "a": 3,
+     "e": "f′(x) = 9x² − 6x − 2, f′(1) = <b>1</b>"
+    },
+    {
+     "q": "f′(a)의 기하적 의미는?",
+     "c": [
+      "평균변화율",
+      "x = a에서의 함숫값",
+      "y절편",
+      "x = a에서의 접선의 기울기"
+     ],
+     "a": 3,
+     "e": "<b>x = a에서의 접선의 기울기</b>"
+    },
+    {
+     "q": "평균변화율의 기하적 의미는?",
+     "c": [
+      "두 점을 잇는 직선의 기울기",
+      "접선의 기울기",
+      "넓이",
+      "곡선의 길이"
+     ],
+     "a": 0,
+     "e": "<b>두 점을 잇는 직선의 기울기</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 2x에서 x의 값이 0에서 1까지 변할 때의 평균변화율과 x = c에서의 미분계수가 같을 때, c의 값은?",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "1"
+     ],
+     "a": 1,
+     "e": "평균변화율 −1 = 2c − 2. <b>c = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² + x − 3의 x = −3에서의 미분계수는?",
+     "c": [
+      "−5",
+      "−4",
+      "3",
+      "5"
+     ],
+     "a": 0,
+     "e": "f′(x) = 2x + 1, f′(−3) = <b>−5</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − x에서 x의 값이 0에서 3까지 변할 때의 평균변화율과 x = c에서의 미분계수가 같을 때, c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "3",
+      "0"
+     ],
+     "a": 1,
+     "e": "평균변화율 2 = 2c − 1. <b>c = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x²에서 x의 값이 0에서 2까지 변할 때의 평균변화율과 x = c에서의 미분계수가 같을 때, c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2",
+      "0",
+      "1"
+     ],
+     "a": 3,
+     "e": "평균변화율 2 = 2c + 0. <b>c = 1</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 4x에서 x의 값이 0에서 3까지 변할 때의 평균변화율과 x = c에서의 미분계수가 같을 때, c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "3"
+     ],
+     "a": 2,
+     "e": "평균변화율 7 = 2c + 4. <b>c = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "x = a에서 연속인 함수는 x = a에서?",
+     "c": [
+      "반드시 불연속이에요",
+      "미분가능하지 않을 수도 있어요",
+      "반드시 미분가능해요",
+      "반드시 극값을 가져요"
+     ],
+     "a": 1,
+     "e": "<b>미분가능하지 않을 수도 있어요</b>"
+    },
+    {
+     "q": "x = a에서 불연속인 함수는 x = a에서?",
+     "c": [
+      "f′(a) = 0이에요",
+      "미분가능해요",
+      "미분가능하지 않아요",
+      "극한값이 같아요"
+     ],
+     "a": 2,
+     "e": "<b>미분가능하지 않아요</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x³ + x² − 2x − 1의 x = 1에서의 미분계수는?",
+     "c": [
+      "−6",
+      "7",
+      "6",
+      "0"
+     ],
+     "a": 2,
+     "e": "f′(x) = 6x² + 2x − 2, f′(1) = <b>6</b>"
+    },
+    {
+     "q": "함수 f(x) = |x|는 x = 0에서?",
+     "c": [
+      "불연속이고 미분가능하지 않아요",
+      "불연속이지만 미분가능해요",
+      "연속이고 미분가능해요",
+      "연속이지만 미분가능하지 않아요"
+     ],
+     "a": 3,
+     "e": "<b>연속이지만 미분가능하지 않아요</b>"
+    },
+    {
+     "q": "f(x) = |x − 2|가 미분가능하지 않은 x의 값은?",
+     "c": [
+      "x = 2",
+      "x = −2",
+      "없어요",
+      "x = 0"
+     ],
+     "a": 0,
+     "e": "<b>x = 2</b>"
+    },
+    {
+     "q": "함수 f(x) = x²에서 x의 값이 0에서 3까지 변할 때의 평균변화율과 x = c에서의 미분계수가 같을 때, c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "3",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "0"
+     ],
+     "a": 0,
+     "e": "평균변화율 3 = 2c + 0. <b>c = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² + x에서 x의 값이 0에서 2까지 변할 때의 평균변화율과 x = c에서의 미분계수가 같을 때, c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2",
+      "0",
+      "1"
+     ],
+     "a": 3,
+     "e": "평균변화율 3 = 2c + 1. <b>c = 1</b>"
+    },
+    {
+     "q": "그래프가 x = a에서 뾰족하게 꺾이면?",
+     "c": [
+      "x = a에서 미분가능하지 않아요",
+      "x = a에서 불연속이에요",
+      "f′(a) = 0이에요",
+      "x = a에서 미분가능해요"
+     ],
+     "a": 0,
+     "e": "<b>x = a에서 미분가능하지 않아요</b>"
+    },
+    {
+     "q": "x = a에서 미분가능한 함수는 x = a에서?",
+     "c": [
+      "극값을 가져요",
+      "f(a) = 0이에요",
+      "반드시 연속이에요",
+      "불연속일 수 있어요"
+     ],
+     "a": 2,
+     "e": "<b>반드시 연속이에요</b>"
+    }
+   ]
+  },
+  {
+   "title": "섞어서 연습",
+   "items": [
+    {
+     "q": "함수 f(x) = 3x³ − x² − x + 4에서 x의 값이 −2에서 0까지 변할 때의 평균변화율은?",
+     "c": [
+      "−1",
+      "−9",
+      "13",
+      "26"
+     ],
+     "a": 2,
+     "e": "(f(0) − f(−2)) ÷ (0 − (−2)) = (4 − (−22)) ÷ 2. <b>13</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ − 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−1 + 2h) − f(−1)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−5",
+      "−6",
+      "−3"
+     ],
+     "a": 2,
+     "e": "f′(−1) = −3이고 2배가 돼요. <b>−6</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² + 2x + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(3 + 3h) − f(3)</span><span class='fd'>2h</span></span></b>의 값은?",
+     "c": [
+      "−<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "−6",
+      "−12",
+      "−4"
+     ],
+     "a": 1,
+     "e": "f′(3) = −4이고 <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>배가 돼요. <b>−6</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ + x² + x에서 x의 값이 1에서 2까지 변할 때의 평균변화율은?",
+     "c": [
+      "−1",
+      "−7",
+      "−3",
+      "−2"
+     ],
+     "a": 2,
+     "e": "(f(2) − f(1)) ÷ (2 − 1) = (−2 − 1) ÷ 1. <b>−3</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 3x − 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(2 + h) − f(2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "7",
+      "14",
+      "8",
+      "−7"
+     ],
+     "a": 0,
+     "e": "미분계수 f′(2)예요. f′(x) = 2x + 3이므로 <b>7</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² − 4x + 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(3 + 4h) − f(3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−10",
+      "−39",
+      "−40",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "f′(3) = −10이고 4배가 돼요. <b>−40</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² + 3x에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(3 + h) − f(3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−2",
+      "−3",
+      "−6",
+      "0"
+     ],
+     "a": 1,
+     "e": "미분계수 f′(3)이에요. f′(x) = −2x + 3이므로 <b>−3</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ + 4x + 4에서 x의 값이 −1에서 4까지 변할 때의 평균변화율은?",
+     "c": [
+      "<span class='fr'><span class='fn'>83</span><span class='fd'>5</span></span>",
+      "85",
+      "52",
+      "17"
+     ],
+     "a": 3,
+     "e": "(f(4) − f(−1)) ÷ (4 − (−1)) = (84 − (−1)) ÷ 5. <b>17</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ − 2x² + 3x + 1에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−2 + h) − f(−2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "24",
+      "−21",
+      "46",
+      "23"
+     ],
+     "a": 3,
+     "e": "미분계수 f′(−2)예요. f′(x) = 3x² − 4x + 3이므로 <b>23</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−2 + 2h) − f(−2)</span><span class='fd'>−h</span></span></b>의 값은?",
+     "c": [
+      "−4",
+      "2",
+      "−8",
+      "8"
+     ],
+     "a": 3,
+     "e": "f′(−2) = −4이고 −2배가 돼요. <b>8</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ − 2x² + 4x + 1에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(2 + h) − f(2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−8",
+      "9",
+      "16",
+      "8"
+     ],
+     "a": 3,
+     "e": "미분계수 f′(2)예요. f′(x) = 3x² − 4x + 4이므로 <b>8</b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ + 2x² + x + 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−3 + h) − f(−3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "−38",
+      "44",
+      "−37",
+      "−76"
+     ],
+     "a": 0,
+     "e": "미분계수 f′(−3)이에요. f′(x) = −3x² + 4x + 1이므로 <b>−38</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 2x + 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(3 + h) − f(3)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "9",
+      "16",
+      "18",
+      "8"
+     ],
+     "a": 3,
+     "e": "미분계수 f′(3)이에요. f′(x) = 2x + 2이므로 <b>8</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² − x − 3에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−2 + h) − f(−2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "3",
+      "−5",
+      "6",
+      "4"
+     ],
+     "a": 0,
+     "e": "미분계수 f′(−2)예요. f′(x) = −2x − 1이므로 <b>3</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x² + 4x에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(2 + 4h) − f(2)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "64",
+      "65",
+      "4",
+      "16"
+     ],
+     "a": 0,
+     "e": "f′(2) = 16이고 4배가 돼요. <b>64</b>"
+    },
+    {
+     "q": "함수 f(x) = x³ − 4x² + 2x + 2에서 x의 값이 −1에서 2까지 변할 때의 평균변화율은?",
+     "c": [
+      "−<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "1",
+      "3",
+      "−2"
+     ],
+     "a": 1,
+     "e": "(f(2) − f(−1)) ÷ (2 − (−1)) = (−2 − (−5)) ÷ 3. <b>1</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x³ − 2x² − 4x − 4에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−1 + 3h) − f(−1)</span><span class='fd'>2h</span></span></b>의 값은?",
+     "c": [
+      "18",
+      "9",
+      "6",
+      "4"
+     ],
+     "a": 1,
+     "e": "f′(−1) = 6이고 <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>배가 돼요. <b>9</b>"
+    },
+    {
+     "q": "함수 f(x) = 3x³ − x² − 4x에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(0 + h) − f(0)</span><span class='fd'>h</span></span></b>의 값은?",
+     "c": [
+      "0",
+      "−4",
+      "−8",
+      "−3"
+     ],
+     "a": 1,
+     "e": "미분계수 f′(0)이에요. f′(x) = 9x² − 2x − 4이므로 <b>−4</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² − x + 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−2 + 3h) − f(−2)</span><span class='fd'>2h</span></span></b>의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "3",
+      "2",
+      "9"
+     ],
+     "a": 0,
+     "e": "f′(−2) = 3이고 <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>배가 돼요. <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = −x³ + x² − x − 2에 대하여 <b>lim<sub>h→0</sub> <span class='fr'><span class='fn'>f(−2 + h) − f(−2)</span><span class='fd'>2h</span></span></b>의 값은?",
+     "c": [
+      "−17",
+      "−<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span>",
+      "−34"
+     ],
+     "a": 2,
+     "e": "f′(−2) = −17이고 <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>배가 돼요. <b>−<span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span></b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 3,
+ "updated": "2026-11-25",
+ "country": "kr",
+ "subject": "math",
+ "grade": "calculus-1"
+}

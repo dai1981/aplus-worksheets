@@ -653,7 +653,7 @@ def qf_graph(kinds=("read", "sign")):
         p, q = R.randint(-3, 3), R.randint(-4, 4)
         f = lambda x, a=a, p=p, q=q: float(a) * (x - p) ** 2 + q
         g = kurve([(f, BLUE, "")], (-5, 5, 1), (-5, 5, 1), pts=[(p, q, "")], label="이차함수의 그래프", W=380, H=360)
-        g = g.replace("<svg ", "<svg data-pf='lg' ", 1)
+        g = g if "data-pf" in g else g.replace("<svg ", "<svg data-pf='lg' ", 1)
         if how == "read":
             ok = vtx_form(a, p, q)
             return M("그림은 x²의 계수가 %s인 이차함수의 그래프이고, 빨간 점이 꼭짓점이에요. 이 이차함수의 식은?%s" % (neg(a), fig(g)), ok, [vtx_form(a, -p, q), vtx_form(a, p, -q), vtx_form(-a, p, q), vtx_form(a, q, p) if p != q else vtx_form(a, p, q + 1)],
@@ -725,7 +725,7 @@ def qg_coef(kinds=("sign", "maxmin")):
         if c == 0 or abs(c) > 4:
             return None
         f = lambda x, a=a, p=p, q=q: float(a) * (x - p) ** 2 + q
-        g = kurve([(f, BLUE, "")], (-5, 5, 1), (-5, 5, 1), label="이차함수 y = ax² + bx + c의 그래프", W=380, H=360).replace("<svg ", "<svg data-pf='lg' ", 1)
+        g = kurve([(f, BLUE, "")], (-5, 5, 1), (-5, 5, 1), label="이차함수 y = ax² + bx + c의 그래프", W=380, H=360)
         sa, sb, sc = (">" if a > 0 else "<"), (">" if b > 0 else "<"), (">" if c > 0 else "<")
         T = {">": "&gt;", "<": "&lt;"}
         ok = "a %s 0, b %s 0, c %s 0" % (T[sa], T[sb], T[sc])

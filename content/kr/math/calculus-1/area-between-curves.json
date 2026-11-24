@@ -1,0 +1,1157 @@
+{
+ "slug": "area-between-curves",
+ "title": "곡선으로 둘러싸인 도형의 넓이",
+ "seo_title": "곡선으로 둘러싸인 도형의 넓이 | 고등학교 미적분Ⅰ 학습지 (정답 포함)",
+ "short_title": "넓이",
+ "domain": "적분",
+ "standard_code": "[12미적Ⅰ-03-05]",
+ "standard_url": "https://ncic.re.kr/inv/org/download.do?year=2022&seq=10003559&orgType=ogi4",
+ "standard_text": "곡선으로 둘러싸인 도형의 넓이에 대한 문제를 해결할 수 있다.",
+ "meta_desc": "고등학교 미적분Ⅰ 넓이 문제: 곡선과 x축으로 둘러싸인 넓이, x축 아래 부분이 있는 넓이, 곡선과 직선·두 곡선 사이의 넓이, 삼차함수와 x축 사이의 넓이까지 100문제와 정답·해설.",
+ "key_big": "넓이 = ∫|f(x) − g(x)| dx",
+ "key_sub": "x축 아래 부분은 부호를 바꾸어 더해요.",
+ "body_html": "<h2>생각하는 방법</h2><p>곡선 y = f(x)와 x축, x = a, x = b로 둘러싸인 넓이는 ∫<sub>a</sub><sup>b</sup> |f(x)| dx예요.</p><p>f(x)가 음수인 구간은 −f(x)를 적분해서 더해요.</p><p>두 곡선 사이의 넓이는 교점을 구한 뒤 ∫(위 − 아래) dx예요.</p><p>이차함수 y = a(x − α)(x − β)와 x축 사이의 넓이는 |a|(β − α)³ ÷ 6이에요.</p><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>y = x² − 2x와 x축</p><p class='sn-ex-s'>교점 0, 2</p><p class='sn-ex-s'>−∫<sub>0</sub><sup>2</sup> (x² − 2x) dx</p><p class='sn-ex-a'>답: 4/3</p></div><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>y = x²과 y = x + 2</p><p class='sn-ex-s'>교점 −1, 2</p><p class='sn-ex-s'>∫(x + 2 − x²) dx</p><p class='sn-ex-a'>답: 9/2</p></div><h2>자주 하는 실수</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>자주 하는 실수</th><th>바르게 생각하기</th></tr></thead><tbody><tr><td>x축 아래 부분을 음수 그대로 더한다</td><td>넓이는 양수이므로 부호를 바꿔 더해요.</td></tr><tr><td>위아래를 바꾸어 적분한다</td><td>(위 − 아래)로 적분해요.</td></tr><tr><td>교점을 구하지 않고 범위를 정한다</td><td>교점이 적분 구간이에요.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "|a|(β − α)³/6은 언제 쓰나요?",
+   "a": "이차함수와 직선(또는 x축)으로 둘러싸인 넓이에 쓸 수 있어요."
+  },
+  {
+   "q": "y축 방향으로 적분할 수도 있나요?",
+   "a": "고등학교 미적분Ⅰ에서는 주로 x에 대하여 적분해요."
+  }
+ ],
+ "sets": [
+  {
+   "title": "곡선과 x축",
+   "items": [
+    {
+     "q": "곡선 y = 3x² + 6x − 24와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−108",
+      "216",
+      "109",
+      "108"
+     ],
+     "a": 3,
+     "e": "교점 x = −4, 2. |∫<sub>−4</sub><sup>2</sup> f(x) dx| = <b>108</b>"
+    },
+    {
+     "q": "곡선 y = x² + 5x + 6과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "교점 x = −3, −2. |∫<sub>−3</sub><sup>−2</sup> f(x) dx| = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 3x² − 21x + 30과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>2</span></span>",
+      "27",
+      "−<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "교점 x = 2, 5. |∫<sub>2</sub><sup>5</sup> f(x) dx| = <b><span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 14x + 20과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "10",
+      "18",
+      "9",
+      "−9"
+     ],
+     "a": 2,
+     "e": "교점 x = 2, 5. |∫<sub>2</sub><sup>5</sup> f(x) dx| = <b>9</b>"
+    },
+    {
+     "q": "곡선 y = 3x² − 3x − 60과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>729</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>731</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>729</span><span class='fd'>2</span></span>",
+      "729"
+     ],
+     "a": 0,
+     "e": "교점 x = −4, 5. |∫<sub>−4</sub><sup>5</sup> f(x) dx| = <b><span class='fr'><span class='fn'>729</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x² + 2x − 8과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "37",
+      "36",
+      "−36",
+      "72"
+     ],
+     "a": 1,
+     "e": "교점 x = −4, 2. |∫<sub>−4</sub><sup>2</sup> f(x) dx| = <b>36</b>"
+    },
+    {
+     "q": "곡선 y = x² + 3x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "9",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "교점 x = −3, 0. |∫<sub>−3</sub><sup>0</sup> f(x) dx| = <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "곡선 y = −x² + 4x + 5와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "72",
+      "36",
+      "−36",
+      "18"
+     ],
+     "a": 1,
+     "e": "교점 x = −1, 5. |∫<sub>−1</sub><sup>5</sup> f(x) dx| = <b>36</b>"
+    },
+    {
+     "q": "곡선 y = x² − x − 6과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>131</span><span class='fd'>6</span></span>",
+      "−<span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "교점 x = −2, 3. |∫<sub>−2</sub><sup>3</sup> f(x) dx| = <b><span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x² − 9와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "36",
+      "−36",
+      "72",
+      "37"
+     ],
+     "a": 0,
+     "e": "교점 x = −3, 3. |∫<sub>−3</sub><sup>3</sup> f(x) dx| = <b>36</b>"
+    },
+    {
+     "q": "곡선 y = −x² + 9x − 20과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = 4, 5. |∫<sub>4</sub><sup>5</sup> f(x) dx| = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 3x² − 3x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "1"
+     ],
+     "a": 2,
+     "e": "교점 x = 0, 1. |∫<sub>0</sub><sup>1</sup> f(x) dx| = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 3x² − 12x + 9와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "8",
+      "−4",
+      "4",
+      "5"
+     ],
+     "a": 2,
+     "e": "교점 x = 1, 3. |∫<sub>1</sub><sup>3</sup> f(x) dx| = <b>4</b>"
+    },
+    {
+     "q": "곡선 y = 2x² + 6x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "18",
+      "10",
+      "9",
+      "−9"
+     ],
+     "a": 2,
+     "e": "교점 x = −3, 0. |∫<sub>−3</sub><sup>0</sup> f(x) dx| = <b>9</b>"
+    },
+    {
+     "q": "곡선 y = x² − 1과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = −1, 1. |∫<sub>−1</sub><sup>1</sup> f(x) dx| = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x² + 2x − 3과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "교점 x = −3, 1. |∫<sub>−3</sub><sup>1</sup> f(x) dx| = <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 6x + 4와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "교점 x = 1, 2. |∫<sub>1</sub><sup>2</sup> f(x) dx| = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = −x² + x + 12와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>343</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "교점 x = −3, 4. |∫<sub>−3</sub><sup>4</sup> f(x) dx| = <b><span class='fr'><span class='fn'>343</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x² − x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = 0, 1. |∫<sub>0</sub><sup>1</sup> f(x) dx| = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 2x² + 8x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>67</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "교점 x = −4, 0. |∫<sub>−4</sub><sup>0</sup> f(x) dx| = <b><span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "x축 아래 부분이 있는 넓이",
+   "items": [
+    {
+     "q": "곡선 y = −x² + 16과 x축 및 두 직선 x = 0, x = 5로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>115</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>3</span></span>",
+      "48",
+      "47"
+     ],
+     "a": 3,
+     "e": "x = 4에서 부호가 바뀌어요. <span class='fr'><span class='fn'>128</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>13</span><span class='fd'>3</span></span> = <b>47</b>"
+    },
+    {
+     "q": "곡선 y = x² − 9와 x축 및 두 직선 x = 0, x = 6으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "18",
+      "54",
+      "55",
+      "36"
+     ],
+     "a": 1,
+     "e": "x = 3에서 부호가 바뀌어요. 18 + 36 = <b>54</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 2와 x축 및 두 직선 x = 0, x = 3으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>44</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>47</span><span class='fd'>3</span></span>",
+      "12"
+     ],
+     "a": 1,
+     "e": "x = 1에서 부호가 바뀌어요. <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>44</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = −x² + 16과 x축 및 두 직선 x = 0, x = 7로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "45",
+      "<span class='fr'><span class='fn'>266</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>263</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "x = 4에서 부호가 바뀌어요. <span class='fr'><span class='fn'>128</span><span class='fd'>3</span></span> + 45 = <b><span class='fr'><span class='fn'>263</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = −x² + 4와 x축 및 두 직선 x = 0, x = 4로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "16",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "17"
+     ],
+     "a": 0,
+     "e": "x = 2에서 부호가 바뀌어요. <span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span> = <b>16</b>"
+    },
+    {
+     "q": "곡선 y = x² − 16과 x축 및 두 직선 x = 0, x = 7로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>263</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>266</span><span class='fd'>3</span></span>",
+      "45",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "x = 4에서 부호가 바뀌어요. <span class='fr'><span class='fn'>128</span><span class='fd'>3</span></span> + 45 = <b><span class='fr'><span class='fn'>263</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x² − 4와 x축 및 두 직선 x = 0, x = 3으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "3",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "x = 2에서 부호가 바뀌어요. <span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>23</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 8과 x축 및 두 직선 x = 0, x = 5로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>197</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>194</span><span class='fd'>3</span></span>",
+      "54",
+      "<span class='fr'><span class='fn'>130</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "x = 2에서 부호가 바뀌어요. <span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span> + 54 = <b><span class='fr'><span class='fn'>194</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 8과 x축 및 두 직선 x = 0, x = 3으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>46</span><span class='fd'>3</span></span>",
+      "6",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "x = 2에서 부호가 바뀌어요. <span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>14</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>46</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 18과 x축 및 두 직선 x = 0, x = 4로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>131</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>88</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "x = 3에서 부호가 바뀌어요. 36 + <span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>128</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 18과 x축 및 두 직선 x = 0, x = 6으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "72",
+      "36",
+      "108",
+      "109"
+     ],
+     "a": 2,
+     "e": "x = 3에서 부호가 바뀌어요. 36 + 72 = <b>108</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 32와 x축 및 두 직선 x = 0, x = 7로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>529</span><span class='fd'>3</span></span>",
+      "90",
+      "<span class='fr'><span class='fn'>526</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "x = 4에서 부호가 바뀌어요. <span class='fr'><span class='fn'>256</span><span class='fd'>3</span></span> + 90 = <b><span class='fr'><span class='fn'>526</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 8과 x축 및 두 직선 x = 0, x = 4로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "32",
+      "33",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "x = 2에서 부호가 바뀌어요. <span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span> = <b>32</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 2와 x축 및 두 직선 x = 0, x = 2로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "4",
+      "5"
+     ],
+     "a": 2,
+     "e": "x = 1에서 부호가 바뀌어요. <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span> = <b>4</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 18과 x축 및 두 직선 x = 0, x = 5로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>196</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>88</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>199</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "x = 3에서 부호가 바뀌어요. 36 + <span class='fr'><span class='fn'>88</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>196</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = −x² + 1과 x축 및 두 직선 x = 0, x = 3으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>3</span></span>",
+      "6",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "x = 1에서 부호가 바뀌어요. <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>22</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = −x² + 9와 x축 및 두 직선 x = 0, x = 5로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>44</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>101</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>98</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "x = 3에서 부호가 바뀌어요. 18 + <span class='fr'><span class='fn'>44</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>98</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x² − 4와 x축 및 두 직선 x = 0, x = 4로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "17",
+      "16"
+     ],
+     "a": 3,
+     "e": "x = 2에서 부호가 바뀌어요. <span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span> = <b>16</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 32와 x축 및 두 직선 x = 0, x = 5로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "95",
+      "94",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>230</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "x = 4에서 부호가 바뀌어요. <span class='fr'><span class='fn'>256</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>26</span><span class='fd'>3</span></span> = <b>94</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 32와 x축 및 두 직선 x = 0, x = 6으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "48",
+      "<span class='fr'><span class='fn'>112</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>371</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>368</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "x = 4에서 부호가 바뀌어요. <span class='fr'><span class='fn'>256</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>112</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>368</span><span class='fd'>3</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "곡선과 직선",
+   "items": [
+    {
+     "q": "곡선 y = x²과 직선 y = 2x + 3으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>",
+      "8",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "교점 x = −1, 3. ∫<sub>−1</sub><sup>3</sup> {(2x + 3) − x²} dx. <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = −x + 6으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "교점 x = −3, 2. ∫<sub>−3</sub><sup>2</sup> {(−x + 6) − x²} dx. <b><span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = x + 2로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "9"
+     ],
+     "a": 0,
+     "e": "교점 x = −1, 2. ∫<sub>−1</sub><sup>2</sup> {(x + 2) − x²} dx. <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = 3x로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "9",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = 0, 3. ∫<sub>0</sub><sup>3</sup> {(3x) − x²} dx. <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = 7x − 12로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "교점 x = 3, 4. ∫<sub>3</sub><sup>4</sup> {(7x − 12) − x²} dx. <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = 1로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "교점 x = −1, 1. ∫<sub>−1</sub><sup>1</sup> {(1) − x²} dx. <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = 3x + 4로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "교점 x = −1, 4. ∫<sub>−1</sub><sup>4</sup> {(3x + 4) − x²} dx. <b><span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = −2x로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "교점 x = −2, 0. ∫<sub>−2</sub><sup>0</sup> {(−2x) − x²} dx. <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = 4x − 3으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "교점 x = 1, 3. ∫<sub>1</sub><sup>3</sup> {(4x − 3) − x²} dx. <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = 6x − 8로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = 2, 4. ∫<sub>2</sub><sup>4</sup> {(6x − 8) − x²} dx. <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = 5x − 4로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "9",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "교점 x = 1, 4. ∫<sub>1</sub><sup>4</sup> {(5x − 4) − x²} dx. <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = −2x + 3으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "8",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "교점 x = −3, 1. ∫<sub>−3</sub><sup>1</sup> {(−2x + 3) − x²} dx. <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = −4x − 3으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "2",
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "교점 x = −3, −1. ∫<sub>−3</sub><sup>−1</sup> {(−4x − 3) − x²} dx. <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = 2x로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "2"
+     ],
+     "a": 0,
+     "e": "교점 x = 0, 2. ∫<sub>0</sub><sup>2</sup> {(2x) − x²} dx. <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = 5x − 6으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = 2, 3. ∫<sub>2</sub><sup>3</sup> {(5x − 6) − x²} dx. <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = 3x − 2로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "교점 x = 1, 2. ∫<sub>1</sub><sup>2</sup> {(3x − 2) − x²} dx. <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = −3x − 2로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = −2, −1. ∫<sub>−2</sub><sup>−1</sup> {(−3x − 2) − x²} dx. <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = −3x로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "9",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "교점 x = −3, 0. ∫<sub>−3</sub><sup>0</sup> {(−3x) − x²} dx. <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = x로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "교점 x = 0, 1. ∫<sub>0</sub><sup>1</sup> {(x) − x²} dx. <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = x + 6으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = −2, 3. ∫<sub>−2</sub><sup>3</sup> {(x + 6) − x²} dx. <b><span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "두 곡선 사이와 삼차함수",
+   "items": [
+    {
+     "q": "곡선 y = −x³ + 4x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "8",
+      "4",
+      "0",
+      "16"
+     ],
+     "a": 0,
+     "e": "x = −2, 0, 2에서 만나요. 두 부분의 넓이가 같으므로 2|∫<sub>0</sub><sup>2</sup> (−x³ + 4x) dx| = <b>8</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 10x + 8과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "10",
+      "−9",
+      "18",
+      "9"
+     ],
+     "a": 3,
+     "e": "교점 x = 1, 4. |∫<sub>1</sub><sup>4</sup> f(x) dx| = <b>9</b>"
+    },
+    {
+     "q": "곡선 y = x³ − 9x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "0",
+      "81",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "x = −3, 0, 3에서 만나요. 두 부분의 넓이가 같으므로 2|∫<sub>0</sub><sup>3</sup> (x³ − 9x) dx| = <b><span class='fr'><span class='fn'>81</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "두 곡선 y = x² − 2, y = −x² + 6으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>",
+      "16",
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = ±2. ∫<sub>−2</sub><sup>2</sup> (8 − 2x²) dx = <b><span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x³ − 4x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "0",
+      "16",
+      "8",
+      "4"
+     ],
+     "a": 2,
+     "e": "x = −2, 0, 2에서 만나요. 두 부분의 넓이가 같으므로 2|∫<sub>0</sub><sup>2</sup> (x³ − 4x) dx| = <b>8</b>"
+    },
+    {
+     "q": "곡선 y = 2x² + 6x − 8과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>250</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "교점 x = −4, 1. |∫<sub>−4</sub><sup>1</sup> f(x) dx| = <b><span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "두 곡선 y = x² + 1, y = −x² + 3으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "2"
+     ],
+     "a": 0,
+     "e": "교점 x = ±1. ∫<sub>−1</sub><sup>1</sup> (2 − 2x²) dx = <b><span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x² + 4x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "교점 x = −4, 0. |∫<sub>−4</sub><sup>0</sup> f(x) dx| = <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 2x − 12와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>250</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = −2, 3. |∫<sub>−2</sub><sup>3</sup> f(x) dx| = <b><span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 3x² + 6x − 9와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "33",
+      "64",
+      "−32",
+      "32"
+     ],
+     "a": 3,
+     "e": "교점 x = −3, 1. |∫<sub>−3</sub><sup>1</sup> f(x) dx| = <b>32</b>"
+    },
+    {
+     "q": "두 곡선 y = x² − 1, y = −x² + 17로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "54",
+      "72",
+      "144",
+      "36"
+     ],
+     "a": 1,
+     "e": "교점 x = ±3. ∫<sub>−3</sub><sup>3</sup> (18 − 2x²) dx = <b>72</b>"
+    },
+    {
+     "q": "곡선 y = −x² − x + 12와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>343</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = −4, 3. |∫<sub>−4</sub><sup>3</sup> f(x) dx| = <b><span class='fr'><span class='fn'>343</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x³ − x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "x = −1, 0, 1에서 만나요. 두 부분의 넓이가 같으므로 2|∫<sub>0</sub><sup>1</sup> (x³ − x) dx| = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 4x − 16과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "144",
+      "72",
+      "−72",
+      "73"
+     ],
+     "a": 1,
+     "e": "교점 x = −2, 4. |∫<sub>−2</sub><sup>4</sup> f(x) dx| = <b>72</b>"
+    },
+    {
+     "q": "두 곡선 y = x² − 1, y = −x² + 7로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "16",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "교점 x = ±2. ∫<sub>−2</sub><sup>2</sup> (8 − 2x²) dx = <b><span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "두 곡선 y = x² − 3, y = −x² + 15로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "72",
+      "36",
+      "144",
+      "54"
+     ],
+     "a": 0,
+     "e": "교점 x = ±3. ∫<sub>−3</sub><sup>3</sup> (18 − 2x²) dx = <b>72</b>"
+    },
+    {
+     "q": "곡선 y = 2x³ − 18x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "82",
+      "0",
+      "81",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "x = −3, 0, 3에서 만나요. 두 부분의 넓이가 같으므로 2|∫<sub>0</sub><sup>3</sup> (2x³ − 18x) dx| = <b>81</b>"
+    },
+    {
+     "q": "곡선 y = 2x³ − 8x와 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "16",
+      "17",
+      "4",
+      "0"
+     ],
+     "a": 0,
+     "e": "x = −2, 0, 2에서 만나요. 두 부분의 넓이가 같으므로 2|∫<sub>0</sub><sup>2</sup> (2x³ − 8x) dx| = <b>16</b>"
+    },
+    {
+     "q": "곡선 y = 2x² + 10x + 8과 x축으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "18",
+      "10",
+      "−9",
+      "9"
+     ],
+     "a": 3,
+     "e": "교점 x = −4, −1. |∫<sub>−4</sub><sup>−1</sup> f(x) dx| = <b>9</b>"
+    },
+    {
+     "q": "두 곡선 y = x², y = −x² + 18로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "72",
+      "144",
+      "36",
+      "54"
+     ],
+     "a": 0,
+     "e": "교점 x = ±3. ∫<sub>−3</sub><sup>3</sup> (18 − 2x²) dx = <b>72</b>"
+    }
+   ]
+  },
+  {
+   "title": "그래프 보고 넓이 구하기",
+   "items": [
+    {
+     "q": "곡선 y = x²과 직선 y = 4로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "8",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "교점 x = −2, 2. ∫<sub>−2</sub><sup>2</sup> {(4) − x²} dx. <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = x² − 4x + 3이에요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='137.3' x2='354.0' y2='137.3' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='129.3' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='190.0,40.0 191.0,44.3 192.1,48.5 193.1,52.7 194.2,56.7 195.2,60.7 196.2,64.7 197.3,68.5 198.3,72.3 199.4,76.0 200.4,79.7 201.4,83.2 202.5,86.7 203.5,90.1 204.6,93.5 205.6,96.8 206.6,100.0 207.7,103.1 208.7,106.2 209.8,109.2 210.8,112.1 211.8,114.9 212.9,117.7 213.9,120.4 215.0,123.1 216.0,125.6 217.0,128.1 218.1,130.5 219.1,132.9 220.2,135.1 221.2,137.3 222.2,139.5 223.3,141.5 224.3,143.5 225.4,145.4 226.4,147.2 227.4,149.0 228.5,150.7 229.5,152.3 230.6,153.9 231.6,155.4 232.6,156.8 233.7,158.1 234.7,159.4 235.8,160.5 236.8,161.7 237.8,162.7 238.9,163.7 239.9,164.6 241.0,165.4 242.0,166.2 243.0,166.9 244.1,167.5 245.1,168.0 246.2,168.5 247.2,168.9 248.2,169.2 249.3,169.5 250.3,169.6 251.4,169.7 252.4,169.8 253.4,169.7 254.5,169.6 255.5,169.5 256.6,169.2 257.6,168.9 258.6,168.5 259.7,168.0 260.7,167.5 261.8,166.9 262.8,166.2 263.8,165.4 264.9,164.6 265.9,163.7 267.0,162.7 268.0,161.7 269.0,160.5 270.1,159.4 271.1,158.1 272.2,156.8 273.2,155.4 274.2,153.9 275.3,152.3 276.3,150.7 277.4,149.0 278.4,147.2 279.4,145.4 280.5,143.5 281.5,141.5 282.6,139.5 283.6,137.3 284.6,135.1 285.7,132.9 286.7,130.5 287.8,128.1 288.8,125.6 289.8,123.1 290.9,120.4 291.9,117.7 293.0,114.9 294.0,112.1 295.0,109.2 296.1,106.2 297.1,103.1 298.2,100.0 299.2,96.8 300.2,93.5 301.3,90.1 302.3,86.7 303.4,83.2 304.4,79.7 305.4,76.0 306.5,72.3 307.5,68.5 308.6,64.7 309.6,60.7 310.6,56.7 311.7,52.7 312.7,48.5 313.8,44.3 314.8,40.0' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='221.2' cy='137.3' r='5.5' fill='#c0392b'/><circle cx='283.6' cy='137.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "|∫<sub>1</sub><sup>3</sup> (x² − 4x + 3) dx| = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = −x² + x + 2예요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='234.7' x2='354.0' y2='234.7' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='226.7' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='133.8,333.3 134.9,328.4 135.9,323.5 137.0,318.7 138.0,314.0 139.0,309.3 140.1,304.7 141.1,300.2 142.2,295.8 143.2,291.4 144.2,287.2 145.3,282.9 146.3,278.8 147.4,274.7 148.4,270.7 149.4,266.8 150.5,262.9 151.5,259.1 152.6,255.4 153.6,251.8 154.6,248.2 155.7,244.7 156.7,241.3 157.8,237.9 158.8,234.7 159.8,231.5 160.9,228.3 161.9,225.3 163.0,222.3 164.0,219.3 165.0,216.5 166.1,213.7 167.1,211.0 168.2,208.4 169.2,205.8 170.2,203.3 171.3,200.9 172.3,198.6 173.4,196.3 174.4,194.1 175.4,192.0 176.5,189.9 177.5,187.9 178.6,186.0 179.6,184.2 180.6,182.4 181.7,180.7 182.7,179.1 183.8,177.6 184.8,176.1 185.8,174.7 186.9,173.3 187.9,172.1 189.0,170.9 190.0,169.8 191.0,168.7 192.1,167.8 193.1,166.9 194.2,166.0 195.2,165.3 196.2,164.6 197.3,164.0 198.3,163.4 199.4,163.0 200.4,162.6 201.4,162.2 202.5,162.0 203.5,161.8 204.6,161.7 205.6,161.7 206.6,161.7 207.7,161.8 208.7,162.0 209.8,162.2 210.8,162.6 211.8,163.0 212.9,163.4 213.9,164.0 215.0,164.6 216.0,165.3 217.0,166.0 218.1,166.9 219.1,167.8 220.2,168.7 221.2,169.8 222.2,170.9 223.3,172.1 224.3,173.3 225.4,174.7 226.4,176.1 227.4,177.6 228.5,179.1 229.5,180.7 230.6,182.4 231.6,184.2 232.6,186.0 233.7,187.9 234.7,189.9 235.8,192.0 236.8,194.1 237.8,196.3 238.9,198.6 239.9,200.9 241.0,203.3 242.0,205.8 243.0,208.4 244.1,211.0 245.1,213.7 246.2,216.5 247.2,219.3 248.2,222.3 249.3,225.3 250.3,228.3 251.4,231.5 252.4,234.7 253.4,237.9 254.5,241.3 255.5,244.7 256.6,248.2 257.6,251.8 258.6,255.4 259.7,259.1 260.7,262.9 261.8,266.8 262.8,270.7 263.8,274.7 264.9,278.8 265.9,282.9 267.0,287.2 268.0,291.4 269.0,295.8 270.1,300.2 271.1,304.7 272.2,309.3 273.2,314.0 274.2,318.7 275.3,323.5 276.3,328.4 277.4,333.3' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='158.8' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='252.4' cy='234.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "9"
+     ],
+     "a": 1,
+     "e": "|∫<sub>−1</sub><sup>2</sup> (−x² + x + 2) dx| = <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = x² + 6x + 8이에요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='137.3' x2='354.0' y2='137.3' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='129.3' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='34.0,40.0 35.0,44.3 36.1,48.5 37.1,52.7 38.2,56.7 39.2,60.7 40.2,64.7 41.3,68.5 42.3,72.3 43.4,76.0 44.4,79.7 45.4,83.2 46.5,86.7 47.5,90.1 48.6,93.5 49.6,96.8 50.6,100.0 51.7,103.1 52.7,106.2 53.8,109.2 54.8,112.1 55.8,114.9 56.9,117.7 57.9,120.4 59.0,123.1 60.0,125.6 61.0,128.1 62.1,130.5 63.1,132.9 64.2,135.1 65.2,137.3 66.2,139.5 67.3,141.5 68.3,143.5 69.4,145.4 70.4,147.2 71.4,149.0 72.5,150.7 73.5,152.3 74.6,153.9 75.6,155.4 76.6,156.8 77.7,158.1 78.7,159.4 79.8,160.5 80.8,161.7 81.8,162.7 82.9,163.7 83.9,164.6 85.0,165.4 86.0,166.2 87.0,166.9 88.1,167.5 89.1,168.0 90.2,168.5 91.2,168.9 92.2,169.2 93.3,169.5 94.3,169.6 95.4,169.7 96.4,169.8 97.4,169.7 98.5,169.6 99.5,169.5 100.6,169.2 101.6,168.9 102.6,168.5 103.7,168.0 104.7,167.5 105.8,166.9 106.8,166.2 107.8,165.4 108.9,164.6 109.9,163.7 111.0,162.7 112.0,161.7 113.0,160.5 114.1,159.4 115.1,158.1 116.2,156.8 117.2,155.4 118.2,153.9 119.3,152.3 120.3,150.7 121.4,149.0 122.4,147.2 123.4,145.4 124.5,143.5 125.5,141.5 126.6,139.5 127.6,137.3 128.6,135.1 129.7,132.9 130.7,130.5 131.8,128.1 132.8,125.6 133.8,123.1 134.9,120.4 135.9,117.7 137.0,114.9 138.0,112.1 139.0,109.2 140.1,106.2 141.1,103.1 142.2,100.0 143.2,96.8 144.2,93.5 145.3,90.1 146.3,86.7 147.4,83.2 148.4,79.7 149.4,76.0 150.5,72.3 151.5,68.5 152.6,64.7 153.6,60.7 154.6,56.7 155.7,52.7 156.7,48.5 157.8,44.3 158.8,40.0' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='65.2' cy='137.3' r='5.5' fill='#c0392b'/><circle cx='127.6' cy='137.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "|∫<sub>−4</sub><sup>−2</sup> (x² + 6x + 8) dx| = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = x² + 4x예요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='137.3' x2='354.0' y2='137.3' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='129.3' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='45.4,42.1 46.5,47.8 47.5,53.4 48.6,58.9 49.6,64.3 50.6,69.7 51.7,75.0 52.7,80.2 53.8,85.4 54.8,90.5 55.8,95.5 56.9,100.4 57.9,105.3 59.0,110.1 60.0,114.8 61.0,119.5 62.1,124.0 63.1,128.5 64.2,133.0 65.2,137.3 66.2,141.6 67.3,145.8 68.3,150.0 69.4,154.1 70.4,158.1 71.4,162.0 72.5,165.8 73.5,169.6 74.6,173.3 75.6,177.0 76.6,180.6 77.7,184.1 78.7,187.5 79.8,190.8 80.8,194.1 81.8,197.3 82.9,200.5 83.9,203.5 85.0,206.5 86.0,209.4 87.0,212.3 88.1,215.1 89.1,217.8 90.2,220.4 91.2,223.0 92.2,225.4 93.3,227.9 94.3,230.2 95.4,232.5 96.4,234.7 97.4,236.8 98.5,238.8 99.5,240.8 100.6,242.7 101.6,244.6 102.6,246.3 103.7,248.0 104.7,249.7 105.8,251.2 106.8,252.7 107.8,254.1 108.9,255.4 109.9,256.7 111.0,257.9 112.0,259.0 113.0,260.0 114.1,261.0 115.1,261.9 116.2,262.7 117.2,263.5 118.2,264.2 119.3,264.8 120.3,265.3 121.4,265.8 122.4,266.2 123.4,266.5 124.5,266.8 125.5,267.0 126.6,267.1 127.6,267.1 128.6,267.1 129.7,267.0 130.7,266.8 131.8,266.5 132.8,266.2 133.8,265.8 134.9,265.3 135.9,264.8 137.0,264.2 138.0,263.5 139.0,262.7 140.1,261.9 141.1,261.0 142.2,260.0 143.2,259.0 144.2,257.9 145.3,256.7 146.3,255.4 147.4,254.1 148.4,252.7 149.4,251.2 150.5,249.7 151.5,248.0 152.6,246.3 153.6,244.6 154.6,242.7 155.7,240.8 156.7,238.8 157.8,236.8 158.8,234.7 159.8,232.5 160.9,230.2 161.9,227.9 163.0,225.4 164.0,223.0 165.0,220.4 166.1,217.8 167.1,215.1 168.2,212.3 169.2,209.4 170.2,206.5 171.3,203.5 172.3,200.5 173.4,197.3 174.4,194.1 175.4,190.8 176.5,187.5 177.5,184.1 178.6,180.6 179.6,177.0 180.6,173.3 181.7,169.6 182.7,165.8 183.8,162.0 184.8,158.1 185.8,154.1 186.9,150.0 187.9,145.8 189.0,141.6 190.0,137.3 191.0,133.0 192.1,128.5 193.1,124.0 194.2,119.5 195.2,114.8 196.2,110.1 197.3,105.3 198.3,100.4 199.4,95.5 200.4,90.5 201.4,85.4 202.5,80.2 203.5,75.0 204.6,69.7 205.6,64.3 206.6,58.9 207.7,53.4 208.7,47.8 209.8,42.1' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='65.2' cy='137.3' r='5.5' fill='#c0392b'/><circle cx='190.0' cy='137.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "16",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "8"
+     ],
+     "a": 2,
+     "e": "|∫<sub>−4</sub><sup>0</sup> (x² + 4x) dx| = <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = 4x로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "8",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = 0, 4. ∫<sub>0</sub><sup>4</sup> {(4x) − x²} dx. <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = −x² + 6x − 8이에요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='234.7' x2='354.0' y2='234.7' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='226.7' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='221.2,332.0 222.2,327.7 223.3,323.5 224.3,319.3 225.4,315.3 226.4,311.3 227.4,307.3 228.5,303.5 229.5,299.7 230.6,296.0 231.6,292.3 232.6,288.8 233.7,285.3 234.7,281.9 235.8,278.5 236.8,275.2 237.8,272.0 238.9,268.9 239.9,265.8 241.0,262.8 242.0,259.9 243.0,257.1 244.1,254.3 245.1,251.6 246.2,248.9 247.2,246.4 248.2,243.9 249.3,241.5 250.3,239.1 251.4,236.9 252.4,234.7 253.4,232.5 254.5,230.5 255.5,228.5 256.6,226.6 257.6,224.8 258.6,223.0 259.7,221.3 260.7,219.7 261.8,218.1 262.8,216.6 263.8,215.2 264.9,213.9 265.9,212.6 267.0,211.5 268.0,210.3 269.0,209.3 270.1,208.3 271.1,207.4 272.2,206.6 273.2,205.8 274.2,205.1 275.3,204.5 276.3,204.0 277.4,203.5 278.4,203.1 279.4,202.8 280.5,202.5 281.5,202.4 282.6,202.3 283.6,202.2 284.6,202.3 285.7,202.4 286.7,202.5 287.8,202.8 288.8,203.1 289.8,203.5 290.9,204.0 291.9,204.5 293.0,205.1 294.0,205.8 295.0,206.6 296.1,207.4 297.1,208.3 298.2,209.3 299.2,210.3 300.2,211.5 301.3,212.6 302.3,213.9 303.4,215.2 304.4,216.6 305.4,218.1 306.5,219.7 307.5,221.3 308.6,223.0 309.6,224.8 310.6,226.6 311.7,228.5 312.7,230.5 313.8,232.5 314.8,234.7 315.8,236.9 316.9,239.1 317.9,241.5 319.0,243.9 320.0,246.4 321.0,248.9 322.1,251.6 323.1,254.3 324.2,257.1 325.2,259.9 326.2,262.8 327.3,265.8 328.3,268.9 329.4,272.0 330.4,275.2 331.4,278.5 332.5,281.9 333.5,285.3 334.6,288.8 335.6,292.3 336.6,296.0 337.7,299.7 338.7,303.5 339.8,307.3 340.8,311.3 341.8,315.3 342.9,319.3 343.9,323.5 345.0,327.7 346.0,332.0' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='252.4' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='314.8' cy='234.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "|∫<sub>2</sub><sup>4</sup> (−x² + 6x − 8) dx| = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = −x² − 4x − 3이에요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='234.7' x2='354.0' y2='234.7' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='226.7' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='65.2,332.0 66.2,327.7 67.3,323.5 68.3,319.3 69.4,315.3 70.4,311.3 71.4,307.3 72.5,303.5 73.5,299.7 74.6,296.0 75.6,292.3 76.6,288.8 77.7,285.3 78.7,281.9 79.8,278.5 80.8,275.2 81.8,272.0 82.9,268.9 83.9,265.8 85.0,262.8 86.0,259.9 87.0,257.1 88.1,254.3 89.1,251.6 90.2,248.9 91.2,246.4 92.2,243.9 93.3,241.5 94.3,239.1 95.4,236.9 96.4,234.7 97.4,232.5 98.5,230.5 99.5,228.5 100.6,226.6 101.6,224.8 102.6,223.0 103.7,221.3 104.7,219.7 105.8,218.1 106.8,216.6 107.8,215.2 108.9,213.9 109.9,212.6 111.0,211.5 112.0,210.3 113.0,209.3 114.1,208.3 115.1,207.4 116.2,206.6 117.2,205.8 118.2,205.1 119.3,204.5 120.3,204.0 121.4,203.5 122.4,203.1 123.4,202.8 124.5,202.5 125.5,202.4 126.6,202.3 127.6,202.2 128.6,202.3 129.7,202.4 130.7,202.5 131.8,202.8 132.8,203.1 133.8,203.5 134.9,204.0 135.9,204.5 137.0,205.1 138.0,205.8 139.0,206.6 140.1,207.4 141.1,208.3 142.2,209.3 143.2,210.3 144.2,211.5 145.3,212.6 146.3,213.9 147.4,215.2 148.4,216.6 149.4,218.1 150.5,219.7 151.5,221.3 152.6,223.0 153.6,224.8 154.6,226.6 155.7,228.5 156.7,230.5 157.8,232.5 158.8,234.7 159.8,236.9 160.9,239.1 161.9,241.5 163.0,243.9 164.0,246.4 165.0,248.9 166.1,251.6 167.1,254.3 168.2,257.1 169.2,259.9 170.2,262.8 171.3,265.8 172.3,268.9 173.4,272.0 174.4,275.2 175.4,278.5 176.5,281.9 177.5,285.3 178.6,288.8 179.6,292.3 180.6,296.0 181.7,299.7 182.7,303.5 183.8,307.3 184.8,311.3 185.8,315.3 186.9,319.3 187.9,323.5 189.0,327.7 190.0,332.0' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='96.4' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='158.8' cy='234.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "|∫<sub>−3</sub><sup>−1</sup> (−x² − 4x − 3) dx| = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = x + 12로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>343</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "교점 x = −3, 4. ∫<sub>−3</sub><sup>4</sup> {(x + 12) − x²} dx. <b><span class='fr'><span class='fn'>343</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = −x² + 4x − 3이에요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='234.7' x2='354.0' y2='234.7' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='226.7' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='190.0,332.0 191.0,327.7 192.1,323.5 193.1,319.3 194.2,315.3 195.2,311.3 196.2,307.3 197.3,303.5 198.3,299.7 199.4,296.0 200.4,292.3 201.4,288.8 202.5,285.3 203.5,281.9 204.6,278.5 205.6,275.2 206.6,272.0 207.7,268.9 208.7,265.8 209.8,262.8 210.8,259.9 211.8,257.1 212.9,254.3 213.9,251.6 215.0,248.9 216.0,246.4 217.0,243.9 218.1,241.5 219.1,239.1 220.2,236.9 221.2,234.7 222.2,232.5 223.3,230.5 224.3,228.5 225.4,226.6 226.4,224.8 227.4,223.0 228.5,221.3 229.5,219.7 230.6,218.1 231.6,216.6 232.6,215.2 233.7,213.9 234.7,212.6 235.8,211.5 236.8,210.3 237.8,209.3 238.9,208.3 239.9,207.4 241.0,206.6 242.0,205.8 243.0,205.1 244.1,204.5 245.1,204.0 246.2,203.5 247.2,203.1 248.2,202.8 249.3,202.5 250.3,202.4 251.4,202.3 252.4,202.2 253.4,202.3 254.5,202.4 255.5,202.5 256.6,202.8 257.6,203.1 258.6,203.5 259.7,204.0 260.7,204.5 261.8,205.1 262.8,205.8 263.8,206.6 264.9,207.4 265.9,208.3 267.0,209.3 268.0,210.3 269.0,211.5 270.1,212.6 271.1,213.9 272.2,215.2 273.2,216.6 274.2,218.1 275.3,219.7 276.3,221.3 277.4,223.0 278.4,224.8 279.4,226.6 280.5,228.5 281.5,230.5 282.6,232.5 283.6,234.7 284.6,236.9 285.7,239.1 286.7,241.5 287.8,243.9 288.8,246.4 289.8,248.9 290.9,251.6 291.9,254.3 293.0,257.1 294.0,259.9 295.0,262.8 296.1,265.8 297.1,268.9 298.2,272.0 299.2,275.2 300.2,278.5 301.3,281.9 302.3,285.3 303.4,288.8 304.4,292.3 305.4,296.0 306.5,299.7 307.5,303.5 308.6,307.3 309.6,311.3 310.6,315.3 311.7,319.3 312.7,323.5 313.8,327.7 314.8,332.0' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='221.2' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='283.6' cy='234.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "2"
+     ],
+     "a": 2,
+     "e": "|∫<sub>1</sub><sup>3</sup> (−x² + 4x − 3) dx| = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = x² + 2x − 3이에요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='137.3' x2='354.0' y2='137.3' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='129.3' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='76.6,42.1 77.7,47.8 78.7,53.4 79.8,58.9 80.8,64.3 81.8,69.7 82.9,75.0 83.9,80.2 85.0,85.4 86.0,90.5 87.0,95.5 88.1,100.4 89.1,105.3 90.2,110.1 91.2,114.8 92.2,119.5 93.3,124.0 94.3,128.5 95.4,133.0 96.4,137.3 97.4,141.6 98.5,145.8 99.5,150.0 100.6,154.1 101.6,158.1 102.6,162.0 103.7,165.8 104.7,169.6 105.8,173.3 106.8,177.0 107.8,180.6 108.9,184.1 109.9,187.5 111.0,190.8 112.0,194.1 113.0,197.3 114.1,200.5 115.1,203.5 116.2,206.5 117.2,209.4 118.2,212.3 119.3,215.1 120.3,217.8 121.4,220.4 122.4,223.0 123.4,225.4 124.5,227.9 125.5,230.2 126.6,232.5 127.6,234.7 128.6,236.8 129.7,238.8 130.7,240.8 131.8,242.7 132.8,244.6 133.8,246.3 134.9,248.0 135.9,249.7 137.0,251.2 138.0,252.7 139.0,254.1 140.1,255.4 141.1,256.7 142.2,257.9 143.2,259.0 144.2,260.0 145.3,261.0 146.3,261.9 147.4,262.7 148.4,263.5 149.4,264.2 150.5,264.8 151.5,265.3 152.6,265.8 153.6,266.2 154.6,266.5 155.7,266.8 156.7,267.0 157.8,267.1 158.8,267.1 159.8,267.1 160.9,267.0 161.9,266.8 163.0,266.5 164.0,266.2 165.0,265.8 166.1,265.3 167.1,264.8 168.2,264.2 169.2,263.5 170.2,262.7 171.3,261.9 172.3,261.0 173.4,260.0 174.4,259.0 175.4,257.9 176.5,256.7 177.5,255.4 178.6,254.1 179.6,252.7 180.6,251.2 181.7,249.7 182.7,248.0 183.8,246.3 184.8,244.6 185.8,242.7 186.9,240.8 187.9,238.8 189.0,236.8 190.0,234.7 191.0,232.5 192.1,230.2 193.1,227.9 194.2,225.4 195.2,223.0 196.2,220.4 197.3,217.8 198.3,215.1 199.4,212.3 200.4,209.4 201.4,206.5 202.5,203.5 203.5,200.5 204.6,197.3 205.6,194.1 206.6,190.8 207.7,187.5 208.7,184.1 209.8,180.6 210.8,177.0 211.8,173.3 212.9,169.6 213.9,165.8 215.0,162.0 216.0,158.1 217.0,154.1 218.1,150.0 219.1,145.8 220.2,141.6 221.2,137.3 222.2,133.0 223.3,128.5 224.3,124.0 225.4,119.5 226.4,114.8 227.4,110.1 228.5,105.3 229.5,100.4 230.6,95.5 231.6,90.5 232.6,85.4 233.7,80.2 234.7,75.0 235.8,69.7 236.8,64.3 237.8,58.9 238.9,53.4 239.9,47.8 241.0,42.1' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='96.4' cy='137.3' r='5.5' fill='#c0392b'/><circle cx='221.2' cy='137.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "8",
+      "16",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "|∫<sub>−3</sub><sup>1</sup> (x² + 2x − 3) dx| = <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = x² − 4예요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='157.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='137.3' x2='354.0' y2='137.3' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='129.3' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='107.8,42.1 108.9,47.8 109.9,53.4 111.0,58.9 112.0,64.3 113.0,69.7 114.1,75.0 115.1,80.2 116.2,85.4 117.2,90.5 118.2,95.5 119.3,100.4 120.3,105.3 121.4,110.1 122.4,114.8 123.4,119.5 124.5,124.0 125.5,128.5 126.6,133.0 127.6,137.3 128.6,141.6 129.7,145.8 130.7,150.0 131.8,154.1 132.8,158.1 133.8,162.0 134.9,165.8 135.9,169.6 137.0,173.3 138.0,177.0 139.0,180.6 140.1,184.1 141.1,187.5 142.2,190.8 143.2,194.1 144.2,197.3 145.3,200.5 146.3,203.5 147.4,206.5 148.4,209.4 149.4,212.3 150.5,215.1 151.5,217.8 152.6,220.4 153.6,223.0 154.6,225.4 155.7,227.9 156.7,230.2 157.8,232.5 158.8,234.7 159.8,236.8 160.9,238.8 161.9,240.8 163.0,242.7 164.0,244.6 165.0,246.3 166.1,248.0 167.1,249.7 168.2,251.2 169.2,252.7 170.2,254.1 171.3,255.4 172.3,256.7 173.4,257.9 174.4,259.0 175.4,260.0 176.5,261.0 177.5,261.9 178.6,262.7 179.6,263.5 180.6,264.2 181.7,264.8 182.7,265.3 183.8,265.8 184.8,266.2 185.8,266.5 186.9,266.8 187.9,267.0 189.0,267.1 190.0,267.1 191.0,267.1 192.1,267.0 193.1,266.8 194.2,266.5 195.2,266.2 196.2,265.8 197.3,265.3 198.3,264.8 199.4,264.2 200.4,263.5 201.4,262.7 202.5,261.9 203.5,261.0 204.6,260.0 205.6,259.0 206.6,257.9 207.7,256.7 208.7,255.4 209.8,254.1 210.8,252.7 211.8,251.2 212.9,249.7 213.9,248.0 215.0,246.3 216.0,244.6 217.0,242.7 218.1,240.8 219.1,238.8 220.2,236.8 221.2,234.7 222.2,232.5 223.3,230.2 224.3,227.9 225.4,225.4 226.4,223.0 227.4,220.4 228.5,217.8 229.5,215.1 230.6,212.3 231.6,209.4 232.6,206.5 233.7,203.5 234.7,200.5 235.8,197.3 236.8,194.1 237.8,190.8 238.9,187.5 239.9,184.1 241.0,180.6 242.0,177.0 243.0,173.3 244.1,169.6 245.1,165.8 246.2,162.0 247.2,158.1 248.2,154.1 249.3,150.0 250.3,145.8 251.4,141.6 252.4,137.3 253.4,133.0 254.5,128.5 255.5,124.0 256.6,119.5 257.6,114.8 258.6,110.1 259.7,105.3 260.7,100.4 261.8,95.5 262.8,90.5 263.8,85.4 264.9,80.2 265.9,75.0 267.0,69.7 268.0,64.3 269.0,58.9 270.1,53.4 271.1,47.8 272.2,42.1' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='127.6' cy='137.3' r='5.5' fill='#c0392b'/><circle cx='252.4' cy='137.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>",
+      "16",
+      "8"
+     ],
+     "a": 0,
+     "e": "|∫<sub>−2</sub><sup>2</sup> (x² − 4) dx| = <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = −x² − 2x예요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='234.7' x2='354.0' y2='234.7' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='226.7' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='96.4,332.0 97.4,327.7 98.5,323.5 99.5,319.3 100.6,315.3 101.6,311.3 102.6,307.3 103.7,303.5 104.7,299.7 105.8,296.0 106.8,292.3 107.8,288.8 108.9,285.3 109.9,281.9 111.0,278.5 112.0,275.2 113.0,272.0 114.1,268.9 115.1,265.8 116.2,262.8 117.2,259.9 118.2,257.1 119.3,254.3 120.3,251.6 121.4,248.9 122.4,246.4 123.4,243.9 124.5,241.5 125.5,239.1 126.6,236.9 127.6,234.7 128.6,232.5 129.7,230.5 130.7,228.5 131.8,226.6 132.8,224.8 133.8,223.0 134.9,221.3 135.9,219.7 137.0,218.1 138.0,216.6 139.0,215.2 140.1,213.9 141.1,212.6 142.2,211.5 143.2,210.3 144.2,209.3 145.3,208.3 146.3,207.4 147.4,206.6 148.4,205.8 149.4,205.1 150.5,204.5 151.5,204.0 152.6,203.5 153.6,203.1 154.6,202.8 155.7,202.5 156.7,202.4 157.8,202.3 158.8,202.2 159.8,202.3 160.9,202.4 161.9,202.5 163.0,202.8 164.0,203.1 165.0,203.5 166.1,204.0 167.1,204.5 168.2,205.1 169.2,205.8 170.2,206.6 171.3,207.4 172.3,208.3 173.4,209.3 174.4,210.3 175.4,211.5 176.5,212.6 177.5,213.9 178.6,215.2 179.6,216.6 180.6,218.1 181.7,219.7 182.7,221.3 183.8,223.0 184.8,224.8 185.8,226.6 186.9,228.5 187.9,230.5 189.0,232.5 190.0,234.7 191.0,236.9 192.1,239.1 193.1,241.5 194.2,243.9 195.2,246.4 196.2,248.9 197.3,251.6 198.3,254.3 199.4,257.1 200.4,259.9 201.4,262.8 202.5,265.8 203.5,268.9 204.6,272.0 205.6,275.2 206.6,278.5 207.7,281.9 208.7,285.3 209.8,288.8 210.8,292.3 211.8,296.0 212.9,299.7 213.9,303.5 215.0,307.3 216.0,311.3 217.0,315.3 218.1,319.3 219.1,323.5 220.2,327.7 221.2,332.0' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='127.6' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='190.0' cy='234.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "|∫<sub>−2</sub><sup>0</sup> (−x² − 2x) dx| = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = −x + 2로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "9",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "교점 x = −2, 1. ∫<sub>−2</sub><sup>1</sup> {(−x + 2) − x²} dx. <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = −5x − 6으로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "교점 x = −3, −2. ∫<sub>−3</sub><sup>−2</sup> {(−5x − 6) − x²} dx. <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "곡선 y = x²과 직선 y = −x로 둘러싸인 부분의 넓이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 0,
+     "e": "교점 x = −1, 0. ∫<sub>−1</sub><sup>0</sup> {(−x) − x²} dx. <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = −x² − 6x − 8이에요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='234.7' x2='354.0' y2='234.7' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='226.7' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='34.0,332.0 35.0,327.7 36.1,323.5 37.1,319.3 38.2,315.3 39.2,311.3 40.2,307.3 41.3,303.5 42.3,299.7 43.4,296.0 44.4,292.3 45.4,288.8 46.5,285.3 47.5,281.9 48.6,278.5 49.6,275.2 50.6,272.0 51.7,268.9 52.7,265.8 53.8,262.8 54.8,259.9 55.8,257.1 56.9,254.3 57.9,251.6 59.0,248.9 60.0,246.4 61.0,243.9 62.1,241.5 63.1,239.1 64.2,236.9 65.2,234.7 66.2,232.5 67.3,230.5 68.3,228.5 69.4,226.6 70.4,224.8 71.4,223.0 72.5,221.3 73.5,219.7 74.6,218.1 75.6,216.6 76.6,215.2 77.7,213.9 78.7,212.6 79.8,211.5 80.8,210.3 81.8,209.3 82.9,208.3 83.9,207.4 85.0,206.6 86.0,205.8 87.0,205.1 88.1,204.5 89.1,204.0 90.2,203.5 91.2,203.1 92.2,202.8 93.3,202.5 94.3,202.4 95.4,202.3 96.4,202.2 97.4,202.3 98.5,202.4 99.5,202.5 100.6,202.8 101.6,203.1 102.6,203.5 103.7,204.0 104.7,204.5 105.8,205.1 106.8,205.8 107.8,206.6 108.9,207.4 109.9,208.3 111.0,209.3 112.0,210.3 113.0,211.5 114.1,212.6 115.1,213.9 116.2,215.2 117.2,216.6 118.2,218.1 119.3,219.7 120.3,221.3 121.4,223.0 122.4,224.8 123.4,226.6 124.5,228.5 125.5,230.5 126.6,232.5 127.6,234.7 128.6,236.9 129.7,239.1 130.7,241.5 131.8,243.9 132.8,246.4 133.8,248.9 134.9,251.6 135.9,254.3 137.0,257.1 138.0,259.9 139.0,262.8 140.1,265.8 141.1,268.9 142.2,272.0 143.2,275.2 144.2,278.5 145.3,281.9 146.3,285.3 147.4,288.8 148.4,292.3 149.4,296.0 150.5,299.7 151.5,303.5 152.6,307.3 153.6,311.3 154.6,315.3 155.7,319.3 156.7,323.5 157.8,327.7 158.8,332.0' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='65.2' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='127.6' cy='234.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "|∫<sub>−4</sub><sup>−2</sup> (−x² − 6x − 8) dx| = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = −x² − 2x + 3이에요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='234.7' x2='354.0' y2='234.7' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='226.7' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='76.6,329.9 77.7,324.2 78.7,318.6 79.8,313.1 80.8,307.7 81.8,302.3 82.9,297.0 83.9,291.8 85.0,286.6 86.0,281.5 87.0,276.5 88.1,271.6 89.1,266.7 90.2,261.9 91.2,257.2 92.2,252.5 93.3,248.0 94.3,243.5 95.4,239.0 96.4,234.7 97.4,230.4 98.5,226.2 99.5,222.0 100.6,217.9 101.6,213.9 102.6,210.0 103.7,206.2 104.7,202.4 105.8,198.7 106.8,195.0 107.8,191.4 108.9,187.9 109.9,184.5 111.0,181.2 112.0,177.9 113.0,174.7 114.1,171.5 115.1,168.5 116.2,165.5 117.2,162.6 118.2,159.7 119.3,156.9 120.3,154.2 121.4,151.6 122.4,149.0 123.4,146.6 124.5,144.1 125.5,141.8 126.6,139.5 127.6,137.3 128.6,135.2 129.7,133.2 130.7,131.2 131.8,129.3 132.8,127.4 133.8,125.7 134.9,124.0 135.9,122.3 137.0,120.8 138.0,119.3 139.0,117.9 140.1,116.6 141.1,115.3 142.2,114.1 143.2,113.0 144.2,112.0 145.3,111.0 146.3,110.1 147.4,109.3 148.4,108.5 149.4,107.8 150.5,107.2 151.5,106.7 152.6,106.2 153.6,105.8 154.6,105.5 155.7,105.2 156.7,105.0 157.8,104.9 158.8,104.9 159.8,104.9 160.9,105.0 161.9,105.2 163.0,105.5 164.0,105.8 165.0,106.2 166.1,106.7 167.1,107.2 168.2,107.8 169.2,108.5 170.2,109.3 171.3,110.1 172.3,111.0 173.4,112.0 174.4,113.0 175.4,114.1 176.5,115.3 177.5,116.6 178.6,117.9 179.6,119.3 180.6,120.8 181.7,122.3 182.7,124.0 183.8,125.7 184.8,127.4 185.8,129.3 186.9,131.2 187.9,133.2 189.0,135.2 190.0,137.3 191.0,139.5 192.1,141.8 193.1,144.1 194.2,146.6 195.2,149.0 196.2,151.6 197.3,154.2 198.3,156.9 199.4,159.7 200.4,162.6 201.4,165.5 202.5,168.5 203.5,171.5 204.6,174.7 205.6,177.9 206.6,181.2 207.7,184.5 208.7,187.9 209.8,191.4 210.8,195.0 211.8,198.7 212.9,202.4 213.9,206.2 215.0,210.0 216.0,213.9 217.0,217.9 218.1,222.0 219.1,226.2 220.2,230.4 221.2,234.7 222.2,239.0 223.3,243.5 224.3,248.0 225.4,252.5 226.4,257.2 227.4,261.9 228.5,266.7 229.5,271.6 230.6,276.5 231.6,281.5 232.6,286.6 233.7,291.8 234.7,297.0 235.8,302.3 236.8,307.7 237.8,313.1 238.9,318.6 239.9,324.2 241.0,329.9' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='96.4' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='221.2' cy='234.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "8",
+      "16",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "|∫<sub>−3</sub><sup>1</sup> (−x² − 2x + 3) dx| = <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = −x² + 3x예요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='234.7' x2='354.0' y2='234.7' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='226.7' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='165.0,333.3 166.1,328.4 167.1,323.5 168.2,318.7 169.2,314.0 170.2,309.3 171.3,304.7 172.3,300.2 173.4,295.8 174.4,291.4 175.4,287.2 176.5,282.9 177.5,278.8 178.6,274.7 179.6,270.7 180.6,266.8 181.7,262.9 182.7,259.1 183.8,255.4 184.8,251.8 185.8,248.2 186.9,244.7 187.9,241.3 189.0,237.9 190.0,234.7 191.0,231.5 192.1,228.3 193.1,225.3 194.2,222.3 195.2,219.3 196.2,216.5 197.3,213.7 198.3,211.0 199.4,208.4 200.4,205.8 201.4,203.3 202.5,200.9 203.5,198.6 204.6,196.3 205.6,194.1 206.6,192.0 207.7,189.9 208.7,187.9 209.8,186.0 210.8,184.2 211.8,182.4 212.9,180.7 213.9,179.1 215.0,177.6 216.0,176.1 217.0,174.7 218.1,173.3 219.1,172.1 220.2,170.9 221.2,169.8 222.2,168.7 223.3,167.8 224.3,166.9 225.4,166.0 226.4,165.3 227.4,164.6 228.5,164.0 229.5,163.4 230.6,163.0 231.6,162.6 232.6,162.2 233.7,162.0 234.7,161.8 235.8,161.7 236.8,161.7 237.8,161.7 238.9,161.8 239.9,162.0 241.0,162.2 242.0,162.6 243.0,163.0 244.1,163.4 245.1,164.0 246.2,164.6 247.2,165.3 248.2,166.0 249.3,166.9 250.3,167.8 251.4,168.7 252.4,169.8 253.4,170.9 254.5,172.1 255.5,173.3 256.6,174.7 257.6,176.1 258.6,177.6 259.7,179.1 260.7,180.7 261.8,182.4 262.8,184.2 263.8,186.0 264.9,187.9 265.9,189.9 267.0,192.0 268.0,194.1 269.0,196.3 270.1,198.6 271.1,200.9 272.2,203.3 273.2,205.8 274.2,208.4 275.3,211.0 276.3,213.7 277.4,216.5 278.4,219.3 279.4,222.3 280.5,225.3 281.5,228.3 282.6,231.5 283.6,234.7 284.6,237.9 285.7,241.3 286.7,244.7 287.8,248.2 288.8,251.8 289.8,255.4 290.9,259.1 291.9,262.9 293.0,266.8 294.0,270.7 295.0,274.7 296.1,278.8 297.1,282.9 298.2,287.2 299.2,291.4 300.2,295.8 301.3,300.2 302.3,304.7 303.4,309.3 304.4,314.0 305.4,318.7 306.5,323.5 307.5,328.4 308.6,333.3' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='190.0' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='283.6' cy='234.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>4</span></span>",
+      "9"
+     ],
+     "a": 0,
+     "e": "|∫<sub>0</sub><sup>3</sup> (−x² + 3x) dx| = <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "그림은 곡선 y = −x² − 5x − 4예요. 이 곡선과 x축으로 둘러싸인 부분의 넓이는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='곡선과 x축'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='254.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='299.6' x2='346.0' y2='299.6' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='304.6' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='267.1' x2='346.0' y2='267.1' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='272.1' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='202.2' x2='346.0' y2='202.2' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='207.2' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='169.8' x2='346.0' y2='169.8' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='174.8' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='104.9' x2='346.0' y2='104.9' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='109.9' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='72.4' x2='346.0' y2='72.4' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='77.4' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='234.7' x2='354.0' y2='234.7' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='226.7' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='40.2,333.3 41.3,328.4 42.3,323.5 43.4,318.7 44.4,314.0 45.4,309.3 46.5,304.7 47.5,300.2 48.6,295.8 49.6,291.4 50.6,287.2 51.7,282.9 52.7,278.8 53.8,274.7 54.8,270.7 55.8,266.8 56.9,262.9 57.9,259.1 59.0,255.4 60.0,251.8 61.0,248.2 62.1,244.7 63.1,241.3 64.2,237.9 65.2,234.7 66.2,231.5 67.3,228.3 68.3,225.3 69.4,222.3 70.4,219.3 71.4,216.5 72.5,213.7 73.5,211.0 74.6,208.4 75.6,205.8 76.6,203.3 77.7,200.9 78.7,198.6 79.8,196.3 80.8,194.1 81.8,192.0 82.9,189.9 83.9,187.9 85.0,186.0 86.0,184.2 87.0,182.4 88.1,180.7 89.1,179.1 90.2,177.6 91.2,176.1 92.2,174.7 93.3,173.3 94.3,172.1 95.4,170.9 96.4,169.8 97.4,168.7 98.5,167.8 99.5,166.9 100.6,166.0 101.6,165.3 102.6,164.6 103.7,164.0 104.7,163.4 105.8,163.0 106.8,162.6 107.8,162.2 108.9,162.0 109.9,161.8 111.0,161.7 112.0,161.7 113.0,161.7 114.1,161.8 115.1,162.0 116.2,162.2 117.2,162.6 118.2,163.0 119.3,163.4 120.3,164.0 121.4,164.6 122.4,165.3 123.4,166.0 124.5,166.9 125.5,167.8 126.6,168.7 127.6,169.8 128.6,170.9 129.7,172.1 130.7,173.3 131.8,174.7 132.8,176.1 133.8,177.6 134.9,179.1 135.9,180.7 137.0,182.4 138.0,184.2 139.0,186.0 140.1,187.9 141.1,189.9 142.2,192.0 143.2,194.1 144.2,196.3 145.3,198.6 146.3,200.9 147.4,203.3 148.4,205.8 149.4,208.4 150.5,211.0 151.5,213.7 152.6,216.5 153.6,219.3 154.6,222.3 155.7,225.3 156.7,228.3 157.8,231.5 158.8,234.7 159.8,237.9 160.9,241.3 161.9,244.7 163.0,248.2 164.0,251.8 165.0,255.4 166.1,259.1 167.1,262.9 168.2,266.8 169.2,270.7 170.2,274.7 171.3,278.8 172.3,282.9 173.4,287.2 174.4,291.4 175.4,295.8 176.5,300.2 177.5,304.7 178.6,309.3 179.6,314.0 180.6,318.7 181.7,323.5 182.7,328.4 183.8,333.3' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='65.2' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='158.8' cy='234.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>4</span></span>",
+      "9",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "|∫<sub>−4</sub><sup>−1</sup> (−x² − 5x − 4) dx| = <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 11,
+ "updated": "2026-11-25",
+ "country": "kr",
+ "subject": "math",
+ "grade": "calculus-1"
+}

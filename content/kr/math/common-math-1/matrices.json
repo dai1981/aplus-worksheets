@@ -1,0 +1,1157 @@
+{
+ "slug": "matrices",
+ "title": "행렬의 뜻과 연산",
+ "seo_title": "행렬의 뜻과 연산 | 고등학교 공통수학1 학습지 (정답 포함)",
+ "short_title": "행렬",
+ "domain": "행렬",
+ "standard_code": "[10공수1-04-01] [10공수1-04-02]",
+ "standard_url": "https://ncic.re.kr/inv/org/download.do?year=2022&seq=10003559&orgType=ogi4",
+ "standard_text": "행렬의 뜻을 알고, 실생활 상황을 행렬로 표현할 수 있다. 행렬의 연산을 수행하고, 관련된 문제를 해결할 수 있다.",
+ "meta_desc": "고등학교 공통수학1 행렬 문제: 행렬의 뜻과 (i, j) 성분, m × n 행렬, 서로 같은 행렬, 덧셈·뺄셈·실수배, 행렬의 곱셈, 거듭제곱, 실생활 자료를 행렬로 나타내기까지 100문제와 정답·해설.",
+ "key_big": "AB의 (i, j) 성분 = A의 i행 · B의 j열",
+ "key_sub": "행렬의 곱셈은 교환법칙이 성립하지 않아요(AB ≠ BA).",
+ "body_html": "<h2>생각하는 방법</h2><p>수나 문자를 직사각형 모양으로 배열하여 괄호로 묶은 것을 <b>행렬</b>이라 하고, i행 j열의 수를 (i, j) 성분이라고 해요.</p><p>같은 꼴의 두 행렬은 같은 위치의 성분끼리 더하거나 빼요. 실수배는 모든 성분에 곱해요.</p><p>AB의 (i, j) 성분은 A의 i행과 B의 j열의 성분을 차례로 곱하여 더한 값이에요.</p><p>행렬의 곱셈에서는 일반적으로 AB ≠ BA예요.</p><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>(1 2; 3 4)(1 0; 1 1)</p><p class='sn-ex-s'>(1 + 2, 0 + 2)</p><p class='sn-ex-s'>(3 + 4, 0 + 4)</p><p class='sn-ex-a'>답: (3 2; 7 4)</p></div><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>2A − B의 성분</p><p class='sn-ex-s'>2a₁₁ − b₁₁ …</p><p class='sn-ex-a'>답: 성분별로 계산</p></div><h2>자주 하는 실수</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>자주 하는 실수</th><th>바르게 생각하기</th></tr></thead><tbody><tr><td>행렬의 곱셈을 성분끼리 곱한다</td><td>행과 열을 곱해 더해요.</td></tr><tr><td>(i, j) 성분에서 행과 열을 바꾼다</td><td>앞의 수가 행, 뒤의 수가 열이에요.</td></tr><tr><td>AB = BA라고 생각한다</td><td>일반적으로 성립하지 않아요.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "곱할 수 있는 조건은?",
+   "a": "앞 행렬의 열의 개수와 뒤 행렬의 행의 개수가 같아야 해요."
+  },
+  {
+   "q": "행렬은 어디에 쓰이나요?",
+   "a": "판매량과 가격, 연결 관계처럼 표로 된 자료를 계산할 때 써요."
+  }
+ ],
+ "sets": [
+  {
+   "title": "행렬의 뜻",
+   "items": [
+    {
+     "q": "행렬 A = <span class='mx m2'><span>4</span><span>2</span><span>6</span><span>2</span><span>1</span><span>1</span></span>에서 (1, 1) 성분은?",
+     "c": [
+      "1",
+      "6",
+      "4",
+      "5"
+     ],
+     "a": 2,
+     "e": "1행 1열의 성분이에요. <b>4</b>"
+    },
+    {
+     "q": "행렬 A = <span class='mx m2'><span>6</span><span>−1</span><span>3</span><span>2</span><span>3</span><span>4</span></span>에서 (3, 2) 성분은?",
+     "c": [
+      "6",
+      "5",
+      "4",
+      "7"
+     ],
+     "a": 2,
+     "e": "3행 2열의 성분이에요. <b>4</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m2'><span>1</span><span>2</span><span>−5</span><span>−5</span><span>5</span><span>2</span></span>의 꼴은?",
+     "c": [
+      "2 × 3 행렬",
+      "3 × 2 행렬",
+      "6 × 1 행렬",
+      "3 × 3 행렬"
+     ],
+     "a": 1,
+     "e": "행이 3개, 열이 2개예요. <b>3 × 2 행렬</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m3'><span>−1</span><span>3</span><span>6</span></span>의 꼴은?",
+     "c": [
+      "3 × 1 행렬",
+      "1 × 1 행렬",
+      "3 × 3 행렬",
+      "1 × 3 행렬"
+     ],
+     "a": 3,
+     "e": "행이 1개, 열이 3개예요. <b>1 × 3 행렬</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m1'><span>0</span><span>−4</span><span>−4</span></span>의 꼴은?",
+     "c": [
+      "3 × 1 행렬",
+      "3 × 3 행렬",
+      "1 × 1 행렬",
+      "1 × 3 행렬"
+     ],
+     "a": 0,
+     "e": "행이 3개, 열이 1개예요. <b>3 × 1 행렬</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m3'><span>−1</span><span>0</span><span>4</span><span>0</span><span>0</span><span>2</span></span>의 꼴은?",
+     "c": [
+      "2 × 3 행렬",
+      "6 × 1 행렬",
+      "3 × 2 행렬",
+      "2 × 2 행렬"
+     ],
+     "a": 0,
+     "e": "행이 2개, 열이 3개예요. <b>2 × 3 행렬</b>"
+    },
+    {
+     "q": "행렬 A = <span class='mx m3'><span>2</span><span>−5</span><span>5</span><span>2</span><span>−4</span><span>−3</span></span>에서 (1, 3) 성분은?",
+     "c": [
+      "6",
+      "5",
+      "2",
+      "−3"
+     ],
+     "a": 1,
+     "e": "1행 3열의 성분이에요. <b>5</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m1'><span>1</span><span>−2</span><span>0</span></span>의 꼴은?",
+     "c": [
+      "1 × 3 행렬",
+      "3 × 3 행렬",
+      "1 × 1 행렬",
+      "3 × 1 행렬"
+     ],
+     "a": 3,
+     "e": "행이 3개, 열이 1개예요. <b>3 × 1 행렬</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m3'><span>5</span><span>−3</span><span>−1</span></span>의 꼴은?",
+     "c": [
+      "3 × 1 행렬",
+      "1 × 1 행렬",
+      "3 × 3 행렬",
+      "1 × 3 행렬"
+     ],
+     "a": 3,
+     "e": "행이 1개, 열이 3개예요. <b>1 × 3 행렬</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m3'><span>−4</span><span>−3</span><span>0</span><span>−3</span><span>5</span><span>2</span></span>의 꼴은?",
+     "c": [
+      "6 × 1 행렬",
+      "2 × 2 행렬",
+      "2 × 3 행렬",
+      "3 × 2 행렬"
+     ],
+     "a": 2,
+     "e": "행이 2개, 열이 3개예요. <b>2 × 3 행렬</b>"
+    },
+    {
+     "q": "행렬 A = <span class='mx m3'><span>6</span><span>0</span><span>6</span><span>−5</span><span>−1</span><span>−5</span></span>에서 (1, 3) 성분은?",
+     "c": [
+      "6",
+      "12",
+      "7",
+      "−5"
+     ],
+     "a": 0,
+     "e": "1행 3열의 성분이에요. <b>6</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m3'><span>−4</span><span>3</span><span>5</span><span>2</span><span>6</span><span>−2</span></span>의 꼴은?",
+     "c": [
+      "2 × 3 행렬",
+      "2 × 2 행렬",
+      "3 × 2 행렬",
+      "6 × 1 행렬"
+     ],
+     "a": 0,
+     "e": "행이 2개, 열이 3개예요. <b>2 × 3 행렬</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m3'><span>1</span><span>−3</span><span>−4</span><span>−4</span><span>−2</span><span>−3</span></span>의 꼴은?",
+     "c": [
+      "2 × 3 행렬",
+      "3 × 2 행렬",
+      "6 × 1 행렬",
+      "2 × 2 행렬"
+     ],
+     "a": 0,
+     "e": "행이 2개, 열이 3개예요. <b>2 × 3 행렬</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m3'><span>−1</span><span>2</span><span>−3</span></span>의 꼴은?",
+     "c": [
+      "3 × 3 행렬",
+      "1 × 1 행렬",
+      "1 × 3 행렬",
+      "3 × 1 행렬"
+     ],
+     "a": 2,
+     "e": "행이 1개, 열이 3개예요. <b>1 × 3 행렬</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m3'><span>−5</span><span>4</span><span>−1</span></span>의 꼴은?",
+     "c": [
+      "3 × 3 행렬",
+      "1 × 3 행렬",
+      "1 × 1 행렬",
+      "3 × 1 행렬"
+     ],
+     "a": 1,
+     "e": "행이 1개, 열이 3개예요. <b>1 × 3 행렬</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m2'><span>−5</span><span>5</span><span>3</span><span>−5</span><span>−1</span><span>5</span></span>의 꼴은?",
+     "c": [
+      "3 × 3 행렬",
+      "6 × 1 행렬",
+      "2 × 3 행렬",
+      "3 × 2 행렬"
+     ],
+     "a": 3,
+     "e": "행이 3개, 열이 2개예요. <b>3 × 2 행렬</b>"
+    },
+    {
+     "q": "행렬 A = <span class='mx m3'><span>−3</span><span>−4</span><span>3</span><span>0</span><span>0</span><span>2</span><span>2</span><span>3</span><span>6</span></span>에서 (1, 3) 성분은?",
+     "c": [
+      "6",
+      "−3",
+      "2",
+      "3"
+     ],
+     "a": 3,
+     "e": "1행 3열의 성분이에요. <b>3</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m3'><span>6</span><span>2</span><span>−4</span></span>의 꼴은?",
+     "c": [
+      "1 × 1 행렬",
+      "1 × 3 행렬",
+      "3 × 1 행렬",
+      "3 × 3 행렬"
+     ],
+     "a": 1,
+     "e": "행이 1개, 열이 3개예요. <b>1 × 3 행렬</b>"
+    },
+    {
+     "q": "행렬 A = <span class='mx m2'><span>−3</span><span>−2</span><span>0</span><span>2</span></span>에서 (2, 1) 성분은?",
+     "c": [
+      "2",
+      "0",
+      "−3",
+      "−2"
+     ],
+     "a": 1,
+     "e": "2행 1열의 성분이에요. <b>0</b>"
+    },
+    {
+     "q": "행렬 <span class='mx m1'><span>3</span><span>6</span><span>4</span></span>의 꼴은?",
+     "c": [
+      "1 × 1 행렬",
+      "3 × 3 행렬",
+      "3 × 1 행렬",
+      "1 × 3 행렬"
+     ],
+     "a": 2,
+     "e": "행이 3개, 열이 1개예요. <b>3 × 1 행렬</b>"
+    }
+   ]
+  },
+  {
+   "title": "덧셈과 뺄셈",
+   "items": [
+    {
+     "q": "A = <span class='mx m2'><span>−5</span><span>−3</span><span>−3</span><span>−2</span></span>, B = <span class='mx m2'><span>6</span><span>0</span><span>1</span><span>1</span></span>일 때, <b>A − B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−11</span><span>−4</span><span>−3</span><span>−3</span></span>",
+      "<span class='mx m2'><span>−11</span><span>−3</span><span>−4</span><span>−3</span></span>",
+      "<span class='mx m2'><span>−33</span><span>−3</span><span>−20</span><span>−2</span></span>",
+      "<span class='mx m2'><span>1</span><span>−3</span><span>−2</span><span>−1</span></span>"
+     ],
+     "a": 1,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>−11</span><span>−3</span><span>−4</span><span>−3</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>3</span><span>3</span><span>3</span><span>4</span></span>, B = <span class='mx m2'><span>4</span><span>−1</span><span>3</span><span>1</span></span>일 때, <b>A + B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>7</span><span>2</span><span>6</span><span>5</span></span>",
+      "<span class='mx m2'><span>21</span><span>0</span><span>24</span><span>1</span></span>",
+      "<span class='mx m2'><span>7</span><span>6</span><span>2</span><span>5</span></span>",
+      "<span class='mx m2'><span>−1</span><span>4</span><span>0</span><span>3</span></span>"
+     ],
+     "a": 0,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>7</span><span>2</span><span>6</span><span>5</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>2</span><span>1</span><span>0</span><span>−3</span></span>, B = <span class='mx m2'><span>−2</span><span>3</span><span>−1</span><span>6</span></span>일 때, <b>A − B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>4</span><span>−1</span><span>3</span></span>",
+      "<span class='mx m2'><span>4</span><span>−2</span><span>1</span><span>−9</span></span>",
+      "<span class='mx m2'><span>4</span><span>1</span><span>−2</span><span>−9</span></span>",
+      "<span class='mx m2'><span>−5</span><span>12</span><span>3</span><span>−18</span></span>"
+     ],
+     "a": 1,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>4</span><span>−2</span><span>1</span><span>−9</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−2</span><span>1</span><span>0</span><span>−4</span></span>, B = <span class='mx m2'><span>3</span><span>2</span><span>5</span><span>−4</span></span>일 때, <b>A + B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>3</span><span>5</span><span>−8</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−8</span><span>−20</span><span>16</span></span>",
+      "<span class='mx m2'><span>1</span><span>5</span><span>3</span><span>−8</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−1</span><span>−5</span><span>0</span></span>"
+     ],
+     "a": 0,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>1</span><span>3</span><span>5</span><span>−8</span></span></b>"
+    },
+    {
+     "q": "두 행렬 <span class='mx m2'><span>x + 3</span><span>2</span><span>3</span><span>y − 1</span></span>, <span class='mx m2'><span>6</span><span>2</span><span>3</span><span>−3</span></span>가 서로 같을 때, x + y의 값은?",
+     "c": [
+      "5",
+      "7",
+      "3",
+      "1"
+     ],
+     "a": 3,
+     "e": "x + 3 = 6, y − 1 = −3이므로 x = 3, y = −2. <b>1</b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−2</span><span>−2</span><span>1</span><span>4</span></span>, B = <span class='mx m2'><span>−3</span><span>−4</span><span>5</span><span>3</span></span>일 때, <b>A − B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>−4</span><span>2</span><span>1</span></span>",
+      "<span class='mx m2'><span>−4</span><span>2</span><span>17</span><span>8</span></span>",
+      "<span class='mx m2'><span>1</span><span>2</span><span>−4</span><span>1</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−6</span><span>6</span><span>7</span></span>"
+     ],
+     "a": 2,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>1</span><span>2</span><span>−4</span><span>1</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>4</span><span>−2</span><span>4</span><span>1</span></span>, B = <span class='mx m2'><span>−5</span><span>4</span><span>5</span><span>−1</span></span>일 때, <b>A − B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−30</span><span>18</span><span>−15</span><span>15</span></span>",
+      "<span class='mx m2'><span>−1</span><span>2</span><span>9</span><span>0</span></span>",
+      "<span class='mx m2'><span>9</span><span>−6</span><span>−1</span><span>2</span></span>",
+      "<span class='mx m2'><span>9</span><span>−1</span><span>−6</span><span>2</span></span>"
+     ],
+     "a": 2,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>9</span><span>−6</span><span>−1</span><span>2</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>4</span><span>−5</span><span>5</span><span>0</span></span>, B = <span class='mx m2'><span>1</span><span>−2</span><span>2</span><span>3</span></span>일 때, <b>A + B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>−23</span><span>5</span><span>−10</span></span>",
+      "<span class='mx m2'><span>5</span><span>7</span><span>−7</span><span>3</span></span>",
+      "<span class='mx m2'><span>3</span><span>−3</span><span>3</span><span>−3</span></span>",
+      "<span class='mx m2'><span>5</span><span>−7</span><span>7</span><span>3</span></span>"
+     ],
+     "a": 3,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>5</span><span>−7</span><span>7</span><span>3</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>−4</span><span>3</span><span>−1</span></span>, B = <span class='mx m2'><span>5</span><span>−5</span><span>−5</span><span>0</span></span>일 때, <b>A − B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−4</span><span>8</span><span>1</span><span>−1</span></span>",
+      "<span class='mx m2'><span>6</span><span>−9</span><span>−2</span><span>−1</span></span>",
+      "<span class='mx m2'><span>25</span><span>−5</span><span>20</span><span>−15</span></span>",
+      "<span class='mx m2'><span>−4</span><span>1</span><span>8</span><span>−1</span></span>"
+     ],
+     "a": 3,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>−4</span><span>1</span><span>8</span><span>−1</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>5</span><span>0</span><span>−5</span><span>3</span></span>, B = <span class='mx m2'><span>−1</span><span>−3</span><span>−5</span><span>−4</span></span>일 때, <b>A − B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>6</span><span>0</span><span>3</span><span>7</span></span>",
+      "<span class='mx m2'><span>6</span><span>3</span><span>0</span><span>7</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−15</span><span>−10</span><span>3</span></span>",
+      "<span class='mx m2'><span>4</span><span>−3</span><span>−10</span><span>−1</span></span>"
+     ],
+     "a": 1,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>6</span><span>3</span><span>0</span><span>7</span></span></b>"
+    },
+    {
+     "q": "두 행렬 <span class='mx m2'><span>x + 1</span><span>2</span><span>3</span><span>y − 3</span></span>, <span class='mx m2'><span>−3</span><span>2</span><span>3</span><span>2</span></span>가 서로 같을 때, x + y의 값은?",
+     "c": [
+      "−1",
+      "−9",
+      "1",
+      "3"
+     ],
+     "a": 2,
+     "e": "x + 1 = −3, y − 3 = 2이므로 x = −4, y = 5. <b>1</b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−5</span><span>−3</span><span>−4</span><span>−2</span></span>, B = <span class='mx m2'><span>2</span><span>4</span><span>3</span><span>4</span></span>일 때, <b>A − B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−7</span><span>−7</span><span>−7</span><span>−6</span></span>",
+      "<span class='mx m2'><span>−19</span><span>−32</span><span>−14</span><span>−24</span></span>",
+      "<span class='mx m2'><span>−6</span><span>−7</span><span>−7</span><span>−6</span></span>",
+      "<span class='mx m2'><span>−3</span><span>1</span><span>−1</span><span>2</span></span>"
+     ],
+     "a": 0,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>−7</span><span>−7</span><span>−7</span><span>−6</span></span></b>"
+    },
+    {
+     "q": "두 행렬 <span class='mx m2'><span>x + 3</span><span>2</span><span>3</span><span>y − 2</span></span>, <span class='mx m2'><span>4</span><span>2</span><span>3</span><span>−4</span></span>가 서로 같을 때, x + y의 값은?",
+     "c": [
+      "3",
+      "0",
+      "5",
+      "−1"
+     ],
+     "a": 3,
+     "e": "x + 3 = 4, y − 2 = −4이므로 x = 1, y = −2. <b>−1</b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−5</span><span>−2</span><span>−3</span><span>−4</span></span>, B = <span class='mx m2'><span>−1</span><span>−5</span><span>4</span><span>−2</span></span>일 때, <b>A − B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−3</span><span>29</span><span>−13</span><span>23</span></span>",
+      "<span class='mx m2'><span>−4</span><span>3</span><span>−7</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−6</span><span>−7</span><span>1</span><span>−6</span></span>",
+      "<span class='mx m2'><span>−4</span><span>−7</span><span>3</span><span>−2</span></span>"
+     ],
+     "a": 1,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>−4</span><span>3</span><span>−7</span><span>−2</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−1</span><span>−4</span><span>0</span><span>0</span></span>, B = <span class='mx m2'><span>−4</span><span>−1</span><span>−2</span><span>−1</span></span>일 때, <b>A + B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>12</span><span>5</span><span>0</span><span>0</span></span>",
+      "<span class='mx m2'><span>3</span><span>−3</span><span>2</span><span>1</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−5</span><span>−2</span><span>−1</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−2</span><span>−5</span><span>−1</span></span>"
+     ],
+     "a": 2,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>−5</span><span>−5</span><span>−2</span><span>−1</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>0</span><span>−1</span><span>−2</span><span>0</span></span>, B = <span class='mx m2'><span>−1</span><span>−2</span><span>6</span><span>−2</span></span>일 때, <b>A − B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>2</span><span>2</span><span>4</span></span>",
+      "<span class='mx m2'><span>1</span><span>1</span><span>−8</span><span>2</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−3</span><span>4</span><span>−2</span></span>",
+      "<span class='mx m2'><span>1</span><span>−8</span><span>1</span><span>2</span></span>"
+     ],
+     "a": 1,
+     "e": "같은 위치의 성분끼리 계산해요. <b><span class='mx m2'><span>1</span><span>1</span><span>−8</span><span>2</span></span></b>"
+    },
+    {
+     "q": "두 행렬 <span class='mx m2'><span>x + 2</span><span>2</span><span>3</span><span>y − 3</span></span>, <span class='mx m2'><span>−3</span><span>2</span><span>3</span><span>−2</span></span>가 서로 같을 때, x + y의 값은?",
+     "c": [
+      "−6",
+      "−5",
+      "0",
+      "−4"
+     ],
+     "a": 3,
+     "e": "x + 2 = −3, y − 3 = −2이므로 x = −5, y = 1. <b>−4</b>"
+    },
+    {
+     "q": "두 행렬 <span class='mx m2'><span>x + 2</span><span>2</span><span>3</span><span>y − 3</span></span>, <span class='mx m2'><span>2</span><span>2</span><span>3</span><span>−6</span></span>가 서로 같을 때, x + y의 값은?",
+     "c": [
+      "1",
+      "−4",
+      "−3",
+      "3"
+     ],
+     "a": 2,
+     "e": "x + 2 = 2, y − 3 = −6이므로 x = 0, y = −3. <b>−3</b>"
+    },
+    {
+     "q": "두 행렬 <span class='mx m2'><span>x + 3</span><span>2</span><span>3</span><span>y − 1</span></span>, <span class='mx m2'><span>−2</span><span>2</span><span>3</span><span>2</span></span>가 서로 같을 때, x + y의 값은?",
+     "c": [
+      "−2",
+      "0",
+      "4",
+      "−8"
+     ],
+     "a": 0,
+     "e": "x + 3 = −2, y − 1 = 2이므로 x = −5, y = 3. <b>−2</b>"
+    },
+    {
+     "q": "두 행렬 <span class='mx m2'><span>x + 3</span><span>2</span><span>3</span><span>y − 1</span></span>, <span class='mx m2'><span>7</span><span>2</span><span>3</span><span>−5</span></span>가 서로 같을 때, x + y의 값은?",
+     "c": [
+      "0",
+      "2",
+      "8",
+      "6"
+     ],
+     "a": 0,
+     "e": "x + 3 = 7, y − 1 = −5이므로 x = 4, y = −4. <b>0</b>"
+    }
+   ]
+  },
+  {
+   "title": "실수배",
+   "items": [
+    {
+     "q": "A = <span class='mx m2'><span>0</span><span>−3</span><span>−5</span><span>−5</span></span>, B = <span class='mx m2'><span>6</span><span>5</span><span>6</span><span>1</span></span>일 때, <b>2A + 2B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>6</span><span>−1</span><span>−4</span><span>−9</span></span>",
+      "<span class='mx m2'><span>6</span><span>2</span><span>1</span><span>−4</span></span>",
+      "<span class='mx m2'><span>12</span><span>4</span><span>2</span><span>−8</span></span>",
+      "<span class='mx m2'><span>−12</span><span>−16</span><span>−22</span><span>−12</span></span>"
+     ],
+     "a": 2,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>12</span><span>4</span><span>2</span><span>−8</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>3</span><span>−2</span><span>5</span><span>2</span></span>, B = <span class='mx m2'><span>5</span><span>−1</span><span>−1</span><span>1</span></span>일 때, <b>−2A + 2B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−16</span><span>6</span><span>−8</span><span>−6</span></span>",
+      "<span class='mx m2'><span>8</span><span>−3</span><span>4</span><span>3</span></span>",
+      "<span class='mx m2'><span>4</span><span>2</span><span>−12</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−1</span><span>3</span><span>−11</span><span>−3</span></span>"
+     ],
+     "a": 2,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>4</span><span>2</span><span>−12</span><span>−2</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>1</span><span>−5</span><span>−2</span></span>, B = <span class='mx m2'><span>4</span><span>−5</span><span>−3</span><span>3</span></span>일 때, <b>−2A + 3B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>10</span><span>−17</span><span>1</span><span>13</span></span>",
+      "<span class='mx m2'><span>−14</span><span>13</span><span>19</span><span>−5</span></span>",
+      "<span class='mx m2'><span>5</span><span>−4</span><span>−8</span><span>1</span></span>",
+      "<span class='mx m2'><span>2</span><span>−7</span><span>7</span><span>7</span></span>"
+     ],
+     "a": 0,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>10</span><span>−17</span><span>1</span><span>13</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−3</span><span>3</span><span>4</span><span>−1</span></span>, B = <span class='mx m2'><span>0</span><span>2</span><span>4</span><span>6</span></span>일 때, <b>2A + 3B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>0</span><span>−4</span><span>−20</span></span>",
+      "<span class='mx m2'><span>−6</span><span>12</span><span>20</span><span>16</span></span>",
+      "<span class='mx m2'><span>−3</span><span>5</span><span>8</span><span>5</span></span>",
+      "<span class='mx m2'><span>−6</span><span>8</span><span>12</span><span>4</span></span>"
+     ],
+     "a": 1,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>−6</span><span>12</span><span>20</span><span>16</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−4</span><span>5</span><span>−2</span><span>−3</span></span>, B = <span class='mx m2'><span>1</span><span>1</span><span>−3</span><span>−5</span></span>일 때, <b>−A + 2B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−3</span><span>6</span><span>−5</span><span>−8</span></span>",
+      "<span class='mx m2'><span>2</span><span>−7</span><span>8</span><span>13</span></span>",
+      "<span class='mx m2'><span>5</span><span>−4</span><span>−1</span><span>−2</span></span>",
+      "<span class='mx m2'><span>6</span><span>−3</span><span>−4</span><span>−7</span></span>"
+     ],
+     "a": 3,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>6</span><span>−3</span><span>−4</span><span>−7</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−5</span><span>−3</span><span>−3</span><span>−5</span></span>, B = <span class='mx m2'><span>5</span><span>4</span><span>4</span><span>−4</span></span>일 때, <b>−2A + 3B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>1</span><span>1</span><span>−9</span></span>",
+      "<span class='mx m2'><span>25</span><span>18</span><span>18</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−6</span><span>−6</span><span>22</span></span>",
+      "<span class='mx m2'><span>15</span><span>10</span><span>10</span><span>6</span></span>"
+     ],
+     "a": 1,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>25</span><span>18</span><span>18</span><span>−2</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>0</span><span>2</span><span>1</span><span>3</span></span>, B = <span class='mx m2'><span>−3</span><span>4</span><span>−5</span><span>6</span></span>일 때, <b>3A + 3B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−9</span><span>18</span><span>−12</span><span>27</span></span>",
+      "<span class='mx m2'><span>9</span><span>−6</span><span>18</span><span>−9</span></span>",
+      "<span class='mx m2'><span>−3</span><span>10</span><span>−2</span><span>15</span></span>",
+      "<span class='mx m2'><span>−3</span><span>6</span><span>−4</span><span>9</span></span>"
+     ],
+     "a": 0,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>−9</span><span>18</span><span>−12</span><span>27</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−2</span><span>5</span><span>5</span><span>−4</span></span>, B = <span class='mx m2'><span>−5</span><span>6</span><span>−1</span><span>−5</span></span>일 때, <b>2A + 3B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−9</span><span>16</span><span>9</span><span>−13</span></span>",
+      "<span class='mx m2'><span>−19</span><span>28</span><span>7</span><span>−23</span></span>",
+      "<span class='mx m2'><span>11</span><span>−8</span><span>13</span><span>7</span></span>",
+      "<span class='mx m2'><span>−7</span><span>11</span><span>4</span><span>−9</span></span>"
+     ],
+     "a": 1,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>−19</span><span>28</span><span>7</span><span>−23</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−5</span><span>3</span><span>−1</span><span>5</span></span>, B = <span class='mx m2'><span>6</span><span>−3</span><span>−1</span><span>4</span></span>일 때, <b>2A + 2B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−4</span><span>3</span><span>−3</span><span>14</span></span>",
+      "<span class='mx m2'><span>2</span><span>0</span><span>−4</span><span>18</span></span>",
+      "<span class='mx m2'><span>−22</span><span>12</span><span>0</span><span>2</span></span>",
+      "<span class='mx m2'><span>1</span><span>0</span><span>−2</span><span>9</span></span>"
+     ],
+     "a": 1,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>2</span><span>0</span><span>−4</span><span>18</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>4</span><span>5</span><span>−3</span></span>, B = <span class='mx m2'><span>5</span><span>−2</span><span>−3</span><span>6</span></span>일 때, <b>3A + 3B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>18</span><span>6</span><span>6</span><span>9</span></span>",
+      "<span class='mx m2'><span>8</span><span>10</span><span>12</span><span>−3</span></span>",
+      "<span class='mx m2'><span>6</span><span>2</span><span>2</span><span>3</span></span>",
+      "<span class='mx m2'><span>−12</span><span>18</span><span>24</span><span>−27</span></span>"
+     ],
+     "a": 0,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>18</span><span>6</span><span>6</span><span>9</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−3</span><span>4</span><span>2</span><span>4</span></span>, B = <span class='mx m2'><span>−5</span><span>2</span><span>−1</span><span>−4</span></span>일 때, <b>−A + 3B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>18</span><span>−10</span><span>1</span><span>8</span></span>",
+      "<span class='mx m2'><span>−12</span><span>2</span><span>−5</span><span>−16</span></span>",
+      "<span class='mx m2'><span>−2</span><span>−2</span><span>−3</span><span>−8</span></span>",
+      "<span class='mx m2'><span>−8</span><span>6</span><span>1</span><span>0</span></span>"
+     ],
+     "a": 1,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>−12</span><span>2</span><span>−5</span><span>−16</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>2</span><span>1</span><span>6</span><span>4</span></span>, B = <span class='mx m2'><span>3</span><span>−5</span><span>−1</span><span>−1</span></span>일 때, <b>3A + 3B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−3</span><span>18</span><span>21</span><span>15</span></span>",
+      "<span class='mx m2'><span>5</span><span>−4</span><span>5</span><span>3</span></span>",
+      "<span class='mx m2'><span>15</span><span>−12</span><span>15</span><span>9</span></span>",
+      "<span class='mx m2'><span>9</span><span>−2</span><span>17</span><span>11</span></span>"
+     ],
+     "a": 2,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>15</span><span>−12</span><span>15</span><span>9</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>2</span><span>5</span><span>0</span><span>5</span></span>, B = <span class='mx m2'><span>1</span><span>5</span><span>6</span><span>−2</span></span>일 때, <b>−2A + 2B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>3</span><span>10</span><span>6</span><span>3</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−5</span><span>6</span><span>−12</span></span>",
+      "<span class='mx m2'><span>−6</span><span>−20</span><span>−12</span><span>−6</span></span>",
+      "<span class='mx m2'><span>−2</span><span>0</span><span>12</span><span>−14</span></span>"
+     ],
+     "a": 3,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>−2</span><span>0</span><span>12</span><span>−14</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>3</span><span>−2</span><span>4</span><span>2</span></span>, B = <span class='mx m2'><span>−1</span><span>0</span><span>6</span><span>6</span></span>일 때, <b>3A + 3B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>2</span><span>−2</span><span>10</span><span>8</span></span>",
+      "<span class='mx m2'><span>8</span><span>−6</span><span>18</span><span>12</span></span>",
+      "<span class='mx m2'><span>6</span><span>−6</span><span>30</span><span>24</span></span>",
+      "<span class='mx m2'><span>12</span><span>−6</span><span>−6</span><span>−12</span></span>"
+     ],
+     "a": 2,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>6</span><span>−6</span><span>30</span><span>24</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>0</span><span>3</span><span>1</span><span>−5</span></span>, B = <span class='mx m2'><span>−5</span><span>−4</span><span>5</span><span>1</span></span>일 때, <b>2A + 3B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>15</span><span>18</span><span>−13</span><span>−13</span></span>",
+      "<span class='mx m2'><span>−5</span><span>2</span><span>7</span><span>−9</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−1</span><span>6</span><span>−4</span></span>",
+      "<span class='mx m2'><span>−15</span><span>−6</span><span>17</span><span>−7</span></span>"
+     ],
+     "a": 3,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>−15</span><span>−6</span><span>17</span><span>−7</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−5</span><span>6</span><span>−3</span><span>−5</span></span>, B = <span class='mx m2'><span>1</span><span>0</span><span>−5</span><span>−4</span></span>일 때, <b>−2A + 3B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>11</span><span>−12</span><span>1</span><span>6</span></span>",
+      "<span class='mx m2'><span>7</span><span>−12</span><span>21</span><span>22</span></span>",
+      "<span class='mx m2'><span>−4</span><span>6</span><span>−8</span><span>−9</span></span>",
+      "<span class='mx m2'><span>13</span><span>−12</span><span>−9</span><span>−2</span></span>"
+     ],
+     "a": 3,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>13</span><span>−12</span><span>−9</span><span>−2</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>0</span><span>2</span><span>−2</span><span>3</span></span>, B = <span class='mx m2'><span>−5</span><span>−1</span><span>4</span><span>6</span></span>일 때, <b>−A + 2B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−10</span><span>−4</span><span>10</span><span>9</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−3</span><span>6</span><span>3</span></span>",
+      "<span class='mx m2'><span>10</span><span>0</span><span>−6</span><span>−15</span></span>",
+      "<span class='mx m2'><span>−5</span><span>1</span><span>2</span><span>9</span></span>"
+     ],
+     "a": 0,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>−10</span><span>−4</span><span>10</span><span>9</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−5</span><span>4</span><span>6</span><span>0</span></span>, B = <span class='mx m2'><span>−3</span><span>−1</span><span>0</span><span>1</span></span>일 때, <b>−A + 2B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−8</span><span>3</span><span>6</span><span>1</span></span>",
+      "<span class='mx m2'><span>2</span><span>−5</span><span>−6</span><span>1</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−6</span><span>−6</span><span>2</span></span>",
+      "<span class='mx m2'><span>11</span><span>−2</span><span>−6</span><span>−2</span></span>"
+     ],
+     "a": 2,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>−1</span><span>−6</span><span>−6</span><span>2</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−5</span><span>5</span><span>−5</span><span>4</span></span>, B = <span class='mx m2'><span>−4</span><span>−4</span><span>3</span><span>−5</span></span>일 때, <b>−A + 2B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>−9</span><span>8</span><span>−9</span></span>",
+      "<span class='mx m2'><span>13</span><span>3</span><span>−1</span><span>6</span></span>",
+      "<span class='mx m2'><span>−9</span><span>1</span><span>−2</span><span>−1</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−13</span><span>11</span><span>−14</span></span>"
+     ],
+     "a": 3,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>−3</span><span>−13</span><span>11</span><span>−14</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>0</span><span>2</span><span>−5</span><span>4</span></span>, B = <span class='mx m2'><span>4</span><span>−3</span><span>−4</span><span>−3</span></span>일 때, <b>−A + 2B</b>는?",
+     "c": [
+      "<span class='mx m2'><span>8</span><span>−8</span><span>−3</span><span>−10</span></span>",
+      "<span class='mx m2'><span>4</span><span>−1</span><span>−9</span><span>1</span></span>",
+      "<span class='mx m2'><span>4</span><span>−5</span><span>1</span><span>−7</span></span>",
+      "<span class='mx m2'><span>−8</span><span>4</span><span>13</span><span>2</span></span>"
+     ],
+     "a": 0,
+     "e": "각 성분에 실수를 곱한 뒤 더해요. <b><span class='mx m2'><span>8</span><span>−8</span><span>−3</span><span>−10</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "행렬의 곱셈",
+   "items": [
+    {
+     "q": "<b><span class='mx m2'><span>−1</span><span>2</span><span>−4</span><span>−4</span></span><span class='mx m1'><span>4</span><span>−3</span></span></b>를 계산하면?",
+     "c": [
+      "<span class='mx m1'><span>−4</span><span>12</span></span>",
+      "<span class='mx m1'><span>−10</span><span>−4</span></span>",
+      "<span class='mx m1'><span>8</span><span>20</span></span>",
+      "<span class='mx m1'><span>−9</span><span>−4</span></span>"
+     ],
+     "a": 1,
+     "e": "(행) × (열)로 곱해 더해요. <b><span class='mx m1'><span>−10</span><span>−4</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−1</span><span>2</span><span>−2</span><span>−2</span></span>, B = <span class='mx m2'><span>−3</span><span>−5</span><span>0</span><span>−3</span></span>일 때, <b>AB</b>는?",
+     "c": [
+      "<span class='mx m2'><span>3</span><span>−1</span><span>6</span><span>16</span></span>",
+      "<span class='mx m2'><span>3</span><span>6</span><span>−1</span><span>16</span></span>",
+      "<span class='mx m2'><span>13</span><span>4</span><span>6</span><span>6</span></span>",
+      "<span class='mx m2'><span>3</span><span>−10</span><span>0</span><span>6</span></span>"
+     ],
+     "a": 0,
+     "e": "AB의 (i, j) 성분 = A의 i행과 B의 j열의 곱의 합. <b><span class='mx m2'><span>3</span><span>−1</span><span>6</span><span>16</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>5</span><span>−1</span><span>0</span><span>−1</span></span>, B = <span class='mx m2'><span>−4</span><span>2</span><span>6</span><span>6</span></span>일 때, <b>AB</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−20</span><span>−2</span><span>0</span><span>−6</span></span>",
+      "<span class='mx m2'><span>−26</span><span>4</span><span>−6</span><span>−6</span></span>",
+      "<span class='mx m2'><span>−20</span><span>2</span><span>30</span><span>−12</span></span>",
+      "<span class='mx m2'><span>−26</span><span>−6</span><span>4</span><span>−6</span></span>"
+     ],
+     "a": 1,
+     "e": "AB의 (i, j) 성분 = A의 i행과 B의 j열의 곱의 합. <b><span class='mx m2'><span>−26</span><span>4</span><span>−6</span><span>−6</span></span></b>"
+    },
+    {
+     "q": "<b><span class='mx m2'><span>3</span><span>3</span><span>−5</span><span>3</span></span><span class='mx m1'><span>4</span><span>1</span></span></b>를 계산하면?",
+     "c": [
+      "<span class='mx m1'><span>7</span><span>15</span></span>",
+      "<span class='mx m1'><span>16</span><span>−17</span></span>",
+      "<span class='mx m1'><span>15</span><span>−17</span></span>",
+      "<span class='mx m1'><span>12</span><span>3</span></span>"
+     ],
+     "a": 2,
+     "e": "(행) × (열)로 곱해 더해요. <b><span class='mx m1'><span>15</span><span>−17</span></span></b>"
+    },
+    {
+     "q": "<b><span class='mx m2'><span>0</span><span>−3</span><span>1</span><span>2</span></span><span class='mx m1'><span>−4</span><span>2</span></span></b>를 계산하면?",
+     "c": [
+      "<span class='mx m1'><span>0</span><span>4</span></span>",
+      "<span class='mx m1'><span>−6</span><span>0</span></span>",
+      "<span class='mx m1'><span>−5</span><span>0</span></span>",
+      "<span class='mx m1'><span>2</span><span>16</span></span>"
+     ],
+     "a": 1,
+     "e": "(행) × (열)로 곱해 더해요. <b><span class='mx m1'><span>−6</span><span>0</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−3</span><span>−2</span><span>−2</span><span>1</span></span>, B = <span class='mx m2'><span>6</span><span>−2</span><span>5</span><span>5</span></span>일 때, <b>AB</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−18</span><span>4</span><span>−10</span><span>5</span></span>",
+      "<span class='mx m2'><span>−14</span><span>−14</span><span>−25</span><span>−5</span></span>",
+      "<span class='mx m2'><span>−28</span><span>−7</span><span>−4</span><span>9</span></span>",
+      "<span class='mx m2'><span>−28</span><span>−4</span><span>−7</span><span>9</span></span>"
+     ],
+     "a": 3,
+     "e": "AB의 (i, j) 성분 = A의 i행과 B의 j열의 곱의 합. <b><span class='mx m2'><span>−28</span><span>−4</span><span>−7</span><span>9</span></span></b>"
+    },
+    {
+     "q": "<b><span class='mx m2'><span>−3</span><span>1</span><span>−5</span><span>4</span></span><span class='mx m1'><span>2</span><span>2</span></span></b>를 계산하면?",
+     "c": [
+      "<span class='mx m1'><span>−3</span><span>−2</span></span>",
+      "<span class='mx m1'><span>−6</span><span>8</span></span>",
+      "<span class='mx m1'><span>−4</span><span>−2</span></span>",
+      "<span class='mx m1'><span>−16</span><span>10</span></span>"
+     ],
+     "a": 2,
+     "e": "(행) × (열)로 곱해 더해요. <b><span class='mx m1'><span>−4</span><span>−2</span></span></b>"
+    },
+    {
+     "q": "<b><span class='mx m2'><span>−2</span><span>5</span><span>6</span><span>1</span></span><span class='mx m1'><span>−4</span><span>3</span></span></b>를 계산하면?",
+     "c": [
+      "<span class='mx m1'><span>24</span><span>−21</span></span>",
+      "<span class='mx m1'><span>8</span><span>3</span></span>",
+      "<span class='mx m1'><span>23</span><span>−21</span></span>",
+      "<span class='mx m1'><span>26</span><span>−17</span></span>"
+     ],
+     "a": 2,
+     "e": "(행) × (열)로 곱해 더해요. <b><span class='mx m1'><span>23</span><span>−21</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>4</span><span>−4</span><span>5</span><span>5</span></span>, B = <span class='mx m2'><span>6</span><span>6</span><span>0</span><span>6</span></span>일 때, <b>AB</b>는?",
+     "c": [
+      "<span class='mx m2'><span>24</span><span>0</span><span>30</span><span>60</span></span>",
+      "<span class='mx m2'><span>54</span><span>6</span><span>30</span><span>30</span></span>",
+      "<span class='mx m2'><span>24</span><span>30</span><span>0</span><span>60</span></span>",
+      "<span class='mx m2'><span>24</span><span>−24</span><span>0</span><span>30</span></span>"
+     ],
+     "a": 0,
+     "e": "AB의 (i, j) 성분 = A의 i행과 B의 j열의 곱의 합. <b><span class='mx m2'><span>24</span><span>0</span><span>30</span><span>60</span></span></b>"
+    },
+    {
+     "q": "<b><span class='mx m2'><span>−3</span><span>−4</span><span>−5</span><span>−4</span></span><span class='mx m1'><span>3</span><span>0</span></span></b>를 계산하면?",
+     "c": [
+      "<span class='mx m1'><span>−8</span><span>−15</span></span>",
+      "<span class='mx m1'><span>−9</span><span>0</span></span>",
+      "<span class='mx m1'><span>−9</span><span>−12</span></span>",
+      "<span class='mx m1'><span>−9</span><span>−15</span></span>"
+     ],
+     "a": 3,
+     "e": "(행) × (열)로 곱해 더해요. <b><span class='mx m1'><span>−9</span><span>−15</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>0</span><span>5</span><span>3</span><span>−3</span></span>, B = <span class='mx m2'><span>1</span><span>−2</span><span>0</span><span>4</span></span>일 때, <b>AB</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>11</span><span>12</span><span>−12</span></span>",
+      "<span class='mx m2'><span>0</span><span>3</span><span>20</span><span>−18</span></span>",
+      "<span class='mx m2'><span>0</span><span>20</span><span>3</span><span>−18</span></span>",
+      "<span class='mx m2'><span>0</span><span>−10</span><span>0</span><span>−12</span></span>"
+     ],
+     "a": 2,
+     "e": "AB의 (i, j) 성분 = A의 i행과 B의 j열의 곱의 합. <b><span class='mx m2'><span>0</span><span>20</span><span>3</span><span>−18</span></span></b>"
+    },
+    {
+     "q": "<b><span class='mx m2'><span>5</span><span>−5</span><span>6</span><span>2</span></span><span class='mx m1'><span>−4</span><span>−2</span></span></b>를 계산하면?",
+     "c": [
+      "<span class='mx m1'><span>−20</span><span>−4</span></span>",
+      "<span class='mx m1'><span>−32</span><span>16</span></span>",
+      "<span class='mx m1'><span>−9</span><span>−28</span></span>",
+      "<span class='mx m1'><span>−10</span><span>−28</span></span>"
+     ],
+     "a": 3,
+     "e": "(행) × (열)로 곱해 더해요. <b><span class='mx m1'><span>−10</span><span>−28</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−4</span><span>1</span><span>−4</span><span>−2</span></span>, B = <span class='mx m2'><span>−4</span><span>−5</span><span>−5</span><span>−2</span></span>일 때, <b>AB</b>는?",
+     "c": [
+      "<span class='mx m2'><span>11</span><span>26</span><span>18</span><span>24</span></span>",
+      "<span class='mx m2'><span>16</span><span>−5</span><span>20</span><span>4</span></span>",
+      "<span class='mx m2'><span>36</span><span>6</span><span>28</span><span>−1</span></span>",
+      "<span class='mx m2'><span>11</span><span>18</span><span>26</span><span>24</span></span>"
+     ],
+     "a": 3,
+     "e": "AB의 (i, j) 성분 = A의 i행과 B의 j열의 곱의 합. <b><span class='mx m2'><span>11</span><span>18</span><span>26</span><span>24</span></span></b>"
+    },
+    {
+     "q": "<b><span class='mx m2'><span>−4</span><span>3</span><span>2</span><span>−5</span></span><span class='mx m1'><span>2</span><span>0</span></span></b>를 계산하면?",
+     "c": [
+      "<span class='mx m1'><span>−7</span><span>4</span></span>",
+      "<span class='mx m1'><span>−8</span><span>4</span></span>",
+      "<span class='mx m1'><span>−8</span><span>0</span></span>",
+      "<span class='mx m1'><span>−8</span><span>6</span></span>"
+     ],
+     "a": 1,
+     "e": "(행) × (열)로 곱해 더해요. <b><span class='mx m1'><span>−8</span><span>4</span></span></b>"
+    },
+    {
+     "q": "<b><span class='mx m2'><span>−5</span><span>5</span><span>3</span><span>−5</span></span><span class='mx m1'><span>−3</span><span>−1</span></span></b>를 계산하면?",
+     "c": [
+      "<span class='mx m1'><span>12</span><span>−10</span></span>",
+      "<span class='mx m1'><span>10</span><span>−4</span></span>",
+      "<span class='mx m1'><span>11</span><span>−4</span></span>",
+      "<span class='mx m1'><span>15</span><span>5</span></span>"
+     ],
+     "a": 1,
+     "e": "(행) × (열)로 곱해 더해요. <b><span class='mx m1'><span>10</span><span>−4</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>2</span><span>−5</span><span>6</span><span>−5</span></span>, B = <span class='mx m2'><span>6</span><span>−3</span><span>−3</span><span>−1</span></span>일 때, <b>AB</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−6</span><span>−15</span><span>−12</span><span>20</span></span>",
+      "<span class='mx m2'><span>27</span><span>51</span><span>−1</span><span>−13</span></span>",
+      "<span class='mx m2'><span>12</span><span>15</span><span>−18</span><span>5</span></span>",
+      "<span class='mx m2'><span>27</span><span>−1</span><span>51</span><span>−13</span></span>"
+     ],
+     "a": 3,
+     "e": "AB의 (i, j) 성분 = A의 i행과 B의 j열의 곱의 합. <b><span class='mx m2'><span>27</span><span>−1</span><span>51</span><span>−13</span></span></b>"
+    },
+    {
+     "q": "<b><span class='mx m2'><span>−1</span><span>−4</span><span>−5</span><span>4</span></span><span class='mx m1'><span>3</span><span>−2</span></span></b>를 계산하면?",
+     "c": [
+      "<span class='mx m1'><span>5</span><span>−23</span></span>",
+      "<span class='mx m1'><span>−3</span><span>−8</span></span>",
+      "<span class='mx m1'><span>7</span><span>−20</span></span>",
+      "<span class='mx m1'><span>6</span><span>−23</span></span>"
+     ],
+     "a": 0,
+     "e": "(행) × (열)로 곱해 더해요. <b><span class='mx m1'><span>5</span><span>−23</span></span></b>"
+    },
+    {
+     "q": "<b><span class='mx m2'><span>5</span><span>6</span><span>1</span><span>−3</span></span><span class='mx m1'><span>1</span><span>3</span></span></b>를 계산하면?",
+     "c": [
+      "<span class='mx m1'><span>23</span><span>−8</span></span>",
+      "<span class='mx m1'><span>24</span><span>−8</span></span>",
+      "<span class='mx m1'><span>8</span><span>−3</span></span>",
+      "<span class='mx m1'><span>5</span><span>−9</span></span>"
+     ],
+     "a": 0,
+     "e": "(행) × (열)로 곱해 더해요. <b><span class='mx m1'><span>23</span><span>−8</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−2</span><span>−4</span><span>−2</span><span>−2</span></span>, B = <span class='mx m2'><span>−1</span><span>2</span><span>6</span><span>3</span></span>일 때, <b>AB</b>는?",
+     "c": [
+      "<span class='mx m2'><span>−22</span><span>−16</span><span>−10</span><span>−10</span></span>",
+      "<span class='mx m2'><span>−2</span><span>0</span><span>−18</span><span>−30</span></span>",
+      "<span class='mx m2'><span>2</span><span>−8</span><span>−12</span><span>−6</span></span>",
+      "<span class='mx m2'><span>−22</span><span>−10</span><span>−16</span><span>−10</span></span>"
+     ],
+     "a": 0,
+     "e": "AB의 (i, j) 성분 = A의 i행과 B의 j열의 곱의 합. <b><span class='mx m2'><span>−22</span><span>−16</span><span>−10</span><span>−10</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>−3</span><span>−3</span><span>−1</span><span>4</span></span>, B = <span class='mx m2'><span>0</span><span>4</span><span>−5</span><span>−5</span></span>일 때, <b>AB</b>는?",
+     "c": [
+      "<span class='mx m2'><span>15</span><span>−20</span><span>3</span><span>−24</span></span>",
+      "<span class='mx m2'><span>−4</span><span>16</span><span>20</span><span>−5</span></span>",
+      "<span class='mx m2'><span>15</span><span>3</span><span>−20</span><span>−24</span></span>",
+      "<span class='mx m2'><span>0</span><span>−12</span><span>5</span><span>−20</span></span>"
+     ],
+     "a": 2,
+     "e": "AB의 (i, j) 성분 = A의 i행과 B의 j열의 곱의 합. <b><span class='mx m2'><span>15</span><span>3</span><span>−20</span><span>−24</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "거듭제곱과 활용",
+   "items": [
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>6</span><span>4</span><span>3</span><span>2</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>500</span><span>900</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "3300원",
+      "1500원",
+      "6600원",
+      "1800원"
+     ],
+     "a": 0,
+     "e": "행렬의 곱 <span class='mx m1'><span>6600</span><span>3300</span></span>의 2행 성분: 3 × 500 + 2 × 900 = <b>3300원</b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>4</span><span>0</span><span>1</span></span>일 때, <b>A<sup>4</sup></b>은?",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>8</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>16</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>256</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>4</span><span>16</span><span>0</span><span>4</span></span>"
+     ],
+     "a": 1,
+     "e": "A², A³을 구해 보면 (1, 2) 성분이 4씩 늘어요. <b><span class='mx m2'><span>1</span><span>16</span><span>0</span><span>1</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>1</span><span>0</span><span>1</span></span>일 때, <b>A<sup>5</sup></b>은?",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>6</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>5</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>5</span><span>5</span><span>0</span><span>5</span></span>",
+      "<span class='mx m2'><span>1</span><span>1</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 1,
+     "e": "A², A³을 구해 보면 (1, 2) 성분이 1씩 늘어요. <b><span class='mx m2'><span>1</span><span>5</span><span>0</span><span>1</span></span></b>"
+    },
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>8</span><span>6</span><span>5</span><span>3</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>1000</span><span>1500</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "9500원",
+      "4500원",
+      "17,000원",
+      "5000원"
+     ],
+     "a": 0,
+     "e": "행렬의 곱 <span class='mx m1'><span>17,000</span><span>9500</span></span>의 2행 성분: 5 × 1000 + 3 × 1500 = <b>9500원</b>"
+    },
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>6</span><span>7</span><span>2</span><span>2</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>1000</span><span>1500</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "2000원",
+      "3000원",
+      "5000원",
+      "16,500원"
+     ],
+     "a": 2,
+     "e": "행렬의 곱 <span class='mx m1'><span>16,500</span><span>5000</span></span>의 2행 성분: 2 × 1000 + 2 × 1500 = <b>5000원</b>"
+    },
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>3</span><span>5</span><span>2</span><span>7</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>800</span><span>1200</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "10,800원",
+      "10,000원",
+      "8400원",
+      "1600원"
+     ],
+     "a": 1,
+     "e": "행렬의 곱 <span class='mx m1'><span>8400</span><span>10,000</span></span>의 2행 성분: 2 × 800 + 7 × 1200 = <b>10,000원</b>"
+    },
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>5</span><span>6</span><span>8</span><span>5</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>500</span><span>900</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "4000원",
+      "4500원",
+      "8500원",
+      "7900원"
+     ],
+     "a": 2,
+     "e": "행렬의 곱 <span class='mx m1'><span>7900</span><span>8500</span></span>의 2행 성분: 8 × 500 + 5 × 900 = <b>8500원</b>"
+    },
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>9</span><span>6</span><span>5</span><span>2</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>800</span><span>1200</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "2400원",
+      "14,400원",
+      "6400원",
+      "4000원"
+     ],
+     "a": 2,
+     "e": "행렬의 곱 <span class='mx m1'><span>14,400</span><span>6400</span></span>의 2행 성분: 5 × 800 + 2 × 1200 = <b>6400원</b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>3</span><span>0</span><span>1</span></span>일 때, <b>A<sup>7</sup></b>은?",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>21</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>7</span><span>21</span><span>0</span><span>7</span></span>",
+      "<span class='mx m2'><span>1</span><span>10</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>2187</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 0,
+     "e": "A², A³을 구해 보면 (1, 2) 성분이 3씩 늘어요. <b><span class='mx m2'><span>1</span><span>21</span><span>0</span><span>1</span></span></b>"
+    },
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>4</span><span>6</span><span>4</span><span>3</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>800</span><span>1200</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "6800원",
+      "3600원",
+      "10,400원",
+      "3200원"
+     ],
+     "a": 0,
+     "e": "행렬의 곱 <span class='mx m1'><span>10,400</span><span>6800</span></span>의 2행 성분: 4 × 800 + 3 × 1200 = <b>6800원</b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>4</span><span>0</span><span>1</span></span>일 때, <b>A<sup>6</sup></b>은?",
+     "c": [
+      "<span class='mx m2'><span>6</span><span>24</span><span>0</span><span>6</span></span>",
+      "<span class='mx m2'><span>1</span><span>10</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>4096</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>24</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 3,
+     "e": "A², A³을 구해 보면 (1, 2) 성분이 4씩 늘어요. <b><span class='mx m2'><span>1</span><span>24</span><span>0</span><span>1</span></span></b>"
+    },
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>5</span><span>6</span><span>3</span><span>5</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>500</span><span>900</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "7900원",
+      "4500원",
+      "1500원",
+      "6000원"
+     ],
+     "a": 3,
+     "e": "행렬의 곱 <span class='mx m1'><span>7900</span><span>6000</span></span>의 2행 성분: 3 × 500 + 5 × 900 = <b>6000원</b>"
+    },
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>8</span><span>4</span><span>3</span><span>8</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>1000</span><span>1500</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "12,000원",
+      "15,000원",
+      "3000원",
+      "14,000원"
+     ],
+     "a": 1,
+     "e": "행렬의 곱 <span class='mx m1'><span>14,000</span><span>15,000</span></span>의 2행 성분: 3 × 1000 + 8 × 1500 = <b>15,000원</b>"
+    },
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>6</span><span>4</span><span>5</span><span>3</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>500</span><span>900</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "2700원",
+      "6600원",
+      "5200원",
+      "2500원"
+     ],
+     "a": 2,
+     "e": "행렬의 곱 <span class='mx m1'><span>6600</span><span>5200</span></span>의 2행 성분: 5 × 500 + 3 × 900 = <b>5200원</b>"
+    },
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>3</span><span>8</span><span>3</span><span>5</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>800</span><span>1200</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "2400원",
+      "6000원",
+      "12,000원",
+      "8400원"
+     ],
+     "a": 3,
+     "e": "행렬의 곱 <span class='mx m1'><span>12,000</span><span>8400</span></span>의 2행 성분: 3 × 800 + 5 × 1200 = <b>8400원</b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>2</span><span>0</span><span>1</span></span>일 때, <b>A<sup>5</sup></b>은?",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>32</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>7</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>5</span><span>10</span><span>0</span><span>5</span></span>",
+      "<span class='mx m2'><span>1</span><span>10</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 3,
+     "e": "A², A³을 구해 보면 (1, 2) 성분이 2씩 늘어요. <b><span class='mx m2'><span>1</span><span>10</span><span>0</span><span>1</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>2</span><span>0</span><span>1</span></span>일 때, <b>A<sup>3</sup></b>은?",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>5</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>3</span><span>6</span><span>0</span><span>3</span></span>",
+      "<span class='mx m2'><span>1</span><span>6</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>8</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 2,
+     "e": "A², A³을 구해 보면 (1, 2) 성분이 2씩 늘어요. <b><span class='mx m2'><span>1</span><span>6</span><span>0</span><span>1</span></span></b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>2</span><span>0</span><span>1</span></span>일 때, <b>A<sup>7</sup></b>은?",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>14</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>7</span><span>14</span><span>0</span><span>7</span></span>",
+      "<span class='mx m2'><span>1</span><span>128</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>9</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 0,
+     "e": "A², A³을 구해 보면 (1, 2) 성분이 2씩 늘어요. <b><span class='mx m2'><span>1</span><span>14</span><span>0</span><span>1</span></span></b>"
+    },
+    {
+     "q": "두 가게의 빵과 우유 판매량을 행렬 <span class='mx m2'><span>3</span><span>9</span><span>7</span><span>8</span></span>(1행: 가게 A, 2행: 가게 B, 1열: 빵, 2열: 우유)로, 가격을 <span class='mx m1'><span>1000</span><span>1500</span></span>(원)로 나타냈어요. 가게 B의 매출은 몇 원일까요?",
+     "c": [
+      "16,500원",
+      "7000원",
+      "12,000원",
+      "19,000원"
+     ],
+     "a": 3,
+     "e": "행렬의 곱 <span class='mx m1'><span>16,500</span><span>19,000</span></span>의 2행 성분: 7 × 1000 + 8 × 1500 = <b>19,000원</b>"
+    },
+    {
+     "q": "A = <span class='mx m2'><span>1</span><span>3</span><span>0</span><span>1</span></span>일 때, <b>A<sup>3</sup></b>은?",
+     "c": [
+      "<span class='mx m2'><span>3</span><span>9</span><span>0</span><span>3</span></span>",
+      "<span class='mx m2'><span>1</span><span>9</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>6</span><span>0</span><span>1</span></span>",
+      "<span class='mx m2'><span>1</span><span>27</span><span>0</span><span>1</span></span>"
+     ],
+     "a": 1,
+     "e": "A², A³을 구해 보면 (1, 2) 성분이 3씩 늘어요. <b><span class='mx m2'><span>1</span><span>9</span><span>0</span><span>1</span></span></b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 16,
+ "updated": "2026-11-25",
+ "country": "kr",
+ "subject": "math",
+ "grade": "common-math-1"
+}

@@ -1,0 +1,1157 @@
+{
+ "slug": "independence-and-multiplication-rule",
+ "title": "사건의 독립과 종속, 곱셈정리",
+ "seo_title": "사건의 독립과 종속, 곱셈정리 | 고등학교 확률과 통계 학습지 (정답 포함)",
+ "short_title": "독립과 곱셈정리",
+ "domain": "확률",
+ "standard_code": "[12확통02-05] [12확통02-06]",
+ "standard_url": "https://ncic.re.kr/inv/org/download.do?year=2022&seq=10003559&orgType=ogi4",
+ "standard_text": "사건의 독립과 종속을 이해하고, 이를 판단할 수 있다. 확률의 곱셈정리를 이해하고, 이를 활용하여 문제를 해결할 수 있다.",
+ "meta_desc": "고등학교 확률과 통계 사건의 독립과 확률의 곱셈정리 문제: 독립의 판정 P(A ∩ B) = P(A)P(B), 독립인 사건의 확률, 독립시행의 확률 ₙCᵣpʳ(1 − p)ⁿ⁻ʳ, 적어도 한 번 성공할 확률까지 100문제와 정답·해설.",
+ "key_big": "독립: P(A ∩ B) = P(A)P(B)",
+ "key_sub": "독립시행: ₙCᵣpʳ(1 − p)ⁿ⁻ʳ",
+ "body_html": "<h2>생각하는 방법</h2><p><b>곱셈정리</b>: P(A ∩ B) = P(A)P(B|A)예요.</p><p>P(B|A) = P(B)이면 A와 B는 서로 <b>독립</b>이고, 이때 P(A ∩ B) = P(A)P(B)예요.</p><p>A, B가 독립이면 A와 B<sup>C</sup>, A<sup>C</sup>와 B<sup>C</sup>도 독립이에요.</p><p>확률이 p인 시행을 n번 독립적으로 할 때 r번 일어날 확률은 <sub>n</sub>C<sub>r</sub>p<sup>r</sup>(1 − p)<sup>n−r</sup>이에요.</p><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>P(A) = 0.4, P(B) = 0.5, 독립</p><p class='sn-ex-s'>0.4 × 0.5</p><p class='sn-ex-a'>답: P(A ∩ B) = 0.2</p></div><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>동전 4번, 앞면 2번</p><p class='sn-ex-s'>₄C₂(1/2)²(1/2)²</p><p class='sn-ex-a'>답: 3/8</p></div><h2>자주 하는 실수</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>자주 하는 실수</th><th>바르게 생각하기</th></tr></thead><tbody><tr><td>배반사건이면 독립이라고 생각한다</td><td>P(A), P(B) &gt; 0이면 배반사건은 종속이에요.</td></tr><tr><td>독립시행에서 ₙCᵣ를 빠뜨린다</td><td>어느 회에 일어나는지 고르는 경우를 곱해요.</td></tr><tr><td>P(A ∪ B)를 P(A)P(B)로 쓴다</td><td>곱은 A ∩ B의 확률이에요.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "독립과 배반은 어떻게 다른가요?",
+   "a": "배반은 동시에 일어나지 않는 것, 독립은 서로의 확률에 영향을 주지 않는 것이에요."
+  },
+  {
+   "q": "독립시행의 예는?",
+   "a": "주사위나 동전을 반복해서 던지는 시행이에요."
+  }
+ ],
+ "sets": [
+  {
+   "title": "독립인 사건의 확률",
+   "items": [
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "0"
+     ],
+     "a": 1,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>일 때, A와 B가 모두 일어나지 않을 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "(1 − <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)(1 − <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>) = <b><span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>"
+     ],
+     "a": 3,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>, P(B) = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>100</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>27</span><span class='fd'>100</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>, P(B) = <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>일 때, A와 B가 모두 일어나지 않을 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>100</span></span>"
+     ],
+     "a": 1,
+     "e": "(1 − <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>)(1 − <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>일 때, P(A ∪ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A) + P(B) − P(A)P(B). <b><span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>일 때, P(A ∪ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A) + P(B) − P(A)P(B). <b><span class='fr'><span class='fn'>19</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>일 때, A와 B가 모두 일어나지 않을 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>20</span></span>"
+     ],
+     "a": 1,
+     "e": "(1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)(1 − <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "0"
+     ],
+     "a": 1,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>일 때, A와 B가 모두 일어나지 않을 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "(1 − <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)(1 − <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>) = <b><span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>9</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>일 때, A와 B가 모두 일어나지 않을 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>"
+     ],
+     "a": 2,
+     "e": "(1 − <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>)(1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>"
+     ],
+     "a": 3,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>일 때, P(A ∪ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A) + P(B) − P(A)P(B). <b><span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>일 때, P(A ∪ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>87</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A) + P(B) − P(A)P(B). <b><span class='fr'><span class='fn'>22</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>일 때, P(A ∪ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>50</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A) + P(B) − P(A)P(B). <b><span class='fr'><span class='fn'>41</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>일 때, P(A ∪ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "P(A) + P(B) − P(A)P(B). <b><span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "독립과 종속의 판정",
+   "items": [
+    {
+     "q": "A와 B가 서로 독립이면 A와 B<sup>C</sup>는?",
+     "c": [
+      "서로 종속이에요",
+      "배반사건이에요",
+      "알 수 없어요",
+      "서로 독립이에요"
+     ],
+     "a": 3,
+     "e": "<b>서로 독립이에요</b>"
+    },
+    {
+     "q": "1부터 8까지의 자연수 중 하나를 뽑을 때, A: 짝수가 나오는 사건, B: 3의 배수가 나오는 사건이에요. A와 B는?",
+     "c": [
+      "알 수 없어요",
+      "독립이에요",
+      "배반사건이에요",
+      "종속이에요"
+     ],
+     "a": 1,
+     "e": "P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, P(A ∩ B) = <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>. P(A)P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>이므로 <b>독립이에요</b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립일 조건은?",
+     "c": [
+      "P(A) = P(B)",
+      "P(A ∪ B) = 1",
+      "P(A ∩ B) = P(A)P(B)",
+      "P(A ∩ B) = 0"
+     ],
+     "a": 2,
+     "e": "<b>P(A ∩ B) = P(A)P(B)</b>"
+    },
+    {
+     "q": "확률의 곱셈정리로 옳은 것은?",
+     "c": [
+      "P(A ∩ B) = P(B|A) ÷ P(A)",
+      "P(A ∩ B) = P(A|B)P(A)",
+      "P(A ∩ B) = P(A)P(B|A)",
+      "P(A ∩ B) = P(A) + P(B|A)"
+     ],
+     "a": 2,
+     "e": "<b>P(A ∩ B) = P(A)P(B|A)</b>"
+    },
+    {
+     "q": "1부터 6까지의 자연수 중 하나를 뽑을 때, A: 짝수가 나오는 사건, B: 3의 배수가 나오는 사건이에요. A와 B는?",
+     "c": [
+      "종속이에요",
+      "독립이에요",
+      "배반사건이에요",
+      "알 수 없어요"
+     ],
+     "a": 1,
+     "e": "P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>, P(A ∩ B) = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. P(A)P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>이므로 <b>독립이에요</b>"
+    },
+    {
+     "q": "P(A) &gt; 0, P(B) &gt; 0인 두 사건 A, B가 서로 배반사건이면?",
+     "c": [
+      "A와 B는 독립이에요",
+      "P(A ∩ B) = P(A)P(B)",
+      "P(A) = P(B)",
+      "A와 B는 종속이에요"
+     ],
+     "a": 3,
+     "e": "<b>A와 B는 종속이에요</b>"
+    },
+    {
+     "q": "주사위를 두 번 던질 때 첫 번째와 두 번째 결과는?",
+     "c": [
+      "서로 독립이에요",
+      "같은 사건이에요",
+      "배반사건이에요",
+      "서로 종속이에요"
+     ],
+     "a": 0,
+     "e": "<b>서로 독립이에요</b>"
+    },
+    {
+     "q": "1부터 10까지의 자연수 중 하나를 뽑을 때, A: 짝수가 나오는 사건, B: 4 이하의 수가 나오는 사건이에요. A와 B는?",
+     "c": [
+      "배반사건이에요",
+      "독립이에요",
+      "종속이에요",
+      "알 수 없어요"
+     ],
+     "a": 1,
+     "e": "P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>, P(A ∩ B) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. P(A)P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>이므로 <b>독립이에요</b>"
+    },
+    {
+     "q": "1부터 12까지의 자연수 중 하나를 뽑을 때, A: 짝수가 나오는 사건, B: 3의 배수가 나오는 사건이에요. A와 B는?",
+     "c": [
+      "종속이에요",
+      "독립이에요",
+      "알 수 없어요",
+      "배반사건이에요"
+     ],
+     "a": 1,
+     "e": "P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>, P(A ∩ B) = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. P(A)P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>이므로 <b>독립이에요</b>"
+    },
+    {
+     "q": "1부터 10까지의 자연수 중 하나를 뽑을 때, A: 짝수가 나오는 사건, B: 3 이하의 수가 나오는 사건이에요. A와 B는?",
+     "c": [
+      "배반사건이에요",
+      "독립이에요",
+      "알 수 없어요",
+      "종속이에요"
+     ],
+     "a": 3,
+     "e": "P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>, P(A ∩ B) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>. P(A)P(B) = <span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>이므로 <b>종속이에요</b>"
+    },
+    {
+     "q": "A와 B가 서로 독립일 때 P(B|A)는?",
+     "c": [
+      "P(B)",
+      "P(A)",
+      "1",
+      "P(A)P(B)"
+     ],
+     "a": 0,
+     "e": "<b>P(B)</b>"
+    },
+    {
+     "q": "1부터 6까지의 자연수 중 하나를 뽑을 때, A: 짝수가 나오는 사건, B: 4 이하의 수가 나오는 사건이에요. A와 B는?",
+     "c": [
+      "독립이에요",
+      "알 수 없어요",
+      "종속이에요",
+      "배반사건이에요"
+     ],
+     "a": 0,
+     "e": "P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>, P(A ∩ B) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. P(A)P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>이므로 <b>독립이에요</b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>, P(B) = <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>100</span></span>",
+      "0"
+     ],
+     "a": 2,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>7</span><span class='fd'>100</span></span></b>"
+    },
+    {
+     "q": "1부터 10까지의 자연수 중 하나를 뽑을 때, A: 짝수가 나오는 사건, B: 3의 배수가 나오는 사건이에요. A와 B는?",
+     "c": [
+      "종속이에요",
+      "독립이에요",
+      "알 수 없어요",
+      "배반사건이에요"
+     ],
+     "a": 0,
+     "e": "P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>, P(A ∩ B) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>. P(A)P(B) = <span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>이므로 <b>종속이에요</b>"
+    },
+    {
+     "q": "1부터 6까지의 자연수 중 하나를 뽑을 때, A: 짝수가 나오는 사건, B: 5 이하의 수가 나오는 사건이에요. A와 B는?",
+     "c": [
+      "독립이에요",
+      "알 수 없어요",
+      "종속이에요",
+      "배반사건이에요"
+     ],
+     "a": 2,
+     "e": "P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>, P(A ∩ B) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. P(A)P(B) = <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>이므로 <b>종속이에요</b>"
+    },
+    {
+     "q": "1부터 12까지의 자연수 중 하나를 뽑을 때, A: 짝수가 나오는 사건, B: 3 이하의 수가 나오는 사건이에요. A와 B는?",
+     "c": [
+      "알 수 없어요",
+      "배반사건이에요",
+      "독립이에요",
+      "종속이에요"
+     ],
+     "a": 3,
+     "e": "P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, P(A ∩ B) = <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>. P(A)P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>이므로 <b>종속이에요</b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>"
+     ],
+     "a": 3,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>, P(B) = <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>일 때, P(A ∩ B)의 값은?",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 2,
+     "e": "독립이면 P(A ∩ B) = P(A)P(B). <b><span class='fr'><span class='fn'>18</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "두 사건 A, B가 서로 독립이고 P(A) = <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>, P(B) = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>일 때, A와 B가 모두 일어나지 않을 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>"
+     ],
+     "a": 1,
+     "e": "(1 − <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>)(1 − <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>) = <b><span class='fr'><span class='fn'>7</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "1부터 12까지의 자연수 중 하나를 뽑을 때, A: 짝수가 나오는 사건, B: 4 이하의 수가 나오는 사건이에요. A와 B는?",
+     "c": [
+      "독립이에요",
+      "종속이에요",
+      "알 수 없어요",
+      "배반사건이에요"
+     ],
+     "a": 0,
+     "e": "P(A) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>, P(A ∩ B) = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. P(A)P(B) = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>이므로 <b>독립이에요</b>"
+    }
+   ]
+  },
+  {
+   "title": "독립시행의 확률",
+   "items": [
+    {
+     "q": "동전 한 개를 던져 앞면이 나오는 시행을 5번 반복할 때, 그 사건이 정확히 1번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>5</sub>C<sub>1</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>1</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span></b>"
+    },
+    {
+     "q": "확률이 1/4인 시행을 3번 반복할 때, 그 사건이 정확히 2번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>3</sub>C<sub>2</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)<sup>2</sup>(<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 2 이상 5 이하의 눈이 나오는 시행을 6번 반복할 때, 그 사건이 정확히 4번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>6</sub>C<sub>4</sub>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>4</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 2 이상 5 이하의 눈이 나오는 시행을 6번 반복할 때, 그 사건이 정확히 5번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>243</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>6</sub>C<sub>5</sub>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>5</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>64</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 3의 배수의 눈이 나오는 시행을 6번 반복할 때, 그 사건이 정확히 4번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>27</span></span>"
+     ],
+     "a": 2,
+     "e": "<sub>6</sub>C<sub>4</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>4</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>20</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 2 이상 5 이하의 눈이 나오는 시행을 4번 반복할 때, 그 사건이 정확히 3번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>4</sub>C<sub>3</sub>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>3</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>32</span><span class='fd'>81</span></span></b>"
+    },
+    {
+     "q": "확률이 1/4인 시행을 6번 반복할 때, 그 사건이 정확히 4번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>135</span><span class='fd'>4096</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4096</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>6</sub>C<sub>4</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)<sup>4</sup>(<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>135</span><span class='fd'>4096</span></span></b>"
+    },
+    {
+     "q": "동전 한 개를 던져 앞면이 나오는 시행을 3번 반복할 때, 그 사건이 정확히 2번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>3</sub>C<sub>2</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>2</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>"
+    },
+    {
+     "q": "확률이 1/4인 시행을 4번 반복할 때, 그 사건이 정확히 3번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>4</sub>C<sub>3</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)<sup>3</sup>(<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 2 이상 5 이하의 눈이 나오는 시행을 3번 반복할 때, 그 사건이 정확히 1번 일어날 확률은?",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>27</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>3</sub>C<sub>1</sub>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>1</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span></b>"
+    },
+    {
+     "q": "확률이 1/4인 시행을 5번 반복할 때, 그 사건이 정확히 3번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>512</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>5</sub>C<sub>3</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)<sup>3</sup>(<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>45</span><span class='fd'>512</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 3의 배수의 눈이 나오는 시행을 5번 반복할 때, 그 사건이 정확히 2번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>5</sub>C<sub>2</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>2</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>3</sup> = <b><span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 1의 눈이 나오는 시행을 5번 반복할 때, 그 사건이 정확히 4번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7776</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>7776</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>1296</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1296</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>5</sub>C<sub>4</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)<sup>4</sup>(<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>7776</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 3의 배수의 눈이 나오는 시행을 5번 반복할 때, 그 사건이 정확히 4번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>81</span></span>"
+     ],
+     "a": 2,
+     "e": "<sub>5</sub>C<sub>4</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>4</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>10</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 2 이상 5 이하의 눈이 나오는 시행을 3번 반복할 때, 그 사건이 정확히 2번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "<sub>3</sub>C<sub>2</sub>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>2</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 3의 배수의 눈이 나오는 시행을 5번 반복할 때, 그 사건이 정확히 3번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>243</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>5</sub>C<sub>3</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>3</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>40</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 1의 눈이 나오는 시행을 5번 반복할 때, 그 사건이 정확히 2번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>625</span><span class='fd'>3888</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>7776</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>5</sub>C<sub>2</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)<sup>2</sup>(<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>)<sup>3</sup> = <b><span class='fr'><span class='fn'>625</span><span class='fd'>3888</span></span></b>"
+    },
+    {
+     "q": "확률이 1/4인 시행을 4번 반복할 때, 그 사건이 정확히 1번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span>",
+      "1"
+     ],
+     "a": 2,
+     "e": "<sub>4</sub>C<sub>1</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)<sup>1</sup>(<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>3</sup> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span></b>"
+    },
+    {
+     "q": "동전 한 개를 던져 앞면이 나오는 시행을 3번 반복할 때, 그 사건이 정확히 1번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "<sub>3</sub>C<sub>1</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>1</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>"
+    },
+    {
+     "q": "확률이 1/4인 시행을 5번 반복할 때, 그 사건이 정확히 4번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>256</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>5</sub>C<sub>4</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)<sup>4</sup>(<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>15</span><span class='fd'>1024</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "적어도 한 번",
+   "items": [
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>인 시도를 독립적으로 5번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>2101</span><span class='fd'>3125</span></span>",
+      "<span class='fr'><span class='fn'>1024</span><span class='fd'>3125</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3125</span></span>",
+      "<span class='fr'><span class='fn'>2101</span><span class='fd'>6250</span></span>"
+     ],
+     "a": 0,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>)<sup>5</sup>). <b><span class='fr'><span class='fn'>2101</span><span class='fd'>3125</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>인 시도를 독립적으로 4번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>369</span><span class='fd'>625</span></span>"
+     ],
+     "a": 3,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>)<sup>4</sup>). <b><span class='fr'><span class='fn'>369</span><span class='fd'>625</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>인 시도를 독립적으로 4번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>625</span><span class='fd'>1296</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1296</span></span>",
+      "<span class='fr'><span class='fn'>671</span><span class='fd'>1296</span></span>"
+     ],
+     "a": 3,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>)<sup>4</sup>). <b><span class='fr'><span class='fn'>671</span><span class='fd'>1296</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>인 시도를 독립적으로 4번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>7599</span><span class='fd'>20000</span></span>",
+      "<span class='fr'><span class='fn'>7599</span><span class='fd'>10000</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>10000</span></span>",
+      "<span class='fr'><span class='fn'>2401</span><span class='fd'>10000</span></span>"
+     ],
+     "a": 1,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>)<sup>4</sup>). <b><span class='fr'><span class='fn'>7599</span><span class='fd'>10000</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>인 시도를 독립적으로 4번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>175</span><span class='fd'>512</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>175</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>256</span></span>"
+     ],
+     "a": 2,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>4</sup>). <b><span class='fr'><span class='fn'>175</span><span class='fd'>256</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>인 시도를 독립적으로 5번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>83193</span><span class='fd'>200000</span></span>",
+      "<span class='fr'><span class='fn'>83193</span><span class='fd'>100000</span></span>",
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>100000</span></span>",
+      "<span class='fr'><span class='fn'>16807</span><span class='fd'>100000</span></span>"
+     ],
+     "a": 1,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>)<sup>5</sup>). <b><span class='fr'><span class='fn'>83193</span><span class='fd'>100000</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>인 시도를 독립적으로 3번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>91</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>216</span></span>"
+     ],
+     "a": 0,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>)<sup>3</sup>). <b><span class='fr'><span class='fn'>91</span><span class='fd'>216</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>인 시도를 독립적으로 6번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>46656</span></span>",
+      "<span class='fr'><span class='fn'>31031</span><span class='fd'>93312</span></span>",
+      "<span class='fr'><span class='fn'>15625</span><span class='fd'>46656</span></span>",
+      "<span class='fr'><span class='fn'>31031</span><span class='fd'>46656</span></span>"
+     ],
+     "a": 3,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>)<sup>6</sup>). <b><span class='fr'><span class='fn'>31031</span><span class='fd'>46656</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>인 시도를 독립적으로 3번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>98</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>125</span></span>"
+     ],
+     "a": 2,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>)<sup>3</sup>). <b><span class='fr'><span class='fn'>98</span><span class='fd'>125</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>인 시도를 독립적으로 5번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>211</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>211</span><span class='fd'>486</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>243</span></span>"
+     ],
+     "a": 0,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>5</sup>). <b><span class='fr'><span class='fn'>211</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>인 시도를 독립적으로 6번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>11529</span><span class='fd'>15625</span></span>",
+      "<span class='fr'><span class='fn'>11529</span><span class='fd'>31250</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15625</span></span>",
+      "<span class='fr'><span class='fn'>4096</span><span class='fd'>15625</span></span>"
+     ],
+     "a": 0,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>)<sup>6</sup>). <b><span class='fr'><span class='fn'>11529</span><span class='fd'>15625</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>인 시도를 독립적으로 6번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4096</span></span>",
+      "<span class='fr'><span class='fn'>3367</span><span class='fd'>4096</span></span>",
+      "<span class='fr'><span class='fn'>729</span><span class='fd'>4096</span></span>",
+      "<span class='fr'><span class='fn'>3367</span><span class='fd'>8192</span></span>"
+     ],
+     "a": 1,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>6</sup>). <b><span class='fr'><span class='fn'>3367</span><span class='fd'>4096</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>인 시도를 독립적으로 3번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>54</span></span>"
+     ],
+     "a": 1,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>3</sup>). <b><span class='fr'><span class='fn'>19</span><span class='fd'>27</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>인 시도를 독립적으로 2번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>)<sup>2</sup>). <b><span class='fr'><span class='fn'>51</span><span class='fd'>100</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>인 시도를 독립적으로 2번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>)<sup>2</sup>). <b><span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>인 시도를 독립적으로 2번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>2</sup>). <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>인 시도를 독립적으로 5번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>781</span><span class='fd'>2048</span></span>",
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>781</span><span class='fd'>1024</span></span>"
+     ],
+     "a": 3,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>5</sup>). <b><span class='fr'><span class='fn'>781</span><span class='fd'>1024</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>인 시도를 독립적으로 5번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7776</span></span>",
+      "<span class='fr'><span class='fn'>4651</span><span class='fd'>7776</span></span>",
+      "<span class='fr'><span class='fn'>3125</span><span class='fd'>7776</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>)<sup>5</sup>). <b><span class='fr'><span class='fn'>4651</span><span class='fd'>7776</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>인 시도를 독립적으로 2번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>)<sup>2</sup>). <b><span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span></b>"
+    },
+    {
+     "q": "한 번의 시도에서 성공할 확률이 <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>인 시도를 독립적으로 6번 할 때, 적어도 한 번 성공할 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>882351</span><span class='fd'>2000000</span></span>",
+      "<span class='fr'><span class='fn'>117649</span><span class='fd'>1000000</span></span>",
+      "<span class='fr'><span class='fn'>729</span><span class='fd'>1000000</span></span>",
+      "<span class='fr'><span class='fn'>882351</span><span class='fd'>1000000</span></span>"
+     ],
+     "a": 3,
+     "e": "1 − (한 번도 성공하지 못할 확률 (<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>)<sup>6</sup>). <b><span class='fr'><span class='fn'>882351</span><span class='fd'>1000000</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "곱셈정리의 활용",
+   "items": [
+    {
+     "q": "동전 한 개를 던져 앞면이 나오는 시행을 6번 반복할 때, 그 사건이 정확히 5번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>6</sub>C<sub>5</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>5</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>, <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>100</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>, <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>97</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>100</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>17</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 1의 눈이 나오는 시행을 3번 반복할 때, 그 사건이 정확히 2번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>72</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>3</sub>C<sub>2</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)<sup>2</sup>(<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>72</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>, <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>50</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>, <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>25</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>17</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>93</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>50</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>33</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>91</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>",
+      "1"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>41</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>, <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>50</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>29</span><span class='fd'>50</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>, <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 3의 배수의 눈이 나오는 시행을 3번 반복할 때, 그 사건이 정확히 1번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>3</sub>C<sub>1</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>1</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 1의 눈이 나오는 시행을 5번 반복할 때, 그 사건이 정확히 1번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>3125</span><span class='fd'>7776</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>625</span><span class='fd'>7776</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>5</sub>C<sub>1</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)<sup>1</sup>(<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>3125</span><span class='fd'>7776</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 3의 배수의 눈이 나오는 시행을 4번 반복할 때, 그 사건이 정확히 3번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span>"
+     ],
+     "a": 2,
+     "e": "<sub>4</sub>C<sub>3</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>3</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span></b>"
+    },
+    {
+     "q": "주사위 한 개를 던져 1의 눈이 나오는 시행을 4번 반복할 때, 그 사건이 정확히 3번 일어날 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>1296</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>324</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>54</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>216</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>4</sub>C<sub>3</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)<sup>3</sup>(<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>324</span></span></b>"
+    },
+    {
+     "q": "A, B 두 사람이 각각 과녁을 맞힐 확률이 <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>, <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>이고 서로 독립이에요. 두 사람이 한 번씩 쏠 때, 한 사람만 맞힐 확률은?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>50</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>19</span><span class='fd'>50</span></span></b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 6,
+ "updated": "2026-11-25",
+ "country": "kr",
+ "subject": "math",
+ "grade": "probability-and-statistics"
+}

@@ -37,7 +37,69 @@ function topic_defs_kr() {
             'blurb' => '좌표평면과 그래프, 정비례와 반비례, 일차함수와 이차함수의 그래프와 성질을 알아봅니다.'),
         'patterns' => array('name' => '규칙 찾기', 'in' => '/^patterns$|number-patterns/', 'out' => '/^$/',
             'blurb' => '모양과 색, 수의 배열, 덧셈표와 곱셈표, 달력에서 되풀이되거나 일정하게 변하는 규칙을 찾고 나타냅니다.'),
+        'coordinate-geometry' => array('name' => '도형의 방정식', 'in' => '/^$/', 'out' => '/^$/',
+            'blurb' => '좌표평면에서 두 점 사이의 거리와 내분점, 직선과 원의 방정식, 원과 직선의 위치 관계, 평행이동과 대칭이동을 다룹니다.'),
+        'sets-and-logic' => array('name' => '집합과 명제', 'in' => '/^$/', 'out' => '/^$/',
+            'blurb' => '집합의 표현과 연산, 명제와 조건, 역과 대우, 충분조건과 필요조건, 절대부등식을 익힙니다.'),
+        'exponents-and-logarithms' => array('name' => '지수와 로그', 'in' => '/^$/', 'out' => '/^$/',
+            'blurb' => '거듭제곱근과 유리수 지수, 로그와 상용로그, 지수함수와 로그함수의 그래프, 지수·로그방정식과 부등식을 풉니다.'),
+        'trigonometry' => array('name' => '삼각함수', 'in' => '/^$/', 'out' => '/^$/',
+            'blurb' => '일반각과 호도법, 삼각함수의 값과 그래프, 삼각방정식과 부등식, 사인법칙과 코사인법칙을 익힙니다.'),
+        'sequences' => array('name' => '수열', 'in' => '/^$/', 'out' => '/^$/',
+            'blurb' => '등차수열과 등비수열의 일반항과 합, ∑의 뜻과 성질, 수열의 귀납적 정의와 수학적 귀납법을 다룹니다.'),
+        'calculus' => array('name' => '미분과 적분', 'in' => '/^$/', 'out' => '/^$/',
+            'blurb' => '함수의 극한과 연속, 미분계수와 도함수, 접선과 극값, 그래프와 최대·최소, 부정적분과 정적분, 넓이와 거리를 구합니다.'),
+        'counting' => array('name' => '경우의 수', 'in' => '/^$/', 'out' => '/^$/',
+            'blurb' => '합의 법칙과 곱의 법칙, 순열과 조합, 중복순열과 중복조합, 이항정리로 경우의 수를 셉니다.'),
+        'probability-and-statistics' => array('name' => '확률과 통계', 'in' => '/^$/', 'out' => '/^$/',
+            'blurb' => '확률의 덧셈정리와 곱셈정리, 조건부확률, 이산확률변수와 이항분포, 정규분포, 표본평균과 통계적 추정을 다룹니다.'),
     );
+}
+
+/* Korea, 고등학교: the high-school slugs are listed one by one (most would match the elementary/middle-school patterns wrongly) */
+function topic_hs_kr() {
+    return array(
+        'identities-and-remainder-theorem' => 'algebra', 'complex-numbers' => 'number-systems',
+        'discriminant' => 'equations', 'roots-and-coefficients' => 'equations', 'cubic-and-quartic-equations' => 'equations', 'simultaneous-quadratic-equations' => 'equations',
+        'linear-inequalities-and-absolute-values' => 'equations', 'quadratic-inequalities' => 'equations',
+        'quadratic-equations-and-functions' => 'functions', 'maximum-and-minimum-of-quadratic-functions' => 'functions',
+        'functions' => 'functions', 'composite-and-inverse-functions' => 'functions', 'rational-functions' => 'functions', 'irrational-functions' => 'functions',
+        'matrices' => '',
+        'distance-and-internal-division' => 'coordinate-geometry', 'equations-of-lines' => 'coordinate-geometry', 'distance-from-a-point-to-a-line' => 'coordinate-geometry',
+        'equations-of-circles' => 'coordinate-geometry', 'circles-and-lines' => 'coordinate-geometry', 'translations-and-reflections' => 'coordinate-geometry',
+        'sets' => 'sets-and-logic', 'set-operations' => 'sets-and-logic', 'propositions-and-conditions' => 'sets-and-logic', 'necessary-and-sufficient-conditions' => 'sets-and-logic', 'absolute-inequalities' => 'sets-and-logic',
+        'radicals-and-roots' => 'exponents-and-logarithms', 'exponents' => 'exponents-and-logarithms', 'logarithms' => 'exponents-and-logarithms', 'common-logarithms' => 'exponents-and-logarithms',
+        'exponential-and-logarithmic-functions' => 'exponents-and-logarithms', 'exponential-and-logarithmic-equations' => 'exponents-and-logarithms',
+        'radians-and-general-angles' => 'trigonometry', 'trigonometric-functions' => 'trigonometry', 'graphs-of-trigonometric-functions' => 'trigonometry', 'law-of-sines-and-cosines' => 'trigonometry',
+        'arithmetic-sequences' => 'sequences', 'geometric-sequences' => 'sequences', 'sigma-notation' => 'sequences', 'recursive-sequences-and-induction' => 'sequences',
+        'limits-of-functions' => 'calculus', 'continuity' => 'calculus', 'derivatives' => 'calculus', 'rules-of-differentiation' => 'calculus', 'tangent-lines-and-mean-value-theorem' => 'calculus',
+        'increasing-decreasing-and-extrema' => 'calculus', 'graphs-and-maximum-minimum' => 'calculus', 'equations-inequalities-and-velocity' => 'calculus', 'indefinite-integrals' => 'calculus',
+        'definite-integrals' => 'calculus', 'area-between-curves' => 'calculus', 'velocity-and-distance' => 'calculus',
+        'counting-principles' => 'counting', 'permutations' => 'counting', 'combinations' => 'counting', 'permutations-with-repetition' => 'counting', 'combinations-with-repetition' => 'counting', 'binomial-theorem' => 'counting',
+        'probability-and-addition-rule' => 'probability-and-statistics', 'conditional-probability' => 'probability-and-statistics', 'independence-and-multiplication-rule' => 'probability-and-statistics',
+        'discrete-random-variables' => 'probability-and-statistics', 'binomial-distribution' => 'probability-and-statistics', 'normal-distribution' => 'probability-and-statistics', 'sampling-and-estimation' => 'probability-and-statistics',
+    );
+}
+
+/* topic_defs_kr() + the high-school list: each high-school slug goes only to its listed topic */
+function topic_defs_kr_all() {
+    $t = topic_defs_kr();
+    $hs = topic_hs_kr();
+    foreach ($t as $k => $d) {
+        $mine = array();
+        $other = array();
+        foreach ($hs as $slug => $tk) {
+            if ($tk === $k) $mine[] = preg_quote($slug, '/');
+            else $other[] = preg_quote($slug, '/');
+        }
+        $in = substr($d['in'], 1, -1);
+        $out = substr($d['out'], 1, -1);
+        if ($mine) $in = '(?:' . $in . ')|^(?:' . implode('|', $mine) . ')$';
+        if ($other) $out = '(?:' . $out . ')|^(?:' . implode('|', $other) . ')$';
+        $t[$k]['in'] = '/' . $in . '/';
+        $t[$k]['out'] = '/' . $out . '/';
+    }
+    return $t;
 }
 
 /* Taiwan (zh-TW): its own topic set, because its slugs and grade span (國小一年級 to 國中九年級) differ */
@@ -332,7 +394,7 @@ function topic_defs($country = null) {
     if ($country === 'br') return topic_defs_br();
     if ($country === 'es' || $country === 'mx') return topic_defs_es();
     if ($country === 'tw') return topic_defs_tw();
-    if ($country === 'kr') return topic_defs_kr();
+    if ($country === 'kr') return topic_defs_kr_all();
     if ($country === 'de') return topic_defs_de();
     if ($country === 'fr') return topic_defs_fr();
     if ($country === 'it') return topic_defs_it();

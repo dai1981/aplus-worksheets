@@ -1,0 +1,1157 @@
+{
+ "slug": "velocity-and-distance",
+ "title": "속도와 거리",
+ "seo_title": "속도와 거리 | 고등학교 미적분Ⅰ 학습지 (정답 포함)",
+ "short_title": "속도와 거리",
+ "domain": "적분",
+ "standard_code": "[12미적Ⅰ-03-06]",
+ "standard_url": "https://ncic.re.kr/inv/org/download.do?year=2022&seq=10003559&orgType=ogi4",
+ "standard_text": "적분을 속도와 거리에 대한 문제에 활용하고, 그 유용성을 인식할 수 있다.",
+ "meta_desc": "고등학교 미적분Ⅰ 속도와 거리 문제: 속도를 적분해 위치 구하기, 위치의 변화량과 움직인 거리의 차이, 출발점으로 다시 돌아오는 시각, 위로 던진 공의 높이까지 100문제와 정답·해설.",
+ "key_big": "위치의 변화량 = ∫v(t) dt",
+ "key_sub": "움직인 거리 = ∫|v(t)| dt",
+ "body_html": "<h2>생각하는 방법</h2><p>시각 t에서의 속도가 v(t)이고 t = 0에서의 위치가 x₀이면, 시각 t에서의 위치는 x₀ + ∫<sub>0</sub><sup>t</sup> v(s) ds예요.</p><p>t = a에서 t = b까지 위치의 변화량은 ∫<sub>a</sub><sup>b</sup> v(t) dt예요.</p><p>움직인 거리는 ∫<sub>a</sub><sup>b</sup> |v(t)| dt로, 방향이 바뀌는 시각에서 나누어 계산해요.</p><p>위로 던진 물체는 v(t) = 0일 때 가장 높이 올라가요.</p><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>v(t) = 2t − 4, 0 ≤ t ≤ 3</p><p class='sn-ex-s'>변화량 ∫(2t − 4) dt = −3</p><p class='sn-ex-s'>거리 4 + 1</p><p class='sn-ex-a'>답: 변화량 −3, 거리 5</p></div><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>v(t) = 20 − 10t</p><p class='sn-ex-s'>v = 0인 t = 2</p><p class='sn-ex-s'>∫<sub>0</sub><sup>2</sup> (20 − 10t) dt</p><p class='sn-ex-a'>답: 최고 높이 20 m</p></div><h2>자주 하는 실수</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>자주 하는 실수</th><th>바르게 생각하기</th></tr></thead><tbody><tr><td>움직인 거리를 ∫v(t) dt로 구한다</td><td>방향이 바뀌면 |v(t)|를 적분해야 해요.</td></tr><tr><td>위치를 구할 때 처음 위치를 더하지 않는다</td><td>x₀ + ∫v(t) dt예요.</td></tr><tr><td>최고 높이에서 가속도가 0이라고 한다</td><td>속도가 0이에요.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "위치의 변화량이 0이면?",
+   "a": "처음 위치로 돌아왔다는 뜻이에요."
+  },
+  {
+   "q": "속력의 적분은?",
+   "a": "|v(t)|의 적분이 움직인 거리예요."
+  }
+ ],
+ "sets": [
+  {
+   "title": "위치",
+   "items": [
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 3t − 12이고 t = 0일 때 위치가 −5예요. t = 5에서 점 P의 위치는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>55</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>35</span><span class='fd'>2</span></span>",
+      "3",
+      "−<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "x(5) = −5 + ∫<sub>0</sub><sup>5</sup> v(t) dt. <b>−<span class='fr'><span class='fn'>55</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 3t − 3이고 t = 0일 때 위치가 −5예요. t = 5에서 점 P의 위치는?",
+     "c": [
+      "<span class='fr'><span class='fn'>55</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>2</span></span>",
+      "12",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "x(5) = −5 + ∫<sub>0</sub><sup>5</sup> v(t) dt. <b><span class='fr'><span class='fn'>35</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 4t − 16이고 t = 0일 때 위치가 1이에요. t = 2에서 점 P의 위치는?",
+     "c": [
+      "−24",
+      "−8",
+      "−25",
+      "−23"
+     ],
+     "a": 3,
+     "e": "x(2) = 1 + ∫<sub>0</sub><sup>2</sup> v(t) dt. <b>−23</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 2t − 8이고 t = 0일 때 위치가 4예요. t = 3에서 점 P의 위치는?",
+     "c": [
+      "−11",
+      "−19",
+      "−2",
+      "−15"
+     ],
+     "a": 0,
+     "e": "x(3) = 4 + ∫<sub>0</sub><sup>3</sup> v(t) dt. <b>−11</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 4t − 4이고 t = 0일 때 위치가 4예요. t = 1에서 점 P의 위치는?",
+     "c": [
+      "−2",
+      "2",
+      "0",
+      "−6"
+     ],
+     "a": 1,
+     "e": "x(1) = 4 + ∫<sub>0</sub><sup>1</sup> v(t) dt. <b>2</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = t − 1이고 t = 0일 때 위치가 1이에요. t = 1에서 점 P의 위치는?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "x(1) = 1 + ∫<sub>0</sub><sup>1</sup> v(t) dt. <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 4t − 12이고 t = 0일 때 위치가 1이에요. t = 5에서 점 P의 위치는?",
+     "c": [
+      "−11",
+      "−10",
+      "−9",
+      "8"
+     ],
+     "a": 2,
+     "e": "x(5) = 1 + ∫<sub>0</sub><sup>5</sup> v(t) dt. <b>−9</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = t − 3이고 t = 0일 때 위치가 2예요. t = 2에서 점 P의 위치는?",
+     "c": [
+      "−6",
+      "−1",
+      "−4",
+      "−2"
+     ],
+     "a": 3,
+     "e": "x(2) = 2 + ∫<sub>0</sub><sup>2</sup> v(t) dt. <b>−2</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 3t − 6이고 t = 0일 때 위치가 −1이에요. t = 4에서 점 P의 위치는?",
+     "c": [
+      "0",
+      "6",
+      "−1",
+      "1"
+     ],
+     "a": 2,
+     "e": "x(4) = −1 + ∫<sub>0</sub><sup>4</sup> v(t) dt. <b>−1</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 4t − 4이고 t = 0일 때 위치가 −4예요. t = 5에서 점 P의 위치는?",
+     "c": [
+      "16",
+      "30",
+      "26",
+      "34"
+     ],
+     "a": 2,
+     "e": "x(5) = −4 + ∫<sub>0</sub><sup>5</sup> v(t) dt. <b>26</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 4t − 4이고 t = 0일 때 위치가 1이에요. t = 1에서 점 P의 위치는?",
+     "c": [
+      "−1",
+      "−2",
+      "0",
+      "−3"
+     ],
+     "a": 0,
+     "e": "x(1) = 1 + ∫<sub>0</sub><sup>1</sup> v(t) dt. <b>−1</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 3t − 9이고 t = 0일 때 위치가 −1이에요. t = 5에서 점 P의 위치는?",
+     "c": [
+      "6",
+      "−<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>13</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "x(5) = −1 + ∫<sub>0</sub><sup>5</sup> v(t) dt. <b>−<span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 2t − 2이고 t = 0일 때 위치가 4예요. t = 3에서 점 P의 위치는?",
+     "c": [
+      "7",
+      "−1",
+      "3",
+      "4"
+     ],
+     "a": 0,
+     "e": "x(3) = 4 + ∫<sub>0</sub><sup>3</sup> v(t) dt. <b>7</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 3t − 15이고 t = 0일 때 위치가 2예요. t = 2에서 점 P의 위치는?",
+     "c": [
+      "−24",
+      "−26",
+      "−9",
+      "−22"
+     ],
+     "a": 3,
+     "e": "x(2) = 2 + ∫<sub>0</sub><sup>2</sup> v(t) dt. <b>−22</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 2t − 10이고 t = 0일 때 위치가 −4예요. t = 1에서 점 P의 위치는?",
+     "c": [
+      "−9",
+      "−8",
+      "−13",
+      "−5"
+     ],
+     "a": 2,
+     "e": "x(1) = −4 + ∫<sub>0</sub><sup>1</sup> v(t) dt. <b>−13</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = t − 4이고 t = 0일 때 위치가 −4예요. t = 1에서 점 P의 위치는?",
+     "c": [
+      "−3",
+      "−<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "x(1) = −4 + ∫<sub>0</sub><sup>1</sup> v(t) dt. <b>−<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 3t − 12이고 t = 0일 때 위치가 −1이에요. t = 4에서 점 P의 위치는?",
+     "c": [
+      "−24",
+      "−23",
+      "0",
+      "−25"
+     ],
+     "a": 3,
+     "e": "x(4) = −1 + ∫<sub>0</sub><sup>4</sup> v(t) dt. <b>−25</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 2t − 10이고 t = 0일 때 위치가 −5예요. t = 5에서 점 P의 위치는?",
+     "c": [
+      "0",
+      "−30",
+      "−25",
+      "−20"
+     ],
+     "a": 1,
+     "e": "x(5) = −5 + ∫<sub>0</sub><sup>5</sup> v(t) dt. <b>−30</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 2t − 4이고 t = 0일 때 위치가 −4예요. t = 1에서 점 P의 위치는?",
+     "c": [
+      "−7",
+      "−3",
+      "1",
+      "−2"
+     ],
+     "a": 0,
+     "e": "x(1) = −4 + ∫<sub>0</sub><sup>1</sup> v(t) dt. <b>−7</b>"
+    },
+    {
+     "q": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = t − 5이고 t = 0일 때 위치가 −4예요. t = 2에서 점 P의 위치는?",
+     "c": [
+      "−8",
+      "−12",
+      "−4",
+      "−3"
+     ],
+     "a": 1,
+     "e": "x(2) = −4 + ∫<sub>0</sub><sup>2</sup> v(t) dt. <b>−12</b>"
+    }
+   ]
+  },
+  {
+   "title": "위치의 변화량",
+   "items": [
+    {
+     "q": "속도가 v(t) = 4t − 20인 점 P의 t = 0에서 t = 8까지 위치의 변화량은?",
+     "c": [
+      "−32",
+      "12",
+      "128",
+      "68"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>8</sup> v(t) dt = <b>−32</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 16인 점 P의 t = 0에서 t = 8까지 위치의 변화량은?",
+     "c": [
+      "64",
+      "16",
+      "128",
+      "0"
+     ],
+     "a": 3,
+     "e": "∫<sub>0</sub><sup>8</sup> v(t) dt = <b>0</b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 4인 점 P의 t = 0에서 t = 3까지 위치의 변화량은?",
+     "c": [
+      "5",
+      "2",
+      "−3",
+      "9"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>3</sup> v(t) dt = <b>−3</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 1인 점 P의 t = 0에서 t = 4까지 위치의 변화량은?",
+     "c": [
+      "8",
+      "5",
+      "4",
+      "3"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>4</sup> v(t) dt = <b>4</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 3인 점 P의 t = 0에서 t = 4까지 위치의 변화량은?",
+     "c": [
+      "5",
+      "1",
+      "−4",
+      "8"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>4</sup> v(t) dt = <b>−4</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 12인 점 P의 t = 0에서 t = 5까지 위치의 변화량은?",
+     "c": [
+      "<span class='fr'><span class='fn'>75</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span>",
+      "3"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>5</sup> v(t) dt = <b>−<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 15인 점 P의 t = 0에서 t = 8까지 위치의 변화량은?",
+     "c": [
+      "51",
+      "96",
+      "−24",
+      "9"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>8</sup> v(t) dt = <b>−24</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 12인 점 P의 t = 0에서 t = 6까지 위치의 변화량은?",
+     "c": [
+      "36",
+      "12",
+      "72",
+      "0"
+     ],
+     "a": 3,
+     "e": "∫<sub>0</sub><sup>6</sup> v(t) dt = <b>0</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 3인 점 P의 t = 0에서 t = 7까지 위치의 변화량은?",
+     "c": [
+      "4",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>7</sup> v(t) dt = <b><span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 15인 점 P의 t = 0에서 t = 7까지 위치의 변화량은?",
+     "c": [
+      "−<span class='fr'><span class='fn'>63</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>87</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>147</span><span class='fd'>2</span></span>",
+      "6"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>7</sup> v(t) dt = <b>−<span class='fr'><span class='fn'>63</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 10인 점 P의 t = 0에서 t = 8까지 위치의 변화량은?",
+     "c": [
+      "−16",
+      "6",
+      "34",
+      "64"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>8</sup> v(t) dt = <b>−16</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 15인 점 P의 t = 0에서 t = 9까지 위치의 변화량은?",
+     "c": [
+      "<span class='fr'><span class='fn'>123</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>",
+      "12",
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>9</sup> v(t) dt = <b>−<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 8인 점 P의 t = 0에서 t = 7까지 위치의 변화량은?",
+     "c": [
+      "−7",
+      "25",
+      "6",
+      "49"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>7</sup> v(t) dt = <b>−7</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 6인 점 P의 t = 0에서 t = 3까지 위치의 변화량은?",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "3",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>3</sup> v(t) dt = <b>−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 4인 점 P의 t = 0에서 t = 5까지 위치의 변화량은?",
+     "c": [
+      "25",
+      "6",
+      "13",
+      "5"
+     ],
+     "a": 3,
+     "e": "∫<sub>0</sub><sup>5</sup> v(t) dt = <b>5</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 12인 점 P의 t = 0에서 t = 8까지 위치의 변화량은?",
+     "c": [
+      "96",
+      "0",
+      "48",
+      "12"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>8</sup> v(t) dt = <b>0</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 3인 점 P의 t = 0에서 t = 4까지 위치의 변화량은?",
+     "c": [
+      "15",
+      "24",
+      "9",
+      "12"
+     ],
+     "a": 3,
+     "e": "∫<sub>0</sub><sup>4</sup> v(t) dt = <b>12</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 2인 점 P의 t = 0에서 t = 5까지 위치의 변화량은?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>2</span></span>",
+      "3"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>5</sup> v(t) dt = <b><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 10인 점 P의 t = 0에서 t = 7까지 위치의 변화량은?",
+     "c": [
+      "49",
+      "29",
+      "4",
+      "−21"
+     ],
+     "a": 3,
+     "e": "∫<sub>0</sub><sup>7</sup> v(t) dt = <b>−21</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 3인 점 P의 t = 0에서 t = 5까지 위치의 변화량은?",
+     "c": [
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>75</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>2</span></span>",
+      "12"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>5</sup> v(t) dt = <b><span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "움직인 거리",
+   "items": [
+    {
+     "q": "속도가 v(t) = 4t − 16인 점 P가 t = 0에서 t = 8까지 움직인 거리는?",
+     "c": [
+      "64",
+      "0",
+      "32",
+      "65"
+     ],
+     "a": 0,
+     "e": "t = 4에서 방향이 바뀌므로 ∫<sub>0</sub><sup>8</sup> |v(t)| dt = 32 + 32. <b>64</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 6인 점 P가 t = 0에서 t = 3까지 움직인 거리는?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "6",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "t = 2에서 방향이 바뀌므로 ∫<sub>0</sub><sup>3</sup> |v(t)| dt = 6 + <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>. <b><span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 4인 점 P가 t = 0에서 t = 3까지 움직인 거리는?",
+     "c": [
+      "10",
+      "8",
+      "2",
+      "6"
+     ],
+     "a": 0,
+     "e": "t = 1에서 방향이 바뀌므로 ∫<sub>0</sub><sup>3</sup> |v(t)| dt = 2 + 8. <b>10</b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 8인 점 P가 t = 0에서 t = 6까지 움직인 거리는?",
+     "c": [
+      "16",
+      "−12",
+      "4",
+      "20"
+     ],
+     "a": 3,
+     "e": "t = 4에서 방향이 바뀌므로 ∫<sub>0</sub><sup>6</sup> |v(t)| dt = 16 + 4. <b>20</b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 8인 점 P가 t = 0에서 t = 7까지 움직인 거리는?",
+     "c": [
+      "9",
+      "25",
+      "−7",
+      "16"
+     ],
+     "a": 1,
+     "e": "t = 4에서 방향이 바뀌므로 ∫<sub>0</sub><sup>7</sup> |v(t)| dt = 16 + 9. <b>25</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 15인 점 P가 t = 0에서 t = 8까지 움직인 거리는?",
+     "c": [
+      "51",
+      "−24",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>75</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "t = 5에서 방향이 바뀌므로 ∫<sub>0</sub><sup>8</sup> |v(t)| dt = <span class='fr'><span class='fn'>75</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>. <b>51</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 3인 점 P가 t = 0에서 t = 5까지 움직인 거리는?",
+     "c": [
+      "24",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "t = 1에서 방향이 바뀌므로 ∫<sub>0</sub><sup>5</sup> |v(t)| dt = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> + 24. <b><span class='fr'><span class='fn'>51</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 2인 점 P가 t = 0에서 t = 3까지 움직인 거리는?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2"
+     ],
+     "a": 0,
+     "e": "t = 2에서 방향이 바뀌므로 ∫<sub>0</sub><sup>3</sup> |v(t)| dt = 2 + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. <b><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 12인 점 P가 t = 0에서 t = 5까지 움직인 거리는?",
+     "c": [
+      "8",
+      "−10",
+      "26",
+      "18"
+     ],
+     "a": 2,
+     "e": "t = 3에서 방향이 바뀌므로 ∫<sub>0</sub><sup>5</sup> |v(t)| dt = 18 + 8. <b>26</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 5인 점 P가 t = 0에서 t = 9까지 움직인 거리는?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "8"
+     ],
+     "a": 1,
+     "e": "t = 5에서 방향이 바뀌므로 ∫<sub>0</sub><sup>9</sup> |v(t)| dt = <span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span> + 8. <b><span class='fr'><span class='fn'>41</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 5인 점 P가 t = 0에서 t = 6까지 움직인 거리는?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−12",
+      "13",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "t = 5에서 방향이 바뀌므로 ∫<sub>0</sub><sup>6</sup> |v(t)| dt = <span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. <b>13</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 4인 점 P가 t = 0에서 t = 2까지 움직인 거리는?",
+     "c": [
+      "2",
+      "0",
+      "4",
+      "5"
+     ],
+     "a": 2,
+     "e": "t = 1에서 방향이 바뀌므로 ∫<sub>0</sub><sup>2</sup> |v(t)| dt = 2 + 2. <b>4</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 2인 점 P가 t = 0에서 t = 4까지 움직인 거리는?",
+     "c": [
+      "0",
+      "2",
+      "5",
+      "4"
+     ],
+     "a": 3,
+     "e": "t = 2에서 방향이 바뀌므로 ∫<sub>0</sub><sup>4</sup> |v(t)| dt = 2 + 2. <b>4</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 12인 점 P가 t = 0에서 t = 6까지 움직인 거리는?",
+     "c": [
+      "37",
+      "36",
+      "0",
+      "18"
+     ],
+     "a": 1,
+     "e": "t = 3에서 방향이 바뀌므로 ∫<sub>0</sub><sup>6</sup> |v(t)| dt = 18 + 18. <b>36</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 9인 점 P가 t = 0에서 t = 6까지 움직인 거리는?",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>",
+      "28",
+      "27"
+     ],
+     "a": 3,
+     "e": "t = 3에서 방향이 바뀌므로 ∫<sub>0</sub><sup>6</sup> |v(t)| dt = <span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>. <b>27</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 4인 점 P가 t = 0에서 t = 5까지 움직인 거리는?",
+     "c": [
+      "34",
+      "30",
+      "2",
+      "32"
+     ],
+     "a": 0,
+     "e": "t = 1에서 방향이 바뀌므로 ∫<sub>0</sub><sup>5</sup> |v(t)| dt = 2 + 32. <b>34</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 6인 점 P가 t = 0에서 t = 4까지 움직인 거리는?",
+     "c": [
+      "6",
+      "13",
+      "12",
+      "0"
+     ],
+     "a": 2,
+     "e": "t = 2에서 방향이 바뀌므로 ∫<sub>0</sub><sup>4</sup> |v(t)| dt = 6 + 6. <b>12</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 3인 점 P가 t = 0에서 t = 6까지 움직인 거리는?",
+     "c": [
+      "10",
+      "0",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "9"
+     ],
+     "a": 3,
+     "e": "t = 3에서 방향이 바뀌므로 ∫<sub>0</sub><sup>6</sup> |v(t)| dt = <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>. <b>9</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 8인 점 P가 t = 0에서 t = 6까지 움직인 거리는?",
+     "c": [
+      "32",
+      "40",
+      "24",
+      "8"
+     ],
+     "a": 1,
+     "e": "t = 2에서 방향이 바뀌므로 ∫<sub>0</sub><sup>6</sup> |v(t)| dt = 8 + 32. <b>40</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 8인 점 P가 t = 0에서 t = 5까지 움직인 거리는?",
+     "c": [
+      "8",
+      "10",
+      "26",
+      "18"
+     ],
+     "a": 2,
+     "e": "t = 2에서 방향이 바뀌므로 ∫<sub>0</sub><sup>5</sup> |v(t)| dt = 8 + 18. <b>26</b>"
+    }
+   ]
+  },
+  {
+   "title": "다시 돌아오는 시각",
+   "items": [
+    {
+     "q": "속도가 v(t) = t − 1인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "3",
+      "2",
+      "1",
+      "4"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>t² − t = 0. <b>t = 2</b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 4인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "8",
+      "4",
+      "2",
+      "5"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = t² − 4t = 0. <b>t = 4</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 2인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "8",
+      "2",
+      "5",
+      "4"
+     ],
+     "a": 3,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>t² − 2t = 0. <b>t = 4</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 20인 점 P가 t = 0에서 t = 6까지 움직인 거리는?",
+     "c": [
+      "50",
+      "−48",
+      "2",
+      "52"
+     ],
+     "a": 3,
+     "e": "t = 5에서 방향이 바뀌므로 ∫<sub>0</sub><sup>6</sup> |v(t)| dt = 50 + 2. <b>52</b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 8인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "16",
+      "4",
+      "9",
+      "8"
+     ],
+     "a": 3,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = t² − 8t = 0. <b>t = 8</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 8인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "4",
+      "2",
+      "5",
+      "8"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = 2t² − 8t = 0. <b>t = 4</b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 6인 점 P의 t = 0에서 t = 5까지 위치의 변화량은?",
+     "c": [
+      "4",
+      "−5",
+      "13",
+      "25"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>5</sup> v(t) dt = <b>−5</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 4인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = 2t² − 4t = 0. <b>t = 2</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 20인 점 P가 t = 0에서 t = 7까지 움직인 거리는?",
+     "c": [
+      "−42",
+      "8",
+      "58",
+      "50"
+     ],
+     "a": 2,
+     "e": "t = 5에서 방향이 바뀌므로 ∫<sub>0</sub><sup>7</sup> |v(t)| dt = 50 + 8. <b>58</b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 3인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "2",
+      "3",
+      "4",
+      "1"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>t² − 3t = 0. <b>t = 2</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 3인 점 P의 t = 0에서 t = 5까지 위치의 변화량은?",
+     "c": [
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>5</sup> v(t) dt = <b>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 9인 점 P가 t = 0에서 t = 7까지 움직인 거리는?",
+     "c": [
+      "<span class='fr'><span class='fn'>75</span><span class='fd'>2</span></span>",
+      "24",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "t = 3에서 방향이 바뀌므로 ∫<sub>0</sub><sup>7</sup> |v(t)| dt = <span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span> + 24. <b><span class='fr'><span class='fn'>75</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 4인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "16",
+      "9",
+      "4",
+      "8"
+     ],
+     "a": 3,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>t² − 4t = 0. <b>t = 8</b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 10인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "5",
+      "25",
+      "20",
+      "10"
+     ],
+     "a": 3,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = t² − 10t = 0. <b>t = 10</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 3인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "3",
+      "12",
+      "6",
+      "9"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>t² − 3t = 0. <b>t = 6</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 5인 점 P의 t = 0에서 t = 7까지 위치의 변화량은?",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>21</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>7</sup> v(t) dt = <b>−<span class='fr'><span class='fn'>21</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "속도가 v(t) = 3t − 12인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "16",
+      "4",
+      "8",
+      "9"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>t² − 12t = 0. <b>t = 8</b>"
+    },
+    {
+     "q": "속도가 v(t) = 2t − 10인 점 P의 t = 0에서 t = 9까지 위치의 변화량은?",
+     "c": [
+      "−9",
+      "81",
+      "8",
+      "41"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>9</sup> v(t) dt = <b>−9</b>"
+    },
+    {
+     "q": "속도가 v(t) = t − 5인 점 P가 t = 0일 때 출발한 점을 다시 지나는 시각은? (t &gt; 0)",
+     "c": [
+      "5",
+      "10",
+      "20",
+      "25"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>t</sup> v(s) ds = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>t² − 5t = 0. <b>t = 10</b>"
+    },
+    {
+     "q": "속도가 v(t) = 4t − 8인 점 P의 t = 0에서 t = 4까지 위치의 변화량은?",
+     "c": [
+      "32",
+      "8",
+      "0",
+      "16"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>4</sup> v(t) dt = <b>0</b>"
+    }
+   ]
+  },
+  {
+   "title": "위로 던진 물체",
+   "items": [
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 35 − 10t (m/s)일 때, 1초 후의 높이는?",
+     "c": [
+      "60 m",
+      "30 m",
+      "35 m",
+      "25 m"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>1</sup> (35 − 10t) dt = <b>30 m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 30 − 10t (m/s)일 때, 2초 후의 높이는?",
+     "c": [
+      "40 m",
+      "10 m",
+      "60 m",
+      "45 m"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>2</sup> (30 − 10t) dt = <b>40 m</b>"
+    },
+    {
+     "q": "지면에서 초속 50 m로 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 50 − 10t (m/s)일 때, 공이 최고 높이에 도달할 때의 높이는?",
+     "c": [
+      "130 m",
+      "125 m",
+      "5 m",
+      "250 m"
+     ],
+     "a": 1,
+     "e": "v(t) = 0인 t = 5. ∫<sub>0</sub><sup>5</sup> (50 − 10t) dt = <b>125 m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 25 − 10t (m/s)일 때, 2초 후의 높이는?",
+     "c": [
+      "50 m",
+      "5 m",
+      "30 m",
+      "35 m"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>2</sup> (25 − 10t) dt = <b>30 m</b>"
+    },
+    {
+     "q": "지면에서 초속 20 m로 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 20 − 10t (m/s)일 때, 공이 최고 높이에 도달할 때의 높이는?",
+     "c": [
+      "20 m",
+      "25 m",
+      "40 m",
+      "2 m"
+     ],
+     "a": 0,
+     "e": "v(t) = 0인 t = 2. ∫<sub>0</sub><sup>2</sup> (20 − 10t) dt = <b>20 m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 50 − 10t (m/s)일 때, 4초 후의 높이는?",
+     "c": [
+      "10 m",
+      "120 m",
+      "125 m",
+      "200 m"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>4</sup> (50 − 10t) dt = <b>120 m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 45 − 10t (m/s)일 때, 1초 후의 높이는?",
+     "c": [
+      "35 m",
+      "40 m",
+      "80 m",
+      "45 m"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>1</sup> (45 − 10t) dt = <b>40 m</b>"
+    },
+    {
+     "q": "지면에서 초속 60 m로 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 60 − 10t (m/s)일 때, 공이 최고 높이에 도달할 때의 높이는?",
+     "c": [
+      "6 m",
+      "185 m",
+      "360 m",
+      "180 m"
+     ],
+     "a": 3,
+     "e": "v(t) = 0인 t = 6. ∫<sub>0</sub><sup>6</sup> (60 − 10t) dt = <b>180 m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 45 − 10t (m/s)일 때, 4초 후의 높이는?",
+     "c": [
+      "100 m",
+      "105 m",
+      "5 m",
+      "180 m"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>4</sup> (45 − 10t) dt = <b>100 m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 25 − 10t (m/s)일 때, 1초 후의 높이는?",
+     "c": [
+      "15 m",
+      "40 m",
+      "20 m",
+      "25 m"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>1</sup> (25 − 10t) dt = <b>20 m</b>"
+    },
+    {
+     "q": "지면에서 초속 15 m로 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 15 − 10t (m/s)일 때, 공이 최고 높이에 도달할 때의 높이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> m",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span> m",
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>4</span></span> m",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>4</span></span> m"
+     ],
+     "a": 3,
+     "e": "v(t) = 0인 t = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>. ∫<sub>0</sub><sup><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></sup> (15 − 10t) dt = <b><span class='fr'><span class='fn'>45</span><span class='fd'>4</span></span> m</b>"
+    },
+    {
+     "q": "지면에서 초속 35 m로 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 35 − 10t (m/s)일 때, 공이 최고 높이에 도달할 때의 높이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>245</span><span class='fd'>4</span></span> m",
+      "<span class='fr'><span class='fn'>245</span><span class='fd'>2</span></span> m",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span> m",
+      "<span class='fr'><span class='fn'>265</span><span class='fd'>4</span></span> m"
+     ],
+     "a": 0,
+     "e": "v(t) = 0인 t = <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>. ∫<sub>0</sub><sup><span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span></sup> (35 − 10t) dt = <b><span class='fr'><span class='fn'>245</span><span class='fd'>4</span></span> m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 45 − 10t (m/s)일 때, 2초 후의 높이는?",
+     "c": [
+      "25 m",
+      "75 m",
+      "90 m",
+      "70 m"
+     ],
+     "a": 3,
+     "e": "∫<sub>0</sub><sup>2</sup> (45 − 10t) dt = <b>70 m</b>"
+    },
+    {
+     "q": "지면에서 초속 25 m로 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 25 − 10t (m/s)일 때, 공이 최고 높이에 도달할 때의 높이는?",
+     "c": [
+      "<span class='fr'><span class='fn'>145</span><span class='fd'>4</span></span> m",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>2</span></span> m",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> m",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>4</span></span> m"
+     ],
+     "a": 3,
+     "e": "v(t) = 0인 t = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>. ∫<sub>0</sub><sup><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></sup> (25 − 10t) dt = <b><span class='fr'><span class='fn'>125</span><span class='fd'>4</span></span> m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 35 − 10t (m/s)일 때, 2초 후의 높이는?",
+     "c": [
+      "50 m",
+      "55 m",
+      "70 m",
+      "15 m"
+     ],
+     "a": 0,
+     "e": "∫<sub>0</sub><sup>2</sup> (35 − 10t) dt = <b>50 m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 40 − 10t (m/s)일 때, 1초 후의 높이는?",
+     "c": [
+      "40 m",
+      "30 m",
+      "35 m",
+      "70 m"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>1</sup> (40 − 10t) dt = <b>35 m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 15 − 10t (m/s)일 때, 1초 후의 높이는?",
+     "c": [
+      "15 m",
+      "5 m",
+      "20 m",
+      "10 m"
+     ],
+     "a": 3,
+     "e": "∫<sub>0</sub><sup>1</sup> (15 − 10t) dt = <b>10 m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 50 − 10t (m/s)일 때, 2초 후의 높이는?",
+     "c": [
+      "85 m",
+      "80 m",
+      "30 m",
+      "100 m"
+     ],
+     "a": 1,
+     "e": "∫<sub>0</sub><sup>2</sup> (50 − 10t) dt = <b>80 m</b>"
+    },
+    {
+     "q": "지면에서 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 30 − 10t (m/s)일 때, 3초 후의 높이는?",
+     "c": [
+      "90 m",
+      "0 m",
+      "45 m",
+      "50 m"
+     ],
+     "a": 2,
+     "e": "∫<sub>0</sub><sup>3</sup> (30 − 10t) dt = <b>45 m</b>"
+    },
+    {
+     "q": "지면에서 초속 30 m로 똑바로 위로 던진 공의 t초 후의 속도가 v(t) = 30 − 10t (m/s)일 때, 공이 최고 높이에 도달할 때의 높이는?",
+     "c": [
+      "3 m",
+      "50 m",
+      "45 m",
+      "90 m"
+     ],
+     "a": 2,
+     "e": "v(t) = 0인 t = 3. ∫<sub>0</sub><sup>3</sup> (30 − 10t) dt = <b>45 m</b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 12,
+ "updated": "2026-11-25",
+ "country": "kr",
+ "subject": "math",
+ "grade": "calculus-1"
+}

@@ -1,0 +1,1157 @@
+{
+ "slug": "graphs-and-maximum-minimum",
+ "title": "함수의 그래프와 최댓값·최솟값",
+ "seo_title": "함수의 그래프와 최댓값·최솟값 | 고등학교 미적분Ⅰ 학습지 (정답 포함)",
+ "short_title": "그래프와 최대·최소",
+ "domain": "미분",
+ "standard_code": "[12미적Ⅰ-02-08]",
+ "standard_url": "https://ncic.re.kr/inv/org/download.do?year=2022&seq=10003559&orgType=ogi4",
+ "standard_text": "함수의 그래프의 개형을 그릴 수 있다.",
+ "meta_desc": "고등학교 미적분Ⅰ 함수의 그래프 문제: 삼차함수 그래프의 개형, 그래프 읽기, 닫힌구간에서의 최댓값과 최솟값, 극값을 이용한 실근의 개수까지 100문제와 정답·해설.",
+ "key_big": "최댓값·최솟값은 극값과 양 끝값을 비교",
+ "key_sub": "극값의 위치와 x축과의 관계로 개형을 그려요.",
+ "body_html": "<h2>생각하는 방법</h2><p>f′(x) = 0인 x와 증감표로 극값을 구하고 그래프의 개형을 그려요.</p><p>닫힌구간에서의 최댓값·최솟값은 극값과 구간의 양 끝값 중 가장 큰 값·작은 값이에요.</p><p>f(x) = k의 실근의 개수는 y = f(x)와 직선 y = k의 교점의 개수예요.</p><p>삼차함수에서 (극댓값) × (극솟값) &lt; 0이면 x축과 세 점에서 만나요.</p><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>[−2, 3]에서 f(x) = x³ − 3x</p><p class='sn-ex-s'>극값 f(−1) = 2, f(1) = −2</p><p class='sn-ex-s'>끝값 f(−2) = −2, f(3) = 18</p><p class='sn-ex-a'>답: 최댓값 18, 최솟값 −2</p></div><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>x³ − 3x = 1의 실근</p><p class='sn-ex-s'>극댓값 2 &gt; 1 &gt; 극솟값 −2</p><p class='sn-ex-a'>답: 3개</p></div><h2>자주 하는 실수</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>자주 하는 실수</th><th>바르게 생각하기</th></tr></thead><tbody><tr><td>구간의 양 끝값을 비교하지 않는다</td><td>끝값이 더 클 수도 있어요.</td></tr><tr><td>극댓값을 최댓값으로 답한다</td><td>닫힌구간에서는 끝값과 비교해요.</td></tr><tr><td>직선이 극값을 지날 때 교점을 3개로 센다</td><td>접하면 2개예요.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "사차함수의 개형은?",
+   "a": "f′(x) = 0의 근에 따라 W자 또는 U자 모양이에요."
+  },
+  {
+   "q": "그래프를 그리는 순서는?",
+   "a": "f′(x) = 0 → 증감표 → 극값 → 절편 순서로 해요."
+  }
+ ],
+ "sets": [
+  {
+   "title": "닫힌구간에서의 최대·최소",
+   "items": [
+    {
+     "q": "닫힌구간 [1, 5]에서 함수 f(x) = x³ − 6x² + 9x − 1의 최솟값은?",
+     "c": [
+      "−1",
+      "3",
+      "0",
+      "19"
+     ],
+     "a": 0,
+     "e": "극값 f(1) = 3, f(3) = −1과 양 끝값 f(1) = 3, f(5) = 19를 비교해요. <b>−1</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 2]에서 함수 f(x) = −x³ − 3x² + 1의 최솟값은?",
+     "c": [
+      "−18",
+      "−19",
+      "1",
+      "−3"
+     ],
+     "a": 1,
+     "e": "극값 f(−2) = −3, f(0) = 1과 양 끝값 f(−3) = 1, f(2) = −19를 비교해요. <b>−19</b>"
+    },
+    {
+     "q": "닫힌구간 [−2, 3]에서 함수 f(x) = −x³ + 3x² + 9x + 1의 최솟값은?",
+     "c": [
+      "28",
+      "3",
+      "−4",
+      "−3"
+     ],
+     "a": 2,
+     "e": "극값 f(−1) = −4, f(3) = 28과 양 끝값 f(−2) = 3, f(3) = 28을 비교해요. <b>−4</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 2]에서 함수 f(x) = −x³ − 3x² + 9x + 3의 최솟값은?",
+     "c": [
+      "−23",
+      "−24",
+      "8",
+      "1"
+     ],
+     "a": 1,
+     "e": "극값 f(−3) = −24, f(1) = 8과 양 끝값 f(−3) = −24, f(2) = 1을 비교해요. <b>−24</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 3]에서 함수 f(x) = x³ + 3x² − 9x + 3의 최솟값은?",
+     "c": [
+      "−2",
+      "3",
+      "30",
+      "−1"
+     ],
+     "a": 0,
+     "e": "극값 f(−3) = 30, f(1) = −2와 양 끝값 f(−3) = 30, f(3) = 30을 비교해요. <b>−2</b>"
+    },
+    {
+     "q": "닫힌구간 [−5, 0]에서 함수 f(x) = −x³ − 6x² − 9x + 4의 최솟값은?",
+     "c": [
+      "8",
+      "4",
+      "24",
+      "5"
+     ],
+     "a": 1,
+     "e": "극값 f(−3) = 4, f(−1) = 8과 양 끝값 f(−5) = 24, f(0) = 4를 비교해요. <b>4</b>"
+    },
+    {
+     "q": "닫힌구간 [−2, 2]에서 함수 f(x) = x³ + 3x² − 3의 최솟값은?",
+     "c": [
+      "17",
+      "1",
+      "−2",
+      "−3"
+     ],
+     "a": 3,
+     "e": "극값 f(−2) = 1, f(0) = −3과 양 끝값 f(−2) = 1, f(2) = 17을 비교해요. <b>−3</b>"
+    },
+    {
+     "q": "닫힌구간 [−2, 4]에서 함수 f(x) = −x³ + 3x² + 9x − 4의 최댓값은?",
+     "c": [
+      "23",
+      "16",
+      "−9",
+      "−2"
+     ],
+     "a": 0,
+     "e": "극값 f(−1) = −9, f(3) = 23과 양 끝값 f(−2) = −2, f(4) = 16을 비교해요. <b>23</b>"
+    },
+    {
+     "q": "닫힌구간 [−5, −1]에서 함수 f(x) = x³ + 6x² + 9x − 4의 최솟값은?",
+     "c": [
+      "−8",
+      "−4",
+      "−24",
+      "−23"
+     ],
+     "a": 2,
+     "e": "극값 f(−3) = −4, f(−1) = −8과 양 끝값 f(−5) = −24, f(−1) = −8을 비교해요. <b>−24</b>"
+    },
+    {
+     "q": "닫힌구간 [−2, 2]에서 함수 f(x) = −x³ + 3x + 4의 최솟값은?",
+     "c": [
+      "3",
+      "6",
+      "4",
+      "2"
+     ],
+     "a": 3,
+     "e": "극값 f(−1) = 2, f(1) = 6과 양 끝값 f(−2) = 6, f(2) = 2를 비교해요. <b>2</b>"
+    },
+    {
+     "q": "닫힌구간 [−1, 4]에서 함수 f(x) = x³ − 3x² − 9x + 1의 최솟값은?",
+     "c": [
+      "−25",
+      "−19",
+      "−26",
+      "6"
+     ],
+     "a": 2,
+     "e": "극값 f(−1) = 6, f(3) = −26과 양 끝값 f(−1) = 6, f(4) = −19를 비교해요. <b>−26</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 4]에서 함수 f(x) = −x³ + 3x² + 9x의 최댓값은?",
+     "c": [
+      "27",
+      "28",
+      "20",
+      "−5"
+     ],
+     "a": 0,
+     "e": "극값 f(−1) = −5, f(3) = 27과 양 끝값 f(−3) = 27, f(4) = 20을 비교해요. <b>27</b>"
+    },
+    {
+     "q": "닫힌구간 [−1, 4]에서 함수 f(x) = x³ − 3x² − 9x − 4의 최댓값은?",
+     "c": [
+      "−31",
+      "1",
+      "−24",
+      "2"
+     ],
+     "a": 1,
+     "e": "극값 f(−1) = 1, f(3) = −31과 양 끝값 f(−1) = 1, f(4) = −24를 비교해요. <b>1</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 1]에서 함수 f(x) = x³ − 3x − 1의 최댓값은?",
+     "c": [
+      "2",
+      "−3",
+      "1",
+      "−19"
+     ],
+     "a": 2,
+     "e": "극값 f(−1) = 1, f(1) = −3과 양 끝값 f(−3) = −19, f(1) = −3을 비교해요. <b>1</b>"
+    },
+    {
+     "q": "닫힌구간 [−2, 3]에서 함수 f(x) = x³ − 3x − 4의 최솟값은?",
+     "c": [
+      "−5",
+      "−2",
+      "14",
+      "−6"
+     ],
+     "a": 3,
+     "e": "극값 f(−1) = −2, f(1) = −6과 양 끝값 f(−2) = −6, f(3) = 14를 비교해요. <b>−6</b>"
+    },
+    {
+     "q": "닫힌구간 [−1, 4]에서 함수 f(x) = x³ − 3x² − 9x + 3의 최솟값은?",
+     "c": [
+      "−23",
+      "−24",
+      "8",
+      "−17"
+     ],
+     "a": 1,
+     "e": "극값 f(−1) = 8, f(3) = −24와 양 끝값 f(−1) = 8, f(4) = −17을 비교해요. <b>−24</b>"
+    },
+    {
+     "q": "닫힌구간 [1, 5]에서 함수 f(x) = x³ − 6x² + 9x + 1의 최댓값은?",
+     "c": [
+      "1",
+      "5",
+      "21",
+      "22"
+     ],
+     "a": 2,
+     "e": "극값 f(1) = 5, f(3) = 1과 양 끝값 f(1) = 5, f(5) = 21을 비교해요. <b>21</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 2]에서 함수 f(x) = −x³ − 3x² + 9x − 4의 최솟값은?",
+     "c": [
+      "−30",
+      "−6",
+      "1",
+      "−31"
+     ],
+     "a": 3,
+     "e": "극값 f(−3) = −31, f(1) = 1과 양 끝값 f(−3) = −31, f(2) = −6을 비교해요. <b>−31</b>"
+    },
+    {
+     "q": "닫힌구간 [−4, 4]에서 함수 f(x) = −x³ + 12x + 3의 최솟값은?",
+     "c": [
+      "−13",
+      "−12",
+      "3",
+      "19"
+     ],
+     "a": 0,
+     "e": "극값 f(−2) = −13, f(2) = 19와 양 끝값 f(−4) = 19, f(4) = −13을 비교해요. <b>−13</b>"
+    },
+    {
+     "q": "닫힌구간 [−4, 4]에서 함수 f(x) = x³ − 27x + 1의 최댓값은?",
+     "c": [
+      "45",
+      "−53",
+      "−43",
+      "55"
+     ],
+     "a": 3,
+     "e": "극값 f(−3) = 55, f(3) = −53과 양 끝값 f(−4) = 45, f(4) = −43을 비교해요. <b>55</b>"
+    }
+   ]
+  },
+  {
+   "title": "그래프 읽기",
+   "items": [
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극솟값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='83.9,49.1 85.0,60.5 86.0,71.5 87.0,82.2 88.1,92.4 89.1,102.3 90.2,111.8 91.2,121.0 92.2,129.8 93.3,138.3 94.3,146.4 95.4,154.2 96.4,161.7 97.4,168.8 98.5,175.6 99.5,182.1 100.6,188.3 101.6,194.2 102.6,199.8 103.7,205.1 104.7,210.1 105.8,214.9 106.8,219.3 107.8,223.5 108.9,227.5 109.9,231.1 111.0,234.5 112.0,237.7 113.0,240.6 114.1,243.3 115.1,245.8 116.2,248.0 117.2,250.0 118.2,251.8 119.3,253.3 120.3,254.7 121.4,255.9 122.4,256.9 123.4,257.6 124.5,258.2 125.5,258.7 126.6,258.9 127.6,259.0 128.6,258.9 129.7,258.7 130.7,258.3 131.8,257.8 132.8,257.1 133.8,256.3 134.9,255.3 135.9,254.3 137.0,253.1 138.0,251.8 139.0,250.4 140.1,248.9 141.1,247.3 142.2,245.6 143.2,243.8 144.2,241.9 145.3,240.0 146.3,238.0 147.4,235.9 148.4,233.8 149.4,231.6 150.5,229.3 151.5,227.1 152.6,224.7 153.6,222.4 154.6,220.0 155.7,217.6 156.7,215.2 157.8,212.8 158.8,210.3 159.8,207.9 160.9,205.5 161.9,203.1 163.0,200.7 164.0,198.3 165.0,195.9 166.1,193.6 167.1,191.3 168.2,189.1 169.2,186.9 170.2,184.8 171.3,182.7 172.3,180.7 173.4,178.7 174.4,176.9 175.4,175.1 176.5,173.4 177.5,171.8 178.6,170.3 179.6,168.9 180.6,167.6 181.7,166.4 182.7,165.3 183.8,164.4 184.8,163.6 185.8,162.9 186.9,162.4 187.9,162.0 189.0,161.7 190.0,161.7 191.0,161.7 192.1,162.0 193.1,162.4 194.2,163.0 195.2,163.8 196.2,164.8 197.3,166.0 198.3,167.3 199.4,168.9 200.4,170.7 201.4,172.7 202.5,174.9 203.5,177.4 204.6,180.0 205.6,183.0 206.6,186.1 207.7,189.5 208.7,193.2 209.8,197.1 210.8,201.3 211.8,205.8 212.9,210.5 213.9,215.5 215.0,220.8 216.0,226.4 217.0,232.3 218.1,238.5 219.1,245.0 220.2,251.9 221.2,259.0 222.2,266.5 223.3,274.3 224.3,282.4 225.4,290.9 226.4,299.7 227.4,308.8 228.5,318.4 229.5,328.2' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='127.6' cy='259.0' r='5.5' fill='#c0392b'/><circle cx='190.0' cy='161.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "3",
+      "−3",
+      "−2",
+      "1"
+     ],
+     "a": 1,
+     "e": "극소인 점의 y좌표예요. <b>−3</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극댓값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='90.2,333.2 91.2,324.0 92.2,315.2 93.3,306.7 94.3,298.6 95.4,290.8 96.4,283.3 97.4,276.2 98.5,269.4 99.5,262.9 100.6,256.7 101.6,250.8 102.6,245.2 103.7,239.9 104.7,234.9 105.8,230.1 106.8,225.7 107.8,221.5 108.9,217.5 109.9,213.9 111.0,210.5 112.0,207.3 113.0,204.4 114.1,201.7 115.1,199.2 116.2,197.0 117.2,195.0 118.2,193.2 119.3,191.7 120.3,190.3 121.4,189.1 122.4,188.1 123.4,187.4 124.5,186.8 125.5,186.3 126.6,186.1 127.6,186.0 128.6,186.1 129.7,186.3 130.7,186.7 131.8,187.2 132.8,187.9 133.8,188.7 134.9,189.7 135.9,190.7 137.0,191.9 138.0,193.2 139.0,194.6 140.1,196.1 141.1,197.7 142.2,199.4 143.2,201.2 144.2,203.1 145.3,205.0 146.3,207.0 147.4,209.1 148.4,211.2 149.4,213.4 150.5,215.7 151.5,217.9 152.6,220.3 153.6,222.6 154.6,225.0 155.7,227.4 156.7,229.8 157.8,232.2 158.8,234.7 159.8,237.1 160.9,239.5 161.9,241.9 163.0,244.3 164.0,246.7 165.0,249.1 166.1,251.4 167.1,253.7 168.2,255.9 169.2,258.1 170.2,260.2 171.3,262.3 172.3,264.3 173.4,266.3 174.4,268.1 175.4,269.9 176.5,271.6 177.5,273.2 178.6,274.7 179.6,276.1 180.6,277.4 181.7,278.6 182.7,279.7 183.8,280.6 184.8,281.4 185.8,282.1 186.9,282.6 187.9,283.0 189.0,283.3 190.0,283.3 191.0,283.3 192.1,283.0 193.1,282.6 194.2,282.0 195.2,281.2 196.2,280.2 197.3,279.0 198.3,277.7 199.4,276.1 200.4,274.3 201.4,272.3 202.5,270.1 203.5,267.6 204.6,265.0 205.6,262.0 206.6,258.9 207.7,255.5 208.7,251.8 209.8,247.9 210.8,243.7 211.8,239.2 212.9,234.5 213.9,229.5 215.0,224.2 216.0,218.6 217.0,212.7 218.1,206.5 219.1,200.0 220.2,193.1 221.2,186.0 222.2,178.5 223.3,170.7 224.3,162.6 225.4,154.1 226.4,145.3 227.4,136.2 228.5,126.6 229.5,116.8 230.6,106.5 231.6,95.9 232.6,84.9 233.7,73.5 234.7,61.7 235.8,49.5' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='127.6' cy='186.0' r='5.5' fill='#c0392b'/><circle cx='190.0' cy='283.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "−2",
+      "1",
+      "−4",
+      "0"
+     ],
+     "a": 3,
+     "e": "극대인 점의 y좌표예요. <b>0</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극솟값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='171.3,326.5 172.3,312.7 173.4,299.4 174.4,286.4 175.4,273.8 176.5,261.6 177.5,249.9 178.6,238.5 179.6,227.5 180.6,216.8 181.7,206.6 182.7,196.7 183.8,187.2 184.8,178.0 185.8,169.2 186.9,160.7 187.9,152.6 189.0,144.8 190.0,137.3 191.0,130.2 192.1,123.4 193.1,116.9 194.2,110.7 195.2,104.8 196.2,99.2 197.3,93.9 198.3,88.9 199.4,84.1 200.4,79.7 201.4,75.5 202.5,71.5 203.5,67.9 204.6,64.5 205.6,61.3 206.6,58.4 207.7,55.7 208.7,53.2 209.8,51.0 210.8,49.0 211.8,47.2 212.9,45.7 213.9,44.3 215.0,43.1 216.0,42.1 217.0,41.4 218.1,40.8 219.1,40.3 220.2,40.1 221.2,40.0 222.2,40.1 223.3,40.3 224.3,40.7 225.4,41.2 226.4,41.9 227.4,42.7 228.5,43.7 229.5,44.7 230.6,45.9 231.6,47.2 232.6,48.6 233.7,50.1 234.7,51.7 235.8,53.4 236.8,55.2 237.8,57.1 238.9,59.0 239.9,61.0 241.0,63.1 242.0,65.2 243.0,67.4 244.1,69.7 245.1,71.9 246.2,74.3 247.2,76.6 248.2,79.0 249.3,81.4 250.3,83.8 251.4,86.2 252.4,88.7 253.4,91.1 254.5,93.5 255.5,95.9 256.6,98.3 257.6,100.7 258.6,103.1 259.7,105.4 260.7,107.7 261.8,109.9 262.8,112.1 263.8,114.2 264.9,116.3 265.9,118.3 267.0,120.3 268.0,122.1 269.0,123.9 270.1,125.6 271.1,127.2 272.2,128.7 273.2,130.1 274.2,131.4 275.3,132.6 276.3,133.7 277.4,134.6 278.4,135.4 279.4,136.1 280.5,136.6 281.5,137.0 282.6,137.3 283.6,137.3 284.6,137.3 285.7,137.0 286.7,136.6 287.8,136.0 288.8,135.2 289.8,134.2 290.9,133.0 291.9,131.7 293.0,130.1 294.0,128.3 295.0,126.3 296.1,124.1 297.1,121.6 298.2,119.0 299.2,116.0 300.2,112.9 301.3,109.5 302.3,105.8 303.4,101.9 304.4,97.7 305.4,93.2 306.5,88.5 307.5,83.5 308.6,78.2 309.6,72.6 310.6,66.7 311.7,60.5 312.7,54.0 313.8,47.1 314.8,40.0' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='221.2' cy='40.0' r='5.5' fill='#c0392b'/><circle cx='283.6' cy='137.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "2",
+      "−2",
+      "6",
+      "3"
+     ],
+     "a": 0,
+     "e": "극소인 점의 y좌표예요. <b>2</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극솟값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='52.7,49.1 53.8,60.5 54.8,71.5 55.8,82.2 56.9,92.4 57.9,102.3 59.0,111.8 60.0,121.0 61.0,129.8 62.1,138.3 63.1,146.4 64.2,154.2 65.2,161.7 66.2,168.8 67.3,175.6 68.3,182.1 69.4,188.3 70.4,194.2 71.4,199.8 72.5,205.1 73.5,210.1 74.6,214.9 75.6,219.3 76.6,223.5 77.7,227.5 78.7,231.1 79.8,234.5 80.8,237.7 81.8,240.6 82.9,243.3 83.9,245.8 85.0,248.0 86.0,250.0 87.0,251.8 88.1,253.3 89.1,254.7 90.2,255.9 91.2,256.9 92.2,257.6 93.3,258.2 94.3,258.7 95.4,258.9 96.4,259.0 97.4,258.9 98.5,258.7 99.5,258.3 100.6,257.8 101.6,257.1 102.6,256.3 103.7,255.3 104.7,254.3 105.8,253.1 106.8,251.8 107.8,250.4 108.9,248.9 109.9,247.3 111.0,245.6 112.0,243.8 113.0,241.9 114.1,240.0 115.1,238.0 116.2,235.9 117.2,233.8 118.2,231.6 119.3,229.3 120.3,227.1 121.4,224.7 122.4,222.4 123.4,220.0 124.5,217.6 125.5,215.2 126.6,212.8 127.6,210.3 128.6,207.9 129.7,205.5 130.7,203.1 131.8,200.7 132.8,198.3 133.8,195.9 134.9,193.6 135.9,191.3 137.0,189.1 138.0,186.9 139.0,184.8 140.1,182.7 141.1,180.7 142.2,178.7 143.2,176.9 144.2,175.1 145.3,173.4 146.3,171.8 147.4,170.3 148.4,168.9 149.4,167.6 150.5,166.4 151.5,165.3 152.6,164.4 153.6,163.6 154.6,162.9 155.7,162.4 156.7,162.0 157.8,161.7 158.8,161.7 159.8,161.7 160.9,162.0 161.9,162.4 163.0,163.0 164.0,163.8 165.0,164.8 166.1,166.0 167.1,167.3 168.2,168.9 169.2,170.7 170.2,172.7 171.3,174.9 172.3,177.4 173.4,180.0 174.4,183.0 175.4,186.1 176.5,189.5 177.5,193.2 178.6,197.1 179.6,201.3 180.6,205.8 181.7,210.5 182.7,215.5 183.8,220.8 184.8,226.4 185.8,232.3 186.9,238.5 187.9,245.0 189.0,251.9 190.0,259.0 191.0,266.5 192.1,274.3 193.1,282.4 194.2,290.9 195.2,299.7 196.2,308.8 197.3,318.4 198.3,328.2' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='96.4' cy='259.0' r='5.5' fill='#c0392b'/><circle cx='158.8' cy='161.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "−2",
+      "−3",
+      "1",
+      "3"
+     ],
+     "a": 1,
+     "e": "극소인 점의 y좌표예요. <b>−3</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f′(x) ≥ 0인 x의 값의 범위는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='175.4,49.5 176.5,61.7 177.5,73.5 178.6,84.9 179.6,95.9 180.6,106.5 181.7,116.8 182.7,126.6 183.8,136.2 184.8,145.3 185.8,154.1 186.9,162.6 187.9,170.7 189.0,178.5 190.0,186.0 191.0,193.1 192.1,200.0 193.1,206.5 194.2,212.7 195.2,218.6 196.2,224.2 197.3,229.5 198.3,234.5 199.4,239.2 200.4,243.7 201.4,247.9 202.5,251.8 203.5,255.5 204.6,258.9 205.6,262.0 206.6,265.0 207.7,267.6 208.7,270.1 209.8,272.3 210.8,274.3 211.8,276.1 212.9,277.7 213.9,279.0 215.0,280.2 216.0,281.2 217.0,282.0 218.1,282.6 219.1,283.0 220.2,283.3 221.2,283.3 222.2,283.3 223.3,283.0 224.3,282.6 225.4,282.1 226.4,281.4 227.4,280.6 228.5,279.7 229.5,278.6 230.6,277.4 231.6,276.1 232.6,274.7 233.7,273.2 234.7,271.6 235.8,269.9 236.8,268.1 237.8,266.3 238.9,264.3 239.9,262.3 241.0,260.2 242.0,258.1 243.0,255.9 244.1,253.7 245.1,251.4 246.2,249.1 247.2,246.7 248.2,244.3 249.3,241.9 250.3,239.5 251.4,237.1 252.4,234.7 253.4,232.2 254.5,229.8 255.5,227.4 256.6,225.0 257.6,222.6 258.6,220.3 259.7,217.9 260.7,215.7 261.8,213.4 262.8,211.2 263.8,209.1 264.9,207.0 265.9,205.0 267.0,203.1 268.0,201.2 269.0,199.4 270.1,197.7 271.1,196.1 272.2,194.6 273.2,193.2 274.2,191.9 275.3,190.7 276.3,189.7 277.4,188.7 278.4,187.9 279.4,187.2 280.5,186.7 281.5,186.3 282.6,186.1 283.6,186.0 284.6,186.1 285.7,186.3 286.7,186.8 287.8,187.4 288.8,188.1 289.8,189.1 290.9,190.3 291.9,191.7 293.0,193.2 294.0,195.0 295.0,197.0 296.1,199.2 297.1,201.7 298.2,204.4 299.2,207.3 300.2,210.5 301.3,213.9 302.3,217.5 303.4,221.5 304.4,225.7 305.4,230.1 306.5,234.9 307.5,239.9 308.6,245.2 309.6,250.8 310.6,256.7 311.7,262.9 312.7,269.4 313.8,276.2 314.8,283.3 315.8,290.8 316.9,298.6 317.9,306.7 319.0,315.2 320.0,324.0 321.0,333.2' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='221.2' cy='283.3' r='5.5' fill='#c0392b'/><circle cx='283.6' cy='186.0' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "x ≥ 3",
+      "x ≤ 1",
+      "x ≤ 1 또는 x ≥ 3",
+      "1 ≤ x ≤ 3"
+     ],
+     "a": 3,
+     "e": "f(x)가 증가하는 범위예요. <b>1 ≤ x ≤ 3</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f′(x) ≥ 0인 x의 값의 범위는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='183.8,333.2 184.8,324.0 185.8,315.2 186.9,306.7 187.9,298.6 189.0,290.8 190.0,283.3 191.0,276.2 192.1,269.4 193.1,262.9 194.2,256.7 195.2,250.8 196.2,245.2 197.3,239.9 198.3,234.9 199.4,230.1 200.4,225.7 201.4,221.5 202.5,217.5 203.5,213.9 204.6,210.5 205.6,207.3 206.6,204.4 207.7,201.7 208.7,199.2 209.8,197.0 210.8,195.0 211.8,193.2 212.9,191.7 213.9,190.3 215.0,189.1 216.0,188.1 217.0,187.4 218.1,186.8 219.1,186.3 220.2,186.1 221.2,186.0 222.2,186.1 223.3,186.3 224.3,186.7 225.4,187.2 226.4,187.9 227.4,188.7 228.5,189.7 229.5,190.7 230.6,191.9 231.6,193.2 232.6,194.6 233.7,196.1 234.7,197.7 235.8,199.4 236.8,201.2 237.8,203.1 238.9,205.0 239.9,207.0 241.0,209.1 242.0,211.2 243.0,213.4 244.1,215.7 245.1,217.9 246.2,220.3 247.2,222.6 248.2,225.0 249.3,227.4 250.3,229.8 251.4,232.2 252.4,234.7 253.4,237.1 254.5,239.5 255.5,241.9 256.6,244.3 257.6,246.7 258.6,249.1 259.7,251.4 260.7,253.7 261.8,255.9 262.8,258.1 263.8,260.2 264.9,262.3 265.9,264.3 267.0,266.3 268.0,268.1 269.0,269.9 270.1,271.6 271.1,273.2 272.2,274.7 273.2,276.1 274.2,277.4 275.3,278.6 276.3,279.7 277.4,280.6 278.4,281.4 279.4,282.1 280.5,282.6 281.5,283.0 282.6,283.3 283.6,283.3 284.6,283.3 285.7,283.0 286.7,282.6 287.8,282.0 288.8,281.2 289.8,280.2 290.9,279.0 291.9,277.7 293.0,276.1 294.0,274.3 295.0,272.3 296.1,270.1 297.1,267.6 298.2,265.0 299.2,262.0 300.2,258.9 301.3,255.5 302.3,251.8 303.4,247.9 304.4,243.7 305.4,239.2 306.5,234.5 307.5,229.5 308.6,224.2 309.6,218.6 310.6,212.7 311.7,206.5 312.7,200.0 313.8,193.1 314.8,186.0 315.8,178.5 316.9,170.7 317.9,162.6 319.0,154.1 320.0,145.3 321.0,136.2 322.1,126.6 323.1,116.8 324.2,106.5 325.2,95.9 326.2,84.9 327.3,73.5 328.3,61.7 329.4,49.5' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='221.2' cy='186.0' r='5.5' fill='#c0392b'/><circle cx='283.6' cy='283.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "x ≥ 3",
+      "x ≤ 1",
+      "x ≤ 1 또는 x ≥ 3",
+      "1 ≤ x ≤ 3"
+     ],
+     "a": 2,
+     "e": "f(x)가 증가하는 범위예요. <b>x ≤ 1 또는 x ≥ 3</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극댓값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='65.2,332.0 66.2,324.9 67.3,318.0 68.3,311.5 69.4,305.3 70.4,299.4 71.4,293.8 72.5,288.5 73.5,283.5 74.6,278.8 75.6,274.3 76.6,270.1 77.7,266.2 78.7,262.5 79.8,259.1 80.8,256.0 81.8,253.0 82.9,250.4 83.9,247.9 85.0,245.7 86.0,243.7 87.0,241.9 88.1,240.3 89.1,239.0 90.2,237.8 91.2,236.8 92.2,236.0 93.3,235.4 94.3,235.0 95.4,234.7 96.4,234.7 97.4,234.7 98.5,235.0 99.5,235.4 100.6,235.9 101.6,236.6 102.6,237.4 103.7,238.3 104.7,239.4 105.8,240.6 106.8,241.9 107.8,243.3 108.9,244.8 109.9,246.4 111.0,248.1 112.0,249.9 113.0,251.7 114.1,253.7 115.1,255.7 116.2,257.8 117.2,259.9 118.2,262.1 119.3,264.3 120.3,266.6 121.4,268.9 122.4,271.3 123.4,273.7 124.5,276.1 125.5,278.5 126.6,280.9 127.6,283.3 128.6,285.8 129.7,288.2 130.7,290.6 131.8,293.0 132.8,295.4 133.8,297.7 134.9,300.1 135.9,302.3 137.0,304.6 138.0,306.8 139.0,308.9 140.1,311.0 141.1,313.0 142.2,314.9 143.2,316.8 144.2,318.6 145.3,320.3 146.3,321.9 147.4,323.4 148.4,324.8 149.4,326.1 150.5,327.3 151.5,328.3 152.6,329.3 153.6,330.1 154.6,330.8 155.7,331.3 156.7,331.7 157.8,331.9 158.8,332.0 159.8,331.9 160.9,331.7 161.9,331.2 163.0,330.6 164.0,329.9 165.0,328.9 166.1,327.7 167.1,326.3 168.2,324.8 169.2,323.0 170.2,321.0 171.3,318.8 172.3,316.3 173.4,313.6 174.4,310.7 175.4,307.5 176.5,304.1 177.5,300.5 178.6,296.5 179.6,292.3 180.6,287.9 181.7,283.1 182.7,278.1 183.8,272.8 184.8,267.2 185.8,261.3 186.9,255.1 187.9,248.6 189.0,241.8 190.0,234.7 191.0,227.2 192.1,219.4 193.1,211.3 194.2,202.8 195.2,194.0 196.2,184.8 197.3,175.3 198.3,165.4 199.4,155.2 200.4,144.5 201.4,133.5 202.5,122.1 203.5,110.4 204.6,98.2 205.6,85.6 206.6,72.6 207.7,59.3 208.7,45.5' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='96.4' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='158.8' cy='332.0' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "−3",
+      "−2",
+      "−6",
+      "−1"
+     ],
+     "a": 1,
+     "e": "극대인 점의 y좌표예요. <b>−2</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극댓값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='124.5,331.1 125.5,322.9 126.6,315.1 127.6,307.7 128.6,300.5 129.7,293.7 130.7,287.2 131.8,281.0 132.8,275.1 133.8,269.5 134.9,264.2 135.9,259.2 137.0,254.4 138.0,250.0 139.0,245.8 140.1,241.9 141.1,238.2 142.2,234.8 143.2,231.6 144.2,228.7 145.3,226.0 146.3,223.6 147.4,221.3 148.4,219.3 149.4,217.6 150.5,216.0 151.5,214.6 152.6,213.4 153.6,212.5 154.6,211.7 155.7,211.1 156.7,210.7 157.8,210.4 158.8,210.3 159.8,210.4 160.9,210.7 161.9,211.0 163.0,211.6 164.0,212.2 165.0,213.1 166.1,214.0 167.1,215.1 168.2,216.2 169.2,217.5 170.2,218.9 171.3,220.5 172.3,222.1 173.4,223.8 174.4,225.5 175.4,227.4 176.5,229.3 177.5,231.4 178.6,233.4 179.6,235.6 180.6,237.8 181.7,240.0 182.7,242.3 183.8,244.6 184.8,246.9 185.8,249.3 186.9,251.7 187.9,254.1 189.0,256.6 190.0,259.0 191.0,261.4 192.1,263.9 193.1,266.3 194.2,268.7 195.2,271.1 196.2,273.4 197.3,275.7 198.3,278.0 199.4,280.2 200.4,282.4 201.4,284.6 202.5,286.6 203.5,288.7 204.6,290.6 205.6,292.5 206.6,294.2 207.7,295.9 208.7,297.5 209.8,299.1 210.8,300.5 211.8,301.8 212.9,302.9 213.9,304.0 215.0,304.9 216.0,305.8 217.0,306.4 218.1,307.0 219.1,307.3 220.2,307.6 221.2,307.7 222.2,307.6 223.3,307.3 224.3,306.9 225.4,306.3 226.4,305.5 227.4,304.6 228.5,303.4 229.5,302.0 230.6,300.4 231.6,298.7 232.6,296.7 233.7,294.4 234.7,292.0 235.8,289.3 236.8,286.4 237.8,283.2 238.9,279.8 239.9,276.1 241.0,272.2 242.0,268.0 243.0,263.6 244.1,258.8 245.1,253.8 246.2,248.5 247.2,242.9 248.2,237.0 249.3,230.8 250.3,224.3 251.4,217.5 252.4,210.3 253.4,202.9 254.5,195.1 255.5,186.9 256.6,178.5 257.6,169.7 258.6,160.5 259.7,151.0 260.7,141.1 261.8,130.8 262.8,120.2 263.8,109.2 264.9,97.8 265.9,86.0 267.0,73.9 268.0,61.3 269.0,48.3' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='158.8' cy='210.3' r='5.5' fill='#c0392b'/><circle cx='221.2' cy='307.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "0",
+      "−1",
+      "−5",
+      "1"
+     ],
+     "a": 1,
+     "e": "극대인 점의 y좌표예요. <b>−1</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극솟값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='177.5,49.1 178.6,60.5 179.6,71.5 180.6,82.2 181.7,92.4 182.7,102.3 183.8,111.8 184.8,121.0 185.8,129.8 186.9,138.3 187.9,146.4 189.0,154.2 190.0,161.7 191.0,168.8 192.1,175.6 193.1,182.1 194.2,188.3 195.2,194.2 196.2,199.8 197.3,205.1 198.3,210.1 199.4,214.9 200.4,219.3 201.4,223.5 202.5,227.5 203.5,231.1 204.6,234.5 205.6,237.7 206.6,240.6 207.7,243.3 208.7,245.8 209.8,248.0 210.8,250.0 211.8,251.8 212.9,253.3 213.9,254.7 215.0,255.9 216.0,256.9 217.0,257.6 218.1,258.2 219.1,258.7 220.2,258.9 221.2,259.0 222.2,258.9 223.3,258.7 224.3,258.3 225.4,257.8 226.4,257.1 227.4,256.3 228.5,255.3 229.5,254.3 230.6,253.1 231.6,251.8 232.6,250.4 233.7,248.9 234.7,247.3 235.8,245.6 236.8,243.8 237.8,241.9 238.9,240.0 239.9,238.0 241.0,235.9 242.0,233.8 243.0,231.6 244.1,229.3 245.1,227.1 246.2,224.7 247.2,222.4 248.2,220.0 249.3,217.6 250.3,215.2 251.4,212.8 252.4,210.3 253.4,207.9 254.5,205.5 255.5,203.1 256.6,200.7 257.6,198.3 258.6,195.9 259.7,193.6 260.7,191.3 261.8,189.1 262.8,186.9 263.8,184.8 264.9,182.7 265.9,180.7 267.0,178.7 268.0,176.9 269.0,175.1 270.1,173.4 271.1,171.8 272.2,170.3 273.2,168.9 274.2,167.6 275.3,166.4 276.3,165.3 277.4,164.4 278.4,163.6 279.4,162.9 280.5,162.4 281.5,162.0 282.6,161.7 283.6,161.7 284.6,161.7 285.7,162.0 286.7,162.4 287.8,163.0 288.8,163.8 289.8,164.8 290.9,166.0 291.9,167.3 293.0,168.9 294.0,170.7 295.0,172.7 296.1,174.9 297.1,177.4 298.2,180.0 299.2,183.0 300.2,186.1 301.3,189.5 302.3,193.2 303.4,197.1 304.4,201.3 305.4,205.8 306.5,210.5 307.5,215.5 308.6,220.8 309.6,226.4 310.6,232.3 311.7,238.5 312.7,245.0 313.8,251.9 314.8,259.0 315.8,266.5 316.9,274.3 317.9,282.4 319.0,290.9 320.0,299.7 321.0,308.8 322.1,318.4 323.1,328.2' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='221.2' cy='259.0' r='5.5' fill='#c0392b'/><circle cx='283.6' cy='161.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "−2",
+      "−3",
+      "3",
+      "1"
+     ],
+     "a": 1,
+     "e": "극소인 점의 y좌표예요. <b>−3</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극댓값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='79.8,48.3 80.8,61.3 81.8,73.9 82.9,86.0 83.9,97.8 85.0,109.2 86.0,120.2 87.0,130.8 88.1,141.1 89.1,151.0 90.2,160.5 91.2,169.7 92.2,178.5 93.3,186.9 94.3,195.1 95.4,202.9 96.4,210.3 97.4,217.5 98.5,224.3 99.5,230.8 100.6,237.0 101.6,242.9 102.6,248.5 103.7,253.8 104.7,258.8 105.8,263.6 106.8,268.0 107.8,272.2 108.9,276.1 109.9,279.8 111.0,283.2 112.0,286.4 113.0,289.3 114.1,292.0 115.1,294.4 116.2,296.7 117.2,298.7 118.2,300.4 119.3,302.0 120.3,303.4 121.4,304.6 122.4,305.5 123.4,306.3 124.5,306.9 125.5,307.3 126.6,307.6 127.6,307.7 128.6,307.6 129.7,307.3 130.7,307.0 131.8,306.4 132.8,305.8 133.8,304.9 134.9,304.0 135.9,302.9 137.0,301.8 138.0,300.5 139.0,299.1 140.1,297.5 141.1,295.9 142.2,294.2 143.2,292.5 144.2,290.6 145.3,288.7 146.3,286.6 147.4,284.6 148.4,282.4 149.4,280.2 150.5,278.0 151.5,275.7 152.6,273.4 153.6,271.1 154.6,268.7 155.7,266.3 156.7,263.9 157.8,261.4 158.8,259.0 159.8,256.6 160.9,254.1 161.9,251.7 163.0,249.3 164.0,246.9 165.0,244.6 166.1,242.3 167.1,240.0 168.2,237.8 169.2,235.6 170.2,233.4 171.3,231.4 172.3,229.3 173.4,227.4 174.4,225.5 175.4,223.8 176.5,222.1 177.5,220.5 178.6,218.9 179.6,217.5 180.6,216.2 181.7,215.1 182.7,214.0 183.8,213.1 184.8,212.2 185.8,211.6 186.9,211.0 187.9,210.7 189.0,210.4 190.0,210.3 191.0,210.4 192.1,210.7 193.1,211.1 194.2,211.7 195.2,212.5 196.2,213.4 197.3,214.6 198.3,216.0 199.4,217.6 200.4,219.3 201.4,221.3 202.5,223.6 203.5,226.0 204.6,228.7 205.6,231.6 206.6,234.8 207.7,238.2 208.7,241.9 209.8,245.8 210.8,250.0 211.8,254.4 212.9,259.2 213.9,264.2 215.0,269.5 216.0,275.1 217.0,281.0 218.1,287.2 219.1,293.7 220.2,300.5 221.2,307.7 222.2,315.1 223.3,322.9 224.3,331.1' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='127.6' cy='307.7' r='5.5' fill='#c0392b'/><circle cx='190.0' cy='210.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "−1",
+      "0",
+      "−5",
+      "1"
+     ],
+     "a": 0,
+     "e": "극대인 점의 y좌표예요. <b>−1</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극댓값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='148.4,324.8 149.4,314.2 150.5,303.9 151.5,294.0 152.6,284.5 153.6,275.3 154.6,266.5 155.7,258.1 156.7,249.9 157.8,242.1 158.8,234.7 159.8,227.5 160.9,220.7 161.9,214.2 163.0,208.0 164.0,202.1 165.0,196.5 166.1,191.2 167.1,186.2 168.2,181.4 169.2,177.0 170.2,172.8 171.3,168.9 172.3,165.2 173.4,161.8 174.4,158.6 175.4,155.7 176.5,153.0 177.5,150.6 178.6,148.3 179.6,146.3 180.6,144.6 181.7,143.0 182.7,141.6 183.8,140.4 184.8,139.5 185.8,138.7 186.9,138.1 187.9,137.7 189.0,137.4 190.0,137.3 191.0,137.4 192.1,137.7 193.1,138.0 194.2,138.6 195.2,139.2 196.2,140.1 197.3,141.0 198.3,142.1 199.4,143.2 200.4,144.5 201.4,145.9 202.5,147.5 203.5,149.1 204.6,150.8 205.6,152.5 206.6,154.4 207.7,156.3 208.7,158.4 209.8,160.4 210.8,162.6 211.8,164.8 212.9,167.0 213.9,169.3 215.0,171.6 216.0,173.9 217.0,176.3 218.1,178.7 219.1,181.1 220.2,183.6 221.2,186.0 222.2,188.4 223.3,190.9 224.3,193.3 225.4,195.7 226.4,198.1 227.4,200.4 228.5,202.7 229.5,205.0 230.6,207.2 231.6,209.4 232.6,211.6 233.7,213.6 234.7,215.7 235.8,217.6 236.8,219.5 237.8,221.2 238.9,222.9 239.9,224.5 241.0,226.1 242.0,227.5 243.0,228.8 244.1,229.9 245.1,231.0 246.2,231.9 247.2,232.8 248.2,233.4 249.3,234.0 250.3,234.3 251.4,234.6 252.4,234.7 253.4,234.6 254.5,234.3 255.5,233.9 256.6,233.3 257.6,232.5 258.6,231.6 259.7,230.4 260.7,229.0 261.8,227.4 262.8,225.7 263.8,223.7 264.9,221.4 265.9,219.0 267.0,216.3 268.0,213.4 269.0,210.2 270.1,206.8 271.1,203.1 272.2,199.2 273.2,195.0 274.2,190.6 275.3,185.8 276.3,180.8 277.4,175.5 278.4,169.9 279.4,164.0 280.5,157.8 281.5,151.3 282.6,144.5 283.6,137.3 284.6,129.9 285.7,122.1 286.7,113.9 287.8,105.5 288.8,96.7 289.8,87.5 290.9,78.0 291.9,68.1 293.0,57.8 294.0,47.2' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='190.0' cy='137.3' r='5.5' fill='#c0392b'/><circle cx='252.4' cy='234.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "2",
+      "0",
+      "−2",
+      "3"
+     ],
+     "a": 0,
+     "e": "극대인 점의 y좌표예요. <b>2</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극솟값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='158.8,40.0 159.8,47.1 160.9,54.0 161.9,60.5 163.0,66.7 164.0,72.6 165.0,78.2 166.1,83.5 167.1,88.5 168.2,93.2 169.2,97.7 170.2,101.9 171.3,105.8 172.3,109.5 173.4,112.9 174.4,116.0 175.4,119.0 176.5,121.6 177.5,124.1 178.6,126.3 179.6,128.3 180.6,130.1 181.7,131.7 182.7,133.0 183.8,134.2 184.8,135.2 185.8,136.0 186.9,136.6 187.9,137.0 189.0,137.3 190.0,137.3 191.0,137.3 192.1,137.0 193.1,136.6 194.2,136.1 195.2,135.4 196.2,134.6 197.3,133.7 198.3,132.6 199.4,131.4 200.4,130.1 201.4,128.7 202.5,127.2 203.5,125.6 204.6,123.9 205.6,122.1 206.6,120.3 207.7,118.3 208.7,116.3 209.8,114.2 210.8,112.1 211.8,109.9 212.9,107.7 213.9,105.4 215.0,103.1 216.0,100.7 217.0,98.3 218.1,95.9 219.1,93.5 220.2,91.1 221.2,88.7 222.2,86.2 223.3,83.8 224.3,81.4 225.4,79.0 226.4,76.6 227.4,74.3 228.5,71.9 229.5,69.7 230.6,67.4 231.6,65.2 232.6,63.1 233.7,61.0 234.7,59.0 235.8,57.1 236.8,55.2 237.8,53.4 238.9,51.7 239.9,50.1 241.0,48.6 242.0,47.2 243.0,45.9 244.1,44.7 245.1,43.7 246.2,42.7 247.2,41.9 248.2,41.2 249.3,40.7 250.3,40.3 251.4,40.1 252.4,40.0 253.4,40.1 254.5,40.3 255.5,40.8 256.6,41.4 257.6,42.1 258.6,43.1 259.7,44.3 260.7,45.7 261.8,47.2 262.8,49.0 263.8,51.0 264.9,53.2 265.9,55.7 267.0,58.4 268.0,61.3 269.0,64.5 270.1,67.9 271.1,71.5 272.2,75.5 273.2,79.7 274.2,84.1 275.3,88.9 276.3,93.9 277.4,99.2 278.4,104.8 279.4,110.7 280.5,116.9 281.5,123.4 282.6,130.2 283.6,137.3 284.6,144.8 285.7,152.6 286.7,160.7 287.8,169.2 288.8,178.0 289.8,187.2 290.9,196.7 291.9,206.6 293.0,216.8 294.0,227.5 295.0,238.5 296.1,249.9 297.1,261.6 298.2,273.8 299.2,286.4 300.2,299.4 301.3,312.7 302.3,326.5' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='190.0' cy='137.3' r='5.5' fill='#c0392b'/><circle cx='252.4' cy='40.0' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "0",
+      "6",
+      "2",
+      "3"
+     ],
+     "a": 2,
+     "e": "극소인 점의 y좌표예요. <b>2</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f′(x) ≥ 0인 x의 값의 범위는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='148.4,47.2 149.4,57.8 150.5,68.1 151.5,78.0 152.6,87.5 153.6,96.7 154.6,105.5 155.7,113.9 156.7,122.1 157.8,129.9 158.8,137.3 159.8,144.5 160.9,151.3 161.9,157.8 163.0,164.0 164.0,169.9 165.0,175.5 166.1,180.8 167.1,185.8 168.2,190.6 169.2,195.0 170.2,199.2 171.3,203.1 172.3,206.8 173.4,210.2 174.4,213.4 175.4,216.3 176.5,219.0 177.5,221.4 178.6,223.7 179.6,225.7 180.6,227.4 181.7,229.0 182.7,230.4 183.8,231.6 184.8,232.5 185.8,233.3 186.9,233.9 187.9,234.3 189.0,234.6 190.0,234.7 191.0,234.6 192.1,234.3 193.1,234.0 194.2,233.4 195.2,232.8 196.2,231.9 197.3,231.0 198.3,229.9 199.4,228.8 200.4,227.5 201.4,226.1 202.5,224.5 203.5,222.9 204.6,221.2 205.6,219.5 206.6,217.6 207.7,215.7 208.7,213.6 209.8,211.6 210.8,209.4 211.8,207.2 212.9,205.0 213.9,202.7 215.0,200.4 216.0,198.1 217.0,195.7 218.1,193.3 219.1,190.9 220.2,188.4 221.2,186.0 222.2,183.6 223.3,181.1 224.3,178.7 225.4,176.3 226.4,173.9 227.4,171.6 228.5,169.3 229.5,167.0 230.6,164.8 231.6,162.6 232.6,160.4 233.7,158.4 234.7,156.3 235.8,154.4 236.8,152.5 237.8,150.8 238.9,149.1 239.9,147.5 241.0,145.9 242.0,144.5 243.0,143.2 244.1,142.1 245.1,141.0 246.2,140.1 247.2,139.2 248.2,138.6 249.3,138.0 250.3,137.7 251.4,137.4 252.4,137.3 253.4,137.4 254.5,137.7 255.5,138.1 256.6,138.7 257.6,139.5 258.6,140.4 259.7,141.6 260.7,143.0 261.8,144.6 262.8,146.3 263.8,148.3 264.9,150.6 265.9,153.0 267.0,155.7 268.0,158.6 269.0,161.8 270.1,165.2 271.1,168.9 272.2,172.8 273.2,177.0 274.2,181.4 275.3,186.2 276.3,191.2 277.4,196.5 278.4,202.1 279.4,208.0 280.5,214.2 281.5,220.7 282.6,227.5 283.6,234.7 284.6,242.1 285.7,249.9 286.7,258.1 287.8,266.5 288.8,275.3 289.8,284.5 290.9,294.0 291.9,303.9 293.0,314.2 294.0,324.8' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='190.0' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='252.4' cy='137.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "0 ≤ x ≤ 2",
+      "x ≤ 0",
+      "x ≤ 0 또는 x ≥ 2",
+      "x ≥ 2"
+     ],
+     "a": 0,
+     "e": "f(x)가 증가하는 범위예요. <b>0 ≤ x ≤ 2</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f′(x) ≥ 0인 x의 값의 범위는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='127.6,332.0 128.6,324.9 129.7,318.0 130.7,311.5 131.8,305.3 132.8,299.4 133.8,293.8 134.9,288.5 135.9,283.5 137.0,278.8 138.0,274.3 139.0,270.1 140.1,266.2 141.1,262.5 142.2,259.1 143.2,256.0 144.2,253.0 145.3,250.4 146.3,247.9 147.4,245.7 148.4,243.7 149.4,241.9 150.5,240.3 151.5,239.0 152.6,237.8 153.6,236.8 154.6,236.0 155.7,235.4 156.7,235.0 157.8,234.7 158.8,234.7 159.8,234.7 160.9,235.0 161.9,235.4 163.0,235.9 164.0,236.6 165.0,237.4 166.1,238.3 167.1,239.4 168.2,240.6 169.2,241.9 170.2,243.3 171.3,244.8 172.3,246.4 173.4,248.1 174.4,249.9 175.4,251.7 176.5,253.7 177.5,255.7 178.6,257.8 179.6,259.9 180.6,262.1 181.7,264.3 182.7,266.6 183.8,268.9 184.8,271.3 185.8,273.7 186.9,276.1 187.9,278.5 189.0,280.9 190.0,283.3 191.0,285.8 192.1,288.2 193.1,290.6 194.2,293.0 195.2,295.4 196.2,297.7 197.3,300.1 198.3,302.3 199.4,304.6 200.4,306.8 201.4,308.9 202.5,311.0 203.5,313.0 204.6,314.9 205.6,316.8 206.6,318.6 207.7,320.3 208.7,321.9 209.8,323.4 210.8,324.8 211.8,326.1 212.9,327.3 213.9,328.3 215.0,329.3 216.0,330.1 217.0,330.8 218.1,331.3 219.1,331.7 220.2,331.9 221.2,332.0 222.2,331.9 223.3,331.7 224.3,331.2 225.4,330.6 226.4,329.9 227.4,328.9 228.5,327.7 229.5,326.3 230.6,324.8 231.6,323.0 232.6,321.0 233.7,318.8 234.7,316.3 235.8,313.6 236.8,310.7 237.8,307.5 238.9,304.1 239.9,300.5 241.0,296.5 242.0,292.3 243.0,287.9 244.1,283.1 245.1,278.1 246.2,272.8 247.2,267.2 248.2,261.3 249.3,255.1 250.3,248.6 251.4,241.8 252.4,234.7 253.4,227.2 254.5,219.4 255.5,211.3 256.6,202.8 257.6,194.0 258.6,184.8 259.7,175.3 260.7,165.4 261.8,155.2 262.8,144.5 263.8,133.5 264.9,122.1 265.9,110.4 267.0,98.2 268.0,85.6 269.0,72.6 270.1,59.3 271.1,45.5' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='158.8' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='221.2' cy='332.0' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "x ≤ −1 또는 x ≥ 1",
+      "−1 ≤ x ≤ 1",
+      "x ≥ 1",
+      "x ≤ −1"
+     ],
+     "a": 0,
+     "e": "f(x)가 증가하는 범위예요. <b>x ≤ −1 또는 x ≥ 1</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극댓값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='50.6,322.5 51.7,310.3 52.7,298.5 53.8,287.1 54.8,276.1 55.8,265.5 56.9,255.2 57.9,245.4 59.0,235.8 60.0,226.7 61.0,217.9 62.1,209.4 63.1,201.3 64.2,193.5 65.2,186.0 66.2,178.9 67.3,172.0 68.3,165.5 69.4,159.3 70.4,153.4 71.4,147.8 72.5,142.5 73.5,137.5 74.6,132.8 75.6,128.3 76.6,124.1 77.7,120.2 78.7,116.5 79.8,113.1 80.8,110.0 81.8,107.0 82.9,104.4 83.9,101.9 85.0,99.7 86.0,97.7 87.0,95.9 88.1,94.3 89.1,93.0 90.2,91.8 91.2,90.8 92.2,90.0 93.3,89.4 94.3,89.0 95.4,88.7 96.4,88.7 97.4,88.7 98.5,89.0 99.5,89.4 100.6,89.9 101.6,90.6 102.6,91.4 103.7,92.3 104.7,93.4 105.8,94.6 106.8,95.9 107.8,97.3 108.9,98.8 109.9,100.4 111.0,102.1 112.0,103.9 113.0,105.7 114.1,107.7 115.1,109.7 116.2,111.8 117.2,113.9 118.2,116.1 119.3,118.3 120.3,120.6 121.4,122.9 122.4,125.3 123.4,127.7 124.5,130.1 125.5,132.5 126.6,134.9 127.6,137.3 128.6,139.8 129.7,142.2 130.7,144.6 131.8,147.0 132.8,149.4 133.8,151.7 134.9,154.1 135.9,156.3 137.0,158.6 138.0,160.8 139.0,162.9 140.1,165.0 141.1,167.0 142.2,168.9 143.2,170.8 144.2,172.6 145.3,174.3 146.3,175.9 147.4,177.4 148.4,178.8 149.4,180.1 150.5,181.3 151.5,182.3 152.6,183.3 153.6,184.1 154.6,184.8 155.7,185.3 156.7,185.7 157.8,185.9 158.8,186.0 159.8,185.9 160.9,185.7 161.9,185.2 163.0,184.6 164.0,183.9 165.0,182.9 166.1,181.7 167.1,180.3 168.2,178.8 169.2,177.0 170.2,175.0 171.3,172.8 172.3,170.3 173.4,167.6 174.4,164.7 175.4,161.5 176.5,158.1 177.5,154.5 178.6,150.5 179.6,146.3 180.6,141.9 181.7,137.1 182.7,132.1 183.8,126.8 184.8,121.2 185.8,115.3 186.9,109.1 187.9,102.6 189.0,95.8 190.0,88.7 191.0,81.2 192.1,73.4 193.1,65.3 194.2,56.8 195.2,48.0 196.2,38.8' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='96.4' cy='88.7' r='5.5' fill='#c0392b'/><circle cx='158.8' cy='186.0' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "5",
+      "0",
+      "4",
+      "−3"
+     ],
+     "a": 2,
+     "e": "극대인 점의 y좌표예요. <b>4</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극댓값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='56.9,328.2 57.9,318.4 59.0,308.8 60.0,299.7 61.0,290.9 62.1,282.4 63.1,274.3 64.2,266.5 65.2,259.0 66.2,251.9 67.3,245.0 68.3,238.5 69.4,232.3 70.4,226.4 71.4,220.8 72.5,215.5 73.5,210.5 74.6,205.8 75.6,201.3 76.6,197.1 77.7,193.2 78.7,189.5 79.8,186.1 80.8,183.0 81.8,180.0 82.9,177.4 83.9,174.9 85.0,172.7 86.0,170.7 87.0,168.9 88.1,167.3 89.1,166.0 90.2,164.8 91.2,163.8 92.2,163.0 93.3,162.4 94.3,162.0 95.4,161.7 96.4,161.7 97.4,161.7 98.5,162.0 99.5,162.4 100.6,162.9 101.6,163.6 102.6,164.4 103.7,165.3 104.7,166.4 105.8,167.6 106.8,168.9 107.8,170.3 108.9,171.8 109.9,173.4 111.0,175.1 112.0,176.9 113.0,178.7 114.1,180.7 115.1,182.7 116.2,184.8 117.2,186.9 118.2,189.1 119.3,191.3 120.3,193.6 121.4,195.9 122.4,198.3 123.4,200.7 124.5,203.1 125.5,205.5 126.6,207.9 127.6,210.3 128.6,212.8 129.7,215.2 130.7,217.6 131.8,220.0 132.8,222.4 133.8,224.7 134.9,227.1 135.9,229.3 137.0,231.6 138.0,233.8 139.0,235.9 140.1,238.0 141.1,240.0 142.2,241.9 143.2,243.8 144.2,245.6 145.3,247.3 146.3,248.9 147.4,250.4 148.4,251.8 149.4,253.1 150.5,254.3 151.5,255.3 152.6,256.3 153.6,257.1 154.6,257.8 155.7,258.3 156.7,258.7 157.8,258.9 158.8,259.0 159.8,258.9 160.9,258.7 161.9,258.2 163.0,257.6 164.0,256.9 165.0,255.9 166.1,254.7 167.1,253.3 168.2,251.8 169.2,250.0 170.2,248.0 171.3,245.8 172.3,243.3 173.4,240.6 174.4,237.7 175.4,234.5 176.5,231.1 177.5,227.5 178.6,223.5 179.6,219.3 180.6,214.9 181.7,210.1 182.7,205.1 183.8,199.8 184.8,194.2 185.8,188.3 186.9,182.1 187.9,175.6 189.0,168.8 190.0,161.7 191.0,154.2 192.1,146.4 193.1,138.3 194.2,129.8 195.2,121.0 196.2,111.8 197.3,102.3 198.3,92.4 199.4,82.2 200.4,71.5 201.4,60.5 202.5,49.1' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='96.4' cy='161.7' r='5.5' fill='#c0392b'/><circle cx='158.8' cy='259.0' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "2",
+      "−1",
+      "−3",
+      "1"
+     ],
+     "a": 3,
+     "e": "극대인 점의 y좌표예요. <b>1</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극솟값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='113.0,322.5 114.1,310.3 115.1,298.5 116.2,287.1 117.2,276.1 118.2,265.5 119.3,255.2 120.3,245.4 121.4,235.8 122.4,226.7 123.4,217.9 124.5,209.4 125.5,201.3 126.6,193.5 127.6,186.0 128.6,178.9 129.7,172.0 130.7,165.5 131.8,159.3 132.8,153.4 133.8,147.8 134.9,142.5 135.9,137.5 137.0,132.8 138.0,128.3 139.0,124.1 140.1,120.2 141.1,116.5 142.2,113.1 143.2,110.0 144.2,107.0 145.3,104.4 146.3,101.9 147.4,99.7 148.4,97.7 149.4,95.9 150.5,94.3 151.5,93.0 152.6,91.8 153.6,90.8 154.6,90.0 155.7,89.4 156.7,89.0 157.8,88.7 158.8,88.7 159.8,88.7 160.9,89.0 161.9,89.4 163.0,89.9 164.0,90.6 165.0,91.4 166.1,92.3 167.1,93.4 168.2,94.6 169.2,95.9 170.2,97.3 171.3,98.8 172.3,100.4 173.4,102.1 174.4,103.9 175.4,105.7 176.5,107.7 177.5,109.7 178.6,111.8 179.6,113.9 180.6,116.1 181.7,118.3 182.7,120.6 183.8,122.9 184.8,125.3 185.8,127.7 186.9,130.1 187.9,132.5 189.0,134.9 190.0,137.3 191.0,139.8 192.1,142.2 193.1,144.6 194.2,147.0 195.2,149.4 196.2,151.7 197.3,154.1 198.3,156.3 199.4,158.6 200.4,160.8 201.4,162.9 202.5,165.0 203.5,167.0 204.6,168.9 205.6,170.8 206.6,172.6 207.7,174.3 208.7,175.9 209.8,177.4 210.8,178.8 211.8,180.1 212.9,181.3 213.9,182.3 215.0,183.3 216.0,184.1 217.0,184.8 218.1,185.3 219.1,185.7 220.2,185.9 221.2,186.0 222.2,185.9 223.3,185.7 224.3,185.2 225.4,184.6 226.4,183.9 227.4,182.9 228.5,181.7 229.5,180.3 230.6,178.8 231.6,177.0 232.6,175.0 233.7,172.8 234.7,170.3 235.8,167.6 236.8,164.7 237.8,161.5 238.9,158.1 239.9,154.5 241.0,150.5 242.0,146.3 243.0,141.9 244.1,137.1 245.1,132.1 246.2,126.8 247.2,121.2 248.2,115.3 249.3,109.1 250.3,102.6 251.4,95.8 252.4,88.7 253.4,81.2 254.5,73.4 255.5,65.3 256.6,56.8 257.6,48.0 258.6,38.8' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='158.8' cy='88.7' r='5.5' fill='#c0392b'/><circle cx='221.2' cy='186.0' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "2",
+      "4",
+      "0",
+      "1"
+     ],
+     "a": 2,
+     "e": "극소인 점의 y좌표예요. <b>0</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극댓값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='117.2,47.2 118.2,57.8 119.3,68.1 120.3,78.0 121.4,87.5 122.4,96.7 123.4,105.5 124.5,113.9 125.5,122.1 126.6,129.9 127.6,137.3 128.6,144.5 129.7,151.3 130.7,157.8 131.8,164.0 132.8,169.9 133.8,175.5 134.9,180.8 135.9,185.8 137.0,190.6 138.0,195.0 139.0,199.2 140.1,203.1 141.1,206.8 142.2,210.2 143.2,213.4 144.2,216.3 145.3,219.0 146.3,221.4 147.4,223.7 148.4,225.7 149.4,227.4 150.5,229.0 151.5,230.4 152.6,231.6 153.6,232.5 154.6,233.3 155.7,233.9 156.7,234.3 157.8,234.6 158.8,234.7 159.8,234.6 160.9,234.3 161.9,234.0 163.0,233.4 164.0,232.8 165.0,231.9 166.1,231.0 167.1,229.9 168.2,228.8 169.2,227.5 170.2,226.1 171.3,224.5 172.3,222.9 173.4,221.2 174.4,219.5 175.4,217.6 176.5,215.7 177.5,213.6 178.6,211.6 179.6,209.4 180.6,207.2 181.7,205.0 182.7,202.7 183.8,200.4 184.8,198.1 185.8,195.7 186.9,193.3 187.9,190.9 189.0,188.4 190.0,186.0 191.0,183.6 192.1,181.1 193.1,178.7 194.2,176.3 195.2,173.9 196.2,171.6 197.3,169.3 198.3,167.0 199.4,164.8 200.4,162.6 201.4,160.4 202.5,158.4 203.5,156.3 204.6,154.4 205.6,152.5 206.6,150.8 207.7,149.1 208.7,147.5 209.8,145.9 210.8,144.5 211.8,143.2 212.9,142.1 213.9,141.0 215.0,140.1 216.0,139.2 217.0,138.6 218.1,138.0 219.1,137.7 220.2,137.4 221.2,137.3 222.2,137.4 223.3,137.7 224.3,138.1 225.4,138.7 226.4,139.5 227.4,140.4 228.5,141.6 229.5,143.0 230.6,144.6 231.6,146.3 232.6,148.3 233.7,150.6 234.7,153.0 235.8,155.7 236.8,158.6 237.8,161.8 238.9,165.2 239.9,168.9 241.0,172.8 242.0,177.0 243.0,181.4 244.1,186.2 245.1,191.2 246.2,196.5 247.2,202.1 248.2,208.0 249.3,214.2 250.3,220.7 251.4,227.5 252.4,234.7 253.4,242.1 254.5,249.9 255.5,258.1 256.6,266.5 257.6,275.3 258.6,284.5 259.7,294.0 260.7,303.9 261.8,314.2 262.8,324.8' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='158.8' cy='234.7' r='5.5' fill='#c0392b'/><circle cx='221.2' cy='137.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "−2",
+      "3",
+      "1",
+      "2"
+     ],
+     "a": 3,
+     "e": "극대인 점의 y좌표예요. <b>2</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극댓값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='127.6,40.0 128.6,47.1 129.7,54.0 130.7,60.5 131.8,66.7 132.8,72.6 133.8,78.2 134.9,83.5 135.9,88.5 137.0,93.2 138.0,97.7 139.0,101.9 140.1,105.8 141.1,109.5 142.2,112.9 143.2,116.0 144.2,119.0 145.3,121.6 146.3,124.1 147.4,126.3 148.4,128.3 149.4,130.1 150.5,131.7 151.5,133.0 152.6,134.2 153.6,135.2 154.6,136.0 155.7,136.6 156.7,137.0 157.8,137.3 158.8,137.3 159.8,137.3 160.9,137.0 161.9,136.6 163.0,136.1 164.0,135.4 165.0,134.6 166.1,133.7 167.1,132.6 168.2,131.4 169.2,130.1 170.2,128.7 171.3,127.2 172.3,125.6 173.4,123.9 174.4,122.1 175.4,120.3 176.5,118.3 177.5,116.3 178.6,114.2 179.6,112.1 180.6,109.9 181.7,107.7 182.7,105.4 183.8,103.1 184.8,100.7 185.8,98.3 186.9,95.9 187.9,93.5 189.0,91.1 190.0,88.7 191.0,86.2 192.1,83.8 193.1,81.4 194.2,79.0 195.2,76.6 196.2,74.3 197.3,71.9 198.3,69.7 199.4,67.4 200.4,65.2 201.4,63.1 202.5,61.0 203.5,59.0 204.6,57.1 205.6,55.2 206.6,53.4 207.7,51.7 208.7,50.1 209.8,48.6 210.8,47.2 211.8,45.9 212.9,44.7 213.9,43.7 215.0,42.7 216.0,41.9 217.0,41.2 218.1,40.7 219.1,40.3 220.2,40.1 221.2,40.0 222.2,40.1 223.3,40.3 224.3,40.8 225.4,41.4 226.4,42.1 227.4,43.1 228.5,44.3 229.5,45.7 230.6,47.2 231.6,49.0 232.6,51.0 233.7,53.2 234.7,55.7 235.8,58.4 236.8,61.3 237.8,64.5 238.9,67.9 239.9,71.5 241.0,75.5 242.0,79.7 243.0,84.1 244.1,88.9 245.1,93.9 246.2,99.2 247.2,104.8 248.2,110.7 249.3,116.9 250.3,123.4 251.4,130.2 252.4,137.3 253.4,144.8 254.5,152.6 255.5,160.7 256.6,169.2 257.6,178.0 258.6,187.2 259.7,196.7 260.7,206.6 261.8,216.8 262.8,227.5 263.8,238.5 264.9,249.9 265.9,261.6 267.0,273.8 268.0,286.4 269.0,299.4 270.1,312.7 271.1,326.5' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='158.8' cy='137.3' r='5.5' fill='#c0392b'/><circle cx='221.2' cy='40.0' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "7",
+      "1",
+      "2",
+      "6"
+     ],
+     "a": 3,
+     "e": "극대인 점의 y좌표예요. <b>6</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극솟값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='183.8,333.2 184.8,324.0 185.8,315.2 186.9,306.7 187.9,298.6 189.0,290.8 190.0,283.3 191.0,276.2 192.1,269.4 193.1,262.9 194.2,256.7 195.2,250.8 196.2,245.2 197.3,239.9 198.3,234.9 199.4,230.1 200.4,225.7 201.4,221.5 202.5,217.5 203.5,213.9 204.6,210.5 205.6,207.3 206.6,204.4 207.7,201.7 208.7,199.2 209.8,197.0 210.8,195.0 211.8,193.2 212.9,191.7 213.9,190.3 215.0,189.1 216.0,188.1 217.0,187.4 218.1,186.8 219.1,186.3 220.2,186.1 221.2,186.0 222.2,186.1 223.3,186.3 224.3,186.7 225.4,187.2 226.4,187.9 227.4,188.7 228.5,189.7 229.5,190.7 230.6,191.9 231.6,193.2 232.6,194.6 233.7,196.1 234.7,197.7 235.8,199.4 236.8,201.2 237.8,203.1 238.9,205.0 239.9,207.0 241.0,209.1 242.0,211.2 243.0,213.4 244.1,215.7 245.1,217.9 246.2,220.3 247.2,222.6 248.2,225.0 249.3,227.4 250.3,229.8 251.4,232.2 252.4,234.7 253.4,237.1 254.5,239.5 255.5,241.9 256.6,244.3 257.6,246.7 258.6,249.1 259.7,251.4 260.7,253.7 261.8,255.9 262.8,258.1 263.8,260.2 264.9,262.3 265.9,264.3 267.0,266.3 268.0,268.1 269.0,269.9 270.1,271.6 271.1,273.2 272.2,274.7 273.2,276.1 274.2,277.4 275.3,278.6 276.3,279.7 277.4,280.6 278.4,281.4 279.4,282.1 280.5,282.6 281.5,283.0 282.6,283.3 283.6,283.3 284.6,283.3 285.7,283.0 286.7,282.6 287.8,282.0 288.8,281.2 289.8,280.2 290.9,279.0 291.9,277.7 293.0,276.1 294.0,274.3 295.0,272.3 296.1,270.1 297.1,267.6 298.2,265.0 299.2,262.0 300.2,258.9 301.3,255.5 302.3,251.8 303.4,247.9 304.4,243.7 305.4,239.2 306.5,234.5 307.5,229.5 308.6,224.2 309.6,218.6 310.6,212.7 311.7,206.5 312.7,200.0 313.8,193.1 314.8,186.0 315.8,178.5 316.9,170.7 317.9,162.6 319.0,154.1 320.0,145.3 321.0,136.2 322.1,126.6 323.1,116.8 324.2,106.5 325.2,95.9 326.2,84.9 327.3,73.5 328.3,61.7 329.4,49.5' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='221.2' cy='186.0' r='5.5' fill='#c0392b'/><circle cx='283.6' cy='283.3' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "−3",
+      "3",
+      "−4",
+      "0"
+     ],
+     "a": 2,
+     "e": "극소인 점의 y좌표예요. <b>−4</b>"
+    }
+   ]
+  },
+  {
+   "title": "실근의 개수",
+   "items": [
+    {
+     "q": "방정식 <b>x³ − 12x = −7</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "3개",
+      "2개",
+      "0개",
+      "1개"
+     ],
+     "a": 0,
+     "e": "y = x³ − 12x의 극댓값 16, 극솟값 −16과 직선 y = −7의 교점의 개수예요. <b>3개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 27x = −57</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "0개",
+      "3개",
+      "1개",
+      "2개"
+     ],
+     "a": 2,
+     "e": "y = x³ − 27x의 극댓값 54, 극솟값 −54와 직선 y = −57의 교점의 개수예요. <b>1개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 12x = 10</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "1개",
+      "2개",
+      "3개",
+      "0개"
+     ],
+     "a": 2,
+     "e": "y = x³ − 12x의 극댓값 16, 극솟값 −16과 직선 y = 10의 교점의 개수예요. <b>3개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 27x = 23</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "0개",
+      "2개",
+      "1개",
+      "3개"
+     ],
+     "a": 3,
+     "e": "y = x³ − 27x의 극댓값 54, 극솟값 −54와 직선 y = 23의 교점의 개수예요. <b>3개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 12x = −21</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "0개",
+      "1개",
+      "2개",
+      "3개"
+     ],
+     "a": 1,
+     "e": "y = x³ − 12x의 극댓값 16, 극솟값 −16과 직선 y = −21의 교점의 개수예요. <b>1개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 3x = 3</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "0개",
+      "3개",
+      "2개",
+      "1개"
+     ],
+     "a": 3,
+     "e": "y = x³ − 3x의 극댓값 2, 극솟값 −2와 직선 y = 3의 교점의 개수예요. <b>1개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 3x = 6</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "2개",
+      "0개",
+      "1개",
+      "3개"
+     ],
+     "a": 2,
+     "e": "y = x³ − 3x의 극댓값 2, 극솟값 −2와 직선 y = 6의 교점의 개수예요. <b>1개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 3x = 2</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "0개",
+      "3개",
+      "1개",
+      "2개"
+     ],
+     "a": 3,
+     "e": "y = x³ − 3x의 극댓값 2, 극솟값 −2와 직선 y = 2의 교점의 개수예요. <b>2개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 27x = −54</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "1개",
+      "2개",
+      "0개",
+      "3개"
+     ],
+     "a": 1,
+     "e": "y = x³ − 27x의 극댓값 54, 극솟값 −54와 직선 y = −54의 교점의 개수예요. <b>2개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 27x = 12</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "3개",
+      "2개",
+      "0개",
+      "1개"
+     ],
+     "a": 0,
+     "e": "y = x³ − 27x의 극댓값 54, 극솟값 −54와 직선 y = 12의 교점의 개수예요. <b>3개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 12x = 16</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "2개",
+      "1개",
+      "3개",
+      "0개"
+     ],
+     "a": 0,
+     "e": "y = x³ − 12x의 극댓값 16, 극솟값 −16과 직선 y = 16의 교점의 개수예요. <b>2개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 3x = −2</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "1개",
+      "2개",
+      "0개",
+      "3개"
+     ],
+     "a": 1,
+     "e": "y = x³ − 3x의 극댓값 2, 극솟값 −2와 직선 y = −2의 교점의 개수예요. <b>2개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 12x = 12</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "0개",
+      "1개",
+      "2개",
+      "3개"
+     ],
+     "a": 3,
+     "e": "y = x³ − 12x의 극댓값 16, 극솟값 −16과 직선 y = 12의 교점의 개수예요. <b>3개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 3x = −7</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "0개",
+      "2개",
+      "1개",
+      "3개"
+     ],
+     "a": 2,
+     "e": "y = x³ − 3x의 극댓값 2, 극솟값 −2와 직선 y = −7의 교점의 개수예요. <b>1개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 12x = 0</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "2개",
+      "0개",
+      "3개",
+      "1개"
+     ],
+     "a": 2,
+     "e": "y = x³ − 12x의 극댓값 16, 극솟값 −16과 직선 y = 0의 교점의 개수예요. <b>3개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 3x = −3</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "2개",
+      "1개",
+      "0개",
+      "3개"
+     ],
+     "a": 1,
+     "e": "y = x³ − 3x의 극댓값 2, 극솟값 −2와 직선 y = −3의 교점의 개수예요. <b>1개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 27x = 50</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "3개",
+      "2개",
+      "1개",
+      "0개"
+     ],
+     "a": 0,
+     "e": "y = x³ − 27x의 극댓값 54, 극솟값 −54와 직선 y = 50의 교점의 개수예요. <b>3개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 27x = 54</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "0개",
+      "3개",
+      "1개",
+      "2개"
+     ],
+     "a": 3,
+     "e": "y = x³ − 27x의 극댓값 54, 극솟값 −54와 직선 y = 54의 교점의 개수예요. <b>2개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 3x = −1</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "3개",
+      "2개",
+      "0개",
+      "1개"
+     ],
+     "a": 0,
+     "e": "y = x³ − 3x의 극댓값 2, 극솟값 −2와 직선 y = −1의 교점의 개수예요. <b>3개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 12x = −16</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "3개",
+      "2개",
+      "1개",
+      "0개"
+     ],
+     "a": 1,
+     "e": "y = x³ − 12x의 극댓값 16, 극솟값 −16과 직선 y = −16의 교점의 개수예요. <b>2개</b>"
+    }
+   ]
+  },
+  {
+   "title": "그래프의 개형",
+   "items": [
+    {
+     "q": "방정식 <b>x³ − 27x = −55</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "0개",
+      "3개",
+      "2개",
+      "1개"
+     ],
+     "a": 3,
+     "e": "y = x³ − 27x의 극댓값 54, 극솟값 −54와 직선 y = −55의 교점의 개수예요. <b>1개</b>"
+    },
+    {
+     "q": "닫힌구간 [−5, 3]에서 함수 f(x) = −x³ + 27x + 3의 최솟값은?",
+     "c": [
+      "−51",
+      "57",
+      "−50",
+      "−7"
+     ],
+     "a": 0,
+     "e": "극값 f(−3) = −51, f(3) = 57과 양 끝값 f(−5) = −7, f(3) = 57을 비교해요. <b>−51</b>"
+    },
+    {
+     "q": "f′(a) = 0이고 x = a의 좌우에서 f′(x)의 부호가 양에서 음으로 바뀌면?",
+     "c": [
+      "x = a에서 극대",
+      "극값이 없어요",
+      "x = a에서 극소",
+      "x = a에서 불연속"
+     ],
+     "a": 0,
+     "e": "<b>x = a에서 극대</b>"
+    },
+    {
+     "q": "닫힌구간 [−5, 1]에서 함수 f(x) = x³ + 3x² − 9x + 4의 최솟값은?",
+     "c": [
+      "31",
+      "4",
+      "0",
+      "−1"
+     ],
+     "a": 3,
+     "e": "극값 f(−3) = 31, f(1) = −1과 양 끝값 f(−5) = −1, f(1) = −1을 비교해요. <b>−1</b>"
+    },
+    {
+     "q": "닫힌구간 [−1, 3]에서 함수 f(x) = x³ − 3x − 4의 최솟값은?",
+     "c": [
+      "−2",
+      "14",
+      "−6",
+      "−5"
+     ],
+     "a": 2,
+     "e": "극값 f(−1) = −2, f(1) = −6과 양 끝값 f(−1) = −2, f(3) = 14를 비교해요. <b>−6</b>"
+    },
+    {
+     "q": "닫힌구간 [−1, 4]에서 함수 f(x) = −x³ + 3x² + 9x − 3의 최댓값은?",
+     "c": [
+      "25",
+      "24",
+      "−8",
+      "17"
+     ],
+     "a": 1,
+     "e": "극값 f(−1) = −8, f(3) = 24와 양 끝값 f(−1) = −8, f(4) = 17을 비교해요. <b>24</b>"
+    },
+    {
+     "q": "삼차함수 f(x)가 극값을 가질 조건은?",
+     "c": [
+      "f′(x) = 0이 서로 다른 두 실근을 가져요",
+      "f′(x) = 0이 중근을 가져요",
+      "f′(x) &gt; 0이에요",
+      "f(x) = 0이 실근을 가져요"
+     ],
+     "a": 0,
+     "e": "<b>f′(x) = 0이 서로 다른 두 실근을 가져요</b>"
+    },
+    {
+     "q": "최고차항의 계수가 양수인 삼차함수의 그래프는 x → ∞일 때?",
+     "c": [
+      "y → ∞",
+      "y → −∞",
+      "y → 1",
+      "y → 0"
+     ],
+     "a": 0,
+     "e": "<b>y → ∞</b>"
+    },
+    {
+     "q": "삼차함수 f(x)의 극댓값과 극솟값의 곱이 음수이면 f(x) = 0의 실근은?",
+     "c": [
+      "한 실근",
+      "서로 다른 세 실근",
+      "중근과 다른 한 근",
+      "실근이 없어요"
+     ],
+     "a": 1,
+     "e": "<b>서로 다른 세 실근</b>"
+    },
+    {
+     "q": "닫힌구간에서 연속인 함수의 최댓값은 어디에서 생길까요?",
+     "c": [
+      "극댓값에서만",
+      "구간의 양 끝에서만",
+      "x = 0에서만",
+      "극값 또는 구간의 양 끝"
+     ],
+     "a": 3,
+     "e": "<b>극값 또는 구간의 양 끝</b>"
+    },
+    {
+     "q": "닫힌구간 [−4, 2]에서 함수 f(x) = −x³ − 3x² + 3의 최솟값은?",
+     "c": [
+      "19",
+      "3",
+      "−17",
+      "−1"
+     ],
+     "a": 2,
+     "e": "극값 f(−2) = −1, f(0) = 3과 양 끝값 f(−4) = 19, f(2) = −17을 비교해요. <b>−17</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 2]에서 함수 f(x) = x³ − 3x의 최솟값은?",
+     "c": [
+      "−18",
+      "−2",
+      "−17",
+      "2"
+     ],
+     "a": 0,
+     "e": "극값 f(−1) = 2, f(1) = −2와 양 끝값 f(−3) = −18, f(2) = 2를 비교해요. <b>−18</b>"
+    },
+    {
+     "q": "f(x) = x³의 x = 0에서의 성질은?",
+     "c": [
+      "극소예요",
+      "미분가능하지 않아요",
+      "극대예요",
+      "f′(0) = 0이지만 극값이 아니에요"
+     ],
+     "a": 3,
+     "e": "<b>f′(0) = 0이지만 극값이 아니에요</b>"
+    },
+    {
+     "q": "닫힌구간 [−4, 1]에서 함수 f(x) = x³ + 6x² + 9x의 최댓값은?",
+     "c": [
+      "17",
+      "0",
+      "16",
+      "−4"
+     ],
+     "a": 2,
+     "e": "극값 f(−3) = 0, f(−1) = −4와 양 끝값 f(−4) = −4, f(1) = 16을 비교해요. <b>16</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 3]에서 함수 f(x) = −x³ + 3x − 2의 최댓값은?",
+     "c": [
+      "−20",
+      "16",
+      "−4",
+      "0"
+     ],
+     "a": 1,
+     "e": "극값 f(−1) = −4, f(1) = 0과 양 끝값 f(−3) = 16, f(3) = −20을 비교해요. <b>16</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 27x = 4</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "1개",
+      "3개",
+      "0개",
+      "2개"
+     ],
+     "a": 1,
+     "e": "y = x³ − 27x의 극댓값 54, 극솟값 −54와 직선 y = 4의 교점의 개수예요. <b>3개</b>"
+    },
+    {
+     "q": "삼차함수 f(x)의 극댓값과 극솟값의 곱이 0이면 f(x) = 0의 실근은?",
+     "c": [
+      "서로 다른 세 실근",
+      "실근이 없어요",
+      "한 실근",
+      "중근과 다른 한 실근"
+     ],
+     "a": 3,
+     "e": "<b>중근과 다른 한 실근</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 12x = 17</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "3개",
+      "1개",
+      "2개",
+      "0개"
+     ],
+     "a": 1,
+     "e": "y = x³ − 12x의 극댓값 16, 극솟값 −16과 직선 y = 17의 교점의 개수예요. <b>1개</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 3x = 1</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "1개",
+      "0개",
+      "3개",
+      "2개"
+     ],
+     "a": 2,
+     "e": "y = x³ − 3x의 극댓값 2, 극솟값 −2와 직선 y = 1의 교점의 개수예요. <b>3개</b>"
+    },
+    {
+     "q": "f′(a) = 0이지만 x = a의 좌우에서 f′(x)의 부호가 바뀌지 않으면?",
+     "c": [
+      "x = a에서 극대",
+      "x = a에서 극소",
+      "x = a에서 극값을 갖지 않아요",
+      "x = a에서 최댓값"
+     ],
+     "a": 2,
+     "e": "<b>x = a에서 극값을 갖지 않아요</b>"
+    }
+   ]
+  },
+  {
+   "title": "섞어서 연습",
+   "items": [
+    {
+     "q": "닫힌구간 [−5, −1]에서 함수 f(x) = −x³ − 6x² − 9x − 4의 최댓값은?",
+     "c": [
+      "0",
+      "−4",
+      "17",
+      "16"
+     ],
+     "a": 3,
+     "e": "극값 f(−3) = −4, f(−1) = 0과 양 끝값 f(−5) = 16, f(−1) = 0을 비교해요. <b>16</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 3]에서 함수 f(x) = −x³ − 3x² + 9x의 최솟값은?",
+     "c": [
+      "0",
+      "5",
+      "−27",
+      "−26"
+     ],
+     "a": 2,
+     "e": "극값 f(−3) = −27, f(1) = 5와 양 끝값 f(−3) = −27, f(3) = −27을 비교해요. <b>−27</b>"
+    },
+    {
+     "q": "닫힌구간 [−5, 4]에서 함수 f(x) = −x³ + 27x − 1의 최댓값은?",
+     "c": [
+      "53",
+      "−11",
+      "−55",
+      "43"
+     ],
+     "a": 0,
+     "e": "극값 f(−3) = −55, f(3) = 53과 양 끝값 f(−5) = −11, f(4) = 43을 비교해요. <b>53</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 4]에서 함수 f(x) = x³ − 12x − 1의 최댓값은?",
+     "c": [
+      "−17",
+      "16",
+      "15",
+      "8"
+     ],
+     "a": 2,
+     "e": "극값 f(−2) = 15, f(2) = −17과 양 끝값 f(−3) = 8, f(4) = 15를 비교해요. <b>15</b>"
+    },
+    {
+     "q": "닫힌구간 [−1, 5]에서 함수 f(x) = x³ − 6x² + 9x − 1의 최솟값은?",
+     "c": [
+      "19",
+      "−17",
+      "−1",
+      "3"
+     ],
+     "a": 1,
+     "e": "극값 f(1) = 3, f(3) = −1과 양 끝값 f(−1) = −17, f(5) = 19를 비교해요. <b>−17</b>"
+    },
+    {
+     "q": "닫힌구간 [−1, 5]에서 함수 f(x) = −x³ + 6x² − 9x − 2의 최댓값은?",
+     "c": [
+      "−6",
+      "14",
+      "−22",
+      "−2"
+     ],
+     "a": 1,
+     "e": "극값 f(1) = −6, f(3) = −2와 양 끝값 f(−1) = 14, f(5) = −22를 비교해요. <b>14</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극댓값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='79.8,323.7 80.8,310.7 81.8,298.1 82.9,286.0 83.9,274.2 85.0,262.8 86.0,251.8 87.0,241.2 88.1,230.9 89.1,221.0 90.2,211.5 91.2,202.3 92.2,193.5 93.3,185.1 94.3,176.9 95.4,169.1 96.4,161.7 97.4,154.5 98.5,147.7 99.5,141.2 100.6,135.0 101.6,129.1 102.6,123.5 103.7,118.2 104.7,113.2 105.8,108.4 106.8,104.0 107.8,99.8 108.9,95.9 109.9,92.2 111.0,88.8 112.0,85.6 113.0,82.7 114.1,80.0 115.1,77.6 116.2,75.3 117.2,73.3 118.2,71.6 119.3,70.0 120.3,68.6 121.4,67.4 122.4,66.5 123.4,65.7 124.5,65.1 125.5,64.7 126.6,64.4 127.6,64.3 128.6,64.4 129.7,64.7 130.7,65.0 131.8,65.6 132.8,66.2 133.8,67.1 134.9,68.0 135.9,69.1 137.0,70.2 138.0,71.5 139.0,72.9 140.1,74.5 141.1,76.1 142.2,77.8 143.2,79.5 144.2,81.4 145.3,83.3 146.3,85.4 147.4,87.4 148.4,89.6 149.4,91.8 150.5,94.0 151.5,96.3 152.6,98.6 153.6,100.9 154.6,103.3 155.7,105.7 156.7,108.1 157.8,110.6 158.8,113.0 159.8,115.4 160.9,117.9 161.9,120.3 163.0,122.7 164.0,125.1 165.0,127.4 166.1,129.7 167.1,132.0 168.2,134.2 169.2,136.4 170.2,138.6 171.3,140.6 172.3,142.7 173.4,144.6 174.4,146.5 175.4,148.2 176.5,149.9 177.5,151.5 178.6,153.1 179.6,154.5 180.6,155.8 181.7,156.9 182.7,158.0 183.8,158.9 184.8,159.8 185.8,160.4 186.9,161.0 187.9,161.3 189.0,161.6 190.0,161.7 191.0,161.6 192.1,161.3 193.1,160.9 194.2,160.3 195.2,159.5 196.2,158.6 197.3,157.4 198.3,156.0 199.4,154.4 200.4,152.7 201.4,150.7 202.5,148.4 203.5,146.0 204.6,143.3 205.6,140.4 206.6,137.2 207.7,133.8 208.7,130.1 209.8,126.2 210.8,122.0 211.8,117.6 212.9,112.8 213.9,107.8 215.0,102.5 216.0,96.9 217.0,91.0 218.1,84.8 219.1,78.3 220.2,71.5 221.2,64.3 222.2,56.9 223.3,49.1 224.3,40.9' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='127.6' cy='64.3' r='5.5' fill='#c0392b'/><circle cx='190.0' cy='161.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "5",
+      "−2",
+      "6",
+      "1"
+     ],
+     "a": 0,
+     "e": "극대인 점의 y좌표예요. <b>5</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 4]에서 함수 f(x) = x³ − 27x − 1의 최댓값은?",
+     "c": [
+      "−55",
+      "53",
+      "54",
+      "−45"
+     ],
+     "a": 1,
+     "e": "극값 f(−3) = 53, f(3) = −55와 양 끝값 f(−3) = 53, f(4) = −45를 비교해요. <b>53</b>"
+    },
+    {
+     "q": "닫힌구간 [−5, 1]에서 함수 f(x) = −x³ − 6x² − 9x + 3의 최댓값은?",
+     "c": [
+      "7",
+      "3",
+      "23",
+      "−13"
+     ],
+     "a": 2,
+     "e": "극값 f(−3) = 3, f(−1) = 7과 양 끝값 f(−5) = 23, f(1) = −13을 비교해요. <b>23</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 5]에서 함수 f(x) = −x³ + 27x − 1의 최댓값은?",
+     "c": [
+      "9",
+      "53",
+      "−55",
+      "54"
+     ],
+     "a": 1,
+     "e": "극값 f(−3) = −55, f(3) = 53과 양 끝값 f(−3) = −55, f(5) = 9를 비교해요. <b>53</b>"
+    },
+    {
+     "q": "닫힌구간 [−3, 4]에서 함수 f(x) = x³ − 12x + 2의 최솟값은?",
+     "c": [
+      "18",
+      "11",
+      "−13",
+      "−14"
+     ],
+     "a": 3,
+     "e": "극값 f(−2) = 18, f(2) = −14와 양 끝값 f(−3) = 11, f(4) = 18을 비교해요. <b>−14</b>"
+    },
+    {
+     "q": "닫힌구간 [−5, 1]에서 함수 f(x) = x³ + 6x² + 9x의 최솟값은?",
+     "c": [
+      "−4",
+      "0",
+      "−20",
+      "16"
+     ],
+     "a": 2,
+     "e": "극값 f(−3) = 0, f(−1) = −4와 양 끝값 f(−5) = −20, f(1) = 16을 비교해요. <b>−20</b>"
+    },
+    {
+     "q": "닫힌구간 [−2, 3]에서 함수 f(x) = x³ − 3x의 최솟값은?",
+     "c": [
+      "−2",
+      "18",
+      "2",
+      "−1"
+     ],
+     "a": 0,
+     "e": "극값 f(−1) = 2, f(1) = −2와 양 끝값 f(−2) = −2, f(3) = 18을 비교해요. <b>−2</b>"
+    },
+    {
+     "q": "닫힌구간 [−4, 4]에서 함수 f(x) = x³ − 12x + 1의 최솟값은?",
+     "c": [
+      "17",
+      "−14",
+      "1",
+      "−15"
+     ],
+     "a": 3,
+     "e": "극값 f(−2) = 17, f(2) = −15와 양 끝값 f(−4) = −15, f(4) = 17을 비교해요. <b>−15</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 12x = −19</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "0개",
+      "3개",
+      "2개",
+      "1개"
+     ],
+     "a": 3,
+     "e": "y = x³ − 12x의 극댓값 16, 극솟값 −16과 직선 y = −19의 교점의 개수예요. <b>1개</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f(x)의 극솟값은?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='62.1,331.1 63.1,322.9 64.2,315.1 65.2,307.7 66.2,300.5 67.3,293.7 68.3,287.2 69.4,281.0 70.4,275.1 71.4,269.5 72.5,264.2 73.5,259.2 74.6,254.4 75.6,250.0 76.6,245.8 77.7,241.9 78.7,238.2 79.8,234.8 80.8,231.6 81.8,228.7 82.9,226.0 83.9,223.6 85.0,221.3 86.0,219.3 87.0,217.6 88.1,216.0 89.1,214.6 90.2,213.4 91.2,212.5 92.2,211.7 93.3,211.1 94.3,210.7 95.4,210.4 96.4,210.3 97.4,210.4 98.5,210.7 99.5,211.0 100.6,211.6 101.6,212.2 102.6,213.1 103.7,214.0 104.7,215.1 105.8,216.2 106.8,217.5 107.8,218.9 108.9,220.5 109.9,222.1 111.0,223.8 112.0,225.5 113.0,227.4 114.1,229.3 115.1,231.4 116.2,233.4 117.2,235.6 118.2,237.8 119.3,240.0 120.3,242.3 121.4,244.6 122.4,246.9 123.4,249.3 124.5,251.7 125.5,254.1 126.6,256.6 127.6,259.0 128.6,261.4 129.7,263.9 130.7,266.3 131.8,268.7 132.8,271.1 133.8,273.4 134.9,275.7 135.9,278.0 137.0,280.2 138.0,282.4 139.0,284.6 140.1,286.6 141.1,288.7 142.2,290.6 143.2,292.5 144.2,294.2 145.3,295.9 146.3,297.5 147.4,299.1 148.4,300.5 149.4,301.8 150.5,302.9 151.5,304.0 152.6,304.9 153.6,305.8 154.6,306.4 155.7,307.0 156.7,307.3 157.8,307.6 158.8,307.7 159.8,307.6 160.9,307.3 161.9,306.9 163.0,306.3 164.0,305.5 165.0,304.6 166.1,303.4 167.1,302.0 168.2,300.4 169.2,298.7 170.2,296.7 171.3,294.4 172.3,292.0 173.4,289.3 174.4,286.4 175.4,283.2 176.5,279.8 177.5,276.1 178.6,272.2 179.6,268.0 180.6,263.6 181.7,258.8 182.7,253.8 183.8,248.5 184.8,242.9 185.8,237.0 186.9,230.8 187.9,224.3 189.0,217.5 190.0,210.3 191.0,202.9 192.1,195.1 193.1,186.9 194.2,178.5 195.2,169.7 196.2,160.5 197.3,151.0 198.3,141.1 199.4,130.8 200.4,120.2 201.4,109.2 202.5,97.8 203.5,86.0 204.6,73.9 205.6,61.3 206.6,48.3' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='96.4' cy='210.3' r='5.5' fill='#c0392b'/><circle cx='158.8' cy='307.7' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "−5",
+      "5",
+      "−1",
+      "−4"
+     ],
+     "a": 0,
+     "e": "극소인 점의 y좌표예요. <b>−5</b>"
+    },
+    {
+     "q": "그림은 삼차함수 y = f(x)의 그래프예요(빨간 점은 극값). f′(x) ≥ 0인 x의 값의 범위는?<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 360' width='380' height='360' role='img' aria-label='삼차함수의 그래프'><g font-family='Arial, Helvetica, sans-serif'><line x1='34.0' y1='332.0' x2='34.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='34.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−5</text><line x1='65.2' y1='332.0' x2='65.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='65.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−4</text><line x1='96.4' y1='332.0' x2='96.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='96.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−3</text><line x1='127.6' y1='332.0' x2='127.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='127.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−2</text><line x1='158.8' y1='332.0' x2='158.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='158.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>−1</text><line x1='190.0' y1='332.0' x2='190.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><line x1='221.2' y1='332.0' x2='221.2' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='221.2' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1</text><line x1='252.4' y1='332.0' x2='252.4' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='252.4' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2</text><line x1='283.6' y1='332.0' x2='283.6' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='283.6' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3</text><line x1='314.8' y1='332.0' x2='314.8' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='314.8' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4</text><line x1='346.0' y1='332.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='346.0' y='206.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5</text><line x1='34.0' y1='332.0' x2='346.0' y2='332.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='337.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−6</text><line x1='34.0' y1='307.7' x2='346.0' y2='307.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='312.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−5</text><line x1='34.0' y1='283.3' x2='346.0' y2='283.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='288.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−4</text><line x1='34.0' y1='259.0' x2='346.0' y2='259.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='264.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−3</text><line x1='34.0' y1='234.7' x2='346.0' y2='234.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='239.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−2</text><line x1='34.0' y1='210.3' x2='346.0' y2='210.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='215.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>−1</text><line x1='34.0' y1='186.0' x2='346.0' y2='186.0' stroke='#d5dfec' stroke-width='1'/><line x1='34.0' y1='161.7' x2='346.0' y2='161.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='166.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>1</text><line x1='34.0' y1='137.3' x2='346.0' y2='137.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='142.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>2</text><line x1='34.0' y1='113.0' x2='346.0' y2='113.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='118.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>3</text><line x1='34.0' y1='88.7' x2='346.0' y2='88.7' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='93.7' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>4</text><line x1='34.0' y1='64.3' x2='346.0' y2='64.3' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='69.3' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>5</text><line x1='34.0' y1='40.0' x2='346.0' y2='40.0' stroke='#d5dfec' stroke-width='1'/><text x='182.0' y='45.0' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='end'>6</text><line x1='34.0' y1='186.0' x2='354.0' y2='186.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='352.0' y='178.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>x</text><line x1='190.0' y1='332.0' x2='190.0' y2='32.0' stroke='#2b2b2b' stroke-width='2.2'/><text x='202.0' y='36.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle' font-style='italic'>y</text><polyline points='181.7,328.2 182.7,318.4 183.8,308.8 184.8,299.7 185.8,290.9 186.9,282.4 187.9,274.3 189.0,266.5 190.0,259.0 191.0,251.9 192.1,245.0 193.1,238.5 194.2,232.3 195.2,226.4 196.2,220.8 197.3,215.5 198.3,210.5 199.4,205.8 200.4,201.3 201.4,197.1 202.5,193.2 203.5,189.5 204.6,186.1 205.6,183.0 206.6,180.0 207.7,177.4 208.7,174.9 209.8,172.7 210.8,170.7 211.8,168.9 212.9,167.3 213.9,166.0 215.0,164.8 216.0,163.8 217.0,163.0 218.1,162.4 219.1,162.0 220.2,161.7 221.2,161.7 222.2,161.7 223.3,162.0 224.3,162.4 225.4,162.9 226.4,163.6 227.4,164.4 228.5,165.3 229.5,166.4 230.6,167.6 231.6,168.9 232.6,170.3 233.7,171.8 234.7,173.4 235.8,175.1 236.8,176.9 237.8,178.7 238.9,180.7 239.9,182.7 241.0,184.8 242.0,186.9 243.0,189.1 244.1,191.3 245.1,193.6 246.2,195.9 247.2,198.3 248.2,200.7 249.3,203.1 250.3,205.5 251.4,207.9 252.4,210.3 253.4,212.8 254.5,215.2 255.5,217.6 256.6,220.0 257.6,222.4 258.6,224.7 259.7,227.1 260.7,229.3 261.8,231.6 262.8,233.8 263.8,235.9 264.9,238.0 265.9,240.0 267.0,241.9 268.0,243.8 269.0,245.6 270.1,247.3 271.1,248.9 272.2,250.4 273.2,251.8 274.2,253.1 275.3,254.3 276.3,255.3 277.4,256.3 278.4,257.1 279.4,257.8 280.5,258.3 281.5,258.7 282.6,258.9 283.6,259.0 284.6,258.9 285.7,258.7 286.7,258.2 287.8,257.6 288.8,256.9 289.8,255.9 290.9,254.7 291.9,253.3 293.0,251.8 294.0,250.0 295.0,248.0 296.1,245.8 297.1,243.3 298.2,240.6 299.2,237.7 300.2,234.5 301.3,231.1 302.3,227.5 303.4,223.5 304.4,219.3 305.4,214.9 306.5,210.1 307.5,205.1 308.6,199.8 309.6,194.2 310.6,188.3 311.7,182.1 312.7,175.6 313.8,168.8 314.8,161.7 315.8,154.2 316.9,146.4 317.9,138.3 319.0,129.8 320.0,121.0 321.0,111.8 322.1,102.3 323.1,92.4 324.2,82.2 325.2,71.5 326.2,60.5 327.3,49.1' fill='none' stroke='#1f5fa8' stroke-width='3'/><circle cx='221.2' cy='161.7' r='5.5' fill='#c0392b'/><circle cx='283.6' cy='259.0' r='5.5' fill='#c0392b'/></g></svg></div>",
+     "c": [
+      "1 ≤ x ≤ 3",
+      "x ≤ 1",
+      "x ≤ 1 또는 x ≥ 3",
+      "x ≥ 3"
+     ],
+     "a": 2,
+     "e": "f(x)가 증가하는 범위예요. <b>x ≤ 1 또는 x ≥ 3</b>"
+    },
+    {
+     "q": "닫힌구간 [−1, 4]에서 함수 f(x) = −x³ + 6x² − 9x의 최댓값은?",
+     "c": [
+      "−4",
+      "16",
+      "17",
+      "0"
+     ],
+     "a": 1,
+     "e": "극값 f(1) = −4, f(3) = 0과 양 끝값 f(−1) = 16, f(4) = −4를 비교해요. <b>16</b>"
+    },
+    {
+     "q": "닫힌구간 [−4, 4]에서 함수 f(x) = x³ − 27x − 1의 최댓값은?",
+     "c": [
+      "−55",
+      "−45",
+      "43",
+      "53"
+     ],
+     "a": 3,
+     "e": "극값 f(−3) = 53, f(3) = −55와 양 끝값 f(−4) = 43, f(4) = −45를 비교해요. <b>53</b>"
+    },
+    {
+     "q": "방정식 <b>x³ − 12x = 15</b>의 서로 다른 실근의 개수는?",
+     "c": [
+      "3개",
+      "2개",
+      "1개",
+      "0개"
+     ],
+     "a": 0,
+     "e": "y = x³ − 12x의 극댓값 16, 극솟값 −16과 직선 y = 15의 교점의 개수예요. <b>3개</b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 7,
+ "updated": "2026-11-25",
+ "country": "kr",
+ "subject": "math",
+ "grade": "calculus-1"
+}

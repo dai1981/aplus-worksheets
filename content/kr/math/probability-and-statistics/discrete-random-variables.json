@@ -1,0 +1,1157 @@
+{
+ "slug": "discrete-random-variables",
+ "title": "이산확률변수의 평균, 분산, 표준편차",
+ "seo_title": "이산확률변수의 평균, 분산, 표준편차 | 고등학교 확률과 통계 학습지 (정답 포함)",
+ "short_title": "이산확률변수",
+ "domain": "통계",
+ "standard_code": "[12확통03-01] [12확통03-02]",
+ "standard_url": "https://ncic.re.kr/inv/org/download.do?year=2022&seq=10003559&orgType=ogi4",
+ "standard_text": "확률변수와 확률분포의 뜻을 설명할 수 있다. 이산확률변수의 기댓값(평균)과 표준편차를 구할 수 있다.",
+ "meta_desc": "고등학교 확률과 통계 이산확률변수 문제: 확률분포표와 확률의 합, 기댓값 E(X), 분산 V(X) = E(X²) − {E(X)}², 표준편차, E(aX + b), V(aX + b), σ(aX + b)까지 100문제와 정답·해설.",
+ "key_big": "V(X) = E(X²) − {E(X)}²",
+ "key_sub": "E(aX + b) = aE(X) + b, V(aX + b) = a²V(X)",
+ "body_html": "<h2>생각하는 방법</h2><p>확률변수 X가 가질 수 있는 값이 셀 수 있을 때 <b>이산확률변수</b>라 하고, 확률의 합은 1이에요.</p><p>E(X) = Σx P(X = x), V(X) = E(X²) − {E(X)}², σ(X) = √V(X)</p><p>E(aX + b) = aE(X) + b, V(aX + b) = a²V(X), σ(aX + b) = |a|σ(X)</p><p>b는 퍼진 정도에 영향을 주지 않으므로 분산·표준편차에서 사라져요.</p><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>X: 0, 1, 2 / P: 1/4, 1/2, 1/4</p><p class='sn-ex-s'>E = 1</p><p class='sn-ex-s'>E(X²) = 3/2</p><p class='sn-ex-a'>답: V(X) = 1/2</p></div><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>V(X) = 4, V(3X − 1)</p><p class='sn-ex-s'>3² × 4</p><p class='sn-ex-a'>답: 36</p></div><h2>자주 하는 실수</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>자주 하는 실수</th><th>바르게 생각하기</th></tr></thead><tbody><tr><td>V(aX + b) = aV(X) + b</td><td>a²V(X)예요.</td></tr><tr><td>분산을 E(X²)로 답한다</td><td>{E(X)}²을 빼요.</td></tr><tr><td>σ(−2X) = −2σ(X)</td><td>표준편차는 |a|를 곱해요.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "기댓값은 실제로 나오는 값인가요?",
+   "a": "많이 반복했을 때의 평균값이에요. 실제로 나오지 않는 값일 수도 있어요."
+  },
+  {
+   "q": "연속확률변수는?",
+   "a": "키, 시간처럼 구간의 모든 값을 갖는 확률변수예요."
+  }
+ ],
+ "sets": [
+  {
+   "title": "확률분포",
+   "items": [
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, P(X ≥ 4)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>3</th><th>4</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "X = 4 이상인 확률을 더해요. <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, 상수 a의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>3</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td>a</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "확률의 합이 1이에요. <b>a = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, P(X ≥ 2)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "X = 2 이상인 확률을 더해요. <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, P(X ≥ 4)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "X = 4 이상인 확률을 더해요. <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, P(X ≥ 5)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "X = 5 이상인 확률을 더해요. <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, P(X ≥ 4)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>3</th><th>4</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "X = 4 이상인 확률을 더해요. <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, P(X ≥ 5)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>2</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "X = 5 이상인 확률을 더해요. <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, P(X ≥ 3)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>2</th><th>3</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "X = 3 이상인 확률을 더해요. <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, P(X ≥ 1)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>3</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "X = 1 이상인 확률을 더해요. <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, 상수 a의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td>a</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "확률의 합이 1이에요. <b>a = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, 상수 a의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>2</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td>a</td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "확률의 합이 1이에요. <b>a = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, 상수 a의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>2</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></td><td>a</td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "확률의 합이 1이에요. <b>a = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, 상수 a의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td>a</td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "확률의 합이 1이에요. <b>a = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, P(X ≥ 3)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>3</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "X = 3 이상인 확률을 더해요. <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, 상수 a의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td>a</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "확률의 합이 1이에요. <b>a = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, 상수 a의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>2</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td>a</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "확률의 합이 1이에요. <b>a = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, P(X ≥ 5)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>2</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "X = 5 이상인 확률을 더해요. <b><span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, 상수 a의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>3</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td>a</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "확률의 합이 1이에요. <b>a = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, 상수 a의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td>a</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "확률의 합이 1이에요. <b>a = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, P(X ≥ 5)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 2,
+     "e": "X = 5 이상인 확률을 더해요. <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "기댓값",
+   "items": [
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>3</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>127</span><span class='fd'>12</span></span>",
+      "3"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>31</span><span class='fd'>12</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>3</th><th>4</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>19</span><span class='fd'>10</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>3</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>77</span><span class='fd'>8</span></span>",
+      "3",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>21</span><span class='fd'>8</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>3</th><th>4</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>17</span><span class='fd'>8</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>3</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x P(X = x) = <b>1</b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>6</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>4</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>",
+      "4",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>8</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>2</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>77</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>19</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>3</th><th>4</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>2</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "2"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>23</span><span class='fd'>12</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>2</th><th>3</th><th>4</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>69</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>8</span></span>",
+      "3"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>23</span><span class='fd'>8</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "3"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>2</th><th>3</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>7</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "14",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>85</span><span class='fd'>8</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>19</span><span class='fd'>8</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>2</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>23</span><span class='fd'>10</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>151</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>37</span><span class='fd'>12</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>61</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, E(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>3</th><th>4</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = Σ x P(X = x) = <b><span class='fr'><span class='fn'>9</span><span class='fd'>5</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "분산",
+   "items": [
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>196</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>431</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>47</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>39</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = <span class='fr'><span class='fn'>14</span><span class='fd'>5</span></span>, E(X²) = <span class='fr'><span class='fn'>47</span><span class='fd'>5</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>39</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>3</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>459</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>121</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>169</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>58</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = <span class='fr'><span class='fn'>13</span><span class='fd'>5</span></span>, E(X²) = <span class='fr'><span class='fn'>58</span><span class='fd'>5</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>121</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>2561</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>167</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1225</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>111</span><span class='fd'>64</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = <span class='fr'><span class='fn'>35</span><span class='fd'>8</span></span>, E(X²) = <span class='fr'><span class='fn'>167</span><span class='fd'>8</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>111</span><span class='fd'>64</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>3</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>53</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>89</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>303</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>, E(X²) = <span class='fr'><span class='fn'>89</span><span class='fd'>10</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>53</span><span class='fd'>20</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>2</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>211</span><span class='fd'>100</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>, E(X²) = <span class='fr'><span class='fn'>13</span><span class='fd'>10</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>49</span><span class='fd'>100</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>154</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>9</span></span>",
+      "10"
+     ],
+     "a": 1,
+     "e": "E(X) = <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>, E(X²) = 10이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>26</span><span class='fd'>9</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>2</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>73</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>, E(X²) = <span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>23</span><span class='fd'>9</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>100</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>217</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>9</span></span>",
+      "13"
+     ],
+     "a": 2,
+     "e": "E(X) = <span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>, E(X²) = 13이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>17</span><span class='fd'>9</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>3</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>157</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>, E(X²) = <span class='fr'><span class='fn'>41</span><span class='fd'>6</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>2</th><th>3</th><th>4</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>133</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>, E(X²) = <span class='fr'><span class='fn'>23</span><span class='fd'>3</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>59</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>, E(X²) = <span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>679</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>101</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>289</span><span class='fd'>36</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = <span class='fr'><span class='fn'>17</span><span class='fd'>6</span></span>, E(X²) = <span class='fr'><span class='fn'>65</span><span class='fd'>6</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>101</span><span class='fd'>36</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>2</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>625</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>1957</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>707</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = <span class='fr'><span class='fn'>25</span><span class='fd'>12</span></span>, E(X²) = <span class='fr'><span class='fn'>37</span><span class='fd'>4</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>707</span><span class='fd'>144</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>3</th><th>4</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>39</span><span class='fd'>4</span></span>",
+      "4",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = 2, E(X²) = <span class='fr'><span class='fn'>23</span><span class='fd'>4</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>1</th><th>2</th><th>3</th><th>4</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>3</span></span>",
+      "4",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = 2, E(X²) = <span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>185</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>59</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>523</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>169</span><span class='fd'>36</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = <span class='fr'><span class='fn'>13</span><span class='fd'>6</span></span>, E(X²) = <span class='fr'><span class='fn'>59</span><span class='fd'>6</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>185</span><span class='fd'>36</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>3</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>91</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>52</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>169</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>429</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = <span class='fr'><span class='fn'>13</span><span class='fd'>5</span></span>, E(X²) = <span class='fr'><span class='fn'>52</span><span class='fd'>5</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>91</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>3</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>69</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = <span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>, E(X²) = <span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>19</span><span class='fd'>16</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>1</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "9",
+      "<span class='fr'><span class='fn'>116</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>71</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = 3, E(X²) = <span class='fr'><span class='fn'>71</span><span class='fd'>5</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>26</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X의 확률분포가 다음과 같을 때, V(X)의 값은?<div class='sn-tw'><table class='sn-table'><thead><tr><th>X</th><th>0</th><th>2</th><th>4</th><th>5</th><th>합계</th></tr></thead><tbody><tr><td>P(X = x)</td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></td><td><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></td><td>1</td></tr></tbody></table></div>",
+     "c": [
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "9",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = 3, E(X²) = <span class='fr'><span class='fn'>37</span><span class='fd'>3</span></span>이므로 V(X) = E(X²) − {E(X)}² = <b><span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "표준편차",
+   "items": [
+    {
+     "q": "E(X) = 3, E(X²) = 34일 때, σ(X)의 값은?",
+     "c": [
+      "25",
+      "6",
+      "34",
+      "5"
+     ],
+     "a": 3,
+     "e": "V(X) = 34 − 9 = 25, σ(X) = √25. <b>5</b>"
+    },
+    {
+     "q": "E(X) = 7, E(X²) = 74일 때, σ(X)의 값은?",
+     "c": [
+      "25",
+      "5",
+      "6",
+      "74"
+     ],
+     "a": 1,
+     "e": "V(X) = 74 − 49 = 25, σ(X) = √25. <b>5</b>"
+    },
+    {
+     "q": "E(X) = 6, σ(X) = 4일 때, E(X²)의 값은?",
+     "c": [
+      "52",
+      "22",
+      "16",
+      "36"
+     ],
+     "a": 0,
+     "e": "E(X²) = V(X) + {E(X)}² = 16 + 36. <b>52</b>"
+    },
+    {
+     "q": "E(X) = 6, E(X²) = 40일 때, σ(X)의 값은?",
+     "c": [
+      "4",
+      "40",
+      "3",
+      "2"
+     ],
+     "a": 3,
+     "e": "V(X) = 40 − 36 = 4, σ(X) = √4. <b>2</b>"
+    },
+    {
+     "q": "E(X) = 4, E(X²) = 17일 때, σ(X)의 값은?",
+     "c": [
+      "4",
+      "17",
+      "2",
+      "1"
+     ],
+     "a": 3,
+     "e": "V(X) = 17 − 16 = 1, σ(X) = √1. <b>1</b>"
+    },
+    {
+     "q": "E(X) = 6, σ(X) = 3일 때, E(X²)의 값은?",
+     "c": [
+      "9",
+      "45",
+      "15",
+      "36"
+     ],
+     "a": 1,
+     "e": "E(X²) = V(X) + {E(X)}² = 9 + 36. <b>45</b>"
+    },
+    {
+     "q": "E(X) = 7, E(X²) = 85일 때, σ(X)의 값은?",
+     "c": [
+      "85",
+      "7",
+      "6",
+      "36"
+     ],
+     "a": 2,
+     "e": "V(X) = 85 − 49 = 36, σ(X) = √36. <b>6</b>"
+    },
+    {
+     "q": "E(X) = 8, E(X²) = 100일 때, σ(X)의 값은?",
+     "c": [
+      "36",
+      "100",
+      "6",
+      "7"
+     ],
+     "a": 2,
+     "e": "V(X) = 100 − 64 = 36, σ(X) = √36. <b>6</b>"
+    },
+    {
+     "q": "E(X) = 1, σ(X) = 5일 때, E(X²)의 값은?",
+     "c": [
+      "1",
+      "26",
+      "25",
+      "24"
+     ],
+     "a": 1,
+     "e": "E(X²) = V(X) + {E(X)}² = 25 + 1. <b>26</b>"
+    },
+    {
+     "q": "E(X) = 4, E(X²) = 25일 때, σ(X)의 값은?",
+     "c": [
+      "3",
+      "9",
+      "4",
+      "25"
+     ],
+     "a": 0,
+     "e": "V(X) = 25 − 16 = 9, σ(X) = √9. <b>3</b>"
+    },
+    {
+     "q": "E(X) = 4, σ(X) = 1일 때, E(X²)의 값은?",
+     "c": [
+      "16",
+      "5",
+      "1",
+      "17"
+     ],
+     "a": 3,
+     "e": "E(X²) = V(X) + {E(X)}² = 1 + 16. <b>17</b>"
+    },
+    {
+     "q": "E(X) = 2, σ(X) = 3일 때, E(X²)의 값은?",
+     "c": [
+      "13",
+      "9",
+      "5",
+      "4"
+     ],
+     "a": 0,
+     "e": "E(X²) = V(X) + {E(X)}² = 9 + 4. <b>13</b>"
+    },
+    {
+     "q": "E(X) = 2, σ(X) = 5일 때, E(X²)의 값은?",
+     "c": [
+      "21",
+      "25",
+      "29",
+      "4"
+     ],
+     "a": 2,
+     "e": "E(X²) = V(X) + {E(X)}² = 25 + 4. <b>29</b>"
+    },
+    {
+     "q": "E(X) = 2, E(X²) = 29일 때, σ(X)의 값은?",
+     "c": [
+      "25",
+      "5",
+      "6",
+      "29"
+     ],
+     "a": 1,
+     "e": "V(X) = 29 − 4 = 25, σ(X) = √25. <b>5</b>"
+    },
+    {
+     "q": "E(X) = 8, σ(X) = 2일 때, E(X²)의 값은?",
+     "c": [
+      "4",
+      "64",
+      "68",
+      "12"
+     ],
+     "a": 2,
+     "e": "E(X²) = V(X) + {E(X)}² = 4 + 64. <b>68</b>"
+    },
+    {
+     "q": "E(X) = 7, E(X²) = 50일 때, σ(X)의 값은?",
+     "c": [
+      "2",
+      "50",
+      "7",
+      "1"
+     ],
+     "a": 3,
+     "e": "V(X) = 50 − 49 = 1, σ(X) = √1. <b>1</b>"
+    },
+    {
+     "q": "E(X) = 6, E(X²) = 45일 때, σ(X)의 값은?",
+     "c": [
+      "9",
+      "3",
+      "4",
+      "45"
+     ],
+     "a": 1,
+     "e": "V(X) = 45 − 36 = 9, σ(X) = √9. <b>3</b>"
+    },
+    {
+     "q": "E(X) = 4, σ(X) = 6일 때, E(X²)의 값은?",
+     "c": [
+      "36",
+      "16",
+      "52",
+      "20"
+     ],
+     "a": 2,
+     "e": "E(X²) = V(X) + {E(X)}² = 36 + 16. <b>52</b>"
+    },
+    {
+     "q": "E(X) = 1, σ(X) = 2일 때, E(X²)의 값은?",
+     "c": [
+      "5",
+      "4",
+      "3",
+      "1"
+     ],
+     "a": 0,
+     "e": "E(X²) = V(X) + {E(X)}² = 4 + 1. <b>5</b>"
+    },
+    {
+     "q": "E(X) = 1, E(X²) = 26일 때, σ(X)의 값은?",
+     "c": [
+      "5",
+      "6",
+      "25",
+      "26"
+     ],
+     "a": 0,
+     "e": "V(X) = 26 − 1 = 25, σ(X) = √25. <b>5</b>"
+    }
+   ]
+  },
+  {
+   "title": "E(aX + b)와 V(aX + b)",
+   "items": [
+    {
+     "q": "E(X) = 3, V(X) = 9일 때, E(−2X + 3)의 값은?",
+     "c": [
+      "6",
+      "−3",
+      "−6",
+      "−12"
+     ],
+     "a": 1,
+     "e": "E(aX + b) = aE(X) + b. <b>−3</b>"
+    },
+    {
+     "q": "σ(X) = 5일 때, σ(2X + 4)의 값은?",
+     "c": [
+      "5",
+      "20",
+      "10",
+      "14"
+     ],
+     "a": 2,
+     "e": "σ(aX + b) = |a|σ(X). <b>10</b>"
+    },
+    {
+     "q": "E(X) = 6, V(X) = 9일 때, V(4X − 1)의 값은?",
+     "c": [
+      "35",
+      "36",
+      "144",
+      "143"
+     ],
+     "a": 2,
+     "e": "V(aX + b) = a²V(X). <b>144</b>"
+    },
+    {
+     "q": "E(X) = 2, V(X) = 8일 때, V(2X + 2)의 값은?",
+     "c": [
+      "16",
+      "34",
+      "18",
+      "32"
+     ],
+     "a": 3,
+     "e": "V(aX + b) = a²V(X). <b>32</b>"
+    },
+    {
+     "q": "E(X) = 10, V(X) = 7일 때, E(5X + 5)의 값은?",
+     "c": [
+      "50",
+      "15",
+      "75",
+      "55"
+     ],
+     "a": 3,
+     "e": "E(aX + b) = aE(X) + b. <b>55</b>"
+    },
+    {
+     "q": "E(X) = 2, V(X) = 6일 때, E(−2X + 3)의 값은?",
+     "c": [
+      "−1",
+      "−4",
+      "−10",
+      "5"
+     ],
+     "a": 0,
+     "e": "E(aX + b) = aE(X) + b. <b>−1</b>"
+    },
+    {
+     "q": "E(X) = 7, V(X) = 6일 때, V(4X + 1)의 값은?",
+     "c": [
+      "25",
+      "97",
+      "24",
+      "96"
+     ],
+     "a": 3,
+     "e": "V(aX + b) = a²V(X). <b>96</b>"
+    },
+    {
+     "q": "σ(X) = 5일 때, σ(2X − 1)의 값은?",
+     "c": [
+      "5",
+      "20",
+      "9",
+      "10"
+     ],
+     "a": 3,
+     "e": "σ(aX + b) = |a|σ(X). <b>10</b>"
+    },
+    {
+     "q": "E(X) = 1, V(X) = 3일 때, E(5X − 4)의 값은?",
+     "c": [
+      "1",
+      "−15",
+      "5",
+      "−3"
+     ],
+     "a": 0,
+     "e": "E(aX + b) = aE(X) + b. <b>1</b>"
+    },
+    {
+     "q": "σ(X) = 4일 때, σ(−2X − 5)의 값은?",
+     "c": [
+      "3",
+      "8",
+      "4",
+      "16"
+     ],
+     "a": 1,
+     "e": "σ(aX + b) = |a|σ(X). <b>8</b>"
+    },
+    {
+     "q": "E(X) = 5, V(X) = 2일 때, E(4X − 5)의 값은?",
+     "c": [
+      "20",
+      "15",
+      "0",
+      "25"
+     ],
+     "a": 1,
+     "e": "E(aX + b) = aE(X) + b. <b>15</b>"
+    },
+    {
+     "q": "E(X) = 3, V(X) = 1일 때, V(2X − 1)의 값은?",
+     "c": [
+      "2",
+      "1",
+      "4",
+      "3"
+     ],
+     "a": 2,
+     "e": "V(aX + b) = a²V(X). <b>4</b>"
+    },
+    {
+     "q": "σ(X) = 6일 때, σ(3X − 1)의 값은?",
+     "c": [
+      "6",
+      "54",
+      "18",
+      "17"
+     ],
+     "a": 2,
+     "e": "σ(aX + b) = |a|σ(X). <b>18</b>"
+    },
+    {
+     "q": "σ(X) = 2일 때, σ(5X + 1)의 값은?",
+     "c": [
+      "11",
+      "50",
+      "2",
+      "10"
+     ],
+     "a": 3,
+     "e": "σ(aX + b) = |a|σ(X). <b>10</b>"
+    },
+    {
+     "q": "E(X) = 4, V(X) = 2일 때, E(4X − 3)의 값은?",
+     "c": [
+      "13",
+      "1",
+      "16",
+      "4"
+     ],
+     "a": 0,
+     "e": "E(aX + b) = aE(X) + b. <b>13</b>"
+    },
+    {
+     "q": "σ(X) = 3일 때, σ(5X + 3)의 값은?",
+     "c": [
+      "18",
+      "15",
+      "3",
+      "75"
+     ],
+     "a": 1,
+     "e": "σ(aX + b) = |a|σ(X). <b>15</b>"
+    },
+    {
+     "q": "E(X) = 3, V(X) = 8일 때, V(5X + 3)의 값은?",
+     "c": [
+      "43",
+      "200",
+      "203",
+      "40"
+     ],
+     "a": 1,
+     "e": "V(aX + b) = a²V(X). <b>200</b>"
+    },
+    {
+     "q": "E(X) = 9, V(X) = 2일 때, E(2X − 2)의 값은?",
+     "c": [
+      "16",
+      "7",
+      "18",
+      "14"
+     ],
+     "a": 0,
+     "e": "E(aX + b) = aE(X) + b. <b>16</b>"
+    },
+    {
+     "q": "E(X) = 1, V(X) = 8일 때, V(−2X − 3)의 값은?",
+     "c": [
+      "32",
+      "−19",
+      "29",
+      "−16"
+     ],
+     "a": 0,
+     "e": "V(aX + b) = a²V(X). <b>32</b>"
+    },
+    {
+     "q": "E(X) = 8, V(X) = 1일 때, V(−2X + 4)의 값은?",
+     "c": [
+      "−2",
+      "8",
+      "4",
+      "2"
+     ],
+     "a": 2,
+     "e": "V(aX + b) = a²V(X). <b>4</b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 7,
+ "updated": "2026-11-25",
+ "country": "kr",
+ "subject": "math",
+ "grade": "probability-and-statistics"
+}

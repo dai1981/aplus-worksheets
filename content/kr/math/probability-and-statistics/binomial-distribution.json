@@ -1,0 +1,1157 @@
+{
+ "slug": "binomial-distribution",
+ "title": "이항분포의 평균과 분산",
+ "seo_title": "이항분포의 평균과 분산 | 고등학교 확률과 통계 학습지 (정답 포함)",
+ "short_title": "이항분포",
+ "domain": "통계",
+ "standard_code": "[12확통03-03]",
+ "standard_url": "https://ncic.re.kr/inv/org/download.do?year=2022&seq=10003559&orgType=ogi4",
+ "standard_text": "이항분포의 뜻과 성질을 이해하고, 평균과 표준편차를 구할 수 있다.",
+ "meta_desc": "고등학교 확률과 통계 이항분포 문제: B(n, p)의 확률 P(X = r), 평균 np, 분산 np(1 − p), 표준편차, 주사위·동전·발아율 문제, 평균으로 n이나 p 구하기까지 100문제와 정답·해설.",
+ "key_big": "B(n, p)의 평균은 np",
+ "key_sub": "분산은 np(1 − p), P(X = r) = ₙCᵣpʳ(1 − p)ⁿ⁻ʳ",
+ "body_html": "<h2>생각하는 방법</h2><p>확률이 p인 시행을 n번 독립적으로 할 때 그 사건이 일어나는 횟수 X는 <b>이항분포</b> B(n, p)를 따라요.</p><p>P(X = r) = <sub>n</sub>C<sub>r</sub>p<sup>r</sup>(1 − p)<sup>n−r</sup> (r = 0, 1, …, n)</p><p>E(X) = np, V(X) = np(1 − p), σ(X) = √(np(1 − p))</p><p>E(aX + b), V(aX + b)는 이산확률변수의 성질을 그대로 써요.</p><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>B(30, 1/3)</p><p class='sn-ex-s'>E = 10</p><p class='sn-ex-s'>V = 30 × 1/3 × 2/3</p><p class='sn-ex-a'>답: E(X) = 10, V(X) = 20/3</p></div><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>주사위 60번, 6의 눈 횟수</p><p class='sn-ex-s'>B(60, 1/6)</p><p class='sn-ex-a'>답: 평균 10</p></div><h2>자주 하는 실수</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>자주 하는 실수</th><th>바르게 생각하기</th></tr></thead><tbody><tr><td>V(X) = np로 쓴다</td><td>(1 − p)를 곱해요.</td></tr><tr><td>p와 1 − p를 바꾼다</td><td>구하는 사건의 확률이 p예요.</td></tr><tr><td>σ(X)를 np(1 − p)로 답한다</td><td>√를 씌워요.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "이항분포의 그래프는?",
+   "a": "n이 크면 평균 np 근처에서 가장 높은 종 모양이에요."
+  },
+  {
+   "q": "n이 크면 어떤 분포에 가까워지나요?",
+   "a": "정규분포 N(np, np(1 − p))에 가까워져요."
+  }
+ ],
+ "sets": [
+  {
+   "title": "평균과 분산",
+   "items": [
+    {
+     "q": "확률변수 X가 이항분포 B(45, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)를 따를 때, V(X)의 값은?",
+     "c": [
+      "30",
+      "20",
+      "10",
+      "11"
+     ],
+     "a": 2,
+     "e": "V(X) = np(1 − p) = 45 × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. <b>10</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(50, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>100</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>53</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>100</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = np = 50 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. <b><span class='fr'><span class='fn'>50</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(20, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "5",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "10",
+      "11"
+     ],
+     "a": 2,
+     "e": "E(X) = np = 20 × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. <b>10</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(24, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)를 따를 때, V(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "6"
+     ],
+     "a": 0,
+     "e": "V(X) = np(1 − p) = 24 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(24, <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)를 따를 때, V(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "4",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "V(X) = np(1 − p) = 24 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>. <b><span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(15, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "5",
+      "6",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "10"
+     ],
+     "a": 0,
+     "e": "E(X) = np = 15 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. <b>5</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(18, <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>72</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>72</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = np = 18 × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. <b><span class='fr'><span class='fn'>18</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(90, <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>",
+      "16",
+      "15",
+      "75"
+     ],
+     "a": 2,
+     "e": "E(X) = np = 90 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. <b>15</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(72, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>432</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>144</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>149</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>216</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = np = 72 × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. <b><span class='fr'><span class='fn'>144</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(72, <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "10",
+      "60",
+      "13",
+      "12"
+     ],
+     "a": 3,
+     "e": "E(X) = np = 72 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. <b>12</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(24, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "16",
+      "8",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>",
+      "9"
+     ],
+     "a": 1,
+     "e": "E(X) = np = 24 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. <b>8</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(10, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)를 따를 때, V(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "5",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "−20"
+     ],
+     "a": 2,
+     "e": "V(X) = np(1 − p) = 10 × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. <b><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(12, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "5",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "8",
+      "4"
+     ],
+     "a": 3,
+     "e": "E(X) = np = 12 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. <b>4</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(30, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>47</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = np = 30 × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. <b><span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(40, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)를 따를 때, V(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span>",
+      "30"
+     ],
+     "a": 1,
+     "e": "V(X) = np(1 − p) = 40 × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. <b><span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(24, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "19",
+      "6",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "18"
+     ],
+     "a": 3,
+     "e": "E(X) = np = 24 × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. <b>18</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(50, <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "E(X) = np = 50 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. <b><span class='fr'><span class='fn'>25</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(15, <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)를 따를 때, V(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>"
+     ],
+     "a": 2,
+     "e": "V(X) = np(1 − p) = 15 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>. <b><span class='fr'><span class='fn'>25</span><span class='fd'>12</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(36, <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)를 따를 때, V(X)의 값은?",
+     "c": [
+      "5",
+      "6",
+      "1",
+      "−30"
+     ],
+     "a": 0,
+     "e": "V(X) = np(1 − p) = 36 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>. <b>5</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(20, <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)를 따를 때, E(X)의 값은?",
+     "c": [
+      "4",
+      "16",
+      "5",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "E(X) = np = 20 × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. <b>4</b>"
+    }
+   ]
+  },
+  {
+   "title": "P(X = r)",
+   "items": [
+    {
+     "q": "확률변수 X가 이항분포 B(4, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)를 따를 때, P(X = 0)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "1",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>4</sub>C<sub>0</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>0</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(3, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, P(X = 3)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>27</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>27</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>3</sub>C<sub>3</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>3</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>0</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(6, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, P(X = 3)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>160</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>27</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>6</sub>C<sub>3</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>3</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>3</sup> = <b><span class='fr'><span class='fn'>160</span><span class='fd'>729</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(6, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)를 따를 때, P(X = 2)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>243</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>6</sub>C<sub>2</sub>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>2</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>20</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(6, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, P(X = 5)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>243</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>6</sub>C<sub>5</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>5</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(4, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)를 따를 때, P(X = 4)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 2,
+     "e": "<sub>4</sub>C<sub>4</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>4</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>0</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(5, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, P(X = 4)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>243</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>5</sub>C<sub>4</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>4</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>10</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(3, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)를 따를 때, P(X = 2)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>3</sub>C<sub>2</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>2</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(5, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)를 따를 때, P(X = 1)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>243</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>5</sub>C<sub>1</sub>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>1</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>10</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(6, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)를 따를 때, P(X = 4)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>729</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>6</sub>C<sub>4</sub>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>4</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(3, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)를 따를 때, P(X = 3)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>3</sub>C<sub>3</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>3</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>0</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(3, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)를 따를 때, P(X = 0)의 값은?",
+     "c": [
+      "0",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>27</span></span>"
+     ],
+     "a": 2,
+     "e": "<sub>3</sub>C<sub>0</sub>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>0</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>3</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(6, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)를 따를 때, P(X = 4)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>"
+     ],
+     "a": 0,
+     "e": "<sub>6</sub>C<sub>4</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>4</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>15</span><span class='fd'>64</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(6, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)를 따를 때, P(X = 1)의 값은?",
+     "c": [
+      "4",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>243</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>6</sub>C<sub>1</sub>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>1</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>5</sup> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(6, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, P(X = 2)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "<sub>6</sub>C<sub>2</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>2</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(3, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, P(X = 1)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "1"
+     ],
+     "a": 2,
+     "e": "<sub>3</sub>C<sub>1</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>1</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(6, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, P(X = 0)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>729</span></span>",
+      "0",
+      "1"
+     ],
+     "a": 1,
+     "e": "<sub>6</sub>C<sub>0</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>0</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>6</sup> = <b><span class='fr'><span class='fn'>64</span><span class='fd'>729</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(3, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)를 따를 때, P(X = 1)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "<sub>3</sub>C<sub>1</sub>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>1</sup>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(4, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, P(X = 3)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span>"
+     ],
+     "a": 3,
+     "e": "<sub>4</sub>C<sub>3</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>3</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>1</sup> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(3, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, P(X = 0)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>27</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>",
+      "0"
+     ],
+     "a": 2,
+     "e": "<sub>3</sub>C<sub>0</sub>(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>0</sup>(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>3</sup> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "E(aX + b)와 V(aX + b)",
+   "items": [
+    {
+     "q": "확률변수 X가 이항분포 B(24, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)를 따를 때, V(2X − 1)의 값은?",
+     "c": [
+      "18",
+      "8",
+      "17",
+      "9"
+     ],
+     "a": 0,
+     "e": "V(X) = <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>이므로 4 × <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>. <b>18</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(36, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)를 따를 때, V(2X + 1)의 값은?",
+     "c": [
+      "27",
+      "28",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "V(X) = <span class='fr'><span class='fn'>27</span><span class='fd'>4</span></span>이므로 4 × <span class='fr'><span class='fn'>27</span><span class='fd'>4</span></span>. <b>27</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(36, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)를 따를 때, E(3X − 1)의 값은?",
+     "c": [
+      "36",
+      "23",
+      "11",
+      "35"
+     ],
+     "a": 3,
+     "e": "E(X) = 12이므로 3 × 12 − 1. <b>35</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(30, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)를 따를 때, V(−X + 3)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "V(X) = <span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>이므로 1 × <span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>. <b><span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(24, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)를 따를 때, V(−X + 2)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "V(X) = <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>이므로 1 × <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>. <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(10, <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)를 따를 때, V(−X + 5)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>115</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>18</span></span>",
+      "−<span class='fr'><span class='fn'>25</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>18</span></span>"
+     ],
+     "a": 3,
+     "e": "V(X) = <span class='fr'><span class='fn'>25</span><span class='fd'>18</span></span>이므로 1 × <span class='fr'><span class='fn'>25</span><span class='fd'>18</span></span>. <b><span class='fr'><span class='fn'>25</span><span class='fd'>18</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(60, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)를 따를 때, E(4X + 2)의 값은?",
+     "c": [
+      "182",
+      "188",
+      "47",
+      "180"
+     ],
+     "a": 0,
+     "e": "E(X) = 45이므로 4 × 45 + 2. <b>182</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(90, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)를 따를 때, E(4X + 4)의 값은?",
+     "c": [
+      "49",
+      "184",
+      "180",
+      "94"
+     ],
+     "a": 1,
+     "e": "E(X) = 45이므로 4 × 45 + 4. <b>184</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(40, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)를 따를 때, V(2X − 4)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>160</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>320</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>124</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>284</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "V(X) = <span class='fr'><span class='fn'>80</span><span class='fd'>9</span></span>이므로 4 × <span class='fr'><span class='fn'>80</span><span class='fd'>9</span></span>. <b><span class='fr'><span class='fn'>320</span><span class='fd'>9</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(90, <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)를 따를 때, E(2X − 4)의 값은?",
+     "c": [
+      "36",
+      "32",
+      "14",
+      "<span class='fr'><span class='fn'>124</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = 18이므로 2 × 18 − 4. <b>32</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(20, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)를 따를 때, V(3X)의 값은?",
+     "c": [
+      "72",
+      "<span class='fr'><span class='fn'>221</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>216</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>72</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "V(X) = <span class='fr'><span class='fn'>24</span><span class='fd'>5</span></span>이므로 9 × <span class='fr'><span class='fn'>24</span><span class='fd'>5</span></span>. <b><span class='fr'><span class='fn'>216</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(18, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)를 따를 때, V(3X − 2)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>922</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>324</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>972</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>274</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "V(X) = <span class='fr'><span class='fn'>108</span><span class='fd'>25</span></span>이므로 9 × <span class='fr'><span class='fn'>108</span><span class='fd'>25</span></span>. <b><span class='fr'><span class='fn'>972</span><span class='fd'>25</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(90, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)를 따를 때, E(−X − 4)의 값은?",
+     "c": [
+      "−36",
+      "32",
+      "−40",
+      "−<span class='fr'><span class='fn'>128</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = 36이므로 −1 × 36 − 4. <b>−40</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(40, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)를 따를 때, E(3X − 2)의 값은?",
+     "c": [
+      "90",
+      "28",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>2</span></span>",
+      "88"
+     ],
+     "a": 3,
+     "e": "E(X) = 30이므로 3 × 30 − 2. <b>88</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(30, <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)를 따를 때, E(4X − 3)의 값은?",
+     "c": [
+      "2",
+      "20",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>3</span></span>",
+      "17"
+     ],
+     "a": 3,
+     "e": "E(X) = 5이므로 4 × 5 − 3. <b>17</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(50, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)를 따를 때, E(2X − 2)의 값은?",
+     "c": [
+      "18",
+      "38",
+      "40",
+      "22"
+     ],
+     "a": 1,
+     "e": "E(X) = 20이므로 2 × 20 − 2. <b>38</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(15, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)를 따를 때, E(4X + 3)의 값은?",
+     "c": [
+      "57",
+      "48",
+      "45",
+      "<span class='fr'><span class='fn'>57</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = <span class='fr'><span class='fn'>45</span><span class='fd'>4</span></span>이므로 4 × <span class='fr'><span class='fn'>45</span><span class='fd'>4</span></span> + 3. <b>48</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(10, <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)를 따를 때, E(4X − 2)의 값은?",
+     "c": [
+      "8",
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>5</span></span>",
+      "6",
+      "0"
+     ],
+     "a": 2,
+     "e": "E(X) = 2이므로 4 × 2 − 2. <b>6</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(60, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)를 따를 때, E(4X + 4)의 값은?",
+     "c": [
+      "28",
+      "96",
+      "100",
+      "<span class='fr'><span class='fn'>308</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = 24이므로 4 × 24 + 4. <b>100</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(15, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)를 따를 때, E(4X − 1)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>2</span></span>",
+      "14",
+      "30",
+      "29"
+     ],
+     "a": 3,
+     "e": "E(X) = <span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>이므로 4 × <span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span> − 1. <b>29</b>"
+    }
+   ]
+  },
+  {
+   "title": "n과 p 구하기",
+   "items": [
+    {
+     "q": "확률변수 X가 이항분포 B(12, p)를 따르고 E(X) = 2일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>"
+     ],
+     "a": 1,
+     "e": "np = 2 → <b>p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(n, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)를 따르고 E(X) = 60일 때, n의 값은?",
+     "c": [
+      "180",
+      "90",
+      "91",
+      "60"
+     ],
+     "a": 1,
+     "e": "np = 60 → <b>n = 90</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(n, <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>)를 따르고 E(X) = 12일 때, n의 값은?",
+     "c": [
+      "72",
+      "73",
+      "12",
+      "<span class='fr'><span class='fn'>72</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "np = 12 → <b>n = 72</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(n, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)를 따르고 E(X) = 60일 때, n의 값은?",
+     "c": [
+      "80",
+      "60",
+      "240",
+      "81"
+     ],
+     "a": 0,
+     "e": "np = 60 → <b>n = 80</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(n, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)를 따르고 E(X) = <span class='fr'><span class='fn'>45</span><span class='fd'>4</span></span>일 때, n의 값은?",
+     "c": [
+      "15",
+      "46",
+      "45",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "np = <span class='fr'><span class='fn'>45</span><span class='fd'>4</span></span> → <b>n = 45</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(n, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)를 따르고 E(X) = <span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>일 때, n의 값은?",
+     "c": [
+      "10",
+      "11",
+      "20",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "np = <span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span> → <b>n = 10</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(30, p)를 따르고 E(X) = <span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "np = <span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span> → <b>p = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(80, p)를 따르고 E(X) = 32일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>80</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "np = 32 → <b>p = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(12, p)를 따르고 E(X) = 3일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>100</span></span>"
+     ],
+     "a": 1,
+     "e": "np = 3 → <b>p = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(80, p)를 따르고 E(X) = <span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span>일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>80</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>"
+     ],
+     "a": 2,
+     "e": "np = <span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span> → <b>p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(45, p)를 따르고 E(X) = 18일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>45</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>50</span></span>"
+     ],
+     "a": 0,
+     "e": "np = 18 → <b>p = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(12, p)를 따르고 E(X) = 9일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "np = 9 → <b>p = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(n, <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)를 따르고 E(X) = <span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span>일 때, n의 값은?",
+     "c": [
+      "3",
+      "13",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span>",
+      "12"
+     ],
+     "a": 3,
+     "e": "np = <span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span> → <b>n = 12</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(45, p)를 따르고 E(X) = <span class='fr'><span class='fn'>45</span><span class='fd'>4</span></span>일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>80</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>45</span></span>"
+     ],
+     "a": 0,
+     "e": "np = <span class='fr'><span class='fn'>45</span><span class='fd'>4</span></span> → <b>p = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(18, p)를 따르고 E(X) = <span class='fr'><span class='fn'>18</span><span class='fd'>5</span></span>일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>250</span></span>"
+     ],
+     "a": 1,
+     "e": "np = <span class='fr'><span class='fn'>18</span><span class='fd'>5</span></span> → <b>p = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(n, <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)를 따르고 E(X) = 8일 때, n의 값은?",
+     "c": [
+      "41",
+      "10",
+      "40",
+      "8"
+     ],
+     "a": 2,
+     "e": "np = 8 → <b>n = 40</b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(72, p)를 따르고 E(X) = 12일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>72</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "np = 12 → <b>p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(10, p)를 따르고 E(X) = <span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "np = <span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span> → <b>p = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(18, p)를 따르고 E(X) = 9일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>"
+     ],
+     "a": 2,
+     "e": "np = 9 → <b>p = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "확률변수 X가 이항분포 B(45, p)를 따르고 E(X) = 15일 때, p의 값은? (0 &lt; p &lt; 1)",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>45</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "np = 15 → <b>p = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>"
+    }
+   ]
+  },
+  {
+   "title": "실생활 문제",
+   "items": [
+    {
+     "q": "동전 한 개를 64번 던질 때, 앞면이 나오는 횟수를 X라 하면 σ(X)의 값은?",
+     "c": [
+      "8",
+      "32",
+      "16",
+      "4"
+     ],
+     "a": 3,
+     "e": "V(X) = 64 × ½ × ½ = 16이므로 <b>σ(X) = 4</b>"
+    },
+    {
+     "q": "주사위 한 개를 30번 던질 때, 1의 눈이 나오는 횟수를 X라 하면 V(X)의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>6</span></span>",
+      "15",
+      "5",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>"
+     ],
+     "a": 0,
+     "e": "X는 B(30, 1/6)을 따르므로 <b><span class='fr'><span class='fn'>25</span><span class='fd'>6</span></span></b>"
+    },
+    {
+     "q": "발아율이 80%인 씨앗 400개를 심을 때, 싹이 트는 씨앗의 개수 X의 평균은?",
+     "c": [
+      "64개",
+      "321개",
+      "80개",
+      "320개"
+     ],
+     "a": 3,
+     "e": "E(X) = np = 400 × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>. <b>320</b>"
+    },
+    {
+     "q": "발아율이 75%인 씨앗 500개를 심을 때, 싹이 트는 씨앗의 개수 X의 평균은?",
+     "c": [
+      "375개",
+      "<span class='fr'><span class='fn'>375</span><span class='fd'>4</span></span>개",
+      "75개",
+      "125개"
+     ],
+     "a": 0,
+     "e": "E(X) = np = 500 × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. <b>375</b>"
+    },
+    {
+     "q": "동전 한 개를 16번 던질 때, 앞면이 나오는 횟수를 X라 하면 σ(X)의 값은?",
+     "c": [
+      "2",
+      "8",
+      "4",
+      "3"
+     ],
+     "a": 0,
+     "e": "V(X) = 16 × ½ × ½ = 4이므로 <b>σ(X) = 2</b>"
+    },
+    {
+     "q": "동전 한 개를 256번 던질 때, 앞면이 나오는 횟수를 X라 하면 σ(X)의 값은?",
+     "c": [
+      "8",
+      "64",
+      "16",
+      "128"
+     ],
+     "a": 0,
+     "e": "V(X) = 256 × ½ × ½ = 64이므로 <b>σ(X) = 8</b>"
+    },
+    {
+     "q": "발아율이 90%인 씨앗 500개를 심을 때, 싹이 트는 씨앗의 개수 X의 평균은?",
+     "c": [
+      "50개",
+      "45개",
+      "450개",
+      "90개"
+     ],
+     "a": 2,
+     "e": "E(X) = np = 500 × <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>. <b>450</b>"
+    },
+    {
+     "q": "발아율이 80%인 씨앗 300개를 심을 때, 싹이 트는 씨앗의 개수 X의 평균은?",
+     "c": [
+      "60개",
+      "48개",
+      "240개",
+      "80개"
+     ],
+     "a": 2,
+     "e": "E(X) = np = 300 × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>. <b>240</b>"
+    },
+    {
+     "q": "동전 한 개를 144번 던질 때, 앞면이 나오는 횟수를 X라 하면 σ(X)의 값은?",
+     "c": [
+      "72",
+      "36",
+      "12",
+      "6"
+     ],
+     "a": 3,
+     "e": "V(X) = 144 × ½ × ½ = 36이므로 <b>σ(X) = 6</b>"
+    },
+    {
+     "q": "발아율이 70%인 씨앗 500개를 심을 때, 싹이 트는 씨앗의 개수 X의 평균은?",
+     "c": [
+      "150개",
+      "350개",
+      "70개",
+      "105개"
+     ],
+     "a": 1,
+     "e": "E(X) = np = 500 × <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>. <b>350</b>"
+    },
+    {
+     "q": "동전 한 개를 36번 던질 때, 앞면이 나오는 횟수를 X라 하면 σ(X)의 값은?",
+     "c": [
+      "6",
+      "18",
+      "3",
+      "9"
+     ],
+     "a": 2,
+     "e": "V(X) = 36 × ½ × ½ = 9이므로 <b>σ(X) = 3</b>"
+    },
+    {
+     "q": "동전 한 개를 196번 던질 때, 앞면이 나오는 횟수를 X라 하면 σ(X)의 값은?",
+     "c": [
+      "14",
+      "7",
+      "49",
+      "98"
+     ],
+     "a": 1,
+     "e": "V(X) = 196 × ½ × ½ = 49이므로 <b>σ(X) = 7</b>"
+    },
+    {
+     "q": "주사위 한 개를 36번 던질 때, 1의 눈이 나오는 횟수를 X라 하면 V(X)의 값은?",
+     "c": [
+      "1",
+      "6",
+      "5",
+      "18"
+     ],
+     "a": 2,
+     "e": "X는 B(36, 1/6)을 따르므로 <b>5</b>"
+    },
+    {
+     "q": "동전 한 개를 100번 던질 때, 앞면이 나오는 횟수를 X라 하면 σ(X)의 값은?",
+     "c": [
+      "5",
+      "50",
+      "10",
+      "25"
+     ],
+     "a": 0,
+     "e": "V(X) = 100 × ½ × ½ = 25이므로 <b>σ(X) = 5</b>"
+    },
+    {
+     "q": "발아율이 90%인 씨앗 400개를 심을 때, 싹이 트는 씨앗의 개수 X의 평균은?",
+     "c": [
+      "36개",
+      "360개",
+      "90개",
+      "40개"
+     ],
+     "a": 1,
+     "e": "E(X) = np = 400 × <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>. <b>360</b>"
+    },
+    {
+     "q": "주사위 한 개를 30번 던질 때, 1의 눈이 나오는 횟수를 X라 하면 E(X)의 값은?",
+     "c": [
+      "15",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>6</span></span>",
+      "5"
+     ],
+     "a": 3,
+     "e": "X는 B(30, 1/6)을 따르므로 <b>5</b>"
+    },
+    {
+     "q": "주사위 한 개를 120번 던질 때, 1의 눈이 나오는 횟수를 X라 하면 V(X)의 값은?",
+     "c": [
+      "60",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>3</span></span>",
+      "20"
+     ],
+     "a": 2,
+     "e": "X는 B(120, 1/6)을 따르므로 <b><span class='fr'><span class='fn'>50</span><span class='fd'>3</span></span></b>"
+    },
+    {
+     "q": "발아율이 80%인 씨앗 500개를 심을 때, 싹이 트는 씨앗의 개수 X의 평균은?",
+     "c": [
+      "100개",
+      "80개",
+      "401개",
+      "400개"
+     ],
+     "a": 3,
+     "e": "E(X) = np = 500 × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>. <b>400</b>"
+    },
+    {
+     "q": "발아율이 80%인 씨앗 100개를 심을 때, 싹이 트는 씨앗의 개수 X의 평균은?",
+     "c": [
+      "20개",
+      "80개",
+      "16개",
+      "81개"
+     ],
+     "a": 1,
+     "e": "E(X) = np = 100 × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>. <b>80</b>"
+    },
+    {
+     "q": "주사위 한 개를 90번 던질 때, 1의 눈이 나오는 횟수를 X라 하면 V(X)의 값은?",
+     "c": [
+      "45",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>",
+      "15",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "X는 B(90, 1/6)을 따르므로 <b><span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span></b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 8,
+ "updated": "2026-11-25",
+ "country": "kr",
+ "subject": "math",
+ "grade": "probability-and-statistics"
+}

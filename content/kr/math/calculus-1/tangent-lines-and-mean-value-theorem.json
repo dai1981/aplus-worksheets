@@ -1,0 +1,1157 @@
+{
+ "slug": "tangent-lines-and-mean-value-theorem",
+ "title": "접선의 방정식과 평균값 정리",
+ "seo_title": "접선의 방정식과 평균값 정리 | 고등학교 미적분Ⅰ 학습지 (정답 포함)",
+ "short_title": "접선과 평균값 정리",
+ "domain": "미분",
+ "standard_code": "[12미적Ⅰ-02-05] [12미적Ⅰ-02-06]",
+ "standard_url": "https://ncic.re.kr/inv/org/download.do?year=2022&seq=10003559&orgType=ogi4",
+ "standard_text": "미분계수와 접선의 기울기의 관계를 이해하고, 접선의 방정식을 구할 수 있다. 함수에 대한 평균값 정리를 설명하고, 이를 활용할 수 있다.",
+ "meta_desc": "고등학교 미적분Ⅰ 접선의 방정식과 평균값 정리 문제: 곡선 위의 점에서의 접선, 기울기가 주어진 접선, 곡선 밖의 점에서 그은 접선, 롤의 정리, 평균값 정리를 만족하는 c까지 100문제와 정답·해설.",
+ "key_big": "y − f(a) = f′(a)(x − a)",
+ "key_sub": "평균값 정리: (f(b) − f(a)) ÷ (b − a) = f′(c)",
+ "body_html": "<h2>생각하는 방법</h2><p>곡선 y = f(x) 위의 점 (a, f(a))에서의 접선은 y − f(a) = f′(a)(x − a)예요.</p><p>기울기가 m인 접선은 f′(x) = m인 접점을 먼저 찾아요.</p><p><b>롤의 정리</b>: f(a) = f(b)이면 f′(c) = 0인 c가 (a, b)에 있어요.</p><p><b>평균값 정리</b>: (f(b) − f(a)) ÷ (b − a) = f′(c)인 c가 (a, b)에 있어요.</p><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>y = x² − 3x 위의 (1, −2)</p><p class='sn-ex-s'>f′(1) = −1</p><p class='sn-ex-a'>답: y = −x − 1</p></div><div class='sn-ex'><span class='sn-ex-t'>예제</span><p class='sn-ex-q'>f(x) = x², [1, 5]</p><p class='sn-ex-s'>(25 − 1) ÷ 4 = 2c</p><p class='sn-ex-a'>답: c = 3</p></div><h2>자주 하는 실수</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>자주 하는 실수</th><th>바르게 생각하기</th></tr></thead><tbody><tr><td>접선의 기울기에 f(a)를 쓴다</td><td>기울기는 f′(a)예요.</td></tr><tr><td>곡선 밖의 점을 접점으로 생각한다</td><td>접점 (t, f(t))를 놓고 그 점을 지나도록 해요.</td></tr><tr><td>평균값 정리에서 c를 구간 밖에서 고른다</td><td>c는 열린구간 (a, b) 안에 있어요.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "평균값 정리의 그림 의미는?",
+   "a": "두 끝점을 잇는 직선과 평행한 접선이 있다는 뜻이에요."
+  },
+  {
+   "q": "법선이란?",
+   "a": "접점에서 접선에 수직인 직선이에요. 기울기는 −1/f′(a)예요."
+  }
+ ],
+ "sets": [
+  {
+   "title": "곡선 위의 점에서의 접선",
+   "items": [
+    {
+     "q": "곡선 y = −x³ + 2x² + 3 위의 점 (−2, 19)에서의 접선의 방정식은?",
+     "c": [
+      "y = −20x + 59",
+      "y = 19x + 18",
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>x + <span class='fr'><span class='fn'>191</span><span class='fd'>10</span></span>",
+      "y = −20x − 21"
+     ],
+     "a": 3,
+     "e": "기울기 f′(−2) = −20, y − 19 = −20(x − (−2)). <b>y = −20x − 21</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 3x 위의 점 (−2, 14)에서의 접선의 방정식은?",
+     "c": [
+      "y = −11x + 36",
+      "y = −11x − 8",
+      "y = 14x + 17",
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>x + <span class='fr'><span class='fn'>156</span><span class='fd'>11</span></span>"
+     ],
+     "a": 1,
+     "e": "기울기 f′(−2) = −11, y − 14 = −11(x − (−2)). <b>y = −11x − 8</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 4x + 3 위의 점 (3, 9)에서의 접선의 방정식은?",
+     "c": [
+      "y = 8x − 15",
+      "y = 8x + 33",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>x + <span class='fr'><span class='fn'>75</span><span class='fd'>8</span></span>",
+      "y = 9x − 19"
+     ],
+     "a": 0,
+     "e": "기울기 f′(3) = 8, y − 9 = 8(x − 3). <b>y = 8x − 15</b>"
+    },
+    {
+     "q": "곡선 y = 2x³ + x² + 2x − 4 위의 점 (3, 65)에서의 접선의 방정식은?",
+     "c": [
+      "y = 62x − 121",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>62</span></span>x + <span class='fr'><span class='fn'>4033</span><span class='fd'>62</span></span>",
+      "y = 62x + 251",
+      "y = 65x − 133"
+     ],
+     "a": 0,
+     "e": "기울기 f′(3) = 62, y − 65 = 62(x − 3). <b>y = 62x − 121</b>"
+    },
+    {
+     "q": "곡선 y = 2x³ − 4x² − x 위의 점 (2, −2)에서의 접선의 방정식은?",
+     "c": [
+      "y = −2x + 11",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>x − <span class='fr'><span class='fn'>12</span><span class='fd'>7</span></span>",
+      "y = 7x − 16",
+      "y = 7x + 12"
+     ],
+     "a": 2,
+     "e": "기울기 f′(2) = 7, y − (−2) = 7(x − 2). <b>y = 7x − 16</b>"
+    },
+    {
+     "q": "곡선 y = x² − x + 3 위의 점 (2, 5)에서의 접선의 방정식은?",
+     "c": [
+      "y = 3x − 1",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>x + <span class='fr'><span class='fn'>17</span><span class='fd'>3</span></span>",
+      "y = 5x − 7",
+      "y = 3x + 11"
+     ],
+     "a": 0,
+     "e": "기울기 f′(2) = 3, y − 5 = 3(x − 2). <b>y = 3x − 1</b>"
+    },
+    {
+     "q": "곡선 y = 2x³ − 4x² − 4x + 2 위의 점 (2, −6)에서의 접선의 방정식은?",
+     "c": [
+      "y = 4x − 14",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>x − <span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "y = 4x + 2",
+      "y = −6x + 16"
+     ],
+     "a": 0,
+     "e": "기울기 f′(2) = 4, y − (−6) = 4(x − 2). <b>y = 4x − 14</b>"
+    },
+    {
+     "q": "곡선 y = x³ − 4x² − x − 1 위의 점 (3, −13)에서의 접선의 방정식은?",
+     "c": [
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x − <span class='fr'><span class='fn'>23</span><span class='fd'>2</span></span>",
+      "y = −13x + 41",
+      "y = 2x − 7",
+      "y = 2x − 19"
+     ],
+     "a": 3,
+     "e": "기울기 f′(3) = 2, y − (−13) = 2(x − 3). <b>y = 2x − 19</b>"
+    },
+    {
+     "q": "곡선 y = 2x³ + 3x² + 3x + 4 위의 점 (3, 94)에서의 접선의 방정식은?",
+     "c": [
+      "y = 75x − 131",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>75</span></span>x + <span class='fr'><span class='fn'>2351</span><span class='fd'>25</span></span>",
+      "y = 75x + 319",
+      "y = 94x − 207"
+     ],
+     "a": 0,
+     "e": "기울기 f′(3) = 75, y − 94 = 75(x − 3). <b>y = 75x − 131</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − x + 1 위의 점 (−2, 11)에서의 접선의 방정식은?",
+     "c": [
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>x + <span class='fr'><span class='fn'>101</span><span class='fd'>9</span></span>",
+      "y = −9x + 29",
+      "y = −9x − 7",
+      "y = 11x + 13"
+     ],
+     "a": 2,
+     "e": "기울기 f′(−2) = −9, y − 11 = −9(x − (−2)). <b>y = −9x − 7</b>"
+    },
+    {
+     "q": "곡선 y = −x³ + x² − 4x + 2 위의 점 (1, −2)에서의 접선의 방정식은?",
+     "c": [
+      "y = −2x − 3",
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>x − <span class='fr'><span class='fn'>11</span><span class='fd'>5</span></span>",
+      "y = −5x + 3",
+      "y = −5x − 7"
+     ],
+     "a": 2,
+     "e": "기울기 f′(1) = −5, y − (−2) = −5(x − 1). <b>y = −5x + 3</b>"
+    },
+    {
+     "q": "곡선 y = x² + 2 위의 점 (−2, 6)에서의 접선의 방정식은?",
+     "c": [
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>x + <span class='fr'><span class='fn'>13</span><span class='fd'>2</span></span>",
+      "y = 6x + 8",
+      "y = −4x + 14",
+      "y = −4x − 2"
+     ],
+     "a": 3,
+     "e": "기울기 f′(−2) = −4, y − 6 = −4(x − (−2)). <b>y = −4x − 2</b>"
+    },
+    {
+     "q": "곡선 y = 2x³ + x² + 4x + 3 위의 점 (1, 10)에서의 접선의 방정식은?",
+     "c": [
+      "y = 10x + 2",
+      "y = 12x + 22",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>x + <span class='fr'><span class='fn'>121</span><span class='fd'>12</span></span>",
+      "y = 12x − 2"
+     ],
+     "a": 3,
+     "e": "기울기 f′(1) = 12, y − 10 = 12(x − 1). <b>y = 12x − 2</b>"
+    },
+    {
+     "q": "곡선 y = −x³ + 2x² + 4x + 1 위의 점 (1, 6)에서의 접선의 방정식은?",
+     "c": [
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>x + <span class='fr'><span class='fn'>31</span><span class='fd'>5</span></span>",
+      "y = 5x + 1",
+      "y = 6x − 1",
+      "y = 5x + 11"
+     ],
+     "a": 1,
+     "e": "기울기 f′(1) = 5, y − 6 = 5(x − 1). <b>y = 5x + 1</b>"
+    },
+    {
+     "q": "곡선 y = x² − 4x + 3 위의 점 (3, 0)에서의 접선의 방정식은?",
+     "c": [
+      "y = 2x + 6",
+      "y = 2x − 6",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x + <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "y = 2"
+     ],
+     "a": 1,
+     "e": "기울기 f′(3) = 2, y − 0 = 2(x − 3). <b>y = 2x − 6</b>"
+    },
+    {
+     "q": "곡선 y = 2x² + 2x + 3 위의 점 (−1, 3)에서의 접선의 방정식은?",
+     "c": [
+      "y = −2x + 5",
+      "y = 3x + 1",
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x + <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "y = −2x + 1"
+     ],
+     "a": 3,
+     "e": "기울기 f′(−1) = −2, y − 3 = −2(x − (−1)). <b>y = −2x + 1</b>"
+    },
+    {
+     "q": "곡선 y = −x² + 2x 위의 점 (−2, −8)에서의 접선의 방정식은?",
+     "c": [
+      "y = −8x − 10",
+      "y = 6x − 20",
+      "y = 6x + 4",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>x − <span class='fr'><span class='fn'>25</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "기울기 f′(−2) = 6, y − (−8) = 6(x − (−2)). <b>y = 6x + 4</b>"
+    },
+    {
+     "q": "곡선 y = x³ + 2x² + 2x + 3 위의 점 (3, 54)에서의 접선의 방정식은?",
+     "c": [
+      "y = 54x − 121",
+      "y = 41x − 69",
+      "y = 41x + 177",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>41</span></span>x + <span class='fr'><span class='fn'>2217</span><span class='fd'>41</span></span>"
+     ],
+     "a": 1,
+     "e": "기울기 f′(3) = 41, y − 54 = 41(x − 3). <b>y = 41x − 69</b>"
+    },
+    {
+     "q": "곡선 y = x² + x + 4 위의 점 (2, 10)에서의 접선의 방정식은?",
+     "c": [
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>x + <span class='fr'><span class='fn'>52</span><span class='fd'>5</span></span>",
+      "y = 5x",
+      "y = 5x + 20",
+      "y = 10x − 15"
+     ],
+     "a": 1,
+     "e": "기울기 f′(2) = 5, y − 10 = 5(x − 2). <b>y = 5x</b>"
+    },
+    {
+     "q": "곡선 y = −x² + x + 3 위의 점 (1, 3)에서의 접선의 방정식은?",
+     "c": [
+      "y = x + 2",
+      "y = 3x − 4",
+      "y = −x + 4",
+      "y = −x + 2"
+     ],
+     "a": 2,
+     "e": "기울기 f′(1) = −1, y − 3 = −1(x − 1). <b>y = −x + 4</b>"
+    }
+   ]
+  },
+  {
+   "title": "기울기가 주어진 접선",
+   "items": [
+    {
+     "q": "곡선 y = x² + 3x − 4에 접하고 기울기가 5인 직선의 방정식은?",
+     "c": [
+      "y = 5x",
+      "y = 5x + 5",
+      "y = 5x − 5",
+      "y = −5x + 5"
+     ],
+     "a": 2,
+     "e": "f′(x) = 2x + 3 = 5에서 접점 (1, 0). <b>y = 5x − 5</b>"
+    },
+    {
+     "q": "곡선 y = x² − 2x + 1에 접하고 기울기가 4인 직선의 방정식은?",
+     "c": [
+      "y = 4x + 8",
+      "y = 4x − 8",
+      "y = 4x + 4",
+      "y = 4x + 16"
+     ],
+     "a": 1,
+     "e": "f′(x) = 2x − 2 = 4에서 접점 (3, 4). <b>y = 4x − 8</b>"
+    },
+    {
+     "q": "곡선 y = x² − 3x에 접하고 기울기가 −5인 직선의 방정식은?",
+     "c": [
+      "y = −5x + 1",
+      "y = −5x − 1",
+      "y = −5x + 4",
+      "y = −5x + 9"
+     ],
+     "a": 1,
+     "e": "f′(x) = 2x − 3 = −5에서 접점 (−1, 4). <b>y = −5x − 1</b>"
+    },
+    {
+     "q": "곡선 y = x² + 4x − 3에 접하고 기울기가 −2인 직선의 방정식은?",
+     "c": [
+      "y = −2x − 6",
+      "y = −2x + 12",
+      "y = −2x − 12",
+      "y = −2x"
+     ],
+     "a": 2,
+     "e": "f′(x) = 2x + 4 = −2에서 접점 (−3, −6). <b>y = −2x − 12</b>"
+    },
+    {
+     "q": "곡선 y = x² + 3x + 4에 접하고 기울기가 −1인 직선의 방정식은?",
+     "c": [
+      "y = −x",
+      "y = −x + 4",
+      "y = −x + 2",
+      "y = −x + 1"
+     ],
+     "a": 0,
+     "e": "f′(x) = 2x + 3 = −1에서 접점 (−2, 2). <b>y = −x</b>"
+    },
+    {
+     "q": "곡선 y = x² − 2x에 접하고 기울기가 2인 직선의 방정식은?",
+     "c": [
+      "y = 2x + 4",
+      "y = −2x + 4",
+      "y = 2x",
+      "y = 2x − 4"
+     ],
+     "a": 3,
+     "e": "f′(x) = 2x − 2 = 2에서 접점 (2, 0). <b>y = 2x − 4</b>"
+    },
+    {
+     "q": "곡선 y = x² + x − 3에 접하고 기울기가 −3인 직선의 방정식은?",
+     "c": [
+      "y = −3x + 5",
+      "y = −3x + 7",
+      "y = −3x − 7",
+      "y = −3x − 1"
+     ],
+     "a": 2,
+     "e": "f′(x) = 2x + 1 = −3에서 접점 (−2, −1). <b>y = −3x − 7</b>"
+    },
+    {
+     "q": "곡선 y = x² − 4x + 1에 접하고 기울기가 2인 직선의 방정식은?",
+     "c": [
+      "y = 2x + 4",
+      "y = 2x − 8",
+      "y = 2x + 8",
+      "y = 2x − 2"
+     ],
+     "a": 1,
+     "e": "f′(x) = 2x − 4 = 2에서 접점 (3, −2). <b>y = 2x − 8</b>"
+    },
+    {
+     "q": "곡선 y = x² − x − 3에 접하고 기울기가 −5인 직선의 방정식은?",
+     "c": [
+      "y = −5x + 13",
+      "y = −5x − 7",
+      "y = −5x + 7",
+      "y = −5x + 3"
+     ],
+     "a": 1,
+     "e": "f′(x) = 2x − 1 = −5에서 접점 (−2, 3). <b>y = −5x − 7</b>"
+    },
+    {
+     "q": "곡선 y = x² + x − 1에 접하고 기울기가 −5인 직선의 방정식은?",
+     "c": [
+      "y = −5x + 5",
+      "y = −5x − 10",
+      "y = −5x + 10",
+      "y = −5x + 20"
+     ],
+     "a": 1,
+     "e": "f′(x) = 2x + 1 = −5에서 접점 (−3, 5). <b>y = −5x − 10</b>"
+    },
+    {
+     "q": "곡선 y = x² + 3x + 2에 접하고 기울기가 1인 직선의 방정식은?",
+     "c": [
+      "y = −x − 1",
+      "y = x",
+      "y = x + 1",
+      "y = x − 1"
+     ],
+     "a": 2,
+     "e": "f′(x) = 2x + 3 = 1에서 접점 (−1, 0). <b>y = x + 1</b>"
+    },
+    {
+     "q": "곡선 y = x² − x − 2에 접하고 기울기가 −5인 직선의 방정식은?",
+     "c": [
+      "y = −5x + 14",
+      "y = −5x + 6",
+      "y = −5x + 4",
+      "y = −5x − 6"
+     ],
+     "a": 3,
+     "e": "f′(x) = 2x − 1 = −5에서 접점 (−2, 4). <b>y = −5x − 6</b>"
+    },
+    {
+     "q": "곡선 y = x² − 3x + 1에 접하고 기울기가 −1인 직선의 방정식은?",
+     "c": [
+      "y = −x + 1",
+      "y = −x − 2",
+      "y = −x − 1",
+      "y = −x"
+     ],
+     "a": 3,
+     "e": "f′(x) = 2x − 3 = −1에서 접점 (1, −1). <b>y = −x</b>"
+    },
+    {
+     "q": "곡선 y = x² + 2x − 3에 접하고 기울기가 −4인 직선의 방정식은?",
+     "c": [
+      "y = −4x − 12",
+      "y = 4x + 12",
+      "y = −4x + 12",
+      "y = −4x"
+     ],
+     "a": 0,
+     "e": "f′(x) = 2x + 2 = −4에서 접점 (−3, 0). <b>y = −4x − 12</b>"
+    },
+    {
+     "q": "곡선 y = x² − 4x + 4에 접하고 기울기가 2인 직선의 방정식은?",
+     "c": [
+      "y = 2x − 5",
+      "y = 2x + 5",
+      "y = 2x + 1",
+      "y = 2x + 7"
+     ],
+     "a": 0,
+     "e": "f′(x) = 2x − 4 = 2에서 접점 (3, 1). <b>y = 2x − 5</b>"
+    },
+    {
+     "q": "곡선 y = x² − 4x + 3에 접하고 기울기가 −2인 직선의 방정식은?",
+     "c": [
+      "y = −2x − 2",
+      "y = −2x",
+      "y = 2x − 2",
+      "y = −2x + 2"
+     ],
+     "a": 3,
+     "e": "f′(x) = 2x − 4 = −2에서 접점 (1, 0). <b>y = −2x + 2</b>"
+    },
+    {
+     "q": "곡선 y = x² + 3x − 4에 접하고 기울기가 −1인 직선의 방정식은?",
+     "c": [
+      "y = −x − 8",
+      "y = −x + 8",
+      "y = −x − 6",
+      "y = −x − 4"
+     ],
+     "a": 0,
+     "e": "f′(x) = 2x + 3 = −1에서 접점 (−2, −6). <b>y = −x − 8</b>"
+    },
+    {
+     "q": "곡선 y = x² + 4x − 1에 접하고 기울기가 2인 직선의 방정식은?",
+     "c": [
+      "y = 2x − 4",
+      "y = 2x − 6",
+      "y = 2x − 2",
+      "y = 2x + 2"
+     ],
+     "a": 2,
+     "e": "f′(x) = 2x + 4 = 2에서 접점 (−1, −4). <b>y = 2x − 2</b>"
+    },
+    {
+     "q": "곡선 y = x² + 4x − 4에 접하고 기울기가 −2인 직선의 방정식은?",
+     "c": [
+      "y = −2x − 7",
+      "y = −2x + 13",
+      "y = −2x − 1",
+      "y = −2x − 13"
+     ],
+     "a": 3,
+     "e": "f′(x) = 2x + 4 = −2에서 접점 (−3, −7). <b>y = −2x − 13</b>"
+    },
+    {
+     "q": "곡선 y = x² − x + 3에 접하고 기울기가 5인 직선의 방정식은?",
+     "c": [
+      "y = 5x − 6",
+      "y = 5x + 6",
+      "y = 5x + 9",
+      "y = 5x + 24"
+     ],
+     "a": 0,
+     "e": "f′(x) = 2x − 1 = 5에서 접점 (3, 9). <b>y = 5x − 6</b>"
+    }
+   ]
+  },
+  {
+   "title": "곡선 밖의 점에서 그은 접선",
+   "items": [
+    {
+     "q": "곡선 y = −x² + 2x − 2 위의 점 (3, −5)에서의 접선의 방정식은?",
+     "c": [
+      "y = −4x − 17",
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>x − <span class='fr'><span class='fn'>23</span><span class='fd'>4</span></span>",
+      "y = −4x + 7",
+      "y = −5x + 11"
+     ],
+     "a": 2,
+     "e": "기울기 f′(3) = −4, y − (−5) = −4(x − 3). <b>y = −4x + 7</b>"
+    },
+    {
+     "q": "점 (0, −9)에서 곡선 y = x²에 그은 접선의 방정식을 모두 구하면?",
+     "c": [
+      "y = 6x − 9, y = −6x − 9",
+      "y = 6x + 9, y = −6x + 9",
+      "y = 6x − 9",
+      "y = 3x − 9, y = −3x − 9"
+     ],
+     "a": 0,
+     "e": "접점 (t, t²)에서 접선 y = 2tx − t²이 (0, −9)를 지나므로 t = ±3. <b>y = 6x − 9, y = −6x − 9</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 4x − 3 위의 점 (−2, 13)에서의 접선의 방정식은?",
+     "c": [
+      "y = −12x + 37",
+      "y = 13x + 14",
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>x + <span class='fr'><span class='fn'>79</span><span class='fd'>6</span></span>",
+      "y = −12x − 11"
+     ],
+     "a": 3,
+     "e": "기울기 f′(−2) = −12, y − 13 = −12(x − (−2)). <b>y = −12x − 11</b>"
+    },
+    {
+     "q": "점 (0, −4)에서 곡선 y = x²에 그은 접선의 방정식을 모두 구하면?",
+     "c": [
+      "y = 4x + 4, y = −4x + 4",
+      "y = 4x − 4",
+      "y = 2x − 4, y = −2x − 4",
+      "y = 4x − 4, y = −4x − 4"
+     ],
+     "a": 3,
+     "e": "접점 (t, t²)에서 접선 y = 2tx − t²이 (0, −4)를 지나므로 t = ±2. <b>y = 4x − 4, y = −4x − 4</b>"
+    },
+    {
+     "q": "곡선 y = x² + x + 3에 접하고 기울기가 −5인 직선의 방정식은?",
+     "c": [
+      "y = −5x − 6",
+      "y = −5x + 24",
+      "y = −5x + 6",
+      "y = −5x + 9"
+     ],
+     "a": 0,
+     "e": "f′(x) = 2x + 1 = −5에서 접점 (−3, 9). <b>y = −5x − 6</b>"
+    },
+    {
+     "q": "곡선 y = x³ − 2x² + 3x − 2 위의 점 (3, 16)에서의 접선의 방정식은?",
+     "c": [
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>x + <span class='fr'><span class='fn'>97</span><span class='fd'>6</span></span>",
+      "y = 18x − 38",
+      "y = 16x − 30",
+      "y = 18x + 70"
+     ],
+     "a": 1,
+     "e": "기울기 f′(3) = 18, y − 16 = 18(x − 3). <b>y = 18x − 38</b>"
+    },
+    {
+     "q": "곡선 y = x³ − 4x² + 3x + 2 위의 점 (−1, −6)에서의 접선의 방정식은?",
+     "c": [
+      "y = 14x − 20",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>14</span></span>x − <span class='fr'><span class='fn'>85</span><span class='fd'>14</span></span>",
+      "y = −6x + 8",
+      "y = 14x + 8"
+     ],
+     "a": 3,
+     "e": "기울기 f′(−1) = 14, y − (−6) = 14(x − (−1)). <b>y = 14x + 8</b>"
+    },
+    {
+     "q": "곡선 y = x² + 4x + 3에 접하고 기울기가 −2인 직선의 방정식은?",
+     "c": [
+      "y = 2x + 6",
+      "y = −2x + 6",
+      "y = −2x − 6",
+      "y = −2x"
+     ],
+     "a": 2,
+     "e": "f′(x) = 2x + 4 = −2에서 접점 (−3, 0). <b>y = −2x − 6</b>"
+    },
+    {
+     "q": "곡선 y = −x³ + x² + x 위의 점 (3, −15)에서의 접선의 방정식은?",
+     "c": [
+      "y = −20x + 45",
+      "y = −20x − 75",
+      "y = −15x + 25",
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>x − <span class='fr'><span class='fn'>303</span><span class='fd'>20</span></span>"
+     ],
+     "a": 0,
+     "e": "기울기 f′(3) = −20, y − (−15) = −20(x − 3). <b>y = −20x + 45</b>"
+    },
+    {
+     "q": "곡선 y = 2x² − 2x − 1 위의 점 (3, 11)에서의 접선의 방정식은?",
+     "c": [
+      "y = 10x + 41",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>x + <span class='fr'><span class='fn'>113</span><span class='fd'>10</span></span>",
+      "y = 10x − 19",
+      "y = 11x − 23"
+     ],
+     "a": 2,
+     "e": "기울기 f′(3) = 10, y − 11 = 10(x − 3). <b>y = 10x − 19</b>"
+    },
+    {
+     "q": "곡선 y = x² + 1에 접하고 기울기가 −2인 직선의 방정식은?",
+     "c": [
+      "y = −2x + 4",
+      "y = −2x",
+      "y = −2x + 1",
+      "y = −2x + 2"
+     ],
+     "a": 1,
+     "e": "f′(x) = 2x = −2에서 접점 (−1, 2). <b>y = −2x</b>"
+    },
+    {
+     "q": "곡선 y = 2x³ − 4x² − 2x + 4 위의 점 (2, 0)에서의 접선의 방정식은?",
+     "c": [
+      "y = 6x − 12",
+      "y = 6x + 12",
+      "y = 6",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>x + <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "기울기 f′(2) = 6, y − 0 = 6(x − 2). <b>y = 6x − 12</b>"
+    },
+    {
+     "q": "곡선 y = −x² + 4x + 2 위의 점 (−1, −3)에서의 접선의 방정식은?",
+     "c": [
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>x − <span class='fr'><span class='fn'>19</span><span class='fd'>6</span></span>",
+      "y = 6x + 3",
+      "y = −3x + 3",
+      "y = 6x − 9"
+     ],
+     "a": 1,
+     "e": "기울기 f′(−1) = 6, y − (−3) = 6(x − (−1)). <b>y = 6x + 3</b>"
+    },
+    {
+     "q": "곡선 y = x² − 3x + 2 위의 점 (−2, 12)에서의 접선의 방정식은?",
+     "c": [
+      "y = <span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>x + <span class='fr'><span class='fn'>86</span><span class='fd'>7</span></span>",
+      "y = −7x − 2",
+      "y = −7x + 26",
+      "y = 12x + 17"
+     ],
+     "a": 1,
+     "e": "기울기 f′(−2) = −7, y − 12 = −7(x − (−2)). <b>y = −7x − 2</b>"
+    },
+    {
+     "q": "곡선 y = 2x³ − 4x² − 2x 위의 점 (−2, −28)에서의 접선의 방정식은?",
+     "c": [
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>38</span></span>x − <span class='fr'><span class='fn'>533</span><span class='fd'>19</span></span>",
+      "y = 38x − 104",
+      "y = −28x − 18",
+      "y = 38x + 48"
+     ],
+     "a": 3,
+     "e": "기울기 f′(−2) = 38, y − (−28) = 38(x − (−2)). <b>y = 38x + 48</b>"
+    },
+    {
+     "q": "곡선 y = x² − 2x + 3에 접하고 기울기가 2인 직선의 방정식은?",
+     "c": [
+      "y = 2x + 3",
+      "y = 2x + 1",
+      "y = 2x − 1",
+      "y = 2x + 7"
+     ],
+     "a": 2,
+     "e": "f′(x) = 2x − 2 = 2에서 접점 (2, 3). <b>y = 2x − 1</b>"
+    },
+    {
+     "q": "곡선 y = x² − 3x에 접하고 기울기가 3인 직선의 방정식은?",
+     "c": [
+      "y = 3x + 9",
+      "y = 3x",
+      "y = 3x − 9",
+      "y = −3x + 9"
+     ],
+     "a": 2,
+     "e": "f′(x) = 2x − 3 = 3에서 접점 (3, 0). <b>y = 3x − 9</b>"
+    },
+    {
+     "q": "점 (0, −16)에서 곡선 y = x²에 그은 접선의 방정식을 모두 구하면?",
+     "c": [
+      "y = 8x + 16, y = −8x + 16",
+      "y = 4x − 16, y = −4x − 16",
+      "y = 8x − 16",
+      "y = 8x − 16, y = −8x − 16"
+     ],
+     "a": 3,
+     "e": "접점 (t, t²)에서 접선 y = 2tx − t²이 (0, −16)을 지나므로 t = ±4. <b>y = 8x − 16, y = −8x − 16</b>"
+    },
+    {
+     "q": "곡선 y = −x³ + 4x² + 2x 위의 점 (2, 12)에서의 접선의 방정식은?",
+     "c": [
+      "y = 12x − 18",
+      "y = 6x",
+      "y = −<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>x + <span class='fr'><span class='fn'>37</span><span class='fd'>3</span></span>",
+      "y = 6x + 24"
+     ],
+     "a": 1,
+     "e": "기울기 f′(2) = 6, y − 12 = 6(x − 2). <b>y = 6x</b>"
+    },
+    {
+     "q": "점 (0, −1)에서 곡선 y = x²에 그은 접선의 방정식을 모두 구하면?",
+     "c": [
+      "y = 2x − 1, y = −2x − 1",
+      "y = x − 1, y = −x − 1",
+      "y = 2x + 1, y = −2x + 1",
+      "y = 2x − 1"
+     ],
+     "a": 0,
+     "e": "접점 (t, t²)에서 접선 y = 2tx − t²이 (0, −1)을 지나므로 t = ±1. <b>y = 2x − 1, y = −2x − 1</b>"
+    }
+   ]
+  },
+  {
+   "title": "롤의 정리",
+   "items": [
+    {
+     "q": "함수 f(x) = x² + 2x − 8에 대하여 닫힌구간 [−4, 2]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "−1",
+      "−8",
+      "−2",
+      "3"
+     ],
+     "a": 0,
+     "e": "f(−4) = f(2) = 0이므로 f′(c) = 2c − (−2) = 0. <b>c = −1</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 4에 대하여 닫힌구간 [−2, 2]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "0",
+      "−4",
+      "1",
+      "2"
+     ],
+     "a": 0,
+     "e": "f(−2) = f(2) = 0이므로 f′(c) = 2c − 0 = 0. <b>c = 0</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 3x − 10에 대하여 닫힌구간 [−2, 5]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "−10",
+      "3",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "f(−2) = f(5) = 0이므로 f′(c) = 2c − 3 = 0. <b>c = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 4x − 5에 대하여 닫힌구간 [−1, 5]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "2",
+      "4",
+      "3",
+      "−5"
+     ],
+     "a": 0,
+     "e": "f(−1) = f(5) = 0이므로 f′(c) = 2c − 4 = 0. <b>c = 2</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 2x − 3에 대하여 닫힌구간 [−3, 1]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "−2",
+      "2",
+      "−1",
+      "−3"
+     ],
+     "a": 2,
+     "e": "f(−3) = f(1) = 0이므로 f′(c) = 2c − (−2) = 0. <b>c = −1</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 3x − 4에 대하여 닫힌구간 [−4, 1]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−3",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "−4"
+     ],
+     "a": 0,
+     "e": "f(−4) = f(1) = 0이므로 f′(c) = 2c − (−3) = 0. <b>c = −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 2x − 8에 대하여 닫힌구간 [−2, 4]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "−8",
+      "3",
+      "1",
+      "2"
+     ],
+     "a": 2,
+     "e": "f(−2) = f(4) = 0이므로 f′(c) = 2c − 2 = 0. <b>c = 1</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 4x + 3에 대하여 닫힌구간 [−3, −1]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "3",
+      "−4",
+      "−2",
+      "1"
+     ],
+     "a": 2,
+     "e": "f(−3) = f(−1) = 0이므로 f′(c) = 2c − (−4) = 0. <b>c = −2</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 4x에 대하여 닫힌구간 [0, 4]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "0",
+      "4",
+      "2",
+      "3"
+     ],
+     "a": 2,
+     "e": "f(0) = f(4) = 0이므로 f′(c) = 2c − 4 = 0. <b>c = 2</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 7x + 12에 대하여 닫힌구간 [3, 4]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "7",
+      "12",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "f(3) = f(4) = 0이므로 f′(c) = 2c − 7 = 0. <b>c = <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 3x에 대하여 닫힌구간 [−3, 0]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "0",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−3"
+     ],
+     "a": 1,
+     "e": "f(−3) = f(0) = 0이므로 f′(c) = 2c − (−3) = 0. <b>c = −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² − x − 20에 대하여 닫힌구간 [−4, 5]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "−20",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "1"
+     ],
+     "a": 1,
+     "e": "f(−4) = f(5) = 0이므로 f′(c) = 2c − 1 = 0. <b>c = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² − x − 2에 대하여 닫힌구간 [−1, 2]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "−2",
+      "1",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "f(−1) = f(2) = 0이므로 f′(c) = 2c − 1 = 0. <b>c = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² + x에 대하여 닫힌구간 [−1, 0]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−1",
+      "0",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "f(−1) = f(0) = 0이므로 f′(c) = 2c − (−1) = 0. <b>c = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 4x에 대하여 닫힌구간 [−4, 0]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "0",
+      "−2",
+      "2",
+      "−4"
+     ],
+     "a": 1,
+     "e": "f(−4) = f(0) = 0이므로 f′(c) = 2c − (−4) = 0. <b>c = −2</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 3x에 대하여 닫힌구간 [0, 3]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "3",
+      "0",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "f(0) = f(3) = 0이므로 f′(c) = 2c − 3 = 0. <b>c = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 6x + 8에 대하여 닫힌구간 [2, 4]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "3",
+      "6",
+      "8",
+      "1"
+     ],
+     "a": 0,
+     "e": "f(2) = f(4) = 0이므로 f′(c) = 2c − 6 = 0. <b>c = 3</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 4x + 3에 대하여 닫힌구간 [1, 3]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "4",
+      "2",
+      "1",
+      "3"
+     ],
+     "a": 1,
+     "e": "f(1) = f(3) = 0이므로 f′(c) = 2c − 4 = 0. <b>c = 2</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 5x + 6에 대하여 닫힌구간 [−3, −2]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "−5",
+      "6"
+     ],
+     "a": 1,
+     "e": "f(−3) = f(−2) = 0이므로 f′(c) = 2c − (−5) = 0. <b>c = −<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 6x + 8에 대하여 닫힌구간 [−4, −2]에서 롤의 정리를 만족하는 c의 값은?",
+     "c": [
+      "8",
+      "−6",
+      "−3",
+      "1"
+     ],
+     "a": 2,
+     "e": "f(−4) = f(−2) = 0이므로 f′(c) = 2c − (−6) = 0. <b>c = −3</b>"
+    }
+   ]
+  },
+  {
+   "title": "평균값 정리",
+   "items": [
+    {
+     "q": "함수 f(x) = −x² + 4x + 2에 대하여 닫힌구간 [−3, 2]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "−3",
+      "2",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(2) − f(−3)) ÷ 5 = f′(c). <b>c = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = 2x² + x − 1에 대하여 닫힌구간 [−3, 5]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "4",
+      "5",
+      "−3",
+      "1"
+     ],
+     "a": 3,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(5) − f(−3)) ÷ 8 = f′(c). <b>c = 1</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² − 2x − 2에 대하여 닫힌구간 [−3, 4]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "4",
+      "−3",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(4) − f(−3)) ÷ 7 = f′(c). <b>c = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = 2x² + x + 1에 대하여 닫힌구간 [−3, −2]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "−3",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "−2",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(−2) − f(−3)) ÷ 1 = f′(c). <b>c = −<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = −x² + 4x − 1에 대하여 닫힌구간 [−3, 3]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "−3",
+      "3",
+      "0",
+      "1"
+     ],
+     "a": 2,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(3) − f(−3)) ÷ 6 = f′(c). <b>c = 0</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 4x + 3에 대하여 닫힌구간 [−1, 4]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "4",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "−1",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(4) − f(−1)) ÷ 5 = f′(c). <b>c = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = −x² + 3x + 4에 대하여 닫힌구간 [−3, 3]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "3",
+      "0",
+      "−3",
+      "1"
+     ],
+     "a": 1,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(3) − f(−3)) ÷ 6 = f′(c). <b>c = 0</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 2x + 1에 대하여 닫힌구간 [−3, 4]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "−3",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "4"
+     ],
+     "a": 2,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(4) − f(−3)) ÷ 7 = f′(c). <b>c = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x³에 대하여 닫힌구간 [0, 6]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "3√2",
+      "2",
+      "3",
+      "2√3"
+     ],
+     "a": 3,
+     "e": "6² = 3c² → c = 6 ÷ √3. <b>2√3</b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 4x − 4에 대하여 닫힌구간 [0, 1]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(1) − f(0)) ÷ 1 = f′(c). <b>c = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² − 1에 대하여 닫힌구간 [−2, 5]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "5",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−2"
+     ],
+     "a": 2,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(5) − f(−2)) ÷ 7 = f′(c). <b>c = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x³에 대하여 닫힌구간 [0, 9]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>√2",
+      "3√3",
+      "3",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "9² = 3c² → c = 9 ÷ √3. <b>3√3</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² + 1에 대하여 닫힌구간 [1, 5]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "2",
+      "1",
+      "3",
+      "5"
+     ],
+     "a": 2,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(5) − f(1)) ÷ 4 = f′(c). <b>c = 3</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² − 4x − 1에 대하여 닫힌구간 [−3, 1]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "2",
+      "−1",
+      "−3",
+      "1"
+     ],
+     "a": 1,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(1) − f(−3)) ÷ 4 = f′(c). <b>c = −1</b>"
+    },
+    {
+     "q": "함수 f(x) = x³에 대하여 닫힌구간 [0, 3]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "√3",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>√2",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "1"
+     ],
+     "a": 0,
+     "e": "3² = 3c² → c = 3 ÷ √3. <b>√3</b>"
+    },
+    {
+     "q": "함수 f(x) = 2x² + 3x + 3에 대하여 닫힌구간 [−3, 1]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "−1",
+      "−3",
+      "1",
+      "2"
+     ],
+     "a": 0,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(1) − f(−3)) ÷ 4 = f′(c). <b>c = −1</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 2x − 2에 대하여 닫힌구간 [3, 5]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "4",
+      "1",
+      "5",
+      "3"
+     ],
+     "a": 0,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(5) − f(3)) ÷ 2 = f′(c). <b>c = 4</b>"
+    },
+    {
+     "q": "함수 f(x) = −x² + 3x + 2에 대하여 닫힌구간 [2, 4]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "2",
+      "3",
+      "4",
+      "1"
+     ],
+     "a": 1,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(4) − f(2)) ÷ 2 = f′(c). <b>c = 3</b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 2x + 4에 대하여 닫힌구간 [1, 2]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "1",
+      "2",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(2) − f(1)) ÷ 1 = f′(c). <b>c = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>"
+    },
+    {
+     "q": "함수 f(x) = x² + 2x에 대하여 닫힌구간 [0, 4]에서 평균값 정리를 만족하는 c의 값은?",
+     "c": [
+      "2",
+      "3",
+      "4",
+      "0"
+     ],
+     "a": 0,
+     "e": "이차함수에서는 c가 구간의 가운데예요. (f(4) − f(0)) ÷ 4 = f′(c). <b>c = 2</b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 5,
+ "updated": "2026-11-25",
+ "country": "kr",
+ "subject": "math",
+ "grade": "calculus-1"
+}

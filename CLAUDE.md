@@ -1689,7 +1689,23 @@ KR / Math / 중학교 3학년（이차함수의 최댓값・최솟값は高校�
 7. quadratic-equation-word-problems ✓ 8. quadratic-functions ✓ 9. graphs-of-quadratic-functions ✓ 10. trigonometric-ratios ✓ 11. applications-of-trigonometric-ratios ✓ 12. chords-and-tangents ✓
 13. inscribed-angles ✓ 14. variance-and-standard-deviation ✓ 15. box-plots ✓ 16. scatter-plots-and-correlation ✓
 
-KR / Math は초등 1학년〜중학교 3학년まで完了。次は 고등학교（2022 개정 공통수학 1・2）か、GDP 順で次の国
+KR / Math / 고등학교（2022 개정。科目ごとに grade：`common-math-1`（공통수학1、sort 10）・`common-math-2`（공통수학2、11）・`algebra`（대수、12）・`calculus-1`（미적분Ⅰ、13）・`probability-and-statistics`（확률과 통계、14）。unit.php で typicalAgeRange と educationalLevel「고등학교」）— 生成スクリプトは `gen_kr_math_cm1_*`・`cm2_*`・`alg_*`・`calc1_*`・`ps_*`（2 行のラッパー）、本体は `tools/kr_h1.py`〜`kr_h5.py` の build(key)、seed は 830NN〜834NN。
+共通部品は `tools/kr_hs.py`（kr_mid の上に px（係数リスト → 多項式）・padd・pmul・peval・pdiv・cx（복소수）・surd・mx（행렬 .mx）・roots・W・graph（kurve、data-pf='lg'、xlab で π 目盛り））。kr_common.unit は standard_code の [10공수1-…]・[12대수…]・[12미적Ⅰ-…]・[12확통…] から domain（DOMAIN_HS）と seo_title「… | 고등학교 공통수학1 학습지 (정답 포함)」を作る。
+key_big・key_sub に「<」を書かない（plain_text の assert）。負の数を %d で出さない（neg）。数・式の後の助詞は tidy が直すが、<sub> の後（₄C₃을）は直らないので文を変える。表は fr_common.table（.sn-table）。점근선は赤い点線を SVG に足す。
+トピック（topic_defs_kr_all）：고등학교の slug は topic_hs_kr() で 1 つずつ割り当てる（他のトピックの out に自動で入る。중학교と同じ slug の polynomial-operations・factoring は従来どおり）。新トピック coordinate-geometry・sets-and-logic・exponents-and-logarithms・trigonometry・sequences・calculus・counting・probability-and-statistics
+
+KR / Math / 공통수학1: 1. polynomial-operations ✓ 2. identities-and-remainder-theorem ✓ 3. factoring ✓ 4. complex-numbers ✓ 5. discriminant ✓ 6. roots-and-coefficients ✓ 7. quadratic-equations-and-functions ✓ 8. maximum-and-minimum-of-quadratic-functions ✓
+9. cubic-and-quartic-equations ✓ 10. simultaneous-quadratic-equations ✓ 11. linear-inequalities-and-absolute-values ✓ 12. quadratic-inequalities ✓ 13. counting-principles ✓ 14. permutations ✓ 15. combinations ✓ 16. matrices ✓
+KR / Math / 공통수학2: 1. distance-and-internal-division ✓ 2. equations-of-lines ✓ 3. distance-from-a-point-to-a-line ✓ 4. equations-of-circles ✓ 5. circles-and-lines ✓ 6. translations-and-reflections ✓ 7. sets ✓ 8. set-operations ✓
+9. propositions-and-conditions ✓ 10. necessary-and-sufficient-conditions ✓ 11. absolute-inequalities ✓ 12. functions ✓ 13. composite-and-inverse-functions ✓ 14. rational-functions ✓ 15. irrational-functions ✓
+KR / Math / 대수: 1. radicals-and-roots ✓ 2. exponents ✓ 3. logarithms ✓ 4. common-logarithms ✓ 5. exponential-and-logarithmic-functions ✓ 6. exponential-and-logarithmic-equations ✓ 7. radians-and-general-angles ✓
+8. trigonometric-functions ✓ 9. graphs-of-trigonometric-functions ✓ 10. law-of-sines-and-cosines ✓ 11. arithmetic-sequences ✓ 12. geometric-sequences ✓ 13. sigma-notation ✓ 14. recursive-sequences-and-induction ✓
+KR / Math / 미적분Ⅰ: 1. limits-of-functions ✓ 2. continuity ✓ 3. derivatives ✓ 4. rules-of-differentiation ✓ 5. tangent-lines-and-mean-value-theorem ✓ 6. increasing-decreasing-and-extrema ✓
+7. graphs-and-maximum-minimum ✓ 8. equations-inequalities-and-velocity ✓ 9. indefinite-integrals ✓ 10. definite-integrals ✓ 11. area-between-curves ✓ 12. velocity-and-distance ✓
+KR / Math / 확률과 통계: 1. permutations-with-repetition ✓ 2. combinations-with-repetition ✓ 3. binomial-theorem ✓ 4. probability-and-addition-rule ✓ 5. conditional-probability ✓ 6. independence-and-multiplication-rule ✓
+7. discrete-random-variables ✓ 8. binomial-distribution ✓ 9. normal-distribution（표준정규분포표を問題に入れる）✓ 10. sampling-and-estimation ✓
+
+KR / Math は초등 1학년〜고등학교（공통수학1・2、대수、미적분Ⅰ、확률과 통계）まで完了。次は 미적분Ⅱ・기하 などの選択科目か、GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

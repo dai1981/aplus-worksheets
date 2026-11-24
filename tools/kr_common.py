@@ -20,7 +20,14 @@ BOYS = ["시우", "지호", "태오", "서호", "도하", "준서", "우주", "�
 DOMAIN = {"01": "수와 연산", "02": "변화와 관계", "03": "도형과 측정", "04": "자료와 가능성"}
 GRADE_NAME = {"grade-1": "초등 1학년", "grade-2": "초등 2학년", "grade-3": "초등 3학년", "grade-4": "초등 4학년",
               "grade-5": "초등 5학년", "grade-6": "초등 6학년", "grade-7": "중학교 1학년", "grade-8": "중학교 2학년",
-              "grade-9": "중학교 3학년"}
+              "grade-9": "중학교 3학년", "common-math-1": "공통수학1", "common-math-2": "공통수학2", "algebra": "대수",
+              "calculus-1": "미적분Ⅰ", "probability-and-statistics": "확률과 통계"}
+# 고등학교：영역は成就基準コードの頭（[10공수1-02-01] → 10공수1-02）で決める
+DOMAIN_HS = {"10공수1-01": "다항식", "10공수1-02": "방정식과 부등식", "10공수1-03": "경우의 수", "10공수1-04": "행렬",
+             "10공수2-01": "도형의 방정식", "10공수2-02": "집합과 명제", "10공수2-03": "함수와 그래프",
+             "12대수01": "지수함수와 로그함수", "12대수02": "삼각함수", "12대수03": "수열",
+             "12미적Ⅰ-01": "함수의 극한과 연속", "12미적Ⅰ-02": "미분", "12미적Ⅰ-03": "적분",
+             "12확통01": "경우의 수", "12확통02": "확률", "12확통03": "통계"}
 
 
 def num(n):
@@ -218,9 +225,15 @@ def unit(grade, slug, sort, code, std, title, short, meta, key_big, key_sub, thi
     title, short, meta, key_big, key_sub = map(plain_text, (title, short, meta, key_big, key_sub))
     assert len(title) <= 40 and len(key_big) <= 30 and len(key_sub) <= 50, (title, key_big, key_sub)
     gname = GRADE_NAME[grade]
-    dom = DOMAIN[re.search(r"수(\d\d)-", code).group(1)]
+    hs = re.search(r"\[(10공수[12]-\d\d|12대수\d\d|12미적Ⅰ-\d\d|12확통\d\d)", code)
+    if hs:
+        dom = DOMAIN_HS[hs.group(1)]
+        seo = "%s | 고등학교 %s 학습지 (정답 포함)" % (title, gname)
+    else:
+        dom = DOMAIN[re.search(r"수(\d\d)-", code).group(1)]
+        seo = "%s | %s 수학 학습지 (정답 포함)" % (title, gname)
     write_unit("kr", "math", grade, {
-        "slug": slug, "title": title, "seo_title": "%s | %s 수학 학습지 (정답 포함)" % (title, gname),
+        "slug": slug, "title": title, "seo_title": seo,
         "short_title": short, "domain": dom, "standard_code": code, "standard_url": STD_URL,
         "standard_text": std, "meta_desc": meta, "key_big": key_big, "key_sub": key_sub,
         "body_html": lesson(think, examples, mist, extra),
