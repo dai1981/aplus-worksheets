@@ -7,7 +7,7 @@
 /* Korea (ko): 2022 개정 교육과정. Slugs are English, like Taiwan */
 function topic_defs_kr() {
     return array(
-        'whole-numbers' => array('name' => '큰 수와 자릿값', 'in' => '/numbers-to|large-numbers|place-value/', 'out' => '/^$/',
+        'whole-numbers' => array('name' => '큰 수와 자릿값', 'in' => '/numbers-to|large-numbers|place-value|^(three|four)-digit-numbers$/', 'out' => '/^$/',
             'blurb' => '100까지의 수부터 만, 억, 조까지 자릿값을 알고 수를 읽고 쓰며 크기를 비교합니다.'),
         'addition-and-subtraction' => array('name' => '덧셈과 뺄셈', 'in' => '/add|subtract/', 'out' => '/fraction|decimal|integer|polynom/',
             'blurb' => '덧셈과 뺄셈의 뜻부터 받아올림, 받아내림이 있는 세 자리 수의 덧셈과 뺄셈까지 익힙니다.'),
@@ -21,12 +21,14 @@ function topic_defs_kr() {
             'blurb' => '몇십, 몇백으로 어림하고, 이상・이하・초과・미만과 올림・버림・반올림으로 수의 범위와 어림값을 나타냅니다.'),
         'shapes' => array('name' => '도형', 'in' => '/lines|angles|rectangles|squares|circles|triangles|quadrilaterals|polygons|shapes|position|congruent|symmetry|cuboids|prisms|cylinders|stacking/', 'out' => '/^$/',
             'blurb' => '선분과 각, 여러 가지 삼각형과 사각형, 합동과 대칭, 직육면체・각기둥・원기둥 같은 입체도형을 알아봅니다.'),
-        'measurement' => array('name' => '측정', 'in' => '/length|time|capacity|weight|mass|perimeter|area|volume|circumference/', 'out' => '/^$/',
+        'measurement' => array('name' => '측정', 'in' => '/length|time|capacity|weight|mass|perimeter|area|volume|circumference|calendar/', 'out' => '/^$/',
             'blurb' => '길이, 시간, 들이, 무게의 단위부터 둘레와 넓이, 원주와 원의 넓이, 겉넓이와 부피까지 구합니다.'),
-        'data' => array('name' => '자료와 가능성', 'in' => '/graph|data|tables|likelihood|chance|averages/', 'out' => '/^$/',
+        'data' => array('name' => '자료와 가능성', 'in' => '/graph|data|tables|likelihood|chance|averages|sorting/', 'out' => '/multiplication-tables/',
             'blurb' => '자료를 표와 여러 가지 그래프로 나타내고 해석하며, 평균과 일이 일어날 가능성을 알아봅니다.'),
         'ratios-and-proportions' => array('name' => '규칙과 비율', 'in' => '/correspondence|ratio|percent|proportion/', 'out' => '/^$/',
             'blurb' => '두 양의 대응 관계를 식으로 나타내고, 비와 비율, 백분율, 비례식과 비례배분을 익힙니다.'),
+        'patterns' => array('name' => '규칙 찾기', 'in' => '/^patterns$|number-patterns/', 'out' => '/^$/',
+            'blurb' => '모양과 색, 수의 배열, 덧셈표와 곱셈표, 달력에서 되풀이되거나 일정하게 변하는 규칙을 찾고 나타냅니다.'),
     );
 }
 

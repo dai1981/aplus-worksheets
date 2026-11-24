@@ -1656,7 +1656,22 @@ KR / Math / 초등 6학년（6-1 → 6-2。生成スクリプトは `gen_kr_math
 1. dividing-fractions-by-whole-numbers ✓ 2. prisms-and-pyramids ✓ 3. dividing-decimals-by-whole-numbers ✓ 4. ratios-and-rates ✓ 5. percentages ✓ 6. strip-and-circle-graphs ✓ 7. surface-area-and-volume-of-cuboids ✓
 8. dividing-fractions ✓ 9. dividing-decimals ✓ 10. stacking-cubes-and-views ✓ 11. ratios-and-proportions ✓ 12. proportional-distribution ✓ 13. circumference-and-pi ✓ 14. area-of-circles ✓ 15. cylinders-cones-and-spheres ✓
 トピック（topic_defs_kr）：factors-and-multiples（약수와 배수）・ratios-and-proportions（규칙과 비율）を足した。order-of→multiplication、range-of→estimation、congruent・symmetry・cuboids・prisms・cylinders・stacking→shapes、perimeter・area・volume・circumference→measurement、averages→data。
-助詞：ㄱ〜ㅂ（点・面の名前）は받침ありとして「이에요・과」を直接書く。次は 초등 1・2학년（2022 개정、2024 年度から）か、GDP 順で次の国
+助詞：ㄱ〜ㅂ（点・面の名前）は받침ありとして「이에요・과」を直接書く
+
+KR / Math / 초등 1학년・2학년（2022 개정、2024 年度から）— 共通部品は `tools/kr_low.py`（k_pics の絵に韓国語の aria-label と 가나다라：row・scatter・tenframe・rods・bond・two・crossed・cards・chart・pencils・towers・scale・glasses、수 모형 blocks、돈 money（10〜500원 동전・1000원 지폐）、고유어 native・native_c（한 개・스무 개）、ORD（첫째…）。
+import すると kr_common.tidy を拡張して、名詞（사과・꽃…）と助数詞（3장을・몇 권을）の後の助詞、받침の後の 예요→이에요・라고→이라고 も直す）。1학년は 100 まで、計算は 20 まで、とても短い文。2학년は 9999 まで、곱셈구구。
+まとまりは kr_g1_num（수 3）・kr_g1_calc（덧셈과 뺄셈 4）・kr_g1_geo（모양・비교・시각・규칙 5）・kr_g2_num（세・네 자리 수）・kr_g2_calc（덧셈・뺄셈・세 수・□ 4）・kr_g2_mul（곱셈・곱셈구구）・kr_g2_meas（cm・m・시각과 시간・달력）・kr_g2_geo（도형・쌓기나무・규칙）・kr_g2_data（분류・표와 그래프）の build(which)。
+1학년の입체는「상자・둥근 기둥・공 모양」、평면은「□・△・○ 모양」、2학년から삼각형・사각형・원。トピック `patterns`（규칙 찾기）を足した
+
+KR / Math / 초등 1학년（1-1 → 1-2）
+1. numbers-to-9 ✓ 2. solid-shapes ✓ 3. addition-and-subtraction-within-9 ✓ 4. comparing-length-weight-area-and-capacity ✓ 5. numbers-to-50 ✓ 6. numbers-to-100 ✓
+7. two-digit-addition-and-subtraction ✓ 8. adding-three-numbers-and-making-10 ✓ 9. addition-and-subtraction-within-20 ✓ 10. flat-shapes ✓ 11. telling-time-hours-and-half-hours ✓ 12. patterns ✓
+KR / Math / 초등 2학년（2-1 → 2-2）
+1. three-digit-numbers ✓ 2. triangles-quadrilaterals-and-circles ✓ 3. stacking-cubes ✓ 4. adding-two-digit-numbers ✓ 5. subtracting-two-digit-numbers ✓ 6. adding-and-subtracting-three-numbers ✓
+7. addition-subtraction-relationship-and-missing-numbers ✓ 8. measuring-length-in-cm ✓ 9. sorting ✓ 10. meaning-of-multiplication ✓ 11. four-digit-numbers ✓ 12. multiplication-tables ✓
+13. length-in-meters-and-centimeters ✓ 14. telling-time-to-the-minute ✓ 15. calendar-days-weeks-months-and-years ✓ 16. tables-and-graphs ✓ 17. patterns ✓
+
+KR / Math は초등 1〜6학년まで完了。次は 중학교（2022 개정 중학교 수학）か、GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
