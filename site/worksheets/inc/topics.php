@@ -17,7 +17,7 @@ function topic_defs_kr() {
             'blurb' => '똑같이 나누기로 분수를 알고, 단위분수, 진분수, 가분수, 대분수와 소수 한 자리 수를 배웁니다.'),
         'estimation' => array('name' => '어림하기', 'in' => '/estimat|round/', 'out' => '/^$/',
             'blurb' => '몇십, 몇백으로 어림하여 계산 결과를 짐작하고 답이 맞는지 확인합니다.'),
-        'shapes' => array('name' => '도형', 'in' => '/lines|angles|rectangles|squares|circles|triangles|quadrilaterals|polygons|shapes/', 'out' => '/^$/',
+        'shapes' => array('name' => '도형', 'in' => '/lines|angles|rectangles|squares|circles|triangles|quadrilaterals|polygons|shapes|position/', 'out' => '/^$/',
             'blurb' => '선분, 직선, 반직선, 각과 직각, 직사각형과 정사각형, 원의 중심과 반지름을 알아봅니다.'),
         'measurement' => array('name' => '측정', 'in' => '/length|time|capacity|weight|mass/', 'out' => '/^$/',
             'blurb' => 'mm와 km, 초 단위의 시간, L와 mL, kg과 g을 알고 단위를 바꾸어 계산합니다.'),

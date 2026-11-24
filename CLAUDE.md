@@ -1643,7 +1643,11 @@ KR / Math / 초등 3학년（3-1 → 3-2 の順）
 1. add-and-subtract-three-digit-numbers ✓ 2. lines-rays-and-angles ✓ 3. right-triangles-rectangles-and-squares ✓ 4. meaning-of-division ✓ 5. multiply-two-digit-by-one-digit ✓ 6. length-mm-and-km ✓ 7. time-in-seconds ✓
 8. fractions ✓ 9. decimals ✓ 10. multiply-three-digit-by-one-digit ✓ 11. multiply-two-digit-by-two-digit ✓ 12. division-with-remainders ✓ 13. divide-three-digit-by-one-digit ✓ 14. circles ✓
 15. fraction-of-a-number ✓ 16. proper-improper-and-mixed-fractions ✓ 17. comparing-fractions ✓ 18. capacity-liters-and-milliliters ✓ 19. weight-kilograms-and-grams ✓ 20. picture-graphs ✓ 21. estimation ✓
-次は 초등 4학년（[4수01-01] 큰 수、[4수01-07] 나누는 수가 두 자리 수、[4수01-13] 소수 두・세 자리、[4수01-15][4수01-16] 分数・小数の덧셈と뺄셈、[4수02-01〜03] 규칙과 등호、[4수03-02][4수03-24][4수03-25] 각도、[4수03-03] 수직과 평행、[4수03-04] 평면도형의 이동、[4수03-05] 위치と方向、[4수03-08][4수03-09] 삼각형、[4수03-10] 사각형、[4수03-11] 다각형、[4수03-12] 모양 채우기、[4수04-01] 막대그래프、[4수04-02][4수04-03] 꺾은선그래프）
+KR / Math / 초등 4학년（4-1 → 4-2。生成スクリプトは `gen_kr_math_g4_*`、まとまりは kr_g4_num.py（数・計算・規則）・kr_g4_geo.py（角度・移動・位置・三角形・垂直と平行・四角形・多角形。角度の図は gen_au_maths_y5_angles を relabel）・kr_g4_fd.py（分数・小数。4 학년は약분しないので fs(v, d) で分母を固定）・kr_g4_data.py（막대・꺾은선그래프）の build(which)。助詞は josa、単位で終わる語は unit_josa）
+1. large-numbers ✓ 2. comparing-large-numbers ✓ 3. measuring-angles ✓ 4. angle-sums-of-triangles-and-quadrilaterals ✓ 5. multiply-three-digit-by-two-digit ✓ 6. divide-by-two-digit-numbers ✓ 7. sliding-flipping-and-turning-shapes ✓
+8. position-and-direction ✓ 9. bar-graphs ✓ 11. number-patterns ✓ 12. equal-sign-and-equations ✓ 13. adding-and-subtracting-fractions ✓ 14. triangles ✓ 15. decimals-hundredths-and-thousandths ✓
+16. adding-and-subtracting-decimals ✓ 17. perpendicular-and-parallel-lines ✓ 18. quadrilaterals ✓ 19. line-graphs ✓ 20. polygons ✓
+トピック：position→shapes。次は 초등 5학년（2026 年度から 2022 개정）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
