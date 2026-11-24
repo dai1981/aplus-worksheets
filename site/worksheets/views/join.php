@@ -16,6 +16,7 @@ site_header(array());
   <button id="mqb" type="submit">Join</button>
   <p class="mq-join-e" id="mqe" role="alert"></p>
   <p class="mq-join-n">You can also scan the QR code with a phone camera.</p>
+  <p class="mq-join-n"><a href="<?= url('ranking/') ?>">See the class rankings by country and state</a></p>
 </form>
 </main>
 <style>

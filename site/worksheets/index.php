@@ -12,6 +12,7 @@
    /worksheets/us/math/grade-3/area/pin.png     -> tall picture for Pinterest (also grade and topic pages)
    /worksheets/sitemap.xml                    -> sitemap
    /worksheets/join/                          -> Quiz together: enter a room code
+   /worksheets/ranking/                       -> Quiz together: class accuracy by country and state
 */
 require __DIR__ . '/inc/core.php';
 
@@ -46,6 +47,12 @@ if ($p !== '' && substr($uri, -1) !== '/') {
 // Quiz together: type the 6-digit code from the host's screen
 if ($p === 'join') {
     try { require __DIR__ . '/views/join.php'; }
+    catch (PDOException $e) { http_response_code(503); }
+    exit;
+}
+// Quiz together: rankings by country and state (drawn by eigo-duke.com /common/js/mq-rank.js)
+if ($p === 'ranking') {
+    try { require __DIR__ . '/views/ranking.php'; }
     catch (PDOException $e) { http_response_code(503); }
     exit;
 }

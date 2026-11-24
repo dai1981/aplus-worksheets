@@ -1601,6 +1601,12 @@ MX / Matemáticas は primaria 1.º〜6.º まで完了。次は secundaria（Fa
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
+## みんなでクイズ ランキング（/worksheets/ranking/）
+
+- 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
+- 集計テーブルは mq.php と同じ DB の qz_area・qz_done・qz_stat・qz_unit（mq.php が自動で作る。qz_stat・qz_unit は足すだけ）
+- 国・地域のコードは mq-geo.js と mq.php の MQ_GEO をそろえる（新しい国を足したら両方に）
+
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
 - 単語ページは `site/japanese/_dict/word.php` が DB の **jd_word**（1語1行、13言語の訳を JSON）から作る。ルーティングは `site/japanese/.htaccess`
