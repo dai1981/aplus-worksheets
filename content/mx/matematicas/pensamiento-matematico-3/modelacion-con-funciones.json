@@ -1,0 +1,1157 @@
+{
+ "slug": "modelacion-con-funciones",
+ "title": "Operaciones y composición de funciones",
+ "seo_title": "Modelación con funciones – Pensamiento Matemático III: ejercicios con respuestas",
+ "short_title": "Modelación con funciones",
+ "domain": "Variación y funciones",
+ "standard_code": "Pensamiento Matemático III · Progresión 3: Modelación con funciones",
+ "standard_url": "https://educacionmediasuperior.sep.gob.mx/work/models/sems/Resource/13634/1/images/Progresiones%20de%20aprendizaje%20-%20Pensamiento%20matematico(1).pdf",
+ "standard_text": "Modela situaciones de cambio con funciones reales de variable real y opera con ellas: suma, resta, producto, cociente, composición e inversa (resumen de la progresión 3 de aprendizaje de Pensamiento Matemático III (MCCEMS, SEP 2023))",
+ "meta_desc": "Ejercicios de Pensamiento Matemático III: dominio, suma, producto y cociente de funciones, composición f(g(x)), función inversa y modelos de situaciones reales. 100 ejercicios con respuestas.",
+ "key_big": "(f ∘ g)(x) = f(g(x))",
+ "key_sub": "Primero se aplica g, luego f.",
+ "body_html": "<h2>Cómo se hace</h2><p>Con dos funciones se forman otras: (f + g)(x) = f(x) + g(x), (f · g)(x) = f(x) · g(x), (f/g)(x) = f(x) ÷ g(x) con g(x) ≠ 0.</p><p>La <b>composición</b> f(g(x)) encadena procesos: por ejemplo, piezas producidas en t horas y costo de esas piezas.</p><p>El <b>dominio</b> son los valores de x permitidos: no se divide entre 0 ni se saca raíz cuadrada de negativos.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>f(x) = 2x + 1, g(x) = x²</p><p class='sn-ex-s'>f(g(3)) = f(9) = 19</p><p class='sn-ex-s'>g(f(3)) = g(7) = 49</p><p class='sn-ex-a'>Respuesta: 19 y 49: el orden importa</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Pensar que f(g(x)) = g(f(x))</td><td>La composición no es conmutativa.</td></tr><tr><td>Multiplicar en vez de componer</td><td>f(g(x)) no es f(x) · g(x).</td></tr><tr><td>Olvidar los ceros del denominador</td><td>Quítalos del dominio.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Qué es una función real de variable real?",
+   "a": "Una regla que a cada número real x de su dominio le asigna un único número real f(x)."
+  },
+  {
+   "q": "¿Para qué sirve la inversa?",
+   "a": "Para regresar: si f convierte °C en °F, su inversa convierte °F en °C."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Dominio",
+   "items": [
+    {
+     "q": "¿Cuál es el dominio de f(x) = 3/(x² + 5)?",
+     "c": [
+      "ℝ − {0}",
+      "ℝ − {±5}",
+      "ℝ − {−5}",
+      "ℝ"
+     ],
+     "a": 3,
+     "e": "x² + 5 nunca es 0: <b>ℝ</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = log (x² − 25)?",
+     "c": [
+      "(5, +∞)",
+      "(−∞, −5) ∪ (5, +∞)",
+      "(−∞, −5] ∪ [5, +∞)",
+      "(−5, 5)"
+     ],
+     "a": 1,
+     "e": "x² − 25 &gt; 0 → |x| &gt; 5: <b>(−∞, −5) ∪ (5, +∞)</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = √(16 − x²)?",
+     "c": [
+      "[−4, 4]",
+      "(−4, 4)",
+      "(−∞, 16]",
+      "(−∞, −4] ∪ [4, +∞)"
+     ],
+     "a": 0,
+     "e": "16 − x² ≥ 0 → −4 ≤ x ≤ 4: <b>[−4, 4]</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = √(4 − x²)?",
+     "c": [
+      "(−∞, 4]",
+      "(−∞, −2] ∪ [2, +∞)",
+      "(−2, 2)",
+      "[−2, 2]"
+     ],
+     "a": 3,
+     "e": "4 − x² ≥ 0 → −2 ≤ x ≤ 2: <b>[−2, 2]</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = ln (x + 4)?",
+     "c": [
+      "(4, +∞)",
+      "[−4, +∞)",
+      "(−4, +∞)",
+      "(−∞, −4)"
+     ],
+     "a": 2,
+     "e": "El argumento del logaritmo debe ser positivo: x + 4 &gt; 0 → <b>(−4, +∞)</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = √(36 − x²)?",
+     "c": [
+      "(−∞, −6] ∪ [6, +∞)",
+      "(−∞, 36]",
+      "(−6, 6)",
+      "[−6, 6]"
+     ],
+     "a": 3,
+     "e": "36 − x² ≥ 0 → −6 ≤ x ≤ 6: <b>[−6, 6]</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = √(9 − x²)?",
+     "c": [
+      "(−∞, 9]",
+      "(−3, 3)",
+      "(−∞, −3] ∪ [3, +∞)",
+      "[−3, 3]"
+     ],
+     "a": 3,
+     "e": "9 − x² ≥ 0 → −3 ≤ x ≤ 3: <b>[−3, 3]</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = (x + 1)/(x² − 9x + 20)?",
+     "c": [
+      "ℝ − {20}",
+      "ℝ − {4, 5}",
+      "ℝ",
+      "ℝ − {−5, −4}"
+     ],
+     "a": 1,
+     "e": "Denominador = 0 → x = 4 o x = 5: <b>ℝ − {4, 5}</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = (x + 1)/(x² + 2x − 15)?",
+     "c": [
+      "ℝ − {−5, 3}",
+      "ℝ",
+      "ℝ − {−3, 5}",
+      "ℝ − {−15}"
+     ],
+     "a": 0,
+     "e": "Denominador = 0 → x = 3 o x = −5: <b>ℝ − {−5, 3}</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = (x + 1)/(x² − 6x)?",
+     "c": [
+      "ℝ − {−6, 0}",
+      "ℝ",
+      "ℝ − {0, 6}",
+      "ℝ − {0}"
+     ],
+     "a": 2,
+     "e": "Denominador = 0 → x = 0 o x = 6: <b>ℝ − {0, 6}</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = log (x² − 16)?",
+     "c": [
+      "(−∞, −4] ∪ [4, +∞)",
+      "(4, +∞)",
+      "(−∞, −4) ∪ (4, +∞)",
+      "(−4, 4)"
+     ],
+     "a": 2,
+     "e": "x² − 16 &gt; 0 → |x| &gt; 4: <b>(−∞, −4) ∪ (4, +∞)</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = log (x² − 1)?",
+     "c": [
+      "(−1, 1)",
+      "(−∞, −1) ∪ (1, +∞)",
+      "(1, +∞)",
+      "(−∞, −1] ∪ [1, +∞)"
+     ],
+     "a": 1,
+     "e": "x² − 1 &gt; 0 → |x| &gt; 1: <b>(−∞, −1) ∪ (1, +∞)</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = √(x − 4)?",
+     "c": [
+      "[4, +∞)",
+      "(4, +∞)",
+      "[−4, +∞)",
+      "(−∞, 4]"
+     ],
+     "a": 0,
+     "e": "x − 4 ≥ 0 → <b>[4, +∞)</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = 3/(x² + 9)?",
+     "c": [
+      "ℝ − {0}",
+      "ℝ − {±9}",
+      "ℝ",
+      "ℝ − {−9}"
+     ],
+     "a": 2,
+     "e": "x² + 9 nunca es 0: <b>ℝ</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = √(x)?",
+     "c": [
+      "(0, +∞)",
+      "[0, +∞)",
+      "ℝ",
+      "(−∞, 0]"
+     ],
+     "a": 1,
+     "e": "x ≥ 0 → <b>[0, +∞)</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = (x + 1)/(x² − x − 2)?",
+     "c": [
+      "ℝ − {−2}",
+      "ℝ − {−2, 1}",
+      "ℝ − {−1, 2}",
+      "ℝ"
+     ],
+     "a": 2,
+     "e": "Denominador = 0 → x = 2 o x = −1: <b>ℝ − {−1, 2}</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = (x + 1)/(x² − 9x + 18)?",
+     "c": [
+      "ℝ − {3, 6}",
+      "ℝ",
+      "ℝ − {18}",
+      "ℝ − {−6, −3}"
+     ],
+     "a": 0,
+     "e": "Denominador = 0 → x = 6 o x = 3: <b>ℝ − {3, 6}</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = 3/(x² + 6)?",
+     "c": [
+      "ℝ − {0}",
+      "ℝ",
+      "ℝ − {−6}",
+      "ℝ − {±6}"
+     ],
+     "a": 1,
+     "e": "x² + 6 nunca es 0: <b>ℝ</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = √(1 − x²)?",
+     "c": [
+      "[−1, 1]",
+      "(−∞, 1]",
+      "(−1, 1)",
+      "(−∞, −1] ∪ [1, +∞)"
+     ],
+     "a": 0,
+     "e": "1 − x² ≥ 0 → −1 ≤ x ≤ 1: <b>[−1, 1]</b>."
+    },
+    {
+     "q": "¿Cuál es el dominio de f(x) = (x + 1)/(x² − 11x + 30)?",
+     "c": [
+      "ℝ − {−6, −5}",
+      "ℝ",
+      "ℝ − {30}",
+      "ℝ − {5, 6}"
+     ],
+     "a": 3,
+     "e": "Denominador = 0 → x = 6 o x = 5: <b>ℝ − {5, 6}</b>."
+    }
+   ]
+  },
+  {
+   "title": "Suma, producto y cociente",
+   "items": [
+    {
+     "q": "Si f(x) = 4x + 1 y g(x) = 2x² − 2x − 4, ¿cuánto vale (f + g)(1)?",
+     "c": [
+      "2",
+      "9",
+      "−20",
+      "1"
+     ],
+     "a": 3,
+     "e": "(f + g)(1) = f(1) + g(1) = 5 + −4 = <b>1</b>."
+    },
+    {
+     "q": "Si f(x) = 2x − 1 y g(x) = −x² + 2x + 5, ¿cuánto vale (f · g)(−3)?",
+     "c": [
+      "−17",
+      "70",
+      "−21",
+      "72"
+     ],
+     "a": 1,
+     "e": "(f · g)(−3) = −7 × −10 = <b>70</b>."
+    },
+    {
+     "q": "Si f(x) = −x + 4 y g(x) = −x² − 3x − 4, ¿cuánto vale (f/g)(1)?",
+     "c": [
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "−<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "11"
+     ],
+     "a": 0,
+     "e": "(f/g)(1) = 3 ÷ −8 = <b>−<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Si f(x) = 4x − 3 y g(x) = x² + 2x − 3, ¿cuánto vale (f + g)(−3)?",
+     "c": [
+      "−15",
+      "−14",
+      "−16",
+      "0"
+     ],
+     "a": 0,
+     "e": "(f + g)(−3) = f(−3) + g(−3) = −15 + 0 = <b>−15</b>."
+    },
+    {
+     "q": "Si f(x) = 4x + 2 y g(x) = 2x² − 2x + 5, ¿cuánto vale (f/g)(−1)?",
+     "c": [
+      "−11",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "(f/g)(−1) = −2 ÷ 9 = <b>−<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Si f(x) = 4x − 5 y g(x) = −x² − 2x − 5, ¿cuánto vale (f · g)(−3)?",
+     "c": [
+      "138",
+      "−37",
+      "136",
+      "−25"
+     ],
+     "a": 2,
+     "e": "(f · g)(−3) = −17 × −8 = <b>136</b>."
+    },
+    {
+     "q": "Si f(x) = −x − 1 y g(x) = x² − 2x − 4, ¿cuánto vale (f + g)(2)?",
+     "c": [
+      "12",
+      "−7",
+      "−6",
+      "1"
+     ],
+     "a": 1,
+     "e": "(f + g)(2) = f(2) + g(2) = −3 + −4 = <b>−7</b>."
+    },
+    {
+     "q": "Si f(x) = −x + 6 y g(x) = −2x² − 2, ¿cuánto vale (f · g)(1)?",
+     "c": [
+      "10",
+      "−18",
+      "1",
+      "−20"
+     ],
+     "a": 3,
+     "e": "(f · g)(1) = 5 × −4 = <b>−20</b>."
+    },
+    {
+     "q": "Si f(x) = −2x − 2 y g(x) = x² + x − 5, ¿cuánto vale (f/g)(2)?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "−5",
+      "−6",
+      "−7"
+     ],
+     "a": 2,
+     "e": "(f/g)(2) = −6 ÷ 1 = <b>−6</b>."
+    },
+    {
+     "q": "Si f(x) = 3x + 5 y g(x) = x² − 3x + 5, ¿cuánto vale (f/g)(2)?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>3</span></span>",
+      "8",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "(f/g)(2) = 11 ÷ 3 = <b><span class='fr'><span class='fn'>11</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Si f(x) = −3x − 3 y g(x) = −2x² + 2x, ¿cuánto vale (f + g)(0)?",
+     "c": [
+      "0",
+      "−2",
+      "−3",
+      "−4"
+     ],
+     "a": 2,
+     "e": "(f + g)(0) = f(0) + g(0) = −3 + 0 = <b>−3</b>."
+    },
+    {
+     "q": "Si f(x) = 4x − 5 y g(x) = −2x² + x + 1, ¿cuánto vale (f/g)(0)?",
+     "c": [
+      "−5",
+      "−4",
+      "−6",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "(f/g)(0) = −5 ÷ 1 = <b>−5</b>."
+    },
+    {
+     "q": "Si f(x) = 4x − 2 y g(x) = x² + x − 4, ¿cuánto vale (f · g)(0)?",
+     "c": [
+      "−6",
+      "−18",
+      "8",
+      "10"
+     ],
+     "a": 2,
+     "e": "(f · g)(0) = −2 × −4 = <b>8</b>."
+    },
+    {
+     "q": "Si f(x) = −3x + 4 y g(x) = x² − 2x + 3, ¿cuánto vale (f · g)(2)?",
+     "c": [
+      "−5",
+      "−4",
+      "−6",
+      "1"
+     ],
+     "a": 2,
+     "e": "(f · g)(2) = −2 × 3 = <b>−6</b>."
+    },
+    {
+     "q": "Si f(x) = x − 6 y g(x) = 2x² − 3x − 3, ¿cuánto vale (f · g)(−3)?",
+     "c": [
+      "−214",
+      "−216",
+      "18",
+      "15"
+     ],
+     "a": 1,
+     "e": "(f · g)(−3) = −9 × 24 = <b>−216</b>."
+    },
+    {
+     "q": "Si f(x) = −4x y g(x) = x² − x + 3, ¿cuánto vale (f + g)(−1)?",
+     "c": [
+      "10",
+      "9",
+      "−1",
+      "20"
+     ],
+     "a": 1,
+     "e": "(f + g)(−1) = f(−1) + g(−1) = 4 + 5 = <b>9</b>."
+    },
+    {
+     "q": "Si f(x) = −x − 6 y g(x) = 2x² + 2x + 5, ¿cuánto vale (f + g)(−1)?",
+     "c": [
+      "1",
+      "−10",
+      "−25",
+      "0"
+     ],
+     "a": 3,
+     "e": "(f + g)(−1) = f(−1) + g(−1) = −5 + 5 = <b>0</b>."
+    },
+    {
+     "q": "Si f(x) = 2x + 5 y g(x) = −2x² − 2x + 1, ¿cuánto vale (f/g)(2)?",
+     "c": [
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>11</span></span>",
+      "−<span class='fr'><span class='fn'>11</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>",
+      "20"
+     ],
+     "a": 0,
+     "e": "(f/g)(2) = 9 ÷ −11 = <b>−<span class='fr'><span class='fn'>9</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "Si f(x) = −3x + 5 y g(x) = −x² + 2x + 1, ¿cuánto vale (f · g)(2)?",
+     "c": [
+      "2",
+      "−1",
+      "0",
+      "1"
+     ],
+     "a": 1,
+     "e": "(f · g)(2) = −1 × 1 = <b>−1</b>."
+    },
+    {
+     "q": "Si f(x) = −x + 2 y g(x) = −2x² + 3x − 3, ¿cuánto vale (f + g)(−3)?",
+     "c": [
+      "−24",
+      "−150",
+      "35",
+      "−25"
+     ],
+     "a": 3,
+     "e": "(f + g)(−3) = f(−3) + g(−3) = 5 + −30 = <b>−25</b>."
+    }
+   ]
+  },
+  {
+   "title": "Composición",
+   "items": [
+    {
+     "q": "Si f(x) = 3x − 5 y g(x) = x² − 1, calcula (g ∘ f)(0).",
+     "c": [
+      "−6",
+      "−8",
+      "5",
+      "24"
+     ],
+     "a": 3,
+     "e": "f(0) = −5 y g(−5) = 24: <b>24</b>."
+    },
+    {
+     "q": "Si f(x) = −x y g(x) = −2x² + 3x − 2, ¿cuánto vale (f ∘ g)(−2) = f(g(−2))?",
+     "c": [
+      "−4",
+      "−14",
+      "16",
+      "−32"
+     ],
+     "a": 2,
+     "e": "Primero g(−2) = −16; luego f(−16) = <b>16</b>."
+    },
+    {
+     "q": "Si f(x) = −3x − 5 y g(x) = x² + 1, ¿cuánto vale (f ∘ g)(0) = f(g(0))?",
+     "c": [
+      "−4",
+      "−8",
+      "−5",
+      "26"
+     ],
+     "a": 1,
+     "e": "Primero g(0) = 1; luego f(1) = <b>−8</b>."
+    },
+    {
+     "q": "Si f(x) = −2x + 3 y g(x) = x² − 1, ¿cuánto vale (f ∘ g)(−2) = f(g(−2))?",
+     "c": [
+      "48",
+      "21",
+      "−3",
+      "10"
+     ],
+     "a": 2,
+     "e": "Primero g(−2) = 3; luego f(3) = <b>−3</b>."
+    },
+    {
+     "q": "Si f(x) = 4x − 1 y g(x) = x² + 4, calcula (g ∘ f)(2).",
+     "c": [
+      "56",
+      "15",
+      "53",
+      "31"
+     ],
+     "a": 2,
+     "e": "f(2) = 7 y g(7) = 53: <b>53</b>."
+    },
+    {
+     "q": "Si f(x) = 3x + 2 y g(x) = x² + 4, calcula (g ∘ f)(−1).",
+     "c": [
+      "5",
+      "−5",
+      "17",
+      "4"
+     ],
+     "a": 0,
+     "e": "f(−1) = −1 y g(−1) = 5: <b>5</b>."
+    },
+    {
+     "q": "Si f(x) = 4x y g(x) = x² − 3, calcula (f ∘ g)(2).",
+     "c": [
+      "4",
+      "61",
+      "9",
+      "8"
+     ],
+     "a": 0,
+     "e": "g(2) = 1 y f(1) = 4: <b>4</b>."
+    },
+    {
+     "q": "Si f(x) = −4x y h(x) = 3x, ¿cuál es f(h(x))?",
+     "c": [
+      "−12x",
+      "−11x",
+      "−13x",
+      "−x"
+     ],
+     "a": 0,
+     "e": "f(h(x)) = −4(3x) + 0 = <b>−12x</b>."
+    },
+    {
+     "q": "Si f(x) = 2x y h(x) = −3x + 5, ¿cuál es f(h(x))?",
+     "c": [
+      "−6x + 5",
+      "−x + 5",
+      "−6x + 10",
+      "−6x + 11"
+     ],
+     "a": 2,
+     "e": "f(h(x)) = 2(−3x + 5) + 0 = <b>−6x + 10</b>."
+    },
+    {
+     "q": "Si f(x) = 3x y g(x) = −x² − x − 5, ¿cuánto vale (f ∘ g)(−1) = f(g(−1))?",
+     "c": [
+      "−15",
+      "15",
+      "−8",
+      "−11"
+     ],
+     "a": 0,
+     "e": "Primero g(−1) = −5; luego f(−5) = <b>−15</b>."
+    },
+    {
+     "q": "Si f(x) = 2x y g(x) = x² + 3, ¿cuál es (g ∘ f)(x)?",
+     "c": [
+      "x² + 3 + 2x",
+      "2x² + 6",
+      "(2x)(x² + 3)",
+      "(2x)² + 3"
+     ],
+     "a": 3,
+     "e": "(g ∘ f)(x) = g(f(x)): sustituimos x por 2x en g. <b>(2x)² + 3</b>."
+    },
+    {
+     "q": "Si f(x) = 3x − 3 y g(x) = x² − 3, calcula (f ∘ g)(2).",
+     "c": [
+      "0",
+      "4",
+      "3",
+      "6"
+     ],
+     "a": 0,
+     "e": "g(2) = 1 y f(1) = 0: <b>0</b>."
+    },
+    {
+     "q": "Si f(x) = 4x + 5 y g(x) = −x² − 2x − 1, ¿cuánto vale (f ∘ g)(0) = f(g(0))?",
+     "c": [
+      "4",
+      "−36",
+      "−5",
+      "1"
+     ],
+     "a": 3,
+     "e": "Primero g(0) = −1; luego f(−1) = <b>1</b>."
+    },
+    {
+     "q": "Si f(x) = 3x + 1 y g(x) = x², calcula (f ∘ g)(0).",
+     "c": [
+      "3",
+      "2",
+      "0",
+      "1"
+     ],
+     "a": 3,
+     "e": "g(0) = 0 y f(0) = 1: <b>1</b>."
+    },
+    {
+     "q": "Si f(x) = 2x + 5 y h(x) = −3x − 3, ¿cuál es f(h(x))?",
+     "c": [
+      "−6x + 2",
+      "−6x − 18",
+      "−6x − 1",
+      "−x + 2"
+     ],
+     "a": 2,
+     "e": "f(h(x)) = 2(−3x − 3) + 5 = <b>−6x − 1</b>."
+    },
+    {
+     "q": "Si f(x) = 4x − 4 y g(x) = x² − 3, calcula (f ∘ g)(2).",
+     "c": [
+      "4",
+      "0",
+      "13",
+      "5"
+     ],
+     "a": 1,
+     "e": "g(2) = 1 y f(1) = 0: <b>0</b>."
+    },
+    {
+     "q": "Si f(x) = x + 1 y h(x) = −2x − 4, ¿cuál es f(h(x))?",
+     "c": [
+      "−2x − 6",
+      "−2x − 3",
+      "−2x − 4",
+      "−x − 3"
+     ],
+     "a": 1,
+     "e": "f(h(x)) = 1(−2x − 4) + 1 = <b>−2x − 3</b>."
+    },
+    {
+     "q": "Si f(x) = 5x − 2 y g(x) = x² + 3, ¿cuál es (g ∘ f)(x)?",
+     "c": [
+      "5x² + 13",
+      "(5x − 2)² + 3",
+      "(5x − 2)(x² + 3)",
+      "x² + 3 + 5x − 2"
+     ],
+     "a": 1,
+     "e": "(g ∘ f)(x) = g(f(x)): sustituimos x por 5x − 2 en g. <b>(5x − 2)² + 3</b>."
+    },
+    {
+     "q": "Si f(x) = −x − 6 y h(x) = −2x − 5, ¿cuál es f(h(x))?",
+     "c": [
+      "2x + 7",
+      "2x − 1",
+      "2x − 11",
+      "−3x − 11"
+     ],
+     "a": 1,
+     "e": "f(h(x)) = −1(−2x − 5) − 6 = <b>2x − 1</b>."
+    },
+    {
+     "q": "Si f(x) = 4x − 2 y g(x) = x² + 3, calcula (g ∘ f)(−2).",
+     "c": [
+      "−3",
+      "−70",
+      "26",
+      "103"
+     ],
+     "a": 3,
+     "e": "f(−2) = −10 y g(−10) = 103: <b>103</b>."
+    }
+   ]
+  },
+  {
+   "title": "Inversa y a trozos",
+   "items": [
+    {
+     "q": "Si f(x) = 6x + 6, ¿cuánto vale f⁻¹(36)?",
+     "c": [
+      "6",
+      "5",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "222"
+     ],
+     "a": 1,
+     "e": "f⁻¹(36) es el x con f(x) = 36: 6x + 6 = 36 → <b>x = 5</b>."
+    },
+    {
+     "q": "¿Qué valor de k hace que f(x) = 3x + k si x &lt; 1 y f(x) = x² − 2 si x ≥ 1 no tenga saltos?",
+     "c": [
+      "k = −4",
+      "k = 4",
+      "k = −5",
+      "k = −1"
+     ],
+     "a": 0,
+     "e": "Los dos trozos deben valer lo mismo en x = 1: 3 + k = −1 → <b>k = −4</b>."
+    },
+    {
+     "q": "Si f(x) = 2x, ¿cuánto vale f⁻¹(−4)?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "−2",
+      "−8",
+      "−1"
+     ],
+     "a": 1,
+     "e": "f⁻¹(−4) es el x con f(x) = −4: 2x + 0 = −4 → <b>x = −2</b>."
+    },
+    {
+     "q": "Halla la inversa de f(x) = 3/(x + 1).",
+     "c": [
+      "f⁻¹(x) = 3/x + 1",
+      "f⁻¹(x) = 3/(x + 3)",
+      "f⁻¹(x) = (x + 1)/3",
+      "f⁻¹(x) = 3/x − 1"
+     ],
+     "a": 3,
+     "e": "y(x − −1) = 3 → x = 3/y + −1 → <b>f⁻¹(x) = 3/x − 1</b>."
+    },
+    {
+     "q": "Si f(x) = x − 1 si x &lt; 1 y f(x) = x² − 2 si x ≥ 1, ¿cuánto vale f(−2)?",
+     "c": [
+      "3",
+      "−3",
+      "2",
+      "−1"
+     ],
+     "a": 1,
+     "e": "−2 &lt; 1, así que usamos x − 1: <b>−3</b>."
+    },
+    {
+     "q": "Halla la inversa de f(x) = 5/(x + 1).",
+     "c": [
+      "f⁻¹(x) = 5/(x + 5)",
+      "f⁻¹(x) = 5/x − 1",
+      "f⁻¹(x) = 5/x + 1",
+      "f⁻¹(x) = (x + 1)/5"
+     ],
+     "a": 1,
+     "e": "y(x − −1) = 5 → x = 5/y + −1 → <b>f⁻¹(x) = 5/x − 1</b>."
+    },
+    {
+     "q": "Si f(x) = 2x + 3 si x &lt; 1 y f(x) = x² + 3 si x ≥ 1, ¿cuánto vale f(4)?",
+     "c": [
+      "11",
+      "19",
+      "−19",
+      "30"
+     ],
+     "a": 1,
+     "e": "4 ≥ 1, así que usamos x² + 3: <b>19</b>."
+    },
+    {
+     "q": "Si f(x) = 2x − 3 si x &lt; 1 y f(x) = x² + 1 si x ≥ 1, ¿cuánto vale f(−1)?",
+     "c": [
+      "−5",
+      "−3",
+      "5",
+      "2"
+     ],
+     "a": 0,
+     "e": "−1 &lt; 1, así que usamos 2x − 3: <b>−5</b>."
+    },
+    {
+     "q": "Halla la función inversa de f(x) = 2x − 8.",
+     "c": [
+      "f⁻¹(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x + 8",
+      "f⁻¹(x) = 1/(2x − 8)",
+      "f⁻¹(x) = (x − 8)/2",
+      "f⁻¹(x) = (x + 8)/2"
+     ],
+     "a": 3,
+     "e": "y = 2x − 8 → despejamos x y cambiamos los nombres: <b>f⁻¹(x) = (x + 8)/2</b>."
+    },
+    {
+     "q": "Halla la función inversa de f(x) = 2x − 4.",
+     "c": [
+      "f⁻¹(x) = 1/(2x − 4)",
+      "f⁻¹(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>x + 4",
+      "f⁻¹(x) = (x + 4)/2",
+      "f⁻¹(x) = (x − 4)/2"
+     ],
+     "a": 2,
+     "e": "y = 2x − 4 → despejamos x y cambiamos los nombres: <b>f⁻¹(x) = (x + 4)/2</b>."
+    },
+    {
+     "q": "¿Qué valor de k hace que f(x) = 2x + k si x &lt; −1 y f(x) = x² − 3 si x ≥ −1 no tenga saltos?",
+     "c": [
+      "k = 2",
+      "k = −2",
+      "k = 1",
+      "k = 0"
+     ],
+     "a": 3,
+     "e": "Los dos trozos deben valer lo mismo en x = −1: −2 + k = −2 → <b>k = 0</b>."
+    },
+    {
+     "q": "Si f(x) = 6x + 5, ¿cuánto vale f⁻¹(29)?",
+     "c": [
+      "179",
+      "5",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>29</span></span>",
+      "4"
+     ],
+     "a": 3,
+     "e": "f⁻¹(29) es el x con f(x) = 29: 6x + 5 = 29 → <b>x = 4</b>."
+    },
+    {
+     "q": "¿Qué simetría tiene f(x) = x⁵?",
+     "c": [
+      "impar (simétrica respecto al origen)",
+      "par (simétrica respecto al eje Y)",
+      "simétrica respecto al eje X",
+      "ni par ni impar"
+     ],
+     "a": 0,
+     "e": "Comparamos f(−x) con f(x) y con −f(x): <b>impar (simétrica respecto al origen)</b>."
+    },
+    {
+     "q": "Si f(x) = 4x − 2, ¿cuánto vale f⁻¹(6)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "3",
+      "2",
+      "22"
+     ],
+     "a": 2,
+     "e": "f⁻¹(6) es el x con f(x) = 6: 4x − 2 = 6 → <b>x = 2</b>."
+    },
+    {
+     "q": "Halla la inversa de f(x) = 5/(x − 5).",
+     "c": [
+      "f⁻¹(x) = 5/(x + 5)",
+      "f⁻¹(x) = 5/x − 5",
+      "f⁻¹(x) = 5/x + 5",
+      "f⁻¹(x) = (x − 5)/5"
+     ],
+     "a": 2,
+     "e": "y(x − 5) = 5 → x = 5/y + 5 → <b>f⁻¹(x) = 5/x + 5</b>."
+    },
+    {
+     "q": "¿Cuál es la función inversa de f(x) = 2<sup>x</sup>?",
+     "c": [
+      "f⁻¹(x) = log<sub>2</sub> x",
+      "f⁻¹(x) = √x",
+      "f⁻¹(x) = x/2",
+      "f⁻¹(x) = x²"
+     ],
+     "a": 0,
+     "e": "La exponencial y el logaritmo de la misma base son inversas: <b>log<sub>2</sub> x</b>."
+    },
+    {
+     "q": "¿Qué valor de k hace que f(x) = 2x + k si x &lt; 2 y f(x) = x² − 3 si x ≥ 2 no tenga saltos?",
+     "c": [
+      "k = −3",
+      "k = 3",
+      "k = 1",
+      "k = −1"
+     ],
+     "a": 0,
+     "e": "Los dos trozos deben valer lo mismo en x = 2: 4 + k = 1 → <b>k = −3</b>."
+    },
+    {
+     "q": "Si f(x) = 6x + 8, ¿cuánto vale f⁻¹(26)?",
+     "c": [
+      "164",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>26</span></span>",
+      "3",
+      "4"
+     ],
+     "a": 2,
+     "e": "f⁻¹(26) es el x con f(x) = 26: 6x + 8 = 26 → <b>x = 3</b>."
+    },
+    {
+     "q": "Si f(x) = 2x − 1 si x &lt; 1 y f(x) = x² − 1 si x ≥ 1, ¿cuánto vale f(0)?",
+     "c": [
+      "1",
+      "0",
+      "−2",
+      "−1"
+     ],
+     "a": 3,
+     "e": "0 &lt; 1, así que usamos 2x − 1: <b>−1</b>."
+    },
+    {
+     "q": "Halla la inversa de f(x) = 5/(x − 1).",
+     "c": [
+      "f⁻¹(x) = 5/x − 1",
+      "f⁻¹(x) = 5/(x + 5)",
+      "f⁻¹(x) = 5/x + 1",
+      "f⁻¹(x) = (x − 1)/5"
+     ],
+     "a": 2,
+     "e": "y(x − 1) = 5 → x = 5/y + 1 → <b>f⁻¹(x) = 5/x + 1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Modelos",
+   "items": [
+    {
+     "q": "Una fábrica hace q(t) = 10t piezas en t horas, y el costo de q piezas es C(q) = 25q + 100 pesos. ¿Cuánto cuesta lo que se produce en 21 horas?",
+     "c": [
+      "$26 250",
+      "$625",
+      "$5 350",
+      "$210"
+     ],
+     "a": 2,
+     "e": "C(q(t)) = 25(10t) + 100 = 250t + 100. Con t = 21: <b>$5 350</b>."
+    },
+    {
+     "q": "Una compañía de agua cobra $0.50 por m³ los primeros 20 m³ y $0.90 por m³ el consumo que pase de 20 m³. ¿Cuánto paga un hogar que gasta 33 m³?",
+     "c": [
+      "$16.50",
+      "$21.70",
+      "$17.40",
+      "$29.70"
+     ],
+     "a": 1,
+     "e": "f(x) = 0.5 × 20 + 0.9 × (x − 20) si x &gt; 20: $10.00 + 0.9 × 13 = <b>$21.70</b>."
+    },
+    {
+     "q": "Una fábrica hace q(t) = 15t piezas en t horas, y el costo de q piezas es C(q) = 12q + 40 pesos. ¿Cuánto cuesta lo que se produce en 26 horas?",
+     "c": [
+      "$20 280",
+      "$352",
+      "$390",
+      "$4 720"
+     ],
+     "a": 3,
+     "e": "C(q(t)) = 12(15t) + 40 = 180t + 40. Con t = 26: <b>$4 720</b>."
+    },
+    {
+     "q": "C(x) = 1 800 + 3x es el costo de x unidades. ¿Qué representa 3?",
+     "c": [
+      "el precio de venta",
+      "lo que cuesta cada unidad más (costo variable unitario)",
+      "el costo fijo",
+      "el número de trabajadores"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>lo que cuesta cada unidad más (costo variable unitario)</b>."
+    },
+    {
+     "q": "Una compañía de agua cobra $0.50 por m³ los primeros 10 m³ y $0.90 por m³ el consumo que pase de 10 m³. ¿Cuánto paga un hogar que gasta 12 m³?",
+     "c": [
+      "$6.80",
+      "$10.80",
+      "$6.00",
+      "$6.90"
+     ],
+     "a": 0,
+     "e": "f(x) = 0.5 × 10 + 0.9 × (x − 10) si x &gt; 10: $5.00 + 0.9 × 2 = <b>$6.80</b>."
+    },
+    {
+     "q": "Una compañía de agua cobra $0.70 por m³ los primeros 10 m³ y $1.30 por m³ el consumo que pase de 10 m³. ¿Cuánto paga un hogar que gasta 22 m³?",
+     "c": [
+      "$15.40",
+      "$28.60",
+      "$16.70",
+      "$22.60"
+     ],
+     "a": 3,
+     "e": "f(x) = 0.7 × 10 + 1.3 × (x − 10) si x &gt; 10: $7.00 + 1.3 × 12 = <b>$22.60</b>."
+    },
+    {
+     "q": "Una compañía de agua cobra $0.80 por m³ los primeros 15 m³ y $1.20 por m³ el consumo que pase de 15 m³. ¿Cuánto paga un hogar que gasta 32 m³?",
+     "c": [
+      "$32.40",
+      "$25.60",
+      "$26.80",
+      "$38.40"
+     ],
+     "a": 0,
+     "e": "f(x) = 0.8 × 15 + 1.2 × (x − 15) si x &gt; 15: $12.00 + 1.2 × 17 = <b>$32.40</b>."
+    },
+    {
+     "q": "Una compañía de agua cobra $0.80 por m³ los primeros 15 m³ y $1.20 por m³ el consumo que pase de 15 m³. ¿Cuánto paga un hogar que gasta 34 m³?",
+     "c": [
+      "$27.20",
+      "$40.80",
+      "$28.40",
+      "$34.80"
+     ],
+     "a": 3,
+     "e": "f(x) = 0.8 × 15 + 1.2 × (x − 15) si x &gt; 15: $12.00 + 1.2 × 19 = <b>$34.80</b>."
+    },
+    {
+     "q": "Una fábrica hace q(t) = 30t piezas en t horas, y el costo de q piezas es C(q) = 6q + 50 pesos. ¿Cuánto cuesta lo que se produce en 25 horas?",
+     "c": [
+      "$4 550",
+      "$750",
+      "$200",
+      "$42 000"
+     ],
+     "a": 0,
+     "e": "C(q(t)) = 6(30t) + 50 = 180t + 50. Con t = 25: <b>$4 550</b>."
+    },
+    {
+     "q": "Una fábrica hace q(t) = 10t piezas en t horas, y el costo de q piezas es C(q) = 25q + 100 pesos. ¿Cuánto cuesta lo que se produce en 12 horas?",
+     "c": [
+      "$400",
+      "$120",
+      "$15 000",
+      "$3 100"
+     ],
+     "a": 3,
+     "e": "C(q(t)) = 25(10t) + 100 = 250t + 100. Con t = 12: <b>$3 100</b>."
+    },
+    {
+     "q": "Una fábrica hace q(t) = 20t piezas en t horas, y el costo de q piezas es C(q) = 8q + 30 pesos. ¿Cuánto cuesta lo que se produce en 34 horas?",
+     "c": [
+      "$25 840",
+      "$680",
+      "$5 470",
+      "$302"
+     ],
+     "a": 2,
+     "e": "C(q(t)) = 8(20t) + 30 = 160t + 30. Con t = 34: <b>$5 470</b>."
+    },
+    {
+     "q": "Una compañía de agua cobra $1.00 por m³ los primeros 10 m³ y $1.50 por m³ el consumo que pase de 10 m³. ¿Cuánto paga un hogar que gasta 29 m³?",
+     "c": [
+      "$30.50",
+      "$29.00",
+      "$43.50",
+      "$38.50"
+     ],
+     "a": 3,
+     "e": "f(x) = 1 × 10 + 1.5 × (x − 10) si x &gt; 10: $10.00 + 1.5 × 19 = <b>$38.50</b>."
+    },
+    {
+     "q": "Una compañía de agua cobra $0.60 por m³ los primeros 20 m³ y $1.00 por m³ el consumo que pase de 20 m³. ¿Cuánto paga un hogar que gasta 31 m³?",
+     "c": [
+      "$23.00",
+      "$18.60",
+      "$19.60",
+      "$31.00"
+     ],
+     "a": 0,
+     "e": "f(x) = 0.6 × 20 + 1 × (x − 20) si x &gt; 20: $12.00 + 1 × 11 = <b>$23.00</b>."
+    },
+    {
+     "q": "Una fábrica hace q(t) = 10t piezas en t horas, y el costo de q piezas es C(q) = 25q + 100 pesos. ¿Cuánto cuesta lo que se produce en 17 horas?",
+     "c": [
+      "$21 250",
+      "$525",
+      "$4 350",
+      "$170"
+     ],
+     "a": 2,
+     "e": "C(q(t)) = 25(10t) + 100 = 250t + 100. Con t = 17: <b>$4 350</b>."
+    },
+    {
+     "q": "Una compañía de agua cobra $1.00 por m³ los primeros 15 m³ y $1.50 por m³ el consumo que pase de 15 m³. ¿Cuánto paga un hogar que gasta 40 m³?",
+     "c": [
+      "$40.00",
+      "$52.50",
+      "$60.00",
+      "$41.50"
+     ],
+     "a": 1,
+     "e": "f(x) = 1 × 15 + 1.5 × (x − 15) si x &gt; 15: $15.00 + 1.5 × 25 = <b>$52.50</b>."
+    },
+    {
+     "q": "Los usuarios de una aplicación (en miles) siguen U(t) = 20 × 1.02<sup>t</sup>, con t en años. ¿Cuántos usuarios habrá dentro de 9 años?",
+     "c": [
+      "3.6 mil",
+      "23.4 mil",
+      "23.9 mil",
+      "23.6 mil"
+     ],
+     "a": 2,
+     "e": "U(9) = 20 × 1.02<sup>9</sup> ≈ <b>23.9 mil</b>."
+    },
+    {
+     "q": "Los usuarios de una aplicación (en miles) siguen U(t) = 25 × 1.05<sup>t</sup>, con t en años. ¿Cuántos usuarios habrá dentro de 3 años?",
+     "c": [
+      "27.6 mil",
+      "28.9 mil",
+      "3.8 mil",
+      "28.7 mil"
+     ],
+     "a": 1,
+     "e": "U(3) = 25 × 1.05<sup>3</sup> ≈ <b>28.9 mil</b>."
+    },
+    {
+     "q": "¿Qué tipo de función describe un crecimiento de un porcentaje fijo cada año (7 %)?",
+     "c": [
+      "lineal",
+      "cuadrática",
+      "exponencial",
+      "de proporcionalidad inversa"
+     ],
+     "a": 2,
+     "e": "Respuesta: <b>exponencial</b>."
+    },
+    {
+     "q": "C(x) = 700 + 7x es el costo de x unidades. ¿Qué representa 700?",
+     "c": [
+      "el costo de cada unidad",
+      "el costo fijo (aunque no se produzca nada)",
+      "la ganancia",
+      "el número de unidades"
+     ],
+     "a": 1,
+     "e": "Respuesta: <b>el costo fijo (aunque no se produzca nada)</b>."
+    },
+    {
+     "q": "Los usuarios de una aplicación (en miles) siguen U(t) = 15 × 1.04<sup>t</sup>, con t en años. ¿Cuántos usuarios habrá dentro de 7 años?",
+     "c": [
+      "19.7 mil",
+      "19 mil",
+      "19.2 mil",
+      "4.2 mil"
+     ],
+     "a": 0,
+     "e": "U(7) = 15 × 1.04<sup>7</sup> ≈ <b>19.7 mil</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 3,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "pensamiento-matematico-3"
+}

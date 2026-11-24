@@ -1,0 +1,1157 @@
+{
+ "slug": "limites",
+ "title": "Límites de funciones",
+ "seo_title": "Límites – Pensamiento Matemático III: ejercicios con respuestas",
+ "short_title": "Límites",
+ "domain": "Límites y continuidad",
+ "standard_code": "Pensamiento Matemático III · Progresión 5: Límites",
+ "standard_url": "https://educacionmediasuperior.sep.gob.mx/work/models/sems/Resource/13634/1/images/Progresiones%20de%20aprendizaje%20-%20Pensamiento%20matematico(1).pdf",
+ "standard_text": "Describe el comportamiento local de una función con el concepto de límite, usa tablas, gráficas y las leyes de los límites, y resuelve indeterminaciones sencillas (resumen de la progresión 5 de aprendizaje de Pensamiento Matemático III (MCCEMS, SEP 2023))",
+ "meta_desc": "Ejercicios de Pensamiento Matemático III: límites con tablas, leyes de los límites, límites por sustitución, indeterminaciones 0/0 y límites al infinito. 100 ejercicios con respuestas.",
+ "key_big": "¿A qué se acerca f(x)?",
+ "key_sub": "Si sale 0/0, factoriza y simplifica.",
+ "body_html": "<h2>Cómo se hace</h2><p>El <b>límite</b> de f(x) cuando x → a es el valor al que se acerca f(x) cuando x se acerca a a (por la izquierda y por la derecha).</p><p><b>Leyes</b>: el límite de una suma, producto o cociente es la suma, producto o cociente de los límites. En un polinomio basta sustituir.</p><p>Si al sustituir sale 0/0, factoriza, simplifica y vuelve a sustituir. Al infinito, en un cociente de polinomios mandan los términos de mayor grado.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>lím x→3 (x² − 9)/(x − 3)</p><p class='sn-ex-s'>0/0</p><p class='sn-ex-s'>(x − 3)(x + 3)/(x − 3) = x + 3</p><p class='sn-ex-a'>Respuesta: 6</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Decir que 0/0 = 0</td><td>Es una indeterminación: hay que simplificar.</td></tr><tr><td>Confundir f(a) con el límite</td><td>El límite puede existir aunque f(a) no.</td></tr><tr><td>Mirar solo un lado</td><td>Si los laterales no coinciden, no existe.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Hace falta la definición épsilon-delta?",
+   "a": "En el bachillerato basta la idea intuitiva y las leyes de los límites."
+  },
+  {
+   "q": "¿Qué es un límite infinito?",
+   "a": "Cuando f(x) crece o decrece sin parar al acercarse x a un valor: hay una asíntota vertical."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Límites con tablas",
+   "items": [
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3.9</th><th>3.99</th><th>3.999</th><th>4.001</th><th>4.01</th><th>4.1</th></tr></thead><tbody><tr><td>f(x)</td><td>3.8</td><td>3.98</td><td>3.997</td><td>4.003</td><td>4.03</td><td>4.2</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → 4?",
+     "c": [
+      "4",
+      "5",
+      "3.8",
+      "no existe"
+     ],
+     "a": 0,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−3.1</th><th>−3.01</th><th>−3.001</th><th>−2.999</th><th>−2.99</th><th>−2.9</th></tr></thead><tbody><tr><td>f(x)</td><td>5.9</td><td>5.97</td><td>5.998</td><td>6.002</td><td>6.02</td><td>6.1</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → −3?",
+     "c": [
+      "6",
+      "7",
+      "5.9",
+      "no existe"
+     ],
+     "a": 0,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>0.9</th><th>0.99</th><th>0.999</th><th>1.001</th><th>1.01</th><th>1.1</th></tr></thead><tbody><tr><td>f(x)</td><td>−1.3</td><td>−1.01</td><td>−1.003</td><td>−0.998</td><td>−0.98</td><td>−0.7</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → 1?",
+     "c": [
+      "−1.3",
+      "no existe",
+      "0",
+      "−1"
+     ],
+     "a": 3,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>−1</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−2.1</th><th>−2.01</th><th>−2.001</th><th>−1.999</th><th>−1.99</th><th>−1.9</th></tr></thead><tbody><tr><td>f(x)</td><td>6.8</td><td>6.98</td><td>6.998</td><td>7.002</td><td>7.01</td><td>7.2</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → −2?",
+     "c": [
+      "no existe",
+      "7",
+      "6.8",
+      "8"
+     ],
+     "a": 1,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>7</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−2.1</th><th>−2.01</th><th>−2.001</th><th>−1.999</th><th>−1.99</th><th>−1.9</th></tr></thead><tbody><tr><td>f(x)</td><td>5.9</td><td>5.99</td><td>5.999</td><td>6.002</td><td>6.03</td><td>6.2</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → −2?",
+     "c": [
+      "7",
+      "6",
+      "no existe",
+      "5.9"
+     ],
+     "a": 1,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−3.1</th><th>−3.01</th><th>−3.001</th><th>−2.999</th><th>−2.99</th><th>−2.9</th></tr></thead><tbody><tr><td>f(x)</td><td>3.8</td><td>3.98</td><td>3.998</td><td>4.001</td><td>4.02</td><td>4.2</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → −3?",
+     "c": [
+      "3.8",
+      "no existe",
+      "5",
+      "4"
+     ],
+     "a": 3,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−0.1</th><th>−0.01</th><th>−0.001</th><th>0.001</th><th>0.01</th><th>0.1</th></tr></thead><tbody><tr><td>f(x)</td><td>−3.3</td><td>−3.03</td><td>−3.001</td><td>−2.997</td><td>−2.97</td><td>−2.9</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → 0?",
+     "c": [
+      "−3.3",
+      "−2",
+      "−3",
+      "no existe"
+     ],
+     "a": 2,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>−3</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>4.9</th><th>4.99</th><th>4.999</th><th>5.001</th><th>5.01</th><th>5.1</th></tr></thead><tbody><tr><td>f(x)</td><td>8.7</td><td>8.99</td><td>8.997</td><td>9.001</td><td>9.03</td><td>9.1</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → 5?",
+     "c": [
+      "10",
+      "9",
+      "no existe",
+      "8.7"
+     ],
+     "a": 1,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>9</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−3.1</th><th>−3.01</th><th>−3.001</th><th>−2.999</th><th>−2.99</th><th>−2.9</th></tr></thead><tbody><tr><td>f(x)</td><td>1.7</td><td>1.98</td><td>1.997</td><td>2.001</td><td>2.03</td><td>2.2</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → −3?",
+     "c": [
+      "2",
+      "1.7",
+      "3",
+      "no existe"
+     ],
+     "a": 0,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>2</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2.9</th><th>2.99</th><th>2.999</th><th>3.001</th><th>3.01</th><th>3.1</th></tr></thead><tbody><tr><td>f(x)</td><td>5.9</td><td>5.99</td><td>5.997</td><td>6.003</td><td>6.03</td><td>6.1</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → 3?",
+     "c": [
+      "7",
+      "5.9",
+      "6",
+      "no existe"
+     ],
+     "a": 2,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>4.9</th><th>4.99</th><th>4.999</th><th>5.001</th><th>5.01</th><th>5.1</th></tr></thead><tbody><tr><td>f(x)</td><td>7.9</td><td>7.97</td><td>7.999</td><td>8.003</td><td>8.02</td><td>8.1</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → 5?",
+     "c": [
+      "7.9",
+      "9",
+      "no existe",
+      "8"
+     ],
+     "a": 3,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>8</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−1.1</th><th>−1.01</th><th>−1.001</th><th>−0.999</th><th>−0.99</th><th>−0.9</th></tr></thead><tbody><tr><td>f(x)</td><td>−5.1</td><td>−5.03</td><td>−5.002</td><td>−4.998</td><td>−4.97</td><td>−4.9</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → −1?",
+     "c": [
+      "−5.1",
+      "no existe",
+      "−4",
+      "−5"
+     ],
+     "a": 3,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>−5</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−0.1</th><th>−0.01</th><th>−0.001</th><th>0.001</th><th>0.01</th><th>0.1</th></tr></thead><tbody><tr><td>f(x)</td><td>−2.2</td><td>−2.02</td><td>−2.001</td><td>−1.997</td><td>−1.99</td><td>−1.9</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → 0?",
+     "c": [
+      "−2.2",
+      "no existe",
+      "−2",
+      "−1"
+     ],
+     "a": 2,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>−2</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−0.1</th><th>−0.01</th><th>−0.001</th><th>0.001</th><th>0.01</th><th>0.1</th></tr></thead><tbody><tr><td>f(x)</td><td>−4.2</td><td>−4.02</td><td>−4.001</td><td>−3.997</td><td>−3.98</td><td>−3.9</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → 0?",
+     "c": [
+      "−3",
+      "−4",
+      "−4.2",
+      "no existe"
+     ],
+     "a": 1,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>−4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−3.1</th><th>−3.01</th><th>−3.001</th><th>−2.999</th><th>−2.99</th><th>−2.9</th></tr></thead><tbody><tr><td>f(x)</td><td>5.7</td><td>5.99</td><td>5.997</td><td>6.001</td><td>6.01</td><td>6.1</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → −3?",
+     "c": [
+      "no existe",
+      "6",
+      "7",
+      "5.7"
+     ],
+     "a": 1,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>6</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−3.1</th><th>−3.01</th><th>−3.001</th><th>−2.999</th><th>−2.99</th><th>−2.9</th></tr></thead><tbody><tr><td>f(x)</td><td>1.9</td><td>1.98</td><td>1.997</td><td>2.003</td><td>2.02</td><td>2.1</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → −3?",
+     "c": [
+      "no existe",
+      "3",
+      "2",
+      "1.9"
+     ],
+     "a": 2,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>2</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>2.9</th><th>2.99</th><th>2.999</th><th>3.001</th><th>3.01</th><th>3.1</th></tr></thead><tbody><tr><td>f(x)</td><td>7.7</td><td>7.97</td><td>7.997</td><td>8.002</td><td>8.02</td><td>8.3</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → 3?",
+     "c": [
+      "8",
+      "9",
+      "7.7",
+      "no existe"
+     ],
+     "a": 0,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>8</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−0.1</th><th>−0.01</th><th>−0.001</th><th>0.001</th><th>0.01</th><th>0.1</th></tr></thead><tbody><tr><td>f(x)</td><td>8.7</td><td>8.98</td><td>8.999</td><td>9.002</td><td>9.03</td><td>9.2</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → 0?",
+     "c": [
+      "10",
+      "no existe",
+      "8.7",
+      "9"
+     ],
+     "a": 3,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>9</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>−1.1</th><th>−1.01</th><th>−1.001</th><th>−0.999</th><th>−0.99</th><th>−0.9</th></tr></thead><tbody><tr><td>f(x)</td><td>−4.2</td><td>−4.01</td><td>−4.001</td><td>−3.997</td><td>−3.97</td><td>−3.9</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → −1?",
+     "c": [
+      "−4.2",
+      "−3",
+      "−4",
+      "no existe"
+     ],
+     "a": 2,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>−4</b>."
+    },
+    {
+     "q": "<div class='sn-tw'><table class='sn-table'><thead><tr><th>x</th><th>3.9</th><th>3.99</th><th>3.999</th><th>4.001</th><th>4.01</th><th>4.1</th></tr></thead><tbody><tr><td>f(x)</td><td>−2.2</td><td>−2.02</td><td>−2.003</td><td>−1.998</td><td>−1.97</td><td>−1.9</td></tr></tbody></table></div>Según la tabla, ¿cuál es el límite de f(x) cuando x → 4?",
+     "c": [
+      "−2",
+      "−2.2",
+      "−1",
+      "no existe"
+     ],
+     "a": 0,
+     "e": "Por la izquierda y por la derecha, f(x) se acerca a <b>−2</b>."
+    }
+   ]
+  },
+  {
+   "title": "Leyes de los límites",
+   "items": [
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = 5 y lím<sub>x→a</sub> g(x) = 4, ¿cuánto vale lím<sub>x→a</sub> [[f(x)]² + g(x)]?",
+     "c": [
+      "29",
+      "9",
+      "21",
+      "14"
+     ],
+     "a": 0,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>29</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = −6 y lím<sub>x→a</sub> g(x) = 1, ¿cuánto vale lím<sub>x→a</sub> [[f(x)]² + g(x)]?",
+     "c": [
+      "35",
+      "−11",
+      "37",
+      "−5"
+     ],
+     "a": 2,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>37</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = 5 y lím<sub>x→a</sub> g(x) = 1, ¿cuánto vale lím<sub>x→a</sub> [f(x) · g(x)]?",
+     "c": [
+      "4",
+      "5",
+      "7",
+      "6"
+     ],
+     "a": 1,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>5</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = −1 y lím<sub>x→a</sub> g(x) = −4, ¿cuánto vale lím<sub>x→a</sub> [[f(x)]² + g(x)]?",
+     "c": [
+      "−6",
+      "5",
+      "−5",
+      "−3"
+     ],
+     "a": 3,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>−3</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = −2 y lím<sub>x→a</sub> g(x) = −3, ¿cuánto vale lím<sub>x→a</sub> [f(x) · g(x)]?",
+     "c": [
+      "−5",
+      "6",
+      "7",
+      "1"
+     ],
+     "a": 1,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>6</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = −5 y lím<sub>x→a</sub> g(x) = −5, ¿cuánto vale lím<sub>x→a</sub> [[f(x)]² + g(x)]?",
+     "c": [
+      "−15",
+      "−10",
+      "30",
+      "20"
+     ],
+     "a": 3,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>20</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = 2 y lím<sub>x→a</sub> g(x) = 5, ¿cuánto vale lím<sub>x→a</sub> [3·f(x) + 1·g(x)]?",
+     "c": [
+      "11",
+      "14",
+      "7",
+      "1"
+     ],
+     "a": 0,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>11</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = 3 y lím<sub>x→a</sub> g(x) = −1, ¿cuánto vale lím<sub>x→a</sub> [f(x) · g(x)]?",
+     "c": [
+      "4",
+      "−2",
+      "2",
+      "−3"
+     ],
+     "a": 3,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>−3</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = 5 y lím<sub>x→a</sub> g(x) = 5, ¿cuánto vale lím<sub>x→a</sub> [f(x) ÷ g(x)]?",
+     "c": [
+      "1",
+      "3",
+      "0",
+      "2"
+     ],
+     "a": 0,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>1</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = −6 y lím<sub>x→a</sub> g(x) = −5, ¿cuánto vale lím<sub>x→a</sub> [f(x) · g(x)]?",
+     "c": [
+      "−1",
+      "30",
+      "−11",
+      "31"
+     ],
+     "a": 1,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>30</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = 4 y lím<sub>x→a</sub> g(x) = 2, ¿cuánto vale lím<sub>x→a</sub> [1·f(x) + 1·g(x)]?",
+     "c": [
+      "2",
+      "7",
+      "6",
+      "5"
+     ],
+     "a": 2,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>6</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = −2 y lím<sub>x→a</sub> g(x) = −4, ¿cuánto vale lím<sub>x→a</sub> [1·f(x) − 2·g(x)]?",
+     "c": [
+      "−6",
+      "7",
+      "6",
+      "−10"
+     ],
+     "a": 2,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>6</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = −2 y lím<sub>x→a</sub> g(x) = −4, ¿cuánto vale lím<sub>x→a</sub> [−3·f(x) + 1·g(x)]?",
+     "c": [
+      "10",
+      "2",
+      "−1",
+      "−6"
+     ],
+     "a": 1,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>2</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = 5 y lím<sub>x→a</sub> g(x) = −5, ¿cuánto vale lím<sub>x→a</sub> [f(x) · g(x)]?",
+     "c": [
+      "0",
+      "−24",
+      "−25",
+      "10"
+     ],
+     "a": 2,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>−25</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = 4 y lím<sub>x→a</sub> g(x) = −5, ¿cuánto vale lím<sub>x→a</sub> [f(x) ÷ g(x)]?",
+     "c": [
+      "9",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>−<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = −2 y lím<sub>x→a</sub> g(x) = −2, ¿cuánto vale lím<sub>x→a</sub> [f(x) · g(x)]?",
+     "c": [
+      "−4",
+      "4",
+      "5",
+      "0"
+     ],
+     "a": 1,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>4</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = 3 y lím<sub>x→a</sub> g(x) = −3, ¿cuánto vale lím<sub>x→a</sub> [[f(x)]² + g(x)]?",
+     "c": [
+      "3",
+      "12",
+      "6",
+      "0"
+     ],
+     "a": 2,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>6</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = 6 y lím<sub>x→a</sub> g(x) = −2, ¿cuánto vale lím<sub>x→a</sub> [3·f(x) − 4·g(x)]?",
+     "c": [
+      "4",
+      "10",
+      "29",
+      "26"
+     ],
+     "a": 3,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>26</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = 3 y lím<sub>x→a</sub> g(x) = −1, ¿cuánto vale lím<sub>x→a</sub> [[f(x)]² + g(x)]?",
+     "c": [
+      "8",
+      "2",
+      "10",
+      "5"
+     ],
+     "a": 0,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>8</b>."
+    },
+    {
+     "q": "Si lím<sub>x→a</sub> f(x) = −6 y lím<sub>x→a</sub> g(x) = 2, ¿cuánto vale lím<sub>x→a</sub> [f(x) ÷ g(x)]?",
+     "c": [
+      "−3",
+      "−2",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−8"
+     ],
+     "a": 0,
+     "e": "Por las leyes de los límites, se sustituye cada límite: <b>−3</b>."
+    }
+   ]
+  },
+  {
+   "title": "Por sustitución",
+   "items": [
+    {
+     "q": "Calcula lím<sub>x→2<sup>+</sup></sub> 3/(x − 2).",
+     "c": [
+      "+∞",
+      "−∞",
+      "0",
+      "no existe"
+     ],
+     "a": 0,
+     "e": "Cerca de 2 por la derecha, x − 2 es positivo y el numerador positivo: <b>+∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→0<sup>+</sup></sub> ln x.",
+     "c": [
+      "0",
+      "+∞",
+      "−∞",
+      "1"
+     ],
+     "a": 2,
+     "e": "Respuesta: <b>−∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→0</sub> (−x² + x + 6).",
+     "c": [
+      "6",
+      "8",
+      "7",
+      "5"
+     ],
+     "a": 0,
+     "e": "Un polinomio es continuo: basta sustituir x = 0 → <b>6</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→2</sub> (2x² − 9).",
+     "c": [
+      "−2",
+      "−1",
+      "−9",
+      "0"
+     ],
+     "a": 1,
+     "e": "Un polinomio es continuo: basta sustituir x = 2 → <b>−1</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→3<sup>−</sup></sub> 1/(x − 3).",
+     "c": [
+      "0",
+      "+∞",
+      "−∞",
+      "no existe"
+     ],
+     "a": 2,
+     "e": "Cerca de 3 por la izquierda, x − 3 es negativo y el numerador positivo: <b>−∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−3<sup>−</sup></sub> 2/(x + 3).",
+     "c": [
+      "+∞",
+      "−∞",
+      "0",
+      "no existe"
+     ],
+     "a": 1,
+     "e": "Cerca de −3 por la izquierda, x − −3 es negativo y el numerador positivo: <b>−∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−3</sub> (−x² + x − 1).",
+     "c": [
+      "no existe",
+      "13",
+      "−13",
+      "−12"
+     ],
+     "a": 2,
+     "e": "Es un polinomio: basta sustituir x = −3. <b>−13</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−3<sup>+</sup></sub> −1/(x + 3).",
+     "c": [
+      "+∞",
+      "no existe",
+      "0",
+      "−∞"
+     ],
+     "a": 3,
+     "e": "Cerca de −3 por la derecha, x − −3 es positivo y el numerador negativo: <b>−∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−3</sub> (−2x² + 3x + 9).",
+     "c": [
+      "9",
+      "−17",
+      "0",
+      "−18"
+     ],
+     "a": 3,
+     "e": "Un polinomio es continuo: basta sustituir x = −3 → <b>−18</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→2</sub> (x² − 3x + 1).",
+     "c": [
+      "−1",
+      "0",
+      "11",
+      "1"
+     ],
+     "a": 0,
+     "e": "Un polinomio es continuo: basta sustituir x = 2 → <b>−1</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−1</sub> (−3x² − 2x − 5).",
+     "c": [
+      "−6",
+      "−5",
+      "−7",
+      "−10"
+     ],
+     "a": 0,
+     "e": "Un polinomio es continuo: basta sustituir x = −1 → <b>−6</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→4</sub> (x² + 6)/(x + 4).",
+     "c": [
+      "+∞",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "El denominador no se anula: sustituimos, (16 + 6)/8 = <b><span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→1</sub> (3x² − 2x − 2).",
+     "c": [
+      "3",
+      "0",
+      "−2",
+      "−1"
+     ],
+     "a": 3,
+     "e": "Un polinomio es continuo: basta sustituir x = 1 → <b>−1</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→1</sub> (3x² − x − 1).",
+     "c": [
+      "−1",
+      "1",
+      "2",
+      "3"
+     ],
+     "a": 1,
+     "e": "Un polinomio es continuo: basta sustituir x = 1 → <b>1</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−1<sup>−</sup></sub> −1/(x + 1).",
+     "c": [
+      "no existe",
+      "0",
+      "+∞",
+      "−∞"
+     ],
+     "a": 2,
+     "e": "Cerca de −1 por la izquierda, x − −1 es negativo y el numerador negativo: <b>+∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−∞</sub> e<sup>x</sup>.",
+     "c": [
+      "1",
+      "−∞",
+      "0",
+      "+∞"
+     ],
+     "a": 2,
+     "e": "Respuesta: <b>0</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→1<sup>+</sup></sub> 3/(x − 1).",
+     "c": [
+      "0",
+      "no existe",
+      "−∞",
+      "+∞"
+     ],
+     "a": 3,
+     "e": "Cerca de 1 por la derecha, x − 1 es positivo y el numerador positivo: <b>+∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−3<sup>+</sup></sub> −2/(x + 3).",
+     "c": [
+      "+∞",
+      "0",
+      "no existe",
+      "−∞"
+     ],
+     "a": 3,
+     "e": "Cerca de −3 por la derecha, x − −3 es positivo y el numerador negativo: <b>−∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→0</sub> (−3x² + 4x − 8).",
+     "c": [
+      "−8",
+      "−7",
+      "−9",
+      "−10"
+     ],
+     "a": 0,
+     "e": "Un polinomio es continuo: basta sustituir x = 0 → <b>−8</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→3<sup>+</sup></sub> 3/(x − 3).",
+     "c": [
+      "no existe",
+      "+∞",
+      "−∞",
+      "0"
+     ],
+     "a": 1,
+     "e": "Cerca de 3 por la derecha, x − 3 es positivo y el numerador positivo: <b>+∞</b>."
+    }
+   ]
+  },
+  {
+   "title": "Indeterminaciones 0/0",
+   "items": [
+    {
+     "q": "Calcula lím<sub>x→1</sub> (x² − 3x + 2)/(x² − 6x + 5).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "0",
+      "no existe"
+     ],
+     "a": 0,
+     "e": "0/0: factorizamos y simplificamos (x − 1): (1 − 2)/(1 − 5) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−4</sub> (x² + 4x) ÷ (x + 4).",
+     "c": [
+      "no existe",
+      "−5",
+      "0",
+      "−4"
+     ],
+     "a": 3,
+     "e": "Al sustituir sale 0/0. Factorizamos: (x + 4)(x + 0)/(x + 4) = x + 0 → <b>−4</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→2</sub> (x² − x − 2) ÷ (x − 2).",
+     "c": [
+      "1",
+      "no existe",
+      "0",
+      "3"
+     ],
+     "a": 3,
+     "e": "Al sustituir sale 0/0. Factorizamos: (x − 2)(x + 1)/(x − 2) = x + 1 → <b>3</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→3</sub> (x² − 9)/(x² − 2x − 3).",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "0",
+      "no existe",
+      "3"
+     ],
+     "a": 0,
+     "e": "0/0: factorizamos y simplificamos (x − 3): (3 − (−3))/(3 − (−1)) = <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−2</sub> (x² − 3x − 10) ÷ (x + 2).",
+     "c": [
+      "no existe",
+      "−7",
+      "3",
+      "0"
+     ],
+     "a": 1,
+     "e": "Al sustituir sale 0/0. Factorizamos: (x + 2)(x − 5)/(x + 2) = x − 5 → <b>−7</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (√(x² + 3x) − x).",
+     "c": [
+      "+∞",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "0",
+      "3"
+     ],
+     "a": 1,
+     "e": "∞ − ∞: multiplicamos y dividimos por el conjugado → 3x/(√(x² + 3x) + x) → <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→4</sub> (x² − 3x − 4)/(x² − 7x + 12).",
+     "c": [
+      "5",
+      "no existe",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "0"
+     ],
+     "a": 0,
+     "e": "0/0: factorizamos y simplificamos (x − 4): (4 − (−1))/(4 − 3) = <b>5</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−2</sub> (x² + 2x)/(x² + 5x + 6).",
+     "c": [
+      "2",
+      "0",
+      "−2",
+      "no existe"
+     ],
+     "a": 2,
+     "e": "0/0: factorizamos y simplificamos (x − −2): (−2 − 0)/(−2 − (−3)) = <b>−2</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→1</sub> (x² − 6x + 5) ÷ (x − 1).",
+     "c": [
+      "−4",
+      "6",
+      "0",
+      "no existe"
+     ],
+     "a": 0,
+     "e": "Al sustituir sale 0/0. Factorizamos: (x − 1)(x − 5)/(x − 1) = x − 5 → <b>−4</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→4</sub> (x² − 9x + 20) ÷ (x − 4).",
+     "c": [
+      "no existe",
+      "−1",
+      "0",
+      "9"
+     ],
+     "a": 1,
+     "e": "Al sustituir sale 0/0. Factorizamos: (x − 4)(x − 5)/(x − 4) = x − 5 → <b>−1</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→5</sub> (x² − 7x + 10) ÷ (x − 5).",
+     "c": [
+      "7",
+      "3",
+      "0",
+      "no existe"
+     ],
+     "a": 1,
+     "e": "Al sustituir sale 0/0. Factorizamos: (x − 5)(x − 2)/(x − 5) = x − 2 → <b>3</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−3</sub> (x² + 4x + 3)/(x² − 2x − 15).",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "0",
+      "no existe",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "0/0: factorizamos y simplificamos (x − −3): (−3 − (−1))/(−3 − 5) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→4</sub> (√x − 2)/(x − 4).",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "1"
+     ],
+     "a": 2,
+     "e": "Multiplicamos por el conjugado √x + 2: queda 1/(√x + 2) → <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→3</sub> (x² − 4x + 3) ÷ (x − 3).",
+     "c": [
+      "2",
+      "4",
+      "no existe",
+      "0"
+     ],
+     "a": 0,
+     "e": "Al sustituir sale 0/0. Factorizamos: (x − 3)(x − 1)/(x − 3) = x − 1 → <b>2</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−2</sub> (x² + 5x + 6)/(x² − 3x − 10).",
+     "c": [
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "0",
+      "no existe",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>"
+     ],
+     "a": 3,
+     "e": "0/0: factorizamos y simplificamos (x − −2): (−2 − (−3))/(−2 − 5) = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→1</sub> (x² − 1) ÷ (x − 1).",
+     "c": [
+      "no existe",
+      "0",
+      "3",
+      "2"
+     ],
+     "a": 3,
+     "e": "Al sustituir sale 0/0. Factorizamos: (x − 1)(x + 1)/(x − 1) = x + 1 → <b>2</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−3</sub> (x² + 8x + 15)/(x² + x − 6).",
+     "c": [
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "0",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "no existe"
+     ],
+     "a": 2,
+     "e": "0/0: factorizamos y simplificamos (x − −3): (−3 − (−5))/(−3 − 2) = <b>−<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→−3</sub> (x² + x − 6) ÷ (x + 3).",
+     "c": [
+      "−1",
+      "no existe",
+      "−5",
+      "0"
+     ],
+     "a": 2,
+     "e": "Al sustituir sale 0/0. Factorizamos: (x + 3)(x − 2)/(x + 3) = x − 2 → <b>−5</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→2</sub> (x² + 3x − 10)/(x² − 5x + 6).",
+     "c": [
+      "no existe",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "−7",
+      "0"
+     ],
+     "a": 2,
+     "e": "0/0: factorizamos y simplificamos (x − 2): (2 − (−5))/(2 − 3) = <b>−7</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→5</sub> (x² − 8x + 15) ÷ (x − 5).",
+     "c": [
+      "8",
+      "2",
+      "no existe",
+      "0"
+     ],
+     "a": 1,
+     "e": "Al sustituir sale 0/0. Factorizamos: (x − 5)(x − 3)/(x − 5) = x − 3 → <b>2</b>."
+    }
+   ]
+  },
+  {
+   "title": "Límites al infinito",
+   "items": [
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (3x² + x − 4)/(4x² + 5x + 5).",
+     "c": [
+      "+∞",
+      "0",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Mismo grado: cociente de los coeficientes principales, 3/4 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (x + 2)/(x − 3).",
+     "c": [
+      "+∞",
+      "0",
+      "1",
+      "2"
+     ],
+     "a": 2,
+     "e": "Mismo grado: cociente de los coeficientes principales, 1/1 = <b>1</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (4x² + 1)/(x − 3).",
+     "c": [
+      "4",
+      "+∞",
+      "0",
+      "−∞"
+     ],
+     "a": 1,
+     "e": "El grado del numerador es mayor: el límite es infinito con el signo de 4/1: <b>+∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (−3x² + 5)/(6x − 1).",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "0",
+      "+∞",
+      "−∞"
+     ],
+     "a": 3,
+     "e": "El grado del numerador es mayor: el límite es infinito con el signo de −3/6: <b>−∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (3x + 4)/(6x + 1).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "0",
+      "+∞",
+      "2"
+     ],
+     "a": 0,
+     "e": "Mismo grado: cociente de los coeficientes principales, 3/6 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (−3x² + 1)/(6x + 1).",
+     "c": [
+      "+∞",
+      "0",
+      "−∞",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "El grado del numerador es mayor: el límite es infinito con el signo de −3/6: <b>−∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (−6x² + 5)/(6x + 1).",
+     "c": [
+      "+∞",
+      "0",
+      "−1",
+      "−∞"
+     ],
+     "a": 3,
+     "e": "El grado del numerador es mayor: el límite es infinito con el signo de −6/6: <b>−∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (2x − 4)/(4x + 4).",
+     "c": [
+      "+∞",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "0",
+      "2"
+     ],
+     "a": 1,
+     "e": "Mismo grado: cociente de los coeficientes principales, 2/4 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (4x² − 3x − 4)/(4x² + 3x − 1).",
+     "c": [
+      "1",
+      "+∞",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "0"
+     ],
+     "a": 0,
+     "e": "Mismo grado: cociente de los coeficientes principales, 4/4 = <b>1</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (2x + 2)/(6x² + 5).",
+     "c": [
+      "0",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "+∞"
+     ],
+     "a": 0,
+     "e": "El grado del denominador es mayor: <b>0</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (−x² − 2)/(3x − 2).",
+     "c": [
+      "+∞",
+      "−∞",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "0"
+     ],
+     "a": 1,
+     "e": "El grado del numerador es mayor: el límite es infinito con el signo de −1/3: <b>−∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (5x − 2)/(3x + 5).",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "0",
+      "+∞"
+     ],
+     "a": 1,
+     "e": "Mismo grado: cociente de los coeficientes principales, 5/3 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> √(9x² + 1)/(5x − 3).",
+     "c": [
+      "+∞",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>5</span></span>",
+      "0"
+     ],
+     "a": 1,
+     "e": "√(9x²) = 3x: 3/5 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (5x − 1)/(5x² + 1).",
+     "c": [
+      "2",
+      "1",
+      "+∞",
+      "0"
+     ],
+     "a": 3,
+     "e": "El grado del denominador es mayor: <b>0</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (4x³ − 5x² + 5x + 5)/(6x³ − x² + 5x + 4).",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "+∞",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Mismo grado: cociente de los coeficientes principales, 4/6 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (−4x² + 4)/(6x + 1).",
+     "c": [
+      "−∞",
+      "+∞",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "0"
+     ],
+     "a": 0,
+     "e": "El grado del numerador es mayor: el límite es infinito con el signo de −4/6: <b>−∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (2x² − 1)/(3x + 2).",
+     "c": [
+      "+∞",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "−∞",
+      "0"
+     ],
+     "a": 0,
+     "e": "El grado del numerador es mayor: el límite es infinito con el signo de 2/3: <b>+∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (−3x²)/(3x).",
+     "c": [
+      "0",
+      "+∞",
+      "−∞",
+      "−1"
+     ],
+     "a": 2,
+     "e": "El grado del numerador es mayor: el límite es infinito con el signo de −3/3: <b>−∞</b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (4x² + 5x − 4)/(5x² − 2).",
+     "c": [
+      "+∞",
+      "0",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Mismo grado: cociente de los coeficientes principales, 4/5 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Calcula lím<sub>x→+∞</sub> (x + 1)/(x² + 3).",
+     "c": [
+      "2",
+      "1",
+      "0",
+      "+∞"
+     ],
+     "a": 2,
+     "e": "El grado del denominador es mayor: <b>0</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 5,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "pensamiento-matematico-3"
+}

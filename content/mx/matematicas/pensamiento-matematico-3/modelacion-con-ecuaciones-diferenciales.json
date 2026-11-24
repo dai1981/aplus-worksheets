@@ -1,0 +1,1157 @@
+{
+ "slug": "modelacion-con-ecuaciones-diferenciales",
+ "title": "Plantear ecuaciones diferenciales",
+ "seo_title": "Ecuaciones diferenciales – Pensamiento Matemático III: ejercicios con respuestas",
+ "short_title": "Ecuaciones diferenciales",
+ "domain": "Funciones trascendentes",
+ "standard_code": "Pensamiento Matemático III · Progresión 14: Modelación con ecuaciones diferenciales",
+ "standard_url": "https://educacionmediasuperior.sep.gob.mx/work/models/sems/Resource/13634/1/images/Progresiones%20de%20aprendizaje%20-%20Pensamiento%20matematico(1).pdf",
+ "standard_text": "Plantea, sin resolverlas, ecuaciones diferenciales que modelan fenómenos como el crecimiento de bacterias, el decaimiento radiactivo, el enfriamiento y el modelo presa-depredador (resumen de la progresión 14 de aprendizaje de Pensamiento Matemático III (MCCEMS, SEP 2023))",
+ "meta_desc": "Ejercicios de Pensamiento Matemático III: traducir «la rapidez de cambio es proporcional a…» a una ecuación diferencial, ritmo de cambio, método de Euler y comprobar soluciones. 100 ejercicios con respuestas.",
+ "key_big": "«Rapidez de cambio» = derivada",
+ "key_sub": "dP/dt = kP: crecimiento exponencial.",
+ "body_html": "<h2>Cómo se hace</h2><p>Una <b>ecuación diferencial</b> relaciona una función con su derivada. «La rapidez con que cambia P» se escribe dP/dt.</p><p>«Proporcional a P» se escribe kP. Crecimiento: dP/dt = kP (k &gt; 0). Decaimiento: dN/dt = −kN. Enfriamiento: dT/dt = −k(T − T<sub>a</sub>).</p><p>Para estimar valores sin resolverla se puede usar el <b>método de Euler</b>: y(t + h) ≈ y(t) + h · y′(t).</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>dP/dt = 0.05P con P = 2 000</p><p class='sn-ex-s'>0.05 × 2 000</p><p class='sn-ex-a'>Respuesta: crece 100 por unidad de tiempo</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Escribir P = kt</td><td>La rapidez de cambio es dP/dt, no P.</td></tr><tr><td>Olvidar el signo en el decaimiento</td><td>Si disminuye, la derivada es negativa.</td></tr><tr><td>Confundir la constante k con la población</td><td>k es la tasa; P es la cantidad.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Qué es el modelo logístico?",
+   "a": "dP/dt = kP(1 − P/M): crece rápido al principio y se frena al acercarse a la capacidad M."
+  },
+  {
+   "q": "¿Por qué importan?",
+   "a": "Describen cómo cambian las cosas: epidemias, poblaciones, medicamentos en la sangre o circuitos."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Plantear el modelo",
+   "items": [
+    {
+     "q": "Una cantidad cumple dP/dt = 0.02P. ¿A qué ritmo cambia cuando P = 1 000?",
+     "c": [
+      "20 por unidad de tiempo",
+      "40 por unidad de tiempo",
+      "1 000 por unidad de tiempo",
+      "−20 por unidad de tiempo"
+     ],
+     "a": 0,
+     "e": "Sustituimos: 0.02 × 1 000 = <b>20</b>."
+    },
+    {
+     "q": "En el modelo logístico, cuando P se acerca a M, el crecimiento…",
+     "c": [
+      "se hace cada vez más lento",
+      "se acelera",
+      "no cambia",
+      "se vuelve negativo de golpe"
+     ],
+     "a": 0,
+     "e": "El factor (1 − P/M) se acerca a 0."
+    },
+    {
+     "q": "Un tinaco se llena con un flujo constante de 20 litros por minuto. ¿Qué ecuación diferencial la describe?",
+     "c": [
+      "dP/dt = kP, con k &gt; 0",
+      "dT/dt = −k(T − T<sub>a</sub>)",
+      "dv/dt = g",
+      "dV/dt = 20"
+     ],
+     "a": 3,
+     "e": "La frase «rapidez de cambio» es la derivada: <b>dV/dt = 20</b>."
+    },
+    {
+     "q": "¿Qué fenómeno modela dT/dt = −k(T − T<sub>a</sub>)?",
+     "c": [
+      "la caída libre",
+      "el enfriamiento de un objeto (ley de Newton)",
+      "el crecimiento de bacterias",
+      "el interés compuesto"
+     ],
+     "a": 1,
+     "e": "La temperatura se acerca a la del ambiente."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.02P. ¿A qué ritmo cambia cuando P = 2 000?",
+     "c": [
+      "2 000 por unidad de tiempo",
+      "80 por unidad de tiempo",
+      "−40 por unidad de tiempo",
+      "40 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: −0.02 × 2 000 = <b>−40</b>."
+    },
+    {
+     "q": "Un café se enfría con una rapidez proporcional a la diferencia entre su temperatura y la del cuarto (T<sub>a</sub>). ¿Qué ecuación diferencial la describe?",
+     "c": [
+      "dv/dt = g",
+      "dP/dt = kP(1 − P/M)",
+      "dV/dt = 20",
+      "dT/dt = −k(T − T<sub>a</sub>)"
+     ],
+     "a": 3,
+     "e": "La frase «rapidez de cambio» es la derivada: <b>dT/dt = −k(T − T<sub>a</sub>)</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.1P. ¿A qué ritmo cambia cuando P = 1 000?",
+     "c": [
+      "200 por unidad de tiempo",
+      "100 por unidad de tiempo",
+      "−100 por unidad de tiempo",
+      "1 000 por unidad de tiempo"
+     ],
+     "a": 1,
+     "e": "Sustituimos: 0.1 × 1 000 = <b>100</b>."
+    },
+    {
+     "q": "Una sustancia radiactiva se desintegra con una rapidez proporcional a la cantidad que queda. ¿Qué ecuación diferencial la describe?",
+     "c": [
+      "dN/dt = −kN, con k &gt; 0",
+      "dP/dt = kP(1 − P/M)",
+      "dP/dt = kP, con k &gt; 0",
+      "dV/dt = 20"
+     ],
+     "a": 0,
+     "e": "La frase «rapidez de cambio» es la derivada: <b>dN/dt = −kN, con k &gt; 0</b>."
+    },
+    {
+     "q": "Una población crece proporcionalmente a sí misma, pero frena al acercarse a la capacidad máxima M. ¿Qué ecuación diferencial la describe?",
+     "c": [
+      "dN/dt = −kN, con k &gt; 0",
+      "dv/dt = g",
+      "dP/dt = kP(1 − P/M)",
+      "dV/dt = 20"
+     ],
+     "a": 2,
+     "e": "La frase «rapidez de cambio» es la derivada: <b>dP/dt = kP(1 − P/M)</b>."
+    },
+    {
+     "q": "Una ecuación diferencial es una ecuación que relaciona…",
+     "c": [
+      "dos números",
+      "dos rectas",
+      "una función con su área",
+      "una función con sus derivadas"
+     ],
+     "a": 3,
+     "e": "Por ejemplo dP/dt = 0.03P."
+    },
+    {
+     "q": "En el modelo presa-depredador (Lotka-Volterra) se usan…",
+     "c": [
+      "dos ecuaciones diferenciales, una para cada población",
+      "una sola ecuación lineal",
+      "una tabla de frecuencias",
+      "un sistema de desigualdades"
+     ],
+     "a": 0,
+     "e": "La rapidez de cambio de cada población depende de las dos."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.03P. ¿A qué ritmo cambia cuando P = 10 000?",
+     "c": [
+      "−300 por unidad de tiempo",
+      "300 por unidad de tiempo",
+      "10 000 por unidad de tiempo",
+      "600 por unidad de tiempo"
+     ],
+     "a": 1,
+     "e": "Sustituimos: 0.03 × 10 000 = <b>300</b>."
+    },
+    {
+     "q": "En dP/dt = kP, si k &lt; 0 la cantidad…",
+     "c": [
+      "se duplica",
+      "es constante",
+      "decrece",
+      "crece"
+     ],
+     "a": 2,
+     "e": "Derivada negativa: la cantidad baja."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.04P. ¿A qué ritmo cambia cuando P = 1 000?",
+     "c": [
+      "1 000 por unidad de tiempo",
+      "40 por unidad de tiempo",
+      "80 por unidad de tiempo",
+      "−40 por unidad de tiempo"
+     ],
+     "a": 3,
+     "e": "Sustituimos: −0.04 × 1 000 = <b>−40</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.1P. ¿A qué ritmo cambia cuando P = 50 000?",
+     "c": [
+      "−5 000 por unidad de tiempo",
+      "5 000 por unidad de tiempo",
+      "10 000 por unidad de tiempo",
+      "50 000 por unidad de tiempo"
+     ],
+     "a": 1,
+     "e": "Sustituimos: 0.1 × 50 000 = <b>5 000</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.1P. ¿A qué ritmo cambia cuando P = 2 000?",
+     "c": [
+      "2 000 por unidad de tiempo",
+      "200 por unidad de tiempo",
+      "−200 por unidad de tiempo",
+      "400 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: −0.1 × 2 000 = <b>−200</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.03P. ¿A qué ritmo cambia cuando P = 5 000?",
+     "c": [
+      "−150 por unidad de tiempo",
+      "300 por unidad de tiempo",
+      "150 por unidad de tiempo",
+      "5 000 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: 0.03 × 5 000 = <b>150</b>."
+    },
+    {
+     "q": "Un objeto cae con aceleración constante g. ¿Qué ecuación diferencial la describe?",
+     "c": [
+      "dV/dt = 20",
+      "dv/dt = g",
+      "dN/dt = −kN, con k &gt; 0",
+      "dP/dt = kP, con k &gt; 0"
+     ],
+     "a": 1,
+     "e": "La frase «rapidez de cambio» es la derivada: <b>dv/dt = g</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.05P. ¿A qué ritmo cambia cuando P = 5 000?",
+     "c": [
+      "−250 por unidad de tiempo",
+      "500 por unidad de tiempo",
+      "250 por unidad de tiempo",
+      "5 000 por unidad de tiempo"
+     ],
+     "a": 0,
+     "e": "Sustituimos: −0.05 × 5 000 = <b>−250</b>."
+    },
+    {
+     "q": "La rapidez con que crece una población es proporcional a la población. ¿Qué ecuación diferencial la describe?",
+     "c": [
+      "dT/dt = −k(T − T<sub>a</sub>)",
+      "dv/dt = g",
+      "dN/dt = −kN, con k &gt; 0",
+      "dP/dt = kP, con k &gt; 0"
+     ],
+     "a": 3,
+     "e": "La frase «rapidez de cambio» es la derivada: <b>dP/dt = kP, con k &gt; 0</b>."
+    }
+   ]
+  },
+  {
+   "title": "Ritmo de cambio",
+   "items": [
+    {
+     "q": "Una cantidad cumple dP/dt = 0.03P. ¿A qué ritmo cambia cuando P = 1 000?",
+     "c": [
+      "−30 por unidad de tiempo",
+      "60 por unidad de tiempo",
+      "30 por unidad de tiempo",
+      "1 000 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: 0.03 × 1 000 = <b>30</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.04P. ¿A qué ritmo cambia cuando P = 50 000?",
+     "c": [
+      "50 000 por unidad de tiempo",
+      "2 000 por unidad de tiempo",
+      "−2 000 por unidad de tiempo",
+      "4 000 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: −0.04 × 50 000 = <b>−2 000</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.03P. ¿A qué ritmo cambia cuando P = 2 000?",
+     "c": [
+      "120 por unidad de tiempo",
+      "2 000 por unidad de tiempo",
+      "60 por unidad de tiempo",
+      "−60 por unidad de tiempo"
+     ],
+     "a": 3,
+     "e": "Sustituimos: −0.03 × 2 000 = <b>−60</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.02P. ¿A qué ritmo cambia cuando P = 10 000?",
+     "c": [
+      "200 por unidad de tiempo",
+      "−200 por unidad de tiempo",
+      "400 por unidad de tiempo",
+      "10 000 por unidad de tiempo"
+     ],
+     "a": 1,
+     "e": "Sustituimos: −0.02 × 10 000 = <b>−200</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.03P. ¿A qué ritmo cambia cuando P = 1 000?",
+     "c": [
+      "60 por unidad de tiempo",
+      "1 000 por unidad de tiempo",
+      "30 por unidad de tiempo",
+      "−30 por unidad de tiempo"
+     ],
+     "a": 3,
+     "e": "Sustituimos: −0.03 × 1 000 = <b>−30</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.1P. ¿A qué ritmo cambia cuando P = 10 000?",
+     "c": [
+      "−1 000 por unidad de tiempo",
+      "2 000 por unidad de tiempo",
+      "10 000 por unidad de tiempo",
+      "1 000 por unidad de tiempo"
+     ],
+     "a": 0,
+     "e": "Sustituimos: −0.1 × 10 000 = <b>−1 000</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.02P. ¿A qué ritmo cambia cuando P = 1 000?",
+     "c": [
+      "−20 por unidad de tiempo",
+      "1 000 por unidad de tiempo",
+      "40 por unidad de tiempo",
+      "20 por unidad de tiempo"
+     ],
+     "a": 0,
+     "e": "Sustituimos: −0.02 × 1 000 = <b>−20</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.02P. ¿A qué ritmo cambia cuando P = 5 000?",
+     "c": [
+      "200 por unidad de tiempo",
+      "100 por unidad de tiempo",
+      "−100 por unidad de tiempo",
+      "5 000 por unidad de tiempo"
+     ],
+     "a": 1,
+     "e": "Sustituimos: 0.02 × 5 000 = <b>100</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.1P. ¿A qué ritmo cambia cuando P = 5 000?",
+     "c": [
+      "1 000 por unidad de tiempo",
+      "500 por unidad de tiempo",
+      "5 000 por unidad de tiempo",
+      "−500 por unidad de tiempo"
+     ],
+     "a": 3,
+     "e": "Sustituimos: −0.1 × 5 000 = <b>−500</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.04P. ¿A qué ritmo cambia cuando P = 10 000?",
+     "c": [
+      "10 000 por unidad de tiempo",
+      "400 por unidad de tiempo",
+      "−400 por unidad de tiempo",
+      "800 por unidad de tiempo"
+     ],
+     "a": 1,
+     "e": "Sustituimos: 0.04 × 10 000 = <b>400</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.03P. ¿A qué ritmo cambia cuando P = 5 000?",
+     "c": [
+      "5 000 por unidad de tiempo",
+      "300 por unidad de tiempo",
+      "150 por unidad de tiempo",
+      "−150 por unidad de tiempo"
+     ],
+     "a": 3,
+     "e": "Sustituimos: −0.03 × 5 000 = <b>−150</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.02P. ¿A qué ritmo cambia cuando P = 2 000?",
+     "c": [
+      "80 por unidad de tiempo",
+      "2 000 por unidad de tiempo",
+      "−40 por unidad de tiempo",
+      "40 por unidad de tiempo"
+     ],
+     "a": 3,
+     "e": "Sustituimos: 0.02 × 2 000 = <b>40</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.03P. ¿A qué ritmo cambia cuando P = 10 000?",
+     "c": [
+      "−300 por unidad de tiempo",
+      "10 000 por unidad de tiempo",
+      "300 por unidad de tiempo",
+      "600 por unidad de tiempo"
+     ],
+     "a": 0,
+     "e": "Sustituimos: −0.03 × 10 000 = <b>−300</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.02P. ¿A qué ritmo cambia cuando P = 10 000?",
+     "c": [
+      "200 por unidad de tiempo",
+      "10 000 por unidad de tiempo",
+      "−200 por unidad de tiempo",
+      "400 por unidad de tiempo"
+     ],
+     "a": 0,
+     "e": "Sustituimos: 0.02 × 10 000 = <b>200</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.1P. ¿A qué ritmo cambia cuando P = 2 000?",
+     "c": [
+      "400 por unidad de tiempo",
+      "2 000 por unidad de tiempo",
+      "200 por unidad de tiempo",
+      "−200 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: 0.1 × 2 000 = <b>200</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.03P. ¿A qué ritmo cambia cuando P = 2 000?",
+     "c": [
+      "60 por unidad de tiempo",
+      "−60 por unidad de tiempo",
+      "2 000 por unidad de tiempo",
+      "120 por unidad de tiempo"
+     ],
+     "a": 0,
+     "e": "Sustituimos: 0.03 × 2 000 = <b>60</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.1P. ¿A qué ritmo cambia cuando P = 10 000?",
+     "c": [
+      "10 000 por unidad de tiempo",
+      "−1 000 por unidad de tiempo",
+      "1 000 por unidad de tiempo",
+      "2 000 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: 0.1 × 10 000 = <b>1 000</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.04P. ¿A qué ritmo cambia cuando P = 1 000?",
+     "c": [
+      "80 por unidad de tiempo",
+      "40 por unidad de tiempo",
+      "1 000 por unidad de tiempo",
+      "−40 por unidad de tiempo"
+     ],
+     "a": 1,
+     "e": "Sustituimos: 0.04 × 1 000 = <b>40</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.04P. ¿A qué ritmo cambia cuando P = 2 000?",
+     "c": [
+      "−80 por unidad de tiempo",
+      "2 000 por unidad de tiempo",
+      "80 por unidad de tiempo",
+      "160 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: 0.04 × 2 000 = <b>80</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.02P. ¿A qué ritmo cambia cuando P = 50 000?",
+     "c": [
+      "50 000 por unidad de tiempo",
+      "−1 000 por unidad de tiempo",
+      "2 000 por unidad de tiempo",
+      "1 000 por unidad de tiempo"
+     ],
+     "a": 1,
+     "e": "Sustituimos: −0.02 × 50 000 = <b>−1 000</b>."
+    }
+   ]
+  },
+  {
+   "title": "Método de Euler",
+   "items": [
+    {
+     "q": "Para dy/dt = 0.3y con y(0) = 80, usa un paso de Euler con h = 1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "80.3",
+      "104",
+      "24",
+      "135.2"
+     ],
+     "a": 1,
+     "e": "y′(0) = 0.3 × 80 = 24; y(h) ≈ 80 + 1 × 24 = <b>104</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.3y con y(0) = 200, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "230",
+      "200.3",
+      "60",
+      "338"
+     ],
+     "a": 0,
+     "e": "y′(0) = 0.3 × 200 = 60; y(h) ≈ 200 + 0.5 × 60 = <b>230</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 10, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "10.05",
+      "10.25",
+      "0.5",
+      "11.03"
+     ],
+     "a": 1,
+     "e": "y′(0) = 0.1 × 10 = 0.5; y(h) ≈ 10 + 0.5 × 0.5 = <b>10.25</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.5y con y(0) = 20, usa un paso de Euler con h = 1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "30",
+      "45",
+      "10",
+      "20.5"
+     ],
+     "a": 0,
+     "e": "y′(0) = 0.5 × 20 = 10; y(h) ≈ 20 + 1 × 10 = <b>30</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.5y con y(0) = 100, usa un paso de Euler con h = 0.1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "100.5",
+      "105",
+      "225",
+      "50"
+     ],
+     "a": 1,
+     "e": "y′(0) = 0.5 × 100 = 50; y(h) ≈ 100 + 0.1 × 50 = <b>105</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 100, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "105",
+      "121",
+      "100.1",
+      "10"
+     ],
+     "a": 0,
+     "e": "y′(0) = 0.1 × 100 = 10; y(h) ≈ 100 + 0.5 × 10 = <b>105</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.3y con y(0) = 100, usa un paso de Euler con h = 0.1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "103",
+      "100.3",
+      "30",
+      "169"
+     ],
+     "a": 0,
+     "e": "y′(0) = 0.3 × 100 = 30; y(h) ≈ 100 + 0.1 × 30 = <b>103</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 80, usa un paso de Euler con h = 0.1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "8",
+      "80.1",
+      "96.8",
+      "80.8"
+     ],
+     "a": 3,
+     "e": "y′(0) = 0.1 × 80 = 8; y(h) ≈ 80 + 0.1 × 8 = <b>80.8</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.3y con y(0) = 80, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "80.3",
+      "135.2",
+      "92",
+      "24"
+     ],
+     "a": 2,
+     "e": "y′(0) = 0.3 × 80 = 24; y(h) ≈ 80 + 0.5 × 24 = <b>92</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.5y con y(0) = 10, usa un paso de Euler con h = 1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "22.5",
+      "5",
+      "15",
+      "10.5"
+     ],
+     "a": 2,
+     "e": "y′(0) = 0.5 × 10 = 5; y(h) ≈ 10 + 1 × 5 = <b>15</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.3y con y(0) = 50, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "15",
+      "57.5",
+      "84.5",
+      "50.3"
+     ],
+     "a": 1,
+     "e": "y′(0) = 0.3 × 50 = 15; y(h) ≈ 50 + 0.5 × 15 = <b>57.5</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.5y con y(0) = 50, usa un paso de Euler con h = 0.1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "25",
+      "112.5",
+      "50.5",
+      "52.5"
+     ],
+     "a": 3,
+     "e": "y′(0) = 0.5 × 50 = 25; y(h) ≈ 50 + 0.1 × 25 = <b>52.5</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.3y con y(0) = 10, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "3",
+      "10.3",
+      "11.5",
+      "16.9"
+     ],
+     "a": 2,
+     "e": "y′(0) = 0.3 × 10 = 3; y(h) ≈ 10 + 0.5 × 3 = <b>11.5</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 20, usa un paso de Euler con h = 1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "22.05",
+      "20.05",
+      "1",
+      "21"
+     ],
+     "a": 3,
+     "e": "y′(0) = 0.1 × 20 = 1; y(h) ≈ 20 + 1 × 1 = <b>21</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 40, usa un paso de Euler con h = 1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "40.05",
+      "44.1",
+      "42",
+      "2"
+     ],
+     "a": 2,
+     "e": "y′(0) = 0.1 × 40 = 2; y(h) ≈ 40 + 1 × 2 = <b>42</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 20, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "24.2",
+      "20.1",
+      "21",
+      "2"
+     ],
+     "a": 2,
+     "e": "y′(0) = 0.1 × 20 = 2; y(h) ≈ 20 + 0.5 × 2 = <b>21</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 10, usa un paso de Euler con h = 1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "10.5",
+      "11.03",
+      "10.05",
+      "0.5"
+     ],
+     "a": 0,
+     "e": "y′(0) = 0.1 × 10 = 0.5; y(h) ≈ 10 + 1 × 0.5 = <b>10.5</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 40, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "40.05",
+      "44.1",
+      "2",
+      "41"
+     ],
+     "a": 3,
+     "e": "y′(0) = 0.1 × 40 = 2; y(h) ≈ 40 + 0.5 × 2 = <b>41</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 80, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "8",
+      "96.8",
+      "80.1",
+      "84"
+     ],
+     "a": 3,
+     "e": "y′(0) = 0.1 × 80 = 8; y(h) ≈ 80 + 0.5 × 8 = <b>84</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.2y con y(0) = 20, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "20.2",
+      "22",
+      "28.8",
+      "4"
+     ],
+     "a": 1,
+     "e": "y′(0) = 0.2 × 20 = 4; y(h) ≈ 20 + 0.5 × 4 = <b>22</b>."
+    }
+   ]
+  },
+  {
+   "title": "Comprobar soluciones",
+   "items": [
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 3e<sup>−4t</sup>?",
+     "c": [
+      "y′ = −4",
+      "y′ = −4y",
+      "y′ = 3y",
+      "y′ = 4y"
+     ],
+     "a": 1,
+     "e": "y′ = −4 × 3e<sup>…</sup> = −4·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 5e<sup>−4t</sup>?",
+     "c": [
+      "y′ = 4y",
+      "y′ = −4",
+      "y′ = 5y",
+      "y′ = −4y"
+     ],
+     "a": 3,
+     "e": "y′ = −4 × 5e<sup>…</sup> = −4·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 10e<sup>−4t</sup>?",
+     "c": [
+      "y′ = −4",
+      "y′ = 10y",
+      "y′ = 4y",
+      "y′ = −4y"
+     ],
+     "a": 3,
+     "e": "y′ = −4 × 10e<sup>…</sup> = −4·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 1e<sup>5t</sup>?",
+     "c": [
+      "y′ = −5y",
+      "y′ = 5",
+      "y′ = 5y",
+      "y′ = y"
+     ],
+     "a": 2,
+     "e": "y′ = 5 × 1e<sup>…</sup> = 5·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 3e<sup>−t</sup>?",
+     "c": [
+      "y′ = −y",
+      "y′ = −1",
+      "y′ = 3y",
+      "y′ = y"
+     ],
+     "a": 0,
+     "e": "y′ = −1 × 3e<sup>…</sup> = −1·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 5e<sup>5t</sup>?",
+     "c": [
+      "y′ = 5y",
+      "y′ = 5",
+      "y′ = 6y",
+      "y′ = −5y"
+     ],
+     "a": 0,
+     "e": "y′ = 5 × 5e<sup>…</sup> = 5·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 3e<sup>2t</sup>?",
+     "c": [
+      "y′ = 3y",
+      "y′ = 2",
+      "y′ = −2y",
+      "y′ = 2y"
+     ],
+     "a": 3,
+     "e": "y′ = 2 × 3e<sup>…</sup> = 2·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 10e<sup>−t</sup>?",
+     "c": [
+      "y′ = −1",
+      "y′ = −y",
+      "y′ = 10y",
+      "y′ = y"
+     ],
+     "a": 1,
+     "e": "y′ = −1 × 10e<sup>…</sup> = −1·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 10e<sup>−2t</sup>?",
+     "c": [
+      "y′ = −2y",
+      "y′ = 2y",
+      "y′ = 10y",
+      "y′ = −2"
+     ],
+     "a": 0,
+     "e": "y′ = −2 × 10e<sup>…</sup> = −2·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 5e<sup>3t</sup>?",
+     "c": [
+      "y′ = −3y",
+      "y′ = 3",
+      "y′ = 5y",
+      "y′ = 3y"
+     ],
+     "a": 3,
+     "e": "y′ = 3 × 5e<sup>…</sup> = 3·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 3e<sup>5t</sup>?",
+     "c": [
+      "y′ = 3y",
+      "y′ = −5y",
+      "y′ = 5y",
+      "y′ = 5"
+     ],
+     "a": 2,
+     "e": "y′ = 5 × 3e<sup>…</sup> = 5·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 1e<sup>−4t</sup>?",
+     "c": [
+      "y′ = −4",
+      "y′ = y",
+      "y′ = 4y",
+      "y′ = −4y"
+     ],
+     "a": 3,
+     "e": "y′ = −4 × 1e<sup>…</sup> = −4·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 3e<sup>−2t</sup>?",
+     "c": [
+      "y′ = 2y",
+      "y′ = 3y",
+      "y′ = −2y",
+      "y′ = −2"
+     ],
+     "a": 2,
+     "e": "y′ = −2 × 3e<sup>…</sup> = −2·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 1e<sup>−2t</sup>?",
+     "c": [
+      "y′ = 2y",
+      "y′ = y",
+      "y′ = −2y",
+      "y′ = −2"
+     ],
+     "a": 2,
+     "e": "y′ = −2 × 1e<sup>…</sup> = −2·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 5e<sup>−2t</sup>?",
+     "c": [
+      "y′ = −2y",
+      "y′ = 5y",
+      "y′ = −2",
+      "y′ = 2y"
+     ],
+     "a": 0,
+     "e": "y′ = −2 × 5e<sup>…</sup> = −2·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 1e<sup>3t</sup>?",
+     "c": [
+      "y′ = −3y",
+      "y′ = y",
+      "y′ = 3y",
+      "y′ = 3"
+     ],
+     "a": 2,
+     "e": "y′ = 3 × 1e<sup>…</sup> = 3·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 5e<sup>−t</sup>?",
+     "c": [
+      "y′ = −1",
+      "y′ = −y",
+      "y′ = 5y",
+      "y′ = y"
+     ],
+     "a": 1,
+     "e": "y′ = −1 × 5e<sup>…</sup> = −1·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 10e<sup>2t</sup>?",
+     "c": [
+      "y′ = 10y",
+      "y′ = 2y",
+      "y′ = −2y",
+      "y′ = 2"
+     ],
+     "a": 1,
+     "e": "y′ = 2 × 10e<sup>…</sup> = 2·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 10e<sup>5t</sup>?",
+     "c": [
+      "y′ = −5y",
+      "y′ = 5y",
+      "y′ = 10y",
+      "y′ = 5"
+     ],
+     "a": 1,
+     "e": "y′ = 5 × 10e<sup>…</sup> = 5·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    },
+    {
+     "q": "¿Qué ecuación diferencial cumple y = 5e<sup>2t</sup>?",
+     "c": [
+      "y′ = 2y",
+      "y′ = 5y",
+      "y′ = 2",
+      "y′ = −2y"
+     ],
+     "a": 0,
+     "e": "y′ = 2 × 5e<sup>…</sup> = 2·y. Por eso las exponenciales modelan crecimiento y decaimiento."
+    }
+   ]
+  },
+  {
+   "title": "Repaso",
+   "items": [
+    {
+     "q": "Para dy/dt = 0.5y con y(0) = 50, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "62.5",
+      "50.5",
+      "25",
+      "112.5"
+     ],
+     "a": 0,
+     "e": "y′(0) = 0.5 × 50 = 25; y(h) ≈ 50 + 0.5 × 25 = <b>62.5</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.5y con y(0) = 10, usa un paso de Euler con h = 0.1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "10.6",
+      "5",
+      "22.5",
+      "10.5"
+     ],
+     "a": 3,
+     "e": "y′(0) = 0.5 × 10 = 5; y(h) ≈ 10 + 0.1 × 5 = <b>10.5</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.2y con y(0) = 80, usa un paso de Euler con h = 1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "96",
+      "80.2",
+      "16",
+      "115.2"
+     ],
+     "a": 0,
+     "e": "y′(0) = 0.2 × 80 = 16; y(h) ≈ 80 + 1 × 16 = <b>96</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.2y con y(0) = 20, usa un paso de Euler con h = 1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "28.8",
+      "20.2",
+      "24",
+      "4"
+     ],
+     "a": 2,
+     "e": "y′(0) = 0.2 × 20 = 4; y(h) ≈ 20 + 1 × 4 = <b>24</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.3y con y(0) = 100, usa un paso de Euler con h = 0.5: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "30",
+      "115",
+      "169",
+      "100.3"
+     ],
+     "a": 1,
+     "e": "y′(0) = 0.3 × 100 = 30; y(h) ≈ 100 + 0.5 × 30 = <b>115</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.05P. ¿A qué ritmo cambia cuando P = 5 000?",
+     "c": [
+      "5 000 por unidad de tiempo",
+      "500 por unidad de tiempo",
+      "−250 por unidad de tiempo",
+      "250 por unidad de tiempo"
+     ],
+     "a": 3,
+     "e": "Sustituimos: 0.05 × 5 000 = <b>250</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.05P. ¿A qué ritmo cambia cuando P = 10 000?",
+     "c": [
+      "10 000 por unidad de tiempo",
+      "1 000 por unidad de tiempo",
+      "500 por unidad de tiempo",
+      "−500 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: 0.05 × 10 000 = <b>500</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 20, usa un paso de Euler con h = 0.1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "2",
+      "20.2",
+      "20.1",
+      "24.2"
+     ],
+     "a": 1,
+     "e": "y′(0) = 0.1 × 20 = 2; y(h) ≈ 20 + 0.1 × 2 = <b>20.2</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.2y con y(0) = 80, usa un paso de Euler con h = 0.1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "81.6",
+      "16",
+      "80.2",
+      "115.2"
+     ],
+     "a": 0,
+     "e": "y′(0) = 0.2 × 80 = 16; y(h) ≈ 80 + 0.1 × 16 = <b>81.6</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.05P. ¿A qué ritmo cambia cuando P = 50 000?",
+     "c": [
+      "−2 500 por unidad de tiempo",
+      "50 000 por unidad de tiempo",
+      "5 000 por unidad de tiempo",
+      "2 500 por unidad de tiempo"
+     ],
+     "a": 3,
+     "e": "Sustituimos: 0.05 × 50 000 = <b>2 500</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.04P. ¿A qué ritmo cambia cuando P = 5 000?",
+     "c": [
+      "−200 por unidad de tiempo",
+      "200 por unidad de tiempo",
+      "5 000 por unidad de tiempo",
+      "400 por unidad de tiempo"
+     ],
+     "a": 1,
+     "e": "Sustituimos: 0.04 × 5 000 = <b>200</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.1P. ¿A qué ritmo cambia cuando P = 50 000?",
+     "c": [
+      "10 000 por unidad de tiempo",
+      "50 000 por unidad de tiempo",
+      "5 000 por unidad de tiempo",
+      "−5 000 por unidad de tiempo"
+     ],
+     "a": 3,
+     "e": "Sustituimos: −0.1 × 50 000 = <b>−5 000</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 50, usa un paso de Euler con h = 1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "60.5",
+      "50.1",
+      "5",
+      "55"
+     ],
+     "a": 3,
+     "e": "y′(0) = 0.1 × 50 = 5; y(h) ≈ 50 + 1 × 5 = <b>55</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 80, usa un paso de Euler con h = 1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "80.1",
+      "88",
+      "8",
+      "96.8"
+     ],
+     "a": 1,
+     "e": "y′(0) = 0.1 × 80 = 8; y(h) ≈ 80 + 1 × 8 = <b>88</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.05P. ¿A qué ritmo cambia cuando P = 10 000?",
+     "c": [
+      "500 por unidad de tiempo",
+      "10 000 por unidad de tiempo",
+      "−500 por unidad de tiempo",
+      "1 000 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: −0.05 × 10 000 = <b>−500</b>."
+    },
+    {
+     "q": "Para dy/dt = 0.1y con y(0) = 40, usa un paso de Euler con h = 0.1: y(h) ≈ y(0) + h × y′(0). ¿Cuánto vale?",
+     "c": [
+      "40.4",
+      "4",
+      "40.1",
+      "48.4"
+     ],
+     "a": 0,
+     "e": "y′(0) = 0.1 × 40 = 4; y(h) ≈ 40 + 0.1 × 4 = <b>40.4</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = −0.1P. ¿A qué ritmo cambia cuando P = 1 000?",
+     "c": [
+      "−100 por unidad de tiempo",
+      "1 000 por unidad de tiempo",
+      "100 por unidad de tiempo",
+      "200 por unidad de tiempo"
+     ],
+     "a": 0,
+     "e": "Sustituimos: −0.1 × 1 000 = <b>−100</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.03P. ¿A qué ritmo cambia cuando P = 50 000?",
+     "c": [
+      "3 000 por unidad de tiempo",
+      "1 500 por unidad de tiempo",
+      "50 000 por unidad de tiempo",
+      "−1 500 por unidad de tiempo"
+     ],
+     "a": 1,
+     "e": "Sustituimos: 0.03 × 50 000 = <b>1 500</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.02P. ¿A qué ritmo cambia cuando P = 50 000?",
+     "c": [
+      "50 000 por unidad de tiempo",
+      "2 000 por unidad de tiempo",
+      "1 000 por unidad de tiempo",
+      "−1 000 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: 0.02 × 50 000 = <b>1 000</b>."
+    },
+    {
+     "q": "Una cantidad cumple dP/dt = 0.04P. ¿A qué ritmo cambia cuando P = 50 000?",
+     "c": [
+      "−2 000 por unidad de tiempo",
+      "4 000 por unidad de tiempo",
+      "2 000 por unidad de tiempo",
+      "50 000 por unidad de tiempo"
+     ],
+     "a": 2,
+     "e": "Sustituimos: 0.04 × 50 000 = <b>2 000</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 14,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "pensamiento-matematico-3"
+}

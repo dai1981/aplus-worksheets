@@ -1,0 +1,1157 @@
+{
+ "slug": "optimizacion",
+ "title": "Optimización con derivadas",
+ "seo_title": "Optimización – Pensamiento Matemático III: ejercicios con respuestas",
+ "short_title": "Optimización",
+ "domain": "Derivadas",
+ "standard_code": "Pensamiento Matemático III · Progresión 11: Optimización",
+ "standard_url": "https://educacionmediasuperior.sep.gob.mx/work/models/sems/Resource/13634/1/images/Progresiones%20de%20aprendizaje%20-%20Pensamiento%20matematico(1).pdf",
+ "standard_text": "Resuelve problemas de optimización de su entorno (áreas, volúmenes, costos e ingresos) planteando una función y usando la derivada (resumen de la progresión 11 de aprendizaje de Pensamiento Matemático III (MCCEMS, SEP 2023))",
+ "meta_desc": "Ejercicios de Pensamiento Matemático III: área máxima con un perímetro fijo, producto máximo, caja de volumen máximo, ingreso y ganancia máximos. 100 ejercicios con respuestas.",
+ "key_big": "Función → derivada = 0 → revisa",
+ "key_sub": "El óptimo está donde f′ = 0 o en un extremo.",
+ "body_html": "<h2>Cómo se hace</h2><p>1. Escribe la cantidad a optimizar en función de <b>una</b> variable (usa la condición para quitar la otra).</p><p>2. Deriva e iguala a 0. 3. Comprueba que es máximo o mínimo (signo de f′ o de f″) y que tiene sentido en el problema.</p><p>Con un perímetro fijo, el rectángulo de área máxima es el cuadrado.</p><div class='sn-ex'><span class='sn-ex-t'>Ejemplo</span><p class='sn-ex-q'>60 m de malla, área máxima</p><p class='sn-ex-s'>A(x) = x(30 − x)</p><p class='sn-ex-s'>A′(x) = 30 − 2x = 0</p><p class='sn-ex-a'>Respuesta: cuadrado de 15 m</p></div><h2>Errores frecuentes</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Error frecuente</th><th>Qué hacer</th></tr></thead><tbody><tr><td>Derivar con dos variables</td><td>Primero deja todo en función de una.</td></tr><tr><td>No revisar el dominio</td><td>Las medidas deben ser positivas.</td></tr><tr><td>Dar x y no la cantidad pedida</td><td>Lee qué se pregunta: medida, área o ganancia.</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "¿Dónde se usa la optimización?",
+   "a": "En empaques, rutas, producción y precios: para gastar lo menos o ganar lo más."
+  },
+  {
+   "q": "¿Siempre hay un óptimo?",
+   "a": "En un intervalo cerrado, una función continua siempre alcanza un máximo y un mínimo."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Cercas y terrenos",
+   "items": [
+    {
+     "q": "Con 100 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "12.5 m × 37.5 m",
+      "25 m × 25 m",
+      "50 m × 50 m",
+      "30 m × 20 m"
+     ],
+     "a": 1,
+     "e": "A(x) = x(100/2 − x). A′(x) = 50 − 2x = 0 → x = 25: un cuadrado de <b>25 m</b> por lado."
+    },
+    {
+     "q": "Con 280 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "75 m × 65 m",
+      "140 m × 140 m",
+      "35 m × 105 m",
+      "70 m × 70 m"
+     ],
+     "a": 3,
+     "e": "A(x) = x(280/2 − x). A′(x) = 140 − 2x = 0 → x = 70: un cuadrado de <b>70 m</b> por lado."
+    },
+    {
+     "q": "Con 160 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "20 m × 60 m",
+      "45 m × 35 m",
+      "80 m × 80 m",
+      "40 m × 40 m"
+     ],
+     "a": 3,
+     "e": "A(x) = x(160/2 − x). A′(x) = 80 − 2x = 0 → x = 40: un cuadrado de <b>40 m</b> por lado."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 380 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "18 051 m²",
+      "16 044.44 m²",
+      "9 025 m²",
+      "18 050 m²"
+     ],
+     "a": 3,
+     "e": "A(x) = x(380 − 2x). A′(x) = 380 − 4x = 0 → x = 95 m y el otro lado 190 m. Área = <b>18 050 m²</b>."
+    },
+    {
+     "q": "Con 200 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "50 m × 50 m",
+      "25 m × 75 m",
+      "55 m × 45 m",
+      "100 m × 100 m"
+     ],
+     "a": 0,
+     "e": "A(x) = x(200/2 − x). A′(x) = 100 − 2x = 0 → x = 50: un cuadrado de <b>50 m</b> por lado."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 100 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "1 250 m²",
+      "1 111.11 m²",
+      "625 m²",
+      "1251 m²"
+     ],
+     "a": 0,
+     "e": "A(x) = x(100 − 2x). A′(x) = 100 − 4x = 0 → x = 25 m y el otro lado 50 m. Área = <b>1 250 m²</b>."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 520 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "33 800 m²",
+      "16 900 m²",
+      "30 044.44 m²",
+      "33 801 m²"
+     ],
+     "a": 0,
+     "e": "A(x) = x(520 − 2x). A′(x) = 520 − 4x = 0 → x = 130 m y el otro lado 260 m. Área = <b>33 800 m²</b>."
+    },
+    {
+     "q": "Con 60 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "30 m × 30 m",
+      "7.5 m × 22.5 m",
+      "20 m × 10 m",
+      "15 m × 15 m"
+     ],
+     "a": 3,
+     "e": "A(x) = x(60/2 − x). A′(x) = 30 − 2x = 0 → x = 15: un cuadrado de <b>15 m</b> por lado."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 240 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "7201 m²",
+      "7 200 m²",
+      "3 600 m²",
+      "6 400 m²"
+     ],
+     "a": 1,
+     "e": "A(x) = x(240 − 2x). A′(x) = 240 − 4x = 0 → x = 60 m y el otro lado 120 m. Área = <b>7 200 m²</b>."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 200 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "5 000 m²",
+      "2 500 m²",
+      "5001 m²",
+      "4 444.44 m²"
+     ],
+     "a": 0,
+     "e": "A(x) = x(200 − 2x). A′(x) = 200 − 4x = 0 → x = 50 m y el otro lado 100 m. Área = <b>5 000 m²</b>."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 320 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "6 400 m²",
+      "11 377.78 m²",
+      "12 800 m²",
+      "12 801 m²"
+     ],
+     "a": 2,
+     "e": "A(x) = x(320 − 2x). A′(x) = 320 − 4x = 0 → x = 80 m y el otro lado 160 m. Área = <b>12 800 m²</b>."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 160 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "3201 m²",
+      "1 600 m²",
+      "3 200 m²",
+      "2 844.44 m²"
+     ],
+     "a": 2,
+     "e": "A(x) = x(160 − 2x). A′(x) = 160 − 4x = 0 → x = 40 m y el otro lado 80 m. Área = <b>3 200 m²</b>."
+    },
+    {
+     "q": "Con 340 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "42.5 m × 127.5 m",
+      "90 m × 80 m",
+      "85 m × 85 m",
+      "170 m × 170 m"
+     ],
+     "a": 2,
+     "e": "A(x) = x(340/2 − x). A′(x) = 170 − 2x = 0 → x = 85: un cuadrado de <b>85 m</b> por lado."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 480 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "14 400 m²",
+      "25 600 m²",
+      "28 800 m²",
+      "28 801 m²"
+     ],
+     "a": 2,
+     "e": "A(x) = x(480 − 2x). A′(x) = 480 − 4x = 0 → x = 120 m y el otro lado 240 m. Área = <b>28 800 m²</b>."
+    },
+    {
+     "q": "Con 120 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "15 m × 45 m",
+      "35 m × 25 m",
+      "60 m × 60 m",
+      "30 m × 30 m"
+     ],
+     "a": 3,
+     "e": "A(x) = x(120/2 − x). A′(x) = 60 − 2x = 0 → x = 30: un cuadrado de <b>30 m</b> por lado."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 560 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "34 844.44 m²",
+      "39 200 m²",
+      "19 600 m²",
+      "39 201 m²"
+     ],
+     "a": 1,
+     "e": "A(x) = x(560 − 2x). A′(x) = 560 − 4x = 0 → x = 140 m y el otro lado 280 m. Área = <b>39 200 m²</b>."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 80 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "400 m²",
+      "800 m²",
+      "801 m²",
+      "711.11 m²"
+     ],
+     "a": 1,
+     "e": "A(x) = x(80 − 2x). A′(x) = 80 − 4x = 0 → x = 20 m y el otro lado 40 m. Área = <b>800 m²</b>."
+    },
+    {
+     "q": "Con 40 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "15 m × 5 m",
+      "10 m × 10 m",
+      "20 m × 20 m",
+      "5 m × 15 m"
+     ],
+     "a": 1,
+     "e": "A(x) = x(40/2 − x). A′(x) = 20 − 2x = 0 → x = 10: un cuadrado de <b>10 m</b> por lado."
+    },
+    {
+     "q": "Con 260 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "70 m × 60 m",
+      "32.5 m × 97.5 m",
+      "65 m × 65 m",
+      "130 m × 130 m"
+     ],
+     "a": 2,
+     "e": "A(x) = x(260/2 − x). A′(x) = 130 − 2x = 0 → x = 65: un cuadrado de <b>65 m</b> por lado."
+    },
+    {
+     "q": "Con 380 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "95 m × 95 m",
+      "47.5 m × 142.5 m",
+      "100 m × 90 m",
+      "190 m × 190 m"
+     ],
+     "a": 0,
+     "e": "A(x) = x(380/2 − x). A′(x) = 190 − 2x = 0 → x = 95: un cuadrado de <b>95 m</b> por lado."
+    }
+   ]
+  },
+  {
+   "title": "Números",
+   "items": [
+    {
+     "q": "Con una hoja cuadrada de 30 cm de lado se hace una caja sin tapa cortando un cuadrado de lado x en cada esquina. ¿Qué x da el volumen máximo?",
+     "c": [
+      "x = 10 cm",
+      "x = 5 cm",
+      "x = 15 cm",
+      "x = <span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span> cm"
+     ],
+     "a": 1,
+     "e": "V(x) = (30 − 2x)² x; V′(x) = 0 → x = 5 (la otra solución, 15, da volumen 0). Volumen máximo 2 000 cm³. <b>x = 5 cm</b>."
+    },
+    {
+     "q": "Dos números positivos suman 70. ¿Cuál es el mayor producto posible?",
+     "c": [
+      "2 450",
+      "1 225",
+      "70",
+      "1 224"
+     ],
+     "a": 1,
+     "e": "P(x) = x(70 − x); P′(x) = 70 − 2x = 0 → x = 35. Producto máximo = 35 × 35 = <b>1 225</b>."
+    },
+    {
+     "q": "Dos números positivos suman 100. ¿Cuál es el mayor producto posible?",
+     "c": [
+      "100",
+      "2 500",
+      "2 499",
+      "5 000"
+     ],
+     "a": 1,
+     "e": "P(x) = x(100 − x); P′(x) = 100 − 2x = 0 → x = 50. Producto máximo = 50 × 50 = <b>2 500</b>."
+    },
+    {
+     "q": "Dos números positivos suman 34. ¿Cuál es el mayor producto posible?",
+     "c": [
+      "578",
+      "34",
+      "289",
+      "288"
+     ],
+     "a": 2,
+     "e": "P(x) = x(34 − x); P′(x) = 34 − 2x = 0 → x = 17. Producto máximo = 17 × 17 = <b>289</b>."
+    },
+    {
+     "q": "Dos números positivos suman 44. ¿Cuál es el mayor producto posible?",
+     "c": [
+      "483",
+      "44",
+      "484",
+      "968"
+     ],
+     "a": 2,
+     "e": "P(x) = x(44 − x); P′(x) = 44 − 2x = 0 → x = 22. Producto máximo = 22 × 22 = <b>484</b>."
+    },
+    {
+     "q": "Con una hoja cuadrada de 18 cm de lado se hace una caja sin tapa cortando un cuadrado de lado x en cada esquina. ¿Qué x da el volumen máximo?",
+     "c": [
+      "x = 6 cm",
+      "x = 9 cm",
+      "x = 3 cm",
+      "x = <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> cm"
+     ],
+     "a": 2,
+     "e": "V(x) = (18 − 2x)² x; V′(x) = 0 → x = 3 (la otra solución, 9, da volumen 0). Volumen máximo 432 cm³. <b>x = 3 cm</b>."
+    },
+    {
+     "q": "Dos números positivos suman 68. ¿Cuál es el mayor producto posible?",
+     "c": [
+      "68",
+      "2 312",
+      "1 155",
+      "1 156"
+     ],
+     "a": 3,
+     "e": "P(x) = x(68 − x); P′(x) = 68 − 2x = 0 → x = 34. Producto máximo = 34 × 34 = <b>1 156</b>."
+    },
+    {
+     "q": "Descompón 16 en dos sumandos positivos cuyo producto sea máximo.",
+     "c": [
+      "8 y 8",
+      "7 y 9",
+      "1 y 15",
+      "16 y 0"
+     ],
+     "a": 0,
+     "e": "P(x) = x(16 − x); P′(x) = 16 − 2x = 0 → <b>x = 8</b>."
+    },
+    {
+     "q": "Una lata cilíndrica debe contener 250 π cm³. ¿Qué radio minimiza el material (área total)?",
+     "c": [
+      "r = 6.3 cm",
+      "r = 11.18 cm",
+      "r = 5 cm",
+      "r = 62.5 cm"
+     ],
+     "a": 2,
+     "e": "h = 250/r²; A(r) = 2πr² + 2π × 250/r; A′(r) = 0 → r³ = 250/2 → <b>r = 5 cm</b> (la altura es el doble del radio)."
+    },
+    {
+     "q": "La demanda de un producto es q = 100 − 5p (p en pesos). ¿Qué precio da el ingreso máximo?",
+     "c": [
+      "$5",
+      "$20",
+      "$10",
+      "$100"
+     ],
+     "a": 2,
+     "e": "I(p) = p(100 − 5p); I′(p) = 100 − 10p = 0 → <b>p = $10</b>."
+    },
+    {
+     "q": "Dos números positivos suman 38. ¿Cuál es el mayor producto posible?",
+     "c": [
+      "361",
+      "38",
+      "360",
+      "722"
+     ],
+     "a": 0,
+     "e": "P(x) = x(38 − x); P′(x) = 38 − 2x = 0 → x = 19. Producto máximo = 19 × 19 = <b>361</b>."
+    },
+    {
+     "q": "Se quiere vallar un terreno rectangular de 200 m² junto a un río (ese lado no se cerca). ¿Qué dimensiones gastan menos cerca?",
+     "c": [
+      "10 m (perpendicular al río) y 20 m",
+      "14.14 m y 14.14 m",
+      "5 m y 40 m",
+      "20 m (perpendicular al río) y 5 m"
+     ],
+     "a": 0,
+     "e": "L(x) = 2x + 200/x; L′(x) = 2 − 200/x² = 0 → x = 10: <b>10 m y 20 m</b>."
+    },
+    {
+     "q": "Una lata cilíndrica debe contener 16 π cm³. ¿Qué radio minimiza el material (área total)?",
+     "c": [
+      "r = 4 cm",
+      "r = 2.83 cm",
+      "r = 2.52 cm",
+      "r = 2 cm"
+     ],
+     "a": 3,
+     "e": "h = 16/r²; A(r) = 2πr² + 2π × 16/r; A′(r) = 0 → r³ = 16/2 → <b>r = 2 cm</b> (la altura es el doble del radio)."
+    },
+    {
+     "q": "Dos números positivos suman 28. ¿Cuál es el mayor producto posible?",
+     "c": [
+      "392",
+      "28",
+      "195",
+      "196"
+     ],
+     "a": 3,
+     "e": "P(x) = x(28 − x); P′(x) = 28 − 2x = 0 → x = 14. Producto máximo = 14 × 14 = <b>196</b>."
+    },
+    {
+     "q": "Dos números positivos suman 90. ¿Cuál es el mayor producto posible?",
+     "c": [
+      "2 024",
+      "90",
+      "4 050",
+      "2 025"
+     ],
+     "a": 3,
+     "e": "P(x) = x(90 − x); P′(x) = 90 − 2x = 0 → x = 45. Producto máximo = 45 × 45 = <b>2 025</b>."
+    },
+    {
+     "q": "Descompón 12 en dos sumandos positivos cuyo producto sea máximo.",
+     "c": [
+      "1 y 11",
+      "6 y 6",
+      "12 y 0",
+      "5 y 7"
+     ],
+     "a": 1,
+     "e": "P(x) = x(12 − x); P′(x) = 12 − 2x = 0 → <b>x = 6</b>."
+    },
+    {
+     "q": "La demanda de un producto es q = 100 − 1p (p en pesos). ¿Qué precio da el ingreso máximo?",
+     "c": [
+      "$50",
+      "$55",
+      "$25",
+      "$100"
+     ],
+     "a": 0,
+     "e": "I(p) = p(100 − 1p); I′(p) = 100 − 2p = 0 → <b>p = $50</b>."
+    },
+    {
+     "q": "Dos números positivos suman 78. ¿Cuál es el mayor producto posible?",
+     "c": [
+      "3 042",
+      "1 521",
+      "1 520",
+      "78"
+     ],
+     "a": 1,
+     "e": "P(x) = x(78 − x); P′(x) = 78 − 2x = 0 → x = 39. Producto máximo = 39 × 39 = <b>1 521</b>."
+    },
+    {
+     "q": "Descompón 30 en dos sumandos positivos cuyo producto sea máximo.",
+     "c": [
+      "30 y 0",
+      "14 y 16",
+      "1 y 29",
+      "15 y 15"
+     ],
+     "a": 3,
+     "e": "P(x) = x(30 − x); P′(x) = 30 − 2x = 0 → <b>x = 15</b>."
+    },
+    {
+     "q": "Dos números positivos suman 36. ¿Cuál es el mayor producto posible?",
+     "c": [
+      "324",
+      "323",
+      "648",
+      "36"
+     ],
+     "a": 0,
+     "e": "P(x) = x(36 − x); P′(x) = 36 − 2x = 0 → x = 18. Producto máximo = 18 × 18 = <b>324</b>."
+    }
+   ]
+  },
+  {
+   "title": "Cajas y volúmenes",
+   "items": [
+    {
+     "q": "De una lámina cuadrada de 30 cm de lado se cortan cuadrados de x cm en las esquinas para hacer una caja sin tapa. ¿Qué x da el volumen máximo?",
+     "c": [
+      "15 cm",
+      "5 cm",
+      "7 cm",
+      "10 cm"
+     ],
+     "a": 1,
+     "e": "V(x) = x(30 − 2x)². V′(x) = 0 da x = 30/6 = <b>5 cm</b> (volumen 2 000 cm³)."
+    },
+    {
+     "q": "De una lámina cuadrada de 60 cm de lado se cortan cuadrados de x cm en las esquinas para hacer una caja sin tapa. ¿Qué x da el volumen máximo?",
+     "c": [
+      "30 cm",
+      "20 cm",
+      "10 cm",
+      "15 cm"
+     ],
+     "a": 2,
+     "e": "V(x) = x(60 − 2x)². V′(x) = 0 da x = 60/6 = <b>10 cm</b> (volumen 16 000 cm³)."
+    },
+    {
+     "q": "De una lámina cuadrada de 24 cm de lado se cortan cuadrados de x cm en las esquinas para hacer una caja sin tapa. ¿Qué x da el volumen máximo?",
+     "c": [
+      "8 cm",
+      "12 cm",
+      "6 cm",
+      "4 cm"
+     ],
+     "a": 3,
+     "e": "V(x) = x(24 − 2x)². V′(x) = 0 da x = 24/6 = <b>4 cm</b> (volumen 1 024 cm³)."
+    },
+    {
+     "q": "De todos los rectángulos de perímetro 100 cm, ¿cuál tiene el área máxima?",
+     "c": [
+      "el de lados 49 cm y 1 cm",
+      "el de lados 24 cm y 26 cm",
+      "todos tienen la misma área",
+      "el cuadrado de lado 25 cm"
+     ],
+     "a": 3,
+     "e": "A(x) = x(50 − x); A′(x) = 50 − 2x = 0 → x = 25: <b>un cuadrado</b>."
+    },
+    {
+     "q": "Descompón 20 en dos sumandos positivos cuyo producto sea máximo.",
+     "c": [
+      "10 y 10",
+      "20 y 0",
+      "1 y 19",
+      "9 y 11"
+     ],
+     "a": 0,
+     "e": "P(x) = x(20 − x); P′(x) = 20 − 2x = 0 → <b>x = 10</b>."
+    },
+    {
+     "q": "Una lata cilíndrica debe contener 54 π cm³. ¿Qué radio minimiza el material (área total)?",
+     "c": [
+      "r = 5.2 cm",
+      "r = 3.78 cm",
+      "r = 13.5 cm",
+      "r = 3 cm"
+     ],
+     "a": 3,
+     "e": "h = 54/r²; A(r) = 2πr² + 2π × 54/r; A′(r) = 0 → r³ = 54/2 → <b>r = 3 cm</b> (la altura es el doble del radio)."
+    },
+    {
+     "q": "De una lámina cuadrada de 84 cm de lado se cortan cuadrados de x cm en las esquinas para hacer una caja sin tapa. ¿Qué x da el volumen máximo?",
+     "c": [
+      "14 cm",
+      "28 cm",
+      "42 cm",
+      "21 cm"
+     ],
+     "a": 0,
+     "e": "V(x) = x(84 − 2x)². V′(x) = 0 da x = 84/6 = <b>14 cm</b> (volumen 43 904 cm³)."
+    },
+    {
+     "q": "Una lata cilíndrica debe contener 128 π cm³. ¿Qué radio minimiza el material (área total)?",
+     "c": [
+      "r = 5.04 cm",
+      "r = 8 cm",
+      "r = 4 cm",
+      "r = 32 cm"
+     ],
+     "a": 2,
+     "e": "h = 128/r²; A(r) = 2πr² + 2π × 128/r; A′(r) = 0 → r³ = 128/2 → <b>r = 4 cm</b> (la altura es el doble del radio)."
+    },
+    {
+     "q": "De una lámina cuadrada de 54 cm de lado se cortan cuadrados de x cm en las esquinas para hacer una caja sin tapa. ¿Qué x da el volumen máximo?",
+     "c": [
+      "9 cm",
+      "18 cm",
+      "27 cm",
+      "13 cm"
+     ],
+     "a": 0,
+     "e": "V(x) = x(54 − 2x)². V′(x) = 0 da x = 54/6 = <b>9 cm</b> (volumen 11 664 cm³)."
+    },
+    {
+     "q": "De una lámina cuadrada de 36 cm de lado se cortan cuadrados de x cm en las esquinas para hacer una caja sin tapa. ¿Qué x da el volumen máximo?",
+     "c": [
+      "9 cm",
+      "12 cm",
+      "6 cm",
+      "18 cm"
+     ],
+     "a": 2,
+     "e": "V(x) = x(36 − 2x)². V′(x) = 0 da x = 36/6 = <b>6 cm</b> (volumen 3 456 cm³)."
+    },
+    {
+     "q": "Se quiere vallar un terreno rectangular de 800 m² junto a un río (ese lado no se cerca). ¿Qué dimensiones gastan menos cerca?",
+     "c": [
+      "28.28 m y 28.28 m",
+      "25 m y 32 m",
+      "40 m (perpendicular al río) y 10 m",
+      "20 m (perpendicular al río) y 40 m"
+     ],
+     "a": 3,
+     "e": "L(x) = 2x + 800/x; L′(x) = 2 − 800/x² = 0 → x = 20: <b>20 m y 40 m</b>."
+    },
+    {
+     "q": "Descompón 10 en dos sumandos positivos cuyo producto sea máximo.",
+     "c": [
+      "1 y 9",
+      "5 y 5",
+      "10 y 0",
+      "4 y 6"
+     ],
+     "a": 1,
+     "e": "P(x) = x(10 − x); P′(x) = 10 − 2x = 0 → <b>x = 5</b>."
+    },
+    {
+     "q": "Se quiere vallar un terreno rectangular de 450 m² junto a un río (ese lado no se cerca). ¿Qué dimensiones gastan menos cerca?",
+     "c": [
+      "16 m y 29 m",
+      "21.21 m y 21.21 m",
+      "30 m (perpendicular al río) y 15 m",
+      "15 m (perpendicular al río) y 30 m"
+     ],
+     "a": 3,
+     "e": "L(x) = 2x + 450/x; L′(x) = 2 − 450/x² = 0 → x = 15: <b>15 m y 30 m</b>."
+    },
+    {
+     "q": "De una lámina cuadrada de 90 cm de lado se cortan cuadrados de x cm en las esquinas para hacer una caja sin tapa. ¿Qué x da el volumen máximo?",
+     "c": [
+      "15 cm",
+      "45 cm",
+      "22 cm",
+      "30 cm"
+     ],
+     "a": 0,
+     "e": "V(x) = x(90 − 2x)². V′(x) = 0 da x = 90/6 = <b>15 cm</b> (volumen 54 000 cm³)."
+    },
+    {
+     "q": "De una lámina cuadrada de 42 cm de lado se cortan cuadrados de x cm en las esquinas para hacer una caja sin tapa. ¿Qué x da el volumen máximo?",
+     "c": [
+      "10 cm",
+      "21 cm",
+      "7 cm",
+      "14 cm"
+     ],
+     "a": 2,
+     "e": "V(x) = x(42 − 2x)². V′(x) = 0 da x = 42/6 = <b>7 cm</b> (volumen 5 488 cm³)."
+    },
+    {
+     "q": "De todos los rectángulos de perímetro 40 cm, ¿cuál tiene el área máxima?",
+     "c": [
+      "el de lados 19 cm y 1 cm",
+      "el cuadrado de lado 10 cm",
+      "el de lados 9 cm y 11 cm",
+      "todos tienen la misma área"
+     ],
+     "a": 1,
+     "e": "A(x) = x(20 − x); A′(x) = 20 − 2x = 0 → x = 10: <b>un cuadrado</b>."
+    },
+    {
+     "q": "De una lámina cuadrada de 108 cm de lado se cortan cuadrados de x cm en las esquinas para hacer una caja sin tapa. ¿Qué x da el volumen máximo?",
+     "c": [
+      "54 cm",
+      "18 cm",
+      "27 cm",
+      "36 cm"
+     ],
+     "a": 1,
+     "e": "V(x) = x(108 − 2x)². V′(x) = 0 da x = 108/6 = <b>18 cm</b> (volumen 93 312 cm³)."
+    },
+    {
+     "q": "De una lámina cuadrada de 96 cm de lado se cortan cuadrados de x cm en las esquinas para hacer una caja sin tapa. ¿Qué x da el volumen máximo?",
+     "c": [
+      "48 cm",
+      "24 cm",
+      "16 cm",
+      "32 cm"
+     ],
+     "a": 2,
+     "e": "V(x) = x(96 − 2x)². V′(x) = 0 da x = 96/6 = <b>16 cm</b> (volumen 65 536 cm³)."
+    },
+    {
+     "q": "Descompón 40 en dos sumandos positivos cuyo producto sea máximo.",
+     "c": [
+      "20 y 20",
+      "40 y 0",
+      "1 y 39",
+      "19 y 21"
+     ],
+     "a": 0,
+     "e": "P(x) = x(40 − x); P′(x) = 40 − 2x = 0 → <b>x = 20</b>."
+    },
+    {
+     "q": "Con una hoja cuadrada de 24 cm de lado se hace una caja sin tapa cortando un cuadrado de lado x en cada esquina. ¿Qué x da el volumen máximo?",
+     "c": [
+      "x = 8 cm",
+      "x = 4 cm",
+      "x = 6 cm",
+      "x = 12 cm"
+     ],
+     "a": 1,
+     "e": "V(x) = (24 − 2x)² x; V′(x) = 0 → x = 4 (la otra solución, 12, da volumen 0). Volumen máximo 1 024 cm³. <b>x = 4 cm</b>."
+    }
+   ]
+  },
+  {
+   "title": "Economía",
+   "items": [
+    {
+     "q": "El costo de producir x unidades es C(x) = 5x² + 26x + 500 pesos. ¿Qué producción hace mínimo el costo medio C(x)/x?",
+     "c": [
+      "5 unidades (costo medio $151)",
+      "500 unidades (costo medio $2 527)",
+      "10 unidades (costo medio $126)",
+      "20 unidades (costo medio $151)"
+     ],
+     "a": 2,
+     "e": "CM(x) = 5x + 26 + 500/x; CM′(x) = 5 − 500/x² = 0 → x² = 100 → x = 10. CM(10) = <b>$126</b>."
+    },
+    {
+     "q": "El costo de producir x unidades es C(x) = 5x² + 17x + 500 pesos. ¿Qué producción hace mínimo el costo medio C(x)/x?",
+     "c": [
+      "10 unidades (costo medio $117)",
+      "5 unidades (costo medio $142)",
+      "20 unidades (costo medio $142)",
+      "500 unidades (costo medio $2 518)"
+     ],
+     "a": 0,
+     "e": "CM(x) = 5x + 17 + 500/x; CM′(x) = 5 − 500/x² = 0 → x² = 100 → x = 10. CM(10) = <b>$117</b>."
+    },
+    {
+     "q": "El costo de producir x unidades es C(x) = x² + 4x + 1 600 pesos. ¿Qué producción hace mínimo el costo medio C(x)/x?",
+     "c": [
+      "20 unidades (costo medio $104)",
+      "40 unidades (costo medio $84)",
+      "1 600 unidades (costo medio $1 605)",
+      "80 unidades (costo medio $104)"
+     ],
+     "a": 1,
+     "e": "CM(x) = x + 4 + 1 600/x; CM′(x) = 1 − 1 600/x² = 0 → x² = 1 600 → x = 40. CM(40) = <b>$84</b>."
+    },
+    {
+     "q": "Un puesto vende 720 tortas al día a $150. Por cada peso que sube el precio, vende 2 tortas menos. ¿Qué precio da el mayor ingreso?",
+     "c": [
+      "$255",
+      "$360",
+      "$202",
+      "$150"
+     ],
+     "a": 0,
+     "e": "I(x) = (150 + x)(720 − 2x). I′(x) = 0 → x = 105. Precio = <b>$255</b>."
+    },
+    {
+     "q": "Cada unidad se vende a $46 y el costo es C(x) = 0.5x² + 35x + $500. ¿Cuántas unidades conviene producir para que la ganancia sea máxima?",
+     "c": [
+      "46 unidades",
+      "81 unidades",
+      "11 unidades",
+      "22 unidades"
+     ],
+     "a": 2,
+     "e": "B(x) = 46x − C(x); B′(x) = 46 − x − 35 = 0 → x = <b>11</b>. (Es donde el ingreso marginal iguala al costo marginal.)"
+    },
+    {
+     "q": "Un puesto vende 760 tortas al día a $80. Por cada peso que sube el precio, vende 4 tortas menos. ¿Qué precio da el mayor ingreso?",
+     "c": [
+      "$135",
+      "$190",
+      "$107",
+      "$80"
+     ],
+     "a": 0,
+     "e": "I(x) = (80 + x)(760 − 4x). I′(x) = 0 → x = 55. Precio = <b>$135</b>."
+    },
+    {
+     "q": "El costo de producir x unidades es C(x) = x² + 22x + 2 500 pesos. ¿Qué producción hace mínimo el costo medio C(x)/x?",
+     "c": [
+      "25 unidades (costo medio $147)",
+      "2 500 unidades (costo medio $2 523)",
+      "100 unidades (costo medio $147)",
+      "50 unidades (costo medio $122)"
+     ],
+     "a": 3,
+     "e": "CM(x) = x + 22 + 2 500/x; CM′(x) = 1 − 2 500/x² = 0 → x² = 2 500 → x = 50. CM(50) = <b>$122</b>."
+    },
+    {
+     "q": "El costo de producir x unidades es C(x) = 2x² + 27x + 1 800 pesos. ¿Qué producción hace mínimo el costo medio C(x)/x?",
+     "c": [
+      "60 unidades (costo medio $177)",
+      "1 800 unidades (costo medio $3 628)",
+      "15 unidades (costo medio $177)",
+      "30 unidades (costo medio $147)"
+     ],
+     "a": 3,
+     "e": "CM(x) = 2x + 27 + 1 800/x; CM′(x) = 2 − 1 800/x² = 0 → x² = 900 → x = 30. CM(30) = <b>$147</b>."
+    },
+    {
+     "q": "Si el precio es p pesos, se venden q = 120 − 2p unidades. ¿Qué precio da el ingreso máximo?",
+     "c": [
+      "$4",
+      "$30",
+      "$15.00",
+      "$60"
+     ],
+     "a": 1,
+     "e": "I(p) = p(120 − 2p) = 120p − 2p²; I′(p) = 120 − 4p = 0 → <b>p = $30</b>."
+    },
+    {
+     "q": "Un puesto vende 220 tortas al día a $20. Por cada peso que sube el precio, vende 2 tortas menos. ¿Qué precio da el mayor ingreso?",
+     "c": [
+      "$20",
+      "$42",
+      "$110",
+      "$65"
+     ],
+     "a": 3,
+     "e": "I(x) = (20 + x)(220 − 2x). I′(x) = 0 → x = 45. Precio = <b>$65</b>."
+    },
+    {
+     "q": "Si el precio es p pesos, se venden q = 300 − 5p unidades. ¿Qué precio da el ingreso máximo?",
+     "c": [
+      "$150",
+      "$15.00",
+      "$60",
+      "$30"
+     ],
+     "a": 3,
+     "e": "I(p) = p(300 − 5p) = 300p − 5p²; I′(p) = 300 − 10p = 0 → <b>p = $30</b>."
+    },
+    {
+     "q": "Un puesto vende 260 tortas al día a $120. Por cada peso que sube el precio, vende 1 tortas menos. ¿Qué precio da el mayor ingreso?",
+     "c": [
+      "$155",
+      "$190",
+      "$120",
+      "$260"
+     ],
+     "a": 1,
+     "e": "I(x) = (120 + x)(260 − 1x). I′(x) = 0 → x = 70. Precio = <b>$190</b>."
+    },
+    {
+     "q": "Si el precio es p pesos, se venden q = 200 − 4p unidades. ¿Qué precio da el ingreso máximo?",
+     "c": [
+      "$50",
+      "$100",
+      "$25",
+      "$12.50"
+     ],
+     "a": 2,
+     "e": "I(p) = p(200 − 4p) = 200p − 4p²; I′(p) = 200 − 8p = 0 → <b>p = $25</b>."
+    },
+    {
+     "q": "La ganancia diaria de una empresa es B(x) = −2x² + 124x − 310 (cientos de pesos). ¿Cuál es la ganancia máxima?",
+     "c": [
+      "2 232 cientos de pesos",
+      "31 cientos de pesos",
+      "1 612 cientos de pesos",
+      "1 922 cientos de pesos"
+     ],
+     "a": 2,
+     "e": "B′(x) = −4x + 124 = 0 → x = 31; B″ = −4 &lt; 0, es un máximo. B(31) = 1 612. <b>1 612 cientos de pesos</b>."
+    },
+    {
+     "q": "La ganancia diaria de una empresa es B(x) = −x² + 66x − 120 (cientos de pesos), con x el número de unidades. ¿Cuántas unidades dan la ganancia máxima?",
+     "c": [
+      "34 unidades",
+      "33 unidades",
+      "16 unidades",
+      "66 unidades"
+     ],
+     "a": 1,
+     "e": "B′(x) = −2x + 66 = 0 → x = 33; B″ = −2 &lt; 0, es un máximo. B(33) = 969. <b>33 unidades</b>."
+    },
+    {
+     "q": "Cada unidad se vende a $118 y el costo es C(x) = 0.5x² + 10x + $800. ¿Cuántas unidades conviene producir para que la ganancia sea máxima?",
+     "c": [
+      "128 unidades",
+      "108 unidades",
+      "118 unidades",
+      "216 unidades"
+     ],
+     "a": 1,
+     "e": "B(x) = 118x − C(x); B′(x) = 118 − x − 10 = 0 → x = <b>108</b>. (Es donde el ingreso marginal iguala al costo marginal.)"
+    },
+    {
+     "q": "La ganancia diaria de una empresa es B(x) = −4x² + 200x − 160 (cientos de pesos). ¿Cuál es la ganancia máxima?",
+     "c": [
+      "25 cientos de pesos",
+      "2 660 cientos de pesos",
+      "2 340 cientos de pesos",
+      "2 500 cientos de pesos"
+     ],
+     "a": 2,
+     "e": "B′(x) = −8x + 200 = 0 → x = 25; B″ = −8 &lt; 0, es un máximo. B(25) = 2 340. <b>2 340 cientos de pesos</b>."
+    },
+    {
+     "q": "Un puesto vende 560 tortas al día a $40. Por cada peso que sube el precio, vende 2 tortas menos. ¿Qué precio da el mayor ingreso?",
+     "c": [
+      "$160",
+      "$40",
+      "$100",
+      "$280"
+     ],
+     "a": 0,
+     "e": "I(x) = (40 + x)(560 − 2x). I′(x) = 0 → x = 120. Precio = <b>$160</b>."
+    },
+    {
+     "q": "Un puesto vende 620 tortas al día a $190. Por cada peso que sube el precio, vende 2 tortas menos. ¿Qué precio da el mayor ingreso?",
+     "c": [
+      "$250",
+      "$190",
+      "$220",
+      "$310"
+     ],
+     "a": 0,
+     "e": "I(x) = (190 + x)(620 − 2x). I′(x) = 0 → x = 60. Precio = <b>$250</b>."
+    },
+    {
+     "q": "El costo de producir x unidades es C(x) = 4x² + 6x + 1 600 pesos. ¿Qué producción hace mínimo el costo medio C(x)/x?",
+     "c": [
+      "10 unidades (costo medio $206)",
+      "40 unidades (costo medio $206)",
+      "1 600 unidades (costo medio $6 407)",
+      "20 unidades (costo medio $166)"
+     ],
+     "a": 3,
+     "e": "CM(x) = 4x + 6 + 1 600/x; CM′(x) = 4 − 1 600/x² = 0 → x² = 400 → x = 20. CM(20) = <b>$166</b>."
+    }
+   ]
+  },
+  {
+   "title": "Repaso",
+   "items": [
+    {
+     "q": "Con 80 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "10 m × 30 m",
+      "25 m × 15 m",
+      "20 m × 20 m",
+      "40 m × 40 m"
+     ],
+     "a": 2,
+     "e": "A(x) = x(80/2 − x). A′(x) = 40 − 2x = 0 → x = 20: un cuadrado de <b>20 m</b> por lado."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 400 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "20 000 m²",
+      "20 001 m²",
+      "17 777.78 m²",
+      "10 000 m²"
+     ],
+     "a": 0,
+     "e": "A(x) = x(400 − 2x). A′(x) = 400 − 4x = 0 → x = 100 m y el otro lado 200 m. Área = <b>20 000 m²</b>."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 220 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "5 377.78 m²",
+      "3 025 m²",
+      "6051 m²",
+      "6 050 m²"
+     ],
+     "a": 3,
+     "e": "A(x) = x(220 − 2x). A′(x) = 220 − 4x = 0 → x = 55 m y el otro lado 110 m. Área = <b>6 050 m²</b>."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 540 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "36 451 m²",
+      "36 450 m²",
+      "18 225 m²",
+      "32 400 m²"
+     ],
+     "a": 1,
+     "e": "A(x) = x(540 − 2x). A′(x) = 540 − 4x = 0 → x = 135 m y el otro lado 270 m. Área = <b>36 450 m²</b>."
+    },
+    {
+     "q": "Con 360 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "90 m × 90 m",
+      "95 m × 85 m",
+      "45 m × 135 m",
+      "180 m × 180 m"
+     ],
+     "a": 0,
+     "e": "A(x) = x(360/2 − x). A′(x) = 180 − 2x = 0 → x = 90: un cuadrado de <b>90 m</b> por lado."
+    },
+    {
+     "q": "La ganancia diaria de una empresa es B(x) = −x² + 34x − 270 (cientos de pesos), con x el número de unidades. ¿Cuántas unidades dan la ganancia máxima?",
+     "c": [
+      "17 unidades",
+      "8 unidades",
+      "18 unidades",
+      "34 unidades"
+     ],
+     "a": 0,
+     "e": "B′(x) = −2x + 34 = 0 → x = 17; B″ = −2 &lt; 0, es un máximo. B(17) = 19. <b>17 unidades</b>."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 580 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "21 025 m²",
+      "42 051 m²",
+      "42 050 m²",
+      "37 377.78 m²"
+     ],
+     "a": 2,
+     "e": "A(x) = x(580 − 2x). A′(x) = 580 − 4x = 0 → x = 145 m y el otro lado 290 m. Área = <b>42 050 m²</b>."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 60 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "225 m²",
+      "400 m²",
+      "450 m²",
+      "451 m²"
+     ],
+     "a": 2,
+     "e": "A(x) = x(60 − 2x). A′(x) = 60 − 4x = 0 → x = 15 m y el otro lado 30 m. Área = <b>450 m²</b>."
+    },
+    {
+     "q": "Con 240 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "65 m × 55 m",
+      "60 m × 60 m",
+      "120 m × 120 m",
+      "30 m × 90 m"
+     ],
+     "a": 1,
+     "e": "A(x) = x(240/2 − x). A′(x) = 120 − 2x = 0 → x = 60: un cuadrado de <b>60 m</b> por lado."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 420 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "11 025 m²",
+      "22 051 m²",
+      "19 600 m²",
+      "22 050 m²"
+     ],
+     "a": 3,
+     "e": "A(x) = x(420 − 2x). A′(x) = 420 − 4x = 0 → x = 105 m y el otro lado 210 m. Área = <b>22 050 m²</b>."
+    },
+    {
+     "q": "La ganancia diaria de una empresa es B(x) = −5x² + 110x − 340 (cientos de pesos). ¿Cuál es la ganancia máxima?",
+     "c": [
+      "265 cientos de pesos",
+      "11 cientos de pesos",
+      "945 cientos de pesos",
+      "605 cientos de pesos"
+     ],
+     "a": 0,
+     "e": "B′(x) = −10x + 110 = 0 → x = 11; B″ = −10 &lt; 0, es un máximo. B(11) = 265. <b>265 cientos de pesos</b>."
+    },
+    {
+     "q": "La ganancia diaria de una empresa es B(x) = −4x² + 208x − 170 (cientos de pesos), con x el número de unidades. ¿Cuántas unidades dan la ganancia máxima?",
+     "c": [
+      "52 unidades",
+      "30 unidades",
+      "208 unidades",
+      "26 unidades"
+     ],
+     "a": 3,
+     "e": "B′(x) = −8x + 208 = 0 → x = 26; B″ = −8 &lt; 0, es un máximo. B(26) = 2 534. <b>26 unidades</b>."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 440 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "12 100 m²",
+      "21 511.11 m²",
+      "24 201 m²",
+      "24 200 m²"
+     ],
+     "a": 3,
+     "e": "A(x) = x(440 − 2x). A′(x) = 440 − 4x = 0 → x = 110 m y el otro lado 220 m. Área = <b>24 200 m²</b>."
+    },
+    {
+     "q": "La ganancia diaria de una empresa es B(x) = −3x² + 102x − 40 (cientos de pesos). ¿Cuál es la ganancia máxima?",
+     "c": [
+      "907 cientos de pesos",
+      "827 cientos de pesos",
+      "17 cientos de pesos",
+      "867 cientos de pesos"
+     ],
+     "a": 1,
+     "e": "B′(x) = −6x + 102 = 0 → x = 17; B″ = −6 &lt; 0, es un máximo. B(17) = 827. <b>827 cientos de pesos</b>."
+    },
+    {
+     "q": "El costo de producir x unidades es C(x) = 4x² + 24x + 400 pesos. ¿Qué producción hace mínimo el costo medio C(x)/x?",
+     "c": [
+      "5 unidades (costo medio $124)",
+      "400 unidades (costo medio $1 625)",
+      "10 unidades (costo medio $104)",
+      "20 unidades (costo medio $124)"
+     ],
+     "a": 2,
+     "e": "CM(x) = 4x + 24 + 400/x; CM′(x) = 4 − 400/x² = 0 → x² = 100 → x = 10. CM(10) = <b>$104</b>."
+    },
+    {
+     "q": "Con 320 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "85 m × 75 m",
+      "80 m × 80 m",
+      "160 m × 160 m",
+      "40 m × 120 m"
+     ],
+     "a": 1,
+     "e": "A(x) = x(320/2 − x). A′(x) = 160 − 2x = 0 → x = 80: un cuadrado de <b>80 m</b> por lado."
+    },
+    {
+     "q": "Con 140 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "35 m × 35 m",
+      "40 m × 30 m",
+      "70 m × 70 m",
+      "17.5 m × 52.5 m"
+     ],
+     "a": 0,
+     "e": "A(x) = x(140/2 − x). A′(x) = 70 − 2x = 0 → x = 35: un cuadrado de <b>35 m</b> por lado."
+    },
+    {
+     "q": "El costo de producir x unidades es C(x) = x² + 3x + 100 pesos. ¿Qué producción hace mínimo el costo medio C(x)/x?",
+     "c": [
+      "100 unidades (costo medio $104)",
+      "10 unidades (costo medio $23)",
+      "5 unidades (costo medio $28)",
+      "20 unidades (costo medio $28)"
+     ],
+     "a": 1,
+     "e": "CM(x) = x + 3 + 100/x; CM′(x) = 1 − 100/x² = 0 → x² = 100 → x = 10. CM(10) = <b>$23</b>."
+    },
+    {
+     "q": "Se cercan tres lados de un terreno rectangular junto a un río (el río es el cuarto lado) con 360 m de malla. ¿Cuál es el área máxima?",
+     "c": [
+      "8 100 m²",
+      "14 400 m²",
+      "16 201 m²",
+      "16 200 m²"
+     ],
+     "a": 3,
+     "e": "A(x) = x(360 − 2x). A′(x) = 360 − 4x = 0 → x = 90 m y el otro lado 180 m. Área = <b>16 200 m²</b>."
+    },
+    {
+     "q": "Con 220 m de malla se quiere cercar un terreno rectangular con la mayor área posible. ¿Qué medidas debe tener?",
+     "c": [
+      "110 m × 110 m",
+      "60 m × 50 m",
+      "55 m × 55 m",
+      "27.5 m × 82.5 m"
+     ],
+     "a": 2,
+     "e": "A(x) = x(220/2 − x). A′(x) = 110 − 2x = 0 → x = 55: un cuadrado de <b>55 m</b> por lado."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 11,
+ "updated": "2026-11-24",
+ "country": "mx",
+ "subject": "matematicas",
+ "grade": "pensamiento-matematico-3"
+}
