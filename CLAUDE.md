@@ -1705,7 +1705,13 @@ KR / Math / 미적분Ⅰ: 1. limits-of-functions ✓ 2. continuity ✓ 3. deriva
 KR / Math / 확률과 통계: 1. permutations-with-repetition ✓ 2. combinations-with-repetition ✓ 3. binomial-theorem ✓ 4. probability-and-addition-rule ✓ 5. conditional-probability ✓ 6. independence-and-multiplication-rule ✓
 7. discrete-random-variables ✓ 8. binomial-distribution ✓ 9. normal-distribution（표준정규분포표を問題に入れる）✓ 10. sampling-and-estimation ✓
 
-KR / Math は초등 1학년〜고등학교（공통수학1・2、대수、미적분Ⅰ、확률과 통계）まで完了。次は 미적분Ⅱ・기하 などの選択科目か、GDP 順で次の国
+KR / Math / 유치원（만 5세、2019 개정 누리과정 자연탐구「생활 속에서 탐구하기」）— grade `kindergarten`（name「유치원」、sort 0）。10까지（数えるのは 20까지）。とても短い文、ほぼ全問に絵。
+生成スクリプトは `gen_kr_math_k_*`（build を呼ぶだけ）、本体は `tools/kr_k.py`（UNITS に単元を定義、reseed で kr_g1_num・kr_g1_calc・kr_g1_geo・kr_g2_data の R を入れ替えて再利用、위치와 방향・똑같이 나누기・모양/소리의 규칙・세 줄 비교は自前、le(mk, n) で n を超える数を落とす、이름「하나」は使わない）。
+kr_common.unit に domain 引数（유치원は 수 세기와 셈／위치와 모양／길이와 무게 비교／규칙 찾기／분류하기）、standard_code は「누리과정 자연탐구: 생활 속에서 탐구하기」、standard_url は STD_URL_NURI。core.php の grade_standard() で유치원の基準名を「2019 개정 누리과정」に（grade.php・unit.php・preview.php）
+1. counting-to-10 ✓ 2. numbers-to-20 ✓ 3. comparing-quantities ✓ 4. ordinal-numbers ✓ 5. putting-together-and-taking-apart ✓ 6. adding-and-taking-away ✓ 7. sharing-and-grouping ✓
+8. position-and-direction ✓ 9. shapes ✓ 10. comparing-length-weight-and-capacity ✓ 11. patterns ✓ 12. sorting-and-classifying ✓
+
+KR / Math は유치원・초등 1학년〜고등학교（공통수학1・2、대수、미적분Ⅰ、확률과 통계）まで完了。次は 미적분Ⅱ・기하 などの選択科目か、GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

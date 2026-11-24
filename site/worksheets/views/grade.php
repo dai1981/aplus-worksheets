@@ -23,7 +23,7 @@ foreach ($units as $u) { $names[] = $u['short_title']; }
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
     'title' => sprintf(T('grade_ws'), $grade['name'], $subject['name']) . T('grade_title_sfx') . ' | ' . SITE_NAME,
-    'desc' => sprintf(T('grade_desc'), $grade['name'], lc($subject['name']), $country['standard'],
+    'desc' => sprintf(T('grade_desc'), $grade['name'], lc($subject['name']), grade_standard($country, $grade),
                       implode(T('list_sep'), array_slice($names, 0, 6))),
     'canonical' => $base, 'image' => preview_path($base),
 ));

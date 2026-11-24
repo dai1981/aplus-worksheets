@@ -7,11 +7,11 @@
 /* Korea (ko): 2022 개정 교육과정. Slugs are English, like Taiwan */
 function topic_defs_kr() {
     return array(
-        'whole-numbers' => array('name' => '큰 수와 자릿값', 'in' => '/numbers-to|large-numbers|place-value|^(three|four)-digit-numbers$/', 'out' => '/^$/',
+        'whole-numbers' => array('name' => '큰 수와 자릿값', 'in' => '/numbers-to|large-numbers|place-value|^(three|four)-digit-numbers$|^counting-to-10$|^comparing-quantities$|^ordinal-numbers$/', 'out' => '/^$/',
             'blurb' => '100까지의 수부터 만, 억, 조까지 자릿값을 알고 수를 읽고 쓰며 크기를 비교합니다.'),
-        'addition-and-subtraction' => array('name' => '덧셈과 뺄셈', 'in' => '/add|subtract/', 'out' => '/fraction|decimal|integer|polynom/',
+        'addition-and-subtraction' => array('name' => '덧셈과 뺄셈', 'in' => '/add|subtract|putting-together/', 'out' => '/fraction|decimal|integer|polynom/',
             'blurb' => '덧셈과 뺄셈의 뜻부터 받아올림, 받아내림이 있는 세 자리 수의 덧셈과 뺄셈까지 익힙니다.'),
-        'multiplication-and-division' => array('name' => '곱셈과 나눗셈', 'in' => '/multipl|divi|order-of/', 'out' => '/fraction|decimal|integer|polynom/',
+        'multiplication-and-division' => array('name' => '곱셈과 나눗셈', 'in' => '/multipl|divi|order-of|sharing-and-grouping/', 'out' => '/fraction|decimal|integer|polynom/',
             'blurb' => '곱셈구구, 곱셈과 나눗셈의 관계, 세로셈 곱셈, 몫과 나머지가 있는 나눗셈, 혼합 계산을 연습합니다.'),
         'factors-and-multiples' => array('name' => '약수와 배수', 'in' => '/factors|gcf|simplifying/', 'out' => '/^$/',
             'blurb' => '약수와 배수, 최대공약수와 최소공배수를 구하고 이를 이용해 분수를 약분하고 통분합니다.'),
@@ -23,7 +23,7 @@ function topic_defs_kr() {
             'blurb' => '선분과 각, 삼각형과 사각형, 합동과 대칭, 입체도형부터 중학교의 작도, 닮음, 피타고라스 정리, 삼각비, 원의 성질까지 알아봅니다.'),
         'measurement' => array('name' => '측정', 'in' => '/length|time|capacity|weight|mass|perimeter|area|volume|circumference|calendar/', 'out' => '/^$/',
             'blurb' => '길이, 시간, 들이, 무게의 단위부터 둘레와 넓이, 원주와 원의 넓이, 겉넓이와 부피까지 구합니다.'),
-        'data' => array('name' => '자료와 가능성', 'in' => '/graph|data|tables|likelihood|chance|averages|sorting|representative|frequenc|counting|probability|variance|box-plots|scatter/', 'out' => '/multiplication-tables|function|coordinates/',
+        'data' => array('name' => '자료와 가능성', 'in' => '/graph|data|tables|likelihood|chance|averages|sorting|representative|frequenc|counting|probability|variance|box-plots|scatter/', 'out' => '/multiplication-tables|function|coordinates|^counting-to-10$/',
             'blurb' => '자료를 표와 그래프로 나타내고 해석하며, 평균과 가능성부터 중학교의 대푯값, 상대도수, 확률, 분산, 상자그림, 산점도까지 다룹니다.'),
         'ratios-and-proportions' => array('name' => '규칙과 비율', 'in' => '/correspondence|(^|-)ratios?(-|$)|percent|proportion/', 'out' => '/trigonometr/',
             'blurb' => '두 양의 대응 관계를 식으로 나타내고, 비와 비율, 백분율, 비례식과 비례배분을 익힙니다.'),

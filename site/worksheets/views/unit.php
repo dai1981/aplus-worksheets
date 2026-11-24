@@ -5,7 +5,7 @@ $grade = $subject ? get_grade($seg[0], $seg[1], $seg[2]) : null;
 $u = $grade ? get_unit($seg[0], $seg[1], $seg[2], $seg[3]) : null;
 if (!$u) not_found();
 T(array($country['lang']));
-$std_name = ($country['code'] === 'it' && substr($grade['slug'], -6) === '-liceo') ? 'Indicazioni nazionali per i licei' : $country['standard'];   // Italy: the licei have their own Indicazioni (DM 211/2010)
+$std_name = ($country['code'] === 'it' && substr($grade['slug'], -6) === '-liceo') ? 'Indicazioni nazionali per i licei' : grade_standard($country, $grade);   // Italy: the licei have their own Indicazioni (DM 211/2010)
 
 $gbase = $seg[0] . '/' . $seg[1] . '/' . $seg[2] . '/';
 $path = $gbase . $u['slug'] . '/';
@@ -181,6 +181,9 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 } elseif ($grade['slug'] === 'grade-r' && $country['code'] === 'za') {
     $lr['typicalAgeRange'] = '5-6';   // South Africa: Grade R (Reception Year), the year before Grade 1
     $lr['educationalLevel'] = array('Grade R', 'Reception Year');
+} elseif ($grade['slug'] === 'kindergarten' && $country['code'] === 'kr') {
+    $lr['typicalAgeRange'] = '5-6';   // Korea: 유치원 만 5세반 (2019 개정 누리과정)
+    $lr['educationalLevel'] = array('유치원', '만 5세', '누리과정');
 } elseif ($grade['slug'] === 'kindergarten') {
     $lr['typicalAgeRange'] = '5-6';
 } elseif ($grade['slug'] === 'algebra-1') {

@@ -21,7 +21,9 @@ DOMAIN = {"01": "수와 연산", "02": "변화와 관계", "03": "도형과 측�
 GRADE_NAME = {"grade-1": "초등 1학년", "grade-2": "초등 2학년", "grade-3": "초등 3학년", "grade-4": "초등 4학년",
               "grade-5": "초등 5학년", "grade-6": "초등 6학년", "grade-7": "중학교 1학년", "grade-8": "중학교 2학년",
               "grade-9": "중학교 3학년", "common-math-1": "공통수학1", "common-math-2": "공통수학2", "algebra": "대수",
-              "calculus-1": "미적분Ⅰ", "probability-and-statistics": "확률과 통계"}
+              "calculus-1": "미적분Ⅰ", "probability-and-statistics": "확률과 통계", "kindergarten": "유치원"}
+# 유치원（2019 개정 누리과정、만 5세）：성취기준 코드がないので「자연탐구」の内容を standard_code に、domain は引数で渡す
+STD_URL_NURI = "https://www.goe.go.kr/resource/old/BBSMSTR_000000030067/BBS_202302201143570171.pdf"
 # 고등학교：영역は成就基準コードの頭（[10공수1-02-01] → 10공수1-02）で決める
 DOMAIN_HS = {"10공수1-01": "다항식", "10공수1-02": "방정식과 부등식", "10공수1-03": "경우의 수", "10공수1-04": "행렬",
              "10공수2-01": "도형의 방정식", "10공수2-02": "집합과 명제", "10공수2-03": "함수와 그래프",
@@ -208,7 +210,7 @@ def plain_text(t):
 
 
 def unit(grade, slug, sort, code, std, title, short, meta, key_big, key_sub, think, examples, mist, faq, spec, seed,
-         extra=""):
+         extra="", domain=None):
     """spec: [(セット名, [(maker, 数)])] × 5。code は '[4수01-03]' または '[4수03-13] [4수03-14]'"""
     import random
     R = random.Random(seed)
@@ -226,7 +228,10 @@ def unit(grade, slug, sort, code, std, title, short, meta, key_big, key_sub, thi
     assert len(title) <= 40 and len(key_big) <= 30 and len(key_sub) <= 50, (title, key_big, key_sub)
     gname = GRADE_NAME[grade]
     hs = re.search(r"\[(10공수[12]-\d\d|12대수\d\d|12미적Ⅰ-\d\d|12확통\d\d)", code)
-    if hs:
+    if grade == "kindergarten":
+        dom = domain
+        seo = "%s | 유치원(만 5세) 수학 학습지 (정답 포함)" % title
+    elif hs:
         dom = DOMAIN_HS[hs.group(1)]
         seo = "%s | 고등학교 %s 학습지 (정답 포함)" % (title, gname)
     else:
@@ -234,7 +239,7 @@ def unit(grade, slug, sort, code, std, title, short, meta, key_big, key_sub, thi
         seo = "%s | %s 수학 학습지 (정답 포함)" % (title, gname)
     write_unit("kr", "math", grade, {
         "slug": slug, "title": title, "seo_title": seo,
-        "short_title": short, "domain": dom, "standard_code": code, "standard_url": STD_URL,
+        "short_title": short, "domain": dom, "standard_code": code, "standard_url": STD_URL_NURI if grade == "kindergarten" else STD_URL,
         "standard_text": std, "meta_desc": meta, "key_big": key_big, "key_sub": key_sub,
         "body_html": lesson(think, examples, mist, extra),
         "faq": [{"q": q, "a": a} for q, a in faq], "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,

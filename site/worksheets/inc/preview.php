@@ -330,6 +330,7 @@ function preview_route($seg, $kind = 'preview') {
 
     $grade = get_grade($seg[0], $seg[1], $seg[2]);
     if (!$grade) { http_response_code(404); exit; }
+    $country['standard'] = grade_standard($country, $grade);
 
     if (count($seg) === 3) {                                           // grade
         $units = list_units($seg[0], $seg[1], $seg[2]);
