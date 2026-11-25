@@ -116,3 +116,100 @@ def build(seed, slug, grade, sort, codes, dom):
     C.write(slug, grade, sort, codes, dom, "Geld: Franken und Rappen", "Geld",
             "Mathematik 3. Klasse: Franken und Rappen – Geld zählen, umwandeln, Preise zusammenrechnen, Rückgeld und Sachaufgaben. 100 Übungsaufgaben online und Arbeitsblatt mit Lösungen.",
             "1 Fr. = 100 Rp.", "3 Fr. 50 Rp. schreibt man 3.50 Fr.", body, faq, sets, R)
+
+
+def build4(seed, slug, grade, sort, codes, dom):
+    """4. Klasse: Rechnen mit Geld（grössere Beträge, mal, geteilt, Angebote vergleichen）"""
+    R = random.Random(seed)
+    K = D.Kids(R)
+
+    def M(q, g, ws, e):
+        ws = [w for w in dict.fromkeys(ws) if w != g][:3]
+        return C.mcq(q, g, ws, e) if len(ws) == 3 else None
+
+    def r5(lo, hi):
+        return R.randint(lo // 5, hi // 5) * 5
+
+    def umw():
+        t = r5(1005, 99995)
+        if t % 100 == 0:
+            return None
+        if R.random() < 0.5:
+            return M("%s = ? Rp." % chf(t), "%s Rp." % C.num(t), ["%s Rp." % C.num(x) for x in (t // 10, t * 10, t + 1000, t - 100)],
+                     "1 Fr. = 100 Rp.: <b>%s Rp.</b>" % C.num(t))
+        f, r = divmod(t, 100)
+        return M("%s Rp. = ? Fr." % C.num(t), chf(t), ["%s.%d Fr." % (C.num(f), r // 10) if r % 10 == 0 else chf(t + 1000), chf(t * 10), chf(t + 100), chf(t - 5)],
+                 "100 Rp. = 1 Fr.: <b>%s</b>." % chf(t))
+
+    def addsub():
+        a, b = r5(1005, 49995), r5(1005, 49995)
+        if R.random() < 0.5:
+            t = a + b
+            return M("%s + %s = ?" % (chf(a), chf(b)), chf(t), [chf(t + 100), chf(t - 100), chf(t + 10), chf(t + 1000)],
+                     "Punkt unter Punkt schreiben und wie mit Rappen rechnen: <b>%s</b>." % chf(t))
+        a, b = max(a, b), min(a, b)
+        if a == b:
+            return None
+        t = a - b
+        return M("%s − %s = ?" % (chf(a), chf(b)), chf(t), [chf(t + 100), chf(abs(t - 100)), chf(t + 10), chf(a + b)],
+                 "Punkt unter Punkt schreiben und wie mit Rappen rechnen: <b>%s</b>." % chf(t))
+
+    def mal():
+        p = r5(105, 4995)
+        n = R.randint(2, 9)
+        t = p * n
+        return M("%d × %s = ?" % (n, chf(p)), chf(t), [chf(t + p), chf(t - p), chf(t + 100), chf(p * (n + 10))],
+                 "%d × %s Rp. = %s Rp. = <b>%s</b>." % (n, C.num(p), C.num(t), chf(t)))
+
+    def geteilt():
+        n = R.randint(2, 9)
+        p = r5(105, 2995)
+        t = p * n
+        return M("%s : %d = ?" % (chf(t), n), chf(p), [chf(p + 100), chf(p + 5), chf(abs(p - 100)) if p > 100 else chf(p + 200), chf(t - n * 100) if t - n * 100 > 0 else chf(p + 10)],
+                 "In Rappen rechnen: %s Rp. : %d = %s Rp. = <b>%s</b>." % (C.num(t), n, C.num(p), chf(p)))
+
+    GUT = [("Joghurts", 5), ("Brötli", 5), ("Äpfel", 5), ("Hefte", 5), ("Farbstifte", 5), ("Glaces", 5), ("Flaschen Wasser", 5)]
+
+    def angebot():
+        w, _ = R.choice(GUT)
+        na, nb = R.sample([2, 3, 4, 5, 6, 8, 10], 2)
+        ua, ub = r5(40, 300), r5(40, 300)
+        if ua == ub:
+            return None
+        pa, pb = ua * na, ub * nb
+        g = "Angebot A" if ua < ub else "Angebot B"
+        return M("Angebot A: %d %s für %s. Angebot B: %d %s für %s. Welches Angebot ist günstiger (Preis für ein Stück)?" % (na, w, chf(pa), nb, w, chf(pb)), g,
+                 ["Angebot B" if g == "Angebot A" else "Angebot A", "Beide sind gleich teuer", "Das kann man nicht sagen"],
+                 "Preis für ein Stück: A %s, B %s. <b>%s</b> ist günstiger." % (chf(ua), chf(ub), g))
+
+    def sache():
+        x, er = K.next()
+        n = R.randint(2, 6)
+        p = r5(150, 1500)
+        have = R.choice([5000, 10000, 20000])
+        if p * n >= have:
+            return None
+        r = have - p * n
+        return M("%s hat %s und kauft %d Bücher zu je %s. Wie viel Geld bleibt übrig?" % (x, chf(have), n, chf(p)), chf(r), [chf(r + p), chf(have - p), chf(p * n), chf(r - 100) if r > 100 else chf(r + 50)],
+                 "%d × %s = %s; %s − %s = <b>%s</b>." % (n, chf(p), chf(p * n), chf(have), chf(p * n), chf(r)))
+
+    seen = set()
+    sets = [("Franken und Rappen umwandeln", D.mix(R, seen, [(umw, 20)])), ("Addieren und subtrahieren", D.mix(R, seen, [(addsub, 20)])),
+            ("Multiplizieren und dividieren", D.mix(R, seen, [(mal, 10), (geteilt, 10)])), ("Angebote vergleichen", D.mix(R, seen, [(angebot, 20)])),
+            ("Sachaufgaben", D.mix(R, seen, [(sache, 14), (mal, 3), (geteilt, 3)]))]
+    body = D.lesson(
+        ["1 Fr. = 100 Rp. Geldbeträge schreiben wir mit Punkt und zwei Stellen für die Rappen: 4.05 Fr. = 4 Fr. 5 Rp.",
+         "Schriftlich rechnen wir <b>Punkt unter Punkt</b>. Oder wir rechnen alles in Rappen und schreiben das Ergebnis wieder in Franken.",
+         "Preise werden auf 5 Rappen gerundet, denn die kleinste Münze ist 5 Rp.",
+         "Angebote vergleichen wir mit dem Preis für ein Stück."],
+        [D.example("3 × 12.45 Fr.", ["3 × 1245 Rp. = 3735 Rp."], "37.35 Fr."),
+         D.example("A: 3 Joghurts für 1.80 Fr., B: 5 Joghurts für 2.75 Fr.", ["A: 1.80 Fr. : 3 = 0.60 Fr.", "B: 2.75 Fr. : 5 = 0.55 Fr."], "B ist günstiger")],
+        [["4.05 Fr. = 4 Fr. 50 Rp.", "4.05 Fr. = 4 Fr. 5 Rp."], ["Beim schriftlichen Rechnen die Punkte nicht untereinander", "Punkt unter Punkt"],
+         ["Gesamtpreise statt Stückpreise vergleichen", "Erst durch die Anzahl teilen"]])
+    faq = [{"q": "Wie rechnet man mit Geldbeträgen?", "a": "Entweder in Rappen umwandeln und ohne Punkt rechnen, oder schriftlich mit Punkt unter Punkt."},
+           {"q": "Warum enden Preise auf 0 oder 5?", "a": "Die kleinste Münze ist 5 Rappen. Deshalb werden Beträge an der Kasse auf 5 Rappen gerundet."},
+           {"q": "Wie vergleicht man Angebote?", "a": "Man rechnet den Preis für ein Stück (oder für gleich viel) aus und vergleicht dann."},
+           {"q": "Was steht im Lehrplan 21 dazu?", "a": "Die Kinder können Grössen wie Geldbeträge umwandeln und mit ihnen rechnen (MA.3.A.2) und Sachsituationen berechnen (MA.3.C.2)."}]
+    C.write(slug, grade, sort, codes, dom, "Rechnen mit Geld: Franken und Rappen", "Rechnen mit Geld",
+            "Mathematik 4. Klasse: Rechnen mit Geld – Franken und Rappen umwandeln, addieren, subtrahieren, multiplizieren, dividieren und Angebote vergleichen. 100 Übungsaufgaben und Arbeitsblatt mit Lösungen.",
+            "Punkt unter Punkt", "Oder alles in Rappen rechnen: 1 Fr. = 100 Rp.", body, faq, sets, R)

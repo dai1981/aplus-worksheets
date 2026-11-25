@@ -43,6 +43,7 @@ KOMP = {
 }
 NB = " "
 AP = "’"
+DEBUG = []
 
 # スイスの名前（Kids が使う。性別はそろえる）
 D.GIRLS[:] = ["Mia", "Emma", "Lina", "Elena", "Lea", "Laura", "Lara", "Nina", "Alina", "Leonie", "Malea", "Ayla", "Seraina", "Ronja"]
@@ -54,23 +55,34 @@ WORDS = [
     (r"\bSchulranzen\b", "Schulthek"), (r"\bRanzen\b", "Thek"), (r"\bStra(ss|ß)enbahn", "Tram"), (r"\bBürgersteig", "Trottoir"),
     (r"\bSahne\b", "Rahm"), (r"\bPaprika\b", "Peperoni"), (r"\bKlassenfahrt", "Schulreise"), (r"\bPausenbrot", "Znüni"),
     (r"\bMülleimer", "Abfalleimer"), (r"\bBerlin\b", "Bern"), (r"\bHamburg\b", "Basel"), (r"\bMünchen\b", "Zürich"),
-    (r"\bKöln\b", "Luzern"), (r"\bFrankfurt\b", "St. Gallen"), (r"\bStuttgart\b", "Winterthur"), (r"\bDresden\b", "Chur"),
-    (r"\bLeipzig\b", "Thun"), (r"\bBremen\b", "Aarau"), (r"\bHannover\b", "Biel"), (r"\bNürnberg\b", "Schaffhausen"),
+    (r"\bKöln\b", "Luzern"), (r"\bFrankfurt\b", "St. Gallen"), (r"\bStuttgart\b", "Wil"), (r"\bDresden\b", "Chur"),
+    (r"\bLeipzig\b", "Thun"), (r"\bBremen\b", "Aarau"), (r"\bHannover\b", "Olten"), (r"\bKassel\b", "Aarau"), (r"\bFulda\b", "Zürich"), (r"\bAugsburg\b", "Winterthur"), (r"\bUlm\b", "Frauenfeld"), (r"\bMannheim\b", "St. Gallen"), (r"\bNürnberg\b", "Schaffhausen"),
     (r"\bBundesland\b", "Kanton"), (r"\bBundesländer", "Kantone"),
     (r"\bMathe Klasse (\d+)", r"Mathematik \1. Klasse"), (r"\b([Ii]n|[Aa]b) Klasse (\d+)", r"\1 der \2. Klasse"),
-    (r"\bKlasse (\d+)", r"\1. Klasse"), (r"\bMathe-Arbeitsbl", "Mathematik-Arbeitsbl"), (r"\bMathe\b", "Mathematik"),
+    (r"\bKlasse (\d+)(?![a-z\d])", r"\1. Klasse"), (r"\bMathe-Arbeitsbl", "Mathematik-Arbeitsbl"), (r"\bMathe\b", "Mathematik"),
     (r"\bKMK-Bildungsstandards?\b", "Lehrplan 21"), (r"\bBildungsstandards\b", "Lehrplan 21"),
     (r"\bCroissants?\b", "Gipfeli"), (r"\bKommaschreibweise", "Dezimalschreibweise"), (r"\bKommazahl", "Dezimalzahl"),
+    (r"\bBücherei", "Bibliothek"), (r"\bLieblings-AG\b", "Lieblingskurs"),
+    (r"\bKomma unter Komma", "Punkt unter Punkt"), (r"\b(hinter|vor|nach|mit) dem Komma", r"\1 dem Punkt"),
+    (r"\bdas Komma\b", "der Punkt"), (r"\bDas Komma\b", "Der Punkt"), (r"\bdes Kommas\b", "des Punktes"), (r"\b(mit|ohne) Komma\b", r"\1 Punkt"),
+    (r"\bKommastelle", "Dezimalstelle"), (r"\bKommabeträge", "Geldbeträge"), (r"\bKomma\b", "Punkt"),
     (r"\bEuro\b", "Franken"), (r"\bCent\b", "Rappen"),
 ]
+DE_NAMES = {"Emma": "Chiara", "Mia": "Sara", "Hannah": "Elin", "Sophia": "Zoe", "Lena": "Julia", "Marie": "Nora", "Anna": "Jael", "Lina": "Svenja",
+            "Clara": "Livia", "Ida": "Annina", "Paula": "Flurina", "Aylin": "Ladina", "Frieda": "Tamara", "Leni": "Fabienne",
+            "Ben": "Gion", "Paul": "Dario", "Leon": "Fabio", "Finn": "Mattia", "Elias": "Joel", "Felix": "Remo", "Jonas": "Silvan",
+            "Emil": "Andrin", "Max": "Flurin", "Anton": "Yanick", "Theo": "Severin", "Moritz": "Reto", "Yusuf": "Beat", "Luca": "Dominik"}
+_DE_NAME_RE = re.compile(r"\b(%s)(s?)\b" % "|".join(sorted(DE_NAMES, key=len, reverse=True)))
 LEAKS = ["€", " ct", "ct ", "Euro", "Cent", "ß", "Bundesland", "Grundschul", "Brötchen", "Fahrrad", "KMK", "Pfennig", "Kita", "Sonnabend",
-         "Kommaschreibweise", "Komma"]
+         "Kommaschreibweise", "Komma", "Düsseldorf", "Dortmund", "Duisburg", "Bonn", "Mainz", "Kiel", "Rostock", "Potsdam", "Erfurt", "Magdeburg", "Bayern", "Sachsen"]
 
 
 def _money(s):
     s = re.sub(r"(\d+),(\d\d)[  ]?€", r"\1.\2 Fr.", s)
     s = re.sub(r"(\d[\d ]*)[  ]?€", lambda m: m.group(1) + NB + "Fr.", s)
     s = re.sub(r"(\d+)[  ]?ct\b", lambda m: m.group(1) + NB + "Rp.", s)
+    s = re.sub(r"(?<=[\s?=(])€", "Fr.", s)
+    s = re.sub(r"(?<=[\s?=(])ct\b", "Rp.", s)
     return s
 
 
@@ -87,6 +99,7 @@ def _textnode(s, full):
     s = s.replace("ß", "ss")
     s = _money(s)
     s = re.sub(r"(?<=\d) (?=\d{3}(?!\d))", "", s)            # 10 000 → 10000（あとで ’ を付ける）
+    s = re.sub(r"(?<=[\d☐□])\u00a0(?=[\d☐□]{3}(?![\d☐□]))", AP, s)
     s = re.sub(r"(?<=\d),(?=\d)", ".", s)                          # 2,5 → 2.5
     # 4 けた以上の整数に ’（小数部・時刻・年は除く）
     def grp(m):
@@ -97,10 +110,12 @@ def _textnode(s, full):
             return m.group(0)
         return _group(m)
     s = re.sub(r"(?<![\d.:’/])\d{4,}(?!\d|:\d)", grp, s)
-    s = re.sub(r"(?<=[\d)□☐?_a-z\]])([\u00a0 ])·([\u00a0 ])(?=[\d(□☐?_a-z\[])", r"\1×\2", s)
+    s = re.sub(r"(?<=\S)([\u00a0 ])·([\u00a0 ])(?=\S)", r"\1×\2", s)
+    s = s.replace("·", "×")       # Deutschland: Malpunkt, Schweiz: ×
     s = re.sub(r"(Fr|Rp)\.\.", r"\1.", s)
     for a, b in WORDS:
         s = re.sub(a, b, s)
+    s = _DE_NAME_RE.sub(lambda m: DE_NAMES[m.group(1)] + m.group(2), s)
     return s
 
 
@@ -137,6 +152,8 @@ def leak(s):
 def item_ok(it):
     blob = it["q"] + " " + " ".join(it["c"]) + " " + it["e"]
     if leak(blob) or not money_ok(blob):
+        if DEBUG:
+            DEBUG.append((leak(blob), money_ok(blob), it["q"][:90]))
         return False
     return len(set(it["c"])) == len(it["c"])
 
@@ -145,7 +162,10 @@ _orig_mcq = D.mcq
 
 
 def mcq(*a, **k):
-    it = _orig_mcq(*a, **k)
+    try:
+        it = _orig_mcq(*a, **k)
+    except AssertionError:
+        return None
     if not it:
         return it
     it = dict(it)
@@ -192,7 +212,10 @@ def note(x, y, fr):
 
 
 def geld_svg(items):
-    """items: Rappen; ab 1000 Rp. (10 Fr.) Noten, sonst Münzen"""
+    """items: Rappen; ab 1000 Rp. (10 Fr.) Noten, sonst Münzen. Andere Werte (z. B. 1 Rp., 5-Franken-Note) → ValueError"""
+    for c in items:
+        if c not in (5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 100000):
+            raise ValueError("kein Schweizer Geld: %r" % c)
     s, x = [], 6
     for c in sorted([c for c in items if c >= 1000], reverse=True):
         s.append(note(x, 6, c // 100))
@@ -236,20 +259,25 @@ def write(slug, grade, sort, codes, dom, title, short, meta, kb, ks, body, faq, 
     write_unit("ch", "mathematik", grade, u)
 
 
-def from_de(modname, seed, slug, grade, sort, codes, dom, seo=None, fix=None, std_note=""):
+def from_de(modname, seed, slug, grade, sort, codes, dom, seo=None, fix=None, std_note="", pre=None):
     """Deutschland の生成スクリプトを新しい seed で動かし、make_unit の中身を受け取ってスイス式で書く"""
     mod = importlib.import_module(modname)
     mod.R = random.Random(seed)
     for k in ("K", "KIDS"):
-        if hasattr(mod, k):
+        if isinstance(getattr(mod, k, None), D.Kids):
             setattr(mod, k, D.Kids(mod.R))
     got = {}
 
     def cap(rnd, slug_, dom_, std_text, title, seo_title, short_title, meta_desc, key_big, key_sub, body_html, faq, sets, sort_, grade="klasse-3"):
         got.update(title=title, short=short_title, meta=meta_desc, kb=key_big, ks=key_sub, body=body_html, faq=faq, sets=sets)
     mod.make_unit = cap
+    if pre:
+        pre(mod)
     mod.main()
     if fix:
         fix(got)
     write(slug, grade, sort, codes, dom, got["title"], got["short"], got["meta"], got["kb"], got["ks"], got["body"], got["faq"],
           got["sets"], random.Random(seed + 7), seo=seo, std_note=std_note)
+
+
+D.geld_svg = geld_svg    # Deutschland の生成スクリプトの絵もスイスの硬貨・紙幣に

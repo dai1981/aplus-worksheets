@@ -17,7 +17,7 @@ if __name__ == "__main__":
             continue
         seed = 130000 + 1000 * k + i
         if isinstance(src, str):
-            C.from_de(src, seed, slug, "klasse-%d" % k, sort, codes, dom, fix=getattr(m, "FIX", {}).get(slug))
+            C.from_de(src, seed, slug, "klasse-%d" % k, sort, codes, dom, fix=getattr(m, "FIX", {}).get(slug), pre=getattr(m, "PRE", {}).get(slug))
         else:
             src(seed, slug, "klasse-%d" % k, sort, codes, dom)
         print(i, slug, flush=True)

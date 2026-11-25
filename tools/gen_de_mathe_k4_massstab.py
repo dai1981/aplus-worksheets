@@ -90,9 +90,9 @@ def grundriss():
     if a == b:
         return None
     k = 22
-    s = ["<rect x='20' y='14' width='%d' height='%d' fill='%s' stroke='%s' stroke-width='2'/>" % (a * k, b * k, FILL, GREEN),
-         text(20 + a * k / 2.0, 10, "%d cm" % a, 12), text(14, 14 + b * k / 2.0 + 4, "%d cm" % b, 12, anchor="end")]
-    pic = wrap(a * k + 60, b * k + 30, "".join(s), "Grundriss eines Zimmers", lg=True)
+    s = ["<rect x='48' y='14' width='%d' height='%d' fill='%s' stroke='%s' stroke-width='2'/>" % (a * k, b * k, FILL, GREEN),
+         text(48 + a * k / 2.0, 10, "%d cm" % a, 12), text(42, 14 + b * k / 2.0 + 4, "%d cm" % b, 12, anchor="end")]
+    pic = wrap(a * k + 70, b * k + 30, "".join(s), "Grundriss eines Zimmers", lg=True)
     which = R.choice(["lang", "breit"])
     v = a if which == "lang" else b
     r = v * m

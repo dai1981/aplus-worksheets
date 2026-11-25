@@ -1876,7 +1876,12 @@ CH / Mathematik / 3. Klasse（Zahlenraum bis 1’000）
 1. zahlen-bis-1000 ✓ 2. zahlen-vergleichen-und-ordnen ✓ 3. runden-und-ueberschlagen ✓ 4. plus-und-minus-bis-1000 ✓ 5. schriftliche-addition ✓ 6. schriftliche-subtraktion ✓ 7. einmaleins ✓
 8. multiplizieren-und-dividieren ✓ 9. dividieren-mit-rest ✓ 10. sachaufgaben ✓ 11. geld ✓ 12. laengen ✓ 13. gewichte ✓ 14. uhrzeit-und-zeitspannen ✓
 15. koerper-und-figuren ✓ 16. achsensymmetrie ✓ 17. zahlenfolgen-und-muster ✓ 18. diagramme-und-tabellen ✓ 19. wahrscheinlichkeit ✓
-CH の次: 4. Klasse（Zahlenraum bis 1 Million、Deutschland Klasse 4 から）、2. Klasse、1. Klasse、5.–6. Klasse、Kindergarten、Sekundarstufe I（7.–9. Klasse）。フランス語圏（PER）・イタリア語圏（Ticino）はその後
+CH / Mathematik / 4. Klasse（Zahlenraum bis 1 Million。ch_k4.py、rechnen-mit-geld は自前（ch_k3_geld.build4）、daten-und-diagramme は PRE で距離表をスイスの都市に）
+1. zahlen-bis-1-million ✓ 2. runden-und-ueberschlagen ✓ 3. schriftlich-addieren-und-subtrahieren ✓ 4. schriftliche-multiplikation ✓ 5. schriftliche-division ✓ 6. rechengesetze-und-klammern ✓ 7. brueche-im-alltag ✓
+8. sachaufgaben ✓ 9. laengen-in-dezimalschreibweise ✓ 10. gewichte-und-tonnen ✓ 11. rauminhalte ✓ 12. rechnen-mit-geld ✓ 13. zeit-und-kalender ✓ 14. massstab ✓
+15. umfang-und-flaecheninhalt ✓ 16. parallel-senkrecht-und-vierecke ✓ 17. wuerfel-und-quader ✓ 18. daten-und-diagramme ✓ 19. kombinatorik-und-wahrscheinlichkeit ✓
+ch_common: from_de の pre(mod) で main の前にモジュールのデータを差し替えられる。Deutschland の文字どおりの名前（Paul, Ben …）は DE_NAMES でスイスの名前に（Kids の名前とは別の名前）
+CH の次: 2. Klasse、1. Klasse、5.–6. Klasse、Kindergarten、Sekundarstufe I（7.–9. Klasse）。フランス語圏（PER）・イタリア語圏（Ticino）はその後
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
