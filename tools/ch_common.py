@@ -267,12 +267,12 @@ def write(slug, grade, sort, codes, dom, title, short, meta, kb, ks, body, faq, 
             seen.add(k)
             assert item_ok(it), (slug, it["q"][:80], leak(it["q"] + " ".join(it["c"]) + it["e"]))
     balance(sets, rnd)
-    gnum = int(grade.split("-")[1])
+    gname = "Kindergarten" if grade == "kindergarten" else "%d. Klasse" % int(grade.split("-")[1])
     std = "Die Schülerinnen und Schüler %s (Lehrplan 21, %s)." % ("; sie ".join(KOMP[c] for c in codes), ", ".join(codes))
     t = lambda s: D.plain_text(ch_text(s))
     u = {
         "slug": slug, "title": t(title),
-        "seo_title": seo or "%s – Mathematik %d. Klasse: Arbeitsblätter mit Lösungen" % (t(short), gnum),
+        "seo_title": seo or "%s – Mathematik %s: Arbeitsblätter mit Lösungen" % (t(short), gname),
         "short_title": t(short), "domain": DOMAIN[dom], "standard_code": ", ".join(codes), "standard_url": STD_URL,
         "standard_text": std + std_note, "meta_desc": t(meta), "key_big": t(kb), "key_sub": t(ks),
         "body_html": ch_text(body), "faq": [{"q": ch_text(f["q"]), "a": ch_text(f["a"])} for f in faq],

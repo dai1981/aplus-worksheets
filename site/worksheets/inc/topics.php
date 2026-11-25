@@ -276,6 +276,12 @@ function topic_defs_ch() {
         $d[$k]['name'] = strtr($v['name'], $m);
         $d[$k]['blurb'] = strtr($v['blurb'], $m);
     }
+    // Kindergarten slugs
+    $kg = array('zahlen-und-stellenwerte' => '^zaehlen-bis|mengen-vergleichen', 'plus-und-minus' => 'dazuzaehlen|wegnehmen|zahlen-zerlegen',
+                'groessen' => 'tagesablauf', 'daten-und-zufall' => 'sortieren-und');
+    foreach ($kg as $k => $re) {
+        $d[$k]['in'] = preg_replace('#/$#', '|' . $re . '/', $d[$k]['in']);
+    }
     return $d;
 }
 

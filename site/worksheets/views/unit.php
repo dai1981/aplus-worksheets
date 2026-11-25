@@ -206,6 +206,9 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 } elseif ($grade['slug'] === 'tk' && $country['code'] === 'id') {
     $lr['typicalAgeRange'] = '5-6';   // Indonesia: TK B (Taman Kanak-kanak), Fase Fondasi
     $lr['educationalLevel'] = array('TK B', 'Taman Kanak-kanak', 'PAUD');
+} elseif ($grade['slug'] === 'kindergarten' && $country['code'] === 'ch') {
+    $lr['typicalAgeRange'] = '4-6';   // Switzerland: 2 years of Kindergarten, Zyklus 1 of Lehrplan 21
+    $lr['educationalLevel'] = array('Kindergarten', 'Zyklus 1');
 } elseif ($grade['slug'] === 'kindergarten') {
     $lr['typicalAgeRange'] = '5-6';
 } elseif ($grade['slug'] === 'algebra-1') {
