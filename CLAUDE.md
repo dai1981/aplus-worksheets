@@ -1867,6 +1867,17 @@ DOMAIN に SAY Sayma・MM Matematiksel Muhakeme・PC Matematiksel Problem Çözm
 1. ritmik-sayma ✓ 2. nesne-sayma ✓ 3. bir-bakista-sayma ✓ 4. butun-ve-parca ✓ 5. geometrik-sekiller ✓ 6. konum-ve-yon ✓ 7. olcme-ve-karsilastirma ✓ 8. oruntuler ✓ 9. karsilastirma-ve-siralama ✓ 10. artma-ve-azalma ✓ 11. paylastirma ✓ 12. veri-toplama-ve-grafik ✓
 TR / Matematik は okul öncesi・1.〜12. sınıf まで完了。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に tr があるか確認する。次は GDP 順で次の国
 
+CH / Mathematik（Lehrplan 21, Deutschschweiz）— country `ch`（name「Schweiz」、lang `de`（UI は Deutschland と共用）、hreflang de-ch、standard「Kompetenzen des Lehrplans 21」）、subject `mathematik`（Mathematik）、grade `klasse-N`（name「3. Klasse」、unit.php で N+5〜N+6 歳と Primarstufe／Sekundarstufe I）、A4。
+`python3 tools/ch_run.py 3 [Nummer …]`、単元は `tools/ch_k3.py` の UNITS（slug, sort, LP21 のコード, Kompetenzbereich, 元）。元が gen_de_mathe_* の名前なら Deutschland の生成スクリプトを新しい seed（130000 + 1000 × Klasse + 番号）で動かし、make_unit の中身を受け取って書く（ch_common.from_de。FIX で個別に直す）。元が関数なら自前（ch_k3_geld：スイスの硬貨・紙幣の絵）。
+共通部品は `tools/ch_common.py`：de_common.mcq を差し替えて、すべての問題の文をスイス式に直す（ch_text：ß → ss、1’000（4 けたから ’。年は除く）、小数は点 2.5、3 × 4、3.50 Fr.・45 Rp.、Euro/Cent → Franken/Rappen、Velo・Brötli・Gipfeli・Schulthek・Primarschule、ドイツの都市 → スイスの都市、「Klasse 3」→「3. Klasse」）。5 Rp. で割り切れない金額と LEAKS（€・ct・Euro・ß・Komma など）が残る問題は落とす。名前は de_common.GIRLS/BOYS をスイスの名前に置き換える。
+standard_code は LP21 のコード（「MA.1.A.1, MA.1.C.2」）、standard_text は Kompetenz の文（KOMP）、domain は Zahl und Variable／Form und Raum／Grössen, Funktionen, Daten und Zufall、standard_url は Lehrplan 21 Mathematik（St. Gallen の PDF）。トピックは topic_defs_ch()（topic_defs_de を ss・Franken und Rappen に直したもの）
+
+CH / Mathematik / 3. Klasse（Zahlenraum bis 1’000）
+1. zahlen-bis-1000 ✓ 2. zahlen-vergleichen-und-ordnen ✓ 3. runden-und-ueberschlagen ✓ 4. plus-und-minus-bis-1000 ✓ 5. schriftliche-addition ✓ 6. schriftliche-subtraktion ✓ 7. einmaleins ✓
+8. multiplizieren-und-dividieren ✓ 9. dividieren-mit-rest ✓ 10. sachaufgaben ✓ 11. geld ✓ 12. laengen ✓ 13. gewichte ✓ 14. uhrzeit-und-zeitspannen ✓
+15. koerper-und-figuren ✓ 16. achsensymmetrie ✓ 17. zahlenfolgen-und-muster ✓ 18. diagramme-und-tabellen ✓ 19. wahrscheinlichkeit ✓
+CH の次: 4. Klasse（Zahlenraum bis 1 Million、Deutschland Klasse 4 から）、2. Klasse、1. Klasse、5.–6. Klasse、Kindergarten、Sekundarstufe I（7.–9. Klasse）。フランス語圏（PER）・イタリア語圏（Ticino）はその後
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）

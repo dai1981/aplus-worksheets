@@ -268,6 +268,17 @@ function topic_defs_de() {
     );
 }
 
+/* Switzerland (ch, Deutschschweiz): the German topics and slugs, written the Swiss way (ss, Franken und Rappen) */
+function topic_defs_ch() {
+    $d = topic_defs_de();
+    $m = array('ß' => 'ss', 'Euro und Cent' => 'Franken und Rappen', 'Kommaschreibweise' => 'Dezimalschreibweise');
+    foreach ($d as $k => $v) {
+        $d[$k]['name'] = strtr($v['name'], $m);
+        $d[$k]['blurb'] = strtr($v['blurb'], $m);
+    }
+    return $d;
+}
+
 /* France: French unit slugs, French names */
 function topic_defs_fr() {
     return array(
@@ -580,6 +591,7 @@ function topic_defs($country = null) {
     if ($country === 'cn') return topic_defs_cn();
     if ($country === 'kr') return topic_defs_kr_all();
     if ($country === 'de') return topic_defs_de();
+    if ($country === 'ch') return topic_defs_ch();
     if ($country === 'fr') return topic_defs_fr();
     if ($country === 'it') return topic_defs_it();
     if ($country === 'id') return topic_defs_id();
@@ -825,7 +837,7 @@ function topic_range($units) {
     if ($units[0]['country'] === 'id') return $first . ' sampai ' . $last;
     if ($units[0]['country'] === 'tr') return $first . ' – ' . $last;
     if ($units[0]['country'] === 'it') return 'dalla ' . strtolower($first) . ' alla ' . strtolower($last);
-    return $units[0]['country'] === 'de' ? $first . ' bis ' . $last : $first . ' to ' . $last;
+    return ($units[0]['country'] === 'de' || $units[0]['country'] === 'ch') ? $first . ' bis ' . $last : $first . ' to ' . $last;
 }
 
 /* lower case for use inside a sentence, keeping "2D", "3D" */
