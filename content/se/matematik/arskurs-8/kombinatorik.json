@@ -1,0 +1,1161 @@
+{
+ "slug": "kombinatorik",
+ "title": "Kombinatorik: multiplikationsprincipen, ordning och koder",
+ "seo_title": "Kombinatorik årskurs 8: arbetsblad i matematik med facit",
+ "short_title": "Kombinatorik",
+ "domain": "Sannolikhet och statistik",
+ "standard_code": "Lgr22 åk 7–9 · Sannolikhet och statistik",
+ "standard_url": "https://www.skolverket.se/undervisning/grundskolan/laroplan-och-kursplaner-for-grundskolan/kursplaner-i-grundskolan/matematik",
+ "standard_text": "Kombinatoriska principer och metoder för att lösa problem i vardagliga och matematiska situationer. Multiplikationsprincipen, permutationer och kombinationer. (sammanfattning av det centrala innehållet i kursplanen i matematik, Lgr22, årskurs 7–9)",
+ "meta_desc": "Arbetsblad om kombinatorik för årskurs 8: multiplikationsprincipen, ordning och köer, handslag och matcher, utfall och koder. 100 uppgifter med facit.",
+ "key_big": "Antal val · antal val · …",
+ "key_sub": "Spelar ordningen roll eller inte?",
+ "body_html": "<h2>Så tänker du</h2><p>Multiplikationsprincipen: om du först har a val och sedan b val finns det a · b möjligheter.</p><p>Spelar ordningen roll blir det fler möjligheter: 5 personer i en kö kan stå på 5 · 4 · 3 · 2 · 1 = 120 sätt.</p><p>Spelar ordningen ingen roll, som vid handslag, räknar du varje par en gång: n · (n − 1)/2.</p><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>3 tröjor och 4 byxor</p><p class='sn-ex-s'>3 · 4</p><p class='sn-ex-a'>Svar: 12 kombinationer</p></div><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>6 personer hälsar</p><p class='sn-ex-s'>6 · 5/2</p><p class='sn-ex-a'>Svar: 15 handslag</p></div><h2>Vanliga fel</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Fel</th><th>Rätt</th></tr></thead><tbody><tr><td>Adderar antalet val</td><td>Multiplicera: 3 · 4 = 12</td></tr><tr><td>Handslag: 6 · 5 = 30</td><td>Varje handslag räknas två gånger, dela med 2</td></tr><tr><td>Kö med 4 personer: 4 · 4</td><td>Varje plats har ett val mindre: 4 · 3 · 2 · 1</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Vad är n!?",
+   "a": "n fakultet: n · (n − 1) · … · 1. Till exempel 4! = 24."
+  },
+  {
+   "q": "När spelar ordningen roll?",
+   "a": "När ABC och BCA räknas som olika, till exempel koder och placeringar."
+  },
+  {
+   "q": "Hur ritar jag ett träddiagram?",
+   "a": "En gren för varje val i första steget, och från varje gren nya grenar för nästa steg."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Multiplikationsprincipen",
+   "items": [
+    {
+     "q": "Wilma har 3 tröjor, 8 byxor och 5 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "16 kombinationer",
+      "24 kombinationer",
+      "120 kombinationer",
+      "119 kombinationer"
+     ],
+     "a": 2,
+     "e": "3 · 8 · 5 = <b>120</b>."
+    },
+    {
+     "q": "På en restaurang finns 3 förrätter och 7 huvudrätter. Hur många olika middagar med en förrätt och en huvudrätt kan man välja?",
+     "c": [
+      "22 middagar",
+      "21 middagar",
+      "10 middagar",
+      "42 middagar"
+     ],
+     "a": 1,
+     "e": "3 · 7 = <b>21</b>."
+    },
+    {
+     "q": "Ett lås har 4 hjul med siffrorna 0–8 på varje. Hur många koder finns det?",
+     "c": [
+      "729 koder",
+      "262 144 koder",
+      "6 561 koder",
+      "36 koder"
+     ],
+     "a": 2,
+     "e": "9<sup>4</sup> = <b>6 561</b>."
+    },
+    {
+     "q": "Ett lås har 5 hjul med siffrorna 0–2 på varje. Hur många koder finns det?",
+     "c": [
+      "15 koder",
+      "243 koder",
+      "125 koder",
+      "81 koder"
+     ],
+     "a": 1,
+     "e": "3<sup>5</sup> = <b>243</b>."
+    },
+    {
+     "q": "Ett lås har 5 hjul med siffrorna 0–6 på varje. Hur många koder finns det?",
+     "c": [
+      "2 401 koder",
+      "78 125 koder",
+      "16 807 koder",
+      "35 koder"
+     ],
+     "a": 2,
+     "e": "7<sup>5</sup> = <b>16 807</b>."
+    },
+    {
+     "q": "Ebba har 8 tröjor, 4 byxor och 4 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "32 kombinationer",
+      "127 kombinationer",
+      "16 kombinationer",
+      "128 kombinationer"
+     ],
+     "a": 3,
+     "e": "8 · 4 · 4 = <b>128</b>."
+    },
+    {
+     "q": "Nora har 4 tröjor, 4 byxor och 5 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "13 kombinationer",
+      "16 kombinationer",
+      "80 kombinationer",
+      "79 kombinationer"
+     ],
+     "a": 2,
+     "e": "4 · 4 · 5 = <b>80</b>."
+    },
+    {
+     "q": "Vera har 5 tröjor, 3 byxor och 4 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "12 kombinationer",
+      "60 kombinationer",
+      "15 kombinationer",
+      "59 kombinationer"
+     ],
+     "a": 1,
+     "e": "5 · 3 · 4 = <b>60</b>."
+    },
+    {
+     "q": "På en restaurang finns 8 förrätter och 2 huvudrätter. Hur många olika middagar med en förrätt och en huvudrätt kan man välja?",
+     "c": [
+      "32 middagar",
+      "10 middagar",
+      "17 middagar",
+      "16 middagar"
+     ],
+     "a": 3,
+     "e": "8 · 2 = <b>16</b>."
+    },
+    {
+     "q": "Alice har 7 tröjor, 8 byxor och 4 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "224 kombinationer",
+      "223 kombinationer",
+      "56 kombinationer",
+      "19 kombinationer"
+     ],
+     "a": 0,
+     "e": "7 · 8 · 4 = <b>224</b>."
+    },
+    {
+     "q": "Ett lås har 3 hjul med siffrorna 0–3 på varje. Hur många koder finns det?",
+     "c": [
+      "12 koder",
+      "64 koder",
+      "81 koder",
+      "16 koder"
+     ],
+     "a": 1,
+     "e": "4<sup>3</sup> = <b>64</b>."
+    },
+    {
+     "q": "Elsa har 5 tröjor, 5 byxor och 5 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "25 kombinationer",
+      "15 kombinationer",
+      "124 kombinationer",
+      "125 kombinationer"
+     ],
+     "a": 3,
+     "e": "5 · 5 · 5 = <b>125</b>."
+    },
+    {
+     "q": "På en restaurang finns 5 förrätter och 4 huvudrätter. Hur många olika middagar med en förrätt och en huvudrätt kan man välja?",
+     "c": [
+      "21 middagar",
+      "9 middagar",
+      "40 middagar",
+      "20 middagar"
+     ],
+     "a": 3,
+     "e": "5 · 4 = <b>20</b>."
+    },
+    {
+     "q": "Liam har 4 tröjor, 6 byxor och 4 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "95 kombinationer",
+      "24 kombinationer",
+      "14 kombinationer",
+      "96 kombinationer"
+     ],
+     "a": 3,
+     "e": "4 · 6 · 4 = <b>96</b>."
+    },
+    {
+     "q": "Olle har 5 tröjor, 2 byxor och 5 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "50 kombinationer",
+      "49 kombinationer",
+      "10 kombinationer",
+      "12 kombinationer"
+     ],
+     "a": 0,
+     "e": "5 · 2 · 5 = <b>50</b>."
+    },
+    {
+     "q": "På en restaurang finns 8 förrätter och 7 huvudrätter. Hur många olika middagar med en förrätt och en huvudrätt kan man välja?",
+     "c": [
+      "56 middagar",
+      "15 middagar",
+      "112 middagar",
+      "57 middagar"
+     ],
+     "a": 0,
+     "e": "8 · 7 = <b>56</b>."
+    },
+    {
+     "q": "På en restaurang finns 2 förrätter och 6 huvudrätter. Hur många olika middagar med en förrätt och en huvudrätt kan man välja?",
+     "c": [
+      "8 middagar",
+      "12 middagar",
+      "24 middagar",
+      "13 middagar"
+     ],
+     "a": 1,
+     "e": "2 · 6 = <b>12</b>."
+    },
+    {
+     "q": "Melvin har 6 tröjor, 4 byxor och 2 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "24 kombinationer",
+      "47 kombinationer",
+      "48 kombinationer",
+      "12 kombinationer"
+     ],
+     "a": 2,
+     "e": "6 · 4 · 2 = <b>48</b>."
+    },
+    {
+     "q": "På en restaurang finns 2 förrätter och 4 huvudrätter. Hur många olika middagar med en förrätt och en huvudrätt kan man välja?",
+     "c": [
+      "8 middagar",
+      "6 middagar",
+      "9 middagar",
+      "16 middagar"
+     ],
+     "a": 0,
+     "e": "2 · 4 = <b>8</b>."
+    },
+    {
+     "q": "Ett lås har 5 hjul med siffrorna 0–1 på varje. Hur många koder finns det?",
+     "c": [
+      "32 koder",
+      "10 koder",
+      "25 koder",
+      "16 koder"
+     ],
+     "a": 0,
+     "e": "2<sup>5</sup> = <b>32</b>."
+    }
+   ]
+  },
+  {
+   "title": "Ordning och köer",
+   "items": [
+    {
+     "q": "11 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "165 sätt",
+      "33 sätt",
+      "990 sätt",
+      "1 331 sätt"
+     ],
+     "a": 2,
+     "e": "11 · 10 · 9 = <b>990</b>."
+    },
+    {
+     "q": "15 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "2 730 sätt",
+      "45 sätt",
+      "3 375 sätt",
+      "455 sätt"
+     ],
+     "a": 0,
+     "e": "15 · 14 · 13 = <b>2 730</b>."
+    },
+    {
+     "q": "På hur många sätt kan 5 böcker i en hylla ordnas?",
+     "c": [
+      "24 sätt",
+      "120 sätt",
+      "20 sätt",
+      "25 sätt"
+     ],
+     "a": 1,
+     "e": "5! = <b>120</b>."
+    },
+    {
+     "q": "På hur många sätt kan 7 personer ställa sig i en kö?",
+     "c": [
+      "49 sätt",
+      "5 040 sätt",
+      "2 520 sätt",
+      "42 sätt"
+     ],
+     "a": 1,
+     "e": "7 · 6 · 5 · 4 · 3 · 2 · 1 = <b>5 040</b>."
+    },
+    {
+     "q": "På hur många sätt kan 8 koppar på en rad ordnas?",
+     "c": [
+      "56 sätt",
+      "5 040 sätt",
+      "64 sätt",
+      "40 320 sätt"
+     ],
+     "a": 3,
+     "e": "8! = <b>40 320</b>."
+    },
+    {
+     "q": "På hur många sätt kan 4 koppar på en rad ordnas?",
+     "c": [
+      "6 sätt",
+      "12 sätt",
+      "16 sätt",
+      "24 sätt"
+     ],
+     "a": 3,
+     "e": "4! = <b>24</b>."
+    },
+    {
+     "q": "Hur många olika ord (med eller utan betydelse) kan man bilda av alla bokstäverna i TRÄD?",
+     "c": [
+      "16 ord",
+      "12 ord",
+      "24 ord",
+      "48 ord"
+     ],
+     "a": 2,
+     "e": "4 bokstäver kan ordnas på 4! sätt: <b>24</b>."
+    },
+    {
+     "q": "På hur många sätt kan 5 elever på en bänk ordnas?",
+     "c": [
+      "20 sätt",
+      "24 sätt",
+      "25 sätt",
+      "120 sätt"
+     ],
+     "a": 3,
+     "e": "5! = <b>120</b>."
+    },
+    {
+     "q": "På hur många sätt kan 5 koppar på en rad ordnas?",
+     "c": [
+      "20 sätt",
+      "120 sätt",
+      "25 sätt",
+      "24 sätt"
+     ],
+     "a": 1,
+     "e": "5! = <b>120</b>."
+    },
+    {
+     "q": "10 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "30 sätt",
+      "120 sätt",
+      "1 000 sätt",
+      "720 sätt"
+     ],
+     "a": 3,
+     "e": "10 · 9 · 8 = <b>720</b>."
+    },
+    {
+     "q": "På hur många sätt kan 9 bilder på en vägg ordnas?",
+     "c": [
+      "81 sätt",
+      "40 320 sätt",
+      "362 880 sätt",
+      "72 sätt"
+     ],
+     "a": 2,
+     "e": "9! = <b>362 880</b>."
+    },
+    {
+     "q": "På hur många sätt kan 9 böcker i en hylla ordnas?",
+     "c": [
+      "362 880 sätt",
+      "81 sätt",
+      "72 sätt",
+      "40 320 sätt"
+     ],
+     "a": 0,
+     "e": "9! = <b>362 880</b>."
+    },
+    {
+     "q": "9 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "504 sätt",
+      "729 sätt",
+      "84 sätt",
+      "27 sätt"
+     ],
+     "a": 0,
+     "e": "9 · 8 · 7 = <b>504</b>."
+    },
+    {
+     "q": "På hur många sätt kan 4 böcker i en hylla ordnas?",
+     "c": [
+      "16 sätt",
+      "24 sätt",
+      "6 sätt",
+      "12 sätt"
+     ],
+     "a": 1,
+     "e": "4! = <b>24</b>."
+    },
+    {
+     "q": "12 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "1 320 sätt",
+      "1 728 sätt",
+      "36 sätt",
+      "220 sätt"
+     ],
+     "a": 0,
+     "e": "12 · 11 · 10 = <b>1 320</b>."
+    },
+    {
+     "q": "På hur många sätt kan 5 personer ställa sig i en kö?",
+     "c": [
+      "25 sätt",
+      "20 sätt",
+      "120 sätt",
+      "60 sätt"
+     ],
+     "a": 2,
+     "e": "5 · 4 · 3 · 2 · 1 = <b>120</b>."
+    },
+    {
+     "q": "På hur många sätt kan 6 personer ställa sig i en kö?",
+     "c": [
+      "360 sätt",
+      "36 sätt",
+      "30 sätt",
+      "720 sätt"
+     ],
+     "a": 3,
+     "e": "6 · 5 · 4 · 3 · 2 · 1 = <b>720</b>."
+    },
+    {
+     "q": "8 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "512 sätt",
+      "336 sätt",
+      "56 sätt",
+      "24 sätt"
+     ],
+     "a": 1,
+     "e": "8 · 7 · 6 = <b>336</b>."
+    },
+    {
+     "q": "Hur många olika ord (med eller utan betydelse) kan man bilda av alla bokstäverna i BORD?",
+     "c": [
+      "24 ord",
+      "12 ord",
+      "16 ord",
+      "48 ord"
+     ],
+     "a": 0,
+     "e": "4 bokstäver kan ordnas på 4! sätt: <b>24</b>."
+    },
+    {
+     "q": "13 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "286 sätt",
+      "2 197 sätt",
+      "1 716 sätt",
+      "39 sätt"
+     ],
+     "a": 2,
+     "e": "13 · 12 · 11 = <b>1 716</b>."
+    }
+   ]
+  },
+  {
+   "title": "Handslag och matcher",
+   "items": [
+    {
+     "q": "10 lag spelar en serie där alla möter alla en gång. Hur många matcher blir det?",
+     "c": [
+      "90 matcher",
+      "55 matcher",
+      "45 matcher",
+      "20 matcher"
+     ],
+     "a": 2,
+     "e": "10 · 9/2 = <b>45</b>."
+    },
+    {
+     "q": "7 personer hälsar på varandra en gång var. Hur många handslag blir det?",
+     "c": [
+      "21 handslag",
+      "7 handslag",
+      "42 handslag",
+      "49 handslag"
+     ],
+     "a": 0,
+     "e": "7 · 6/2 = <b>21</b>. Varje handslag räknas bara en gång."
+    },
+    {
+     "q": "På en restaurang finns 6 förrätter och 5 huvudrätter. Hur många olika middagar med en förrätt och en huvudrätt kan man välja?",
+     "c": [
+      "60 middagar",
+      "30 middagar",
+      "31 middagar",
+      "11 middagar"
+     ],
+     "a": 1,
+     "e": "6 · 5 = <b>30</b>."
+    },
+    {
+     "q": "8 lag spelar en serie där alla möter alla en gång. Hur många matcher blir det?",
+     "c": [
+      "28 matcher",
+      "16 matcher",
+      "56 matcher",
+      "36 matcher"
+     ],
+     "a": 0,
+     "e": "8 · 7/2 = <b>28</b>."
+    },
+    {
+     "q": "Amira har 6 tröjor, 4 byxor och 5 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "15 kombinationer",
+      "24 kombinationer",
+      "120 kombinationer",
+      "119 kombinationer"
+     ],
+     "a": 2,
+     "e": "6 · 4 · 5 = <b>120</b>."
+    },
+    {
+     "q": "Leo har 5 tröjor, 4 byxor och 5 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "100 kombinationer",
+      "20 kombinationer",
+      "99 kombinationer",
+      "14 kombinationer"
+     ],
+     "a": 0,
+     "e": "5 · 4 · 5 = <b>100</b>."
+    },
+    {
+     "q": "6 lag spelar en serie där alla möter alla en gång. Hur många matcher blir det?",
+     "c": [
+      "12 matcher",
+      "15 matcher",
+      "21 matcher",
+      "30 matcher"
+     ],
+     "a": 1,
+     "e": "6 · 5/2 = <b>15</b>."
+    },
+    {
+     "q": "6 personer hälsar på varandra en gång var. Hur många handslag blir det?",
+     "c": [
+      "36 handslag",
+      "30 handslag",
+      "15 handslag",
+      "6 handslag"
+     ],
+     "a": 2,
+     "e": "6 · 5/2 = <b>15</b>. Varje handslag räknas bara en gång."
+    },
+    {
+     "q": "7 lag spelar en serie där alla möter alla en gång. Hur många matcher blir det?",
+     "c": [
+      "21 matcher",
+      "14 matcher",
+      "28 matcher",
+      "42 matcher"
+     ],
+     "a": 0,
+     "e": "7 · 6/2 = <b>21</b>."
+    },
+    {
+     "q": "Oscar har 5 tröjor, 6 byxor och 2 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "13 kombinationer",
+      "59 kombinationer",
+      "30 kombinationer",
+      "60 kombinationer"
+     ],
+     "a": 3,
+     "e": "5 · 6 · 2 = <b>60</b>."
+    },
+    {
+     "q": "På en restaurang finns 4 förrätter och 8 huvudrätter. Hur många olika middagar med en förrätt och en huvudrätt kan man välja?",
+     "c": [
+      "64 middagar",
+      "32 middagar",
+      "33 middagar",
+      "12 middagar"
+     ],
+     "a": 1,
+     "e": "4 · 8 = <b>32</b>."
+    },
+    {
+     "q": "8 personer hälsar på varandra en gång var. Hur många handslag blir det?",
+     "c": [
+      "64 handslag",
+      "8 handslag",
+      "56 handslag",
+      "28 handslag"
+     ],
+     "a": 3,
+     "e": "8 · 7/2 = <b>28</b>. Varje handslag räknas bara en gång."
+    },
+    {
+     "q": "9 personer hälsar på varandra en gång var. Hur många handslag blir det?",
+     "c": [
+      "9 handslag",
+      "36 handslag",
+      "81 handslag",
+      "72 handslag"
+     ],
+     "a": 1,
+     "e": "9 · 8/2 = <b>36</b>. Varje handslag räknas bara en gång."
+    },
+    {
+     "q": "På en restaurang finns 7 förrätter och 5 huvudrätter. Hur många olika middagar med en förrätt och en huvudrätt kan man välja?",
+     "c": [
+      "12 middagar",
+      "35 middagar",
+      "70 middagar",
+      "36 middagar"
+     ],
+     "a": 1,
+     "e": "7 · 5 = <b>35</b>."
+    },
+    {
+     "q": "Ett lås har 4 hjul med siffrorna 0–5 på varje. Hur många koder finns det?",
+     "c": [
+      "24 koder",
+      "4 096 koder",
+      "216 koder",
+      "1 296 koder"
+     ],
+     "a": 3,
+     "e": "6<sup>4</sup> = <b>1 296</b>."
+    },
+    {
+     "q": "Ali har 8 tröjor, 4 byxor och 5 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "160 kombinationer",
+      "32 kombinationer",
+      "17 kombinationer",
+      "159 kombinationer"
+     ],
+     "a": 0,
+     "e": "8 · 4 · 5 = <b>160</b>."
+    },
+    {
+     "q": "4 lag spelar en serie där alla möter alla en gång. Hur många matcher blir det?",
+     "c": [
+      "10 matcher",
+      "8 matcher",
+      "6 matcher",
+      "12 matcher"
+     ],
+     "a": 2,
+     "e": "4 · 3/2 = <b>6</b>."
+    },
+    {
+     "q": "William har 6 tröjor, 4 byxor och 5 par skor. Hur många olika klädkombinationer finns det?",
+     "c": [
+      "119 kombinationer",
+      "15 kombinationer",
+      "24 kombinationer",
+      "120 kombinationer"
+     ],
+     "a": 3,
+     "e": "6 · 4 · 5 = <b>120</b>."
+    },
+    {
+     "q": "10 personer hälsar på varandra en gång var. Hur många handslag blir det?",
+     "c": [
+      "100 handslag",
+      "90 handslag",
+      "45 handslag",
+      "10 handslag"
+     ],
+     "a": 2,
+     "e": "10 · 9/2 = <b>45</b>. Varje handslag räknas bara en gång."
+    },
+    {
+     "q": "Ett lås har 4 hjul med siffrorna 0–6 på varje. Hur många koder finns det?",
+     "c": [
+      "343 koder",
+      "16 384 koder",
+      "28 koder",
+      "2 401 koder"
+     ],
+     "a": 3,
+     "e": "7<sup>4</sup> = <b>2 401</b>."
+    }
+   ]
+  },
+  {
+   "title": "Utfall och träddiagram",
+   "items": [
+    {
+     "q": "Hur många olika ord (med eller utan betydelse) kan man bilda av alla bokstäverna i STOL?",
+     "c": [
+      "48 ord",
+      "12 ord",
+      "16 ord",
+      "24 ord"
+     ],
+     "a": 3,
+     "e": "4 bokstäver kan ordnas på 4! sätt: <b>24</b>."
+    },
+    {
+     "q": "På hur många sätt kan 7 böcker i en hylla ordnas?",
+     "c": [
+      "720 sätt",
+      "42 sätt",
+      "5 040 sätt",
+      "49 sätt"
+     ],
+     "a": 2,
+     "e": "7! = <b>5 040</b>."
+    },
+    {
+     "q": "Du väljer en av 8 glassorter och en av 5 strutar. Hur många olika glassar kan du få?",
+     "c": [
+      "13 glassar",
+      "80 glassar",
+      "39 glassar",
+      "40 glassar"
+     ],
+     "a": 3,
+     "e": "8 · 5 = <b>40</b>."
+    },
+    {
+     "q": "På hur många sätt kan 6 bilder på en vägg ordnas?",
+     "c": [
+      "36 sätt",
+      "720 sätt",
+      "120 sätt",
+      "30 sätt"
+     ],
+     "a": 1,
+     "e": "6! = <b>720</b>."
+    },
+    {
+     "q": "14 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "2 744 sätt",
+      "42 sätt",
+      "2 184 sätt",
+      "364 sätt"
+     ],
+     "a": 2,
+     "e": "14 · 13 · 12 = <b>2 184</b>."
+    },
+    {
+     "q": "Hur många olika ord (med eller utan betydelse) kan man bilda av alla bokstäverna i FISK?",
+     "c": [
+      "24 ord",
+      "12 ord",
+      "48 ord",
+      "16 ord"
+     ],
+     "a": 0,
+     "e": "4 bokstäver kan ordnas på 4! sätt: <b>24</b>."
+    },
+    {
+     "q": "Du kastar 1 tärning och singlar en slant. Hur många utfall finns det?",
+     "c": [
+      "8 utfall",
+      "6 utfall",
+      "11 utfall",
+      "12 utfall"
+     ],
+     "a": 3,
+     "e": "6<sup>1</sup> · 2 = <b>12</b>."
+    },
+    {
+     "q": "En slant singlas 6 gånger. Hur många olika utfall finns det?",
+     "c": [
+      "64 utfall",
+      "36 utfall",
+      "12 utfall",
+      "63 utfall"
+     ],
+     "a": 0,
+     "e": "2<sup>6</sup> = <b>64</b>."
+    },
+    {
+     "q": "Hur många olika ord (med eller utan betydelse) kan man bilda av alla bokstäverna i LAMPA?",
+     "c": [
+      "25 ord",
+      "60 ord",
+      "20 ord",
+      "120 ord"
+     ],
+     "a": 1,
+     "e": "5 bokstäver kan ordnas på 5! sätt delat med de lika bokstävernas byten: <b>60</b>."
+    },
+    {
+     "q": "Du väljer en av 5 glassorter och en av 2 strutar. Hur många olika glassar kan du få?",
+     "c": [
+      "10 glassar",
+      "20 glassar",
+      "9 glassar",
+      "7 glassar"
+     ],
+     "a": 0,
+     "e": "5 · 2 = <b>10</b>."
+    },
+    {
+     "q": "Du kastar 3 tärningar och singlar en slant. Hur många utfall finns det?",
+     "c": [
+      "431 utfall",
+      "20 utfall",
+      "216 utfall",
+      "432 utfall"
+     ],
+     "a": 3,
+     "e": "6<sup>3</sup> · 2 = <b>432</b>."
+    },
+    {
+     "q": "Du väljer en av 8 glassorter och en av 2 strutar. Hur många olika glassar kan du få?",
+     "c": [
+      "10 glassar",
+      "16 glassar",
+      "32 glassar",
+      "15 glassar"
+     ],
+     "a": 1,
+     "e": "8 · 2 = <b>16</b>."
+    },
+    {
+     "q": "Du väljer en av 4 glassorter och en av 2 strutar. Hur många olika glassar kan du få?",
+     "c": [
+      "8 glassar",
+      "6 glassar",
+      "7 glassar",
+      "16 glassar"
+     ],
+     "a": 0,
+     "e": "4 · 2 = <b>8</b>."
+    },
+    {
+     "q": "En slant singlas 3 gånger. Hur många olika utfall finns det?",
+     "c": [
+      "7 utfall",
+      "8 utfall",
+      "9 utfall",
+      "6 utfall"
+     ],
+     "a": 1,
+     "e": "2<sup>3</sup> = <b>8</b>."
+    },
+    {
+     "q": "Du kastar 2 tärningar och singlar en slant. Hur många utfall finns det?",
+     "c": [
+      "71 utfall",
+      "72 utfall",
+      "36 utfall",
+      "14 utfall"
+     ],
+     "a": 1,
+     "e": "6<sup>2</sup> · 2 = <b>72</b>."
+    },
+    {
+     "q": "På hur många sätt kan 7 elever på en bänk ordnas?",
+     "c": [
+      "42 sätt",
+      "720 sätt",
+      "5 040 sätt",
+      "49 sätt"
+     ],
+     "a": 2,
+     "e": "7! = <b>5 040</b>."
+    },
+    {
+     "q": "På hur många sätt kan 9 koppar på en rad ordnas?",
+     "c": [
+      "40 320 sätt",
+      "72 sätt",
+      "362 880 sätt",
+      "81 sätt"
+     ],
+     "a": 2,
+     "e": "9! = <b>362 880</b>."
+    },
+    {
+     "q": "På hur många sätt kan 8 elever på en bänk ordnas?",
+     "c": [
+      "40 320 sätt",
+      "64 sätt",
+      "5 040 sätt",
+      "56 sätt"
+     ],
+     "a": 0,
+     "e": "8! = <b>40 320</b>."
+    },
+    {
+     "q": "På hur många sätt kan 4 elever på en bänk ordnas?",
+     "c": [
+      "16 sätt",
+      "12 sätt",
+      "24 sätt",
+      "6 sätt"
+     ],
+     "a": 2,
+     "e": "4! = <b>24</b>."
+    },
+    {
+     "q": "Du väljer en av 7 glassorter och en av 2 strutar. Hur många olika glassar kan du få?",
+     "c": [
+      "9 glassar",
+      "28 glassar",
+      "13 glassar",
+      "14 glassar"
+     ],
+     "a": 3,
+     "e": "7 · 2 = <b>14</b>."
+    }
+   ]
+  },
+  {
+   "title": "Koder",
+   "items": [
+    {
+     "q": "En kod har 5 tecken och varje tecken är en av 9 färger. Hur många koder finns det?",
+     "c": [
+      "6 561 koder",
+      "32 768 koder",
+      "45 koder",
+      "59 049 koder"
+     ],
+     "a": 3,
+     "e": "9<sup>5</sup> = <b>59 049</b>."
+    },
+    {
+     "q": "En kod har 3 tecken och varje tecken är en av 5 färger. Hur många koder finns det?",
+     "c": [
+      "125 koder",
+      "64 koder",
+      "15 koder",
+      "25 koder"
+     ],
+     "a": 0,
+     "e": "5<sup>3</sup> = <b>125</b>."
+    },
+    {
+     "q": "En kod har 3 tecken och varje tecken är en av 6 färger. Hur många koder finns det?",
+     "c": [
+      "36 koder",
+      "18 koder",
+      "125 koder",
+      "216 koder"
+     ],
+     "a": 3,
+     "e": "6<sup>3</sup> = <b>216</b>."
+    },
+    {
+     "q": "En kod börjar med 3 bokstäver (A–Ö, 29 st) följt av 3 siffror. Hur många koder finns det?",
+     "c": [
+      "24 389 000 koder",
+      "25 389 koder",
+      "117 koder",
+      "12 194 500 koder"
+     ],
+     "a": 0,
+     "e": "29<sup>3</sup> · 10<sup>3</sup> = <b>24 389 000</b>."
+    },
+    {
+     "q": "En kod börjar med 3 bokstäver (A–Ö, 29 st) följt av 4 siffror. Hur många koder finns det?",
+     "c": [
+      "34 389 koder",
+      "127 koder",
+      "243 890 000 koder",
+      "121 945 000 koder"
+     ],
+     "a": 2,
+     "e": "29<sup>3</sup> · 10<sup>4</sup> = <b>243 890 000</b>."
+    },
+    {
+     "q": "En kod har 4 siffror och samma siffra får inte användas två gånger. Hur många koder finns det?",
+     "c": [
+      "10 000 koder",
+      "6 561 koder",
+      "5 040 koder",
+      "2 520 koder"
+     ],
+     "a": 2,
+     "e": "10 · 9 · 8 · 7 = <b>5 040</b>."
+    },
+    {
+     "q": "En kod har 6 tecken och varje tecken är en av 4 färger. Hur många koder finns det?",
+     "c": [
+      "24 koder",
+      "729 koder",
+      "1 024 koder",
+      "4 096 koder"
+     ],
+     "a": 3,
+     "e": "4<sup>6</sup> = <b>4 096</b>."
+    },
+    {
+     "q": "En kod har 5 tecken och varje tecken är en av 5 färger. Hur många koder finns det?",
+     "c": [
+      "25 koder",
+      "3 125 koder",
+      "625 koder",
+      "1 024 koder"
+     ],
+     "a": 1,
+     "e": "5<sup>5</sup> = <b>3 125</b>."
+    },
+    {
+     "q": "En kod börjar med 2 bokstäver (A–Ö, 29 st) följt av 3 siffror. Hur många koder finns det?",
+     "c": [
+      "88 koder",
+      "1 841 koder",
+      "420 500 koder",
+      "841 000 koder"
+     ],
+     "a": 3,
+     "e": "29<sup>2</sup> · 10<sup>3</sup> = <b>841 000</b>."
+    },
+    {
+     "q": "En kod har 4 tecken och varje tecken är en av 6 färger. Hur många koder finns det?",
+     "c": [
+      "24 koder",
+      "1 296 koder",
+      "216 koder",
+      "625 koder"
+     ],
+     "a": 1,
+     "e": "6<sup>4</sup> = <b>1 296</b>."
+    },
+    {
+     "q": "En kod har 3 siffror och samma siffra får inte användas två gånger. Hur många koder finns det?",
+     "c": [
+      "720 koder",
+      "360 koder",
+      "729 koder",
+      "1 000 koder"
+     ],
+     "a": 0,
+     "e": "10 · 9 · 8 = <b>720</b>."
+    },
+    {
+     "q": "En kod har 5 tecken och varje tecken är en av 4 färger. Hur många koder finns det?",
+     "c": [
+      "256 koder",
+      "20 koder",
+      "1 024 koder",
+      "243 koder"
+     ],
+     "a": 2,
+     "e": "4<sup>5</sup> = <b>1 024</b>."
+    },
+    {
+     "q": "En kod börjar med 3 bokstäver (A–Ö, 29 st) följt av 2 siffror. Hur många koder finns det?",
+     "c": [
+      "1 219 450 koder",
+      "24 489 koder",
+      "2 438 900 koder",
+      "107 koder"
+     ],
+     "a": 2,
+     "e": "29<sup>3</sup> · 10<sup>2</sup> = <b>2 438 900</b>."
+    },
+    {
+     "q": "En kod har 4 tecken och varje tecken är en av 9 färger. Hur många koder finns det?",
+     "c": [
+      "6 561 koder",
+      "4 096 koder",
+      "729 koder",
+      "36 koder"
+     ],
+     "a": 0,
+     "e": "9<sup>4</sup> = <b>6 561</b>."
+    },
+    {
+     "q": "En pinkod har 5 siffror (0–9). Hur många koder finns det?",
+     "c": [
+      "10 000 koder",
+      "100 000 koder",
+      "50 koder",
+      "59 049 koder"
+     ],
+     "a": 1,
+     "e": "10<sup>5</sup> = <b>100 000</b>."
+    },
+    {
+     "q": "En kod har 5 siffror och samma siffra får inte användas två gånger. Hur många koder finns det?",
+     "c": [
+      "100 000 koder",
+      "15 120 koder",
+      "59 049 koder",
+      "30 240 koder"
+     ],
+     "a": 3,
+     "e": "10 · 9 · 8 · 7 · 6 = <b>30 240</b>."
+    },
+    {
+     "q": "En kod har 4 tecken och varje tecken är en av 4 färger. Hur många koder finns det?",
+     "c": [
+      "64 koder",
+      "81 koder",
+      "256 koder",
+      "16 koder"
+     ],
+     "a": 2,
+     "e": "4<sup>4</sup> = <b>256</b>."
+    },
+    {
+     "q": "En kod börjar med 2 bokstäver (A–Ö, 29 st) följt av 2 siffror. Hur många koder finns det?",
+     "c": [
+      "84 100 koder",
+      "42 050 koder",
+      "941 koder",
+      "78 koder"
+     ],
+     "a": 0,
+     "e": "29<sup>2</sup> · 10<sup>2</sup> = <b>84 100</b>."
+    },
+    {
+     "q": "En kod har 5 tecken och varje tecken är en av 6 färger. Hur många koder finns det?",
+     "c": [
+      "3 125 koder",
+      "7 776 koder",
+      "30 koder",
+      "1 296 koder"
+     ],
+     "a": 1,
+     "e": "6<sup>5</sup> = <b>7 776</b>."
+    },
+    {
+     "q": "En kod börjar med 2 bokstäver (A–Ö, 29 st) följt av 4 siffror. Hur många koder finns det?",
+     "c": [
+      "98 koder",
+      "8 410 000 koder",
+      "4 205 000 koder",
+      "10 841 koder"
+     ],
+     "a": 1,
+     "e": "29<sup>2</sup> · 10<sup>4</sup> = <b>8 410 000</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 15,
+ "updated": "2026-11-26",
+ "country": "se",
+ "subject": "matematik",
+ "grade": "arskurs-8"
+}
