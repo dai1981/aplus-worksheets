@@ -1854,7 +1854,11 @@ TR / Matematik / 10. Sınıf（Ortaöğretim DÖP 2026。単元は tr_s10a（1�
 8. ebob-ve-ekok ✓ 9. bolunebilme-ve-kalan ✓ 10. fonksiyon-olma-sartlari ✓ 11. karesel-fonksiyon ✓ 12. karekok-ve-rasyonel-fonksiyonlar ✓ 13. ters-fonksiyonlar ✓ 14. fonksiyonlarla-denklem-ve-esitsizlik-problemleri ✓
 15. sayma-stratejileri ✓ 16. algoritmik-islemler ✓ 17. iki-nokta-arasi-uzaklik ✓ 18. dogrunun-analitik-incelenmesi ✓ 19. kosullu-olasilik ✓ 20. bayes-teoremi ✓
 トピックに fonksiyonlar・trigonometri を足した（olcme の out に kalan、olasilik に sayma-stratejileri・bayes、carpanlar に ebob）
-TR の次: 11.〜12. sınıf、okul öncesi
+TR / Matematik / 11. Sınıf（単元は tr_s11a（1〜7：veri・dörtgen・çokgen・trigonometrik fonksiyonlar。pis（π の倍数）・tval（特別角の符号付きの値））・tr_s11b（8〜14：trigonometrik denklemler・üstel・logaritma（lg：log₂ 8、底 10 は log）・bileşke・dört işlem））
+1. iki-nicel-degiskenli-veri ✓ 2. dortgenlerin-ozellikleri ✓ 3. ozel-dortgenler ✓ 4. cokgenler ✓ 5. cokgen-problemleri ✓ 6. trigonometrik-fonksiyonlar ✓ 7. trigonometrik-fonksiyonlarin-grafikleri ✓
+8. trigonometrik-denklemler ✓ 9. ustel-fonksiyon ✓ 10. logaritma ✓ 11. logaritmik-fonksiyon ✓ 12. ustel-ve-logaritmik-denklemler ✓ 13. bileske-fonksiyon ✓ 14. fonksiyonlarda-dort-islem ✓
+トピックに ustel-ve-logaritmik-fonksiyonlar を足した（sayilar の out に logaritm（ritmik に当たる）、veri・denklemler・fonksiyonlar の out に trigonometri など）
+TR の次: 12. sınıf、okul öncesi
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
