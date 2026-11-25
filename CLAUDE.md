@@ -1887,7 +1887,14 @@ CH / Mathematik / 2. Klasse（Zahlenraum bis 100、Einmaleins。ch_k2.py、geld 
 CH / Mathematik / 1. Klasse（Zahlenraum bis 20。ch_k1.py、geld は自前（ch_k3_geld.build1））
 1. zahlen-bis-10 ✓ 2. zahlen-bis-20 ✓ 3. zahlen-vergleichen ✓ 4. zerlegen-und-ergaenzen ✓ 5. plus-bis-10 ✓ 6. minus-bis-10 ✓ 7. plus-und-minus-bis-20 ✓ 8. plus-und-minus-ueber-die-10 ✓ 9. verdoppeln-und-halbieren ✓
 10. rechengeschichten-und-sachaufgaben ✓ 11. geld ✓ 12. laengen-vergleichen-und-messen ✓ 13. uhrzeit-und-tagesablauf ✓ 14. formen-und-koerper ✓ 15. lage-und-richtung ✓ 16. muster-und-zahlenfolgen ✓ 17. strichlisten-und-tabellen ✓
-CH の次: 5.–6. Klasse、1. Klasse、5.–6. Klasse、Kindergarten、Sekundarstufe I（7.–9. Klasse）。フランス語圏（PER）・イタリア語圏（Ticino）はその後
+CH / Mathematik / 5. Klasse（ch_k5.py、Deutschland Klasse 5 から。負の数・累乗は Zyklus 3 なので外し、EXTRA の _noneg で問題文に負の数がある問題を落とす）
+1. natuerliche-zahlen-und-stellenwerte ✓ 2. runden-und-schaetzen ✓ 3. addieren-und-subtrahieren ✓ 4. multiplizieren-und-dividieren ✓ 5. terme-und-rechengesetze ✓ 6. teiler-vielfache-und-primzahlen ✓ 7. brueche-und-anteile ✓ 8. muster-terme-und-variablen ✓
+9. laengen-massen-und-zeit ✓ 10. sachaufgaben-und-kombinatorik ✓ 11. strecken-geraden-und-strahlen ✓ 12. winkel ✓ 13. koordinatensystem ✓ 14. achsen-und-punktsymmetrie ✓ 15. flaecheninhalt-und-umfang ✓ 16. volumen-und-oberflaeche-von-quadern ✓ 17. haeufigkeiten-und-diagramme ✓
+CH / Mathematik / 6. Klasse（ch_k6.py、Deutschland Klasse 6 から。分数の乗除・負の数・方程式・平行四辺形の面積は Zyklus 3 なので外した）
+1. brueche-erweitern-und-kuerzen ✓ 2. brueche-vergleichen-und-ordnen ✓ 3. gemischte-zahlen ✓ 4. brueche-addieren-und-subtrahieren ✓ 5. dezimalzahlen-und-stellenwerte ✓ 6. brueche-und-dezimalzahlen ✓ 7. dezimalzahlen-addieren-und-subtrahieren ✓
+8. dezimalzahlen-multiplizieren-und-dividieren ✓ 9. prozente ✓ 10. zuordnungen-und-dreisatz ✓ 11. sachaufgaben-mit-bruechen-und-dezimalzahlen ✓ 12. dreiecke-und-vierecke ✓ 13. kreise ✓ 14. daten-und-wahrscheinlichkeit ✓
+お金は money_ok で 5 Rp. 単位・小数 2 けたでない金額（2.99 Fr.、0.9 Fr.）の問題を落とす
+CH の次: Sekundarstufe I（7.–9. Klasse、Deutschland Klasse 7–9 から）、Kindergarten。フランス語圏（PER）・イタリア語圏（Ticino）はその後、1. Klasse、5.–6. Klasse、Kindergarten、Sekundarstufe I（7.–9. Klasse）。フランス語圏（PER）・イタリア語圏（Ticino）はその後
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

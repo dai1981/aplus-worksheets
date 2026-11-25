@@ -23,6 +23,7 @@ KOMP = {
     "MA.1.A.4": "können Terme vergleichen und umformen, Gleichungen lösen, Gesetze und Regeln anwenden",
     "MA.1.B.1": "können Zahl- und Operationsbeziehungen sowie arithmetische Muster erforschen und Erkenntnisse austauschen",
     "MA.1.B.2": "können Aussagen, Vermutungen und Ergebnisse zu Zahlen und Variablen überprüfen und begründen",
+    "MA.1.B.3": "können Hilfsmittel wie Material, Zahlentafeln oder elektronische Medien beim Erforschen arithmetischer Muster nutzen",
     "MA.1.C.1": "können Rechenwege darstellen, beschreiben, austauschen und nachvollziehen",
     "MA.1.C.2": "können Anzahlen, Zahlenfolgen und Terme veranschaulichen, beschreiben und verallgemeinern",
     "MA.2.A.1": "verstehen und verwenden geometrische Begriffe und Symbole",
@@ -63,7 +64,7 @@ WORDS = [
     (r"\bKMK-Bildungsstandards?\b", "Lehrplan 21"), (r"\bBildungsstandards\b", "Lehrplan 21"),
     (r"\bCroissants?\b", "Gipfeli"), (r"\bKommaschreibweise", "Dezimalschreibweise"), (r"\bKommazahl", "Dezimalzahl"),
     (r"Bücherei", "Bibliothek"), (r"bücherei", "bibliothek"), (r"Franken-Scheine\b", "Franken-Noten"), (r"\bLieblings-AG\b", "Lieblingskurs"),
-    (r"\bWechselgeld", "Rückgeld"),
+    (r"\bWechselgeld", "Rückgeld"), (r"\bmit dem Rad\b", "mit dem Velo"),
     (r"\bKomma unter Komma", "Punkt unter Punkt"), (r"\b(hinter|vor|nach|mit) dem Komma", r"\1 dem Punkt"),
     (r"\bdas Komma\b", "der Punkt"), (r"\bDas Komma\b", "Der Punkt"), (r"\bdes Kommas\b", "des Punktes"), (r"\b(mit|ohne) Komma\b", r"\1 Punkt"),
     (r"\bKommastelle", "Dezimalstelle"), (r"\bKommabeträge", "Geldbeträge"), (r"\bKomma\b", "Punkt"),
@@ -100,9 +101,12 @@ def _group(m):
 
 
 def _textnode(s, full):
+    if s.strip() in ("€", "ct"):
+        return s.replace("€", "Fr.").replace("ct", "Rp.")
     s = s.replace("ß", "ss")
     s = _money(s)
     s = re.sub(r"(?<=\d) (?=\d{3}(?!\d))", "", s)            # 10 000 → 10000（あとで ’ を付ける）
+    s = re.sub(r"(?<![\d’.,])(\d{1,3}) (\d{3})(?![\d’])", r"\1\2", s)      # 14 728 → 14728（あとで ’）
     s = re.sub(r"(?<=[\d☐□])\u00a0(?=[\d☐□]{3}(?![\d☐□]))", AP, s)
     s = re.sub(r"(?<=\d),(?=\d)", ".", s)                          # 2,5 → 2.5
     # 4 けた以上の整数に ’（小数部・時刻・年は除く）
@@ -146,10 +150,14 @@ def ch_text(s):
 
 
 def money_ok(s):
-    for m in re.finditer(r"(\d+)\.(\d\d) ?Fr\.", s):
+    """Schweizer Beträge: auf 5 Rappen, zwei Stellen nach dem Punkt"""
+    s = re.sub(r"<[^>]*>", "", s)
+    if re.search(r"\d\.\d(?!\d)[\u00a0 ]?Fr\.", s) or re.search(r"\d\.\d{3,}[\u00a0 ]?Fr\.", s):
+        return False
+    for m in re.finditer(r"(\d+)\.(\d\d)[\u00a0 ]?Fr\.", s):
         if int(m.group(2)) % 5:
             return False
-    for m in re.finditer(r"(\d+) ?Rp\.", s):
+    for m in re.finditer(r"(\d+)[\u00a0 ]?Rp\.", s):
         if int(m.group(1)) % 5:
             return False
     return True
@@ -160,8 +168,14 @@ def leak(s):
     return [w for w in LEAKS if w in t]
 
 
+EXTRA = []    # weitere Prüfungen je Klasse (Funktion it → bool)
+
+
 def item_ok(it):
     blob = it["q"] + " " + " ".join(it["c"]) + " " + it["e"]
+    for f in EXTRA:
+        if not f(it):
+            return False
     if leak(blob) or not money_ok(blob):
         if DEBUG:
             DEBUG.append((leak(blob), money_ok(blob), it["q"][:90]))
