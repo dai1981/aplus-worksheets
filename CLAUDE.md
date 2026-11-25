@@ -1862,7 +1862,10 @@ TR / Matematik / 12. Sınıf（単元は tr_s12a（1〜9：diziler・polinomlar�
 1. aritmetik-diziler ✓ 2. geometrik-diziler ✓ 3. diziler-ve-fonksiyonlar ✓ 4. polinomlar ✓ 5. polinom-bolme-ve-kalan ✓ 6. polinom-ve-rasyonel-denklemler ✓ 7. cemberin-elemanlari ✓ 8. cemberde-acilar ✓ 9. cember-ve-daire-problemleri ✓
 10. prizma-ve-silindir ✓ 11. piramit-koni-ve-kure ✓ 12. cisim-problemleri ✓ 13. limit ✓ 14. belirsizlik-ve-sureklilik ✓ 15. turevin-tanimi ✓ 16. turev-kurallari ✓ 17. turevin-geometrik-yorumu ✓ 18. turevin-uygulamalari ✓ 19. hazir-veriler-uzerinde-calisma ✓
 トピックに diziler-ve-polinomlar・limit-ve-turev を足した（geometri に cemberin・cemberde・cember-ve-daire・prizma-ve-silindir・piramit-koni）
-TR の次: okul öncesi
+TR / Matematik / Okul Öncesi（60–72 ay、5〜6歳。Maarif Modeli Okul Öncesi Eğitim Programı 2024 の Matematik alanı MAB.1〜MAB.14、tr_common.STD_URL_OO）— grade `okul-oncesi`（name「Okul Öncesi」、sort 0）。`python3 tools/tr_run.py 0`、単元は tr_s0a（tr_p12 の問題関数を lim(mk, 10) で 10 までに絞って再利用、bakista・paylastir・esit_mi・karsi は自前）。
+DOMAIN に SAY Sayma・MM Matematiksel Muhakeme・PC Matematiksel Problem Çözme・MT Matematiksel Temsil・VK Veri ile Çalışma を足した。seo_title は「… Okul Öncesi Matematik (5-6 Yaş): Etkinlik Kâğıdı ve Cevaplar」。unit.php で typicalAgeRange 5-6、core.php の grade_standard() で基準名を Okul Öncesi Eğitim Programı に
+1. ritmik-sayma ✓ 2. nesne-sayma ✓ 3. bir-bakista-sayma ✓ 4. butun-ve-parca ✓ 5. geometrik-sekiller ✓ 6. konum-ve-yon ✓ 7. olcme-ve-karsilastirma ✓ 8. oruntuler ✓ 9. karsilastirma-ve-siralama ✓ 10. artma-ve-azalma ✓ 11. paylastirma ✓ 12. veri-toplama-ve-grafik ✓
+TR / Matematik は okul öncesi・1.〜12. sınıf まで完了。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に tr があるか確認する。次は GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

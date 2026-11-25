@@ -454,13 +454,13 @@ function topic_defs_br() {
 function topic_defs_tr() {
     return array(
         'sayilar' => array('name' => 'Sayılar ve Basamak Değeri',
-            'in' => '/sayilar|siralama|yuvarlama|ritmik|tek-ve-cift|basamak|buyuk-sayilar|nesne-sayisini|sayi-araliklari|sayi-kumeleri/', 'out' => '/islem|asal|ondalik|kesir|toplama|cikarma|rasyonel|tam-sayilar|ispat|logaritm/',
+            'in' => '/sayilar|siralama|yuvarlama|ritmik|tek-ve-cift|basamak|buyuk-sayilar|nesne-sayisini|sayi-araliklari|sayi-kumeleri|nesne-sayma|bir-bakista/', 'out' => '/islem|asal|ondalik|kesir|toplama|cikarma|rasyonel|tam-sayilar|ispat|logaritm/',
             'blurb' => 'Sayıları okuma ve yazma, basamak ve bölük, basamak değeri, sayıları karşılaştırma, sıralama ve yuvarlama, ritmik sayma, büyük sayılar ve doğal sayılarla problemler.'),
         'toplama-ve-cikarma' => array('name' => 'Toplama ve Çıkarma',
-            'in' => '/toplama|cikarma/', 'out' => '/veri|kesir|rasyonel/',
+            'in' => '/toplama|cikarma|artma-ve-azalma|butun-ve-parca/', 'out' => '/veri|kesir|rasyonel/',
             'blurb' => 'Eldeli toplama, onluk bozarak çıkarma, zihinden işlem, tahmin ve sonucu kontrol etme.'),
         'carpma-ve-bolme' => array('name' => 'Çarpma ve Bölme',
-            'in' => '/carpma|bolme|dort-islem|islem-onceligi/', 'out' => '/kesir|ondalik|bolunebilme|bolenler|rasyonel|fonksiyon|polinom/',
+            'in' => '/carpma|bolme|dort-islem|islem-onceligi|paylastirma/', 'out' => '/kesir|ondalik|bolunebilme|bolenler|rasyonel|fonksiyon|polinom/',
             'blurb' => 'Çarpım tablosu, çok basamaklı çarpma ve bölme, kalanlı bölme, zihinden işlem ve kısa yollar, işlem önceliği ve dört işlem problemleri.'),
         'carpanlar-ve-bolunebilme' => array('name' => 'Çarpanlar, Katlar ve Bölünebilme',
             'in' => '/asal|bolunebilme|carpanlar-ve-katlar|ortak-bolenler|ebob/', 'out' => '/^$/',

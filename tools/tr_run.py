@@ -12,6 +12,7 @@ import tr_g
 import tr_common as C
 
 SUFFIX = {1: " (Türkiye Yüzyılı Maarif Modeli, İlkokul Matematik Dersi Öğretim Programı)", 2: " (Türkiye Yüzyılı Maarif Modeli, İlkokul Matematik Dersi Öğretim Programı)", 4: " (Türkiye Yüzyılı Maarif Modeli, İlkokul Matematik Dersi Öğretim Programı)"}
+SUFFIX[0] = " (Türkiye Yüzyılı Maarif Modeli, Okul Öncesi Eğitim Programı, 60–72 ay)"
 for g in range(9, 13):
     SUFFIX[g] = " (Türkiye Yüzyılı Maarif Modeli, Ortaöğretim Matematik Dersi Öğretim Programı)"
 for g in range(5, 9):
@@ -62,7 +63,7 @@ def build(g, i):
     body = C.lesson(d["think"], [C.example(q, s, a) for q, s, a in d["ex"]], d["mist"])
     faq = [{"q": q, "a": a} for q, a in d["faq"]]
     C.make_unit(rnd, d["slug"], d["dom"], d["code"], d["std"] + SUFFIX[g], d["title"], d["short"], d["meta"], d["kb"], d["ks"],
-                body, faq, sets, d["sort"], grade="%d-sinif" % g)
+                body, faq, sets, d["sort"], grade="okul-oncesi" if g == 0 else "%d-sinif" % g)
     return d["slug"]
 
 

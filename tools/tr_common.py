@@ -41,6 +41,11 @@ DOMAIN = {
     "GC": "Geometrik Cisimler",
     "DM": "Değişimin Matematiği",
     "HV": "Hazır Veriler Üzerinde Çalışma",
+    "SAY": "Sayma",
+    "MM": "Matematiksel Muhakeme",
+    "PC": "Matematiksel Problem Çözme",
+    "MT": "Matematiksel Temsil",
+    "VK": "Veri ile Çalışma ve Veriye Dayalı Karar Verme",
 }
 STD_URL_LISE = "https://mufredat.meb.gov.tr/Dosyalar/2026518151640408-matedöp.pdf"
 STD_URL_ORTA = "https://mufredat.meb.gov.tr/Dosyalar/202681491243620-Matematik%20(5-8)%20D%C3%96P.pdf"
@@ -185,6 +190,8 @@ def lesson(think, examples, mist, extra=""):
 
 plain_text = D.plain_text
 GRADE_NAME = {"%d-sinif" % g: "%d. Sınıf" % g for g in range(1, 13)}
+GRADE_NAME["okul-oncesi"] = "Okul Öncesi"
+STD_URL_OO = "https://tegm.meb.gov.tr/meb_iys_dosyalar/2024_09/20104013_2024programokuloncesionayli.pdf"
 
 
 def make_unit(rnd, slug, dom, code, std_text, title, short_title, meta_desc, key_big, key_sub,
@@ -203,11 +210,13 @@ def make_unit(rnd, slug, dom, code, std_text, title, short_title, meta_desc, key
     sets = _j.loads(_j.dumps(sets, ensure_ascii=False).replace("i\u0307", "i"))
     gname = GRADE_NAME[grade]
     seo_title = "%s %s Matematik: Çalışma Kâğıdı ve Cevaplı Test" % (short_title, gname)
+    if grade == "okul-oncesi":
+        seo_title = "%s Okul Öncesi Matematik (5-6 Yaş): Etkinlik Kâğıdı ve Cevaplar" % short_title
     title, seo_title, short_title, meta_desc, key_big, key_sub = map(plain_text, (title, seo_title, short_title, meta_desc, key_big, key_sub))
     assert len(key_big) <= 40 and len(key_sub) <= 60, (slug, key_big, key_sub)
     write_unit("tr", "matematik", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
-        "domain": DOMAIN[dom], "standard_code": code, "standard_url": STD_URL_LISE if int(grade.split("-")[0]) >= 9 else STD_URL_ORTA if int(grade.split("-")[0]) >= 5 else STD_URL,
+        "domain": DOMAIN[dom], "standard_code": code, "standard_url": STD_URL_OO if grade == "okul-oncesi" else STD_URL_LISE if int(grade.split("-")[0]) >= 9 else STD_URL_ORTA if int(grade.split("-")[0]) >= 5 else STD_URL,
         "standard_text": std_text, "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
         "body_html": body_html, "faq": faq, "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })
