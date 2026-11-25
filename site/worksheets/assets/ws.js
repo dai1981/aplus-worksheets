@@ -502,11 +502,13 @@
 
   Quiz.prototype.shell = function () {
     var self = this;
-    this.root.innerHTML = '<div class="sn-quiz-h"><span class="t"></span><span class="n"></span></div>'
+    this.root.innerHTML = '<div class="sn-quiz-h"><span class="t"></span><span class="sn-done" hidden></span><span class="n"></span></div>'
       + '<div class="sn-quiz-b"><div class="sn-bar"><i></i></div><div class="sn-stage">'
       + '<div class="sn-q"></div><div class="sn-choices"></div></div><div class="sn-fb" hidden></div></div>';
     this.root.querySelector(".sn-quiz-h .t").textContent = this.title;
     this.eN = this.root.querySelector(".sn-quiz-h .n");
+    this.eDone = this.root.querySelector(".sn-done");
+    this.mark();
     this.eBar = this.root.querySelector(".sn-bar i");
     this.eStage = this.root.querySelector(".sn-stage");
     this.eQ = this.root.querySelector(".sn-q");
@@ -555,6 +557,18 @@
     probe.parentNode.removeChild(probe);
     max = Math.max(max, this.eStage.scrollHeight);
     if (max > this.minH) { this.minH = max; this.eStage.style.minHeight = max + "px"; }
+  };
+
+  // done mark on the header: a check and the best score (gold when all correct)
+  var CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  Quiz.prototype.mark = function () {
+    var d = get(this.key), e = this.eDone;
+    if (!e) return;
+    if (!d) { e.hidden = true; return; }
+    e.innerHTML = CHECK + d.o + " / " + d.t;
+    e.className = "sn-done" + (d.o === d.t ? " full" : "");
+    e.title = t("best", { o: d.o, t: d.t });
+    e.hidden = false;
   };
 
   Quiz.prototype.begin = function (items) {
@@ -646,6 +660,7 @@
     this.ended = true;
     clearTimeout(this.timer);
     if (n === this.all.length) put(this.key, this.ok, n);   // retrying only the misses is not recorded
+    this.mark();
     record(this.key, this.grade, this.ok, n);                // every correct answer counts toward the rank
     this.eN.textContent = t("done");
     this.eBar.style.width = "100%";
