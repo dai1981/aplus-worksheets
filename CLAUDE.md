@@ -1920,7 +1920,20 @@ SE / Matematik / Årskurs 3（det första året med nationella prov）
 1. tal-till-1000 ✓ 2. jamfora-och-ordna-tal ✓ 3. overslagsrakning-och-rimlighet ✓ 4. huvudrakning ✓ 5. addition-med-uppstallning ✓ 6. subtraktion-med-uppstallning ✓ 7. multiplikation-och-tabellerna ✓ 8. division ✓
 9. problemlosning ✓ 10. enkla-brak ✓ 11. likheter-och-likhetstecknet ✓ 12. monster-och-talfoljder ✓ 13. dubbelt-och-halften ✓ 14. pengar ✓ 15. klockan-och-tid ✓ 16. langd ✓ 17. massa-och-volym ✓
 18. geometriska-figurer ✓ 19. geometriska-kroppar ✓ 20. symmetri ✓ 21. lagesord-och-stegvisa-instruktioner ✓ 22. tabeller-och-diagram ✓ 23. slump-och-sannolikhet ✓
-次は årskurs 6・9（nationella prov）、その後 4・5・1・2・7・8
+SE / Matematik / Årskurs 4–6（mellanstadiet。årskurs 6 が nationella prov の学年）— `python3 tools/se_m46.py 4|5|6 [nummer…]`（seed は 95000 + 100 × årskurs + 番号、単元の並びは se_m46.GRADES）。
+単元の関数は lv（4・5・6）を受け取り、同じ slug でも範囲と問題が学年で変わる：se_m_a（tal-och-positionssystemet・avrundning-och-overslag・addition-och-subtraktion・multiplikation・division・prioriteringsregler・negativa-tal）、
+se_m_b（brak・decimaltal・procent・ekvationer-och-uttryck・monster-och-talfoljder・proportionalitet）、se_m_c（langd-massa-och-volym・tid・omkrets-och-area・vinklar・geometriska-figurer-och-kroppar・symmetri・koordinatsystem・skala）、
+se_m_d（tabeller-och-diagram・medelvarde-typvarde-och-median・sannolikhet・kombinatorik・problemlosning）。共通部品は `tools/se_m.py`（R・K・M（負の数も可、誤答が 3 つそろわないと None、値が同じ分数（5/10 と 1/2）は誤答にしない）・fr・fq・d（Fraction → コンマの小数）・tab・PLATS・MAXN）。
+範囲：åk 4 は 100 000 まで・小数は hundradelar まで、åk 5 は 1 miljon まで・tusendelar・procent・negativa tal、åk 6 は 10 miljoner・bråk の異分母・2 段階の方程式・skala・volym。se_m46.build は文中の 4 桁以上の数を 1 000 の形にそろえる（SVG・タグと「år 1907」などの年は除く）。
+図：角度・分度器・三角形は gen_au_maths_y5_angles、立方体の積み木は kr_pics56.iso_cubes、座標は de_k8.kosy（lo=0）
+SE / Matematik / Årskurs 4: 1. tal-och-positionssystemet ✓ 2. avrundning-och-overslag ✓ 3. addition-och-subtraktion ✓ 4. multiplikation ✓ 5. division ✓ 6. problemlosning ✓ 7. brak ✓ 8. decimaltal ✓ 9. ekvationer-och-uttryck ✓ 10. monster-och-talfoljder ✓
+11. langd-massa-och-volym ✓ 12. tid ✓ 13. omkrets-och-area ✓ 14. vinklar ✓ 15. geometriska-figurer-och-kroppar ✓ 16. symmetri ✓ 17. koordinatsystem ✓ 18. tabeller-och-diagram ✓ 19. sannolikhet ✓
+SE / Matematik / Årskurs 5: 1. tal-och-positionssystemet ✓ 2. avrundning-och-overslag ✓ 3. addition-och-subtraktion ✓ 4. multiplikation ✓ 5. division ✓ 6. prioriteringsregler ✓ 7. negativa-tal ✓ 8. problemlosning ✓ 9. brak ✓ 10. decimaltal ✓ 11. procent ✓ 12. ekvationer-och-uttryck ✓
+13. monster-och-talfoljder ✓ 14. proportionalitet ✓ 15. langd-massa-och-volym ✓ 16. tid ✓ 17. omkrets-och-area ✓ 18. vinklar ✓ 19. geometriska-figurer-och-kroppar ✓ 20. symmetri ✓ 21. koordinatsystem ✓ 22. tabeller-och-diagram ✓ 23. medelvarde-typvarde-och-median ✓ 24. sannolikhet ✓ 25. kombinatorik ✓
+SE / Matematik / Årskurs 6: 1. tal-och-positionssystemet ✓ 2. avrundning-och-overslag ✓ 3. addition-och-subtraktion ✓ 4. multiplikation ✓ 5. division ✓ 6. prioriteringsregler ✓ 7. negativa-tal ✓ 8. problemlosning ✓ 9. brak ✓ 10. decimaltal ✓ 11. procent ✓ 12. ekvationer-och-uttryck ✓
+13. monster-och-talfoljder ✓ 14. proportionalitet ✓ 15. langd-massa-och-volym ✓ 16. omkrets-och-area ✓ 17. vinklar ✓ 18. geometriska-figurer-och-kroppar ✓ 19. skala ✓ 20. koordinatsystem ✓ 21. tabeller-och-diagram ✓ 22. medelvarde-typvarde-och-median ✓ 23. sannolikhet ✓ 24. kombinatorik ✓
+トピック（topic_defs_se）に samband-och-forandring（proportionalitet・skala・koordinat）と problemlosning を足した。prioritering→multiplikation-och-division、kombinatorik→statistik-och-sannolikhet
+次は årskurs 9（nationella prov）、その後 7・8・1・2
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
