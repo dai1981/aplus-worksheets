@@ -213,3 +213,92 @@ def build4(seed, slug, grade, sort, codes, dom):
     C.write(slug, grade, sort, codes, dom, "Rechnen mit Geld: Franken und Rappen", "Rechnen mit Geld",
             "Mathematik 4. Klasse: Rechnen mit Geld – Franken und Rappen umwandeln, addieren, subtrahieren, multiplizieren, dividieren und Angebote vergleichen. 100 Übungsaufgaben und Arbeitsblatt mit Lösungen.",
             "Punkt unter Punkt", "Oder alles in Rappen rechnen: 1 Fr. = 100 Rp.", body, faq, sets, R)
+
+
+def build1(seed, slug, grade, sort, codes, dom):
+    """1. Klasse: Franken und Rappen erkennen, zählen (bis 20 Fr. bzw. bis 100 Rp.), bezahlen"""
+    R = random.Random(seed)
+    K = D.Kids(R)
+
+    def M(q, g, ws, e):
+        ws = [w for w in dict.fromkeys(ws) if w != g][:3]
+        return C.mcq(q, g, ws, e) if len(ws) == 3 else None
+
+    ALL = [5, 10, 20, 50, 100, 200, 500, 1000, 2000]
+
+    def erkennen():
+        c = R.choice(ALL)
+        g = chf(c)
+        ws = [chf(x) for x in R.sample([x for x in ALL if x != c], 3)]
+        if c >= 1000:
+            return M(geld_svg([c]) + "Ist das eine Münze oder eine Note? Wie viel ist sie wert?", "Note: %s" % g,
+                     ["Münze: %s" % g, "Note: %s" % chf(R.choice([x for x in (1000, 2000) if x != c])), "Münze: %s" % chf(c // 10)],
+                     "Noten gibt es ab 10 Fr. Das ist eine <b>Note: %s</b>." % g)
+        return M(geld_svg([c]) + "Wie viel ist diese Münze wert?", g, ws, "Das ist <b>%s</b>." % g)
+
+    def franken():
+        n = R.randint(2, 5)
+        items = [R.choice([100, 200, 500, 1000]) for _ in range(n)]
+        t = sum(items) // 100
+        if t > 20:
+            return None
+        return M(geld_svg(items) + "Wie viel Geld ist das?", "%d Fr." % t, ["%d Fr." % x for x in (n, t + 1, t - 1, t + 2) if x > 0 and x != t],
+                 "Vom grössten Wert aus zählen: <b>%d Fr.</b>" % t)
+
+    def rappen():
+        n = R.randint(2, 5)
+        items = [R.choice([5, 10, 20, 50]) for _ in range(n)]
+        t = sum(items)
+        if t > 100:
+            return None
+        return M(geld_svg(items) + "Wie viel Geld ist das?", "%d Rp." % t, ["%d Rp." % x for x in (n, t + 5, t - 5, t + 10) if x > 0 and x != t] + ["%d Fr." % t],
+                 "Vom grössten Wert aus zählen: <b>%d Rp.</b>" % t)
+
+    def mehr():
+        a = [R.choice([100, 200, 500]) for _ in range(R.randint(1, 3))]
+        b = [R.choice([100, 200, 500]) for _ in range(R.randint(1, 3))]
+        x, y = K.next()[0], K.next()[0]
+        if sum(a) == sum(b) or x == y:
+            return None
+        g = x if sum(a) > sum(b) else y
+        return M("%s hat %s. %s hat %s. Wer hat mehr Geld?" % (x, " + ".join(chf(v) for v in a), y, " + ".join(chf(v) for v in b)), g,
+                 [y if g == x else x, "Beide gleich viel", "Das kann man nicht sagen"],
+                 "%s hat %s, %s hat %s. <b>%s</b> hat mehr." % (x, chf(sum(a)), y, chf(sum(b)), g))
+
+    DING = [("einen Ball", 3, 9), ("ein Heft", 1, 4), ("eine Glace", 2, 5), ("ein Buch", 6, 15), ("ein Spielzeugauto", 4, 12), ("einen Apfel", 1, 2), ("ein Puzzle", 5, 15)]
+
+    def kaufen():
+        (w, lo, hi), (w2, lo2, hi2) = R.sample(DING, 2)
+        a, b = R.randint(lo, hi), R.randint(lo2, hi2)
+        x, er = K.next()
+        if a + b > 20:
+            return None
+        if R.random() < 0.5:
+            return M("%s kauft %s für %d Fr. und %s für %d Fr. Wie viel kostet beides zusammen?" % (x, w, a, w2, b), "%d Fr." % (a + b),
+                     ["%d Fr." % v for v in (a + b + 1, a + b - 1, abs(a - b), a + b + 2) if v > 0], "%d + %d = <b>%d Fr.</b>" % (a, b, a + b))
+        p = R.choice([10, 20])
+        if a >= p:
+            return None
+        return M("%s kauft %s für %d Fr. %s bezahlt mit einer %d-Franken-Note. Wie viel Rückgeld bekommt %s?" % (x, w, a, er.capitalize(), p, er), "%d Fr." % (p - a),
+                 ["%d Fr." % v for v in (p - a + 1, p - a - 1, a, p + a) if v > 0], "Von %d bis %d ergänzen: <b>%d Fr.</b>" % (a, p, p - a))
+
+    seen = set()
+    sets = [("Münzen und Noten", D.mix(R, seen, [(erkennen, 8), (franken, 6), (rappen, 6)])), ("Franken zählen", D.mix(R, seen, [(franken, 20)])),
+            ("Rappen zählen", D.mix(R, seen, [(rappen, 20)])), ("Wer hat mehr?", D.mix(R, seen, [(mehr, 20)])),
+            ("Einkaufen", D.mix(R, seen, [(kaufen, 20)]))]
+    body = D.lesson(
+        ["In der Schweiz bezahlen wir mit <b>Franken (Fr.)</b> und <b>Rappen (Rp.)</b>.",
+         "Münzen: 5 Rp., 10 Rp., 20 Rp., ½ Fr., 1 Fr., 2 Fr., 5 Fr. Noten: 10 Fr., 20 Fr., 50 Fr. und mehr.",
+         "Beim Zählen beginnen wir mit dem grössten Wert und zählen weiter: 5, 7, 8 Fr.",
+         "Wir zählen den <b>Wert</b>, nicht die Anzahl der Münzen."],
+        [D.example("5 Fr. + 2 Fr. + 1 Fr.", ["5", "5 + 2 = 7", "7 + 1 = 8"], "8 Fr."),
+         D.example("20 Rp. + 20 Rp. + 10 Rp.", ["20 + 20 = 40", "40 + 10 = 50"], "50 Rp.")],
+        [["3 Münzen sind 3 Fr.", "Den Wert jeder Münze addieren"], ["Franken und Rappen zusammenzählen", "Franken und Rappen getrennt zählen"],
+         ["Die 5-Franken-Münze für eine Note halten", "Noten gibt es erst ab 10 Fr."]])
+    faq = [{"q": "Welches Geld lernen Kinder in der 1. Klasse?", "a": "Sie erkennen Münzen und Noten, zählen kleine Beträge in Franken oder in Rappen und spielen Einkaufen."},
+           {"q": "Warum gibt es keine 1-Rappen-Münze?", "a": "Die kleinste Münze ist 5 Rappen. Preise werden an der Kasse auf 5 Rappen gerundet."},
+           {"q": "Wie übt man zu Hause?", "a": "Mit echtem Geld oder Spielgeld einkaufen spielen: Preise zusammenzählen und bezahlen."},
+           {"q": "Was steht im Lehrplan 21 dazu?", "a": "Im 1. Zyklus lernen die Kinder Grössen wie Geldbeträge kennen, vergleichen und mit ihnen rechnen (MA.3.A.1, MA.3.A.2)."}]
+    C.write(slug, grade, sort, codes, dom, "Geld: Franken und Rappen", "Geld",
+            "Mathematik 1. Klasse: Franken und Rappen – Münzen und Noten erkennen, Geld zählen, vergleichen und einkaufen. 100 Übungsaufgaben online und Arbeitsblatt mit Lösungen.",
+            "Wert zählen, nicht Münzen", "Vom grössten Wert aus weiterzählen.", body, faq, sets, R)

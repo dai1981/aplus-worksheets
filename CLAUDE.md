@@ -1884,7 +1884,10 @@ ch_common: from_de の pre(mod) で main の前にモジュールのデータを
 CH / Mathematik / 2. Klasse（Zahlenraum bis 100、Einmaleins。ch_k2.py、geld は FIX で本文・FAQ をスイスの硬貨・紙幣に。5 Fr. は硬貨（Fünffrankenstück）、Noten は 10〜1000 Fr.）
 1. zahlen-bis-100 ✓ 2. zahlen-vergleichen-und-ordnen ✓ 3. plus-und-minus-bis-20 ✓ 4. plus-bis-100 ✓ 5. minus-bis-100 ✓ 6. ergaenzen-bis-100 ✓ 7. multiplizieren-verstehen ✓ 8. einmaleins-mit-2-5-und-10 ✓ 9. kleines-einmaleins ✓
 10. geteilt-aufteilen-und-verteilen ✓ 11. sachaufgaben ✓ 12. geld ✓ 13. laengen ✓ 14. uhrzeit ✓ 15. flaechen-und-koerper ✓ 16. spiegeln-und-symmetrie ✓ 17. zahlenmauern-und-muster ✓ 18. strichlisten-und-diagramme ✓
-CH の次: 1. Klasse、1. Klasse、5.–6. Klasse、Kindergarten、Sekundarstufe I（7.–9. Klasse）。フランス語圏（PER）・イタリア語圏（Ticino）はその後
+CH / Mathematik / 1. Klasse（Zahlenraum bis 20。ch_k1.py、geld は自前（ch_k3_geld.build1））
+1. zahlen-bis-10 ✓ 2. zahlen-bis-20 ✓ 3. zahlen-vergleichen ✓ 4. zerlegen-und-ergaenzen ✓ 5. plus-bis-10 ✓ 6. minus-bis-10 ✓ 7. plus-und-minus-bis-20 ✓ 8. plus-und-minus-ueber-die-10 ✓ 9. verdoppeln-und-halbieren ✓
+10. rechengeschichten-und-sachaufgaben ✓ 11. geld ✓ 12. laengen-vergleichen-und-messen ✓ 13. uhrzeit-und-tagesablauf ✓ 14. formen-und-koerper ✓ 15. lage-und-richtung ✓ 16. muster-und-zahlenfolgen ✓ 17. strichlisten-und-tabellen ✓
+CH の次: 5.–6. Klasse、1. Klasse、5.–6. Klasse、Kindergarten、Sekundarstufe I（7.–9. Klasse）。フランス語圏（PER）・イタリア語圏（Ticino）はその後
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
