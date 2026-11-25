@@ -1,0 +1,1161 @@
+{
+ "slug": "algoritma-temelli-problemler",
+ "title": "Algoritma Temelli Problemler",
+ "seo_title": "Algoritmalar 9. Sınıf Matematik: Çalışma Kâğıdı ve Cevaplı Test",
+ "short_title": "Algoritmalar",
+ "domain": "Algoritma ve Bilişim",
+ "standard_code": "MAT.9.5.1",
+ "standard_url": "https://mufredat.meb.gov.tr/Dosyalar/2026518151640408-matedöp.pdf",
+ "standard_text": "Algoritma temelli yaklaşımlarla problem çözer; tekrar ve koşul yapıları içeren algoritmaları izleyerek çıktıyı bulur. (Türkiye Yüzyılı Maarif Modeli, Ortaöğretim Matematik Dersi Öğretim Programı)",
+ "meta_desc": "9. sınıf algoritma çalışma kâğıdı: tekrar eden adımlar, koşullu yapılar (eğer-değilse), toplam algoritmaları, en büyük ortak böleni bulan Öklid algoritması. 100 soru ve cevap anahtarı.",
+ "key_big": "Adım adım izle",
+ "key_sub": "Değişkenin değerini her adımda bir tabloya yaz.",
+ "body_html": "<h2>Nasıl düşünürüz?</h2><p>Algoritma, bir problemi çözmek için sıralı ve açık adımlardır.</p><p>Tekrar yapısında aynı adımlar belli sayıda ya da bir koşul sağlandıkça yinelenir.</p><p>Koşul yapısında (eğer … ise … değilse …) koşulun doğru ya da yanlış olmasına göre farklı adım uygulanır.</p><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>s ← 3; 4 kez s ← s + 5</p><p class='sn-ex-s'>3 + 4 · 5</p><p class='sn-ex-a'>Cevap: 23</p></div><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>a = 48, b = 18</p><p class='sn-ex-s'>(18, 12) → (12, 6) → (6, 0)</p><p class='sn-ex-a'>Cevap: 6</p></div><h2>Sık yapılan hatalar</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Hata</th><th>Doğrusu</th></tr></thead><tbody><tr><td>Tekrar sayısını bir eksik saymak</td><td>Her tekrarı tabloya yaz</td></tr><tr><td>Koşulda ≤ ile &lt;’yi karıştırmak</td><td>Sınır değeri kontrol et</td></tr><tr><td>Değişkenin eski değerini kullanmak</td><td>Her adımda güncel değeri kullan</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Algoritma ile program farkı nedir?",
+   "a": "Algoritma adımların planıdır; program bu planın bir dilde yazılmış hâlidir."
+  },
+  {
+   "q": "Öklid algoritması neden önemli?",
+   "a": "Bilinen en eski algoritmalardan biridir ve EBOB’u hızlıca bulur."
+  },
+  {
+   "q": "Akış şeması nedir?",
+   "a": "Algoritmanın şekillerle gösterimidir."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Tekrar eden adımlar",
+   "items": [
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 3<br>2. 6 kez tekrarla: s ← s + 2<br>3. s değerini yaz</span>",
+     "c": [
+      "13",
+      "36",
+      "11",
+      "15"
+     ],
+     "a": 3,
+     "e": "3 + 6 · 2 = <b>15</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 9<br>2. 6 kez tekrarla: s ← s + 2<br>3. s değerini yaz</span>",
+     "c": [
+      "108",
+      "17",
+      "19",
+      "21"
+     ],
+     "a": 3,
+     "e": "9 + 6 · 2 = <b>21</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 3<br>2. 3 kez tekrarla: s ← s + 4<br>3. s değerini yaz</span>",
+     "c": [
+      "15",
+      "10",
+      "11",
+      "36"
+     ],
+     "a": 0,
+     "e": "3 + 3 · 4 = <b>15</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 6<br>2. 5 kez tekrarla: s ← s + 6<br>3. s değerini yaz</span>",
+     "c": [
+      "17",
+      "30",
+      "36",
+      "180"
+     ],
+     "a": 2,
+     "e": "6 + 5 · 6 = <b>36</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 3<br>2. 5 kez tekrarla: s ← s + 4<br>3. s değerini yaz</span>",
+     "c": [
+      "12",
+      "19",
+      "23",
+      "60"
+     ],
+     "a": 2,
+     "e": "3 + 5 · 4 = <b>23</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 0<br>2. 5 kez tekrarla: s ← s + 2<br>3. s değerini yaz</span>",
+     "c": [
+      "0",
+      "7",
+      "8",
+      "10"
+     ],
+     "a": 3,
+     "e": "0 + 5 · 2 = <b>10</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 5<br>2. 6 kez tekrarla: s ← s + 5<br>3. s değerini yaz</span>",
+     "c": [
+      "35",
+      "30",
+      "16",
+      "150"
+     ],
+     "a": 0,
+     "e": "5 + 6 · 5 = <b>35</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 2<br>2. 6 kez tekrarla: s ← s + 5<br>3. s değerini yaz</span>",
+     "c": [
+      "13",
+      "27",
+      "32",
+      "60"
+     ],
+     "a": 2,
+     "e": "2 + 6 · 5 = <b>32</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 1<br>2. 6 kez tekrarla: s ← s + 6<br>3. s değerini yaz</span>",
+     "c": [
+      "37",
+      "31",
+      "13",
+      "36"
+     ],
+     "a": 0,
+     "e": "1 + 6 · 6 = <b>37</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 1<br>2. 6 kez tekrarla: s ← s + 5<br>3. s değerini yaz</span>",
+     "c": [
+      "30",
+      "26",
+      "12",
+      "31"
+     ],
+     "a": 3,
+     "e": "1 + 6 · 5 = <b>31</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 1<br>2. 6 kez tekrarla: s ← s + 4<br>3. s değerini yaz</span>",
+     "c": [
+      "24",
+      "21",
+      "11",
+      "25"
+     ],
+     "a": 3,
+     "e": "1 + 6 · 4 = <b>25</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 7<br>2. 3 kez tekrarla: s ← s + 2<br>3. s değerini yaz</span>",
+     "c": [
+      "42",
+      "13",
+      "11",
+      "12"
+     ],
+     "a": 1,
+     "e": "7 + 3 · 2 = <b>13</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 8<br>2. 5 kez tekrarla: s ← s + 2<br>3. s değerini yaz</span>",
+     "c": [
+      "80",
+      "18",
+      "15",
+      "16"
+     ],
+     "a": 1,
+     "e": "8 + 5 · 2 = <b>18</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 9<br>2. 6 kez tekrarla: s ← s + 3<br>3. s değerini yaz</span>",
+     "c": [
+      "27",
+      "18",
+      "162",
+      "24"
+     ],
+     "a": 0,
+     "e": "9 + 6 · 3 = <b>27</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 0<br>2. 4 kez tekrarla: s ← s + 7<br>3. s değerini yaz</span>",
+     "c": [
+      "11",
+      "28",
+      "0",
+      "21"
+     ],
+     "a": 1,
+     "e": "0 + 4 · 7 = <b>28</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 1<br>2. 5 kez tekrarla: s ← s + 3<br>3. s değerini yaz</span>",
+     "c": [
+      "15",
+      "16",
+      "9",
+      "13"
+     ],
+     "a": 1,
+     "e": "1 + 5 · 3 = <b>16</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 6<br>2. 3 kez tekrarla: s ← s + 5<br>3. s değerini yaz</span>",
+     "c": [
+      "21",
+      "90",
+      "14",
+      "16"
+     ],
+     "a": 0,
+     "e": "6 + 3 · 5 = <b>21</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 4<br>2. 4 kez tekrarla: s ← s + 4<br>3. s değerini yaz</span>",
+     "c": [
+      "12",
+      "16",
+      "20",
+      "64"
+     ],
+     "a": 2,
+     "e": "4 + 4 · 4 = <b>20</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 4<br>2. 5 kez tekrarla: s ← s + 3<br>3. s değerini yaz</span>",
+     "c": [
+      "60",
+      "19",
+      "16",
+      "12"
+     ],
+     "a": 1,
+     "e": "4 + 5 · 3 = <b>19</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 3<br>2. 3 kez tekrarla: s ← s + 2<br>3. s değerini yaz</span>",
+     "c": [
+      "18",
+      "7",
+      "9",
+      "8"
+     ],
+     "a": 2,
+     "e": "3 + 3 · 2 = <b>9</b>."
+    }
+   ]
+  },
+  {
+   "title": "Koşullu adımlar",
+   "items": [
+    {
+     "q": "x = −2 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 9 ise y ← 2x<br>Değilse y ← x − 9<br>y değerini yaz</span>",
+     "c": [
+      "−4",
+      "−11",
+      "−10",
+      "11"
+     ],
+     "a": 1,
+     "e": "−2 ≤ 9 olduğundan y = x − 9 → <b>−11</b>."
+    },
+    {
+     "q": "x = −18 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 2 ise y ← 2x<br>Değilse y ← x − 2<br>y değerini yaz</span>",
+     "c": [
+      "−36",
+      "−19",
+      "20",
+      "−20"
+     ],
+     "a": 3,
+     "e": "−18 ≤ 2 olduğundan y = x − 2 → <b>−20</b>."
+    },
+    {
+     "q": "x = −16 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 13 ise y ← 2x<br>Değilse y ← x − 13<br>y değerini yaz</span>",
+     "c": [
+      "29",
+      "−29",
+      "−32",
+      "−28"
+     ],
+     "a": 1,
+     "e": "−16 ≤ 13 olduğundan y = x − 13 → <b>−29</b>."
+    },
+    {
+     "q": "x = 0 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 5 ise y ← 2x<br>Değilse y ← x − 5<br>y değerini yaz</span>",
+     "c": [
+      "−5",
+      "0",
+      "5",
+      "−4"
+     ],
+     "a": 0,
+     "e": "0 ≤ 5 olduğundan y = x − 5 → <b>−5</b>."
+    },
+    {
+     "q": "x = 4 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 6 ise y ← 2x<br>Değilse y ← x − 6<br>y değerini yaz</span>",
+     "c": [
+      "−2",
+      "2",
+      "8",
+      "−1"
+     ],
+     "a": 0,
+     "e": "4 ≤ 6 olduğundan y = x − 6 → <b>−2</b>."
+    },
+    {
+     "q": "x = −8 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 3 ise y ← 2x<br>Değilse y ← x − 3<br>y değerini yaz</span>",
+     "c": [
+      "−11",
+      "−10",
+      "11",
+      "−16"
+     ],
+     "a": 0,
+     "e": "−8 ≤ 3 olduğundan y = x − 3 → <b>−11</b>."
+    },
+    {
+     "q": "x = 17 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 2 ise y ← 2x<br>Değilse y ← x − 2<br>y değerini yaz</span>",
+     "c": [
+      "15",
+      "−34",
+      "34",
+      "35"
+     ],
+     "a": 2,
+     "e": "17 &gt; 2 olduğundan y = 2x → <b>34</b>."
+    },
+    {
+     "q": "x = −7 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 0 ise y ← 2x<br>Değilse y ← x − 0<br>y değerini yaz</span>",
+     "c": [
+      "−14",
+      "−7",
+      "−6",
+      "7"
+     ],
+     "a": 1,
+     "e": "−7 ≤ 0 olduğundan y = x − 0 → <b>−7</b>."
+    },
+    {
+     "q": "x = 30 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 15 ise y ← 2x<br>Değilse y ← x − 15<br>y değerini yaz</span>",
+     "c": [
+      "15",
+      "61",
+      "−60",
+      "60"
+     ],
+     "a": 3,
+     "e": "30 &gt; 15 olduğundan y = 2x → <b>60</b>."
+    },
+    {
+     "q": "x = −14 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 5 ise y ← 2x<br>Değilse y ← x − 5<br>y değerini yaz</span>",
+     "c": [
+      "19",
+      "−28",
+      "−18",
+      "−19"
+     ],
+     "a": 3,
+     "e": "−14 ≤ 5 olduğundan y = x − 5 → <b>−19</b>."
+    },
+    {
+     "q": "x = −16 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 15 ise y ← 2x<br>Değilse y ← x − 15<br>y değerini yaz</span>",
+     "c": [
+      "−31",
+      "31",
+      "−32",
+      "−30"
+     ],
+     "a": 0,
+     "e": "−16 ≤ 15 olduğundan y = x − 15 → <b>−31</b>."
+    },
+    {
+     "q": "x = 16 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 15 ise y ← 2x<br>Değilse y ← x − 15<br>y değerini yaz</span>",
+     "c": [
+      "−32",
+      "33",
+      "1",
+      "32"
+     ],
+     "a": 3,
+     "e": "16 &gt; 15 olduğundan y = 2x → <b>32</b>."
+    },
+    {
+     "q": "x = 14 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 1 ise y ← 2x<br>Değilse y ← x − 1<br>y değerini yaz</span>",
+     "c": [
+      "−28",
+      "29",
+      "13",
+      "28"
+     ],
+     "a": 3,
+     "e": "14 &gt; 1 olduğundan y = 2x → <b>28</b>."
+    },
+    {
+     "q": "x = −15 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 8 ise y ← 2x<br>Değilse y ← x − 8<br>y değerini yaz</span>",
+     "c": [
+      "−22",
+      "−30",
+      "−23",
+      "23"
+     ],
+     "a": 2,
+     "e": "−15 ≤ 8 olduğundan y = x − 8 → <b>−23</b>."
+    },
+    {
+     "q": "x = 30 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 1 ise y ← 2x<br>Değilse y ← x − 1<br>y değerini yaz</span>",
+     "c": [
+      "−60",
+      "61",
+      "60",
+      "29"
+     ],
+     "a": 2,
+     "e": "30 &gt; 1 olduğundan y = 2x → <b>60</b>."
+    },
+    {
+     "q": "x = 3 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 13 ise y ← 2x<br>Değilse y ← x − 13<br>y değerini yaz</span>",
+     "c": [
+      "10",
+      "−9",
+      "−10",
+      "6"
+     ],
+     "a": 2,
+     "e": "3 ≤ 13 olduğundan y = x − 13 → <b>−10</b>."
+    },
+    {
+     "q": "x = 4 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 14 ise y ← 2x<br>Değilse y ← x − 14<br>y değerini yaz</span>",
+     "c": [
+      "−10",
+      "8",
+      "−9",
+      "10"
+     ],
+     "a": 0,
+     "e": "4 ≤ 14 olduğundan y = x − 14 → <b>−10</b>."
+    },
+    {
+     "q": "x = −3 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 8 ise y ← 2x<br>Değilse y ← x − 8<br>y değerini yaz</span>",
+     "c": [
+      "11",
+      "−11",
+      "−6",
+      "−10"
+     ],
+     "a": 1,
+     "e": "−3 ≤ 8 olduğundan y = x − 8 → <b>−11</b>."
+    },
+    {
+     "q": "x = 30 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 14 ise y ← 2x<br>Değilse y ← x − 14<br>y değerini yaz</span>",
+     "c": [
+      "61",
+      "60",
+      "−60",
+      "16"
+     ],
+     "a": 1,
+     "e": "30 &gt; 14 olduğundan y = 2x → <b>60</b>."
+    },
+    {
+     "q": "x = 12 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 7 ise y ← 2x<br>Değilse y ← x − 7<br>y değerini yaz</span>",
+     "c": [
+      "5",
+      "25",
+      "24",
+      "−24"
+     ],
+     "a": 2,
+     "e": "12 &gt; 7 olduğundan y = 2x → <b>24</b>."
+    }
+   ]
+  },
+  {
+   "title": "Toplam algoritmaları",
+   "items": [
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 15 değerlerinin her biri için t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "121",
+      "105",
+      "135",
+      "120"
+     ],
+     "a": 3,
+     "e": "Toplanan sayılar: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 → <b>120</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 12 değerlerinin her biri için i tek ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "25",
+      "36",
+      "48",
+      "78"
+     ],
+     "a": 1,
+     "e": "Toplanan sayılar: 1, 3, 5, 7, 9, 11 → <b>36</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 12 değerlerinin her biri için t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "79",
+      "66",
+      "90",
+      "78"
+     ],
+     "a": 3,
+     "e": "Toplanan sayılar: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 → <b>78</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 13 değerlerinin her biri için t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "78",
+      "104",
+      "91",
+      "92"
+     ],
+     "a": 2,
+     "e": "Toplanan sayılar: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 → <b>91</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 10 değerlerinin her biri için i tek ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "55",
+      "35",
+      "25",
+      "16"
+     ],
+     "a": 2,
+     "e": "Toplanan sayılar: 1, 3, 5, 7, 9 → <b>25</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 5 değerlerinin her biri için i çift ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "15",
+      "6",
+      "11",
+      "2"
+     ],
+     "a": 1,
+     "e": "Toplanan sayılar: 2, 4 → <b>6</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 9 değerlerinin her biri için t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "45",
+      "46",
+      "36",
+      "54"
+     ],
+     "a": 0,
+     "e": "Toplanan sayılar: 1, 2, 3, 4, 5, 6, 7, 8, 9 → <b>45</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 11 değerlerinin her biri için t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "77",
+      "55",
+      "66",
+      "67"
+     ],
+     "a": 2,
+     "e": "Toplanan sayılar: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 → <b>66</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 6 değerlerinin her biri için t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "15",
+      "22",
+      "27",
+      "21"
+     ],
+     "a": 3,
+     "e": "Toplanan sayılar: 1, 2, 3, 4, 5, 6 → <b>21</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 9 değerlerinin her biri için i çift ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "29",
+      "20",
+      "12",
+      "45"
+     ],
+     "a": 1,
+     "e": "Toplanan sayılar: 2, 4, 6, 8 → <b>20</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 8 değerlerinin her biri için i çift ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "20",
+      "28",
+      "36",
+      "12"
+     ],
+     "a": 0,
+     "e": "Toplanan sayılar: 2, 4, 6, 8 → <b>20</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 4 değerlerinin her biri için t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "10",
+      "14",
+      "11",
+      "6"
+     ],
+     "a": 0,
+     "e": "Toplanan sayılar: 1, 2, 3, 4 → <b>10</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 4 değerlerinin her biri için i tek ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "10",
+      "1",
+      "8",
+      "4"
+     ],
+     "a": 3,
+     "e": "Toplanan sayılar: 1, 3 → <b>4</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 9 değerlerinin her biri için i tek ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "16",
+      "34",
+      "45",
+      "25"
+     ],
+     "a": 3,
+     "e": "Toplanan sayılar: 1, 3, 5, 7, 9 → <b>25</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 10 değerlerinin her biri için i çift ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "30",
+      "40",
+      "55",
+      "20"
+     ],
+     "a": 0,
+     "e": "Toplanan sayılar: 2, 4, 6, 8, 10 → <b>30</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 11 değerlerinin her biri için i çift ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "20",
+      "66",
+      "30",
+      "41"
+     ],
+     "a": 2,
+     "e": "Toplanan sayılar: 2, 4, 6, 8, 10 → <b>30</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 10 değerlerinin her biri için t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "55",
+      "45",
+      "56",
+      "65"
+     ],
+     "a": 0,
+     "e": "Toplanan sayılar: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 → <b>55</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 15 değerlerinin her biri için i tek ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "79",
+      "64",
+      "120",
+      "49"
+     ],
+     "a": 1,
+     "e": "Toplanan sayılar: 1, 3, 5, 7, 9, 11, 13, 15 → <b>64</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 7 değerlerinin her biri için i tek ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "28",
+      "9",
+      "16",
+      "23"
+     ],
+     "a": 2,
+     "e": "Toplanan sayılar: 1, 3, 5, 7 → <b>16</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 8 değerlerinin her biri için t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "37",
+      "36",
+      "44",
+      "28"
+     ],
+     "a": 1,
+     "e": "Toplanan sayılar: 1, 2, 3, 4, 5, 6, 7, 8 → <b>36</b>."
+    }
+   ]
+  },
+  {
+   "title": "Öklid algoritması",
+   "items": [
+    {
+     "q": "Algoritma (Öklid): a ← 76, b ← 40; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "36",
+      "4",
+      "8",
+      "40"
+     ],
+     "a": 1,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>4</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 71, b ← 43; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "1",
+      "43",
+      "28",
+      "2"
+     ],
+     "a": 0,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 52, b ← 31; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "21",
+      "1",
+      "2",
+      "31"
+     ],
+     "a": 1,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 89, b ← 62; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "1",
+      "62",
+      "27",
+      "2"
+     ],
+     "a": 0,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 86, b ← 18; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "2",
+      "68",
+      "18",
+      "4"
+     ],
+     "a": 0,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>2</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 98, b ← 26; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "26",
+      "72",
+      "4",
+      "2"
+     ],
+     "a": 3,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>2</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 94, b ← 57; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "37",
+      "1",
+      "2",
+      "57"
+     ],
+     "a": 1,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 97, b ← 57; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "57",
+      "2",
+      "40",
+      "1"
+     ],
+     "a": 3,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 87, b ← 49; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "49",
+      "38",
+      "2",
+      "1"
+     ],
+     "a": 3,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 79, b ← 50; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "29",
+      "2",
+      "50",
+      "1"
+     ],
+     "a": 3,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 95, b ← 64; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "64",
+      "1",
+      "2",
+      "31"
+     ],
+     "a": 1,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 53, b ← 21; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "21",
+      "2",
+      "1",
+      "32"
+     ],
+     "a": 2,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 76, b ← 13; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "1",
+      "2",
+      "13",
+      "63"
+     ],
+     "a": 0,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 93, b ← 15; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "15",
+      "78",
+      "3",
+      "6"
+     ],
+     "a": 2,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>3</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 91, b ← 22; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "69",
+      "22",
+      "1",
+      "2"
+     ],
+     "a": 2,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 90, b ← 62; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "62",
+      "4",
+      "2",
+      "28"
+     ],
+     "a": 2,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>2</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 68, b ← 38; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "30",
+      "4",
+      "38",
+      "2"
+     ],
+     "a": 3,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>2</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 94, b ← 58; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "58",
+      "2",
+      "4",
+      "36"
+     ],
+     "a": 1,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>2</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 87, b ← 34; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "53",
+      "2",
+      "1",
+      "34"
+     ],
+     "a": 2,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    },
+    {
+     "q": "Algoritma (Öklid): a ← 65, b ← 51; b ≠ 0 oldukça (a, b) ← (b, a’nın b ile bölümünden kalan); sonunda a yazılır. Çıktı kaçtır?",
+     "c": [
+      "1",
+      "2",
+      "51",
+      "14"
+     ],
+     "a": 0,
+     "e": "Bu algoritma iki sayının en büyük ortak bölenini bulur: <b>1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Karışık",
+   "items": [
+    {
+     "q": "x = 28 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 2 ise y ← 2x<br>Değilse y ← x − 2<br>y değerini yaz</span>",
+     "c": [
+      "−56",
+      "56",
+      "57",
+      "26"
+     ],
+     "a": 1,
+     "e": "28 &gt; 2 olduğundan y = 2x → <b>56</b>."
+    },
+    {
+     "q": "x = −19 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 13 ise y ← 2x<br>Değilse y ← x − 13<br>y değerini yaz</span>",
+     "c": [
+      "−38",
+      "32",
+      "−31",
+      "−32"
+     ],
+     "a": 3,
+     "e": "−19 ≤ 13 olduğundan y = x − 13 → <b>−32</b>."
+    },
+    {
+     "q": "x = 8 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 9 ise y ← 2x<br>Değilse y ← x − 9<br>y değerini yaz</span>",
+     "c": [
+      "−1",
+      "16",
+      "1",
+      "0"
+     ],
+     "a": 0,
+     "e": "8 ≤ 9 olduğundan y = x − 9 → <b>−1</b>."
+    },
+    {
+     "q": "x = 8 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 5 ise y ← 2x<br>Değilse y ← x − 5<br>y değerini yaz</span>",
+     "c": [
+      "3",
+      "16",
+      "17",
+      "−16"
+     ],
+     "a": 1,
+     "e": "8 &gt; 5 olduğundan y = 2x → <b>16</b>."
+    },
+    {
+     "q": "x = −5 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 10 ise y ← 2x<br>Değilse y ← x − 10<br>y değerini yaz</span>",
+     "c": [
+      "−15",
+      "−10",
+      "15",
+      "−14"
+     ],
+     "a": 0,
+     "e": "−5 ≤ 10 olduğundan y = x − 10 → <b>−15</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 9<br>2. 3 kez tekrarla: s ← s + 7<br>3. s değerini yaz</span>",
+     "c": [
+      "23",
+      "189",
+      "30",
+      "19"
+     ],
+     "a": 2,
+     "e": "9 + 3 · 7 = <b>30</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 9<br>2. 5 kez tekrarla: s ← s + 6<br>3. s değerini yaz</span>",
+     "c": [
+      "20",
+      "39",
+      "33",
+      "270"
+     ],
+     "a": 1,
+     "e": "9 + 5 · 6 = <b>39</b>."
+    },
+    {
+     "q": "x = 25 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 14 ise y ← 2x<br>Değilse y ← x − 14<br>y değerini yaz</span>",
+     "c": [
+      "50",
+      "−50",
+      "11",
+      "51"
+     ],
+     "a": 0,
+     "e": "25 &gt; 14 olduğundan y = 2x → <b>50</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 5 değerlerinin her biri için t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "10",
+      "16",
+      "20",
+      "15"
+     ],
+     "a": 3,
+     "e": "Toplanan sayılar: 1, 2, 3, 4, 5 → <b>15</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 12 değerlerinin her biri için i çift ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "54",
+      "42",
+      "30",
+      "78"
+     ],
+     "a": 1,
+     "e": "Toplanan sayılar: 2, 4, 6, 8, 10, 12 → <b>42</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 14 değerlerinin her biri için i çift ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "105",
+      "42",
+      "70",
+      "56"
+     ],
+     "a": 3,
+     "e": "Toplanan sayılar: 2, 4, 6, 8, 10, 12, 14 → <b>56</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 11 değerlerinin her biri için i tek ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "47",
+      "25",
+      "66",
+      "36"
+     ],
+     "a": 3,
+     "e": "Toplanan sayılar: 1, 3, 5, 7, 9, 11 → <b>36</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 2<br>2. 4 kez tekrarla: s ← s + 6<br>3. s değerini yaz</span>",
+     "c": [
+      "48",
+      "12",
+      "26",
+      "20"
+     ],
+     "a": 2,
+     "e": "2 + 4 · 6 = <b>26</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 7<br>2. 6 kez tekrarla: s ← s + 2<br>3. s değerini yaz</span>",
+     "c": [
+      "17",
+      "15",
+      "19",
+      "84"
+     ],
+     "a": 2,
+     "e": "7 + 6 · 2 = <b>19</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 7<br>2. 4 kez tekrarla: s ← s + 4<br>3. s değerini yaz</span>",
+     "c": [
+      "19",
+      "112",
+      "23",
+      "15"
+     ],
+     "a": 2,
+     "e": "7 + 4 · 4 = <b>23</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 7 değerlerinin her biri için t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "28",
+      "21",
+      "29",
+      "35"
+     ],
+     "a": 0,
+     "e": "Toplanan sayılar: 1, 2, 3, 4, 5, 6, 7 → <b>28</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 0<br>2. 3 kez tekrarla: s ← s + 2<br>3. s değerini yaz</span>",
+     "c": [
+      "4",
+      "6",
+      "5",
+      "0"
+     ],
+     "a": 1,
+     "e": "0 + 3 · 2 = <b>6</b>."
+    },
+    {
+     "q": "Aşağıdaki algoritmanın çıktısı nedir?<span class='code'>1. s ← 1<br>2. 3 kez tekrarla: s ← s + 4<br>3. s değerini yaz</span>",
+     "c": [
+      "13",
+      "8",
+      "9",
+      "12"
+     ],
+     "a": 0,
+     "e": "1 + 3 · 4 = <b>13</b>."
+    },
+    {
+     "q": "Algoritma: t ← 0; i = 1, 2, …, 6 değerlerinin her biri için i tek ise t ← t + i; sonunda t yazılır. Çıktı kaçtır?",
+     "c": [
+      "4",
+      "15",
+      "21",
+      "9"
+     ],
+     "a": 3,
+     "e": "Toplanan sayılar: 1, 3, 5 → <b>9</b>."
+    },
+    {
+     "q": "x = 9 için algoritmanın çıktısı nedir?<span class='code'>Eğer x &gt; 6 ise y ← 2x<br>Değilse y ← x − 6<br>y değerini yaz</span>",
+     "c": [
+      "3",
+      "19",
+      "18",
+      "−18"
+     ],
+     "a": 2,
+     "e": "9 &gt; 6 olduğundan y = 2x → <b>18</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 15,
+ "updated": "2026-11-25",
+ "country": "tr",
+ "subject": "matematik",
+ "grade": "9-sinif"
+}

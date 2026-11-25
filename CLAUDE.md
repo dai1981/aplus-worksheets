@@ -1844,7 +1844,11 @@ TR / Matematik / 1.〜2. Sınıf（İlkokul 2024 程序。1. sınıf は 20 ま�
 2. sınıf: 1. 100e-kadar-sayilar ✓ 2. iki-basamakli-sayilar ✓ 3. sayilari-karsilastirma-ve-siralama ✓ 4. ritmik-sayma ✓ 5. oruntuler ✓ 6. nesne-sayisini-tahmin-etme ✓ 7. butun-yarim-ve-ceyrek ✓ 8. paralarimiz ✓ 9. zaman-olcme ✓ 10. uzunluk-ve-kutle-olcme ✓ 11. toplama-islemi ✓
 12. cikarma-islemi ✓ 13. toplama-ve-cikarma-problemleri ✓ 14. carpma-islemi ✓ 15. bolme-islemi ✓ 16. esitlik ✓ 17. geometrik-cisimler ✓ 18. geometrik-sekiller ✓ 19. sivi-olcme ✓ 20. yon-ve-konum ✓ 21. simetri ✓ 22. veri-toplama-ve-grafikler ✓
 トピック：nesne-sayisini→sayilar、yarim-ve-ceyrek→kesirler、konum→geometri
-TR の次: lise（9〜12）、okul öncesi
+TR / Matematik / 9. Sınıf（Lise。Ortaöğretim Matematik DÖP 2026、tr_common.STD_URL_LISE、DOMAIN に SY Sayılar・N Nicelikler ve Değişimler・ES Eşlik ve Benzerlik・AB Algoritma ve Bilişim）— 単元は tr_s9a（1〜4）・tr_s9b（5〜18）。tr_s9a.reuse(mod, "uN", 名前) で 7.〜8. sınıf の問題関数を使う（tr_s9a.setup が MODS の setup を呼ぶ）。グラフの問題は 1 本だけ描いて式を選ばせる（複数の線はラベルが重なる）
+1. uslu-ifadeler ✓ 2. koklu-ifadeler ✓ 3. gercek-sayi-araliklari ✓ 4. sayi-kumeleri ✓ 5. gercek-sayilarin-islem-ozellikleri ✓ 6. dogrusal-fonksiyonlar ✓ 7. mutlak-deger-fonksiyonu ✓ 8. dogrusal-denklem-ve-esitsizlik-problemleri ✓ 9. ucgende-aci-ve-kenar-ozellikleri ✓
+10. geometrik-donusumler ✓ 11. eslik-ve-benzerlik-kosullari ✓ 12. benzer-ucgenler-olusturma ✓ 13. tales-oklid-ve-pisagor-teoremleri ✓ 14. eslik-ve-benzerlik-problemleri ✓ 15. algoritma-temelli-problemler ✓ 16. mantik-baglaclari-ve-niceleyiciler ✓ 17. tek-nicel-degiskenli-veri ✓ 18. deneysel-ve-teorik-olasilik ✓
+10. sınıf の MAT.10.x（DÖP の PDF の 200000 文字目あたり）: Geometrik Şekiller（trigonometrik oranlar、yardımcı elemanlar、alan、sinüs-kosinüs teoremi）、İki kategorik değişken、Sayılar（asal çarpan・bölen、EBOB-EKOK、kalan）…
+TR の次: 10.〜12. sınıf、okul öncesi
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

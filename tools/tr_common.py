@@ -32,7 +32,12 @@ DOMAIN = {
     "VO": "Veriden Olasılığa",
     "D": "Dönüşüm",
     "C8": "Cebirsel Düşünme ve Değişimler",
+    "SY": "Sayılar",
+    "N": "Nicelikler ve Değişimler",
+    "ES": "Eşlik ve Benzerlik",
+    "AB": "Algoritma ve Bilişim",
 }
+STD_URL_LISE = "https://mufredat.meb.gov.tr/Dosyalar/2026518151640408-matedöp.pdf"
 STD_URL_ORTA = "https://mufredat.meb.gov.tr/Dosyalar/202681491243620-Matematik%20(5-8)%20D%C3%96P.pdf"
 NAMES = ["Elif", "Yusuf", "Zeynep", "Ömer", "Defne", "Emir", "Ecrin", "Kerem", "Eylül", "Mert", "Nehir", "Aras",
          "Asel", "Can", "Duru", "Berk", "Ela", "Furkan", "Ece", "Miraç", "Azra", "Efe", "Hira", "Kuzey"]
@@ -197,7 +202,7 @@ def make_unit(rnd, slug, dom, code, std_text, title, short_title, meta_desc, key
     assert len(key_big) <= 40 and len(key_sub) <= 60, (slug, key_big, key_sub)
     write_unit("tr", "matematik", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
-        "domain": DOMAIN[dom], "standard_code": code, "standard_url": STD_URL_ORTA if int(grade.split("-")[0]) >= 5 else STD_URL,
+        "domain": DOMAIN[dom], "standard_code": code, "standard_url": STD_URL_LISE if int(grade.split("-")[0]) >= 9 else STD_URL_ORTA if int(grade.split("-")[0]) >= 5 else STD_URL,
         "standard_text": std_text, "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
         "body_html": body_html, "faq": faq, "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })

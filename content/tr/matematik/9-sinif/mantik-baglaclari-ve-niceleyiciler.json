@@ -1,0 +1,1161 @@
+{
+ "slug": "mantik-baglaclari-ve-niceleyiciler",
+ "title": "Mantık Bağlaçları ve Niceleyiciler",
+ "seo_title": "Mantık Bağlaçları 9. Sınıf Matematik: Çalışma Kâğıdı ve Cevaplı Test",
+ "short_title": "Mantık Bağlaçları",
+ "domain": "Algoritma ve Bilişim",
+ "standard_code": "MAT.9.5.2, MAT.9.5.3",
+ "standard_url": "https://mufredat.meb.gov.tr/Dosyalar/2026518151640408-matedöp.pdf",
+ "standard_text": "Algoritmik yapılar içerisindeki mantık bağlaçlarını (ve, veya, ise, ancak ve ancak, değil) ve niceleyicileri (her, en az bir) çözümler ve algoritmalarda kullanır. (Türkiye Yüzyılı Maarif Modeli, Ortaöğretim Matematik Dersi Öğretim Programı)",
+ "meta_desc": "9. sınıf mantık bağlaçları ve niceleyiciler çalışma kâğıdı: ve, veya, ise, ancak ve ancak bağlaçlarının doğruluk değerleri, bileşik önermeler, her ve en az bir niceleyicileri, olumsuzlama, algoritmalarda koşullar. 100 soru ve cevap anahtarı.",
+ "key_big": "∧ ve, ∨ veya, ⇒ ise, ∀ her, ∃ en az bir",
+ "key_sub": "Değil alırken ∀ ile ∃ yer değiştirir.",
+ "body_html": "<h2>Nasıl düşünürüz?</h2><p>“ve” (∧) bağlacıyla kurulan önerme yalnızca iki önerme de doğruysa doğrudur. “veya” (∨) en az biri doğruysa doğrudur.</p><p>p ⇒ q yalnızca p doğru, q yanlış iken yanlıştır. p ⇔ q, p ve q aynı değerdeyse doğrudur.</p><p>∀ “her”, ∃ “en az bir” demektir. ∀x için önermenin değili ∃x için koşulun değilidir.</p><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>p ≡ 1, q ≡ 0, p ∧ q</p><p class='sn-ex-s'>İkisi de 1 değil</p><p class='sn-ex-a'>Cevap: 0</p></div><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>∀x ∈ ℝ, x² ≥ 0 değili</p><p class='sn-ex-s'>∀ → ∃</p><p class='sn-ex-s'>≥ → &lt;</p><p class='sn-ex-a'>Cevap: ∃x ∈ ℝ, x² &lt; 0</p></div><h2>Sık yapılan hatalar</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Hata</th><th>Doğrusu</th></tr></thead><tbody><tr><td>“veya”yı “ya … ya …” sanmak</td><td>Matematikte veya ikisi birden doğru olunca da doğrudur</td></tr><tr><td>p ⇒ q’yu p yanlışken yanlış saymak</td><td>p yanlışsa p ⇒ q doğrudur</td></tr><tr><td>Değil alırken niceleyiciyi değiştirmemek</td><td>∀ ↔ ∃</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Önerme nedir?",
+   "a": "Doğru ya da yanlış olduğu kesin olarak söylenebilen ifadedir."
+  },
+  {
+   "q": "Algoritmalarda bağlaçlar nerede kullanılır?",
+   "a": "Koşullu yapılarda (eğer x &gt; 0 ve x &lt; 10 ise …)."
+  },
+  {
+   "q": "De Morgan kuralı nedir?",
+   "a": "(p ∧ q)′ ≡ p′ ∨ q′ ve (p ∨ q)′ ≡ p′ ∧ q′."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Bağlaçlar ve doğruluk değeri",
+   "items": [
+    {
+     "q": "x = 39 için çıktı nedir?<span class='code'>Eğer x &gt; 13 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "HAYIR",
+      "EVET",
+      "Çıktı yoktur",
+      "EVET ve HAYIR"
+     ],
+     "a": 1,
+     "e": "39 &gt; 13: doğru; 39, 3 ile bölünür: doğru; “ve” → <b>EVET</b>."
+    },
+    {
+     "q": "p ≡ 0 ve q ≡ 1 ise p ⇔ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "Belirlenemez",
+      "Hem 0 hem 1",
+      "0",
+      "1"
+     ],
+     "a": 2,
+     "e": "“ancak ve ancak” değerler aynıysa 1: . Cevap: <b>0</b>."
+    },
+    {
+     "q": "p ≡ 0 ve q ≡ 1 ise p ∨ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "Belirlenemez",
+      "Hem 0 hem 1",
+      "0",
+      "1"
+     ],
+     "a": 3,
+     "e": "“veya” en az biri 1 iken 1: . Cevap: <b>1</b>."
+    },
+    {
+     "q": "p ≡ 1 ve q ≡ 0 ise p ∧ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "0",
+      "Hem 0 hem 1",
+      "Belirlenemez",
+      "1"
+     ],
+     "a": 0,
+     "e": "“ve” yalnızca ikisi 1 iken 1: . Cevap: <b>0</b>."
+    },
+    {
+     "q": "x = 34 için çıktı nedir?<span class='code'>Eğer x &gt; 19 ve x, 4 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "Çıktı yoktur",
+      "HAYIR",
+      "EVET",
+      "EVET ve HAYIR"
+     ],
+     "a": 1,
+     "e": "34 &gt; 19: doğru; 34, 4 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "p ≡ 0 ve q ≡ 1 ise p ∧ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "Belirlenemez",
+      "0",
+      "1",
+      "Hem 0 hem 1"
+     ],
+     "a": 1,
+     "e": "“ve” yalnızca ikisi 1 iken 1: . Cevap: <b>0</b>."
+    },
+    {
+     "q": "p ≡ 1 ve q ≡ 1 ise p ⇔ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "0",
+      "Belirlenemez",
+      "1",
+      "Hem 0 hem 1"
+     ],
+     "a": 2,
+     "e": "“ancak ve ancak” değerler aynıysa 1: . Cevap: <b>1</b>."
+    },
+    {
+     "q": "p ≡ 1 ve q ≡ 0 ise p ∨ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "0",
+      "Hem 0 hem 1",
+      "1",
+      "Belirlenemez"
+     ],
+     "a": 2,
+     "e": "“veya” en az biri 1 iken 1: . Cevap: <b>1</b>."
+    },
+    {
+     "q": "p ≡ 0 ve q ≡ 0 ise p ⇒ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "Hem 0 hem 1",
+      "Belirlenemez",
+      "0",
+      "1"
+     ],
+     "a": 3,
+     "e": "“ise” yalnızca 1 ⇒ 0 durumunda 0: . Cevap: <b>1</b>."
+    },
+    {
+     "q": "p ≡ 1 ve q ≡ 1 ise p ∧ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "1",
+      "Hem 0 hem 1",
+      "Belirlenemez",
+      "0"
+     ],
+     "a": 0,
+     "e": "“ve” yalnızca ikisi 1 iken 1: . Cevap: <b>1</b>."
+    },
+    {
+     "q": "p ≡ 0 ve q ≡ 0 ise p ∨ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "0",
+      "Belirlenemez",
+      "Hem 0 hem 1",
+      "1"
+     ],
+     "a": 0,
+     "e": "“veya” en az biri 1 iken 1: . Cevap: <b>0</b>."
+    },
+    {
+     "q": "p ≡ 1 ve q ≡ 1 ise p ∨ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "0",
+      "1",
+      "Belirlenemez",
+      "Hem 0 hem 1"
+     ],
+     "a": 1,
+     "e": "“veya” en az biri 1 iken 1: . Cevap: <b>1</b>."
+    },
+    {
+     "q": "x = 11 için çıktı nedir?<span class='code'>Eğer x &gt; 14 veya x, 5 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "HAYIR",
+      "Çıktı yoktur",
+      "EVET ve HAYIR",
+      "EVET"
+     ],
+     "a": 0,
+     "e": "11 &gt; 14: yanlış; 11, 5 ile bölünür: yanlış; “veya” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 22 için çıktı nedir?<span class='code'>Eğer x &gt; 11 veya x, 5 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "Çıktı yoktur",
+      "HAYIR",
+      "EVET",
+      "EVET ve HAYIR"
+     ],
+     "a": 2,
+     "e": "22 &gt; 11: doğru; 22, 5 ile bölünür: yanlış; “veya” → <b>EVET</b>."
+    },
+    {
+     "q": "p ≡ 1 ve q ≡ 0 ise p ⇔ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "Hem 0 hem 1",
+      "0",
+      "Belirlenemez",
+      "1"
+     ],
+     "a": 1,
+     "e": "“ancak ve ancak” değerler aynıysa 1: . Cevap: <b>0</b>."
+    },
+    {
+     "q": "p ≡ 1 ve q ≡ 1 ise p ⇒ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "1",
+      "0",
+      "Belirlenemez",
+      "Hem 0 hem 1"
+     ],
+     "a": 0,
+     "e": "“ise” yalnızca 1 ⇒ 0 durumunda 0: . Cevap: <b>1</b>."
+    },
+    {
+     "q": "p ≡ 0 ve q ≡ 1 ise p ⇒ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "0",
+      "Belirlenemez",
+      "Hem 0 hem 1",
+      "1"
+     ],
+     "a": 3,
+     "e": "“ise” yalnızca 1 ⇒ 0 durumunda 0: . Cevap: <b>1</b>."
+    },
+    {
+     "q": "p ≡ 0 ve q ≡ 0 ise p ⇔ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "0",
+      "Hem 0 hem 1",
+      "1",
+      "Belirlenemez"
+     ],
+     "a": 2,
+     "e": "“ancak ve ancak” değerler aynıysa 1: . Cevap: <b>1</b>."
+    },
+    {
+     "q": "p ≡ 0 ve q ≡ 0 ise p ∧ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "Hem 0 hem 1",
+      "Belirlenemez",
+      "1",
+      "0"
+     ],
+     "a": 3,
+     "e": "“ve” yalnızca ikisi 1 iken 1: . Cevap: <b>0</b>."
+    },
+    {
+     "q": "p ≡ 1 ve q ≡ 0 ise p ⇒ q önermesinin doğruluk değeri nedir?",
+     "c": [
+      "Belirlenemez",
+      "Hem 0 hem 1",
+      "1",
+      "0"
+     ],
+     "a": 3,
+     "e": "“ise” yalnızca 1 ⇒ 0 durumunda 0: . Cevap: <b>0</b>."
+    }
+   ]
+  },
+  {
+   "title": "Bileşik önermeler",
+   "items": [
+    {
+     "q": "“7 bir çift sayıdır ve 7 &gt; 10” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Önerme değildir",
+      "Yanlış",
+      "Belirlenemez"
+     ],
+     "a": 2,
+     "e": "Birinci yanlış, ikinci yanlış; “ve” → <b>yanlış</b>."
+    },
+    {
+     "q": "“7 bir asal sayıdır veya 7 &gt; 10” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Önerme değildir",
+      "Yanlış",
+      "Belirlenemez",
+      "Doğru"
+     ],
+     "a": 3,
+     "e": "Birinci doğru, ikinci yanlış; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“6 bir çift sayıdır veya 6 sayısı 3 ile tam bölünür” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Önerme değildir",
+      "Belirlenemez",
+      "Doğru",
+      "Yanlış"
+     ],
+     "a": 2,
+     "e": "Birinci doğru, ikinci doğru; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“4 sayısı 3 ile tam bölünür ve 4 bir asal sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Yanlış",
+      "Önerme değildir",
+      "Belirlenemez"
+     ],
+     "a": 1,
+     "e": "Birinci yanlış, ikinci yanlış; “ve” → <b>yanlış</b>."
+    },
+    {
+     "q": "“13 sayısı 3 ile tam bölünür ve 13 bir asal sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Önerme değildir",
+      "Doğru",
+      "Yanlış",
+      "Belirlenemez"
+     ],
+     "a": 2,
+     "e": "Birinci yanlış, ikinci doğru; “ve” → <b>yanlış</b>."
+    },
+    {
+     "q": "“5 sayısı 3 ile tam bölünür veya 5 bir çift sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Önerme değildir",
+      "Belirlenemez",
+      "Doğru",
+      "Yanlış"
+     ],
+     "a": 3,
+     "e": "Birinci yanlış, ikinci yanlış; “veya” → <b>yanlış</b>."
+    },
+    {
+     "q": "“14 &gt; 10 veya 14 bir çift sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Önerme değildir",
+      "Yanlış",
+      "Doğru",
+      "Belirlenemez"
+     ],
+     "a": 2,
+     "e": "Birinci doğru, ikinci doğru; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“14 &gt; 10 veya 14 bir asal sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Yanlış",
+      "Belirlenemez",
+      "Önerme değildir"
+     ],
+     "a": 0,
+     "e": "Birinci doğru, ikinci yanlış; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“6 bir çift sayıdır veya 6 &gt; 10” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Yanlış",
+      "Belirlenemez",
+      "Önerme değildir"
+     ],
+     "a": 0,
+     "e": "Birinci doğru, ikinci yanlış; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“4 &gt; 10 ve 4 sayısı 3 ile tam bölünür” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Önerme değildir",
+      "Belirlenemez",
+      "Doğru",
+      "Yanlış"
+     ],
+     "a": 3,
+     "e": "Birinci yanlış, ikinci yanlış; “ve” → <b>yanlış</b>."
+    },
+    {
+     "q": "“19 bir asal sayıdır ve 19 sayısı 3 ile tam bölünür” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Yanlış",
+      "Belirlenemez",
+      "Önerme değildir"
+     ],
+     "a": 1,
+     "e": "Birinci doğru, ikinci yanlış; “ve” → <b>yanlış</b>."
+    },
+    {
+     "q": "“12 sayısı 3 ile tam bölünür veya 12 &gt; 10” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Belirlenemez",
+      "Doğru",
+      "Önerme değildir",
+      "Yanlış"
+     ],
+     "a": 1,
+     "e": "Birinci doğru, ikinci doğru; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“8 bir çift sayıdır ve 8 bir asal sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Belirlenemez",
+      "Önerme değildir",
+      "Yanlış"
+     ],
+     "a": 3,
+     "e": "Birinci doğru, ikinci yanlış; “ve” → <b>yanlış</b>."
+    },
+    {
+     "q": "“16 bir çift sayıdır veya 16 bir asal sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Yanlış",
+      "Belirlenemez",
+      "Önerme değildir"
+     ],
+     "a": 0,
+     "e": "Birinci doğru, ikinci yanlış; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“11 bir çift sayıdır veya 11 &gt; 10” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Önerme değildir",
+      "Yanlış",
+      "Belirlenemez"
+     ],
+     "a": 0,
+     "e": "Birinci yanlış, ikinci doğru; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“15 sayısı 3 ile tam bölünür veya 15 bir asal sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Belirlenemez",
+      "Önerme değildir",
+      "Yanlış"
+     ],
+     "a": 0,
+     "e": "Birinci doğru, ikinci yanlış; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“7 &gt; 10 veya 7 sayısı 3 ile tam bölünür” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Belirlenemez",
+      "Yanlış",
+      "Önerme değildir",
+      "Doğru"
+     ],
+     "a": 1,
+     "e": "Birinci yanlış, ikinci yanlış; “veya” → <b>yanlış</b>."
+    },
+    {
+     "q": "“10 &gt; 10 ve 10 bir çift sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Önerme değildir",
+      "Yanlış",
+      "Belirlenemez",
+      "Doğru"
+     ],
+     "a": 1,
+     "e": "Birinci yanlış, ikinci doğru; “ve” → <b>yanlış</b>."
+    },
+    {
+     "q": "“16 &gt; 10 veya 16 bir çift sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Önerme değildir",
+      "Yanlış",
+      "Doğru",
+      "Belirlenemez"
+     ],
+     "a": 2,
+     "e": "Birinci doğru, ikinci doğru; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“2 sayısı 3 ile tam bölünür ve 2 &gt; 10” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Önerme değildir",
+      "Belirlenemez",
+      "Doğru",
+      "Yanlış"
+     ],
+     "a": 3,
+     "e": "Birinci yanlış, ikinci yanlış; “ve” → <b>yanlış</b>."
+    }
+   ]
+  },
+  {
+   "title": "Niceleyiciler",
+   "items": [
+    {
+     "q": "“18 sayısı 3 ile tam bölünür veya 18 bir asal sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Belirlenemez",
+      "Doğru",
+      "Önerme değildir"
+     ],
+     "a": 2,
+     "e": "Birinci doğru, ikinci yanlış; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“∀x ∈ ℝ, x² ≥ 0” önermesinin olumsuzu (değili) hangisidir?",
+     "c": [
+      "Hiçbir sayı çift değildir.",
+      "Okula gelmeyen en az bir öğrenci vardır.",
+      "Dikdörtgen olmayan en az bir kare vardır.",
+      "∃x ∈ ℝ, x² &lt; 0"
+     ],
+     "a": 3,
+     "e": "Değil alırken ∀ ↔ ∃ değişir, koşul olumsuzlanır; ∧ ↔ ∨ değişir. Cevap: <b>∃x ∈ ℝ, x² &lt; 0</b>."
+    },
+    {
+     "q": "“∃x ∈ ℤ, 2x = 7” önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Önerme değildir",
+      "Doğru",
+      "Belirlenemez"
+     ],
+     "a": 0,
+     "e": "∀ (her) için tek bir karşı örnek yanlış yapar; ∃ (en az bir) için tek bir örnek doğru yapar. Cevap: <b>Yanlış</b>."
+    },
+    {
+     "q": "“Bütün kareler dikdörtgendir.” önermesinin olumsuzu (değili) hangisidir?",
+     "c": [
+      "p′ ∧ q′",
+      "Okula gelmeyen en az bir öğrenci vardır.",
+      "∀x ∈ ℕ, x + 3 ≠ 1",
+      "Dikdörtgen olmayan en az bir kare vardır."
+     ],
+     "a": 3,
+     "e": "Değil alırken ∀ ↔ ∃ değişir, koşul olumsuzlanır; ∧ ↔ ∨ değişir. Cevap: <b>Dikdörtgen olmayan en az bir kare vardır.</b>."
+    },
+    {
+     "q": "“∀x ∈ ℝ, x² + 1 &gt; 0” önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Yanlış",
+      "Önerme değildir",
+      "Belirlenemez"
+     ],
+     "a": 0,
+     "e": "∀ (her) için tek bir karşı örnek yanlış yapar; ∃ (en az bir) için tek bir örnek doğru yapar. Cevap: <b>Doğru</b>."
+    },
+    {
+     "q": "“p ∧ q” önermesinin olumsuzu (değili) hangisidir?",
+     "c": [
+      "∃x ∈ ℝ, x² &lt; 0",
+      "Okula gelmeyen en az bir öğrenci vardır.",
+      "p′ ∨ q′",
+      "Hiçbir sayı çift değildir."
+     ],
+     "a": 2,
+     "e": "Değil alırken ∀ ↔ ∃ değişir, koşul olumsuzlanır; ∧ ↔ ∨ değişir. Cevap: <b>p′ ∨ q′</b>."
+    },
+    {
+     "q": "“∀x ∈ ℝ, 2x &gt; x” önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Belirlenemez",
+      "Doğru",
+      "Önerme değildir"
+     ],
+     "a": 0,
+     "e": "∀ (her) için tek bir karşı örnek yanlış yapar; ∃ (en az bir) için tek bir örnek doğru yapar. Cevap: <b>Yanlış</b>."
+    },
+    {
+     "q": "“∃x ∈ ℚ, x² = 2” önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Belirlenemez",
+      "Yanlış",
+      "Doğru",
+      "Önerme değildir"
+     ],
+     "a": 1,
+     "e": "∀ (her) için tek bir karşı örnek yanlış yapar; ∃ (en az bir) için tek bir örnek doğru yapar. Cevap: <b>Yanlış</b>."
+    },
+    {
+     "q": "“p ∨ q” önermesinin olumsuzu (değili) hangisidir?",
+     "c": [
+      "Dikdörtgen olmayan en az bir kare vardır.",
+      "p′ ∧ q′",
+      "p′ ∨ q′",
+      "Hiçbir sayı çift değildir."
+     ],
+     "a": 1,
+     "e": "Değil alırken ∀ ↔ ∃ değişir, koşul olumsuzlanır; ∧ ↔ ∨ değişir. Cevap: <b>p′ ∧ q′</b>."
+    },
+    {
+     "q": "“Her öğrenci okula gelmiştir.” önermesinin olumsuzu (değili) hangisidir?",
+     "c": [
+      "p′ ∨ q′",
+      "Okula gelmeyen en az bir öğrenci vardır.",
+      "∀x ∈ ℕ, x + 3 ≠ 1",
+      "Dikdörtgen olmayan en az bir kare vardır."
+     ],
+     "a": 1,
+     "e": "Değil alırken ∀ ↔ ∃ değişir, koşul olumsuzlanır; ∧ ↔ ∨ değişir. Cevap: <b>Okula gelmeyen en az bir öğrenci vardır.</b>."
+    },
+    {
+     "q": "“∃x ∈ ℝ, x² = 2” önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Önerme değildir",
+      "Belirlenemez",
+      "Doğru"
+     ],
+     "a": 3,
+     "e": "∀ (her) için tek bir karşı örnek yanlış yapar; ∃ (en az bir) için tek bir örnek doğru yapar. Cevap: <b>Doğru</b>."
+    },
+    {
+     "q": "“∀x ∈ ℕ, x ≥ 1” önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Belirlenemez",
+      "Önerme değildir",
+      "Doğru"
+     ],
+     "a": 0,
+     "e": "∀ (her) için tek bir karşı örnek yanlış yapar; ∃ (en az bir) için tek bir örnek doğru yapar. Cevap: <b>Yanlış</b>."
+    },
+    {
+     "q": "“∃x ∈ ℕ, x + 3 = 1” önermesinin olumsuzu (değili) hangisidir?",
+     "c": [
+      "Dikdörtgen olmayan en az bir kare vardır.",
+      "p′ ∨ q′",
+      "∀x ∈ ℕ, x + 3 ≠ 1",
+      "∃x ∈ ℝ, x² &lt; 0"
+     ],
+     "a": 2,
+     "e": "Değil alırken ∀ ↔ ∃ değişir, koşul olumsuzlanır; ∧ ↔ ∨ değişir. Cevap: <b>∀x ∈ ℕ, x + 3 ≠ 1</b>."
+    },
+    {
+     "q": "“∀x ∈ ℤ, 2x çifttir.” önermesinin olumsuzu (değili) hangisidir?",
+     "c": [
+      "Dikdörtgen olmayan en az bir kare vardır.",
+      "∀x ∈ ℕ, x + 3 ≠ 1",
+      "Okula gelmeyen en az bir öğrenci vardır.",
+      "∃x ∈ ℤ, 2x çift değildir."
+     ],
+     "a": 3,
+     "e": "Değil alırken ∀ ↔ ∃ değişir, koşul olumsuzlanır; ∧ ↔ ∨ değişir. Cevap: <b>∃x ∈ ℤ, 2x çift değildir.</b>."
+    },
+    {
+     "q": "“3 bir çift sayıdır ve 3 sayısı 3 ile tam bölünür” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Yanlış",
+      "Önerme değildir",
+      "Belirlenemez"
+     ],
+     "a": 1,
+     "e": "Birinci yanlış, ikinci doğru; “ve” → <b>yanlış</b>."
+    },
+    {
+     "q": "“∃x ∈ ℝ, x + 5 = 2” önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Belirlenemez",
+      "Doğru",
+      "Önerme değildir"
+     ],
+     "a": 2,
+     "e": "∀ (her) için tek bir karşı örnek yanlış yapar; ∃ (en az bir) için tek bir örnek doğru yapar. Cevap: <b>Doğru</b>."
+    },
+    {
+     "q": "“∀x ∈ ℤ, x + 0 = x” önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Önerme değildir",
+      "Doğru",
+      "Belirlenemez"
+     ],
+     "a": 2,
+     "e": "∀ (her) için tek bir karşı örnek yanlış yapar; ∃ (en az bir) için tek bir örnek doğru yapar. Cevap: <b>Doğru</b>."
+    },
+    {
+     "q": "“Bazı sayılar çifttir.” önermesinin olumsuzu (değili) hangisidir?",
+     "c": [
+      "Hiçbir sayı çift değildir.",
+      "p′ ∨ q′",
+      "∀x ∈ ℕ, x + 3 ≠ 1",
+      "∃x ∈ ℝ, x² &lt; 0"
+     ],
+     "a": 0,
+     "e": "Değil alırken ∀ ↔ ∃ değişir, koşul olumsuzlanır; ∧ ↔ ∨ değişir. Cevap: <b>Hiçbir sayı çift değildir.</b>."
+    },
+    {
+     "q": "“∃x ∈ ℕ, x &lt; 0” önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Yanlış",
+      "Belirlenemez",
+      "Önerme değildir"
+     ],
+     "a": 1,
+     "e": "∀ (her) için tek bir karşı örnek yanlış yapar; ∃ (en az bir) için tek bir örnek doğru yapar. Cevap: <b>Yanlış</b>."
+    },
+    {
+     "q": "“∀x ∈ ℝ, |x| ≥ 0” önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Önerme değildir",
+      "Belirlenemez",
+      "Yanlış",
+      "Doğru"
+     ],
+     "a": 3,
+     "e": "∀ (her) için tek bir karşı örnek yanlış yapar; ∃ (en az bir) için tek bir örnek doğru yapar. Cevap: <b>Doğru</b>."
+    }
+   ]
+  },
+  {
+   "title": "Algoritmalarda bağlaçlar",
+   "items": [
+    {
+     "q": "x = 38 için çıktı nedir?<span class='code'>Eğer x &gt; 19 ve x, 5 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "Çıktı yoktur",
+      "HAYIR",
+      "EVET"
+     ],
+     "a": 2,
+     "e": "38 &gt; 19: doğru; 38, 5 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 40 için çıktı nedir?<span class='code'>Eğer x &gt; 10 veya x, 5 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "Çıktı yoktur",
+      "HAYIR",
+      "EVET"
+     ],
+     "a": 3,
+     "e": "40 &gt; 10: doğru; 40, 5 ile bölünür: doğru; “veya” → <b>EVET</b>."
+    },
+    {
+     "q": "x = 17 için çıktı nedir?<span class='code'>Eğer x &gt; 7 ve x, 5 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "EVET",
+      "Çıktı yoktur",
+      "HAYIR"
+     ],
+     "a": 3,
+     "e": "17 &gt; 7: doğru; 17, 5 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 12 için çıktı nedir?<span class='code'>Eğer x &gt; 11 veya x, 4 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "EVET",
+      "HAYIR",
+      "Çıktı yoktur"
+     ],
+     "a": 1,
+     "e": "12 &gt; 11: doğru; 12, 4 ile bölünür: doğru; “veya” → <b>EVET</b>."
+    },
+    {
+     "q": "x = 40 için çıktı nedir?<span class='code'>Eğer x &gt; 12 veya x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET",
+      "HAYIR",
+      "EVET ve HAYIR",
+      "Çıktı yoktur"
+     ],
+     "a": 0,
+     "e": "40 &gt; 12: doğru; 40, 3 ile bölünür: yanlış; “veya” → <b>EVET</b>."
+    },
+    {
+     "q": "x = 12 için çıktı nedir?<span class='code'>Eğer x &gt; 10 ve x, 4 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "Çıktı yoktur",
+      "HAYIR",
+      "EVET ve HAYIR",
+      "EVET"
+     ],
+     "a": 3,
+     "e": "12 &gt; 10: doğru; 12, 4 ile bölünür: doğru; “ve” → <b>EVET</b>."
+    },
+    {
+     "q": "x = 12 için çıktı nedir?<span class='code'>Eğer x &gt; 18 veya x, 4 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "EVET",
+      "Çıktı yoktur",
+      "HAYIR"
+     ],
+     "a": 1,
+     "e": "12 &gt; 18: yanlış; 12, 4 ile bölünür: doğru; “veya” → <b>EVET</b>."
+    },
+    {
+     "q": "x = 14 için çıktı nedir?<span class='code'>Eğer x &gt; 9 veya x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "Çıktı yoktur",
+      "EVET",
+      "HAYIR",
+      "EVET ve HAYIR"
+     ],
+     "a": 1,
+     "e": "14 &gt; 9: doğru; 14, 3 ile bölünür: yanlış; “veya” → <b>EVET</b>."
+    },
+    {
+     "q": "x = 2 için çıktı nedir?<span class='code'>Eğer x &gt; 12 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "HAYIR",
+      "EVET",
+      "EVET ve HAYIR",
+      "Çıktı yoktur"
+     ],
+     "a": 0,
+     "e": "2 &gt; 12: yanlış; 2, 3 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 30 için çıktı nedir?<span class='code'>Eğer x &gt; 16 ve x, 4 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "EVET",
+      "HAYIR",
+      "Çıktı yoktur"
+     ],
+     "a": 2,
+     "e": "30 &gt; 16: doğru; 30, 4 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 15 için çıktı nedir?<span class='code'>Eğer x &gt; 12 ve x, 4 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "Çıktı yoktur",
+      "HAYIR",
+      "EVET ve HAYIR",
+      "EVET"
+     ],
+     "a": 1,
+     "e": "15 &gt; 12: doğru; 15, 4 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 17 için çıktı nedir?<span class='code'>Eğer x &gt; 6 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "HAYIR",
+      "Çıktı yoktur",
+      "EVET"
+     ],
+     "a": 1,
+     "e": "17 &gt; 6: doğru; 17, 3 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 34 için çıktı nedir?<span class='code'>Eğer x &gt; 19 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "HAYIR",
+      "EVET ve HAYIR",
+      "Çıktı yoktur",
+      "EVET"
+     ],
+     "a": 0,
+     "e": "34 &gt; 19: doğru; 34, 3 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 4 için çıktı nedir?<span class='code'>Eğer x &gt; 12 ve x, 5 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "Çıktı yoktur",
+      "EVET",
+      "HAYIR"
+     ],
+     "a": 3,
+     "e": "4 &gt; 12: yanlış; 4, 5 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 13 için çıktı nedir?<span class='code'>Eğer x &gt; 20 veya x, 5 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "Çıktı yoktur",
+      "EVET ve HAYIR",
+      "HAYIR",
+      "EVET"
+     ],
+     "a": 2,
+     "e": "13 &gt; 20: yanlış; 13, 5 ile bölünür: yanlış; “veya” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 32 için çıktı nedir?<span class='code'>Eğer x &gt; 18 veya x, 5 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "Çıktı yoktur",
+      "HAYIR",
+      "EVET",
+      "EVET ve HAYIR"
+     ],
+     "a": 2,
+     "e": "32 &gt; 18: doğru; 32, 5 ile bölünür: yanlış; “veya” → <b>EVET</b>."
+    },
+    {
+     "q": "x = 3 için çıktı nedir?<span class='code'>Eğer x &gt; 6 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "HAYIR",
+      "EVET ve HAYIR",
+      "Çıktı yoktur",
+      "EVET"
+     ],
+     "a": 0,
+     "e": "3 &gt; 6: yanlış; 3, 3 ile bölünür: doğru; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 12 için çıktı nedir?<span class='code'>Eğer x &gt; 8 ve x, 2 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "Çıktı yoktur",
+      "EVET ve HAYIR",
+      "HAYIR",
+      "EVET"
+     ],
+     "a": 3,
+     "e": "12 &gt; 8: doğru; 12, 2 ile bölünür: doğru; “ve” → <b>EVET</b>."
+    },
+    {
+     "q": "x = 35 için çıktı nedir?<span class='code'>Eğer x &gt; 15 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "EVET",
+      "HAYIR",
+      "Çıktı yoktur"
+     ],
+     "a": 2,
+     "e": "35 &gt; 15: doğru; 35, 3 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 7 için çıktı nedir?<span class='code'>Eğer x &gt; 9 ve x, 5 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "HAYIR",
+      "EVET",
+      "EVET ve HAYIR",
+      "Çıktı yoktur"
+     ],
+     "a": 0,
+     "e": "7 &gt; 9: yanlış; 7, 5 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    }
+   ]
+  },
+  {
+   "title": "Karışık",
+   "items": [
+    {
+     "q": "“3 sayısı 3 ile tam bölünür veya 3 bir asal sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Önerme değildir",
+      "Doğru",
+      "Belirlenemez",
+      "Yanlış"
+     ],
+     "a": 1,
+     "e": "Birinci doğru, ikinci doğru; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "x = 8 için çıktı nedir?<span class='code'>Eğer x &gt; 10 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "HAYIR",
+      "Çıktı yoktur",
+      "EVET",
+      "EVET ve HAYIR"
+     ],
+     "a": 0,
+     "e": "8 &gt; 10: yanlış; 8, 3 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 2 için çıktı nedir?<span class='code'>Eğer x &gt; 16 veya x, 2 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET",
+      "HAYIR",
+      "EVET ve HAYIR",
+      "Çıktı yoktur"
+     ],
+     "a": 0,
+     "e": "2 &gt; 16: yanlış; 2, 2 ile bölünür: doğru; “veya” → <b>EVET</b>."
+    },
+    {
+     "q": "x = 6 için çıktı nedir?<span class='code'>Eğer x &gt; 14 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "EVET",
+      "HAYIR",
+      "Çıktı yoktur"
+     ],
+     "a": 2,
+     "e": "6 &gt; 14: yanlış; 6, 3 ile bölünür: doğru; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "“20 sayısı 3 ile tam bölünür ve 20 bir çift sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Belirlenemez",
+      "Doğru",
+      "Önerme değildir",
+      "Yanlış"
+     ],
+     "a": 3,
+     "e": "Birinci yanlış, ikinci doğru; “ve” → <b>yanlış</b>."
+    },
+    {
+     "q": "x = 7 için çıktı nedir?<span class='code'>Eğer x &gt; 13 ve x, 5 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "Çıktı yoktur",
+      "HAYIR",
+      "EVET"
+     ],
+     "a": 2,
+     "e": "7 &gt; 13: yanlış; 7, 5 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 40 için çıktı nedir?<span class='code'>Eğer x &gt; 11 ve x, 5 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "HAYIR",
+      "EVET ve HAYIR",
+      "EVET",
+      "Çıktı yoktur"
+     ],
+     "a": 2,
+     "e": "40 &gt; 11: doğru; 40, 5 ile bölünür: doğru; “ve” → <b>EVET</b>."
+    },
+    {
+     "q": "“9 sayısı 3 ile tam bölünür veya 9 &gt; 10” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Belirlenemez",
+      "Önerme değildir",
+      "Doğru"
+     ],
+     "a": 3,
+     "e": "Birinci doğru, ikinci yanlış; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“9 bir çift sayıdır veya 9 sayısı 3 ile tam bölünür” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Belirlenemez",
+      "Önerme değildir",
+      "Doğru"
+     ],
+     "a": 3,
+     "e": "Birinci yanlış, ikinci doğru; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "x = 21 için çıktı nedir?<span class='code'>Eğer x &gt; 11 veya x, 2 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET",
+      "EVET ve HAYIR",
+      "Çıktı yoktur",
+      "HAYIR"
+     ],
+     "a": 0,
+     "e": "21 &gt; 11: doğru; 21, 2 ile bölünür: yanlış; “veya” → <b>EVET</b>."
+    },
+    {
+     "q": "“12 sayısı 3 ile tam bölünür veya 12 bir çift sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Doğru",
+      "Önerme değildir",
+      "Belirlenemez"
+     ],
+     "a": 1,
+     "e": "Birinci doğru, ikinci doğru; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "x = 39 için çıktı nedir?<span class='code'>Eğer x &gt; 7 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "Çıktı yoktur",
+      "EVET ve HAYIR",
+      "HAYIR",
+      "EVET"
+     ],
+     "a": 3,
+     "e": "39 &gt; 7: doğru; 39, 3 ile bölünür: doğru; “ve” → <b>EVET</b>."
+    },
+    {
+     "q": "“20 bir çift sayıdır veya 20 &gt; 10” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Belirlenemez",
+      "Doğru",
+      "Önerme değildir",
+      "Yanlış"
+     ],
+     "a": 1,
+     "e": "Birinci doğru, ikinci doğru; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "x = 36 için çıktı nedir?<span class='code'>Eğer x &gt; 15 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET ve HAYIR",
+      "Çıktı yoktur",
+      "EVET",
+      "HAYIR"
+     ],
+     "a": 2,
+     "e": "36 &gt; 15: doğru; 36, 3 ile bölünür: doğru; “ve” → <b>EVET</b>."
+    },
+    {
+     "q": "“6 sayısı 3 ile tam bölünür ve 6 bir asal sayıdır” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Önerme değildir",
+      "Yanlış",
+      "Belirlenemez"
+     ],
+     "a": 2,
+     "e": "Birinci doğru, ikinci yanlış; “ve” → <b>yanlış</b>."
+    },
+    {
+     "q": "“19 bir çift sayıdır ve 19 sayısı 3 ile tam bölünür” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Belirlenemez",
+      "Önerme değildir",
+      "Doğru"
+     ],
+     "a": 0,
+     "e": "Birinci yanlış, ikinci yanlış; “ve” → <b>yanlış</b>."
+    },
+    {
+     "q": "“13 bir asal sayıdır veya 13 &gt; 10” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Doğru",
+      "Belirlenemez",
+      "Yanlış",
+      "Önerme değildir"
+     ],
+     "a": 0,
+     "e": "Birinci doğru, ikinci doğru; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "“13 bir asal sayıdır veya 13 sayısı 3 ile tam bölünür” bileşik önermesi doğru mu, yanlış mı?",
+     "c": [
+      "Yanlış",
+      "Doğru",
+      "Belirlenemez",
+      "Önerme değildir"
+     ],
+     "a": 1,
+     "e": "Birinci doğru, ikinci yanlış; “veya” → <b>doğru</b>."
+    },
+    {
+     "q": "x = 11 için çıktı nedir?<span class='code'>Eğer x &gt; 18 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "Çıktı yoktur",
+      "HAYIR",
+      "EVET",
+      "EVET ve HAYIR"
+     ],
+     "a": 1,
+     "e": "11 &gt; 18: yanlış; 11, 3 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    },
+    {
+     "q": "x = 38 için çıktı nedir?<span class='code'>Eğer x &gt; 15 ve x, 3 ile tam bölünür ise “EVET” yaz<br>Değilse “HAYIR” yaz</span>",
+     "c": [
+      "EVET",
+      "Çıktı yoktur",
+      "EVET ve HAYIR",
+      "HAYIR"
+     ],
+     "a": 3,
+     "e": "38 &gt; 15: doğru; 38, 3 ile bölünür: yanlış; “ve” → <b>HAYIR</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 16,
+ "updated": "2026-11-25",
+ "country": "tr",
+ "subject": "matematik",
+ "grade": "9-sinif"
+}

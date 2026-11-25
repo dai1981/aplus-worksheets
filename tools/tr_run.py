@@ -12,6 +12,8 @@ import tr_g
 import tr_common as C
 
 SUFFIX = {1: " (Türkiye Yüzyılı Maarif Modeli, İlkokul Matematik Dersi Öğretim Programı)", 2: " (Türkiye Yüzyılı Maarif Modeli, İlkokul Matematik Dersi Öğretim Programı)", 4: " (Türkiye Yüzyılı Maarif Modeli, İlkokul Matematik Dersi Öğretim Programı)"}
+for g in range(9, 13):
+    SUFFIX[g] = " (Türkiye Yüzyılı Maarif Modeli, Ortaöğretim Matematik Dersi Öğretim Programı)"
 for g in range(5, 9):
     SUFFIX[g] = " (Türkiye Yüzyılı Maarif Modeli, Ortaokul Matematik Dersi Öğretim Programı)"
 
