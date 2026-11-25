@@ -777,6 +777,13 @@ function topic_defs($country = null) {
             'in' => '/probab|chance|sample-spaces|likelihood|permutations-and-combinations|expected-value/', 'out' => '/^$/',
             'blurb' => 'Likelihood words, spinners and number cubes, probability as a fraction, experiments and tree diagrams.'),
     );
+    if ($country === 'ng') {
+        // Nigeria (NERDC topic names): open sentences are algebra, LCM is factors and multiples, decimal fractions are decimals
+        $d['algebra']['in'] = substr($d['algebra']['in'], 0, -1) . '|open-sentences/';
+        $d['factors-and-multiples']['in'] = substr($d['factors-and-multiples']['in'], 0, -1) . '|lowest-common-multiple/';
+        $d['multiplication']['out'] = substr($d['multiplication']['out'], 0, -1) . '|lowest-common-multiple/';
+        $d['fractions']['out'] = substr($d['fractions']['out'], 0, -1) . '|^decimal-fractions$/';
+    }
     if ($country === 'in') {
         // India (NCERT chapter names): Real Numbers is HCF, LCM and irrational numbers; Arithmetic Progressions are sequences
         $d['factors-and-multiples']['in'] = substr($d['factors-and-multiples']['in'], 0, -1) . '|^real-numbers$/';
@@ -845,7 +852,7 @@ function topic_defs($country = null) {
 }
 
 /* British spelling for these countries */
-function topic_gb($country) { return in_array($country, array('uk', 'au', 'sg', 'za', 'in'), true); }
+function topic_gb($country) { return in_array($country, array('uk', 'au', 'sg', 'za', 'in', 'ng'), true); }
 
 function topic_name($t, $country) {
     if ($country === 'au' && isset($t['name_au'])) return $t['name_au'];

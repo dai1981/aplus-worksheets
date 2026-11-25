@@ -1959,6 +1959,18 @@ Matematik nivå 4: 1. komplexa-tal-i-rektangular-form ✓ 2. komplexa-tal-i-pola
 Matematik nivå 5: 1. differentialekvationer-av-forsta-ordningen ✓ 2. differentialekvationer-av-andra-ordningen ✓ 3. tillampningar-av-differentialekvationer ✓ 4. mangdlara ✓ 5. kombinatorik ✓ 6. talteori-och-kongruensrakning ✓ 7. talbaser ✓ 8. rekursiva-talfoljder ✓ 9. bevismetoder-och-induktion ✓ 10. grafer-och-natverk ✓
 SE / Matematik は förskoleklass・årskurs 1〜9・gymnasiet（nivå 1c〜5）まで完了。次は GDP 順で次の国（a・b 系列（1a・1b・2a・2b）は必要なら後で）
 
+NG / Mathematics（NERDC 9-Year Basic Education Curriculum。単元の順は Primary の first・second・third term の scheme of work）— country `ng`（name「Nigeria」、lang en、hreflang en-ng、standard「NERDC 9-Year Basic Education Curriculum: Mathematics」）、subject `maths`（name「Mathematics」）、grade `primary-N`（name「Primary N」、unit.php で N+5〜N+6 歳と educationalLevel「Primary school (9-Year Basic Education)」）、A4。
+`python3 tools/ng_p4.py [番号…]`（seed は 150400 + 番号、再利用するモジュールの R は 1509NN）。単元は ng_p4.units() の U(...)、自前の問題は `tools/ng_p4a.py`（skip counting・words・比較・÷10〜50・LCM・HCF・小数・平方・naira と kobo・profit and loss・open sentences・km/m・kg/g・litres/cl・calendar・cardinal points（compass_svg・cp_map）・horizontal/vertical・2D/3D・mode・chance、Roman numerals の rm_write）。
+共通部品は `tools/ng_common.py`（ph_common の写し：ナイジェリアの名前と都市、ng_text（US→英国式の綴り、hundred and、pesos→naira、Grade/Year N→Primary N、learners→pupils、standard form→figures）、localize（他国とフィリピンの名前・地名をナイジェリアのものに）、LEAKS、naira（₦1,250.50）、make（seo_title「X – Primary 4 Mathematics Worksheets with Answers (NERDC)」））。US・UK・SG・PH・AU の生成スクリプトの問題関数を mod() で adopt して再利用。
+1,000 以上はカンマ、小数は点。お金は ₦ と kobo（₦1 = 100 kobo）。容量は litres と cl。INCH の正規表現が「982 in Roman」「205,040 in words」に当たるので、数の直後に in を書かない。
+standard_code は「Primary 4: Number and Numeration」（Number and Numeration／Basic Operations／Algebraic Processes／Measurement／Geometry／Everyday Statistics）、standard_url は https://nerdc.gov.ng/ 。topic_gb() に ng、topics.php に ng の調整（open-sentences→algebra、lowest-common-multiple→factors-and-multiples、decimal-fractions は decimals だけ）
+
+NG / Mathematics / Primary 4
+1. whole-numbers-up-to-one-million ✓ 2. skip-counting ✓ 3. comparing-and-ordering-numbers ✓ 4. roman-numerals ✓ 5. addition-and-subtraction ✓ 6. multiplication ✓ 7. division ✓ 8. lowest-common-multiple ✓
+9. factors-and-highest-common-factor ✓ 10. fractions ✓ 11. equivalent-fractions-and-adding-fractions ✓ 12. decimal-fractions ✓ 13. multiplying-and-dividing-decimals ✓ 14. squares-and-square-roots ✓ 15. estimation-and-rounding ✓
+16. money ✓ 17. open-sentences ✓ 18. length ✓ 19. weight ✓ 20. perimeter-and-area ✓ 21. time ✓ 22. capacity ✓ 23. plane-shapes-symmetry-and-angles ✓ 24. 3d-shapes ✓ 25. everyday-statistics ✓
+NG の次: Primary 5・6（Common Entrance）、Primary 1〜3、JSS 1〜3（BECE）、SSS 1〜3（WAEC・NECO）。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に ng を足す
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
