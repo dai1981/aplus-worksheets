@@ -1754,7 +1754,12 @@ ID / Matematika / Kelas 4（Fase B）
 1. bilangan-cacah-sampai-10000 ✓ 2. membandingkan-dan-mengurutkan-bilangan ✓ 3. menyusun-dan-menguraikan-bilangan ✓ 4. penjumlahan-dan-pengurangan ✓ 5. perkalian-dan-pembagian ✓ 6. faktor-dan-kelipatan ✓
 7. soal-cerita ✓ 8. pecahan ✓ 9. pecahan-senilai ✓ 10. desimal-dan-persen ✓ 11. kalimat-matematika ✓ 12. pola-gambar-dan-pola-bilangan ✓ 13. pengukuran-panjang-dan-berat ✓
 14. luas-dan-volume ✓ 15. bangun-datar ✓ 16. menyusun-dan-mengurai-bangun-datar ✓ 17. piktogram-dan-diagram-batang ✓
-ID の次: Kelas 3（Fase B）、Kelas 5–6（Fase C）、Kelas 1–2（Fase A）…
+ID / Matematika / Kelas 5（Fase C：数は 1.000.000 まで、四則は 100.000 まで、KPK・FPB、分数の四則（分数 × ÷ 自然数）、小数は 1 桁、比と比例、角度、時間、立方体・直方体、マス目の地図、確率）— 生成スクリプトは `tools/id_k5.py [番号…]`（seed は 40500 + sort、問題関数は id_k5a（Bilangan 1〜10）・id_k5b（11〜20）の uN()）。
+id_common.mcq は分数（<span class='fr'>）の誤答が足りないとき分子・分母を 1 ずらして補う。角度の図は gen_au_maths_y5_angles（protractor_svg・angle_fig）、立体は kr_pics56.iso_cubes（「앞」→ depan）と id_k4b.kubus、jaring-jaring は fold() で立方体に折れるか判定（11 種類）
+1. bilangan-cacah-sampai-1000000 ✓ 2. penjumlahan-dan-pengurangan ✓ 3. perkalian ✓ 4. pembagian ✓ 5. kpk-dan-fpb ✓ 6. pecahan-campuran ✓ 7. penjumlahan-dan-pengurangan-pecahan ✓
+8. perkalian-dan-pembagian-pecahan ✓ 9. desimal ✓ 10. soal-cerita-uang ✓ 11. kalimat-matematika ✓ 12. pola-bilangan ✓ 13. rasio-dan-proporsi ✓ 14. keliling-dan-luas-bangun-datar ✓
+15. mengukur-sudut ✓ 16. durasi-waktu ✓ 17. kubus-dan-balok ✓ 18. peta-berpetak ✓ 19. tabel-frekuensi-dan-diagram ✓ 20. peluang ✓
+ID の次: Kelas 6（Fase C の残り）、Kelas 3（Fase B）、Kelas 1–2（Fase A）…
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

@@ -95,6 +95,17 @@ def mcq(q, correct, cands, e):
         pick.append(c)
         if len(pick) == 3:
             break
+    if len(pick) < 3 and correct.count("class='fr'") == 1:
+        m = re.match(r"^(\d*)<span class='fr'><span class='fn'>(\d+)</span><span class='fd'>(\d+)</span></span>(.*)$", correct)
+        if m:
+            w, a, b, tail = m.group(1), int(m.group(2)), int(m.group(3)), m.group(4)
+            for na, nb in ((a + 1, b), (a, b + 1), (a + 2, b), (a, b + 2), (a + 1, b + 1)):
+                c = "%s<span class='fr'><span class='fn'>%d</span><span class='fd'>%d</span></span>%s" % (w, na, nb, tail)
+                if c not in seen and na != nb:
+                    seen.add(c)
+                    pick.append(c)
+                if len(pick) == 3:
+                    break
     if len(pick) < 3 and "<" not in correct:
         m = re.match(r"^(.*?)(\d(?:\d|\.(?=\d{3}))*)([^\d]*)$", correct)
         if m:
