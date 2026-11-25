@@ -1936,6 +1936,12 @@ CH / Mathematik（Deutschschweiz）は Kindergarten〜9. Klasse と Gymnasium 1.
 - jd_word は追加・上書きだけ（INSERT … ON DUPLICATE KEY UPDATE）。DELETE・DROP・ALTER は書かない
 - 移行中: サーバーに単語の .html が残っている間はそちらが優先。削除し終えたら `.htaccess` の `RewriteCond %{REQUEST_FILENAME} !-f` を消す
 
+## apu2.com のトップ・About・プライバシーポリシー（このリポジトリの外。zip で渡してユーザーが上げる）
+
+- 英語（/）と de・fr・it・es・pt・tr（/de/ など）の index.html・about.html は `tools/apu2_top/build_top.py`、privacypolicy.html（13言語のタブ）は `build_pp.py` で作る（出力は tools/apu2_top/out/）。文言と算数の国の一覧は `top_data.py`（MATH・CC・T・A）。en_*.html は元にした英語ページ
+- ja・vi・id・zh・tw・ko・us・uk・au・ca・sg のトップ・About は手で作った別のファイル（言語メニュー・hreflang に de〜tr がまだない）
+- 新しい国の算数を足したら MATH・CC・OWN に足して作り直す
+
 ## 触ってはいけないもの
 
 - `site/worksheets/inc/secret.php`（サーバーにだけある鍵。リポジトリに入れない）
