@@ -1793,7 +1793,10 @@ Kelas 10: 1. eksponen ✓ 2. logaritma ✓ 3. barisan-dan-deret ✓ 4. bunga-maj
 8. sistem-persamaan-linear-tiga-variabel ✓ 9. sistem-pertidaksamaan-linear-dua-variabel ✓ 10. persamaan-dan-fungsi-kuadrat ✓ 11. statistika-data-berkelompok ✓ 12. peluang-kejadian-saling-lepas-dan-saling-bebas ✓
 Kelas 11: 1. komposisi-fungsi-dan-fungsi-invers ✓ 2. persamaan-lingkaran ✓ 3. korelasi-dan-regresi-linear ✓ 4. peluang-bersyarat ✓ 5. polinomial ✓ 6. matriks ✓ 7. fungsi-trigonometri ✓ 8. bilangan-kompleks ✓ 9. ragam-dan-simpangan-baku ✓
 Kelas 12: 1. kaidah-pencacahan ✓ 2. permutasi-dan-kombinasi ✓ 3. limit-fungsi-aljabar ✓ 4. turunan-fungsi-aljabar ✓ 5. aplikasi-turunan ✓ 6. integral-tak-tentu ✓ 7. integral-tentu-dan-luas-daerah ✓ 8. transformasi-geometri-dan-komposisinya ✓ 9. dimensi-tiga ✓
-ID / Matematika は Kelas 1〜12（SD・SMP・SMA）まで完了。次は GDP 順で次の国
+ID / Matematika / TK（TK B、5〜6歳、Fase Fondasi）— grade `tk`（name「TK」、sort 0）。10 まで（数えるのは 20 まで）、とても短い文、ほぼ全問に絵、記号（&lt; &gt;）は使わない。生成スクリプトは `tools/id_tk.py [番号…]`（seed は 40000 + 番号）。id_k12（Kelas 1・2）の問題関数を範囲を絞って再利用し、比べる・分ける・時間（f_common.sky_svg・days_svg）・容量（glasses_svg）・分類・色は自前。id_common.make_unit は grade="tk" で seo_title「… untuk TK: Lembar Kerja …」、unit.php で educationalLevel TK B / Taman Kanak-kanak / PAUD
+1. membilang-sampai-10 ✓ 2. bilangan-sampai-20 ✓ 3. membandingkan-banyak-benda ✓ 4. urutan-bilangan ✓ 5. menambah-benda ✓ 6. mengurangi-benda ✓ 7. membagi-sama-banyak ✓
+8. mengenal-bentuk ✓ 9. posisi-dan-arah ✓ 10. membandingkan-ukuran ✓ 11. waktu-sehari-hari ✓ 12. pola ✓ 13. mengelompokkan-dan-data ✓
+ID / Matematika は TK・Kelas 1〜12（SD・SMP・SMA）まで完了。次は GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

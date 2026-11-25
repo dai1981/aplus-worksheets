@@ -161,9 +161,12 @@ def make_unit(rnd, slug, dom, std_text, title, short_title, meta_desc, key_big, 
             assert k not in allq, ("duplicate question", slug, k)
             allq.add(k)
     balance(sets, rnd)
-    gname = "Kelas " + grade.split("-")[1]
-    school = "SD" if int(grade.split("-")[1]) <= 6 else ("SMP" if int(grade.split("-")[1]) <= 9 else "SMA")
-    seo_title = "%s %s " % (short_title, gname) + school + ": Latihan Soal dan Lembar Kerja dengan Kunci Jawaban"
+    if grade == "tk":
+        seo_title = "%s untuk TK: Lembar Kerja dan Latihan Soal dengan Kunci Jawaban" % short_title
+    else:
+        gname = "Kelas " + grade.split("-")[1]
+        school = "SD" if int(grade.split("-")[1]) <= 6 else ("SMP" if int(grade.split("-")[1]) <= 9 else "SMA")
+        seo_title = "%s %s " % (short_title, gname) + school + ": Latihan Soal dan Lembar Kerja dengan Kunci Jawaban"
     title, seo_title, short_title, meta_desc, key_big, key_sub = map(plain_text, (title, seo_title, short_title, meta_desc, key_big, key_sub))
     assert len(key_big) <= 40 and len(key_sub) <= 60, (slug, key_big, key_sub)
     write_unit("id", "matematika", grade, {
