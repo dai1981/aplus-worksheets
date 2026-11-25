@@ -36,6 +36,11 @@ DOMAIN = {
     "N": "Nicelikler ve Değişimler",
     "ES": "Eşlik ve Benzerlik",
     "AB": "Algoritma ve Bilişim",
+    "SAB": "Sayma, Algoritma ve Bilişim",
+    "AN": "Analitik İnceleme",
+    "GC": "Geometrik Cisimler",
+    "DM": "Değişimin Matematiği",
+    "HV": "Hazır Veriler Üzerinde Çalışma",
 }
 STD_URL_LISE = "https://mufredat.meb.gov.tr/Dosyalar/2026518151640408-matedöp.pdf"
 STD_URL_ORTA = "https://mufredat.meb.gov.tr/Dosyalar/202681491243620-Matematik%20(5-8)%20D%C3%96P.pdf"

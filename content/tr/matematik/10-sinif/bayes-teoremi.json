@@ -1,0 +1,1161 @@
+{
+ "slug": "bayes-teoremi",
+ "title": "Toplam Olasılık ve Bayes Teoremi",
+ "seo_title": "Bayes Teoremi 10. Sınıf Matematik: Çalışma Kâğıdı ve Cevaplı Test",
+ "short_title": "Bayes Teoremi",
+ "domain": "Veriden Olasılığa",
+ "standard_code": "MAT.10.7.2",
+ "standard_url": "https://mufredat.meb.gov.tr/Dosyalar/2026518151640408-matedöp.pdf",
+ "standard_text": "Bayes teoremini kullanarak yeni bir bilgi elde edildiğinde olasılıkların nasıl güncellendiğini inceler; toplam olasılık kuralını uygular. (Türkiye Yüzyılı Maarif Modeli, Ortaöğretim Matematik Dersi Öğretim Programı)",
+ "meta_desc": "10. sınıf bayes teoremi çalışma kâğıdı: ağaç diyagramında olasılık, toplam olasılık kuralı, Bayes teoremi, torba problemleri, tıbbi test sonuçlarını yorumlama. 100 soru ve cevap anahtarı.",
+ "key_big": "P(A | K) = P(A ∩ K) ÷ P(K)",
+ "key_sub": "P(K) tüm dallardan toplanır (toplam olasılık).",
+ "body_html": "<h2>Nasıl düşünürüz?</h2><p>Ağaç diyagramında bir dal boyunca olasılıklar çarpılır; aynı sonuca giden dallar toplanır.</p><p>Toplam olasılık: P(K) = P(A) · P(K | A) + P(B) · P(K | B).</p><p>Bayes teoremi: P(A | K) = P(A) · P(K | A) ÷ P(K). Yeni bilgi (K) ile olasılık güncellenir.</p><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>%60 A, %40 B; kusur %5 ve %10</p><p class='sn-ex-s'>0,03 + 0,04 = 0,07</p><p class='sn-ex-a'>Cevap: P(K) = 7/100</p></div><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>Kusurlu ise A?</p><p class='sn-ex-s'>0,03 ÷ 0,07</p><p class='sn-ex-a'>Cevap: 3/7</p></div><h2>Sık yapılan hatalar</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Hata</th><th>Doğrusu</th></tr></thead><tbody><tr><td>Payda yalnızca bir dalı almak</td><td>Bütün dalları topla</td></tr><tr><td>P(K | A) ile P(A | K)’yı karıştırmak</td><td>Bayes yer değiştirir</td></tr><tr><td>Nadir hastalıkta pozitif testi kesin sanmak</td><td>Yanlış pozitifler çok olabilir</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Bayes kimdir?",
+   "a": "18. yüzyılda yaşamış İngiliz matematikçi Thomas Bayes’tir."
+  },
+  {
+   "q": "Neden şaşırtıcı sonuçlar çıkar?",
+   "a": "Nadir olaylarda yanlış pozitifler gerçek pozitiflerden çok olabilir."
+  },
+  {
+   "q": "Nerede kullanılır?",
+   "a": "Tıp, istenmeyen e-posta filtreleri ve yapay zekâda."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Ağaç diyagramı",
+   "items": [
+    {
+     "q": "Bir öğrenci servise %20 olasılıkla yetişir. Yetişirse derse %90 olasılıkla, yetişemezse %60 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>50</span></span>"
+     ],
+     "a": 3,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %10 olasılıkla yetişir. Yetişirse derse %20 olasılıkla, yetişemezse %60 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %90 olasılıkla yetişir. Yetişirse derse %40 olasılıkla, yetişemezse %20 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %50 olasılıkla yetişir. Yetişirse derse %60 olasılıkla, yetişemezse %20 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %40 olasılıkla yetişir. Yetişirse derse %50 olasılıkla, yetişemezse %90 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %50 olasılıkla yetişir. Yetişirse derse %20 olasılıkla, yetişemezse %70 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %70 olasılıkla yetişir. Yetişirse derse %60 olasılıkla, yetişemezse %20 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span>"
+     ],
+     "a": 0,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %80 olasılıkla yetişir. Yetişirse derse %40 olasılıkla, yetişemezse %40 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %30 olasılıkla yetişir. Yetişirse derse %80 olasılıkla, yetişemezse %50 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>59</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %90 olasılıkla yetişir. Yetişirse derse %70 olasılıkla, yetişemezse %60 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>63</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>69</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>63</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %20 olasılıkla yetişir. Yetişirse derse %90 olasılıkla, yetişemezse %20 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>50</span></span>"
+     ],
+     "a": 3,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %60 olasılıkla yetişir. Yetişirse derse %90 olasılıkla, yetişemezse %70 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %30 olasılıkla yetişir. Yetişirse derse %20 olasılıkla, yetişemezse %30 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %60 olasılıkla yetişir. Yetişirse derse %80 olasılıkla, yetişemezse %90 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %80 olasılıkla yetişir. Yetişirse derse %70 olasılıkla, yetişemezse %90 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>14</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %70 olasılıkla yetişir. Yetişirse derse %50 olasılıkla, yetişemezse %80 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>59</span><span class='fd'>100</span></span>"
+     ],
+     "a": 2,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %30 olasılıkla yetişir. Yetişirse derse %70 olasılıkla, yetişemezse %90 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>100</span></span>"
+     ],
+     "a": 3,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>21</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %90 olasılıkla yetişir. Yetişirse derse %60 olasılıkla, yetişemezse %80 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>50</span></span>"
+     ],
+     "a": 1,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %30 olasılıkla yetişir. Yetişirse derse %50 olasılıkla, yetişemezse %40 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "Bir öğrenci servise %70 olasılıkla yetişir. Yetişirse derse %30 olasılıkla, yetişemezse %90 olasılıkla zamanında girer. Öğrencinin servise yetişip derse zamanında girme olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>100</span></span>"
+     ],
+     "a": 3,
+     "e": "Ağaç diyagramında dal boyunca çarparız: <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>21</span><span class='fd'>100</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Toplam olasılık",
+   "items": [
+    {
+     "q": "Bir fabrikada ürünlerin %40 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %25 kadarı, B’ninkilerin %45 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>100</span></span>"
+     ],
+     "a": 3,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>37</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %40 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %10 kadarı, B’ninkilerin %15 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>13</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %70 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %5 kadarı, B’ninkilerin %25 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>200</span></span>"
+     ],
+     "a": 0,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>11</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %70 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %45 kadarı, B’ninkilerin %20 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>63</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %30 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %15 kadarı, B’ninkilerin %35 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>100</span></span>"
+     ],
+     "a": 3,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>29</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %20 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %45 kadarı, B’ninkilerin %40 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>"
+     ],
+     "a": 1,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>41</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %70 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %40 kadarı, B’ninkilerin %45 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>83</span><span class='fd'>200</span></span>"
+     ],
+     "a": 3,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>83</span><span class='fd'>200</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %80 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %25 kadarı, B’ninkilerin %45 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>29</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %70 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %25 kadarı, B’ninkilerin %10 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>41</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>41</span><span class='fd'>200</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %80 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %30 kadarı, B’ninkilerin %35 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>31</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %30 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %35 kadarı, B’ninkilerin %25 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %80 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %45 kadarı, B’ninkilerin %20 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %40 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %45 kadarı, B’ninkilerin %20 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>50</span></span>"
+     ],
+     "a": 2,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %70 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %10 kadarı, B’ninkilerin %25 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>100</span></span>"
+     ],
+     "a": 2,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>29</span><span class='fd'>200</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %50 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %40 kadarı, B’ninkilerin %20 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %60 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %40 kadarı, B’ninkilerin %30 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>"
+     ],
+     "a": 0,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %60 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %45 kadarı, B’ninkilerin %5 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>100</span></span>"
+     ],
+     "a": 0,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>29</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %30 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %5 kadarı, B’ninkilerin %45 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>33</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %40 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %30 kadarı, B’ninkilerin %20 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %20 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %40 kadarı, B’ninkilerin %30 kadarı kusurludur. Rastgele seçilen bir ürünün kusurlu olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Toplam olasılık: <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Bayes teoremi",
+   "items": [
+    {
+     "q": "Bir fabrikada ürünlerin %70 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %35 kadarı, B’ninkilerin %45 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>76</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>76</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 2450 ÷ 3800 = <b><span class='fr'><span class='fn'>49</span><span class='fd'>76</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %70 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %5 kadarı, B’ninkilerin %30 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 350 ÷ 1250 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %60 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %5 kadarı, B’ninkilerin %35 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 300 ÷ 1700 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>17</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %70 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %30 kadarı, B’ninkilerin %5 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 2100 ÷ 2250 = <b><span class='fr'><span class='fn'>14</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %20 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %15 kadarı, B’ninkilerin %40 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 300 ÷ 3500 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>35</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %40 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %25 kadarı, B’ninkilerin %30 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 1000 ÷ 2800 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %50 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %15 kadarı, B’ninkilerin %40 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 750 ÷ 2750 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %60 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %30 kadarı, B’ninkilerin %20 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span>"
+     ],
+     "a": 0,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 1800 ÷ 2600 = <b><span class='fr'><span class='fn'>9</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %80 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %25 kadarı, B’ninkilerin %40 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 2000 ÷ 2800 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %30 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %15 kadarı, B’ninkilerin %25 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>44</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>44</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 450 ÷ 2200 = <b><span class='fr'><span class='fn'>9</span><span class='fd'>44</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %80 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %45 kadarı, B’ninkilerin %40 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>"
+     ],
+     "a": 0,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 3600 ÷ 4400 = <b><span class='fr'><span class='fn'>9</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %20 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %20 kadarı, B’ninkilerin %10 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 400 ÷ 1200 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %20 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %5 kadarı, B’ninkilerin %35 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 100 ÷ 2900 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>29</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %30 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %10 kadarı, B’ninkilerin %15 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 300 ÷ 1350 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %80 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %5 kadarı, B’ninkilerin %40 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>"
+     ],
+     "a": 0,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 400 ÷ 1200 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %30 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %40 kadarı, B’ninkilerin %20 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 1200 ÷ 2600 = <b><span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %60 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %40 kadarı, B’ninkilerin %30 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 2400 ÷ 3600 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %70 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %15 kadarı, B’ninkilerin %20 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span>"
+     ],
+     "a": 3,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 1050 ÷ 1650 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %80 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %30 kadarı, B’ninkilerin %45 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 2400 ÷ 3300 = <b><span class='fr'><span class='fn'>8</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "Bir fabrikada ürünlerin %20 kadarı A makinesinde, kalanı B makinesinde üretilir. A’nın ürünlerinin %35 kadarı, B’ninkilerin %5 kadarı kusurludur. Seçilen ürün kusurlu ise A’da üretilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>"
+     ],
+     "a": 0,
+     "e": "P(A | K) = P(A) · P(K | A) ÷ P(K) = 700 ÷ 1100 = <b><span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Torbalar",
+   "items": [
+    {
+     "q": "I. torbada 8 kırmızı 3 mavi, II. torbada 6 kırmızı 3 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>23</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>23</span></span>"
+     ],
+     "a": 3,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>8</span><span class='fd'>11</span></span> ÷ (½ · <span class='fr'><span class='fn'>8</span><span class='fd'>11</span></span> + ½ · <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>) = <b><span class='fr'><span class='fn'>12</span><span class='fd'>23</span></span></b>."
+    },
+    {
+     "q": "I. torbada 2 kırmızı 3 mavi, II. torbada 3 kırmızı 4 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> ÷ (½ · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + ½ · <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>) = <b><span class='fr'><span class='fn'>14</span><span class='fd'>29</span></span></b>."
+    },
+    {
+     "q": "I. torbada 2 kırmızı 3 mavi, II. torbada 8 kırmızı 1 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>29</span></span>"
+     ],
+     "a": 1,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> ÷ (½ · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + ½ · <span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>) = <b><span class='fr'><span class='fn'>9</span><span class='fd'>29</span></span></b>."
+    },
+    {
+     "q": "I. torbada 7 kırmızı 6 mavi, II. torbada 1 kırmızı 1 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span> ÷ (½ · <span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span> + ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b><span class='fr'><span class='fn'>14</span><span class='fd'>27</span></span></b>."
+    },
+    {
+     "q": "I. torbada 6 kırmızı 8 mavi, II. torbada 4 kırmızı 1 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>43</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>43</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>"
+     ],
+     "a": 1,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> ÷ (½ · <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> + ½ · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>) = <b><span class='fr'><span class='fn'>15</span><span class='fd'>43</span></span></b>."
+    },
+    {
+     "q": "I. torbada 6 kırmızı 2 mavi, II. torbada 1 kırmızı 5 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> ÷ (½ · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> + ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>) = <b><span class='fr'><span class='fn'>9</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "I. torbada 5 kırmızı 7 mavi, II. torbada 1 kırmızı 7 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> ÷ (½ · <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> + ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>) = <b><span class='fr'><span class='fn'>10</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "I. torbada 5 kırmızı 3 mavi, II. torbada 3 kırmızı 3 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> ÷ (½ · <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> + ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "I. torbada 7 kırmızı 6 mavi, II. torbada 5 kırmızı 3 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>56</span><span class='fd'>121</span></span>"
+     ],
+     "a": 3,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span> ÷ (½ · <span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span> + ½ · <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>) = <b><span class='fr'><span class='fn'>56</span><span class='fd'>121</span></span></b>."
+    },
+    {
+     "q": "I. torbada 4 kırmızı 8 mavi, II. torbada 1 kırmızı 5 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> ÷ (½ · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> + ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>) = <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "I. torbada 1 kırmızı 8 mavi, II. torbada 8 kırmızı 4 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span> ÷ (½ · <span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span> + ½ · <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "I. torbada 4 kırmızı 6 mavi, II. torbada 8 kırmızı 8 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> ÷ (½ · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "I. torbada 1 kırmızı 6 mavi, II. torbada 6 kırmızı 3 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>17</span></span>"
+     ],
+     "a": 3,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span> ÷ (½ · <span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span> + ½ · <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>) = <b><span class='fr'><span class='fn'>3</span><span class='fd'>17</span></span></b>."
+    },
+    {
+     "q": "I. torbada 6 kırmızı 2 mavi, II. torbada 8 kırmızı 8 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> ÷ (½ · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> + ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "I. torbada 8 kırmızı 6 mavi, II. torbada 8 kırmızı 8 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>"
+     ],
+     "a": 0,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> ÷ (½ · <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> + ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "I. torbada 7 kırmızı 6 mavi, II. torbada 5 kırmızı 1 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>107</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>42</span><span class='fd'>107</span></span>"
+     ],
+     "a": 3,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span> ÷ (½ · <span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span> + ½ · <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>) = <b><span class='fr'><span class='fn'>42</span><span class='fd'>107</span></span></b>."
+    },
+    {
+     "q": "I. torbada 8 kırmızı 2 mavi, II. torbada 2 kırmızı 5 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ÷ (½ · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + ½ · <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>) = <b><span class='fr'><span class='fn'>14</span><span class='fd'>19</span></span></b>."
+    },
+    {
+     "q": "I. torbada 5 kırmızı 5 mavi, II. torbada 1 kırmızı 8 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> ÷ (½ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + ½ · <span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>) = <b><span class='fr'><span class='fn'>9</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "I. torbada 3 kırmızı 1 mavi, II. torbada 7 kırmızı 2 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>55</span></span>"
+     ],
+     "a": 2,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> ÷ (½ · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> + ½ · <span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>) = <b><span class='fr'><span class='fn'>27</span><span class='fd'>55</span></span></b>."
+    },
+    {
+     "q": "I. torbada 5 kırmızı 4 mavi, II. torbada 8 kırmızı 7 mavi top vardır. Rastgele bir torba seçilip bir top çekiliyor. Top kırmızı ise I. torbadan çekilmiş olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "P(I | K) = ½ · <span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> ÷ (½ · <span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> + ½ · <span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>) = <b><span class='fr'><span class='fn'>25</span><span class='fd'>49</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Tıbbi testler",
+   "items": [
+    {
+     "q": "Bir toplulukta kişilerin %1 kadarı hastadır. Bir test hastaların %95 kadarında pozitif, sağlıklıların %10 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>217</span></span>",
+      "<span class='fr'><span class='fn'>198</span><span class='fd'>217</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>"
+     ],
+     "a": 1,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>) = 95 ÷ 1085 = <b><span class='fr'><span class='fn'>19</span><span class='fd'>217</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %10 kadarı hastadır. Bir test hastaların %95 kadarında pozitif, sağlıklıların %2 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>95</span><span class='fd'>113</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>113</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>) = 950 ÷ 1130 = <b><span class='fr'><span class='fn'>95</span><span class='fd'>113</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %2 kadarı hastadır. Bir test hastaların %90 kadarında pozitif, sağlıklıların %10 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>58</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>58</span></span>"
+     ],
+     "a": 3,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>49</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>) = 180 ÷ 1160 = <b><span class='fr'><span class='fn'>9</span><span class='fd'>58</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %2 kadarı hastadır. Bir test hastaların %90 kadarında pozitif, sağlıklıların %2 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>94</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>94</span></span>"
+     ],
+     "a": 3,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>49</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>) = 180 ÷ 376 = <b><span class='fr'><span class='fn'>45</span><span class='fd'>94</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %10 kadarı hastadır. Bir test hastaların %80 kadarında pozitif, sağlıklıların %10 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 2,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>) = 800 ÷ 1700 = <b><span class='fr'><span class='fn'>8</span><span class='fd'>17</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %2 kadarı hastadır. Bir test hastaların %95 kadarında pozitif, sağlıklıların %5 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>68</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>68</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>"
+     ],
+     "a": 2,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>49</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>) = 190 ÷ 680 = <b><span class='fr'><span class='fn'>19</span><span class='fd'>68</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %10 kadarı hastadır. Bir test hastaların %90 kadarında pozitif, sağlıklıların %5 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>) = 900 ÷ 1350 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %2 kadarı hastadır. Bir test hastaların %80 kadarında pozitif, sağlıklıların %2 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>89</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>89</span></span>"
+     ],
+     "a": 3,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>49</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>) = 160 ÷ 356 = <b><span class='fr'><span class='fn'>40</span><span class='fd'>89</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %5 kadarı hastadır. Bir test hastaların %95 kadarında pozitif, sağlıklıların %2 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>"
+     ],
+     "a": 1,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>) = 475 ÷ 665 = <b><span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %5 kadarı hastadır. Bir test hastaların %80 kadarında pozitif, sağlıklıların %10 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>) = 400 ÷ 1350 = <b><span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %2 kadarı hastadır. Bir test hastaların %80 kadarında pozitif, sağlıklıların %5 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>65</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>65</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>"
+     ],
+     "a": 2,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>49</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>) = 160 ÷ 650 = <b><span class='fr'><span class='fn'>16</span><span class='fd'>65</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %1 kadarı hastadır. Bir test hastaların %90 kadarında pozitif, sağlıklıların %10 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>) = 90 ÷ 1080 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %10 kadarı hastadır. Bir test hastaların %80 kadarında pozitif, sağlıklıların %5 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>) = 800 ÷ 1250 = <b><span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %2 kadarı hastadır. Bir test hastaların %95 kadarında pozitif, sağlıklıların %10 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>117</span></span>",
+      "<span class='fr'><span class='fn'>98</span><span class='fd'>117</span></span>"
+     ],
+     "a": 2,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>49</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>) = 190 ÷ 1170 = <b><span class='fr'><span class='fn'>19</span><span class='fd'>117</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %2 kadarı hastadır. Bir test hastaların %95 kadarında pozitif, sağlıklıların %2 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>95</span><span class='fd'>193</span></span>",
+      "<span class='fr'><span class='fn'>98</span><span class='fd'>193</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>"
+     ],
+     "a": 1,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>49</span><span class='fd'>50</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>) = 190 ÷ 386 = <b><span class='fr'><span class='fn'>95</span><span class='fd'>193</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %1 kadarı hastadır. Bir test hastaların %90 kadarında pozitif, sağlıklıların %5 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>) = 90 ÷ 585 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %5 kadarı hastadır. Bir test hastaların %80 kadarında pozitif, sağlıklıların %2 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>59</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>59</span></span>"
+     ],
+     "a": 1,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>) = 400 ÷ 590 = <b><span class='fr'><span class='fn'>40</span><span class='fd'>59</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %1 kadarı hastadır. Bir test hastaların %80 kadarında pozitif, sağlıklıların %2 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>139</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>139</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>) = 80 ÷ 278 = <b><span class='fr'><span class='fn'>40</span><span class='fd'>139</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %1 kadarı hastadır. Bir test hastaların %80 kadarında pozitif, sağlıklıların %10 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>107</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>107</span></span>"
+     ],
+     "a": 0,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>) = 80 ÷ 1070 = <b><span class='fr'><span class='fn'>8</span><span class='fd'>107</span></span></b>."
+    },
+    {
+     "q": "Bir toplulukta kişilerin %10 kadarı hastadır. Bir test hastaların %95 kadarında pozitif, sağlıklıların %5 kadarında da yanlışlıkla pozitif çıkıyor. Testi pozitif çıkan birinin hasta olma olasılığı kaçtır?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 2,
+     "e": "P(H | +) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> ÷ (<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>) = 950 ÷ 1400 = <b><span class='fr'><span class='fn'>19</span><span class='fd'>28</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 20,
+ "updated": "2026-11-25",
+ "country": "tr",
+ "subject": "matematik",
+ "grade": "10-sinif"
+}

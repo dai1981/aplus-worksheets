@@ -1,0 +1,1161 @@
+{
+ "slug": "sayma-stratejileri",
+ "title": "Sayma Stratejileri: Permütasyon ve Kombinasyon",
+ "seo_title": "Sayma Stratejileri 10. Sınıf Matematik: Çalışma Kâğıdı ve Cevaplı Test",
+ "short_title": "Sayma Stratejileri",
+ "domain": "Sayma, Algoritma ve Bilişim",
+ "standard_code": "MAT.10.5.1",
+ "standard_url": "https://mufredat.meb.gov.tr/Dosyalar/2026518151640408-matedöp.pdf",
+ "standard_text": "Sayma stratejilerini (toplama ve çarpma yoluyla sayma, sıralama ve seçme) kullanarak olası durumların sayısını belirler. (Türkiye Yüzyılı Maarif Modeli, Ortaöğretim Matematik Dersi Öğretim Programı)",
+ "meta_desc": "10. sınıf sayma stratejileri çalışma kâğıdı: toplama ve çarpma yoluyla sayma, rakamlarla sayı yazma, faktöriyel, sıralama (permütasyon), seçme (kombinasyon). 100 soru ve cevap anahtarı.",
+ "key_big": "Sıra önemliyse sırala, değilse seç",
+ "key_sub": "P(n, r) = n! ÷ (n − r)!, C(n, r) = P(n, r) ÷ r!.",
+ "body_html": "<h2>Nasıl düşünürüz?</h2><p>Birbirini dışlayan seçenekler toplanır (ya o ya bu); art arda yapılan seçimler çarpılır (hem o hem bu).</p><p>n farklı nesne n! biçimde sıralanır. n nesneden r tanesinin sıralanması P(n, r) = n! ÷ (n − r)!’dir.</p><p>Sıra önemli değilse seçim yapılır: C(n, r) = n! ÷ (r! · (n − r)!).</p><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>3 tişört, 4 pantolon</p><p class='sn-ex-s'>3 · 4</p><p class='sn-ex-a'>Cevap: 12</p></div><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>6 kişiden 2 kişilik ekip</p><p class='sn-ex-s'>6 · 5 ÷ 2</p><p class='sn-ex-a'>Cevap: 15</p></div><h2>Sık yapılan hatalar</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Hata</th><th>Doğrusu</th></tr></thead><tbody><tr><td>Sıra önemsizken permütasyon kullanmak</td><td>Ekip, grup → kombinasyon</td></tr><tr><td>İlk basamağa 0 koymak</td><td>Sayılar 0 ile başlamaz</td></tr><tr><td>Toplama ile çarpmayı karıştırmak</td><td>“ya” toplanır, “ve” çarpılır</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "0! kaçtır?",
+   "a": "1’dir."
+  },
+  {
+   "q": "C(n, r) ile C(n, n − r) neden eşit?",
+   "a": "r tanesini seçmek, kalan n − r tanesini dışarıda bırakmakla aynıdır."
+  },
+  {
+   "q": "Sayma neden önemli?",
+   "a": "Olasılık hesaplarının temelidir."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Toplama ve çarpma yoluyla sayma",
+   "items": [
+    {
+     "q": "7 farklı tişört ve 9 farklı pantolonu olan biri kaç farklı biçimde giyinebilir?",
+     "c": [
+      "16",
+      "63",
+      "126",
+      "64"
+     ],
+     "a": 1,
+     "e": "Çarpma yoluyla sayma: 7 · 9 = <b>63</b>."
+    },
+    {
+     "q": "8 farklı kalem, 8 farklı defter ve 5 farklı silgiden birer tane kaç farklı biçimde seçilir?",
+     "c": [
+      "21",
+      "640",
+      "321",
+      "320"
+     ],
+     "a": 3,
+     "e": "Çarpma yoluyla sayma: 8 · 8 · 5 = <b>320</b>."
+    },
+    {
+     "q": "Bir kütüphanede 8 farklı roman ve 4 farklı hikâye kitabı vardır. Bu kitaplardan bir tane kaç farklı biçimde seçilir?",
+     "c": [
+      "32",
+      "11",
+      "12",
+      "13"
+     ],
+     "a": 2,
+     "e": "Ya roman ya hikâye: toplama yoluyla sayma, 8 + 4 = <b>12</b>."
+    },
+    {
+     "q": "Bir lokantada 8 çeşit çorba ve 8 çeşit ana yemek var. Bir çorba ve bir ana yemek kaç farklı biçimde seçilir?",
+     "c": [
+      "64",
+      "128",
+      "16",
+      "65"
+     ],
+     "a": 0,
+     "e": "Çarpma yoluyla sayma: 8 · 8 = <b>64</b>."
+    },
+    {
+     "q": "Bir lokantada 5 çeşit çorba ve 4 çeşit ana yemek var. Bir çorba ve bir ana yemek kaç farklı biçimde seçilir?",
+     "c": [
+      "21",
+      "40",
+      "20",
+      "9"
+     ],
+     "a": 2,
+     "e": "Çarpma yoluyla sayma: 5 · 4 = <b>20</b>."
+    },
+    {
+     "q": "A şehrinden B şehrine 6, B’den C’ye 7 farklı yol var. A’dan B’ye uğrayarak C’ye kaç farklı yoldan gidilir?",
+     "c": [
+      "43",
+      "84",
+      "13",
+      "42"
+     ],
+     "a": 3,
+     "e": "Çarpma yoluyla sayma: 6 · 7 = <b>42</b>."
+    },
+    {
+     "q": "A şehrinden B şehrine 7, B’den C’ye 9 farklı yol var. A’dan B’ye uğrayarak C’ye kaç farklı yoldan gidilir?",
+     "c": [
+      "63",
+      "16",
+      "64",
+      "126"
+     ],
+     "a": 0,
+     "e": "Çarpma yoluyla sayma: 7 · 9 = <b>63</b>."
+    },
+    {
+     "q": "Bir lokantada 4 çeşit çorba ve 6 çeşit ana yemek var. Bir çorba ve bir ana yemek kaç farklı biçimde seçilir?",
+     "c": [
+      "10",
+      "25",
+      "48",
+      "24"
+     ],
+     "a": 3,
+     "e": "Çarpma yoluyla sayma: 4 · 6 = <b>24</b>."
+    },
+    {
+     "q": "9 farklı tişört ve 9 farklı pantolonu olan biri kaç farklı biçimde giyinebilir?",
+     "c": [
+      "18",
+      "81",
+      "82",
+      "162"
+     ],
+     "a": 1,
+     "e": "Çarpma yoluyla sayma: 9 · 9 = <b>81</b>."
+    },
+    {
+     "q": "Bir kütüphanede 9 farklı roman ve 9 farklı hikâye kitabı vardır. Bu kitaplardan bir tane kaç farklı biçimde seçilir?",
+     "c": [
+      "17",
+      "81",
+      "19",
+      "18"
+     ],
+     "a": 3,
+     "e": "Ya roman ya hikâye: toplama yoluyla sayma, 9 + 9 = <b>18</b>."
+    },
+    {
+     "q": "9 farklı kalem, 9 farklı defter ve 9 farklı silgiden birer tane kaç farklı biçimde seçilir?",
+     "c": [
+      "729",
+      "1.458",
+      "730",
+      "27"
+     ],
+     "a": 0,
+     "e": "Çarpma yoluyla sayma: 9 · 9 · 9 = <b>729</b>."
+    },
+    {
+     "q": "Bir kütüphanede 14 farklı roman ve 12 farklı hikâye kitabı vardır. Bu kitaplardan bir tane kaç farklı biçimde seçilir?",
+     "c": [
+      "25",
+      "27",
+      "26",
+      "168"
+     ],
+     "a": 2,
+     "e": "Ya roman ya hikâye: toplama yoluyla sayma, 14 + 12 = <b>26</b>."
+    },
+    {
+     "q": "Bir lokantada 3 çeşit çorba ve 4 çeşit ana yemek var. Bir çorba ve bir ana yemek kaç farklı biçimde seçilir?",
+     "c": [
+      "24",
+      "13",
+      "7",
+      "12"
+     ],
+     "a": 3,
+     "e": "Çarpma yoluyla sayma: 3 · 4 = <b>12</b>."
+    },
+    {
+     "q": "9 farklı kalem, 6 farklı defter ve 2 farklı silgiden birer tane kaç farklı biçimde seçilir?",
+     "c": [
+      "108",
+      "17",
+      "216",
+      "109"
+     ],
+     "a": 0,
+     "e": "Çarpma yoluyla sayma: 9 · 6 · 2 = <b>108</b>."
+    },
+    {
+     "q": "Bir kütüphanede 15 farklı roman ve 11 farklı hikâye kitabı vardır. Bu kitaplardan bir tane kaç farklı biçimde seçilir?",
+     "c": [
+      "25",
+      "27",
+      "26",
+      "165"
+     ],
+     "a": 2,
+     "e": "Ya roman ya hikâye: toplama yoluyla sayma, 15 + 11 = <b>26</b>."
+    },
+    {
+     "q": "Bir kütüphanede 10 farklı roman ve 7 farklı hikâye kitabı vardır. Bu kitaplardan bir tane kaç farklı biçimde seçilir?",
+     "c": [
+      "17",
+      "70",
+      "18",
+      "16"
+     ],
+     "a": 0,
+     "e": "Ya roman ya hikâye: toplama yoluyla sayma, 10 + 7 = <b>17</b>."
+    },
+    {
+     "q": "3 farklı kalem, 9 farklı defter ve 4 farklı silgiden birer tane kaç farklı biçimde seçilir?",
+     "c": [
+      "16",
+      "216",
+      "108",
+      "109"
+     ],
+     "a": 2,
+     "e": "Çarpma yoluyla sayma: 3 · 9 · 4 = <b>108</b>."
+    },
+    {
+     "q": "A şehrinden B şehrine 3, B’den C’ye 6 farklı yol var. A’dan B’ye uğrayarak C’ye kaç farklı yoldan gidilir?",
+     "c": [
+      "36",
+      "18",
+      "19",
+      "9"
+     ],
+     "a": 1,
+     "e": "Çarpma yoluyla sayma: 3 · 6 = <b>18</b>."
+    },
+    {
+     "q": "Bir kütüphanede 11 farklı roman ve 5 farklı hikâye kitabı vardır. Bu kitaplardan bir tane kaç farklı biçimde seçilir?",
+     "c": [
+      "15",
+      "16",
+      "55",
+      "17"
+     ],
+     "a": 1,
+     "e": "Ya roman ya hikâye: toplama yoluyla sayma, 11 + 5 = <b>16</b>."
+    },
+    {
+     "q": "7 farklı kalem, 9 farklı defter ve 8 farklı silgiden birer tane kaç farklı biçimde seçilir?",
+     "c": [
+      "505",
+      "504",
+      "24",
+      "1.008"
+     ],
+     "a": 1,
+     "e": "Çarpma yoluyla sayma: 7 · 9 · 8 = <b>504</b>."
+    }
+   ]
+  },
+  {
+   "title": "Rakamlarla sayı yazma",
+   "items": [
+    {
+     "q": "{0, 1, 2, 3, 5, 6} kümesinin elemanlarıyla rakamları tekrar edebilen 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "180",
+      "186",
+      "120",
+      "216"
+     ],
+     "a": 0,
+     "e": "Birinci basamağa 0 gelemez, diğerlerine 6 seçenek: <b>180</b>."
+    },
+    {
+     "q": "{1, 3, 4, 5} kümesinin elemanlarıyla rakamları tekrar edebilen 2 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "20",
+      "15",
+      "16",
+      "12"
+     ],
+     "a": 2,
+     "e": "Birinci basamağa 4 seçenek, diğerlerine 4 seçenek: <b>16</b>."
+    },
+    {
+     "q": "{0, 1, 2, 3, 7} kümesinin elemanlarıyla rakamları tekrar edebilen 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "60",
+      "105",
+      "125",
+      "100"
+     ],
+     "a": 3,
+     "e": "Birinci basamağa 0 gelemez, diğerlerine 5 seçenek: <b>100</b>."
+    },
+    {
+     "q": "{0, 2, 4, 5, 9} kümesinin elemanlarıyla rakamları tekrar edebilen 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "105",
+      "60",
+      "100",
+      "125"
+     ],
+     "a": 2,
+     "e": "Birinci basamağa 0 gelemez, diğerlerine 5 seçenek: <b>100</b>."
+    },
+    {
+     "q": "{3, 4, 5, 9} kümesinin elemanlarıyla rakamları tekrar edebilen 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "68",
+      "24",
+      "63",
+      "64"
+     ],
+     "a": 3,
+     "e": "Birinci basamağa 4 seçenek, diğerlerine 4 seçenek: <b>64</b>."
+    },
+    {
+     "q": "{0, 4, 6, 8} kümesinin elemanlarıyla rakamları tekrar edebilen 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "24",
+      "64",
+      "48",
+      "52"
+     ],
+     "a": 2,
+     "e": "Birinci basamağa 0 gelemez, diğerlerine 4 seçenek: <b>48</b>."
+    },
+    {
+     "q": "{0, 1, 4, 5, 7, 9} kümesinin elemanlarıyla rakamları tekrar edebilen 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "180",
+      "186",
+      "120",
+      "216"
+     ],
+     "a": 0,
+     "e": "Birinci basamağa 0 gelemez, diğerlerine 6 seçenek: <b>180</b>."
+    },
+    {
+     "q": "{3, 4, 8, 9} kümesinin elemanlarıyla rakamları tekrar edebilen 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "24",
+      "64",
+      "68",
+      "63"
+     ],
+     "a": 1,
+     "e": "Birinci basamağa 4 seçenek, diğerlerine 4 seçenek: <b>64</b>."
+    },
+    {
+     "q": "{1, 3, 4, 6, 7} kümesinin elemanlarıyla rakamları tekrar edebilen 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "60",
+      "125",
+      "124",
+      "130"
+     ],
+     "a": 1,
+     "e": "Birinci basamağa 5 seçenek, diğerlerine 5 seçenek: <b>125</b>."
+    },
+    {
+     "q": "{2, 3, 4, 6, 8} kümesinin elemanlarıyla rakamları tekrar edebilen 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "130",
+      "125",
+      "60",
+      "124"
+     ],
+     "a": 1,
+     "e": "Birinci basamağa 5 seçenek, diğerlerine 5 seçenek: <b>125</b>."
+    },
+    {
+     "q": "{0, 4, 6, 7, 9} kümesinin elemanlarıyla rakamları farklı 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "48",
+      "53",
+      "60",
+      "125"
+     ],
+     "a": 0,
+     "e": "Birinci basamağa 0 gelemez, diğerlerine kalan rakamlar: <b>48</b>."
+    },
+    {
+     "q": "{1, 2, 4, 5, 6, 7} kümesinin elemanlarıyla rakamları tekrar edebilen 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "215",
+      "216",
+      "222",
+      "120"
+     ],
+     "a": 1,
+     "e": "Birinci basamağa 6 seçenek, diğerlerine 6 seçenek: <b>216</b>."
+    },
+    {
+     "q": "{1, 4, 5, 7, 8} kümesinin elemanlarıyla rakamları tekrar edebilen 2 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "20",
+      "30",
+      "24",
+      "25"
+     ],
+     "a": 3,
+     "e": "Birinci basamağa 5 seçenek, diğerlerine 5 seçenek: <b>25</b>."
+    },
+    {
+     "q": "{1, 2, 7, 9} kümesinin elemanlarıyla rakamları farklı 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "23",
+      "64",
+      "28",
+      "24"
+     ],
+     "a": 3,
+     "e": "Birinci basamağa 4 seçenek, diğerlerine kalan rakamlar: <b>24</b>."
+    },
+    {
+     "q": "{0, 3, 4, 6, 8, 9} kümesinin elemanlarıyla rakamları farklı 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "106",
+      "120",
+      "100",
+      "216"
+     ],
+     "a": 2,
+     "e": "Birinci basamağa 0 gelemez, diğerlerine kalan rakamlar: <b>100</b>."
+    },
+    {
+     "q": "{1, 2, 4, 5, 6, 7} kümesinin elemanlarıyla rakamları farklı 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "120",
+      "126",
+      "216",
+      "119"
+     ],
+     "a": 0,
+     "e": "Birinci basamağa 6 seçenek, diğerlerine kalan rakamlar: <b>120</b>."
+    },
+    {
+     "q": "{0, 4, 6, 7} kümesinin elemanlarıyla rakamları farklı 2 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "9",
+      "13",
+      "16",
+      "12"
+     ],
+     "a": 0,
+     "e": "Birinci basamağa 0 gelemez, diğerlerine kalan rakamlar: <b>9</b>."
+    },
+    {
+     "q": "{2, 6, 8, 9} kümesinin elemanlarıyla rakamları farklı 3 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "64",
+      "28",
+      "23",
+      "24"
+     ],
+     "a": 3,
+     "e": "Birinci basamağa 4 seçenek, diğerlerine kalan rakamlar: <b>24</b>."
+    },
+    {
+     "q": "{1, 3, 6, 7} kümesinin elemanlarıyla rakamları tekrar edebilen 2 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "12",
+      "15",
+      "16",
+      "20"
+     ],
+     "a": 2,
+     "e": "Birinci basamağa 4 seçenek, diğerlerine 4 seçenek: <b>16</b>."
+    },
+    {
+     "q": "{0, 2, 6, 9} kümesinin elemanlarıyla rakamları farklı 2 basamaklı kaç doğal sayı yazılabilir?",
+     "c": [
+      "16",
+      "9",
+      "12",
+      "13"
+     ],
+     "a": 1,
+     "e": "Birinci basamağa 0 gelemez, diğerlerine kalan rakamlar: <b>9</b>."
+    }
+   ]
+  },
+  {
+   "title": "Faktöriyel ve sıralama",
+   "items": [
+    {
+     "q": "6 kişilik bir sınıftan 2 kişi başkan, yardımcı olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "720",
+      "15",
+      "36",
+      "30"
+     ],
+     "a": 3,
+     "e": "Sıra önemli: P(6, 2) = <b>30</b>."
+    },
+    {
+     "q": "6! ÷ 4! kaçtır?",
+     "c": [
+      "120",
+      "5",
+      "2",
+      "30"
+     ],
+     "a": 3,
+     "e": "6 · 5 = <b>30</b>."
+    },
+    {
+     "q": "6 kişilik bir sınıftan 3 kişi başkan, yardımcı ve sekreter olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "20",
+      "120",
+      "60",
+      "216"
+     ],
+     "a": 1,
+     "e": "Sıra önemli: P(6, 3) = <b>120</b>."
+    },
+    {
+     "q": "5! ÷ 2! kaçtır?",
+     "c": [
+      "3",
+      "6",
+      "12",
+      "60"
+     ],
+     "a": 3,
+     "e": "5 · 4 · 3 = <b>60</b>."
+    },
+    {
+     "q": "8! ÷ 5! kaçtır?",
+     "c": [
+      "336",
+      "42",
+      "6",
+      "3"
+     ],
+     "a": 0,
+     "e": "8 · 7 · 6 = <b>336</b>."
+    },
+    {
+     "q": "6! ÷ 3! kaçtır?",
+     "c": [
+      "120",
+      "3",
+      "20",
+      "6"
+     ],
+     "a": 0,
+     "e": "6 · 5 · 4 = <b>120</b>."
+    },
+    {
+     "q": "5! ÷ 3! kaçtır?",
+     "c": [
+      "60",
+      "2",
+      "20",
+      "4"
+     ],
+     "a": 2,
+     "e": "5 · 4 = <b>20</b>."
+    },
+    {
+     "q": "4 kişilik bir sınıftan 3 kişi başkan, yardımcı ve sekreter olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "64",
+      "4",
+      "24",
+      "12"
+     ],
+     "a": 2,
+     "e": "Sıra önemli: P(4, 3) = <b>24</b>."
+    },
+    {
+     "q": "7 kişilik bir sınıftan 3 kişi başkan, yardımcı ve sekreter olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "35",
+      "343",
+      "105",
+      "210"
+     ],
+     "a": 3,
+     "e": "Sıra önemli: P(7, 3) = <b>210</b>."
+    },
+    {
+     "q": "8 kişi bir sıraya kaç farklı biçimde dizilir?",
+     "c": [
+      "5.040",
+      "28",
+      "64",
+      "40.320"
+     ],
+     "a": 3,
+     "e": "8! = <b>40.320</b>."
+    },
+    {
+     "q": "4 kişi bir sıraya kaç farklı biçimde dizilir?",
+     "c": [
+      "16",
+      "28",
+      "24",
+      "6"
+     ],
+     "a": 2,
+     "e": "4! = <b>24</b>."
+    },
+    {
+     "q": "7 kişi bir sıraya kaç farklı biçimde dizilir?",
+     "c": [
+      "720",
+      "5.040",
+      "21",
+      "49"
+     ],
+     "a": 1,
+     "e": "7! = <b>5.040</b>."
+    },
+    {
+     "q": "6 kişi bir sıraya kaç farklı biçimde dizilir?",
+     "c": [
+      "15",
+      "720",
+      "120",
+      "36"
+     ],
+     "a": 1,
+     "e": "6! = <b>720</b>."
+    },
+    {
+     "q": "4! ÷ 2! kaçtır?",
+     "c": [
+      "12",
+      "3",
+      "24",
+      "2"
+     ],
+     "a": 0,
+     "e": "4 · 3 = <b>12</b>."
+    },
+    {
+     "q": "8 kişilik bir sınıftan 4 kişi başkan, yardımcı, sekreter ve sayman olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "840",
+      "1.680",
+      "4.096",
+      "70"
+     ],
+     "a": 1,
+     "e": "Sıra önemli: P(8, 4) = <b>1.680</b>."
+    },
+    {
+     "q": "8! ÷ 4! kaçtır?",
+     "c": [
+      "1.680",
+      "4",
+      "24",
+      "210"
+     ],
+     "a": 0,
+     "e": "8 · 7 · 6 · 5 = <b>1.680</b>."
+    },
+    {
+     "q": "7! ÷ 3! kaçtır?",
+     "c": [
+      "4",
+      "24",
+      "840",
+      "120"
+     ],
+     "a": 2,
+     "e": "7 · 6 · 5 · 4 = <b>840</b>."
+    },
+    {
+     "q": "8! ÷ 3! kaçtır?",
+     "c": [
+      "840",
+      "6.720",
+      "5",
+      "120"
+     ],
+     "a": 1,
+     "e": "8 · 7 · 6 · 5 · 4 = <b>6.720</b>."
+    },
+    {
+     "q": "7! ÷ 2! kaçtır?",
+     "c": [
+      "5",
+      "120",
+      "2.520",
+      "360"
+     ],
+     "a": 2,
+     "e": "7 · 6 · 5 · 4 · 3 = <b>2.520</b>."
+    },
+    {
+     "q": "5 kişi bir sıraya kaç farklı biçimde dizilir?",
+     "c": [
+      "120",
+      "24",
+      "10",
+      "25"
+     ],
+     "a": 0,
+     "e": "5! = <b>120</b>."
+    }
+   ]
+  },
+  {
+   "title": "Seçim: sıra önemli mi?",
+   "items": [
+    {
+     "q": "Düzlemde herhangi üçü doğrusal olmayan 11 noktadan 3 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "990",
+      "176",
+      "33",
+      "165"
+     ],
+     "a": 3,
+     "e": "Sıra önemsiz: C(11, 3) = 11! ÷ (3! · 8!) = <b>165</b>."
+    },
+    {
+     "q": "Düzlemde herhangi üçü doğrusal olmayan 5 noktadan 3 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "60",
+      "10",
+      "9",
+      "15"
+     ],
+     "a": 1,
+     "e": "Sıra önemsiz: C(5, 3) = 5! ÷ (3! · 2!) = <b>10</b>."
+    },
+    {
+     "q": "10 kişiden 3 kişilik bir ekip kaç farklı biçimde seçilir?",
+     "c": [
+      "720",
+      "130",
+      "30",
+      "120"
+     ],
+     "a": 3,
+     "e": "Sıra önemsiz: C(10, 3) = 10! ÷ (3! · 7!) = <b>120</b>."
+    },
+    {
+     "q": "7 kişilik bir sınıftan 4 kişi başkan, yardımcı, sekreter ve sayman olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "2.401",
+      "420",
+      "35",
+      "840"
+     ],
+     "a": 3,
+     "e": "Sıra önemli: P(7, 4) = <b>840</b>."
+    },
+    {
+     "q": "5 kişilik bir sınıftan 4 kişi başkan, yardımcı, sekreter ve sayman olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "5",
+      "120",
+      "625",
+      "60"
+     ],
+     "a": 1,
+     "e": "Sıra önemli: P(5, 4) = <b>120</b>."
+    },
+    {
+     "q": "Düzlemde herhangi üçü doğrusal olmayan 5 noktadan 2 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "20",
+      "9",
+      "10",
+      "15"
+     ],
+     "a": 2,
+     "e": "Sıra önemsiz: C(5, 2) = 5! ÷ (2! · 3!) = <b>10</b>."
+    },
+    {
+     "q": "5 kişilik bir sınıftan 3 kişi başkan, yardımcı ve sekreter olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "10",
+      "60",
+      "125",
+      "30"
+     ],
+     "a": 1,
+     "e": "Sıra önemli: P(5, 3) = <b>60</b>."
+    },
+    {
+     "q": "12 farklı meyveden 3 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "220",
+      "36",
+      "232",
+      "1.320"
+     ],
+     "a": 0,
+     "e": "Sıra önemsiz: C(12, 3) = 12! ÷ (3! · 9!) = <b>220</b>."
+    },
+    {
+     "q": "12 kişiden 4 kişilik bir ekip kaç farklı biçimde seçilir?",
+     "c": [
+      "507",
+      "11.880",
+      "495",
+      "48"
+     ],
+     "a": 2,
+     "e": "Sıra önemsiz: C(12, 4) = 12! ÷ (4! · 8!) = <b>495</b>."
+    },
+    {
+     "q": "7 kişilik bir sınıftan 2 kişi başkan, yardımcı olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "21",
+      "49",
+      "42",
+      "5.040"
+     ],
+     "a": 2,
+     "e": "Sıra önemli: P(7, 2) = <b>42</b>."
+    },
+    {
+     "q": "3 kişi bir sıraya kaç farklı biçimde dizilir?",
+     "c": [
+      "9",
+      "2",
+      "3",
+      "6"
+     ],
+     "a": 3,
+     "e": "3! = <b>6</b>."
+    },
+    {
+     "q": "6 kişilik bir sınıftan 4 kişi başkan, yardımcı, sekreter ve sayman olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "1.296",
+      "360",
+      "15",
+      "180"
+     ],
+     "a": 1,
+     "e": "Sıra önemli: P(6, 4) = <b>360</b>."
+    },
+    {
+     "q": "3 kişilik bir sınıftan 3 kişi başkan, yardımcı ve sekreter olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "6",
+      "3",
+      "1",
+      "27"
+     ],
+     "a": 0,
+     "e": "Sıra önemli: P(3, 3) = <b>6</b>."
+    },
+    {
+     "q": "Düzlemde herhangi üçü doğrusal olmayan 12 noktadan 3 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "220",
+      "1.320",
+      "232",
+      "36"
+     ],
+     "a": 0,
+     "e": "Sıra önemsiz: C(12, 3) = 12! ÷ (3! · 9!) = <b>220</b>."
+    },
+    {
+     "q": "11 kişiden 2 kişilik bir ekip kaç farklı biçimde seçilir?",
+     "c": [
+      "55",
+      "22",
+      "66",
+      "110"
+     ],
+     "a": 0,
+     "e": "Sıra önemsiz: C(11, 2) = 11! ÷ (2! · 9!) = <b>55</b>."
+    },
+    {
+     "q": "Düzlemde herhangi üçü doğrusal olmayan 7 noktadan 3 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "35",
+      "210",
+      "42",
+      "21"
+     ],
+     "a": 0,
+     "e": "Sıra önemsiz: C(7, 3) = 7! ÷ (3! · 4!) = <b>35</b>."
+    },
+    {
+     "q": "8 kişilik bir sınıftan 3 kişi başkan, yardımcı ve sekreter olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "168",
+      "56",
+      "336",
+      "512"
+     ],
+     "a": 2,
+     "e": "Sıra önemli: P(8, 3) = <b>336</b>."
+    },
+    {
+     "q": "4 kişilik bir sınıftan 4 kişi başkan, yardımcı, sekreter ve sayman olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "256",
+      "12",
+      "1",
+      "24"
+     ],
+     "a": 3,
+     "e": "Sıra önemli: P(4, 4) = <b>24</b>."
+    },
+    {
+     "q": "5 kişilik bir sınıftan 2 kişi başkan, yardımcı olarak kaç farklı biçimde seçilir?",
+     "c": [
+      "120",
+      "10",
+      "20",
+      "25"
+     ],
+     "a": 2,
+     "e": "Sıra önemli: P(5, 2) = <b>20</b>."
+    },
+    {
+     "q": "4 farklı meyveden 3 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "12",
+      "4",
+      "8",
+      "24"
+     ],
+     "a": 1,
+     "e": "Sıra önemsiz: C(4, 3) = 4! ÷ (3! · 1!) = <b>4</b>."
+    }
+   ]
+  },
+  {
+   "title": "Kombinasyon",
+   "items": [
+    {
+     "q": "8 farklı meyveden 3 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "56",
+      "336",
+      "24",
+      "64"
+     ],
+     "a": 0,
+     "e": "Sıra önemsiz: C(8, 3) = 8! ÷ (3! · 5!) = <b>56</b>."
+    },
+    {
+     "q": "Düzlemde herhangi üçü doğrusal olmayan 12 noktadan 2 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "78",
+      "24",
+      "132",
+      "66"
+     ],
+     "a": 3,
+     "e": "Sıra önemsiz: C(12, 2) = 12! ÷ (2! · 10!) = <b>66</b>."
+    },
+    {
+     "q": "Düzlemde herhangi üçü doğrusal olmayan 9 noktadan 3 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "27",
+      "504",
+      "84",
+      "93"
+     ],
+     "a": 2,
+     "e": "Sıra önemsiz: C(9, 3) = 9! ÷ (3! · 6!) = <b>84</b>."
+    },
+    {
+     "q": "Düzlemde herhangi üçü doğrusal olmayan 11 noktadan 2 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "110",
+      "22",
+      "55",
+      "66"
+     ],
+     "a": 2,
+     "e": "Sıra önemsiz: C(11, 2) = 11! ÷ (2! · 9!) = <b>55</b>."
+    },
+    {
+     "q": "Düzlemde herhangi üçü doğrusal olmayan 4 noktadan 2 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "10",
+      "6",
+      "8",
+      "12"
+     ],
+     "a": 1,
+     "e": "Sıra önemsiz: C(4, 2) = 4! ÷ (2! · 2!) = <b>6</b>."
+    },
+    {
+     "q": "7 farklı meyveden 3 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "210",
+      "35",
+      "21",
+      "42"
+     ],
+     "a": 1,
+     "e": "Sıra önemsiz: C(7, 3) = 7! ÷ (3! · 4!) = <b>35</b>."
+    },
+    {
+     "q": "6 kişiden 2 kişilik bir ekip kaç farklı biçimde seçilir?",
+     "c": [
+      "12",
+      "21",
+      "30",
+      "15"
+     ],
+     "a": 3,
+     "e": "Sıra önemsiz: C(6, 2) = 6! ÷ (2! · 4!) = <b>15</b>."
+    },
+    {
+     "q": "9 farklı meyveden 3 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "504",
+      "27",
+      "93",
+      "84"
+     ],
+     "a": 3,
+     "e": "Sıra önemsiz: C(9, 3) = 9! ÷ (3! · 6!) = <b>84</b>."
+    },
+    {
+     "q": "Düzlemde herhangi üçü doğrusal olmayan 8 noktadan 4 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "32",
+      "70",
+      "1.680",
+      "78"
+     ],
+     "a": 1,
+     "e": "Sıra önemsiz: C(8, 4) = 8! ÷ (4! · 4!) = <b>70</b>."
+    },
+    {
+     "q": "12 kişiden 3 kişilik bir ekip kaç farklı biçimde seçilir?",
+     "c": [
+      "1.320",
+      "232",
+      "220",
+      "36"
+     ],
+     "a": 2,
+     "e": "Sıra önemsiz: C(12, 3) = 12! ÷ (3! · 9!) = <b>220</b>."
+    },
+    {
+     "q": "4 farklı meyveden 2 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "6",
+      "12",
+      "8",
+      "10"
+     ],
+     "a": 0,
+     "e": "Sıra önemsiz: C(4, 2) = 4! ÷ (2! · 2!) = <b>6</b>."
+    },
+    {
+     "q": "10 kişiden 2 kişilik bir ekip kaç farklı biçimde seçilir?",
+     "c": [
+      "20",
+      "90",
+      "55",
+      "45"
+     ],
+     "a": 3,
+     "e": "Sıra önemsiz: C(10, 2) = 10! ÷ (2! · 8!) = <b>45</b>."
+    },
+    {
+     "q": "8 kişiden 4 kişilik bir ekip kaç farklı biçimde seçilir?",
+     "c": [
+      "78",
+      "1.680",
+      "32",
+      "70"
+     ],
+     "a": 3,
+     "e": "Sıra önemsiz: C(8, 4) = 8! ÷ (4! · 4!) = <b>70</b>."
+    },
+    {
+     "q": "11 farklı meyveden 4 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "7.920",
+      "330",
+      "44",
+      "341"
+     ],
+     "a": 1,
+     "e": "Sıra önemsiz: C(11, 4) = 11! ÷ (4! · 7!) = <b>330</b>."
+    },
+    {
+     "q": "Düzlemde herhangi üçü doğrusal olmayan 7 noktadan 2 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "14",
+      "28",
+      "21",
+      "42"
+     ],
+     "a": 2,
+     "e": "Sıra önemsiz: C(7, 2) = 7! ÷ (2! · 5!) = <b>21</b>."
+    },
+    {
+     "q": "8 kişiden 2 kişilik bir ekip kaç farklı biçimde seçilir?",
+     "c": [
+      "16",
+      "36",
+      "28",
+      "56"
+     ],
+     "a": 2,
+     "e": "Sıra önemsiz: C(8, 2) = 8! ÷ (2! · 6!) = <b>28</b>."
+    },
+    {
+     "q": "11 farklı meyveden 2 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "55",
+      "66",
+      "22",
+      "110"
+     ],
+     "a": 0,
+     "e": "Sıra önemsiz: C(11, 2) = 11! ÷ (2! · 9!) = <b>55</b>."
+    },
+    {
+     "q": "5 kişiden 2 kişilik bir ekip kaç farklı biçimde seçilir?",
+     "c": [
+      "10",
+      "20",
+      "9",
+      "15"
+     ],
+     "a": 0,
+     "e": "Sıra önemsiz: C(5, 2) = 5! ÷ (2! · 3!) = <b>10</b>."
+    },
+    {
+     "q": "12 farklı meyveden 4 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "495",
+      "507",
+      "11.880",
+      "48"
+     ],
+     "a": 0,
+     "e": "Sıra önemsiz: C(12, 4) = 12! ÷ (4! · 8!) = <b>495</b>."
+    },
+    {
+     "q": "10 farklı meyveden 3 tanesi kaç farklı biçimde seçilir?",
+     "c": [
+      "720",
+      "120",
+      "30",
+      "130"
+     ],
+     "a": 1,
+     "e": "Sıra önemsiz: C(10, 3) = 10! ÷ (3! · 7!) = <b>120</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 15,
+ "updated": "2026-11-25",
+ "country": "tr",
+ "subject": "matematik",
+ "grade": "10-sinif"
+}

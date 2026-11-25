@@ -48,7 +48,7 @@ def build(g, i):
         def g():
             try:
                 return f()
-            except (AssertionError, ZeroDivisionError, ValueError):
+            except (AssertionError, ZeroDivisionError, ValueError, TypeError, KeyError, IndexError):
                 return None
         g.__name__ = f.__name__
         return g

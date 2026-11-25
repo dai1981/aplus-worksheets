@@ -1848,7 +1848,13 @@ TR / Matematik / 9. Sınıf（Lise。Ortaöğretim Matematik DÖP 2026、tr_comm
 1. uslu-ifadeler ✓ 2. koklu-ifadeler ✓ 3. gercek-sayi-araliklari ✓ 4. sayi-kumeleri ✓ 5. gercek-sayilarin-islem-ozellikleri ✓ 6. dogrusal-fonksiyonlar ✓ 7. mutlak-deger-fonksiyonu ✓ 8. dogrusal-denklem-ve-esitsizlik-problemleri ✓ 9. ucgende-aci-ve-kenar-ozellikleri ✓
 10. geometrik-donusumler ✓ 11. eslik-ve-benzerlik-kosullari ✓ 12. benzer-ucgenler-olusturma ✓ 13. tales-oklid-ve-pisagor-teoremleri ✓ 14. eslik-ve-benzerlik-problemleri ✓ 15. algoritma-temelli-problemler ✓ 16. mantik-baglaclari-ve-niceleyiciler ✓ 17. tek-nicel-degiskenli-veri ✓ 18. deneysel-ve-teorik-olasilik ✓
 10. sınıf の MAT.10.x（DÖP の PDF の 200000 文字目あたり）: Geometrik Şekiller（trigonometrik oranlar、yardımcı elemanlar、alan、sinüs-kosinüs teoremi）、İki kategorik değişken、Sayılar（asal çarpan・bölen、EBOB-EKOK、kalan）…
-TR の次: 10.〜12. sınıf、okul öncesi
+TR / Matematik / 10. Sınıf（Ortaöğretim DÖP 2026。単元は tr_s10a（1〜10）・tr_s10b（11〜20）、lise の共通部品は `tools/tr_lise.py`（TRIG（特別角の文字列）・TVAL・TRIP（ピタゴラス数）・poly・peval・nCr・nPr・frs・U（meta を自動）・W3（誤答の重複を落とす））。DOMAIN に SAB Sayma, Algoritma ve Bilişim・AN Analitik İnceleme・GC Geometrik Cisimler・DM Değişimin Matematiği・HV Hazır Veriler を足した。
+変数の数・角度の後に接尾辞を付けない（「m(A) = 60° olsun」「%30 kadarı」「%40 olasılıkla」）。tr_run の safe は TypeError・KeyError・IndexError も None にする）
+1. dik-ucgende-trigonometrik-oranlar ✓ 2. trigonometrik-ozdeslikler ✓ 3. ucgende-yardimci-elemanlar ✓ 4. ucgenin-alani ✓ 5. sinus-ve-kosinus-teoremleri ✓ 6. iki-kategorik-degiskenli-veri ✓ 7. asal-carpanlar-ve-bolenler ✓
+8. ebob-ve-ekok ✓ 9. bolunebilme-ve-kalan ✓ 10. fonksiyon-olma-sartlari ✓ 11. karesel-fonksiyon ✓ 12. karekok-ve-rasyonel-fonksiyonlar ✓ 13. ters-fonksiyonlar ✓ 14. fonksiyonlarla-denklem-ve-esitsizlik-problemleri ✓
+15. sayma-stratejileri ✓ 16. algoritmik-islemler ✓ 17. iki-nokta-arasi-uzaklik ✓ 18. dogrunun-analitik-incelenmesi ✓ 19. kosullu-olasilik ✓ 20. bayes-teoremi ✓
+トピックに fonksiyonlar・trigonometri を足した（olcme の out に kalan、olasilik に sayma-stratejileri・bayes、carpanlar に ebob）
+TR の次: 11.〜12. sınıf、okul öncesi
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
