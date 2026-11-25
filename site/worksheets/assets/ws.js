@@ -560,6 +560,7 @@
   Quiz.prototype.begin = function (items) {
     this.items = items.slice();
     this.i = 0; this.ok = 0; this.streak = 0; this.miss = []; this.ended = false;
+    this.ans = []; this.ms = 0;                                 // for the anonymous "where do I stand" count
     this.draw();
   };
 
@@ -576,7 +577,7 @@
     this.eQ.innerHTML = it.q;
     this.eC.className = "sn-choices" + cols(it.c);
     this.eC.innerHTML = "";
-    var opts = it.c.map(function (s, k) { return { t: s, ok: k === it.a }; });
+    var opts = it.c.map(function (s, k) { return { t: s, ok: k === it.a, k: k }; });
     // choices that are picture labels (A-D, Net 1, Mix B) stay in order so they match the picture
     var labels = it.c.every(function (s) { return /^\s*(?:[A-H]|[A-Za-z]+ [A-H1-9])\s*$/.test(String(s).replace(/<[^>]+>/g, "")); });
     this.opts = labels ? opts.sort(function (x, y) {
@@ -587,15 +588,18 @@
       var b = document.createElement("button");
       b.type = "button";
       b.innerHTML = o.t;
-      b.addEventListener("click", function () { self.hit(o.ok, b); });
+      b.addEventListener("click", function () { self.hit(o.ok, b, o.k); });
       self.eC.appendChild(b);
     });
     var h = this.eStage.scrollHeight;
     if (h > this.minH) { this.minH = h; this.eStage.style.minHeight = h + "px"; }
+    this.shown = Date.now();
   };
 
-  Quiz.prototype.hit = function (right, clicked) {
+  Quiz.prototype.hit = function (right, clicked, k) {
     var self = this, it = this.items[this.i], F = CONFIG.flow;
+    this.ms += Math.min(60000, Date.now() - (this.shown || Date.now()));
+    this.ans.push(right ? "1" : k >= 0 && k < 6 ? String.fromCharCode(97 + k) : "0");
     var btns = this.eC.querySelectorAll("button");
     Array.prototype.forEach.call(btns, function (b, k) {
       b.disabled = true;
@@ -648,12 +652,14 @@
     this.eFb.hidden = true;
     this.eFb.innerHTML = "";
     this.eStage.innerHTML = '<div class="sn-result"><p class="sn-score">' + t("score", { o: this.ok, n: n }) + "</p>"
+      + '<p class="sn-pos" hidden></p>'
       + (prev ? '<p class="sn-best">' + t("best", { o: prev.o, t: prev.t }) + "</p>" : "")
       + '<p class="sn-msg">' + t(rate === 100 ? "m100" : rate >= 80 ? "m80" : "mlow") + "</p>"
       + (this.miss.length ? '<button type="button" class="sn-again" data-m="1">' + t("redoMiss", { n: this.miss.length }) + "</button>" : "")
       + '<button type="button" class="sn-again" data-m="0">' + t("redoAll") + "</button></div>";
     FX.finish(this.root, this.ok, n);
     redraw();
+    if (n === this.all.length) this.stand(n);
     Array.prototype.forEach.call(this.eStage.querySelectorAll(".sn-again"), function (btn) {
       btn.addEventListener("click", function () {
         self.eStage.innerHTML = '<div class="sn-q"></div><div class="sn-choices"></div>';
@@ -663,6 +669,38 @@
         self.begin(btn.getAttribute("data-m") === "1" ? self.miss : self.all);
       });
     });
+  };
+
+  // ------------------------------------------------------------ where do I stand
+  //  A finished full set is sent once per device (no name, no account): score, time and the answer to each question.
+  //  The server answers how many students did this set and how many scored higher.
+  var SOLO_API = "/worksheets/api/mq.php", SOLO_MIN = 10;
+  function plain(html) {
+    var d = document.createElement("div");
+    d.innerHTML = String(html).replace(/<rt>.*?<\/rt>/g, "");
+    return (d.textContent || "").replace(/\s+/g, " ").trim();
+  }
+  Quiz.prototype.stand = function (n) {
+    var self = this, sent = rd("ws:sent", {}), rec = !sent[this.key] && this.ans.length === n;
+    if (!window.fetch || !window.JSON) return;
+    var body = { a: "solo", page: location.pathname, set: this.root.getAttribute("data-quiz"), title: this.title,
+                 n: n, ok: this.ok, ms: this.ms, ans: this.ans.join(""), rec: rec ? 1 : 0 };
+    if (rec) body.qs = this.all.slice(0, 100).map(function (it) {
+      return [plain(it.q).slice(0, 400), (it.c || []).slice(0, 8).map(function (c) { return plain(c).slice(0, 120); }),
+              it.a, /<(svg|img)\b/i.test(it.q) ? 1 : 0];
+    });
+    fetch(SOLO_API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (!j || !j.w) return;
+        if (rec) { sent = rd("ws:sent", {}); sent[self.key] = 1; wr("ws:sent", sent); }
+        var el = self.eStage.querySelector(".sn-pos"), all = j.w[0], up = j.w[1];
+        if (!el || !all) return;
+        var p = Math.max(1, Math.ceil(100 * (up + 1) / all));
+        el.innerHTML = all >= SOLO_MIN ? t("soloTop", { p: p, n: fmt(all) }) : all > 1 ? t("soloFew", { n: fmt(all) }) : t("soloOne");
+        el.hidden = false;
+      })
+      .catch(function () {});
   };
 
   // ------------------------------------------------------------ boot
