@@ -1759,7 +1759,17 @@ id_common.mcq は分数（<span class='fr'>）の誤答が足りないとき分�
 1. bilangan-cacah-sampai-1000000 ✓ 2. penjumlahan-dan-pengurangan ✓ 3. perkalian ✓ 4. pembagian ✓ 5. kpk-dan-fpb ✓ 6. pecahan-campuran ✓ 7. penjumlahan-dan-pengurangan-pecahan ✓
 8. perkalian-dan-pembagian-pecahan ✓ 9. desimal ✓ 10. soal-cerita-uang ✓ 11. kalimat-matematika ✓ 12. pola-bilangan ✓ 13. rasio-dan-proporsi ✓ 14. keliling-dan-luas-bangun-datar ✓
 15. mengukur-sudut ✓ 16. durasi-waktu ✓ 17. kubus-dan-balok ✓ 18. peta-berpetak ✓ 19. tabel-frekuensi-dan-diagram ✓ 20. peluang ✓
-ID の次: Kelas 6（Fase C の残り）、Kelas 3（Fase B）、Kelas 1–2（Fase A）…
+ID / Matematika / Kelas 3（Fase B：数は 1.000 まで、九九は 10 × 10 まで、分数は単位分数と同分母、お金は Rp20.000 まで）— 生成スクリプトは `tools/id_k3.py [番号…]`（seed は 40300 + sort）。
+数・計算・お金は自前（uang_svg：Rp100〜Rp1.000 硬貨、Rp1.000〜Rp20.000 札）。かけ算・わり算・分数・パターン・kalimat matematika・測定・図形・データは Kelas 4 の問題関数を maker(d4, 名前) で取り出し、lim(mk, 1000) で 1.000 までに絞って再利用（文・lesson・faq は Kelas 3 向けに新しく）
+1. bilangan-cacah-sampai-1000 ✓ 2. membandingkan-dan-mengurutkan-bilangan ✓ 3. penjumlahan ✓ 4. pengurangan ✓ 5. perkalian ✓ 6. pembagian ✓ 7. pecahan ✓
+8. uang ✓ 9. pola-bilangan-dan-gambar ✓ 10. kalimat-matematika ✓ 11. pengukuran-panjang-dan-berat ✓ 12. luas-dan-volume ✓ 13. bangun-datar ✓ 14. piktogram-dan-diagram-batang ✓
+ID / Matematika / Kelas 6（Fase C の応用：四則混合、概数、KPK・FPB の文章題、分数・小数・百分率、縮尺、n 番目の数、二段階の方程式、台形・たこ形、三角形の角、体積、8 方位、カレンダー、最頻値）— 生成スクリプトは `tools/id_k6.py [番号…]`（seed は 40600 + sort）。
+Kelas 5 の問題関数を maker(d5, 名前) で再利用し、自前の問題を足す（d2：百分の一単位の整数 → 0,25、kompas：8 方位の図、tri_svg：三角形の角、dots_svg：三角数・四角数・長方形数）
+1. operasi-hitung-campuran ✓ 2. pembulatan-dan-taksiran ✓ 3. kpk-dan-fpb-dalam-soal-cerita ✓ 4. pecahan-desimal-dan-persen ✓ 5. operasi-hitung-pecahan ✓ 6. operasi-hitung-desimal ✓
+7. persen ✓ 8. soal-cerita-pecahan ✓ 9. perbandingan-dan-skala ✓ 10. pola-bilangan-dan-pola-titik ✓ 11. persamaan-sederhana ✓ 12. luas-bangun-datar-dan-gabungan ✓
+13. sudut-dan-segitiga ✓ 14. bangun-ruang-dan-volume ✓ 15. lokasi-dan-arah-mata-angin ✓ 16. waktu-jadwal-dan-kalender ✓ 17. modus-dan-penyajian-data ✓ 18. peluang ✓
+トピック（topic_defs_id）：operasi-hitung-campuran→perkalian-dan-pembagian、persamaan→aljabar-dan-pola、arah-mata-angin→geometri、bangun-ruang はgeometri だけ、luas- は pengukuran だけ
+ID の次: Kelas 1–2（Fase A）、SMP（Fase D）…
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
