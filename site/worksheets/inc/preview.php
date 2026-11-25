@@ -29,7 +29,21 @@ function pv_text($html) {
     }, $s);
     $s = preg_replace('/<br\s*\/?>/i', ' ', $s);
     $s = html_entity_decode(strip_tags($s), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    if (!empty($GLOBALS['PV_CJK'])) $s = pv_cjk_safe($s);
     return trim(preg_replace('/[ \t\r\n]+/u', ' ', $s));
+}
+
+/* Noto Sans SC/TC/KR have only ¹²³ among the superscript digits: write the others as ^5, and subscripts as plain digits */
+function pv_cjk_safe($s) {
+    $up = array('⁰' => '0', '¹' => '1', '²' => '2', '³' => '3', '⁴' => '4', '⁵' => '5', '⁶' => '6', '⁷' => '7', '⁸' => '8', '⁹' => '9', '⁻' => '-', '⁺' => '+',
+                'ⁿ' => 'n', 'ˣ' => 'x', 'ʳ' => 'r', 'ˢ' => 's', 'ᵇ' => 'b', 'ᵏ' => 'k', 'ᵐ' => 'm', 'ᵘ' => 'u');
+    $s = preg_replace_callback('/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺ⁿˣʳˢᵇᵏᵐᵘ]+/u', function ($m) use ($up) {
+        if (preg_match('/^[¹²³]+$/u', $m[0])) return $m[0];
+        return '^' . strtr($m[0], $up);
+    }, $s);
+    return strtr($s, array('₀' => '0', '₁' => '1', '₂' => '2', '₃' => '3', '₄' => '4', '₅' => '5', '₆' => '6', '₇' => '7', '₈' => '8', '₉' => '9',
+                           '₊' => '+', '₋' => '-', 'ₐ' => 'a', 'ₘ' => 'm', 'ₙ' => 'n', 'ₚ' => 'p', 'ᵢ' => 'i', 'ᵣ' => 'r', 'ᵤ' => 'U', '∁' => 'C',
+                           'ŷ' => 'y', 'ȳ' => 'y', "\u{0302}" => '', '⁄' => '/', '⅓' => '1/3', '∛' => '3√', '☐' => '□'));
 }
 
 function pv_font($w) {

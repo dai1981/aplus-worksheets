@@ -1,0 +1,1153 @@
+{
+ "slug": "random-variables",
+ "title": "随机变量及其分布：均值、方差、二项分布和超几何分布",
+ "seo_title": "随机变量及其分布：均值、方差、二项分布和超几何分布｜高中数学选择性必修第三册练习题（附答案）",
+ "short_title": "随机变量及其分布",
+ "domain": "概率与统计",
+ "standard_code": "选择性必修课程 · 概率与统计",
+ "standard_url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html",
+ "standard_text": "理解分类加法计数原理和分步乘法计数原理，排列与组合，二项式定理；理解离散型随机变量的分布列、均值和方差，二项分布、超几何分布、正态分布；理解条件概率和全概率公式；会用相关系数、一元线性回归模型和独立性检验分析成对数据（课标内容要求摘要）",
+ "meta_desc": "高中数学选择性必修第三册“随机变量及其分布”练习题：由分布列求均值，二项分布的均值和方差，E(aX ＋ b) 和 D(aX ＋ b)，超几何分布，二项分布的概率，100题在线练习，附可打印答案。",
+ "key_big": "X ～ B(n, p)：E(X) ＝ np，D(X) ＝ np(1 － p)",
+ "key_sub": "E(aX ＋ b) ＝ aE(X) ＋ b，D(aX ＋ b) ＝ a²D(X)。不放回抽取用超几何分布，独立重复试验用二项分布。",
+ "body_html": "<h2>怎么想</h2><p><b>分布列</b>：各概率非负，和为 1。<b>均值</b> E(X) ＝ Σxᵢpᵢ，<b>方差</b> D(X) ＝ Σ(xᵢ － E(X))²pᵢ。</p><p><b>二项分布</b> X ～ B(n, p)：n 次独立重复试验中成功的次数，P(X ＝ k) ＝ C(n, k)pᵏ(1 － p)ⁿ⁻ᵏ。</p><p><b>超几何分布</b>：N 件中有 M 件次品，不放回取 n 件，P(X ＝ k) ＝ C(M, k)C(N － M, n － k) ÷ C(N, n)。</p><div class='sn-ex'><span class='sn-ex-t'>例题</span><p class='sn-ex-q'>X ～ B(10, 0.3) 的均值和方差</p><p class='sn-ex-s'>np ＝ 3</p><p class='sn-ex-s'>np(1 － p) ＝ 2.1</p><p class='sn-ex-a'>答：3，2.1</p></div><div class='sn-ex'><span class='sn-ex-t'>例题</span><p class='sn-ex-q'>D(X) ＝ 2，求 D(3X ＋ 1)</p><p class='sn-ex-s'>3² × 2</p><p class='sn-ex-a'>答：18</p></div><h2>常见错误</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>常见错误</th><th>正确的想法</th></tr></thead><tbody><tr><td>D(aX ＋ b) 写成 aD(X) ＋ b</td><td>常数 b 不影响方差，系数 a 要平方。</td></tr><tr><td>不放回抽取用了二项分布</td><td>不放回时每次的概率会变，用超几何分布。</td></tr><tr><td>二项分布概率忘了乘 C(n, k)</td><td>恰好 k 次成功可以出现在不同的位置。</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "均值和平均数有什么关系？",
+   "a": "均值是随机变量取值的加权平均（权是概率），反映取值的平均水平。"
+  }
+ ],
+ "sets": [
+  {
+   "title": "分布列和均值",
+   "items": [
+    {
+     "q": "X 的分布列：P(X ＝ 0) ＝ a，P(X ＝ 3) ＝ 0.3，P(X ＝ 4) ＝ 0.4。求 E(X)。",
+     "c": [
+      "2.5",
+      "9.1",
+      "2.33",
+      "2.6"
+     ],
+     "a": 0,
+     "e": "先由概率之和为 1 得 a ＝ 0.3，E(X) ＝ Σxᵢpᵢ ＝ <b>2.5</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 2) ＝ 0.1，P(X ＝ 3) ＝ 0.4，P(X ＝ 4) ＝ a。求 E(X)。",
+     "c": [
+      "3.4",
+      "3.5",
+      "12",
+      "3"
+     ],
+     "a": 0,
+     "e": "先由概率之和为 1 得 a ＝ 0.5，E(X) ＝ Σxᵢpᵢ ＝ <b>3.4</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ －1) ＝ 0.1，P(X ＝ 2) ＝ a，P(X ＝ 5) ＝ 0.5。求 E(X)。",
+     "c": [
+      "3.2",
+      "3.3",
+      "14.2",
+      "2"
+     ],
+     "a": 0,
+     "e": "先由概率之和为 1 得 a ＝ 0.4，E(X) ＝ Σxᵢpᵢ ＝ <b>3.2</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 0) ＝ 0.3，P(X ＝ 2) ＝ a，P(X ＝ 4) ＝ 0.5。求 E(X)。",
+     "c": [
+      "2.5",
+      "2",
+      "2.4",
+      "8.8"
+     ],
+     "a": 2,
+     "e": "先由概率之和为 1 得 a ＝ 0.2，E(X) ＝ Σxᵢpᵢ ＝ <b>2.4</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 1) ＝ 0.3，P(X ＝ 4) ＝ a，P(X ＝ 5) ＝ 0.6。求 E(X)。",
+     "c": [
+      "3.33",
+      "16.9",
+      "3.8",
+      "3.7"
+     ],
+     "a": 3,
+     "e": "先由概率之和为 1 得 a ＝ 0.1，E(X) ＝ Σxᵢpᵢ ＝ <b>3.7</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 0) ＝ a，P(X ＝ 1) ＝ 0.2，P(X ＝ 3) ＝ 0.6。求 E(X)。",
+     "c": [
+      "2.1",
+      "2",
+      "5.6",
+      "1.33"
+     ],
+     "a": 1,
+     "e": "先由概率之和为 1 得 a ＝ 0.2，E(X) ＝ Σxᵢpᵢ ＝ <b>2</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 0) ＝ a，P(X ＝ 1) ＝ 0.2，P(X ＝ 3) ＝ 0.4。求 E(X)。",
+     "c": [
+      "1.33",
+      "1.5",
+      "1.4",
+      "3.8"
+     ],
+     "a": 2,
+     "e": "先由概率之和为 1 得 a ＝ 0.4，E(X) ＝ Σxᵢpᵢ ＝ <b>1.4</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 0) ＝ 0.5，P(X ＝ 1) ＝ a，P(X ＝ 4) ＝ 0.4。求 E(X)。",
+     "c": [
+      "1.67",
+      "1.7",
+      "1.8",
+      "6.5"
+     ],
+     "a": 1,
+     "e": "先由概率之和为 1 得 a ＝ 0.1，E(X) ＝ Σxᵢpᵢ ＝ <b>1.7</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ －1) ＝ a，P(X ＝ 2) ＝ 0.4，P(X ＝ 4) ＝ 0.5。求 E(X)。",
+     "c": [
+      "9.7",
+      "1.67",
+      "2.7",
+      "2.8"
+     ],
+     "a": 2,
+     "e": "先由概率之和为 1 得 a ＝ 0.1，E(X) ＝ Σxᵢpᵢ ＝ <b>2.7</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ －1) ＝ 0.3，P(X ＝ 2) ＝ a，P(X ＝ 3) ＝ 0.3。求 E(X)。",
+     "c": [
+      "4.6",
+      "1.4",
+      "1.5",
+      "1.33"
+     ],
+     "a": 1,
+     "e": "先由概率之和为 1 得 a ＝ 0.4，E(X) ＝ Σxᵢpᵢ ＝ <b>1.4</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 2) ＝ 0.5，P(X ＝ 4) ＝ 0.1，P(X ＝ 5) ＝ a。求 E(X)。",
+     "c": [
+      "3.5",
+      "3.67",
+      "3.4",
+      "13.6"
+     ],
+     "a": 2,
+     "e": "先由概率之和为 1 得 a ＝ 0.4，E(X) ＝ Σxᵢpᵢ ＝ <b>3.4</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 0) ＝ 0.5，P(X ＝ 1) ＝ 0.1，P(X ＝ 5) ＝ a。求 E(X)。",
+     "c": [
+      "10.1",
+      "2.1",
+      "2",
+      "2.2"
+     ],
+     "a": 1,
+     "e": "先由概率之和为 1 得 a ＝ 0.4，E(X) ＝ Σxᵢpᵢ ＝ <b>2.1</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ －1) ＝ a，P(X ＝ 1) ＝ 0.4，P(X ＝ 2) ＝ 0.4。求 E(X)。",
+     "c": [
+      "2.2",
+      "0.67",
+      "1.1",
+      "1"
+     ],
+     "a": 3,
+     "e": "先由概率之和为 1 得 a ＝ 0.2，E(X) ＝ Σxᵢpᵢ ＝ <b>1</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ －1) ＝ 0.3，P(X ＝ 0) ＝ a，P(X ＝ 4) ＝ 0.4。求 E(X)。",
+     "c": [
+      "1.4",
+      "6.7",
+      "1",
+      "1.3"
+     ],
+     "a": 3,
+     "e": "先由概率之和为 1 得 a ＝ 0.3，E(X) ＝ Σxᵢpᵢ ＝ <b>1.3</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 1) ＝ 0.5，P(X ＝ 2) ＝ a，P(X ＝ 4) ＝ 0.2。求 E(X)。",
+     "c": [
+      "2",
+      "2.33",
+      "1.9",
+      "4.9"
+     ],
+     "a": 2,
+     "e": "先由概率之和为 1 得 a ＝ 0.3，E(X) ＝ Σxᵢpᵢ ＝ <b>1.9</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 2) ＝ 0.2，P(X ＝ 3) ＝ a，P(X ＝ 5) ＝ 0.5。求 E(X)。",
+     "c": [
+      "3.8",
+      "16",
+      "3.33",
+      "3.9"
+     ],
+     "a": 0,
+     "e": "先由概率之和为 1 得 a ＝ 0.3，E(X) ＝ Σxᵢpᵢ ＝ <b>3.8</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ －1) ＝ 0.1，P(X ＝ 0) ＝ 0.3，P(X ＝ 1) ＝ a。求 E(X)。",
+     "c": [
+      "0.5",
+      "0.7",
+      "0.6",
+      "0"
+     ],
+     "a": 0,
+     "e": "先由概率之和为 1 得 a ＝ 0.6，E(X) ＝ Σxᵢpᵢ ＝ <b>0.5</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 2) ＝ a，P(X ＝ 4) ＝ 0.2，P(X ＝ 5) ＝ 0.5。求 E(X)。",
+     "c": [
+      "16.9",
+      "3.67",
+      "4",
+      "3.9"
+     ],
+     "a": 3,
+     "e": "先由概率之和为 1 得 a ＝ 0.3，E(X) ＝ Σxᵢpᵢ ＝ <b>3.9</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ 2) ＝ 0.1，P(X ＝ 3) ＝ a，P(X ＝ 5) ＝ 0.8。求 E(X)。",
+     "c": [
+      "3.33",
+      "4.6",
+      "21.3",
+      "4.5"
+     ],
+     "a": 3,
+     "e": "先由概率之和为 1 得 a ＝ 0.1，E(X) ＝ Σxᵢpᵢ ＝ <b>4.5</b>。"
+    },
+    {
+     "q": "X 的分布列：P(X ＝ －1) ＝ a，P(X ＝ 1) ＝ 0.3，P(X ＝ 5) ＝ 0.3。求 E(X)。",
+     "c": [
+      "8.2",
+      "1.4",
+      "1.5",
+      "1.67"
+     ],
+     "a": 1,
+     "e": "先由概率之和为 1 得 a ＝ 0.4，E(X) ＝ Σxᵢpᵢ ＝ <b>1.4</b>。"
+    }
+   ]
+  },
+  {
+   "title": "二项分布的均值和方差",
+   "items": [
+    {
+     "q": "X ～ B(20, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)，D(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "二项分布 D(X) ＝ np(1 － p) ＝ 20 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> ＝ <b><span class='fr'><span class='fn'>40</span><span class='fd'>9</span></span></b>。"
+    },
+    {
+     "q": "X ～ B(5, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)，E(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>"
+     ],
+     "a": 1,
+     "e": "二项分布 E(X) ＝ np ＝ 5 × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> ＝ <b><span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span></b>。"
+    },
+    {
+     "q": "X ～ B(20, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)，E(X) ＝ ？",
+     "c": [
+      "15",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>4</span></span>",
+      "5",
+      "10"
+     ],
+     "a": 2,
+     "e": "二项分布 E(X) ＝ np ＝ 20 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> ＝ <b>5</b>。"
+    },
+    {
+     "q": "X ～ B(6, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)，D(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "二项分布 D(X) ＝ np(1 － p) ＝ 6 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> ＝ <b><span class='fr'><span class='fn'>9</span><span class='fd'>8</span></span></b>。"
+    },
+    {
+     "q": "X ～ B(25, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)，E(X) ＝ ？",
+     "c": [
+      "10",
+      "6",
+      "15",
+      "20"
+     ],
+     "a": 0,
+     "e": "二项分布 E(X) ＝ np ＝ 25 × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> ＝ <b>10</b>。"
+    },
+    {
+     "q": "X ～ B(12, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)，D(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "9",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "二项分布 D(X) ＝ np(1 － p) ＝ 12 × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> ＝ <b><span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span></b>。"
+    },
+    {
+     "q": "X ～ B(100, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)，E(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>200</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>400</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>100</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>200</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "二项分布 E(X) ＝ np ＝ 100 × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> ＝ <b><span class='fr'><span class='fn'>200</span><span class='fd'>3</span></span></b>。"
+    },
+    {
+     "q": "X ～ B(50, <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)，D(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>225</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>75</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>75</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>75</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "二项分布 D(X) ＝ np(1 － p) ＝ 50 × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> ＝ <b><span class='fr'><span class='fn'>75</span><span class='fd'>8</span></span></b>。"
+    },
+    {
+     "q": "X ～ B(20, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)，E(X) ＝ ？",
+     "c": [
+      "16",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>5</span></span>",
+      "12",
+      "8"
+     ],
+     "a": 3,
+     "e": "二项分布 E(X) ＝ np ＝ 20 × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> ＝ <b>8</b>。"
+    },
+    {
+     "q": "X ～ B(50, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)，D(X) ＝ ？",
+     "c": [
+      "12",
+      "8",
+      "24",
+      "20"
+     ],
+     "a": 0,
+     "e": "二项分布 D(X) ＝ np(1 － p) ＝ 50 × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> ＝ <b>12</b>。"
+    },
+    {
+     "q": "X ～ B(50, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)，E(X) ＝ ？",
+     "c": [
+      "30",
+      "12",
+      "40",
+      "20"
+     ],
+     "a": 3,
+     "e": "二项分布 E(X) ＝ np ＝ 50 × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> ＝ <b>20</b>。"
+    },
+    {
+     "q": "X ～ B(100, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)，D(X) ＝ ？",
+     "c": [
+      "40",
+      "24",
+      "48",
+      "16"
+     ],
+     "a": 1,
+     "e": "二项分布 D(X) ＝ np(1 － p) ＝ 100 × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> ＝ <b>24</b>。"
+    },
+    {
+     "q": "X ～ B(5, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)，D(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "二项分布 D(X) ＝ np(1 － p) ＝ 5 × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> ＝ <b><span class='fr'><span class='fn'>10</span><span class='fd'>9</span></span></b>。"
+    },
+    {
+     "q": "X ～ B(12, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)，D(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "3",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "二项分布 D(X) ＝ np(1 － p) ＝ 12 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> ＝ <b><span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span></b>。"
+    },
+    {
+     "q": "X ～ B(12, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)，E(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "16",
+      "8",
+      "4"
+     ],
+     "a": 2,
+     "e": "二项分布 E(X) ＝ np ＝ 12 × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> ＝ <b>8</b>。"
+    },
+    {
+     "q": "X ～ B(50, <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)，D(X) ＝ ？",
+     "c": [
+      "16",
+      "8",
+      "2",
+      "10"
+     ],
+     "a": 1,
+     "e": "二项分布 D(X) ＝ np(1 － p) ＝ 50 × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> ＝ <b>8</b>。"
+    },
+    {
+     "q": "X ～ B(10, <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>)，D(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span>",
+      "4",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "二项分布 D(X) ＝ np(1 － p) ＝ 10 × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> ＝ <b><span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span></b>。"
+    },
+    {
+     "q": "X ～ B(25, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)，D(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>75</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>75</span><span class='fd'>16</span></span>"
+     ],
+     "a": 3,
+     "e": "二项分布 D(X) ＝ np(1 － p) ＝ 25 × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> ＝ <b><span class='fr'><span class='fn'>75</span><span class='fd'>16</span></span></b>。"
+    },
+    {
+     "q": "X ～ B(10, <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>)，E(X) ＝ ？",
+     "c": [
+      "2",
+      "4",
+      "8",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "二项分布 E(X) ＝ np ＝ 10 × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> ＝ <b>2</b>。"
+    },
+    {
+     "q": "X ～ B(50, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)，E(X) ＝ ？",
+     "c": [
+      "<span class='fr'><span class='fn'>100</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>100</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>200</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "二项分布 E(X) ＝ np ＝ 50 × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> ＝ <b><span class='fr'><span class='fn'>100</span><span class='fd'>3</span></span></b>。"
+    }
+   ]
+  },
+  {
+   "title": "均值和方差的性质",
+   "items": [
+    {
+     "q": "已知 E(X) ＝ －2，D(X) ＝ 5，求 D(－2X － 3)。",
+     "c": [
+      "－10",
+      "17",
+      "20",
+      "－13"
+     ],
+     "a": 2,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 4 × 5 ＝ <b>20</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 8，D(X) ＝ 8，求 E(－3X ＋ 4)。",
+     "c": [
+      "12",
+      "－24",
+      "－20",
+      "76"
+     ],
+     "a": 2,
+     "e": "E(aX ＋ b) ＝ aE(X) ＋ b ＝ <b>－20</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ －3，D(X) ＝ 5，求 D(－X ＋ 2)。",
+     "c": [
+      "－5",
+      "－3",
+      "7",
+      "5"
+     ],
+     "a": 3,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 1 × 5 ＝ <b>5</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ －3，D(X) ＝ 1，求 E(2X － 1)。",
+     "c": [
+      "－6",
+      "－13",
+      "－4",
+      "－7"
+     ],
+     "a": 3,
+     "e": "E(aX ＋ b) ＝ aE(X) ＋ b ＝ <b>－7</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 4，D(X) ＝ 8，求 D(3X ＋ 4)。",
+     "c": [
+      "24",
+      "76",
+      "28",
+      "72"
+     ],
+     "a": 3,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 9 × 8 ＝ <b>72</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 6，D(X) ＝ 9，求 D(－4X － 6)。",
+     "c": [
+      "144",
+      "138",
+      "－42",
+      "－36"
+     ],
+     "a": 0,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 16 × 9 ＝ <b>144</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 1，D(X) ＝ 9，求 D(2X ＋ 4)。",
+     "c": [
+      "22",
+      "18",
+      "36",
+      "40"
+     ],
+     "a": 2,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 4 × 9 ＝ <b>36</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 8，D(X) ＝ 8，求 D(－3X － 4)。",
+     "c": [
+      "－28",
+      "－24",
+      "72",
+      "68"
+     ],
+     "a": 2,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 9 × 8 ＝ <b>72</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 7，D(X) ＝ 1，求 E(－3X ＋ 6)。",
+     "c": [
+      "－15",
+      "69",
+      "13",
+      "－21"
+     ],
+     "a": 0,
+     "e": "E(aX ＋ b) ＝ aE(X) ＋ b ＝ <b>－15</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 3，D(X) ＝ 3，求 D(－2X ＋ 1)。",
+     "c": [
+      "－5",
+      "12",
+      "－6",
+      "13"
+     ],
+     "a": 1,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 4 × 3 ＝ <b>12</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ －3，D(X) ＝ 3，求 D(－4X ＋ 4)。",
+     "c": [
+      "52",
+      "48",
+      "－12",
+      "－8"
+     ],
+     "a": 1,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 16 × 3 ＝ <b>48</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 8，D(X) ＝ 8，求 E(2X ＋ 3)。",
+     "c": [
+      "16",
+      "35",
+      "19",
+      "11"
+     ],
+     "a": 2,
+     "e": "E(aX ＋ b) ＝ aE(X) ＋ b ＝ <b>19</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 5，D(X) ＝ 8，求 D(4X ＋ 6)。",
+     "c": [
+      "32",
+      "134",
+      "38",
+      "128"
+     ],
+     "a": 3,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 16 × 8 ＝ <b>128</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 3，D(X) ＝ 5，求 E(－4X ＋ 1)。",
+     "c": [
+      "－12",
+      "4",
+      "49",
+      "－11"
+     ],
+     "a": 3,
+     "e": "E(aX ＋ b) ＝ aE(X) ＋ b ＝ <b>－11</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 7，D(X) ＝ 3，求 E(2X ＋ 6)。",
+     "c": [
+      "20",
+      "14",
+      "34",
+      "13"
+     ],
+     "a": 0,
+     "e": "E(aX ＋ b) ＝ aE(X) ＋ b ＝ <b>20</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 4，D(X) ＝ 3，求 D(2X － 3)。",
+     "c": [
+      "12",
+      "3",
+      "6",
+      "9"
+     ],
+     "a": 0,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 4 × 3 ＝ <b>12</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 2，D(X) ＝ 9，求 E(－2X ＋ 5)。",
+     "c": [
+      "13",
+      "1",
+      "7",
+      "－4"
+     ],
+     "a": 1,
+     "e": "E(aX ＋ b) ＝ aE(X) ＋ b ＝ <b>1</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 1，D(X) ＝ 4，求 D(－X － 6)。",
+     "c": [
+      "－10",
+      "4",
+      "－2",
+      "－4"
+     ],
+     "a": 1,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 1 × 4 ＝ <b>4</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ －1，D(X) ＝ 3，求 E(4X － 4)。",
+     "c": [
+      "－8",
+      "－20",
+      "－4",
+      "－5"
+     ],
+     "a": 0,
+     "e": "E(aX ＋ b) ＝ aE(X) ＋ b ＝ <b>－8</b>。"
+    },
+    {
+     "q": "已知 E(X) ＝ 4，D(X) ＝ 3，求 D(－3X － 1)。",
+     "c": [
+      "－9",
+      "27",
+      "26",
+      "－10"
+     ],
+     "a": 1,
+     "e": "D(aX ＋ b) ＝ a²D(X) ＝ 9 × 3 ＝ <b>27</b>。"
+    }
+   ]
+  },
+  {
+   "title": "超几何分布",
+   "items": [
+    {
+     "q": "11 件产品中有 5 件次品，从中任取 4 件，恰有 4 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>66</span></span>",
+      "<span class='fr'><span class='fn'>625</span><span class='fd'>14641</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>66</span></span>"
+     ],
+     "a": 3,
+     "e": "超几何分布：C(5, 4)C(6, 0) ÷ C(11, 4) ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>66</span></span></b>。"
+    },
+    {
+     "q": "8 件产品中有 5 件次品，从中任取 2 件，恰有 0 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>28</span></span>"
+     ],
+     "a": 0,
+     "e": "超几何分布：C(5, 0)C(3, 2) ÷ C(8, 2) ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span></b>。"
+    },
+    {
+     "q": "10 件产品中有 6 件次品，从中任取 4 件，恰有 1 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>96</span><span class='fd'>625</span></span>"
+     ],
+     "a": 0,
+     "e": "超几何分布：C(6, 1)C(4, 3) ÷ C(10, 4) ＝ <b><span class='fr'><span class='fn'>4</span><span class='fd'>35</span></span></b>。"
+    },
+    {
+     "q": "12 件产品中有 4 件次品，从中任取 3 件，恰有 1 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "超几何分布：C(4, 1)C(8, 2) ÷ C(12, 3) ＝ <b><span class='fr'><span class='fn'>28</span><span class='fd'>55</span></span></b>。"
+    },
+    {
+     "q": "9 件产品中有 3 件次品，从中任取 4 件，恰有 0 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>126</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>42</span></span>"
+     ],
+     "a": 3,
+     "e": "超几何分布：C(3, 0)C(6, 4) ÷ C(9, 4) ＝ <b><span class='fr'><span class='fn'>5</span><span class='fd'>42</span></span></b>。"
+    },
+    {
+     "q": "8 件产品中有 5 件次品，从中任取 4 件，恰有 1 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>135</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>14</span></span>"
+     ],
+     "a": 2,
+     "e": "超几何分布：C(5, 1)C(3, 3) ÷ C(8, 4) ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>14</span></span></b>。"
+    },
+    {
+     "q": "10 件产品中有 7 件次品，从中任取 2 件，恰有 0 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>45</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "超几何分布：C(7, 0)C(3, 2) ÷ C(10, 2) ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span></b>。"
+    },
+    {
+     "q": "10 件产品中有 6 件次品，从中任取 4 件，恰有 0 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>210</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>209</span><span class='fd'>210</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>"
+     ],
+     "a": 0,
+     "e": "超几何分布：C(6, 0)C(4, 4) ÷ C(10, 4) ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>210</span></span></b>。"
+    },
+    {
+     "q": "11 件产品中有 8 件次品，从中任取 2 件，恰有 0 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>121</span></span>"
+     ],
+     "a": 2,
+     "e": "超几何分布：C(8, 0)C(3, 2) ÷ C(11, 2) ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>55</span></span></b>。"
+    },
+    {
+     "q": "11 件产品中有 6 件次品，从中任取 3 件，恰有 0 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>165</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>1331</span></span>"
+     ],
+     "a": 0,
+     "e": "超几何分布：C(6, 0)C(5, 3) ÷ C(11, 3) ＝ <b><span class='fr'><span class='fn'>2</span><span class='fd'>33</span></span></b>。"
+    },
+    {
+     "q": "9 件产品中有 6 件次品，从中任取 3 件，恰有 1 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "超几何分布：C(6, 1)C(3, 2) ÷ C(9, 3) ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span></b>。"
+    },
+    {
+     "q": "9 件产品中有 4 件次品，从中任取 2 件，恰有 0 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>"
+     ],
+     "a": 3,
+     "e": "超几何分布：C(4, 0)C(5, 2) ÷ C(9, 2) ＝ <b><span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span></b>。"
+    },
+    {
+     "q": "9 件产品中有 3 件次品，从中任取 4 件，恰有 3 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>126</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "超几何分布：C(3, 3)C(6, 1) ÷ C(9, 4) ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>21</span></span></b>。"
+    },
+    {
+     "q": "12 件产品中有 9 件次品，从中任取 3 件，恰有 1 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>220</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>220</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "超几何分布：C(9, 1)C(3, 2) ÷ C(12, 3) ＝ <b><span class='fr'><span class='fn'>27</span><span class='fd'>220</span></span></b>。"
+    },
+    {
+     "q": "11 件产品中有 6 件次品，从中任取 2 件，恰有 1 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>60</span><span class='fd'>121</span></span>"
+     ],
+     "a": 2,
+     "e": "超几何分布：C(6, 1)C(5, 1) ÷ C(11, 2) ＝ <b><span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span></b>。"
+    },
+    {
+     "q": "8 件产品中有 3 件次品，从中任取 2 件，恰有 1 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>32</span></span>"
+     ],
+     "a": 1,
+     "e": "超几何分布：C(3, 1)C(5, 1) ÷ C(8, 2) ＝ <b><span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span></b>。"
+    },
+    {
+     "q": "9 件产品中有 5 件次品，从中任取 2 件，恰有 0 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "超几何分布：C(5, 0)C(4, 2) ÷ C(9, 2) ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>。"
+    },
+    {
+     "q": "10 件产品中有 3 件次品，从中任取 2 件，恰有 1 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "超几何分布：C(3, 1)C(7, 1) ÷ C(10, 2) ＝ <b><span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span></b>。"
+    },
+    {
+     "q": "8 件产品中有 5 件次品，从中任取 2 件，恰有 1 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>32</span></span>"
+     ],
+     "a": 1,
+     "e": "超几何分布：C(5, 1)C(3, 1) ÷ C(8, 2) ＝ <b><span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span></b>。"
+    },
+    {
+     "q": "10 件产品中有 4 件次品，从中任取 2 件，恰有 0 件次品的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>45</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>"
+     ],
+     "a": 1,
+     "e": "超几何分布：C(4, 0)C(6, 2) ÷ C(10, 2) ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>。"
+    }
+   ]
+  },
+  {
+   "title": "二项分布的概率",
+   "items": [
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>，独立投篮 4 次，恰好命中 1 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "X ～ B(4, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)，P(X ＝ 1) ＝ C(4, 1) × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>¹ × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>³ ＝ <b><span class='fr'><span class='fn'>32</span><span class='fd'>81</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>，独立投篮 4 次，恰好命中 3 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "X ～ B(4, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)，P(X ＝ 3) ＝ C(4, 3) × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>³ × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>¹ ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>，独立投篮 6 次，恰好命中 1 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>729</span></span>",
+      "4",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "X ～ B(6, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)，P(X ＝ 1) ＝ C(6, 1) × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>¹ × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>⁵ ＝ <b><span class='fr'><span class='fn'>4</span><span class='fd'>243</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>，独立投篮 6 次，恰好命中 4 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>64</span></span>"
+     ],
+     "a": 3,
+     "e": "X ～ B(6, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)，P(X ＝ 4) ＝ C(6, 4) × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>⁴ × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>² ＝ <b><span class='fr'><span class='fn'>15</span><span class='fd'>64</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>，独立投篮 5 次，恰好命中 4 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>243</span></span>"
+     ],
+     "a": 3,
+     "e": "X ～ B(5, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)，P(X ＝ 4) ＝ C(5, 4) × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>⁴ × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>¹ ＝ <b><span class='fr'><span class='fn'>10</span><span class='fd'>243</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>，独立投篮 3 次，恰好命中 2 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "X ～ B(3, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)，P(X ＝ 2) ＝ C(3, 2) × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>² × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>¹ ＝ <b><span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>，独立投篮 4 次，恰好命中 3 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>256</span></span>"
+     ],
+     "a": 2,
+     "e": "X ～ B(4, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)，P(X ＝ 3) ＝ C(4, 3) × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>³ × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>¹ ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>，独立投篮 3 次，恰好命中 1 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "X ～ B(3, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)，P(X ＝ 1) ＝ C(3, 1) × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>¹ × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>² ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>，独立投篮 6 次，恰好命中 4 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "X ～ B(6, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)，P(X ＝ 4) ＝ C(6, 4) × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>⁴ × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>² ＝ <b><span class='fr'><span class='fn'>20</span><span class='fd'>243</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>，独立投篮 5 次，恰好命中 1 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>243</span></span>"
+     ],
+     "a": 3,
+     "e": "X ～ B(5, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)，P(X ＝ 1) ＝ C(5, 1) × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>¹ × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>⁴ ＝ <b><span class='fr'><span class='fn'>10</span><span class='fd'>243</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>，独立投篮 3 次，恰好命中 1 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span>"
+     ],
+     "a": 2,
+     "e": "X ～ B(3, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)，P(X ＝ 1) ＝ C(3, 1) × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>¹ × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>² ＝ <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>，独立投篮 3 次，恰好命中 1 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "X ～ B(3, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)，P(X ＝ 1) ＝ C(3, 1) × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>¹ × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>² ＝ <b><span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>，独立投篮 5 次，恰好命中 1 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>405</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "X ～ B(5, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)，P(X ＝ 1) ＝ C(5, 1) × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>¹ × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>⁴ ＝ <b><span class='fr'><span class='fn'>405</span><span class='fd'>1024</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>，独立投篮 5 次，恰好命中 2 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>135</span><span class='fd'>512</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>1024</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "X ～ B(5, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)，P(X ＝ 2) ＝ C(5, 2) × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>² × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>³ ＝ <b><span class='fr'><span class='fn'>135</span><span class='fd'>512</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>，独立投篮 5 次，恰好命中 3 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>"
+     ],
+     "a": 3,
+     "e": "X ～ B(5, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)，P(X ＝ 3) ＝ C(5, 3) × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>³ × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>² ＝ <b><span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>，独立投篮 6 次，恰好命中 3 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>160</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>729</span></span>"
+     ],
+     "a": 1,
+     "e": "X ～ B(6, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)，P(X ＝ 3) ＝ C(6, 3) × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>³ × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>³ ＝ <b><span class='fr'><span class='fn'>160</span><span class='fd'>729</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>，独立投篮 5 次，恰好命中 2 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "X ～ B(5, <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)，P(X ＝ 2) ＝ C(5, 2) × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>² × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>³ ＝ <b><span class='fr'><span class='fn'>80</span><span class='fd'>243</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>，独立投篮 6 次，恰好命中 2 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>4096</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1215</span><span class='fd'>4096</span></span>"
+     ],
+     "a": 3,
+     "e": "X ～ B(6, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)，P(X ＝ 2) ＝ C(6, 2) × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>² × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>⁴ ＝ <b><span class='fr'><span class='fn'>1215</span><span class='fd'>4096</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>，独立投篮 4 次，恰好命中 1 次的概率是多少？",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "X ～ B(4, <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)，P(X ＝ 1) ＝ C(4, 1) × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>¹ × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>³ ＝ <b><span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span></b>。"
+    },
+    {
+     "q": "某人每次投篮命中的概率是 <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>，独立投篮 6 次，恰好命中 1 次的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>",
+      "3"
+     ],
+     "a": 0,
+     "e": "X ～ B(6, <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)，P(X ＝ 1) ＝ C(6, 1) × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>¹ × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>⁵ ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span></b>。"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 3,
+ "updated": "2026-11-25",
+ "country": "cn",
+ "subject": "math",
+ "grade": "elective-3"
+}

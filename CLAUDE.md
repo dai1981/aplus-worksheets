@@ -1730,7 +1730,16 @@ CN / Math / 七〜九年级（初中、第四学段。domain は 数与代数／
 CN / Math / 七年级: rational-numbers, adding-and-subtracting-rational-numbers, multiplying-and-dividing-rational-numbers, powers-and-scientific-notation, algebraic-expressions, linear-equations, linear-equation-word-problems, geometric-figures, intersecting-and-parallel-lines, real-numbers, coordinate-plane, systems-of-linear-equations, inequalities, data-collection-and-description ✓
 CN / Math / 八年级: triangles-and-polygons, congruent-triangles, axial-symmetry, multiplying-polynomials, multiplication-formulas, factorization, algebraic-fractions, quadratic-radicals, pythagorean-theorem, parallelograms, linear-functions, data-analysis ✓
 CN / Math / 九年级: quadratic-equations, quadratic-functions, rotation, circle-geometry, probability, inverse-proportion-functions, similarity, trigonometric-functions, projections-and-views ✓
-CN の次: 高中（普通高中数学课程标准）。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に cn があるか確認する
+CN / Math / 高中（普通高中数学课程标准（2017年版2020年修订）、人教A版 2019 の章の順）— grade は教科書：`required-1`（必修第一册、sort 10）・`required-2`（必修第二册）・`elective-1`〜`elective-3`（选择性必修第一〜三册、sort 12〜14）。unit.php で 15〜18 歳と educationalLevel「普通高中」、core.php の grade_standard() で基準名を高中の课标に。standard_url は教育部 2020 年の通知（cn_common.STD_URL_HS）、standard_code は「必修课程 · 函数」形式、domain は 预备知识／函数／几何与代数／概率与统计（DOMAIN_HS、dom は P・F・G・S）。
+生成スクリプトは `tools/cn_hsa.py`（必修第一册）、`cn_hsb.py required-2|elective-1`、`cn_hsc.py elective-2|elective-3`（seed は 2011NN・2021NN・2031NN・2041NN・2051NN）。問題はすべて自前、共通部品は `tools/cn_hsu.py`（S・P・poly・lin・rt・pis・iv・sup、mcq は tidy で -3 → －3、「＋ －」→「－」、1x → x を直す）。各 maker は種類（kind）ごとに 20 問以上作れるようにする（足りないと pick が止まる）。kb・ks・title・meta に < を書かない。
+初中・小学と同じ slug は使わない（angles-and-trigonometric-functions、equations-of-circles）。トピックに 集合、逻辑与不等式・三角函数・向量与复数・解析几何・数列与导数・计数原理与概率分布 を足した。
+preview.php の pv_cjk_safe()：Noto Sans SC/TC/KR にない上付き・下付き文字（⁴〜⁹、ₙ、ŷ、⅓ など）を ^5・n などに置き換える
+CN / Math / 必修第一册: sets, logic, quadratic-inequalities, functions, exponents-and-logarithms, exponential-and-logarithmic-functions, angles-and-trigonometric-functions, trigonometric-identities, graphs-of-trigonometric-functions ✓
+CN / Math / 必修第二册: plane-vectors, solving-triangles, complex-numbers, solid-geometry, statistics, probability ✓
+CN / Math / 选择性必修第一册: space-vectors, lines, equations-of-circles, ellipses, hyperbolas, parabolas ✓
+CN / Math / 选择性必修第二册: sequences, derivatives, applications-of-derivatives ✓
+CN / Math / 选择性必修第三册: counting-principles, binomial-theorem, random-variables, conditional-probability-and-normal-distribution, paired-data ✓
+CN / Math は小学一年级〜高中（必修・选择性必修）まで完了。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に cn があるか確認する
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

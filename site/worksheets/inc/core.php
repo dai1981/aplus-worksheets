@@ -962,6 +962,7 @@ function get_subject($c, $s) { return q1('SELECT * FROM ws_subject WHERE country
 /* The curriculum a grade follows: usually the country's, but Korean kindergarten follows the 누리과정 */
 function grade_standard($country, $grade) {
     if ($country['code'] === 'kr' && $grade && $grade['slug'] === 'kindergarten') return '2019 개정 누리과정';
+    if ($country['code'] === 'cn' && $grade && strpos($grade['slug'], 'grade-') !== 0) return '普通高中数学课程标准（2017年版2020年修订）';
     return $country['standard'];
 }
 function get_grade($c, $s, $g) { return q1('SELECT * FROM ws_grade WHERE country=? AND subject=? AND slug=?', array($c, $s, $g)); }

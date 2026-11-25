@@ -1,0 +1,1153 @@
+{
+ "slug": "conditional-probability-and-normal-distribution",
+ "title": "条件概率、全概率公式和正态分布",
+ "seo_title": "条件概率、全概率公式和正态分布｜高中数学选择性必修第三册练习题（附答案）",
+ "short_title": "条件概率与正态分布",
+ "domain": "概率与统计",
+ "standard_code": "选择性必修课程 · 概率与统计",
+ "standard_url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html",
+ "standard_text": "理解分类加法计数原理和分步乘法计数原理，排列与组合，二项式定理；理解离散型随机变量的分布列、均值和方差，二项分布、超几何分布、正态分布；理解条件概率和全概率公式；会用相关系数、一元线性回归模型和独立性检验分析成对数据（课标内容要求摘要）",
+ "meta_desc": "高中数学选择性必修第三册练习题：条件概率，不放回抽取的乘法公式，全概率公式和贝叶斯公式，正态分布的对称性，3σ 原则，100题在线练习，附可打印答案。",
+ "key_big": "P(B|A) ＝ P(AB) ÷ P(A)",
+ "key_sub": "全概率公式 P(B) ＝ ΣP(Aᵢ)P(B|Aᵢ)；正态曲线关于 x ＝ μ 对称。",
+ "body_html": "<h2>怎么想</h2><p><b>条件概率</b>：事件 A 发生的条件下 B 发生的概率 P(B|A) ＝ P(AB) ÷ P(A)。乘法公式 P(AB) ＝ P(A)P(B|A)。</p><p><b>全概率公式</b>：A₁、A₂、… 互斥且并为全体，P(B) ＝ ΣP(Aᵢ)P(B|Aᵢ)；<b>贝叶斯公式</b> P(Aᵢ|B) ＝ P(Aᵢ)P(B|Aᵢ) ÷ P(B)。</p><p><b>正态分布</b> N(μ, σ²)：曲线关于 x ＝ μ 对称；P(μ － σ ≤ X ≤ μ ＋ σ) ≈ 0.6827，2σ ≈ 0.9545，3σ ≈ 0.9973。</p><div class='sn-ex'><span class='sn-ex-t'>例题</span><p class='sn-ex-q'>P(A) ＝ 0.5，P(AB) ＝ 0.2，求 P(B|A)</p><p class='sn-ex-s'>0.2 ÷ 0.5</p><p class='sn-ex-a'>答：0.4</p></div><div class='sn-ex'><span class='sn-ex-t'>例题</span><p class='sn-ex-q'>X ～ N(2, σ²)，P(X ＞ 4) ＝ 0.1，求 P(0 ＜ X ＜ 4)</p><p class='sn-ex-s'>1 － 2 × 0.1</p><p class='sn-ex-a'>答：0.8</p></div><h2>常见错误</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>常见错误</th><th>正确的想法</th></tr></thead><tbody><tr><td>把 P(B|A) 和 P(A|B) 弄混</td><td>竖线后面是已经发生的条件。</td></tr><tr><td>把条件概率当成 P(AB)</td><td>P(B|A) 要除以 P(A)。</td></tr><tr><td>正态分布用错对称轴</td><td>对称轴是均值 μ，不是 0。</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "σ 越大，正态曲线怎样变化？",
+   "a": "σ 越大，曲线越“矮胖”，数据越分散；σ 越小越“瘦高”，数据越集中。"
+  }
+ ],
+ "sets": [
+  {
+   "title": "条件概率",
+   "items": [
+    {
+     "q": "已知 P(A) ＝ 0.5，P(AB) ＝ 0.2，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.2 ÷ 0.5 ＝ <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.6，P(AB) ＝ 0.5，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.5 ÷ 0.6 ＝ <b><span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.5，P(AB) ＝ 0.3，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.3 ÷ 0.5 ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.8，P(AB) ＝ 0.6，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.6 ÷ 0.8 ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.6，P(AB) ＝ 0.3，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "2",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.3 ÷ 0.6 ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.5，P(AB) ＝ 0.1，求 P(B|A)。",
+     "c": [
+      "5",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>"
+     ],
+     "a": 1,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.1 ÷ 0.5 ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.7，P(AB) ＝ 0.4，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.4 ÷ 0.7 ＝ <b><span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.8，P(AB) ＝ 0.7，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 2,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.7 ÷ 0.8 ＝ <b><span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.7，P(AB) ＝ 0.2，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.2 ÷ 0.7 ＝ <b><span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.4，P(AB) ＝ 0.3，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.3 ÷ 0.4 ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.4，P(AB) ＝ 0.1，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>",
+      "4",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.1 ÷ 0.4 ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.6，P(AB) ＝ 0.2，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "3",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.2 ÷ 0.6 ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.4，P(AB) ＝ 0.2，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "2"
+     ],
+     "a": 0,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.2 ÷ 0.4 ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.7，P(AB) ＝ 0.1，求 P(B|A)。",
+     "c": [
+      "7",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 2,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.1 ÷ 0.7 ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.8，P(AB) ＝ 0.1，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "8"
+     ],
+     "a": 0,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.1 ÷ 0.8 ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.3，P(AB) ＝ 0.1，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "3",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.1 ÷ 0.3 ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.3，P(AB) ＝ 0.2，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span>"
+     ],
+     "a": 2,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.2 ÷ 0.3 ＝ <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.6，P(AB) ＝ 0.4，求 P(B|A)。",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.4 ÷ 0.6 ＝ <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.8，P(AB) ＝ 0.2，求 P(B|A)。",
+     "c": [
+      "4",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.2 ÷ 0.8 ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>。"
+    },
+    {
+     "q": "已知 P(A) ＝ 0.8，P(AB) ＝ 0.4，求 P(B|A)。",
+     "c": [
+      "2",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span>"
+     ],
+     "a": 1,
+     "e": "P(B|A) ＝ P(AB) ÷ P(A) ＝ 0.4 ÷ 0.8 ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>。"
+    }
+   ]
+  },
+  {
+   "title": "不放回抽取",
+   "items": [
+    {
+     "q": "袋中有 6 个红球、2 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>"
+     ],
+     "a": 2,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span> ＝ <b><span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span></b>。"
+    },
+    {
+     "q": "袋中有 4 个红球、5 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>。"
+    },
+    {
+     "q": "袋中有 2 个红球、4 个白球，不放回地依次取 2 个。已知第 1 次取到红球，第 2 次也取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "第 1 次取走 1 个红球后，剩下 5 个球中有 1 个红球：<b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>。"
+    },
+    {
+     "q": "袋中有 6 个红球、6 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span>"
+     ],
+     "a": 2,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span> ＝ <b><span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span></b>。"
+    },
+    {
+     "q": "袋中有 2 个红球、7 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>。"
+    },
+    {
+     "q": "袋中有 3 个红球、6 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 3,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>。"
+    },
+    {
+     "q": "袋中有 4 个红球、6 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> ＝ <b><span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span></b>。"
+    },
+    {
+     "q": "袋中有 6 个红球、4 个白球，不放回地依次取 2 个。已知第 1 次取到红球，第 2 次也取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "第 1 次取走 1 个红球后，剩下 9 个球中有 5 个红球：<b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>。"
+    },
+    {
+     "q": "袋中有 7 个红球、5 个白球，不放回地依次取 2 个。已知第 1 次取到红球，第 2 次也取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>"
+     ],
+     "a": 0,
+     "e": "第 1 次取走 1 个红球后，剩下 11 个球中有 6 个红球：<b><span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span></b>。"
+    },
+    {
+     "q": "袋中有 4 个红球、7 个白球，不放回地依次取 2 个。已知第 1 次取到红球，第 2 次也取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>"
+     ],
+     "a": 2,
+     "e": "第 1 次取走 1 个红球后，剩下 10 个球中有 3 个红球：<b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>。"
+    },
+    {
+     "q": "袋中有 5 个红球、5 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> ＝ <b><span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span></b>。"
+    },
+    {
+     "q": "袋中有 7 个红球、2 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>81</span></span>"
+     ],
+     "a": 1,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> ＝ <b><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></b>。"
+    },
+    {
+     "q": "袋中有 5 个红球、2 个白球，不放回地依次取 2 个。已知第 1 次取到红球，第 2 次也取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>21</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "第 1 次取走 1 个红球后，剩下 6 个球中有 4 个红球：<b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>。"
+    },
+    {
+     "q": "袋中有 7 个红球、2 个白球，不放回地依次取 2 个。已知第 1 次取到红球，第 2 次也取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "第 1 次取走 1 个红球后，剩下 8 个球中有 6 个红球：<b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>。"
+    },
+    {
+     "q": "袋中有 3 个红球、2 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>。"
+    },
+    {
+     "q": "袋中有 7 个红球、7 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span>"
+     ],
+     "a": 2,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span> ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span></b>。"
+    },
+    {
+     "q": "袋中有 6 个红球、4 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>"
+     ],
+     "a": 1,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> ＝ <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>。"
+    },
+    {
+     "q": "袋中有 5 个红球、4 个白球，不放回地依次取 2 个。已知第 1 次取到红球，第 2 次也取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>"
+     ],
+     "a": 0,
+     "e": "第 1 次取走 1 个红球后，剩下 8 个球中有 4 个红球：<b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>。"
+    },
+    {
+     "q": "袋中有 5 个红球、3 个白球，不放回地依次取 2 个，两次都取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "乘法公式：P(A₁A₂) ＝ P(A₁)P(A₂|A₁) ＝ <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> ＝ <b><span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span></b>。"
+    },
+    {
+     "q": "袋中有 5 个红球、5 个白球，不放回地依次取 2 个。已知第 1 次取到红球，第 2 次也取到红球的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "第 1 次取走 1 个红球后，剩下 9 个球中有 4 个红球：<b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>。"
+    }
+   ]
+  },
+  {
+   "title": "全概率公式和贝叶斯公式",
+   "items": [
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 30% 和 70%，次品率分别是 3% 和 2%。任取一件是次品的概率是多少？",
+     "c": [
+      "0.0006",
+      "0.009",
+      "0.025",
+      "0.023"
+     ],
+     "a": 3,
+     "e": "全概率公式：0.3 × 0.03 ＋ 0.7 × 0.02 ＝ <b>0.023</b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 60% 和 40%，次品率分别是 4% 和 3%。任取一件是次品的概率是多少？",
+     "c": [
+      "0.036",
+      "0.0012",
+      "0.035",
+      "0.024"
+     ],
+     "a": 0,
+     "e": "全概率公式：0.6 × 0.04 ＋ 0.4 × 0.03 ＝ <b>0.036</b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 70% 和 30%，次品率分别是 5% 和 1%。任取一件是次品的概率是多少？",
+     "c": [
+      "0.0005",
+      "0.03",
+      "0.035",
+      "0.038"
+     ],
+     "a": 3,
+     "e": "全概率公式：0.7 × 0.05 ＋ 0.3 × 0.01 ＝ <b>0.038</b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 70% 和 30%，次品率分别是 1% 和 5%。任取一件是次品，它来自甲厂的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "贝叶斯公式：P(甲|次) ＝ 0.007 ÷ 0.022 ＝ <b><span class='fr'><span class='fn'>7</span><span class='fd'>22</span></span></b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 30% 和 70%，次品率分别是 5% 和 2%。任取一件是次品，它来自甲厂的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>29</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 2,
+     "e": "贝叶斯公式：P(甲|次) ＝ 0.015 ÷ 0.029 ＝ <b><span class='fr'><span class='fn'>15</span><span class='fd'>29</span></span></b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 70% 和 30%，次品率分别是 3% 和 4%。任取一件是次品，它来自甲厂的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "贝叶斯公式：P(甲|次) ＝ 0.021 ÷ 0.033 ＝ <b><span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span></b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 30% 和 70%，次品率分别是 5% 和 2%。任取一件是次品的概率是多少？",
+     "c": [
+      "0.001",
+      "0.015",
+      "0.029",
+      "0.035"
+     ],
+     "a": 2,
+     "e": "全概率公式：0.3 × 0.05 ＋ 0.7 × 0.02 ＝ <b>0.029</b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 60% 和 40%，次品率分别是 5% 和 1%。任取一件是次品，它来自甲厂的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>17</span></span>"
+     ],
+     "a": 1,
+     "e": "贝叶斯公式：P(甲|次) ＝ 0.03 ÷ 0.034 ＝ <b><span class='fr'><span class='fn'>15</span><span class='fd'>17</span></span></b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 40% 和 60%，次品率分别是 4% 和 5%。任取一件是次品的概率是多少？",
+     "c": [
+      "0.046",
+      "0.002",
+      "0.045",
+      "0.016"
+     ],
+     "a": 0,
+     "e": "全概率公式：0.4 × 0.04 ＋ 0.6 × 0.05 ＝ <b>0.046</b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 60% 和 40%，次品率分别是 4% 和 1%。任取一件是次品，它来自甲厂的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>"
+     ],
+     "a": 1,
+     "e": "贝叶斯公式：P(甲|次) ＝ 0.024 ÷ 0.028 ＝ <b><span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span></b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 30% 和 70%，次品率分别是 3% 和 1%。任取一件是次品，它来自甲厂的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>"
+     ],
+     "a": 3,
+     "e": "贝叶斯公式：P(甲|次) ＝ 0.009 ÷ 0.016 ＝ <b><span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span></b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 60% 和 40%，次品率分别是 5% 和 2%。任取一件是次品的概率是多少？",
+     "c": [
+      "0.035",
+      "0.001",
+      "0.038",
+      "0.03"
+     ],
+     "a": 2,
+     "e": "全概率公式：0.6 × 0.05 ＋ 0.4 × 0.02 ＝ <b>0.038</b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 30% 和 70%，次品率分别是 1% 和 5%。任取一件是次品，它来自甲厂的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>38</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>38</span></span>"
+     ],
+     "a": 1,
+     "e": "贝叶斯公式：P(甲|次) ＝ 0.003 ÷ 0.038 ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>38</span></span></b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 70% 和 30%，次品率分别是 1% 和 4%。任取一件是次品，它来自甲厂的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>19</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 1,
+     "e": "贝叶斯公式：P(甲|次) ＝ 0.007 ÷ 0.019 ＝ <b><span class='fr'><span class='fn'>7</span><span class='fd'>19</span></span></b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 60% 和 40%，次品率分别是 5% 和 4%。任取一件是次品的概率是多少？",
+     "c": [
+      "0.046",
+      "0.03",
+      "0.002",
+      "0.045"
+     ],
+     "a": 0,
+     "e": "全概率公式：0.6 × 0.05 ＋ 0.4 × 0.04 ＝ <b>0.046</b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 70% 和 30%，次品率分别是 4% 和 5%。任取一件是次品的概率是多少？",
+     "c": [
+      "0.028",
+      "0.045",
+      "0.043",
+      "0.002"
+     ],
+     "a": 2,
+     "e": "全概率公式：0.7 × 0.04 ＋ 0.3 × 0.05 ＝ <b>0.043</b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 70% 和 30%，次品率分别是 5% 和 4%。任取一件是次品的概率是多少？",
+     "c": [
+      "0.045",
+      "0.002",
+      "0.035",
+      "0.047"
+     ],
+     "a": 3,
+     "e": "全概率公式：0.7 × 0.05 ＋ 0.3 × 0.04 ＝ <b>0.047</b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 60% 和 40%，次品率分别是 2% 和 1%。任取一件是次品，它来自甲厂的概率是多少？",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "贝叶斯公式：P(甲|次) ＝ 0.012 ÷ 0.016 ＝ <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 40% 和 60%，次品率分别是 5% 和 4%。任取一件是次品的概率是多少？",
+     "c": [
+      "0.044",
+      "0.02",
+      "0.045",
+      "0.002"
+     ],
+     "a": 0,
+     "e": "全概率公式：0.4 × 0.05 ＋ 0.6 × 0.04 ＝ <b>0.044</b>。"
+    },
+    {
+     "q": "甲、乙两厂生产同一种零件，分别占总产量的 30% 和 70%，次品率分别是 4% 和 3%。任取一件是次品的概率是多少？",
+     "c": [
+      "0.035",
+      "0.0012",
+      "0.012",
+      "0.033"
+     ],
+     "a": 3,
+     "e": "全概率公式：0.3 × 0.04 ＋ 0.7 × 0.03 ＝ <b>0.033</b>。"
+    }
+   ]
+  },
+  {
+   "title": "正态分布的对称性",
+   "items": [
+    {
+     "q": "X ～ N(99, 7²)，P(X ＞ 120) ＝ 0.12，求 P(78 ＜ X ＜ 120)。",
+     "c": [
+      "0.76",
+      "0.24",
+      "0.38",
+      "0.88"
+     ],
+     "a": 0,
+     "e": "正态曲线关于 x ＝ 99 对称，P(X ＜ 78) ＝ P(X ＞ 120) ＝ 0.12，所以 1 － 2 × 0.12 ＝ <b>0.76</b>。"
+    },
+    {
+     "q": "X ～ N(14, 5²)，P(X ＜ 9) ＝ 0.1，求 P(X ＞ 19)。",
+     "c": [
+      "0.9",
+      "0.4",
+      "0.1",
+      "0.8"
+     ],
+     "a": 2,
+     "e": "关于 x ＝ 14 对称，P(X ＞ 19) ＝ P(X ＜ 9) ＝ <b>0.1</b>。"
+    },
+    {
+     "q": "X ～ N(16, 5²)，P(X ＞ 21) ＝ 0.29，求 P(11 ＜ X ＜ 21)。",
+     "c": [
+      "0.58",
+      "0.42",
+      "0.71",
+      "0.21"
+     ],
+     "a": 1,
+     "e": "正态曲线关于 x ＝ 16 对称，P(X ＜ 11) ＝ P(X ＞ 21) ＝ 0.29，所以 1 － 2 × 0.29 ＝ <b>0.42</b>。"
+    },
+    {
+     "q": "X ～ N(91, 8²)，P(X ＞ 99) ＝ 0.03，求 P(83 ＜ X ＜ 99)。",
+     "c": [
+      "0.94",
+      "0.47",
+      "0.06",
+      "0.97"
+     ],
+     "a": 0,
+     "e": "正态曲线关于 x ＝ 91 对称，P(X ＜ 83) ＝ P(X ＞ 99) ＝ 0.03，所以 1 － 2 × 0.03 ＝ <b>0.94</b>。"
+    },
+    {
+     "q": "X ～ N(65, 2²)，P(X ＜ 63) ＝ 0.23，求 P(X ＞ 67)。",
+     "c": [
+      "0.77",
+      "0.54",
+      "0.23",
+      "0.27"
+     ],
+     "a": 2,
+     "e": "关于 x ＝ 65 对称，P(X ＞ 67) ＝ P(X ＜ 63) ＝ <b>0.23</b>。"
+    },
+    {
+     "q": "X ～ N(30, 10²)，P(X ＜ 10) ＝ 0.21，求 P(X ＞ 50)。",
+     "c": [
+      "0.21",
+      "0.58",
+      "0.29",
+      "0.79"
+     ],
+     "a": 0,
+     "e": "关于 x ＝ 30 对称，P(X ＞ 50) ＝ P(X ＜ 10) ＝ <b>0.21</b>。"
+    },
+    {
+     "q": "X ～ N(97, 10²)，P(X ＜ 77) ＝ 0.22，求 P(X ＞ 117)。",
+     "c": [
+      "0.56",
+      "0.78",
+      "0.22",
+      "0.28"
+     ],
+     "a": 2,
+     "e": "关于 x ＝ 97 对称，P(X ＞ 117) ＝ P(X ＜ 77) ＝ <b>0.22</b>。"
+    },
+    {
+     "q": "X ～ N(23, 1²)，P(X ＞ 25) ＝ 0.23，求 P(21 ＜ X ＜ 25)。",
+     "c": [
+      "0.27",
+      "0.77",
+      "0.54",
+      "0.46"
+     ],
+     "a": 2,
+     "e": "正态曲线关于 x ＝ 23 对称，P(X ＜ 21) ＝ P(X ＞ 25) ＝ 0.23，所以 1 － 2 × 0.23 ＝ <b>0.54</b>。"
+    },
+    {
+     "q": "X ～ N(68, 7²)，P(X ＜ 54) ＝ 0.13，求 P(X ＞ 82)。",
+     "c": [
+      "0.13",
+      "0.74",
+      "0.37",
+      "0.87"
+     ],
+     "a": 0,
+     "e": "关于 x ＝ 68 对称，P(X ＞ 82) ＝ P(X ＜ 54) ＝ <b>0.13</b>。"
+    },
+    {
+     "q": "X ～ N(4, 2²)，P(X ＜ －2) ＝ 0.09，求 P(X ＞ 10)。",
+     "c": [
+      "0.41",
+      "0.91",
+      "0.82",
+      "0.09"
+     ],
+     "a": 3,
+     "e": "关于 x ＝ 4 对称，P(X ＞ 10) ＝ P(X ＜ －2) ＝ <b>0.09</b>。"
+    },
+    {
+     "q": "X ～ N(51, 2²)，P(X ＜ 47) ＝ 0.05，求 P(X ＞ 55)。",
+     "c": [
+      "0.45",
+      "0.9",
+      "0.95",
+      "0.05"
+     ],
+     "a": 3,
+     "e": "关于 x ＝ 51 对称，P(X ＞ 55) ＝ P(X ＜ 47) ＝ <b>0.05</b>。"
+    },
+    {
+     "q": "X ～ N(64, 10²)，P(X ＞ 74) ＝ 0.28，求 P(54 ＜ X ＜ 74)。",
+     "c": [
+      "0.56",
+      "0.72",
+      "0.22",
+      "0.44"
+     ],
+     "a": 3,
+     "e": "正态曲线关于 x ＝ 64 对称，P(X ＜ 54) ＝ P(X ＞ 74) ＝ 0.28，所以 1 － 2 × 0.28 ＝ <b>0.44</b>。"
+    },
+    {
+     "q": "X ～ N(92, 5²)，P(X ＜ 82) ＝ 0.21，求 P(X ＞ 102)。",
+     "c": [
+      "0.58",
+      "0.79",
+      "0.21",
+      "0.29"
+     ],
+     "a": 2,
+     "e": "关于 x ＝ 92 对称，P(X ＞ 102) ＝ P(X ＜ 82) ＝ <b>0.21</b>。"
+    },
+    {
+     "q": "X ～ N(50, 5²)，P(X ＞ 65) ＝ 0.08，求 P(35 ＜ X ＜ 65)。",
+     "c": [
+      "0.84",
+      "0.92",
+      "0.16",
+      "0.42"
+     ],
+     "a": 0,
+     "e": "正态曲线关于 x ＝ 50 对称，P(X ＜ 35) ＝ P(X ＞ 65) ＝ 0.08，所以 1 － 2 × 0.08 ＝ <b>0.84</b>。"
+    },
+    {
+     "q": "X ～ N(89, 10²)，P(X ＞ 99) ＝ 0.01，求 P(79 ＜ X ＜ 99)。",
+     "c": [
+      "0.02",
+      "0.98",
+      "0.99",
+      "0.49"
+     ],
+     "a": 1,
+     "e": "正态曲线关于 x ＝ 89 对称，P(X ＜ 79) ＝ P(X ＞ 99) ＝ 0.01，所以 1 － 2 × 0.01 ＝ <b>0.98</b>。"
+    },
+    {
+     "q": "X ～ N(48, 8²)，P(X ＜ 24) ＝ 0.29，求 P(X ＞ 72)。",
+     "c": [
+      "0.21",
+      "0.42",
+      "0.71",
+      "0.29"
+     ],
+     "a": 3,
+     "e": "关于 x ＝ 48 对称，P(X ＞ 72) ＝ P(X ＜ 24) ＝ <b>0.29</b>。"
+    },
+    {
+     "q": "X ～ N(58, 6²)，P(X ＞ 70) ＝ 0.1，求 P(46 ＜ X ＜ 70)。",
+     "c": [
+      "0.2",
+      "0.4",
+      "0.9",
+      "0.8"
+     ],
+     "a": 3,
+     "e": "正态曲线关于 x ＝ 58 对称，P(X ＜ 46) ＝ P(X ＞ 70) ＝ 0.1，所以 1 － 2 × 0.1 ＝ <b>0.8</b>。"
+    },
+    {
+     "q": "X ～ N(56, 7²)，P(X ＜ 49) ＝ 0.15，求 P(X ＞ 63)。",
+     "c": [
+      "0.35",
+      "0.15",
+      "0.85",
+      "0.7"
+     ],
+     "a": 1,
+     "e": "关于 x ＝ 56 对称，P(X ＞ 63) ＝ P(X ＜ 49) ＝ <b>0.15</b>。"
+    },
+    {
+     "q": "X ～ N(26, 6²)，P(X ＞ 38) ＝ 0.21，求 P(14 ＜ X ＜ 38)。",
+     "c": [
+      "0.29",
+      "0.58",
+      "0.42",
+      "0.79"
+     ],
+     "a": 1,
+     "e": "正态曲线关于 x ＝ 26 对称，P(X ＜ 14) ＝ P(X ＞ 38) ＝ 0.21，所以 1 － 2 × 0.21 ＝ <b>0.58</b>。"
+    },
+    {
+     "q": "X ～ N(28, 7²)，P(X ＜ 14) ＝ 0.07，求 P(X ＞ 42)。",
+     "c": [
+      "0.43",
+      "0.07",
+      "0.86",
+      "0.93"
+     ],
+     "a": 1,
+     "e": "关于 x ＝ 28 对称，P(X ＞ 42) ＝ P(X ＜ 14) ＝ <b>0.07</b>。"
+    }
+   ]
+  },
+  {
+   "title": "3σ 原则",
+   "items": [
+    {
+     "q": "X ～ N(170, 10²)，P(160 ≤ X ≤ 180) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.9973",
+      "0.9545",
+      "0.6827",
+      "0.5"
+     ],
+     "a": 2,
+     "e": "区间是 [μ － 1σ, μ ＋ 1σ]，概率约为 <b>0.6827</b>。"
+    },
+    {
+     "q": "X ～ N(80, 5²)，P(70 ≤ X ≤ 90) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.9973",
+      "0.9545",
+      "0.5",
+      "0.6827"
+     ],
+     "a": 1,
+     "e": "区间是 [μ － 2σ, μ ＋ 2σ]，概率约为 <b>0.9545</b>。"
+    },
+    {
+     "q": "X ～ N(80, 2²)，P(76 ≤ X ≤ 84) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.9545",
+      "0.9973",
+      "0.6827",
+      "0.5"
+     ],
+     "a": 0,
+     "e": "区间是 [μ － 2σ, μ ＋ 2σ]，概率约为 <b>0.9545</b>。"
+    },
+    {
+     "q": "X ～ N(170, 2²)，P(166 ≤ X ≤ 174) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.5",
+      "0.9545",
+      "0.6827",
+      "0.9973"
+     ],
+     "a": 1,
+     "e": "区间是 [μ － 2σ, μ ＋ 2σ]，概率约为 <b>0.9545</b>。"
+    },
+    {
+     "q": "X ～ N(70, 5²)，P(55 ≤ X ≤ 85) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.9545",
+      "0.9973",
+      "0.5",
+      "0.6827"
+     ],
+     "a": 1,
+     "e": "区间是 [μ － 3σ, μ ＋ 3σ]，概率约为 <b>0.9973</b>。"
+    },
+    {
+     "q": "X ～ N(70, 10²)，P(40 ≤ X ≤ 100) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.9973",
+      "0.6827",
+      "0.5",
+      "0.9545"
+     ],
+     "a": 0,
+     "e": "区间是 [μ － 3σ, μ ＋ 3σ]，概率约为 <b>0.9973</b>。"
+    },
+    {
+     "q": "X ～ N(60, 4²)，P(48 ≤ X ≤ 72) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.9973",
+      "0.6827",
+      "0.5",
+      "0.9545"
+     ],
+     "a": 0,
+     "e": "区间是 [μ － 3σ, μ ＋ 3σ]，概率约为 <b>0.9973</b>。"
+    },
+    {
+     "q": "X ～ N(170, 5²)，P(160 ≤ X ≤ 180) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.9545",
+      "0.9973",
+      "0.5",
+      "0.6827"
+     ],
+     "a": 0,
+     "e": "区间是 [μ － 2σ, μ ＋ 2σ]，概率约为 <b>0.9545</b>。"
+    },
+    {
+     "q": "X ～ N(70, 2²)，P(64 ≤ X ≤ 76) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.6827",
+      "0.5",
+      "0.9545",
+      "0.9973"
+     ],
+     "a": 3,
+     "e": "区间是 [μ － 3σ, μ ＋ 3σ]，概率约为 <b>0.9973</b>。"
+    },
+    {
+     "q": "X ～ N(100, 4²)，P(88 ≤ X ≤ 112) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.9545",
+      "0.5",
+      "0.6827",
+      "0.9973"
+     ],
+     "a": 3,
+     "e": "区间是 [μ － 3σ, μ ＋ 3σ]，概率约为 <b>0.9973</b>。"
+    },
+    {
+     "q": "X ～ N(50, 5²)，P(35 ≤ X ≤ 65) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.9545",
+      "0.5",
+      "0.9973",
+      "0.6827"
+     ],
+     "a": 2,
+     "e": "区间是 [μ － 3σ, μ ＋ 3σ]，概率约为 <b>0.9973</b>。"
+    },
+    {
+     "q": "X ～ N(50, 5²)，P(45 ≤ X ≤ 55) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.5",
+      "0.9973",
+      "0.9545",
+      "0.6827"
+     ],
+     "a": 3,
+     "e": "区间是 [μ － 1σ, μ ＋ 1σ]，概率约为 <b>0.6827</b>。"
+    },
+    {
+     "q": "X ～ N(50, 4²)，P(38 ≤ X ≤ 62) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.5",
+      "0.6827",
+      "0.9973",
+      "0.9545"
+     ],
+     "a": 2,
+     "e": "区间是 [μ － 3σ, μ ＋ 3σ]，概率约为 <b>0.9973</b>。"
+    },
+    {
+     "q": "X ～ N(170, 5²)，P(165 ≤ X ≤ 175) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.6827",
+      "0.5",
+      "0.9973",
+      "0.9545"
+     ],
+     "a": 0,
+     "e": "区间是 [μ － 1σ, μ ＋ 1σ]，概率约为 <b>0.6827</b>。"
+    },
+    {
+     "q": "X ～ N(70, 2²)，P(68 ≤ X ≤ 72) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.5",
+      "0.9545",
+      "0.9973",
+      "0.6827"
+     ],
+     "a": 3,
+     "e": "区间是 [μ － 1σ, μ ＋ 1σ]，概率约为 <b>0.6827</b>。"
+    },
+    {
+     "q": "X ～ N(80, 5²)，P(75 ≤ X ≤ 85) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.5",
+      "0.9545",
+      "0.6827",
+      "0.9973"
+     ],
+     "a": 2,
+     "e": "区间是 [μ － 1σ, μ ＋ 1σ]，概率约为 <b>0.6827</b>。"
+    },
+    {
+     "q": "X ～ N(80, 4²)，P(76 ≤ X ≤ 84) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.9973",
+      "0.5",
+      "0.9545",
+      "0.6827"
+     ],
+     "a": 3,
+     "e": "区间是 [μ － 1σ, μ ＋ 1σ]，概率约为 <b>0.6827</b>。"
+    },
+    {
+     "q": "X ～ N(170, 10²)，P(140 ≤ X ≤ 200) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.5",
+      "0.9973",
+      "0.6827",
+      "0.9545"
+     ],
+     "a": 1,
+     "e": "区间是 [μ － 3σ, μ ＋ 3σ]，概率约为 <b>0.9973</b>。"
+    },
+    {
+     "q": "X ～ N(170, 5²)，P(155 ≤ X ≤ 185) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.5",
+      "0.6827",
+      "0.9973",
+      "0.9545"
+     ],
+     "a": 2,
+     "e": "区间是 [μ － 3σ, μ ＋ 3σ]，概率约为 <b>0.9973</b>。"
+    },
+    {
+     "q": "X ～ N(100, 10²)，P(70 ≤ X ≤ 130) 约等于多少？（参考：P(μ － kσ ≤ X ≤ μ ＋ kσ) ≈ 0.6827、0.9545、0.9973，k ＝ 1、2、3）",
+     "c": [
+      "0.6827",
+      "0.9973",
+      "0.9545",
+      "0.5"
+     ],
+     "a": 1,
+     "e": "区间是 [μ － 3σ, μ ＋ 3σ]，概率约为 <b>0.9973</b>。"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 4,
+ "updated": "2026-11-25",
+ "country": "cn",
+ "subject": "math",
+ "grade": "elective-3"
+}

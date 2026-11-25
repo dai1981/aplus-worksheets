@@ -134,6 +134,10 @@ if ($u['key_big']) $lr['teaches'] = $u['key_big'];
 $lr['audience'] = array('@type' => 'EducationalAudience', 'educationalRole' => array('student', 'teacher', 'parent'));
 if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 'us' || $country['code'] === 'us-tx' || $country['code'] === 'ph' || $country['code'] === 'za' || $country['code'] === 'tw' || $country['code'] === 'cn' || $country['code'] === 'kr' || strpos($country['code'], 'ca') === 0)) {   // Texas, the Philippines, Canada and Taiwan: Grade 3 = age 8-9, like the US
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);
+} elseif ($country['code'] === 'cn' && isset(array('required-1' => 1, 'required-2' => 1, 'elective-1' => 1, 'elective-2' => 1, 'elective-3' => 1)[$grade['slug']])) {
+    $ages = array('required-1' => '15-16', 'required-2' => '15-16', 'elective-1' => '16-17', 'elective-2' => '16-17', 'elective-3' => '16-18');
+    $lr['typicalAgeRange'] = $ages[$grade['slug']];   // China, 普通高中: 必修 = 高一, 选择性必修 = 高二〜高三
+    $lr['educationalLevel'] = array($grade['name'], '普通高中');
 } elseif ($country['code'] === 'kr' && isset(array('common-math-1' => 1, 'common-math-2' => 1, 'algebra' => 1, 'calculus-1' => 1, 'probability-and-statistics' => 1)[$grade['slug']])) {
     $ages = array('common-math-1' => '15-16', 'common-math-2' => '15-16', 'algebra' => '16-17', 'calculus-1' => '16-17', 'probability-and-statistics' => '17-18');
     $lr['typicalAgeRange'] = $ages[$grade['slug']];   // Korea, 고등학교: 공통수학1·2 = 1학년, 대수·미적분Ⅰ = 2학년, 확률과 통계 = 2~3학년

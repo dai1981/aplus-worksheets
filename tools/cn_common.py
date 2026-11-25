@@ -24,6 +24,13 @@ STAGE = {1: "第一学段", 2: "第一学段", 3: "第二学段", 4: "第二学�
 # 课标の主題（standard_code の後半と domain）
 DOMAIN = {"N": "数与运算", "Q": "数量关系", "G": "图形的认识与测量", "T": "图形的位置与运动", "D": "统计与概率"}
 DOMAIN_JH = {"N": "数与代数", "A": "数与代数", "G": "图形与几何", "T": "图形与几何", "D": "统计与概率"}  # 第四学段
+# 高中（普通高中数学课程标准（2017年版2020年修订））：grade は科目（必修第一册 など）
+STD_URL_HS = "http://www.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html"
+HS_NAMES = {"required-1": "必修第一册", "required-2": "必修第二册", "elective-1": "选择性必修第一册",
+            "elective-2": "选择性必修第二册", "elective-3": "选择性必修第三册"}
+HS_STAGE = {"required-1": "必修课程", "required-2": "必修课程", "elective-1": "选择性必修课程",
+            "elective-2": "选择性必修课程", "elective-3": "选择性必修课程"}
+DOMAIN_HS = {"P": "预备知识", "F": "函数", "G": "几何与代数", "S": "概率与统计"}
 DOMAIN_LOW = {"G": "图形的认识与测量", "D": "数据分类"}          # 第一学段の呼び方
 
 _T2S = opencc.OpenCC("tw2sp")
@@ -273,12 +280,19 @@ def unit(g, slug, sort, dom, std, title, short, meta, key_big, key_sub, body, fa
             assert not re.search(r"[們個這們為來說時對還會與無並後從應於將從學數點麼裡邊們樣條鐘幾讀寫錢買賣張隻開關]", re.sub(r"<[^>]+>", "", it["q"] + "".join(it["c"]) + it["e"])), ("traditional", slug, it["q"][:80])
     balance(sets, rnd)
     title, short, meta, key_big, key_sub = map(plain, (title, short, meta, key_big, key_sub))
-    dname = DOMAIN_JH[dom] if g >= 7 else ((DOMAIN_LOW.get(dom) if g <= 2 else None) or DOMAIN[dom])
-    write_unit("cn", "math", "grade-%d" % g, {
+    if isinstance(g, str):                  # 高中
+        dname = DOMAIN_HS[dom]
+        gslug, seo = g, "%s｜高中数学%s练习题（附答案）" % (title, HS_NAMES[g])
+        code, url = "%s · %s" % (HS_STAGE[g], dname), STD_URL_HS
+    else:
+        dname = DOMAIN_JH[dom] if g >= 7 else ((DOMAIN_LOW.get(dom) if g <= 2 else None) or DOMAIN[dom])
+        gslug, seo = "grade-%d" % g, "%s｜%s数学练习题（附答案）" % (title, GRADE_ZH[g])
+        code, url = "%s · %s" % (STAGE[g], dname), STD_URL
+    write_unit("cn", "math", gslug, {
         "slug": slug, "title": title,
-        "seo_title": "%s｜%s数学练习题（附答案）" % (title, GRADE_ZH[g]),
-        "short_title": short, "domain": dname, "standard_code": "%s · %s" % (STAGE[g], dname),
-        "standard_url": STD_URL, "standard_text": std + "（课标内容要求摘要）", "meta_desc": meta,
+        "seo_title": seo,
+        "short_title": short, "domain": dname, "standard_code": code,
+        "standard_url": url, "standard_text": std + "（课标内容要求摘要）", "meta_desc": meta,
         "key_big": key_big, "key_sub": key_sub, "body_html": body,
         "faq": [{"q": q, "a": a} for q, a in faq], "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })
