@@ -1,6 +1,6 @@
 <?php
 /* Quiz together rankings: class accuracy by country and by state / province (/worksheets/ranking/)
-   ?lang=de|fr|it|es|es-MX|pt-BR|zh-TW|zh-CN|ko shows the page in that language (the quiz links here in the page language).
+   ?lang=de|fr|it|es|es-MX|pt-BR|zh-TW|zh-CN|ko|id|tr shows the page in that language (the quiz links here in the page language).
    The page is drawn by one shared file on eigo-duke.com: /common/js/mq-rank.js (data: api/mq.php?a=rank) */
 $RK = array(
     'en' => array('Quiz Together Rankings: Class Accuracy by Country and State',
@@ -30,6 +30,12 @@ $RK = array(
     'zh-TW' => array('一起來答題 排行榜：各國與各地區的班級答對率',
         '看看你所在的縣市和國家的班級在「一起來答題」中的答對率。全班一起作答，讓你們的地區排名往上衝。',
         '「一起來答題」可以讓全班用手機回答同一份題目。點題目右上角的小 QR 碼，在等待畫面選擇國家和地區，全班的答對率就會計入所在地區的排行榜。每個人只計算第一次的成績，不會保存名字。參加人數夠多之後，才會顯示該地區的答對率。'),
+    'id' => array('Peringkat Kuis Bersama: Persentase Benar Kelas per Negara dan Provinsi',
+        'Lihat seberapa baik kelas-kelas di provinsi dan negaramu dalam Kuis Bersama. Kerjakan kuis bersama teman sekelas dan bantu daerahmu naik peringkat.',
+        'Dengan Kuis Bersama, satu kelas menjawab kuis yang sama di ponsel. Ketuk kode QR kecil pada kuis, lalu pilih negara dan provinsi di layar tunggu. Persentase jawaban benar kelasmu akan dihitung untuk peringkat daerahmu. Hanya permainan pertama setiap pemain yang dihitung, dan nama tidak pernah disimpan. Persentase suatu daerah muncul setelah cukup banyak pemain ikut.'),
+    'tr' => array('Birlikte Quiz Sıralaması: Ülkelere ve İllere Göre Sınıf Başarı Oranı',
+        'İlindeki ve ülkendeki sınıfların Birlikte Quiz’de ne kadar başarılı olduğunu gör. Sınıfınla birlikte çöz ve bölgeni sıralamada yukarı taşı.',
+        'Birlikte Quiz ile bütün sınıf aynı testi telefondan çözer. Bir testin küçük QR koduna dokun, bekleme ekranında ülkeni ve ilini seç. Sınıfının doğru cevap oranı bölgenin sıralamasına eklenir. Her oyuncunun yalnızca ilk oyunu sayılır ve isimler asla kaydedilmez. Bir bölgenin oranı, yeterince oyuncu katıldıktan sonra görünür.'),
 );
 $lang = isset($_GET['lang']) && is_string($_GET['lang']) ? $_GET['lang'] : 'en';
 if ($lang === 'es-MX') $tx = $RK['es'];
