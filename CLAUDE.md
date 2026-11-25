@@ -1917,8 +1917,9 @@ CH / Mathematik（Deutschschweiz）は Kindergarten〜9. Klasse と Gymnasium 1.
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
 - 集計テーブルは mq.php と同じ DB の qz_area・qz_done・qz_stat・qz_unit（mq.php が自動で作る。qz_stat・qz_unit は足すだけ）
 - クラス：先生の端末に名前なしのクラス番号（16けた）を残し（localStorage の mq:cls、クラス名は端末の中だけ）、結果を qz_cres（クラス番号×単元×日、足すだけ）に記録。クラスの継続比較・上位 ◯% の表示はまだ（データだけためている）
-- 文言は ja・en・zh（繁體）・zhs（简体、html lang zh-CN）・ko・de・fr・it・es・pt（mq.js の W、mq-rank.js の T）。apu2 のランキングは ?lang=de・?lang=ko・?lang=zh-CN などで言語を切り替え（views/ranking.php の $RK）。views/ranking.php の $RK には id（インドネシア語）・tr（トルコ語）もある（見出し・説明文・フッター）。ランキング表の本体（mq-rank.js の T）と mq.js の W・mq-geo.js の n・lv にはまだ id・tr がない（英語で出る）。共通ファイルはこのリポジトリの外なので、触れるときに足す
-- mq-geo.js の n・lv は [ja, en, zh, de, fr, it, es, pt, ko, zhs] の 10 個。地域名は「その国のことば|English」、その国のことばで出す言語の番号は nl（kr は [8]、cn は [9, 2, 0]、ないときは [0]）。生成は geo.py（eigo-duke 側の作業フォルダ）
+- 文言は ja・en・zh（繁體）・zhs（简体、html lang zh-CN）・ko・id・tr・de・fr・it・es・pt（mq.js の W、mq-rank.js の T）。apu2 のランキングは ?lang=de・?lang=ko・?lang=zh-CN などで言語を切り替え（views/ranking.php の $RK）・id（Bahasa Indonesia）・tr（Türkçe）。$RK にも id・tr
+- mq-geo.js の n・lv は [ja, en, zh, de, fr, it, es, pt, ko, zhs, id, tr] の 12 個。地域名は「その国のことば|English」、その国のことばで出す言語の番号は nl（kr は [8]、cn は [9, 2, 0]、id は [10]、tr は [11]、ch は [3, 4, 5]、ないときは [0]）。国は 21（id 38 州・tr 81 県・ch 26 州を 2026-11-25 に追加）。生成は geo.py（eigo-duke 側の作業フォルダ）
+- 共通ファイルを直すときは、ユーザーの手元の写しが古いことがある。前回納品した版（MQ_VER・VER の日付が新しいもの）をもとにする。MQ_VER（mq.php）と VER（mq.js）はそろえて上げる
 - 国・地域のコードは mq-geo.js と mq.php の MQ_GEO をそろえる（新しい国を足したら両方に）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB

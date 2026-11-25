@@ -56,8 +56,8 @@ site_header(array());
 </main>
 <style>.rk-wrap{padding:24px 14px}.mqr-intro{max-width:860px;margin:18px auto 0;font-size:14px;line-height:1.9;color:#5b5249}</style>
 <script>window.MQR_CONF = { api: "<?= url('api/mq.php') ?>", lang: "<?= h($lang) ?>", quiz: "<?= url('') ?>" };</script>
-<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261125a"></script>
-<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261125a"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261125c"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261125c"></script>
 <?php site_footer($lang === 'es-MX' ? 'es' : $lang, false); ?>
 </body>
 </html>
