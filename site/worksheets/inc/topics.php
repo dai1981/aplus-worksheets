@@ -606,6 +606,35 @@ function topic_defs_id() {
     );
 }
 
+function topic_defs_se() {
+    return array(
+        'tal' => array('name' => 'Tal och positionssystemet',
+            'in' => '/tal-till|jamfora|ordna|overslag|avrund|positions|negativa-tal|stora-tal/', 'out' => '/talfoljd|brak|decimal/',
+            'blurb' => 'Hundratal, tiotal och ental, att läsa, skriva, jämföra och ordna tal, tallinjen, avrundning, överslagsräkning och rimlighet.'),
+        'addition-och-subtraktion' => array('name' => 'Addition och subtraktion',
+            'in' => '/addition|subtraktion|huvudrakning/', 'out' => '/brak|decimal/',
+            'blurb' => 'Tiokamrater och hundrakamrater, huvudräkning, uppställning med minnessiffra och växling, kontroll med det motsatta räknesättet och textuppgifter.'),
+        'multiplikation-och-division' => array('name' => 'Multiplikation och division',
+            'in' => '/multiplikation|division|dubbelt/', 'out' => '/brak|decimal/',
+            'blurb' => 'Lika stora grupper, multiplikationstabellerna, division som delning och innehåll, division med rest, dubbelt och hälften och textuppgifter.'),
+        'brak-decimaltal-och-procent' => array('name' => 'Bråk, decimaltal och procent',
+            'in' => '/brak|decimal|procent/', 'out' => '/^$/',
+            'blurb' => 'Del av helhet och del av antal, stambråk, att jämföra bråk, tiondelar och hundradelar, decimaltal och procent.'),
+        'algebra' => array('name' => 'Algebra och mönster',
+            'in' => '/(^|-)likhet|monster|talfoljd|ekvation|uttryck|programmering|instruktioner/', 'out' => '/^$/',
+            'blurb' => 'Likhetstecknets betydelse, saknade tal, mönster och talföljder, uttryck med variabler, ekvationer och stegvisa instruktioner.'),
+        'matning' => array('name' => 'Mätning, tid och pengar',
+            'in' => '/langd|massa|volym|klockan|(^|-)tid(-|$)|pengar|omkrets|area|skala/', 'out' => '/kroppar/',
+            'blurb' => 'Längd, massa och volym med vanliga enheter, att omvandla och uppskatta, klockan och tidsskillnader, pengar och växel.'),
+        'geometri' => array('name' => 'Geometri',
+            'in' => '/geometrisk|symmetri|lagesord|vinkl|koordinat|kroppar|figurer/', 'out' => '/^$/',
+            'blurb' => 'Trianglar, fyrhörningar och cirklar, klot, kub, rätblock, cylinder, kon och pyramid, symmetri, lägesord och rutnät.'),
+        'statistik-och-sannolikhet' => array('name' => 'Statistik och sannolikhet',
+            'in' => '/tabell|diagram|slump|sannolikhet|statistik|lagesmatt|medelvarde/', 'out' => '/tabellerna/',
+            'blurb' => 'Streckräkning, tabeller och stapeldiagram, att jämföra och tolka data, slump, säkert, möjligt och omöjligt och rättvisa spel.'),
+    );
+}
+
 function topic_defs($country = null) {
     if ($country === 'br') return topic_defs_br();
     if ($country === 'es' || $country === 'mx') return topic_defs_es();
@@ -618,6 +647,7 @@ function topic_defs($country = null) {
     if ($country === 'it') return topic_defs_it();
     if ($country === 'id') return topic_defs_id();
     if ($country === 'tr') return topic_defs_tr();
+    if ($country === 'se') return topic_defs_se();
     $d = array(
         'fractions' => array('name' => 'Fractions',
             'in' => '/fraction|halves|thirds|fourths|quarters|mixed-num|improper|fair-shares|partition-shapes|operations-with-rational/',
@@ -858,6 +888,7 @@ function topic_range($units) {
     if ($units[0]['country'] === 'es' || $units[0]['country'] === 'mx') return 'de ' . $first . ' a ' . $last;
     if ($units[0]['country'] === 'id') return $first . ' sampai ' . $last;
     if ($units[0]['country'] === 'tr') return $first . ' – ' . $last;
+    if ($units[0]['country'] === 'se') return $first . '–' . $last;
     if ($units[0]['country'] === 'it') return 'dalla ' . strtolower($first) . ' alla ' . strtolower($last);
     return ($units[0]['country'] === 'de' || $units[0]['country'] === 'ch') ? $first . ' bis ' . $last : $first . ' to ' . $last;
 }

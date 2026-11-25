@@ -140,6 +140,9 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 } elseif (preg_match('/^(\d+)-sinif$/', $grade['slug'], $gm) && $country['code'] === 'tr') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Türkiye: 3. sınıf = age 8-9
     $lr['educationalLevel'] = array($grade['name'], (int)$gm[1] <= 4 ? 'İlkokul' : ((int)$gm[1] <= 8 ? 'Ortaokul' : 'Lise'));
+} elseif (preg_match('/^arskurs-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'se') {
+    $lr['typicalAgeRange'] = ((int)$gm[1] + 6) . '-' . ((int)$gm[1] + 7);   // Sverige: årskurs 3 = age 9-10 (förskoleklass at 6)
+    $lr['educationalLevel'] = array($grade['name'], (int)$gm[1] <= 3 ? 'Grundskolan, lågstadiet' : ((int)$gm[1] <= 6 ? 'Grundskolan, mellanstadiet' : 'Grundskolan, högstadiet'));
 } elseif (preg_match('/^kelas-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'id') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Indonesia: SD kelas 4 = age 9-10
     $lr['educationalLevel'] = array($grade['name'], (int)$gm[1] <= 6 ? 'Sekolah Dasar' : ((int)$gm[1] <= 9 ? 'Sekolah Menengah Pertama' : 'Sekolah Menengah Atas'));

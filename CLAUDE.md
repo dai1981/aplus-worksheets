@@ -1910,6 +1910,18 @@ Gymnasium 3: 1. vektoren ✓ 2. skalarprodukt-und-winkel ✓ 3. geraden-und-eben
 Gymnasium 4: 1. ableitung-und-tangente ✓ 2. ableitungsregeln ✓ 3. kurvendiskussion ✓ 4. extremwertaufgaben ✓ 5. stammfunktionen ✓ 6. bestimmtes-integral-und-flaechen ✓ 7. statistische-kennzahlen ✓
 CH / Mathematik（Deutschschweiz）は Kindergarten〜9. Klasse と Gymnasium 1.〜4. Klasse まで完了。次はフランス語圏（PER）・イタリア語圏（Ticino）か、GDP 順で次の国
 
+SE / Matematik（Lgr22, kursplanen i matematik。åk 1–3・4–6・7–9 の centralt innehåll を学年に分ける）— country `se`（name「Sverige」、lang `sv`、hreflang sv-se、standard「Lgr22」）、subject `matematik`、grade `arskurs-N`（name「Årskurs N」、unit.php で N+6〜N+7 歳と educationalLevel Grundskolan, lågstadiet／mellanstadiet／högstadiet）、A4。
+生成スクリプトは `tools/se_a3.py [nummer…]`（seed は 95300 + 番号、単元は se_a3a（1〜12）・se_a3b（13〜23）の UNITS）、共通部品は `tools/se_common.py`（num（1 000 から空白区切り、ノーブレークスペース）・dec（コンマ）・kr（25 kr、öre なし）・u・ord_（trehundrafyrtiofem）・klocka_ord（kvart över tre、halv fyra = 3.30、fem i halv fyra）・hm（14.30）・Kids（hon/han）・mcq（誤答が足りないと近い数で補う、fill=False で None）・lesson（Så tänker du → Exempel → Vanliga fel）・make_unit（seo_title「X årskurs 3: arbetsblad i matematik med facit」、standard_code「Lgr22 åk 1–3 · Geometri」、standard_text の末尾に「(sammanfattning av det centrala innehållet …)」）・図：tallinje・positionstabell・basemat・stapel・streck・uppstallning・klocka）。
+スウェーデン語、du で話しかける短い文。記号は × と :（割り算）、余りは「17 : 5 = 3 rest 2」。単位は mm cm dm m km mil、g hg kg、ml cl dl l。名詞の性に注意（ett klot、ett rätblock、ett äpple、halva pizzan）。
+domain は Lgr22 の 6 分野（T Taluppfattning och tals användning／A Algebra／G Geometri／S Sannolikhet och statistik／F Samband och förändring／P Problemlösning）。standard_url は Skolverket の kursplan matematik。symmetri は DE Klasse 3 の生成スクリプトの図（grid・half・mirror・broken・shifted・four）を R を入れ替えて使う。
+UI 文言は core.php の 'sv'（T と js_text、sep はノーブレークスペース、lc は 'mb'（mb_strtolower））、トピックは topics.php の `topic_defs_se()`（tal・addition-och-subtraktion・multiplikation-och-division・brak-decimaltal-och-procent・algebra・matning・geometri・statistik-och-sannolikhet、トピックの呼び名は「tema」）、topic.php・topics.php に $sv の文言。みんなでクイズ（mq.js）にはまだ sv の言語がない（英語で出る）
+
+SE / Matematik / Årskurs 3（det första året med nationella prov）
+1. tal-till-1000 ✓ 2. jamfora-och-ordna-tal ✓ 3. overslagsrakning-och-rimlighet ✓ 4. huvudrakning ✓ 5. addition-med-uppstallning ✓ 6. subtraktion-med-uppstallning ✓ 7. multiplikation-och-tabellerna ✓ 8. division ✓
+9. problemlosning ✓ 10. enkla-brak ✓ 11. likheter-och-likhetstecknet ✓ 12. monster-och-talfoljder ✓ 13. dubbelt-och-halften ✓ 14. pengar ✓ 15. klockan-och-tid ✓ 16. langd ✓ 17. massa-och-volym ✓
+18. geometriska-figurer ✓ 19. geometriska-kroppar ✓ 20. symmetri ✓ 21. lagesord-och-stegvisa-instruktioner ✓ 22. tabeller-och-diagram ✓ 23. slump-och-sannolikhet ✓
+次は årskurs 6・9（nationella prov）、その後 4・5・1・2・7・8
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
