@@ -1838,7 +1838,13 @@ TR / Matematik / 8. Sınıf（2026 DÖP。単元は tr_s8a（1〜12：S・C8）�
 13. ucgende-aci-kenar-iliskisi ✓ 14. ucgen-esitsizligi ✓ 15. eslik ✓ 16. benzerlik ✓ 17. pisagor-bagintisi ✓ 18. cisimlerin-yuzey-acinimlari ✓ 19. silindirin-yuzey-alani-ve-hacmi ✓
 20. oteleme-donusumu ✓ 21. koordinat-duzleminde-oteleme-ve-yansima ✓ 22. veri-analizi-ve-yorumlama ✓ 23. olasilik-yaklasimlari ✓
 トピックに uslu-ve-karekoklu-ifadeler・dogrusal-fonksiyonlar を足した（oruntuler・veri の out に dogrusal、denklemler の out に ucgen-esitsizligi）。eslik・benzerlik・pisagor・oteleme→geometri
-TR の次: 1.〜2. sınıf、lise、okul öncesi
+TR / Matematik / 1.〜2. Sınıf（İlkokul 2024 程序。1. sınıf は 20 まで（ritmik sayma 100 まで、toplama eldesiz）、2. sınıf は 100 まで（eldeli、çarpma 5 まで、bölme 20 まで kalansız）。とても短い文、ほぼ全問に絵）— `python3 tools/tr_run.py 1|2`、単元は tr_s1a・tr_s2a、問題関数と絵は `tools/tr_p12.py`（k_pics の絵にトルコ語の aria-label、BENDA・SHAPE・CISIM、izgara（yönerge の kareli zemin）、es_svg（eş şekiller、同じ縮尺）、cetvel、A.para_svg のお金）。2. sınıf の simetri は tr_s3b.u21 の問題関数（from_unit）
+1. sınıf: 1. 20ye-kadar-sayilar ✓ 2. sira-sayilari ✓ 3. sayilari-karsilastirma ✓ 4. ritmik-sayma ✓ 5. oruntuler ✓ 6. nesne-sayisini-tahmin-etme ✓ 7. uzunluk-ve-kutle-olcme ✓ 8. paralarimiz ✓
+9. toplama-islemi ✓ 10. cikarma-islemi ✓ 11. toplama-ve-cikarma-problemleri ✓ 12. esitlik-ve-islemler-arasi-iliski ✓ 13. yon-konum-ve-es-nesneler ✓ 14. geometrik-cisimler ✓ 15. geometrik-sekiller ✓ 16. veri-toplama-ve-nesne-grafigi ✓
+2. sınıf: 1. 100e-kadar-sayilar ✓ 2. iki-basamakli-sayilar ✓ 3. sayilari-karsilastirma-ve-siralama ✓ 4. ritmik-sayma ✓ 5. oruntuler ✓ 6. nesne-sayisini-tahmin-etme ✓ 7. butun-yarim-ve-ceyrek ✓ 8. paralarimiz ✓ 9. zaman-olcme ✓ 10. uzunluk-ve-kutle-olcme ✓ 11. toplama-islemi ✓
+12. cikarma-islemi ✓ 13. toplama-ve-cikarma-problemleri ✓ 14. carpma-islemi ✓ 15. bolme-islemi ✓ 16. esitlik ✓ 17. geometrik-cisimler ✓ 18. geometrik-sekiller ✓ 19. sivi-olcme ✓ 20. yon-ve-konum ✓ 21. simetri ✓ 22. veri-toplama-ve-grafikler ✓
+トピック：nesne-sayisini→sayilar、yarim-ve-ceyrek→kesirler、konum→geometri
+TR の次: lise（9〜12）、okul öncesi
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

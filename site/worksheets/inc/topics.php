@@ -454,7 +454,7 @@ function topic_defs_br() {
 function topic_defs_tr() {
     return array(
         'sayilar' => array('name' => 'Sayılar ve Basamak Değeri',
-            'in' => '/sayilar|siralama|yuvarlama|ritmik|tek-ve-cift|basamak|buyuk-sayilar/', 'out' => '/islem|asal|ondalik|kesir|toplama|cikarma|rasyonel|tam-sayilar|ispat/',
+            'in' => '/sayilar|siralama|yuvarlama|ritmik|tek-ve-cift|basamak|buyuk-sayilar|nesne-sayisini/', 'out' => '/islem|asal|ondalik|kesir|toplama|cikarma|rasyonel|tam-sayilar|ispat/',
             'blurb' => 'Sayıları okuma ve yazma, basamak ve bölük, basamak değeri, sayıları karşılaştırma, sıralama ve yuvarlama, ritmik sayma, büyük sayılar ve doğal sayılarla problemler.'),
         'toplama-ve-cikarma' => array('name' => 'Toplama ve Çıkarma',
             'in' => '/toplama|cikarma/', 'out' => '/veri|kesir|rasyonel/',
@@ -469,7 +469,7 @@ function topic_defs_tr() {
             'in' => '/rasyonel|tam-sayilar/', 'out' => '/^$/',
             'blurb' => 'Tam sayılar ve mutlak değer, rasyonel sayılar ve sayı doğrusu, sonlu ve devirli ondalık gösterim, karşılaştırma ve sıralama, rasyonel sayılarla dört işlem ve problemler.'),
         'kesirler' => array('name' => 'Kesirler, Ondalık Gösterim ve Yüzde',
-            'in' => '/kesir|kesri|ondalik|yuzde|gosterimleri/', 'out' => '/rasyonel/',
+            'in' => '/kesir|kesri|ondalik|yuzde|gosterimleri|yarim-ve-ceyrek/', 'out' => '/rasyonel/',
             'blurb' => 'Birim, basit, bileşik ve tam sayılı kesirler, denk kesirler, kesirlerle işlemler, ondalık gösterim, yüzdeler ve farklı gösterimleri karşılaştırma.'),
         'oruntuler-ve-esitlik' => array('name' => 'Örüntüler, Eşitlik ve Cebir',
             'in' => '/oruntu|esitlik|cebir|algoritma/', 'out' => '/dogrusal/',
@@ -490,7 +490,7 @@ function topic_defs_tr() {
             'in' => '/olcme|olcu|saat|paralar|uzunlug|cevre|kutle|alan|cember-uzunlugu|hacim|hacmi/', 'out' => '/(^|-)aci|veri/',
             'blurb' => 'Uzunluk, kütle, sıvı ve zaman ölçme, birim dönüşümleri, paralarımız, çevre uzunluğu, alan ve alan ölçü birimleri, çember uzunluğu.'),
         'geometri' => array('name' => 'Geometri',
-            'in' => '/geometrik|simetri|sekil|cisim|aci|ucgen|dortgen|cokgen|paralel|dogrularin|kup|yansima|eslik|benzerlik|pisagor|oteleme/', 'out' => '/alani|olasilik|cevre|hacim|hacmi/',
+            'in' => '/geometrik|simetri|sekil|cisim|aci|ucgen|dortgen|cokgen|paralel|dogrularin|kup|yansima|eslik|benzerlik|pisagor|oteleme|konum/', 'out' => '/alani|olasilik|cevre|hacim|hacmi/',
             'blurb' => 'Geometrik cisimler ve açınımları, üçgen ve dörtgenler, çokgenler, açılar ve açı ölçme, paralel doğrular, çember, simetri.'),
         'veri' => array('name' => 'Veri',
             'in' => '/veri|grafik|tablo/', 'out' => '/dogrusal/',
