@@ -1,6 +1,6 @@
 <?php
 /* Quiz together rankings: class accuracy by country and by state / province (/worksheets/ranking/)
-   ?lang=de|fr|it|es|es-MX|pt-BR|zh-TW shows the page in that language (the quiz links here in the page language).
+   ?lang=de|fr|it|es|es-MX|pt-BR|zh-TW|zh-CN|ko shows the page in that language (the quiz links here in the page language).
    The page is drawn by one shared file on eigo-duke.com: /common/js/mq-rank.js (data: api/mq.php?a=rank) */
 $RK = array(
     'en' => array('Quiz Together Rankings: Class Accuracy by Country and State',
@@ -21,6 +21,12 @@ $RK = array(
     'pt-BR' => array('Quiz em grupo: ranking por país e estado',
         'Veja como as turmas do seu estado e do seu país vão no quiz em grupo. Joguem juntos e façam sua região subir no ranking.',
         'O “Quiz em grupo” deixa uma turma responder o mesmo quiz no celular. Toque no pequeno QR code de um quiz e escolha o país e a região na tela de espera: a porcentagem de acertos da turma conta para o ranking da sua região. Só conta a primeira partida de cada jogador e os nomes nunca são salvos. A porcentagem de uma região aparece quando jogadores suficientes tiverem participado.'),
+    'ko' => array('다 함께 퀴즈 랭킹: 나라·시도별 반 정답률',
+        '우리 시도와 나라의 반들이 다 함께 퀴즈에서 얼마나 맞혔는지 확인해 보세요. 반 친구들과 함께 풀고 우리 지역의 순위를 올려요.',
+        '‘다 함께 퀴즈’는 반 전체가 휴대폰으로 같은 퀴즈를 푸는 기능이에요. 퀴즈 오른쪽 위의 작은 QR 코드를 누르고, 대기 화면에서 나라와 시도를 고르면 반의 정답률이 우리 지역 랭킹에 들어가요. 한 사람당 첫 번째 결과만 세고, 이름은 저장하지 않아요. 참여 인원이 충분히 모이면 그 지역의 정답률이 표시돼요.'),
+    'zh-CN' => array('一起来答题 排行榜：各国家和省份的班级答对率',
+        '看看你所在的省份和国家的班级在“一起来答题”中的答对率。全班一起作答，让你们省份的排名往上冲。',
+        '“一起来答题”可以让全班用手机回答同一组题目。点题目右上角的小二维码，在等待页面选择国家和省份，全班的答对率就会计入所在省份的排行榜。每个人只计算第一次的成绩，不会保存名字。参加人数足够多之后，才会显示该省份的答对率。'),
     'zh-TW' => array('一起來答題 排行榜：各國與各地區的班級答對率',
         '看看你所在的縣市和國家的班級在「一起來答題」中的答對率。全班一起作答，讓你們的地區排名往上衝。',
         '「一起來答題」可以讓全班用手機回答同一份題目。點題目右上角的小 QR 碼，在等待畫面選擇國家和地區，全班的答對率就會計入所在地區的排行榜。每個人只計算第一次的成績，不會保存名字。參加人數夠多之後，才會顯示該地區的答對率。'),
@@ -44,8 +50,8 @@ site_header(array());
 </main>
 <style>.rk-wrap{padding:24px 14px}.mqr-intro{max-width:860px;margin:18px auto 0;font-size:14px;line-height:1.9;color:#5b5249}</style>
 <script>window.MQR_CONF = { api: "<?= url('api/mq.php') ?>", lang: "<?= h($lang) ?>", quiz: "<?= url('') ?>" };</script>
-<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261124d"></script>
-<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261124d"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261125a"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261125a"></script>
 <?php site_footer($lang === 'es-MX' ? 'es' : $lang, false); ?>
 </body>
 </html>
