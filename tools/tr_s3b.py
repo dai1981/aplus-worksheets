@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Türkiye 3. sınıf: İşlemlerden Cebirsel Düşünmeye, Nesnelerin Geometrisi, Veriye Dayalı Araştırma — 11〜22 単元。"""
+from tr_common import low
 import math
 import tr_s3a as A
 from tr_s3a import unit, cap, mi, named, dagit
@@ -472,7 +473,7 @@ def u15():
              ("Bir kitapçıda bugün kitap satıldı. Kaç kitap kaldı?", "İlk baştaki ve satılan kitap sayısı", ["Kitapçının adresi", "Kitapların sayfa sayısı", "Kasiyerin adı"]),
              ("Mert her gün bir miktar su içiyor. Bir haftada kaç bardak su içer?", "Mert’in bir günde içtiği bardak sayısı", ["Bardakların rengi", "Haftanın ilk günü", "Mert’in sınıfı"])]
         q, g, w = ch(F)
-        return mcq("“%s” Bu problemi çözmek için hangi bilgi gerekir?" % q, g, w, "Soruyu cevaplamak için <b>%s</b> bilinmelidir." % g.lower())
+        return mcq("“%s” Bu problemi çözmek için hangi bilgi gerekir?" % q, g, w, "Soruyu cevaplamak için <b>%s</b> bilinmelidir." % low(g))
 
     sets = [("İki işlemli problemler", [(iki_adim, 20)]),
             ("Hangi işlem yapılır?", [(islem_sec, 10), (iki_adim, 10)]),
@@ -538,7 +539,7 @@ def u16():
         d = v - c if good else v - c + ch([1, -1, 10, -10])
         g = "Doğru" if good else "Yanlış"
         return mcq("“%d + %d = %d + %d” eşitliği doğru mu?" % (a, b, c, d), g, ["Yanlış" if good else "Doğru", "Yalnızca sol taraf doğru", "Eşittir işareti sonuç gösterir"],
-                   "Sol taraf %d, sağ taraf %d. Eşitlik <b>%s</b>." % (v, c + d, g.lower()))
+                   "Sol taraf %d, sağ taraf %d. Eşitlik <b>%s</b>." % (v, c + d, low(g)))
 
     def ayni_sonuc():
         v = ri(12, 48)
@@ -934,7 +935,7 @@ def u20():
              ("Bir şişe ayran", "Yarım litre ya da daha az", ["Yaklaşık 10 litre", "Yaklaşık 50 litre", "Yaklaşık 100 litre"]),
              ("Bir çiçek saksısını sulamak için gereken su", "Yaklaşık yarım litre", ["Yaklaşık 50 litre", "Yaklaşık 500 litre", "Yaklaşık 20 litre"])]
         q, g, w = ch(F)
-        return mcq("%s ne kadardır?" % q, g, w, "Günlük hayattaki kapları düşün: <b>%s</b>." % g.lower())
+        return mcq("%s ne kadardır?" % q, g, w, "Günlük hayattaki kapları düşün: <b>%s</b>." % low(g))
 
     def problem():
         k = ri(0, 3)
@@ -1030,7 +1031,7 @@ def u21():
         thing, g = ch(F)
         w = [x for x in ["Hiç yok", "1", "2", "3", "4", "6", "Sonsuz sayıda"] if x != g]
         near_ = {"4": ["2", "8"], "2": ["4", "1"], "3": ["1", "6"], "Sonsuz sayıda": ["1", "4"], "1": ["2", "Hiç yok"], "6": ["3", "12"], "Hiç yok": ["1", "2"]}[g]
-        return mcq("%s kaç simetri doğrusuna sahiptir?" % thing, g, near_ + sh(w), "%s: <b>%s</b> simetri doğrusu." % (thing, g.lower() if g[0].isalpha() else g))
+        return mcq("%s kaç simetri doğrusuna sahiptir?" % thing, g, near_ + sh(w), "%s: <b>%s</b> simetri doğrusu." % (thing, low(g) if g[0].isalpha() else g))
 
     def harf():
         DIK = list("AHİMOTUVWY")
@@ -1063,7 +1064,7 @@ def u21():
             g = "Simetri doğrusunun %d kare %s" % (n, other)
             return mcq("Bir kare, dikey simetri doğrusunun %d kare %s. Simetriği nerededir?" % (n, side), g,
                        ["Simetri doğrusunun %d kare %s" % (n, side), "Simetri doğrusunun %d kare %s" % (n + 1, other), "Simetri doğrusunun %d kare %s" % (2 * n, other)],
-                       "Simetrik nokta aynı uzaklıkta, diğer taraftadır: <b>%s</b>." % g.lower())
+                       "Simetrik nokta aynı uzaklıkta, diğer taraftadır: <b>%s</b>." % low(g))
         return mcq("Bir kare simetri doğrusuna %d kare uzaklıkta. Bu kare ile simetriği arasında kaç kare vardır?" % n, "%d kare" % (2 * n),
                    ["%d kare" % n, "%d kare" % (n + 1), "%d kare" % (2 * n + 2)], "Doğruya kadar %d, diğer tarafta yine %d: <b>%d kare</b>." % (n, n, 2 * n))
 

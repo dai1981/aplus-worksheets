@@ -1807,7 +1807,25 @@ UI 文言は core.php の 'tr'（T と js_text、sep '.'）、プレビュー画
 TR / Matematik / 3. Sınıf
 1. 1000e-kadar-sayilar ✓ 2. sayilari-siralama-ve-yuvarlama ✓ 3. ritmik-sayma ✓ 4. tek-ve-cift-sayilar ✓ 5. oruntuler ✓ 6. kesirler ✓ 7. saat-okuma ✓ 8. zaman-olcu-birimleri ✓ 9. uzunluk-ve-kutle-olcme ✓ 10. paralarimiz ✓
 11. toplama-islemi ✓ 12. cikarma-islemi ✓ 13. carpma-islemi ✓ 14. bolme-islemi ✓ 15. dort-islem-problemleri ✓ 16. esitlik ✓ 17. geometrik-cisimler ✓ 18. geometrik-sekiller ✓ 19. cevre-uzunlugu ✓ 20. sivi-olcme ✓ 21. simetri ✓ 22. veri-toplama-ve-nokta-grafigi ✓
-TR の次: 4. sınıf（Maarif Modeli）
+TR / Matematik / 4.〜6. Sınıf — 生成スクリプトは `tools/tr_run.py 学年 [番号…]`（seed は 90000 + 100 × 学年 + 番号、単元は tr_sNa・tr_sNb・tr_sNc の UNITS、図や部品は `tools/tr_g.py`：ff・mf・dz・grid_shape・poly（辺の長さ・目盛り・直角）・circle_fig・pie_chart・parallel_fig（平行線と横断線の 8 つの角、コード 1〜8）・stem_leaf・freq_table・dot_plot・withopts（選択肢を問題文に入れて重複を避ける））。角度の図は gen_au_maths_y5_angles の Pic・angle_fig・protractor_svg・shape_svg。
+5.〜6. sınıf は Ortaokul Matematik Dersi Öğretim Programı（2026 DÖP、tr_common.STD_URL_ORTA）。domain は C5／C6（İşlemlerle Cebirsel Düşünme（ve Değişimler））・GS Geometrik Şekiller・GN Geometrik Nicelikler・IA İstatistiksel Araştırma Süreci・VO Veriden Olasılığa（4. sınıf の olasılık・veri は OV）。
+トルコ語の小文字は tr_common.low()（İ → i、I → ı。.lower() を使わない）。数字の後の接尾辞は固定の文だけに書く（1’den、%20’si）。変数の数字の後には付けない
+TR / Matematik / 4. Sınıf
+1. alti-basamakli-sayilar ✓ 2. basamak-ve-boluk ✓ 3. siralama-ve-yuvarlama ✓ 4. ritmik-sayma ✓ 5. oruntuler ✓ 6. kesir-cesitleri ✓ 7. denk-kesirler ✓ 8. kesirleri-karsilastirma ✓ 9. bir-coklugun-kesri ✓
+10. kesirlerle-toplama-ve-cikarma ✓ 11. uzunluk-ve-kutle-donusumleri ✓ 12. zihinden-toplama-ve-cikarma ✓ 13. dort-basamakli-toplama-ve-cikarma ✓ 14. carpma-ve-bolmede-tahmin ✓ 15. zihinden-carpma-ve-bolme ✓
+16. carpma-ve-bolme ✓ 17. dort-islem-problemleri ✓ 18. esitlik-ve-esit-degildir ✓ 19. geometrik-cisimlerin-acinimlari ✓ 20. ucgen-kare-ve-dikdortgen ✓ 21. cevre-ve-alan ✓ 22. acilar ✓ 23. simetri ✓
+24. imkansiz-olabilir-kesin ✓ 25. veri-toplama-ve-grafikler ✓
+TR / Matematik / 5. Sınıf（2026 DÖP のテーマ順）
+1. temel-geometrik-kavramlar ✓ 2. aci-olcme ✓ 3. dogrularin-olusturdugu-acilar ✓ 4. cokgenler ✓ 5. ucgenler-ve-cember ✓ 6. buyuk-sayilar ✓ 7. dogal-sayilarla-problemler ✓ 8. dikdortgenin-cevresi ✓
+9. dikdortgenin-alani ✓ 10. cevre-ve-alan-iliskisi ✓ 11. kesirler ✓ 12. ondalik-gosterim ✓ 13. yuzdeler ✓ 14. farkli-gosterimleri-karsilastirma ✓ 15. veri-ve-grafikler ✓ 16. esitlik-ve-islem-ozellikleri ✓
+17. islem-onceligi ✓ 18. oruntuler ✓ 19. algoritmalar ✓ 20. olasilik ✓
+TR / Matematik / 6. Sınıf（EBOB・EKOK の語は使わない（DÖP のとおり）。π は 3 と 3,14。devirli は <span class='ov'>）
+1. carpanlar-ve-katlar ✓ 2. bolunebilme-kurallari ✓ 3. asal-sayilar-ve-asal-carpanlar ✓ 4. ortak-bolenler-ve-ortak-katlar ✓ 5. ondalik-gosterimde-basamak-degeri ✓ 6. kesir-ve-bolme-iliskisi ✓
+7. kesirlerle-islemler ✓ 8. ondalik-gosterimlerle-islemler ✓ 9. yuzde-problemleri ✓ 10. uzunluk-olcme ✓ 11. cebirsel-ifadeler ✓ 12. oruntuler-ve-cebirsel-ifadeler ✓ 13. algoritmalar-ve-cebirsel-ifadeler ✓
+14. paralel-dogrular-ve-kesen ✓ 15. dortgenler ✓ 16. ucgen-ve-dortgende-acilar ✓ 17. alan-olcu-birimleri ✓ 18. paralelkenar-ve-ucgenin-alani ✓ 19. cember-uzunlugu-ve-pi ✓ 20. merkez-acisi-ve-yay ✓
+21. veri-analizi ✓ 22. deneysel-olasilik ✓
+トピック（topic_defs_tr）：sayilar・toplama-ve-cikarma・carpma-ve-bolme・carpanlar-ve-bolunebilme・kesirler（Kesirler, Ondalık Gösterim ve Yüzde）・oruntuler-ve-esitlik（Örüntüler, Eşitlik ve Cebir）・olcme・geometri・veri・olasilik
+TR の次: 7. sınıf、または 1.〜2. sınıf
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

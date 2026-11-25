@@ -23,11 +23,24 @@ DOMAIN = {
     "I": "İşlemlerden Cebirsel Düşünmeye",
     "G": "Nesnelerin Geometrisi",
     "V": "Veriye Dayalı Araştırma",
+    "OV": "Olayların Olasılığı ve Veriye Dayalı Araştırma",
+    "C5": "İşlemlerle Cebirsel Düşünme",
+    "C6": "İşlemlerle Cebirsel Düşünme ve Değişimler",
+    "GS": "Geometrik Şekiller",
+    "GN": "Geometrik Nicelikler",
+    "IA": "İstatistiksel Araştırma Süreci",
+    "VO": "Veriden Olasılığa",
 }
+STD_URL_ORTA = "https://mufredat.meb.gov.tr/Dosyalar/202681491243620-Matematik%20(5-8)%20D%C3%96P.pdf"
 NAMES = ["Elif", "Yusuf", "Zeynep", "Ömer", "Defne", "Emir", "Ecrin", "Kerem", "Eylül", "Mert", "Nehir", "Aras",
          "Asel", "Can", "Duru", "Berk", "Ela", "Furkan", "Ece", "Miraç", "Azra", "Efe", "Hira", "Kuzey"]
 NB = " "
 D.num = num
+
+
+def low(s):
+    """Türkçe küçük harf: İ → i, I → ı"""
+    return s.replace("İ", "i").replace("I", "ı").lower()
 
 
 def tl(n):
@@ -159,7 +172,7 @@ def lesson(think, examples, mist, extra=""):
 
 
 plain_text = D.plain_text
-GRADE_NAME = {"3-sinif": "3. Sınıf", "4-sinif": "4. Sınıf", "2-sinif": "2. Sınıf", "1-sinif": "1. Sınıf"}
+GRADE_NAME = {"%d-sinif" % g: "%d. Sınıf" % g for g in range(1, 13)}
 
 
 def make_unit(rnd, slug, dom, code, std_text, title, short_title, meta_desc, key_big, key_sub,
@@ -174,13 +187,15 @@ def make_unit(rnd, slug, dom, code, std_text, title, short_title, meta_desc, key
             assert k not in allq, ("duplicate question", slug, k)
             allq.add(k)
     balance(sets, rnd)
+    import json as _j
+    sets = _j.loads(_j.dumps(sets, ensure_ascii=False).replace("i\u0307", "i"))
     gname = GRADE_NAME[grade]
     seo_title = "%s %s Matematik: Çalışma Kâğıdı ve Cevaplı Test" % (short_title, gname)
     title, seo_title, short_title, meta_desc, key_big, key_sub = map(plain_text, (title, seo_title, short_title, meta_desc, key_big, key_sub))
     assert len(key_big) <= 40 and len(key_sub) <= 60, (slug, key_big, key_sub)
     write_unit("tr", "matematik", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
-        "domain": DOMAIN[dom], "standard_code": code, "standard_url": STD_URL,
+        "domain": DOMAIN[dom], "standard_code": code, "standard_url": STD_URL_ORTA if int(grade.split("-")[0]) >= 5 else STD_URL,
         "standard_text": std_text, "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
         "body_html": body_html, "faq": faq, "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })
