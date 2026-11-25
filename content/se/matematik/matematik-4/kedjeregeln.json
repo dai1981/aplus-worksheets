@@ -1,0 +1,1161 @@
+{
+ "slug": "kedjeregeln",
+ "title": "Kedjeregeln: derivera sammansatta funktioner",
+ "seo_title": "Kedjeregeln – Matematik 4: uppgifter med facit",
+ "short_title": "Kedjeregeln",
+ "domain": "Differential- och integralkalkyl",
+ "standard_code": "Gy25 Matematik nivå 4 · Differential- och integralkalkyl",
+ "standard_url": "https://syllabuswebb.skolverket.se/subject/MAT/11/pdf",
+ "standard_text": "Härledning och användning av kedjeregeln för derivering av sammansatta funktioner. (sammanfattning av det centrala innehållet i ämnesplanen i matematik för gymnasieskolan, nivå 4)",
+ "meta_desc": "Uppgifter om kedjeregeln för Matematik 4: potenser av uttryck, exponentialfunktioner, logaritmfunktioner, trigonometriska funktioner och derivatans värde. 100 uppgifter med facit.",
+ "key_big": "Yttre derivata gånger inre derivata",
+ "key_sub": "f(g(x))′ = f′(g(x)) · g′(x)",
+ "body_html": "<h2>Så tänker du</h2><p>En sammansatt funktion f(g(x)) har en yttre funktion f och en inre funktion g.</p><p>Kedjeregeln: derivatan är den yttre derivatan (med den inre funktionen kvar) gånger den inre derivatan.</p><p>Exempel: (e<sup>3x</sup>)′ = 3e<sup>3x</sup>, (ln(2x + 1))′ = 2/(2x + 1) och (sin 4x)′ = 4 cos 4x.</p><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>(3x − 1)⁴</p><p class='sn-ex-s'>4(3x − 1)³ · 3</p><p class='sn-ex-a'>Svar: 12(3x − 1)³</p></div><h2>Vanliga fel</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Fel</th><th>Rätt</th></tr></thead><tbody><tr><td>Glömmer inre derivatan</td><td>Multiplicera med g′(x)</td></tr><tr><td>Deriverar den inre funktionen i yttre derivatan</td><td>Behåll g(x) i yttre derivatan</td></tr><tr><td>(cos x)′ = sin x</td><td>(cos x)′ = −sin x</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Hur ser jag att kedjeregeln behövs?",
+   "a": "När något annat än x står inuti en funktion."
+  },
+  {
+   "q": "Kan kedjeregeln användas flera gånger?",
+   "a": "Ja, för funktioner i flera lager."
+  },
+  {
+   "q": "Varför fungerar den?",
+   "a": "Förändringshastigheterna multipliceras."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Potenser av uttryck",
+   "items": [
+    {
+     "q": "Derivera f(x) = (−4x + 1)<sup>6</sup>.",
+     "c": [
+      "f′(x) = 6(−4x + 1)<sup>5</sup>",
+      "f′(x) = −24(−4x + 1)<sup>5</sup>",
+      "f′(x) = −24",
+      "f′(x) = −24(−4x + 1)<sup>6</sup>"
+     ],
+     "a": 1,
+     "e": "Yttre derivata 6(−4x + 1)<sup>5</sup> gånger inre derivata −4: <b>f′(x) = −24(−4x + 1)<sup>5</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (−4x − 9)<sup>4</sup>.",
+     "c": [
+      "f′(x) = 4(−4x − 9)<sup>3</sup>",
+      "f′(x) = −16(−4x − 9)<sup>3</sup>",
+      "f′(x) = −16",
+      "f′(x) = −16(−4x − 9)<sup>4</sup>"
+     ],
+     "a": 1,
+     "e": "Yttre derivata 4(−4x − 9)<sup>3</sup> gånger inre derivata −4: <b>f′(x) = −16(−4x − 9)<sup>3</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (3x + 9)<sup>6</sup>.",
+     "c": [
+      "f′(x) = 18(3x + 9)<sup>5</sup>",
+      "f′(x) = 18",
+      "f′(x) = 18(3x + 9)<sup>6</sup>",
+      "f′(x) = 6(3x + 9)<sup>5</sup>"
+     ],
+     "a": 0,
+     "e": "Yttre derivata 6(3x + 9)<sup>5</sup> gånger inre derivata 3: <b>f′(x) = 18(3x + 9)<sup>5</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (−4x + 3)<sup>4</sup>.",
+     "c": [
+      "f′(x) = −16(−4x + 3)<sup>3</sup>",
+      "f′(x) = −16",
+      "f′(x) = 4(−4x + 3)<sup>3</sup>",
+      "f′(x) = −16(−4x + 3)<sup>4</sup>"
+     ],
+     "a": 0,
+     "e": "Yttre derivata 4(−4x + 3)<sup>3</sup> gånger inre derivata −4: <b>f′(x) = −16(−4x + 3)<sup>3</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (2x − 6)<sup>6</sup>.",
+     "c": [
+      "f′(x) = 6(2x − 6)<sup>5</sup>",
+      "f′(x) = 12(2x − 6)<sup>6</sup>",
+      "f′(x) = 12(2x − 6)<sup>5</sup>",
+      "f′(x) = 12"
+     ],
+     "a": 2,
+     "e": "Yttre derivata 6(2x − 6)<sup>5</sup> gånger inre derivata 2: <b>f′(x) = 12(2x − 6)<sup>5</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (3x − 9)<sup>5</sup>.",
+     "c": [
+      "f′(x) = 15(3x − 9)<sup>5</sup>",
+      "f′(x) = 15",
+      "f′(x) = 5(3x − 9)<sup>4</sup>",
+      "f′(x) = 15(3x − 9)<sup>4</sup>"
+     ],
+     "a": 3,
+     "e": "Yttre derivata 5(3x − 9)<sup>4</sup> gånger inre derivata 3: <b>f′(x) = 15(3x − 9)<sup>4</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (2x + 9)<sup>5</sup>.",
+     "c": [
+      "f′(x) = 10",
+      "f′(x) = 10(2x + 9)<sup>4</sup>",
+      "f′(x) = 5(2x + 9)<sup>4</sup>",
+      "f′(x) = 10(2x + 9)<sup>5</sup>"
+     ],
+     "a": 1,
+     "e": "Yttre derivata 5(2x + 9)<sup>4</sup> gånger inre derivata 2: <b>f′(x) = 10(2x + 9)<sup>4</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (3x − 5)<sup>4</sup>.",
+     "c": [
+      "f′(x) = 12(3x − 5)<sup>4</sup>",
+      "f′(x) = 4(3x − 5)<sup>3</sup>",
+      "f′(x) = 12",
+      "f′(x) = 12(3x − 5)<sup>3</sup>"
+     ],
+     "a": 3,
+     "e": "Yttre derivata 4(3x − 5)<sup>3</sup> gånger inre derivata 3: <b>f′(x) = 12(3x − 5)<sup>3</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (5x − 1)<sup>6</sup>.",
+     "c": [
+      "f′(x) = 30(5x − 1)<sup>5</sup>",
+      "f′(x) = 6(5x − 1)<sup>5</sup>",
+      "f′(x) = 30",
+      "f′(x) = 30(5x − 1)<sup>6</sup>"
+     ],
+     "a": 0,
+     "e": "Yttre derivata 6(5x − 1)<sup>5</sup> gånger inre derivata 5: <b>f′(x) = 30(5x − 1)<sup>5</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (3x − 1)<sup>3</sup>.",
+     "c": [
+      "f′(x) = 9(3x − 1)<sup>2</sup>",
+      "f′(x) = 3(3x − 1)<sup>2</sup>",
+      "f′(x) = 9",
+      "f′(x) = 9(3x − 1)<sup>3</sup>"
+     ],
+     "a": 0,
+     "e": "Yttre derivata 3(3x − 1)<sup>2</sup> gånger inre derivata 3: <b>f′(x) = 9(3x − 1)<sup>2</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (5x − 9)<sup>3</sup>.",
+     "c": [
+      "f′(x) = 3(5x − 9)<sup>2</sup>",
+      "f′(x) = 15",
+      "f′(x) = 15(5x − 9)<sup>3</sup>",
+      "f′(x) = 15(5x − 9)<sup>2</sup>"
+     ],
+     "a": 3,
+     "e": "Yttre derivata 3(5x − 9)<sup>2</sup> gånger inre derivata 5: <b>f′(x) = 15(5x − 9)<sup>2</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (−5x + 2)<sup>6</sup>.",
+     "c": [
+      "f′(x) = −30(−5x + 2)<sup>6</sup>",
+      "f′(x) = −30",
+      "f′(x) = −30(−5x + 2)<sup>5</sup>",
+      "f′(x) = 6(−5x + 2)<sup>5</sup>"
+     ],
+     "a": 2,
+     "e": "Yttre derivata 6(−5x + 2)<sup>5</sup> gånger inre derivata −5: <b>f′(x) = −30(−5x + 2)<sup>5</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (−5x − 2)<sup>4</sup>.",
+     "c": [
+      "f′(x) = 4(−5x − 2)<sup>3</sup>",
+      "f′(x) = −20(−5x − 2)<sup>4</sup>",
+      "f′(x) = −20",
+      "f′(x) = −20(−5x − 2)<sup>3</sup>"
+     ],
+     "a": 3,
+     "e": "Yttre derivata 4(−5x − 2)<sup>3</sup> gånger inre derivata −5: <b>f′(x) = −20(−5x − 2)<sup>3</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (−5x − 5)<sup>2</sup>.",
+     "c": [
+      "f′(x) = −10(−5x − 5)<sup>2</sup>",
+      "f′(x) = 2(−5x − 5)",
+      "f′(x) = −10(−5x − 5)",
+      "f′(x) = −10"
+     ],
+     "a": 2,
+     "e": "Yttre derivata 2(−5x − 5) gånger inre derivata −5: <b>f′(x) = −10(−5x − 5)</b>."
+    },
+    {
+     "q": "Derivera f(x) = (5x + 6)<sup>2</sup>.",
+     "c": [
+      "f′(x) = 10",
+      "f′(x) = 10(5x + 6)",
+      "f′(x) = 10(5x + 6)<sup>2</sup>",
+      "f′(x) = 2(5x + 6)"
+     ],
+     "a": 1,
+     "e": "Yttre derivata 2(5x + 6) gånger inre derivata 5: <b>f′(x) = 10(5x + 6)</b>."
+    },
+    {
+     "q": "Derivera f(x) = (4x − 4)<sup>5</sup>.",
+     "c": [
+      "f′(x) = 20",
+      "f′(x) = 5(4x − 4)<sup>4</sup>",
+      "f′(x) = 20(4x − 4)<sup>4</sup>",
+      "f′(x) = 20(4x − 4)<sup>5</sup>"
+     ],
+     "a": 2,
+     "e": "Yttre derivata 5(4x − 4)<sup>4</sup> gånger inre derivata 4: <b>f′(x) = 20(4x − 4)<sup>4</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (3x + 2)<sup>5</sup>.",
+     "c": [
+      "f′(x) = 15(3x + 2)<sup>4</sup>",
+      "f′(x) = 15(3x + 2)<sup>5</sup>",
+      "f′(x) = 15",
+      "f′(x) = 5(3x + 2)<sup>4</sup>"
+     ],
+     "a": 0,
+     "e": "Yttre derivata 5(3x + 2)<sup>4</sup> gånger inre derivata 3: <b>f′(x) = 15(3x + 2)<sup>4</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (2x − 9)<sup>2</sup>.",
+     "c": [
+      "f′(x) = 4",
+      "f′(x) = 4(2x − 9)<sup>2</sup>",
+      "f′(x) = 4(2x − 9)",
+      "f′(x) = 2(2x − 9)"
+     ],
+     "a": 2,
+     "e": "Yttre derivata 2(2x − 9) gånger inre derivata 2: <b>f′(x) = 4(2x − 9)</b>."
+    },
+    {
+     "q": "Derivera f(x) = (−3x + 1)<sup>4</sup>.",
+     "c": [
+      "f′(x) = −12(−3x + 1)<sup>4</sup>",
+      "f′(x) = −12",
+      "f′(x) = 4(−3x + 1)<sup>3</sup>",
+      "f′(x) = −12(−3x + 1)<sup>3</sup>"
+     ],
+     "a": 3,
+     "e": "Yttre derivata 4(−3x + 1)<sup>3</sup> gånger inre derivata −3: <b>f′(x) = −12(−3x + 1)<sup>3</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = (5x + 3)<sup>5</sup>.",
+     "c": [
+      "f′(x) = 25(5x + 3)<sup>5</sup>",
+      "f′(x) = 25(5x + 3)<sup>4</sup>",
+      "f′(x) = 5(5x + 3)<sup>4</sup>",
+      "f′(x) = 25"
+     ],
+     "a": 1,
+     "e": "Yttre derivata 5(5x + 3)<sup>4</sup> gånger inre derivata 5: <b>f′(x) = 25(5x + 3)<sup>4</sup></b>."
+    }
+   ]
+  },
+  {
+   "title": "Exponentialfunktioner",
+   "items": [
+    {
+     "q": "Derivera f(x) = -4e<sup>x² − 7</sup>.",
+     "c": [
+      "f′(x) = (2x) · -4e<sup>x² − 7</sup>",
+      "f′(x) = -4e<sup>x² − 7</sup>",
+      "f′(x) = (2x) · e<sup>x² − 7</sup>",
+      "f′(x) = (2x) · -4e<sup>2x</sup>"
+     ],
+     "a": 0,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = (2x) · -4e<sup>x² − 7</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = 2e<sup>−3x² + 4</sup>.",
+     "c": [
+      "f′(x) = (−6x) · 2e<sup>−3x² + 4</sup>",
+      "f′(x) = (−6x) · e<sup>−3x² + 4</sup>",
+      "f′(x) = 2e<sup>−3x² + 4</sup>",
+      "f′(x) = (−6x) · 2e<sup>−6x</sup>"
+     ],
+     "a": 0,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = (−6x) · 2e<sup>−3x² + 4</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = -2e<sup>−4x</sup>.",
+     "c": [
+      "f′(x) = -2e<sup>−4x</sup>",
+      "f′(x) = −4 · e<sup>−4x</sup>",
+      "f′(x) = −4 · -2e<sup>−4x</sup>",
+      "f′(x) = −4 · -2e<sup>−4</sup>"
+     ],
+     "a": 2,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = −4 · -2e<sup>−4x</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = -3e<sup>3x² + 5</sup>.",
+     "c": [
+      "f′(x) = (6x) · e<sup>3x² + 5</sup>",
+      "f′(x) = (6x) · -3e<sup>6x</sup>",
+      "f′(x) = (6x) · -3e<sup>3x² + 5</sup>",
+      "f′(x) = -3e<sup>3x² + 5</sup>"
+     ],
+     "a": 2,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = (6x) · -3e<sup>3x² + 5</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = 3e<sup>3x + 6</sup>.",
+     "c": [
+      "f′(x) = 3 · 3e<sup>3x + 6</sup>",
+      "f′(x) = 3 · e<sup>3x + 6</sup>",
+      "f′(x) = 3 · 3e<sup>3</sup>",
+      "f′(x) = 3e<sup>3x + 6</sup>"
+     ],
+     "a": 0,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = 3 · 3e<sup>3x + 6</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = 3e<sup>−3x²</sup>.",
+     "c": [
+      "f′(x) = (−6x) · e<sup>−3x²</sup>",
+      "f′(x) = (−6x) · 3e<sup>−3x²</sup>",
+      "f′(x) = 3e<sup>−3x²</sup>",
+      "f′(x) = (−6x) · 3e<sup>−6x</sup>"
+     ],
+     "a": 1,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = (−6x) · 3e<sup>−3x²</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = 4e<sup>−4x² − 9</sup>.",
+     "c": [
+      "f′(x) = (−8x) · e<sup>−4x² − 9</sup>",
+      "f′(x) = (−8x) · 4e<sup>−4x² − 9</sup>",
+      "f′(x) = (−8x) · 4e<sup>−8x</sup>",
+      "f′(x) = 4e<sup>−4x² − 9</sup>"
+     ],
+     "a": 1,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = (−8x) · 4e<sup>−4x² − 9</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = −e<sup>−3x − 7</sup>.",
+     "c": [
+      "f′(x) = −3 · e<sup>−3x − 7</sup>",
+      "f′(x) = −3 · −e<sup>−3</sup>",
+      "f′(x) = −3 · (−1)e<sup>−3x − 7</sup>",
+      "f′(x) = −e<sup>−3x − 7</sup>"
+     ],
+     "a": 2,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = −3 · (−1)e<sup>−3x − 7</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = 4e<sup>2x − 5</sup>.",
+     "c": [
+      "f′(x) = 2 · 4e<sup>2</sup>",
+      "f′(x) = 2 · 4e<sup>2x − 5</sup>",
+      "f′(x) = 2 · e<sup>2x − 5</sup>",
+      "f′(x) = 4e<sup>2x − 5</sup>"
+     ],
+     "a": 1,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = 2 · 4e<sup>2x − 5</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = -3e<sup>−x + 1</sup>.",
+     "c": [
+      "f′(x) = −1 · -3e<sup>−1</sup>",
+      "f′(x) = −1 · e<sup>−x + 1</sup>",
+      "f′(x) = -3e<sup>−x + 1</sup>",
+      "f′(x) = −1 · -3e<sup>−x + 1</sup>"
+     ],
+     "a": 3,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = −1 · -3e<sup>−x + 1</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = 3e<sup>x − 9</sup>.",
+     "c": [
+      "f′(x) = 3e<sup>x − 9</sup>",
+      "f′(x) = 1 · 3e<sup>x − 9</sup>",
+      "f′(x) = 1 · e<sup>x − 9</sup>",
+      "f′(x) = 1 · 3e<sup>1</sup>"
+     ],
+     "a": 1,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = 1 · 3e<sup>x − 9</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = 4e<sup>−2x² + 9</sup>.",
+     "c": [
+      "f′(x) = (−4x) · 4e<sup>−2x² + 9</sup>",
+      "f′(x) = (−4x) · 4e<sup>−4x</sup>",
+      "f′(x) = (−4x) · e<sup>−2x² + 9</sup>",
+      "f′(x) = 4e<sup>−2x² + 9</sup>"
+     ],
+     "a": 0,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = (−4x) · 4e<sup>−2x² + 9</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = 4e<sup>−3x + 8</sup>.",
+     "c": [
+      "f′(x) = −3 · 4e<sup>−3</sup>",
+      "f′(x) = −3 · e<sup>−3x + 8</sup>",
+      "f′(x) = 4e<sup>−3x + 8</sup>",
+      "f′(x) = −3 · 4e<sup>−3x + 8</sup>"
+     ],
+     "a": 3,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = −3 · 4e<sup>−3x + 8</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = -2e<sup>x² − 1</sup>.",
+     "c": [
+      "f′(x) = (2x) · e<sup>x² − 1</sup>",
+      "f′(x) = -2e<sup>x² − 1</sup>",
+      "f′(x) = (2x) · -2e<sup>2x</sup>",
+      "f′(x) = (2x) · -2e<sup>x² − 1</sup>"
+     ],
+     "a": 3,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = (2x) · -2e<sup>x² − 1</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = 2e<sup>−2x² + 4</sup>.",
+     "c": [
+      "f′(x) = (−4x) · 2e<sup>−2x² + 4</sup>",
+      "f′(x) = 2e<sup>−2x² + 4</sup>",
+      "f′(x) = (−4x) · e<sup>−2x² + 4</sup>",
+      "f′(x) = (−4x) · 2e<sup>−4x</sup>"
+     ],
+     "a": 0,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = (−4x) · 2e<sup>−2x² + 4</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = −e<sup>−x² + 6</sup>.",
+     "c": [
+      "f′(x) = (−2x) · e<sup>−x² + 6</sup>",
+      "f′(x) = (−2x) · −e<sup>−2x</sup>",
+      "f′(x) = −e<sup>−x² + 6</sup>",
+      "f′(x) = (−2x) · (−1)e<sup>−x² + 6</sup>"
+     ],
+     "a": 3,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = (−2x) · (−1)e<sup>−x² + 6</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = 4e<sup>−x² − 8</sup>.",
+     "c": [
+      "f′(x) = (−2x) · e<sup>−x² − 8</sup>",
+      "f′(x) = (−2x) · 4e<sup>−2x</sup>",
+      "f′(x) = (−2x) · 4e<sup>−x² − 8</sup>",
+      "f′(x) = 4e<sup>−x² − 8</sup>"
+     ],
+     "a": 2,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = (−2x) · 4e<sup>−x² − 8</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = -4e<sup>2x + 7</sup>.",
+     "c": [
+      "f′(x) = 2 · -4e<sup>2</sup>",
+      "f′(x) = 2 · -4e<sup>2x + 7</sup>",
+      "f′(x) = -4e<sup>2x + 7</sup>",
+      "f′(x) = 2 · e<sup>2x + 7</sup>"
+     ],
+     "a": 1,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = 2 · -4e<sup>2x + 7</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = -2e<sup>−5x − 8</sup>.",
+     "c": [
+      "f′(x) = −5 · e<sup>−5x − 8</sup>",
+      "f′(x) = −5 · -2e<sup>−5</sup>",
+      "f′(x) = −5 · -2e<sup>−5x − 8</sup>",
+      "f′(x) = -2e<sup>−5x − 8</sup>"
+     ],
+     "a": 2,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = −5 · -2e<sup>−5x − 8</sup></b>."
+    },
+    {
+     "q": "Derivera f(x) = −e<sup>−4x + 8</sup>.",
+     "c": [
+      "f′(x) = −e<sup>−4x + 8</sup>",
+      "f′(x) = −4 · e<sup>−4x + 8</sup>",
+      "f′(x) = −4 · −e<sup>−4</sup>",
+      "f′(x) = −4 · (−1)e<sup>−4x + 8</sup>"
+     ],
+     "a": 3,
+     "e": "(e<sup>g(x)</sup>)′ = g′(x)e<sup>g(x)</sup>: <b>f′(x) = −4 · (−1)e<sup>−4x + 8</sup></b>."
+    }
+   ]
+  },
+  {
+   "title": "Logaritmfunktioner",
+   "items": [
+    {
+     "q": "Derivera f(x) = ln(−4x − 4).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>−4</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−4x − 4</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−4</span><span class='fd'>−4x − 4</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−4x − 4</span><span class='fd'>−4</span></span>"
+     ],
+     "a": 2,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−4</span><span class='fd'>−4x − 4</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−3x² + 1).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>−6x</span><span class='fd'>−3x² + 1</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−3x² + 1</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−6x</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>"
+     ],
+     "a": 0,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−6x</span><span class='fd'>−3x² + 1</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(5x + 1).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>5</span><span class='fd'>5x + 1</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>5x + 1</span><span class='fd'>5</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>5</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>5x + 1</span></span>"
+     ],
+     "a": 0,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>5</span><span class='fd'>5x + 1</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−6x + 4).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>−6x + 4</span><span class='fd'>−6</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−6x + 4</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−6</span><span class='fd'>−6x + 4</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−6</span><span class='fd'>x</span></span>"
+     ],
+     "a": 2,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−6</span><span class='fd'>−6x + 4</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−4x + 6).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−4x + 6</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−4x + 6</span><span class='fd'>−4</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−4</span><span class='fd'>−4x + 6</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−4</span><span class='fd'>x</span></span>"
+     ],
+     "a": 2,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−4</span><span class='fd'>−4x + 6</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(3x + 2).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>3</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>3x + 2</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>3x + 2</span><span class='fd'>3</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>3</span><span class='fd'>3x + 2</span></span>"
+     ],
+     "a": 3,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>3</span><span class='fd'>3x + 2</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−2x² + 6).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−2x² + 6</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−4x</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−4x</span><span class='fd'>−2x² + 6</span></span>"
+     ],
+     "a": 3,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−4x</span><span class='fd'>−2x² + 6</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−6x² − 6).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−12x</span><span class='fd'>−6x² − 6</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−6x² − 6</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−12x</span><span class='fd'>x</span></span>"
+     ],
+     "a": 1,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−12x</span><span class='fd'>−6x² − 6</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−6x² − 2).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−6x² − 2</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−12x</span><span class='fd'>−6x² − 2</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−12x</span><span class='fd'>x</span></span>"
+     ],
+     "a": 2,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−12x</span><span class='fd'>−6x² − 2</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−x² − 7).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>−2x</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−2x</span><span class='fd'>−x² − 7</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−x² − 7</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>"
+     ],
+     "a": 1,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−2x</span><span class='fd'>−x² − 7</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(2x + 5).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>2x + 5</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>2x + 5</span><span class='fd'>2</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>2x + 5</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>"
+     ],
+     "a": 0,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>2</span><span class='fd'>2x + 5</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−3x + 7).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−3x + 7</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−3</span><span class='fd'>−3x + 7</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−3x + 7</span><span class='fd'>−3</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−3</span><span class='fd'>x</span></span>"
+     ],
+     "a": 1,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−3</span><span class='fd'>−3x + 7</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−3x² + 5).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>−6x</span><span class='fd'>−3x² + 5</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−6x</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−3x² + 5</span></span>"
+     ],
+     "a": 0,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−6x</span><span class='fd'>−3x² + 5</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−2x² − 5).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−2x² − 5</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−4x</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−4x</span><span class='fd'>−2x² − 5</span></span>"
+     ],
+     "a": 3,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−4x</span><span class='fd'>−2x² − 5</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−6x² − 7).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−6x² − 7</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−12x</span><span class='fd'>−6x² − 7</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−12x</span><span class='fd'>x</span></span>"
+     ],
+     "a": 2,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−12x</span><span class='fd'>−6x² − 7</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−x + 9).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>−1</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−x + 9</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−x + 9</span><span class='fd'>−1</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−1</span><span class='fd'>−x + 9</span></span>"
+     ],
+     "a": 3,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−1</span><span class='fd'>−x + 9</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(2x + 8).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>2x + 8</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>2x + 8</span><span class='fd'>2</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>2x + 8</span></span>"
+     ],
+     "a": 3,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>2</span><span class='fd'>2x + 8</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(x² + 9).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>2x</span><span class='fd'>x² + 9</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>x² + 9</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>2x</span><span class='fd'>x</span></span>"
+     ],
+     "a": 0,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>2x</span><span class='fd'>x² + 9</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−x² − 3).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>−2x</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−2x</span><span class='fd'>−x² − 3</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−x² − 3</span></span>"
+     ],
+     "a": 1,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−2x</span><span class='fd'>−x² − 3</span></span></b>."
+    },
+    {
+     "q": "Derivera f(x) = ln(−5x − 5).",
+     "c": [
+      "f′(x) = <span class='fr'><span class='fn'>−5</span><span class='fd'>x</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−5</span><span class='fd'>−5x − 5</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>−5x − 5</span></span>",
+      "f′(x) = <span class='fr'><span class='fn'>−5x − 5</span><span class='fd'>−5</span></span>"
+     ],
+     "a": 1,
+     "e": "(ln g)′ = g′/g: <b><span class='fr'><span class='fn'>−5</span><span class='fd'>−5x − 5</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Trigonometriska funktioner",
+   "items": [
+    {
+     "q": "Derivera f(x) = sin -3x.",
+     "c": [
+      "f′(x) = -3cos -3x",
+      "f′(x) = 3cos -3x",
+      "f′(x) = cos -3x",
+      "f′(x) = -3sin -3x"
+     ],
+     "a": 0,
+     "e": "Inre derivata −3: <b>f′(x) = -3cos -3x</b>."
+    },
+    {
+     "q": "Derivera f(x) = 4sin 6x.",
+     "c": [
+      "f′(x) = 4cos 6x",
+      "f′(x) = -24cos 6x",
+      "f′(x) = 24sin 6x",
+      "f′(x) = 24cos 6x"
+     ],
+     "a": 3,
+     "e": "Inre derivata 6: <b>f′(x) = 24cos 6x</b>."
+    },
+    {
+     "q": "Derivera f(x) = −sin -6x.",
+     "c": [
+      "f′(x) = 6sin -6x",
+      "f′(x) = -6cos -6x",
+      "f′(x) = −cos -6x",
+      "f′(x) = 6cos -6x"
+     ],
+     "a": 3,
+     "e": "Inre derivata −6: <b>f′(x) = 6cos -6x</b>."
+    },
+    {
+     "q": "Derivera f(x) = cos 3x.",
+     "c": [
+      "f′(x) = -3cos 3x",
+      "f′(x) = −sin 3x",
+      "f′(x) = 3sin 3x",
+      "f′(x) = -3sin 3x"
+     ],
+     "a": 3,
+     "e": "Inre derivata 3: <b>f′(x) = -3sin 3x</b>."
+    },
+    {
+     "q": "Derivera f(x) = -3sin 3x.",
+     "c": [
+      "f′(x) = -3cos 3x",
+      "f′(x) = -9cos 3x",
+      "f′(x) = 9cos 3x",
+      "f′(x) = -9sin 3x"
+     ],
+     "a": 1,
+     "e": "Inre derivata 3: <b>f′(x) = -9cos 3x</b>."
+    },
+    {
+     "q": "Derivera f(x) = cos -4x.",
+     "c": [
+      "f′(x) = 4cos -4x",
+      "f′(x) = -4sin -4x",
+      "f′(x) = 4sin -4x",
+      "f′(x) = −sin -4x"
+     ],
+     "a": 2,
+     "e": "Inre derivata −4: <b>f′(x) = 4sin -4x</b>."
+    },
+    {
+     "q": "Derivera f(x) = -4cos 3x.",
+     "c": [
+      "f′(x) = 12sin 3x",
+      "f′(x) = 12cos 3x",
+      "f′(x) = 4sin 3x",
+      "f′(x) = -12sin 3x"
+     ],
+     "a": 0,
+     "e": "Inre derivata 3: <b>f′(x) = 12sin 3x</b>."
+    },
+    {
+     "q": "Derivera f(x) = 2sin 6x.",
+     "c": [
+      "f′(x) = -12cos 6x",
+      "f′(x) = 12sin 6x",
+      "f′(x) = 2cos 6x",
+      "f′(x) = 12cos 6x"
+     ],
+     "a": 3,
+     "e": "Inre derivata 6: <b>f′(x) = 12cos 6x</b>."
+    },
+    {
+     "q": "Derivera f(x) = -2cos 6x.",
+     "c": [
+      "f′(x) = 12cos 6x",
+      "f′(x) = -12sin 6x",
+      "f′(x) = 12sin 6x",
+      "f′(x) = 2sin 6x"
+     ],
+     "a": 2,
+     "e": "Inre derivata 6: <b>f′(x) = 12sin 6x</b>."
+    },
+    {
+     "q": "Derivera f(x) = 5sin 3x.",
+     "c": [
+      "f′(x) = 5cos 3x",
+      "f′(x) = 15sin 3x",
+      "f′(x) = 15cos 3x",
+      "f′(x) = -15cos 3x"
+     ],
+     "a": 2,
+     "e": "Inre derivata 3: <b>f′(x) = 15cos 3x</b>."
+    },
+    {
+     "q": "Derivera f(x) = 4sin 4x.",
+     "c": [
+      "f′(x) = 16sin 4x",
+      "f′(x) = 16cos 4x",
+      "f′(x) = 4cos 4x",
+      "f′(x) = -16cos 4x"
+     ],
+     "a": 1,
+     "e": "Inre derivata 4: <b>f′(x) = 16cos 4x</b>."
+    },
+    {
+     "q": "Derivera f(x) = 5sin -6x.",
+     "c": [
+      "f′(x) = 30cos -6x",
+      "f′(x) = -30cos -6x",
+      "f′(x) = 5cos -6x",
+      "f′(x) = -30sin -6x"
+     ],
+     "a": 1,
+     "e": "Inre derivata −6: <b>f′(x) = -30cos -6x</b>."
+    },
+    {
+     "q": "Derivera f(x) = -3sin 4x.",
+     "c": [
+      "f′(x) = -12cos 4x",
+      "f′(x) = -12sin 4x",
+      "f′(x) = -3cos 4x",
+      "f′(x) = 12cos 4x"
+     ],
+     "a": 0,
+     "e": "Inre derivata 4: <b>f′(x) = -12cos 4x</b>."
+    },
+    {
+     "q": "Derivera f(x) = -2sin -6x.",
+     "c": [
+      "f′(x) = 12sin -6x",
+      "f′(x) = 12cos -6x",
+      "f′(x) = -12cos -6x",
+      "f′(x) = -2cos -6x"
+     ],
+     "a": 1,
+     "e": "Inre derivata −6: <b>f′(x) = 12cos -6x</b>."
+    },
+    {
+     "q": "Derivera f(x) = cos -2x.",
+     "c": [
+      "f′(x) = -2sin -2x",
+      "f′(x) = 2cos -2x",
+      "f′(x) = 2sin -2x",
+      "f′(x) = −sin -2x"
+     ],
+     "a": 2,
+     "e": "Inre derivata −2: <b>f′(x) = 2sin -2x</b>."
+    },
+    {
+     "q": "Derivera f(x) = 2sin 5x.",
+     "c": [
+      "f′(x) = 10cos 5x",
+      "f′(x) = 2cos 5x",
+      "f′(x) = 10sin 5x",
+      "f′(x) = -10cos 5x"
+     ],
+     "a": 0,
+     "e": "Inre derivata 5: <b>f′(x) = 10cos 5x</b>."
+    },
+    {
+     "q": "Derivera f(x) = -3cos 3x.",
+     "c": [
+      "f′(x) = 9sin 3x",
+      "f′(x) = 9cos 3x",
+      "f′(x) = -9sin 3x",
+      "f′(x) = 3sin 3x"
+     ],
+     "a": 0,
+     "e": "Inre derivata 3: <b>f′(x) = 9sin 3x</b>."
+    },
+    {
+     "q": "Derivera f(x) = -5sin -4x.",
+     "c": [
+      "f′(x) = -5cos -4x",
+      "f′(x) = 20cos -4x",
+      "f′(x) = 20sin -4x",
+      "f′(x) = -20cos -4x"
+     ],
+     "a": 1,
+     "e": "Inre derivata −4: <b>f′(x) = 20cos -4x</b>."
+    },
+    {
+     "q": "Derivera f(x) = cos 5x.",
+     "c": [
+      "f′(x) = −sin 5x",
+      "f′(x) = 5sin 5x",
+      "f′(x) = -5cos 5x",
+      "f′(x) = -5sin 5x"
+     ],
+     "a": 3,
+     "e": "Inre derivata 5: <b>f′(x) = -5sin 5x</b>."
+    },
+    {
+     "q": "Derivera f(x) = 3sin -4x.",
+     "c": [
+      "f′(x) = 12cos -4x",
+      "f′(x) = -12sin -4x",
+      "f′(x) = -12cos -4x",
+      "f′(x) = 3cos -4x"
+     ],
+     "a": 2,
+     "e": "Inre derivata −4: <b>f′(x) = -12cos -4x</b>."
+    }
+   ]
+  },
+  {
+   "title": "Derivatans värde",
+   "items": [
+    {
+     "q": "f(x) = (3x + 2)<sup>4</sup>. Beräkna f′(0).",
+     "c": [
+      "16",
+      "96",
+      "99",
+      "32"
+     ],
+     "a": 1,
+     "e": "f′(x) = 12(3x + 2)<sup>3</sup>. f′(0) = <b>96</b>."
+    },
+    {
+     "q": "f(x) = (−2x + 3)<sup>4</sup>. Beräkna f′(1).",
+     "c": [
+      "−8",
+      "1",
+      "−10",
+      "4"
+     ],
+     "a": 0,
+     "e": "f′(x) = −8(−2x + 3)<sup>3</sup>. f′(1) = <b>−8</b>."
+    },
+    {
+     "q": "f(x) = (−2x + 1)<sup>2</sup>. Beräkna f′(-1).",
+     "c": [
+      "9",
+      "−12",
+      "−14",
+      "6"
+     ],
+     "a": 1,
+     "e": "f′(x) = −4(−2x + 1). f′(-1) = <b>−12</b>."
+    },
+    {
+     "q": "f(x) = (2x − 4)<sup>3</sup>. Beräkna f′(-1).",
+     "c": [
+      "108",
+      "216",
+      "−216",
+      "218"
+     ],
+     "a": 1,
+     "e": "f′(x) = 6(2x − 4)<sup>2</sup>. f′(-1) = <b>216</b>."
+    },
+    {
+     "q": "f(x) = (3x + 3)<sup>4</sup>. Beräkna f′(2).",
+     "c": [
+      "8 751",
+      "8 748",
+      "2 916",
+      "6 561"
+     ],
+     "a": 1,
+     "e": "f′(x) = 12(3x + 3)<sup>3</sup>. f′(2) = <b>8 748</b>."
+    },
+    {
+     "q": "f(x) = (−3x + 3)<sup>4</sup>. Beräkna f′(2).",
+     "c": [
+      "−108",
+      "321",
+      "81",
+      "324"
+     ],
+     "a": 3,
+     "e": "f′(x) = −12(−3x + 3)<sup>3</sup>. f′(2) = <b>324</b>."
+    },
+    {
+     "q": "f(x) = (2x + 2)<sup>2</sup>. Beräkna f′(2).",
+     "c": [
+      "26",
+      "12",
+      "36",
+      "24"
+     ],
+     "a": 3,
+     "e": "f′(x) = 4(2x + 2). f′(2) = <b>24</b>."
+    },
+    {
+     "q": "f(x) = (3x − 2)<sup>2</sup>. Beräkna f′(-1).",
+     "c": [
+      "25",
+      "−10",
+      "−30",
+      "−27"
+     ],
+     "a": 2,
+     "e": "f′(x) = 6(3x − 2). f′(-1) = <b>−30</b>."
+    },
+    {
+     "q": "f(x) = (−x + 3)<sup>4</sup>. Beräkna f′(2).",
+     "c": [
+      "1",
+      "−5",
+      "−4",
+      "4"
+     ],
+     "a": 2,
+     "e": "f′(x) = −4(−x + 3)<sup>3</sup>. f′(2) = <b>−4</b>."
+    },
+    {
+     "q": "f(x) = (3x + 4)<sup>3</sup>. Beräkna f′(-2).",
+     "c": [
+      "−8",
+      "12",
+      "39",
+      "36"
+     ],
+     "a": 3,
+     "e": "f′(x) = 9(3x + 4)<sup>2</sup>. f′(-2) = <b>36</b>."
+    },
+    {
+     "q": "f(x) = (2x − 5)<sup>3</sup>. Beräkna f′(1).",
+     "c": [
+      "27",
+      "−27",
+      "56",
+      "54"
+     ],
+     "a": 3,
+     "e": "f′(x) = 6(2x − 5)<sup>2</sup>. f′(1) = <b>54</b>."
+    },
+    {
+     "q": "f(x) = (−x − 5)<sup>4</sup>. Beräkna f′(1).",
+     "c": [
+      "864",
+      "1 296",
+      "863",
+      "−864"
+     ],
+     "a": 0,
+     "e": "f′(x) = −4(−x − 5)<sup>3</sup>. f′(1) = <b>864</b>."
+    },
+    {
+     "q": "f(x) = (−2x − 3)<sup>4</sup>. Beräkna f′(2).",
+     "c": [
+      "2 744",
+      "2 742",
+      "2 401",
+      "−1 372"
+     ],
+     "a": 0,
+     "e": "f′(x) = −8(−2x − 3)<sup>3</sup>. f′(2) = <b>2 744</b>."
+    },
+    {
+     "q": "f(x) = (−2x + 5)<sup>3</sup>. Beräkna f′(2).",
+     "c": [
+      "−8",
+      "−6",
+      "3",
+      "1"
+     ],
+     "a": 1,
+     "e": "f′(x) = −6(−2x + 5)<sup>2</sup>. f′(2) = <b>−6</b>."
+    },
+    {
+     "q": "f(x) = (3x + 4)<sup>2</sup>. Beräkna f′(1).",
+     "c": [
+      "14",
+      "49",
+      "45",
+      "42"
+     ],
+     "a": 3,
+     "e": "f′(x) = 6(3x + 4). f′(1) = <b>42</b>."
+    },
+    {
+     "q": "f(x) = (−3x + 2)<sup>4</sup>. Beräkna f′(-1).",
+     "c": [
+      "−1 500",
+      "625",
+      "−1 503",
+      "500"
+     ],
+     "a": 0,
+     "e": "f′(x) = −12(−3x + 2)<sup>3</sup>. f′(-1) = <b>−1 500</b>."
+    },
+    {
+     "q": "f(x) = (−2x + 2)<sup>3</sup>. Beräkna f′(-2).",
+     "c": [
+      "108",
+      "−218",
+      "−216",
+      "216"
+     ],
+     "a": 2,
+     "e": "f′(x) = −6(−2x + 2)<sup>2</sup>. f′(-2) = <b>−216</b>."
+    },
+    {
+     "q": "f(x) = (−3x + 5)<sup>4</sup>. Beräkna f′(2).",
+     "c": [
+      "9",
+      "−4",
+      "12",
+      "1"
+     ],
+     "a": 2,
+     "e": "f′(x) = −12(−3x + 5)<sup>3</sup>. f′(2) = <b>12</b>."
+    },
+    {
+     "q": "f(x) = (−2x − 3)<sup>2</sup>. Beräkna f′(2).",
+     "c": [
+      "26",
+      "49",
+      "28",
+      "−14"
+     ],
+     "a": 2,
+     "e": "f′(x) = −4(−2x − 3). f′(2) = <b>28</b>."
+    },
+    {
+     "q": "f(x) = (−2x + 5)<sup>3</sup>. Beräkna f′(0).",
+     "c": [
+      "−150",
+      "125",
+      "75",
+      "−152"
+     ],
+     "a": 0,
+     "e": "f′(x) = −6(−2x + 5)<sup>2</sup>. f′(0) = <b>−150</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 8,
+ "updated": "2026-11-26",
+ "country": "se",
+ "subject": "matematik",
+ "grade": "matematik-4"
+}

@@ -1,0 +1,1161 @@
+{
+ "slug": "ranta-och-amortering",
+ "title": "Privatekonomi: ränta, ränta på ränta och amortering",
+ "seo_title": "Ränta och amortering – Matematik 1c: uppgifter med facit",
+ "short_title": "Ränta och amortering",
+ "domain": "Problemlösning och tillämpningar",
+ "standard_code": "Gy25 Matematik nivå 1c · Problemlösning och tillämpningar",
+ "standard_url": "https://syllabuswebb.skolverket.se/subject/MATE/1/pdf",
+ "standard_text": "Kalkylprogram för beräkningar av ränta och amortering. Privatekonomi och matematiska modeller i realistiska situationer. (sammanfattning av det centrala innehållet i ämnesplanen i matematik för gymnasieskolan, nivå 1c)",
+ "meta_desc": "Uppgifter om ränta och amortering för Matematik 1c: ränta på sparande, ränta på ränta, lån, rak amortering, kredit och formler i kalkylprogram. 100 uppgifter med facit.",
+ "key_big": "Ränta på skulden som är kvar",
+ "key_sub": "Rak amortering: lika stor amortering varje år.",
+ "body_html": "<h2>Så tänker du</h2><p>Ränta på ränta: belopp · (1 + r)ⁿ. Ett kalkylprogram räknar år för år med en formel som =A2*1,04.</p><p>Vid rak amortering betalar du lika stor del av lånet varje år. Räntan räknas på den skuld som är kvar och minskar därför år för år.</p><p>Kredit och avbetalning kan ha hög ränta. Jämför alltid den effektiva räntan.</p><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>Lån 100 000 kr, 10 år, 5 %. Ränta år 3</p><p class='sn-ex-s'>Skuld: 100 000 − 2 · 10 000 = 80 000</p><p class='sn-ex-s'>80 000 · 0,05</p><p class='sn-ex-a'>Svar: 4 000 kr</p></div><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>5 000 kr, 3 %, 4 år</p><p class='sn-ex-s'>5 000 · 1,03⁴</p><p class='sn-ex-a'>Svar: ≈ 5 628 kr</p></div><h2>Vanliga fel</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Fel</th><th>Rätt</th></tr></thead><tbody><tr><td>Räknar ränta på hela lånet varje år</td><td>Räntan räknas på kvarvarande skuld</td></tr><tr><td>=A1*4 för 4 % ränta</td><td>Förändringsfaktorn 1,04: =A1*1,04</td></tr><tr><td>Amortering = ränta</td><td>Amortering minskar skulden, ränta är en kostnad</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Vad är rak amortering?",
+   "a": "Lika stor amortering varje period, så att skulden minskar jämnt."
+  },
+  {
+   "q": "Vad är ett annuitetslån?",
+   "a": "Ett lån där summan av ränta och amortering är lika stor varje period."
+  },
+  {
+   "q": "Varför använda kalkylprogram?",
+   "a": "Det räknar många perioder snabbt och visar hur skulden förändras."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Ränta på sparande",
+   "items": [
+    {
+     "q": "Alice sätter in 32 000 kr på ett sparkonto med 2,5 % ränta per år. Hur mycket ränta får hon efter ett år?",
+     "c": [
+      "8 000 kr",
+      "800 kr",
+      "32 800 kr",
+      "250 kr"
+     ],
+     "a": 1,
+     "e": "2,5 % av 32 000 = 0,025 · 32 000 = <b>800 kr</b>."
+    },
+    {
+     "q": "Du sätter in 3 000 kr med 10 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 6 år? Avrunda till hela kronor.",
+     "c": [
+      "5 846 kr",
+      "1 800 kr",
+      "4 800 kr",
+      "5 315 kr"
+     ],
+     "a": 3,
+     "e": "3 000 · 1,1<sup>6</sup> ≈ <b>5 315 kr</b>."
+    },
+    {
+     "q": "Du sätter in 20 000 kr med 8 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 2 år? Avrunda till hela kronor.",
+     "c": [
+      "23 200 kr",
+      "3 200 kr",
+      "25 194 kr",
+      "23 328 kr"
+     ],
+     "a": 3,
+     "e": "20 000 · 1,08<sup>2</sup> ≈ <b>23 328 kr</b>."
+    },
+    {
+     "q": "Selma sätter in 46 000 kr på ett sparkonto med 1 % ränta per år. Hur mycket ränta får hon efter ett år?",
+     "c": [
+      "100 kr",
+      "460 kr",
+      "46 460 kr",
+      "4 600 kr"
+     ],
+     "a": 1,
+     "e": "1 % av 46 000 = 0,01 · 46 000 = <b>460 kr</b>."
+    },
+    {
+     "q": "Saga sätter in 46 000 kr på ett sparkonto med 1 % ränta per år. Hur mycket ränta får hon efter ett år?",
+     "c": [
+      "460 kr",
+      "4 600 kr",
+      "100 kr",
+      "46 460 kr"
+     ],
+     "a": 0,
+     "e": "1 % av 46 000 = 0,01 · 46 000 = <b>460 kr</b>."
+    },
+    {
+     "q": "Du sätter in 32 000 kr med 6 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 2 år? Avrunda till hela kronor.",
+     "c": [
+      "38 113 kr",
+      "35 955 kr",
+      "3 840 kr",
+      "35 840 kr"
+     ],
+     "a": 1,
+     "e": "32 000 · 1,06<sup>2</sup> ≈ <b>35 955 kr</b>."
+    },
+    {
+     "q": "Vera sätter in 16 000 kr på ett sparkonto med 6 % ränta per år. Hur mycket ränta får hon efter ett år?",
+     "c": [
+      "960 kr",
+      "600 kr",
+      "9 600 kr",
+      "16 960 kr"
+     ],
+     "a": 0,
+     "e": "6 % av 16 000 = 0,06 · 16 000 = <b>960 kr</b>."
+    },
+    {
+     "q": "Leo sätter in 17 000 kr på ett sparkonto med 6 % ränta per år. Hur mycket ränta får han efter ett år?",
+     "c": [
+      "10 200 kr",
+      "18 020 kr",
+      "1 020 kr",
+      "600 kr"
+     ],
+     "a": 2,
+     "e": "6 % av 17 000 = 0,06 · 17 000 = <b>1 020 kr</b>."
+    },
+    {
+     "q": "Amira sätter in 16 000 kr på ett sparkonto med 5 % ränta per år. Hur mycket ränta får hon efter ett år?",
+     "c": [
+      "500 kr",
+      "800 kr",
+      "16 800 kr",
+      "8 000 kr"
+     ],
+     "a": 1,
+     "e": "5 % av 16 000 = 0,05 · 16 000 = <b>800 kr</b>."
+    },
+    {
+     "q": "Du sätter in 39 000 kr med 8 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 10 år? Avrunda till hela kronor.",
+     "c": [
+      "84 198 kr",
+      "70 200 kr",
+      "31 200 kr",
+      "90 934 kr"
+     ],
+     "a": 0,
+     "e": "39 000 · 1,08<sup>10</sup> ≈ <b>84 198 kr</b>."
+    },
+    {
+     "q": "Du sätter in 23 000 kr med 8 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 2 år? Avrunda till hela kronor.",
+     "c": [
+      "3 680 kr",
+      "26 680 kr",
+      "28 973 kr",
+      "26 827 kr"
+     ],
+     "a": 3,
+     "e": "23 000 · 1,08<sup>2</sup> ≈ <b>26 827 kr</b>."
+    },
+    {
+     "q": "Ludvig sätter in 5 000 kr på ett sparkonto med 2 % ränta per år. Hur mycket ränta får han efter ett år?",
+     "c": [
+      "100 kr",
+      "200 kr",
+      "5 100 kr",
+      "1 000 kr"
+     ],
+     "a": 0,
+     "e": "2 % av 5 000 = 0,02 · 5 000 = <b>100 kr</b>."
+    },
+    {
+     "q": "Du sätter in 3 000 kr med 3 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 10 år? Avrunda till hela kronor.",
+     "c": [
+      "3 900 kr",
+      "4 032 kr",
+      "4 153 kr",
+      "900 kr"
+     ],
+     "a": 1,
+     "e": "3 000 · 1,03<sup>10</sup> ≈ <b>4 032 kr</b>."
+    },
+    {
+     "q": "Du sätter in 32 000 kr med 6 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 5 år? Avrunda till hela kronor.",
+     "c": [
+      "9 600 kr",
+      "41 600 kr",
+      "42 823 kr",
+      "45 393 kr"
+     ],
+     "a": 2,
+     "e": "32 000 · 1,06<sup>5</sup> ≈ <b>42 823 kr</b>."
+    },
+    {
+     "q": "Du sätter in 5 000 kr med 5 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 5 år? Avrunda till hela kronor.",
+     "c": [
+      "6 700 kr",
+      "1 250 kr",
+      "6 381 kr",
+      "6 250 kr"
+     ],
+     "a": 2,
+     "e": "5 000 · 1,05<sup>5</sup> ≈ <b>6 381 kr</b>."
+    },
+    {
+     "q": "Oscar sätter in 38 000 kr på ett sparkonto med 2,5 % ränta per år. Hur mycket ränta får han efter ett år?",
+     "c": [
+      "950 kr",
+      "9 500 kr",
+      "250 kr",
+      "38 950 kr"
+     ],
+     "a": 0,
+     "e": "2,5 % av 38 000 = 0,025 · 38 000 = <b>950 kr</b>."
+    },
+    {
+     "q": "Noah sätter in 40 000 kr på ett sparkonto med 5 % ränta per år. Hur mycket ränta får han efter ett år?",
+     "c": [
+      "42 000 kr",
+      "500 kr",
+      "20 000 kr",
+      "2 000 kr"
+     ],
+     "a": 3,
+     "e": "5 % av 40 000 = 0,05 · 40 000 = <b>2 000 kr</b>."
+    },
+    {
+     "q": "Elias sätter in 20 000 kr på ett sparkonto med 1 % ränta per år. Hur mycket ränta får han efter ett år?",
+     "c": [
+      "20 200 kr",
+      "100 kr",
+      "2 000 kr",
+      "200 kr"
+     ],
+     "a": 3,
+     "e": "1 % av 20 000 = 0,01 · 20 000 = <b>200 kr</b>."
+    },
+    {
+     "q": "Du sätter in 17 000 kr med 10 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 8 år? Avrunda till hela kronor.",
+     "c": [
+      "40 085 kr",
+      "30 600 kr",
+      "36 441 kr",
+      "13 600 kr"
+     ],
+     "a": 2,
+     "e": "17 000 · 1,1<sup>8</sup> ≈ <b>36 441 kr</b>."
+    },
+    {
+     "q": "Du sätter in 34 000 kr med 3 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 9 år? Avrunda till hela kronor.",
+     "c": [
+      "43 180 kr",
+      "45 693 kr",
+      "44 362 kr",
+      "9 180 kr"
+     ],
+     "a": 2,
+     "e": "34 000 · 1,03<sup>9</sup> ≈ <b>44 362 kr</b>."
+    }
+   ]
+  },
+  {
+   "title": "Lån och amortering",
+   "items": [
+    {
+     "q": "Ett lån på 220 000 kr amorteras med lika stora belopp varje år i 5 år. Räntan är 4 %. Hur mycket ränta betalas år 3?",
+     "c": [
+      "8 800 kr",
+      "7 040 kr",
+      "5 280 kr",
+      "1 760 kr"
+     ],
+     "a": 2,
+     "e": "Skulden vid början av år 3: 220 000 − 2 · 44 000 = 132 000. Ränta: 132 000 · 0,04 = <b>5 280 kr</b>."
+    },
+    {
+     "q": "Ett lån på 340 000 kr amorteras med lika stora belopp varje år i 5 år. Räntan är 6 %. Hur mycket ränta betalas år 4?",
+     "c": [
+      "8 160 kr",
+      "12 240 kr",
+      "20 400 kr",
+      "4 080 kr"
+     ],
+     "a": 0,
+     "e": "Skulden vid början av år 4: 340 000 − 3 · 68 000 = 136 000. Ränta: 136 000 · 0,06 = <b>8 160 kr</b>."
+    },
+    {
+     "q": "Ett lån på 250 000 kr amorteras med lika stora belopp varje år i 20 år. Räntan är 5 %. Hur mycket ränta betalas år 7?",
+     "c": [
+      "12 500 kr",
+      "9 375 kr",
+      "8 750 kr",
+      "625 kr"
+     ],
+     "a": 2,
+     "e": "Skulden vid början av år 7: 250 000 − 6 · 12 500 = 175 000. Ränta: 175 000 · 0,05 = <b>8 750 kr</b>."
+    },
+    {
+     "q": "Ett lån på 80 000 kr amorteras med lika stora belopp varje år i 10 år. Räntan är 6 %. Hur mycket ränta betalas år 5?",
+     "c": [
+      "4 800 kr",
+      "3 360 kr",
+      "480 kr",
+      "2 880 kr"
+     ],
+     "a": 3,
+     "e": "Skulden vid början av år 5: 80 000 − 4 · 8 000 = 48 000. Ränta: 48 000 · 0,06 = <b>2 880 kr</b>."
+    },
+    {
+     "q": "Ett lån på 270 000 kr amorteras med lika stora belopp varje år i 5 år. Räntan är 5 %. Hur mycket ränta betalas år 3?",
+     "c": [
+      "13 500 kr",
+      "8 100 kr",
+      "10 800 kr",
+      "2 700 kr"
+     ],
+     "a": 1,
+     "e": "Skulden vid början av år 3: 270 000 − 2 · 54 000 = 162 000. Ränta: 162 000 · 0,05 = <b>8 100 kr</b>."
+    },
+    {
+     "q": "Ett lån på 110 000 kr amorteras med lika stora belopp varje år i 20 år. Räntan är 4 %. Hur mycket ränta betalas år 8?",
+     "c": [
+      "3 080 kr",
+      "4 400 kr",
+      "220 kr",
+      "2 860 kr"
+     ],
+     "a": 3,
+     "e": "Skulden vid början av år 8: 110 000 − 7 · 5 500 = 71 500. Ränta: 71 500 · 0,04 = <b>2 860 kr</b>."
+    },
+    {
+     "q": "Ett lån på 320 000 kr amorteras med lika stora belopp varje år i 5 år. Räntan är 5 %. Hur mycket ränta betalas år 3?",
+     "c": [
+      "9 600 kr",
+      "16 000 kr",
+      "12 800 kr",
+      "3 200 kr"
+     ],
+     "a": 0,
+     "e": "Skulden vid början av år 3: 320 000 − 2 · 64 000 = 192 000. Ränta: 192 000 · 0,05 = <b>9 600 kr</b>."
+    },
+    {
+     "q": "Ett lån på 390 000 kr amorteras med lika stora belopp varje år i 10 år. Räntan är 5 %. Hur mycket ränta betalas år 9?",
+     "c": [
+      "3 900 kr",
+      "19 500 kr",
+      "1 950 kr",
+      "5 850 kr"
+     ],
+     "a": 0,
+     "e": "Skulden vid början av år 9: 390 000 − 8 · 39 000 = 78 000. Ränta: 78 000 · 0,05 = <b>3 900 kr</b>."
+    },
+    {
+     "q": "Ett lån på 80 000 kr amorteras med lika stora belopp varje år i 5 år. Räntan är 3 %. Hur mycket ränta betalas år 4?",
+     "c": [
+      "480 kr",
+      "960 kr",
+      "2 400 kr",
+      "1 440 kr"
+     ],
+     "a": 1,
+     "e": "Skulden vid början av år 4: 80 000 − 3 · 16 000 = 32 000. Ränta: 32 000 · 0,03 = <b>960 kr</b>."
+    },
+    {
+     "q": "Ett lån på 210 000 kr amorteras med lika stora belopp varje år i 20 år. Räntan är 4 %. Hur mycket ränta betalas år 11?",
+     "c": [
+      "420 kr",
+      "4 620 kr",
+      "4 200 kr",
+      "8 400 kr"
+     ],
+     "a": 2,
+     "e": "Skulden vid början av år 11: 210 000 − 10 · 10 500 = 105 000. Ränta: 105 000 · 0,04 = <b>4 200 kr</b>."
+    },
+    {
+     "q": "Ett lån på 130 000 kr amorteras med lika stora belopp varje år i 25 år. Räntan är 6 %. Hur mycket ränta betalas år 5?",
+     "c": [
+      "7 800 kr",
+      "6 864 kr",
+      "6 552 kr",
+      "312 kr"
+     ],
+     "a": 2,
+     "e": "Skulden vid början av år 5: 130 000 − 4 · 5 200 = 109 200. Ränta: 109 200 · 0,06 = <b>6 552 kr</b>."
+    },
+    {
+     "q": "Ett lån på 370 000 kr amorteras med lika stora belopp varje år i 5 år. Räntan är 5 %. Hur mycket ränta betalas år 4?",
+     "c": [
+      "18 500 kr",
+      "7 400 kr",
+      "3 700 kr",
+      "11 100 kr"
+     ],
+     "a": 1,
+     "e": "Skulden vid början av år 4: 370 000 − 3 · 74 000 = 148 000. Ränta: 148 000 · 0,05 = <b>7 400 kr</b>."
+    },
+    {
+     "q": "Ett lån på 370 000 kr amorteras med lika stora belopp varje år i 10 år. Räntan är 3 %. Hur mycket ränta betalas år 5?",
+     "c": [
+      "1 110 kr",
+      "7 770 kr",
+      "11 100 kr",
+      "6 660 kr"
+     ],
+     "a": 3,
+     "e": "Skulden vid början av år 5: 370 000 − 4 · 37 000 = 222 000. Ränta: 222 000 · 0,03 = <b>6 660 kr</b>."
+    },
+    {
+     "q": "Ett lån på 330 000 kr amorteras med lika stora belopp varje år i 25 år. Räntan är 6 %. Hur mycket ränta betalas år 15?",
+     "c": [
+      "792 kr",
+      "9 504 kr",
+      "19 800 kr",
+      "8 712 kr"
+     ],
+     "a": 3,
+     "e": "Skulden vid början av år 15: 330 000 − 14 · 13 200 = 145 200. Ränta: 145 200 · 0,06 = <b>8 712 kr</b>."
+    },
+    {
+     "q": "Ett lån på 120 000 kr amorteras med lika stora belopp varje år i 10 år. Räntan är 6 %. Hur mycket ränta betalas år 5?",
+     "c": [
+      "720 kr",
+      "4 320 kr",
+      "5 040 kr",
+      "7 200 kr"
+     ],
+     "a": 1,
+     "e": "Skulden vid början av år 5: 120 000 − 4 · 12 000 = 72 000. Ränta: 72 000 · 0,06 = <b>4 320 kr</b>."
+    },
+    {
+     "q": "Ett lån på 160 000 kr amorteras med lika stora belopp varje år i 20 år. Räntan är 5 %. Hur mycket ränta betalas år 9?",
+     "c": [
+      "4 800 kr",
+      "400 kr",
+      "8 000 kr",
+      "5 200 kr"
+     ],
+     "a": 0,
+     "e": "Skulden vid början av år 9: 160 000 − 8 · 8 000 = 96 000. Ränta: 96 000 · 0,05 = <b>4 800 kr</b>."
+    },
+    {
+     "q": "Ett lån på 290 000 kr amorteras med lika stora belopp varje år i 20 år. Räntan är 5 %. Hur mycket ränta betalas år 18?",
+     "c": [
+      "725 kr",
+      "2 900 kr",
+      "14 500 kr",
+      "2 175 kr"
+     ],
+     "a": 3,
+     "e": "Skulden vid början av år 18: 290 000 − 17 · 14 500 = 43 500. Ränta: 43 500 · 0,05 = <b>2 175 kr</b>."
+    },
+    {
+     "q": "Ett lån på 290 000 kr amorteras med lika stora belopp varje år i 10 år. Räntan är 3 %. Hur mycket ränta betalas år 7?",
+     "c": [
+      "8 700 kr",
+      "3 480 kr",
+      "870 kr",
+      "4 350 kr"
+     ],
+     "a": 1,
+     "e": "Skulden vid början av år 7: 290 000 − 6 · 29 000 = 116 000. Ränta: 116 000 · 0,03 = <b>3 480 kr</b>."
+    },
+    {
+     "q": "Ett lån på 200 000 kr amorteras med lika stora belopp varje år i 20 år. Räntan är 4 %. Hur mycket ränta betalas år 15?",
+     "c": [
+      "400 kr",
+      "8 000 kr",
+      "2 400 kr",
+      "2 800 kr"
+     ],
+     "a": 2,
+     "e": "Skulden vid början av år 15: 200 000 − 14 · 10 000 = 60 000. Ränta: 60 000 · 0,04 = <b>2 400 kr</b>."
+    },
+    {
+     "q": "Ett lån på 310 000 kr amorteras med lika stora belopp varje år i 10 år. Räntan är 4 %. Hur mycket ränta betalas år 7?",
+     "c": [
+      "4 960 kr",
+      "12 400 kr",
+      "6 200 kr",
+      "1 240 kr"
+     ],
+     "a": 0,
+     "e": "Skulden vid början av år 7: 310 000 − 6 · 31 000 = 124 000. Ränta: 124 000 · 0,04 = <b>4 960 kr</b>."
+    }
+   ]
+  },
+  {
+   "title": "Lån och kredit",
+   "items": [
+    {
+     "q": "Du handlar för 17 000 kr på kredit med 18 % årsränta och betalar efter 9 månader. Hur mycket ränta blir det?",
+     "c": [
+      "2 295 kr",
+      "1 147,5 kr",
+      "27 540 kr",
+      "3 060 kr"
+     ],
+     "a": 0,
+     "e": "17 000 · 0,18 · 9/12 = <b>2 295 kr</b>."
+    },
+    {
+     "q": "Du handlar för 24 000 kr på kredit med 18 % årsränta och betalar efter 9 månader. Hur mycket ränta blir det?",
+     "c": [
+      "4 320 kr",
+      "38 880 kr",
+      "3 240 kr",
+      "1 620 kr"
+     ],
+     "a": 2,
+     "e": "24 000 · 0,18 · 9/12 = <b>3 240 kr</b>."
+    },
+    {
+     "q": "Du köper en TV för 42 000 kr på avbetalning. Räntan är 20 % per år och du betalar efter 4 månader. Hur mycket ränta blir det?",
+     "c": [
+      "8 400 kr",
+      "2 800 kr",
+      "5 600 kr",
+      "33 600 kr"
+     ],
+     "a": 1,
+     "e": "20 % per år = 8 400 kr. För 4 månader: 8 400 · 4/12 = <b>2 800 kr</b>."
+    },
+    {
+     "q": "Ett lån på 90 000 kr ska betalas av med lika mycket varje år i 2 år. Räntan är 12 %. Hur mycket betalar du första året (amortering + ränta)?",
+     "c": [
+      "50 400 kr",
+      "55 800 kr",
+      "10 800 kr",
+      "45 000 kr"
+     ],
+     "a": 1,
+     "e": "Amortering 45 000 kr och ränta 10 800 kr: <b>55 800 kr</b>."
+    },
+    {
+     "q": "Ett lån på 220 000 kr ska betalas av med lika mycket varje år i 4 år. Räntan är 4 %. Hur mycket betalar du första året (amortering + ränta)?",
+     "c": [
+      "8 800 kr",
+      "57 200 kr",
+      "55 000 kr",
+      "63 800 kr"
+     ],
+     "a": 3,
+     "e": "Amortering 55 000 kr och ränta 8 800 kr: <b>63 800 kr</b>."
+    },
+    {
+     "q": "Du köper en TV för 30 000 kr på avbetalning. Räntan är 20 % per år och du betalar efter 5 månader. Hur mycket ränta blir det?",
+     "c": [
+      "6 000 kr",
+      "30 000 kr",
+      "2 500 kr",
+      "5 000 kr"
+     ],
+     "a": 2,
+     "e": "20 % per år = 6 000 kr. För 5 månader: 6 000 · 5/12 = <b>2 500 kr</b>."
+    },
+    {
+     "q": "Du handlar för 6 000 kr på kredit med 18 % årsränta och betalar efter 11 månader. Hur mycket ränta blir det?",
+     "c": [
+      "1 080 kr",
+      "11 880 kr",
+      "495 kr",
+      "990 kr"
+     ],
+     "a": 3,
+     "e": "6 000 · 0,18 · 11/12 = <b>990 kr</b>."
+    },
+    {
+     "q": "Ett lån på 110 000 kr ska betalas av med lika mycket varje år i 8 år. Räntan är 4 %. Hur mycket betalar du första året (amortering + ränta)?",
+     "c": [
+      "4 400 kr",
+      "13 750 kr",
+      "14 300 kr",
+      "18 150 kr"
+     ],
+     "a": 3,
+     "e": "Amortering 13 750 kr och ränta 4 400 kr: <b>18 150 kr</b>."
+    },
+    {
+     "q": "Du köper en TV för 24 000 kr på avbetalning. Räntan är 15 % per år och du betalar efter 11 månader. Hur mycket ränta blir det?",
+     "c": [
+      "6 600 kr",
+      "3 600 kr",
+      "3 300 kr",
+      "39 600 kr"
+     ],
+     "a": 2,
+     "e": "15 % per år = 3 600 kr. För 11 månader: 3 600 · 11/12 = <b>3 300 kr</b>."
+    },
+    {
+     "q": "Ett lån på 190 000 kr ska betalas av med lika mycket varje år i 10 år. Räntan är 7 %. Hur mycket betalar du första året (amortering + ränta)?",
+     "c": [
+      "32 300 kr",
+      "20 330 kr",
+      "13 300 kr",
+      "19 000 kr"
+     ],
+     "a": 0,
+     "e": "Amortering 19 000 kr och ränta 13 300 kr: <b>32 300 kr</b>."
+    },
+    {
+     "q": "Du handlar för 19 000 kr på kredit med 24 % årsränta och betalar efter 3 månader. Hur mycket ränta blir det?",
+     "c": [
+      "1 140 kr",
+      "570 kr",
+      "13 680 kr",
+      "4 560 kr"
+     ],
+     "a": 0,
+     "e": "19 000 · 0,24 · 3/12 = <b>1 140 kr</b>."
+    },
+    {
+     "q": "Du handlar för 9 000 kr på kredit med 20 % årsränta och betalar efter 9 månader. Hur mycket ränta blir det?",
+     "c": [
+      "675 kr",
+      "1 350 kr",
+      "1 800 kr",
+      "16 200 kr"
+     ],
+     "a": 1,
+     "e": "9 000 · 0,2 · 9/12 = <b>1 350 kr</b>."
+    },
+    {
+     "q": "Du handlar för 18 000 kr på kredit med 20 % årsränta och betalar efter 7 månader. Hur mycket ränta blir det?",
+     "c": [
+      "25 200 kr",
+      "3 600 kr",
+      "2 100 kr",
+      "1 050 kr"
+     ],
+     "a": 2,
+     "e": "18 000 · 0,2 · 7/12 = <b>2 100 kr</b>."
+    },
+    {
+     "q": "Du handlar för 22 000 kr på kredit med 18 % årsränta och betalar efter 5 månader. Hur mycket ränta blir det?",
+     "c": [
+      "1 650 kr",
+      "825 kr",
+      "3 960 kr",
+      "19 800 kr"
+     ],
+     "a": 0,
+     "e": "22 000 · 0,18 · 5/12 = <b>1 650 kr</b>."
+    },
+    {
+     "q": "Ett lån på 170 000 kr ska betalas av med lika mycket varje år i 10 år. Räntan är 12 %. Hur mycket betalar du första året (amortering + ränta)?",
+     "c": [
+      "17 000 kr",
+      "20 400 kr",
+      "37 400 kr",
+      "19 040 kr"
+     ],
+     "a": 2,
+     "e": "Amortering 17 000 kr och ränta 20 400 kr: <b>37 400 kr</b>."
+    },
+    {
+     "q": "Du köper en TV för 18 000 kr på avbetalning. Räntan är 15 % per år och du betalar efter 7 månader. Hur mycket ränta blir det?",
+     "c": [
+      "1 575 kr",
+      "3 150 kr",
+      "2 700 kr",
+      "18 900 kr"
+     ],
+     "a": 0,
+     "e": "15 % per år = 2 700 kr. För 7 månader: 2 700 · 7/12 = <b>1 575 kr</b>."
+    },
+    {
+     "q": "Du handlar för 13 000 kr på kredit med 18 % årsränta och betalar efter 6 månader. Hur mycket ränta blir det?",
+     "c": [
+      "14 040 kr",
+      "585 kr",
+      "2 340 kr",
+      "1 170 kr"
+     ],
+     "a": 3,
+     "e": "13 000 · 0,18 · 6/12 = <b>1 170 kr</b>."
+    },
+    {
+     "q": "Du köper en TV för 46 000 kr på avbetalning. Räntan är 15 % per år och du betalar efter 10 månader. Hur mycket ränta blir det?",
+     "c": [
+      "69 000 kr",
+      "6 900 kr",
+      "11 500 kr",
+      "5 750 kr"
+     ],
+     "a": 3,
+     "e": "15 % per år = 6 900 kr. För 10 månader: 6 900 · 10/12 = <b>5 750 kr</b>."
+    },
+    {
+     "q": "Du handlar för 22 000 kr på kredit med 20 % årsränta och betalar efter 3 månader. Hur mycket ränta blir det?",
+     "c": [
+      "4 400 kr",
+      "1 100 kr",
+      "13 200 kr",
+      "550 kr"
+     ],
+     "a": 1,
+     "e": "22 000 · 0,2 · 3/12 = <b>1 100 kr</b>."
+    },
+    {
+     "q": "Du handlar för 23 000 kr på kredit med 15 % årsränta och betalar efter 10 månader. Hur mycket ränta blir det?",
+     "c": [
+      "34 500 kr",
+      "2 875 kr",
+      "1 437,5 kr",
+      "3 450 kr"
+     ],
+     "a": 1,
+     "e": "23 000 · 0,15 · 10/12 = <b>2 875 kr</b>."
+    }
+   ]
+  },
+  {
+   "title": "Kalkylprogram",
+   "items": [
+    {
+     "q": "Du sätter in 48 000 kr med 3 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 4 år? Avrunda till hela kronor.",
+     "c": [
+      "54 024 kr",
+      "55 645 kr",
+      "5 760 kr",
+      "53 760 kr"
+     ],
+     "a": 0,
+     "e": "48 000 · 1,03<sup>4</sup> ≈ <b>54 024 kr</b>."
+    },
+    {
+     "q": "60 000 kr placeras i 20 år med 6 % årlig ränta. Hur mycket mer blir det med ränta på ränta än om räntan tas ut varje år? Avrunda till hela kronor.",
+     "c": [
+      "60 428 kr",
+      "132 428 kr",
+      "3 021 kr",
+      "72 000 kr"
+     ],
+     "a": 0,
+     "e": "Ränta på ränta: 192 428 kr. Utan: 132 000 kr. Skillnad <b>60 428 kr</b>."
+    },
+    {
+     "q": "Du sätter in 8 000 kr med 8 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 7 år? Avrunda till hela kronor.",
+     "c": [
+      "12 480 kr",
+      "4 480 kr",
+      "13 711 kr",
+      "14 807 kr"
+     ],
+     "a": 2,
+     "e": "8 000 · 1,08<sup>7</sup> ≈ <b>13 711 kr</b>."
+    },
+    {
+     "q": "Du sätter in 46 000 kr med 5 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 6 år? Avrunda till hela kronor.",
+     "c": [
+      "13 800 kr",
+      "64 727 kr",
+      "59 800 kr",
+      "61 644 kr"
+     ],
+     "a": 3,
+     "e": "46 000 · 1,05<sup>6</sup> ≈ <b>61 644 kr</b>."
+    },
+    {
+     "q": "20 000 kr placeras i 5 år med 4 % årlig ränta. Hur mycket mer blir det med ränta på ränta än om räntan tas ut varje år? Avrunda till hela kronor.",
+     "c": [
+      "4 000 kr",
+      "67 kr",
+      "333 kr",
+      "4 333 kr"
+     ],
+     "a": 2,
+     "e": "Ränta på ränta: 24 333 kr. Utan: 24 000 kr. Skillnad <b>333 kr</b>."
+    },
+    {
+     "q": "I ett kalkylprogram står ett belopp i A1 och räntesatsen 4 % ska läggas till. Vilken formel ger nytt belopp?",
+     "c": [
+      "=A1*0,04",
+      "=A1*1,04",
+      "=A1*4",
+      "=A1+4"
+     ],
+     "a": 1,
+     "e": "<b>=A1*1,04</b>."
+    },
+    {
+     "q": "90 000 kr placeras i 5 år med 4 % årlig ränta. Hur mycket mer blir det med ränta på ränta än om räntan tas ut varje år? Avrunda till hela kronor.",
+     "c": [
+      "18 000 kr",
+      "1 499 kr",
+      "19 499 kr",
+      "300 kr"
+     ],
+     "a": 1,
+     "e": "Ränta på ränta: 109 499 kr. Utan: 108 000 kr. Skillnad <b>1 499 kr</b>."
+    },
+    {
+     "q": "Du sätter in 4 000 kr med 8 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 3 år? Avrunda till hela kronor.",
+     "c": [
+      "5 442 kr",
+      "960 kr",
+      "4 960 kr",
+      "5 039 kr"
+     ],
+     "a": 3,
+     "e": "4 000 · 1,08<sup>3</sup> ≈ <b>5 039 kr</b>."
+    },
+    {
+     "q": "Räntan är 5 % av skulden i C2. Vilken formel ger räntan?",
+     "c": [
+      "=C2*1,05",
+      "=C2*5",
+      "=C2+0,05",
+      "=C2*0,05"
+     ],
+     "a": 3,
+     "e": "<b>=C2*0,05</b>."
+    },
+    {
+     "q": "20 000 kr placeras i 20 år med 6 % årlig ränta. Hur mycket mer blir det med ränta på ränta än om räntan tas ut varje år? Avrunda till hela kronor.",
+     "c": [
+      "24 000 kr",
+      "44 143 kr",
+      "20 143 kr",
+      "1 007 kr"
+     ],
+     "a": 2,
+     "e": "Ränta på ränta: 64 143 kr. Utan: 44 000 kr. Skillnad <b>20 143 kr</b>."
+    },
+    {
+     "q": "10 000 kr placeras i 20 år med 3 % årlig ränta. Hur mycket mer blir det med ränta på ränta än om räntan tas ut varje år? Avrunda till hela kronor.",
+     "c": [
+      "8 061 kr",
+      "103 kr",
+      "6 000 kr",
+      "2 061 kr"
+     ],
+     "a": 3,
+     "e": "Ränta på ränta: 18 061 kr. Utan: 16 000 kr. Skillnad <b>2 061 kr</b>."
+    },
+    {
+     "q": "Du sätter in 39 000 kr med 5 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 3 år? Avrunda till hela kronor.",
+     "c": [
+      "44 850 kr",
+      "45 147 kr",
+      "47 405 kr",
+      "5 850 kr"
+     ],
+     "a": 1,
+     "e": "39 000 · 1,05<sup>3</sup> ≈ <b>45 147 kr</b>."
+    },
+    {
+     "q": "30 000 kr placeras i 5 år med 4 % årlig ränta. Hur mycket mer blir det med ränta på ränta än om räntan tas ut varje år? Avrunda till hela kronor.",
+     "c": [
+      "500 kr",
+      "6 500 kr",
+      "100 kr",
+      "6 000 kr"
+     ],
+     "a": 0,
+     "e": "Ränta på ränta: 36 500 kr. Utan: 36 000 kr. Skillnad <b>500 kr</b>."
+    },
+    {
+     "q": "80 000 kr placeras i 10 år med 4 % årlig ränta. Hur mycket mer blir det med ränta på ränta än om räntan tas ut varje år? Avrunda till hela kronor.",
+     "c": [
+      "32 000 kr",
+      "6 420 kr",
+      "642 kr",
+      "38 420 kr"
+     ],
+     "a": 1,
+     "e": "Ränta på ränta: 118 420 kr. Utan: 112 000 kr. Skillnad <b>6 420 kr</b>."
+    },
+    {
+     "q": "Du sätter in 4 000 kr med 6 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 5 år? Avrunda till hela kronor.",
+     "c": [
+      "1 200 kr",
+      "5 200 kr",
+      "5 353 kr",
+      "5 674 kr"
+     ],
+     "a": 2,
+     "e": "4 000 · 1,06<sup>5</sup> ≈ <b>5 353 kr</b>."
+    },
+    {
+     "q": "Du sätter in 28 000 kr med 4 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 3 år? Avrunda till hela kronor.",
+     "c": [
+      "31 496 kr",
+      "3 360 kr",
+      "32 756 kr",
+      "31 360 kr"
+     ],
+     "a": 0,
+     "e": "28 000 · 1,04<sup>3</sup> ≈ <b>31 496 kr</b>."
+    },
+    {
+     "q": "70 000 kr placeras i 10 år med 6 % årlig ränta. Hur mycket mer blir det med ränta på ränta än om räntan tas ut varje år? Avrunda till hela kronor.",
+     "c": [
+      "1 336 kr",
+      "55 359 kr",
+      "13 359 kr",
+      "42 000 kr"
+     ],
+     "a": 2,
+     "e": "Ränta på ränta: 125 359 kr. Utan: 112 000 kr. Skillnad <b>13 359 kr</b>."
+    },
+    {
+     "q": "Du sätter in 28 000 kr med 8 % ränta per år och tar inte ut räntan. Hur mycket finns på kontot efter 6 år? Avrunda till hela kronor.",
+     "c": [
+      "41 440 kr",
+      "13 440 kr",
+      "47 987 kr",
+      "44 432 kr"
+     ],
+     "a": 3,
+     "e": "28 000 · 1,08<sup>6</sup> ≈ <b>44 432 kr</b>."
+    },
+    {
+     "q": "En skuld i B2 minskar med en amortering på 2 000 kr. Vilken formel ger ny skuld i B3?",
+     "c": [
+      "=2 000-B2",
+      "=B2-2 000",
+      "=B2+2 000",
+      "=B2*2 000"
+     ],
+     "a": 1,
+     "e": "<b>=B2-2 000</b>."
+    },
+    {
+     "q": "Ett sparande växer med 3 % per år. A2 innehåller förra årets värde. Vilken formel ska stå i A3?",
+     "c": [
+      "=A2*1,03",
+      "=A2*0,03",
+      "=A2*3",
+      "=A2+3"
+     ],
+     "a": 0,
+     "e": "<b>=A2*1,03</b>."
+    }
+   ]
+  },
+  {
+   "title": "Blandat",
+   "items": [
+    {
+     "q": "Nora sätter in 15 000 kr på ett sparkonto med 1 % ränta per år. Hur mycket ränta får hon efter ett år?",
+     "c": [
+      "150 kr",
+      "1 500 kr",
+      "15 150 kr",
+      "100 kr"
+     ],
+     "a": 0,
+     "e": "1 % av 15 000 = 0,01 · 15 000 = <b>150 kr</b>."
+    },
+    {
+     "q": "Hugo sätter in 14 000 kr på ett sparkonto med 6 % ränta per år. Hur mycket ränta får han efter ett år?",
+     "c": [
+      "840 kr",
+      "600 kr",
+      "14 840 kr",
+      "8 400 kr"
+     ],
+     "a": 0,
+     "e": "6 % av 14 000 = 0,06 · 14 000 = <b>840 kr</b>."
+    },
+    {
+     "q": "Maja sätter in 13 000 kr på ett sparkonto med 5 % ränta per år. Hur mycket ränta får hon efter ett år?",
+     "c": [
+      "6 500 kr",
+      "650 kr",
+      "500 kr",
+      "13 650 kr"
+     ],
+     "a": 1,
+     "e": "5 % av 13 000 = 0,05 · 13 000 = <b>650 kr</b>."
+    },
+    {
+     "q": "Melvin sätter in 23 000 kr på ett sparkonto med 2 % ränta per år. Hur mycket ränta får han efter ett år?",
+     "c": [
+      "460 kr",
+      "23 460 kr",
+      "4 600 kr",
+      "200 kr"
+     ],
+     "a": 0,
+     "e": "2 % av 23 000 = 0,02 · 23 000 = <b>460 kr</b>."
+    },
+    {
+     "q": "Ett lån på 310 000 kr amorteras med lika stora belopp varje år i 10 år. Räntan är 4 %. Hur mycket ränta betalas år 6?",
+     "c": [
+      "1 240 kr",
+      "12 400 kr",
+      "7 440 kr",
+      "6 200 kr"
+     ],
+     "a": 3,
+     "e": "Skulden vid början av år 6: 310 000 − 5 · 31 000 = 155 000. Ränta: 155 000 · 0,04 = <b>6 200 kr</b>."
+    },
+    {
+     "q": "Adam sätter in 19 000 kr på ett sparkonto med 2 % ränta per år. Hur mycket ränta får han efter ett år?",
+     "c": [
+      "3 800 kr",
+      "380 kr",
+      "19 380 kr",
+      "200 kr"
+     ],
+     "a": 1,
+     "e": "2 % av 19 000 = 0,02 · 19 000 = <b>380 kr</b>."
+    },
+    {
+     "q": "Ett lån på 210 000 kr amorteras med lika stora belopp varje år i 10 år. Räntan är 4 %. Hur mycket ränta betalas år 3?",
+     "c": [
+      "6 720 kr",
+      "7 560 kr",
+      "8 400 kr",
+      "840 kr"
+     ],
+     "a": 0,
+     "e": "Skulden vid början av år 3: 210 000 − 2 · 21 000 = 168 000. Ränta: 168 000 · 0,04 = <b>6 720 kr</b>."
+    },
+    {
+     "q": "Ett lån på 190 000 kr amorteras med lika stora belopp varje år i 5 år. Räntan är 3 %. Hur mycket ränta betalas år 3?",
+     "c": [
+      "5 700 kr",
+      "4 560 kr",
+      "3 420 kr",
+      "1 140 kr"
+     ],
+     "a": 2,
+     "e": "Skulden vid början av år 3: 190 000 − 2 · 38 000 = 114 000. Ränta: 114 000 · 0,03 = <b>3 420 kr</b>."
+    },
+    {
+     "q": "Viktor sätter in 13 000 kr på ett sparkonto med 2 % ränta per år. Hur mycket ränta får han efter ett år?",
+     "c": [
+      "2 600 kr",
+      "13 260 kr",
+      "260 kr",
+      "200 kr"
+     ],
+     "a": 2,
+     "e": "2 % av 13 000 = 0,02 · 13 000 = <b>260 kr</b>."
+    },
+    {
+     "q": "Olle sätter in 16 000 kr på ett sparkonto med 5 % ränta per år. Hur mycket ränta får han efter ett år?",
+     "c": [
+      "500 kr",
+      "8 000 kr",
+      "800 kr",
+      "16 800 kr"
+     ],
+     "a": 2,
+     "e": "5 % av 16 000 = 0,05 · 16 000 = <b>800 kr</b>."
+    },
+    {
+     "q": "Ett lån på 190 000 kr amorteras med lika stora belopp varje år i 20 år. Räntan är 6 %. Hur mycket ränta betalas år 12?",
+     "c": [
+      "570 kr",
+      "11 400 kr",
+      "5 130 kr",
+      "5 700 kr"
+     ],
+     "a": 2,
+     "e": "Skulden vid början av år 12: 190 000 − 11 · 9 500 = 85 500. Ränta: 85 500 · 0,06 = <b>5 130 kr</b>."
+    },
+    {
+     "q": "Ett lån på 360 000 kr amorteras med lika stora belopp varje år i 10 år. Räntan är 6 %. Hur mycket ränta betalas år 3?",
+     "c": [
+      "19 440 kr",
+      "2 160 kr",
+      "21 600 kr",
+      "17 280 kr"
+     ],
+     "a": 3,
+     "e": "Skulden vid början av år 3: 360 000 − 2 · 36 000 = 288 000. Ränta: 288 000 · 0,06 = <b>17 280 kr</b>."
+    },
+    {
+     "q": "Ett lån på 180 000 kr amorteras med lika stora belopp varje år i 25 år. Räntan är 6 %. Hur mycket ränta betalas år 18?",
+     "c": [
+      "432 kr",
+      "10 800 kr",
+      "3 888 kr",
+      "3 456 kr"
+     ],
+     "a": 3,
+     "e": "Skulden vid början av år 18: 180 000 − 17 · 7 200 = 57 600. Ränta: 57 600 · 0,06 = <b>3 456 kr</b>."
+    },
+    {
+     "q": "Ali sätter in 29 000 kr på ett sparkonto med 4 % ränta per år. Hur mycket ränta får han efter ett år?",
+     "c": [
+      "400 kr",
+      "1 160 kr",
+      "30 160 kr",
+      "11 600 kr"
+     ],
+     "a": 1,
+     "e": "4 % av 29 000 = 0,04 · 29 000 = <b>1 160 kr</b>."
+    },
+    {
+     "q": "Ett lån på 170 000 kr amorteras med lika stora belopp varje år i 10 år. Räntan är 3 %. Hur mycket ränta betalas år 4?",
+     "c": [
+      "3 570 kr",
+      "4 080 kr",
+      "5 100 kr",
+      "510 kr"
+     ],
+     "a": 0,
+     "e": "Skulden vid början av år 4: 170 000 − 3 · 17 000 = 119 000. Ränta: 119 000 · 0,03 = <b>3 570 kr</b>."
+    },
+    {
+     "q": "Freja sätter in 20 000 kr på ett sparkonto med 6 % ränta per år. Hur mycket ränta får hon efter ett år?",
+     "c": [
+      "600 kr",
+      "12 000 kr",
+      "21 200 kr",
+      "1 200 kr"
+     ],
+     "a": 3,
+     "e": "6 % av 20 000 = 0,06 · 20 000 = <b>1 200 kr</b>."
+    },
+    {
+     "q": "Ett lån på 110 000 kr amorteras med lika stora belopp varje år i 10 år. Räntan är 6 %. Hur mycket ränta betalas år 8?",
+     "c": [
+      "660 kr",
+      "1 980 kr",
+      "2 640 kr",
+      "6 600 kr"
+     ],
+     "a": 1,
+     "e": "Skulden vid början av år 8: 110 000 − 7 · 11 000 = 33 000. Ränta: 33 000 · 0,06 = <b>1 980 kr</b>."
+    },
+    {
+     "q": "Ett lån på 350 000 kr amorteras med lika stora belopp varje år i 5 år. Räntan är 4 %. Hur mycket ränta betalas år 4?",
+     "c": [
+      "8 400 kr",
+      "14 000 kr",
+      "2 800 kr",
+      "5 600 kr"
+     ],
+     "a": 3,
+     "e": "Skulden vid början av år 4: 350 000 − 3 · 70 000 = 140 000. Ränta: 140 000 · 0,04 = <b>5 600 kr</b>."
+    },
+    {
+     "q": "Ett lån på 290 000 kr amorteras med lika stora belopp varje år i 20 år. Räntan är 6 %. Hur mycket ränta betalas år 9?",
+     "c": [
+      "11 310 kr",
+      "10 440 kr",
+      "17 400 kr",
+      "870 kr"
+     ],
+     "a": 1,
+     "e": "Skulden vid början av år 9: 290 000 − 8 · 14 500 = 174 000. Ränta: 174 000 · 0,06 = <b>10 440 kr</b>."
+    },
+    {
+     "q": "Alma sätter in 38 000 kr på ett sparkonto med 5 % ränta per år. Hur mycket ränta får hon efter ett år?",
+     "c": [
+      "39 900 kr",
+      "19 000 kr",
+      "1 900 kr",
+      "500 kr"
+     ],
+     "a": 2,
+     "e": "5 % av 38 000 = 0,05 · 38 000 = <b>1 900 kr</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 14,
+ "updated": "2026-11-26",
+ "country": "se",
+ "subject": "matematik",
+ "grade": "matematik-1c"
+}

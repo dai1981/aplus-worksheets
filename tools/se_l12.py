@@ -36,6 +36,7 @@ def build(lv, i):
         try:
             items = C.mix(rnd, seen, parts)
             for it in items:
+                it["q"] = re.sub(r"<div class='qfig'><div class='qfig'>(.*?)</div></div>", r"<div class='qfig'>\1</div>", it["q"], flags=re.S)
                 it["q"] = group(it["q"])
                 it["e"] = group(it["e"])
                 it["c"] = [group(c) for c in it["c"]]

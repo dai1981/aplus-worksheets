@@ -143,6 +143,13 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 } elseif (preg_match('/^arskurs-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'se') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 6) . '-' . ((int)$gm[1] + 7);   // Sverige: årskurs 3 = age 9-10 (förskoleklass at 6)
     $lr['educationalLevel'] = array($grade['name'], (int)$gm[1] <= 3 ? 'Grundskolan, lågstadiet' : ((int)$gm[1] <= 6 ? 'Grundskolan, mellanstadiet' : 'Grundskolan, högstadiet'));
+} elseif ($country['code'] === 'se' && $grade['slug'] === 'forskoleklass') {
+    $lr['typicalAgeRange'] = '6-7';   // Sverige: förskoleklass, the year children turn 6
+    $lr['educationalLevel'] = array($grade['name'], 'Förskoleklass');
+} elseif ($country['code'] === 'se' && isset(array('matematik-1c' => 1, 'matematik-2c' => 1, 'matematik-3c' => 1, 'matematik-4' => 1, 'matematik-5' => 1)[$grade['slug']])) {
+    $ages = array('matematik-1c' => '16-17', 'matematik-2c' => '16-18', 'matematik-3c' => '17-18', 'matematik-4' => '17-19', 'matematik-5' => '18-19');
+    $lr['typicalAgeRange'] = $ages[$grade['slug']];   // Sverige, gymnasieskolan: nivå 1c–2c in year 1, 3c–4 in year 2, 5 in year 3
+    $lr['educationalLevel'] = array($grade['name'], 'Gymnasieskolan');
 } elseif (preg_match('/^kelas-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'id') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Indonesia: SD kelas 4 = age 9-10
     $lr['educationalLevel'] = array($grade['name'], (int)$gm[1] <= 6 ? 'Sekolah Dasar' : ((int)$gm[1] <= 9 ? 'Sekolah Menengah Pertama' : 'Sekolah Menengah Atas'));

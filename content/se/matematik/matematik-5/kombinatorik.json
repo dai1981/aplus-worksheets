@@ -1,0 +1,1161 @@
+{
+ "slug": "kombinatorik",
+ "title": "Kombinatorik: permutationer, kombinationer och binomialsatsen",
+ "seo_title": "Kombinatorik – Matematik 5: uppgifter med facit",
+ "short_title": "Kombinatorik",
+ "domain": "Diskret matematik och bevis",
+ "standard_code": "Gy25 Matematik nivå 5 · Diskret matematik och bevis",
+ "standard_url": "https://syllabuswebb.skolverket.se/subject/MAT/11/pdf",
+ "standard_text": "Metoder för kombinatorik: multiplikationsprincipen, permutationer, kombinationer och binomialsatsen. (sammanfattning av det centrala innehållet i ämnesplanen i matematik för gymnasieskolan, nivå 5)",
+ "meta_desc": "Uppgifter om kombinatorik för Matematik 5: permutationer, kombinationer, multiplikationsprincipen, binomialsatsen och sannolikhet. 100 uppgifter med facit.",
+ "key_big": "Ordning spelar roll: permutation",
+ "key_sub": "Ordning spelar ingen roll: kombination.",
+ "body_html": "<h2>Så tänker du</h2><p>Multiplikationsprincipen: med a val och sedan b val finns a · b möjligheter.</p><p>n föremål kan ordnas på n! sätt. Att välja och ordna k av n ger P(n, k) = n!/(n − k)!.</p><p>Att välja k av n utan ordning ger C(n, k) = n!/(k!(n − k)!). Binomialsatsen: (a + b)ⁿ = Σ C(n, k) aⁿ⁻ᵏ bᵏ.</p><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>Välj 3 av 10</p><p class='sn-ex-s'>10!/(3! · 7!)</p><p class='sn-ex-a'>Svar: 120</p></div><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>3 av 10 på pallen</p><p class='sn-ex-s'>10 · 9 · 8</p><p class='sn-ex-a'>Svar: 720</p></div><h2>Vanliga fel</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Fel</th><th>Rätt</th></tr></thead><tbody><tr><td>Använder kombination när ordningen spelar roll</td><td>Fråga: spelar ordningen roll?</td></tr><tr><td>Adderar i stället för att multiplicera</td><td>Oberoende val multipliceras</td></tr><tr><td>0! = 0</td><td>0! = 1</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Vad betyder n!?",
+   "a": "n · (n − 1) · … · 2 · 1."
+  },
+  {
+   "q": "Varför är C(n, k) = C(n, n − k)?",
+   "a": "Att välja k är samma som att välja bort n − k."
+  },
+  {
+   "q": "Var används kombinatorik?",
+   "a": "I sannolikhet, kodning och schemaläggning."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Permutationer",
+   "items": [
+    {
+     "q": "På hur många sätt kan 9 lag placera sig i en tabell (utan delade placeringar)?",
+     "c": [
+      "40 320",
+      "72",
+      "81",
+      "362 880"
+     ],
+     "a": 3,
+     "e": "9! = <b>362 880</b>."
+    },
+    {
+     "q": "9 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "504",
+      "729",
+      "6",
+      "84"
+     ],
+     "a": 0,
+     "e": "9 · 8 · … (3 faktorer) = <b>504</b>."
+    },
+    {
+     "q": "Hur många ord med 2 olika bokstäver kan bildas av 12 olika bokstäver?",
+     "c": [
+      "144",
+      "132",
+      "66",
+      "2"
+     ],
+     "a": 1,
+     "e": "12 · 11 · … (2 faktorer) = <b>132</b>."
+    },
+    {
+     "q": "Hur många ord med 2 olika bokstäver kan bildas av 5 olika bokstäver?",
+     "c": [
+      "2",
+      "10",
+      "20",
+      "25"
+     ],
+     "a": 2,
+     "e": "5 · 4 · … (2 faktorer) = <b>20</b>."
+    },
+    {
+     "q": "På hur många sätt kan 5 lag placera sig i en tabell (utan delade placeringar)?",
+     "c": [
+      "120",
+      "25",
+      "20",
+      "24"
+     ],
+     "a": 0,
+     "e": "5! = <b>120</b>."
+    },
+    {
+     "q": "Hur många ord med 2 olika bokstäver kan bildas av 6 olika bokstäver?",
+     "c": [
+      "2",
+      "30",
+      "15",
+      "36"
+     ],
+     "a": 1,
+     "e": "6 · 5 · … (2 faktorer) = <b>30</b>."
+    },
+    {
+     "q": "På hur många sätt kan 7 lag placera sig i en tabell (utan delade placeringar)?",
+     "c": [
+      "5 040",
+      "42",
+      "720",
+      "49"
+     ],
+     "a": 0,
+     "e": "7! = <b>5 040</b>."
+    },
+    {
+     "q": "Hur många ord med 4 olika bokstäver kan bildas av 12 olika bokstäver?",
+     "c": [
+      "495",
+      "11 880",
+      "24",
+      "20 736"
+     ],
+     "a": 1,
+     "e": "12 · 11 · … (4 faktorer) = <b>11 880</b>."
+    },
+    {
+     "q": "8 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "56",
+      "336",
+      "512",
+      "6"
+     ],
+     "a": 1,
+     "e": "8 · 7 · … (3 faktorer) = <b>336</b>."
+    },
+    {
+     "q": "6 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "216",
+      "6",
+      "120",
+      "20"
+     ],
+     "a": 2,
+     "e": "6 · 5 · … (3 faktorer) = <b>120</b>."
+    },
+    {
+     "q": "På hur många sätt kan 5 personer ställa sig i en kö?",
+     "c": [
+      "20",
+      "24",
+      "25",
+      "120"
+     ],
+     "a": 3,
+     "e": "5! = <b>120</b>."
+    },
+    {
+     "q": "10 löpare tävlar. På hur många sätt kan guld, silver och brons fördelas?",
+     "c": [
+      "1 000",
+      "120",
+      "720",
+      "6"
+     ],
+     "a": 2,
+     "e": "10 · 9 · … (3 faktorer) = <b>720</b>."
+    },
+    {
+     "q": "På hur många sätt kan 7 olika böcker ställas i en bokhylla?",
+     "c": [
+      "42",
+      "720",
+      "5 040",
+      "49"
+     ],
+     "a": 2,
+     "e": "7! = <b>5 040</b>."
+    },
+    {
+     "q": "Hur många ord med 2 olika bokstäver kan bildas av 11 olika bokstäver?",
+     "c": [
+      "121",
+      "55",
+      "2",
+      "110"
+     ],
+     "a": 3,
+     "e": "11 · 10 · … (2 faktorer) = <b>110</b>."
+    },
+    {
+     "q": "Hur många ord med 2 olika bokstäver kan bildas av 7 olika bokstäver?",
+     "c": [
+      "42",
+      "2",
+      "21",
+      "49"
+     ],
+     "a": 0,
+     "e": "7 · 6 · … (2 faktorer) = <b>42</b>."
+    },
+    {
+     "q": "Hur många ord med 4 olika bokstäver kan bildas av 11 olika bokstäver?",
+     "c": [
+      "330",
+      "24",
+      "14 641",
+      "7 920"
+     ],
+     "a": 3,
+     "e": "11 · 10 · … (4 faktorer) = <b>7 920</b>."
+    },
+    {
+     "q": "Hur många ord med 4 olika bokstäver kan bildas av 9 olika bokstäver?",
+     "c": [
+      "24",
+      "126",
+      "3 024",
+      "6 561"
+     ],
+     "a": 2,
+     "e": "9 · 8 · … (4 faktorer) = <b>3 024</b>."
+    },
+    {
+     "q": "På hur många sätt kan 6 olika böcker ställas i en bokhylla?",
+     "c": [
+      "36",
+      "120",
+      "30",
+      "720"
+     ],
+     "a": 3,
+     "e": "6! = <b>720</b>."
+    },
+    {
+     "q": "På hur många sätt kan 4 lag placera sig i en tabell (utan delade placeringar)?",
+     "c": [
+      "24",
+      "12",
+      "16",
+      "6"
+     ],
+     "a": 0,
+     "e": "4! = <b>24</b>."
+    },
+    {
+     "q": "Hur många ord med 4 olika bokstäver kan bildas av 8 olika bokstäver?",
+     "c": [
+      "4 096",
+      "1 680",
+      "24",
+      "70"
+     ],
+     "a": 1,
+     "e": "8 · 7 · … (4 faktorer) = <b>1 680</b>."
+    }
+   ]
+  },
+  {
+   "title": "Kombinationer",
+   "items": [
+    {
+     "q": "På hur många sätt kan man välja 2 personer av 13 till en kommitté?",
+     "c": [
+      "78",
+      "13",
+      "26",
+      "156"
+     ],
+     "a": 0,
+     "e": "C(13, 2) = 13!/(2! · 11!) = <b>78</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 2 personer av 19 till en kommitté?",
+     "c": [
+      "38",
+      "342",
+      "19",
+      "171"
+     ],
+     "a": 3,
+     "e": "C(19, 2) = 19!/(2! · 17!) = <b>171</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 3 personer av 14 till en kommitté?",
+     "c": [
+      "364",
+      "42",
+      "2 184",
+      "91"
+     ],
+     "a": 0,
+     "e": "C(14, 3) = 14!/(3! · 11!) = <b>364</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 4 personer av 10 till en kommitté?",
+     "c": [
+      "5 040",
+      "40",
+      "120",
+      "210"
+     ],
+     "a": 3,
+     "e": "C(10, 4) = 10!/(4! · 6!) = <b>210</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 3 personer av 9 till en kommitté?",
+     "c": [
+      "27",
+      "504",
+      "84",
+      "36"
+     ],
+     "a": 2,
+     "e": "C(9, 3) = 9!/(3! · 6!) = <b>84</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 4 personer av 9 till en kommitté?",
+     "c": [
+      "84",
+      "126",
+      "36",
+      "3 024"
+     ],
+     "a": 1,
+     "e": "C(9, 4) = 9!/(4! · 5!) = <b>126</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 3 personer av 10 till en kommitté?",
+     "c": [
+      "45",
+      "720",
+      "30",
+      "120"
+     ],
+     "a": 3,
+     "e": "C(10, 3) = 10!/(3! · 7!) = <b>120</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 3 personer av 15 till en kommitté?",
+     "c": [
+      "105",
+      "2 730",
+      "455",
+      "45"
+     ],
+     "a": 2,
+     "e": "C(15, 3) = 15!/(3! · 12!) = <b>455</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 2 personer av 20 till en kommitté?",
+     "c": [
+      "190",
+      "20",
+      "380",
+      "40"
+     ],
+     "a": 0,
+     "e": "C(20, 2) = 20!/(2! · 18!) = <b>190</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 3 personer av 13 till en kommitté?",
+     "c": [
+      "39",
+      "286",
+      "78",
+      "1 716"
+     ],
+     "a": 1,
+     "e": "C(13, 3) = 13!/(3! · 10!) = <b>286</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 3 personer av 17 till en kommitté?",
+     "c": [
+      "136",
+      "4 080",
+      "680",
+      "51"
+     ],
+     "a": 2,
+     "e": "C(17, 3) = 17!/(3! · 14!) = <b>680</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 5 personer av 16 till en kommitté?",
+     "c": [
+      "4 368",
+      "1 820",
+      "80",
+      "524 160"
+     ],
+     "a": 0,
+     "e": "C(16, 5) = 16!/(5! · 11!) = <b>4 368</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 3 personer av 18 till en kommitté?",
+     "c": [
+      "4 896",
+      "153",
+      "54",
+      "816"
+     ],
+     "a": 3,
+     "e": "C(18, 3) = 18!/(3! · 15!) = <b>816</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 5 personer av 14 till en kommitté?",
+     "c": [
+      "70",
+      "1 001",
+      "2 002",
+      "240 240"
+     ],
+     "a": 2,
+     "e": "C(14, 5) = 14!/(5! · 9!) = <b>2 002</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 2 personer av 12 till en kommitté?",
+     "c": [
+      "12",
+      "66",
+      "24",
+      "132"
+     ],
+     "a": 1,
+     "e": "C(12, 2) = 12!/(2! · 10!) = <b>66</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 3 personer av 11 till en kommitté?",
+     "c": [
+      "33",
+      "55",
+      "165",
+      "990"
+     ],
+     "a": 2,
+     "e": "C(11, 3) = 11!/(3! · 8!) = <b>165</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 2 personer av 15 till en kommitté?",
+     "c": [
+      "15",
+      "105",
+      "30",
+      "210"
+     ],
+     "a": 1,
+     "e": "C(15, 2) = 15!/(2! · 13!) = <b>105</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 5 personer av 15 till en kommitté?",
+     "c": [
+      "75",
+      "1 365",
+      "360 360",
+      "3 003"
+     ],
+     "a": 3,
+     "e": "C(15, 5) = 15!/(5! · 10!) = <b>3 003</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 2 personer av 7 till en kommitté?",
+     "c": [
+      "14",
+      "21",
+      "42",
+      "7"
+     ],
+     "a": 1,
+     "e": "C(7, 2) = 7!/(2! · 5!) = <b>21</b>."
+    },
+    {
+     "q": "På hur många sätt kan man välja 5 personer av 8 till en kommitté?",
+     "c": [
+      "56",
+      "6 720",
+      "40",
+      "70"
+     ],
+     "a": 0,
+     "e": "C(8, 5) = 8!/(5! · 3!) = <b>56</b>."
+    }
+   ]
+  },
+  {
+   "title": "Multiplikationsprincipen",
+   "items": [
+    {
+     "q": "En meny har 2 förrätter, 5 huvudrätter och 5 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "50",
+      "12",
+      "15",
+      "220"
+     ],
+     "a": 0,
+     "e": "Multiplikationsprincipen: 2 · 5 · 5 = <b>50</b>."
+    },
+    {
+     "q": "En meny har 6 förrätter, 2 huvudrätter och 3 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "36",
+      "165",
+      "11",
+      "15"
+     ],
+     "a": 0,
+     "e": "Multiplikationsprincipen: 6 · 2 · 3 = <b>36</b>."
+    },
+    {
+     "q": "En meny har 8 förrätter, 2 huvudrätter och 6 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "16",
+      "22",
+      "96",
+      "560"
+     ],
+     "a": 2,
+     "e": "Multiplikationsprincipen: 8 · 2 · 6 = <b>96</b>."
+    },
+    {
+     "q": "En meny har 4 förrätter, 8 huvudrätter och 6 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "18",
+      "38",
+      "816",
+      "192"
+     ],
+     "a": 3,
+     "e": "Multiplikationsprincipen: 4 · 8 · 6 = <b>192</b>."
+    },
+    {
+     "q": "En meny har 4 förrätter, 7 huvudrätter och 6 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "680",
+      "34",
+      "168",
+      "17"
+     ],
+     "a": 2,
+     "e": "Multiplikationsprincipen: 4 · 7 · 6 = <b>168</b>."
+    },
+    {
+     "q": "En meny har 7 förrätter, 3 huvudrätter och 5 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "15",
+      "105",
+      "455",
+      "26"
+     ],
+     "a": 1,
+     "e": "Multiplikationsprincipen: 7 · 3 · 5 = <b>105</b>."
+    },
+    {
+     "q": "En meny har 7 förrätter, 3 huvudrätter och 3 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "63",
+      "13",
+      "24",
+      "286"
+     ],
+     "a": 0,
+     "e": "Multiplikationsprincipen: 7 · 3 · 3 = <b>63</b>."
+    },
+    {
+     "q": "En meny har 5 förrätter, 5 huvudrätter och 4 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "364",
+      "29",
+      "14",
+      "100"
+     ],
+     "a": 3,
+     "e": "Multiplikationsprincipen: 5 · 5 · 4 = <b>100</b>."
+    },
+    {
+     "q": "En meny har 6 förrätter, 4 huvudrätter och 4 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "96",
+      "28",
+      "364",
+      "14"
+     ],
+     "a": 0,
+     "e": "Multiplikationsprincipen: 6 · 4 · 4 = <b>96</b>."
+    },
+    {
+     "q": "En meny har 4 förrätter, 6 huvudrätter och 2 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "48",
+      "12",
+      "26",
+      "220"
+     ],
+     "a": 0,
+     "e": "Multiplikationsprincipen: 4 · 6 · 2 = <b>48</b>."
+    },
+    {
+     "q": "En meny har 2 förrätter, 3 huvudrätter och 5 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "11",
+      "30",
+      "10",
+      "120"
+     ],
+     "a": 1,
+     "e": "Multiplikationsprincipen: 2 · 3 · 5 = <b>30</b>."
+    },
+    {
+     "q": "En meny har 6 förrätter, 7 huvudrätter och 2 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "15",
+      "455",
+      "44",
+      "84"
+     ],
+     "a": 3,
+     "e": "Multiplikationsprincipen: 6 · 7 · 2 = <b>84</b>."
+    },
+    {
+     "q": "En meny har 8 förrätter, 3 huvudrätter och 4 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "15",
+      "28",
+      "96",
+      "455"
+     ],
+     "a": 2,
+     "e": "Multiplikationsprincipen: 8 · 3 · 4 = <b>96</b>."
+    },
+    {
+     "q": "En meny har 3 förrätter, 3 huvudrätter och 6 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "15",
+      "220",
+      "54",
+      "12"
+     ],
+     "a": 2,
+     "e": "Multiplikationsprincipen: 3 · 3 · 6 = <b>54</b>."
+    },
+    {
+     "q": "En meny har 4 förrätter, 2 huvudrätter och 6 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "220",
+      "12",
+      "14",
+      "48"
+     ],
+     "a": 3,
+     "e": "Multiplikationsprincipen: 4 · 2 · 6 = <b>48</b>."
+    },
+    {
+     "q": "En meny har 5 förrätter, 4 huvudrätter och 3 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "23",
+      "60",
+      "12",
+      "220"
+     ],
+     "a": 1,
+     "e": "Multiplikationsprincipen: 5 · 4 · 3 = <b>60</b>."
+    },
+    {
+     "q": "En meny har 3 förrätter, 5 huvudrätter och 6 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "364",
+      "90",
+      "21",
+      "14"
+     ],
+     "a": 1,
+     "e": "Multiplikationsprincipen: 3 · 5 · 6 = <b>90</b>."
+    },
+    {
+     "q": "En meny har 4 förrätter, 5 huvudrätter och 6 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "15",
+      "455",
+      "26",
+      "120"
+     ],
+     "a": 3,
+     "e": "Multiplikationsprincipen: 4 · 5 · 6 = <b>120</b>."
+    },
+    {
+     "q": "En meny har 5 förrätter, 8 huvudrätter och 2 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "42",
+      "455",
+      "80",
+      "15"
+     ],
+     "a": 2,
+     "e": "Multiplikationsprincipen: 5 · 8 · 2 = <b>80</b>."
+    },
+    {
+     "q": "En meny har 8 förrätter, 6 huvudrätter och 2 efterrätter. Hur många olika middagar med en av varje kan man välja?",
+     "c": [
+      "50",
+      "96",
+      "560",
+      "16"
+     ],
+     "a": 1,
+     "e": "Multiplikationsprincipen: 8 · 6 · 2 = <b>96</b>."
+    }
+   ]
+  },
+  {
+   "title": "Binomialsatsen",
+   "items": [
+    {
+     "q": "Bestäm koefficienten för x<sup>5</sup> i (3x + 1)<sup>6</sup>.",
+     "c": [
+      "243",
+      "18",
+      "1 458",
+      "6"
+     ],
+     "a": 2,
+     "e": "Binomialsatsen: C(6, 5) · 3<sup>5</sup> = <b>1 458</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>2</sup> i (3x + 1)<sup>7</sup>.",
+     "c": [
+      "9",
+      "21",
+      "5 103",
+      "189"
+     ],
+     "a": 3,
+     "e": "Binomialsatsen: C(7, 2) · 3<sup>2</sup> = <b>189</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>4</sup> i (3x + 1)<sup>5</sup>.",
+     "c": [
+      "15",
+      "5",
+      "405",
+      "81"
+     ],
+     "a": 2,
+     "e": "Binomialsatsen: C(5, 4) · 3<sup>4</sup> = <b>405</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>3</sup> i (3x + 1)<sup>5</sup>.",
+     "c": [
+      "90",
+      "270",
+      "10",
+      "27"
+     ],
+     "a": 1,
+     "e": "Binomialsatsen: C(5, 3) · 3<sup>3</sup> = <b>270</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>2</sup> i (2x + 1)<sup>7</sup>.",
+     "c": [
+      "84",
+      "4",
+      "672",
+      "21"
+     ],
+     "a": 0,
+     "e": "Binomialsatsen: C(7, 2) · 2<sup>2</sup> = <b>84</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x i (3x + 1)<sup>7</sup>.",
+     "c": [
+      "21",
+      "3",
+      "7",
+      "5 103"
+     ],
+     "a": 0,
+     "e": "Binomialsatsen: C(7, 1) · 3<sup>1</sup> = <b>21</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>3</sup> i (3x + 1)<sup>7</sup>.",
+     "c": [
+      "27",
+      "2 835",
+      "945",
+      "35"
+     ],
+     "a": 2,
+     "e": "Binomialsatsen: C(7, 3) · 3<sup>3</sup> = <b>945</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>2</sup> i (3x + 1)<sup>4</sup>.",
+     "c": [
+      "6",
+      "55",
+      "9",
+      "54"
+     ],
+     "a": 3,
+     "e": "Binomialsatsen: C(4, 2) · 3<sup>2</sup> = <b>54</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>4</sup> i (2x + 1)<sup>5</sup>.",
+     "c": [
+      "10",
+      "16",
+      "80",
+      "5"
+     ],
+     "a": 2,
+     "e": "Binomialsatsen: C(5, 4) · 2<sup>4</sup> = <b>80</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>7</sup> i (3x + 1)<sup>8</sup>.",
+     "c": [
+      "2 187",
+      "24",
+      "8",
+      "17 496"
+     ],
+     "a": 3,
+     "e": "Binomialsatsen: C(8, 7) · 3<sup>7</sup> = <b>17 496</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>4</sup> i (3x + 1)<sup>7</sup>.",
+     "c": [
+      "35",
+      "2 835",
+      "81",
+      "945"
+     ],
+     "a": 1,
+     "e": "Binomialsatsen: C(7, 4) · 3<sup>4</sup> = <b>2 835</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>2</sup> i (3x + 1)<sup>6</sup>.",
+     "c": [
+      "135",
+      "15",
+      "9",
+      "1 215"
+     ],
+     "a": 0,
+     "e": "Binomialsatsen: C(6, 2) · 3<sup>2</sup> = <b>135</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>6</sup> i (2x + 1)<sup>7</sup>.",
+     "c": [
+      "14",
+      "448",
+      "7",
+      "64"
+     ],
+     "a": 1,
+     "e": "Binomialsatsen: C(7, 6) · 2<sup>6</sup> = <b>448</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x i (2x + 1)<sup>5</sup>.",
+     "c": [
+      "5",
+      "10",
+      "2",
+      "80"
+     ],
+     "a": 1,
+     "e": "Binomialsatsen: C(5, 1) · 2<sup>1</sup> = <b>10</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>2</sup> i (2x + 1)<sup>5</sup>.",
+     "c": [
+      "40",
+      "4",
+      "80",
+      "10"
+     ],
+     "a": 0,
+     "e": "Binomialsatsen: C(5, 2) · 2<sup>2</sup> = <b>40</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>7</sup> i (2x + 1)<sup>8</sup>.",
+     "c": [
+      "128",
+      "8",
+      "1 024",
+      "16"
+     ],
+     "a": 2,
+     "e": "Binomialsatsen: C(8, 7) · 2<sup>7</sup> = <b>1 024</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>5</sup> i (2x + 1)<sup>6</sup>.",
+     "c": [
+      "6",
+      "32",
+      "12",
+      "192"
+     ],
+     "a": 3,
+     "e": "Binomialsatsen: C(6, 5) · 2<sup>5</sup> = <b>192</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x i (3x + 1)<sup>4</sup>.",
+     "c": [
+      "4",
+      "108",
+      "3",
+      "12"
+     ],
+     "a": 3,
+     "e": "Binomialsatsen: C(4, 1) · 3<sup>1</sup> = <b>12</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>4</sup> i (2x + 1)<sup>8</sup>.",
+     "c": [
+      "1 121",
+      "1 120",
+      "70",
+      "16"
+     ],
+     "a": 1,
+     "e": "Binomialsatsen: C(8, 4) · 2<sup>4</sup> = <b>1 120</b>."
+    },
+    {
+     "q": "Bestäm koefficienten för x<sup>5</sup> i (3x + 1)<sup>7</sup>.",
+     "c": [
+      "5 103",
+      "21",
+      "243",
+      "189"
+     ],
+     "a": 0,
+     "e": "Binomialsatsen: C(7, 5) · 3<sup>5</sup> = <b>5 103</b>."
+    }
+   ]
+  },
+  {
+   "title": "Sannolikhet med kombinatorik",
+   "items": [
+    {
+     "q": "En påse har 11 kulor, varav 5 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>121</span></span>"
+     ],
+     "a": 0,
+     "e": "C(5, 2)/C(11, 2) = <b><span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "En påse har 15 kulor, varav 8 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>225</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>105</span></span>",
+      "<span class='fr'><span class='fn'>56</span><span class='fd'>225</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "C(8, 2)/C(15, 2) = <b><span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "En påse har 10 kulor, varav 4 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "0,12",
+      "0,16",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>45</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "C(4, 2)/C(10, 2) = <b><span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "En påse har 14 kulor, varav 3 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>91</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>98</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>196</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>182</span></span>"
+     ],
+     "a": 0,
+     "e": "C(3, 2)/C(14, 2) = <b><span class='fr'><span class='fn'>3</span><span class='fd'>91</span></span></b>."
+    },
+    {
+     "q": "En påse har 8 kulor, varav 4 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "0,1875",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span>",
+      "0,25",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>"
+     ],
+     "a": 1,
+     "e": "C(4, 2)/C(8, 2) = <b><span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span></b>."
+    },
+    {
+     "q": "En påse har 13 kulor, varav 8 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>56</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>39</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>39</span></span>"
+     ],
+     "a": 1,
+     "e": "C(8, 2)/C(13, 2) = <b><span class='fr'><span class='fn'>14</span><span class='fd'>39</span></span></b>."
+    },
+    {
+     "q": "En påse har 15 kulor, varav 3 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>70</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>35</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>75</span></span>",
+      "0,04"
+     ],
+     "a": 1,
+     "e": "C(3, 2)/C(15, 2) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>35</span></span></b>."
+    },
+    {
+     "q": "En påse har 13 kulor, varav 6 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>36</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>30</span><span class='fd'>169</span></span>"
+     ],
+     "a": 2,
+     "e": "C(6, 2)/C(13, 2) = <b><span class='fr'><span class='fn'>5</span><span class='fd'>26</span></span></b>."
+    },
+    {
+     "q": "En påse har 10 kulor, varav 3 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "0,06",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "0,09",
+      "0,1"
+     ],
+     "a": 1,
+     "e": "C(3, 2)/C(10, 2) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "En påse har 12 kulor, varav 8 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>18</span></span>"
+     ],
+     "a": 2,
+     "e": "C(8, 2)/C(12, 2) = <b><span class='fr'><span class='fn'>14</span><span class='fd'>33</span></span></b>."
+    },
+    {
+     "q": "En påse har 9 kulor, varav 4 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span>"
+     ],
+     "a": 0,
+     "e": "C(4, 2)/C(9, 2) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "En påse har 12 kulor, varav 5 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>33</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>132</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>144</span></span>"
+     ],
+     "a": 1,
+     "e": "C(5, 2)/C(12, 2) = <b><span class='fr'><span class='fn'>5</span><span class='fd'>33</span></span></b>."
+    },
+    {
+     "q": "En påse har 9 kulor, varav 6 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "0,5",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>"
+     ],
+     "a": 3,
+     "e": "C(6, 2)/C(9, 2) = <b><span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "En påse har 13 kulor, varav 5 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>156</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>39</span></span>"
+     ],
+     "a": 3,
+     "e": "C(5, 2)/C(13, 2) = <b><span class='fr'><span class='fn'>5</span><span class='fd'>39</span></span></b>."
+    },
+    {
+     "q": "En påse har 14 kulor, varav 6 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>91</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>91</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>98</span></span>"
+     ],
+     "a": 2,
+     "e": "C(6, 2)/C(14, 2) = <b><span class='fr'><span class='fn'>15</span><span class='fd'>91</span></span></b>."
+    },
+    {
+     "q": "En påse har 13 kulor, varav 7 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>42</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>156</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>169</span></span>"
+     ],
+     "a": 2,
+     "e": "C(7, 2)/C(13, 2) = <b><span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span></b>."
+    },
+    {
+     "q": "En påse har 12 kulor, varav 3 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>44</span></span>",
+      "0,0625",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>24</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>22</span></span>"
+     ],
+     "a": 3,
+     "e": "C(3, 2)/C(12, 2) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>22</span></span></b>."
+    },
+    {
+     "q": "En påse har 8 kulor, varav 5 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>56</span></span>",
+      "0,390625",
+      "0,3125"
+     ],
+     "a": 0,
+     "e": "C(5, 2)/C(8, 2) = <b><span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span></b>."
+    },
+    {
+     "q": "En påse har 13 kulor, varav 4 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>39</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>169</span></span>"
+     ],
+     "a": 0,
+     "e": "C(4, 2)/C(13, 2) = <b><span class='fr'><span class='fn'>1</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "En påse har 14 kulor, varav 8 är röda. Två kulor dras utan återläggning. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>91</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>49</span></span>"
+     ],
+     "a": 2,
+     "e": "C(8, 2)/C(14, 2) = <b><span class='fr'><span class='fn'>4</span><span class='fd'>13</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 5,
+ "updated": "2026-11-26",
+ "country": "se",
+ "subject": "matematik",
+ "grade": "matematik-5"
+}

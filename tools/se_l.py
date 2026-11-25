@@ -876,7 +876,7 @@ def delning(lv):
         p, n = ri(2, 4), ri(2, 5)
         k = ch(KINDS)
         pic = P(KP.groups_svg([(n, k)] * p), "%d grupper med %d i varje" % (p, n))
-        return mcq("%s är fördelade i lika stora grupper. Hur många grupper är det och hur många i varje?" % cap1(sak(p * n, k)) + pic, "%d grupper med %d" % (p, n), ["%d grupper med %d" % (n, p) if n != p else "%d grupper med %d" % (p + 1, n), "%d grupper med %d" % (p, n + 1), "%d grupper med %d" % (1, p * n)], "Räkna grupperna och sakerna i en grupp: <b>%d grupper med %d</b>." % (p, n))
+        return mcq("%s är fördelade i lika stora grupper. Hur många grupper är det och hur många i varje?" % cap1(sak(p * n, k)) + pic, "%d grupper med %d" % (p, n), ["%d grupper med %d" % (n, p) if n != p else "%d grupper med %d" % (p + 1, n), "%d grupper med %d" % (p, n + 1), "1 grupp med %d" % (p * n)], "Räkna grupperna och sakerna i en grupp: <b>%d grupper med %d</b>." % (p, n))
 
     sets = [("Dela lika", [(dela, 20)]), ("Hur många grupper?", [(innehall, 20)]), ("Dela i tvåor, femmor och tior", [(tal, 20)]), ("Dela mellan vänner", [(halv, 20)]), ("Grupper i bild", [(bild, 20)])]
     return unit("delning", "T", "Delning: dela lika och dela i grupper", "Delning",
@@ -972,7 +972,7 @@ def monster(lv):
         s.append("<rect x='%d' y='10' width='36' height='36' fill='none' stroke='%s' stroke-width='1.6' stroke-dasharray='4 3'/>" % (x - 18, RED) + text(x, 34, "?", 18, col=RED))
         pic = P(wrap(x + 30, 56, "".join(s), "mönster"), "mönster med figurer")
         name = lambda t: "%s %s" % ({"röd": "röd", "blå": "blå", "gul": "gul", "grön": "grön"}[FARG[t[1]]], NAMN[t[0]])
-        opts = list(set(unit_) | {(ch(SH), ch(COL)) for _ in range(5)})
+        opts = sorted(set(unit_) | {(ch(SH), ch(COL)) for _ in range(5)})
         w = [name(o) for o in opts if o != nxt]
         return mcq("Vad kommer sedan i mönstret?" + pic, name(nxt), w, "Mönstret upprepar %s. Nästa är en <b>%s</b>." % (" – ".join(name(t) for t in unit_), name(nxt)))
 
@@ -1076,7 +1076,7 @@ def klockan(lv):
         for hh, mm in [(h % 12 + 1, m), (h, (m + 30) % 60), ((h - 2) % 12 + 1, m), (h, (m + 15) % 60), (h % 12 + 1, (m + 30) % 60)]:
             if mm in MIN:
                 others.add(klocka_ord(hh, mm))
-        return mcq("Vad är klockan?" + pic, r, [o for o in others if o != r], "Den korta visaren visar timmen och den långa minuterna: <b>%s</b>." % r)
+        return mcq("Vad är klockan?" + pic, r, [o for o in sorted(others) if o != r], "Den korta visaren visar timmen och den långa minuterna: <b>%s</b>." % r)
 
     def digital():
         h, m = ri(1, 12), ch(MIN)

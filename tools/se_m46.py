@@ -58,6 +58,7 @@ def build(lv, i):
         try:
             items = C.mix(rnd, seen, parts)
             for it in items:
+                it["q"] = re.sub(r"<div class='qfig'><div class='qfig'>(.*?)</div></div>", r"<div class='qfig'>\1</div>", it["q"], flags=re.S)
                 yrs = set(re.findall(r"år (\d{4})\b", it["q"]))
                 it["q"] = group(it["q"], yrs)
                 it["e"] = group(it["e"], yrs)

@@ -1,0 +1,1161 @@
+{
+ "slug": "talteori-och-kongruensrakning",
+ "title": "Talteori och kongruensräkning",
+ "seo_title": "Kongruensräkning – Matematik 5: uppgifter med facit",
+ "short_title": "Kongruensräkning",
+ "domain": "Diskret matematik och bevis",
+ "standard_code": "Gy25 Matematik nivå 5 · Diskret matematik och bevis",
+ "standard_url": "https://syllabuswebb.skolverket.se/subject/MAT/11/pdf",
+ "standard_text": "Delbarhet, Euklides algoritm och kongruensräkning samt enkla diofantiska ekvationer. (sammanfattning av det centrala innehållet i ämnesplanen i matematik för gymnasieskolan, nivå 5)",
+ "meta_desc": "Uppgifter om talteori och kongruensräkning för Matematik 5: rest och mod, räkna modulo n, sista siffran, kongruenta tal, SGD och diofantiska ekvationer. 100 uppgifter med facit.",
+ "key_big": "a ≡ b (mod n): n delar a − b",
+ "key_sub": "Byt tal mot resten innan du räknar.",
+ "body_html": "<h2>Så tänker du</h2><p>a ≡ b (mod n) betyder att a och b ger samma rest vid division med n, alltså att n delar a − b.</p><p>I kongruensräkning kan du byta varje tal mot dess rest innan du adderar, multiplicerar eller upphöjer.</p><p>Euklides algoritm ger största gemensamma delaren SGD(a, b) genom upprepad division med rest.</p><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>7¹⁰⁰ mod 10</p><p class='sn-ex-s'>7, 9, 3, 1, 7, …</p><p class='sn-ex-s'>Period 4</p><p class='sn-ex-s'>100 = 4 · 25</p><p class='sn-ex-a'>Svar: 1</p></div><h2>Vanliga fel</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Fel</th><th>Rätt</th></tr></thead><tbody><tr><td>Blandar ihop kvot och rest</td><td>Resten är det som blir över</td></tr><tr><td>Räknar ut hela potensen</td><td>Byt mot rester tidigt</td></tr><tr><td>Negativ rest</td><td>Resten ligger mellan 0 och n − 1</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Var används kongruensräkning?",
+   "a": "I kryptering, kontrollsiffror och kalendrar."
+  },
+  {
+   "q": "Vad är en diofantisk ekvation?",
+   "a": "En ekvation där man söker heltalslösningar."
+  },
+  {
+   "q": "Vad betyder SGD?",
+   "a": "Största gemensamma delare."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Rest och mod",
+   "items": [
+    {
+     "q": "Vilken rest får 984 vid division med 10? (Bestäm 984 mod 10.)",
+     "c": [
+      "98",
+      "6",
+      "5",
+      "4"
+     ],
+     "a": 3,
+     "e": "984 = 10 · 98 + 4: <b>4</b>."
+    },
+    {
+     "q": "Vilken rest får 455 vid division med 10? (Bestäm 455 mod 10.)",
+     "c": [
+      "5",
+      "6",
+      "45",
+      "7"
+     ],
+     "a": 0,
+     "e": "455 = 10 · 45 + 5: <b>5</b>."
+    },
+    {
+     "q": "Vilken rest får 651 vid division med 5? (Bestäm 651 mod 5.)",
+     "c": [
+      "2",
+      "4",
+      "130",
+      "1"
+     ],
+     "a": 3,
+     "e": "651 = 5 · 130 + 1: <b>1</b>."
+    },
+    {
+     "q": "Vilken rest får 911 vid division med 9? (Bestäm 911 mod 9.)",
+     "c": [
+      "101",
+      "3",
+      "7",
+      "2"
+     ],
+     "a": 3,
+     "e": "911 = 9 · 101 + 2: <b>2</b>."
+    },
+    {
+     "q": "Vilken rest får 228 vid division med 12? (Bestäm 228 mod 12.)",
+     "c": [
+      "1",
+      "12",
+      "19",
+      "0"
+     ],
+     "a": 3,
+     "e": "228 = 12 · 19 + 0: <b>0</b>."
+    },
+    {
+     "q": "Vilken rest får 941 vid division med 10? (Bestäm 941 mod 10.)",
+     "c": [
+      "94",
+      "1",
+      "2",
+      "9"
+     ],
+     "a": 1,
+     "e": "941 = 10 · 94 + 1: <b>1</b>."
+    },
+    {
+     "q": "Vilken rest får 261 vid division med 4? (Bestäm 261 mod 4.)",
+     "c": [
+      "3",
+      "1",
+      "2",
+      "65"
+     ],
+     "a": 1,
+     "e": "261 = 4 · 65 + 1: <b>1</b>."
+    },
+    {
+     "q": "Vilken rest får 494 vid division med 6? (Bestäm 494 mod 6.)",
+     "c": [
+      "82",
+      "2",
+      "4",
+      "3"
+     ],
+     "a": 1,
+     "e": "494 = 6 · 82 + 2: <b>2</b>."
+    },
+    {
+     "q": "Vilken rest får 257 vid division med 8? (Bestäm 257 mod 8.)",
+     "c": [
+      "1",
+      "2",
+      "32",
+      "7"
+     ],
+     "a": 0,
+     "e": "257 = 8 · 32 + 1: <b>1</b>."
+    },
+    {
+     "q": "Vilken rest får 221 vid division med 4? (Bestäm 221 mod 4.)",
+     "c": [
+      "1",
+      "55",
+      "2",
+      "3"
+     ],
+     "a": 0,
+     "e": "221 = 4 · 55 + 1: <b>1</b>."
+    },
+    {
+     "q": "Vilken rest får 708 vid division med 3? (Bestäm 708 mod 3.)",
+     "c": [
+      "0",
+      "1",
+      "3",
+      "236"
+     ],
+     "a": 0,
+     "e": "708 = 3 · 236 + 0: <b>0</b>."
+    },
+    {
+     "q": "Vilken rest får 868 vid division med 7? (Bestäm 868 mod 7.)",
+     "c": [
+      "7",
+      "0",
+      "124",
+      "1"
+     ],
+     "a": 1,
+     "e": "868 = 7 · 124 + 0: <b>0</b>."
+    },
+    {
+     "q": "Vilken rest får 360 vid division med 8? (Bestäm 360 mod 8.)",
+     "c": [
+      "45",
+      "0",
+      "8",
+      "1"
+     ],
+     "a": 1,
+     "e": "360 = 8 · 45 + 0: <b>0</b>."
+    },
+    {
+     "q": "Vilken rest får 356 vid division med 8? (Bestäm 356 mod 8.)",
+     "c": [
+      "4",
+      "44",
+      "6",
+      "5"
+     ],
+     "a": 0,
+     "e": "356 = 8 · 44 + 4: <b>4</b>."
+    },
+    {
+     "q": "Vilken rest får 126 vid division med 8? (Bestäm 126 mod 8.)",
+     "c": [
+      "2",
+      "7",
+      "15",
+      "6"
+     ],
+     "a": 3,
+     "e": "126 = 8 · 15 + 6: <b>6</b>."
+    },
+    {
+     "q": "Vilken rest får 137 vid division med 3? (Bestäm 137 mod 3.)",
+     "c": [
+      "1",
+      "45",
+      "2",
+      "0"
+     ],
+     "a": 2,
+     "e": "137 = 3 · 45 + 2: <b>2</b>."
+    },
+    {
+     "q": "Vilken rest får 984 vid division med 9? (Bestäm 984 mod 9.)",
+     "c": [
+      "6",
+      "4",
+      "3",
+      "109"
+     ],
+     "a": 2,
+     "e": "984 = 9 · 109 + 3: <b>3</b>."
+    },
+    {
+     "q": "Vilken rest får 122 vid division med 8? (Bestäm 122 mod 8.)",
+     "c": [
+      "3",
+      "15",
+      "2",
+      "6"
+     ],
+     "a": 2,
+     "e": "122 = 8 · 15 + 2: <b>2</b>."
+    },
+    {
+     "q": "Vilken rest får 595 vid division med 10? (Bestäm 595 mod 10.)",
+     "c": [
+      "59",
+      "7",
+      "5",
+      "6"
+     ],
+     "a": 2,
+     "e": "595 = 10 · 59 + 5: <b>5</b>."
+    },
+    {
+     "q": "Vilken rest får 875 vid division med 8? (Bestäm 875 mod 8.)",
+     "c": [
+      "4",
+      "5",
+      "3",
+      "109"
+     ],
+     "a": 2,
+     "e": "875 = 8 · 109 + 3: <b>3</b>."
+    }
+   ]
+  },
+  {
+   "title": "Räkna modulo n",
+   "items": [
+    {
+     "q": "Beräkna 6<sup>94</sup> (mod 8).",
+     "c": [
+      "1",
+      "0",
+      "6",
+      "4"
+     ],
+     "a": 1,
+     "e": "Leta efter ett mönster i potenserna mod 8: <b>0</b>."
+    },
+    {
+     "q": "Beräkna 4<sup>76</sup> (mod 11).",
+     "c": [
+      "10",
+      "7",
+      "1",
+      "4"
+     ],
+     "a": 3,
+     "e": "Leta efter ett mönster i potenserna mod 11: <b>4</b>."
+    },
+    {
+     "q": "Beräkna 9<sup>77</sup> (mod 5).",
+     "c": [
+      "1",
+      "3",
+      "4",
+      "2"
+     ],
+     "a": 2,
+     "e": "Leta efter ett mönster i potenserna mod 5: <b>4</b>."
+    },
+    {
+     "q": "Beräkna 198 · 115 (mod 8).",
+     "c": [
+      "2",
+      "18",
+      "1",
+      "3"
+     ],
+     "a": 0,
+     "e": "198 ≡ 6 och 115 ≡ 3, så produkten ≡ 6 · 3 ≡ <b>2</b>."
+    },
+    {
+     "q": "Beräkna 194 · 49 (mod 11).",
+     "c": [
+      "2",
+      "1",
+      "3",
+      "35"
+     ],
+     "a": 0,
+     "e": "194 ≡ 7 och 49 ≡ 5, så produkten ≡ 7 · 5 ≡ <b>2</b>."
+    },
+    {
+     "q": "Beräkna 62 · 21 (mod 13).",
+     "c": [
+      "2",
+      "80",
+      "3",
+      "5"
+     ],
+     "a": 0,
+     "e": "62 ≡ 10 och 21 ≡ 8, så produkten ≡ 10 · 8 ≡ <b>2</b>."
+    },
+    {
+     "q": "Beräkna 3<sup>12</sup> (mod 13).",
+     "c": [
+      "9",
+      "1",
+      "10",
+      "12"
+     ],
+     "a": 1,
+     "e": "Leta efter ett mönster i potenserna mod 13: <b>1</b>."
+    },
+    {
+     "q": "Beräkna 59 · 143 (mod 7).",
+     "c": [
+      "2",
+      "6",
+      "3",
+      "9"
+     ],
+     "a": 0,
+     "e": "59 ≡ 3 och 143 ≡ 3, så produkten ≡ 3 · 3 ≡ <b>2</b>."
+    },
+    {
+     "q": "Beräkna 2<sup>26</sup> (mod 11).",
+     "c": [
+      "4",
+      "10",
+      "9",
+      "8"
+     ],
+     "a": 2,
+     "e": "Leta efter ett mönster i potenserna mod 11: <b>9</b>."
+    },
+    {
+     "q": "Beräkna 7<sup>80</sup> (mod 11).",
+     "c": [
+      "3",
+      "8",
+      "1",
+      "10"
+     ],
+     "a": 2,
+     "e": "Leta efter ett mönster i potenserna mod 11: <b>1</b>."
+    },
+    {
+     "q": "Beräkna 155 · 24 (mod 10).",
+     "c": [
+      "1",
+      "9",
+      "20",
+      "0"
+     ],
+     "a": 3,
+     "e": "155 ≡ 5 och 24 ≡ 4, så produkten ≡ 5 · 4 ≡ <b>0</b>."
+    },
+    {
+     "q": "Beräkna 135 · 199 (mod 13).",
+     "c": [
+      "9",
+      "20",
+      "8",
+      "7"
+     ],
+     "a": 3,
+     "e": "135 ≡ 5 och 199 ≡ 4, så produkten ≡ 5 · 4 ≡ <b>7</b>."
+    },
+    {
+     "q": "Beräkna 2<sup>61</sup> (mod 8).",
+     "c": [
+      "2",
+      "1",
+      "5",
+      "0"
+     ],
+     "a": 3,
+     "e": "Leta efter ett mönster i potenserna mod 8: <b>0</b>."
+    },
+    {
+     "q": "Beräkna 8<sup>70</sup> (mod 9).",
+     "c": [
+      "7",
+      "1",
+      "2",
+      "8"
+     ],
+     "a": 1,
+     "e": "Leta efter ett mönster i potenserna mod 9: <b>1</b>."
+    },
+    {
+     "q": "Beräkna 59 · 51 (mod 8).",
+     "c": [
+      "2",
+      "6",
+      "1",
+      "9"
+     ],
+     "a": 2,
+     "e": "59 ≡ 3 och 51 ≡ 3, så produkten ≡ 3 · 3 ≡ <b>1</b>."
+    },
+    {
+     "q": "Beräkna 126 · 89 (mod 12).",
+     "c": [
+      "11",
+      "6",
+      "7",
+      "30"
+     ],
+     "a": 1,
+     "e": "126 ≡ 6 och 89 ≡ 5, så produkten ≡ 6 · 5 ≡ <b>6</b>."
+    },
+    {
+     "q": "Beräkna 35 · 190 (mod 8).",
+     "c": [
+      "2",
+      "1",
+      "18",
+      "3"
+     ],
+     "a": 0,
+     "e": "35 ≡ 3 och 190 ≡ 6, så produkten ≡ 3 · 6 ≡ <b>2</b>."
+    },
+    {
+     "q": "Beräkna 115 · 163 (mod 10).",
+     "c": [
+      "6",
+      "15",
+      "8",
+      "5"
+     ],
+     "a": 3,
+     "e": "115 ≡ 5 och 163 ≡ 3, så produkten ≡ 5 · 3 ≡ <b>5</b>."
+    },
+    {
+     "q": "Beräkna 159 · 86 (mod 9).",
+     "c": [
+      "4",
+      "3",
+      "2",
+      "30"
+     ],
+     "a": 1,
+     "e": "159 ≡ 6 och 86 ≡ 5, så produkten ≡ 6 · 5 ≡ <b>3</b>."
+    },
+    {
+     "q": "Beräkna 162 · 28 (mod 11).",
+     "c": [
+      "5",
+      "48",
+      "4",
+      "3"
+     ],
+     "a": 2,
+     "e": "162 ≡ 8 och 28 ≡ 6, så produkten ≡ 8 · 6 ≡ <b>4</b>."
+    }
+   ]
+  },
+  {
+   "title": "Sista siffran",
+   "items": [
+    {
+     "q": "Vilken är sista siffran i 7<sup>158</sup>?",
+     "c": [
+      "7",
+      "6",
+      "3",
+      "9"
+     ],
+     "a": 3,
+     "e": "Sista siffran är 7<sup>158</sup> mod 10. Siffrorna upprepas med en period: <b>9</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 3<sup>135</sup>?",
+     "c": [
+      "7",
+      "1",
+      "5",
+      "3"
+     ],
+     "a": 0,
+     "e": "Sista siffran är 3<sup>135</sup> mod 10. Siffrorna upprepas med en period: <b>7</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 7<sup>54</sup>?",
+     "c": [
+      "3",
+      "9",
+      "8",
+      "7"
+     ],
+     "a": 1,
+     "e": "Sista siffran är 7<sup>54</sup> mod 10. Siffrorna upprepas med en period: <b>9</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 2<sup>130</sup>?",
+     "c": [
+      "0",
+      "2",
+      "4",
+      "8"
+     ],
+     "a": 2,
+     "e": "Sista siffran är 2<sup>130</sup> mod 10. Siffrorna upprepas med en period: <b>4</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 8<sup>10</sup>?",
+     "c": [
+      "2",
+      "4",
+      "0",
+      "8"
+     ],
+     "a": 1,
+     "e": "Sista siffran är 8<sup>10</sup> mod 10. Siffrorna upprepas med en period: <b>4</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 2<sup>18</sup>?",
+     "c": [
+      "2",
+      "4",
+      "8",
+      "6"
+     ],
+     "a": 1,
+     "e": "Sista siffran är 2<sup>18</sup> mod 10. Siffrorna upprepas med en period: <b>4</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 3<sup>55</sup>?",
+     "c": [
+      "5",
+      "1",
+      "3",
+      "7"
+     ],
+     "a": 3,
+     "e": "Sista siffran är 3<sup>55</sup> mod 10. Siffrorna upprepas med en period: <b>7</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 7<sup>94</sup>?",
+     "c": [
+      "3",
+      "9",
+      "7",
+      "8"
+     ],
+     "a": 1,
+     "e": "Sista siffran är 7<sup>94</sup> mod 10. Siffrorna upprepas med en period: <b>9</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 7<sup>106</sup>?",
+     "c": [
+      "2",
+      "7",
+      "3",
+      "9"
+     ],
+     "a": 3,
+     "e": "Sista siffran är 7<sup>106</sup> mod 10. Siffrorna upprepas med en period: <b>9</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 2<sup>27</sup>?",
+     "c": [
+      "6",
+      "8",
+      "2",
+      "4"
+     ],
+     "a": 1,
+     "e": "Sista siffran är 2<sup>27</sup> mod 10. Siffrorna upprepas med en period: <b>8</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 3<sup>66</sup>?",
+     "c": [
+      "7",
+      "3",
+      "8",
+      "9"
+     ],
+     "a": 3,
+     "e": "Sista siffran är 3<sup>66</sup> mod 10. Siffrorna upprepas med en period: <b>9</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 7<sup>122</sup>?",
+     "c": [
+      "7",
+      "4",
+      "9",
+      "3"
+     ],
+     "a": 2,
+     "e": "Sista siffran är 7<sup>122</sup> mod 10. Siffrorna upprepas med en period: <b>9</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 7<sup>166</sup>?",
+     "c": [
+      "9",
+      "7",
+      "3",
+      "2"
+     ],
+     "a": 0,
+     "e": "Sista siffran är 7<sup>166</sup> mod 10. Siffrorna upprepas med en period: <b>9</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 3<sup>103</sup>?",
+     "c": [
+      "1",
+      "9",
+      "7",
+      "3"
+     ],
+     "a": 2,
+     "e": "Sista siffran är 3<sup>103</sup> mod 10. Siffrorna upprepas med en period: <b>7</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 7<sup>75</sup>?",
+     "c": [
+      "3",
+      "1",
+      "5",
+      "7"
+     ],
+     "a": 0,
+     "e": "Sista siffran är 7<sup>75</sup> mod 10. Siffrorna upprepas med en period: <b>3</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 2<sup>78</sup>?",
+     "c": [
+      "6",
+      "2",
+      "8",
+      "4"
+     ],
+     "a": 3,
+     "e": "Sista siffran är 2<sup>78</sup> mod 10. Siffrorna upprepas med en period: <b>4</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 3<sup>166</sup>?",
+     "c": [
+      "3",
+      "8",
+      "9",
+      "7"
+     ],
+     "a": 2,
+     "e": "Sista siffran är 3<sup>166</sup> mod 10. Siffrorna upprepas med en period: <b>9</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 7<sup>90</sup>?",
+     "c": [
+      "0",
+      "7",
+      "9",
+      "3"
+     ],
+     "a": 2,
+     "e": "Sista siffran är 7<sup>90</sup> mod 10. Siffrorna upprepas med en period: <b>9</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 3<sup>110</sup>?",
+     "c": [
+      "9",
+      "7",
+      "3",
+      "0"
+     ],
+     "a": 0,
+     "e": "Sista siffran är 3<sup>110</sup> mod 10. Siffrorna upprepas med en period: <b>9</b>."
+    },
+    {
+     "q": "Vilken är sista siffran i 7<sup>115</sup>?",
+     "c": [
+      "3",
+      "5",
+      "1",
+      "7"
+     ],
+     "a": 0,
+     "e": "Sista siffran är 7<sup>115</sup> mod 10. Siffrorna upprepas med en period: <b>3</b>."
+    }
+   ]
+  },
+  {
+   "title": "Kongruenta tal och SGD",
+   "items": [
+    {
+     "q": "Bestäm SGD(99, 45) med Euklides algoritm.",
+     "c": [
+      "45",
+      "18",
+      "9",
+      "495"
+     ],
+     "a": 2,
+     "e": "Euklides algoritm ger <b>9</b>."
+    },
+    {
+     "q": "Bestäm SGD(208, 120) med Euklides algoritm.",
+     "c": [
+      "16",
+      "8",
+      "120",
+      "3 120"
+     ],
+     "a": 1,
+     "e": "Euklides algoritm ger <b>8</b>."
+    },
+    {
+     "q": "Bestäm SGD(70, 40) med Euklides algoritm.",
+     "c": [
+      "40",
+      "280",
+      "20",
+      "10"
+     ],
+     "a": 3,
+     "e": "Euklides algoritm ger <b>10</b>."
+    },
+    {
+     "q": "Vilket tal är kongruent med 75 modulo 4: 78, 84, 79 och 85?",
+     "c": [
+      "78",
+      "85",
+      "84",
+      "79"
+     ],
+     "a": 3,
+     "e": "Skillnaden 79 − 75 = 4 är delbar med 4: <b>79</b>."
+    },
+    {
+     "q": "Bestäm SGD(44, 52) med Euklides algoritm.",
+     "c": [
+      "4",
+      "44",
+      "572",
+      "8"
+     ],
+     "a": 0,
+     "e": "Euklides algoritm ger <b>4</b>."
+    },
+    {
+     "q": "Bestäm SGD(26, 39) med Euklides algoritm.",
+     "c": [
+      "13",
+      "78",
+      "26",
+      "14"
+     ],
+     "a": 0,
+     "e": "Euklides algoritm ger <b>13</b>."
+    },
+    {
+     "q": "Bestäm SGD(225, 189) med Euklides algoritm.",
+     "c": [
+      "4 725",
+      "189",
+      "9",
+      "18"
+     ],
+     "a": 2,
+     "e": "Euklides algoritm ger <b>9</b>."
+    },
+    {
+     "q": "Vilket tal är kongruent med 42 modulo 7: 62, 57, 63 och 45?",
+     "c": [
+      "45",
+      "57",
+      "62",
+      "63"
+     ],
+     "a": 3,
+     "e": "Skillnaden 63 − 42 = 21 är delbar med 7: <b>63</b>."
+    },
+    {
+     "q": "Bestäm SGD(84, 120) med Euklides algoritm.",
+     "c": [
+      "840",
+      "84",
+      "12",
+      "24"
+     ],
+     "a": 2,
+     "e": "Euklides algoritm ger <b>12</b>."
+    },
+    {
+     "q": "Vilket tal är kongruent med 51 modulo 12: 88, 75, 78 och 58?",
+     "c": [
+      "78",
+      "75",
+      "58",
+      "88"
+     ],
+     "a": 1,
+     "e": "Skillnaden 75 − 51 = 24 är delbar med 12: <b>75</b>."
+    },
+    {
+     "q": "Vilket tal är kongruent med 21 modulo 8: 30, 45, 23 och 43?",
+     "c": [
+      "43",
+      "45",
+      "23",
+      "30"
+     ],
+     "a": 1,
+     "e": "Skillnaden 45 − 21 = 24 är delbar med 8: <b>45</b>."
+    },
+    {
+     "q": "Vilket tal är kongruent med 88 modulo 4: 89, 92, 98 och 93?",
+     "c": [
+      "93",
+      "92",
+      "98",
+      "89"
+     ],
+     "a": 1,
+     "e": "Skillnaden 92 − 88 = 4 är delbar med 4: <b>92</b>."
+    },
+    {
+     "q": "Bestäm SGD(108, 126) med Euklides algoritm.",
+     "c": [
+      "36",
+      "756",
+      "108",
+      "18"
+     ],
+     "a": 3,
+     "e": "Euklides algoritm ger <b>18</b>."
+    },
+    {
+     "q": "Vilket tal är kongruent med 47 modulo 11: 56, 70, 102 och 71?",
+     "c": [
+      "71",
+      "70",
+      "56",
+      "102"
+     ],
+     "a": 3,
+     "e": "Skillnaden 102 − 47 = 55 är delbar med 11: <b>102</b>."
+    },
+    {
+     "q": "Bestäm SGD(10, 48) med Euklides algoritm.",
+     "c": [
+      "2",
+      "4",
+      "10",
+      "240"
+     ],
+     "a": 0,
+     "e": "Euklides algoritm ger <b>2</b>."
+    },
+    {
+     "q": "Vilket tal är kongruent med 70 modulo 11: 94, 92, 78 och 82?",
+     "c": [
+      "92",
+      "78",
+      "94",
+      "82"
+     ],
+     "a": 0,
+     "e": "Skillnaden 92 − 70 = 22 är delbar med 11: <b>92</b>."
+    },
+    {
+     "q": "Bestäm SGD(143, 220) med Euklides algoritm.",
+     "c": [
+      "22",
+      "2 860",
+      "11",
+      "143"
+     ],
+     "a": 2,
+     "e": "Euklides algoritm ger <b>11</b>."
+    },
+    {
+     "q": "Vilket tal är kongruent med 38 modulo 10: 45, 63, 48 och 79?",
+     "c": [
+      "63",
+      "48",
+      "79",
+      "45"
+     ],
+     "a": 1,
+     "e": "Skillnaden 48 − 38 = 10 är delbar med 10: <b>48</b>."
+    },
+    {
+     "q": "Vilket tal är kongruent med 18 modulo 11: 52, 43, 27 och 62?",
+     "c": [
+      "43",
+      "52",
+      "62",
+      "27"
+     ],
+     "a": 2,
+     "e": "Skillnaden 62 − 18 = 44 är delbar med 11: <b>62</b>."
+    },
+    {
+     "q": "Vilket tal är kongruent med 53 modulo 10: 57, 73, 84 och 79?",
+     "c": [
+      "73",
+      "79",
+      "84",
+      "57"
+     ],
+     "a": 0,
+     "e": "Skillnaden 73 − 53 = 20 är delbar med 10: <b>73</b>."
+    }
+   ]
+  },
+  {
+   "title": "Diofantiska ekvationer",
+   "items": [
+    {
+     "q": "Bestäm den lösning i positiva heltal till 5x + 3y = 22.",
+     "c": [
+      "x = 2, y = 4",
+      "x = 5, y = 4",
+      "x = 4, y = 2",
+      "x = 2, y = 9"
+     ],
+     "a": 0,
+     "e": "5 · 2 + 3 · 4 = 22: <b>x = 2, y = 4</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 7x + 4y = 44.",
+     "c": [
+      "x = 5, y = 4",
+      "x = 4, y = 4",
+      "x = 8, y = 4",
+      "x = 4, y = 11"
+     ],
+     "a": 1,
+     "e": "7 · 4 + 4 · 4 = 44: <b>x = 4, y = 4</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 7x + 5y = 53.",
+     "c": [
+      "x = 5, y = 4",
+      "x = 4, y = 12",
+      "x = 4, y = 5",
+      "x = 9, y = 5"
+     ],
+     "a": 2,
+     "e": "7 · 4 + 5 · 5 = 53: <b>x = 4, y = 5</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 9x + 4y = 44.",
+     "c": [
+      "x = 2, y = 4",
+      "x = 4, y = 2",
+      "x = 8, y = 2",
+      "x = 4, y = 11"
+     ],
+     "a": 1,
+     "e": "9 · 4 + 4 · 2 = 44: <b>x = 4, y = 2</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 4x + 9y = 38.",
+     "c": [
+      "x = 5, y = 6",
+      "x = 5, y = 2",
+      "x = 14, y = 2",
+      "x = 2, y = 5"
+     ],
+     "a": 1,
+     "e": "4 · 5 + 9 · 2 = 38: <b>x = 5, y = 2</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 4x + 5y = 27.",
+     "c": [
+      "x = 3, y = 7",
+      "x = 4, y = 3",
+      "x = 8, y = 3",
+      "x = 3, y = 3"
+     ],
+     "a": 3,
+     "e": "4 · 3 + 5 · 3 = 27: <b>x = 3, y = 3</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 3x + 5y = 16.",
+     "c": [
+      "x = 3, y = 2",
+      "x = 7, y = 2",
+      "x = 2, y = 2",
+      "x = 2, y = 5"
+     ],
+     "a": 2,
+     "e": "3 · 2 + 5 · 2 = 16: <b>x = 2, y = 2</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 4x + 5y = 22.",
+     "c": [
+      "x = 2, y = 3",
+      "x = 8, y = 2",
+      "x = 3, y = 2",
+      "x = 3, y = 6"
+     ],
+     "a": 2,
+     "e": "4 · 3 + 5 · 2 = 22: <b>x = 3, y = 2</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 7x + 8y = 68.",
+     "c": [
+      "x = 4, y = 5",
+      "x = 12, y = 5",
+      "x = 5, y = 4",
+      "x = 4, y = 12"
+     ],
+     "a": 0,
+     "e": "7 · 4 + 8 · 5 = 68: <b>x = 4, y = 5</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 5x + 8y = 60.",
+     "c": [
+      "x = 4, y = 10",
+      "x = 12, y = 5",
+      "x = 5, y = 4",
+      "x = 4, y = 5"
+     ],
+     "a": 3,
+     "e": "5 · 4 + 8 · 5 = 60: <b>x = 4, y = 5</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 9x + 7y = 25.",
+     "c": [
+      "x = 1, y = 2",
+      "x = 2, y = 10",
+      "x = 9, y = 1",
+      "x = 2, y = 1"
+     ],
+     "a": 3,
+     "e": "9 · 2 + 7 · 1 = 25: <b>x = 2, y = 1</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 4x + 9y = 31.",
+     "c": [
+      "x = 1, y = 3",
+      "x = 10, y = 3",
+      "x = 3, y = 1",
+      "x = 1, y = 7"
+     ],
+     "a": 0,
+     "e": "4 · 1 + 9 · 3 = 31: <b>x = 1, y = 3</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 9x + 2y = 22.",
+     "c": [
+      "x = 2, y = 2",
+      "x = 2, y = 11",
+      "x = 4, y = 2",
+      "x = 3, y = 2"
+     ],
+     "a": 0,
+     "e": "9 · 2 + 2 · 2 = 22: <b>x = 2, y = 2</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 7x + 9y = 57.",
+     "c": [
+      "x = 4, y = 3",
+      "x = 12, y = 4",
+      "x = 3, y = 4",
+      "x = 3, y = 11"
+     ],
+     "a": 2,
+     "e": "7 · 3 + 9 · 4 = 57: <b>x = 3, y = 4</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 5x + 6y = 28.",
+     "c": [
+      "x = 3, y = 2",
+      "x = 2, y = 8",
+      "x = 2, y = 3",
+      "x = 8, y = 3"
+     ],
+     "a": 2,
+     "e": "5 · 2 + 6 · 3 = 28: <b>x = 2, y = 3</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 7x + 9y = 16.",
+     "c": [
+      "x = 10, y = 1",
+      "x = 2, y = 1",
+      "x = 1, y = 8",
+      "x = 1, y = 1"
+     ],
+     "a": 3,
+     "e": "7 · 1 + 9 · 1 = 16: <b>x = 1, y = 1</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 5x + 9y = 33.",
+     "c": [
+      "x = 2, y = 3",
+      "x = 3, y = 2",
+      "x = 12, y = 2",
+      "x = 3, y = 7"
+     ],
+     "a": 1,
+     "e": "5 · 3 + 9 · 2 = 33: <b>x = 3, y = 2</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 8x + 3y = 36.",
+     "c": [
+      "x = 4, y = 3",
+      "x = 3, y = 4",
+      "x = 6, y = 4",
+      "x = 3, y = 12"
+     ],
+     "a": 1,
+     "e": "8 · 3 + 3 · 4 = 36: <b>x = 3, y = 4</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 3x + 5y = 27.",
+     "c": [
+      "x = 4, y = 3",
+      "x = 4, y = 6",
+      "x = 9, y = 3",
+      "x = 3, y = 4"
+     ],
+     "a": 0,
+     "e": "3 · 4 + 5 · 3 = 27: <b>x = 4, y = 3</b>."
+    },
+    {
+     "q": "Bestäm den lösning i positiva heltal till 8x + 7y = 60.",
+     "c": [
+      "x = 4, y = 12",
+      "x = 11, y = 4",
+      "x = 5, y = 4",
+      "x = 4, y = 4"
+     ],
+     "a": 3,
+     "e": "8 · 4 + 7 · 4 = 60: <b>x = 4, y = 4</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 6,
+ "updated": "2026-11-26",
+ "country": "se",
+ "subject": "matematik",
+ "grade": "matematik-5"
+}

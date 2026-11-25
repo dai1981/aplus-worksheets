@@ -1,0 +1,1161 @@
+{
+ "slug": "grafer-och-natverk",
+ "title": "Grafteori: gradtal, träd, Eulervägar och kortaste vägen",
+ "seo_title": "Grafer och nätverk – Matematik 5: uppgifter med facit",
+ "short_title": "Grafer och nätverk",
+ "domain": "Diskret matematik och bevis",
+ "standard_code": "Gy25 Matematik nivå 5 · Diskret matematik och bevis",
+ "standard_url": "https://syllabuswebb.skolverket.se/subject/MAT/11/pdf",
+ "standard_text": "Grafteori med begreppen hörn, kant och gradtal samt problemlösning med grafer, till exempel Eulervägar och kortaste vägen. (sammanfattning av det centrala innehållet i ämnesplanen i matematik för gymnasieskolan, nivå 5)",
+ "meta_desc": "Uppgifter om grafer och nätverk för Matematik 5: gradtal, kompletta grafer, träd, Eulervägar och kortaste vägen. 100 uppgifter med facit.",
+ "key_big": "Summan av gradtalen = 2 · antalet kanter",
+ "key_sub": "Eulerkrets: alla gradtal jämna.",
+ "body_html": "<h2>Så tänker du</h2><p>En graf består av hörn och kanter. Ett hörns gradtal är antalet kanter som möts där.</p><p>Summan av alla gradtal är två gånger antalet kanter. Den kompletta grafen med n hörn har n(n − 1)/2 kanter, och ett träd har n − 1 kanter.</p><p>En sammanhängande graf har en Eulerkrets om alla gradtal är jämna och en Eulerväg om exakt två är udda.</p><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>Gradtal 2, 2, 3, 3</p><p class='sn-ex-s'>Två udda hörn</p><p class='sn-ex-a'>Svar: Eulerväg men ingen Eulerkrets</p></div><h2>Vanliga fel</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Fel</th><th>Rätt</th></tr></thead><tbody><tr><td>Summan av gradtal = antal kanter</td><td>Den är dubbelt så stor</td></tr><tr><td>Glömmer att grafen måste vara sammanhängande</td><td>Kontrollera det först</td></tr><tr><td>Väljer den väg med färst kanter</td><td>Summera avstånden</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Vad är en Eulerväg?",
+   "a": "En väg som använder varje kant exakt en gång."
+  },
+  {
+   "q": "Var används grafteori?",
+   "a": "I nätverk, kartor, scheman och sociala medier."
+  },
+  {
+   "q": "Vad är ett träd?",
+   "a": "En sammanhängande graf utan cykler."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Gradtal",
+   "items": [
+    {
+     "q": "En graf har 8 hörn och 27 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "35",
+      "54",
+      "8",
+      "27"
+     ],
+     "a": 1,
+     "e": "Varje kant ger två gradtal: 2 · 27 = <b>54</b>."
+    },
+    {
+     "q": "En graf har 5 hörn och 8 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "8",
+      "13",
+      "5",
+      "16"
+     ],
+     "a": 3,
+     "e": "Varje kant ger två gradtal: 2 · 8 = <b>16</b>."
+    },
+    {
+     "q": "En graf har 8 hörn och 25 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "25",
+      "8",
+      "33",
+      "50"
+     ],
+     "a": 3,
+     "e": "Varje kant ger två gradtal: 2 · 25 = <b>50</b>."
+    },
+    {
+     "q": "En graf har 8 hörn och 19 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "27",
+      "19",
+      "8",
+      "38"
+     ],
+     "a": 3,
+     "e": "Varje kant ger två gradtal: 2 · 19 = <b>38</b>."
+    },
+    {
+     "q": "En graf har 5 hörn och 7 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "14",
+      "5",
+      "7",
+      "12"
+     ],
+     "a": 0,
+     "e": "Varje kant ger två gradtal: 2 · 7 = <b>14</b>."
+    },
+    {
+     "q": "En graf har 7 hörn och 17 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "7",
+      "24",
+      "17",
+      "34"
+     ],
+     "a": 3,
+     "e": "Varje kant ger två gradtal: 2 · 17 = <b>34</b>."
+    },
+    {
+     "q": "En graf har 6 hörn och 7 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "14",
+      "13",
+      "7",
+      "6"
+     ],
+     "a": 0,
+     "e": "Varje kant ger två gradtal: 2 · 7 = <b>14</b>."
+    },
+    {
+     "q": "En graf har 8 hörn och 15 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "23",
+      "15",
+      "30",
+      "8"
+     ],
+     "a": 2,
+     "e": "Varje kant ger två gradtal: 2 · 15 = <b>30</b>."
+    },
+    {
+     "q": "En graf har 8 hörn och 9 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "9",
+      "17",
+      "8",
+      "18"
+     ],
+     "a": 3,
+     "e": "Varje kant ger två gradtal: 2 · 9 = <b>18</b>."
+    },
+    {
+     "q": "En graf har 6 hörn och 10 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "6",
+      "20",
+      "10",
+      "16"
+     ],
+     "a": 1,
+     "e": "Varje kant ger två gradtal: 2 · 10 = <b>20</b>."
+    },
+    {
+     "q": "En graf har 6 hörn och 12 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "12",
+      "24",
+      "6",
+      "18"
+     ],
+     "a": 1,
+     "e": "Varje kant ger två gradtal: 2 · 12 = <b>24</b>."
+    },
+    {
+     "q": "En graf har 5 hörn och 9 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "14",
+      "9",
+      "18",
+      "5"
+     ],
+     "a": 2,
+     "e": "Varje kant ger två gradtal: 2 · 9 = <b>18</b>."
+    },
+    {
+     "q": "En graf har 7 hörn och 9 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "9",
+      "18",
+      "16",
+      "7"
+     ],
+     "a": 1,
+     "e": "Varje kant ger två gradtal: 2 · 9 = <b>18</b>."
+    },
+    {
+     "q": "En graf har 8 hörn och 21 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "42",
+      "21",
+      "8",
+      "29"
+     ],
+     "a": 0,
+     "e": "Varje kant ger två gradtal: 2 · 21 = <b>42</b>."
+    },
+    {
+     "q": "En graf har 4 hörn och 5 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "5",
+      "4",
+      "10",
+      "9"
+     ],
+     "a": 2,
+     "e": "Varje kant ger två gradtal: 2 · 5 = <b>10</b>."
+    },
+    {
+     "q": "En graf har 4 hörn och 6 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "12",
+      "4",
+      "6",
+      "10"
+     ],
+     "a": 0,
+     "e": "Varje kant ger två gradtal: 2 · 6 = <b>12</b>."
+    },
+    {
+     "q": "En graf har 5 hörn och 10 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "5",
+      "10",
+      "20",
+      "15"
+     ],
+     "a": 2,
+     "e": "Varje kant ger två gradtal: 2 · 10 = <b>20</b>."
+    },
+    {
+     "q": "En graf har 7 hörn och 12 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "19",
+      "12",
+      "24",
+      "7"
+     ],
+     "a": 2,
+     "e": "Varje kant ger två gradtal: 2 · 12 = <b>24</b>."
+    },
+    {
+     "q": "En graf har 7 hörn och 10 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "20",
+      "7",
+      "17",
+      "10"
+     ],
+     "a": 0,
+     "e": "Varje kant ger två gradtal: 2 · 10 = <b>20</b>."
+    },
+    {
+     "q": "En graf har 8 hörn och 26 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "26",
+      "52",
+      "8",
+      "34"
+     ],
+     "a": 1,
+     "e": "Varje kant ger två gradtal: 2 · 26 = <b>52</b>."
+    }
+   ]
+  },
+  {
+   "title": "Kompletta grafer och träd",
+   "items": [
+    {
+     "q": "Ett träd har 16 hörn. Hur många kanter har det?",
+     "c": [
+      "15",
+      "16",
+      "17",
+      "120"
+     ],
+     "a": 0,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>15</b>."
+    },
+    {
+     "q": "Ett träd har 27 hörn. Hur många kanter har det?",
+     "c": [
+      "28",
+      "351",
+      "26",
+      "27"
+     ],
+     "a": 2,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>26</b>."
+    },
+    {
+     "q": "Hur många kanter har den kompletta grafen med 8 hörn?",
+     "c": [
+      "28",
+      "64",
+      "56",
+      "7"
+     ],
+     "a": 0,
+     "e": "Varje par av hörn förbinds: 8 · 7 / 2 = <b>28</b>."
+    },
+    {
+     "q": "12 lag möts en gång var i en serie. Hur många matcher spelas? (Tänk på en komplett graf.)",
+     "c": [
+      "132",
+      "144",
+      "66",
+      "11"
+     ],
+     "a": 2,
+     "e": "Varje par av hörn förbinds: 12 · 11 / 2 = <b>66</b>."
+    },
+    {
+     "q": "Ett träd har 4 hörn. Hur många kanter har det?",
+     "c": [
+      "4",
+      "3",
+      "5",
+      "6"
+     ],
+     "a": 1,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>3</b>."
+    },
+    {
+     "q": "Hur många kanter har den kompletta grafen med 9 hörn?",
+     "c": [
+      "36",
+      "81",
+      "8",
+      "72"
+     ],
+     "a": 0,
+     "e": "Varje par av hörn förbinds: 9 · 8 / 2 = <b>36</b>."
+    },
+    {
+     "q": "14 lag möts en gång var i en serie. Hur många matcher spelas? (Tänk på en komplett graf.)",
+     "c": [
+      "182",
+      "13",
+      "196",
+      "91"
+     ],
+     "a": 3,
+     "e": "Varje par av hörn förbinds: 14 · 13 / 2 = <b>91</b>."
+    },
+    {
+     "q": "Hur många kanter har den kompletta grafen med 14 hörn?",
+     "c": [
+      "13",
+      "91",
+      "196",
+      "182"
+     ],
+     "a": 1,
+     "e": "Varje par av hörn förbinds: 14 · 13 / 2 = <b>91</b>."
+    },
+    {
+     "q": "Hur många kanter har den kompletta grafen med 16 hörn?",
+     "c": [
+      "120",
+      "15",
+      "240",
+      "256"
+     ],
+     "a": 0,
+     "e": "Varje par av hörn förbinds: 16 · 15 / 2 = <b>120</b>."
+    },
+    {
+     "q": "Hur många kanter har den kompletta grafen med 13 hörn?",
+     "c": [
+      "156",
+      "78",
+      "169",
+      "12"
+     ],
+     "a": 1,
+     "e": "Varje par av hörn förbinds: 13 · 12 / 2 = <b>78</b>."
+    },
+    {
+     "q": "21 lag möts en gång var i en serie. Hur många matcher spelas? (Tänk på en komplett graf.)",
+     "c": [
+      "441",
+      "210",
+      "20",
+      "420"
+     ],
+     "a": 1,
+     "e": "Varje par av hörn förbinds: 21 · 20 / 2 = <b>210</b>."
+    },
+    {
+     "q": "Ett träd har 13 hörn. Hur många kanter har det?",
+     "c": [
+      "13",
+      "14",
+      "12",
+      "78"
+     ],
+     "a": 2,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>12</b>."
+    },
+    {
+     "q": "Ett träd har 30 hörn. Hur många kanter har det?",
+     "c": [
+      "435",
+      "30",
+      "29",
+      "31"
+     ],
+     "a": 2,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>29</b>."
+    },
+    {
+     "q": "Ett träd har 6 hörn. Hur många kanter har det?",
+     "c": [
+      "15",
+      "7",
+      "6",
+      "5"
+     ],
+     "a": 3,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>5</b>."
+    },
+    {
+     "q": "18 lag möts en gång var i en serie. Hur många matcher spelas? (Tänk på en komplett graf.)",
+     "c": [
+      "324",
+      "17",
+      "306",
+      "153"
+     ],
+     "a": 3,
+     "e": "Varje par av hörn förbinds: 18 · 17 / 2 = <b>153</b>."
+    },
+    {
+     "q": "6 lag möts en gång var i en serie. Hur många matcher spelas? (Tänk på en komplett graf.)",
+     "c": [
+      "30",
+      "5",
+      "36",
+      "15"
+     ],
+     "a": 3,
+     "e": "Varje par av hörn förbinds: 6 · 5 / 2 = <b>15</b>."
+    },
+    {
+     "q": "Ett träd har 9 hörn. Hur många kanter har det?",
+     "c": [
+      "36",
+      "9",
+      "10",
+      "8"
+     ],
+     "a": 3,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>8</b>."
+    },
+    {
+     "q": "Ett träd har 5 hörn. Hur många kanter har det?",
+     "c": [
+      "4",
+      "6",
+      "10",
+      "5"
+     ],
+     "a": 0,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>4</b>."
+    },
+    {
+     "q": "Ett träd har 29 hörn. Hur många kanter har det?",
+     "c": [
+      "29",
+      "28",
+      "30",
+      "406"
+     ],
+     "a": 1,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>28</b>."
+    },
+    {
+     "q": "Ett träd har 18 hörn. Hur många kanter har det?",
+     "c": [
+      "18",
+      "19",
+      "17",
+      "153"
+     ],
+     "a": 2,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>17</b>."
+    }
+   ]
+  },
+  {
+   "title": "Eulervägar",
+   "items": [
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 4, 3, 3, 4, 2 och 2. Vad gäller?",
+     "c": [
+      "Både Eulerkrets och udda hörn",
+      "Eulerkrets",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerväg men ingen Eulerkrets"
+     ],
+     "a": 3,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 3, 3, 4, 2, 2, 3 och 1. Vad gäller?",
+     "c": [
+      "Eulerväg men ingen Eulerkrets",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerkrets",
+      "Både Eulerkrets och udda hörn"
+     ],
+     "a": 1,
+     "e": "Antalet hörn med udda gradtal är 4: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 1, 5, 1, 3 och 2. Vad gäller?",
+     "c": [
+      "Både Eulerkrets och udda hörn",
+      "Eulerkrets",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerväg men ingen Eulerkrets"
+     ],
+     "a": 2,
+     "e": "Antalet hörn med udda gradtal är 4: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 1, 1, 4, 3 och 3. Vad gäller?",
+     "c": [
+      "Både Eulerkrets och udda hörn",
+      "Eulerväg men ingen Eulerkrets",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerkrets"
+     ],
+     "a": 2,
+     "e": "Antalet hörn med udda gradtal är 4: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 4, 3, 1, 4 och 4. Vad gäller?",
+     "c": [
+      "Både Eulerkrets och udda hörn",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerkrets",
+      "Eulerväg men ingen Eulerkrets"
+     ],
+     "a": 3,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 4, 3, 2, 1, 1 och 5. Vad gäller?",
+     "c": [
+      "Både Eulerkrets och udda hörn",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerkrets",
+      "Eulerväg men ingen Eulerkrets"
+     ],
+     "a": 1,
+     "e": "Antalet hörn med udda gradtal är 4: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 3, 1, 4, 3, 4, 5 och 2. Vad gäller?",
+     "c": [
+      "Eulerväg men ingen Eulerkrets",
+      "Varken Eulerväg eller Eulerkrets",
+      "Både Eulerkrets och udda hörn",
+      "Eulerkrets"
+     ],
+     "a": 1,
+     "e": "Antalet hörn med udda gradtal är 4: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 2, 4, 5, 4, 1 och 2. Vad gäller?",
+     "c": [
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerkrets",
+      "Eulerväg men ingen Eulerkrets",
+      "Både Eulerkrets och udda hörn"
+     ],
+     "a": 2,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 4, 5, 3, 3, 5 och 4. Vad gäller?",
+     "c": [
+      "Varken Eulerväg eller Eulerkrets",
+      "Både Eulerkrets och udda hörn",
+      "Eulerväg men ingen Eulerkrets",
+      "Eulerkrets"
+     ],
+     "a": 0,
+     "e": "Antalet hörn med udda gradtal är 4: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 5, 4, 3 och 2. Vad gäller?",
+     "c": [
+      "Eulerkrets",
+      "Både Eulerkrets och udda hörn",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerväg men ingen Eulerkrets"
+     ],
+     "a": 3,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 3, 1, 1 och 3. Vad gäller?",
+     "c": [
+      "Eulerväg men ingen Eulerkrets",
+      "Eulerkrets",
+      "Varken Eulerväg eller Eulerkrets",
+      "Både Eulerkrets och udda hörn"
+     ],
+     "a": 2,
+     "e": "Antalet hörn med udda gradtal är 4: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 1, 2, 3, 2, 5 och 1. Vad gäller?",
+     "c": [
+      "Eulerväg men ingen Eulerkrets",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerkrets",
+      "Både Eulerkrets och udda hörn"
+     ],
+     "a": 1,
+     "e": "Antalet hörn med udda gradtal är 4: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 2, 3, 4 och 1. Vad gäller?",
+     "c": [
+      "Eulerväg men ingen Eulerkrets",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerkrets",
+      "Både Eulerkrets och udda hörn"
+     ],
+     "a": 0,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 1, 2, 3, 5, 1, 1 och 1. Vad gäller?",
+     "c": [
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerväg men ingen Eulerkrets",
+      "Både Eulerkrets och udda hörn",
+      "Eulerkrets"
+     ],
+     "a": 0,
+     "e": "Antalet hörn med udda gradtal är 6: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 3, 3, 2, 5, 5, 3 och 5. Vad gäller?",
+     "c": [
+      "Eulerkrets",
+      "Eulerväg men ingen Eulerkrets",
+      "Både Eulerkrets och udda hörn",
+      "Varken Eulerväg eller Eulerkrets"
+     ],
+     "a": 3,
+     "e": "Antalet hörn med udda gradtal är 6: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 5, 1, 2, 1 och 1. Vad gäller?",
+     "c": [
+      "Varken Eulerväg eller Eulerkrets",
+      "Både Eulerkrets och udda hörn",
+      "Eulerkrets",
+      "Eulerväg men ingen Eulerkrets"
+     ],
+     "a": 0,
+     "e": "Antalet hörn med udda gradtal är 4: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 1, 5, 5, 3, 5 och 1. Vad gäller?",
+     "c": [
+      "Både Eulerkrets och udda hörn",
+      "Eulerkrets",
+      "Eulerväg men ingen Eulerkrets",
+      "Varken Eulerväg eller Eulerkrets"
+     ],
+     "a": 3,
+     "e": "Antalet hörn med udda gradtal är 6: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 4, 4, 2, 1, 2 och 5. Vad gäller?",
+     "c": [
+      "Eulerväg men ingen Eulerkrets",
+      "Varken Eulerväg eller Eulerkrets",
+      "Både Eulerkrets och udda hörn",
+      "Eulerkrets"
+     ],
+     "a": 0,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 5, 2, 2, 4 och 3. Vad gäller?",
+     "c": [
+      "Varken Eulerväg eller Eulerkrets",
+      "Både Eulerkrets och udda hörn",
+      "Eulerväg men ingen Eulerkrets",
+      "Eulerkrets"
+     ],
+     "a": 2,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 5, 4, 4, 1, 4 och 2. Vad gäller?",
+     "c": [
+      "Eulerkrets",
+      "Eulerväg men ingen Eulerkrets",
+      "Både Eulerkrets och udda hörn",
+      "Varken Eulerväg eller Eulerkrets"
+     ],
+     "a": 1,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    }
+   ]
+  },
+  {
+   "title": "Kortaste vägen",
+   "items": [
+    {
+     "q": "Avstånd: A–B 6 km, B–D 9 km, A–C 6 km, C–D 7 km och A–D 16 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "15 km",
+      "16 km",
+      "28 km",
+      "13 km"
+     ],
+     "a": 3,
+     "e": "Jämför 15, 13 och 16: <b>13 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 7 km, B–D 4 km, A–C 3 km, C–D 5 km och A–D 16 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "8 km",
+      "11 km",
+      "16 km",
+      "19 km"
+     ],
+     "a": 0,
+     "e": "Jämför 11, 8 och 16: <b>8 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 4 km, B–D 8 km, A–C 9 km, C–D 9 km och A–D 16 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "16 km",
+      "12 km",
+      "30 km",
+      "18 km"
+     ],
+     "a": 1,
+     "e": "Jämför 12, 18 och 16: <b>12 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 2 km, B–D 2 km, A–C 5 km, C–D 5 km och A–D 20 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "20 km",
+      "10 km",
+      "4 km",
+      "14 km"
+     ],
+     "a": 2,
+     "e": "Jämför 4, 10 och 20: <b>4 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 8 km, B–D 6 km, A–C 8 km, C–D 4 km och A–D 20 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "12 km",
+      "26 km",
+      "14 km",
+      "20 km"
+     ],
+     "a": 0,
+     "e": "Jämför 14, 12 och 20: <b>12 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 5 km, B–D 2 km, A–C 3 km, C–D 7 km och A–D 12 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "10 km",
+      "17 km",
+      "12 km",
+      "7 km"
+     ],
+     "a": 3,
+     "e": "Jämför 7, 10 och 12: <b>7 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 4 km, B–D 5 km, A–C 4 km, C–D 9 km och A–D 17 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "13 km",
+      "17 km",
+      "9 km",
+      "22 km"
+     ],
+     "a": 2,
+     "e": "Jämför 9, 13 och 17: <b>9 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 7 km, B–D 4 km, A–C 9 km, C–D 7 km och A–D 14 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "16 km",
+      "14 km",
+      "11 km",
+      "27 km"
+     ],
+     "a": 2,
+     "e": "Jämför 11, 16 och 14: <b>11 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 9 km, B–D 6 km, A–C 8 km, C–D 6 km och A–D 20 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "20 km",
+      "15 km",
+      "14 km",
+      "29 km"
+     ],
+     "a": 2,
+     "e": "Jämför 15, 14 och 20: <b>14 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 2 km, B–D 8 km, A–C 9 km, C–D 6 km och A–D 16 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "10 km",
+      "25 km",
+      "15 km",
+      "16 km"
+     ],
+     "a": 0,
+     "e": "Jämför 10, 15 och 16: <b>10 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 8 km, B–D 2 km, A–C 4 km, C–D 7 km och A–D 17 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "10 km",
+      "17 km",
+      "11 km",
+      "21 km"
+     ],
+     "a": 0,
+     "e": "Jämför 10, 11 och 17: <b>10 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 9 km, B–D 9 km, A–C 5 km, C–D 8 km och A–D 20 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "20 km",
+      "13 km",
+      "31 km",
+      "18 km"
+     ],
+     "a": 1,
+     "e": "Jämför 18, 13 och 20: <b>13 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 2 km, B–D 4 km, A–C 3 km, C–D 4 km och A–D 19 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "19 km",
+      "6 km",
+      "13 km",
+      "7 km"
+     ],
+     "a": 1,
+     "e": "Jämför 6, 7 och 19: <b>6 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 8 km, B–D 6 km, A–C 2 km, C–D 2 km och A–D 11 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "18 km",
+      "14 km",
+      "11 km",
+      "4 km"
+     ],
+     "a": 3,
+     "e": "Jämför 14, 4 och 11: <b>4 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 5 km, B–D 8 km, A–C 4 km, C–D 2 km och A–D 15 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "19 km",
+      "6 km",
+      "15 km",
+      "13 km"
+     ],
+     "a": 1,
+     "e": "Jämför 13, 6 och 15: <b>6 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 3 km, B–D 9 km, A–C 8 km, C–D 3 km och A–D 19 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "19 km",
+      "23 km",
+      "11 km",
+      "12 km"
+     ],
+     "a": 2,
+     "e": "Jämför 12, 11 och 19: <b>11 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 5 km, B–D 4 km, A–C 9 km, C–D 3 km och A–D 11 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "11 km",
+      "12 km",
+      "21 km",
+      "9 km"
+     ],
+     "a": 3,
+     "e": "Jämför 9, 12 och 11: <b>9 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 8 km, B–D 9 km, A–C 6 km, C–D 4 km och A–D 18 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "18 km",
+      "10 km",
+      "17 km",
+      "27 km"
+     ],
+     "a": 1,
+     "e": "Jämför 17, 10 och 18: <b>10 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 8 km, B–D 5 km, A–C 4 km, C–D 2 km och A–D 17 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "19 km",
+      "17 km",
+      "13 km",
+      "6 km"
+     ],
+     "a": 3,
+     "e": "Jämför 13, 6 och 17: <b>6 km</b>."
+    },
+    {
+     "q": "Avstånd: A–B 8 km, B–D 9 km, A–C 4 km, C–D 7 km och A–D 12 km. Vilken är den kortaste vägen från A till D?",
+     "c": [
+      "11 km",
+      "12 km",
+      "28 km",
+      "17 km"
+     ],
+     "a": 0,
+     "e": "Jämför 17, 11 och 12: <b>11 km</b>."
+    }
+   ]
+  },
+  {
+   "title": "Blandat",
+   "items": [
+    {
+     "q": "Ett träd har 23 hörn. Hur många kanter har det?",
+     "c": [
+      "23",
+      "22",
+      "24",
+      "253"
+     ],
+     "a": 1,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>22</b>."
+    },
+    {
+     "q": "Ett träd har 24 hörn. Hur många kanter har det?",
+     "c": [
+      "276",
+      "25",
+      "24",
+      "23"
+     ],
+     "a": 3,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>23</b>."
+    },
+    {
+     "q": "13 lag möts en gång var i en serie. Hur många matcher spelas? (Tänk på en komplett graf.)",
+     "c": [
+      "169",
+      "78",
+      "12",
+      "156"
+     ],
+     "a": 1,
+     "e": "Varje par av hörn förbinds: 13 · 12 / 2 = <b>78</b>."
+    },
+    {
+     "q": "Hur många kanter har den kompletta grafen med 15 hörn?",
+     "c": [
+      "105",
+      "14",
+      "225",
+      "210"
+     ],
+     "a": 0,
+     "e": "Varje par av hörn förbinds: 15 · 14 / 2 = <b>105</b>."
+    },
+    {
+     "q": "En graf har 8 hörn och 23 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "31",
+      "8",
+      "46",
+      "23"
+     ],
+     "a": 2,
+     "e": "Varje kant ger två gradtal: 2 · 23 = <b>46</b>."
+    },
+    {
+     "q": "Ett träd har 22 hörn. Hur många kanter har det?",
+     "c": [
+      "231",
+      "21",
+      "23",
+      "22"
+     ],
+     "a": 1,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>21</b>."
+    },
+    {
+     "q": "En graf har 6 hörn och 13 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "6",
+      "19",
+      "13",
+      "26"
+     ],
+     "a": 3,
+     "e": "Varje kant ger två gradtal: 2 · 13 = <b>26</b>."
+    },
+    {
+     "q": "Hur många kanter har den kompletta grafen med 25 hörn?",
+     "c": [
+      "300",
+      "24",
+      "600",
+      "625"
+     ],
+     "a": 0,
+     "e": "Varje par av hörn förbinds: 25 · 24 / 2 = <b>300</b>."
+    },
+    {
+     "q": "En graf har 7 hörn och 15 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "15",
+      "22",
+      "30",
+      "7"
+     ],
+     "a": 2,
+     "e": "Varje kant ger två gradtal: 2 · 15 = <b>30</b>."
+    },
+    {
+     "q": "En graf har 8 hörn och 18 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "8",
+      "18",
+      "36",
+      "26"
+     ],
+     "a": 2,
+     "e": "Varje kant ger två gradtal: 2 · 18 = <b>36</b>."
+    },
+    {
+     "q": "Ett träd har 10 hörn. Hur många kanter har det?",
+     "c": [
+      "10",
+      "9",
+      "11",
+      "45"
+     ],
+     "a": 1,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>9</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 2, 1, 1 och 6. Vad gäller?",
+     "c": [
+      "Både Eulerkrets och udda hörn",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerväg men ingen Eulerkrets",
+      "Eulerkrets"
+     ],
+     "a": 2,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    },
+    {
+     "q": "En graf har 8 hörn och 17 kanter. Vad är summan av alla hörns gradtal?",
+     "c": [
+      "34",
+      "17",
+      "25",
+      "8"
+     ],
+     "a": 0,
+     "e": "Varje kant ger två gradtal: 2 · 17 = <b>34</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 1, 2, 2, 4, 4 och 5. Vad gäller?",
+     "c": [
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerväg men ingen Eulerkrets",
+      "Eulerkrets",
+      "Både Eulerkrets och udda hörn"
+     ],
+     "a": 1,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    },
+    {
+     "q": "24 lag möts en gång var i en serie. Hur många matcher spelas? (Tänk på en komplett graf.)",
+     "c": [
+      "576",
+      "552",
+      "276",
+      "23"
+     ],
+     "a": 2,
+     "e": "Varje par av hörn förbinds: 24 · 23 / 2 = <b>276</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 1, 3, 5, 3, 3 och 5. Vad gäller?",
+     "c": [
+      "Varken Eulerväg eller Eulerkrets",
+      "Både Eulerkrets och udda hörn",
+      "Eulerkrets",
+      "Eulerväg men ingen Eulerkrets"
+     ],
+     "a": 0,
+     "e": "Antalet hörn med udda gradtal är 6: <b>varken eulerväg eller eulerkrets</b>."
+    },
+    {
+     "q": "25 lag möts en gång var i en serie. Hur många matcher spelas? (Tänk på en komplett graf.)",
+     "c": [
+      "625",
+      "600",
+      "24",
+      "300"
+     ],
+     "a": 3,
+     "e": "Varje par av hörn förbinds: 25 · 24 / 2 = <b>300</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 4, 5, 2, 4, 3, 4 och 4. Vad gäller?",
+     "c": [
+      "Eulerväg men ingen Eulerkrets",
+      "Både Eulerkrets och udda hörn",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerkrets"
+     ],
+     "a": 0,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    },
+    {
+     "q": "En sammanhängande graf har hörn med gradtalen 3, 2, 3 och 6. Vad gäller?",
+     "c": [
+      "Både Eulerkrets och udda hörn",
+      "Varken Eulerväg eller Eulerkrets",
+      "Eulerkrets",
+      "Eulerväg men ingen Eulerkrets"
+     ],
+     "a": 3,
+     "e": "Antalet hörn med udda gradtal är 2: <b>eulerväg men ingen eulerkrets</b>."
+    },
+    {
+     "q": "Ett träd har 8 hörn. Hur många kanter har det?",
+     "c": [
+      "8",
+      "9",
+      "28",
+      "7"
+     ],
+     "a": 3,
+     "e": "Ett träd med n hörn har n − 1 kanter: <b>7</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 10,
+ "updated": "2026-11-26",
+ "country": "se",
+ "subject": "matematik",
+ "grade": "matematik-5"
+}

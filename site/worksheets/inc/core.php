@@ -1218,6 +1218,8 @@ function grade_standard($country, $grade) {
     if ($country['code'] === 'tr' && $grade && $grade['slug'] === 'okul-oncesi') return 'Türkiye Yüzyılı Maarif Modeli Okul Öncesi Eğitim Programı';
     if ($country['code'] === 'cn' && $grade && strpos($grade['slug'], 'grade-') !== 0) return '普通高中数学课程标准（2017年版2020年修订）';
     if ($country['code'] === 'ch' && $grade && strpos($grade['slug'], 'gymnasium-') === 0) return 'Rahmenlehrplan Gymnasiale Maturitätsschulen (EDK 2024)';
+    if ($country['code'] === 'se' && $grade && strpos($grade['slug'], 'matematik-') === 0) return 'Ämnesplan i matematik för gymnasieskolan (Gy25)';
+    if ($country['code'] === 'se' && $grade && $grade['slug'] === 'forskoleklass') return 'Lgr22, förskoleklassen';
     return $country['standard'];
 }
 function get_grade($c, $s, $g) { return q1('SELECT * FROM ws_grade WHERE country=? AND subject=? AND slug=?', array($c, $s, $g)); }

@@ -1,0 +1,1161 @@
+{
+ "slug": "integraler-och-volymer",
+ "title": "Integraler: area mellan kurvor och rotationsvolymer",
+ "seo_title": "Integraler och volymer – Matematik 4: uppgifter med facit",
+ "short_title": "Integraler och volymer",
+ "domain": "Differential- och integralkalkyl",
+ "standard_code": "Gy25 Matematik nivå 4 · Differential- och integralkalkyl",
+ "standard_url": "https://syllabuswebb.skolverket.se/subject/MAT/11/pdf",
+ "standard_text": "Primitiva funktioner till trigonometriska funktioner och 1/x. Integraler för area mellan kurvor, rotationsvolymer och medelvärde. (sammanfattning av det centrala innehållet i ämnesplanen i matematik för gymnasieskolan, nivå 4)",
+ "meta_desc": "Uppgifter om integraler och volymer för Matematik 4: trigonometriska primitiver, integraler med 1/x, area mellan kurvor, rotationsvolymer och medelvärde. 100 uppgifter med facit.",
+ "key_big": "Rotationsvolym V = π∫ f(x)² dx",
+ "key_sub": "Area = ∫ (övre − undre) dx",
+ "body_html": "<h2>Så tänker du</h2><p>Primitiv till cos kx är sin kx / k, till sin kx är −cos kx / k och till 1/x är ln |x|.</p><p>Arean mellan två kurvor är ∫ (övre − undre) dx mellan skärningspunkterna.</p><p>När området under y = f(x) roterar kring x-axeln blir volymen V = π∫<sub>a</sub><sup>b</sup> f(x)² dx.</p><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>y = x, 0 ≤ x ≤ 3, kring x-axeln</p><p class='sn-ex-s'>V = π∫x² dx = π · 27/3</p><p class='sn-ex-a'>Svar: 9π v.e.</p></div><h2>Vanliga fel</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Fel</th><th>Rätt</th></tr></thead><tbody><tr><td>Glömmer π i rotationsvolymen</td><td>V = π∫f(x)² dx</td></tr><tr><td>Kvadrerar inte f(x)</td><td>Det är f(x)²</td></tr><tr><td>Undre minus övre</td><td>Övre minus undre</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Vad är v.e.?",
+   "a": "Volymenheter."
+  },
+  {
+   "q": "Kan man rotera kring y-axeln?",
+   "a": "Ja, med en liknande metod."
+  },
+  {
+   "q": "Vad är medelvärdet av en funktion?",
+   "a": "Den konstanta höjd som ger samma area på intervallet."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Trigonometriska primitiver",
+   "items": [
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = -5sin 3x.",
+     "c": [
+      "F(x) = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> sin 3x + C",
+      "F(x) = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> cos 3x + C",
+      "F(x) = 15 cos 3x + C",
+      "F(x) = −<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> cos 3x + C"
+     ],
+     "a": 1,
+     "e": "Primitiv till sin kx är −cos kx / k: <b>F(x) = <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> cos 3x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = -4cos 4x.",
+     "c": [
+      "F(x) = − sin 4x + C",
+      "F(x) = −16 sin 4x + C",
+      "F(x) =  sin 4x + C",
+      "F(x) = − cos 4x + C"
+     ],
+     "a": 0,
+     "e": "Primitiv till cos kx är sin kx / k: <b>F(x) = − sin 4x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = -2cos 3x.",
+     "c": [
+      "F(x) = −<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> sin 3x + C",
+      "F(x) = −6 sin 3x + C",
+      "F(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> sin 3x + C",
+      "F(x) = −<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> cos 3x + C"
+     ],
+     "a": 0,
+     "e": "Primitiv till cos kx är sin kx / k: <b>F(x) = −<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> sin 3x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = -3sin 3x.",
+     "c": [
+      "F(x) =  cos 3x + C",
+      "F(x) = 9 cos 3x + C",
+      "F(x) = − cos 3x + C",
+      "F(x) =  sin 3x + C"
+     ],
+     "a": 0,
+     "e": "Primitiv till sin kx är −cos kx / k: <b>F(x) =  cos 3x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = -2cos 4x.",
+     "c": [
+      "F(x) = −8 sin 4x + C",
+      "F(x) = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> sin 4x + C",
+      "F(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> sin 4x + C",
+      "F(x) = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> cos 4x + C"
+     ],
+     "a": 1,
+     "e": "Primitiv till cos kx är sin kx / k: <b>F(x) = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> sin 4x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = 2sin 3x.",
+     "c": [
+      "F(x) = −<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> sin 3x + C",
+      "F(x) = −<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> cos 3x + C",
+      "F(x) = −6 cos 3x + C",
+      "F(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> cos 3x + C"
+     ],
+     "a": 1,
+     "e": "Primitiv till sin kx är −cos kx / k: <b>F(x) = −<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> cos 3x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = −sin 3x.",
+     "c": [
+      "F(x) = 3 cos 3x + C",
+      "F(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> sin 3x + C",
+      "F(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> cos 3x + C",
+      "F(x) = −<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> cos 3x + C"
+     ],
+     "a": 2,
+     "e": "Primitiv till sin kx är −cos kx / k: <b>F(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> cos 3x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = -3cos 4x.",
+     "c": [
+      "F(x) = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> sin 4x + C",
+      "F(x) = −<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> cos 4x + C",
+      "F(x) = −12 sin 4x + C",
+      "F(x) = −<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> sin 4x + C"
+     ],
+     "a": 3,
+     "e": "Primitiv till cos kx är sin kx / k: <b>F(x) = −<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> sin 4x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = -4cos 3x.",
+     "c": [
+      "F(x) = <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> sin 3x + C",
+      "F(x) = −12 sin 3x + C",
+      "F(x) = −<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> sin 3x + C",
+      "F(x) = −<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> cos 3x + C"
+     ],
+     "a": 2,
+     "e": "Primitiv till cos kx är sin kx / k: <b>F(x) = −<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> sin 3x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = 4cos 2x.",
+     "c": [
+      "F(x) = 8 sin 2x + C",
+      "F(x) = −2 sin 2x + C",
+      "F(x) = 2 cos 2x + C",
+      "F(x) = 2 sin 2x + C"
+     ],
+     "a": 3,
+     "e": "Primitiv till cos kx är sin kx / k: <b>F(x) = 2 sin 2x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = 6sin 2x.",
+     "c": [
+      "F(x) = −12 cos 2x + C",
+      "F(x) = −3 sin 2x + C",
+      "F(x) = 3 cos 2x + C",
+      "F(x) = −3 cos 2x + C"
+     ],
+     "a": 3,
+     "e": "Primitiv till sin kx är −cos kx / k: <b>F(x) = −3 cos 2x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = −sin 2x.",
+     "c": [
+      "F(x) = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> cos 2x + C",
+      "F(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> sin 2x + C",
+      "F(x) = 2 cos 2x + C",
+      "F(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> cos 2x + C"
+     ],
+     "a": 3,
+     "e": "Primitiv till sin kx är −cos kx / k: <b>F(x) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> cos 2x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = -6cos 4x.",
+     "c": [
+      "F(x) = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> sin 4x + C",
+      "F(x) = −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> cos 4x + C",
+      "F(x) = −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> sin 4x + C",
+      "F(x) = −24 sin 4x + C"
+     ],
+     "a": 2,
+     "e": "Primitiv till cos kx är sin kx / k: <b>F(x) = −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> sin 4x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = 2sin 2x.",
+     "c": [
+      "F(x) = −4 cos 2x + C",
+      "F(x) = − sin 2x + C",
+      "F(x) = − cos 2x + C",
+      "F(x) =  cos 2x + C"
+     ],
+     "a": 2,
+     "e": "Primitiv till sin kx är −cos kx / k: <b>F(x) = − cos 2x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = 4sin 2x.",
+     "c": [
+      "F(x) = −2 cos 2x + C",
+      "F(x) = −2 sin 2x + C",
+      "F(x) = 2 cos 2x + C",
+      "F(x) = −8 cos 2x + C"
+     ],
+     "a": 0,
+     "e": "Primitiv till sin kx är −cos kx / k: <b>F(x) = −2 cos 2x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = 3sin 4x.",
+     "c": [
+      "F(x) = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> cos 4x + C",
+      "F(x) = −<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> sin 4x + C",
+      "F(x) = −12 cos 4x + C",
+      "F(x) = −<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> cos 4x + C"
+     ],
+     "a": 3,
+     "e": "Primitiv till sin kx är −cos kx / k: <b>F(x) = −<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> cos 4x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = -6cos 2x.",
+     "c": [
+      "F(x) = −12 sin 2x + C",
+      "F(x) = −3 sin 2x + C",
+      "F(x) = −3 cos 2x + C",
+      "F(x) = 3 sin 2x + C"
+     ],
+     "a": 1,
+     "e": "Primitiv till cos kx är sin kx / k: <b>F(x) = −3 sin 2x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = -4sin 4x.",
+     "c": [
+      "F(x) = 16 cos 4x + C",
+      "F(x) =  cos 4x + C",
+      "F(x) = − cos 4x + C",
+      "F(x) =  sin 4x + C"
+     ],
+     "a": 1,
+     "e": "Primitiv till sin kx är −cos kx / k: <b>F(x) =  cos 4x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = 2cos 2x.",
+     "c": [
+      "F(x) = − sin 2x + C",
+      "F(x) =  cos 2x + C",
+      "F(x) =  sin 2x + C",
+      "F(x) = 4 sin 2x + C"
+     ],
+     "a": 2,
+     "e": "Primitiv till cos kx är sin kx / k: <b>F(x) =  sin 2x + C</b>."
+    },
+    {
+     "q": "Bestäm en primitiv funktion till f(x) = -2sin 3x.",
+     "c": [
+      "F(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> cos 3x + C",
+      "F(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> sin 3x + C",
+      "F(x) = −<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> cos 3x + C",
+      "F(x) = 6 cos 3x + C"
+     ],
+     "a": 0,
+     "e": "Primitiv till sin kx är −cos kx / k: <b>F(x) = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> cos 3x + C</b>."
+    }
+   ]
+  },
+  {
+   "title": "Integraler med 1/x",
+   "items": [
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>8</sup> <span class='fr'><span class='fn'>9</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "9ln 7",
+      "1,125",
+      "9ln 8",
+      "72ln 8"
+     ],
+     "a": 2,
+     "e": "Primitiv till 1/x är ln x: 9(ln 8 − ln 1) = <b>9ln 8</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>4</sup> <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "8ln 4",
+      "2ln 4",
+      "2ln 3",
+      "0,5"
+     ],
+     "a": 1,
+     "e": "Primitiv till 1/x är ln x: 2(ln 4 − ln 1) = <b>2ln 4</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>3</sup> <span class='fr'><span class='fn'>5</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "5/3",
+      "5ln 2",
+      "15ln 3",
+      "5ln 3"
+     ],
+     "a": 3,
+     "e": "Primitiv till 1/x är ln x: 5(ln 3 − ln 1) = <b>5ln 3</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>8</sup> <span class='fr'><span class='fn'>5</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "5ln 7",
+      "0,625",
+      "40ln 8",
+      "5ln 8"
+     ],
+     "a": 3,
+     "e": "Primitiv till 1/x är ln x: 5(ln 8 − ln 1) = <b>5ln 8</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>9</sup> <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "18ln 9",
+      "2ln 8",
+      "2/9",
+      "2ln 9"
+     ],
+     "a": 3,
+     "e": "Primitiv till 1/x är ln x: 2(ln 9 − ln 1) = <b>2ln 9</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>5</sup> <span class='fr'><span class='fn'>1</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "ln 25",
+      "ln 5",
+      "ln 4",
+      "0,2"
+     ],
+     "a": 1,
+     "e": "Primitiv till 1/x är ln x: 1(ln 5 − ln 1) = <b>ln 5</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>7</sup> <span class='fr'><span class='fn'>1</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "ln 49",
+      "ln 7",
+      "ln 6",
+      "1/7"
+     ],
+     "a": 1,
+     "e": "Primitiv till 1/x är ln x: 1(ln 7 − ln 1) = <b>ln 7</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>4</sup> <span class='fr'><span class='fn'>5</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "5ln 4",
+      "20ln 4",
+      "1,25",
+      "5ln 3"
+     ],
+     "a": 0,
+     "e": "Primitiv till 1/x är ln x: 5(ln 4 − ln 1) = <b>5ln 4</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>3</sup> <span class='fr'><span class='fn'>8</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "8/3",
+      "8ln 2",
+      "8ln 3",
+      "24ln 3"
+     ],
+     "a": 2,
+     "e": "Primitiv till 1/x är ln x: 8(ln 3 − ln 1) = <b>8ln 3</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>3</sup> <span class='fr'><span class='fn'>6</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "2",
+      "6ln 3",
+      "6ln 2",
+      "18ln 3"
+     ],
+     "a": 1,
+     "e": "Primitiv till 1/x är ln x: 6(ln 3 − ln 1) = <b>6ln 3</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>2</sup> <span class='fr'><span class='fn'>5</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "5ln 1",
+      "5ln 2",
+      "2,5",
+      "10ln 2"
+     ],
+     "a": 1,
+     "e": "Primitiv till 1/x är ln x: 5(ln 2 − ln 1) = <b>5ln 2</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>5</sup> <span class='fr'><span class='fn'>5</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "5ln 5",
+      "1",
+      "25ln 5",
+      "5ln 4"
+     ],
+     "a": 0,
+     "e": "Primitiv till 1/x är ln x: 5(ln 5 − ln 1) = <b>5ln 5</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>4</sup> <span class='fr'><span class='fn'>8</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "8ln 3",
+      "2",
+      "32ln 4",
+      "8ln 4"
+     ],
+     "a": 3,
+     "e": "Primitiv till 1/x är ln x: 8(ln 4 − ln 1) = <b>8ln 4</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>5</sup> <span class='fr'><span class='fn'>2</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "2ln 5",
+      "10ln 5",
+      "0,4",
+      "2ln 4"
+     ],
+     "a": 0,
+     "e": "Primitiv till 1/x är ln x: 2(ln 5 − ln 1) = <b>2ln 5</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>9</sup> <span class='fr'><span class='fn'>3</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "3/9",
+      "27ln 9",
+      "3ln 9",
+      "3ln 8"
+     ],
+     "a": 2,
+     "e": "Primitiv till 1/x är ln x: 3(ln 9 − ln 1) = <b>3ln 9</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>6</sup> <span class='fr'><span class='fn'>5</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "30ln 6",
+      "5/6",
+      "5ln 6",
+      "5ln 5"
+     ],
+     "a": 2,
+     "e": "Primitiv till 1/x är ln x: 5(ln 6 − ln 1) = <b>5ln 6</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>4</sup> <span class='fr'><span class='fn'>3</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "3ln 4",
+      "0,75",
+      "3ln 3",
+      "12ln 4"
+     ],
+     "a": 0,
+     "e": "Primitiv till 1/x är ln x: 3(ln 4 − ln 1) = <b>3ln 4</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>9</sup> <span class='fr'><span class='fn'>5</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "5ln 9",
+      "45ln 9",
+      "5/9",
+      "5ln 8"
+     ],
+     "a": 0,
+     "e": "Primitiv till 1/x är ln x: 5(ln 9 − ln 1) = <b>5ln 9</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>5</sup> <span class='fr'><span class='fn'>3</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "0,6",
+      "3ln 4",
+      "3ln 5",
+      "15ln 5"
+     ],
+     "a": 2,
+     "e": "Primitiv till 1/x är ln x: 3(ln 5 − ln 1) = <b>3ln 5</b>."
+    },
+    {
+     "q": "Beräkna ∫<sub>1</sub><sup>4</sup> <span class='fr'><span class='fn'>1</span><span class='fd'>x</span></span> dx exakt.",
+     "c": [
+      "ln 16",
+      "ln 3",
+      "0,25",
+      "ln 4"
+     ],
+     "a": 3,
+     "e": "Primitiv till 1/x är ln x: 1(ln 4 − ln 1) = <b>ln 4</b>."
+    }
+   ]
+  },
+  {
+   "title": "Area mellan kurvor",
+   "items": [
+    {
+     "q": "Beräkna arean mellan kurvorna y = 4x och y = x².",
+     "c": [
+      "32 a.e.",
+      "64 a.e.",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span> a.e.",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span> a.e."
+     ],
+     "a": 3,
+     "e": "Skärning i x = 0 och x = 4. ∫(4x − x²) dx = <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 3x och y = 2x².",
+     "c": [
+      "2,25 a.e.",
+      "3,375 a.e.",
+      "1,125 a.e.",
+      "6,75 a.e."
+     ],
+     "a": 2,
+     "e": "Skärning i x = 0 och x = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>. ∫(3x − 2x²) dx = <b><span class='fr'><span class='fn'>9</span><span class='fd'>8</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 6x och y = x².",
+     "c": [
+      "216 a.e.",
+      "72 a.e.",
+      "108 a.e.",
+      "36 a.e."
+     ],
+     "a": 3,
+     "e": "Skärning i x = 0 och x = 6. ∫(6x − x²) dx = <b>36 a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 7x och y = x².",
+     "c": [
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>3</span></span> a.e.",
+      "343 a.e.",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>6</span></span> a.e.",
+      "171,5 a.e."
+     ],
+     "a": 2,
+     "e": "Skärning i x = 0 och x = 7. ∫(7x − x²) dx = <b><span class='fr'><span class='fn'>343</span><span class='fd'>6</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 6x och y = 3x².",
+     "c": [
+      "8 a.e.",
+      "24 a.e.",
+      "4 a.e.",
+      "12 a.e."
+     ],
+     "a": 2,
+     "e": "Skärning i x = 0 och x = 2. ∫(6x − 3x²) dx = <b>4 a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 7x och y = 2x².",
+     "c": [
+      "85,75 a.e.",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>24</span></span> a.e.",
+      "42,875 a.e.",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>12</span></span> a.e."
+     ],
+     "a": 1,
+     "e": "Skärning i x = 0 och x = <span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>. ∫(7x − 2x²) dx = <b><span class='fr'><span class='fn'>343</span><span class='fd'>24</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 5x och y = 2x².",
+     "c": [
+      "31,25 a.e.",
+      "15,625 a.e.",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>12</span></span> a.e.",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>24</span></span> a.e."
+     ],
+     "a": 3,
+     "e": "Skärning i x = 0 och x = <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>. ∫(5x − 2x²) dx = <b><span class='fr'><span class='fn'>125</span><span class='fd'>24</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 7x och y = 3x².",
+     "c": [
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>27</span></span> a.e.",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>18</span></span> a.e.",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>54</span></span> a.e.",
+      "<span class='fr'><span class='fn'>343</span><span class='fd'>9</span></span> a.e."
+     ],
+     "a": 2,
+     "e": "Skärning i x = 0 och x = <span class='fr'><span class='fn'>7</span><span class='fd'>3</span></span>. ∫(7x − 3x²) dx = <b><span class='fr'><span class='fn'>343</span><span class='fd'>54</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = x och y = 4x².",
+     "c": [
+      "0,0625 a.e.",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>96</span></span> a.e.",
+      "0,03125 a.e.",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>48</span></span> a.e."
+     ],
+     "a": 1,
+     "e": "Skärning i x = 0 och x = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. ∫(x − 4x²) dx = <b><span class='fr'><span class='fn'>1</span><span class='fd'>96</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 5x och y = 4x².",
+     "c": [
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>48</span></span> a.e.",
+      "7,8125 a.e.",
+      "3,90625 a.e.",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>96</span></span> a.e."
+     ],
+     "a": 3,
+     "e": "Skärning i x = 0 och x = <span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>. ∫(5x − 4x²) dx = <b><span class='fr'><span class='fn'>125</span><span class='fd'>96</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 8x och y = 3x².",
+     "c": [
+      "<span class='fr'><span class='fn'>512</span><span class='fd'>27</span></span> a.e.",
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>9</span></span> a.e.",
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>27</span></span> a.e.",
+      "<span class='fr'><span class='fn'>512</span><span class='fd'>9</span></span> a.e."
+     ],
+     "a": 2,
+     "e": "Skärning i x = 0 och x = <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>. ∫(8x − 3x²) dx = <b><span class='fr'><span class='fn'>256</span><span class='fd'>27</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 4x och y = 4x².",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> a.e.",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> a.e.",
+      "4 a.e.",
+      "2 a.e."
+     ],
+     "a": 0,
+     "e": "Skärning i x = 0 och x = 1. ∫(4x − 4x²) dx = <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 5x och y = x².",
+     "c": [
+      "125 a.e.",
+      "62,5 a.e.",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span> a.e.",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span> a.e."
+     ],
+     "a": 3,
+     "e": "Skärning i x = 0 och x = 5. ∫(5x − x²) dx = <b><span class='fr'><span class='fn'>125</span><span class='fd'>6</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 4x och y = 3x².",
+     "c": [
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>9</span></span> a.e.",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>27</span></span> a.e.",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>9</span></span> a.e.",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>27</span></span> a.e."
+     ],
+     "a": 1,
+     "e": "Skärning i x = 0 och x = <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>. ∫(4x − 3x²) dx = <b><span class='fr'><span class='fn'>32</span><span class='fd'>27</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 3x och y = 4x².",
+     "c": [
+      "0,5625 a.e.",
+      "0,28125 a.e.",
+      "0,84375 a.e.",
+      "1,6875 a.e."
+     ],
+     "a": 1,
+     "e": "Skärning i x = 0 och x = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. ∫(3x − 4x²) dx = <b><span class='fr'><span class='fn'>9</span><span class='fd'>32</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 3x och y = x².",
+     "c": [
+      "9 a.e.",
+      "4,5 a.e.",
+      "13,5 a.e.",
+      "27 a.e."
+     ],
+     "a": 1,
+     "e": "Skärning i x = 0 och x = 3. ∫(3x − x²) dx = <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 2x och y = x².",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> a.e.",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span> a.e.",
+      "8 a.e.",
+      "4 a.e."
+     ],
+     "a": 0,
+     "e": "Skärning i x = 0 och x = 2. ∫(2x − x²) dx = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 2x och y = 4x².",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span> a.e.",
+      "0,5 a.e.",
+      "0,25 a.e.",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> a.e."
+     ],
+     "a": 0,
+     "e": "Skärning i x = 0 och x = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. ∫(2x − 4x²) dx = <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 2x och y = 3x².",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span> a.e.",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span> a.e.",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> a.e.",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span> a.e."
+     ],
+     "a": 0,
+     "e": "Skärning i x = 0 och x = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>. ∫(2x − 3x²) dx = <b><span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span> a.e.</b>"
+    },
+    {
+     "q": "Beräkna arean mellan kurvorna y = 3x och y = 3x².",
+     "c": [
+      "0,5 a.e.",
+      "1,5 a.e.",
+      "1 a.e.",
+      "3 a.e."
+     ],
+     "a": 0,
+     "e": "Skärning i x = 0 och x = 1. ∫(3x − 3x²) dx = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> a.e.</b>"
+    }
+   ]
+  },
+  {
+   "title": "Rotationsvolymer",
+   "items": [
+    {
+     "q": "Området mellan y = x, x-axeln och x = 2 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "8π v.e.",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>π v.e.",
+      "2π v.e.",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span> v.e."
+     ],
+     "a": 1,
+     "e": "V = π∫<sub>0</sub><sup>2</sup> (x)² dx = π · <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = x², x-axeln och x = 4 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "<span class='fr'><span class='fn'>1 024</span><span class='fd'>5</span></span> v.e.",
+      "<span class='fr'><span class='fn'>1 024</span><span class='fd'>5</span></span>π v.e.",
+      "64π v.e.",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>π v.e."
+     ],
+     "a": 1,
+     "e": "V = π∫(x²)² dx = π∫x⁴ dx = <b><span class='fr'><span class='fn'>1 024</span><span class='fd'>5</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 3x², x-axeln och x = 3 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "<span class='fr'><span class='fn'>729</span><span class='fd'>4</span></span>π v.e.",
+      "27π v.e.",
+      "<span class='fr'><span class='fn'>2 187</span><span class='fd'>5</span></span> v.e.",
+      "<span class='fr'><span class='fn'>2 187</span><span class='fd'>5</span></span>π v.e."
+     ],
+     "a": 3,
+     "e": "V = π∫(3x²)² dx = π∫9x⁴ dx = <b><span class='fr'><span class='fn'>2 187</span><span class='fd'>5</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = x, x-axeln och x = 4 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "64π v.e.",
+      "8π v.e.",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span> v.e.",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>π v.e."
+     ],
+     "a": 3,
+     "e": "V = π∫<sub>0</sub><sup>4</sup> (x)² dx = π · <span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 4x, x-axeln och x = 1 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "2π v.e.",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span> v.e.",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>π v.e.",
+      "16π v.e."
+     ],
+     "a": 2,
+     "e": "V = π∫<sub>0</sub><sup>1</sup> (4x)² dx = π · <span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = x², x-axeln och x = 3 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>5</span></span>π v.e.",
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>5</span></span> v.e.",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>4</span></span>π v.e.",
+      "9π v.e."
+     ],
+     "a": 0,
+     "e": "V = π∫(x²)² dx = π∫x⁴ dx = <b><span class='fr'><span class='fn'>243</span><span class='fd'>5</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 2x², x-axeln och x = 2 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>5</span></span> v.e.",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>π v.e.",
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>5</span></span>π v.e.",
+      "16π v.e."
+     ],
+     "a": 2,
+     "e": "V = π∫(2x²)² dx = π∫4x⁴ dx = <b><span class='fr'><span class='fn'>128</span><span class='fd'>5</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 3x, x-axeln och x = 1 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "9π v.e.",
+      "3 v.e.",
+      "3π v.e.",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>π v.e."
+     ],
+     "a": 2,
+     "e": "V = π∫<sub>0</sub><sup>1</sup> (3x)² dx = π · 3 = <b>3π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 4x, x-axeln och x = 3 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "432π v.e.",
+      "144π v.e.",
+      "144 v.e.",
+      "18π v.e."
+     ],
+     "a": 1,
+     "e": "V = π∫<sub>0</sub><sup>3</sup> (4x)² dx = π · 144 = <b>144π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 3x², x-axeln och x = 4 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "576π v.e.",
+      "64π v.e.",
+      "<span class='fr'><span class='fn'>9 216</span><span class='fd'>5</span></span> v.e.",
+      "<span class='fr'><span class='fn'>9 216</span><span class='fd'>5</span></span>π v.e."
+     ],
+     "a": 3,
+     "e": "V = π∫(3x²)² dx = π∫9x⁴ dx = <b><span class='fr'><span class='fn'>9 216</span><span class='fd'>5</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 2x, x-axeln och x = 1 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "1π v.e.",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> v.e.",
+      "4π v.e.",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>π v.e."
+     ],
+     "a": 3,
+     "e": "V = π∫<sub>0</sub><sup>1</sup> (2x)² dx = π · <span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = x², x-axeln och x = 2 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>5</span></span>π v.e.",
+      "4π v.e.",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>π v.e.",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>5</span></span> v.e."
+     ],
+     "a": 0,
+     "e": "V = π∫(x²)² dx = π∫x⁴ dx = <b><span class='fr'><span class='fn'>32</span><span class='fd'>5</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området under y = √x mellan x = 0 och x = 3 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "3π v.e.",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>π v.e.",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> v.e.",
+      "9π v.e."
+     ],
+     "a": 1,
+     "e": "V = π∫x dx = π · 3²/2 = <b><span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 5x, x-axeln och x = 1 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>3</span></span> v.e.",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>π v.e.",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>3</span></span>π v.e.",
+      "25π v.e."
+     ],
+     "a": 2,
+     "e": "V = π∫<sub>0</sub><sup>1</sup> (5x)² dx = π · <span class='fr'><span class='fn'>25</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>3</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området under y = √x mellan x = 0 och x = 4 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "8π v.e.",
+      "16π v.e.",
+      "8 v.e.",
+      "4π v.e."
+     ],
+     "a": 0,
+     "e": "V = π∫x dx = π · 4²/2 = <b>8π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 3x, x-axeln och x = 4 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "192π v.e.",
+      "24π v.e.",
+      "576π v.e.",
+      "192 v.e."
+     ],
+     "a": 0,
+     "e": "V = π∫<sub>0</sub><sup>4</sup> (3x)² dx = π · 192 = <b>192π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 2x, x-axeln och x = 2 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>π v.e.",
+      "4π v.e.",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span> v.e.",
+      "32π v.e."
+     ],
+     "a": 0,
+     "e": "V = π∫<sub>0</sub><sup>2</sup> (2x)² dx = π · <span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 2x, x-axeln och x = 4 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>3</span></span> v.e.",
+      "256π v.e.",
+      "16π v.e.",
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>3</span></span>π v.e."
+     ],
+     "a": 3,
+     "e": "V = π∫<sub>0</sub><sup>4</sup> (2x)² dx = π · <span class='fr'><span class='fn'>256</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>256</span><span class='fd'>3</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = 3x², x-axeln och x = 1 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "1π v.e.",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>5</span></span>π v.e.",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>5</span></span> v.e.",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>π v.e."
+     ],
+     "a": 1,
+     "e": "V = π∫(3x²)² dx = π∫9x⁴ dx = <b><span class='fr'><span class='fn'>9</span><span class='fd'>5</span></span>π v.e.</b>"
+    },
+    {
+     "q": "Området mellan y = x, x-axeln och x = 3 roterar kring x-axeln. Bestäm volymen exakt.",
+     "c": [
+      "9 v.e.",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>π v.e.",
+      "9π v.e.",
+      "27π v.e."
+     ],
+     "a": 2,
+     "e": "V = π∫<sub>0</sub><sup>3</sup> (x)² dx = π · 9 = <b>9π v.e.</b>"
+    }
+   ]
+  },
+  {
+   "title": "Medelvärde av en funktion",
+   "items": [
+    {
+     "q": "Bestäm medelvärdet av f(x) = 4x² på intervallet 0 ≤ x ≤ 2.",
+     "c": [
+      "16",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "8",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Medelvärdet = (1/2)∫<sub>0</sub><sup>2</sup> 4x² dx = <b><span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 3x² på intervallet 0 ≤ x ≤ 4.",
+     "c": [
+      "16",
+      "48",
+      "64",
+      "24"
+     ],
+     "a": 0,
+     "e": "Medelvärdet = (1/4)∫<sub>0</sub><sup>4</sup> 3x² dx = <b>16</b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 5x² på intervallet 0 ≤ x ≤ 2.",
+     "c": [
+      "20",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>",
+      "10"
+     ],
+     "a": 2,
+     "e": "Medelvärdet = (1/2)∫<sub>0</sub><sup>2</sup> 5x² dx = <b><span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = x² på intervallet 0 ≤ x ≤ 4.",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>",
+      "8",
+      "16",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Medelvärdet = (1/4)∫<sub>0</sub><sup>4</sup> x² dx = <b><span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = x² på intervallet 0 ≤ x ≤ 2.",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "4",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "2"
+     ],
+     "a": 0,
+     "e": "Medelvärdet = (1/2)∫<sub>0</sub><sup>2</sup> x² dx = <b><span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 2x² på intervallet 0 ≤ x ≤ 4.",
+     "c": [
+      "32",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span>",
+      "16",
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Medelvärdet = (1/4)∫<sub>0</sub><sup>4</sup> 2x² dx = <b><span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 6x² på intervallet 0 ≤ x ≤ 5.",
+     "c": [
+      "75",
+      "250",
+      "50",
+      "150"
+     ],
+     "a": 2,
+     "e": "Medelvärdet = (1/5)∫<sub>0</sub><sup>5</sup> 6x² dx = <b>50</b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = x² på intervallet 0 ≤ x ≤ 5.",
+     "c": [
+      "25",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span>",
+      "12,5"
+     ],
+     "a": 1,
+     "e": "Medelvärdet = (1/5)∫<sub>0</sub><sup>5</sup> x² dx = <b><span class='fr'><span class='fn'>25</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 6x² på intervallet 0 ≤ x ≤ 6.",
+     "c": [
+      "108",
+      "216",
+      "72",
+      "432"
+     ],
+     "a": 2,
+     "e": "Medelvärdet = (1/6)∫<sub>0</sub><sup>6</sup> 6x² dx = <b>72</b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 3x² på intervallet 0 ≤ x ≤ 2.",
+     "c": [
+      "12",
+      "6",
+      "4",
+      "8"
+     ],
+     "a": 2,
+     "e": "Medelvärdet = (1/2)∫<sub>0</sub><sup>2</sup> 3x² dx = <b>4</b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = x² på intervallet 0 ≤ x ≤ 6.",
+     "c": [
+      "72",
+      "18",
+      "36",
+      "12"
+     ],
+     "a": 3,
+     "e": "Medelvärdet = (1/6)∫<sub>0</sub><sup>6</sup> x² dx = <b>12</b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 3x² på intervallet 0 ≤ x ≤ 6.",
+     "c": [
+      "108",
+      "36",
+      "216",
+      "54"
+     ],
+     "a": 1,
+     "e": "Medelvärdet = (1/6)∫<sub>0</sub><sup>6</sup> 3x² dx = <b>36</b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 5x² på intervallet 0 ≤ x ≤ 5.",
+     "c": [
+      "62,5",
+      "<span class='fr'><span class='fn'>625</span><span class='fd'>3</span></span>",
+      "125",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Medelvärdet = (1/5)∫<sub>0</sub><sup>5</sup> 5x² dx = <b><span class='fr'><span class='fn'>125</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 4x² på intervallet 0 ≤ x ≤ 6.",
+     "c": [
+      "72",
+      "48",
+      "144",
+      "288"
+     ],
+     "a": 1,
+     "e": "Medelvärdet = (1/6)∫<sub>0</sub><sup>6</sup> 4x² dx = <b>48</b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 4x² på intervallet 0 ≤ x ≤ 5.",
+     "c": [
+      "50",
+      "100",
+      "<span class='fr'><span class='fn'>500</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>100</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Medelvärdet = (1/5)∫<sub>0</sub><sup>5</sup> 4x² dx = <b><span class='fr'><span class='fn'>100</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 5x² på intervallet 0 ≤ x ≤ 6.",
+     "c": [
+      "60",
+      "90",
+      "180",
+      "360"
+     ],
+     "a": 0,
+     "e": "Medelvärdet = (1/6)∫<sub>0</sub><sup>6</sup> 5x² dx = <b>60</b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 6x² på intervallet 0 ≤ x ≤ 4.",
+     "c": [
+      "32",
+      "48",
+      "96",
+      "128"
+     ],
+     "a": 0,
+     "e": "Medelvärdet = (1/4)∫<sub>0</sub><sup>4</sup> 6x² dx = <b>32</b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 4x² på intervallet 0 ≤ x ≤ 4.",
+     "c": [
+      "32",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>3</span></span>",
+      "64"
+     ],
+     "a": 1,
+     "e": "Medelvärdet = (1/4)∫<sub>0</sub><sup>4</sup> 4x² dx = <b><span class='fr'><span class='fn'>64</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 2x² på intervallet 0 ≤ x ≤ 2.",
+     "c": [
+      "4",
+      "8",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "Medelvärdet = (1/2)∫<sub>0</sub><sup>2</sup> 2x² dx = <b><span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Bestäm medelvärdet av f(x) = 3x² på intervallet 0 ≤ x ≤ 5.",
+     "c": [
+      "125",
+      "75",
+      "37,5",
+      "25"
+     ],
+     "a": 3,
+     "e": "Medelvärdet = (1/5)∫<sub>0</sub><sup>5</sup> 3x² dx = <b>25</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 11,
+ "updated": "2026-11-26",
+ "country": "se",
+ "subject": "matematik",
+ "grade": "matematik-4"
+}

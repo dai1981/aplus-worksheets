@@ -196,7 +196,20 @@ def lesson(think, examples, mist, extra=""):
 
 plain_text = D.plain_text
 GRADE_NAME = {"arskurs-%d" % g: "Årskurs %d" % g for g in range(1, 10)}
+GRADE_NAME["forskoleklass"] = "Förskoleklass"
+GY = ["1c", "2c", "3c", "4", "5"]
+for _k in GY:
+    GRADE_NAME["matematik-" + _k] = "Matematik nivå " + _k
 STAGE = {1: "1–3", 2: "1–3", 3: "1–3", 4: "4–6", 5: "4–6", 6: "4–6", 7: "7–9", 8: "7–9", 9: "7–9"}
+DOMAIN.update({
+    "FK": "Matematiska resonemang och uttrycksformer",
+    "AF": "Aritmetik, algebra och funktioner", "TV": "Trigonometri och vektorer", "SS": "Sannolikhet och statistik",
+    "LG": "Logik och geometri", "DI": "Differential- och integralkalkyl", "KT": "Komplexa tal och polynom",
+    "TR": "Trigonometri", "DE": "Differentialekvationer", "DM": "Diskret matematik och bevis", "PT": "Problemlösning och tillämpningar",
+})
+STD_URL_F = "https://www.skolverket.se/undervisning/grundskolan/laroplan-och-kursplaner-for-grundskolan/laroplan-lgr22-for-grundskolan-samt-for-forskoleklassen-och-fritidshemmet"
+STD_URL_GY = {"1c": "https://syllabuswebb.skolverket.se/subject/MATE/1/pdf", "2c": "https://syllabuswebb.skolverket.se/subject/MATE/1/pdf",
+              "3c": "https://syllabuswebb.skolverket.se/subject/MAT/11/pdf", "4": "https://syllabuswebb.skolverket.se/subject/MAT/11/pdf", "5": "https://syllabuswebb.skolverket.se/subject/MAT/11/pdf"}
 
 
 def make_unit(rnd, slug, dom, std_text, title, short_title, meta_desc, key_big, key_sub,
@@ -211,15 +224,27 @@ def make_unit(rnd, slug, dom, std_text, title, short_title, meta_desc, key_big, 
             assert k not in allq, ("duplicate question", slug, k)
             allq.add(k)
     balance(sets, rnd)
-    g = int(grade.split("-")[1])
     gname = GRADE_NAME[grade]
-    seo_title = "%s %s: arbetsblad i matematik med facit" % (short_title, gname.lower())
+    if grade == "forskoleklass":
+        seo_title = "%s i förskoleklass: arbetsblad i matematik med facit" % short_title
+        code, url = "Lgr22 förskoleklass · %s" % DOMAIN[dom], STD_URL_F
+        tail = " (sammanfattning av det centrala innehållet för förskoleklassen i Lgr22, kapitel 3)"
+    elif grade.startswith("matematik-"):
+        k = grade.split("-", 1)[1]
+        seo_title = "%s – Matematik %s: uppgifter med facit" % (short_title, k)
+        code, url = "Gy25 Matematik nivå %s · %s" % (k, DOMAIN[dom]), STD_URL_GY[k]
+        tail = " (sammanfattning av det centrala innehållet i ämnesplanen i matematik för gymnasieskolan, nivå %s)" % k
+    else:
+        g = int(grade.split("-")[1])
+        seo_title = "%s %s: arbetsblad i matematik med facit" % (short_title, gname.lower())
+        code, url = "Lgr22 åk %s · %s" % (STAGE[g], DOMAIN[dom]), STD_URL
+        tail = " (sammanfattning av det centrala innehållet i kursplanen i matematik, Lgr22, årskurs %s)" % STAGE[g]
     title, seo_title, short_title, meta_desc, key_big, key_sub = map(plain_text, (title, seo_title, short_title, meta_desc, key_big, key_sub))
     assert len(title) <= 70 and len(key_big) <= 40 and len(key_sub) <= 60, (slug, title, key_big, key_sub)
     write_unit("se", "matematik", grade, {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short_title,
-        "domain": DOMAIN[dom], "standard_code": "Lgr22 åk %s · %s" % (STAGE[g], DOMAIN[dom]), "standard_url": STD_URL,
-        "standard_text": std_text + " (sammanfattning av det centrala innehållet i kursplanen i matematik, Lgr22, årskurs %s)" % STAGE[g],
+        "domain": DOMAIN[dom], "standard_code": code, "standard_url": url,
+        "standard_text": std_text + tail,
         "meta_desc": meta_desc, "key_big": key_big, "key_sub": key_sub,
         "body_html": body_html, "faq": faq, "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })

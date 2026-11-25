@@ -1,0 +1,1161 @@
+{
+ "slug": "sannolikhet",
+ "title": "Sannolikhet: flera steg, beroende händelser och risk",
+ "seo_title": "Sannolikhet – Matematik 1c: uppgifter med facit",
+ "short_title": "Sannolikhet",
+ "domain": "Sannolikhet och statistik",
+ "standard_code": "Gy25 Matematik nivå 1c · Sannolikhet och statistik",
+ "standard_url": "https://syllabuswebb.skolverket.se/subject/MATE/1/pdf",
+ "standard_text": "Beroende och oberoende händelser, komplementhändelser och sannolikheter i flera steg. Tillämpningar inom spel samt risk- och säkerhetsbedömningar. (sammanfattning av det centrala innehållet i ämnesplanen i matematik för gymnasieskolan, nivå 1c)",
+ "meta_desc": "Uppgifter om sannolikhet för Matematik 1c: flera steg, beroende och oberoende händelser, komplementhändelse, minst en och risk. 100 uppgifter med facit.",
+ "key_big": "P(minst en) = 1 − P(ingen)",
+ "key_sub": "Oberoende: multiplicera sannolikheterna.",
+ "body_html": "<h2>Så tänker du</h2><p>Vid oberoende händelser multiplicerar du sannolikheterna: P(A och B) = P(A) · P(B).</p><p>Vid beroende händelser ändras sannolikheten i andra steget, till exempel när du drar utan återläggning.</p><p>Sannolikheten för minst en gång räknas enklast med komplementet: 1 − P(ingen gång).</p><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>Två sexor i rad</p><p class='sn-ex-s'>1/6 · 1/6</p><p class='sn-ex-a'>Svar: 1/36</p></div><div class='sn-ex'><span class='sn-ex-t'>Exempel</span><p class='sn-ex-q'>Minst en sexa på tre kast</p><p class='sn-ex-s'>1 − (5/6)³</p><p class='sn-ex-a'>Svar: ≈ 0,421</p></div><h2>Vanliga fel</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Fel</th><th>Rätt</th></tr></thead><tbody><tr><td>Adderar sannolikheter i flera steg</td><td>Multiplicera längs grenarna</td></tr><tr><td>Risk 1 % per dag ger 30 % på 30 dagar</td><td>1 − 0,99³⁰ ≈ 26 %</td></tr><tr><td>Glömmer att en kula är borta</td><td>Utan återläggning ändras nämnaren</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Vad betyder oberoende?",
+   "a": "Att det ena inte påverkar det andra."
+  },
+  {
+   "q": "Varför används komplementet?",
+   "a": "Det är ofta mycket enklare att räkna ut att något aldrig händer."
+  },
+  {
+   "q": "Hur används sannolikhet i samhället?",
+   "a": "Vid försäkringar, säkerhetsbedömningar och medicinska tester."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Flera steg",
+   "items": [
+    {
+     "q": "Sannolikheten att ett lag vinner en match är <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>. Vad är sannolikheten att de vinner 4 matcher i rad?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>162</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>544</span><span class='fd'>625</span></span>"
+     ],
+     "a": 2,
+     "e": "(<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>81</span><span class='fd'>625</span></span></b>."
+    },
+    {
+     "q": "I en låda finns 5 röda och 4 blå kulor. Du tar två kulor utan att lägga tillbaka. Vad är sannolikheten att de har olika färg?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "röd–blå eller blå–röd: <span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>8</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> · <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att få 6 på den första och 5 på den andra?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span>"
+     ],
+     "a": 1,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att få 5 på den första och 1 på den andra?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 1,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att få 1 på den första och 6 på den andra?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 1,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Sannolikheten att ett lag vinner en match är <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Vad är sannolikheten att de vinner 4 matcher i rad?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>81</span></span>"
+     ],
+     "a": 0,
+     "e": "(<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>81</span></span></b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att få 2 på den första och 5 på den andra?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att summan blir 8?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "5 av 36 kombinationer ger summan 8: <b><span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "I en låda finns 3 röda och 6 blå kulor. Du tar två kulor utan att lägga tillbaka. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>9</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "I en låda finns 5 röda och 5 blå kulor. Du tar två kulor utan att lägga tillbaka. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>5</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att summan blir 5?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>"
+     ],
+     "a": 1,
+     "e": "4 av 36 kombinationer ger summan 5: <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "I en låda finns 5 röda och 3 blå kulor. Du tar två kulor utan att lägga tillbaka. Vad är sannolikheten att de har olika färg?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>32</span></span>"
+     ],
+     "a": 2,
+     "e": "röd–blå eller blå–röd: <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> · <span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att summan blir 12?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>"
+     ],
+     "a": 2,
+     "e": "1 av 36 kombinationer ger summan 12: <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att ett lag vinner en match är <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. Vad är sannolikheten att de vinner 3 matcher i rad?",
+     "c": [
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>64</span></span>"
+     ],
+     "a": 2,
+     "e": "(<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>3</sup> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att ett lag vinner en match är <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>. Vad är sannolikheten att de vinner 4 matcher i rad?",
+     "c": [
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>175</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>128</span></span>"
+     ],
+     "a": 0,
+     "e": "(<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>81</span><span class='fd'>256</span></span></b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att få 6 på den första och 6 på den andra?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att summan blir 10?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "3 av 36 kombinationer ger summan 10: <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att få 2 på den första och 1 på den andra?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att få 1 på den första och 3 på den andra?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 0,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Sannolikheten att ett lag vinner en match är <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>. Vad är sannolikheten att de vinner 2 matcher i rad?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>2</sup> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Beroende och oberoende",
+   "items": [
+    {
+     "q": "Du tar två godisbitar ur en påse och äter den första. Är händelserna beroende eller oberoende?",
+     "c": [
+      "Varken eller",
+      "Det går inte att avgöra",
+      "Beroende",
+      "Oberoende"
+     ],
+     "a": 2,
+     "e": "<b>Beroende</b>: det första påverkar sannolikheten för det andra."
+    },
+    {
+     "q": "I en låda finns 4 röda och 6 blå kulor. Du tar två kulor utan att lägga tillbaka. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>45</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att få 2 på den första och 6 på den andra?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span>"
+     ],
+     "a": 2,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Du drar två kort ur en kortlek utan att lägga tillbaka. Är händelserna beroende eller oberoende?",
+     "c": [
+      "Beroende",
+      "Oberoende",
+      "Det går inte att avgöra",
+      "Varken eller"
+     ],
+     "a": 0,
+     "e": "<b>Beroende</b>: det första påverkar sannolikheten för det andra."
+    },
+    {
+     "q": "Sannolikheten att ett lag vinner en match är <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Vad är sannolikheten att de vinner 4 matcher i rad?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>"
+     ],
+     "a": 0,
+     "e": "(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Du kastar en tärning två gånger. Är händelserna beroende eller oberoende?",
+     "c": [
+      "Varken eller",
+      "Oberoende",
+      "Beroende",
+      "Det går inte att avgöra"
+     ],
+     "a": 1,
+     "e": "<b>Oberoende</b>: utfallet i det första påverkar inte det andra."
+    },
+    {
+     "q": "Två personer i samma familj blir förkylda samma vecka. Är händelserna beroende eller oberoende?",
+     "c": [
+      "Oberoende",
+      "Beroende",
+      "Det går inte att avgöra",
+      "Varken eller"
+     ],
+     "a": 1,
+     "e": "<b>Beroende</b>: det första påverkar sannolikheten för det andra."
+    },
+    {
+     "q": "Sannolikheten att ett lag vinner en match är <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Vad är sannolikheten att de vinner 4 matcher i rad?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>255</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "(<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>)<sup>4</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>256</span></span></b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att få 4 på den första och 3 på den andra?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att summan blir 9?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>"
+     ],
+     "a": 1,
+     "e": "4 av 36 kombinationer ger summan 9: <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Du singlar en slant och kastar en tärning. Är händelserna beroende eller oberoende?",
+     "c": [
+      "Varken eller",
+      "Beroende",
+      "Det går inte att avgöra",
+      "Oberoende"
+     ],
+     "a": 3,
+     "e": "<b>Oberoende</b>: utfallet i det första påverkar inte det andra."
+    },
+    {
+     "q": "Det regnar i Stockholm och det regnar i Uppsala samma dag. Är händelserna beroende eller oberoende?",
+     "c": [
+      "Beroende",
+      "Det går inte att avgöra",
+      "Oberoende",
+      "Varken eller"
+     ],
+     "a": 0,
+     "e": "<b>Beroende</b>: det första påverkar sannolikheten för det andra."
+    },
+    {
+     "q": "Sannolikheten att ett lag vinner en match är <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>. Vad är sannolikheten att de vinner 3 matcher i rad?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>27</span></span>"
+     ],
+     "a": 1,
+     "e": "(<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>)<sup>3</sup> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span></b>."
+    },
+    {
+     "q": "I en låda finns 5 röda och 6 blå kulor. Du tar två kulor utan att lägga tillbaka. Vad är sannolikheten att de har olika färg?",
+     "c": [
+      "<span class='fr'><span class='fn'>60</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span>"
+     ],
+     "a": 2,
+     "e": "röd–blå eller blå–röd: <span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span> · <span class='fr'><span class='fn'>6</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span> · <span class='fr'><span class='fn'>5</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att ett lag vinner en match är <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Vad är sannolikheten att de vinner 3 matcher i rad?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "(<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>)<sup>3</sup> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att ett lag vinner en match är <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>. Vad är sannolikheten att de vinner 3 matcher i rad?",
+     "c": [
+      "<span class='fr'><span class='fn'>54</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>98</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>125</span></span>"
+     ],
+     "a": 3,
+     "e": "(<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>)<sup>3</sup> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>125</span></span></b>."
+    },
+    {
+     "q": "Två olika lotter i två olika lotterier ger vinst. Är händelserna beroende eller oberoende?",
+     "c": [
+      "Det går inte att avgöra",
+      "Oberoende",
+      "Beroende",
+      "Varken eller"
+     ],
+     "a": 1,
+     "e": "<b>Oberoende</b>: utfallet i det första påverkar inte det andra."
+    },
+    {
+     "q": "Du drar två kort ur en kortlek och lägger tillbaka det första. Är händelserna beroende eller oberoende?",
+     "c": [
+      "Oberoende",
+      "Det går inte att avgöra",
+      "Beroende",
+      "Varken eller"
+     ],
+     "a": 0,
+     "e": "<b>Oberoende</b>: utfallet i det första påverkar inte det andra."
+    },
+    {
+     "q": "I en låda finns 3 röda och 5 blå kulor. Du tar två kulor utan att lägga tillbaka. Vad är sannolikheten att båda är röda?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>56</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "Du kastar två tärningar. Vad är sannolikheten att få 4 på den första och 5 på den andra?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span>"
+     ],
+     "a": 0,
+     "e": "1/6 · 1/6 = <b>1/36</b>."
+    }
+   ]
+  },
+  {
+   "title": "Komplementhändelse",
+   "items": [
+    {
+     "q": "Sannolikheten att bussen är sen är <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Vad är sannolikheten att bussen kommer i tid?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span>"
+     ],
+     "a": 2,
+     "e": "P(inte) = 1 − <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att du vinner på en lott är 95 %. Vad är sannolikheten att du inte vinner?",
+     "c": [
+      "53 %",
+      "15 %",
+      "95 %",
+      "5 %"
+     ],
+     "a": 3,
+     "e": "100 % − 95 % = <b>5 %</b>."
+    },
+    {
+     "q": "Sannolikheten att det snöar på julafton är 90 %. Vad är sannolikheten att det inte snöar?",
+     "c": [
+      "10 %",
+      "20 %",
+      "90 %",
+      "55 %"
+     ],
+     "a": 0,
+     "e": "100 % − 90 % = <b>10 %</b>."
+    },
+    {
+     "q": "Sannolikheten att det snöar på julafton är 15 %. Vad är sannolikheten att det inte snöar?",
+     "c": [
+      "85 %",
+      "15 %",
+      "95 %",
+      "93 %"
+     ],
+     "a": 0,
+     "e": "100 % − 15 % = <b>85 %</b>."
+    },
+    {
+     "q": "Sannolikheten att ditt lag vinner är 5 %. Vad är sannolikheten att ditt lag inte vinner?",
+     "c": [
+      "50 %",
+      "5 %",
+      "98 %",
+      "95 %"
+     ],
+     "a": 3,
+     "e": "100 % − 5 % = <b>95 %</b>."
+    },
+    {
+     "q": "Sannolikheten att du vinner på en lott är <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. Vad är sannolikheten att du inte vinner?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "P(inte) = 1 − <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att ditt lag vinner är 90 %. Vad är sannolikheten att ditt lag inte vinner?",
+     "c": [
+      "10 %",
+      "20 %",
+      "90 %",
+      "55 %"
+     ],
+     "a": 0,
+     "e": "100 % − 90 % = <b>10 %</b>."
+    },
+    {
+     "q": "Sannolikheten att det regnar i morgon är <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>. Vad är sannolikheten att det inte regnar?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>40</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>16</span></span>"
+     ],
+     "a": 2,
+     "e": "P(inte) = 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att ditt lag vinner är <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>. Vad är sannolikheten att ditt lag inte vinner?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "P(inte) = 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att du vinner på en lott är 45 %. Vad är sannolikheten att du inte vinner?",
+     "c": [
+      "65 %",
+      "55 %",
+      "45 %",
+      "78 %"
+     ],
+     "a": 1,
+     "e": "100 % − 45 % = <b>55 %</b>."
+    },
+    {
+     "q": "Sannolikheten att det snöar på julafton är 65 %. Vad är sannolikheten att det inte snöar?",
+     "c": [
+      "45 %",
+      "65 %",
+      "35 %",
+      "68 %"
+     ],
+     "a": 2,
+     "e": "100 % − 65 % = <b>35 %</b>."
+    },
+    {
+     "q": "Sannolikheten att ditt lag vinner är 30 %. Vad är sannolikheten att ditt lag inte vinner?",
+     "c": [
+      "85 %",
+      "70 %",
+      "80 %",
+      "30 %"
+     ],
+     "a": 1,
+     "e": "100 % − 30 % = <b>70 %</b>."
+    },
+    {
+     "q": "Sannolikheten att du vinner på en lott är 35 %. Vad är sannolikheten att du inte vinner?",
+     "c": [
+      "83 %",
+      "65 %",
+      "35 %",
+      "75 %"
+     ],
+     "a": 1,
+     "e": "100 % − 35 % = <b>65 %</b>."
+    },
+    {
+     "q": "Sannolikheten att du vinner på en lott är 90 %. Vad är sannolikheten att du inte vinner?",
+     "c": [
+      "10 %",
+      "20 %",
+      "55 %",
+      "90 %"
+     ],
+     "a": 0,
+     "e": "100 % − 90 % = <b>10 %</b>."
+    },
+    {
+     "q": "Sannolikheten att bussen är sen är <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Vad är sannolikheten att bussen kommer i tid?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>12</span></span>"
+     ],
+     "a": 1,
+     "e": "P(inte) = 1 − <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att det snöar på julafton är 60 %. Vad är sannolikheten att det inte snöar?",
+     "c": [
+      "50 %",
+      "60 %",
+      "70 %",
+      "40 %"
+     ],
+     "a": 3,
+     "e": "100 % − 60 % = <b>40 %</b>."
+    },
+    {
+     "q": "Sannolikheten att det regnar i morgon är 70 %. Vad är sannolikheten att det inte regnar?",
+     "c": [
+      "70 %",
+      "40 %",
+      "30 %",
+      "65 %"
+     ],
+     "a": 2,
+     "e": "100 % − 70 % = <b>30 %</b>."
+    },
+    {
+     "q": "Sannolikheten att bussen är sen är <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>. Vad är sannolikheten att bussen kommer i tid?",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>90</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "P(inte) = 1 − <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa är trasig är <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Vad är sannolikheten att lampan fungerar?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "P(inte) = 1 − <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att bussen är sen är <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>. Vad är sannolikheten att bussen kommer i tid?",
+     "c": [
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "P(inte) = 1 − <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Minst en",
+   "items": [
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,1. Du har 4 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "0,656",
+      "0,400",
+      "0,271",
+      "0,344"
+     ],
+     "a": 3,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,9<sup>4</sup> ≈ <b>0,344</b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,4. Du har 4 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "1,600",
+      "0,870",
+      "0,784",
+      "0,130"
+     ],
+     "a": 1,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,6<sup>4</sup> ≈ <b>0,870</b>."
+    },
+    {
+     "q": "Du singlar slant två gånger. Vad är sannolikheten att det blir en krona och en klave?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "Utfallen är KK, KL, LK och LL. Två av fyra: <b>1/2</b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,2. Du har 4 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "0,800",
+      "0,590",
+      "0,410",
+      "0,488"
+     ],
+     "a": 1,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,8<sup>4</sup> ≈ <b>0,590</b>."
+    },
+    {
+     "q": "Du singlar slant 5 gånger. Vad är sannolikheten att det blir krona varje gång?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span>"
+     ],
+     "a": 2,
+     "e": "(1/2)<sup>5</sup> = <b>1/32</b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,25. Du har 6 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "0,822",
+      "0,763",
+      "0,178",
+      "1,500"
+     ],
+     "a": 0,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,75<sup>6</sup> ≈ <b>0,822</b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,1. Du har 3 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "0,190",
+      "0,729",
+      "0,271",
+      "0,300"
+     ],
+     "a": 2,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,9<sup>3</sup> ≈ <b>0,271</b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,3. Du har 3 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "0,510",
+      "0,900",
+      "0,657",
+      "0,343"
+     ],
+     "a": 2,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,7<sup>3</sup> ≈ <b>0,657</b>."
+    },
+    {
+     "q": "Du kastar 2 tärningar. Vad är sannolikheten att minst en visar en sexa?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "Motsatsen är ingen sexa: 1 − (5/6)<sup>2</sup> = <b><span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,2. Du har 5 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "0,672",
+      "1,000",
+      "0,590",
+      "0,328"
+     ],
+     "a": 0,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,8<sup>5</sup> ≈ <b>0,672</b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,2. Du har 3 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "0,600",
+      "0,512",
+      "0,488",
+      "0,360"
+     ],
+     "a": 2,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,8<sup>3</sup> ≈ <b>0,488</b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,4. Du har 6 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "2,400",
+      "0,047",
+      "0,922",
+      "0,953"
+     ],
+     "a": 3,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,6<sup>6</sup> ≈ <b>0,953</b>."
+    },
+    {
+     "q": "Du kastar 2 tärningar. Vad är sannolikheten att ingen visar en sexa?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 0,
+     "e": "(5/6)<sup>2</sup> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Du singlar slant 3 gånger. Vad är sannolikheten att det blir krona varje gång?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 0,
+     "e": "(1/2)<sup>3</sup> = <b>1/8</b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,25. Du har 3 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "0,438",
+      "0,750",
+      "0,422",
+      "0,578"
+     ],
+     "a": 3,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,75<sup>3</sup> ≈ <b>0,578</b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,05. Du har 3 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "0,150",
+      "0,143",
+      "0,857",
+      "0,098"
+     ],
+     "a": 1,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,95<sup>3</sup> ≈ <b>0,143</b>."
+    },
+    {
+     "q": "Sannolikheten att en lampa går sönder ett år är 0,05. Du har 6 lampor som går sönder oberoende av varandra. Vad är sannolikheten att minst en går sönder? Avrunda till tre decimaler.",
+     "c": [
+      "0,226",
+      "0,265",
+      "0,735",
+      "0,300"
+     ],
+     "a": 1,
+     "e": "P(minst en) = 1 − P(ingen) = 1 − 0,95<sup>6</sup> ≈ <b>0,265</b>."
+    },
+    {
+     "q": "Du kastar 3 tärningar. Vad är sannolikheten att minst en visar en sexa?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>91</span><span class='fd'>216</span></span>"
+     ],
+     "a": 3,
+     "e": "Motsatsen är ingen sexa: 1 − (5/6)<sup>3</sup> = <b><span class='fr'><span class='fn'>91</span><span class='fd'>216</span></span></b>."
+    },
+    {
+     "q": "Du kastar 3 tärningar. Vad är sannolikheten att ingen visar en sexa?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>91</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>"
+     ],
+     "a": 2,
+     "e": "(5/6)<sup>3</sup> = <b><span class='fr'><span class='fn'>125</span><span class='fd'>216</span></span></b>."
+    },
+    {
+     "q": "Du singlar slant 5 gånger. Vad är sannolikheten att det blir minst en klave?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>31</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Motsatsen är krona varje gång: 1 − 1/32 = <b><span class='fr'><span class='fn'>31</span><span class='fd'>32</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Risk och säkerhet",
+   "items": [
+    {
+     "q": "Risken att ett system fallerar en viss dag är 5 %. Hur stor är risken att det fallerar minst en gång på 100 dagar? Avrunda till heltal procent.",
+     "c": [
+      "5 %",
+      "500 %",
+      "1 %",
+      "99 %"
+     ],
+     "a": 3,
+     "e": "1 − 0,95<sup>100</sup> ≈ 0,994, alltså <b>99 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 0,3 %. Hur stor är risken att det fallerar minst en gång på 10 dagar? Avrunda till heltal procent.",
+     "c": [
+      "3 %",
+      "97 %",
+      "0 %",
+      "5 %"
+     ],
+     "a": 0,
+     "e": "1 − 0,997<sup>10</sup> ≈ 0,030, alltså <b>3 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 0,3 %. Hur stor är risken att det fallerar minst en gång på 100 dagar? Avrunda till heltal procent.",
+     "c": [
+      "30 %",
+      "0 %",
+      "74 %",
+      "26 %"
+     ],
+     "a": 3,
+     "e": "1 − 0,997<sup>100</sup> ≈ 0,260, alltså <b>26 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 0,1 %. Hur stor är risken att det fallerar minst en gång på 10 dagar? Avrunda till heltal procent.",
+     "c": [
+      "0 %",
+      "1 %",
+      "3 %",
+      "99 %"
+     ],
+     "a": 1,
+     "e": "1 − 0,999<sup>10</sup> ≈ 0,010, alltså <b>1 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 5 %. Hur stor är risken att det fallerar minst en gång på 20 dagar? Avrunda till heltal procent.",
+     "c": [
+      "64 %",
+      "36 %",
+      "100 %",
+      "5 %"
+     ],
+     "a": 0,
+     "e": "1 − 0,95<sup>20</sup> ≈ 0,642, alltså <b>64 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 1 %. Hur stor är risken att det fallerar minst en gång på 100 dagar? Avrunda till heltal procent.",
+     "c": [
+      "1 %",
+      "100 %",
+      "63 %",
+      "37 %"
+     ],
+     "a": 2,
+     "e": "1 − 0,99<sup>100</sup> ≈ 0,634, alltså <b>63 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 5 %. Hur stor är risken att det fallerar minst en gång på 50 dagar? Avrunda till heltal procent.",
+     "c": [
+      "5 %",
+      "92 %",
+      "250 %",
+      "8 %"
+     ],
+     "a": 1,
+     "e": "1 − 0,95<sup>50</sup> ≈ 0,923, alltså <b>92 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 0,1 %. Hur stor är risken att det fallerar minst en gång på 100 dagar? Avrunda till heltal procent.",
+     "c": [
+      "10 %",
+      "12 %",
+      "90 %",
+      "0 %"
+     ],
+     "a": 0,
+     "e": "1 − 0,999<sup>100</sup> ≈ 0,095, alltså <b>10 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 0,1 %. Hur stor är risken att det fallerar minst en gång på 20 dagar? Avrunda till heltal procent.",
+     "c": [
+      "0 %",
+      "4 %",
+      "2 %",
+      "98 %"
+     ],
+     "a": 2,
+     "e": "1 − 0,999<sup>20</sup> ≈ 0,020, alltså <b>2 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 2 %. Hur stor är risken att det fallerar minst en gång på 20 dagar? Avrunda till heltal procent.",
+     "c": [
+      "40 %",
+      "2 %",
+      "33 %",
+      "67 %"
+     ],
+     "a": 2,
+     "e": "1 − 0,98<sup>20</sup> ≈ 0,332, alltså <b>33 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 0,1 %. Hur stor är risken att det fallerar minst en gång på 50 dagar? Avrunda till heltal procent.",
+     "c": [
+      "5 %",
+      "0 %",
+      "7 %",
+      "95 %"
+     ],
+     "a": 0,
+     "e": "1 − 0,999<sup>50</sup> ≈ 0,049, alltså <b>5 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 2 %. Hur stor är risken att det fallerar minst en gång på 100 dagar? Avrunda till heltal procent.",
+     "c": [
+      "2 %",
+      "87 %",
+      "200 %",
+      "13 %"
+     ],
+     "a": 1,
+     "e": "1 − 0,98<sup>100</sup> ≈ 0,867, alltså <b>87 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 1 %. Hur stor är risken att det fallerar minst en gång på 50 dagar? Avrunda till heltal procent.",
+     "c": [
+      "61 %",
+      "1 %",
+      "39 %",
+      "50 %"
+     ],
+     "a": 2,
+     "e": "1 − 0,99<sup>50</sup> ≈ 0,395, alltså <b>39 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 0,3 %. Hur stor är risken att det fallerar minst en gång på 20 dagar? Avrunda till heltal procent.",
+     "c": [
+      "94 %",
+      "6 %",
+      "8 %",
+      "0 %"
+     ],
+     "a": 1,
+     "e": "1 − 0,997<sup>20</sup> ≈ 0,058, alltså <b>6 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 2 %. Hur stor är risken att det fallerar minst en gång på 10 dagar? Avrunda till heltal procent.",
+     "c": [
+      "2 %",
+      "20 %",
+      "82 %",
+      "18 %"
+     ],
+     "a": 3,
+     "e": "1 − 0,98<sup>10</sup> ≈ 0,183, alltså <b>18 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 1 %. Hur stor är risken att det fallerar minst en gång på 20 dagar? Avrunda till heltal procent.",
+     "c": [
+      "1 %",
+      "20 %",
+      "18 %",
+      "82 %"
+     ],
+     "a": 2,
+     "e": "1 − 0,99<sup>20</sup> ≈ 0,182, alltså <b>18 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 2 %. Hur stor är risken att det fallerar minst en gång på 50 dagar? Avrunda till heltal procent.",
+     "c": [
+      "100 %",
+      "64 %",
+      "2 %",
+      "36 %"
+     ],
+     "a": 1,
+     "e": "1 − 0,98<sup>50</sup> ≈ 0,636, alltså <b>64 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 1 %. Hur stor är risken att det fallerar minst en gång på 10 dagar? Avrunda till heltal procent.",
+     "c": [
+      "10 %",
+      "1 %",
+      "90 %",
+      "12 %"
+     ],
+     "a": 0,
+     "e": "1 − 0,99<sup>10</sup> ≈ 0,096, alltså <b>10 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 5 %. Hur stor är risken att det fallerar minst en gång på 10 dagar? Avrunda till heltal procent.",
+     "c": [
+      "5 %",
+      "60 %",
+      "50 %",
+      "40 %"
+     ],
+     "a": 3,
+     "e": "1 − 0,95<sup>10</sup> ≈ 0,401, alltså <b>40 %</b>."
+    },
+    {
+     "q": "Risken att ett system fallerar en viss dag är 0,3 %. Hur stor är risken att det fallerar minst en gång på 50 dagar? Avrunda till heltal procent.",
+     "c": [
+      "15 %",
+      "86 %",
+      "0 %",
+      "14 %"
+     ],
+     "a": 3,
+     "e": "1 − 0,997<sup>50</sup> ≈ 0,139, alltså <b>14 %</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 12,
+ "updated": "2026-11-26",
+ "country": "se",
+ "subject": "matematik",
+ "grade": "matematik-1c"
+}

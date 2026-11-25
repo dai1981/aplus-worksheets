@@ -116,6 +116,8 @@ def rd(x, k=1):
 
 
 def sup(n):
+    if isinstance(n, str):
+        return "<sup>%s</sup>" % n.replace("-", MIN)
     return "<sup>%s</sup>" % (MIN + str(-n) if n < 0 else str(n))
 
 
