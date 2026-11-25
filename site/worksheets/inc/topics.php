@@ -450,6 +450,36 @@ function topic_defs_br() {
     );
 }
 
+/* Türkiye (tr): Türkiye Yüzyılı Maarif Modeli. Slugs are Turkish */
+function topic_defs_tr() {
+    return array(
+        'sayilar' => array('name' => 'Sayılar ve Basamak Değeri',
+            'in' => '/sayilar|siralama|yuvarlama|ritmik|tek-ve-cift/', 'out' => '/islem/',
+            'blurb' => 'Sayıları okuma ve yazma, basamak değeri, sayıları karşılaştırma, sıralama ve yuvarlama, ritmik sayma ile tek ve çift sayılar.'),
+        'toplama-ve-cikarma' => array('name' => 'Toplama ve Çıkarma',
+            'in' => '/toplama|cikarma/', 'out' => '/veri/',
+            'blurb' => 'Eldeli toplama, onluk bozarak çıkarma, zihinden işlem, tahmin ve sonucu kontrol etme.'),
+        'carpma-ve-bolme' => array('name' => 'Çarpma ve Bölme',
+            'in' => '/carpma|bolme|dort-islem/', 'out' => '/^$/',
+            'blurb' => 'Çarpım tablosu, eşit gruplar, kalanlı bölme, çarpma ile bölme arasındaki ilişki ve dört işlem problemleri.'),
+        'kesirler' => array('name' => 'Kesirler',
+            'in' => '/kesir/', 'out' => '/^$/',
+            'blurb' => 'Bütün, yarım ve çeyrek, birim kesirler, pay ve payda, kesirleri modellerle gösterme.'),
+        'oruntuler-ve-esitlik' => array('name' => 'Örüntüler ve Eşitlik',
+            'in' => '/oruntu|esitlik/', 'out' => '/^$/',
+            'blurb' => 'Sayı ve şekil örüntülerinin kuralını bulma, eşitliğin iki tarafını dengeleme ve bilinmeyeni bulma.'),
+        'olcme' => array('name' => 'Ölçme',
+            'in' => '/olcme|olcu|saat|paralar|uzunlug|cevre|kutle/', 'out' => '/^$/',
+            'blurb' => 'Uzunluk, kütle ve sıvı ölçme, saat okuma ve zaman ölçü birimleri, paralarımız ve çevre uzunluğu.'),
+        'geometri' => array('name' => 'Geometri',
+            'in' => '/geometrik|simetri|sekil|cisim/', 'out' => '/^$/',
+            'blurb' => 'Geometrik cisimler ve şekiller, köşe, kenar, yüz ve ayrıt, simetri doğrusu.'),
+        'veri' => array('name' => 'Veri',
+            'in' => '/veri|grafik|tablo/', 'out' => '/^$/',
+            'blurb' => 'Veri toplama, çetele ve sıklık tablosu, nokta grafiği ve sütun grafiğini okuma ve yorumlama.'),
+    );
+}
+
 /* Indonesia (id): Kurikulum Merdeka, CP 2025. Slugs are Indonesian */
 function topic_defs_id() {
     return array(
@@ -508,6 +538,7 @@ function topic_defs($country = null) {
     if ($country === 'fr') return topic_defs_fr();
     if ($country === 'it') return topic_defs_it();
     if ($country === 'id') return topic_defs_id();
+    if ($country === 'tr') return topic_defs_tr();
     $d = array(
         'fractions' => array('name' => 'Fractions',
             'in' => '/fraction|halves|thirds|fourths|quarters|mixed-num|improper|fair-shares|partition-shapes|operations-with-rational/',
@@ -747,6 +778,7 @@ function topic_range($units) {
     if ($units[0]['country'] === 'br') return 'do ' . $first . ' ao ' . $last;
     if ($units[0]['country'] === 'es' || $units[0]['country'] === 'mx') return 'de ' . $first . ' a ' . $last;
     if ($units[0]['country'] === 'id') return $first . ' sampai ' . $last;
+    if ($units[0]['country'] === 'tr') return $first . ' – ' . $last;
     if ($units[0]['country'] === 'it') return 'dalla ' . strtolower($first) . ' alla ' . strtolower($last);
     return $units[0]['country'] === 'de' ? $first . ' bis ' . $last : $first . ' to ' . $last;
 }

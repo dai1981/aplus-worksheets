@@ -1798,6 +1798,17 @@ ID / Matematika / TK（TK B、5〜6歳、Fase Fondasi）— grade `tk`（name「
 8. mengenal-bentuk ✓ 9. posisi-dan-arah ✓ 10. membandingkan-ukuran ✓ 11. waktu-sehari-hari ✓ 12. pola ✓ 13. mengelompokkan-dan-data ✓
 ID / Matematika は TK・Kelas 1〜12（SD・SMP・SMA）まで完了。次は GDP 順で次の国
 
+TR / Matematik（Türkiye Yüzyılı Maarif Modeli、İlkokul Matematik Dersi Öğretim Programı 2024）— country `tr`（name「Türkiye」、lang `tr`、hreflang tr-tr、standard「Türkiye Yüzyılı Maarif Modeli」）、subject `matematik`、grade `N-sinif`（name「3. Sınıf」、unit.php で N+5〜N+6 歳と educationalLevel İlkokul／Ortaokul／Lise）、A4。
+生成スクリプトは `tools/tr_s3.py [番号…]`（seed は 90300 + 番号、問題関数は tr_s3a（1〜10）・tr_s3b（11〜22）の UNITS）、共通部品は `tools/tr_common.py`（num（1.000 から点で区切る）・dec（コンマ）・tl・kurus・para（kuruş → 3 TL 25 kuruş）・oku（数詞）・saat_oku（「saat üçü on geçiyor」「saat beşe çeyrek var」）・hm（08.30）・Kids・mcq・M（誤答が足りないと None）・lesson（Nasıl düşünürüz? → Örnek → Sık yapılan hatalar）・make_unit（seo_title「Kesirler 3. Sınıf Matematik: Çalışma Kâğıdı ve Cevaplı Test」、key_big ≤ 40・key_sub ≤ 60）・図：sayi_dogrusu・basamak_tablosu・bloklar・sutun_grafigi・cetele・alt_alta・saat_svg）。
+トルコ語、sen で話しかける短い文。記号は × と ÷、余りは「bölüm 3, kalan 2」。**数字・人名の直後に接尾辞を付けない**（「345 sayısının」のように語を挟む）。文頭の大文字は tr_s3a.cap（i → İ、ı → I）、疑問の小辞は mi()（「75 dakika mı」）。所有の文は属格＋所有（「Bir küpün kaç köşesi vardır?」）。
+domain は S Sayılar ve Nicelikler／I İşlemlerden Cebirsel Düşünmeye／G Nesnelerin Geometrisi／V Veriye Dayalı Araştırma、standard_code は MAT コード（「MAT.3.1.1, MAT.3.1.2」）、standard_url は tymm.meb.gov.tr のプログラム PDF。
+UI 文言は core.php の 'tr'（T と js_text、sep '.'）、プレビュー画像の大文字は pv_up（PV_TR で i → İ）、トピックは topics.php の `topic_defs_tr()`（sayilar・toplama-ve-cikarma・carpma-ve-bolme・kesirler・oruntuler-ve-esitlik・olcme・geometri・veri）、topic.php・topics.php に $trk の文言。みんなでクイズ（mq.js）にはまだ tr の言語がない（英語で出る）
+
+TR / Matematik / 3. Sınıf
+1. 1000e-kadar-sayilar ✓ 2. sayilari-siralama-ve-yuvarlama ✓ 3. ritmik-sayma ✓ 4. tek-ve-cift-sayilar ✓ 5. oruntuler ✓ 6. kesirler ✓ 7. saat-okuma ✓ 8. zaman-olcu-birimleri ✓ 9. uzunluk-ve-kutle-olcme ✓ 10. paralarimiz ✓
+11. toplama-islemi ✓ 12. cikarma-islemi ✓ 13. carpma-islemi ✓ 14. bolme-islemi ✓ 15. dort-islem-problemleri ✓ 16. esitlik ✓ 17. geometrik-cisimler ✓ 18. geometrik-sekiller ✓ 19. cevre-uzunlugu ✓ 20. sivi-olcme ✓ 21. simetri ✓ 22. veri-toplama-ve-nokta-grafigi ✓
+TR の次: 4. sınıf（Maarif Modeli）
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）

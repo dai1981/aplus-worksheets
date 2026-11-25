@@ -308,7 +308,10 @@ function preview_cache_check($tag) {
 }
 
 /* upper case that keeps accents (É, Ü) */
-function pv_up($s) { return function_exists('mb_strtoupper') ? mb_strtoupper($s, 'UTF-8') : strtoupper($s); }
+function pv_up($s) {
+    if (!empty($GLOBALS['PV_TR'])) $s = strtr($s, array('i' => 'İ', 'ı' => 'I'));   // Turkish dotted / dotless i
+    return function_exists('mb_strtoupper') ? mb_strtoupper($s, 'UTF-8') : strtoupper($s);
+}
 
 function preview_route($seg, $kind = 'preview') {
     global $PV_KIND;
@@ -318,6 +321,7 @@ function preview_route($seg, $kind = 'preview') {
     $subject = $country ? get_subject($seg[0], $seg[1]) : null;
     if (!$subject) { http_response_code(404); exit; }
     T(array($country['lang']));
+    $GLOBALS['PV_TR'] = $country['lang'] === 'tr';
     $GLOBALS['PV_CJK'] = $country['lang'] === 'zh-CN' ? 'sc' : (strpos($country['lang'], 'zh') === 0 ? 'tc' : ($country['lang'] === 'ko' ? 'kr' : ''));
     $paper = strtoupper($country['paper']);
     $foot = T('pv_foot');
