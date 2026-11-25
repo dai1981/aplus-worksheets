@@ -61,7 +61,7 @@ def head(L, title, desc, path, ld, css, extra=""):
     alts = "".join('<link rel="alternate" hreflang="%s" href="%s%s%s">\n' % (HREFLANG[k], SITE, pre(k), path) for k in LANGS)
     alts += '<link rel="alternate" hreflang="x-default" href="%s/%s">\n' % (SITE, path)
     e = html.escape
-    return ('<!DOCTYPE html>\n<html lang="%s">\n<head>\n<meta charset="UTF-8">\n' % L + extra +
+    return ('<!DOCTYPE html>\n<html lang="%s">\n<head>\n<meta charset="UTF-8">\n' % HREFLANG[L] + extra +
             '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
             '<title>%s</title>\n<meta name="description" content="%s">\n<link rel="canonical" href="%s">\n' % (e(title, False), e(desc), canon) + alts +
             '<meta property="og:type" content="website">\n<meta property="og:url" content="%s">\n<meta property="og:title" content="%s">\n'
@@ -168,10 +168,14 @@ def org():
 
 
 def jdict(L):
+    if L in ("vi", "zh", "tw", "ko", "id"):
+        return "/japanese/%s/word/" % L
     return "/japanese/%s/word/" % L if L in DICT_J else ("/japanese/en/word/" if L in ("it", "tr") else "/japanese/")
 
 
 def edict(L):
+    if L in ("vi", "zh", "tw", "ko", "id"):
+        return "/english/%s/word/" % L
     return "/english/%s/word/" % L if L in DICT_E else "/english/"
 
 
@@ -242,26 +246,28 @@ def build_index(L):
 def build_about(L):
     t = tx(L, T[L])
     a = tx(L, A[L])
-    sep = " : " if L == "fr" else ": "
+    cjk = L in ("ja", "zh", "tw")
+    sep = "\u00a0: " if L == "fr" else "：" if cjk else ": "
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "AboutPage", "name": a["title"].split(" | ")[0], "url": SITE + pre(L) + "about.html", "inLanguage": L, "description": a["desc"], "about": {"@id": SITE + "/#org"}},
+        {"@type": "AboutPage", "name": a["title"].split(" | ")[0], "url": SITE + pre(L) + "about.html", "inLanguage": HREFLANG[L], "description": a["desc"], "about": {"@id": SITE + "/#org"}},
         dict(org(), contactPoint={"@type": "ContactPoint", "contactType": "customer support", "url": SITE + "/mailform/",
                                    "availableLanguage": ["en", "ja", "vi", "id", "zh", "ko", "th", "es", "pt", "fr", "de", "ru", "ar", "it", "tr"]})]}
     h = head(L, a["title"], a["desc"], "about.html", ld, CSS_A)
     h += header(L, "about.html", t)
     jd, ed, co, mw, gm = a["jd"], a["ed"], a["co"], a["mw"], a["gm"]
-    links = ", ".join('<a href="%s">%s</a>' % (MATH_D[c][1], CC[L][c]) for c in OWN[L] + others(L))
-    li = ['<li><b><a href="%s">%s</a></b>%s%s</li>' % (jdict(L) if L != "en" else "/japanese/", jd[0], sep, jd[1]),
+    links = ("、" if cjk else ", ").join('<a href="%s">%s</a>' % (MATH_D[c][1], CC[L][c]) for c in OWN[L] + others(L))
+    li = ['<li><b><a href="%s">%s</a></b>%s%s</li>' % (jdict(L) if L not in ("en", "ja") else "/japanese/", jd[0], sep, jd[1]),
           '<li><b><a href="%s">%s</a></b>%s%s</li>' % (edict(L) if L != "en" else "/english/", ed[0], sep, ed[1]),
           '<li><b>%s</b>%s%s</li>' % (co[0], sep, co[1]),
+          ('<li><b><a href="/worksheets/">%s</a></b>%s%s（%s）。%s</li>' % (mw[0], sep, mw[1], links, mw[2])) if cjk else
           '<li><b><a href="/worksheets/">%s</a></b>%s%s %s. %s</li>' % (mw[0], sep, mw[1], links, mw[2]),
           '<li><b><a href="/game/">%s</a></b>%s%s</li>' % (gm[0], sep, gm[1])]
-    if L != "en":
+    if L in NEW:
         li = [li[3], li[0], li[1], li[2], li[4]]
     body = '<h1>%s</h1><p class="lead2">%s</p>\n' % (a["h1"], a["lead"])
     body += '<div class="stats3">' + "".join('<div class="s3"><b>%s</b><span>%s</span></div>' % x for x in a["stats"]) + "</div>\n"
     body += "<h2>%s</h2><ul>%s</ul>\n" % (a["h_what"], "".join(li))
-    body += "<h2>%s</h2><ul>%s</ul>\n" % (a["h_you"], "".join("<li><b>%s</b> %s</li>" % x for x in a["you"]))
+    body += "<h2>%s</h2><ul>%s</ul>\n" % (a["h_you"], "".join(("<li><b>%s</b>%s</li>" if cjk else "<li><b>%s</b> %s</li>") % x for x in a["you"]))
     body += "<h2>%s</h2><p>%s</p>\n<h2>%s</h2><p>%s</p>\n" % (a["h_exp"], a["exp"], a["h_mis"], a["mis"])
     body += '<h2>%s</h2>\n<p><a class="btn2" href="%s">%s</a></p>\n' % (a["h_start"], pre(L), a["start"].replace("›", "&rsaquo;"))
     body += "<h2>%s</h2><table>%s</table>\n" % (a["h_op"], "".join("<tr><th>%s</th><td>%s</td></tr>" % x for x in a["op"]))
@@ -273,9 +279,10 @@ def build_about(L):
 
 
 if __name__ == "__main__":
-    for L in ["en"] + NEW:
+    for L in LANGS:
         d = OUT if L == "en" else os.path.join(OUT, L)
         os.makedirs(d, exist_ok=True)
-        open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(build_index(L))
+        if L == "en" or L in NEW:
+            open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(build_index(L))
         open(os.path.join(d, "about.html"), "w", encoding="utf-8").write(build_about(L))
     print("ok")
