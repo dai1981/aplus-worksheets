@@ -30,6 +30,8 @@ DOMAIN = {
     "GN": "Geometrik Nicelikler",
     "IA": "İstatistiksel Araştırma Süreci",
     "VO": "Veriden Olasılığa",
+    "D": "Dönüşüm",
+    "C8": "Cebirsel Düşünme ve Değişimler",
 }
 STD_URL_ORTA = "https://mufredat.meb.gov.tr/Dosyalar/202681491243620-Matematik%20(5-8)%20D%C3%96P.pdf"
 NAMES = ["Elif", "Yusuf", "Zeynep", "Ömer", "Defne", "Emir", "Ecrin", "Kerem", "Eylül", "Mert", "Nehir", "Aras",

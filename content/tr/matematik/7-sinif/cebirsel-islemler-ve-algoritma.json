@@ -1,0 +1,1161 @@
+{
+ "slug": "cebirsel-islemler-ve-algoritma",
+ "title": "Aritmetik ve Cebirsel İşlemlerde Algoritma",
+ "seo_title": "Algoritmalar 7. Sınıf Matematik: Çalışma Kâğıdı ve Cevaplı Test",
+ "short_title": "Algoritmalar",
+ "domain": "İşlemlerle Cebirsel Düşünme ve Değişimler",
+ "standard_code": "MAT.7.2.4",
+ "standard_url": "https://mufredat.meb.gov.tr/Dosyalar/202681491243620-Matematik%20(5-8)%20D%C3%96P.pdf",
+ "standard_text": "Aritmetik ve cebirsel işlemlerin sürecini algoritmik ifade yöntemleriyle yapılandırır; adımları ve aralarındaki ilişkileri açıklar ve tutarlı bir bütün oluşturur. (Türkiye Yüzyılı Maarif Modeli, Ortaokul Matematik Dersi Öğretim Programı)",
+ "meta_desc": "7. sınıf algoritma çalışma kâğıdı: algoritmanın çıktısını bulma, algoritmayı cebirsel ifadeye çevirme, tekrar eden ve koşullu adımlar, denklem çözme adımlarını sıralama. 100 soru ve cevap anahtarı.",
+ "key_big": "Adımlar sırayla, tek tek uygulanır",
+ "key_sub": "Tekrar ve ‘eğer … ise’ adımlarına dikkat.",
+ "body_html": "<h2>Nasıl düşünürüz?</h2><p>Algoritma, bir işi yapmak için sıralı adımlar listesidir. Adımlar doğal dil, sözde kod ya da akış şemasıyla yazılabilir.</p><p>Bir algoritmayı cebirsel ifadeye çevirmek için adımları sırayla uygularız: ‘x’i 3 ile çarp, 5 ekle’ → 3x + 5.</p><p>‘n kez tekrar et’ adımı aynı işlemi n kez yapar; ‘eğer … ise’ adımı koşula göre farklı işlem yaptırır.</p><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>x = −2; x’i 4 ile çarp, 7 ekle</p><p class='sn-ex-s'>4 · (−2) = −8</p><p class='sn-ex-s'>−8 + 7</p><p class='sn-ex-a'>Cevap: −1</p></div><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>x’e 3 ekle, sonucu 2 ile çarp</p><p class='sn-ex-s'>(x + 3) · 2</p><p class='sn-ex-a'>Cevap: 2x + 6</p></div><h2>Sık yapılan hatalar</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Hata</th><th>Doğrusu</th></tr></thead><tbody><tr><td>Adımların sırasını değiştirmek</td><td>‘Önce ekle sonra çarp’ ile ‘önce çarp sonra ekle’ farklı sonuç verir</td></tr><tr><td>Tekrar sayısını eksik saymak</td><td>3 kez tekrar: işlem 3 kez yapılır</td></tr><tr><td>Koşulu kontrol etmeden işlem yapmak</td><td>Önce x’in koşulu sağlayıp sağlamadığına bak</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Algoritma ile program aynı mı?",
+   "a": "Algoritma çözüm adımlarıdır; program bu adımların bir bilgisayar dilinde yazılmış hâlidir."
+  },
+  {
+   "q": "Akış şemasında hangi şekiller kullanılır?",
+   "a": "Başla/bitir için oval, işlem için dikdörtgen, karar için eşkenar dörtgen."
+  },
+  {
+   "q": "Algoritmanın doğru olduğunu nasıl anlarım?",
+   "a": "Birkaç farklı girdiyle çalıştırıp sonuçları elle hesapladıklarınla karşılaştır."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Algoritmanın çıktısı",
+   "items": [
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 3)<br>3. x’i −4 ile çarp<br>4. Sonuca 1 ekle<br>5. Sonucu 2 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−10",
+      "22",
+      "−9",
+      "−22"
+     ],
+     "a": 3,
+     "e": "−4 · 3 = −12; −12 + 1 = −11; (−11) · 2 = <b>−22</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 3)<br>3. x’i −5 ile çarp<br>4. Sonuca −4 ekle<br>5. Sonucu 4 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−15",
+      "−76",
+      "−31",
+      "76"
+     ],
+     "a": 1,
+     "e": "−5 · 3 = −15; −15 + (−4) = −19; (−19) · 4 = <b>−76</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 3)<br>3. x’i −2 ile çarp<br>4. Sonuca 9 ekle<br>5. Sonucu 5 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−15",
+      "39",
+      "8",
+      "15"
+     ],
+     "a": 3,
+     "e": "−2 · 3 = −6; −6 + 9 = 3; 3 · 5 = <b>15</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −3)<br>3. x’i −5 ile çarp<br>4. Sonuca 4 ekle<br>5. Sonucu 5 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−95",
+      "35",
+      "95",
+      "24"
+     ],
+     "a": 2,
+     "e": "−5 · (−3) = 15; 15 + 4 = 19; 19 · 5 = <b>95</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 3)<br>3. x’i 2 ile çarp<br>4. Sonuca −1 ekle<br>5. Sonucu 4 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "20",
+      "2",
+      "9",
+      "−20"
+     ],
+     "a": 0,
+     "e": "2 · 3 = 6; 6 + (−1) = 5; 5 · 4 = <b>20</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 7)<br>3. x’i 3 ile çarp<br>4. Sonuca 5 ekle<br>5. Sonucu 5 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "46",
+      "−130",
+      "130",
+      "31"
+     ],
+     "a": 2,
+     "e": "3 · 7 = 21; 21 + 5 = 26; 26 · 5 = <b>130</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −6)<br>3. x’i −5 ile çarp<br>4. Sonuca −3 ekle<br>5. Sonucu 3 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "30",
+      "−81",
+      "81",
+      "21"
+     ],
+     "a": 2,
+     "e": "−5 · (−6) = 30; 30 + (−3) = 27; 27 · 3 = <b>81</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −2)<br>3. x’i −3 ile çarp<br>4. Sonuca −8 ekle<br>5. Sonucu 3 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "1",
+      "−18",
+      "6",
+      "−6"
+     ],
+     "a": 3,
+     "e": "−3 · (−2) = 6; 6 + (−8) = −2; (−2) · 3 = <b>−6</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 1)<br>3. x’i −1 ile çarp<br>4. Sonuca 9 ekle<br>5. Sonucu 5 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−40",
+      "40",
+      "44",
+      "13"
+     ],
+     "a": 1,
+     "e": "−1 · 1 = −1; −1 + 9 = 8; 8 · 5 = <b>40</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 2)<br>3. x’i −2 ile çarp<br>4. Sonuca 2 ekle<br>5. Sonucu 5 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−10",
+      "10",
+      "3",
+      "6"
+     ],
+     "a": 0,
+     "e": "−2 · 2 = −4; −4 + 2 = −2; (−2) · 5 = <b>−10</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −3)<br>3. x’i 1 ile çarp<br>4. Sonuca −5 ekle<br>5. Sonucu 5 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−40",
+      "−28",
+      "40",
+      "−3"
+     ],
+     "a": 0,
+     "e": "1 · (−3) = −3; −3 + (−5) = −8; (−8) · 5 = <b>−40</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −1)<br>3. x’i 1 ile çarp<br>4. Sonuca −8 ekle<br>5. Sonucu 3 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−6",
+      "−27",
+      "−25",
+      "27"
+     ],
+     "a": 1,
+     "e": "1 · (−1) = −1; −1 + (−8) = −9; (−9) · 3 = <b>−27</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −5)<br>3. x’i 2 ile çarp<br>4. Sonuca 2 ekle<br>5. Sonucu 3 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "24",
+      "−5",
+      "−4",
+      "−24"
+     ],
+     "a": 3,
+     "e": "2 · (−5) = −10; −10 + 2 = −8; (−8) · 3 = <b>−24</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 5)<br>3. x’i −6 ile çarp<br>4. Sonuca 4 ekle<br>5. Sonucu 5 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−130",
+      "130",
+      "−10",
+      "−21"
+     ],
+     "a": 0,
+     "e": "−6 · 5 = −30; −30 + 4 = −26; (−26) · 5 = <b>−130</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 2)<br>3. x’i −3 ile çarp<br>4. Sonuca 8 ekle<br>5. Sonucu 4 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "8",
+      "26",
+      "6",
+      "−8"
+     ],
+     "a": 0,
+     "e": "−3 · 2 = −6; −6 + 8 = 2; 2 · 4 = <b>8</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 5)<br>3. x’i −4 ile çarp<br>4. Sonuca 1 ekle<br>5. Sonucu 4 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−16",
+      "−76",
+      "−15",
+      "76"
+     ],
+     "a": 1,
+     "e": "−4 · 5 = −20; −20 + 1 = −19; (−19) · 4 = <b>−76</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −8)<br>3. x’i −6 ile çarp<br>4. Sonuca −2 ekle<br>5. Sonucu 5 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "51",
+      "−230",
+      "230",
+      "38"
+     ],
+     "a": 2,
+     "e": "−6 · (−8) = 48; 48 + (−2) = 46; 46 · 5 = <b>230</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −5)<br>3. x’i −4 ile çarp<br>4. Sonuca −8 ekle<br>5. Sonucu 3 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−36",
+      "−4",
+      "15",
+      "36"
+     ],
+     "a": 3,
+     "e": "−4 · (−5) = 20; 20 + (−8) = 12; 12 · 3 = <b>36</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −4)<br>3. x’i −4 ile çarp<br>4. Sonuca 2 ekle<br>5. Sonucu 3 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "21",
+      "54",
+      "22",
+      "−54"
+     ],
+     "a": 1,
+     "e": "−4 · (−4) = 16; 16 + 2 = 18; 18 · 3 = <b>54</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −8)<br>3. x’i −3 ile çarp<br>4. Sonuca 6 ekle<br>5. Sonucu 3 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "33",
+      "−90",
+      "90",
+      "42"
+     ],
+     "a": 2,
+     "e": "−3 · (−8) = 24; 24 + 6 = 30; 30 · 3 = <b>90</b>."
+    }
+   ]
+  },
+  {
+   "title": "Algoritma ve cebirsel ifade",
+   "items": [
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’e 5 ekle<br>4. Sonucu −4 ile çarp<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−4x + 5",
+      "5x − 4",
+      "−4x − 20",
+      "−4x + 1"
+     ],
+     "a": 2,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−4x − 20</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’e 9 ekle<br>4. Sonucu −5 ile çarp<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−5x − 45",
+      "−5x + 9",
+      "9x − 5",
+      "−5x + 4"
+     ],
+     "a": 0,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−5x − 45</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’i −1 ile çarp<br>4. Sonuca −7 ekle<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−1(x + −7)",
+      "−7x − 1",
+      "−x + 7",
+      "−x − 7"
+     ],
+     "a": 3,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−x − 7</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’e −5 ekle<br>4. Sonucu 5 ile çarp<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "5x",
+      "−5x + 5",
+      "5x − 5",
+      "5x − 25"
+     ],
+     "a": 3,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>5x − 25</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’e 7 ekle<br>4. Sonucu 2 ile çarp<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "2x + 7",
+      "2x + 14",
+      "7x + 2",
+      "2x + 9"
+     ],
+     "a": 1,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>2x + 14</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’e 7 ekle<br>4. Sonucu −4 ile çarp<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−4x + 7",
+      "7x − 4",
+      "−4x + 3",
+      "−4x − 28"
+     ],
+     "a": 3,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−4x − 28</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’i −3 ile çarp<br>4. Sonuca 2 ekle<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−3x + 2",
+      "−3x − 6",
+      "−3(x + 2)",
+      "2x − 3"
+     ],
+     "a": 0,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−3x + 2</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’i −1 ile çarp<br>4. Sonuca 3 ekle<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−x − 3",
+      "3x − 1",
+      "−x + 3",
+      "−1(x + 3)"
+     ],
+     "a": 2,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−x + 3</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’i −3 ile çarp<br>4. Sonuca −5 ekle<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−3(x + −5)",
+      "−3x + 15",
+      "−5x − 3",
+      "−3x − 5"
+     ],
+     "a": 3,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−3x − 5</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’i −5 ile çarp<br>4. Sonuca −4 ekle<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−4x − 5",
+      "−5(x + −4)",
+      "−5x − 4",
+      "−5x + 20"
+     ],
+     "a": 2,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−5x − 4</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’e −4 ekle<br>4. Sonucu −2 ile çarp<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−2x − 4",
+      "−2x − 6",
+      "−4x − 2",
+      "−2x + 8"
+     ],
+     "a": 3,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−2x + 8</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’i −1 ile çarp<br>4. Sonuca −8 ekle<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−x − 8",
+      "−8x − 1",
+      "−x + 8",
+      "−1(x + −8)"
+     ],
+     "a": 0,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−x − 8</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’i −3 ile çarp<br>4. Sonuca 6 ekle<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−3x − 18",
+      "−3(x + 6)",
+      "−3x + 6",
+      "6x − 3"
+     ],
+     "a": 2,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−3x + 6</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’e −8 ekle<br>4. Sonucu 2 ile çarp<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−8x + 2",
+      "2x − 8",
+      "2x − 16",
+      "2x − 6"
+     ],
+     "a": 2,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>2x − 16</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’i 6 ile çarp<br>4. Sonuca −9 ekle<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "6(x + −9)",
+      "6x − 9",
+      "6x − 54",
+      "−9x + 6"
+     ],
+     "a": 1,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>6x − 9</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’i −6 ile çarp<br>4. Sonuca 8 ekle<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−6x + 8",
+      "−6x − 48",
+      "8x − 6",
+      "−6(x + 8)"
+     ],
+     "a": 0,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−6x + 8</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’i −6 ile çarp<br>4. Sonuca −8 ekle<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−6x − 8",
+      "−6x + 48",
+      "−8x − 6",
+      "−6(x + −8)"
+     ],
+     "a": 0,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−6x − 8</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’e 6 ekle<br>4. Sonucu −2 ile çarp<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−2x + 6",
+      "−2x − 12",
+      "6x − 2",
+      "−2x + 4"
+     ],
+     "a": 1,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−2x − 12</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’e 9 ekle<br>4. Sonucu −2 ile çarp<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−2x + 7",
+      "−2x − 18",
+      "−2x + 9",
+      "9x − 2"
+     ],
+     "a": 1,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−2x − 18</b>."
+    },
+    {
+     "q": "Algoritmanın verdiği sonucu gösteren cebirsel ifade hangisidir?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al<br>3. x’i −2 ile çarp<br>4. Sonuca −9 ekle<br>5. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−2(x + −9)",
+      "−2x − 9",
+      "−9x − 2",
+      "−2x + 18"
+     ],
+     "a": 1,
+     "e": "Adımları sırayla cebirsel ifadeye çeviririz: <b>−2x − 9</b>."
+    }
+   ]
+  },
+  {
+   "title": "Tekrar eden adımlar",
+   "items": [
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 10<br>3. 6 kez tekrar et:<br>      sayı ← sayı − 2<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−4",
+      "−2",
+      "0",
+      "8"
+     ],
+     "a": 1,
+     "e": "Her tekrarda −2 eklenir: 10 + 6 · (−2) = <b>−2</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 5<br>3. 4 kez tekrar et:<br>      sayı ← sayı + 4<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "9",
+      "25",
+      "17",
+      "21"
+     ],
+     "a": 3,
+     "e": "Her tekrarda 4 eklenir: 5 + 4 · 4 = <b>21</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 7<br>3. 3 kez tekrar et:<br>      sayı ← sayı − 4<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−5",
+      "−1",
+      "3",
+      "−9"
+     ],
+     "a": 0,
+     "e": "Her tekrarda −4 eklenir: 7 + 3 · (−4) = <b>−5</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −9<br>3. 6 kez tekrar et:<br>      sayı ← sayı − 1<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−16",
+      "−10",
+      "−14",
+      "−15"
+     ],
+     "a": 3,
+     "e": "Her tekrarda −1 eklenir: −9 + 6 · (−1) = <b>−15</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −8<br>3. 5 kez tekrar et:<br>      sayı ← sayı − 2<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−20",
+      "−16",
+      "−18",
+      "−10"
+     ],
+     "a": 2,
+     "e": "Her tekrarda −2 eklenir: −8 + 5 · (−2) = <b>−18</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 1<br>3. 4 kez tekrar et:<br>      sayı ← sayı − 4<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−15",
+      "−3",
+      "−19",
+      "−11"
+     ],
+     "a": 0,
+     "e": "Her tekrarda −4 eklenir: 1 + 4 · (−4) = <b>−15</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −7<br>3. 4 kez tekrar et:<br>      sayı ← sayı − 5<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−32",
+      "−22",
+      "−12",
+      "−27"
+     ],
+     "a": 3,
+     "e": "Her tekrarda −5 eklenir: −7 + 4 · (−5) = <b>−27</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 5<br>3. 4 kez tekrar et:<br>      sayı ← sayı + 3<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "17",
+      "8",
+      "20",
+      "14"
+     ],
+     "a": 0,
+     "e": "Her tekrarda 3 eklenir: 5 + 4 · 3 = <b>17</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −4<br>3. 4 kez tekrar et:<br>      sayı ← sayı − 4<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−24",
+      "−20",
+      "−16",
+      "−8"
+     ],
+     "a": 1,
+     "e": "Her tekrarda −4 eklenir: −4 + 4 · (−4) = <b>−20</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −10<br>3. 5 kez tekrar et:<br>      sayı ← sayı + 4<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−6",
+      "6",
+      "14",
+      "10"
+     ],
+     "a": 3,
+     "e": "Her tekrarda 4 eklenir: −10 + 5 · 4 = <b>10</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −3<br>3. 6 kez tekrar et:<br>      sayı ← sayı − 3<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−21",
+      "−6",
+      "−24",
+      "−18"
+     ],
+     "a": 0,
+     "e": "Her tekrarda −3 eklenir: −3 + 6 · (−3) = <b>−21</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 2<br>3. 6 kez tekrar et:<br>      sayı ← sayı − 4<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−18",
+      "−26",
+      "−22",
+      "−2"
+     ],
+     "a": 2,
+     "e": "Her tekrarda −4 eklenir: 2 + 6 · (−4) = <b>−22</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −5<br>3. 3 kez tekrar et:<br>      sayı ← sayı − 3<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−17",
+      "−14",
+      "−11",
+      "−8"
+     ],
+     "a": 1,
+     "e": "Her tekrarda −3 eklenir: −5 + 3 · (−3) = <b>−14</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −6<br>3. 4 kez tekrar et:<br>      sayı ← sayı − 1<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−10",
+      "−11",
+      "−7",
+      "−9"
+     ],
+     "a": 0,
+     "e": "Her tekrarda −1 eklenir: −6 + 4 · (−1) = <b>−10</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 0<br>3. 6 kez tekrar et:<br>      sayı ← sayı + 3<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "21",
+      "3",
+      "18",
+      "15"
+     ],
+     "a": 2,
+     "e": "Her tekrarda 3 eklenir: 0 + 6 · 3 = <b>18</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 3<br>3. 6 kez tekrar et:<br>      sayı ← sayı + 6<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "45",
+      "39",
+      "33",
+      "9"
+     ],
+     "a": 1,
+     "e": "Her tekrarda 6 eklenir: 3 + 6 · 6 = <b>39</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −1<br>3. 4 kez tekrar et:<br>      sayı ← sayı + 5<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "24",
+      "19",
+      "14",
+      "4"
+     ],
+     "a": 1,
+     "e": "Her tekrarda 5 eklenir: −1 + 4 · 5 = <b>19</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −5<br>3. 3 kez tekrar et:<br>      sayı ← sayı + 6<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "1",
+      "7",
+      "13",
+      "19"
+     ],
+     "a": 2,
+     "e": "Her tekrarda 6 eklenir: −5 + 3 · 6 = <b>13</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 0<br>3. 6 kez tekrar et:<br>      sayı ← sayı + 4<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "20",
+      "4",
+      "28",
+      "24"
+     ],
+     "a": 3,
+     "e": "Her tekrarda 4 eklenir: 0 + 6 · 4 = <b>24</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −8<br>3. 3 kez tekrar et:<br>      sayı ← sayı + 5<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "2",
+      "12",
+      "7",
+      "−3"
+     ],
+     "a": 2,
+     "e": "Her tekrarda 5 eklenir: −8 + 3 · 5 = <b>7</b>."
+    }
+   ]
+  },
+  {
+   "title": "Koşullu adımlar",
+   "items": [
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 1)<br>3. Eğer x &lt; 0 ise x ← x · 4<br>   değilse x ← x + (−6)<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "4",
+      "1",
+      "−5",
+      "5"
+     ],
+     "a": 2,
+     "e": "x = 1, x ≥ 0; bu yüzden x + (−6): <b>−5</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −1)<br>3. Eğer x &lt; 0 ise x ← x · (−4)<br>   değilse x ← x + 6<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "5",
+      "−4",
+      "4",
+      "−1"
+     ],
+     "a": 2,
+     "e": "x = −1, x &lt; 0; bu yüzden x · (−4): <b>4</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 11)<br>3. Eğer x &lt; 0 ise x ← x · (−5)<br>   değilse x ← x + 1<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "−55",
+      "12",
+      "−12",
+      "11"
+     ],
+     "a": 1,
+     "e": "x = 11, x ≥ 0; bu yüzden x + 1: <b>12</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 5)<br>3. Eğer x &lt; 0 ise x ← x · (−2)<br>   değilse x ← x + (−9)<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "−10",
+      "5",
+      "4",
+      "−4"
+     ],
+     "a": 3,
+     "e": "x = 5, x ≥ 0; bu yüzden x + (−9): <b>−4</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 3)<br>3. Eğer x &lt; 0 ise x ← x · 3<br>   değilse x ← x + 3<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "3",
+      "−6",
+      "6",
+      "9"
+     ],
+     "a": 2,
+     "e": "x = 3, x ≥ 0; bu yüzden x + 3: <b>6</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −5)<br>3. Eğer x &lt; 0 ise x ← x · 2<br>   değilse x ← x + 1<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "10",
+      "−4",
+      "−5",
+      "−10"
+     ],
+     "a": 3,
+     "e": "x = −5, x &lt; 0; bu yüzden x · 2: <b>−10</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 12)<br>3. Eğer x &lt; 0 ise x ← x · (−5)<br>   değilse x ← x + 1<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "13",
+      "12",
+      "−13",
+      "−60"
+     ],
+     "a": 0,
+     "e": "x = 12, x ≥ 0; bu yüzden x + 1: <b>13</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −4)<br>3. Eğer x &lt; 0 ise x ← x · (−2)<br>   değilse x ← x + 9<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "−8",
+      "−4",
+      "5",
+      "8"
+     ],
+     "a": 3,
+     "e": "x = −4, x &lt; 0; bu yüzden x · (−2): <b>8</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 9)<br>3. Eğer x &lt; 0 ise x ← x · 3<br>   değilse x ← x + (−8)<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "1",
+      "27",
+      "9",
+      "−1"
+     ],
+     "a": 0,
+     "e": "x = 9, x ≥ 0; bu yüzden x + (−8): <b>1</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 10)<br>3. Eğer x &lt; 0 ise x ← x · (−4)<br>   değilse x ← x + 9<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "−19",
+      "−40",
+      "19",
+      "10"
+     ],
+     "a": 2,
+     "e": "x = 10, x ≥ 0; bu yüzden x + 9: <b>19</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −7)<br>3. Eğer x &lt; 0 ise x ← x · (−3)<br>   değilse x ← x + (−8)<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "−15",
+      "21",
+      "−7",
+      "−21"
+     ],
+     "a": 1,
+     "e": "x = −7, x &lt; 0; bu yüzden x · (−3): <b>21</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 3)<br>3. Eğer x &lt; 0 ise x ← x · (−4)<br>   değilse x ← x + (−2)<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "1",
+      "3",
+      "−12",
+      "−1"
+     ],
+     "a": 0,
+     "e": "x = 3, x ≥ 0; bu yüzden x + (−2): <b>1</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −6)<br>3. Eğer x &lt; 0 ise x ← x · (−5)<br>   değilse x ← x + (−9)<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "−30",
+      "−6",
+      "30",
+      "−15"
+     ],
+     "a": 2,
+     "e": "x = −6, x &lt; 0; bu yüzden x · (−5): <b>30</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −8)<br>3. Eğer x &lt; 0 ise x ← x · 2<br>   değilse x ← x + 3<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "−5",
+      "16",
+      "−8",
+      "−16"
+     ],
+     "a": 3,
+     "e": "x = −8, x &lt; 0; bu yüzden x · 2: <b>−16</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −11)<br>3. Eğer x &lt; 0 ise x ← x · 3<br>   değilse x ← x + 9<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "33",
+      "−33",
+      "−11",
+      "−2"
+     ],
+     "a": 1,
+     "e": "x = −11, x &lt; 0; bu yüzden x · 3: <b>−33</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 7)<br>3. Eğer x &lt; 0 ise x ← x · (−5)<br>   değilse x ← x + 1<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "−35",
+      "8",
+      "7",
+      "−8"
+     ],
+     "a": 1,
+     "e": "x = 7, x ≥ 0; bu yüzden x + 1: <b>8</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −6)<br>3. Eğer x &lt; 0 ise x ← x · (−3)<br>   değilse x ← x + (−4)<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "18",
+      "−10",
+      "−6",
+      "−18"
+     ],
+     "a": 0,
+     "e": "x = −6, x &lt; 0; bu yüzden x · (−3): <b>18</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 12)<br>3. Eğer x &lt; 0 ise x ← x · 4<br>   değilse x ← x + (−6)<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "6",
+      "−6",
+      "48",
+      "12"
+     ],
+     "a": 0,
+     "e": "x = 12, x ≥ 0; bu yüzden x + (−6): <b>6</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −8)<br>3. Eğer x &lt; 0 ise x ← x · 5<br>   değilse x ← x + (−8)<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "40",
+      "−16",
+      "−8",
+      "−40"
+     ],
+     "a": 3,
+     "e": "x = −8, x &lt; 0; bu yüzden x · 5: <b>−40</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 10)<br>3. Eğer x &lt; 0 ise x ← x · (−3)<br>   değilse x ← x + (−1)<br>4. x’i yaz, bitir</span></div>",
+     "c": [
+      "10",
+      "9",
+      "−9",
+      "−30"
+     ],
+     "a": 1,
+     "e": "x = 10, x ≥ 0; bu yüzden x + (−1): <b>9</b>."
+    }
+   ]
+  },
+  {
+   "title": "Adımları sıralama ve karışık",
+   "items": [
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −8)<br>3. x’i −3 ile çarp<br>4. Sonuca 1 ekle<br>5. Sonucu 4 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "28",
+      "100",
+      "29",
+      "−100"
+     ],
+     "a": 1,
+     "e": "−3 · (−8) = 24; 24 + 1 = 25; 25 · 4 = <b>100</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 3)<br>3. x’i −4 ile çarp<br>4. Sonuca −7 ekle<br>5. Sonucu 2 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "38",
+      "−26",
+      "−17",
+      "−38"
+     ],
+     "a": 3,
+     "e": "−4 · 3 = −12; −12 + (−7) = −19; (−19) · 2 = <b>−38</b>."
+    },
+    {
+     "q": "8x − 6 = 58 denklemini çözen algoritmanın adımları karışık verilmiştir. Doğru sıralama hangisidir?<div class='qfig'><span class='code'>A. İki tarafı 8 ile böl<br>B. x’in değerini yaz<br>C. Çözümü denklemde yerine koyup kontrol et<br>D. Eşitliğin iki tarafına 6 ekle</span></div>",
+     "c": [
+      "A – B – C – D",
+      "D – B – A – C",
+      "D – A – B – C",
+      "A – D – C – B"
+     ],
+     "a": 2,
+     "e": "Önce sabit terimden kurtulur, sonra katsayıya böler, sonucu yazar ve kontrol ederiz: <b>D – A – B – C</b> (x = 8)."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −8<br>3. 3 kez tekrar et:<br>      sayı ← sayı − 4<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−20",
+      "−24",
+      "−12",
+      "−16"
+     ],
+     "a": 0,
+     "e": "Her tekrarda −4 eklenir: −8 + 3 · (−4) = <b>−20</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −8)<br>3. x’i −3 ile çarp<br>4. Sonuca −8 ekle<br>5. Sonucu 4 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "64",
+      "20",
+      "−64",
+      "−8"
+     ],
+     "a": 0,
+     "e": "−3 · (−8) = 24; 24 + (−8) = 16; 16 · 4 = <b>64</b>."
+    },
+    {
+     "q": "8x − 3 = 61 denklemini çözen algoritmanın adımları karışık verilmiştir. Doğru sıralama hangisidir?<div class='qfig'><span class='code'>A. Çözümü denklemde yerine koyup kontrol et<br>B. x’in değerini yaz<br>C. Eşitliğin iki tarafına 3 ekle<br>D. İki tarafı 8 ile böl</span></div>",
+     "c": [
+      "C – D – B – A",
+      "C – B – A – D",
+      "B – A – C – D",
+      "D – A – C – B"
+     ],
+     "a": 0,
+     "e": "Önce sabit terimden kurtulur, sonra katsayıya böler, sonucu yazar ve kontrol ederiz: <b>C – D – B – A</b> (x = 8)."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −5<br>3. 4 kez tekrar et:<br>      sayı ← sayı − 2<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−15",
+      "−7",
+      "−13",
+      "−11"
+     ],
+     "a": 2,
+     "e": "Her tekrarda −2 eklenir: −5 + 4 · (−2) = <b>−13</b>."
+    },
+    {
+     "q": "5x − 9 = 26 denklemini çözen algoritmanın adımları karışık verilmiştir. Doğru sıralama hangisidir?<div class='qfig'><span class='code'>A. Çözümü denklemde yerine koyup kontrol et<br>B. x’in değerini yaz<br>C. Eşitliğin iki tarafına 9 ekle<br>D. İki tarafı 5 ile böl</span></div>",
+     "c": [
+      "D – A – B – C",
+      "C – D – B – A",
+      "A – C – B – D",
+      "D – A – C – B"
+     ],
+     "a": 1,
+     "e": "Önce sabit terimden kurtulur, sonra katsayıya böler, sonucu yazar ve kontrol ederiz: <b>C – D – B – A</b> (x = 7)."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −8)<br>3. x’i 5 ile çarp<br>4. Sonuca 6 ekle<br>5. Sonucu 5 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−170",
+      "170",
+      "−10",
+      "−29"
+     ],
+     "a": 0,
+     "e": "5 · (−8) = −40; −40 + 6 = −34; (−34) · 5 = <b>−170</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = 1)<br>3. x’i −3 ile çarp<br>4. Sonuca 9 ekle<br>5. Sonucu 2 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "8",
+      "12",
+      "−12",
+      "15"
+     ],
+     "a": 1,
+     "e": "−3 · 1 = −3; −3 + 9 = 6; 6 · 2 = <b>12</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 7<br>3. 5 kez tekrar et:<br>      sayı ← sayı + 3<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "19",
+      "25",
+      "10",
+      "22"
+     ],
+     "a": 3,
+     "e": "Her tekrarda 3 eklenir: 7 + 5 · 3 = <b>22</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −1<br>3. 6 kez tekrar et:<br>      sayı ← sayı + 1<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "4",
+      "0",
+      "6",
+      "5"
+     ],
+     "a": 3,
+     "e": "Her tekrarda 1 eklenir: −1 + 6 · 1 = <b>5</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −2)<br>3. x’i 1 ile çarp<br>4. Sonuca −3 ekle<br>5. Sonucu 5 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "−17",
+      "0",
+      "−25",
+      "25"
+     ],
+     "a": 2,
+     "e": "1 · (−2) = −2; −2 + (−3) = −5; (−5) · 5 = <b>−25</b>."
+    },
+    {
+     "q": "6x − 2 = 28 denklemini çözen algoritmanın adımları karışık verilmiştir. Doğru sıralama hangisidir?<div class='qfig'><span class='code'>A. Eşitliğin iki tarafına 2 ekle<br>B. x’in değerini yaz<br>C. İki tarafı 6 ile böl<br>D. Çözümü denklemde yerine koyup kontrol et</span></div>",
+     "c": [
+      "C – D – B – A",
+      "A – C – B – D",
+      "B – A – D – C",
+      "C – A – B – D"
+     ],
+     "a": 1,
+     "e": "Önce sabit terimden kurtulur, sonra katsayıya böler, sonucu yazar ve kontrol ederiz: <b>A – C – B – D</b> (x = 5)."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← −1<br>3. 3 kez tekrar et:<br>      sayı ← sayı + 1<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "2",
+      "3",
+      "0",
+      "1"
+     ],
+     "a": 0,
+     "e": "Her tekrarda 1 eklenir: −1 + 3 · 1 = <b>2</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 8<br>3. 6 kez tekrar et:<br>      sayı ← sayı + 2<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "18",
+      "10",
+      "20",
+      "22"
+     ],
+     "a": 2,
+     "e": "Her tekrarda 2 eklenir: 8 + 6 · 2 = <b>20</b>."
+    },
+    {
+     "q": "Algoritma çalıştırıldığında ekrana hangi sayı yazılır?<div class='qfig'><span class='code'>1. Başla<br>2. sayı ← 1<br>3. 5 kez tekrar et:<br>      sayı ← sayı − 4<br>4. sayıyı yaz, bitir</span></div>",
+     "c": [
+      "−3",
+      "−15",
+      "−19",
+      "−23"
+     ],
+     "a": 2,
+     "e": "Her tekrarda −4 eklenir: 1 + 5 · (−4) = <b>−19</b>."
+    },
+    {
+     "q": "Algoritmanın çıktısı kaçtır?<div class='qfig'><span class='code'>1. Başla<br>2. Bir x sayısı al (x = −1)<br>3. x’i 4 ile çarp<br>4. Sonuca −7 ekle<br>5. Sonucu 3 ile çarp<br>6. Sonucu yaz, bitir</span></div>",
+     "c": [
+      "33",
+      "−25",
+      "−8",
+      "−33"
+     ],
+     "a": 3,
+     "e": "4 · (−1) = −4; −4 + (−7) = −11; (−11) · 3 = <b>−33</b>."
+    },
+    {
+     "q": "6x − 3 = 27 denklemini çözen algoritmanın adımları karışık verilmiştir. Doğru sıralama hangisidir?<div class='qfig'><span class='code'>A. Eşitliğin iki tarafına 3 ekle<br>B. Çözümü denklemde yerine koyup kontrol et<br>C. x’in değerini yaz<br>D. İki tarafı 6 ile böl</span></div>",
+     "c": [
+      "C – A – D – B",
+      "C – B – D – A",
+      "B – C – A – D",
+      "A – D – C – B"
+     ],
+     "a": 3,
+     "e": "Önce sabit terimden kurtulur, sonra katsayıya böler, sonucu yazar ve kontrol ederiz: <b>A – D – C – B</b> (x = 5)."
+    },
+    {
+     "q": "2x − 4 = 4 denklemini çözen algoritmanın adımları karışık verilmiştir. Doğru sıralama hangisidir?<div class='qfig'><span class='code'>A. x’in değerini yaz<br>B. İki tarafı 2 ile böl<br>C. Eşitliğin iki tarafına 4 ekle<br>D. Çözümü denklemde yerine koyup kontrol et</span></div>",
+     "c": [
+      "C – A – B – D",
+      "C – B – A – D",
+      "C – B – D – A",
+      "A – D – C – B"
+     ],
+     "a": 1,
+     "e": "Önce sabit terimden kurtulur, sonra katsayıya böler, sonucu yazar ve kontrol ederiz: <b>C – B – A – D</b> (x = 4)."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 15,
+ "updated": "2026-11-25",
+ "country": "tr",
+ "subject": "matematik",
+ "grade": "7-sinif"
+}

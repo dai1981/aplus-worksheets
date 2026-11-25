@@ -1825,7 +1825,14 @@ TR / Matematik / 6. Sınıf（EBOB・EKOK の語は使わない（DÖP のとお
 14. paralel-dogrular-ve-kesen ✓ 15. dortgenler ✓ 16. ucgen-ve-dortgende-acilar ✓ 17. alan-olcu-birimleri ✓ 18. paralelkenar-ve-ucgenin-alani ✓ 19. cember-uzunlugu-ve-pi ✓ 20. merkez-acisi-ve-yay ✓
 21. veri-analizi ✓ 22. deneysel-olasilik ✓
 トピック（topic_defs_tr）：sayilar・toplama-ve-cikarma・carpma-ve-bolme・carpanlar-ve-bolunebilme・kesirler（Kesirler, Ondalık Gösterim ve Yüzde）・oruntuler-ve-esitlik（Örüntüler, Eşitlik ve Cebir）・olcme・geometri・veri・olasilik
-TR の次: 7. sınıf、または 1.〜2. sınıf
+TR / Matematik / 7. Sınıf（2026 DÖP。負の数は「−」、tr_g7.py に sn（符号付きの数・分数）・par・dq・dpar・ondalik（循環小数は <span class='ov'>）・lin・terms・gen（名前の属格：Elif’in・Can’ın・Duru’nun）。単元は tr_s7a（1〜9）・tr_s7b（10〜18）・tr_s7c（19〜27）。立体の図は kr_pics56 の iso_cubes（「앞」→「Ön」）・views_panel・box_svg。DOMAIN に D Dönüşüm・C8 Cebirsel Düşünme ve Değişimler を足した）
+1. tam-sayilar-ve-rasyonel-sayilar ✓ 2. rasyonel-sayilarin-ondalik-gosterimi ✓ 3. rasyonel-sayilari-karsilastirma-ve-siralama ✓ 4. rasyonel-sayilarla-toplama-ve-cikarma ✓ 5. rasyonel-sayilarla-carpma-ve-bolme ✓ 6. rasyonel-sayi-problemleri ✓
+7. oran ✓ 8. oranti ✓ 9. dogru-oranti-problemleri ✓ 10. cebirsel-ifadelerle-islemler ✓ 11. birinci-dereceden-bir-bilinmeyenli-denklemler ✓ 12. birinci-dereceden-bir-bilinmeyenli-esitsizlikler ✓
+13. denklem-ve-esitsizlik-problemleri ✓ 14. sayilarla-ispat-ve-oruntuler ✓ 15. cebirsel-islemler-ve-algoritma ✓ 16. yansima-donusumu ✓ 17. orta-dikme-ve-aciortay ✓ 18. ucgende-kenarortay-aciortay-ve-yukseklik ✓
+19. es-kuplerle-yapilar-ve-gorunumleri ✓ 20. dikdortgenler-prizmasinin-yuzey-alani ✓ 21. dikdortgenler-prizmasinin-hacmi ✓ 22. hacim-olcme-birimleri ✓ 23. dairenin-ve-daire-diliminin-alani ✓ 24. eskenar-dortgen-ve-yamugun-alani ✓
+25. veri-analizi-ve-ortalama-mutlak-sapma ✓ 26. teorik-olasilik-ve-tumleyen-olay ✓ 27. ayrik-ve-ayrik-olmayan-olaylar ✓
+トピックに rasyonel-sayilar（Tam Sayılar ve Rasyonel Sayılar）・oran-ve-oranti・denklemler-ve-esitsizlikler を足した。hacim・hacmi→olcme（geometri の out）、olcme の out は (^|-)aci（hacim の「aci」に当たらないように）、kup・yansima→geometri、olaylar→olasilik
+TR の次: 8. sınıf、1.〜2. sınıf、lise、okul öncesi
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
