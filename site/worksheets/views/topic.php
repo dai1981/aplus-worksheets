@@ -29,12 +29,27 @@ $first = $units[0]; $last = $units[count($units) - 1];
 
 $zh = strpos($country['lang'], 'zh') === 0;   // zh-TW and zh-CN (zt() converts the text for zh-CN)
 $ko = $country['lang'] === 'ko';
+$idn = $country['lang'] === 'id';
 $de = $country['lang'] === 'de';
 $fr = $country['lang'] === 'fr';
 $it = $country['lang'] === 'it';
 $pt = $country['lang'] === 'pt-BR';
 $es = strpos($country['lang'], 'es') === 0;
-if ($es) {
+if ($idn) {
+    $faq = array(
+        array('q' => 'Lembar kerja ' . $name . ' apa saja yang ada di halaman ini?',
+              'a' => 'Ada ' . count($units) . ' materi ' . $name . ' untuk ' . $range . ': '
+                   . implode(', ', array_slice($titles, 0, 6)) . (count($titles) > 6 ? ', dan lainnya' : '') . '.'),
+        array('q' => 'Di kelas berapa ' . $name . ' dipelajari menurut ' . $country['standard'] . '?',
+              'a' => 'Topik ini dimulai di ' . $first['grade_name'] . ' dengan materi ' . $first['short_title']
+                   . ($first['grade'] === $last['grade'] ? '.' : ' dan berlanjut sampai ' . $last['grade_name'] . ' dengan materi ' . $last['short_title'] . '.')),
+        array('q' => 'Bagaimana anak saya sebaiknya memakai lembar kerja ini?',
+              'a' => 'Pilih materi sesuai kelasnya, baca penjelasan singkatnya, lalu kerjakan 5 set latihan yang masing-masing berisi 20 soal. '
+                   . 'Setiap jawaban langsung diperiksa. Untuk latihan tambahan, cetak lembar kerja ukuran ' . $paper . '; kunci jawaban ada di halaman terakhir.'),
+        array('q' => 'Apakah lembar kerja ini gratis?',
+              'a' => 'Ya. Penjelasan, latihan online, dan lembar kerja cetak dengan kunci jawaban gratis dipakai di rumah dan di kelas. Tidak perlu mendaftar.'),
+    );
+} elseif ($es) {
     $faq = array(
         array('q' => '¿Qué fichas sobre «' . $name . '» hay aquí?',
               'a' => 'Hay ' . count($units) . ' temas, ' . $range . ': '
@@ -150,10 +165,10 @@ if ($es) {
 
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
-    'title' => $ko ? $name . ' 학습지 | ' . $range . ' 무료 연습 (정답 포함) | ' . SITE_NAME : ($es ? $name . ': fichas ' . $range . ' gratis con soluciones | ' . SITE_NAME : ($pt ? $name . ': atividades ' . $range . ' grátis com gabarito | ' . SITE_NAME : ($it ? $name . ': schede ' . $range . ' gratis con soluzioni | ' . SITE_NAME : ($fr ? $name . ' : fiches ' . $range . ' gratuites avec corrigé | ' . SITE_NAME : ($de ? $name . ' Arbeitsblätter ' . $range . ': kostenlos üben mit Lösungen | ' . SITE_NAME
+    'title' => $idn ? 'Lembar Kerja ' . $name . ' ' . $range . ': Latihan Gratis dengan Kunci Jawaban | ' . SITE_NAME : ($ko ? $name . ' 학습지 | ' . $range . ' 무료 연습 (정답 포함) | ' . SITE_NAME : ($es ? $name . ': fichas ' . $range . ' gratis con soluciones | ' . SITE_NAME : ($pt ? $name . ': atividades ' . $range . ' grátis com gabarito | ' . SITE_NAME : ($it ? $name . ': schede ' . $range . ' gratis con soluzioni | ' . SITE_NAME : ($fr ? $name . ' : fiches ' . $range . ' gratuites avec corrigé | ' . SITE_NAME : ($de ? $name . ' Arbeitsblätter ' . $range . ': kostenlos üben mit Lösungen | ' . SITE_NAME
              : ($zh ? $name . zt('學習單｜') . $range . zt('免費練習（附解答）| ') . SITE_NAME
-                   : $name . ' Worksheets: Free ' . $range . ' ' . $subject['name'] . ' Practice with Answers | ' . SITE_NAME)))))),
-    'desc' => $ko ? $country['standard'] . '에 맞춘 무료 ' . $name . ' 학습지. ' . $range . ' ' . count($units) . '개 단원, 단원마다 개념 정리, 100문제, 인쇄용 정답이 있습니다.' : ($es ? 'Fichas gratis sobre «' . $name . '», ' . $range . ', según la ' . $country['standard'] . ': '
+                   : $name . ' Worksheets: Free ' . $range . ' ' . $subject['name'] . ' Practice with Answers | ' . SITE_NAME))))))),
+    'desc' => $idn ? 'Lembar kerja ' . $name . ' gratis untuk ' . $range . ' sesuai ' . $country['standard'] . ': ' . count($units) . ' materi, masing-masing dengan penjelasan, 100 soal latihan, dan kunci jawaban siap cetak.' : ($ko ? $country['standard'] . '에 맞춘 무료 ' . $name . ' 학습지. ' . $range . ' ' . count($units) . '개 단원, 단원마다 개념 정리, 100문제, 인쇄용 정답이 있습니다.' : ($es ? 'Fichas gratis sobre «' . $name . '», ' . $range . ', según la ' . $country['standard'] . ': '
                     . count($units) . ' temas, cada uno con una lección, 100 ejercicios y soluciones para imprimir.' : ($pt ? 'Atividades grátis sobre « ' . $name . ' », ' . $range . ', de acordo com a ' . $country['standard'] . ': '
                     . count($units) . ' conteúdos, cada um com aula, 100 exercícios e gabarito para imprimir.' : ($it ? 'Schede gratis sull’argomento « ' . $name . ' », ' . $range . ', secondo le ' . $country['standard'] . ': '
                     . count($units) . ' argomenti, ognuno con una lezione, 100 esercizi e le soluzioni da stampare.' : ($fr ? 'Fiches gratuites sur le thème « ' . $name . ' », ' . $range . ', conformes aux ' . $country['standard'] . ' : '
@@ -162,7 +177,7 @@ page_head(array(
             : ($zh ? zt('免費') . $name . zt('學習單，依照') . $country['standard'] . zt('，從') . $range . zt('共 ') . count($units)
                     . zt(' 個單元，每個單元都有說明、100 題練習和可列印的解答。')
                   : 'Free ' . $lc . ' worksheets for ' . $range . ', aligned to the ' . $country['standard'] . ': '
-                    . count($units) . ' skills, each with a lesson, 100 practice questions and a printable answer key.')))))),
+                    . count($units) . ' skills, each with a lesson, 100 practice questions and a printable answer key.'))))))),
     'canonical' => $path, 'image' => preview_path($path),
 ));
 site_header($crumbs);
@@ -170,8 +185,8 @@ site_header($crumbs);
 <main class="sn-wrap">
 <span class="sn-grade"><?= h($range . ' · ' . $country['standard']) ?></span>
 <h1><?= h(sprintf(T('topic_h1'), $name)) ?></h1>
-<div class="sx-hero"><p><?= h(topic_blurb($defs[$tk], $seg[0])) ?><?= $ko ? h(' 단원마다 짧은 개념 정리, 바로 채점되는 100문제, 정답이 있는 ' . $paper . ' 인쇄용 학습지가 있습니다. 무료, 회원 가입 없음.') : ($es ? h(' Cada tema tiene una lección breve, 100 ejercicios corregidos al momento y una ficha (' . $paper . ') para imprimir con soluciones. Gratis, sin registro.') : ($pt ? h(' Cada conteúdo tem uma aula curta, 100 exercícios corrigidos na hora e uma atividade (' . $paper . ') para imprimir com gabarito. Grátis, sem cadastro.') : ($it ? h(' Ogni argomento ha una lezione breve, 100 esercizi corretti subito e una scheda (' . $paper . ') da stampare con le soluzioni. Gratis, senza registrazione.') : ($fr ? h(' Chaque notion a une leçon courte, 100 exercices corrigés tout de suite et une fiche (' . $paper . ') à imprimer avec corrigé. Gratuit, sans inscription.') : ($de ? h(' Zu jedem Thema gibt es eine kurze Erklärung, 100 Übungsaufgaben mit sofortiger Rückmeldung und ein Arbeitsblatt (' . $paper . ') mit Lösungen zum Ausdrucken. Kostenlos, ohne Anmeldung.') : ($zh ? h(zt('每個單元都有簡短的說明、100 題立即對答的練習，以及附解答的 ') . $paper . zt(' 列印學習單。免費，不需要註冊。'))
-  : ' Every skill below has a short lesson, 100 practice questions with instant feedback and a printable ' . h($paper) . ' worksheet with an answer key. Free, no sign-up.')))))) ?></p></div>
+<div class="sx-hero"><p><?= h(topic_blurb($defs[$tk], $seg[0])) ?><?= $idn ? h(' Setiap materi berisi penjelasan singkat, 100 soal yang langsung dinilai, dan lembar kerja ' . $paper . ' siap cetak dengan kunci jawaban. Gratis, tanpa daftar.') : ($ko ? h(' 단원마다 짧은 개념 정리, 바로 채점되는 100문제, 정답이 있는 ' . $paper . ' 인쇄용 학습지가 있습니다. 무료, 회원 가입 없음.') : ($es ? h(' Cada tema tiene una lección breve, 100 ejercicios corregidos al momento y una ficha (' . $paper . ') para imprimir con soluciones. Gratis, sin registro.') : ($pt ? h(' Cada conteúdo tem uma aula curta, 100 exercícios corrigidos na hora e uma atividade (' . $paper . ') para imprimir com gabarito. Grátis, sem cadastro.') : ($it ? h(' Ogni argomento ha una lezione breve, 100 esercizi corretti subito e una scheda (' . $paper . ') da stampare con le soluzioni. Gratis, senza registrazione.') : ($fr ? h(' Chaque notion a une leçon courte, 100 exercices corrigés tout de suite et une fiche (' . $paper . ') à imprimer avec corrigé. Gratuit, sans inscription.') : ($de ? h(' Zu jedem Thema gibt es eine kurze Erklärung, 100 Übungsaufgaben mit sofortiger Rückmeldung und ein Arbeitsblatt (' . $paper . ') mit Lösungen zum Ausdrucken. Kostenlos, ohne Anmeldung.') : ($zh ? h(zt('每個單元都有簡短的說明、100 題立即對答的練習，以及附解答的 ') . $paper . zt(' 列印學習單。免費，不需要註冊。'))
+  : ' Every skill below has a short lesson, 100 practice questions with instant feedback and a printable ' . h($paper) . ' worksheet with an answer key. Free, no sign-up.'))))))) ?></p></div>
 
 <?php if (count($groups) > 1): ?>
 <ul class="tp-grades" aria-label="<?= h(T('grades')) ?>">
@@ -182,7 +197,7 @@ site_header($crumbs);
 <?php endif; ?>
 
 <?php foreach ($groups as $g => $list): $gbase = $sbase . $g . '/'; ?>
-<h2 id="<?= h($g) ?>"><?= h($ko ? $gnames[$g] . ' ' . $name : ($es ? $name . ' en ' . $gnames[$g] : ($pt ? $name . ' – ' . $gnames[$g] : ($it ? $name . ' in ' . strtolower($gnames[$g]) : ($fr ? $name . ' en ' . $gnames[$g] : $gnames[$g] . ($zh ? '' : ($de ? ': ' : ' ')) . $name))))) ?></h2>
+<h2 id="<?= h($g) ?>"><?= h($idn ? $name . ' di ' . $gnames[$g] : ($ko ? $gnames[$g] . ' ' . $name : ($es ? $name . ' en ' . $gnames[$g] : ($pt ? $name . ' – ' . $gnames[$g] : ($it ? $name . ' in ' . strtolower($gnames[$g]) : ($fr ? $name . ' en ' . $gnames[$g] : $gnames[$g] . ($zh ? '' : ($de ? ': ' : ' ')) . $name)))))) ?></h2>
 <ul class="sx-list">
 <?php foreach ($list as $u): $up = $gbase . $u['slug'] . '/'; ?>
 <li><div class="m"><span class="t"><?= h($u['title']) ?></span>
@@ -201,7 +216,7 @@ site_header($crumbs);
 <?php endforeach; ?>
 </section>
 
-<h2><?= h($ko ? '다른 ' . $subject['name'] . ' 주제' : ($es ? 'Otros temas de ' . mb_strtolower($subject['name']) : ($pt ? 'Outros temas de ' . mb_strtolower($subject['name']) : ($it ? 'Altri argomenti di ' . strtolower($subject['name']) : ($fr ? 'Autres thèmes de ' . strtolower($subject['name']) : ($de ? 'Weitere Themen in ' . $subject['name'] : ($zh ? zt('其他') . $subject['name'] . zt('主題') : 'More ' . strtolower($subject['name']) . ' topics'))))))) ?></h2>
+<h2><?= h($idn ? 'Topik ' . $subject['name'] . ' lainnya' : ($ko ? '다른 ' . $subject['name'] . ' 주제' : ($es ? 'Otros temas de ' . mb_strtolower($subject['name']) : ($pt ? 'Outros temas de ' . mb_strtolower($subject['name']) : ($it ? 'Altri argomenti di ' . strtolower($subject['name']) : ($fr ? 'Autres thèmes de ' . strtolower($subject['name']) : ($de ? 'Weitere Themen in ' . $subject['name'] : ($zh ? zt('其他') . $subject['name'] . zt('主題') : 'More ' . strtolower($subject['name']) . ' topics')))))))) ?></h2>
 <ul class="tp-chips">
 <?php foreach ($all as $ok => $ou): if ($ok === $tk) continue; ?>
   <li><a href="<?= url($sbase . 'topics/' . $ok . '/') ?>"><?= h(topic_name($defs[$ok], $seg[0])) ?><span class="n"><?= count($ou) ?></span></a></li>

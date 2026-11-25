@@ -134,6 +134,9 @@ if ($u['key_big']) $lr['teaches'] = $u['key_big'];
 $lr['audience'] = array('@type' => 'EducationalAudience', 'educationalRole' => array('student', 'teacher', 'parent'));
 if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 'us' || $country['code'] === 'us-tx' || $country['code'] === 'ph' || $country['code'] === 'za' || $country['code'] === 'tw' || $country['code'] === 'cn' || $country['code'] === 'kr' || strpos($country['code'], 'ca') === 0)) {   // Texas, the Philippines, Canada and Taiwan: Grade 3 = age 8-9, like the US
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);
+} elseif (preg_match('/^kelas-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'id') {
+    $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Indonesia: SD kelas 4 = age 9-10
+    $lr['educationalLevel'] = array($grade['name'], (int)$gm[1] <= 6 ? 'Sekolah Dasar' : ((int)$gm[1] <= 9 ? 'Sekolah Menengah Pertama' : 'Sekolah Menengah Atas'));
 } elseif ($country['code'] === 'cn' && isset(array('required-1' => 1, 'required-2' => 1, 'elective-1' => 1, 'elective-2' => 1, 'elective-3' => 1)[$grade['slug']])) {
     $ages = array('required-1' => '15-16', 'required-2' => '15-16', 'elective-1' => '16-17', 'elective-2' => '16-17', 'elective-3' => '16-18');
     $lr['typicalAgeRange'] = $ages[$grade['slug']];   // China, 普通高中: 必修 = 高一, 选择性必修 = 高二〜高三

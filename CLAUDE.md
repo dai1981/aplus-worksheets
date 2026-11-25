@@ -1744,6 +1744,18 @@ cn_common.unit は g == 0 で standard_code「数学认知 · 感知和理解数
 CN / Math / 幼儿园大班: counting-to-10, numbers-to-20, counting-in-groups, comparing-quantities, ordinal-numbers, splitting-and-combining-numbers, adding-and-taking-away, comparing-length-height-thickness-and-weight, recognizing-shapes, position-and-direction, repeating-patterns, sorting-and-recording ✓
 CN / Math は幼儿园大班・小学一年级〜高中（必修・选择性必修）まで完了。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に cn があるか確認する
 
+ID / Matematika（Kurikulum Merdeka、Capaian Pembelajaran：Keputusan Kepala BSKAP No. 046/H/KR/2025。数学は BKPDM 020/2026 で変更なし）— country `id`（name「Indonesia」、lang `id`、hreflang id-id、standard「Kurikulum Merdeka」）、subject `matematika`、grade `kelas-N`（name「Kelas N」、unit.php で N+5〜N+6 歳と educationalLevel Sekolah Dasar など）、A4。
+生成スクリプトは `tools/id_k4.py [番号…]`（seed は 40400 + sort、問題関数は id_k4a・id_k4b・id_k4c の uN()）、共通部品は `tools/id_common.py`（num（1.000 から点で区切る）・dec（コンマ）・rp（Rp6.750）・Kids（Buku Siswa の名前）・mcq（足りない誤答は桁に合わせた近い数、0 以下は出さない）・lesson（Cara berpikir → Contoh → Kesalahan yang sering terjadi）・make_unit（seo_title「X Kelas 4 SD: Latihan Soal dan Lembar Kerja dengan Kunci Jawaban」、standard_code「Fase B · Bilangan」）・garis_bilangan・nilai_tempat・blok・diagram_batang・bersusun。de_common の絵を D.num を差し替えて使う）。
+インドネシア語、kamu で話しかける短い文。記号は × と :（割り算）、余りは「29 : 4 = 7 sisa 1」。単元の範囲は CP の Fase B（kelas 3–4）：数は 10.000 まで、足し算・引き算は 1.000 まで、かけ算・わり算は 100 まで、お金はリブ単位。
+domain は CP の elemen（B Bilangan／A Aljabar／P Pengukuran／G Geometri／D Analisis Data dan Peluang）、standard_url は internal-portal.kemdikbud.go.id/download/file/1933。
+UI 文言は core.php の 'id'（T と J）、トピックは topics.php の `topic_defs_id()`（data の in は (^|-)data(-|$)、out に datar）、topic.php・topics.php に $idn の文言。みんなでクイズ（mq.js）にはまだ id の言語がない（英語で出る）
+
+ID / Matematika / Kelas 4（Fase B）
+1. bilangan-cacah-sampai-10000 ✓ 2. membandingkan-dan-mengurutkan-bilangan ✓ 3. menyusun-dan-menguraikan-bilangan ✓ 4. penjumlahan-dan-pengurangan ✓ 5. perkalian-dan-pembagian ✓ 6. faktor-dan-kelipatan ✓
+7. soal-cerita ✓ 8. pecahan ✓ 9. pecahan-senilai ✓ 10. desimal-dan-persen ✓ 11. kalimat-matematika ✓ 12. pola-gambar-dan-pola-bilangan ✓ 13. pengukuran-panjang-dan-berat ✓
+14. luas-dan-volume ✓ 15. bangun-datar ✓ 16. menyusun-dan-mengurai-bangun-datar ✓ 17. piktogram-dan-diagram-batang ✓
+ID の次: Kelas 3（Fase B）、Kelas 5–6（Fase C）、Kelas 1–2（Fase A）…
+
 その後: …（新しい学年・国は `catalog.json` に追加）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）

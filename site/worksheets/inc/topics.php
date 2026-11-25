@@ -450,6 +450,39 @@ function topic_defs_br() {
     );
 }
 
+/* Indonesia (id): Kurikulum Merdeka, CP 2025. Slugs are Indonesian */
+function topic_defs_id() {
+    return array(
+        'bilangan-cacah' => array('name' => 'Bilangan Cacah dan Nilai Tempat',
+            'in' => '/^bilangan|membandingkan-dan-mengurutkan-bilangan|menyusun-dan-menguraikan-bilangan|nilai-tempat|pembulatan/', 'out' => '/^$/',
+            'blurb' => 'Membaca dan menulis bilangan, nilai tempat ribuan, ratusan, puluhan, dan satuan, membandingkan dan mengurutkan bilangan, serta menyusun dan menguraikan bilangan.'),
+        'penjumlahan-dan-pengurangan' => array('name' => 'Penjumlahan dan Pengurangan',
+            'in' => '/penjumlahan|pengurangan/', 'out' => '/pecahan|desimal/',
+            'blurb' => 'Penjumlahan dan pengurangan bersusun dengan menyimpan dan meminjam, berhitung cepat, dan memeriksa jawaban.'),
+        'perkalian-dan-pembagian' => array('name' => 'Perkalian dan Pembagian',
+            'in' => '/perkalian|pembagian|faktor|kelipatan|kpk|fpb/', 'out' => '/pecahan|desimal/',
+            'blurb' => 'Perkalian dan pembagian sampai 100, hubungan perkalian dan pembagian, serta faktor dan kelipatan suatu bilangan.'),
+        'pecahan-desimal-dan-persen' => array('name' => 'Pecahan, Desimal, dan Persen',
+            'in' => '/pecahan|desimal|persen/', 'out' => '/^$/',
+            'blurb' => 'Pecahan berpembilang satu, pecahan berpenyebut sama, pecahan senilai, desimal persepuluhan dan perseratusan, serta hubungannya dengan persen.'),
+        'soal-cerita' => array('name' => 'Soal Cerita',
+            'in' => '/soal-cerita|uang/', 'out' => '/^$/',
+            'blurb' => 'Masalah sehari-hari dengan uang, belanja, dan benda di sekitar kita yang diselesaikan dengan empat operasi hitung.'),
+        'aljabar-dan-pola' => array('name' => 'Aljabar dan Pola',
+            'in' => '/pola|kalimat-matematika|perbandingan|rasio/', 'out' => '/^$/',
+            'blurb' => 'Mencari nilai yang belum diketahui dalam kalimat matematika, serta mengenali dan melanjutkan pola gambar dan pola bilangan.'),
+        'pengukuran' => array('name' => 'Pengukuran',
+            'in' => '/pengukuran|panjang|berat|luas|volume|waktu|keliling/', 'out' => '/bangun-datar$/',
+            'blurb' => 'Mengukur panjang dan berat dengan satuan baku, hubungan cm dan m serta g dan kg, luas dengan persegi satuan, dan volume dengan kubus satuan.'),
+        'geometri' => array('name' => 'Geometri',
+            'in' => '/bangun|sudut|garis|simetri|kubus|balok/', 'out' => '/^$/',
+            'blurb' => 'Ciri-ciri segitiga, segiempat, dan segi banyak, sisi dan sudut, serta menyusun dan menguraikan bangun datar.'),
+        'data-dan-peluang' => array('name' => 'Data dan Peluang',
+            'in' => '/piktogram|diagram|(^|-)data(-|$)|peluang|kemungkinan/', 'out' => '/datar/',
+            'blurb' => 'Membaca, menyajikan, dan membandingkan data dalam tabel, piktogram, dan diagram batang.'),
+    );
+}
+
 function topic_defs($country = null) {
     if ($country === 'br') return topic_defs_br();
     if ($country === 'es' || $country === 'mx') return topic_defs_es();
@@ -459,6 +492,7 @@ function topic_defs($country = null) {
     if ($country === 'de') return topic_defs_de();
     if ($country === 'fr') return topic_defs_fr();
     if ($country === 'it') return topic_defs_it();
+    if ($country === 'id') return topic_defs_id();
     $d = array(
         'fractions' => array('name' => 'Fractions',
             'in' => '/fraction|halves|thirds|fourths|quarters|mixed-num|improper|fair-shares|partition-shapes|operations-with-rational/',
@@ -697,6 +731,7 @@ function topic_range($units) {
     if ($units[0]['country'] === 'fr') return 'du ' . $first . ' au ' . $last;
     if ($units[0]['country'] === 'br') return 'do ' . $first . ' ao ' . $last;
     if ($units[0]['country'] === 'es' || $units[0]['country'] === 'mx') return 'de ' . $first . ' a ' . $last;
+    if ($units[0]['country'] === 'id') return $first . ' sampai ' . $last;
     if ($units[0]['country'] === 'it') return 'dalla ' . strtolower($first) . ' alla ' . strtolower($last);
     return $units[0]['country'] === 'de' ? $first . ' bis ' . $last : $first . ' to ' . $last;
 }
