@@ -1769,7 +1769,15 @@ Kelas 5 の問題関数を maker(d5, 名前) で再利用し、自前の問題�
 7. persen ✓ 8. soal-cerita-pecahan ✓ 9. perbandingan-dan-skala ✓ 10. pola-bilangan-dan-pola-titik ✓ 11. persamaan-sederhana ✓ 12. luas-bangun-datar-dan-gabungan ✓
 13. sudut-dan-segitiga ✓ 14. bangun-ruang-dan-volume ✓ 15. lokasi-dan-arah-mata-angin ✓ 16. waktu-jadwal-dan-kalender ✓ 17. modus-dan-penyajian-data ✓ 18. peluang ✓
 トピック（topic_defs_id）：operasi-hitung-campuran→perkalian-dan-pembagian、persamaan→aljabar-dan-pola、arah-mata-angin→geometri、bangun-ruang はgeometri だけ、luas- は pengukuran だけ
-ID の次: Kelas 1–2（Fase A）、SMP（Fase D）…
+ID / Matematika / Kelas 1・2（Fase A：Kelas 1 は 20 まで、Kelas 2 は 100 まで（計算は CP のとおり 20 まで）。とても短い文、ほぼ全問に絵）— 生成スクリプトは `tools/id_k12.py 1|2 [番号…]`（seed は 40000 + 100 × 学年 + sort）。
+k_pics の絵に pic() でインドネシア語の aria-label（BENDA：apel・bintang・bola…、インドネシア語は複数形なし）。問題関数は m_hitung・m_fakta（cross で 10 を越えるか）・m_cerita・m_pola・m_data（turus・pikto）など、範囲を引数で渡して両学年で使う。0 が答えになる計算は作らない。
+balok の絵は自前（balok_svg）。Kelas 2 の平面図形・図形の合成は Kelas 4 の問題関数（id_k4c u15・u16）を maker_of で使う（berapa は 20 までに絞る）。
+トピック：posisi→geometri、kesamaan・lompat-hitung→aljabar-dan-pola、mengukur→pengukuran（out に sudut）、puluhan-dan-satuan→bilangan-cacah、setengah→pecahan
+Kelas 1: 1. bilangan-sampai-10 ✓ 2. penjumlahan-sampai-10 ✓ 3. pengurangan-sampai-10 ✓ 4. bilangan-11-sampai-20 ✓ 5. membandingkan-dan-mengurutkan-bilangan ✓ 6. penjumlahan-dan-pengurangan-sampai-20 ✓ 7. soal-cerita ✓
+8. bangun-datar ✓ 9. bangun-ruang ✓ 10. membandingkan-panjang-dan-berat ✓ 11. pola-gambar-dan-bilangan ✓ 12. posisi-benda ✓ 13. turus-dan-piktogram ✓
+Kelas 2: 1. bilangan-sampai-100 ✓ 2. puluhan-dan-satuan ✓ 3. membandingkan-dan-mengurutkan-bilangan ✓ 4. lompat-hitung-dan-bilangan-genap-ganjil ✓ 5. penjumlahan-dan-pengurangan-sampai-20 ✓ 6. kesamaan-dan-tanda-sama-dengan ✓ 7. soal-cerita ✓
+8. setengah-dan-seperempat ✓ 9. mengukur-dengan-satuan-tidak-baku ✓ 10. bangun-datar-dan-bangun-ruang ✓ 11. menyusun-dan-mengurai-bangun-datar ✓ 12. pola ✓ 13. turus-dan-piktogram ✓
+ID / Matematika は Kelas 1〜6（SD）まで完了。次は SMP（Fase D、Kelas 7–9）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
