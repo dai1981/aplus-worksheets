@@ -1786,7 +1786,14 @@ Kelas 8: 1. bilangan-berpangkat ✓ 2. notasi-ilmiah ✓ 3. teorema-pythagoras �
 8. lingkaran ✓ 9. prisma-dan-limas ✓ 10. transformasi-geometri ✓ 11. statistika ✓ 12. peluang-empirik-dan-teoretik ✓
 Kelas 9: 1. bentuk-akar ✓ 2. persamaan-kuadrat ✓ 3. fungsi-kuadrat ✓ 4. kesebangunan ✓ 5. kekongruenan ✓ 6. sudut-pusat-dan-sudut-keliling ✓ 7. tabung-kerucut-dan-bola ✓
 8. dilatasi ✓ 9. ukuran-penyebaran-data ✓ 10. peluang-kejadian-majemuk ✓ 11. pola-bilangan-dan-barisan ✓
-ID / Matematika は Kelas 1〜9（SD・SMP）まで完了。次は SMA（Fase E・F）か、GDP 順で次の国
+ID / Matematika / Kelas 10–12（SMA。Kelas 10 は Fase E、Kelas 11–12 は Fase F）— 生成スクリプトは `tools/id_smp.py 10|11|12 [番号…]`（seed は 40000 + 100 × 学年 + 番号）、単元は `tools/id_sma10.py`・`id_sma11.py`・`id_sma12.py` の UNITS（id_smp.modname が 10 以上で id_smaN を読む。FASE で standard_text の末尾と fase を切り替え、seo_title は SMA）。
+共通部品は id_smp（mat：行列 .mx、det=True で行列式）と id_sma10（LOG・SIN/COS/TAN・surd・sub・neg）、id_sma12（P：{次数: 係数} → 多項式（変数を引数で）・deriv・integ・ev・nPr・nCr）。対数は `<sup>2</sup>log 8`、特別角は「½√3」、区間・不等号は &lt; &gt;。
+トピック（topic_defs_id）に trigonometri（trigonometri・aturan-sinus）と kalkulus（limit・turunan・integral）を足した。eksponen・logaritma→pangkat-dan-akar、barisan・polinomial・matriks→aljabar-dan-pola、bunga-majemuk→pecahan-desimal-dan-persen、vektor・dimensi-tiga→geometri、korelasi・simpangan・pencacahan・permutasi→data-dan-peluang。bilangan-kompleks はトピックなし
+Kelas 10: 1. eksponen ✓ 2. logaritma ✓ 3. barisan-dan-deret ✓ 4. bunga-majemuk-pertumbuhan-dan-peluruhan ✓ 5. vektor ✓ 6. perbandingan-trigonometri ✓ 7. aturan-sinus-kosinus-dan-luas-segitiga ✓
+8. sistem-persamaan-linear-tiga-variabel ✓ 9. sistem-pertidaksamaan-linear-dua-variabel ✓ 10. persamaan-dan-fungsi-kuadrat ✓ 11. statistika-data-berkelompok ✓ 12. peluang-kejadian-saling-lepas-dan-saling-bebas ✓
+Kelas 11: 1. komposisi-fungsi-dan-fungsi-invers ✓ 2. persamaan-lingkaran ✓ 3. korelasi-dan-regresi-linear ✓ 4. peluang-bersyarat ✓ 5. polinomial ✓ 6. matriks ✓ 7. fungsi-trigonometri ✓ 8. bilangan-kompleks ✓ 9. ragam-dan-simpangan-baku ✓
+Kelas 12: 1. kaidah-pencacahan ✓ 2. permutasi-dan-kombinasi ✓ 3. limit-fungsi-aljabar ✓ 4. turunan-fungsi-aljabar ✓ 5. aplikasi-turunan ✓ 6. integral-tak-tentu ✓ 7. integral-tentu-dan-luas-daerah ✓ 8. transformasi-geometri-dan-komposisinya ✓ 9. dimensi-tiga ✓
+ID / Matematika は Kelas 1〜12（SD・SMP・SMA）まで完了。次は GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

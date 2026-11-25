@@ -79,8 +79,8 @@ def fq(v, mixed=False):
         return s + num(v.numerator)
     if mixed and v > 1:
         w, r = divmod(v.numerator, v.denominator)
-        return s + "%s%s" % (num(w), fr(r, v.denominator))
-    return s + fr(v.numerator, v.denominator)
+        return s + "%s%s" % (num(w), fr(num(r), num(v.denominator)))
+    return s + fr(num(v.numerator), num(v.denominator))
 
 
 def sn(v):
@@ -187,13 +187,19 @@ def MD(q, v, wrongs, e, unit=""):
     """小数の答え"""
     if v is None:
         return None
+    places = lambda t: len(t.split(",")[1]) if "," in t else 0
+    lim = max(2, places(dz(v)))
+
     def f(x):
         if x is None:
             return None
         try:
-            return dz(x) + (NB + unit if unit else "")
+            t = dz(x)
         except ValueError:
             return None
+        if places(t) > lim:
+            return None
+        return t + (NB + unit if unit else "")
     return M(q, f(v), [f(w) for w in wrongs], e)
 
 
@@ -344,9 +350,24 @@ def unit(slug, dom, sort, title, short, std, meta, kb, ks, sets, think, ex, mist
                 sets=sets, think=think, ex=ex, mist=mist, faq=faq)
 
 
+FASE = {7: "Fase D", 8: "Fase D", 9: "Fase D", 10: "Fase E", 11: "Fase F", 12: "Fase F"}
+
+
+def modname(lv):
+    """Kelas 7–9: id_smpN、Kelas 10–12: id_smaN"""
+    return ("id_smp%d" if lv <= 9 else "id_sma%d") % lv
+
+
+def mat(rows, det=False):
+    """matriks (det=True: determinan dengan garis tegak)"""
+    n = len(rows[0])
+    cells = "".join("<span>%s</span>" % (c if isinstance(c, str) else sn(c)) for row in rows for c in row)
+    return "<span class='mx%s m%d'>%s</span>" % (" det" if det else "", n, cells)
+
+
 def build(lv, i):
     global R
-    mod = __import__("id_smp%d" % lv)
+    mod = __import__(modname(lv))
     R = random.Random(40000 + 100 * lv + i)
     mod.S.R = R
     d = mod.UNITS[i - 1]()
@@ -359,15 +380,15 @@ def build(lv, i):
             raise AssertionError("%s / %s / %s: %s" % (d["slug"], t, [m.__name__ for m, _ in parts], e))
     body = lesson(d["think"], [example(*x) for x in d["ex"]], d["mist"])
     faq = [{"q": a, "a": b} for a, b in d["faq"]]
-    make_unit(R, d["slug"], d["dom"], d["std"] + " (Capaian Pembelajaran Fase D)", d["title"], d["short"], d["meta"],
-              d["kb"], d["ks"], body, faq, sets, d["sort"], grade="kelas-%d" % lv, fase="Fase D")
+    make_unit(R, d["slug"], d["dom"], d["std"] + " (Capaian Pembelajaran %s)" % FASE[lv], d["title"], d["short"], d["meta"],
+              d["kb"], d["ks"], body, faq, sets, d["sort"], grade="kelas-%d" % lv, fase=FASE[lv])
     return d["slug"]
 
 
 if __name__ == "__main__":
     lv = int(sys.argv[1])
     want = sys.argv[2:]
-    mod = __import__("id_smp%d" % lv)
+    mod = __import__(modname(lv))
     for i in range(1, len(mod.UNITS) + 1):
         if want and str(i) not in want:
             continue

@@ -1,0 +1,1161 @@
+{
+ "slug": "matriks",
+ "title": "Matriks: Operasi, Determinan, dan Invers",
+ "seo_title": "Matriks Kelas 11 SMA: Latihan Soal dan Lembar Kerja dengan Kunci Jawaban",
+ "short_title": "Matriks",
+ "domain": "Aljabar",
+ "standard_code": "Fase F · Aljabar",
+ "standard_url": "https://internal-portal.kemdikbud.go.id/download/file/1933",
+ "standard_text": "Peserta didik melakukan operasi pada matriks (penjumlahan, perkalian skalar, perkalian matriks), menentukan determinan dan invers, serta menyelesaikan persamaan matriks. (Capaian Pembelajaran Fase F)",
+ "meta_desc": "Latihan matriks kelas 11 SMA: ordo dan transpose, penjumlahan dan perkalian skalar, perkalian matriks 2 × 2, determinan 2 × 2 dan 3 × 3 (Sarrus), invers matriks, dan persamaan matriks. 100 soal dengan kunci jawaban.",
+ "key_big": "det (a b; c d) = ad − bc",
+ "key_sub": "Perkalian matriks: baris kali kolom.",
+ "body_html": "<h2>Cara berpikir</h2><p>Matriks berordo m × n mempunyai m baris dan n kolom. Transpose Aᵀ menukar baris menjadi kolom.</p><p>Penjumlahan dilakukan elemen demi elemen. Perkalian AB: elemen baris i kolom j = jumlah hasil kali baris i dari A dengan kolom j dari B. Umumnya AB ≠ BA.</p><p>Untuk A = (a b; c d): det A = ad − bc dan A⁻¹ = 1/(ad − bc) × (d −b; −c a). Persamaan AX = B diselesaikan dengan X = A⁻¹B.</p><div class='sn-ex'><span class='sn-ex-t'>Contoh</span><p class='sn-ex-q'>det (3 2; 1 4)?</p><p class='sn-ex-s'>3 × 4 − 2 × 1</p><p class='sn-ex-a'>Jawaban: 10</p></div><div class='sn-ex'><span class='sn-ex-t'>Contoh</span><p class='sn-ex-q'>(1 2; 3 4)(2 0; 1 1)?</p><p class='sn-ex-s'>Baris 1: 1 × 2 + 2 × 1 = 4, 1 × 0 + 2 × 1 = 2</p><p class='sn-ex-a'>Jawaban: (4 2; 10 4)</p></div><h2>Kesalahan yang sering terjadi</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Kesalahan</th><th>Yang benar</th></tr></thead><tbody><tr><td>Perkalian matriks dilakukan per elemen</td><td>Pakai baris kali kolom</td></tr><tr><td>det = ad + bc</td><td>det = ad − bc</td></tr><tr><td>Invers: tukar b dan c</td><td>Tukar a dan d, ubah tanda b dan c, lalu bagi dengan det</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Kapan dua matriks dapat dikalikan?",
+   "a": "Jika banyak kolom matriks pertama sama dengan banyak baris matriks kedua."
+  },
+  {
+   "q": "Kapan matriks tidak mempunyai invers?",
+   "a": "Jika determinannya 0 (matriks singular)."
+  },
+  {
+   "q": "Di mana matriks dipakai?",
+   "a": "Untuk menyelesaikan sistem persamaan, transformasi geometri, grafika komputer, dan pengolahan data."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Ordo dan transpose",
+   "items": [
+    {
+     "q": "Ordo matriks A = <span class='mx m2'><span>−9</span><span>−2</span><span>−1</span><span>−4</span></span> adalah …",
+     "c": [
+      "3 × 2",
+      "2 × 3",
+      "2 × 2",
+      "4 × 1"
+     ],
+     "a": 2,
+     "e": "Ordo = banyak baris × banyak kolom = 2 × 2."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m2'><span>8</span><span>5</span><span>5</span><span>−2</span></span> adalah …",
+     "c": [
+      "4 × 1",
+      "2 × 3",
+      "3 × 2",
+      "2 × 2"
+     ],
+     "a": 3,
+     "e": "Ordo = banyak baris × banyak kolom = 2 × 2."
+    },
+    {
+     "q": "Transpose matriks A = <span class='mx m3'><span>7</span><span>−4</span><span>−1</span><span>−8</span><span>−2</span><span>−2</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span>7</span><span>−8</span><span>−4</span><span>−2</span><span>−1</span><span>−2</span></span>",
+      "<span class='mx m3'><span>−8</span><span>−2</span><span>−2</span><span>7</span><span>−4</span><span>−1</span></span>",
+      "<span class='mx m3'><span>−1</span><span>−4</span><span>7</span><span>−2</span><span>−2</span><span>−8</span></span>",
+      "<span class='mx m3'><span>−7</span><span>4</span><span>1</span><span>8</span><span>2</span><span>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Baris menjadi kolom: Aᵀ = <span class='mx m2'><span>7</span><span>−8</span><span>−4</span><span>−2</span><span>−1</span><span>−2</span></span>."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m3'><span>5</span><span>7</span><span>6</span><span>−6</span><span>−1</span><span>3</span></span> adalah …",
+     "c": [
+      "2 × 3",
+      "6 × 1",
+      "3 × 2",
+      "3 × 3"
+     ],
+     "a": 0,
+     "e": "Ordo = banyak baris × banyak kolom = 2 × 3."
+    },
+    {
+     "q": "Transpose matriks A = <span class='mx m2'><span>−2</span><span>−5</span><span>3</span><span>−7</span><span>−1</span><span>4</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>4</span><span>3</span><span>−7</span><span>−2</span><span>−5</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−2</span><span>−7</span><span>3</span><span>4</span><span>−1</span></span>",
+      "<span class='mx m3'><span>−2</span><span>3</span><span>−1</span><span>−5</span><span>−7</span><span>4</span></span>",
+      "<span class='mx m2'><span>2</span><span>5</span><span>−3</span><span>7</span><span>1</span><span>−4</span></span>"
+     ],
+     "a": 2,
+     "e": "Baris menjadi kolom: Aᵀ = <span class='mx m3'><span>−2</span><span>3</span><span>−1</span><span>−5</span><span>−7</span><span>4</span></span>."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m2'><span>−7</span><span>−7</span><span>−1</span><span>9</span></span> adalah …",
+     "c": [
+      "4 × 1",
+      "2 × 2",
+      "3 × 2",
+      "2 × 3"
+     ],
+     "a": 1,
+     "e": "Ordo = banyak baris × banyak kolom = 2 × 2."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m2'><span>−1</span><span>−9</span><span>−1</span><span>1</span></span> adalah …",
+     "c": [
+      "2 × 2",
+      "4 × 1",
+      "2 × 3",
+      "3 × 2"
+     ],
+     "a": 0,
+     "e": "Ordo = banyak baris × banyak kolom = 2 × 2."
+    },
+    {
+     "q": "Transpose matriks A = <span class='mx m3'><span>−3</span><span>−9</span><span>1</span><span>−5</span><span>7</span><span>−9</span></span> adalah …",
+     "c": [
+      "<span class='mx m3'><span>−5</span><span>7</span><span>−9</span><span>−3</span><span>−9</span><span>1</span></span>",
+      "<span class='mx m3'><span>1</span><span>−9</span><span>−3</span><span>−9</span><span>7</span><span>−5</span></span>",
+      "<span class='mx m3'><span>3</span><span>9</span><span>−1</span><span>5</span><span>−7</span><span>9</span></span>",
+      "<span class='mx m2'><span>−3</span><span>−5</span><span>−9</span><span>7</span><span>1</span><span>−9</span></span>"
+     ],
+     "a": 3,
+     "e": "Baris menjadi kolom: Aᵀ = <span class='mx m2'><span>−3</span><span>−5</span><span>−9</span><span>7</span><span>1</span><span>−9</span></span>."
+    },
+    {
+     "q": "Transpose matriks A = <span class='mx m3'><span>−9</span><span>−1</span><span>7</span><span>9</span><span>8</span><span>−3</span></span> adalah …",
+     "c": [
+      "<span class='mx m3'><span>7</span><span>−1</span><span>−9</span><span>−3</span><span>8</span><span>9</span></span>",
+      "<span class='mx m3'><span>9</span><span>1</span><span>−7</span><span>−9</span><span>−8</span><span>3</span></span>",
+      "<span class='mx m2'><span>−9</span><span>9</span><span>−1</span><span>8</span><span>7</span><span>−3</span></span>",
+      "<span class='mx m3'><span>9</span><span>8</span><span>−3</span><span>−9</span><span>−1</span><span>7</span></span>"
+     ],
+     "a": 2,
+     "e": "Baris menjadi kolom: Aᵀ = <span class='mx m2'><span>−9</span><span>9</span><span>−1</span><span>8</span><span>7</span><span>−3</span></span>."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m3'><span>−6</span><span>4</span><span>−5</span><span>−5</span><span>−8</span><span>6</span><span>−3</span><span>1</span><span>−3</span></span> adalah …",
+     "c": [
+      "3 × 3",
+      "9 × 1",
+      "4 × 3",
+      "3 × 4"
+     ],
+     "a": 0,
+     "e": "Ordo = banyak baris × banyak kolom = 3 × 3."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m3'><span>2</span><span>9</span><span>−2</span><span>1</span><span>−4</span><span>−4</span><span>−9</span><span>6</span><span>−6</span></span> adalah …",
+     "c": [
+      "3 × 4",
+      "3 × 3",
+      "4 × 3",
+      "9 × 1"
+     ],
+     "a": 1,
+     "e": "Ordo = banyak baris × banyak kolom = 3 × 3."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m2'><span>−9</span><span>8</span><span>−7</span><span>1</span><span>−3</span><span>−7</span></span> adalah …",
+     "c": [
+      "4 × 2",
+      "3 × 2",
+      "6 × 1",
+      "2 × 3"
+     ],
+     "a": 1,
+     "e": "Ordo = banyak baris × banyak kolom = 3 × 2."
+    },
+    {
+     "q": "Transpose matriks A = <span class='mx m3'><span>−7</span><span>−1</span><span>6</span><span>5</span><span>−4</span><span>−5</span></span> adalah …",
+     "c": [
+      "<span class='mx m3'><span>5</span><span>−4</span><span>−5</span><span>−7</span><span>−1</span><span>6</span></span>",
+      "<span class='mx m2'><span>−7</span><span>5</span><span>−1</span><span>−4</span><span>6</span><span>−5</span></span>",
+      "<span class='mx m3'><span>6</span><span>−1</span><span>−7</span><span>−5</span><span>−4</span><span>5</span></span>",
+      "<span class='mx m3'><span>7</span><span>1</span><span>−6</span><span>−5</span><span>4</span><span>5</span></span>"
+     ],
+     "a": 1,
+     "e": "Baris menjadi kolom: Aᵀ = <span class='mx m2'><span>−7</span><span>5</span><span>−1</span><span>−4</span><span>6</span><span>−5</span></span>."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m2'><span>−5</span><span>−6</span><span>−8</span><span>−7</span><span>−2</span><span>−5</span></span> adalah …",
+     "c": [
+      "2 × 3",
+      "6 × 1",
+      "4 × 2",
+      "3 × 2"
+     ],
+     "a": 3,
+     "e": "Ordo = banyak baris × banyak kolom = 3 × 2."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m2'><span>6</span><span>1</span><span>−4</span><span>−6</span></span> adalah …",
+     "c": [
+      "4 × 1",
+      "2 × 2",
+      "2 × 3",
+      "3 × 2"
+     ],
+     "a": 1,
+     "e": "Ordo = banyak baris × banyak kolom = 2 × 2."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m2'><span>−1</span><span>4</span><span>−5</span><span>−4</span></span> adalah …",
+     "c": [
+      "3 × 2",
+      "4 × 1",
+      "2 × 2",
+      "2 × 3"
+     ],
+     "a": 2,
+     "e": "Ordo = banyak baris × banyak kolom = 2 × 2."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m3'><span>5</span><span>5</span><span>−8</span><span>−7</span><span>−1</span><span>−1</span></span> adalah …",
+     "c": [
+      "3 × 2",
+      "6 × 1",
+      "2 × 3",
+      "3 × 3"
+     ],
+     "a": 2,
+     "e": "Ordo = banyak baris × banyak kolom = 2 × 3."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m2'><span>8</span><span>8</span><span>−1</span><span>3</span><span>−3</span><span>1</span></span> adalah …",
+     "c": [
+      "3 × 2",
+      "2 × 3",
+      "4 × 2",
+      "6 × 1"
+     ],
+     "a": 0,
+     "e": "Ordo = banyak baris × banyak kolom = 3 × 2."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m2'><span>−2</span><span>−6</span><span>−3</span><span>1</span></span> adalah …",
+     "c": [
+      "4 × 1",
+      "2 × 3",
+      "3 × 2",
+      "2 × 2"
+     ],
+     "a": 3,
+     "e": "Ordo = banyak baris × banyak kolom = 2 × 2."
+    },
+    {
+     "q": "Ordo matriks A = <span class='mx m2'><span>−7</span><span>−5</span><span>−7</span><span>1</span></span> adalah …",
+     "c": [
+      "2 × 3",
+      "3 × 2",
+      "4 × 1",
+      "2 × 2"
+     ],
+     "a": 3,
+     "e": "Ordo = banyak baris × banyak kolom = 2 × 2."
+    }
+   ]
+  },
+  {
+   "title": "Penjumlahan dan perkalian skalar",
+   "items": [
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>1</span><span>5</span><span>2</span><span>5</span></span> dan B = <span class='mx m2'><span>6</span><span>3</span><span>1</span><span>−2</span></span>. Matriks 2A + B adalah …",
+     "c": [
+      "<span class='mx m2'><span>8</span><span>13</span><span>5</span><span>8</span></span>",
+      "<span class='mx m2'><span>8</span><span>5</span><span>13</span><span>8</span></span>",
+      "<span class='mx m2'><span>7</span><span>8</span><span>3</span><span>3</span></span>",
+      "<span class='mx m2'><span>−4</span><span>7</span><span>3</span><span>12</span></span>"
+     ],
+     "a": 0,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>8</span><span>13</span><span>5</span><span>8</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−1</span><span>4</span><span>6</span><span>3</span></span> dan B = <span class='mx m2'><span>−1</span><span>−6</span><span>6</span><span>−2</span></span>. Matriks 2A − B adalah …",
+     "c": [
+      "<span class='mx m2'><span>−2</span><span>−2</span><span>12</span><span>1</span></span>",
+      "<span class='mx m2'><span>−3</span><span>2</span><span>18</span><span>4</span></span>",
+      "<span class='mx m2'><span>−1</span><span>6</span><span>14</span><span>8</span></span>",
+      "<span class='mx m2'><span>−1</span><span>14</span><span>6</span><span>8</span></span>"
+     ],
+     "a": 3,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>−1</span><span>14</span><span>6</span><span>8</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>2</span><span>3</span><span>−6</span><span>5</span></span> dan B = <span class='mx m2'><span>−6</span><span>2</span><span>−1</span><span>6</span></span>. Matriks 2A + B adalah …",
+     "c": [
+      "<span class='mx m2'><span>10</span><span>4</span><span>−11</span><span>4</span></span>",
+      "<span class='mx m2'><span>−4</span><span>5</span><span>−7</span><span>11</span></span>",
+      "<span class='mx m2'><span>−2</span><span>−13</span><span>8</span><span>16</span></span>",
+      "<span class='mx m2'><span>−2</span><span>8</span><span>−13</span><span>16</span></span>"
+     ],
+     "a": 3,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>−2</span><span>8</span><span>−13</span><span>16</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>3</span><span>−5</span><span>2</span><span>−2</span></span> dan B = <span class='mx m2'><span>−1</span><span>1</span><span>−2</span><span>−2</span></span>. Matriks 3A − 2B adalah …",
+     "c": [
+      "<span class='mx m2'><span>2</span><span>−4</span><span>0</span><span>−4</span></span>",
+      "<span class='mx m2'><span>7</span><span>−13</span><span>2</span><span>−10</span></span>",
+      "<span class='mx m2'><span>11</span><span>10</span><span>−17</span><span>−2</span></span>",
+      "<span class='mx m2'><span>11</span><span>−17</span><span>10</span><span>−2</span></span>"
+     ],
+     "a": 3,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>11</span><span>−17</span><span>10</span><span>−2</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>3</span><span>1</span><span>−4</span><span>−3</span></span> dan B = <span class='mx m2'><span>4</span><span>4</span><span>−2</span><span>1</span></span>. Matriks A + B adalah …",
+     "c": [
+      "<span class='mx m2'><span>7</span><span>−6</span><span>5</span><span>−2</span></span>",
+      "<span class='mx m2'><span>12</span><span>4</span><span>8</span><span>−3</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−3</span><span>−2</span><span>−4</span></span>",
+      "<span class='mx m2'><span>7</span><span>5</span><span>−6</span><span>−2</span></span>"
+     ],
+     "a": 3,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>7</span><span>5</span><span>−6</span><span>−2</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>5</span><span>4</span><span>5</span><span>−2</span></span> dan B = <span class='mx m2'><span>−4</span><span>−3</span><span>−1</span><span>−1</span></span>. Matriks −A − B adalah …",
+     "c": [
+      "<span class='mx m2'><span>−1</span><span>−1</span><span>−4</span><span>3</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−4</span><span>−1</span><span>3</span></span>",
+      "<span class='mx m2'><span>1</span><span>1</span><span>4</span><span>−3</span></span>",
+      "<span class='mx m2'><span>−9</span><span>−7</span><span>−6</span><span>1</span></span>"
+     ],
+     "a": 0,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>−1</span><span>−1</span><span>−4</span><span>3</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>3</span><span>−3</span><span>−3</span><span>−6</span></span> dan B = <span class='mx m2'><span>2</span><span>1</span><span>2</span><span>−3</span></span>. Matriks A + 2B adalah …",
+     "c": [
+      "<span class='mx m2'><span>7</span><span>−1</span><span>1</span><span>−12</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−5</span><span>−7</span><span>0</span></span>",
+      "<span class='mx m2'><span>7</span><span>1</span><span>−1</span><span>−12</span></span>",
+      "<span class='mx m2'><span>5</span><span>−2</span><span>−1</span><span>−9</span></span>"
+     ],
+     "a": 0,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>7</span><span>−1</span><span>1</span><span>−12</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>6</span><span>1</span><span>−1</span><span>2</span></span> dan B = <span class='mx m2'><span>1</span><span>−5</span><span>5</span><span>−6</span></span>. Matriks 2A + B adalah …",
+     "c": [
+      "<span class='mx m2'><span>7</span><span>−4</span><span>4</span><span>−4</span></span>",
+      "<span class='mx m2'><span>11</span><span>7</span><span>−7</span><span>10</span></span>",
+      "<span class='mx m2'><span>13</span><span>−3</span><span>3</span><span>−2</span></span>",
+      "<span class='mx m2'><span>13</span><span>3</span><span>−3</span><span>−2</span></span>"
+     ],
+     "a": 2,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>13</span><span>−3</span><span>3</span><span>−2</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−3</span><span>3</span><span>−2</span><span>2</span></span> dan B = <span class='mx m2'><span>−2</span><span>2</span><span>−5</span><span>−2</span></span>. Matriks 3A + 2B adalah …",
+     "c": [
+      "<span class='mx m2'><span>−13</span><span>13</span><span>−16</span><span>2</span></span>",
+      "<span class='mx m2'><span>−13</span><span>−16</span><span>13</span><span>2</span></span>",
+      "<span class='mx m2'><span>−5</span><span>5</span><span>4</span><span>10</span></span>",
+      "<span class='mx m2'><span>−5</span><span>5</span><span>−7</span><span>0</span></span>"
+     ],
+     "a": 0,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>−13</span><span>13</span><span>−16</span><span>2</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−4</span><span>4</span><span>1</span><span>3</span></span> dan B = <span class='mx m2'><span>−6</span><span>3</span><span>5</span><span>1</span></span>. Matriks 3A − B adalah …",
+     "c": [
+      "<span class='mx m2'><span>−18</span><span>15</span><span>8</span><span>10</span></span>",
+      "<span class='mx m2'><span>−10</span><span>7</span><span>6</span><span>4</span></span>",
+      "<span class='mx m2'><span>−6</span><span>9</span><span>−2</span><span>8</span></span>",
+      "<span class='mx m2'><span>−6</span><span>−2</span><span>9</span><span>8</span></span>"
+     ],
+     "a": 2,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>−6</span><span>9</span><span>−2</span><span>8</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−3</span><span>−2</span><span>4</span><span>−6</span></span> dan B = <span class='mx m2'><span>−2</span><span>5</span><span>6</span><span>3</span></span>. Matriks A + 2B adalah …",
+     "c": [
+      "<span class='mx m2'><span>−5</span><span>3</span><span>10</span><span>−3</span></span>",
+      "<span class='mx m2'><span>−7</span><span>8</span><span>16</span><span>0</span></span>",
+      "<span class='mx m2'><span>−7</span><span>16</span><span>8</span><span>0</span></span>",
+      "<span class='mx m2'><span>1</span><span>−12</span><span>−8</span><span>−12</span></span>"
+     ],
+     "a": 1,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>−7</span><span>8</span><span>16</span><span>0</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>6</span><span>−5</span><span>−2</span><span>−1</span></span> dan B = <span class='mx m2'><span>5</span><span>−5</span><span>5</span><span>4</span></span>. Matriks 2A − B adalah …",
+     "c": [
+      "<span class='mx m2'><span>17</span><span>−15</span><span>1</span><span>2</span></span>",
+      "<span class='mx m2'><span>7</span><span>−5</span><span>−9</span><span>−6</span></span>",
+      "<span class='mx m2'><span>7</span><span>−9</span><span>−5</span><span>−6</span></span>",
+      "<span class='mx m2'><span>11</span><span>−10</span><span>3</span><span>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>7</span><span>−5</span><span>−9</span><span>−6</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>6</span><span>−1</span><span>2</span><span>−4</span></span> dan B = <span class='mx m2'><span>−5</span><span>2</span><span>−5</span><span>6</span></span>. Matriks −A + B adalah …",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>1</span><span>−3</span><span>2</span></span>",
+      "<span class='mx m2'><span>−11</span><span>3</span><span>−7</span><span>10</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−1</span><span>3</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−11</span><span>−7</span><span>3</span><span>10</span></span>"
+     ],
+     "a": 1,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>−11</span><span>3</span><span>−7</span><span>10</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>2</span><span>5</span><span>2</span><span>−2</span></span> dan B = <span class='mx m2'><span>4</span><span>−4</span><span>5</span><span>6</span></span>. Matriks A + B adalah …",
+     "c": [
+      "<span class='mx m2'><span>8</span><span>−20</span><span>10</span><span>−12</span></span>",
+      "<span class='mx m2'><span>−2</span><span>9</span><span>−3</span><span>−8</span></span>",
+      "<span class='mx m2'><span>6</span><span>1</span><span>7</span><span>4</span></span>",
+      "<span class='mx m2'><span>6</span><span>7</span><span>1</span><span>4</span></span>"
+     ],
+     "a": 2,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>6</span><span>1</span><span>7</span><span>4</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−2</span><span>2</span><span>2</span><span>−2</span></span> dan B = <span class='mx m2'><span>5</span><span>3</span><span>−2</span><span>−4</span></span>. Matriks −A + 2B adalah …",
+     "c": [
+      "<span class='mx m2'><span>3</span><span>5</span><span>0</span><span>−6</span></span>",
+      "<span class='mx m2'><span>−8</span><span>−8</span><span>2</span><span>10</span></span>",
+      "<span class='mx m2'><span>12</span><span>4</span><span>−6</span><span>−6</span></span>",
+      "<span class='mx m2'><span>12</span><span>−6</span><span>4</span><span>−6</span></span>"
+     ],
+     "a": 2,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>12</span><span>4</span><span>−6</span><span>−6</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>3</span><span>6</span><span>5</span><span>3</span></span> dan B = <span class='mx m2'><span>6</span><span>−3</span><span>2</span><span>−5</span></span>. Matriks 3A + B adalah …",
+     "c": [
+      "<span class='mx m2'><span>3</span><span>21</span><span>13</span><span>14</span></span>",
+      "<span class='mx m2'><span>15</span><span>15</span><span>17</span><span>4</span></span>",
+      "<span class='mx m2'><span>15</span><span>17</span><span>15</span><span>4</span></span>",
+      "<span class='mx m2'><span>9</span><span>3</span><span>7</span><span>−2</span></span>"
+     ],
+     "a": 1,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>15</span><span>15</span><span>17</span><span>4</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>4</span><span>1</span><span>−5</span><span>−1</span></span> dan B = <span class='mx m2'><span>5</span><span>2</span><span>4</span><span>4</span></span>. Matriks A + 2B adalah …",
+     "c": [
+      "<span class='mx m2'><span>14</span><span>5</span><span>3</span><span>7</span></span>",
+      "<span class='mx m2'><span>14</span><span>3</span><span>5</span><span>7</span></span>",
+      "<span class='mx m2'><span>−6</span><span>−3</span><span>−13</span><span>−9</span></span>",
+      "<span class='mx m2'><span>9</span><span>3</span><span>−1</span><span>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>14</span><span>5</span><span>3</span><span>7</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−6</span><span>6</span><span>−1</span><span>2</span></span> dan B = <span class='mx m2'><span>3</span><span>1</span><span>3</span><span>−2</span></span>. Matriks A − 2B adalah …",
+     "c": [
+      "<span class='mx m2'><span>−3</span><span>7</span><span>2</span><span>0</span></span>",
+      "<span class='mx m2'><span>0</span><span>8</span><span>5</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−12</span><span>−7</span><span>4</span><span>6</span></span>",
+      "<span class='mx m2'><span>−12</span><span>4</span><span>−7</span><span>6</span></span>"
+     ],
+     "a": 3,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>−12</span><span>4</span><span>−7</span><span>6</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>1</span><span>5</span><span>2</span><span>5</span></span> dan B = <span class='mx m2'><span>6</span><span>1</span><span>−6</span><span>6</span></span>. Matriks −A + B adalah …",
+     "c": [
+      "<span class='mx m2'><span>7</span><span>6</span><span>−4</span><span>11</span></span>",
+      "<span class='mx m2'><span>5</span><span>−4</span><span>−8</span><span>1</span></span>",
+      "<span class='mx m2'><span>−7</span><span>−6</span><span>4</span><span>−11</span></span>",
+      "<span class='mx m2'><span>5</span><span>−8</span><span>−4</span><span>1</span></span>"
+     ],
+     "a": 1,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>5</span><span>−4</span><span>−8</span><span>1</span></span>."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>6</span><span>6</span><span>4</span><span>4</span></span> dan B = <span class='mx m2'><span>6</span><span>−3</span><span>6</span><span>3</span></span>. Matriks 3A − B adalah …",
+     "c": [
+      "<span class='mx m2'><span>12</span><span>6</span><span>21</span><span>9</span></span>",
+      "<span class='mx m2'><span>12</span><span>3</span><span>10</span><span>7</span></span>",
+      "<span class='mx m2'><span>12</span><span>21</span><span>6</span><span>9</span></span>",
+      "<span class='mx m2'><span>24</span><span>15</span><span>18</span><span>15</span></span>"
+     ],
+     "a": 2,
+     "e": "Operasikan elemen yang seletak: <span class='mx m2'><span>12</span><span>21</span><span>6</span><span>9</span></span>."
+    }
+   ]
+  },
+  {
+   "title": "Perkalian matriks",
+   "items": [
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>4</span><span>1</span><span>1</span><span>3</span></span> dan B = <span class='mx m2'><span>−5</span><span>−3</span><span>−1</span><span>6</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−23</span><span>−14</span><span>2</span><span>17</span></span>",
+      "<span class='mx m2'><span>−21</span><span>−6</span><span>−8</span><span>15</span></span>",
+      "<span class='mx m2'><span>21</span><span>−6</span><span>−8</span><span>15</span></span>",
+      "<span class='mx m2'><span>−20</span><span>−3</span><span>−1</span><span>18</span></span>"
+     ],
+     "a": 1,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = 4 × (−5) + 1 × (−1) = −21, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>1</span><span>−3</span><span>−4</span><span>2</span></span> dan B = <span class='mx m2'><span>5</span><span>−2</span><span>6</span><span>−1</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−13</span><span>1</span><span>−8</span><span>6</span></span>",
+      "<span class='mx m2'><span>13</span><span>1</span><span>−8</span><span>6</span></span>",
+      "<span class='mx m2'><span>13</span><span>−19</span><span>10</span><span>−20</span></span>",
+      "<span class='mx m2'><span>5</span><span>6</span><span>−24</span><span>−2</span></span>"
+     ],
+     "a": 0,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = 1 × 5 + (−3) × 6 = −13, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>5</span><span>1</span><span>3</span><span>−4</span></span> dan B = <span class='mx m2'><span>−6</span><span>−4</span><span>−3</span><span>5</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>33</span><span>−15</span><span>−6</span><span>−32</span></span>",
+      "<span class='mx m2'><span>−30</span><span>−4</span><span>−9</span><span>−20</span></span>",
+      "<span class='mx m2'><span>−42</span><span>10</span><span>0</span><span>−23</span></span>",
+      "<span class='mx m2'><span>−33</span><span>−15</span><span>−6</span><span>−32</span></span>"
+     ],
+     "a": 3,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = 5 × (−6) + 1 × (−3) = −33, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>2</span><span>−6</span><span>−6</span><span>−1</span></span> dan B = <span class='mx m2'><span>−1</span><span>2</span><span>−2</span><span>5</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−2</span><span>−12</span><span>12</span><span>−5</span></span>",
+      "<span class='mx m2'><span>−14</span><span>4</span><span>−34</span><span>7</span></span>",
+      "<span class='mx m2'><span>10</span><span>−26</span><span>8</span><span>−17</span></span>",
+      "<span class='mx m2'><span>−10</span><span>−26</span><span>8</span><span>−17</span></span>"
+     ],
+     "a": 2,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = 2 × (−1) + (−6) × (−2) = 10, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>4</span><span>−2</span><span>−3</span><span>3</span></span> dan B = <span class='mx m2'><span>2</span><span>5</span><span>6</span><span>6</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>4</span><span>8</span><span>12</span><span>3</span></span>",
+      "<span class='mx m2'><span>−7</span><span>11</span><span>6</span><span>6</span></span>",
+      "<span class='mx m2'><span>−4</span><span>8</span><span>12</span><span>3</span></span>",
+      "<span class='mx m2'><span>8</span><span>−10</span><span>−18</span><span>18</span></span>"
+     ],
+     "a": 2,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = 4 × 2 + (−2) × 6 = −4, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>4</span><span>6</span><span>3</span><span>4</span></span> dan B = <span class='mx m2'><span>6</span><span>1</span><span>6</span><span>−1</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>27</span><span>40</span><span>21</span><span>32</span></span>",
+      "<span class='mx m2'><span>60</span><span>−2</span><span>42</span><span>−1</span></span>",
+      "<span class='mx m2'><span>−60</span><span>−2</span><span>42</span><span>−1</span></span>",
+      "<span class='mx m2'><span>24</span><span>6</span><span>18</span><span>−4</span></span>"
+     ],
+     "a": 1,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = 4 × 6 + 6 × 6 = 60, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>4</span><span>1</span><span>−2</span><span>−3</span></span> dan B = <span class='mx m2'><span>−1</span><span>5</span><span>−3</span><span>3</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−14</span><span>−16</span><span>−18</span><span>−12</span></span>",
+      "<span class='mx m2'><span>−4</span><span>5</span><span>6</span><span>−9</span></span>",
+      "<span class='mx m2'><span>7</span><span>23</span><span>11</span><span>−19</span></span>",
+      "<span class='mx m2'><span>−7</span><span>23</span><span>11</span><span>−19</span></span>"
+     ],
+     "a": 3,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = 4 × (−1) + 1 × (−3) = −7, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>3</span><span>−1</span><span>−5</span><span>4</span></span> dan B = <span class='mx m2'><span>1</span><span>−3</span><span>−2</span><span>1</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>18</span><span>−13</span><span>−11</span><span>6</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−10</span><span>−13</span><span>19</span></span>",
+      "<span class='mx m2'><span>5</span><span>−10</span><span>−13</span><span>19</span></span>",
+      "<span class='mx m2'><span>3</span><span>3</span><span>10</span><span>4</span></span>"
+     ],
+     "a": 2,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = 3 × 1 + (−1) × (−2) = 5, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−3</span><span>6</span><span>6</span><span>−4</span></span> dan B = <span class='mx m2'><span>−5</span><span>4</span><span>5</span><span>−3</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>15</span><span>24</span><span>30</span><span>12</span></span>",
+      "<span class='mx m2'><span>−45</span><span>−30</span><span>−50</span><span>36</span></span>",
+      "<span class='mx m2'><span>45</span><span>−30</span><span>−50</span><span>36</span></span>",
+      "<span class='mx m2'><span>39</span><span>−46</span><span>−33</span><span>42</span></span>"
+     ],
+     "a": 2,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = −3 × (−5) + 6 × 5 = 45, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−1</span><span>3</span><span>−5</span><span>−2</span></span> dan B = <span class='mx m2'><span>−3</span><span>2</span><span>4</span><span>−1</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−7</span><span>−13</span><span>1</span><span>14</span></span>",
+      "<span class='mx m2'><span>−15</span><span>−5</span><span>7</span><span>−8</span></span>",
+      "<span class='mx m2'><span>3</span><span>6</span><span>−20</span><span>2</span></span>",
+      "<span class='mx m2'><span>15</span><span>−5</span><span>7</span><span>−8</span></span>"
+     ],
+     "a": 3,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = −1 × (−3) + 3 × 4 = 15, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>1</span><span>−6</span><span>1</span><span>−1</span></span> dan B = <span class='mx m2'><span>−2</span><span>−5</span><span>−3</span><span>−6</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−2</span><span>30</span><span>−3</span><span>6</span></span>",
+      "<span class='mx m2'><span>−7</span><span>17</span><span>−9</span><span>24</span></span>",
+      "<span class='mx m2'><span>−16</span><span>31</span><span>1</span><span>1</span></span>",
+      "<span class='mx m2'><span>16</span><span>31</span><span>1</span><span>1</span></span>"
+     ],
+     "a": 3,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = 1 × (−2) + (−6) × (−3) = 16, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−4</span><span>2</span><span>3</span><span>3</span></span> dan B = <span class='mx m2'><span>−1</span><span>−5</span><span>3</span><span>−4</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−11</span><span>−17</span><span>−24</span><span>−6</span></span>",
+      "<span class='mx m2'><span>10</span><span>12</span><span>6</span><span>−27</span></span>",
+      "<span class='mx m2'><span>4</span><span>−10</span><span>9</span><span>−12</span></span>",
+      "<span class='mx m2'><span>−10</span><span>12</span><span>6</span><span>−27</span></span>"
+     ],
+     "a": 1,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = −4 × (−1) + 2 × 3 = 10, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−5</span><span>−2</span><span>−3</span><span>4</span></span> dan B = <span class='mx m2'><span>−3</span><span>3</span><span>−1</span><span>1</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>15</span><span>−6</span><span>3</span><span>4</span></span>",
+      "<span class='mx m2'><span>17</span><span>−17</span><span>5</span><span>−5</span></span>",
+      "<span class='mx m2'><span>6</span><span>18</span><span>2</span><span>6</span></span>",
+      "<span class='mx m2'><span>−17</span><span>−17</span><span>5</span><span>−5</span></span>"
+     ],
+     "a": 1,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = −5 × (−3) + (−2) × (−1) = 17, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−6</span><span>4</span><span>3</span><span>−5</span></span> dan B = <span class='mx m2'><span>2</span><span>−5</span><span>3</span><span>1</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>0</span><span>34</span><span>−9</span><span>−20</span></span>",
+      "<span class='mx m2'><span>−27</span><span>33</span><span>−15</span><span>7</span></span>",
+      "<span class='mx m2'><span>−12</span><span>−20</span><span>9</span><span>−5</span></span>",
+      "<span class='mx m2'><span>2</span><span>36</span><span>−7</span><span>−18</span></span>"
+     ],
+     "a": 0,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = −6 × 2 + 4 × 3 = 0, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>2</span><span>−2</span><span>3</span><span>2</span></span> dan B = <span class='mx m2'><span>−6</span><span>−4</span><span>−5</span><span>−5</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−2</span><span>2</span><span>−28</span><span>−22</span></span>",
+      "<span class='mx m2'><span>−24</span><span>4</span><span>−25</span><span>0</span></span>",
+      "<span class='mx m2'><span>−12</span><span>8</span><span>−15</span><span>−10</span></span>",
+      "<span class='mx m2'><span>2</span><span>2</span><span>−28</span><span>−22</span></span>"
+     ],
+     "a": 0,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = 2 × (−6) + (−2) × (−5) = −2, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−4</span><span>−6</span><span>−3</span><span>6</span></span> dan B = <span class='mx m2'><span>6</span><span>−4</span><span>2</span><span>−2</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>36</span><span>28</span><span>−6</span><span>0</span></span>",
+      "<span class='mx m2'><span>−12</span><span>−60</span><span>−2</span><span>−24</span></span>",
+      "<span class='mx m2'><span>−36</span><span>28</span><span>−6</span><span>0</span></span>",
+      "<span class='mx m2'><span>−24</span><span>24</span><span>−6</span><span>−12</span></span>"
+     ],
+     "a": 2,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = −4 × 6 + (−6) × 2 = −36, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−1</span><span>3</span><span>5</span><span>1</span></span> dan B = <span class='mx m2'><span>4</span><span>4</span><span>−5</span><span>−6</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−19</span><span>−22</span><span>15</span><span>14</span></span>",
+      "<span class='mx m2'><span>−4</span><span>12</span><span>−25</span><span>−6</span></span>",
+      "<span class='mx m2'><span>16</span><span>16</span><span>−25</span><span>−21</span></span>",
+      "<span class='mx m2'><span>19</span><span>−22</span><span>15</span><span>14</span></span>"
+     ],
+     "a": 0,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = −1 × 4 + 3 × (−5) = −19, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−6</span><span>1</span><span>−4</span><span>1</span></span> dan B = <span class='mx m2'><span>3</span><span>4</span><span>−1</span><span>6</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−19</span><span>−18</span><span>−13</span><span>−10</span></span>",
+      "<span class='mx m2'><span>−18</span><span>4</span><span>4</span><span>6</span></span>",
+      "<span class='mx m2'><span>19</span><span>−18</span><span>−13</span><span>−10</span></span>",
+      "<span class='mx m2'><span>−34</span><span>7</span><span>−18</span><span>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = −6 × 3 + 1 × (−1) = −19, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>4</span><span>2</span><span>−5</span><span>−1</span></span> dan B = <span class='mx m2'><span>−3</span><span>−4</span><span>4</span><span>−6</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−12</span><span>−8</span><span>−20</span><span>6</span></span>",
+      "<span class='mx m2'><span>−4</span><span>−28</span><span>11</span><span>26</span></span>",
+      "<span class='mx m2'><span>8</span><span>−2</span><span>46</span><span>14</span></span>",
+      "<span class='mx m2'><span>4</span><span>−28</span><span>11</span><span>26</span></span>"
+     ],
+     "a": 1,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = 4 × (−3) + 2 × 4 = −4, dan seterusnya."
+    },
+    {
+     "q": "Diketahui A = <span class='mx m2'><span>−3</span><span>−5</span><span>−3</span><span>4</span></span> dan B = <span class='mx m2'><span>4</span><span>1</span><span>2</span><span>3</span></span>. Hasil AB adalah …",
+     "c": [
+      "<span class='mx m2'><span>−12</span><span>−5</span><span>−6</span><span>12</span></span>",
+      "<span class='mx m2'><span>−15</span><span>−16</span><span>−15</span><span>2</span></span>",
+      "<span class='mx m2'><span>22</span><span>−18</span><span>−4</span><span>9</span></span>",
+      "<span class='mx m2'><span>−22</span><span>−18</span><span>−4</span><span>9</span></span>"
+     ],
+     "a": 3,
+     "e": "Baris × kolom: elemen baris 1 kolom 1 = −3 × 4 + (−5) × 2 = −22, dan seterusnya."
+    }
+   ]
+  },
+  {
+   "title": "Determinan",
+   "items": [
+    {
+     "q": "Determinan matriks <span class='mx m3'><span>−3</span><span>4</span><span>−3</span><span>3</span><span>0</span><span>−1</span><span>−2</span><span>1</span><span>4</span></span> adalah …",
+     "c": [
+      "−1",
+      "52",
+      "−50",
+      "−52"
+     ],
+     "a": 3,
+     "e": "Aturan Sarrus: jumlah hasil kali diagonal ke kanan dikurangi jumlah hasil kali diagonal ke kiri = −52."
+    },
+    {
+     "q": "Determinan matriks A = <span class='mx m2'><span>2</span><span>−6</span><span>5</span><span>−1</span></span> adalah …",
+     "c": [
+      "−28",
+      "−32",
+      "28",
+      "−7"
+     ],
+     "a": 2,
+     "e": "det A = ad − bc = 2 × (−1) − (−6) × 5 = 28."
+    },
+    {
+     "q": "Determinan matriks <span class='mx m3'><span>2</span><span>−2</span><span>4</span><span>−1</span><span>0</span><span>4</span><span>3</span><span>4</span><span>4</span></span> adalah …",
+     "c": [
+      "−80",
+      "80",
+      "−40",
+      "−78"
+     ],
+     "a": 0,
+     "e": "Aturan Sarrus: jumlah hasil kali diagonal ke kanan dikurangi jumlah hasil kali diagonal ke kiri = −80."
+    },
+    {
+     "q": "Determinan matriks <span class='mx m3'><span>−2</span><span>2</span><span>2</span><span>1</span><span>−2</span><span>3</span><span>2</span><span>2</span><span>−3</span></span> adalah …",
+     "c": [
+      "32",
+      "−30",
+      "30",
+      "4"
+     ],
+     "a": 2,
+     "e": "Aturan Sarrus: jumlah hasil kali diagonal ke kanan dikurangi jumlah hasil kali diagonal ke kiri = 30."
+    },
+    {
+     "q": "Determinan matriks A = <span class='mx m2'><span>−3</span><span>4</span><span>−5</span><span>1</span></span> adalah …",
+     "c": [
+      "17",
+      "−23",
+      "−17",
+      "−7"
+     ],
+     "a": 0,
+     "e": "det A = ad − bc = −3 × 1 − 4 × (−5) = 17."
+    },
+    {
+     "q": "Determinan matriks <span class='mx m3'><span>−3</span><span>2</span><span>−1</span><span>−3</span><span>−2</span><span>3</span><span>2</span><span>−3</span><span>−3</span></span> adalah …",
+     "c": [
+      "−64",
+      "−62",
+      "−15",
+      "64"
+     ],
+     "a": 0,
+     "e": "Aturan Sarrus: jumlah hasil kali diagonal ke kanan dikurangi jumlah hasil kali diagonal ke kiri = −64."
+    },
+    {
+     "q": "Determinan matriks A = <span class='mx m2'><span>−5</span><span>−2</span><span>−4</span><span>6</span></span> adalah …",
+     "c": [
+      "−38",
+      "34",
+      "−22",
+      "38"
+     ],
+     "a": 0,
+     "e": "det A = ad − bc = −5 × 6 − (−2) × (−4) = −38."
+    },
+    {
+     "q": "Determinan matriks <span class='mx m3'><span>−3</span><span>−3</span><span>−1</span><span>1</span><span>1</span><span>0</span><span>2</span><span>4</span><span>3</span></span> adalah …",
+     "c": [
+      "−13",
+      "2",
+      "0",
+      "−2"
+     ],
+     "a": 3,
+     "e": "Aturan Sarrus: jumlah hasil kali diagonal ke kanan dikurangi jumlah hasil kali diagonal ke kiri = −2."
+    },
+    {
+     "q": "Determinan matriks <span class='mx m3'><span>0</span><span>−2</span><span>0</span><span>4</span><span>0</span><span>2</span><span>3</span><span>−1</span><span>−2</span></span> adalah …",
+     "c": [
+      "28",
+      "−12",
+      "−26",
+      "−28"
+     ],
+     "a": 3,
+     "e": "Aturan Sarrus: jumlah hasil kali diagonal ke kanan dikurangi jumlah hasil kali diagonal ke kiri = −28."
+    },
+    {
+     "q": "Determinan matriks A = <span class='mx m2'><span>−1</span><span>2</span><span>2</span><span>3</span></span> adalah …",
+     "c": [
+      "7",
+      "−7",
+      "−8",
+      "1"
+     ],
+     "a": 1,
+     "e": "det A = ad − bc = −1 × 3 − 2 × 2 = −7."
+    },
+    {
+     "q": "Determinan matriks <span class='mx m3'><span>4</span><span>−3</span><span>0</span><span>3</span><span>3</span><span>2</span><span>4</span><span>1</span><span>−2</span></span> adalah …",
+     "c": [
+      "−48",
+      "−74",
+      "74",
+      "−72"
+     ],
+     "a": 1,
+     "e": "Aturan Sarrus: jumlah hasil kali diagonal ke kanan dikurangi jumlah hasil kali diagonal ke kiri = −74."
+    },
+    {
+     "q": "Determinan matriks A = <span class='mx m2'><span>−5</span><span>4</span><span>4</span><span>−6</span></span> adalah …",
+     "c": [
+      "−14",
+      "14",
+      "4",
+      "46"
+     ],
+     "a": 1,
+     "e": "det A = ad − bc = −5 × (−6) − 4 × 4 = 14."
+    },
+    {
+     "q": "Determinan matriks <span class='mx m3'><span>3</span><span>−2</span><span>−3</span><span>−1</span><span>−2</span><span>4</span><span>3</span><span>−1</span><span>0</span></span> adalah …",
+     "c": [
+      "−33",
+      "−27",
+      "33",
+      "−31"
+     ],
+     "a": 0,
+     "e": "Aturan Sarrus: jumlah hasil kali diagonal ke kanan dikurangi jumlah hasil kali diagonal ke kiri = −33."
+    },
+    {
+     "q": "Determinan matriks <span class='mx m3'><span>0</span><span>2</span><span>4</span><span>1</span><span>−3</span><span>−2</span><span>3</span><span>3</span><span>−2</span></span> adalah …",
+     "c": [
+      "0",
+      "−40",
+      "40",
+      "42"
+     ],
+     "a": 2,
+     "e": "Aturan Sarrus: jumlah hasil kali diagonal ke kanan dikurangi jumlah hasil kali diagonal ke kiri = 40."
+    },
+    {
+     "q": "Determinan matriks A = <span class='mx m2'><span>−6</span><span>2</span><span>−1</span><span>5</span></span> adalah …",
+     "c": [
+      "28",
+      "−7",
+      "−32",
+      "−28"
+     ],
+     "a": 3,
+     "e": "det A = ad − bc = −6 × 5 − 2 × (−1) = −28."
+    },
+    {
+     "q": "Determinan matriks A = <span class='mx m2'><span>2</span><span>−2</span><span>1</span><span>−6</span></span> adalah …",
+     "c": [
+      "10",
+      "2",
+      "−14",
+      "−10"
+     ],
+     "a": 3,
+     "e": "det A = ad − bc = 2 × (−6) − (−2) × 1 = −10."
+    },
+    {
+     "q": "Determinan matriks A = <span class='mx m2'><span>5</span><span>−1</span><span>1</span><span>−6</span></span> adalah …",
+     "c": [
+      "1",
+      "29",
+      "−29",
+      "−31"
+     ],
+     "a": 2,
+     "e": "det A = ad − bc = 5 × (−6) − (−1) × 1 = −29."
+    },
+    {
+     "q": "Determinan matriks <span class='mx m3'><span>4</span><span>2</span><span>2</span><span>−3</span><span>2</span><span>−1</span><span>−1</span><span>1</span><span>3</span></span> adalah …",
+     "c": [
+      "20",
+      "46",
+      "48",
+      "−46"
+     ],
+     "a": 1,
+     "e": "Aturan Sarrus: jumlah hasil kali diagonal ke kanan dikurangi jumlah hasil kali diagonal ke kiri = 46."
+    },
+    {
+     "q": "Determinan matriks <span class='mx m3'><span>−2</span><span>1</span><span>3</span><span>−1</span><span>4</span><span>2</span><span>3</span><span>2</span><span>−2</span></span> adalah …",
+     "c": [
+      "14",
+      "−12",
+      "−14",
+      "16"
+     ],
+     "a": 2,
+     "e": "Aturan Sarrus: jumlah hasil kali diagonal ke kanan dikurangi jumlah hasil kali diagonal ke kiri = −14."
+    },
+    {
+     "q": "Determinan matriks A = <span class='mx m2'><span>3</span><span>−6</span><span>6</span><span>−2</span></span> adalah …",
+     "c": [
+      "−42",
+      "30",
+      "−30",
+      "−6"
+     ],
+     "a": 1,
+     "e": "det A = ad − bc = 3 × (−2) − (−6) × 6 = 30."
+    }
+   ]
+  },
+  {
+   "title": "Invers dan persamaan matriks",
+   "items": [
+    {
+     "q": "Invers matriks A = <span class='mx m2'><span>4</span><span>5</span><span>−5</span><span>−6</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span>6</span><span>5</span><span>−5</span><span>−4</span></span>",
+      "<span class='mx m2'><span>6</span><span>5</span><span>−5</span><span>4</span></span>",
+      "<span class='mx m2'><span>4</span><span>5</span><span>−5</span><span>−6</span></span>",
+      "<span class='mx m2'><span>−6</span><span>−5</span><span>5</span><span>4</span></span>"
+     ],
+     "a": 3,
+     "e": "A⁻¹ = (1/det A) × (tukar a dan d, ubah tanda b dan c), dengan det A = 1."
+    },
+    {
+     "q": "Jika <span class='mx m2'><span>6</span><span>3</span><span>4</span><span>1</span></span> <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>15</span><span>11</span></span>, nilai x dan y adalah …",
+     "c": [
+      "x = −3, y = 1",
+      "x = 4, y = −1",
+      "x = 3, y = −1",
+      "x = −1, y = 3"
+     ],
+     "a": 2,
+     "e": "Kalikan: 6x + 3y = 15 dan 4x + y = 11, lalu selesaikan."
+    },
+    {
+     "q": "Invers matriks A = <span class='mx m2'><span>−2</span><span>6</span><span>−2</span><span>5</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−3</span><span>1</span><span>−1</span></span>",
+      "<span class='mx m2'><span>5</span><span>−6</span><span>2</span><span>−2</span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>3</span><span>−1</span><span>1</span></span>",
+      "<span class='mx m2'><span>−1</span><span>3</span><span>−1</span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span></span>"
+     ],
+     "a": 0,
+     "e": "A⁻¹ = (1/det A) × (tukar a dan d, ubah tanda b dan c), dengan det A = 2."
+    },
+    {
+     "q": "Invers matriks A = <span class='mx m2'><span>−1</span><span>1</span><span>1</span><span>−3</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−3</span><span>−1</span><span>−1</span><span>−1</span></span>"
+     ],
+     "a": 1,
+     "e": "A⁻¹ = (1/det A) × (tukar a dan d, ubah tanda b dan c), dengan det A = 2."
+    },
+    {
+     "q": "Invers matriks A = <span class='mx m2'><span>5</span><span>6</span><span>3</span><span>4</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>3</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>2</span></span>",
+      "<span class='mx m2'><span>2</span><span>−3</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−2</span><span>3</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>4</span><span>−6</span><span>−3</span><span>5</span></span>"
+     ],
+     "a": 1,
+     "e": "A⁻¹ = (1/det A) × (tukar a dan d, ubah tanda b dan c), dengan det A = 2."
+    },
+    {
+     "q": "Jika <span class='mx m2'><span>−3</span><span>−6</span><span>−3</span><span>−1</span></span> <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>27</span><span>17</span></span>, nilai x dan y adalah …",
+     "c": [
+      "x = 5, y = 2",
+      "x = −5, y = −2",
+      "x = −4, y = −2",
+      "x = −2, y = −5"
+     ],
+     "a": 1,
+     "e": "Kalikan: −3x − 6y = 27 dan −3x − y = 17, lalu selesaikan."
+    },
+    {
+     "q": "Invers matriks A = <span class='mx m2'><span>−3</span><span>−2</span><span>4</span><span>2</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>1</span><span>−2</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−1</span><span>2</span><span>1</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−1</span><span>2</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>2</span><span>2</span><span>−4</span><span>−3</span></span>"
+     ],
+     "a": 0,
+     "e": "A⁻¹ = (1/det A) × (tukar a dan d, ubah tanda b dan c), dengan det A = 2."
+    },
+    {
+     "q": "Invers matriks A = <span class='mx m2'><span>1</span><span>2</span><span>−3</span><span>−4</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span>−4</span><span>−2</span><span>3</span><span>1</span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>1</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−2</span></span>",
+      "<span class='mx m2'><span>2</span><span>1</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−2</span><span>−1</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>"
+     ],
+     "a": 3,
+     "e": "A⁻¹ = (1/det A) × (tukar a dan d, ubah tanda b dan c), dengan det A = 2."
+    },
+    {
+     "q": "Jika <span class='mx m2'><span>5</span><span>−3</span><span>3</span><span>−3</span></span> <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−13</span><span>−9</span></span>, nilai x dan y adalah …",
+     "c": [
+      "x = 2, y = −1",
+      "x = −2, y = 1",
+      "x = 1, y = −2",
+      "x = −1, y = 1"
+     ],
+     "a": 1,
+     "e": "Kalikan: 5x − 3y = −13 dan 3x − 3y = −9, lalu selesaikan."
+    },
+    {
+     "q": "Invers matriks A = <span class='mx m2'><span>2</span><span>4</span><span>−3</span><span>−5</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>2</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−1</span></span>",
+      "<span class='mx m2'><span>−5</span><span>−4</span><span>3</span><span>2</span></span>",
+      "<span class='mx m2'><span>1</span><span>2</span><span>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span></span><span>−2</span><span><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></span><span>1</span></span>"
+     ],
+     "a": 3,
+     "e": "A⁻¹ = (1/det A) × (tukar a dan d, ubah tanda b dan c), dengan det A = 2."
+    },
+    {
+     "q": "Invers matriks A = <span class='mx m2'><span>4</span><span>−3</span><span>−1</span><span>1</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span>1</span><span>3</span><span>1</span><span>4</span></span>",
+      "<span class='mx m2'><span>4</span><span>−3</span><span>−1</span><span>1</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−3</span><span>−1</span><span>4</span></span>",
+      "<span class='mx m2'><span>−1</span><span>−3</span><span>−1</span><span>−4</span></span>"
+     ],
+     "a": 0,
+     "e": "A⁻¹ = (1/det A) × (tukar a dan d, ubah tanda b dan c), dengan det A = 1."
+    },
+    {
+     "q": "Jika <span class='mx m2'><span>3</span><span>6</span><span>6</span><span>6</span></span> <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−33</span><span>−30</span></span>, nilai x dan y adalah …",
+     "c": [
+      "x = 1, y = −6",
+      "x = −6, y = 1",
+      "x = 2, y = −6",
+      "x = −1, y = 6"
+     ],
+     "a": 0,
+     "e": "Kalikan: 3x + 6y = −33 dan 6x + 6y = −30, lalu selesaikan."
+    },
+    {
+     "q": "Jika <span class='mx m2'><span>2</span><span>3</span><span>−3</span><span>6</span></span> <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−3</span><span>15</span></span>, nilai x dan y adalah …",
+     "c": [
+      "x = 3, y = −1",
+      "x = 1, y = −3",
+      "x = −3, y = 1",
+      "x = −2, y = 1"
+     ],
+     "a": 2,
+     "e": "Kalikan: 2x + 3y = −3 dan −3x + 6y = 15, lalu selesaikan."
+    },
+    {
+     "q": "Jika <span class='mx m2'><span>4</span><span>6</span><span>2</span><span>6</span></span> <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>36</span><span>24</span></span>, nilai x dan y adalah …",
+     "c": [
+      "x = −6, y = −2",
+      "x = 6, y = 2",
+      "x = 7, y = 2",
+      "x = 2, y = 6"
+     ],
+     "a": 1,
+     "e": "Kalikan: 4x + 6y = 36 dan 2x + 6y = 24, lalu selesaikan."
+    },
+    {
+     "q": "Jika <span class='mx m2'><span>−3</span><span>−1</span><span>−5</span><span>3</span></span> <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−13</span><span>−31</span></span>, nilai x dan y adalah …",
+     "c": [
+      "x = −2, y = 5",
+      "x = 6, y = −2",
+      "x = −5, y = 2",
+      "x = 5, y = −2"
+     ],
+     "a": 3,
+     "e": "Kalikan: −3x − y = −13 dan −5x + 3y = −31, lalu selesaikan."
+    },
+    {
+     "q": "Jika <span class='mx m2'><span>2</span><span>2</span><span>−4</span><span>3</span></span> <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>10</span><span>−27</span></span>, nilai x dan y adalah …",
+     "c": [
+      "x = 7, y = −1",
+      "x = −1, y = 6",
+      "x = 6, y = −1",
+      "x = −6, y = 1"
+     ],
+     "a": 2,
+     "e": "Kalikan: 2x + 2y = 10 dan −4x + 3y = −27, lalu selesaikan."
+    },
+    {
+     "q": "Jika <span class='mx m2'><span>−6</span><span>5</span><span>6</span><span>−2</span></span> <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>−7</span><span>−8</span></span>, nilai x dan y adalah …",
+     "c": [
+      "x = 3, y = 5",
+      "x = −5, y = −3",
+      "x = −2, y = −5",
+      "x = −3, y = −5"
+     ],
+     "a": 3,
+     "e": "Kalikan: −6x + 5y = −7 dan 6x − 2y = −8, lalu selesaikan."
+    },
+    {
+     "q": "Jika <span class='mx m2'><span>5</span><span>2</span><span>4</span><span>6</span></span> <span class='mx m1'><span>x</span><span>y</span></span> = <span class='mx m1'><span>15</span><span>34</span></span>, nilai x dan y adalah …",
+     "c": [
+      "x = 5, y = 1",
+      "x = 2, y = 5",
+      "x = 1, y = 5",
+      "x = −1, y = −5"
+     ],
+     "a": 2,
+     "e": "Kalikan: 5x + 2y = 15 dan 4x + 6y = 34, lalu selesaikan."
+    },
+    {
+     "q": "Invers matriks A = <span class='mx m2'><span>1</span><span>−1</span><span>−2</span><span>4</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span>2</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>1</span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−2</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−1</span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−1</span><span>2</span></span>",
+      "<span class='mx m2'><span>4</span><span>1</span><span>2</span><span>1</span></span>"
+     ],
+     "a": 0,
+     "e": "A⁻¹ = (1/det A) × (tukar a dan d, ubah tanda b dan c), dengan det A = 2."
+    },
+    {
+     "q": "Invers matriks A = <span class='mx m2'><span>−1</span><span>−1</span><span>1</span><span>−1</span></span> adalah …",
+     "c": [
+      "<span class='mx m2'><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span><span>−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></span></span>",
+      "<span class='mx m2'><span>−1</span><span>1</span><span>−1</span><span>−1</span></span>"
+     ],
+     "a": 2,
+     "e": "A⁻¹ = (1/det A) × (tukar a dan d, ubah tanda b dan c), dengan det A = 2."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 6,
+ "updated": "2026-11-25",
+ "country": "id",
+ "subject": "matematika",
+ "grade": "kelas-11"
+}

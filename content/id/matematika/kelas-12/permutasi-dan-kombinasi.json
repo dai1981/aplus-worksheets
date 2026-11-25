@@ -1,0 +1,1161 @@
+{
+ "slug": "permutasi-dan-kombinasi",
+ "title": "Permutasi dan Kombinasi",
+ "seo_title": "Permutasi dan Kombinasi Kelas 12 SMA: Latihan Soal dan Lembar Kerja dengan Kunci Jawaban",
+ "short_title": "Permutasi dan Kombinasi",
+ "domain": "Analisis Data dan Peluang",
+ "standard_code": "Fase F · Analisis Data dan Peluang",
+ "standard_url": "https://internal-portal.kemdikbud.go.id/download/file/1933",
+ "standard_text": "Peserta didik membedakan permutasi dan kombinasi, menghitung permutasi unsur yang sama dan permutasi siklis, serta menggunakan kombinasi untuk menentukan peluang. (Capaian Pembelajaran Fase F)",
+ "meta_desc": "Latihan permutasi dan kombinasi kelas 12 SMA: notasi P(n, r) dan C(n, r), memilih pengurus, memilih tim, jabat tangan, permutasi huruf yang sama, permutasi siklis, dan peluang dengan kombinasi. 100 soal dengan kunci jawaban.",
+ "key_big": "Urutan penting: permutasi",
+ "key_sub": "Urutan tidak penting: kombinasi. C(n, r) = P(n, r) : r!",
+ "body_html": "<h2>Cara berpikir</h2><p>Permutasi P(n, r) = n!/(n − r)! menghitung susunan r unsur dari n unsur dengan memperhatikan urutan, misalnya ketua dan wakil.</p><p>Kombinasi C(n, r) = n!/(r!(n − r)!) menghitung pilihan r unsur tanpa memperhatikan urutan, misalnya memilih anggota tim.</p><p>Permutasi n unsur dengan unsur yang sama: n!/(k₁! k₂! …). Permutasi siklis n unsur: (n − 1)!.</p><div class='sn-ex'><span class='sn-ex-t'>Contoh</span><p class='sn-ex-q'>Dari 8 siswa dipilih ketua dan wakil.</p><p class='sn-ex-s'>P(8, 2) = 8 × 7</p><p class='sn-ex-a'>Jawaban: 56</p></div><div class='sn-ex'><span class='sn-ex-t'>Contoh</span><p class='sn-ex-q'>Dari 8 siswa dipilih 2 perwakilan.</p><p class='sn-ex-s'>C(8, 2) = 56 : 2</p><p class='sn-ex-a'>Jawaban: 28</p></div><h2>Kesalahan yang sering terjadi</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Kesalahan</th><th>Yang benar</th></tr></thead><tbody><tr><td>Memilih tim memakai permutasi</td><td>Anggota tim tanpa jabatan: kombinasi</td></tr><tr><td>Meja bundar dihitung n!</td><td>Permutasi siklis (n − 1)!</td></tr><tr><td>Huruf yang sama dihitung berbeda</td><td>Bagi dengan faktorial banyak huruf yang sama</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Bagaimana membedakan permutasi dan kombinasi?",
+   "a": "Tukar urutan dua unsur. Jika hasilnya dianggap berbeda (misalnya ketua dan wakil bertukar), itu permutasi. Jika sama, itu kombinasi."
+  },
+  {
+   "q": "Mengapa C(n, r) = C(n, n − r)?",
+   "a": "Memilih r unsur sama saja dengan memilih n − r unsur yang tidak diambil."
+  },
+  {
+   "q": "Apa hubungan kombinasi dan segitiga Pascal?",
+   "a": "Bilangan pada baris ke-n segitiga Pascal adalah C(n, 0), C(n, 1), …, C(n, n)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Notasi permutasi dan kombinasi",
+   "items": [
+    {
+     "q": "Nilai P(10, 3) adalah …",
+     "c": [
+      "1.000",
+      "120",
+      "720",
+      "30"
+     ],
+     "a": 2,
+     "e": "P(n, r) = n!/(n − r)! = 10 × 9 × 8 = 720."
+    },
+    {
+     "q": "Nilai P(4, 3) adalah …",
+     "c": [
+      "64",
+      "24",
+      "4",
+      "12"
+     ],
+     "a": 1,
+     "e": "P(n, r) = n!/(n − r)! = 4 × 3 × 2 = 24."
+    },
+    {
+     "q": "Nilai P(6, 4) adalah …",
+     "c": [
+      "24",
+      "15",
+      "1.296",
+      "360"
+     ],
+     "a": 3,
+     "e": "P(n, r) = n!/(n − r)! = 6 × 5 × 4 × 3 = 360."
+    },
+    {
+     "q": "Nilai P(8, 3) adalah …",
+     "c": [
+      "24",
+      "512",
+      "336",
+      "56"
+     ],
+     "a": 2,
+     "e": "P(n, r) = n!/(n − r)! = 8 × 7 × 6 = 336."
+    },
+    {
+     "q": "Nilai C(10, 4) adalah …",
+     "c": [
+      "40",
+      "210",
+      "420",
+      "5.040"
+     ],
+     "a": 1,
+     "e": "C(n, r) = n!/(r!(n − r)!) = 5.040/24 = 210."
+    },
+    {
+     "q": "Nilai P(8, 4) adalah …",
+     "c": [
+      "32",
+      "70",
+      "4.096",
+      "1.680"
+     ],
+     "a": 3,
+     "e": "P(n, r) = n!/(n − r)! = 8 × 7 × 6 × 5 = 1.680."
+    },
+    {
+     "q": "Nilai P(5, 3) adalah …",
+     "c": [
+      "10",
+      "60",
+      "125",
+      "15"
+     ],
+     "a": 1,
+     "e": "P(n, r) = n!/(n − r)! = 5 × 4 × 3 = 60."
+    },
+    {
+     "q": "Nilai P(7, 4) adalah …",
+     "c": [
+      "2.401",
+      "35",
+      "840",
+      "28"
+     ],
+     "a": 2,
+     "e": "P(n, r) = n!/(n − r)! = 7 × 6 × 5 × 4 = 840."
+    },
+    {
+     "q": "Nilai C(4, 3) adalah …",
+     "c": [
+      "24",
+      "4",
+      "8",
+      "12"
+     ],
+     "a": 1,
+     "e": "C(n, r) = n!/(r!(n − r)!) = 24/6 = 4."
+    },
+    {
+     "q": "Nilai C(5, 3) adalah …",
+     "c": [
+      "10",
+      "60",
+      "15",
+      "20"
+     ],
+     "a": 0,
+     "e": "C(n, r) = n!/(r!(n − r)!) = 60/6 = 10."
+    },
+    {
+     "q": "Nilai C(6, 3) adalah …",
+     "c": [
+      "18",
+      "20",
+      "40",
+      "120"
+     ],
+     "a": 1,
+     "e": "C(n, r) = n!/(r!(n − r)!) = 120/6 = 20."
+    },
+    {
+     "q": "Nilai P(4, 2) adalah …",
+     "c": [
+      "6",
+      "16",
+      "12",
+      "8"
+     ],
+     "a": 2,
+     "e": "P(n, r) = n!/(n − r)! = 4 × 3 = 12."
+    },
+    {
+     "q": "Nilai P(9, 2) adalah …",
+     "c": [
+      "72",
+      "81",
+      "18",
+      "36"
+     ],
+     "a": 0,
+     "e": "P(n, r) = n!/(n − r)! = 9 × 8 = 72."
+    },
+    {
+     "q": "Nilai P(6, 2) adalah …",
+     "c": [
+      "30",
+      "36",
+      "12",
+      "15"
+     ],
+     "a": 0,
+     "e": "P(n, r) = n!/(n − r)! = 6 × 5 = 30."
+    },
+    {
+     "q": "Nilai C(8, 3) adalah …",
+     "c": [
+      "336",
+      "24",
+      "112",
+      "56"
+     ],
+     "a": 3,
+     "e": "C(n, r) = n!/(r!(n − r)!) = 336/6 = 56."
+    },
+    {
+     "q": "Nilai C(10, 3) adalah …",
+     "c": [
+      "120",
+      "720",
+      "240",
+      "30"
+     ],
+     "a": 0,
+     "e": "C(n, r) = n!/(r!(n − r)!) = 720/6 = 120."
+    },
+    {
+     "q": "Nilai C(9, 4) adalah …",
+     "c": [
+      "3.024",
+      "36",
+      "252",
+      "126"
+     ],
+     "a": 3,
+     "e": "C(n, r) = n!/(r!(n − r)!) = 3.024/24 = 126."
+    },
+    {
+     "q": "Nilai P(9, 4) adalah …",
+     "c": [
+      "3.024",
+      "6.561",
+      "126",
+      "36"
+     ],
+     "a": 0,
+     "e": "P(n, r) = n!/(n − r)! = 9 × 8 × 7 × 6 = 3.024."
+    },
+    {
+     "q": "Nilai C(7, 3) adalah …",
+     "c": [
+      "70",
+      "210",
+      "21",
+      "35"
+     ],
+     "a": 3,
+     "e": "C(n, r) = n!/(r!(n − r)!) = 210/6 = 35."
+    },
+    {
+     "q": "Nilai C(7, 4) adalah …",
+     "c": [
+      "840",
+      "28",
+      "35",
+      "70"
+     ],
+     "a": 2,
+     "e": "C(n, r) = n!/(r!(n − r)!) = 840/24 = 35."
+    }
+   ]
+  },
+  {
+   "title": "Permutasi: urutan diperhatikan",
+   "items": [
+    {
+     "q": "Dari 12 siswa akan dipilih ketua, wakil, sekretaris, dan bendahara. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "48",
+      "11.880",
+      "19.958.400",
+      "495"
+     ],
+     "a": 1,
+     "e": "Urutan (jabatan) diperhatikan: P(12, 4) = 11.880."
+    },
+    {
+     "q": "Dari 10 siswa akan dipilih juara 1, 2, dan 3. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "604.800",
+      "120",
+      "720",
+      "30"
+     ],
+     "a": 2,
+     "e": "Urutan (jabatan) diperhatikan: P(10, 3) = 720."
+    },
+    {
+     "q": "Dari 5 siswa akan dipilih juara 1, 2, dan 3. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "10",
+      "15",
+      "60",
+      "20"
+     ],
+     "a": 2,
+     "e": "Urutan (jabatan) diperhatikan: P(5, 3) = 60."
+    },
+    {
+     "q": "Dari 5 siswa akan dipilih ketua, sekretaris, dan bendahara. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "15",
+      "60",
+      "20",
+      "10"
+     ],
+     "a": 1,
+     "e": "Urutan (jabatan) diperhatikan: P(5, 3) = 60."
+    },
+    {
+     "q": "Dari 9 siswa akan dipilih ketua, wakil, sekretaris, dan bendahara. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "36",
+      "15.120",
+      "126",
+      "3.024"
+     ],
+     "a": 3,
+     "e": "Urutan (jabatan) diperhatikan: P(9, 4) = 3.024."
+    },
+    {
+     "q": "Dari 9 siswa akan dipilih ketua, sekretaris, dan bendahara. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "504",
+      "60.480",
+      "84",
+      "27"
+     ],
+     "a": 0,
+     "e": "Urutan (jabatan) diperhatikan: P(9, 3) = 504."
+    },
+    {
+     "q": "Dari 7 siswa akan dipilih ketua, wakil, sekretaris, dan bendahara. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "35",
+      "210",
+      "28",
+      "840"
+     ],
+     "a": 3,
+     "e": "Urutan (jabatan) diperhatikan: P(7, 4) = 840."
+    },
+    {
+     "q": "Dari 8 siswa akan dipilih ketua, sekretaris, dan bendahara. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "336",
+      "24",
+      "56",
+      "6.720"
+     ],
+     "a": 0,
+     "e": "Urutan (jabatan) diperhatikan: P(8, 3) = 336."
+    },
+    {
+     "q": "Dari 11 siswa akan dipilih ketua, sekretaris, dan bendahara. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "6.652.800",
+      "33",
+      "165",
+      "990"
+     ],
+     "a": 3,
+     "e": "Urutan (jabatan) diperhatikan: P(11, 3) = 990."
+    },
+    {
+     "q": "Dari 10 siswa akan dipilih ketua dan wakil ketua. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "20",
+      "45",
+      "90",
+      "1.814.400"
+     ],
+     "a": 2,
+     "e": "Urutan (jabatan) diperhatikan: P(10, 2) = 90."
+    },
+    {
+     "q": "Dari 9 siswa akan dipilih juara 1, 2, dan 3. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "84",
+      "27",
+      "60.480",
+      "504"
+     ],
+     "a": 3,
+     "e": "Urutan (jabatan) diperhatikan: P(9, 3) = 504."
+    },
+    {
+     "q": "Dari 12 siswa akan dipilih ketua dan wakil ketua. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "66",
+      "132",
+      "239.500.800",
+      "24"
+     ],
+     "a": 1,
+     "e": "Urutan (jabatan) diperhatikan: P(12, 2) = 132."
+    },
+    {
+     "q": "Dari 9 siswa akan dipilih ketua dan wakil ketua. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "72",
+      "36",
+      "18",
+      "181.440"
+     ],
+     "a": 0,
+     "e": "Urutan (jabatan) diperhatikan: P(9, 2) = 72."
+    },
+    {
+     "q": "Dari 10 siswa akan dipilih ketua, wakil, sekretaris, dan bendahara. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "5.040",
+      "151.200",
+      "210",
+      "40"
+     ],
+     "a": 0,
+     "e": "Urutan (jabatan) diperhatikan: P(10, 4) = 5.040."
+    },
+    {
+     "q": "Dari 11 siswa akan dipilih ketua, wakil, sekretaris, dan bendahara. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "330",
+      "1.663.200",
+      "44",
+      "7.920"
+     ],
+     "a": 3,
+     "e": "Urutan (jabatan) diperhatikan: P(11, 4) = 7.920."
+    },
+    {
+     "q": "Dari 11 siswa akan dipilih ketua dan wakil ketua. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "19.958.400",
+      "110",
+      "22",
+      "55"
+     ],
+     "a": 1,
+     "e": "Urutan (jabatan) diperhatikan: P(11, 2) = 110."
+    },
+    {
+     "q": "Dari 4 siswa akan dipilih ketua dan wakil ketua. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "13",
+      "8",
+      "12",
+      "6"
+     ],
+     "a": 2,
+     "e": "Urutan (jabatan) diperhatikan: P(4, 2) = 12."
+    },
+    {
+     "q": "Dari 8 siswa akan dipilih juara 1, 2, dan 3. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "336",
+      "56",
+      "6.720",
+      "24"
+     ],
+     "a": 0,
+     "e": "Urutan (jabatan) diperhatikan: P(8, 3) = 336."
+    },
+    {
+     "q": "Dari 6 siswa akan dipilih ketua dan wakil ketua. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "360",
+      "12",
+      "30",
+      "15"
+     ],
+     "a": 2,
+     "e": "Urutan (jabatan) diperhatikan: P(6, 2) = 30."
+    },
+    {
+     "q": "Dari 8 siswa akan dipilih ketua, wakil, sekretaris, dan bendahara. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "1.681",
+      "1.680",
+      "70",
+      "32"
+     ],
+     "a": 1,
+     "e": "Urutan (jabatan) diperhatikan: P(8, 4) = 1.680."
+    }
+   ]
+  },
+  {
+   "title": "Kombinasi: urutan tidak diperhatikan",
+   "items": [
+    {
+     "q": "Dari 6 soal akan dipilih 4 soal yang dikerjakan. Banyak cara memilih adalah …",
+     "c": [
+      "24",
+      "15",
+      "20",
+      "360"
+     ],
+     "a": 1,
+     "e": "Urutan tidak diperhatikan: C(6, 4) = 15."
+    },
+    {
+     "q": "Dari 7 siswa akan dipilih 2 perwakilan. Banyak cara memilih adalah …",
+     "c": [
+      "14",
+      "21",
+      "42",
+      "7"
+     ],
+     "a": 1,
+     "e": "Urutan tidak diperhatikan: C(7, 2) = 21."
+    },
+    {
+     "q": "Dari 8 soal akan dipilih 2 soal yang dikerjakan. Banyak cara memilih adalah …",
+     "c": [
+      "8",
+      "28",
+      "56",
+      "16"
+     ],
+     "a": 1,
+     "e": "Urutan tidak diperhatikan: C(8, 2) = 28."
+    },
+    {
+     "q": "Dari 11 pemain akan dipilih 3 anggota tim. Banyak cara memilih adalah …",
+     "c": [
+      "55",
+      "33",
+      "990",
+      "165"
+     ],
+     "a": 3,
+     "e": "Urutan tidak diperhatikan: C(11, 3) = 165."
+    },
+    {
+     "q": "Dari 9 jenis buah akan dipilih 3 buah. Banyak cara memilih adalah …",
+     "c": [
+      "84",
+      "27",
+      "36",
+      "504"
+     ],
+     "a": 0,
+     "e": "Urutan tidak diperhatikan: C(9, 3) = 84."
+    },
+    {
+     "q": "Dari 7 jenis buah akan dipilih 2 buah. Banyak cara memilih adalah …",
+     "c": [
+      "7",
+      "21",
+      "14",
+      "42"
+     ],
+     "a": 1,
+     "e": "Urutan tidak diperhatikan: C(7, 2) = 21."
+    },
+    {
+     "q": "Dalam sebuah pertemuan, 11 orang saling berjabat tangan tepat sekali. Banyak jabat tangan adalah …",
+     "c": [
+      "110",
+      "165",
+      "22",
+      "55"
+     ],
+     "a": 3,
+     "e": "C(11, 2) = 11 × 10 : 2 = 55."
+    },
+    {
+     "q": "Dalam sebuah pertemuan, 12 orang saling berjabat tangan tepat sekali. Banyak jabat tangan adalah …",
+     "c": [
+      "66",
+      "132",
+      "24",
+      "220"
+     ],
+     "a": 0,
+     "e": "C(12, 2) = 12 × 11 : 2 = 66."
+    },
+    {
+     "q": "Dalam sebuah pertemuan, 10 orang saling berjabat tangan tepat sekali. Banyak jabat tangan adalah …",
+     "c": [
+      "90",
+      "20",
+      "45",
+      "120"
+     ],
+     "a": 2,
+     "e": "C(10, 2) = 10 × 9 : 2 = 45."
+    },
+    {
+     "q": "Dari 10 pemain akan dipilih 3 anggota tim. Banyak cara memilih adalah …",
+     "c": [
+      "120",
+      "720",
+      "30",
+      "45"
+     ],
+     "a": 0,
+     "e": "Urutan tidak diperhatikan: C(10, 3) = 120."
+    },
+    {
+     "q": "Dari 10 siswa akan dipilih 4 perwakilan. Banyak cara memilih adalah …",
+     "c": [
+      "40",
+      "5.040",
+      "120",
+      "210"
+     ],
+     "a": 3,
+     "e": "Urutan tidak diperhatikan: C(10, 4) = 210."
+    },
+    {
+     "q": "Dari 5 jenis buah akan dipilih 3 buah. Banyak cara memilih adalah …",
+     "c": [
+      "60",
+      "10",
+      "11",
+      "15"
+     ],
+     "a": 1,
+     "e": "Urutan tidak diperhatikan: C(5, 3) = 10."
+    },
+    {
+     "q": "Dari 9 siswa akan dipilih 2 perwakilan. Banyak cara memilih adalah …",
+     "c": [
+      "18",
+      "72",
+      "36",
+      "9"
+     ],
+     "a": 2,
+     "e": "Urutan tidak diperhatikan: C(9, 2) = 36."
+    },
+    {
+     "q": "Dari 9 pemain akan dipilih 2 anggota tim. Banyak cara memilih adalah …",
+     "c": [
+      "72",
+      "18",
+      "36",
+      "9"
+     ],
+     "a": 2,
+     "e": "Urutan tidak diperhatikan: C(9, 2) = 36."
+    },
+    {
+     "q": "Dari 5 soal akan dipilih 3 soal yang dikerjakan. Banyak cara memilih adalah …",
+     "c": [
+      "60",
+      "15",
+      "11",
+      "10"
+     ],
+     "a": 3,
+     "e": "Urutan tidak diperhatikan: C(5, 3) = 10."
+    },
+    {
+     "q": "Dari 9 pemain akan dipilih 4 anggota tim. Banyak cara memilih adalah …",
+     "c": [
+      "3.024",
+      "36",
+      "126",
+      "84"
+     ],
+     "a": 2,
+     "e": "Urutan tidak diperhatikan: C(9, 4) = 126."
+    },
+    {
+     "q": "Dalam sebuah pertemuan, 7 orang saling berjabat tangan tepat sekali. Banyak jabat tangan adalah …",
+     "c": [
+      "42",
+      "35",
+      "14",
+      "21"
+     ],
+     "a": 3,
+     "e": "C(7, 2) = 7 × 6 : 2 = 21."
+    },
+    {
+     "q": "Dalam sebuah pertemuan, 9 orang saling berjabat tangan tepat sekali. Banyak jabat tangan adalah …",
+     "c": [
+      "36",
+      "18",
+      "72",
+      "84"
+     ],
+     "a": 0,
+     "e": "C(9, 2) = 9 × 8 : 2 = 36."
+    },
+    {
+     "q": "Dalam sebuah pertemuan, 6 orang saling berjabat tangan tepat sekali. Banyak jabat tangan adalah …",
+     "c": [
+      "15",
+      "30",
+      "12",
+      "20"
+     ],
+     "a": 0,
+     "e": "C(6, 2) = 6 × 5 : 2 = 15."
+    },
+    {
+     "q": "Dari 10 soal akan dipilih 4 soal yang dikerjakan. Banyak cara memilih adalah …",
+     "c": [
+      "120",
+      "40",
+      "210",
+      "5.040"
+     ],
+     "a": 2,
+     "e": "Urutan tidak diperhatikan: C(10, 4) = 210."
+    }
+   ]
+  },
+  {
+   "title": "Permutasi unsur sama, siklis, dan kombinasi bertingkat",
+   "items": [
+    {
+     "q": "Dari 4 siswa laki-laki dan 7 siswa perempuan akan dipilih 1 laki-laki dan 2 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "168",
+      "165",
+      "25",
+      "84"
+     ],
+     "a": 3,
+     "e": "C(4, 1) × C(7, 2) = 4 × 21 = 84."
+    },
+    {
+     "q": "9 orang duduk mengelilingi meja bundar. Banyak susunan duduk yang berbeda adalah …",
+     "c": [
+      "362.880",
+      "40.320",
+      "72",
+      "5.040"
+     ],
+     "a": 1,
+     "e": "Permutasi siklis: (9 − 1)! = 8! = 40.320."
+    },
+    {
+     "q": "Dari 7 siswa laki-laki dan 4 siswa perempuan akan dipilih 3 laki-laki dan 2 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "210",
+      "462",
+      "41",
+      "2.520"
+     ],
+     "a": 0,
+     "e": "C(7, 3) × C(4, 2) = 35 × 6 = 210."
+    },
+    {
+     "q": "Dari 4 siswa laki-laki dan 3 siswa perempuan akan dipilih 3 laki-laki dan 3 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "5",
+      "144",
+      "7",
+      "4"
+     ],
+     "a": 3,
+     "e": "C(4, 3) × C(3, 3) = 4 × 1 = 4."
+    },
+    {
+     "q": "Banyak susunan huruf berbeda dari kata MATEMATIKA adalah …",
+     "c": [
+      "151.200",
+      "3.628.800",
+      "302.400",
+      "151.201"
+     ],
+     "a": 0,
+     "e": "Ada huruf yang sama: 10!/(2! × 3! × 2!) = 151.200."
+    },
+    {
+     "q": "Dari 7 siswa laki-laki dan 3 siswa perempuan akan dipilih 3 laki-laki dan 2 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "252",
+      "105",
+      "1.260",
+      "38"
+     ],
+     "a": 1,
+     "e": "C(7, 3) × C(3, 2) = 35 × 3 = 105."
+    },
+    {
+     "q": "4 orang duduk mengelilingi meja bundar. Banyak susunan duduk yang berbeda adalah …",
+     "c": [
+      "6",
+      "24",
+      "12",
+      "2"
+     ],
+     "a": 0,
+     "e": "Permutasi siklis: (4 − 1)! = 3! = 6."
+    },
+    {
+     "q": "5 orang duduk mengelilingi meja bundar. Banyak susunan duduk yang berbeda adalah …",
+     "c": [
+      "6",
+      "20",
+      "24",
+      "120"
+     ],
+     "a": 2,
+     "e": "Permutasi siklis: (5 − 1)! = 4! = 24."
+    },
+    {
+     "q": "Dari 4 siswa laki-laki dan 6 siswa perempuan akan dipilih 1 laki-laki dan 3 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "210",
+      "480",
+      "24",
+      "80"
+     ],
+     "a": 3,
+     "e": "C(4, 1) × C(6, 3) = 4 × 20 = 80."
+    },
+    {
+     "q": "Dari 7 siswa laki-laki dan 5 siswa perempuan akan dipilih 1 laki-laki dan 1 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "36",
+      "35",
+      "12",
+      "66"
+     ],
+     "a": 1,
+     "e": "C(7, 1) × C(5, 1) = 7 × 5 = 35."
+    },
+    {
+     "q": "6 orang duduk mengelilingi meja bundar. Banyak susunan duduk yang berbeda adalah …",
+     "c": [
+      "120",
+      "24",
+      "720",
+      "30"
+     ],
+     "a": 0,
+     "e": "Permutasi siklis: (6 − 1)! = 5! = 120."
+    },
+    {
+     "q": "Banyak susunan huruf berbeda dari kata SAMASAMA adalah …",
+     "c": [
+      "336",
+      "420",
+      "40.320",
+      "840"
+     ],
+     "a": 1,
+     "e": "Ada huruf yang sama: 8!/(2! × 4! × 2!) = 420."
+    },
+    {
+     "q": "Dari 6 siswa laki-laki dan 5 siswa perempuan akan dipilih 3 laki-laki dan 1 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "25",
+      "100",
+      "330",
+      "600"
+     ],
+     "a": 1,
+     "e": "C(6, 3) × C(5, 1) = 20 × 5 = 100."
+    },
+    {
+     "q": "Dari 5 siswa laki-laki dan 4 siswa perempuan akan dipilih 3 laki-laki dan 3 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "14",
+      "1.440",
+      "84",
+      "40"
+     ],
+     "a": 3,
+     "e": "C(5, 3) × C(4, 3) = 10 × 4 = 40."
+    },
+    {
+     "q": "8 orang duduk mengelilingi meja bundar. Banyak susunan duduk yang berbeda adalah …",
+     "c": [
+      "56",
+      "720",
+      "5.040",
+      "40.320"
+     ],
+     "a": 2,
+     "e": "Permutasi siklis: (8 − 1)! = 7! = 5.040."
+    },
+    {
+     "q": "7 orang duduk mengelilingi meja bundar. Banyak susunan duduk yang berbeda adalah …",
+     "c": [
+      "120",
+      "5.040",
+      "720",
+      "42"
+     ],
+     "a": 2,
+     "e": "Permutasi siklis: (7 − 1)! = 6! = 720."
+    },
+    {
+     "q": "Dari 6 siswa laki-laki dan 7 siswa perempuan akan dipilih 1 laki-laki dan 3 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "210",
+      "715",
+      "41",
+      "1.260"
+     ],
+     "a": 0,
+     "e": "C(6, 1) × C(7, 3) = 6 × 35 = 210."
+    },
+    {
+     "q": "Dari 5 siswa laki-laki dan 4 siswa perempuan akan dipilih 1 laki-laki dan 2 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "11",
+      "84",
+      "30",
+      "60"
+     ],
+     "a": 2,
+     "e": "C(5, 1) × C(4, 2) = 5 × 6 = 30."
+    },
+    {
+     "q": "Dari 5 siswa laki-laki dan 6 siswa perempuan akan dipilih 3 laki-laki dan 1 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "330",
+      "16",
+      "360",
+      "60"
+     ],
+     "a": 3,
+     "e": "C(5, 3) × C(6, 1) = 10 × 6 = 60."
+    },
+    {
+     "q": "Dari 7 siswa laki-laki dan 6 siswa perempuan akan dipilih 2 laki-laki dan 1 perempuan. Banyak cara memilih adalah …",
+     "c": [
+      "252",
+      "286",
+      "126",
+      "27"
+     ],
+     "a": 2,
+     "e": "C(7, 2) × C(6, 1) = 21 × 6 = 126."
+    }
+   ]
+  },
+  {
+   "title": "Peluang dengan kombinasi",
+   "items": [
+    {
+     "q": "Kantong berisi 6 bola merah dan 3 bola biru. Diambil 2 bola sekaligus. Peluang keduanya merah adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "C(6, 2)/C(9, 2) = 15/36 = <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>."
+    },
+    {
+     "q": "Kantong berisi 5 bola merah dan 3 bola biru. Diambil 2 bola sekaligus. Peluang terambil 1 merah dan 1 biru adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>"
+     ],
+     "a": 3,
+     "e": "C(5, 1) × C(3, 1)/C(8, 2) = 15/28 = <span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>."
+    },
+    {
+     "q": "Kantong berisi 4 bola merah dan 5 bola biru. Diambil 2 bola sekaligus. Peluang keduanya merah adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "C(4, 2)/C(9, 2) = 6/36 = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>."
+    },
+    {
+     "q": "Kantong berisi 5 bola merah dan 6 bola biru. Diambil 2 bola sekaligus. Peluang keduanya merah adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>"
+     ],
+     "a": 3,
+     "e": "C(5, 2)/C(11, 2) = 10/55 = <span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>."
+    },
+    {
+     "q": "Kantong berisi 3 bola merah dan 3 bola biru. Diambil 2 bola sekaligus. Peluang terambil 1 merah dan 1 biru adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "C(3, 1) × C(3, 1)/C(6, 2) = 9/15 = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>."
+    },
+    {
+     "q": "Kantong berisi 5 bola merah dan 7 bola biru. Diambil 2 bola sekaligus. Peluang terambil 1 merah dan 1 biru adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>66</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>33</span></span>"
+     ],
+     "a": 0,
+     "e": "C(5, 1) × C(7, 1)/C(12, 2) = 35/66 = <span class='fr'><span class='fn'>35</span><span class='fd'>66</span></span>."
+    },
+    {
+     "q": "Dari 7 jenis buah akan dipilih 4 buah. Banyak cara memilih adalah …",
+     "c": [
+      "28",
+      "35",
+      "36",
+      "840"
+     ],
+     "a": 1,
+     "e": "Urutan tidak diperhatikan: C(7, 4) = 35."
+    },
+    {
+     "q": "Kantong berisi 4 bola merah dan 4 bola biru. Diambil 2 bola sekaligus. Peluang keduanya merah adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "C(4, 2)/C(8, 2) = 6/28 = <span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span>."
+    },
+    {
+     "q": "Kantong berisi 4 bola merah dan 7 bola biru. Diambil 2 bola sekaligus. Peluang keduanya merah adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>"
+     ],
+     "a": 1,
+     "e": "C(4, 2)/C(11, 2) = 6/55 = <span class='fr'><span class='fn'>6</span><span class='fd'>55</span></span>."
+    },
+    {
+     "q": "Kantong berisi 7 bola merah dan 7 bola biru. Diambil 2 bola sekaligus. Peluang keduanya merah adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "C(7, 2)/C(14, 2) = 21/91 = <span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span>."
+    },
+    {
+     "q": "Dari 11 siswa akan dipilih juara 1, 2, dan 3. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "990",
+      "6.652.800",
+      "33",
+      "165"
+     ],
+     "a": 0,
+     "e": "Urutan (jabatan) diperhatikan: P(11, 3) = 990."
+    },
+    {
+     "q": "Kantong berisi 6 bola merah dan 6 bola biru. Diambil 2 bola sekaligus. Peluang terambil 1 merah dan 1 biru adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>"
+     ],
+     "a": 3,
+     "e": "C(6, 1) × C(6, 1)/C(12, 2) = 36/66 = <span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>."
+    },
+    {
+     "q": "Kantong berisi 7 bola merah dan 4 bola biru. Diambil 2 bola sekaligus. Peluang terambil 1 merah dan 1 biru adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>121</span></span>"
+     ],
+     "a": 0,
+     "e": "C(7, 1) × C(4, 1)/C(11, 2) = 28/55 = <span class='fr'><span class='fn'>28</span><span class='fd'>55</span></span>."
+    },
+    {
+     "q": "Dari 11 jenis buah akan dipilih 2 buah. Banyak cara memilih adalah …",
+     "c": [
+      "11",
+      "110",
+      "55",
+      "22"
+     ],
+     "a": 2,
+     "e": "Urutan tidak diperhatikan: C(11, 2) = 55."
+    },
+    {
+     "q": "Dari 9 jenis buah akan dipilih 2 buah. Banyak cara memilih adalah …",
+     "c": [
+      "18",
+      "9",
+      "36",
+      "72"
+     ],
+     "a": 2,
+     "e": "Urutan tidak diperhatikan: C(9, 2) = 36."
+    },
+    {
+     "q": "Kantong berisi 3 bola merah dan 4 bola biru. Diambil 2 bola sekaligus. Peluang keduanya merah adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>"
+     ],
+     "a": 3,
+     "e": "C(3, 2)/C(7, 2) = 3/21 = <span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>."
+    },
+    {
+     "q": "Kantong berisi 3 bola merah dan 4 bola biru. Diambil 2 bola sekaligus. Peluang terambil 1 merah dan 1 biru adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "C(3, 1) × C(4, 1)/C(7, 2) = 12/21 = <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>."
+    },
+    {
+     "q": "Dari 12 siswa akan dipilih juara 1, 2, dan 3. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "36",
+      "220",
+      "1.320",
+      "79.833.600"
+     ],
+     "a": 2,
+     "e": "Urutan (jabatan) diperhatikan: P(12, 3) = 1.320."
+    },
+    {
+     "q": "Kantong berisi 7 bola merah dan 4 bola biru. Diambil 2 bola sekaligus. Peluang keduanya merah adalah …",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>121</span></span>"
+     ],
+     "a": 1,
+     "e": "C(7, 2)/C(11, 2) = 21/55 = <span class='fr'><span class='fn'>21</span><span class='fd'>55</span></span>."
+    },
+    {
+     "q": "Dari 6 siswa akan dipilih ketua, sekretaris, dan bendahara. Banyak susunan yang mungkin adalah …",
+     "c": [
+      "18",
+      "121",
+      "120",
+      "20"
+     ],
+     "a": 2,
+     "e": "Urutan (jabatan) diperhatikan: P(6, 3) = 120."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 2,
+ "updated": "2026-11-25",
+ "country": "id",
+ "subject": "matematika",
+ "grade": "kelas-12"
+}

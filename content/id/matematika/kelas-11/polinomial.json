@@ -1,0 +1,1161 @@
+{
+ "slug": "polinomial",
+ "title": "Polinomial: Operasi, Pembagian, Teorema Sisa, dan Teorema Faktor",
+ "seo_title": "Polinomial Kelas 11 SMA: Latihan Soal dan Lembar Kerja dengan Kunci Jawaban",
+ "short_title": "Polinomial",
+ "domain": "Aljabar",
+ "standard_code": "Fase F · Aljabar",
+ "standard_url": "https://internal-portal.kemdikbud.go.id/download/file/1933",
+ "standard_text": "Peserta didik melakukan operasi pada polinomial, membagi polinomial dengan cara Horner, serta menggunakan teorema sisa dan teorema faktor untuk menentukan akar-akar polinomial. (Capaian Pembelajaran Fase F)",
+ "meta_desc": "Latihan polinomial kelas 11 SMA: derajat dan nilai polinomial, penjumlahan dan perkalian, pembagian cara Horner (bagan), teorema sisa, teorema faktor, dan akar-akar persamaan suku banyak. 100 soal dengan kunci jawaban.",
+ "key_big": "Sisa P(x) : (x − a) adalah P(a)",
+ "key_sub": "(x − a) faktor P(x) jika P(a) = 0.",
+ "body_html": "<h2>Cara berpikir</h2><p>Polinomial (suku banyak) berderajat n mempunyai pangkat tertinggi xⁿ. Nilainya dihitung dengan substitusi atau cara Horner.</p><p>Pembagian P(x) oleh (x − a) menghasilkan P(x) = (x − a)H(x) + S. Teorema sisa: S = P(a).</p><p>Teorema faktor: (x − a) adalah faktor P(x) jika dan hanya jika P(a) = 0. Akar bulat persamaan suku banyak adalah faktor dari konstantanya.</p><div class='sn-ex'><span class='sn-ex-t'>Contoh</span><p class='sn-ex-q'>Sisa x³ − 2x² + 4 dibagi (x − 2)?</p><p class='sn-ex-s'>P(2) = 8 − 8 + 4</p><p class='sn-ex-a'>Jawaban: 4</p></div><div class='sn-ex'><span class='sn-ex-t'>Contoh</span><p class='sn-ex-q'>x³ − 6x² + 11x − 6 = 0</p><p class='sn-ex-s'>P(1) = 0, P(2) = 0, P(3) = 0</p><p class='sn-ex-a'>Jawaban: 1, 2, 3</p></div><h2>Kesalahan yang sering terjadi</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Kesalahan</th><th>Yang benar</th></tr></thead><tbody><tr><td>Sisa dibagi (x + 2) adalah P(2)</td><td>x + 2 = x − (−2), jadi sisanya P(−2)</td></tr><tr><td>Melewatkan koefisien 0 pada cara Horner</td><td>Tulis 0 untuk pangkat yang tidak ada</td></tr><tr><td>Jumlah akar = b/a</td><td>Jumlah akar x³ + bx² + … adalah −b/a</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Apa itu cara Horner?",
+   "a": "Cara cepat membagi polinomial dengan (x − a) memakai bagan koefisien: turunkan, kalikan dengan a, lalu jumlahkan."
+  },
+  {
+   "q": "Bagaimana mencari akar polinomial berderajat tiga?",
+   "a": "Coba faktor-faktor konstanta. Jika satu akar ditemukan, bagi polinomial itu lalu selesaikan sisa persamaan kuadratnya."
+  },
+  {
+   "q": "Apa hubungan sisa dan faktor?",
+   "a": "Jika sisa pembagian oleh (x − a) adalah 0, maka (x − a) adalah faktor."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Nilai dan derajat polinomial",
+   "items": [
+    {
+     "q": "Sisa pembagian P(x) = −4x² + x − 3 oleh (x − 3) adalah …",
+     "c": [
+      "−3",
+      "−35",
+      "−36",
+      "−42"
+     ],
+     "a": 2,
+     "e": "Teorema sisa: sisanya P(3) = −36."
+    },
+    {
+     "q": "Sisa pembagian P(x) = −4x³ + 4x² + 6 oleh (x − 3) adalah …",
+     "c": [
+      "−65",
+      "6",
+      "150",
+      "−66"
+     ],
+     "a": 3,
+     "e": "Teorema sisa: sisanya P(3) = −66."
+    },
+    {
+     "q": "Nilai P(x) = −2x³ − 4x² − 2x − 6 untuk x = 1 adalah …",
+     "c": [
+      "−20",
+      "−14",
+      "−6",
+      "−12"
+     ],
+     "a": 1,
+     "e": "Substitusi x = 1: P(1) = −14."
+    },
+    {
+     "q": "Sisa pembagian P(x) = −2x³ − 6x² − 3x − 4 oleh (x − 2) adalah …",
+     "c": [
+      "−49",
+      "−50",
+      "−4",
+      "−6"
+     ],
+     "a": 1,
+     "e": "Teorema sisa: sisanya P(2) = −50."
+    },
+    {
+     "q": "Nilai P(x) = −4x³ − 3x² + x − 3 untuk x = 1 adalah …",
+     "c": [
+      "−3",
+      "−7",
+      "−12",
+      "−9"
+     ],
+     "a": 3,
+     "e": "Substitusi x = 1: P(1) = −9."
+    },
+    {
+     "q": "Sisa pembagian P(x) = −3x³ + 4x² − 5x + 1 oleh (x + 1) adalah …",
+     "c": [
+      "13",
+      "1",
+      "14",
+      "−3"
+     ],
+     "a": 0,
+     "e": "Teorema sisa: sisanya P(−1) = 13."
+    },
+    {
+     "q": "Nilai P(x) = x² − 5x + 6 untuk x = −1 adalah …",
+     "c": [
+      "2",
+      "18",
+      "12",
+      "14"
+     ],
+     "a": 2,
+     "e": "Substitusi x = −1: P(−1) = 12."
+    },
+    {
+     "q": "Nilai P(x) = x³ − 4 untuk x = −2 adalah …",
+     "c": [
+      "4",
+      "33",
+      "−16",
+      "−12"
+     ],
+     "a": 3,
+     "e": "Substitusi x = −2: P(−2) = −12."
+    },
+    {
+     "q": "Sisa pembagian P(x) = 4x² + 2x oleh (x − 2) adalah …",
+     "c": [
+      "20",
+      "21",
+      "0",
+      "12"
+     ],
+     "a": 0,
+     "e": "Teorema sisa: sisanya P(2) = 20."
+    },
+    {
+     "q": "Sisa pembagian P(x) = −3x³ − 5x² − 2x − 5 oleh (x + 2) adalah …",
+     "c": [
+      "3",
+      "−53",
+      "4",
+      "−5"
+     ],
+     "a": 0,
+     "e": "Teorema sisa: sisanya P(−2) = 3."
+    },
+    {
+     "q": "Derajat polinomial −4x² − x adalah …",
+     "c": [
+      "−4",
+      "2",
+      "1",
+      "3"
+     ],
+     "a": 1,
+     "e": "Pangkat tertinggi x adalah 2."
+    },
+    {
+     "q": "Sisa pembagian P(x) = 3x³ − 3x² − 1 oleh (x − 2) adalah …",
+     "c": [
+      "11",
+      "−37",
+      "−1",
+      "12"
+     ],
+     "a": 0,
+     "e": "Teorema sisa: sisanya P(2) = 11."
+    },
+    {
+     "q": "Sisa pembagian P(x) = 4x² + x − 6 oleh (x − 2) adalah …",
+     "c": [
+      "13",
+      "−6",
+      "12",
+      "8"
+     ],
+     "a": 2,
+     "e": "Teorema sisa: sisanya P(2) = 12."
+    },
+    {
+     "q": "Sisa pembagian P(x) = 4x³ − 4x² + 5x + 6 oleh (x + 2) adalah …",
+     "c": [
+      "−51",
+      "−52",
+      "6",
+      "32"
+     ],
+     "a": 1,
+     "e": "Teorema sisa: sisanya P(−2) = −52."
+    },
+    {
+     "q": "Nilai P(x) = 4x³ + x² − 6x + 1 untuk x = 3 adalah …",
+     "c": [
+      "−80",
+      "−20",
+      "100",
+      "101"
+     ],
+     "a": 2,
+     "e": "Substitusi x = 3: P(3) = 100."
+    },
+    {
+     "q": "Nilai P(x) = x³ − 2x² + 5x − 2 untuk x = 3 adalah …",
+     "c": [
+      "−62",
+      "22",
+      "20",
+      "−14"
+     ],
+     "a": 1,
+     "e": "Substitusi x = 3: P(3) = 22."
+    },
+    {
+     "q": "Nilai P(x) = x² − 5x − 1 untuk x = 1 adalah …",
+     "c": [
+      "5",
+      "−3",
+      "−6",
+      "−5"
+     ],
+     "a": 3,
+     "e": "Substitusi x = 1: P(1) = −5."
+    },
+    {
+     "q": "Sisa pembagian P(x) = 3x³ + 3x oleh (x − 1) adalah …",
+     "c": [
+      "0",
+      "7",
+      "−6",
+      "6"
+     ],
+     "a": 3,
+     "e": "Teorema sisa: sisanya P(1) = 6."
+    },
+    {
+     "q": "Derajat polinomial 2x³ + 6x + 2 adalah …",
+     "c": [
+      "2",
+      "4",
+      "3",
+      "5"
+     ],
+     "a": 2,
+     "e": "Pangkat tertinggi x adalah 3."
+    },
+    {
+     "q": "Nilai P(x) = 2x³ + 2x² − 5x − 3 untuk x = −2 adalah …",
+     "c": [
+      "−1",
+      "−4",
+      "2",
+      "11"
+     ],
+     "a": 0,
+     "e": "Substitusi x = −2: P(−2) = −1."
+    }
+   ]
+  },
+  {
+   "title": "Penjumlahan dan perkalian polinomial",
+   "items": [
+    {
+     "q": "Jika P(x) = −x² + 4x + 4 dan Q(x) = 2x + 3, maka P(x) − Q(x) = …",
+     "c": [
+      "−x² + 2x + 7",
+      "−x² + 6x + 7",
+      "−3x² + x + 4",
+      "−x² + 2x + 1"
+     ],
+     "a": 3,
+     "e": "Kurangkan suku sejenis: −x² + 2x + 1."
+    },
+    {
+     "q": "Jika P(x) = −2x² − 6 dan Q(x) = x + 5, maka P(x) − Q(x) = …",
+     "c": [
+      "−2x² + x − 1",
+      "−3x² − 5x − 6",
+      "−2x² − x − 11",
+      "−2x² − x − 1"
+     ],
+     "a": 2,
+     "e": "Kurangkan suku sejenis: −2x² − x − 11."
+    },
+    {
+     "q": "Hasil kali (x² − 3x − 1)(−x + 5) adalah …",
+     "c": [
+      "−x³ + 3x² + x − 5",
+      "−x³ + 8x² − 14x + 5",
+      "−x³ + 8x² − 14x − 5",
+      "−x² + 8x − 5"
+     ],
+     "a": 2,
+     "e": "Kalikan setiap suku: −x³ + 8x² − 14x − 5."
+    },
+    {
+     "q": "Jika P(x) = −2x² + 5x − 4 dan Q(x) = 2x − 5, maka P(x) − Q(x) = …",
+     "c": [
+      "−2x² + 3x − 9",
+      "−2x² + 3x + 1",
+      "−4x² + 10x − 4",
+      "−2x² + 7x − 9"
+     ],
+     "a": 1,
+     "e": "Kurangkan suku sejenis: −2x² + 3x + 1."
+    },
+    {
+     "q": "Hasil kali (4x² + 3x − 1)(2x + 5) adalah …",
+     "c": [
+      "8x³ + 26x² + 13x − 5",
+      "8x² + 26x − 5",
+      "8x³ + 26x² + 13x + 5",
+      "8x³ + 6x² − 2x − 5"
+     ],
+     "a": 0,
+     "e": "Kalikan setiap suku: 8x³ + 26x² + 13x − 5."
+    },
+    {
+     "q": "Jika P(x) = 3x² − 2x + 2 dan Q(x) = −x − 3, maka P(x) − Q(x) = …",
+     "c": [
+      "3x² − x + 5",
+      "3x² − 3x − 1",
+      "3x² − x − 1",
+      "4x² + x + 2"
+     ],
+     "a": 0,
+     "e": "Kurangkan suku sejenis: 3x² − x + 5."
+    },
+    {
+     "q": "Jika P(x) = −x² + x + 5 dan Q(x) = 3x + 2, maka P(x) − Q(x) = …",
+     "c": [
+      "−x² − 2x + 7",
+      "−x² − 2x + 3",
+      "−4x² − x + 5",
+      "−x² + 4x + 7"
+     ],
+     "a": 1,
+     "e": "Kurangkan suku sejenis: −x² − 2x + 3."
+    },
+    {
+     "q": "Jika P(x) = −4x² − 2x + 1 dan Q(x) = x + 2, maka P(x) − Q(x) = …",
+     "c": [
+      "−5x² − 4x + 1",
+      "−4x² − 3x + 3",
+      "−4x² − x + 3",
+      "−4x² − 3x − 1"
+     ],
+     "a": 3,
+     "e": "Kurangkan suku sejenis: −4x² − 3x − 1."
+    },
+    {
+     "q": "Jika P(x) = −2x² + x + 1 dan Q(x) = −2x + 1, maka P(x) − Q(x) = …",
+     "c": [
+      "−2x² − x + 2",
+      "−2x² + 3x + 2",
+      "−2x² + 3x",
+      "1"
+     ],
+     "a": 2,
+     "e": "Kurangkan suku sejenis: −2x² + 3x."
+    },
+    {
+     "q": "Jika P(x) = x² + 3x − 4 dan Q(x) = 3x − 2, maka P(x) − Q(x) = …",
+     "c": [
+      "x² + 6x − 6",
+      "x² − 2",
+      "x² − 6",
+      "−2x² + 5x − 4"
+     ],
+     "a": 1,
+     "e": "Kurangkan suku sejenis: x² − 2."
+    },
+    {
+     "q": "Hasil kali (−4x² + x − 1)(−x − 1) adalah …",
+     "c": [
+      "4x³ + 3x² − 1",
+      "4x³ − x² + x + 1",
+      "4x³ + 3x² + 1",
+      "4x² + 3x + 1"
+     ],
+     "a": 2,
+     "e": "Kalikan setiap suku: 4x³ + 3x² + 1."
+    },
+    {
+     "q": "Jika P(x) = −4x² − x + 4 dan Q(x) = 3x + 5, maka P(x) − Q(x) = …",
+     "c": [
+      "−4x² − 4x + 9",
+      "−4x² + 2x + 9",
+      "−7x² − 6x + 4",
+      "−4x² − 4x − 1"
+     ],
+     "a": 3,
+     "e": "Kurangkan suku sejenis: −4x² − 4x − 1."
+    },
+    {
+     "q": "Jika P(x) = 2x² − 4x − 5 dan Q(x) = −x − 2, maka P(x) − Q(x) = …",
+     "c": [
+      "2x² − 3x − 7",
+      "3x² − 2x − 5",
+      "2x² − 5x − 7",
+      "2x² − 3x − 3"
+     ],
+     "a": 3,
+     "e": "Kurangkan suku sejenis: 2x² − 3x − 3."
+    },
+    {
+     "q": "Hasil kali (−3x² + 5x − 2)(−3x − 2) adalah …",
+     "c": [
+      "9x³ − 9x² − 4x + 4",
+      "9x³ − 15x² + 6x + 4",
+      "9x² − 9x + 4",
+      "9x³ − 9x² − 4x − 4"
+     ],
+     "a": 0,
+     "e": "Kalikan setiap suku: 9x³ − 9x² − 4x + 4."
+    },
+    {
+     "q": "Jika P(x) = x² − 1 dan Q(x) = −x − 5, maka P(x) − Q(x) = …",
+     "c": [
+      "2x² + 5x − 1",
+      "x² − x − 6",
+      "x² + x + 4",
+      "x² + x − 6"
+     ],
+     "a": 2,
+     "e": "Kurangkan suku sejenis: x² + x + 4."
+    },
+    {
+     "q": "Hasil kali (−3x²)(−3x + 1) adalah …",
+     "c": [
+      "9x³ − 3x²",
+      "9x² − 3x",
+      "9x³ − 3x² + x",
+      "9x³"
+     ],
+     "a": 0,
+     "e": "Kalikan setiap suku: 9x³ − 3x²."
+    },
+    {
+     "q": "Jika P(x) = 4x² + 5x − 4 dan Q(x) = −3x + 1, maka P(x) − Q(x) = …",
+     "c": [
+      "7x² + 4x − 4",
+      "4x² + 8x − 5",
+      "4x² + 2x − 3",
+      "4x² + 8x − 3"
+     ],
+     "a": 1,
+     "e": "Kurangkan suku sejenis: 4x² + 8x − 5."
+    },
+    {
+     "q": "Hasil kali (−4x² + 2x + 1)(3x − 3) adalah …",
+     "c": [
+      "−12x³ + 18x² − 3x + 3",
+      "−12x³ + 18x² − 3x − 3",
+      "−12x³ + 6x² + 3x − 3",
+      "−12x² + 18x − 3"
+     ],
+     "a": 1,
+     "e": "Kalikan setiap suku: −12x³ + 18x² − 3x − 3."
+    },
+    {
+     "q": "Jika P(x) = −4x² + 3x − 5 dan Q(x) = −x − 4, maka P(x) − Q(x) = …",
+     "c": [
+      "−4x² + 4x − 1",
+      "−4x² + 4x − 9",
+      "−3x² + 7x − 5",
+      "−4x² + 2x − 9"
+     ],
+     "a": 0,
+     "e": "Kurangkan suku sejenis: −4x² + 4x − 1."
+    },
+    {
+     "q": "Jika P(x) = −4x² + 2x + 1 dan Q(x) = −x + 3, maka P(x) − Q(x) = …",
+     "c": [
+      "−4x² + 3x + 4",
+      "−3x² − x + 1",
+      "−4x² + x + 4",
+      "−4x² + 3x − 2"
+     ],
+     "a": 3,
+     "e": "Kurangkan suku sejenis: −4x² + 3x − 2."
+    }
+   ]
+  },
+  {
+   "title": "Pembagian cara Horner",
+   "items": [
+    {
+     "q": "Hasil bagi P(x) = 3x³ + 10x² + 8x + 13 oleh (x + 3) adalah …",
+     "c": [
+      "3x² − x + 5",
+      "3x² + x + 5",
+      "3x² + x + 3",
+      "3x² − 17x + 5"
+     ],
+     "a": 1,
+     "e": "Dengan cara Horner (bagan) memakai −3, hasil baginya 3x² + x + 5 dan sisanya −2."
+    },
+    {
+     "q": "Sisa pembagian P(x) = −x³ − 3x² + 16x − 15 oleh (x − 2) adalah …",
+     "c": [
+      "−15",
+      "−51",
+      "−3",
+      "3"
+     ],
+     "a": 2,
+     "e": "Sisa = P(2) = −3."
+    },
+    {
+     "q": "Hasil bagi P(x) = −x³ − 3x² + 11x − 7 oleh (x − 2) adalah …",
+     "c": [
+      "−x² + 5x + 1",
+      "−x² − 9x + 1",
+      "−x² − 5x − 4",
+      "−x² − 5x + 1"
+     ],
+     "a": 3,
+     "e": "Dengan cara Horner (bagan) memakai 2, hasil baginya −x² − 5x + 1 dan sisanya −5."
+    },
+    {
+     "q": "Hasil bagi P(x) = −x³ + 6x² − 9x + 5 oleh (x − 1) adalah …",
+     "c": [
+      "−x² + 5x − 4",
+      "−x² + 3x − 4",
+      "−x² + 5x − 3",
+      "−x² − 5x − 4"
+     ],
+     "a": 0,
+     "e": "Dengan cara Horner (bagan) memakai 1, hasil baginya −x² + 5x − 4 dan sisanya 1."
+    },
+    {
+     "q": "Hasil bagi P(x) = −3x³ + 8x² − 3x − 6 oleh (x − 2) adalah …",
+     "c": [
+      "−3x² − 10x + 1",
+      "−3x² + 2x + 1",
+      "−3x² − 2x + 1",
+      "−3x² + 2x − 3"
+     ],
+     "a": 1,
+     "e": "Dengan cara Horner (bagan) memakai 2, hasil baginya −3x² + 2x + 1 dan sisanya −4."
+    },
+    {
+     "q": "Hasil bagi P(x) = x³ − 3x² − 2x oleh (x + 1) adalah …",
+     "c": [
+      "x² − 4x + 2",
+      "x² − 6x + 2",
+      "x² − 4x",
+      "x² + 4x + 2"
+     ],
+     "a": 0,
+     "e": "Dengan cara Horner (bagan) memakai −1, hasil baginya x² − 4x + 2 dan sisanya −2."
+    },
+    {
+     "q": "Sisa pembagian P(x) = −2x³ + 6x² − 5x + 22 oleh (x − 3) adalah …",
+     "c": [
+      "22",
+      "2",
+      "145",
+      "7"
+     ],
+     "a": 3,
+     "e": "Sisa = P(3) = 7."
+    },
+    {
+     "q": "Hasil bagi P(x) = −3x³ + 8x² − 3x − 1 oleh (x − 1) adalah …",
+     "c": [
+      "−3x² − 5x + 2",
+      "−3x² − x + 2",
+      "−3x² + 5x + 2",
+      "−3x² + 5x + 3"
+     ],
+     "a": 2,
+     "e": "Dengan cara Horner (bagan) memakai 1, hasil baginya −3x² + 5x + 2 dan sisanya 1."
+    },
+    {
+     "q": "Hasil bagi P(x) = x³ − 6x² + 4x oleh (x − 1) adalah …",
+     "c": [
+      "x² − 5x − 2",
+      "x² − 5x − 1",
+      "x² + 5x − 1",
+      "x² − 3x − 1"
+     ],
+     "a": 1,
+     "e": "Dengan cara Horner (bagan) memakai 1, hasil baginya x² − 5x − 1 dan sisanya −1."
+    },
+    {
+     "q": "Hasil bagi P(x) = −3x³ − 8x² − 3x oleh (x + 1) adalah …",
+     "c": [
+      "−3x² + x + 2",
+      "−3x² − 5x + 2",
+      "−3x² + 5x + 2",
+      "−3x² − 5x"
+     ],
+     "a": 1,
+     "e": "Dengan cara Horner (bagan) memakai −1, hasil baginya −3x² − 5x + 2 dan sisanya −2."
+    },
+    {
+     "q": "Hasil bagi P(x) = −2x³ − 4x² + 6x + 6 oleh (x + 3) adalah …",
+     "c": [
+      "−2x² + 14x",
+      "−2x² + 2x + 6",
+      "−2x² − 2x",
+      "−2x² + 2x"
+     ],
+     "a": 3,
+     "e": "Dengan cara Horner (bagan) memakai −3, hasil baginya −2x² + 2x dan sisanya 6."
+    },
+    {
+     "q": "Hasil bagi P(x) = −x³ − 4x² − x − 1 oleh (x + 3) adalah …",
+     "c": [
+      "−x² − x − 5",
+      "−x² + x + 2",
+      "−x² − x + 2",
+      "−x² + 5x + 2"
+     ],
+     "a": 2,
+     "e": "Dengan cara Horner (bagan) memakai −3, hasil baginya −x² − x + 2 dan sisanya −7."
+    },
+    {
+     "q": "Hasil bagi P(x) = x³ + 7x² + 7x − 22 oleh (x + 3) adalah …",
+     "c": [
+      "x² − 2x − 5",
+      "x² − 4x − 5",
+      "x² + 4x − 5",
+      "x² + 4x − 12"
+     ],
+     "a": 2,
+     "e": "Dengan cara Horner (bagan) memakai −3, hasil baginya x² + 4x − 5 dan sisanya −7."
+    },
+    {
+     "q": "Hasil bagi P(x) = 3x³ − 14x² + 12x + 16 oleh (x − 3) adalah …",
+     "c": [
+      "3x² − 5x + 4",
+      "3x² + 5x − 3",
+      "3x² − 5x − 3",
+      "3x² + 13x − 3"
+     ],
+     "a": 2,
+     "e": "Dengan cara Horner (bagan) memakai 3, hasil baginya 3x² − 5x − 3 dan sisanya 7."
+    },
+    {
+     "q": "Hasil bagi P(x) = −3x³ + 7x² + x − 14 oleh (x − 2) adalah …",
+     "c": [
+      "−3x² − 11x + 3",
+      "−3x² + x − 5",
+      "−3x² − x + 3",
+      "−3x² + x + 3"
+     ],
+     "a": 3,
+     "e": "Dengan cara Horner (bagan) memakai 2, hasil baginya −3x² + x + 3 dan sisanya −8."
+    },
+    {
+     "q": "Hasil bagi P(x) = −x³ + 3x² − 6x + 3 oleh (x − 1) adalah …",
+     "c": [
+      "−x² + 2x − 4",
+      "−x² − 2x − 4",
+      "−x² + 2x − 5",
+      "−x² − 4"
+     ],
+     "a": 0,
+     "e": "Dengan cara Horner (bagan) memakai 1, hasil baginya −x² + 2x − 4 dan sisanya −1."
+    },
+    {
+     "q": "Hasil bagi P(x) = x³ + 3x² + 3x + 1 oleh (x + 2) adalah …",
+     "c": [
+      "x² − 3x + 1",
+      "x² + x + 1",
+      "x² + x",
+      "x² − x + 1"
+     ],
+     "a": 1,
+     "e": "Dengan cara Horner (bagan) memakai −2, hasil baginya x² + x + 1 dan sisanya −1."
+    },
+    {
+     "q": "Hasil bagi P(x) = −3x³ − 11x² − 12x − 6 oleh (x + 2) adalah …",
+     "c": [
+      "−3x² − 5x − 4",
+      "−3x² + 7x − 2",
+      "−3x² + 5x − 2",
+      "−3x² − 5x − 2"
+     ],
+     "a": 3,
+     "e": "Dengan cara Horner (bagan) memakai −2, hasil baginya −3x² − 5x − 2 dan sisanya −2."
+    },
+    {
+     "q": "Hasil bagi P(x) = 2x³ + 9x² + 16x + 11 oleh (x + 2) adalah …",
+     "c": [
+      "2x² + 5x + 6",
+      "2x² − 5x + 6",
+      "2x² + 5x + 5",
+      "2x² − 3x + 6"
+     ],
+     "a": 0,
+     "e": "Dengan cara Horner (bagan) memakai −2, hasil baginya 2x² + 5x + 6 dan sisanya −1."
+    },
+    {
+     "q": "Hasil bagi P(x) = 3x³ + 8x² + 7x + 2 oleh (x + 2) adalah …",
+     "c": [
+      "3x² + 2x + 3",
+      "3x² − 2x + 3",
+      "3x² − 10x + 3",
+      "3x² + 2x − 1"
+     ],
+     "a": 0,
+     "e": "Dengan cara Horner (bagan) memakai −2, hasil baginya 3x² + 2x + 3 dan sisanya −4."
+    }
+   ]
+  },
+  {
+   "title": "Teorema sisa dan faktor",
+   "items": [
+    {
+     "q": "Jumlah akar-akar persamaan x³ + 2x² − 16x − 32 = 0 adalah …",
+     "c": [
+      "−16",
+      "2",
+      "32",
+      "−2"
+     ],
+     "a": 3,
+     "e": "x₁ + x₂ + x₃ = −b/a = −2."
+    },
+    {
+     "q": "Akar-akar persamaan x³ + 5x² + 2x − 8 = 0 adalah …",
+     "c": [
+      "4, −2, 1",
+      "−1, 2, 4",
+      "−4, −2, −1",
+      "−4, −2, 1"
+     ],
+     "a": 3,
+     "e": "Coba faktor dari −8; ternyata P(1) = P(−2) = P(−4) = 0."
+    },
+    {
+     "q": "Polinomial x³ + 3x² − 2x + k habis dibagi (x + 4). Nilai k adalah …",
+     "c": [
+      "−8",
+      "4",
+      "−7",
+      "8"
+     ],
+     "a": 3,
+     "e": "P(−4) = 0: −8 + k = 0, jadi k = 8."
+    },
+    {
+     "q": "Polinomial x³ − x² − x + k habis dibagi (x + 3). Nilai k adalah …",
+     "c": [
+      "−33",
+      "33",
+      "−32",
+      "30"
+     ],
+     "a": 1,
+     "e": "P(−3) = 0: −33 + k = 0, jadi k = 33."
+    },
+    {
+     "q": "Jumlah akar-akar persamaan x³ − 3x² − 16x + 48 = 0 adalah …",
+     "c": [
+      "3",
+      "−3",
+      "−16",
+      "−48"
+     ],
+     "a": 0,
+     "e": "x₁ + x₂ + x₃ = −b/a = 3."
+    },
+    {
+     "q": "Jumlah akar-akar persamaan x³ + 5x² + 2x − 8 = 0 adalah …",
+     "c": [
+      "5",
+      "−5",
+      "2",
+      "8"
+     ],
+     "a": 1,
+     "e": "x₁ + x₂ + x₃ = −b/a = −5."
+    },
+    {
+     "q": "Jumlah akar-akar persamaan x³ + 3x² − 4x − 12 = 0 adalah …",
+     "c": [
+      "−4",
+      "12",
+      "−3",
+      "3"
+     ],
+     "a": 2,
+     "e": "x₁ + x₂ + x₃ = −b/a = −3."
+    },
+    {
+     "q": "Jumlah akar-akar persamaan x³ − 4x² − 11x + 30 = 0 adalah …",
+     "c": [
+      "−11",
+      "−30",
+      "4",
+      "−4"
+     ],
+     "a": 2,
+     "e": "x₁ + x₂ + x₃ = −b/a = 4."
+    },
+    {
+     "q": "Polinomial x³ − 3x² − x + k habis dibagi (x − 1). Nilai k adalah …",
+     "c": [
+      "−2",
+      "4",
+      "−3",
+      "3"
+     ],
+     "a": 3,
+     "e": "P(1) = 0: −3 + k = 0, jadi k = 3."
+    },
+    {
+     "q": "Akar-akar persamaan x³ + 4x² − 7x − 10 = 0 adalah …",
+     "c": [
+      "−5, −1, 2",
+      "−2, 1, 5",
+      "5, −1, 2",
+      "−5, −1, −2"
+     ],
+     "a": 0,
+     "e": "Coba faktor dari −10; ternyata P(−5) = P(−1) = P(2) = 0."
+    },
+    {
+     "q": "Polinomial x³ − 2x² + x + k habis dibagi (x + 3). Nilai k adalah …",
+     "c": [
+      "45",
+      "−48",
+      "48",
+      "−47"
+     ],
+     "a": 2,
+     "e": "P(−3) = 0: −48 + k = 0, jadi k = 48."
+    },
+    {
+     "q": "Polinomial x³ − 2x² + 4x + k habis dibagi (x + 2). Nilai k adalah …",
+     "c": [
+      "22",
+      "−23",
+      "−24",
+      "24"
+     ],
+     "a": 3,
+     "e": "P(−2) = 0: −24 + k = 0, jadi k = 24."
+    },
+    {
+     "q": "Akar-akar persamaan x³ + x² − 22x − 40 = 0 adalah …",
+     "c": [
+      "−4, −2, 5",
+      "4, −2, 5",
+      "−4, −2, −5",
+      "−5, 2, 4"
+     ],
+     "a": 0,
+     "e": "Coba faktor dari −40; ternyata P(−4) = P(−2) = P(5) = 0."
+    },
+    {
+     "q": "Akar-akar persamaan x³ + x² − 17x + 15 = 0 adalah …",
+     "c": [
+      "−5, 1, −3",
+      "−5, 1, 3",
+      "5, 1, 3",
+      "−3, −1, 5"
+     ],
+     "a": 1,
+     "e": "Coba faktor dari 15; ternyata P(1) = P(3) = P(−5) = 0."
+    },
+    {
+     "q": "Akar-akar persamaan x³ − 4x² + x + 6 = 0 adalah …",
+     "c": [
+      "−1, 2, −3",
+      "1, 2, 3",
+      "−1, 2, 3",
+      "−3, −2, 1"
+     ],
+     "a": 2,
+     "e": "Coba faktor dari 6; ternyata P(3) = P(2) = P(−1) = 0."
+    },
+    {
+     "q": "Akar-akar persamaan x³ − 6x² + 3x + 10 = 0 adalah …",
+     "c": [
+      "1, 2, 5",
+      "−1, 2, 5",
+      "−1, 2, −5",
+      "−5, −2, 1"
+     ],
+     "a": 1,
+     "e": "Coba faktor dari 10; ternyata P(5) = P(−1) = P(2) = 0."
+    },
+    {
+     "q": "Jumlah akar-akar persamaan x³ − x² − 22x + 40 = 0 adalah …",
+     "c": [
+      "−1",
+      "−40",
+      "1",
+      "−22"
+     ],
+     "a": 2,
+     "e": "x₁ + x₂ + x₃ = −b/a = 1."
+    },
+    {
+     "q": "Polinomial x³ + 3x² − x + k habis dibagi (x − 3). Nilai k adalah …",
+     "c": [
+      "−51",
+      "52",
+      "−48",
+      "51"
+     ],
+     "a": 0,
+     "e": "P(3) = 0: 51 + k = 0, jadi k = −51."
+    },
+    {
+     "q": "Akar-akar persamaan x³ − 6x² + 11x − 6 = 0 adalah …",
+     "c": [
+      "−1, 2, 3",
+      "1, 2, 3",
+      "−3, −2, −1",
+      "1, 2, −3"
+     ],
+     "a": 1,
+     "e": "Coba faktor dari −6; ternyata P(2) = P(1) = P(3) = 0."
+    },
+    {
+     "q": "Jumlah akar-akar persamaan x³ − 21x − 20 = 0 adalah …",
+     "c": [
+      "0",
+      "−21",
+      "1",
+      "20"
+     ],
+     "a": 0,
+     "e": "x₁ + x₂ + x₃ = −b/a = 0."
+    }
+   ]
+  },
+  {
+   "title": "Campuran",
+   "items": [
+    {
+     "q": "Nilai P(x) = x³ + 6x² + 2x − 5 untuk x = 3 adalah …",
+     "c": [
+      "82",
+      "77",
+      "−98",
+      "16"
+     ],
+     "a": 0,
+     "e": "Substitusi x = 3: P(3) = 82."
+    },
+    {
+     "q": "Hasil bagi P(x) = 3x³ + 8x² + 3x + 12 oleh (x + 3) adalah …",
+     "c": [
+      "3x² + x + 6",
+      "3x² − 19x + 6",
+      "3x² − x + 6",
+      "3x² − x"
+     ],
+     "a": 2,
+     "e": "Dengan cara Horner (bagan) memakai −3, hasil baginya 3x² − x + 6 dan sisanya −6."
+    },
+    {
+     "q": "Nilai P(x) = −4x² + 4x + 5 untuk x = −3 adalah …",
+     "c": [
+      "29",
+      "−43",
+      "−38",
+      "−19"
+     ],
+     "a": 1,
+     "e": "Substitusi x = −3: P(−3) = −43."
+    },
+    {
+     "q": "Sisa pembagian P(x) = −2x³ − 3x + 12 oleh (x − 1) adalah …",
+     "c": [
+      "12",
+      "2",
+      "7",
+      "17"
+     ],
+     "a": 2,
+     "e": "Sisa = P(1) = 7."
+    },
+    {
+     "q": "Nilai P(x) = 3x² − 5x − 6 untuk x = −2 adalah …",
+     "c": [
+      "16",
+      "−4",
+      "−11",
+      "10"
+     ],
+     "a": 0,
+     "e": "Substitusi x = −2: P(−2) = 16."
+    },
+    {
+     "q": "Hasil bagi P(x) = 3x³ − 10x² + 4x + 11 oleh (x − 2) adalah …",
+     "c": [
+      "3x² + 4x − 4",
+      "3x² − 4x − 1",
+      "3x² − 4x − 4",
+      "3x² + 8x − 4"
+     ],
+     "a": 2,
+     "e": "Dengan cara Horner (bagan) memakai 2, hasil baginya 3x² − 4x − 4 dan sisanya 3."
+    },
+    {
+     "q": "Hasil bagi P(x) = 2x³ − 3x² − 6x + 4 oleh (x + 1) adalah …",
+     "c": [
+      "2x² − 5x − 1",
+      "2x² − 5x + 4",
+      "2x² − 9x − 1",
+      "2x² + 5x − 1"
+     ],
+     "a": 0,
+     "e": "Dengan cara Horner (bagan) memakai −1, hasil baginya 2x² − 5x − 1 dan sisanya 5."
+    },
+    {
+     "q": "Sisa pembagian P(x) = 3x³ + 11x² + 8x − 5 oleh (x + 2) adalah …",
+     "c": [
+      "−5",
+      "−1",
+      "−3",
+      "79"
+     ],
+     "a": 1,
+     "e": "Sisa = P(−2) = −1."
+    },
+    {
+     "q": "Nilai P(x) = x² + 4x − 3 untuk x = 3 adalah …",
+     "c": [
+      "18",
+      "−14",
+      "15",
+      "−6"
+     ],
+     "a": 0,
+     "e": "Substitusi x = 3: P(3) = 18."
+    },
+    {
+     "q": "Hasil kali (x² + 4x + 2)(−2x + 1) adalah …",
+     "c": [
+      "−2x³ − 8x² − 4x + 2",
+      "−2x² − 7x + 2",
+      "−2x³ − 7x² − 2",
+      "−2x³ − 7x² + 2"
+     ],
+     "a": 3,
+     "e": "Kalikan setiap suku: −2x³ − 7x² + 2."
+    },
+    {
+     "q": "Hasil kali (−3x² + 5x − 6)(x − 5) adalah …",
+     "c": [
+      "−3x³ + 20x² − 31x − 30",
+      "−3x³ + 20x² − 31x + 30",
+      "−3x³ + 5x² − 6x + 30",
+      "−3x² + 20x + 30"
+     ],
+     "a": 1,
+     "e": "Kalikan setiap suku: −3x³ + 20x² − 31x + 30."
+    },
+    {
+     "q": "Hasil bagi P(x) = −3x³ − 12x² − 3x + 16 oleh (x + 3) adalah …",
+     "c": [
+      "−3x² + 15x + 6",
+      "−3x² − 3x + 6",
+      "−3x² − 3x + 4",
+      "−3x² + 3x + 6"
+     ],
+     "a": 1,
+     "e": "Dengan cara Horner (bagan) memakai −3, hasil baginya −3x² − 3x + 6 dan sisanya −2."
+    },
+    {
+     "q": "Derajat polinomial −3x³ + 3x² − 2x + 6 adalah …",
+     "c": [
+      "−3",
+      "3",
+      "2",
+      "4"
+     ],
+     "a": 1,
+     "e": "Pangkat tertinggi x adalah 3."
+    },
+    {
+     "q": "Hasil kali (−4x² − x + 5)(−x + 1) adalah …",
+     "c": [
+      "4x³ + x² − 5x + 5",
+      "4x² − 3x + 5",
+      "4x³ − 3x² − 6x − 5",
+      "4x³ − 3x² − 6x + 5"
+     ],
+     "a": 3,
+     "e": "Kalikan setiap suku: 4x³ − 3x² − 6x + 5."
+    },
+    {
+     "q": "Hasil kali (3x² + x − 3)(x − 3) adalah …",
+     "c": [
+      "3x² − 8x + 9",
+      "3x³ + x² − 3x + 9",
+      "3x³ − 8x² − 6x − 9",
+      "3x³ − 8x² − 6x + 9"
+     ],
+     "a": 3,
+     "e": "Kalikan setiap suku: 3x³ − 8x² − 6x + 9."
+    },
+    {
+     "q": "Sisa pembagian P(x) = 2x³ − 5x² + 4x − 6 oleh (x − 1) adalah …",
+     "c": [
+      "−17",
+      "−4",
+      "−6",
+      "−5"
+     ],
+     "a": 3,
+     "e": "Sisa = P(1) = −5."
+    },
+    {
+     "q": "Nilai P(x) = −4x³ + 5x² + 6x − 3 untuk x = 2 adalah …",
+     "c": [
+      "−3",
+      "6",
+      "−6",
+      "37"
+     ],
+     "a": 0,
+     "e": "Substitusi x = 2: P(2) = −3."
+    },
+    {
+     "q": "Sisa pembagian P(x) = −4x² − 6x − 6 oleh (x + 3) adalah …",
+     "c": [
+      "−23",
+      "−60",
+      "−24",
+      "−6"
+     ],
+     "a": 2,
+     "e": "Teorema sisa: sisanya P(−3) = −24."
+    },
+    {
+     "q": "Jika P(x) = x² + 3x − 6 dan Q(x) = −3x − 3, maka P(x) − Q(x) = …",
+     "c": [
+      "x² − 9",
+      "x² + 6x − 9",
+      "x² + 6x − 3",
+      "4x² + 6x − 6"
+     ],
+     "a": 2,
+     "e": "Kurangkan suku sejenis: x² + 6x − 3."
+    },
+    {
+     "q": "Jika P(x) = −2x² + 3x + 6 dan Q(x) = −3x − 4, maka P(x) − Q(x) = …",
+     "c": [
+      "−2x² + 6x + 2",
+      "x² + 7x + 6",
+      "−2x² + 2",
+      "−2x² + 6x + 10"
+     ],
+     "a": 3,
+     "e": "Kurangkan suku sejenis: −2x² + 6x + 10."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 5,
+ "updated": "2026-11-25",
+ "country": "id",
+ "subject": "matematika",
+ "grade": "kelas-11"
+}
