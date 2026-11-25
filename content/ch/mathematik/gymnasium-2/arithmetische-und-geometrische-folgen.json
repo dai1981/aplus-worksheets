@@ -1,0 +1,1165 @@
+{
+ "slug": "arithmetische-und-geometrische-folgen",
+ "title": "Arithmetische und geometrische Folgen",
+ "seo_title": "Arithmetische und geometrische Folgen – Mathematik Gymnasium: Arbeitsblätter mit Lösungen",
+ "short_title": "Arithmetische und geometrische Folgen",
+ "domain": "Analysis",
+ "standard_code": "RLP Mathematik 2.1 Funktionen",
+ "standard_url": "https://edudoc.ch/record/236136/files/A_PLE-2024-2_d_03_rlp-maturitaetsschulen.pdf",
+ "standard_text": "Die Schülerinnen und Schüler definieren Funktionen, nutzen verschiedene Darstellungsformen und untersuchen das asymptotische Verhalten (Rahmenlehrplan Gymnasiale Maturitätsschulen, EDK 2024, Mathematik 2.1).",
+ "meta_desc": "Folgen am Gymnasium: nächstes Glied, arithmetisch oder geometrisch, explizite und rekursive Formeln, aₙ berechnen, q bestimmen. 100 Aufgaben mit Lösungen.",
+ "key_big": "Arithmetisch: immer + d. Geometrisch: immer · q.",
+ "key_sub": "an = a1 + (n − 1) · d und an = a1 · q^(n − 1)",
+ "body_html": "<h2>So geht's</h2><p>Eine <b>Folge</b> ist eine Liste von Zahlen a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, …</p><p><b>Arithmetische Folge</b>: Die Differenz d zwischen zwei Gliedern ist immer gleich. a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d.</p><p><b>Geometrische Folge</b>: Der Quotient q zweier Glieder ist immer gleich. a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup>.</p><p>Eine <b>rekursive</b> Formel sagt, wie man aus einem Glied das nächste berechnet.</p><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>a₁ = 7, d = 4. Berechne a₁₀.</p><p class='sn-ex-s'>a₁₀ = 7 + 9 · 4</p><p class='sn-ex-a'>Lösung: 43</p></div><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>Folge 3, 6, 12, 24, … Berechne a₇.</p><p class='sn-ex-s'>q = 2</p><p class='sn-ex-s'>a₇ = 3 · 2⁶</p><p class='sn-ex-a'>Lösung: 192</p></div><h2>Typische Fehler</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Typischer Fehler</th><th>So ist es richtig</th></tr></thead><tbody><tr><td>a₁₀ = a₁ + 10 · d</td><td>Bis zum 10. Glied sind es nur 9 Schritte: a₁₀ = a₁ + 9 · d</td></tr><tr><td>Bei 2, 6, 18 die Differenz 4 als Regel nehmen</td><td>Differenzen prüfen: 4, 12 – nicht gleich. Quotient 3 ist gleich.</td></tr><tr><td>a₁ · q · n statt a₁ · qⁿ⁻¹</td><td>q wird (n − 1)-mal multipliziert, nicht mit n</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Woran erkenne ich eine arithmetische Folge?",
+   "a": "Die Differenz zwischen aufeinanderfolgenden Gliedern ist immer gleich, zum Beispiel 3, 7, 11, 15 mit d = 4."
+  },
+  {
+   "q": "Woran erkenne ich eine geometrische Folge?",
+   "a": "Der Quotient aufeinanderfolgender Glieder ist immer gleich, zum Beispiel 2, 6, 18, 54 mit q = 3."
+  },
+  {
+   "q": "Was ist der Unterschied zwischen expliziter und rekursiver Formel?",
+   "a": "Mit der expliziten Formel berechnet man jedes Glied direkt aus n. Die rekursive Formel braucht das vorherige Glied."
+  },
+  {
+   "q": "Kann q negativ sein?",
+   "a": "Ja. Dann wechseln die Vorzeichen der Glieder ab, zum Beispiel 1, −2, 4, −8."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Das nächste Glied",
+   "items": [
+    {
+     "q": "Wie heisst das nächste Glied der Folge 10, 19, 28, 37, …?",
+     "c": [
+      "46",
+      "74",
+      "47",
+      "55"
+     ],
+     "a": 0,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>46</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge 11, 14, 17, 20, …?",
+     "c": [
+      "23",
+      "26",
+      "40",
+      "24"
+     ],
+     "a": 0,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>23</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge −2, −4, −8, −16, …?",
+     "c": [
+      "−32",
+      "−14",
+      "−24",
+      "−64"
+     ],
+     "a": 0,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>−32</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge −3, 9, −27, 81, …?",
+     "c": [
+      "729",
+      "78",
+      "−243",
+      "189"
+     ],
+     "a": 2,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>−243</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge 3, −6, 12, −24, …?",
+     "c": [
+      "48",
+      "−60",
+      "−96",
+      "−26"
+     ],
+     "a": 0,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>48</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge 4, 20, 100, 500, …?",
+     "c": [
+      "505",
+      "12’500",
+      "900",
+      "2’500"
+     ],
+     "a": 3,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>2’500</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge 4, 12, 36, 108, …?",
+     "c": [
+      "972",
+      "180",
+      "111",
+      "324"
+     ],
+     "a": 3,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>324</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge −3, −4, −5, −6, …?",
+     "c": [
+      "−12",
+      "−8",
+      "−6",
+      "−7"
+     ],
+     "a": 3,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>−7</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge 4, 9, 14, 19, …?",
+     "c": [
+      "38",
+      "25",
+      "24",
+      "29"
+     ],
+     "a": 2,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>24</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge 2, 10, 50, 250, …?",
+     "c": [
+      "6’250",
+      "255",
+      "450",
+      "1’250"
+     ],
+     "a": 3,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>1’250</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge −1, 1, 3, 5, …?",
+     "c": [
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "a": 0,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>7</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge −3, −12, −48, −192, …?",
+     "c": [
+      "−3’072",
+      "−768",
+      "−188",
+      "−336"
+     ],
+     "a": 1,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>−768</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge −7, −1, 5, 11, …?",
+     "c": [
+      "22",
+      "17",
+      "18",
+      "23"
+     ],
+     "a": 1,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>17</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge 7, 13, 19, 25, …?",
+     "c": [
+      "37",
+      "32",
+      "50",
+      "31"
+     ],
+     "a": 3,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>31</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge −9, −8, −7, −6, …?",
+     "c": [
+      "−6",
+      "−12",
+      "−5",
+      "−4"
+     ],
+     "a": 2,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>−5</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge 11, 7, 3, −1, …?",
+     "c": [
+      "−9",
+      "−5",
+      "−2",
+      "−4"
+     ],
+     "a": 1,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>−5</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge 3, −9, 27, −81, …?",
+     "c": [
+      "−84",
+      "243",
+      "−189",
+      "−729"
+     ],
+     "a": 1,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>243</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge 3, 12, 48, 192, …?",
+     "c": [
+      "336",
+      "3’072",
+      "768",
+      "196"
+     ],
+     "a": 2,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>768</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge −10, −12, −14, −16, …?",
+     "c": [
+      "−17",
+      "−32",
+      "−18",
+      "−20"
+     ],
+     "a": 2,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>−18</b>."
+    },
+    {
+     "q": "Wie heisst das nächste Glied der Folge 2, 5, 8, 11, …?",
+     "c": [
+      "15",
+      "14",
+      "17",
+      "22"
+     ],
+     "a": 1,
+     "e": "Finde die Regel: immer gleich viel dazu (arithmetisch) oder immer mit derselben Zahl mal (geometrisch). Das nächste Glied ist <b>14</b>."
+    }
+   ]
+  },
+  {
+   "title": "Arithmetisch oder geometrisch?",
+   "items": [
+    {
+     "q": "Welche Art von Folge ist 13, 7, 1, −5, …?",
+     "c": [
+      "geometrisch, q = −6",
+      "arithmetisch, d = −6",
+      "arithmetisch, d = 6",
+      "geometrisch, q = 7"
+     ],
+     "a": 1,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>arithmetisch, d = −6</b>."
+    },
+    {
+     "q": "Welche Art von Folge ist −5, 0, 5, 10, …?",
+     "c": [
+      "geometrisch, q = 6",
+      "geometrisch, q = 5",
+      "arithmetisch, d = 5",
+      "arithmetisch, d = −5"
+     ],
+     "a": 2,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>arithmetisch, d = 5</b>."
+    },
+    {
+     "q": "Welche Art von Folge ist −4, −10, −16, −22, …?",
+     "c": [
+      "geometrisch, q = 7",
+      "geometrisch, q = −6",
+      "arithmetisch, d = 6",
+      "arithmetisch, d = −6"
+     ],
+     "a": 3,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>arithmetisch, d = −6</b>."
+    },
+    {
+     "q": "Welche Art von Folge ist −4, 0, 4, 8, …?",
+     "c": [
+      "arithmetisch, d = 4",
+      "arithmetisch, d = −4",
+      "geometrisch, q = 4",
+      "geometrisch, q = 5"
+     ],
+     "a": 0,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>arithmetisch, d = 4</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 19, 26, 33, 40, …?",
+     "c": [
+      "a<sub>n</sub> = 7n + 12",
+      "a<sub>n</sub> = 7n + 19",
+      "a<sub>n</sub> = 19n + 7",
+      "a<sub>n</sub> = 8n + 11"
+     ],
+     "a": 0,
+     "e": "Die Differenz ist d = 7, also a<sub>n</sub> = 7 · n + c. Mit a<sub>1</sub> = 19 folgt c = 12: <b>a<sub>n</sub> = 7n + 12</b>."
+    },
+    {
+     "q": "Welche Art von Folge ist 2, −4, 8, −16, …?",
+     "c": [
+      "geometrisch, q = 2",
+      "arithmetisch, d = −6",
+      "arithmetisch, d = −2",
+      "geometrisch, q = −2"
+     ],
+     "a": 3,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>geometrisch, q = −2</b>."
+    },
+    {
+     "q": "Welche Art von Folge ist 5, 7, 9, 11, …?",
+     "c": [
+      "geometrisch, q = 3",
+      "arithmetisch, d = −2",
+      "arithmetisch, d = 2",
+      "geometrisch, q = 2"
+     ],
+     "a": 2,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>arithmetisch, d = 2</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 19, 27, 35, 43, …?",
+     "c": [
+      "a<sub>n</sub> = 19n + 8",
+      "a<sub>n</sub> = 8n + 19",
+      "a<sub>n</sub> = 8n + 11",
+      "a<sub>n</sub> = 9n + 10"
+     ],
+     "a": 2,
+     "e": "Die Differenz ist d = 8, also a<sub>n</sub> = 8 · n + c. Mit a<sub>1</sub> = 19 folgt c = 11: <b>a<sub>n</sub> = 8n + 11</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 7, 9, 11, 13, …?",
+     "c": [
+      "a<sub>n</sub> = 2n + 5",
+      "a<sub>n</sub> = 3n + 4",
+      "a<sub>n</sub> = 2n + 7",
+      "a<sub>n</sub> = 7n + 2"
+     ],
+     "a": 0,
+     "e": "Die Differenz ist d = 2, also a<sub>n</sub> = 2 · n + c. Mit a<sub>1</sub> = 7 folgt c = 5: <b>a<sub>n</sub> = 2n + 5</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 13, 21, 29, 37, …?",
+     "c": [
+      "a<sub>n</sub> = 8n + 5",
+      "a<sub>n</sub> = 13n + 8",
+      "a<sub>n</sub> = 9n + 4",
+      "a<sub>n</sub> = 8n + 13"
+     ],
+     "a": 0,
+     "e": "Die Differenz ist d = 8, also a<sub>n</sub> = 8 · n + c. Mit a<sub>1</sub> = 13 folgt c = 5: <b>a<sub>n</sub> = 8n + 5</b>."
+    },
+    {
+     "q": "Welche Art von Folge ist 0, −2, −4, −6, …?",
+     "c": [
+      "geometrisch, q = −2",
+      "arithmetisch, d = −2",
+      "geometrisch, q = 3",
+      "arithmetisch, d = 2"
+     ],
+     "a": 1,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>arithmetisch, d = −2</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 4, −1, −6, −11, …?",
+     "c": [
+      "a<sub>n</sub> = −5n + 4",
+      "a<sub>n</sub> = 4n − 5",
+      "a<sub>n</sub> = −4n + 8",
+      "a<sub>n</sub> = −5n + 9"
+     ],
+     "a": 3,
+     "e": "Die Differenz ist d = −5, also a<sub>n</sub> = −5 · n + c. Mit a<sub>1</sub> = 4 folgt c = 9: <b>a<sub>n</sub> = −5n + 9</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 2, 0, −2, −4, …?",
+     "c": [
+      "a<sub>n</sub> = −2n + 2",
+      "a<sub>n</sub> = −2n + 4",
+      "a<sub>n</sub> = −n + 3",
+      "a<sub>n</sub> = 2n − 2"
+     ],
+     "a": 1,
+     "e": "Die Differenz ist d = −2, also a<sub>n</sub> = −2 · n + c. Mit a<sub>1</sub> = 2 folgt c = 4: <b>a<sub>n</sub> = −2n + 4</b>."
+    },
+    {
+     "q": "Welche Art von Folge ist 1, 5, 25, 125, …?",
+     "c": [
+      "arithmetisch, d = 5",
+      "geometrisch, q = 5",
+      "geometrisch, q = −5",
+      "arithmetisch, d = 4"
+     ],
+     "a": 1,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>geometrisch, q = 5</b>."
+    },
+    {
+     "q": "Welche Art von Folge ist 5, 20, 80, 320, …?",
+     "c": [
+      "arithmetisch, d = 15",
+      "geometrisch, q = −4",
+      "arithmetisch, d = 4",
+      "geometrisch, q = 4"
+     ],
+     "a": 3,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>geometrisch, q = 4</b>."
+    },
+    {
+     "q": "Welche Art von Folge ist 4, −12, 36, −108, …?",
+     "c": [
+      "arithmetisch, d = −16",
+      "arithmetisch, d = −3",
+      "geometrisch, q = −3",
+      "geometrisch, q = 3"
+     ],
+     "a": 2,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>geometrisch, q = −3</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 0, 2, 4, 6, …?",
+     "c": [
+      "a<sub>n</sub> = 2n − 2",
+      "a<sub>n</sub> = 2n",
+      "a<sub>n</sub> = 3n − 3",
+      "a<sub>n</sub> = 2"
+     ],
+     "a": 0,
+     "e": "Die Differenz ist d = 2, also a<sub>n</sub> = 2 · n + c. Mit a<sub>1</sub> = 0 folgt c = −2: <b>a<sub>n</sub> = 2n − 2</b>."
+    },
+    {
+     "q": "Welche Art von Folge ist −2, 5, 12, 19, …?",
+     "c": [
+      "arithmetisch, d = −7",
+      "arithmetisch, d = 7",
+      "geometrisch, q = 8",
+      "geometrisch, q = 7"
+     ],
+     "a": 1,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>arithmetisch, d = 7</b>."
+    },
+    {
+     "q": "Welche Art von Folge ist 1, −2, 4, −8, …?",
+     "c": [
+      "geometrisch, q = 2",
+      "arithmetisch, d = −2",
+      "arithmetisch, d = −3",
+      "geometrisch, q = −2"
+     ],
+     "a": 3,
+     "e": "Differenzen gleich ⇒ arithmetisch (d = Differenz). Quotienten gleich ⇒ geometrisch (q = Quotient). Hier: <b>geometrisch, q = −2</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge −3, 0, 3, 6, …?",
+     "c": [
+      "a<sub>n</sub> = 4n − 7",
+      "a<sub>n</sub> = −3n + 3",
+      "a<sub>n</sub> = 3n − 6",
+      "a<sub>n</sub> = 3n − 3"
+     ],
+     "a": 2,
+     "e": "Die Differenz ist d = 3, also a<sub>n</sub> = 3 · n + c. Mit a<sub>1</sub> = −3 folgt c = −6: <b>a<sub>n</sub> = 3n − 6</b>."
+    }
+   ]
+  },
+  {
+   "title": "Arithmetische Folgen",
+   "items": [
+    {
+     "q": "Das wievielte Glied der Folge 12, 15, 18, … ist 114?",
+     "c": [
+      "das 36. Glied",
+      "das 38. Glied",
+      "das 35. Glied",
+      "das 34. Glied"
+     ],
+     "a": 2,
+     "e": "12 + (n − 1) · 3 = 114 ⇒ n − 1 = 34 ⇒ n = <b>35</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = 3 und d = 1. Berechne a<sub>21</sub>.",
+     "c": [
+      "23",
+      "22",
+      "24",
+      "21"
+     ],
+     "a": 0,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = 3 + 20 · 1 = <b>23</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = 10 und d = 4. Berechne a<sub>50</sub>.",
+     "c": [
+      "207",
+      "206",
+      "210",
+      "200"
+     ],
+     "a": 1,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = 10 + 49 · 4 = <b>206</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = 22 und d = −2. Berechne a<sub>43</sub>.",
+     "c": [
+      "−63",
+      "−64",
+      "−86",
+      "−62"
+     ],
+     "a": 3,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = 22 + 42 · (−2) = <b>−62</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = 14 und d = 12. Berechne a<sub>32</sub>.",
+     "c": [
+      "384",
+      "387",
+      "398",
+      "386"
+     ],
+     "a": 3,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = 14 + 31 · 12 = <b>386</b>."
+    },
+    {
+     "q": "Das wievielte Glied der Folge 11, 14, 17, … ist 137?",
+     "c": [
+      "das 44. Glied",
+      "das 43. Glied",
+      "das 45. Glied",
+      "das 42. Glied"
+     ],
+     "a": 1,
+     "e": "11 + (n − 1) · 3 = 137 ⇒ n − 1 = 42 ⇒ n = <b>43</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = 22 und d = 12. Berechne a<sub>35</sub>.",
+     "c": [
+      "420",
+      "430",
+      "431",
+      "442"
+     ],
+     "a": 1,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = 22 + 34 · 12 = <b>430</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = 26 und d = −3. Berechne a<sub>34</sub>.",
+     "c": [
+      "−73",
+      "−102",
+      "−74",
+      "−76"
+     ],
+     "a": 0,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = 26 + 33 · (−3) = <b>−73</b>."
+    },
+    {
+     "q": "Das wievielte Glied der Folge −1, 3, 7, … ist 127?",
+     "c": [
+      "das 31. Glied",
+      "das 32. Glied",
+      "das 33. Glied",
+      "das 34. Glied"
+     ],
+     "a": 2,
+     "e": "−1 + (n − 1) · 4 = 127 ⇒ n − 1 = 32 ⇒ n = <b>33</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = 22 und d = 3. Berechne a<sub>32</sub>.",
+     "c": [
+      "118",
+      "96",
+      "116",
+      "115"
+     ],
+     "a": 3,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = 22 + 31 · 3 = <b>115</b>."
+    },
+    {
+     "q": "Das wievielte Glied der Folge 3, 7, 11, … ist 219?",
+     "c": [
+      "das 54. Glied",
+      "das 57. Glied",
+      "das 55. Glied",
+      "das 56. Glied"
+     ],
+     "a": 2,
+     "e": "3 + (n − 1) · 4 = 219 ⇒ n − 1 = 54 ⇒ n = <b>55</b>."
+    },
+    {
+     "q": "Das wievielte Glied der Folge −1, 4, 9, … ist 74?",
+     "c": [
+      "das 14. Glied",
+      "das 17. Glied",
+      "das 15. Glied",
+      "das 16. Glied"
+     ],
+     "a": 3,
+     "e": "−1 + (n − 1) · 5 = 74 ⇒ n − 1 = 15 ⇒ n = <b>16</b>."
+    },
+    {
+     "q": "Das wievielte Glied der Folge −2, 6, 14, … ist 422?",
+     "c": [
+      "das 55. Glied",
+      "das 53. Glied",
+      "das 52. Glied",
+      "das 54. Glied"
+     ],
+     "a": 3,
+     "e": "−2 + (n − 1) · 8 = 422 ⇒ n − 1 = 53 ⇒ n = <b>54</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = 4 und d = 8. Berechne a<sub>49</sub>.",
+     "c": [
+      "396",
+      "388",
+      "392",
+      "389"
+     ],
+     "a": 1,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = 4 + 48 · 8 = <b>388</b>."
+    },
+    {
+     "q": "Das wievielte Glied der Folge 11, 18, 25, … ist 249?",
+     "c": [
+      "das 36. Glied",
+      "das 34. Glied",
+      "das 35. Glied",
+      "das 37. Glied"
+     ],
+     "a": 2,
+     "e": "11 + (n − 1) · 7 = 249 ⇒ n − 1 = 34 ⇒ n = <b>35</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = 2 und d = 12. Berechne a<sub>14</sub>.",
+     "c": [
+      "159",
+      "168",
+      "158",
+      "170"
+     ],
+     "a": 2,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = 2 + 13 · 12 = <b>158</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = −9 und d = 11. Berechne a<sub>22</sub>.",
+     "c": [
+      "222",
+      "233",
+      "223",
+      "242"
+     ],
+     "a": 0,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = −9 + 21 · 11 = <b>222</b>."
+    },
+    {
+     "q": "Das wievielte Glied der Folge 8, 15, 22, … ist 309?",
+     "c": [
+      "das 44. Glied",
+      "das 43. Glied",
+      "das 45. Glied",
+      "das 46. Glied"
+     ],
+     "a": 0,
+     "e": "8 + (n − 1) · 7 = 309 ⇒ n − 1 = 43 ⇒ n = <b>44</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = 7 und d = 1. Berechne a<sub>43</sub>.",
+     "c": [
+      "49",
+      "50",
+      "48",
+      "43"
+     ],
+     "a": 0,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = 7 + 42 · 1 = <b>49</b>."
+    },
+    {
+     "q": "Eine arithmetische Folge hat a<sub>1</sub> = 27 und d = 9. Berechne a<sub>60</sub>.",
+     "c": [
+      "567",
+      "558",
+      "540",
+      "559"
+     ],
+     "a": 1,
+     "e": "a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d = 27 + 59 · 9 = <b>558</b>."
+    }
+   ]
+  },
+  {
+   "title": "Geometrische Folgen",
+   "items": [
+    {
+     "q": "In einer geometrischen Folge ist a<sub>2</sub> = 10 und a<sub>5</sub> = 1’250. Wie gross ist q (q &gt; 0)?",
+     "c": [
+      "5",
+      "125",
+      "<span class='fr'><span class='fn'>1’240</span><span class='fd'>3</span></span>",
+      "6"
+     ],
+     "a": 0,
+     "e": "a<sub>5</sub> = a<sub>2</sub> · q<sup>3</sup>, also q<sup>3</sup> = 125. Daraus q = <b>5</b>."
+    },
+    {
+     "q": "In einer geometrischen Folge ist a<sub>3</sub> = 50 und a<sub>5</sub> = 1’250. Wie gross ist q (q &gt; 0)?",
+     "c": [
+      "6",
+      "600",
+      "25",
+      "5"
+     ],
+     "a": 3,
+     "e": "a<sub>5</sub> = a<sub>3</sub> · q<sup>2</sup>, also q<sup>2</sup> = 25. Daraus q = <b>5</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = −2 und q = 5. Berechne a<sub>8</sub>.",
+     "c": [
+      "156’250",
+      "−70",
+      "−156’250",
+      "−781’250"
+     ],
+     "a": 2,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = −2 · 5<sup>7</sup> = <b>−156’250</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = 4 und q = 3. Berechne a<sub>7</sub>.",
+     "c": [
+      "72",
+      "8’748",
+      "2’916",
+      "−2’916"
+     ],
+     "a": 2,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = 4 · 3<sup>6</sup> = <b>2’916</b>."
+    },
+    {
+     "q": "In einer geometrischen Folge ist a<sub>3</sub> = 16 und a<sub>5</sub> = 64. Wie gross ist q (q &gt; 0)?",
+     "c": [
+      "24",
+      "2",
+      "4",
+      "3"
+     ],
+     "a": 1,
+     "e": "a<sub>5</sub> = a<sub>3</sub> · q<sup>2</sup>, also q<sup>2</sup> = 4. Daraus q = <b>2</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = 3 und q = 3. Berechne a<sub>7</sub>.",
+     "c": [
+      "6’561",
+      "−2’187",
+      "54",
+      "2’187"
+     ],
+     "a": 3,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = 3 · 3<sup>6</sup> = <b>2’187</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = −2 und q = 2. Berechne a<sub>7</sub>.",
+     "c": [
+      "128",
+      "−128",
+      "−256",
+      "−24"
+     ],
+     "a": 1,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = −2 · 2<sup>6</sup> = <b>−128</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = −2 und q = 2. Berechne a<sub>8</sub>.",
+     "c": [
+      "256",
+      "−28",
+      "−512",
+      "−256"
+     ],
+     "a": 3,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = −2 · 2<sup>7</sup> = <b>−256</b>."
+    },
+    {
+     "q": "In einer geometrischen Folge ist a<sub>2</sub> = 10 und a<sub>4</sub> = 250. Wie gross ist q (q &gt; 0)?",
+     "c": [
+      "6",
+      "5",
+      "25",
+      "120"
+     ],
+     "a": 1,
+     "e": "a<sub>4</sub> = a<sub>2</sub> · q<sup>2</sup>, also q<sup>2</sup> = 25. Daraus q = <b>5</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = 3 und q = 5. Berechne a<sub>5</sub>.",
+     "c": [
+      "9’375",
+      "60",
+      "1’875",
+      "−1’875"
+     ],
+     "a": 2,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = 3 · 5<sup>4</sup> = <b>1’875</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = 4 und q = 10. Berechne a<sub>5</sub>.",
+     "c": [
+      "400’000",
+      "160",
+      "−40’000",
+      "40’000"
+     ],
+     "a": 3,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = 4 · 10<sup>4</sup> = <b>40’000</b>."
+    },
+    {
+     "q": "In einer geometrischen Folge ist a<sub>2</sub> = 20 und a<sub>4</sub> = 320. Wie gross ist q (q &gt; 0)?",
+     "c": [
+      "4",
+      "5",
+      "150",
+      "16"
+     ],
+     "a": 0,
+     "e": "a<sub>4</sub> = a<sub>2</sub> · q<sup>2</sup>, also q<sup>2</sup> = 16. Daraus q = <b>4</b>."
+    },
+    {
+     "q": "In einer geometrischen Folge ist a<sub>3</sub> = 100 und a<sub>5</sub> = 2’500. Wie gross ist q (q &gt; 0)?",
+     "c": [
+      "5",
+      "1’200",
+      "25",
+      "6"
+     ],
+     "a": 0,
+     "e": "a<sub>5</sub> = a<sub>3</sub> · q<sup>2</sup>, also q<sup>2</sup> = 25. Daraus q = <b>5</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = 2 und q = 3. Berechne a<sub>8</sub>.",
+     "c": [
+      "−4’374",
+      "4’374",
+      "42",
+      "13’122"
+     ],
+     "a": 1,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = 2 · 3<sup>7</sup> = <b>4’374</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = 2 und q = 2. Berechne a<sub>6</sub>.",
+     "c": [
+      "128",
+      "20",
+      "64",
+      "−64"
+     ],
+     "a": 2,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = 2 · 2<sup>5</sup> = <b>64</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = −2 und q = −2. Berechne a<sub>4</sub>.",
+     "c": [
+      "16",
+      "12",
+      "−32",
+      "−16"
+     ],
+     "a": 0,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = −2 · (−2)<sup>3</sup> = <b>16</b>."
+    },
+    {
+     "q": "In einer geometrischen Folge ist a<sub>1</sub> = 4 und a<sub>4</sub> = 256. Wie gross ist q (q &gt; 0)?",
+     "c": [
+      "64",
+      "84",
+      "5",
+      "4"
+     ],
+     "a": 3,
+     "e": "a<sub>4</sub> = a<sub>1</sub> · q<sup>3</sup>, also q<sup>3</sup> = 64. Daraus q = <b>4</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = −2 und q = 5. Berechne a<sub>6</sub>.",
+     "c": [
+      "−31’250",
+      "−6’250",
+      "6’250",
+      "−50"
+     ],
+     "a": 1,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = −2 · 5<sup>5</sup> = <b>−6’250</b>."
+    },
+    {
+     "q": "Eine geometrische Folge hat a<sub>1</sub> = 5 und q = −2. Berechne a<sub>5</sub>.",
+     "c": [
+      "80",
+      "−160",
+      "−80",
+      "−40"
+     ],
+     "a": 0,
+     "e": "a<sub>n</sub> = a<sub>1</sub> · q<sup>n − 1</sup> = 5 · (−2)<sup>4</sup> = <b>80</b>."
+    },
+    {
+     "q": "In einer geometrischen Folge ist a<sub>2</sub> = 4 und a<sub>5</sub> = 256. Wie gross ist q (q &gt; 0)?",
+     "c": [
+      "5",
+      "84",
+      "4",
+      "64"
+     ],
+     "a": 2,
+     "e": "a<sub>5</sub> = a<sub>2</sub> · q<sup>3</sup>, also q<sup>3</sup> = 64. Daraus q = <b>4</b>."
+    }
+   ]
+  },
+  {
+   "title": "Rekursive Folgen und Formeln",
+   "items": [
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = −3 und a<sub>n+1</sub> = 2a<sub>n</sub> − 2. Berechne a<sub>4</sub>.",
+     "c": [
+      "−3",
+      "−18",
+      "−38",
+      "−78"
+     ],
+     "a": 2,
+     "e": "Glied für Glied rechnen: … a<sub>3</sub> = −18, a<sub>4</sub> = <b>−38</b>."
+    },
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = 0 und a<sub>n+1</sub> = 3a<sub>n</sub> + 1. Berechne a<sub>3</sub>.",
+     "c": [
+      "1",
+      "4",
+      "8",
+      "13"
+     ],
+     "a": 1,
+     "e": "Glied für Glied rechnen: … a<sub>2</sub> = 1, a<sub>3</sub> = <b>4</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 4, 11, 18, 25, …?",
+     "c": [
+      "a<sub>n</sub> = 8n − 4",
+      "a<sub>n</sub> = 4n + 7",
+      "a<sub>n</sub> = 7n − 3",
+      "a<sub>n</sub> = 7n + 4"
+     ],
+     "a": 2,
+     "e": "Die Differenz ist d = 7, also a<sub>n</sub> = 7 · n + c. Mit a<sub>1</sub> = 4 folgt c = −3: <b>a<sub>n</sub> = 7n − 3</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 3, 1, −1, −3, …?",
+     "c": [
+      "a<sub>n</sub> = −n + 4",
+      "a<sub>n</sub> = −2n + 5",
+      "a<sub>n</sub> = 3n − 2",
+      "a<sub>n</sub> = −2n + 3"
+     ],
+     "a": 1,
+     "e": "Die Differenz ist d = −2, also a<sub>n</sub> = −2 · n + c. Mit a<sub>1</sub> = 3 folgt c = 5: <b>a<sub>n</sub> = −2n + 5</b>."
+    },
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = 2 und a<sub>n+1</sub> = −2a<sub>n</sub> − 3. Berechne a<sub>4</sub>.",
+     "c": [
+      "47",
+      "−13",
+      "11",
+      "−25"
+     ],
+     "a": 3,
+     "e": "Glied für Glied rechnen: … a<sub>3</sub> = 11, a<sub>4</sub> = <b>−25</b>."
+    },
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = 4 und a<sub>n+1</sub> = 3a<sub>n</sub> − 3. Berechne a<sub>3</sub>.",
+     "c": [
+      "4",
+      "24",
+      "69",
+      "9"
+     ],
+     "a": 1,
+     "e": "Glied für Glied rechnen: … a<sub>2</sub> = 9, a<sub>3</sub> = <b>24</b>."
+    },
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = 2 und a<sub>n+1</sub> = −2a<sub>n</sub> + 2. Berechne a<sub>5</sub>.",
+     "c": [
+      "2",
+      "22",
+      "−42",
+      "−10"
+     ],
+     "a": 1,
+     "e": "Glied für Glied rechnen: … a<sub>4</sub> = −10, a<sub>5</sub> = <b>22</b>."
+    },
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = 2 und a<sub>n+1</sub> = 2a<sub>n</sub> + 3. Berechne a<sub>5</sub>.",
+     "c": [
+      "37",
+      "77",
+      "22",
+      "157"
+     ],
+     "a": 1,
+     "e": "Glied für Glied rechnen: … a<sub>4</sub> = 37, a<sub>5</sub> = <b>77</b>."
+    },
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = −1 und a<sub>n+1</sub> = 3a<sub>n</sub>. Berechne a<sub>4</sub>.",
+     "c": [
+      "−27",
+      "−81",
+      "8",
+      "−9"
+     ],
+     "a": 0,
+     "e": "Glied für Glied rechnen: … a<sub>3</sub> = −9, a<sub>4</sub> = <b>−27</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 13, 22, 31, 40, …?",
+     "c": [
+      "a<sub>n</sub> = 13n + 9",
+      "a<sub>n</sub> = 10n + 3",
+      "a<sub>n</sub> = 9n + 13",
+      "a<sub>n</sub> = 9n + 4"
+     ],
+     "a": 3,
+     "e": "Die Differenz ist d = 9, also a<sub>n</sub> = 9 · n + c. Mit a<sub>1</sub> = 13 folgt c = 4: <b>a<sub>n</sub> = 9n + 4</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 15, 19, 23, 27, …?",
+     "c": [
+      "a<sub>n</sub> = 4n + 11",
+      "a<sub>n</sub> = 4n + 15",
+      "a<sub>n</sub> = 15n + 4",
+      "a<sub>n</sub> = 5n + 10"
+     ],
+     "a": 0,
+     "e": "Die Differenz ist d = 4, also a<sub>n</sub> = 4 · n + c. Mit a<sub>1</sub> = 15 folgt c = 11: <b>a<sub>n</sub> = 4n + 11</b>."
+    },
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = 4 und a<sub>n+1</sub> = 2a<sub>n</sub> − 1. Berechne a<sub>4</sub>.",
+     "c": [
+      "7",
+      "13",
+      "49",
+      "25"
+     ],
+     "a": 3,
+     "e": "Glied für Glied rechnen: … a<sub>3</sub> = 13, a<sub>4</sub> = <b>25</b>."
+    },
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = 0 und a<sub>n+1</sub> = 3a<sub>n</sub> + 2. Berechne a<sub>3</sub>.",
+     "c": [
+      "8",
+      "2",
+      "26",
+      "10"
+     ],
+     "a": 0,
+     "e": "Glied für Glied rechnen: … a<sub>2</sub> = 2, a<sub>3</sub> = <b>8</b>."
+    },
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = 0 und a<sub>n+1</sub> = −a<sub>n</sub> + 5. Berechne a<sub>5</sub>.",
+     "c": [
+      "1",
+      "16",
+      "5",
+      "0"
+     ],
+     "a": 3,
+     "e": "Glied für Glied rechnen: … a<sub>4</sub> = 5, a<sub>5</sub> = <b>0</b>."
+    },
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = 4 und a<sub>n+1</sub> = −2a<sub>n</sub> − 1. Berechne a<sub>3</sub>.",
+     "c": [
+      "−35",
+      "−9",
+      "17",
+      "−2"
+     ],
+     "a": 2,
+     "e": "Glied für Glied rechnen: … a<sub>2</sub> = −9, a<sub>3</sub> = <b>17</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge −11, −13, −15, −17, …?",
+     "c": [
+      "a<sub>n</sub> = −2n − 9",
+      "a<sub>n</sub> = −n − 10",
+      "a<sub>n</sub> = −11n − 2",
+      "a<sub>n</sub> = −2n − 11"
+     ],
+     "a": 0,
+     "e": "Die Differenz ist d = −2, also a<sub>n</sub> = −2 · n + c. Mit a<sub>1</sub> = −11 folgt c = −9: <b>a<sub>n</sub> = −2n − 9</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 11, 15, 19, 23, …?",
+     "c": [
+      "a<sub>n</sub> = 11n + 4",
+      "a<sub>n</sub> = 5n + 6",
+      "a<sub>n</sub> = 4n + 7",
+      "a<sub>n</sub> = 4n + 11"
+     ],
+     "a": 2,
+     "e": "Die Differenz ist d = 4, also a<sub>n</sub> = 4 · n + c. Mit a<sub>1</sub> = 11 folgt c = 7: <b>a<sub>n</sub> = 4n + 7</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge −2, 5, 12, 19, …?",
+     "c": [
+      "a<sub>n</sub> = 7n − 2",
+      "a<sub>n</sub> = −2n + 7",
+      "a<sub>n</sub> = 8n − 10",
+      "a<sub>n</sub> = 7n − 9"
+     ],
+     "a": 3,
+     "e": "Die Differenz ist d = 7, also a<sub>n</sub> = 7 · n + c. Mit a<sub>1</sub> = −2 folgt c = −9: <b>a<sub>n</sub> = 7n − 9</b>."
+    },
+    {
+     "q": "Eine Folge ist rekursiv gegeben: a<sub>1</sub> = 3 und a<sub>n+1</sub> = 3a<sub>n</sub> + 4. Berechne a<sub>3</sub>.",
+     "c": [
+      "43",
+      "17",
+      "133",
+      "13"
+     ],
+     "a": 0,
+     "e": "Glied für Glied rechnen: … a<sub>2</sub> = 13, a<sub>3</sub> = <b>43</b>."
+    },
+    {
+     "q": "Welche Formel beschreibt die Folge 9, 11, 13, 15, …?",
+     "c": [
+      "a<sub>n</sub> = 9n + 2",
+      "a<sub>n</sub> = 3n + 6",
+      "a<sub>n</sub> = 2n + 7",
+      "a<sub>n</sub> = 2n + 9"
+     ],
+     "a": 2,
+     "e": "Die Differenz ist d = 2, also a<sub>n</sub> = 2 · n + c. Mit a<sub>1</sub> = 9 folgt c = 7: <b>a<sub>n</sub> = 2n + 7</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 5,
+ "updated": "2026-11-25",
+ "country": "ch",
+ "subject": "mathematik",
+ "grade": "gymnasium-2"
+}

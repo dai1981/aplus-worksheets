@@ -1136,6 +1136,7 @@ function grade_standard($country, $grade) {
     if ($country['code'] === 'cn' && $grade && $grade['slug'] === 'kindergarten') return '3-6岁儿童学习与发展指南';
     if ($country['code'] === 'tr' && $grade && $grade['slug'] === 'okul-oncesi') return 'Türkiye Yüzyılı Maarif Modeli Okul Öncesi Eğitim Programı';
     if ($country['code'] === 'cn' && $grade && strpos($grade['slug'], 'grade-') !== 0) return '普通高中数学课程标准（2017年版2020年修订）';
+    if ($country['code'] === 'ch' && $grade && strpos($grade['slug'], 'gymnasium-') === 0) return 'Rahmenlehrplan Gymnasiale Maturitätsschulen (EDK 2024)';
     return $country['standard'];
 }
 function get_grade($c, $s, $g) { return q1('SELECT * FROM ws_grade WHERE country=? AND subject=? AND slug=?', array($c, $s, $g)); }

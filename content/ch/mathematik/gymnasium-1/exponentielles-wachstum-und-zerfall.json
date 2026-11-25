@@ -1,0 +1,1165 @@
+{
+ "slug": "exponentielles-wachstum-und-zerfall",
+ "title": "Exponentielles Wachstum und Zerfall",
+ "seo_title": "Wachstum und Zerfall – Mathematik Gymnasium: Arbeitsblätter mit Lösungen",
+ "short_title": "Wachstum und Zerfall",
+ "domain": "Analysis",
+ "standard_code": "RLP Mathematik 2.1 Funktionen, 1.3 Gleichungen",
+ "standard_url": "https://edudoc.ch/record/236136/files/A_PLE-2024-2_d_03_rlp-maturitaetsschulen.pdf",
+ "standard_text": "Die Schülerinnen und Schüler definieren Funktionen, nutzen verschiedene Darstellungsformen und untersuchen das asymptotische Verhalten; sie fassen Sachzusammenhänge in Gleichungen und Gleichungssysteme und lösen verschiedene Arten davon (Rahmenlehrplan Gymnasiale Maturitätsschulen, EDK 2024, Mathematik 2.1, 1.3).",
+ "meta_desc": "Exponentielles Wachstum für das Gymnasium: prozentuales Wachstum, Zinseszins, Abnahme, Halbwertszeit, Verdopplungszeit und Vergleich mit linearem Wachstum. 100 Aufgaben mit Lösungen, kostenlos.",
+ "key_big": "N(n) = N₀ · qⁿ",
+ "key_sub": "Wachstum: q = 1 + p/100. Abnahme: q = 1 − p/100.",
+ "body_html": "<h2>So geht's</h2><p>Bei <b>exponentiellem Wachstum</b> um p % pro Schritt wird jeweils mit q = 1 + p/100 multipliziert: N(n) = N₀ · q<sup>n</sup>.</p><p>Bei <b>Abnahme</b> um p % ist q = 1 − p/100. Zinseszins: K<sub>n</sub> = K₀ · (1 + p/100)<sup>n</sup>.</p><p><b>Halbwertszeit</b>: In dieser Zeit halbiert sich der Bestand. Nach k Halbwertszeiten bleibt (½)<sup>k</sup> übrig. <b>Verdopplungszeit</b> entsprechend.</p><p>Prozente bei mehreren Schritten nicht addieren: 2-mal +10 % ist +21 %.</p><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>1’000 Fr. zu 3 % für 5 Jahre</p><p class='sn-ex-s'>1’000 · 1.03<sup>5</sup></p><p class='sn-ex-a'>Lösung: ≈ 1’159.27 Fr.</p></div><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>80 g, Halbwertszeit 5 Tage, nach 15 Tagen</p><p class='sn-ex-s'>3 Halbwertszeiten</p><p class='sn-ex-s'>80 · ⅛</p><p class='sn-ex-a'>Lösung: 10 g</p></div><h2>Typische Fehler</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Typischer Fehler</th><th>So ist es richtig</th></tr></thead><tbody><tr><td>5 Jahre 3 %: 1’000 + 5 · 30</td><td>Zinsen auf Zinsen: 1’000 · 1.03<sup>5</sup></td></tr><tr><td>−20 % ⇒ Faktor 1.2</td><td>Faktor 0.8</td></tr><tr><td>Halbwertszeit 5 Tage: nach 10 Tagen alles weg</td><td>Nach 10 Tagen ist noch ¼ da</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Wie berechne ich Zinseszins?",
+   "a": "K_n = K₀ · (1 + p/100)^n. Jedes Jahr werden die Zinsen mitverzinst."
+  },
+  {
+   "q": "Was ist die Halbwertszeit?",
+   "a": "Die Zeit, in der sich ein abnehmender Bestand halbiert. Nach zwei Halbwertszeiten ist noch ein Viertel übrig."
+  },
+  {
+   "q": "Warum ergibt zweimal 10 % Zunahme nicht 20 %?",
+   "a": "Die zweite Zunahme bezieht sich auf den schon vergrösserten Wert: 1.1 · 1.1 = 1.21, also +21 %."
+  },
+  {
+   "q": "Wann überholt exponentielles Wachstum lineares?",
+   "a": "Immer irgendwann – auch wenn es langsam beginnt, weil der Zuwachs selbst ständig grösser wird."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Prozentuales Wachstum",
+   "items": [
+    {
+     "q": "Ein Kanal hat 1’500 Follower. Die Zahl wächst jeden Monat um 15 %. Wie viele Follower sind es nach 2 Monaten (gerundet)?",
+     "c": [
+      "etwa 1’725",
+      "etwa 1’950",
+      "etwa 2’281",
+      "etwa 1’984"
+     ],
+     "a": 3,
+     "e": "Faktor q = 1.15, also 1’500 · 1.15<sup>2</sup> ≈ <b>1’984</b>. Die Prozente nicht einfach addieren (2 · 15 % = 30 %)."
+    },
+    {
+     "q": "Ein Kanal hat 800 Follower. Die Zahl wächst jeden Monat um 12 %. Wie viele Follower sind es nach 6 Monaten (gerundet)?",
+     "c": [
+      "etwa 1’410",
+      "etwa 1’376",
+      "etwa 1’579",
+      "etwa 1’769"
+     ],
+     "a": 2,
+     "e": "Faktor q = 1.12, also 800 · 1.12<sup>6</sup> ≈ <b>1’579</b>. Die Prozente nicht einfach addieren (6 · 12 % = 72 %)."
+    },
+    {
+     "q": "Auf einem Teich wachsen 2’000 Seerosen. Ihre Zahl wächst jede Woche um 15 %. Wie viele sind es nach 7 Wochen (gerundet)?",
+     "c": [
+      "etwa 5’320",
+      "etwa 6’118",
+      "etwa 4’626",
+      "etwa 4’100"
+     ],
+     "a": 0,
+     "e": "Faktor q = 1.15, also 2’000 · 1.15<sup>7</sup> ≈ <b>5’320</b>. Die Prozente nicht einfach addieren (7 · 15 % = 105 %)."
+    },
+    {
+     "q": "Ein Kanal hat 800 Follower. Die Zahl wächst jeden Monat um 12 %. Wie viele Follower sind es nach 8 Monaten (gerundet)?",
+     "c": [
+      "etwa 2’218",
+      "etwa 1’568",
+      "etwa 1’769",
+      "etwa 1’981"
+     ],
+     "a": 3,
+     "e": "Faktor q = 1.12, also 800 · 1.12<sup>8</sup> ≈ <b>1’981</b>. Die Prozente nicht einfach addieren (8 · 12 % = 96 %)."
+    },
+    {
+     "q": "In einer Probe sind 200 Bakterien. Ihre Zahl wächst jede Stunde um 2 %. Wie viele sind es nach 2 Stunden (gerundet)?",
+     "c": [
+      "etwa 204",
+      "etwa 8",
+      "etwa 208",
+      "etwa 212"
+     ],
+     "a": 2,
+     "e": "Faktor q = 1.02, also 200 · 1.02<sup>2</sup> ≈ <b>208</b>. Die Prozente nicht einfach addieren (2 · 2 % = 4 %)."
+    },
+    {
+     "q": "In einer Probe sind 1’000 Bakterien. Ihre Zahl wächst jede Stunde um 15 %. Wie viele sind es nach 5 Stunden (gerundet)?",
+     "c": [
+      "etwa 2’313",
+      "etwa 2’011",
+      "etwa 1’749",
+      "etwa 1’750"
+     ],
+     "a": 1,
+     "e": "Faktor q = 1.15, also 1’000 · 1.15<sup>5</sup> ≈ <b>2’011</b>. Die Prozente nicht einfach addieren (5 · 15 % = 75 %)."
+    },
+    {
+     "q": "Eine Stadt hat 1’500 Einwohner. Die Zahl wächst jedes Jahr um 5 %. Wie viele Einwohner sind es nach 2 Jahren (gerundet)?",
+     "c": [
+      "etwa 1’654",
+      "etwa 1’575",
+      "etwa 1’650",
+      "etwa 1’736"
+     ],
+     "a": 0,
+     "e": "Faktor q = 1.05, also 1’500 · 1.05<sup>2</sup> ≈ <b>1’654</b>. Die Prozente nicht einfach addieren (2 · 5 % = 10 %)."
+    },
+    {
+     "q": "Ein Kanal hat 1’000 Follower. Die Zahl wächst jeden Monat um 10 %. Wie viele Follower sind es nach 6 Monaten (gerundet)?",
+     "c": [
+      "etwa 1’949",
+      "etwa 1’611",
+      "etwa 1’772",
+      "etwa 1’600"
+     ],
+     "a": 2,
+     "e": "Faktor q = 1.1, also 1’000 · 1.1<sup>6</sup> ≈ <b>1’772</b>. Die Prozente nicht einfach addieren (6 · 10 % = 60 %)."
+    },
+    {
+     "q": "In einer Probe sind 500 Bakterien. Ihre Zahl wächst jede Stunde um 12 %. Wie viele sind es nach 6 Stunden (gerundet)?",
+     "c": [
+      "etwa 881",
+      "etwa 987",
+      "etwa 860",
+      "etwa 1’105"
+     ],
+     "a": 1,
+     "e": "Faktor q = 1.12, also 500 · 1.12<sup>6</sup> ≈ <b>987</b>. Die Prozente nicht einfach addieren (6 · 12 % = 72 %)."
+    },
+    {
+     "q": "Eine Stadt hat 200 Einwohner. Die Zahl wächst jedes Jahr um 12 %. Wie viele Einwohner sind es nach 8 Jahren (gerundet)?",
+     "c": [
+      "etwa 442",
+      "etwa 392",
+      "etwa 495",
+      "etwa 555"
+     ],
+     "a": 2,
+     "e": "Faktor q = 1.12, also 200 · 1.12<sup>8</sup> ≈ <b>495</b>. Die Prozente nicht einfach addieren (8 · 12 % = 96 %)."
+    },
+    {
+     "q": "Ein Kanal hat 5’000 Follower. Die Zahl wächst jeden Monat um 2 %. Wie viele Follower sind es nach 3 Monaten (gerundet)?",
+     "c": [
+      "etwa 5’300",
+      "etwa 5’412",
+      "etwa 5’202",
+      "etwa 5’306"
+     ],
+     "a": 3,
+     "e": "Faktor q = 1.02, also 5’000 · 1.02<sup>3</sup> ≈ <b>5’306</b>. Die Prozente nicht einfach addieren (3 · 2 % = 6 %)."
+    },
+    {
+     "q": "Ein Kanal hat 2’000 Follower. Die Zahl wächst jeden Monat um 8 %. Wie viele Follower sind es nach 6 Monaten (gerundet)?",
+     "c": [
+      "etwa 3’428",
+      "etwa 2’960",
+      "etwa 3’174",
+      "etwa 2’939"
+     ],
+     "a": 2,
+     "e": "Faktor q = 1.08, also 2’000 · 1.08<sup>6</sup> ≈ <b>3’174</b>. Die Prozente nicht einfach addieren (6 · 8 % = 48 %)."
+    },
+    {
+     "q": "Ein Kanal hat 1’500 Follower. Die Zahl wächst jeden Monat um 10 %. Wie viele Follower sind es nach 3 Monaten (gerundet)?",
+     "c": [
+      "etwa 1’815",
+      "etwa 1’997",
+      "etwa 1’950",
+      "etwa 2’196"
+     ],
+     "a": 1,
+     "e": "Faktor q = 1.1, also 1’500 · 1.1<sup>3</sup> ≈ <b>1’997</b>. Die Prozente nicht einfach addieren (3 · 10 % = 30 %)."
+    },
+    {
+     "q": "Eine Stadt hat 1’500 Einwohner. Die Zahl wächst jedes Jahr um 2 %. Wie viele Einwohner sind es nach 3 Jahren (gerundet)?",
+     "c": [
+      "etwa 1’592",
+      "etwa 1’561",
+      "etwa 1’624",
+      "etwa 1’590"
+     ],
+     "a": 0,
+     "e": "Faktor q = 1.02, also 1’500 · 1.02<sup>3</sup> ≈ <b>1’592</b>. Die Prozente nicht einfach addieren (3 · 2 % = 6 %)."
+    },
+    {
+     "q": "Eine Stadt hat 200 Einwohner. Die Zahl wächst jedes Jahr um 8 %. Wie viele Einwohner sind es nach 2 Jahren (gerundet)?",
+     "c": [
+      "etwa 232",
+      "etwa 252",
+      "etwa 216",
+      "etwa 233"
+     ],
+     "a": 3,
+     "e": "Faktor q = 1.08, also 200 · 1.08<sup>2</sup> ≈ <b>233</b>. Die Prozente nicht einfach addieren (2 · 8 % = 16 %)."
+    },
+    {
+     "q": "In einer Probe sind 1’500 Bakterien. Ihre Zahl wächst jede Stunde um 20 %. Wie viele sind es nach 3 Stunden (gerundet)?",
+     "c": [
+      "etwa 2’160",
+      "etwa 2’400",
+      "etwa 3’110",
+      "etwa 2’592"
+     ],
+     "a": 3,
+     "e": "Faktor q = 1.2, also 1’500 · 1.2<sup>3</sup> ≈ <b>2’592</b>. Die Prozente nicht einfach addieren (3 · 20 % = 60 %)."
+    },
+    {
+     "q": "Eine Stadt hat 1’500 Einwohner. Die Zahl wächst jedes Jahr um 5 %. Wie viele Einwohner sind es nach 4 Jahren (gerundet)?",
+     "c": [
+      "etwa 1’823",
+      "etwa 1’914",
+      "etwa 1’736",
+      "etwa 1’800"
+     ],
+     "a": 0,
+     "e": "Faktor q = 1.05, also 1’500 · 1.05<sup>4</sup> ≈ <b>1’823</b>. Die Prozente nicht einfach addieren (4 · 5 % = 20 %)."
+    },
+    {
+     "q": "Eine Stadt hat 5’000 Einwohner. Die Zahl wächst jedes Jahr um 2 %. Wie viele Einwohner sind es nach 3 Jahren (gerundet)?",
+     "c": [
+      "etwa 5’202",
+      "etwa 5’306",
+      "etwa 5’412",
+      "etwa 5’300"
+     ],
+     "a": 1,
+     "e": "Faktor q = 1.02, also 5’000 · 1.02<sup>3</sup> ≈ <b>5’306</b>. Die Prozente nicht einfach addieren (3 · 2 % = 6 %)."
+    },
+    {
+     "q": "In einer Probe sind 1’000 Bakterien. Ihre Zahl wächst jede Stunde um 4 %. Wie viele sind es nach 6 Stunden (gerundet)?",
+     "c": [
+      "etwa 1’265",
+      "etwa 1’316",
+      "etwa 1’240",
+      "etwa 1’217"
+     ],
+     "a": 0,
+     "e": "Faktor q = 1.04, also 1’000 · 1.04<sup>6</sup> ≈ <b>1’265</b>. Die Prozente nicht einfach addieren (6 · 4 % = 24 %)."
+    },
+    {
+     "q": "Eine Stadt hat 2’000 Einwohner. Die Zahl wächst jedes Jahr um 20 %. Wie viele Einwohner sind es nach 3 Jahren (gerundet)?",
+     "c": [
+      "etwa 3’200",
+      "etwa 3’456",
+      "etwa 2’880",
+      "etwa 4’147"
+     ],
+     "a": 1,
+     "e": "Faktor q = 1.2, also 2’000 · 1.2<sup>3</sup> ≈ <b>3’456</b>. Die Prozente nicht einfach addieren (3 · 20 % = 60 %)."
+    }
+   ]
+  },
+  {
+   "title": "Zinseszins",
+   "items": [
+    {
+     "q": "10’000 Fr. werden 8 Jahre lang zu 5 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "14’774.55 Fr.",
+      "4’774.55 Fr.",
+      "500 Fr.",
+      "4’000 Fr."
+     ],
+     "a": 1,
+     "e": "Endkapital 14’774.55 Fr. minus Anfangskapital: <b>4’774.55 Fr.</b>"
+    },
+    {
+     "q": "Wie viel Franken mehr bringt Zinseszins gegenüber einfachen Zinsen bei 1’000 Fr., 1 % und 4 Jahren?",
+     "c": [
+      "40.60 Fr.",
+      "0 Fr.",
+      "0.60 Fr.",
+      "40 Fr."
+     ],
+     "a": 2,
+     "e": "Zinseszins: 1’040.60 Fr., einfache Zinsen: 1’040 Fr. Unterschied <b>0.60 Fr.</b>"
+    },
+    {
+     "q": "1’000 Fr. werden 2 Jahre lang zu 5 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "102.50 Fr.",
+      "1’102.50 Fr.",
+      "100 Fr.",
+      "50 Fr."
+     ],
+     "a": 0,
+     "e": "Endkapital 1’102.50 Fr. minus Anfangskapital: <b>102.50 Fr.</b>"
+    },
+    {
+     "q": "800 Fr. werden 4 Jahre lang zu 2 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "865.95 Fr.",
+      "16 Fr.",
+      "64 Fr.",
+      "65.95 Fr."
+     ],
+     "a": 3,
+     "e": "Endkapital 865.95 Fr. minus Anfangskapital: <b>65.95 Fr.</b>"
+    },
+    {
+     "q": "Wie viel Franken mehr bringt Zinseszins gegenüber einfachen Zinsen bei 1’500 Fr., 3 % und 2 Jahren?",
+     "c": [
+      "90 Fr.",
+      "91.35 Fr.",
+      "0 Fr.",
+      "1.35 Fr."
+     ],
+     "a": 3,
+     "e": "Zinseszins: 1’591.35 Fr., einfache Zinsen: 1’590 Fr. Unterschied <b>1.35 Fr.</b>"
+    },
+    {
+     "q": "5’000 Fr. werden 7 Jahre lang zu 5 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "7’035.50 Fr.",
+      "2’035.50 Fr.",
+      "250 Fr.",
+      "1’750 Fr."
+     ],
+     "a": 1,
+     "e": "Endkapital 7’035.50 Fr. minus Anfangskapital: <b>2’035.50 Fr.</b>"
+    },
+    {
+     "q": "2’000 Fr. werden 7 Jahre lang zu 3 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "2’459.75 Fr.",
+      "459.75 Fr.",
+      "60 Fr.",
+      "420 Fr."
+     ],
+     "a": 1,
+     "e": "Endkapital 2’459.75 Fr. minus Anfangskapital: <b>459.75 Fr.</b>"
+    },
+    {
+     "q": "800 Fr. werden 9 Jahre lang zu 4 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "32 Fr.",
+      "288 Fr.",
+      "1’138.65 Fr.",
+      "338.65 Fr."
+     ],
+     "a": 3,
+     "e": "Endkapital 1’138.65 Fr. minus Anfangskapital: <b>338.65 Fr.</b>"
+    },
+    {
+     "q": "2’500 Fr. werden 2 Jahre lang zu 5 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "250 Fr.",
+      "256.25 Fr.",
+      "125 Fr.",
+      "2’756.25 Fr."
+     ],
+     "a": 1,
+     "e": "Endkapital 2’756.25 Fr. minus Anfangskapital: <b>256.25 Fr.</b>"
+    },
+    {
+     "q": "Wie viel Franken mehr bringt Zinseszins gegenüber einfachen Zinsen bei 2’500 Fr., 5 % und 2 Jahren?",
+     "c": [
+      "250 Fr.",
+      "256.25 Fr.",
+      "6.25 Fr.",
+      "0 Fr."
+     ],
+     "a": 2,
+     "e": "Zinseszins: 2’756.25 Fr., einfache Zinsen: 2’750 Fr. Unterschied <b>6.25 Fr.</b>"
+    },
+    {
+     "q": "2’000 Fr. werden 9 Jahre lang zu 3 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "540 Fr.",
+      "60 Fr.",
+      "609.55 Fr.",
+      "2’609.55 Fr."
+     ],
+     "a": 2,
+     "e": "Endkapital 2’609.55 Fr. minus Anfangskapital: <b>609.55 Fr.</b>"
+    },
+    {
+     "q": "5’000 Fr. werden 10 Jahre lang zu 1.5 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "802.70 Fr.",
+      "75 Fr.",
+      "750 Fr.",
+      "5’802.70 Fr."
+     ],
+     "a": 0,
+     "e": "Endkapital 5’802.70 Fr. minus Anfangskapital: <b>802.70 Fr.</b>"
+    },
+    {
+     "q": "10’000 Fr. werden 10 Jahre lang zu 5 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "500 Fr.",
+      "16’288.95 Fr.",
+      "6’288.95 Fr.",
+      "5’000 Fr."
+     ],
+     "a": 2,
+     "e": "Endkapital 16’288.95 Fr. minus Anfangskapital: <b>6’288.95 Fr.</b>"
+    },
+    {
+     "q": "10’000 Fr. werden zu 5 % Zinseszins angelegt. Wie hoch ist das Guthaben nach 2 Jahren?",
+     "c": [
+      "11’025 Fr.",
+      "11’576.25 Fr.",
+      "11’000 Fr.",
+      "10’500 Fr."
+     ],
+     "a": 0,
+     "e": "K = 10’000 Fr. · 1.05<sup>2</sup> ≈ <b>11’025 Fr.</b>"
+    },
+    {
+     "q": "Wie viel Franken mehr bringt Zinseszins gegenüber einfachen Zinsen bei 2’000 Fr., 2.5 % und 2 Jahren?",
+     "c": [
+      "100 Fr.",
+      "0 Fr.",
+      "1.25 Fr.",
+      "101.25 Fr."
+     ],
+     "a": 2,
+     "e": "Zinseszins: 2’101.25 Fr., einfache Zinsen: 2’100 Fr. Unterschied <b>1.25 Fr.</b>"
+    },
+    {
+     "q": "800 Fr. werden 2 Jahre lang zu 2.5 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "20 Fr.",
+      "40 Fr.",
+      "840.50 Fr.",
+      "40.50 Fr."
+     ],
+     "a": 3,
+     "e": "Endkapital 840.50 Fr. minus Anfangskapital: <b>40.50 Fr.</b>"
+    },
+    {
+     "q": "Wie viel Franken mehr bringt Zinseszins gegenüber einfachen Zinsen bei 10’000 Fr., 1.5 % und 2 Jahren?",
+     "c": [
+      "2.25 Fr.",
+      "302.25 Fr.",
+      "300 Fr.",
+      "0 Fr."
+     ],
+     "a": 0,
+     "e": "Zinseszins: 10’302.25 Fr., einfache Zinsen: 10’300 Fr. Unterschied <b>2.25 Fr.</b>"
+    },
+    {
+     "q": "5’000 Fr. werden 2 Jahre lang zu 3 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "304.50 Fr.",
+      "300 Fr.",
+      "150 Fr.",
+      "5’304.50 Fr."
+     ],
+     "a": 0,
+     "e": "Endkapital 5’304.50 Fr. minus Anfangskapital: <b>304.50 Fr.</b>"
+    },
+    {
+     "q": "10’000 Fr. werden 2 Jahre lang zu 4 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "10’816 Fr.",
+      "800 Fr.",
+      "400 Fr.",
+      "816 Fr."
+     ],
+     "a": 3,
+     "e": "Endkapital 10’816 Fr. minus Anfangskapital: <b>816 Fr.</b>"
+    },
+    {
+     "q": "5’000 Fr. werden 2 Jahre lang zu 1 % Zinseszins angelegt. Wie viele Zinsen bringt das insgesamt?",
+     "c": [
+      "50 Fr.",
+      "100.50 Fr.",
+      "100 Fr.",
+      "5’100.50 Fr."
+     ],
+     "a": 1,
+     "e": "Endkapital 5’100.50 Fr. minus Anfangskapital: <b>100.50 Fr.</b>"
+    }
+   ]
+  },
+  {
+   "title": "Abnahme und Zurückrechnen",
+   "items": [
+    {
+     "q": "Ein Auto kostet neu 15’000 Fr. Es verliert jedes Jahr 15 % seines Wertes. Wie viel ist es nach 6 Jahren wert (auf ganze Franken)?",
+     "c": [
+      "5’657 Fr.",
+      "34’696 Fr.",
+      "1’500 Fr.",
+      "6’656 Fr."
+     ],
+     "a": 0,
+     "e": "15’000 · 0.85<sup>6</sup> ≈ <b>5’657 Fr.</b>"
+    },
+    {
+     "q": "Im Blut sind 200 mg eines Medikaments. Pro Stunde werden 10 % abgebaut. Wie viel ist nach 3 Stunden noch vorhanden (auf eine Nachkommastelle)?",
+     "c": [
+      "140.0 mg",
+      "131.2 mg",
+      "145.8 mg",
+      "162.0 mg"
+     ],
+     "a": 2,
+     "e": "200 · 0.9<sup>3</sup> ≈ <b>145.8 mg</b>."
+    },
+    {
+     "q": "Ein Wert nimmt 2-mal hintereinander um 50 % ab. Um wie viel Prozent hat er insgesamt abgenommen?",
+     "c": [
+      "100 %",
+      "75 %",
+      "50 %",
+      "25 %"
+     ],
+     "a": 1,
+     "e": "Restfaktor 0.5<sup>2</sup> = 0.250. Abnahme 1 − 0.250 = <b>75 %</b>, nicht 100 %."
+    },
+    {
+     "q": "Ein Wert nimmt 3-mal hintereinander um 50 % ab. Um wie viel Prozent hat er insgesamt abgenommen?",
+     "c": [
+      "50 %",
+      "150 %",
+      "87.5 %",
+      "12.5 %"
+     ],
+     "a": 2,
+     "e": "Restfaktor 0.5<sup>3</sup> = 0.125. Abnahme 1 − 0.125 = <b>87.5 %</b>, nicht 150 %."
+    },
+    {
+     "q": "Im Blut sind 200 mg eines Medikaments. Pro Stunde werden 20 % abgebaut. Wie viel ist nach 6 Stunden noch vorhanden (auf eine Nachkommastelle)?",
+     "c": [
+      "41.9 mg",
+      "65.5 mg",
+      "597.2 mg",
+      "52.4 mg"
+     ],
+     "a": 3,
+     "e": "200 · 0.8<sup>6</sup> ≈ <b>52.4 mg</b>."
+    },
+    {
+     "q": "Ein Auto kostet neu 25’000 Fr. Es verliert jedes Jahr 12 % seines Wertes. Wie viel ist es nach 3 Jahren wert (auf ganze Franken)?",
+     "c": [
+      "35’123 Fr.",
+      "16’000 Fr.",
+      "19’360 Fr.",
+      "17’037 Fr."
+     ],
+     "a": 3,
+     "e": "25’000 · 0.88<sup>3</sup> ≈ <b>17’037 Fr.</b>"
+    },
+    {
+     "q": "Ein Wert nimmt 3-mal hintereinander um 20 % ab. Um wie viel Prozent hat er insgesamt abgenommen?",
+     "c": [
+      "20 %",
+      "48.8 %",
+      "51.2 %",
+      "60 %"
+     ],
+     "a": 1,
+     "e": "Restfaktor 0.8<sup>3</sup> = 0.512. Abnahme 1 − 0.512 = <b>48.8 %</b>, nicht 60 %."
+    },
+    {
+     "q": "Ein Wert nimmt 2-mal hintereinander um 10 % ab. Um wie viel Prozent hat er insgesamt abgenommen?",
+     "c": [
+      "81 %",
+      "10 %",
+      "20 %",
+      "19 %"
+     ],
+     "a": 3,
+     "e": "Restfaktor 0.9<sup>2</sup> = 0.810. Abnahme 1 − 0.810 = <b>19 %</b>, nicht 20 %."
+    },
+    {
+     "q": "Eine Grösse wächst pro Jahr mit dem Faktor 2. Nach 2 Jahren beträgt sie 1’600. Wie gross war sie am Anfang?",
+     "c": [
+      "200",
+      "800",
+      "533.3",
+      "400"
+     ],
+     "a": 3,
+     "e": "Zurückrechnen: 1’600 : 2<sup>2</sup> = <b>400</b>."
+    },
+    {
+     "q": "Ein Wert nimmt 3-mal hintereinander um 10 % ab. Um wie viel Prozent hat er insgesamt abgenommen?",
+     "c": [
+      "30 %",
+      "72.9 %",
+      "27.1 %",
+      "10 %"
+     ],
+     "a": 2,
+     "e": "Restfaktor 0.9<sup>3</sup> = 0.729. Abnahme 1 − 0.729 = <b>27.1 %</b>, nicht 30 %."
+    },
+    {
+     "q": "Eine Grösse wächst pro Jahr mit dem Faktor 2. Nach 3 Jahren beträgt sie 3’200. Wie gross war sie am Anfang?",
+     "c": [
+      "400",
+      "800",
+      "200",
+      "533.3"
+     ],
+     "a": 0,
+     "e": "Zurückrechnen: 3’200 : 2<sup>3</sup> = <b>400</b>."
+    },
+    {
+     "q": "Ein Auto kostet neu 15’000 Fr. Es verliert jedes Jahr 12 % seines Wertes. Wie viel ist es nach 5 Jahren wert (auf ganze Franken)?",
+     "c": [
+      "6’000 Fr.",
+      "7’916 Fr.",
+      "26’435 Fr.",
+      "8’995 Fr."
+     ],
+     "a": 1,
+     "e": "15’000 · 0.88<sup>5</sup> ≈ <b>7’916 Fr.</b>"
+    },
+    {
+     "q": "Im Blut sind 800 mg eines Medikaments. Pro Stunde werden 20 % abgebaut. Wie viel ist nach 3 Stunden noch vorhanden (auf eine Nachkommastelle)?",
+     "c": [
+      "512.0 mg",
+      "320.0 mg",
+      "409.6 mg",
+      "327.7 mg"
+     ],
+     "a": 2,
+     "e": "800 · 0.8<sup>3</sup> ≈ <b>409.6 mg</b>."
+    },
+    {
+     "q": "Eine Grösse wächst pro Jahr mit dem Faktor 1.1. Nach 2 Jahren beträgt sie 121. Wie gross war sie am Anfang?",
+     "c": [
+      "110",
+      "100.8",
+      "90.9",
+      "100"
+     ],
+     "a": 3,
+     "e": "Zurückrechnen: 121 : 1.1<sup>2</sup> = <b>100</b>."
+    },
+    {
+     "q": "Ein Wert nimmt 2-mal hintereinander um 20 % ab. Um wie viel Prozent hat er insgesamt abgenommen?",
+     "c": [
+      "36 %",
+      "40 %",
+      "20 %",
+      "64 %"
+     ],
+     "a": 0,
+     "e": "Restfaktor 0.8<sup>2</sup> = 0.640. Abnahme 1 − 0.640 = <b>36 %</b>, nicht 40 %."
+    },
+    {
+     "q": "Im Blut sind 500 mg eines Medikaments. Pro Stunde werden 25 % abgebaut. Wie viel ist nach 6 Stunden noch vorhanden (auf eine Nachkommastelle)?",
+     "c": [
+      "66.7 mg",
+      "1’907.3 mg",
+      "89.0 mg",
+      "118.7 mg"
+     ],
+     "a": 2,
+     "e": "500 · 0.75<sup>6</sup> ≈ <b>89.0 mg</b>."
+    },
+    {
+     "q": "Im Blut sind 1’000 mg eines Medikaments. Pro Stunde werden 40 % abgebaut. Wie viel ist nach 6 Stunden noch vorhanden (auf eine Nachkommastelle)?",
+     "c": [
+      "46.7 mg",
+      "28.0 mg",
+      "7’529.5 mg",
+      "77.8 mg"
+     ],
+     "a": 0,
+     "e": "1’000 · 0.6<sup>6</sup> ≈ <b>46.7 mg</b>."
+    },
+    {
+     "q": "Im Blut sind 500 mg eines Medikaments. Pro Stunde werden 30 % abgebaut. Wie viel ist nach 3 Stunden noch vorhanden (auf eine Nachkommastelle)?",
+     "c": [
+      "120.0 mg",
+      "171.5 mg",
+      "50.0 mg",
+      "245.0 mg"
+     ],
+     "a": 1,
+     "e": "500 · 0.7<sup>3</sup> ≈ <b>171.5 mg</b>."
+    },
+    {
+     "q": "Ein Auto kostet neu 15’000 Fr. Es verliert jedes Jahr 20 % seines Wertes. Wie viel ist es nach 4 Jahren wert (auf ganze Franken)?",
+     "c": [
+      "6’144 Fr.",
+      "3’000 Fr.",
+      "31’104 Fr.",
+      "7’680 Fr."
+     ],
+     "a": 0,
+     "e": "15’000 · 0.8<sup>4</sup> ≈ <b>6’144 Fr.</b>"
+    },
+    {
+     "q": "Ein Auto kostet neu 20’000 Fr. Es verliert jedes Jahr 20 % seines Wertes. Wie viel ist es nach 3 Jahren wert (auf ganze Franken)?",
+     "c": [
+      "12’800 Fr.",
+      "10’240 Fr.",
+      "34’560 Fr.",
+      "8’000 Fr."
+     ],
+     "a": 1,
+     "e": "20’000 · 0.8<sup>3</sup> ≈ <b>10’240 Fr.</b>"
+    }
+   ]
+  },
+  {
+   "title": "Halbwertszeit und Verdopplung",
+   "items": [
+    {
+     "q": "Von einem Stoff ist nach 30 Stunden nur noch 1/32 der Anfangsmenge vorhanden. Wie gross ist die Halbwertszeit?",
+     "c": [
+      "6 Stunden",
+      "0.9 Stunden",
+      "15.0 Stunden",
+      "7 Stunden"
+     ],
+     "a": 0,
+     "e": "1/32 = (½)<sup>5</sup>: 5 Halbwertszeiten in 30 Stunden ⇒ <b>6 Stunden</b>."
+    },
+    {
+     "q": "Eine Bakterienkultur verdoppelt sich alle 5 Stunden. Am Anfang sind es 50. Wie viele sind es nach 10 Stunden?",
+     "c": [
+      "201",
+      "54",
+      "51’200",
+      "200"
+     ],
+     "a": 3,
+     "e": "10 Stunden = 2 Verdopplungen: 50 · 2<sup>2</sup> = <b>200</b>."
+    },
+    {
+     "q": "Ein Guthaben wächst jährlich um 10 %. Nach wie vielen vollen Jahren hat es sich mindestens verdoppelt?",
+     "c": [
+      "nach 10 Jahren",
+      "nach 9 Jahren",
+      "nach 8 Jahren",
+      "nach 6 Jahren"
+     ],
+     "a": 2,
+     "e": "1.10<sup>8</sup> ≈ 2.14 ≥ 2, aber 1.10<sup>7</sup> ≈ 1.95 &lt; 2. <b>nach 8 Jahren</b>"
+    },
+    {
+     "q": "Von einem Stoff ist nach 12 Stunden nur noch 1/8 der Anfangsmenge vorhanden. Wie gross ist die Halbwertszeit?",
+     "c": [
+      "6.0 Stunden",
+      "1.5 Stunden",
+      "4 Stunden",
+      "6 Stunden"
+     ],
+     "a": 2,
+     "e": "1/8 = (½)<sup>3</sup>: 3 Halbwertszeiten in 12 Stunden ⇒ <b>4 Stunden</b>."
+    },
+    {
+     "q": "Von einem Stoff ist nach 6 Stunden nur noch 1/4 der Anfangsmenge vorhanden. Wie gross ist die Halbwertszeit?",
+     "c": [
+      "1.5 Stunden",
+      "6 Stunden",
+      "3 Stunden",
+      "3.0 Stunden"
+     ],
+     "a": 2,
+     "e": "1/4 = (½)<sup>2</sup>: 2 Halbwertszeiten in 6 Stunden ⇒ <b>3 Stunden</b>."
+    },
+    {
+     "q": "Ein radioaktiver Stoff hat eine Halbwertszeit von 30 Tagen. Von 320 g ist nach 60 Tagen wie viel übrig?",
+     "c": [
+      "0 g",
+      "80 g",
+      "40 g",
+      "81 g"
+     ],
+     "a": 1,
+     "e": "60 Tage sind 2 Halbwertszeiten: 320 · (½)<sup>2</sup> = <b>80 g</b>."
+    },
+    {
+     "q": "Ein radioaktiver Stoff hat eine Halbwertszeit von 5 Tagen. Von 320 g ist nach 25 Tagen wie viel übrig?",
+     "c": [
+      "5 g",
+      "32 g",
+      "10 g",
+      "0 g"
+     ],
+     "a": 2,
+     "e": "25 Tage sind 5 Halbwertszeiten: 320 · (½)<sup>5</sup> = <b>10 g</b>."
+    },
+    {
+     "q": "Eine Bakterienkultur verdoppelt sich alle 2 Stunden. Am Anfang sind es 50. Wie viele sind es nach 10 Stunden?",
+     "c": [
+      "82",
+      "500",
+      "51’200",
+      "1’600"
+     ],
+     "a": 3,
+     "e": "10 Stunden = 5 Verdopplungen: 50 · 2<sup>5</sup> = <b>1’600</b>."
+    },
+    {
+     "q": "Eine Bakterienkultur verdoppelt sich alle 20 Stunden. Am Anfang sind es 1’000. Wie viele sind es nach 80 Stunden?",
+     "c": [
+      "8’000",
+      "16’000",
+      "32’000",
+      "1’016"
+     ],
+     "a": 1,
+     "e": "80 Stunden = 4 Verdopplungen: 1’000 · 2<sup>4</sup> = <b>16’000</b>."
+    },
+    {
+     "q": "Ein radioaktiver Stoff hat eine Halbwertszeit von 5 Tagen. Von 1’000 g ist nach 10 Tagen wie viel übrig?",
+     "c": [
+      "0 g",
+      "125 g",
+      "251 g",
+      "250 g"
+     ],
+     "a": 3,
+     "e": "10 Tage sind 2 Halbwertszeiten: 1’000 · (½)<sup>2</sup> = <b>250 g</b>."
+    },
+    {
+     "q": "Ein radioaktiver Stoff hat eine Halbwertszeit von 30 Tagen. Von 640 g ist nach 150 Tagen wie viel übrig?",
+     "c": [
+      "10 g",
+      "64 g",
+      "20 g",
+      "0 g"
+     ],
+     "a": 2,
+     "e": "150 Tage sind 5 Halbwertszeiten: 640 · (½)<sup>5</sup> = <b>20 g</b>."
+    },
+    {
+     "q": "Von einem Stoff ist nach 8 Stunden nur noch 1/4 der Anfangsmenge vorhanden. Wie gross ist die Halbwertszeit?",
+     "c": [
+      "8 Stunden",
+      "4.0 Stunden",
+      "2.0 Stunden",
+      "4 Stunden"
+     ],
+     "a": 3,
+     "e": "1/4 = (½)<sup>2</sup>: 2 Halbwertszeiten in 8 Stunden ⇒ <b>4 Stunden</b>."
+    },
+    {
+     "q": "Von einem Stoff ist nach 9 Stunden nur noch 1/8 der Anfangsmenge vorhanden. Wie gross ist die Halbwertszeit?",
+     "c": [
+      "1.1 Stunden",
+      "4.5 Stunden",
+      "4 Stunden",
+      "3 Stunden"
+     ],
+     "a": 3,
+     "e": "1/8 = (½)<sup>3</sup>: 3 Halbwertszeiten in 9 Stunden ⇒ <b>3 Stunden</b>."
+    },
+    {
+     "q": "Ein radioaktiver Stoff hat eine Halbwertszeit von 20 Tagen. Von 320 g ist nach 40 Tagen wie viel übrig?",
+     "c": [
+      "0 g",
+      "80 g",
+      "40 g",
+      "81 g"
+     ],
+     "a": 1,
+     "e": "40 Tage sind 2 Halbwertszeiten: 320 · (½)<sup>2</sup> = <b>80 g</b>."
+    },
+    {
+     "q": "Ein radioaktiver Stoff hat eine Halbwertszeit von 30 Tagen. Von 400 g ist nach 150 Tagen wie viel übrig?",
+     "c": [
+      "12.5 g",
+      "0 g",
+      "40 g",
+      "6.25 g"
+     ],
+     "a": 0,
+     "e": "150 Tage sind 5 Halbwertszeiten: 400 · (½)<sup>5</sup> = <b>12.5 g</b>."
+    },
+    {
+     "q": "Von einem Stoff ist nach 15 Stunden nur noch 1/32 der Anfangsmenge vorhanden. Wie gross ist die Halbwertszeit?",
+     "c": [
+      "3 Stunden",
+      "7.5 Stunden",
+      "4 Stunden",
+      "0.5 Stunden"
+     ],
+     "a": 0,
+     "e": "1/32 = (½)<sup>5</sup>: 5 Halbwertszeiten in 15 Stunden ⇒ <b>3 Stunden</b>."
+    },
+    {
+     "q": "Eine Bakterienkultur verdoppelt sich alle 3 Stunden. Am Anfang sind es 50. Wie viele sind es nach 6 Stunden?",
+     "c": [
+      "200",
+      "54",
+      "3’200",
+      "201"
+     ],
+     "a": 0,
+     "e": "6 Stunden = 2 Verdopplungen: 50 · 2<sup>2</sup> = <b>200</b>."
+    },
+    {
+     "q": "Ein Guthaben wächst jährlich um 2 %. Nach wie vielen vollen Jahren hat es sich mindestens verdoppelt?",
+     "c": [
+      "nach 38 Jahren",
+      "nach 36 Jahren",
+      "nach 34 Jahren",
+      "nach 50 Jahren"
+     ],
+     "a": 1,
+     "e": "1.02<sup>36</sup> ≈ 2.04 ≥ 2, aber 1.02<sup>35</sup> ≈ 2.00 &lt; 2. <b>nach 36 Jahren</b>"
+    },
+    {
+     "q": "Eine Bakterienkultur verdoppelt sich alle 5 Stunden. Am Anfang sind es 100. Wie viele sind es nach 15 Stunden?",
+     "c": [
+      "3’276’800",
+      "800",
+      "600",
+      "108"
+     ],
+     "a": 1,
+     "e": "15 Stunden = 3 Verdopplungen: 100 · 2<sup>3</sup> = <b>800</b>."
+    },
+    {
+     "q": "Eine Bakterienkultur verdoppelt sich alle 4 Stunden. Am Anfang sind es 100. Wie viele sind es nach 12 Stunden?",
+     "c": [
+      "800",
+      "108",
+      "409’600",
+      "600"
+     ],
+     "a": 0,
+     "e": "12 Stunden = 3 Verdopplungen: 100 · 2<sup>3</sup> = <b>800</b>."
+    }
+   ]
+  },
+  {
+   "title": "Gemischte Sachaufgaben",
+   "items": [
+    {
+     "q": "Von einem Stoff ist nach 40 Stunden nur noch 1/32 der Anfangsmenge vorhanden. Wie gross ist die Halbwertszeit?",
+     "c": [
+      "10 Stunden",
+      "20.0 Stunden",
+      "8 Stunden",
+      "1.3 Stunden"
+     ],
+     "a": 2,
+     "e": "1/32 = (½)<sup>5</sup>: 5 Halbwertszeiten in 40 Stunden ⇒ <b>8 Stunden</b>."
+    },
+    {
+     "q": "Zwei Sparpläne starten mit 500 Fr. Plan A: jedes Jahr 150 Fr. mehr (linear). Plan B: jedes Jahr 15 % mehr (exponentiell). Ab welchem Jahr hat Plan B mehr?",
+     "c": [
+      "ab dem 8. Jahr",
+      "ab dem 12. Jahr",
+      "Plan B hat nie mehr.",
+      "ab dem 10. Jahr"
+     ],
+     "a": 3,
+     "e": "Jahr 10: A 2000 Fr., B 2023 Fr. Vorher liegt A vorn. <b>ab dem 10. Jahr</b> – exponentielles Wachstum überholt lineares immer."
+    },
+    {
+     "q": "Ein radioaktiver Stoff hat eine Halbwertszeit von 12 Tagen. Von 640 g ist nach 60 Tagen wie viel übrig?",
+     "c": [
+      "0 g",
+      "10 g",
+      "20 g",
+      "64 g"
+     ],
+     "a": 2,
+     "e": "60 Tage sind 5 Halbwertszeiten: 640 · (½)<sup>5</sup> = <b>20 g</b>."
+    },
+    {
+     "q": "Eine Bakterienkultur verdoppelt sich alle 4 Stunden. Am Anfang sind es 1’000. Wie viele sind es nach 16 Stunden?",
+     "c": [
+      "16’000",
+      "8’000",
+      "1’016",
+      "65’536’000"
+     ],
+     "a": 0,
+     "e": "16 Stunden = 4 Verdopplungen: 1’000 · 2<sup>4</sup> = <b>16’000</b>."
+    },
+    {
+     "q": "Zwei Sparpläne starten mit 100 Fr. Plan A: jedes Jahr 50 Fr. mehr (linear). Plan B: jedes Jahr 20 % mehr (exponentiell). Ab welchem Jahr hat Plan B mehr?",
+     "c": [
+      "Plan B hat nie mehr.",
+      "ab dem 8. Jahr",
+      "ab dem 12. Jahr",
+      "ab dem 10. Jahr"
+     ],
+     "a": 3,
+     "e": "Jahr 10: A 600 Fr., B 619 Fr. Vorher liegt A vorn. <b>ab dem 10. Jahr</b> – exponentielles Wachstum überholt lineares immer."
+    },
+    {
+     "q": "Zwei Sparpläne starten mit 200 Fr. Plan A: jedes Jahr 50 Fr. mehr (linear). Plan B: jedes Jahr 20 % mehr (exponentiell). Ab welchem Jahr hat Plan B mehr?",
+     "c": [
+      "ab dem 6. Jahr",
+      "ab dem 4. Jahr",
+      "Plan B hat nie mehr.",
+      "ab dem 2. Jahr"
+     ],
+     "a": 1,
+     "e": "Jahr 4: A 400 Fr., B 415 Fr. Vorher liegt A vorn. <b>ab dem 4. Jahr</b> – exponentielles Wachstum überholt lineares immer."
+    },
+    {
+     "q": "Eine Bakterienkultur verdoppelt sich alle 4 Stunden. Am Anfang sind es 100. Wie viele sind es nach 20 Stunden?",
+     "c": [
+      "3’200",
+      "1’000",
+      "104’857’600",
+      "132"
+     ],
+     "a": 0,
+     "e": "20 Stunden = 5 Verdopplungen: 100 · 2<sup>5</sup> = <b>3’200</b>."
+    },
+    {
+     "q": "Ein Auto kostet neu 30’000 Fr. Es verliert jedes Jahr 10 % seines Wertes. Wie viel ist es nach 6 Jahren wert (auf ganze Franken)?",
+     "c": [
+      "12’000 Fr.",
+      "15’943 Fr.",
+      "53’147 Fr.",
+      "17’715 Fr."
+     ],
+     "a": 1,
+     "e": "30’000 · 0.9<sup>6</sup> ≈ <b>15’943 Fr.</b>"
+    },
+    {
+     "q": "Ein radioaktiver Stoff hat eine Halbwertszeit von 8 Tagen. Von 400 g ist nach 40 Tagen wie viel übrig?",
+     "c": [
+      "12.5 g",
+      "40 g",
+      "0 g",
+      "6.25 g"
+     ],
+     "a": 0,
+     "e": "40 Tage sind 5 Halbwertszeiten: 400 · (½)<sup>5</sup> = <b>12.5 g</b>."
+    },
+    {
+     "q": "Auf einem Teich wachsen 1’500 Seerosen. Ihre Zahl wächst jede Woche um 2 %. Wie viele sind es nach 8 Wochen (gerundet)?",
+     "c": [
+      "etwa 1’740",
+      "etwa 1’793",
+      "etwa 1’723",
+      "etwa 1’757"
+     ],
+     "a": 3,
+     "e": "Faktor q = 1.02, also 1’500 · 1.02<sup>8</sup> ≈ <b>1’757</b>. Die Prozente nicht einfach addieren (8 · 2 % = 16 %)."
+    },
+    {
+     "q": "Eine Grösse wächst pro Jahr mit dem Faktor 1.1. Nach 2 Jahren beträgt sie 242. Wie gross war sie am Anfang?",
+     "c": [
+      "181.8",
+      "220",
+      "200",
+      "201.7"
+     ],
+     "a": 2,
+     "e": "Zurückrechnen: 242 : 1.1<sup>2</sup> = <b>200</b>."
+    },
+    {
+     "q": "Ein Auto kostet neu 20’000 Fr. Es verliert jedes Jahr 15 % seines Wertes. Wie viel ist es nach 3 Jahren wert (auf ganze Franken)?",
+     "c": [
+      "14’450 Fr.",
+      "30’417 Fr.",
+      "11’000 Fr.",
+      "12’282 Fr."
+     ],
+     "a": 3,
+     "e": "20’000 · 0.85<sup>3</sup> ≈ <b>12’282 Fr.</b>"
+    },
+    {
+     "q": "Zwei Sparpläne starten mit 100 Fr. Plan A: jedes Jahr 150 Fr. mehr (linear). Plan B: jedes Jahr 15 % mehr (exponentiell). Ab welchem Jahr hat Plan B mehr?",
+     "c": [
+      "ab dem 25. Jahr",
+      "Plan B hat nie mehr.",
+      "ab dem 27. Jahr",
+      "ab dem 29. Jahr"
+     ],
+     "a": 2,
+     "e": "Jahr 27: A 4’150 Fr., B 4’354 Fr. Vorher liegt A vorn. <b>ab dem 27. Jahr</b> – exponentielles Wachstum überholt lineares immer."
+    },
+    {
+     "q": "Im Blut sind 1’000 mg eines Medikaments. Pro Stunde werden 25 % abgebaut. Wie viel ist nach 6 Stunden noch vorhanden (auf eine Nachkommastelle)?",
+     "c": [
+      "3’814.7 mg",
+      "178.0 mg",
+      "133.5 mg",
+      "237.3 mg"
+     ],
+     "a": 1,
+     "e": "1’000 · 0.75<sup>6</sup> ≈ <b>178.0 mg</b>."
+    },
+    {
+     "q": "In einer Probe sind 2’000 Bakterien. Ihre Zahl wächst jede Stunde um 2 %. Wie viele sind es nach 6 Stunden (gerundet)?",
+     "c": [
+      "etwa 2’208",
+      "etwa 2’252",
+      "etwa 2’240",
+      "etwa 2’297"
+     ],
+     "a": 1,
+     "e": "Faktor q = 1.02, also 2’000 · 1.02<sup>6</sup> ≈ <b>2’252</b>. Die Prozente nicht einfach addieren (6 · 2 % = 12 %)."
+    },
+    {
+     "q": "In einer Probe sind 2’000 Bakterien. Ihre Zahl wächst jede Stunde um 4 %. Wie viele sind es nach 5 Stunden (gerundet)?",
+     "c": [
+      "etwa 2’433",
+      "etwa 2’531",
+      "etwa 2’340",
+      "etwa 2’400"
+     ],
+     "a": 0,
+     "e": "Faktor q = 1.04, also 2’000 · 1.04<sup>5</sup> ≈ <b>2’433</b>. Die Prozente nicht einfach addieren (5 · 4 % = 20 %)."
+    },
+    {
+     "q": "Zwei Sparpläne starten mit 100 Fr. Plan A: jedes Jahr 100 Fr. mehr (linear). Plan B: jedes Jahr 20 % mehr (exponentiell). Ab welchem Jahr hat Plan B mehr?",
+     "c": [
+      "Plan B hat nie mehr.",
+      "ab dem 16. Jahr",
+      "ab dem 18. Jahr",
+      "ab dem 14. Jahr"
+     ],
+     "a": 1,
+     "e": "Jahr 16: A 1’700 Fr., B 1’849 Fr. Vorher liegt A vorn. <b>ab dem 16. Jahr</b> – exponentielles Wachstum überholt lineares immer."
+    },
+    {
+     "q": "Auf einem Teich wachsen 800 Seerosen. Ihre Zahl wächst jede Woche um 2 %. Wie viele sind es nach 3 Wochen (gerundet)?",
+     "c": [
+      "etwa 832",
+      "etwa 866",
+      "etwa 849",
+      "etwa 848"
+     ],
+     "a": 2,
+     "e": "Faktor q = 1.02, also 800 · 1.02<sup>3</sup> ≈ <b>849</b>. Die Prozente nicht einfach addieren (3 · 2 % = 6 %)."
+    },
+    {
+     "q": "Ein Auto kostet neu 30’000 Fr. Es verliert jedes Jahr 12 % seines Wertes. Wie viel ist es nach 2 Jahren wert (auf ganze Franken)?",
+     "c": [
+      "26’400 Fr.",
+      "22’800 Fr.",
+      "37’632 Fr.",
+      "23’232 Fr."
+     ],
+     "a": 3,
+     "e": "30’000 · 0.88<sup>2</sup> ≈ <b>23’232 Fr.</b>"
+    },
+    {
+     "q": "Zwei Sparpläne starten mit 200 Fr. Plan A: jedes Jahr 20 Fr. mehr (linear). Plan B: jedes Jahr 5 % mehr (exponentiell). Ab welchem Jahr hat Plan B mehr?",
+     "c": [
+      "ab dem 27. Jahr",
+      "ab dem 25. Jahr",
+      "ab dem 29. Jahr",
+      "Plan B hat nie mehr."
+     ],
+     "a": 0,
+     "e": "Jahr 27: A 740 Fr., B 747 Fr. Vorher liegt A vorn. <b>ab dem 27. Jahr</b> – exponentielles Wachstum überholt lineares immer."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 5,
+ "updated": "2026-11-25",
+ "country": "ch",
+ "subject": "mathematik",
+ "grade": "gymnasium-1"
+}

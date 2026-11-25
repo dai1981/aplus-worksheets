@@ -15,6 +15,23 @@ from ws_common import write_unit, balance, text, fig, svg_wrap, INK
 
 UPDATED = "2026-11-25"
 STD_URL = "https://sg.lehrplan.ch/container/SG_DE_Fachbereich_MA.pdf"
+STD_URL_GYM = "https://edudoc.ch/record/236136/files/A_PLE-2024-2_d_03_rlp-maturitaetsschulen.pdf"
+KEEP_DOT = False   # Gymnasium: Malpunkt · bleibt (Skalarprodukt, Terme)
+DOMAIN_GYM = {"A": "Arithmetik und Algebra", "N": "Analysis", "G": "Geometrie", "S": "Stochastik"}
+KOMP_GYM = {
+    "1.1 Zahlen": "charakterisieren natürliche, ganze, rationale und reelle Zahlen, rechnen mit ihnen und benennen ihre Eigenschaften",
+    "1.2 Termumformungen": "analysieren die Struktur von algebraischen Termen und wenden die Rechengesetze bei Umformungen an",
+    "1.3 Gleichungen": "fassen Sachzusammenhänge in Gleichungen und Gleichungssysteme und lösen verschiedene Arten davon",
+    "2.1 Funktionen": "definieren Funktionen, nutzen verschiedene Darstellungsformen und untersuchen das asymptotische Verhalten",
+    "2.2 Differenzialrechnung": "bilden und interpretieren Ableitungen und lösen Extremwertprobleme",
+    "2.3 Integralrechnung": "bestimmen Stammfunktionen einer Funktion und wenden den Hauptsatz der Differenzial- und Integralrechnung an",
+    "3.1 Elementargeometrie": "berechnen die Elemente der Geometrie in der Ebene und im Raum und setzen sie in Beziehung",
+    "3.2 Trigonometrie": "definieren trigonometrische Verhältnisse, berechnen fehlende Grössen in Dreiecken und lösen damit Probleme",
+    "3.3 Vektorgeometrie": "erklären Eigenschaften von Vektoren, wenden Vektoren zeichnerisch und rechnerisch an und lösen geometrische Probleme algebraisch",
+    "4.1 Kombinatorik": "unterscheiden Zählprinzipien und kombinatorische Formeln und benutzen sie situationsgerecht",
+    "4.2 Wahrscheinlichkeit": "erklären Begriffe der Wahrscheinlichkeitsrechnung und analysieren mit ihren Regeln Zufallsexperimente",
+    "4.3 Statistik": "kennen und berechnen statistische Kennzahlen und interpretieren Daten mit Grafiken und Kennzahlen",
+}
 DOMAIN = {"Z": "Zahl und Variable", "F": "Form und Raum", "G": "Grössen, Funktionen, Daten und Zufall"}
 KOMP = {
     "MA.1.A.1": "verstehen und verwenden arithmetische Begriffe und Symbole; sie lesen und schreiben Zahlen",
@@ -119,8 +136,9 @@ def _textnode(s, full):
             return m.group(0)
         return _group(m)
     s = re.sub(r"(?<![\d.:’/])\d{4,}(?!\d|:\d)", grp, s)
-    s = re.sub(r"(?<=\S)([\u00a0 ])·([\u00a0 ])(?=\S)", r"\1×\2", s)
-    s = s.replace("·", "×")       # Deutschland: Malpunkt, Schweiz: ×
+    if not KEEP_DOT:
+        s = re.sub(r"(?<=\S)([\u00a0 ])·([\u00a0 ])(?=\S)", r"\1×\2", s)
+        s = s.replace("·", "×")       # Deutschland: Malpunkt, Schweiz (Volksschule): ×
     s = re.sub(r"(Fr|Rp)\.\.", r"\1.", s)
     for a, b in WORDS:
         s = re.sub(a, b, s)
@@ -267,13 +285,20 @@ def write(slug, grade, sort, codes, dom, title, short, meta, kb, ks, body, faq, 
             seen.add(k)
             assert item_ok(it), (slug, it["q"][:80], leak(it["q"] + " ".join(it["c"]) + it["e"]))
     balance(sets, rnd)
-    gname = "Kindergarten" if grade == "kindergarten" else "%d. Klasse" % int(grade.split("-")[1])
-    std = "Die Schülerinnen und Schüler %s (Lehrplan 21, %s)." % ("; sie ".join(KOMP[c] for c in codes), ", ".join(codes))
+    gym = grade.startswith("gymnasium")
+    if gym:
+        gname = "Gymnasium"
+        std = "Die Schülerinnen und Schüler %s (Rahmenlehrplan Gymnasiale Maturitätsschulen, EDK 2024, Mathematik %s)." % (
+            "; sie ".join(KOMP_GYM[c] for c in codes), ", ".join(c.split(" ")[0] for c in codes))
+    else:
+        gname = "Kindergarten" if grade == "kindergarten" else "%d. Klasse" % int(grade.split("-")[1])
+        std = "Die Schülerinnen und Schüler %s (Lehrplan 21, %s)." % ("; sie ".join(KOMP[c] for c in codes), ", ".join(codes))
     t = lambda s: D.plain_text(ch_text(s))
     u = {
         "slug": slug, "title": t(title),
         "seo_title": seo or "%s – Mathematik %s: Arbeitsblätter mit Lösungen" % (t(short), gname),
-        "short_title": t(short), "domain": DOMAIN[dom], "standard_code": ", ".join(codes), "standard_url": STD_URL,
+        "short_title": t(short), "domain": (DOMAIN_GYM if gym else DOMAIN)[dom],
+        "standard_code": ("RLP Mathematik " if gym else "") + ", ".join(codes), "standard_url": STD_URL_GYM if gym else STD_URL,
         "standard_text": std + std_note, "meta_desc": t(meta), "key_big": t(kb), "key_sub": t(ks),
         "body_html": ch_text(body), "faq": [{"q": ch_text(f["q"]), "a": ch_text(f["a"])} for f in faq],
         "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,

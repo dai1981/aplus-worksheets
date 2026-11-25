@@ -1,0 +1,1165 @@
+{
+ "slug": "kombinatorik",
+ "title": "Kombinatorik: Permutationen, Variationen und Kombinationen",
+ "seo_title": "Kombinatorik – Mathematik Gymnasium: Arbeitsblätter mit Lösungen",
+ "short_title": "Kombinatorik",
+ "domain": "Stochastik",
+ "standard_code": "RLP Mathematik 4.1 Kombinatorik",
+ "standard_url": "https://edudoc.ch/record/236136/files/A_PLE-2024-2_d_03_rlp-maturitaetsschulen.pdf",
+ "standard_text": "Die Schülerinnen und Schüler unterscheiden Zählprinzipien und kombinatorische Formeln und benutzen sie situationsgerecht (Rahmenlehrplan Gymnasiale Maturitätsschulen, EDK 2024, Mathematik 4.1).",
+ "meta_desc": "Kombinatorik am Gymnasium: Produktregel, Fakultät, Codes mit Wiederholung, Reihenfolgen, Auswahlen mit dem Binomialkoeffizienten und Anagramme. 100 Aufgaben mit Lösungen.",
+ "key_big": "Zuerst fragen: Ist die Reihenfolge wichtig? Gibt es Wiederholungen?",
+ "key_sub": "n! Reihenfolgen, n hoch k Codes, n über k Auswahlen",
+ "body_html": "<h2>So geht's</h2><p><b>Produktregel</b>: Bei mehreren Entscheidungen nacheinander die Anzahlen multiplizieren.</p><p>n Dinge in eine Reihe: n! = n · (n − 1) · … · 1 Möglichkeiten.</p><p>k Stellen aus n Zeichen <b>mit</b> Wiederholung: n<sup>k</sup>.</p><p>k aus n <b>mit</b> Reihenfolge, ohne Wiederholung: n · (n − 1) · … (k Faktoren).</p><p>k aus n <b>ohne</b> Reihenfolge: Binomialkoeffizient „n über k“ = n! : (k! · (n − k)!).</p><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>4-stellige Codes aus 0–9</p><p class='sn-ex-s'>10 · 10 · 10 · 10</p><p class='sn-ex-a'>Lösung: 10’000</p></div><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>3 aus 10 auswählen</p><p class='sn-ex-s'>10 · 9 · 8 : 3!</p><p class='sn-ex-a'>Lösung: 120</p></div><h2>Typische Fehler</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Typischer Fehler</th><th>So ist es richtig</th></tr></thead><tbody><tr><td>Bei einer Auswahl ohne Reihenfolge 10 · 9 · 8 rechnen</td><td>Noch durch 3! teilen, weil die Reihenfolge egal ist</td></tr><tr><td>Codes: 10 · 4</td><td>Jede Stelle hat 10 Möglichkeiten: 10⁴</td></tr><tr><td>Bei ANANAS 6! Wörter</td><td>Gleiche Buchstaben vertauschen gibt kein neues Wort: 6! : (3! · 2!)</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Was ist der Unterschied zwischen Permutation und Kombination?",
+   "a": "Bei einer Permutation (Anordnung) ist die Reihenfolge wichtig, bei einer Kombination (Auswahl) nicht."
+  },
+  {
+   "q": "Was bedeutet n!?",
+   "a": "n Fakultät ist das Produkt 1 · 2 · … · n. Es ist die Anzahl Reihenfolgen von n verschiedenen Dingen."
+  },
+  {
+   "q": "Wie berechne ich „n über k“?",
+   "a": "n! : (k! · (n − k)!). Zum Beispiel „5 über 2“ = 120 : (2 · 6) = 10."
+  },
+  {
+   "q": "Wie viele Möglichkeiten gibt es beim Schweizer Lotto 6 aus 42?",
+   "a": "„42 über 6“ = 5’245 786."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Produktregel und Reihenfolgen",
+   "items": [
+    {
+     "q": "7 Personen stellen sich in eine Reihe. Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "49",
+      "5’040",
+      "720",
+      "42"
+     ],
+     "a": 1,
+     "e": "7 · 6 · … · 1 = 7! = <b>5’040</b>."
+    },
+    {
+     "q": "Ein Restaurant bietet 4 Vorspeisen, 2 Hauptgänge und 2 Desserts an. Wie viele verschiedene Menüs aus je einem Gang gibt es?",
+     "c": [
+      "16",
+      "8",
+      "10",
+      "64"
+     ],
+     "a": 0,
+     "e": "Produktregel: 4 · 2 · 2 = <b>16</b>."
+    },
+    {
+     "q": "Ein Restaurant bietet 5 Vorspeisen, 3 Hauptgänge und 2 Desserts an. Wie viele verschiedene Menüs aus je einem Gang gibt es?",
+     "c": [
+      "100",
+      "10",
+      "30",
+      "17"
+     ],
+     "a": 2,
+     "e": "Produktregel: 5 · 3 · 2 = <b>30</b>."
+    },
+    {
+     "q": "4 Buchstaben werden in eine Reihe gelegt. Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "12",
+      "6",
+      "24",
+      "16"
+     ],
+     "a": 2,
+     "e": "4 · 3 · … · 1 = 4! = <b>24</b>."
+    },
+    {
+     "q": "5 Bücher werden nebeneinander ins Regal gestellt. Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "20",
+      "25",
+      "24",
+      "120"
+     ],
+     "a": 3,
+     "e": "5 · 4 · … · 1 = 5! = <b>120</b>."
+    },
+    {
+     "q": "8 Kinder setzen sich auf 8 Stühle. Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "56",
+      "64",
+      "40’320",
+      "5’040"
+     ],
+     "a": 2,
+     "e": "8 · 7 · … · 1 = 8! = <b>40’320</b>."
+    },
+    {
+     "q": "Ein Restaurant bietet 6 Vorspeisen, 7 Hauptgänge und 4 Desserts an. Wie viele verschiedene Menüs aus je einem Gang gibt es?",
+     "c": [
+      "46",
+      "168",
+      "289",
+      "17"
+     ],
+     "a": 1,
+     "e": "Produktregel: 6 · 7 · 4 = <b>168</b>."
+    },
+    {
+     "q": "4 Personen stellen sich in eine Reihe. Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "16",
+      "12",
+      "24",
+      "6"
+     ],
+     "a": 2,
+     "e": "4 · 3 · … · 1 = 4! = <b>24</b>."
+    },
+    {
+     "q": "4 Läuferinnen laufen ins Ziel (ohne Gleichstand). Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "12",
+      "16",
+      "6",
+      "24"
+     ],
+     "a": 3,
+     "e": "4 · 3 · … · 1 = 4! = <b>24</b>."
+    },
+    {
+     "q": "Ein Restaurant bietet 2 Vorspeisen, 2 Hauptgänge und 2 Desserts an. Wie viele verschiedene Menüs aus je einem Gang gibt es?",
+     "c": [
+      "6",
+      "8",
+      "9",
+      "36"
+     ],
+     "a": 1,
+     "e": "Produktregel: 2 · 2 · 2 = <b>8</b>."
+    },
+    {
+     "q": "Ein Restaurant bietet 4 Vorspeisen, 2 Hauptgänge und 3 Desserts an. Wie viele verschiedene Menüs aus je einem Gang gibt es?",
+     "c": [
+      "24",
+      "9",
+      "11",
+      "81"
+     ],
+     "a": 0,
+     "e": "Produktregel: 4 · 2 · 3 = <b>24</b>."
+    },
+    {
+     "q": "Ein Restaurant bietet 4 Vorspeisen, 5 Hauptgänge und 5 Desserts an. Wie viele verschiedene Menüs aus je einem Gang gibt es?",
+     "c": [
+      "25",
+      "196",
+      "14",
+      "100"
+     ],
+     "a": 3,
+     "e": "Produktregel: 4 · 5 · 5 = <b>100</b>."
+    },
+    {
+     "q": "Ein Restaurant bietet 4 Vorspeisen, 8 Hauptgänge und 5 Desserts an. Wie viele verschiedene Menüs aus je einem Gang gibt es?",
+     "c": [
+      "17",
+      "289",
+      "37",
+      "160"
+     ],
+     "a": 3,
+     "e": "Produktregel: 4 · 8 · 5 = <b>160</b>."
+    },
+    {
+     "q": "9 Buchstaben werden in eine Reihe gelegt. Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "362’880",
+      "40’320",
+      "72",
+      "81"
+     ],
+     "a": 0,
+     "e": "9 · 8 · … · 1 = 9! = <b>362’880</b>."
+    },
+    {
+     "q": "3 Personen stellen sich in eine Reihe. Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "7",
+      "9",
+      "2",
+      "6"
+     ],
+     "a": 3,
+     "e": "3 · 2 · … · 1 = 3! = <b>6</b>."
+    },
+    {
+     "q": "8 Personen stellen sich in eine Reihe. Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "64",
+      "40’320",
+      "5’040",
+      "56"
+     ],
+     "a": 1,
+     "e": "8 · 7 · … · 1 = 8! = <b>40’320</b>."
+    },
+    {
+     "q": "9 Bücher werden nebeneinander ins Regal gestellt. Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "81",
+      "72",
+      "362’880",
+      "40’320"
+     ],
+     "a": 2,
+     "e": "9 · 8 · … · 1 = 9! = <b>362’880</b>."
+    },
+    {
+     "q": "7 Buchstaben werden in eine Reihe gelegt. Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "5’040",
+      "49",
+      "720",
+      "42"
+     ],
+     "a": 0,
+     "e": "7 · 6 · … · 1 = 7! = <b>5’040</b>."
+    },
+    {
+     "q": "Ein Restaurant bietet 5 Vorspeisen, 2 Hauptgänge und 3 Desserts an. Wie viele verschiedene Menüs aus je einem Gang gibt es?",
+     "c": [
+      "13",
+      "30",
+      "10",
+      "100"
+     ],
+     "a": 1,
+     "e": "Produktregel: 5 · 2 · 3 = <b>30</b>."
+    },
+    {
+     "q": "3 Kinder setzen sich auf 3 Stühle. Wie viele Reihenfolgen gibt es?",
+     "c": [
+      "6",
+      "9",
+      "7",
+      "2"
+     ],
+     "a": 0,
+     "e": "3 · 2 · … · 1 = 3! = <b>6</b>."
+    }
+   ]
+  },
+  {
+   "title": "Codes mit Wiederholung",
+   "items": [
+    {
+     "q": "Wie viele 3-stellige Codes kann man aus den Augenzahlen eines Würfels bilden (Wiederholungen erlaubt)?",
+     "c": [
+      "120",
+      "729",
+      "216",
+      "18"
+     ],
+     "a": 2,
+     "e": "Für jede der 3 Stellen gibt es 6 Möglichkeiten: 6<sup>3</sup> = <b>216</b>."
+    },
+    {
+     "q": "Ein Passwort hat 2 Zeichen aus den 26 Buchstaben (Wiederholungen erlaubt). Wie viele Passwörter gibt es?",
+     "c": [
+      "650",
+      "676",
+      "67’108’864",
+      "52"
+     ],
+     "a": 1,
+     "e": "Für jede der 2 Stellen gibt es 26 Möglichkeiten: 26<sup>2</sup> = <b>676</b>."
+    },
+    {
+     "q": "Ein Passwort hat 6 Zeichen aus den Ziffern 0 bis 9 (Wiederholungen erlaubt). Wie viele Passwörter gibt es?",
+     "c": [
+      "151’200",
+      "1’000’000",
+      "60’466’176",
+      "60"
+     ],
+     "a": 1,
+     "e": "Für jede der 6 Stellen gibt es 10 Möglichkeiten: 10<sup>6</sup> = <b>1’000’000</b>."
+    },
+    {
+     "q": "Wie viele 5-stellige Codes kann man aus den 4 Farben bilden (Wiederholungen erlaubt)?",
+     "c": [
+      "256",
+      "625",
+      "20",
+      "1’024"
+     ],
+     "a": 3,
+     "e": "Für jede der 5 Stellen gibt es 4 Möglichkeiten: 4<sup>5</sup> = <b>1’024</b>."
+    },
+    {
+     "q": "Ein Zahlenschloss hat 6 Rädchen mit den Ziffern 0 bis 9. Wie viele Einstellungen gibt es?",
+     "c": [
+      "60’466’176",
+      "1’000’000",
+      "151’200",
+      "60"
+     ],
+     "a": 1,
+     "e": "Für jede der 6 Stellen gibt es 10 Möglichkeiten: 10<sup>6</sup> = <b>1’000’000</b>."
+    },
+    {
+     "q": "Ein Passwort hat 8 Zeichen aus den Zeichen 0 und 1 (Wiederholungen erlaubt). Wie viele Passwörter gibt es?",
+     "c": [
+      "256",
+      "128",
+      "16",
+      "64"
+     ],
+     "a": 0,
+     "e": "Für jede der 8 Stellen gibt es 2 Möglichkeiten: 2<sup>8</sup> = <b>256</b>."
+    },
+    {
+     "q": "Wie viele 5-stellige Codes kann man aus den Ziffern 0 bis 9 bilden (Wiederholungen erlaubt)?",
+     "c": [
+      "100’000",
+      "30’240",
+      "9’765’625",
+      "50"
+     ],
+     "a": 0,
+     "e": "Für jede der 5 Stellen gibt es 10 Möglichkeiten: 10<sup>5</sup> = <b>100’000</b>."
+    },
+    {
+     "q": "Wie viele 6-stellige Codes kann man aus den 3 Farben bilden (Wiederholungen erlaubt)?",
+     "c": [
+      "216",
+      "18",
+      "729",
+      "243"
+     ],
+     "a": 2,
+     "e": "Für jede der 6 Stellen gibt es 3 Möglichkeiten: 3<sup>6</sup> = <b>729</b>."
+    },
+    {
+     "q": "Ein Passwort hat 10 Zeichen aus den Zeichen 0 und 1 (Wiederholungen erlaubt). Wie viele Passwörter gibt es?",
+     "c": [
+      "20",
+      "512",
+      "1’024",
+      "100"
+     ],
+     "a": 2,
+     "e": "Für jede der 10 Stellen gibt es 2 Möglichkeiten: 2<sup>10</sup> = <b>1’024</b>."
+    },
+    {
+     "q": "Eine Reihe von 6 Feldern wird mit 3 Farben angemalt, jedes Feld mit einer Farbe. Wie viele Muster gibt es?",
+     "c": [
+      "729",
+      "216",
+      "243",
+      "18"
+     ],
+     "a": 0,
+     "e": "Für jede der 6 Stellen gibt es 3 Möglichkeiten: 3<sup>6</sup> = <b>729</b>."
+    },
+    {
+     "q": "Wie viele 3-stellige Codes kann man aus den 26 Buchstaben bilden (Wiederholungen erlaubt)?",
+     "c": [
+      "78",
+      "2’541’865’828’329",
+      "15’600",
+      "17’576"
+     ],
+     "a": 3,
+     "e": "Für jede der 3 Stellen gibt es 26 Möglichkeiten: 26<sup>3</sup> = <b>17’576</b>."
+    },
+    {
+     "q": "Ein Zahlenschloss hat 3 Rädchen mit den Ziffern 0 bis 9. Wie viele Einstellungen gibt es?",
+     "c": [
+      "59’049",
+      "30",
+      "720",
+      "1’000"
+     ],
+     "a": 3,
+     "e": "Für jede der 3 Stellen gibt es 10 Möglichkeiten: 10<sup>3</sup> = <b>1’000</b>."
+    },
+    {
+     "q": "Wie viele 8-stellige Codes kann man aus den Zeichen 0 und 1 bilden (Wiederholungen erlaubt)?",
+     "c": [
+      "64",
+      "256",
+      "16",
+      "128"
+     ],
+     "a": 1,
+     "e": "Für jede der 8 Stellen gibt es 2 Möglichkeiten: 2<sup>8</sup> = <b>256</b>."
+    },
+    {
+     "q": "Ein Passwort hat 3 Zeichen aus den Augenzahlen eines Würfels (Wiederholungen erlaubt). Wie viele Passwörter gibt es?",
+     "c": [
+      "216",
+      "729",
+      "18",
+      "120"
+     ],
+     "a": 0,
+     "e": "Für jede der 3 Stellen gibt es 6 Möglichkeiten: 6<sup>3</sup> = <b>216</b>."
+    },
+    {
+     "q": "Ein Passwort hat 5 Zeichen aus den 4 Farben (Wiederholungen erlaubt). Wie viele Passwörter gibt es?",
+     "c": [
+      "625",
+      "256",
+      "20",
+      "1’024"
+     ],
+     "a": 3,
+     "e": "Für jede der 5 Stellen gibt es 4 Möglichkeiten: 4<sup>5</sup> = <b>1’024</b>."
+    },
+    {
+     "q": "Ein Passwort hat 3 Zeichen aus den 26 Buchstaben (Wiederholungen erlaubt). Wie viele Passwörter gibt es?",
+     "c": [
+      "17’576",
+      "15’600",
+      "78",
+      "2’541’865’828’329"
+     ],
+     "a": 0,
+     "e": "Für jede der 3 Stellen gibt es 26 Möglichkeiten: 26<sup>3</sup> = <b>17’576</b>."
+    },
+    {
+     "q": "Wie viele 6-stellige Codes kann man aus den Ziffern 0 bis 9 bilden (Wiederholungen erlaubt)?",
+     "c": [
+      "151’200",
+      "1’000’000",
+      "60",
+      "60’466’176"
+     ],
+     "a": 1,
+     "e": "Für jede der 6 Stellen gibt es 10 Möglichkeiten: 10<sup>6</sup> = <b>1’000’000</b>."
+    },
+    {
+     "q": "Wie viele 4-stellige Codes kann man aus den Augenzahlen eines Würfels bilden (Wiederholungen erlaubt)?",
+     "c": [
+      "4’096",
+      "360",
+      "1’296",
+      "24"
+     ],
+     "a": 2,
+     "e": "Für jede der 4 Stellen gibt es 6 Möglichkeiten: 6<sup>4</sup> = <b>1’296</b>."
+    },
+    {
+     "q": "Ein Passwort hat 5 Zeichen aus den Ziffern 0 bis 9 (Wiederholungen erlaubt). Wie viele Passwörter gibt es?",
+     "c": [
+      "9’765’625",
+      "50",
+      "100’000",
+      "30’240"
+     ],
+     "a": 2,
+     "e": "Für jede der 5 Stellen gibt es 10 Möglichkeiten: 10<sup>5</sup> = <b>100’000</b>."
+    },
+    {
+     "q": "Wie viele 10-stellige Codes kann man aus den Zeichen 0 und 1 bilden (Wiederholungen erlaubt)?",
+     "c": [
+      "20",
+      "100",
+      "512",
+      "1’024"
+     ],
+     "a": 3,
+     "e": "Für jede der 10 Stellen gibt es 2 Möglichkeiten: 2<sup>10</sup> = <b>1’024</b>."
+    }
+   ]
+  },
+  {
+   "title": "Reihenfolge wichtig",
+   "items": [
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von ANANAS vertauscht?",
+     "c": [
+      "30",
+      "720",
+      "120",
+      "60"
+     ],
+     "a": 3,
+     "e": "6 Buchstaben: 6! : (gleiche Buchstaben: A 3-mal, N 2-mal) = <b>60</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von KOKOS vertauscht?",
+     "c": [
+      "120",
+      "24",
+      "15",
+      "30"
+     ],
+     "a": 3,
+     "e": "5 Buchstaben: 5! : (gleiche Buchstaben: K 2-mal, O 2-mal) = <b>30</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von THUN vertauscht?",
+     "c": [
+      "12",
+      "256",
+      "24",
+      "6"
+     ],
+     "a": 2,
+     "e": "4 Buchstaben: 4! = <b>24</b>."
+    },
+    {
+     "q": "6 Personen nehmen teil. Wie viele Möglichkeiten gibt es für einen Präsidenten und eine Kassierin?",
+     "c": [
+      "15",
+      "36",
+      "30",
+      "12"
+     ],
+     "a": 2,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 6 · 5 = <b>30</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von ALPEN vertauscht?",
+     "c": [
+      "24",
+      "120",
+      "20",
+      "3’125"
+     ],
+     "a": 1,
+     "e": "5 Buchstaben: 5! = <b>120</b>."
+    },
+    {
+     "q": "11 Personen nehmen teil. Wie viele Möglichkeiten gibt es für einen Präsidenten und eine Kassierin?",
+     "c": [
+      "22",
+      "55",
+      "121",
+      "110"
+     ],
+     "a": 3,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 11 · 10 = <b>110</b>."
+    },
+    {
+     "q": "13 Personen nehmen teil. Wie viele Möglichkeiten gibt es für die ersten vier Plätze?",
+     "c": [
+      "28’561",
+      "715",
+      "17’160",
+      "52"
+     ],
+     "a": 2,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 13 · 12 · 11 · 10 = <b>17’160</b>."
+    },
+    {
+     "q": "11 Personen nehmen teil. Wie viele Möglichkeiten gibt es für die ersten vier Plätze?",
+     "c": [
+      "44",
+      "7’920",
+      "14’641",
+      "330"
+     ],
+     "a": 1,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 11 · 10 · 9 · 8 = <b>7’920</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von SALAT vertauscht?",
+     "c": [
+      "60",
+      "120",
+      "24",
+      "30"
+     ],
+     "a": 0,
+     "e": "5 Buchstaben: 5! : (gleiche Buchstaben: A 2-mal) = <b>60</b>."
+    },
+    {
+     "q": "14 Personen nehmen teil. Wie viele Möglichkeiten gibt es für einen Präsidenten und eine Kassierin?",
+     "c": [
+      "182",
+      "91",
+      "28",
+      "196"
+     ],
+     "a": 0,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 14 · 13 = <b>182</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von BANANE vertauscht?",
+     "c": [
+      "180",
+      "120",
+      "90",
+      "720"
+     ],
+     "a": 0,
+     "e": "6 Buchstaben: 6! : (gleiche Buchstaben: A 2-mal, N 2-mal) = <b>180</b>."
+    },
+    {
+     "q": "11 Personen nehmen teil. Wie viele Möglichkeiten gibt es für Gold, Silber und Bronze?",
+     "c": [
+      "33",
+      "165",
+      "990",
+      "1’331"
+     ],
+     "a": 2,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 11 · 10 · 9 = <b>990</b>."
+    },
+    {
+     "q": "14 Personen nehmen teil. Wie viele Möglichkeiten gibt es für die ersten vier Plätze?",
+     "c": [
+      "24’024",
+      "38’416",
+      "1’001",
+      "56"
+     ],
+     "a": 0,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 14 · 13 · 12 · 11 = <b>24’024</b>."
+    },
+    {
+     "q": "8 Personen nehmen teil. Wie viele Möglichkeiten gibt es für Gold, Silber und Bronze?",
+     "c": [
+      "24",
+      "56",
+      "512",
+      "336"
+     ],
+     "a": 3,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 8 · 7 · 6 = <b>336</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von STATISTIK vertauscht?",
+     "c": [
+      "7’560",
+      "15’120",
+      "362’880",
+      "40’320"
+     ],
+     "a": 1,
+     "e": "9 Buchstaben: 9! : (gleiche Buchstaben: I 2-mal, S 2-mal, T 3-mal) = <b>15’120</b>."
+    },
+    {
+     "q": "9 Personen nehmen teil. Wie viele Möglichkeiten gibt es für Gold, Silber und Bronze?",
+     "c": [
+      "27",
+      "84",
+      "729",
+      "504"
+     ],
+     "a": 3,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 9 · 8 · 7 = <b>504</b>."
+    },
+    {
+     "q": "13 Personen nehmen teil. Wie viele Möglichkeiten gibt es für Gold, Silber und Bronze?",
+     "c": [
+      "1’716",
+      "2’197",
+      "39",
+      "286"
+     ],
+     "a": 0,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 13 · 12 · 11 = <b>1’716</b>."
+    },
+    {
+     "q": "6 Personen nehmen teil. Wie viele Möglichkeiten gibt es für die ersten vier Plätze?",
+     "c": [
+      "15",
+      "360",
+      "24",
+      "1’296"
+     ],
+     "a": 1,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 6 · 5 · 4 · 3 = <b>360</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von LAMA vertauscht?",
+     "c": [
+      "13",
+      "6",
+      "12",
+      "24"
+     ],
+     "a": 2,
+     "e": "4 Buchstaben: 4! : (gleiche Buchstaben: A 2-mal) = <b>12</b>."
+    },
+    {
+     "q": "10 Personen nehmen teil. Wie viele Möglichkeiten gibt es für Gold, Silber und Bronze?",
+     "c": [
+      "1’000",
+      "720",
+      "30",
+      "120"
+     ],
+     "a": 1,
+     "e": "Reihenfolge wichtig, ohne Wiederholung: 10 · 9 · 8 = <b>720</b>."
+    }
+   ]
+  },
+  {
+   "title": "Auswahlen ohne Reihenfolge",
+   "items": [
+    {
+     "q": "Aus 19 Sorten Glace wählst du 2 verschiedene. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "19",
+      "171",
+      "342",
+      "361"
+     ],
+     "a": 1,
+     "e": "Reihenfolge egal: „19 über 2“ = 19! : (2! · 17!) = <b>171</b>."
+    },
+    {
+     "q": "Beim Lotto werden 13 Zahlen angeboten und 3 angekreuzt. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "286",
+      "1’716",
+      "2’197",
+      "78"
+     ],
+     "a": 0,
+     "e": "Reihenfolge egal: „13 über 3“ = 13! : (3! · 10!) = <b>286</b>."
+    },
+    {
+     "q": "Berechne den Binomialkoeffizienten „10 über 2“.",
+     "c": [
+      "5",
+      "10",
+      "90",
+      "45"
+     ],
+     "a": 3,
+     "e": "„10 über 2“ = 10 · 9 : 2! = <b>45</b>."
+    },
+    {
+     "q": "Berechne den Binomialkoeffizienten „6 über 4“.",
+     "c": [
+      "24",
+      "15",
+      "20",
+      "360"
+     ],
+     "a": 1,
+     "e": "„6 über 4“ = 6 · 5 · 4 · 3 : 4! = <b>15</b>."
+    },
+    {
+     "q": "Berechne den Binomialkoeffizienten „9 über 4“.",
+     "c": [
+      "3’024",
+      "84",
+      "126",
+      "36"
+     ],
+     "a": 2,
+     "e": "„9 über 4“ = 9 · 8 · 7 · 6 : 4! = <b>126</b>."
+    },
+    {
+     "q": "Berechne den Binomialkoeffizienten „12 über 2“.",
+     "c": [
+      "132",
+      "66",
+      "12",
+      "6"
+     ],
+     "a": 1,
+     "e": "„12 über 2“ = 12 · 11 : 2! = <b>66</b>."
+    },
+    {
+     "q": "Aus 14 Spielern bildet der Trainer ein Team von 4. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "38’416",
+      "364",
+      "24’024",
+      "1’001"
+     ],
+     "a": 3,
+     "e": "Reihenfolge egal: „14 über 4“ = 14! : (4! · 10!) = <b>1’001</b>."
+    },
+    {
+     "q": "Berechne den Binomialkoeffizienten „10 über 6“.",
+     "c": [
+      "210",
+      "151’200",
+      "60",
+      "252"
+     ],
+     "a": 0,
+     "e": "„10 über 6“ = 10 · 9 · 8 · 7 · 6 · 5 : 6! = <b>210</b>."
+    },
+    {
+     "q": "Aus 20 Sorten Glace wählst du 4 verschiedene. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "160’000",
+      "4’845",
+      "1’140",
+      "116’280"
+     ],
+     "a": 1,
+     "e": "Reihenfolge egal: „20 über 4“ = 20! : (4! · 16!) = <b>4’845</b>."
+    },
+    {
+     "q": "Aus 13 Sorten Glace wählst du 3 verschiedene. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "1’716",
+      "2’197",
+      "286",
+      "78"
+     ],
+     "a": 2,
+     "e": "Reihenfolge egal: „13 über 3“ = 13! : (3! · 10!) = <b>286</b>."
+    },
+    {
+     "q": "Aus 13 Sorten Glace wählst du 4 verschiedene. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "715",
+      "17’160",
+      "28’561",
+      "286"
+     ],
+     "a": 0,
+     "e": "Reihenfolge egal: „13 über 4“ = 13! : (4! · 9!) = <b>715</b>."
+    },
+    {
+     "q": "Beim Lotto werden 15 Zahlen angeboten und 2 angekreuzt. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "15",
+      "105",
+      "225",
+      "210"
+     ],
+     "a": 1,
+     "e": "Reihenfolge egal: „15 über 2“ = 15! : (2! · 13!) = <b>105</b>."
+    },
+    {
+     "q": "Berechne den Binomialkoeffizienten „7 über 3“.",
+     "c": [
+      "21",
+      "210",
+      "35",
+      "36"
+     ],
+     "a": 2,
+     "e": "„7 über 3“ = 7 · 6 · 5 : 3! = <b>35</b>."
+    },
+    {
+     "q": "Aus 20 Sorten Glace wählst du 2 verschiedene. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "400",
+      "20",
+      "190",
+      "380"
+     ],
+     "a": 2,
+     "e": "Reihenfolge egal: „20 über 2“ = 20! : (2! · 18!) = <b>190</b>."
+    },
+    {
+     "q": "Berechne den Binomialkoeffizienten „9 über 2“.",
+     "c": [
+      "72",
+      "9",
+      "18",
+      "36"
+     ],
+     "a": 3,
+     "e": "„9 über 2“ = 9 · 8 : 2! = <b>36</b>."
+    },
+    {
+     "q": "Berechne den Binomialkoeffizienten „12 über 6“.",
+     "c": [
+      "924",
+      "792",
+      "665’280",
+      "2"
+     ],
+     "a": 0,
+     "e": "„12 über 6“ = 12 · 11 · 10 · 9 · 8 · 7 : 6! = <b>924</b>."
+    },
+    {
+     "q": "Aus 19 Schülerinnen und Schülern wird eine Gruppe von 5 gewählt. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "11’628",
+      "3’876",
+      "1’395’360",
+      "2’476’099"
+     ],
+     "a": 0,
+     "e": "Reihenfolge egal: „19 über 5“ = 19! : (5! · 14!) = <b>11’628</b>."
+    },
+    {
+     "q": "Aus 20 Sorten Glace wählst du 5 verschiedene. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "4’845",
+      "3’200’000",
+      "15’504",
+      "1’860’480"
+     ],
+     "a": 2,
+     "e": "Reihenfolge egal: „20 über 5“ = 20! : (5! · 15!) = <b>15’504</b>."
+    },
+    {
+     "q": "Aus 17 Schülerinnen und Schülern wird eine Gruppe von 4 gewählt. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "57’120",
+      "83’521",
+      "680",
+      "2’380"
+     ],
+     "a": 3,
+     "e": "Reihenfolge egal: „17 über 4“ = 17! : (4! · 13!) = <b>2’380</b>."
+    },
+    {
+     "q": "Beim Lotto werden 5 Zahlen angeboten und 4 angekreuzt. Wie viele Möglichkeiten gibt es?",
+     "c": [
+      "120",
+      "10",
+      "625",
+      "5"
+     ],
+     "a": 3,
+     "e": "Reihenfolge egal: „5 über 4“ = 5! : (4! · 1!) = <b>5</b>."
+    }
+   ]
+  },
+  {
+   "title": "Sachaufgaben",
+   "items": [
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von MINIMUM vertauscht?",
+     "c": [
+      "5’040",
+      "420",
+      "210",
+      "720"
+     ],
+     "a": 1,
+     "e": "7 Buchstaben: 7! : (gleiche Buchstaben: I 2-mal, M 3-mal) = <b>420</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von PAPAGEI vertauscht?",
+     "c": [
+      "630",
+      "5’040",
+      "720",
+      "1’260"
+     ],
+     "a": 3,
+     "e": "7 Buchstaben: 7! : (gleiche Buchstaben: A 2-mal, P 2-mal) = <b>1’260</b>."
+    },
+    {
+     "q": "10 Personen geben sich alle gegenseitig die Hand. Wie viele Händedrücke sind es?",
+     "c": [
+      "45",
+      "90",
+      "55",
+      "100"
+     ],
+     "a": 0,
+     "e": "Jedes Paar zählt einmal: „10 über 2“ = 10 · 9 : 2 = <b>45</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von BASEL vertauscht?",
+     "c": [
+      "3’125",
+      "120",
+      "20",
+      "24"
+     ],
+     "a": 1,
+     "e": "5 Buchstaben: 5! = <b>120</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von TESSIN vertauscht?",
+     "c": [
+      "120",
+      "360",
+      "720",
+      "180"
+     ],
+     "a": 1,
+     "e": "6 Buchstaben: 6! : (gleiche Buchstaben: S 2-mal) = <b>360</b>."
+    },
+    {
+     "q": "In einer Gruppe spielen 12 Mannschaften jede gegen jede einmal. Wie viele Spiele gibt es?",
+     "c": [
+      "144",
+      "78",
+      "132",
+      "66"
+     ],
+     "a": 3,
+     "e": "Jedes Paar zählt einmal: „12 über 2“ = 12 · 11 : 2 = <b>66</b>."
+    },
+    {
+     "q": "26 Personen geben sich alle gegenseitig die Hand. Wie viele Händedrücke sind es?",
+     "c": [
+      "325",
+      "650",
+      "351",
+      "676"
+     ],
+     "a": 0,
+     "e": "Jedes Paar zählt einmal: „26 über 2“ = 26 · 25 : 2 = <b>325</b>."
+    },
+    {
+     "q": "24 Personen geben sich alle gegenseitig die Hand. Wie viele Händedrücke sind es?",
+     "c": [
+      "552",
+      "300",
+      "276",
+      "576"
+     ],
+     "a": 2,
+     "e": "Jedes Paar zählt einmal: „24 über 2“ = 24 · 23 : 2 = <b>276</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von RAPPEN vertauscht?",
+     "c": [
+      "180",
+      "360",
+      "720",
+      "120"
+     ],
+     "a": 1,
+     "e": "6 Buchstaben: 6! : (gleiche Buchstaben: P 2-mal) = <b>360</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von LUZERN vertauscht?",
+     "c": [
+      "46’656",
+      "120",
+      "720",
+      "30"
+     ],
+     "a": 2,
+     "e": "6 Buchstaben: 6! = <b>720</b>."
+    },
+    {
+     "q": "7 Personen geben sich alle gegenseitig die Hand. Wie viele Händedrücke sind es?",
+     "c": [
+      "42",
+      "21",
+      "28",
+      "49"
+     ],
+     "a": 1,
+     "e": "Jedes Paar zählt einmal: „7 über 2“ = 7 · 6 : 2 = <b>21</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von TOMATE vertauscht?",
+     "c": [
+      "120",
+      "180",
+      "720",
+      "360"
+     ],
+     "a": 3,
+     "e": "6 Buchstaben: 6! : (gleiche Buchstaben: T 2-mal) = <b>360</b>."
+    },
+    {
+     "q": "6 Personen geben sich alle gegenseitig die Hand. Wie viele Händedrücke sind es?",
+     "c": [
+      "15",
+      "21",
+      "30",
+      "36"
+     ],
+     "a": 0,
+     "e": "Jedes Paar zählt einmal: „6 über 2“ = 6 · 5 : 2 = <b>15</b>."
+    },
+    {
+     "q": "In einer Gruppe spielen 15 Mannschaften jede gegen jede einmal. Wie viele Spiele gibt es?",
+     "c": [
+      "120",
+      "210",
+      "105",
+      "225"
+     ],
+     "a": 2,
+     "e": "Jedes Paar zählt einmal: „15 über 2“ = 15 · 14 : 2 = <b>105</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von AARAU vertauscht?",
+     "c": [
+      "120",
+      "10",
+      "24",
+      "20"
+     ],
+     "a": 3,
+     "e": "5 Buchstaben: 5! : (gleiche Buchstaben: A 3-mal) = <b>20</b>."
+    },
+    {
+     "q": "In einer Gruppe spielen 23 Mannschaften jede gegen jede einmal. Wie viele Spiele gibt es?",
+     "c": [
+      "253",
+      "529",
+      "276",
+      "506"
+     ],
+     "a": 0,
+     "e": "Jedes Paar zählt einmal: „23 über 2“ = 23 · 22 : 2 = <b>253</b>."
+    },
+    {
+     "q": "4 Personen geben sich alle gegenseitig die Hand. Wie viele Händedrücke sind es?",
+     "c": [
+      "16",
+      "12",
+      "6",
+      "10"
+     ],
+     "a": 2,
+     "e": "Jedes Paar zählt einmal: „4 über 2“ = 4 · 3 : 2 = <b>6</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von FRANKEN vertauscht?",
+     "c": [
+      "5’040",
+      "720",
+      "1’260",
+      "2’520"
+     ],
+     "a": 3,
+     "e": "7 Buchstaben: 7! : (gleiche Buchstaben: N 2-mal) = <b>2’520</b>."
+    },
+    {
+     "q": "Wie viele verschiedene Wörter (auch sinnlose) entstehen, wenn man die Buchstaben von BERN vertauscht?",
+     "c": [
+      "24",
+      "256",
+      "6",
+      "12"
+     ],
+     "a": 0,
+     "e": "4 Buchstaben: 4! = <b>24</b>."
+    },
+    {
+     "q": "In einer Gruppe spielen 24 Mannschaften jede gegen jede einmal. Wie viele Spiele gibt es?",
+     "c": [
+      "552",
+      "300",
+      "276",
+      "576"
+     ],
+     "a": 2,
+     "e": "Jedes Paar zählt einmal: „24 über 2“ = 24 · 23 : 2 = <b>276</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 4,
+ "updated": "2026-11-25",
+ "country": "ch",
+ "subject": "mathematik",
+ "grade": "gymnasium-3"
+}

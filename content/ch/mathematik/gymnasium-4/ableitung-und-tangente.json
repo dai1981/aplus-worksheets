@@ -1,0 +1,1165 @@
+{
+ "slug": "ableitung-und-tangente",
+ "title": "Ableitung, Tangente und Normale",
+ "seo_title": "Ableitung und Tangente – Mathematik Gymnasium: Arbeitsblätter mit Lösungen",
+ "short_title": "Ableitung und Tangente",
+ "domain": "Analysis",
+ "standard_code": "RLP Mathematik 2.2 Differenzialrechnung",
+ "standard_url": "https://edudoc.ch/record/236136/files/A_PLE-2024-2_d_03_rlp-maturitaetsschulen.pdf",
+ "standard_text": "Die Schülerinnen und Schüler bilden und interpretieren Ableitungen und lösen Extremwertprobleme (Rahmenlehrplan Gymnasiale Maturitätsschulen, EDK 2024, Mathematik 2.2).",
+ "meta_desc": "Differenzialrechnung am Gymnasium: mittlere Änderungsrate, Differenzenquotient, Steigung an einer Stelle, Tangentengleichung und Normale. 100 Aufgaben mit Lösungen.",
+ "key_big": "f′(x0) ist die Steigung der Tangente im Punkt (x0 | f(x0)).",
+ "key_sub": "Tangente: y = f′(x0) · (x − x0) + f(x0)",
+ "body_html": "<h2>So geht's</h2><p>Die <b>mittlere Änderungsrate</b> auf [a; b] ist (f(b) − f(a)) : (b − a), die Steigung der Sekante.</p><p>Lässt man den Abstand h gegen 0 gehen, wird aus der Sekante die Tangente: f′(x<sub>0</sub>) = lim (f(x<sub>0</sub> + h) − f(x<sub>0</sub>)) : h.</p><p>Potenzregel: (x<sup>n</sup>)′ = n · x<sup>n − 1</sup>.</p><p>Tangente in x<sub>0</sub>: y = f′(x<sub>0</sub>) · (x − x<sub>0</sub>) + f(x<sub>0</sub>). Die <b>Normale</b> hat die Steigung −1 : f′(x<sub>0</sub>).</p><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>f(x) = x², Tangente bei x = 3</p><p class='sn-ex-s'>f(3) = 9, f′(x) = 2x, f′(3) = 6</p><p class='sn-ex-s'>y = 6(x − 3) + 9</p><p class='sn-ex-a'>Lösung: y = 6x − 9</p></div><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>f(x) = x³ − 2x, Steigung bei x = 1</p><p class='sn-ex-s'>f′(x) = 3x² − 2</p><p class='sn-ex-a'>Lösung: f′(1) = 1</p></div><h2>Typische Fehler</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Typischer Fehler</th><th>So ist es richtig</th></tr></thead><tbody><tr><td>Steigung bei x₀ = f(x₀)</td><td>Die Steigung ist f′(x₀), nicht der Funktionswert</td></tr><tr><td>Tangente: y = f′(x₀) · x + f(x₀)</td><td>Den Punkt einsetzen: y = f′(x₀)(x − x₀) + f(x₀)</td></tr><tr><td>Normale: Steigung −f′(x₀)</td><td>Negativer Kehrwert: −1 : f′(x₀)</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Was ist die Ableitung anschaulich?",
+   "a": "Die Steigung des Graphen an einer Stelle, also die momentane Änderungsrate."
+  },
+  {
+   "q": "Was ist der Unterschied zwischen Sekante und Tangente?",
+   "a": "Die Sekante geht durch zwei Punkte des Graphen. Die Tangente berührt den Graphen in einem Punkt und hat dort dieselbe Steigung."
+  },
+  {
+   "q": "Wie stelle ich die Tangentengleichung auf?",
+   "a": "f(x0) und f′(x0) berechnen und in y = f′(x0) · (x − x0) + f(x0) einsetzen."
+  },
+  {
+   "q": "Was ist die Normale?",
+   "a": "Die Gerade, die im Berührpunkt senkrecht auf der Tangente steht. Ihre Steigung ist −1 : f′(x0)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Mittlere Änderungsrate",
+   "items": [
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −3x² − 4x − 4 im Intervall [3; 5]?",
+     "c": [
+      "−56",
+      "−71",
+      "−22",
+      "−28"
+     ],
+     "a": 3,
+     "e": "(f(5) − f(3)) : (5 − 3) = (−99 − (−43)) : 2 = <b>−28</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −2x² − x − 1 im Intervall [1; 3]?",
+     "c": [
+      "−5",
+      "−13",
+      "−18",
+      "−9"
+     ],
+     "a": 3,
+     "e": "(f(3) − f(1)) : (3 − 1) = (−22 − (−4)) : 2 = <b>−9</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = 3x² + 3 im Intervall [−4; 0]?",
+     "c": [
+      "−48",
+      "−24",
+      "−12",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "(f(0) − f(−4)) : (0 − (−4)) = (3 − 51) : 4 = <b>−12</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = 3x² − 3x + 1 im Intervall [−1; 3]?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>2</span></span>",
+      "3",
+      "−9",
+      "12"
+     ],
+     "a": 1,
+     "e": "(f(3) − f(−1)) : (3 − (−1)) = (19 − 7) : 4 = <b>3</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −3x² − 4x − 2 im Intervall [3; 5]?",
+     "c": [
+      "−56",
+      "−28",
+      "−69",
+      "−22"
+     ],
+     "a": 1,
+     "e": "(f(5) − f(3)) : (5 − 3) = (−97 − (−41)) : 2 = <b>−28</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −3x² + x + 3 im Intervall [−3; −1]?",
+     "c": [
+      "19",
+      "−14",
+      "26",
+      "13"
+     ],
+     "a": 3,
+     "e": "(f(−1) − f(−3)) : (−1 − (−3)) = (−1 − (−27)) : 2 = <b>13</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = x² + 3x − 1 im Intervall [2; 3]?",
+     "c": [
+      "8",
+      "26",
+      "7",
+      "9"
+     ],
+     "a": 0,
+     "e": "(f(3) − f(2)) : (3 − 2) = (17 − 9) : 1 = <b>8</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = 3x² − x im Intervall [−3; −2]?",
+     "c": [
+      "−19",
+      "−17",
+      "−16",
+      "44"
+     ],
+     "a": 2,
+     "e": "(f(−2) − f(−3)) : (−2 − (−3)) = (14 − 30) : 1 = <b>−16</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −x² − 3 im Intervall [−3; −2]?",
+     "c": [
+      "5",
+      "−19",
+      "6",
+      "4"
+     ],
+     "a": 0,
+     "e": "(f(−2) − f(−3)) : (−2 − (−3)) = (−7 − (−12)) : 1 = <b>5</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = 2x² − 5x + 2 im Intervall [2; 6]?",
+     "c": [
+      "11",
+      "3",
+      "44",
+      "12"
+     ],
+     "a": 0,
+     "e": "(f(6) − f(2)) : (6 − 2) = (44 − 0) : 4 = <b>11</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = x² − 2x + 4 im Intervall [3; 7]?",
+     "c": [
+      "<span class='fr'><span class='fn'>23</span><span class='fd'>2</span></span>",
+      "32",
+      "4",
+      "8"
+     ],
+     "a": 3,
+     "e": "(f(7) − f(3)) : (7 − 3) = (39 − 7) : 4 = <b>8</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −x² + 5x im Intervall [−4; 0]?",
+     "c": [
+      "36",
+      "9",
+      "−9",
+      "13"
+     ],
+     "a": 1,
+     "e": "(f(0) − f(−4)) : (0 − (−4)) = (0 − (−36)) : 4 = <b>9</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = x² − 2x − 2 im Intervall [−2; 2]?",
+     "c": [
+      "−2",
+      "1",
+      "−6",
+      "−8"
+     ],
+     "a": 0,
+     "e": "(f(2) − f(−2)) : (2 − (−2)) = (−2 − 6) : 4 = <b>−2</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = 3x² − x + 2 im Intervall [1; 5]?",
+     "c": [
+      "5",
+      "19",
+      "68",
+      "17"
+     ],
+     "a": 3,
+     "e": "(f(5) − f(1)) : (5 − 1) = (72 − 4) : 4 = <b>17</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −2x² − 4x im Intervall [1; 2]?",
+     "c": [
+      "−22",
+      "−10",
+      "−8",
+      "−11"
+     ],
+     "a": 1,
+     "e": "(f(2) − f(1)) : (2 − 1) = (−16 − (−6)) : 1 = <b>−10</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −2x² − x + 5 im Intervall [−1; 2]?",
+     "c": [
+      "−9",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−3",
+      "3"
+     ],
+     "a": 2,
+     "e": "(f(2) − f(−1)) : (2 − (−1)) = (−5 − 4) : 3 = <b>−3</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −2x² − 5x + 2 im Intervall [1; 4]?",
+     "c": [
+      "−15",
+      "−9",
+      "−<span class='fr'><span class='fn'>55</span><span class='fd'>3</span></span>",
+      "−45"
+     ],
+     "a": 0,
+     "e": "(f(4) − f(1)) : (4 − 1) = (−50 − (−5)) : 3 = <b>−15</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −2x² − 5x + 4 im Intervall [1; 5]?",
+     "c": [
+      "−9",
+      "−<span class='fr'><span class='fn'>37</span><span class='fd'>2</span></span>",
+      "−17",
+      "−68"
+     ],
+     "a": 2,
+     "e": "(f(5) − f(1)) : (5 − 1) = (−71 − (−3)) : 4 = <b>−17</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −x² + 3x + 2 im Intervall [1; 3]?",
+     "c": [
+      "1",
+      "−1",
+      "3",
+      "−2"
+     ],
+     "a": 1,
+     "e": "(f(3) − f(1)) : (3 − 1) = (2 − 4) : 2 = <b>−1</b>."
+    },
+    {
+     "q": "Wie gross ist die mittlere Änderungsrate von f(x) = −x² + x + 2 im Intervall [−1; 3]?",
+     "c": [
+      "−2",
+      "3",
+      "−1",
+      "−4"
+     ],
+     "a": 2,
+     "e": "(f(3) − f(−1)) : (3 − (−1)) = (−4 − 0) : 4 = <b>−1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Vom Differenzenquotienten zur Ableitung",
+   "items": [
+    {
+     "q": "Für f(x) = 4x² gilt (f(4 + h) − f(4)) : h = …",
+     "c": [
+      "32",
+      "4h + 64",
+      "4h² + 32h",
+      "4h + 32"
+     ],
+     "a": 3,
+     "e": "f(4 + h) = 4(4 + h)² = 4h² + 32h + 64. Minus f(4), durch h teilen: <b>4h + 32</b>. Für h → 0: f′(4) = 32."
+    },
+    {
+     "q": "Für f(x) = 4x² gilt (f(3 + h) − f(3)) : h = …",
+     "c": [
+      "4h + 36",
+      "4h + 24",
+      "24",
+      "4h² + 24h"
+     ],
+     "a": 1,
+     "e": "f(3 + h) = 4(3 + h)² = 4h² + 24h + 36. Minus f(3), durch h teilen: <b>4h + 24</b>. Für h → 0: f′(3) = 24."
+    },
+    {
+     "q": "Für f(x) = 4x² gilt (f(−2 + h) − f(−2)) : h = …",
+     "c": [
+      "4h − 16",
+      "4h² − 16h",
+      "4h + 16",
+      "−16"
+     ],
+     "a": 0,
+     "e": "f(−2 + h) = 4(−2 + h)² = 4h² − 16h + 16. Minus f(−2), durch h teilen: <b>4h − 16</b>. Für h → 0: f′(−2) = −16."
+    },
+    {
+     "q": "Für f(x) = x² gilt (f(4 + h) − f(4)) : h = …",
+     "c": [
+      "h + 16",
+      "h² + 8h",
+      "h + 8",
+      "8"
+     ],
+     "a": 2,
+     "e": "f(4 + h) = (4 + h)² = h² + 8h + 16. Minus f(4), durch h teilen: <b>h + 8</b>. Für h → 0: f′(4) = 8."
+    },
+    {
+     "q": "Für f(x) = 4x² gilt (f(−4 + h) − f(−4)) : h = …",
+     "c": [
+      "4h − 32",
+      "−32",
+      "4h² − 32h",
+      "4h + 64"
+     ],
+     "a": 0,
+     "e": "f(−4 + h) = 4(−4 + h)² = 4h² − 32h + 64. Minus f(−4), durch h teilen: <b>4h − 32</b>. Für h → 0: f′(−4) = −32."
+    },
+    {
+     "q": "Für f(x) = 2x² gilt (f(−1 + h) − f(−1)) : h = …",
+     "c": [
+      "−4",
+      "2h² − 4h",
+      "2h − 4",
+      "2h + 2"
+     ],
+     "a": 2,
+     "e": "f(−1 + h) = 2(−1 + h)² = 2h² − 4h + 2. Minus f(−1), durch h teilen: <b>2h − 4</b>. Für h → 0: f′(−1) = −4."
+    },
+    {
+     "q": "Für f(x) = 3x² gilt (f(4 + h) − f(4)) : h = …",
+     "c": [
+      "3h² + 24h",
+      "3h + 48",
+      "24",
+      "3h + 24"
+     ],
+     "a": 3,
+     "e": "f(4 + h) = 3(4 + h)² = 3h² + 24h + 48. Minus f(4), durch h teilen: <b>3h + 24</b>. Für h → 0: f′(4) = 24."
+    },
+    {
+     "q": "Für f(x) = x² gilt (f(−2 + h) − f(−2)) : h = …",
+     "c": [
+      "h + 4",
+      "h − 4",
+      "h² − 4h",
+      "−4"
+     ],
+     "a": 1,
+     "e": "f(−2 + h) = (−2 + h)² = h² − 4h + 4. Minus f(−2), durch h teilen: <b>h − 4</b>. Für h → 0: f′(−2) = −4."
+    },
+    {
+     "q": "Für f(x) = x² gilt (f(1 + h) − f(1)) : h = …",
+     "c": [
+      "h + 1",
+      "h + 2",
+      "2",
+      "h² + 2h"
+     ],
+     "a": 1,
+     "e": "f(1 + h) = (1 + h)² = h² + 2h + 1. Minus f(1), durch h teilen: <b>h + 2</b>. Für h → 0: f′(1) = 2."
+    },
+    {
+     "q": "Für f(x) = 2x² gilt (f(−2 + h) − f(−2)) : h = …",
+     "c": [
+      "−8",
+      "2h − 8",
+      "2h + 8",
+      "2h² − 8h"
+     ],
+     "a": 1,
+     "e": "f(−2 + h) = 2(−2 + h)² = 2h² − 8h + 8. Minus f(−2), durch h teilen: <b>2h − 8</b>. Für h → 0: f′(−2) = −8."
+    },
+    {
+     "q": "Für f(x) = 3x² gilt (f(−2 + h) − f(−2)) : h = …",
+     "c": [
+      "3h + 12",
+      "−12",
+      "3h − 12",
+      "3h² − 12h"
+     ],
+     "a": 2,
+     "e": "f(−2 + h) = 3(−2 + h)² = 3h² − 12h + 12. Minus f(−2), durch h teilen: <b>3h − 12</b>. Für h → 0: f′(−2) = −12."
+    },
+    {
+     "q": "Für f(x) = 2x² gilt (f(1 + h) − f(1)) : h = …",
+     "c": [
+      "2h + 4",
+      "2h + 2",
+      "4",
+      "2h² + 4h"
+     ],
+     "a": 0,
+     "e": "f(1 + h) = 2(1 + h)² = 2h² + 4h + 2. Minus f(1), durch h teilen: <b>2h + 4</b>. Für h → 0: f′(1) = 4."
+    },
+    {
+     "q": "Für f(x) = 2x² gilt (f(2 + h) − f(2)) : h = …",
+     "c": [
+      "2h² + 8h",
+      "2h + 9",
+      "8",
+      "2h + 8"
+     ],
+     "a": 3,
+     "e": "f(2 + h) = 2(2 + h)² = 2h² + 8h + 8. Minus f(2), durch h teilen: <b>2h + 8</b>. Für h → 0: f′(2) = 8."
+    },
+    {
+     "q": "Für f(x) = 2x² gilt (f(5 + h) − f(5)) : h = …",
+     "c": [
+      "2h + 50",
+      "2h² + 20h",
+      "20",
+      "2h + 20"
+     ],
+     "a": 3,
+     "e": "f(5 + h) = 2(5 + h)² = 2h² + 20h + 50. Minus f(5), durch h teilen: <b>2h + 20</b>. Für h → 0: f′(5) = 20."
+    },
+    {
+     "q": "Für f(x) = x² gilt (f(5 + h) − f(5)) : h = …",
+     "c": [
+      "10",
+      "h + 25",
+      "h + 10",
+      "h² + 10h"
+     ],
+     "a": 2,
+     "e": "f(5 + h) = (5 + h)² = h² + 10h + 25. Minus f(5), durch h teilen: <b>h + 10</b>. Für h → 0: f′(5) = 10."
+    },
+    {
+     "q": "Für f(x) = 2x² gilt (f(−3 + h) − f(−3)) : h = …",
+     "c": [
+      "2h − 12",
+      "2h + 18",
+      "2h² − 12h",
+      "−12"
+     ],
+     "a": 0,
+     "e": "f(−3 + h) = 2(−3 + h)² = 2h² − 12h + 18. Minus f(−3), durch h teilen: <b>2h − 12</b>. Für h → 0: f′(−3) = −12."
+    },
+    {
+     "q": "Für f(x) = 4x² gilt (f(−3 + h) − f(−3)) : h = …",
+     "c": [
+      "4h + 36",
+      "4h² − 24h",
+      "4h − 24",
+      "−24"
+     ],
+     "a": 2,
+     "e": "f(−3 + h) = 4(−3 + h)² = 4h² − 24h + 36. Minus f(−3), durch h teilen: <b>4h − 24</b>. Für h → 0: f′(−3) = −24."
+    },
+    {
+     "q": "Für f(x) = 3x² gilt (f(−4 + h) − f(−4)) : h = …",
+     "c": [
+      "3h + 48",
+      "−24",
+      "3h² − 24h",
+      "3h − 24"
+     ],
+     "a": 3,
+     "e": "f(−4 + h) = 3(−4 + h)² = 3h² − 24h + 48. Minus f(−4), durch h teilen: <b>3h − 24</b>. Für h → 0: f′(−4) = −24."
+    },
+    {
+     "q": "Für f(x) = 3x² gilt (f(1 + h) − f(1)) : h = …",
+     "c": [
+      "3h + 6",
+      "3h + 3",
+      "3h² + 6h",
+      "6"
+     ],
+     "a": 0,
+     "e": "f(1 + h) = 3(1 + h)² = 3h² + 6h + 3. Minus f(1), durch h teilen: <b>3h + 6</b>. Für h → 0: f′(1) = 6."
+    },
+    {
+     "q": "Für f(x) = 3x² gilt (f(−1 + h) − f(−1)) : h = …",
+     "c": [
+      "−6",
+      "3h − 6",
+      "3h² − 6h",
+      "3h + 3"
+     ],
+     "a": 1,
+     "e": "f(−1 + h) = 3(−1 + h)² = 3h² − 6h + 3. Minus f(−1), durch h teilen: <b>3h − 6</b>. Für h → 0: f′(−1) = −6."
+    }
+   ]
+  },
+  {
+   "title": "Steigung an einer Stelle",
+   "items": [
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = −3x² − 8x + 2 die Steigung −20?",
+     "c": [
+      "x = <span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "x = 4",
+      "x = 2",
+      "x = −2"
+     ],
+     "a": 2,
+     "e": "f′(x) = −6x − 8 = −20 ⇒ x = <b>2</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = −2x³ + 3x² + 3x − 3 an der Stelle x = 1?",
+     "c": [
+      "3",
+      "4",
+      "1",
+      "−9"
+     ],
+     "a": 0,
+     "e": "f′(x) = −6x² + 6x + 3, f′(1) = <b>3</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = −4x³ − 2x² − x + 1 an der Stelle x = −1?",
+     "c": [
+      "10",
+      "4",
+      "−17",
+      "−9"
+     ],
+     "a": 3,
+     "e": "f′(x) = −12x² − 4x − 1, f′(−1) = <b>−9</b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = −2x² + 4x + 3 die Steigung −4?",
+     "c": [
+      "x = −2",
+      "x = 2",
+      "x = 1",
+      "x = 4"
+     ],
+     "a": 1,
+     "e": "f′(x) = −4x + 4 = −4 ⇒ x = <b>2</b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = −3x² + 8x + 3 die Steigung 32?",
+     "c": [
+      "x = 4",
+      "x = −8",
+      "x = −<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>",
+      "x = −4"
+     ],
+     "a": 3,
+     "e": "f′(x) = −6x + 8 = 32 ⇒ x = <b>−4</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = −2x³ + 3x² − 2x − 3 an der Stelle x = 0?",
+     "c": [
+      "−3",
+      "−2",
+      "−1",
+      "1"
+     ],
+     "a": 1,
+     "e": "f′(x) = −6x² + 6x − 2, f′(0) = <b>−2</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = −4x³ − x² − 3x − 3 an der Stelle x = −3?",
+     "c": [
+      "−117",
+      "105",
+      "−105",
+      "316"
+     ],
+     "a": 2,
+     "e": "f′(x) = −12x² − 2x − 3, f′(−3) = <b>−105</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = 3x³ + 4x² − 2x an der Stelle x = −2?",
+     "c": [
+      "18",
+      "−4",
+      "−35",
+      "50"
+     ],
+     "a": 0,
+     "e": "f′(x) = 9x² + 8x − 2, f′(−2) = <b>18</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = x³ − 4x² − 4x − 3 an der Stelle x = −2?",
+     "c": [
+      "24",
+      "−8",
+      "−19",
+      "−47"
+     ],
+     "a": 0,
+     "e": "f′(x) = 3x² − 8x − 4, f′(−2) = <b>24</b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = −2x² + 8x die Steigung −12?",
+     "c": [
+      "x = 3",
+      "x = 10",
+      "x = −5",
+      "x = 5"
+     ],
+     "a": 3,
+     "e": "f′(x) = −4x + 8 = −12 ⇒ x = <b>5</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = −x³ − 4x² − 4x an der Stelle x = 1?",
+     "c": [
+      "−9",
+      "−14",
+      "1",
+      "−15"
+     ],
+     "a": 3,
+     "e": "f′(x) = −3x² − 8x − 4, f′(1) = <b>−15</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = x³ − 3x² + 3x − 2 an der Stelle x = 3?",
+     "c": [
+      "12",
+      "48",
+      "37",
+      "7"
+     ],
+     "a": 0,
+     "e": "f′(x) = 3x² − 6x + 3, f′(3) = <b>12</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = −4x³ − 3x² + 2x + 3 an der Stelle x = 3?",
+     "c": [
+      "−371",
+      "−126",
+      "−124",
+      "−88"
+     ],
+     "a": 2,
+     "e": "f′(x) = −12x² − 6x + 2, f′(3) = <b>−124</b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = 3x² − 4x − 4 die Steigung −34?",
+     "c": [
+      "x = −5",
+      "x = −10",
+      "x = −<span class='fr'><span class='fn'>17</span><span class='fd'>3</span></span>",
+      "x = 5"
+     ],
+     "a": 0,
+     "e": "f′(x) = 6x − 4 = −34 ⇒ x = <b>−5</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = 3x³ − 3x² − 2x − 3 an der Stelle x = −2?",
+     "c": [
+      "−35",
+      "22",
+      "46",
+      "−91"
+     ],
+     "a": 2,
+     "e": "f′(x) = 9x² − 6x − 2, f′(−2) = <b>46</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = −2x³ − x² − x + 4 an der Stelle x = 3?",
+     "c": [
+      "−182",
+      "−62",
+      "−61",
+      "−49"
+     ],
+     "a": 2,
+     "e": "f′(x) = −6x² − 2x − 1, f′(3) = <b>−61</b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = x² − 7x die Steigung −3?",
+     "c": [
+      "x = 4",
+      "x = 2",
+      "x = −<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "x = −2"
+     ],
+     "a": 1,
+     "e": "f′(x) = 2x − 7 = −3 ⇒ x = <b>2</b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = −2x² + 4 die Steigung −4?",
+     "c": [
+      "x = −1",
+      "x = 2",
+      "x = 3",
+      "x = 1"
+     ],
+     "a": 3,
+     "e": "f′(x) = −4x = −4 ⇒ x = <b>1</b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = 2x² + 3x + 3 die Steigung 19?",
+     "c": [
+      "x = −4",
+      "x = 4",
+      "x = <span class='fr'><span class='fn'>19</span><span class='fd'>4</span></span>",
+      "x = 8"
+     ],
+     "a": 1,
+     "e": "f′(x) = 4x + 3 = 19 ⇒ x = <b>4</b>."
+    },
+    {
+     "q": "Wie gross ist die Steigung des Graphen von f(x) = −x³ − x² − x an der Stelle x = 3?",
+     "c": [
+      "−39",
+      "−34",
+      "−101",
+      "−22"
+     ],
+     "a": 1,
+     "e": "f′(x) = −3x² − 2x − 1, f′(3) = <b>−34</b>."
+    }
+   ]
+  },
+  {
+   "title": "Tangentengleichungen",
+   "items": [
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = x² + 5x + 4 im Punkt mit x = 1?",
+     "c": [
+      "y = 10x + 3",
+      "y = 7x + 10",
+      "y = 7x + 3",
+      "y = 7x + 17"
+     ],
+     "a": 2,
+     "e": "f(1) = 10, f′(1) = 7. y = 7 · (x − 1) + 10 ⇒ <b>y = 7x + 3</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = −2x² − 2x − 5 im Punkt mit x = 0?",
+     "c": [
+      "y = 2x − 5",
+      "y = −5x − 5",
+      "y = −2x − 5",
+      "y = −2x − 4"
+     ],
+     "a": 2,
+     "e": "f(0) = −5, f′(0) = −2. y = −2 · (x − 0) + (−5) ⇒ <b>y = −2x − 5</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = 3x² − 2x − 6 im Punkt mit x = −2?",
+     "c": [
+      "y = −14x − 18",
+      "y = 10x − 18",
+      "y = −14x + 10",
+      "y = −14x + 38"
+     ],
+     "a": 0,
+     "e": "f(−2) = 10, f′(−2) = −14. y = −14 · (x − (−2)) + 10 ⇒ <b>y = −14x − 18</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = 3x² + 5 im Punkt mit x = −1?",
+     "c": [
+      "y = 8x + 2",
+      "y = −6x + 2",
+      "y = −6x + 14",
+      "y = −6x + 8"
+     ],
+     "a": 1,
+     "e": "f(−1) = 8, f′(−1) = −6. y = −6 · (x − (−1)) + 8 ⇒ <b>y = −6x + 2</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = 2x² + x − 3 im Punkt mit x = 0?",
+     "c": [
+      "y = −x − 3",
+      "y = −3x − 3",
+      "y = x − 3",
+      "y = x − 2"
+     ],
+     "a": 2,
+     "e": "f(0) = −3, f′(0) = 1. y = 1 · (x − 0) + (−3) ⇒ <b>y = x − 3</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = x² − 3x − 4 im Punkt mit x = −2?",
+     "c": [
+      "y = −7x + 6",
+      "y = −7x − 8",
+      "y = −7x + 20",
+      "y = 6x − 8"
+     ],
+     "a": 1,
+     "e": "f(−2) = 6, f′(−2) = −7. y = −7 · (x − (−2)) + 6 ⇒ <b>y = −7x − 8</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = −2x² + 4x + 6 im Punkt mit x = −3?",
+     "c": [
+      "y = −24x + 24",
+      "y = 16x − 72",
+      "y = 16x + 24",
+      "y = 16x − 24"
+     ],
+     "a": 2,
+     "e": "f(−3) = −24, f′(−3) = 16. y = 16 · (x − (−3)) + (−24) ⇒ <b>y = 16x + 24</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = 2x² + x − 6 im Punkt mit x = 3?",
+     "c": [
+      "y = 13x + 54",
+      "y = 13x + 15",
+      "y = 13x − 24",
+      "y = 15x − 24"
+     ],
+     "a": 2,
+     "e": "f(3) = 15, f′(3) = 13. y = 13 · (x − 3) + 15 ⇒ <b>y = 13x − 24</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = −3x² − 2x − 1 im Punkt mit x = −2?",
+     "c": [
+      "y = 10x + 11",
+      "y = −9x + 11",
+      "y = 10x − 29",
+      "y = 10x − 9"
+     ],
+     "a": 0,
+     "e": "f(−2) = −9, f′(−2) = 10. y = 10 · (x − (−2)) + (−9) ⇒ <b>y = 10x + 11</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = 2x² + 6x − 4 im Punkt mit x = 2?",
+     "c": [
+      "y = 14x + 16",
+      "y = 14x − 12",
+      "y = 16x − 12",
+      "y = 14x + 44"
+     ],
+     "a": 1,
+     "e": "f(2) = 16, f′(2) = 14. y = 14 · (x − 2) + 16 ⇒ <b>y = 14x − 12</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = −2x² + 6x − 1 im Punkt mit x = 2?",
+     "c": [
+      "y = −2x + 7",
+      "y = −2x + 3",
+      "y = −2x − 1",
+      "y = 3x + 7"
+     ],
+     "a": 0,
+     "e": "f(2) = 3, f′(2) = −2. y = −2 · (x − 2) + 3 ⇒ <b>y = −2x + 7</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = −3x² − x + 3 im Punkt mit x = −2?",
+     "c": [
+      "y = 11x − 29",
+      "y = 11x − 7",
+      "y = −7x + 15",
+      "y = 11x + 15"
+     ],
+     "a": 3,
+     "e": "f(−2) = −7, f′(−2) = 11. y = 11 · (x − (−2)) + (−7) ⇒ <b>y = 11x + 15</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = 2x² + 2x − 4 im Punkt mit x = −1?",
+     "c": [
+      "y = −2x − 2",
+      "y = −2x − 4",
+      "y = −4x − 6",
+      "y = −2x − 6"
+     ],
+     "a": 3,
+     "e": "f(−1) = −4, f′(−1) = −2. y = −2 · (x − (−1)) + (−4) ⇒ <b>y = −2x − 6</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = x² − 2x + 5 im Punkt mit x = 1?",
+     "c": [
+      "y = 4",
+      "y = 3",
+      "y = 5",
+      "y = 4x + 4"
+     ],
+     "a": 0,
+     "e": "f(1) = 4, f′(1) = 0. y = 0 · (x − 1) + 4 ⇒ <b>y = 4</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = x² + 3x + 5 im Punkt mit x = −3?",
+     "c": [
+      "y = −3x + 5",
+      "y = −3x − 4",
+      "y = −3x + 14",
+      "y = 5x − 4"
+     ],
+     "a": 1,
+     "e": "f(−3) = 5, f′(−3) = −3. y = −3 · (x − (−3)) + 5 ⇒ <b>y = −3x − 4</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = −x² + 4x + 6 im Punkt mit x = −1?",
+     "c": [
+      "y = 6x + 1",
+      "y = 6x − 5",
+      "y = x + 7",
+      "y = 6x + 7"
+     ],
+     "a": 3,
+     "e": "f(−1) = 1, f′(−1) = 6. y = 6 · (x − (−1)) + 1 ⇒ <b>y = 6x + 7</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = −2x² + 5x + 4 im Punkt mit x = 3?",
+     "c": [
+      "y = −7x + 22",
+      "y = x + 22",
+      "y = −7x − 20",
+      "y = −7x + 1"
+     ],
+     "a": 0,
+     "e": "f(3) = 1, f′(3) = −7. y = −7 · (x − 3) + 1 ⇒ <b>y = −7x + 22</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = −2x² + 5x − 6 im Punkt mit x = −1?",
+     "c": [
+      "y = 9x − 22",
+      "y = 9x − 13",
+      "y = −13x − 4",
+      "y = 9x − 4"
+     ],
+     "a": 3,
+     "e": "f(−1) = −13, f′(−1) = 9. y = 9 · (x − (−1)) + (−13) ⇒ <b>y = 9x − 4</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = −3x² − 5x − 2 im Punkt mit x = −3?",
+     "c": [
+      "y = −14x + 25",
+      "y = 13x + 25",
+      "y = 13x − 53",
+      "y = 13x − 14"
+     ],
+     "a": 1,
+     "e": "f(−3) = −14, f′(−3) = 13. y = 13 · (x − (−3)) + (−14) ⇒ <b>y = 13x + 25</b>."
+    },
+    {
+     "q": "Wie lautet die Gleichung der Tangente an den Graphen von f(x) = −3x² − 4x + 5 im Punkt mit x = 3?",
+     "c": [
+      "y = −22x − 34",
+      "y = −22x − 100",
+      "y = −34x + 32",
+      "y = −22x + 32"
+     ],
+     "a": 3,
+     "e": "f(3) = −34, f′(3) = −22. y = −22 · (x − 3) + (−34) ⇒ <b>y = −22x + 32</b>."
+    }
+   ]
+  },
+  {
+   "title": "Normale und Steigung",
+   "items": [
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = x² + 5x + 4 an der Stelle x = −1?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−3",
+      "3"
+     ],
+     "a": 0,
+     "e": "Tangente: m = 3. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = −x² + 3x die Steigung 11?",
+     "c": [
+      "x = −8",
+      "x = 4",
+      "x = −<span class='fr'><span class='fn'>11</span><span class='fd'>2</span></span>",
+      "x = −4"
+     ],
+     "a": 3,
+     "e": "f′(x) = −2x + 3 = 11 ⇒ x = <b>−4</b>."
+    },
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = 3x² + 4x an der Stelle x = 3?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>22</span></span>",
+      "22",
+      "−22",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>22</span></span>"
+     ],
+     "a": 3,
+     "e": "Tangente: m = 22. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>22</span></span></b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = 3x² − x + 4 die Steigung 17?",
+     "c": [
+      "x = −3",
+      "x = 3",
+      "x = 6",
+      "x = <span class='fr'><span class='fn'>17</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "f′(x) = 6x − 1 = 17 ⇒ x = <b>3</b>."
+    },
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = −2x² + 4x − 2 an der Stelle x = 3?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "8",
+      "−8"
+     ],
+     "a": 1,
+     "e": "Tangente: m = −8. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b><span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = x² + 6x − 4 die Steigung 12?",
+     "c": [
+      "x = −3",
+      "x = 4",
+      "x = 6",
+      "x = 3"
+     ],
+     "a": 3,
+     "e": "f′(x) = 2x + 6 = 12 ⇒ x = <b>3</b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = 2x² − 5x + 2 die Steigung −25?",
+     "c": [
+      "x = −<span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span>",
+      "x = −5",
+      "x = 5",
+      "x = −10"
+     ],
+     "a": 1,
+     "e": "f′(x) = 4x − 5 = −25 ⇒ x = <b>−5</b>."
+    },
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = −x² − x − 3 an der Stelle x = 3?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "−7",
+      "7"
+     ],
+     "a": 1,
+     "e": "Tangente: m = −7. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b><span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = x² + x + 3 an der Stelle x = −2?",
+     "c": [
+      "3",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−3",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Tangente: m = −3. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = 2x² + 3x + 5 die Steigung 3?",
+     "c": [
+      "x = 0",
+      "x = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "x = 1",
+      "x = 2"
+     ],
+     "a": 0,
+     "e": "f′(x) = 4x + 3 = 3 ⇒ x = <b>0</b>."
+    },
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = −x² − 6x − 5 an der Stelle x = −2?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−2",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "2"
+     ],
+     "a": 0,
+     "e": "Tangente: m = −2. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = 3x² − x − 3 an der Stelle x = 3?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>17</span></span>",
+      "17",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>17</span></span>",
+      "−17"
+     ],
+     "a": 2,
+     "e": "Tangente: m = 17. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b>−<span class='fr'><span class='fn'>1</span><span class='fd'>17</span></span></b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = x² − 2x + 4 die Steigung 0?",
+     "c": [
+      "x = 0",
+      "x = 2",
+      "x = 1",
+      "x = −1"
+     ],
+     "a": 2,
+     "e": "f′(x) = 2x − 2 = 0 ⇒ x = <b>1</b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = 3x² + x + 4 die Steigung 25?",
+     "c": [
+      "x = 8",
+      "x = <span class='fr'><span class='fn'>25</span><span class='fd'>6</span></span>",
+      "x = −4",
+      "x = 4"
+     ],
+     "a": 3,
+     "e": "f′(x) = 6x + 1 = 25 ⇒ x = <b>4</b>."
+    },
+    {
+     "q": "An welcher Stelle hat der Graph von f(x) = −2x² − 6x − 5 die Steigung 2?",
+     "c": [
+      "x = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "x = 2",
+      "x = −4",
+      "x = −2"
+     ],
+     "a": 3,
+     "e": "f′(x) = −4x − 6 = 2 ⇒ x = <b>−2</b>."
+    },
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = x² − 4x + 4 an der Stelle x = 1?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−2",
+      "2"
+     ],
+     "a": 0,
+     "e": "Tangente: m = −2. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = −3x² − 4x − 4 an der Stelle x = 1?",
+     "c": [
+      "10",
+      "−10",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 2,
+     "e": "Tangente: m = −10. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = 3x² − 3x + 1 an der Stelle x = 0?",
+     "c": [
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−3",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "3"
+     ],
+     "a": 2,
+     "e": "Tangente: m = −3. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = x² − 5x + 1 an der Stelle x = 3?",
+     "c": [
+      "−1",
+      "−2",
+      "−3",
+      "1"
+     ],
+     "a": 0,
+     "e": "Tangente: m = 1. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b>−1</b>."
+    },
+    {
+     "q": "Welche Steigung hat die Normale an den Graphen von f(x) = x² + 2x + 3 an der Stelle x = −2?",
+     "c": [
+      "2",
+      "−2",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "Tangente: m = −2. Normale steht senkrecht: m<sub>n</sub> = −1 : m = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 1,
+ "updated": "2026-11-25",
+ "country": "ch",
+ "subject": "mathematik",
+ "grade": "gymnasium-4"
+}

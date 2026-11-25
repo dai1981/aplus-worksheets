@@ -1,0 +1,1165 @@
+{
+ "slug": "erwartungswert",
+ "title": "Erwartungswert und faire Spiele",
+ "seo_title": "Erwartungswert – Mathematik Gymnasium: Arbeitsblätter mit Lösungen",
+ "short_title": "Erwartungswert",
+ "domain": "Stochastik",
+ "standard_code": "RLP Mathematik 4.2 Wahrscheinlichkeit",
+ "standard_url": "https://edudoc.ch/record/236136/files/A_PLE-2024-2_d_03_rlp-maturitaetsschulen.pdf",
+ "standard_text": "Die Schülerinnen und Schüler erklären Begriffe der Wahrscheinlichkeitsrechnung und analysieren mit ihren Regeln Zufallsexperimente (Rahmenlehrplan Gymnasiale Maturitätsschulen, EDK 2024, Mathematik 4.2).",
+ "meta_desc": "Erwartungswert für das Gymnasium: Wahrscheinlichkeitsverteilungen, Erwartungswert berechnen, Würfel- und Glücksradspiele, faire Spiele und Sachaufgaben. 100 Aufgaben mit Lösungen, kostenlos.",
+ "key_big": "E(X) = x₁ · P(X = x₁) + x₂ · P(X = x₂) + …",
+ "key_sub": "Fair: erwarteter Gewinn = 0.",
+ "body_html": "<h2>So geht's</h2><p>Eine <b>Zufallsgrösse</b> X ordnet jedem Ergebnis eines Zufallsexperiments eine Zahl zu (z. B. den Gewinn). Die Wahrscheinlichkeiten aller Werte ergeben zusammen 1.</p><p>Der <b>Erwartungswert</b> ist der gewichtete Mittelwert: E(X) = x₁ · P(X = x₁) + x₂ · P(X = x₂) + …</p><p>Er gibt an, welchen Wert man <b>auf lange Sicht im Mittel</b> erhält – nicht, was bei einem Spiel sicher herauskommt.</p><p>Ein Spiel ist <b>fair</b>, wenn der erwartete Gewinn (Auszahlung minus Einsatz) 0 ist.</p><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>x: 0, 2, 5 mit P: 0.5; 0.3; 0.2</p><p class='sn-ex-s'>E = 0 · 0.5 + 2 · 0.3 + 5 · 0.2</p><p class='sn-ex-a'>Lösung: E = 1.6</p></div><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>Einsatz 1 Fr., bei einer 6 gibt es 5 Fr.</p><p class='sn-ex-s'>5 · ⅙ − 1</p><p class='sn-ex-a'>Lösung: ≈ −0.17 Fr. pro Spiel</p></div><h2>Typische Fehler</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Typischer Fehler</th><th>So ist es richtig</th></tr></thead><tbody><tr><td>Mittelwert von 0, 2, 5 = 2.33</td><td>mit den Wahrscheinlichkeiten gewichten</td></tr><tr><td>Auszahlung = Gewinn</td><td>Einsatz abziehen</td></tr><tr><td>E = 1.6: Man bekommt immer 1.6</td><td>Nur im Mittel bei vielen Durchgängen</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Was ist der Erwartungswert?",
+   "a": "Der Wert, den eine Zufallsgrösse auf lange Sicht im Mittel annimmt: Summe aus Wert mal Wahrscheinlichkeit."
+  },
+  {
+   "q": "Wann ist ein Spiel fair?",
+   "a": "Wenn der erwartete Gewinn 0 ist, also die mittlere Auszahlung gleich dem Einsatz."
+  },
+  {
+   "q": "Muss der Erwartungswert ein möglicher Wert sein?",
+   "a": "Nein. Beim Würfel ist E = 3.5, obwohl man nie 3.5 würfelt."
+  },
+  {
+   "q": "Wie berechne ich einen fairen Einsatz?",
+   "a": "Erwartete Auszahlung berechnen; genau dieser Betrag ist der faire Einsatz."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Wahrscheinlichkeitsverteilungen",
+   "items": [
+    {
+     "q": "Die Tabelle zeigt die Wahrscheinlichkeitsverteilung einer Zufallsgrösse X. Welche Wahrscheinlichkeit fehlt?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>2</td><td>4</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.4</td><td>0.4</td><td>?</td></tr></tbody></table></div>",
+     "c": [
+      "0.3",
+      "0.2",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "0.8"
+     ],
+     "a": 1,
+     "e": "Alle Wahrscheinlichkeiten zusammen ergeben 1: 1 − 0.8 = <b>0.2</b>."
+    },
+    {
+     "q": "Wie gross ist P(X ≥ 6)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>2</td><td>5</td><td>6</td></tr><tr><th>P(X = x)</th><td>0.05</td><td>0.55</td><td>0.35</td><td>0.05</td></tr></tbody></table></div>",
+     "c": [
+      "0.05",
+      "0.95",
+      "0",
+      "0.06"
+     ],
+     "a": 0,
+     "e": "Addiere alle Wahrscheinlichkeiten ab x = 6: <b>0.05</b>."
+    },
+    {
+     "q": "Wie gross ist P(X ≥ 5)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>4</td><td>5</td><td>6</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.6</td><td>0.2</td></tr></tbody></table></div>",
+     "c": [
+      "0.9",
+      "0.8",
+      "0.2",
+      "0.6"
+     ],
+     "a": 1,
+     "e": "Addiere alle Wahrscheinlichkeiten ab x = 5: <b>0.8</b>."
+    },
+    {
+     "q": "Wie gross ist P(X ≥ 7)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>1</td><td>4</td><td>5</td><td>7</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.2</td><td>0.2</td><td>0.2</td><td>0.2</td></tr></tbody></table></div>",
+     "c": [
+      "0.8",
+      "0.3",
+      "0",
+      "0.2"
+     ],
+     "a": 3,
+     "e": "Addiere alle Wahrscheinlichkeiten ab x = 7: <b>0.2</b>."
+    },
+    {
+     "q": "Wie gross ist P(X &lt; 6)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>1</td><td>6</td><td>9</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.2</td><td>0.2</td><td>0.4</td></tr></tbody></table></div>",
+     "c": [
+      "0.6",
+      "0.2",
+      "0.4",
+      "0.5"
+     ],
+     "a": 2,
+     "e": "„Kleiner als 6“: nur die Werte davor: <b>0.4</b>."
+    },
+    {
+     "q": "Die Tabelle zeigt die Wahrscheinlichkeitsverteilung einer Zufallsgrösse X. Welche Wahrscheinlichkeit fehlt?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>1</td><td>3</td><td>4</td><td>7</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.2</td><td>?</td><td>0.4</td></tr></tbody></table></div>",
+     "c": [
+      "0.8",
+      "0.25",
+      "0.3",
+      "0.2"
+     ],
+     "a": 3,
+     "e": "Alle Wahrscheinlichkeiten zusammen ergeben 1: 1 − 0.8 = <b>0.2</b>."
+    },
+    {
+     "q": "Die Tabelle zeigt die Wahrscheinlichkeitsverteilung einer Zufallsgrösse X. Welche Wahrscheinlichkeit fehlt?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>1</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>P(X = x)</th><td>0.15</td><td>0.05</td><td>0.1</td><td>0.2</td><td>?</td></tr></tbody></table></div>",
+     "c": [
+      "0.2",
+      "0.6",
+      "0.55",
+      "0.5"
+     ],
+     "a": 3,
+     "e": "Alle Wahrscheinlichkeiten zusammen ergeben 1: 1 − 0.5 = <b>0.5</b>."
+    },
+    {
+     "q": "Wie gross ist P(X ≥ 8)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>5</td><td>7</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.25</td><td>0.25</td><td>0.375</td><td>0.125</td></tr></tbody></table></div>",
+     "c": [
+      "0.875",
+      "0",
+      "0.125",
+      "0.126"
+     ],
+     "a": 2,
+     "e": "Addiere alle Wahrscheinlichkeiten ab x = 8: <b>0.125</b>."
+    },
+    {
+     "q": "Wie gross ist P(X ≥ 2)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>1</td><td>2</td><td>5</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.625</td><td>0.125</td><td>0.125</td><td>0.125</td></tr></tbody></table></div>",
+     "c": [
+      "0.625",
+      "0.375",
+      "0.125",
+      "0.25"
+     ],
+     "a": 1,
+     "e": "Addiere alle Wahrscheinlichkeiten ab x = 2: <b>0.375</b>."
+    },
+    {
+     "q": "Wie gross ist P(X ≥ 9)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>6</td><td>7</td><td>9</td></tr><tr><th>P(X = x)</th><td>0.6</td><td>0.2</td><td>0.2</td></tr></tbody></table></div>",
+     "c": [
+      "0.8",
+      "0.3",
+      "0.2",
+      "0"
+     ],
+     "a": 2,
+     "e": "Addiere alle Wahrscheinlichkeiten ab x = 9: <b>0.2</b>."
+    },
+    {
+     "q": "Wie gross ist P(X ≥ 5)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>1</td><td>5</td><td>9</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.1</td><td>0.7</td></tr></tbody></table></div>",
+     "c": [
+      "0.8",
+      "0.2",
+      "0.7",
+      "0.1"
+     ],
+     "a": 0,
+     "e": "Addiere alle Wahrscheinlichkeiten ab x = 5: <b>0.8</b>."
+    },
+    {
+     "q": "Wie gross ist P(X ≥ 1)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.2</td><td>0.2</td><td>0.4</td></tr></tbody></table></div>",
+     "c": [
+      "0.9",
+      "0.6",
+      "0.8",
+      "0.2"
+     ],
+     "a": 2,
+     "e": "Addiere alle Wahrscheinlichkeiten ab x = 1: <b>0.8</b>."
+    },
+    {
+     "q": "Wie gross ist P(X &lt; 8)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>1</td><td>3</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.4</td><td>0.2</td><td>0.2</td></tr></tbody></table></div>",
+     "c": [
+      "0.8",
+      "0.2",
+      "0.9",
+      "1"
+     ],
+     "a": 0,
+     "e": "„Kleiner als 8“: nur die Werte davor: <b>0.8</b>."
+    },
+    {
+     "q": "Die Tabelle zeigt die Wahrscheinlichkeitsverteilung einer Zufallsgrösse X. Welche Wahrscheinlichkeit fehlt?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>1</td><td>4</td><td>7</td><td>9</td></tr><tr><th>P(X = x)</th><td>0.3</td><td>0.5</td><td>?</td><td>0.1</td></tr></tbody></table></div>",
+     "c": [
+      "0.1",
+      "0.9",
+      "0.2",
+      "0.25"
+     ],
+     "a": 0,
+     "e": "Alle Wahrscheinlichkeiten zusammen ergeben 1: 1 − 0.9 = <b>0.1</b>."
+    },
+    {
+     "q": "Die Tabelle zeigt die Wahrscheinlichkeitsverteilung einer Zufallsgrösse X. Welche Wahrscheinlichkeit fehlt?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>2</td><td>5</td><td>6</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.5</td><td>0.25</td><td>0.125</td><td>?</td></tr></tbody></table></div>",
+     "c": [
+      "0.126",
+      "0.25",
+      "0.875",
+      "0.125"
+     ],
+     "a": 3,
+     "e": "Alle Wahrscheinlichkeiten zusammen ergeben 1: 1 − 0.875 = <b>0.125</b>."
+    },
+    {
+     "q": "Wie gross ist P(X &lt; 7)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>3</td><td>6</td><td>7</td></tr><tr><th>P(X = x)</th><td>0.25</td><td>0.55</td><td>0.2</td></tr></tbody></table></div>",
+     "c": [
+      "0.55",
+      "1",
+      "0.2",
+      "0.8"
+     ],
+     "a": 3,
+     "e": "„Kleiner als 7“: nur die Werte davor: <b>0.8</b>."
+    },
+    {
+     "q": "Wie gross ist P(X &lt; 7)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>2</td><td>3</td><td>4</td><td>7</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.4</td><td>0.2</td><td>0.2</td></tr></tbody></table></div>",
+     "c": [
+      "0.2",
+      "0.8",
+      "1",
+      "0.9"
+     ],
+     "a": 1,
+     "e": "„Kleiner als 7“: nur die Werte davor: <b>0.8</b>."
+    },
+    {
+     "q": "Wie gross ist P(X ≥ 6)?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>4</td><td>5</td><td>6</td></tr><tr><th>P(X = x)</th><td>0.6</td><td>0.1</td><td>0.2</td><td>0.1</td></tr></tbody></table></div>",
+     "c": [
+      "0.9",
+      "0.1",
+      "0",
+      "0.2"
+     ],
+     "a": 1,
+     "e": "Addiere alle Wahrscheinlichkeiten ab x = 6: <b>0.1</b>."
+    },
+    {
+     "q": "Die Tabelle zeigt die Wahrscheinlichkeitsverteilung einer Zufallsgrösse X. Welche Wahrscheinlichkeit fehlt?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>1</td><td>2</td><td>4</td><td>7</td></tr><tr><th>P(X = x)</th><td>0.1</td><td>0.4</td><td>0.4</td><td>?</td></tr></tbody></table></div>",
+     "c": [
+      "0.1",
+      "0.25",
+      "0.9",
+      "0.2"
+     ],
+     "a": 0,
+     "e": "Alle Wahrscheinlichkeiten zusammen ergeben 1: 1 − 0.9 = <b>0.1</b>."
+    },
+    {
+     "q": "Die Tabelle zeigt die Wahrscheinlichkeitsverteilung einer Zufallsgrösse X. Welche Wahrscheinlichkeit fehlt?<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>7</td></tr><tr><th>P(X = x)</th><td>0.1</td><td>?</td><td>0.4</td><td>0.2</td></tr></tbody></table></div>",
+     "c": [
+      "0.25",
+      "0.7",
+      "0.3",
+      "0.4"
+     ],
+     "a": 2,
+     "e": "Alle Wahrscheinlichkeiten zusammen ergeben 1: 1 − 0.7 = <b>0.3</b>."
+    }
+   ]
+  },
+  {
+   "title": "Erwartungswert berechnen",
+   "items": [
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−2</td><td>2</td><td>4</td><td>6</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.2</td><td>0.4</td><td>0.2</td></tr></tbody></table></div>",
+     "c": [
+      "10",
+      "2.8",
+      "2.5",
+      "3.6"
+     ],
+     "a": 1,
+     "e": "E(X) = (−2) · 0.2 + 2 · 0.2 + 4 · 0.4 + 6 · 0.2 = <b>2.8</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−1</td><td>1</td><td>4</td><td>5</td></tr><tr><th>P(X = x)</th><td>0.1</td><td>0.55</td><td>0.15</td><td>0.2</td></tr></tbody></table></div>",
+     "c": [
+      "2.25",
+      "9",
+      "2.05",
+      "2.06"
+     ],
+     "a": 2,
+     "e": "E(X) = (−1) · 0.1 + 1 · 0.55 + 4 · 0.15 + 5 · 0.2 = <b>2.05</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>1</td><td>5</td><td>10</td></tr><tr><th>P(X = x)</th><td>0.25</td><td>0.25</td><td>0.25</td><td>0.25</td></tr></tbody></table></div>",
+     "c": [
+      "5",
+      "16",
+      "8",
+      "4"
+     ],
+     "a": 3,
+     "e": "E(X) = 0 · 0.25 + 1 · 0.25 + 5 · 0.25 + 10 · 0.25 = <b>4</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>2</td><td>3</td><td>6</td></tr><tr><th>P(X = x)</th><td>0.4</td><td>0.2</td><td>0.4</td></tr></tbody></table></div>",
+     "c": [
+      "11",
+      "3.8",
+      "7.6",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = 2 · 0.4 + 3 · 0.2 + 6 · 0.4 = <b>3.8</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−2</td><td>1</td><td>5</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.5</td><td>0.3</td><td>0.1</td><td>0.1</td></tr></tbody></table></div>",
+     "c": [
+      "2.6",
+      "12",
+      "3",
+      "0.6"
+     ],
+     "a": 3,
+     "e": "E(X) = (−2) · 0.5 + 1 · 0.3 + 5 · 0.1 + 8 · 0.1 = <b>0.6</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>3</td><td>4</td><td>6</td></tr><tr><th>P(X = x)</th><td>0.25</td><td>0.25</td><td>0.25</td><td>0.25</td></tr></tbody></table></div>",
+     "c": [
+      "3.25",
+      "4.25",
+      "13",
+      "6.5"
+     ],
+     "a": 0,
+     "e": "E(X) = 0 · 0.25 + 3 · 0.25 + 4 · 0.25 + 6 · 0.25 = <b>3.25</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−2</td><td>0</td><td>5</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.125</td><td>0.25</td><td>0.125</td><td>0.5</td></tr></tbody></table></div>",
+     "c": [
+      "4.375",
+      "11",
+      "4.875",
+      "2.75"
+     ],
+     "a": 0,
+     "e": "E(X) = (−2) · 0.125 + 0 · 0.25 + 5 · 0.125 + 8 · 0.5 = <b>4.375</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−2</td><td>0</td><td>1</td></tr><tr><th>P(X = x)</th><td>0.25</td><td>0.5</td><td>0.25</td></tr></tbody></table></div>",
+     "c": [
+      "−1",
+      "0.75",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "−0.25"
+     ],
+     "a": 3,
+     "e": "E(X) = (−2) · 0.25 + 0 · 0.5 + 1 · 0.25 = <b>−0.25</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−5</td><td>1</td><td>3</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.1</td><td>0.4</td><td>0.4</td><td>0.1</td></tr></tbody></table></div>",
+     "c": [
+      "1.75",
+      "7",
+      "2.9",
+      "1.9"
+     ],
+     "a": 3,
+     "e": "E(X) = (−5) · 0.1 + 1 · 0.4 + 3 · 0.4 + 8 · 0.1 = <b>1.9</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>2</td><td>4</td><td>10</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.4</td><td>0.4</td></tr></tbody></table></div>",
+     "c": [
+      "16",
+      "12",
+      "6",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "E(X) = 2 · 0.2 + 4 · 0.4 + 10 · 0.4 = <b>6</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−1</td><td>4</td><td>6</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.6</td><td>0.2</td><td>0.1</td><td>0.1</td></tr></tbody></table></div>",
+     "c": [
+      "17",
+      "4.25",
+      "1.6",
+      "2.8"
+     ],
+     "a": 2,
+     "e": "E(X) = (−1) · 0.6 + 4 · 0.2 + 6 · 0.1 + 8 · 0.1 = <b>1.6</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>4</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.5</td><td>0.375</td><td>0.125</td></tr></tbody></table></div>",
+     "c": [
+      "12",
+      "4",
+      "2.5",
+      "5"
+     ],
+     "a": 2,
+     "e": "E(X) = 0 · 0.5 + 4 · 0.375 + 8 · 0.125 = <b>2.5</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−2</td><td>1</td><td>2</td><td>4</td></tr><tr><th>P(X = x)</th><td>0.35</td><td>0.55</td><td>0.05</td><td>0.05</td></tr></tbody></table></div>",
+     "c": [
+      "5",
+      "1.55",
+      "1.25",
+      "0.15"
+     ],
+     "a": 3,
+     "e": "E(X) = (−2) · 0.35 + 1 · 0.55 + 2 · 0.05 + 4 · 0.05 = <b>0.15</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>1</td><td>3</td><td>5</td></tr><tr><th>P(X = x)</th><td>0.25</td><td>0.5</td><td>0.25</td></tr></tbody></table></div>",
+     "c": [
+      "4",
+      "3",
+      "6",
+      "9"
+     ],
+     "a": 1,
+     "e": "E(X) = 1 · 0.25 + 3 · 0.5 + 5 · 0.25 = <b>3</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−2</td><td>−1</td><td>0</td><td>10</td></tr><tr><th>P(X = x)</th><td>0.1</td><td>0.6</td><td>0.2</td><td>0.1</td></tr></tbody></table></div>",
+     "c": [
+      "7",
+      "0.2",
+      "1.8",
+      "1.75"
+     ],
+     "a": 1,
+     "e": "E(X) = (−2) · 0.1 + (−1) · 0.6 + 0 · 0.2 + 10 · 0.1 = <b>0.2</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−5</td><td>0</td><td>2</td><td>5</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.2</td><td>0.2</td><td>0.4</td></tr></tbody></table></div>",
+     "c": [
+      "1.4",
+      "2",
+      "3.4",
+      "0.5"
+     ],
+     "a": 0,
+     "e": "E(X) = (−5) · 0.2 + 0 · 0.2 + 2 · 0.2 + 5 · 0.4 = <b>1.4</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>3</td><td>4</td><td>5</td><td>10</td></tr><tr><th>P(X = x)</th><td>0.2</td><td>0.1</td><td>0.1</td><td>0.6</td></tr></tbody></table></div>",
+     "c": [
+      "5.5",
+      "7.5",
+      "22",
+      "15"
+     ],
+     "a": 1,
+     "e": "E(X) = 3 · 0.2 + 4 · 0.1 + 5 · 0.1 + 10 · 0.6 = <b>7.5</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−1</td><td>4</td><td>5</td></tr><tr><th>P(X = x)</th><td>0.05</td><td>0.65</td><td>0.3</td></tr></tbody></table></div>",
+     "c": [
+      "4.05",
+      "4.15",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "8"
+     ],
+     "a": 0,
+     "e": "E(X) = (−1) · 0.05 + 4 · 0.65 + 5 · 0.3 = <b>4.05</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>−1</td><td>1</td><td>3</td><td>4</td></tr><tr><th>P(X = x)</th><td>0.25</td><td>0.25</td><td>0.25</td><td>0.25</td></tr></tbody></table></div>",
+     "c": [
+      "7",
+      "2.25",
+      "1.75",
+      "2.75"
+     ],
+     "a": 2,
+     "e": "E(X) = (−1) · 0.25 + 1 · 0.25 + 3 · 0.25 + 4 · 0.25 = <b>1.75</b>."
+    },
+    {
+     "q": "Berechne den Erwartungswert E(X).<div class='sn-tw'><table class='sn-table'><tbody><tr><th>x</th><td>0</td><td>4</td><td>5</td><td>8</td></tr><tr><th>P(X = x)</th><td>0.6</td><td>0.2</td><td>0.1</td><td>0.1</td></tr></tbody></table></div>",
+     "c": [
+      "2.1",
+      "4.2",
+      "4.25",
+      "17"
+     ],
+     "a": 0,
+     "e": "E(X) = 0 · 0.6 + 4 · 0.2 + 5 · 0.1 + 8 · 0.1 = <b>2.1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Würfel, Glücksrad, Münzen",
+   "items": [
+    {
+     "q": "Ein Glücksrad hat 5 gleich grosse Felder: 3 Felder mit 0 Fr., 1 Feld mit 5 Fr., 1 Feld mit 10 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "3 Fr.",
+      "10 Fr.",
+      "5 Fr.",
+      "3.75 Fr."
+     ],
+     "a": 0,
+     "e": "E = (5 + 0 + 10 + 0 + 0) : 5 = <b>3 Fr.</b>"
+    },
+    {
+     "q": "Ein Glücksrad hat 5 gleich grosse Felder: 3 Felder mit 0 Fr., 1 Feld mit 1 Fr., 1 Feld mit 2 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "0.60 Fr.",
+      "2 Fr.",
+      "0.75 Fr.",
+      "1 Fr."
+     ],
+     "a": 0,
+     "e": "E = (2 + 0 + 1 + 0 + 0) : 5 = <b>0.60 Fr.</b>"
+    },
+    {
+     "q": "Ein Glücksrad hat 5 gleich grosse Felder: 2 Felder mit 1 Fr., 3 Felder mit 5 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "4.25 Fr.",
+      "5 Fr.",
+      "3 Fr.",
+      "3.40 Fr."
+     ],
+     "a": 3,
+     "e": "E = (5 + 5 + 1 + 1 + 5) : 5 = <b>3.40 Fr.</b>"
+    },
+    {
+     "q": "Ein Spiel kostet 2 Fr. Einsatz. Man würfelt einmal: Bei einer 6 bekommt man 5 Fr. ausgezahlt, bei einer 5 bekommt man 1 Fr., sonst nichts. Wie gross ist der erwartete Gewinn pro Spiel?",
+     "c": [
+      "3 Fr.",
+      "−2 Fr.",
+      "−1 Fr.",
+      "1 Fr."
+     ],
+     "a": 2,
+     "e": "Auszahlung im Mittel 1 Fr., minus Einsatz 2 Fr.: <b>−1 Fr.</b> Auf lange Sicht verliert man."
+    },
+    {
+     "q": "Ein Glücksrad hat 5 gleich grosse Felder: 1 Feld mit 0 Fr., 1 Feld mit 2 Fr., 2 Felder mit 5 Fr., 1 Feld mit 10 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "4.40 Fr.",
+      "5.50 Fr.",
+      "4.25 Fr.",
+      "10 Fr."
+     ],
+     "a": 0,
+     "e": "E = (0 + 5 + 10 + 2 + 5) : 5 = <b>4.40 Fr.</b>"
+    },
+    {
+     "q": "Ein Glücksrad hat 4 gleich grosse Felder: 2 Felder mit 0 Fr., 1 Feld mit 2 Fr., 1 Feld mit 10 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "4 Fr.",
+      "3 Fr.",
+      "10 Fr.",
+      "2 Fr."
+     ],
+     "a": 1,
+     "e": "E = (0 + 0 + 2 + 10) : 4 = <b>3 Fr.</b>"
+    },
+    {
+     "q": "Ein Spiel kostet 2 Fr. Einsatz. Man würfelt einmal: Bei einer 6 bekommt man 3 Fr. ausgezahlt, sonst nichts. Wie gross ist der erwartete Gewinn pro Spiel?",
+     "c": [
+      "1.50 Fr.",
+      "0.50 Fr.",
+      "−1.50 Fr.",
+      "2.50 Fr."
+     ],
+     "a": 2,
+     "e": "Auszahlung im Mittel 0.50 Fr., minus Einsatz 2 Fr.: <b>−1.50 Fr.</b> Auf lange Sicht verliert man."
+    },
+    {
+     "q": "Zwei Münzen werden geworfen. Bei zweimal Kopf gewinnt man 5 Fr., bei zweimal Zahl gewinnt man ebenfalls 5 Fr., sonst verliert man 4 Fr. Wie gross ist der Erwartungswert des Gewinns?",
+     "c": [
+      "2 Fr.",
+      "0.50 Fr.",
+      "−0.75 Fr.",
+      "2.50 Fr."
+     ],
+     "a": 1,
+     "e": "P(gleich) = ½, P(verschieden) = ½: E = ½ · 5 − ½ · 4 = <b>0.50 Fr.</b>"
+    },
+    {
+     "q": "Ein Glücksrad hat 5 gleich grosse Felder: 1 Feld mit 0 Fr., 2 Felder mit 1 Fr., 1 Feld mit 2 Fr., 1 Feld mit 5 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "2 Fr.",
+      "1.80 Fr.",
+      "5 Fr.",
+      "2.25 Fr."
+     ],
+     "a": 1,
+     "e": "E = (0 + 1 + 1 + 2 + 5) : 5 = <b>1.80 Fr.</b>"
+    },
+    {
+     "q": "Ein Glücksrad hat 5 gleich grosse Felder: 2 Felder mit 0 Fr., 1 Feld mit 1 Fr., 2 Felder mit 2 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "1.25 Fr.",
+      "2 Fr.",
+      "1 Fr.",
+      "3 Fr."
+     ],
+     "a": 2,
+     "e": "E = (0 + 1 + 2 + 2 + 0) : 5 = <b>1 Fr.</b>"
+    },
+    {
+     "q": "Ein Spiel kostet 2 Fr. Einsatz. Man würfelt einmal: Bei einer 6 bekommt man 4 Fr. ausgezahlt, bei einer 5 bekommt man 2 Fr., sonst nichts. Wie gross ist der erwartete Gewinn pro Spiel?",
+     "c": [
+      "3 Fr.",
+      "−2 Fr.",
+      "1 Fr.",
+      "−1 Fr."
+     ],
+     "a": 3,
+     "e": "Auszahlung im Mittel 1 Fr., minus Einsatz 2 Fr.: <b>−1 Fr.</b> Auf lange Sicht verliert man."
+    },
+    {
+     "q": "Ein Glücksrad hat 5 gleich grosse Felder: 3 Felder mit 0 Fr., 2 Felder mit 10 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "3 Fr.",
+      "10 Fr.",
+      "5 Fr.",
+      "4 Fr."
+     ],
+     "a": 3,
+     "e": "E = (0 + 0 + 10 + 10 + 0) : 5 = <b>4 Fr.</b>"
+    },
+    {
+     "q": "Ein Glücksrad hat 6 gleich grosse Felder: 2 Felder mit 0 Fr., 1 Feld mit 1 Fr., 1 Feld mit 2 Fr., 1 Feld mit 5 Fr., 1 Feld mit 10 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "3 Fr.",
+      "3.60 Fr.",
+      "10 Fr.",
+      "4 Fr."
+     ],
+     "a": 0,
+     "e": "E = (10 + 1 + 5 + 0 + 2 + 0) : 6 = <b>3 Fr.</b>"
+    },
+    {
+     "q": "Zwei Münzen werden geworfen. Bei zweimal Kopf gewinnt man 1 Fr., bei zweimal Zahl gewinnt man ebenfalls 1 Fr., sonst verliert man 2 Fr. Wie gross ist der Erwartungswert des Gewinns?",
+     "c": [
+      "−0.75 Fr.",
+      "0.50 Fr.",
+      "0 Fr.",
+      "−0.50 Fr."
+     ],
+     "a": 3,
+     "e": "P(gleich) = ½, P(verschieden) = ½: E = ½ · 1 − ½ · 2 = <b>−0.50 Fr.</b>"
+    },
+    {
+     "q": "Zwei Münzen werden geworfen. Bei zweimal Kopf gewinnt man 4 Fr., bei zweimal Zahl gewinnt man ebenfalls 4 Fr., sonst verliert man 2 Fr. Wie gross ist der Erwartungswert des Gewinns?",
+     "c": [
+      "1 Fr.",
+      "3 Fr.",
+      "2 Fr.",
+      "0 Fr."
+     ],
+     "a": 0,
+     "e": "P(gleich) = ½, P(verschieden) = ½: E = ½ · 4 − ½ · 2 = <b>1 Fr.</b>"
+    },
+    {
+     "q": "Ein Glücksrad hat 5 gleich grosse Felder: 1 Feld mit 0 Fr., 1 Feld mit 1 Fr., 2 Felder mit 2 Fr., 1 Feld mit 10 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "3.75 Fr.",
+      "3.25 Fr.",
+      "10 Fr.",
+      "3 Fr."
+     ],
+     "a": 3,
+     "e": "E = (0 + 1 + 2 + 2 + 10) : 5 = <b>3 Fr.</b>"
+    },
+    {
+     "q": "Ein Glücksrad hat 5 gleich grosse Felder: 1 Feld mit 0 Fr., 2 Felder mit 1 Fr., 1 Feld mit 5 Fr., 1 Feld mit 10 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "4 Fr.",
+      "4.25 Fr.",
+      "3.40 Fr.",
+      "10 Fr."
+     ],
+     "a": 2,
+     "e": "E = (10 + 1 + 1 + 5 + 0) : 5 = <b>3.40 Fr.</b>"
+    },
+    {
+     "q": "Ein Glücksrad hat 5 gleich grosse Felder: 1 Feld mit 0 Fr., 4 Felder mit 5 Fr. Wie viel Franken wird im Mittel pro Drehung ausgezahlt?",
+     "c": [
+      "2.50 Fr.",
+      "3 Fr.",
+      "4 Fr.",
+      "5 Fr."
+     ],
+     "a": 2,
+     "e": "E = (5 + 0 + 5 + 5 + 5) : 5 = <b>4 Fr.</b>"
+    },
+    {
+     "q": "Ein Spiel kostet 1 Fr. Einsatz. Man würfelt einmal: Bei einer 6 bekommt man 10 Fr. ausgezahlt, bei einer 5 bekommt man 2 Fr., sonst nichts. Wie gross ist der erwartete Gewinn pro Spiel?",
+     "c": [
+      "3 Fr.",
+      "1 Fr.",
+      "−1 Fr.",
+      "2 Fr."
+     ],
+     "a": 1,
+     "e": "Auszahlung im Mittel 2 Fr., minus Einsatz 1 Fr.: <b>1 Fr.</b> Auf lange Sicht gewinnt man."
+    },
+    {
+     "q": "Zwei Münzen werden geworfen. Bei zweimal Kopf gewinnt man 3 Fr., bei zweimal Zahl gewinnt man ebenfalls 3 Fr., sonst verliert man 6 Fr. Wie gross ist der Erwartungswert des Gewinns?",
+     "c": [
+      "1.50 Fr.",
+      "−1.50 Fr.",
+      "0 Fr.",
+      "−2.25 Fr."
+     ],
+     "a": 1,
+     "e": "P(gleich) = ½, P(verschieden) = ½: E = ½ · 3 − ½ · 6 = <b>−1.50 Fr.</b>"
+    }
+   ]
+  },
+  {
+   "title": "Faire Spiele",
+   "items": [
+    {
+     "q": "Ein Los gewinnt mit der Wahrscheinlichkeit 0.05 den Betrag 50 Fr. (sonst nichts). Bei welchem Einsatz ist das Spiel fair?",
+     "c": [
+      "5 Fr.",
+      "2.50 Fr.",
+      "47.50 Fr.",
+      "25 Fr."
+     ],
+     "a": 1,
+     "e": "Fair heisst: Einsatz = erwartete Auszahlung = 50 · 0.05 = <b>2.50 Fr.</b>"
+    },
+    {
+     "q": "Ein Los gewinnt mit der Wahrscheinlichkeit 0.25 den Betrag 20 Fr. (sonst nichts). Bei welchem Einsatz ist das Spiel fair?",
+     "c": [
+      "6 Fr.",
+      "10 Fr.",
+      "15 Fr.",
+      "5 Fr."
+     ],
+     "a": 3,
+     "e": "Fair heisst: Einsatz = erwartete Auszahlung = 20 · 0.25 = <b>5 Fr.</b>"
+    },
+    {
+     "q": "Ein Los gewinnt mit der Wahrscheinlichkeit 0.125 den Betrag 30 Fr. (sonst nichts). Bei welchem Einsatz ist das Spiel fair?",
+     "c": [
+      "3.75 Fr.",
+      "15 Fr.",
+      "7.50 Fr.",
+      "26.25 Fr."
+     ],
+     "a": 0,
+     "e": "Fair heisst: Einsatz = erwartete Auszahlung = 30 · 0.125 = <b>3.75 Fr.</b>"
+    },
+    {
+     "q": "Ein Los gewinnt mit der Wahrscheinlichkeit 0.2 den Betrag 20 Fr. (sonst nichts). Bei welchem Einsatz ist das Spiel fair?",
+     "c": [
+      "10 Fr.",
+      "8 Fr.",
+      "4 Fr.",
+      "1 Fr."
+     ],
+     "a": 2,
+     "e": "Fair heisst: Einsatz = erwartete Auszahlung = 20 · 0.2 = <b>4 Fr.</b>"
+    },
+    {
+     "q": "Ein Spiel kostet 1 Fr. Einsatz. Mit der Wahrscheinlichkeit 1/6 bekommt man eine Auszahlung, sonst nichts. Wie hoch muss die Auszahlung sein, damit das Spiel fair ist?",
+     "c": [
+      "6 Fr.",
+      "5 Fr.",
+      "7 Fr.",
+      "8 Fr."
+     ],
+     "a": 0,
+     "e": "1/6 · A = 1 Fr. ⇒ <b>A = 6 Fr.</b>"
+    },
+    {
+     "q": "Bei einem Spiel zahlt man 3 Fr. Einsatz. Mit der Wahrscheinlichkeit 1/5 gewinnt man 17 Fr. (sonst nichts). Ist das Spiel fair?",
+     "c": [
+      "Es ist nicht fair, zugunsten der Spieler.",
+      "Es ist fair.",
+      "Es ist nicht zu entscheiden.",
+      "Es ist nicht fair, zugunsten des Veranstalters."
+     ],
+     "a": 0,
+     "e": "Erwarteter Gewinn 17 : 5 − 3 = 0.40 Fr.: <b>nicht fair, zugunsten der Spieler</b>."
+    },
+    {
+     "q": "Ein Spiel kostet 1 Fr. Einsatz. Mit der Wahrscheinlichkeit 1/8 bekommt man eine Auszahlung, sonst nichts. Wie hoch muss die Auszahlung sein, damit das Spiel fair ist?",
+     "c": [
+      "8 Fr.",
+      "10 Fr.",
+      "9 Fr.",
+      "7 Fr."
+     ],
+     "a": 0,
+     "e": "1/8 · A = 1 Fr. ⇒ <b>A = 8 Fr.</b>"
+    },
+    {
+     "q": "Ein Los gewinnt mit der Wahrscheinlichkeit 0.5 den Betrag 20 Fr. (sonst nichts). Bei welchem Einsatz ist das Spiel fair?",
+     "c": [
+      "11 Fr.",
+      "20 Fr.",
+      "10 Fr.",
+      "2.50 Fr."
+     ],
+     "a": 2,
+     "e": "Fair heisst: Einsatz = erwartete Auszahlung = 20 · 0.5 = <b>10 Fr.</b>"
+    },
+    {
+     "q": "Ein Spiel kostet 2 Fr. Einsatz. Mit der Wahrscheinlichkeit 1/8 bekommt man eine Auszahlung, sonst nichts. Wie hoch muss die Auszahlung sein, damit das Spiel fair ist?",
+     "c": [
+      "18 Fr.",
+      "16 Fr.",
+      "10 Fr.",
+      "14 Fr."
+     ],
+     "a": 1,
+     "e": "1/8 · A = 2 Fr. ⇒ <b>A = 16 Fr.</b>"
+    },
+    {
+     "q": "Ein Spiel kostet 5 Fr. Einsatz. Mit der Wahrscheinlichkeit 1/8 bekommt man eine Auszahlung, sonst nichts. Wie hoch muss die Auszahlung sein, damit das Spiel fair ist?",
+     "c": [
+      "35 Fr.",
+      "40 Fr.",
+      "13 Fr.",
+      "45 Fr."
+     ],
+     "a": 1,
+     "e": "1/8 · A = 5 Fr. ⇒ <b>A = 40 Fr.</b>"
+    },
+    {
+     "q": "Ein Los gewinnt mit der Wahrscheinlichkeit 0.05 den Betrag 10 Fr. (sonst nichts). Bei welchem Einsatz ist das Spiel fair?",
+     "c": [
+      "0.50 Fr.",
+      "1 Fr.",
+      "9.50 Fr.",
+      "5 Fr."
+     ],
+     "a": 0,
+     "e": "Fair heisst: Einsatz = erwartete Auszahlung = 10 · 0.05 = <b>0.50 Fr.</b>"
+    },
+    {
+     "q": "Ein Spiel kostet 5 Fr. Einsatz. Mit der Wahrscheinlichkeit 1/5 bekommt man eine Auszahlung, sonst nichts. Wie hoch muss die Auszahlung sein, damit das Spiel fair ist?",
+     "c": [
+      "30 Fr.",
+      "10 Fr.",
+      "25 Fr.",
+      "20 Fr."
+     ],
+     "a": 2,
+     "e": "1/5 · A = 5 Fr. ⇒ <b>A = 25 Fr.</b>"
+    },
+    {
+     "q": "Ein Los gewinnt mit der Wahrscheinlichkeit 0.1 den Betrag 50 Fr. (sonst nichts). Bei welchem Einsatz ist das Spiel fair?",
+     "c": [
+      "10 Fr.",
+      "25 Fr.",
+      "5 Fr.",
+      "45 Fr."
+     ],
+     "a": 2,
+     "e": "Fair heisst: Einsatz = erwartete Auszahlung = 50 · 0.1 = <b>5 Fr.</b>"
+    },
+    {
+     "q": "Bei einem Spiel zahlt man 2 Fr. Einsatz. Mit der Wahrscheinlichkeit 1/10 gewinnt man 20 Fr. (sonst nichts). Ist das Spiel fair?",
+     "c": [
+      "Es ist nicht fair, zugunsten der Spieler.",
+      "Es ist fair.",
+      "Es ist nicht fair, zugunsten des Veranstalters.",
+      "Es ist nicht zu entscheiden."
+     ],
+     "a": 1,
+     "e": "Erwarteter Gewinn 20 : 10 − 2 = 0 Fr.: <b>fair</b>."
+    },
+    {
+     "q": "Bei einem Spiel zahlt man 1 Fr. Einsatz. Mit der Wahrscheinlichkeit 1/5 gewinnt man 4 Fr. (sonst nichts). Ist das Spiel fair?",
+     "c": [
+      "Es ist nicht fair, zugunsten der Spieler.",
+      "Es ist nicht zu entscheiden.",
+      "Es ist nicht fair, zugunsten des Veranstalters.",
+      "Es ist fair."
+     ],
+     "a": 2,
+     "e": "Erwarteter Gewinn 4 : 5 − 1 = −0.20 Fr.: <b>nicht fair, zugunsten des Veranstalters</b>."
+    },
+    {
+     "q": "Ein Spiel kostet 3 Fr. Einsatz. Mit der Wahrscheinlichkeit 1/6 bekommt man eine Auszahlung, sonst nichts. Wie hoch muss die Auszahlung sein, damit das Spiel fair ist?",
+     "c": [
+      "15 Fr.",
+      "9 Fr.",
+      "21 Fr.",
+      "18 Fr."
+     ],
+     "a": 3,
+     "e": "1/6 · A = 3 Fr. ⇒ <b>A = 18 Fr.</b>"
+    },
+    {
+     "q": "Ein Los gewinnt mit der Wahrscheinlichkeit 0.2 den Betrag 40 Fr. (sonst nichts). Bei welchem Einsatz ist das Spiel fair?",
+     "c": [
+      "32 Fr.",
+      "20 Fr.",
+      "16 Fr.",
+      "8 Fr."
+     ],
+     "a": 3,
+     "e": "Fair heisst: Einsatz = erwartete Auszahlung = 40 · 0.2 = <b>8 Fr.</b>"
+    },
+    {
+     "q": "Ein Spiel kostet 3 Fr. Einsatz. Mit der Wahrscheinlichkeit 1/4 bekommt man eine Auszahlung, sonst nichts. Wie hoch muss die Auszahlung sein, damit das Spiel fair ist?",
+     "c": [
+      "15 Fr.",
+      "9 Fr.",
+      "7 Fr.",
+      "12 Fr."
+     ],
+     "a": 3,
+     "e": "1/4 · A = 3 Fr. ⇒ <b>A = 12 Fr.</b>"
+    },
+    {
+     "q": "Ein Los gewinnt mit der Wahrscheinlichkeit 0.2 den Betrag 10 Fr. (sonst nichts). Bei welchem Einsatz ist das Spiel fair?",
+     "c": [
+      "4 Fr.",
+      "0.50 Fr.",
+      "5 Fr.",
+      "2 Fr."
+     ],
+     "a": 3,
+     "e": "Fair heisst: Einsatz = erwartete Auszahlung = 10 · 0.2 = <b>2 Fr.</b>"
+    },
+    {
+     "q": "Ein Los gewinnt mit der Wahrscheinlichkeit 0.5 den Betrag 50 Fr. (sonst nichts). Bei welchem Einsatz ist das Spiel fair?",
+     "c": [
+      "50 Fr.",
+      "25 Fr.",
+      "26 Fr.",
+      "6.25 Fr."
+     ],
+     "a": 1,
+     "e": "Fair heisst: Einsatz = erwartete Auszahlung = 50 · 0.5 = <b>25 Fr.</b>"
+    }
+   ]
+  },
+  {
+   "title": "Sachaufgaben",
+   "items": [
+    {
+     "q": "Eine Veloversicherung kostet 40 Fr. im Jahr. Mit der Wahrscheinlichkeit 0.01 wird ein Rad gestohlen; dann zahlt sie 500 Fr. Wie viel nimmt die Versicherung im Mittel pro Vertrag ein?",
+     "c": [
+      "35 Fr.",
+      "5 Fr.",
+      "40 Fr.",
+      "45 Fr."
+     ],
+     "a": 0,
+     "e": "E = 40 − 0.01 · 500 = <b>35 Fr.</b>"
+    },
+    {
+     "q": "Eine Veloversicherung kostet 60 Fr. im Jahr. Mit der Wahrscheinlichkeit 0.02 wird ein Rad gestohlen; dann zahlt sie 1’000 Fr. Wie viel nimmt die Versicherung im Mittel pro Vertrag ein?",
+     "c": [
+      "60 Fr.",
+      "20 Fr.",
+      "80 Fr.",
+      "40 Fr."
+     ],
+     "a": 3,
+     "e": "E = 60 − 0.02 · 1’000 = <b>40 Fr.</b>"
+    },
+    {
+     "q": "Drei Münzen werden geworfen. X ist die Anzahl der Wappen. Wie gross ist E(X)?",
+     "c": [
+      "2",
+      "0.5",
+      "1.5",
+      "3"
+     ],
+     "a": 2,
+     "e": "Jede Münze trägt im Mittel ½ Wappen bei: E(X) = 3 · ½ = <b>1.5</b>."
+    },
+    {
+     "q": "In einer Urne liegen 2 rote und 3 blaue Kugeln. Man zieht zwei Kugeln ohne Zurücklegen. Sind beide rot, bekommt man 10 Fr. Wie hoch ist die Auszahlung im Mittel?",
+     "c": [
+      "1 Fr.",
+      "4 Fr.",
+      "1.60 Fr.",
+      "5 Fr."
+     ],
+     "a": 0,
+     "e": "P(rot, rot) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>, E = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · 10 = <b>1 Fr.</b>"
+    },
+    {
+     "q": "Bei einer Tombola gibt es 200 Lose zu je 2 Fr. Es gibt 1 Gewinn zu 50 Fr., 2 Gewinne zu 10 Fr., 10 Gewinne zu 5 Fr.; die übrigen Lose sind Nieten. Wie gross ist der erwartete Gewinn pro Los?",
+     "c": [
+      "−2 Fr.",
+      "0.60 Fr.",
+      "38 Fr.",
+      "−1.40 Fr."
+     ],
+     "a": 3,
+     "e": "Erwartete Auszahlung 120 : 200 = 0.60 Fr., minus 2 Fr. Lospreis: <b>−1.40 Fr.</b>"
+    },
+    {
+     "q": "Bei einer Tombola gibt es 100 Lose zu je 2 Fr. Es gibt 1 Gewinn zu 100 Fr., 2 Gewinne zu 20 Fr., 20 Gewinne zu 5 Fr.; die übrigen Lose sind Nieten. Wie gross ist der erwartete Gewinn pro Los?",
+     "c": [
+      "−2 Fr.",
+      "78 Fr.",
+      "0.40 Fr.",
+      "2.40 Fr."
+     ],
+     "a": 2,
+     "e": "Erwartete Auszahlung 240 : 100 = 2.40 Fr., minus 2 Fr. Lospreis: <b>0.40 Fr.</b>"
+    },
+    {
+     "q": "Bei einem Spiel (Einsatz 2 Fr.) gewinnt man mit der Wahrscheinlichkeit 1/10 den Betrag 18 Fr. Mit welchem Ergebnis kann man nach 500 Spielen etwa rechnen?",
+     "c": [
+      "−1’000 Fr.",
+      "−100 Fr.",
+      "−0.20 Fr.",
+      "900 Fr."
+     ],
+     "a": 1,
+     "e": "Pro Spiel −0.20 Fr., also 500 · (−0.20 Fr.) = <b>−100 Fr.</b> (ungefähr, nicht sicher)."
+    },
+    {
+     "q": "Eine Veloversicherung kostet 30 Fr. im Jahr. Mit der Wahrscheinlichkeit 0.02 wird ein Rad gestohlen; dann zahlt sie 500 Fr. Wie viel nimmt die Versicherung im Mittel pro Vertrag ein?",
+     "c": [
+      "40 Fr.",
+      "30 Fr.",
+      "20 Fr.",
+      "10 Fr."
+     ],
+     "a": 2,
+     "e": "E = 30 − 0.02 · 500 = <b>20 Fr.</b>"
+    },
+    {
+     "q": "Bei einem Spiel (Einsatz 2 Fr.) gewinnt man mit der Wahrscheinlichkeit 1/10 den Betrag 19 Fr. Mit welchem Ergebnis kann man nach 50 Spielen etwa rechnen?",
+     "c": [
+      "−100 Fr.",
+      "−5 Fr.",
+      "−0.10 Fr.",
+      "95 Fr."
+     ],
+     "a": 1,
+     "e": "Pro Spiel −0.10 Fr., also 50 · (−0.10 Fr.) = <b>−5 Fr.</b> (ungefähr, nicht sicher)."
+    },
+    {
+     "q": "Bei einem Spiel (Einsatz 1 Fr.) gewinnt man mit der Wahrscheinlichkeit 1/10 den Betrag 9 Fr. Mit welchem Ergebnis kann man nach 100 Spielen etwa rechnen?",
+     "c": [
+      "−0.10 Fr.",
+      "−10 Fr.",
+      "−100 Fr.",
+      "90 Fr."
+     ],
+     "a": 1,
+     "e": "Pro Spiel −0.10 Fr., also 100 · (−0.10 Fr.) = <b>−10 Fr.</b> (ungefähr, nicht sicher)."
+    },
+    {
+     "q": "Bei einem Spiel (Einsatz 2 Fr.) gewinnt man mit der Wahrscheinlichkeit 1/8 den Betrag 12 Fr. Mit welchem Ergebnis kann man nach 500 Spielen etwa rechnen?",
+     "c": [
+      "−0.50 Fr.",
+      "−1’000 Fr.",
+      "750 Fr.",
+      "−250 Fr."
+     ],
+     "a": 3,
+     "e": "Pro Spiel −0.50 Fr., also 500 · (−0.50 Fr.) = <b>−250 Fr.</b> (ungefähr, nicht sicher)."
+    },
+    {
+     "q": "Bei einer Tombola gibt es 100 Lose zu je 1 Fr. Es gibt 1 Gewinn zu 50 Fr., 4 Gewinne zu 20 Fr., 10 Gewinne zu 5 Fr.; die übrigen Lose sind Nieten. Wie gross ist der erwartete Gewinn pro Los?",
+     "c": [
+      "0.80 Fr.",
+      "−1 Fr.",
+      "59 Fr.",
+      "1.80 Fr."
+     ],
+     "a": 0,
+     "e": "Erwartete Auszahlung 180 : 100 = 1.80 Fr., minus 1 Fr. Lospreis: <b>0.80 Fr.</b>"
+    },
+    {
+     "q": "Eine Veloversicherung kostet 25 Fr. im Jahr. Mit der Wahrscheinlichkeit 0.02 wird ein Rad gestohlen; dann zahlt sie 3’000 Fr. Wie viel nimmt die Versicherung im Mittel pro Vertrag ein?",
+     "c": [
+      "60 Fr.",
+      "85 Fr.",
+      "−35 Fr.",
+      "25 Fr."
+     ],
+     "a": 2,
+     "e": "E = 25 − 0.02 · 3’000 = <b>−35 Fr.</b>"
+    },
+    {
+     "q": "Bei einem Spiel (Einsatz 1 Fr.) gewinnt man mit der Wahrscheinlichkeit 1/8 den Betrag 4 Fr. Mit welchem Ergebnis kann man nach 200 Spielen etwa rechnen?",
+     "c": [
+      "100 Fr.",
+      "−0.50 Fr.",
+      "−200 Fr.",
+      "−100 Fr."
+     ],
+     "a": 3,
+     "e": "Pro Spiel −0.50 Fr., also 200 · (−0.50 Fr.) = <b>−100 Fr.</b> (ungefähr, nicht sicher)."
+    },
+    {
+     "q": "Zwei Münzen werden geworfen. X ist die Anzahl der Wappen. Wie gross ist E(X)?",
+     "c": [
+      "1.5",
+      "1",
+      "2",
+      "0.5"
+     ],
+     "a": 1,
+     "e": "Jede Münze trägt im Mittel ½ Wappen bei: E(X) = 2 · ½ = <b>1</b>."
+    },
+    {
+     "q": "Bei einem Spiel (Einsatz 2 Fr.) gewinnt man mit der Wahrscheinlichkeit 1/10 den Betrag 16 Fr. Mit welchem Ergebnis kann man nach 500 Spielen etwa rechnen?",
+     "c": [
+      "−1’000 Fr.",
+      "−200 Fr.",
+      "−0.40 Fr.",
+      "800 Fr."
+     ],
+     "a": 1,
+     "e": "Pro Spiel −0.40 Fr., also 500 · (−0.40 Fr.) = <b>−200 Fr.</b> (ungefähr, nicht sicher)."
+    },
+    {
+     "q": "Bei einem Spiel (Einsatz 1 Fr.) gewinnt man mit der Wahrscheinlichkeit 1/8 den Betrag 4 Fr. Mit welchem Ergebnis kann man nach 50 Spielen etwa rechnen?",
+     "c": [
+      "−50 Fr.",
+      "25 Fr.",
+      "−0.50 Fr.",
+      "−25 Fr."
+     ],
+     "a": 3,
+     "e": "Pro Spiel −0.50 Fr., also 50 · (−0.50 Fr.) = <b>−25 Fr.</b> (ungefähr, nicht sicher)."
+    },
+    {
+     "q": "Eine Veloversicherung kostet 50 Fr. im Jahr. Mit der Wahrscheinlichkeit 0.005 wird ein Rad gestohlen; dann zahlt sie 500 Fr. Wie viel nimmt die Versicherung im Mittel pro Vertrag ein?",
+     "c": [
+      "47.50 Fr.",
+      "2.50 Fr.",
+      "50 Fr.",
+      "52.50 Fr."
+     ],
+     "a": 0,
+     "e": "E = 50 − 0.005 · 500 = <b>47.50 Fr.</b>"
+    },
+    {
+     "q": "Eine Veloversicherung kostet 25 Fr. im Jahr. Mit der Wahrscheinlichkeit 0.005 wird ein Rad gestohlen; dann zahlt sie 1’000 Fr. Wie viel nimmt die Versicherung im Mittel pro Vertrag ein?",
+     "c": [
+      "5 Fr.",
+      "30 Fr.",
+      "20 Fr.",
+      "25 Fr."
+     ],
+     "a": 2,
+     "e": "E = 25 − 0.005 · 1’000 = <b>20 Fr.</b>"
+    },
+    {
+     "q": "Eine Veloversicherung kostet 40 Fr. im Jahr. Mit der Wahrscheinlichkeit 0.01 wird ein Rad gestohlen; dann zahlt sie 2’000 Fr. Wie viel nimmt die Versicherung im Mittel pro Vertrag ein?",
+     "c": [
+      "20 Fr.",
+      "21 Fr.",
+      "60 Fr.",
+      "40 Fr."
+     ],
+     "a": 0,
+     "e": "E = 40 − 0.01 · 2’000 = <b>20 Fr.</b>"
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 6,
+ "updated": "2026-11-25",
+ "country": "ch",
+ "subject": "mathematik",
+ "grade": "gymnasium-3"
+}

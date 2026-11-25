@@ -1,0 +1,1165 @@
+{
+ "slug": "bedingte-wahrscheinlichkeit",
+ "title": "Bedingte Wahrscheinlichkeit und Satz von Bayes",
+ "seo_title": "Bedingte Wahrscheinlichkeit – Mathematik Gymnasium: Arbeitsblätter mit Lösungen",
+ "short_title": "Bedingte Wahrscheinlichkeit",
+ "domain": "Stochastik",
+ "standard_code": "RLP Mathematik 4.2 Wahrscheinlichkeit",
+ "standard_url": "https://edudoc.ch/record/236136/files/A_PLE-2024-2_d_03_rlp-maturitaetsschulen.pdf",
+ "standard_text": "Die Schülerinnen und Schüler erklären Begriffe der Wahrscheinlichkeitsrechnung und analysieren mit ihren Regeln Zufallsexperimente (Rahmenlehrplan Gymnasiale Maturitätsschulen, EDK 2024, Mathematik 4.2).",
+ "meta_desc": "Bedingte Wahrscheinlichkeit am Gymnasium: Ziehen ohne Zurücklegen, P(B | A), totale Wahrscheinlichkeit, Satz von Bayes und unabhängige Ereignisse. 100 Aufgaben mit Lösungen.",
+ "key_big": "P(B | A) = P(A ∩ B) : P(A)",
+ "key_sub": "Im Baumdiagramm: entlang eines Pfades multiplizieren, Pfade addieren",
+ "body_html": "<h2>So geht's</h2><p>P(B | A) ist die Wahrscheinlichkeit von B, wenn man schon weiss, dass A eingetreten ist: P(B | A) = P(A ∩ B) : P(A).</p><p>Im <b>Baumdiagramm</b> multipliziert man entlang eines Pfades (Pfadregel) und addiert die Pfade (Summenregel).</p><p><b>Totale Wahrscheinlichkeit</b>: P(B) = P(A) · P(B | A) + P(Ā) · P(B | Ā).</p><p><b>Satz von Bayes</b>: P(A | B) = P(A) · P(B | A) : P(B).</p><p>A und B sind <b>unabhängig</b>, wenn P(A ∩ B) = P(A) · P(B).</p><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>Krankheit 10 %, Test bei Kranken 90 % positiv, bei Gesunden 20 %</p><p class='sn-ex-s'>P(positiv) = 0.1 · 0.9 + 0.9 · 0.2 = 0.27</p><p class='sn-ex-s'>P(krank | positiv) = 0.09 : 0.27</p><p class='sn-ex-a'>Lösung: ≈ 33.3 %</p></div><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>3 rote, 2 blaue Kugeln, zwei ohne Zurücklegen</p><p class='sn-ex-s'>P(rot, rot) = 3/5 · 2/4</p><p class='sn-ex-a'>Lösung: 3/10</p></div><h2>Typische Fehler</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Typischer Fehler</th><th>So ist es richtig</th></tr></thead><tbody><tr><td>P(B | A) = P(A) · P(A ∩ B)</td><td>Durch P(A) teilen</td></tr><tr><td>Beim zweiten Zug ohne Zurücklegen wieder durch n teilen</td><td>Es sind nur noch n − 1 Kugeln</td></tr><tr><td>P(krank | positiv) = P(positiv | krank)</td><td>Die Bedingung umdrehen ändert die Wahrscheinlichkeit: Bayes verwenden</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Was bedeutet P(B | A)?",
+   "a": "Die Wahrscheinlichkeit für B unter der Bedingung, dass A eingetreten ist."
+  },
+  {
+   "q": "Wann brauche ich den Satz von Bayes?",
+   "a": "Wenn man P(B | A) kennt, aber P(A | B) sucht, zum Beispiel: Wie wahrscheinlich ist man krank, wenn der Test positiv ist?"
+  },
+  {
+   "q": "Wann sind zwei Ereignisse unabhängig?",
+   "a": "Wenn P(A ∩ B) = P(A) · P(B). Dann ändert das Wissen über A die Wahrscheinlichkeit von B nicht."
+  },
+  {
+   "q": "Warum ist ein positiver Test oft nicht sicher?",
+   "a": "Wenn eine Krankheit selten ist, sind viele positive Tests falsch-positiv. Der Satz von Bayes zeigt, wie gross dieser Anteil ist."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Ziehen ohne Zurücklegen",
+   "items": [
+    {
+     "q": "Eine Urne enthält 3 rote und 2 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 2 rote und 3 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 8 rote und 2 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>45</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>28</span><span class='fd'>45</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 8 rote und 7 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(verschiedene Farben)?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>112</span><span class='fd'>225</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>"
+     ],
+     "a": 0,
+     "e": "Zwei Pfade: rot–blau und blau–rot. 2 · <span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 4 rote und 8 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>33</span></span>"
+     ],
+     "a": 2,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 7 rote und 2 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(verschiedene Farben)?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>36</span></span>"
+     ],
+     "a": 2,
+     "e": "Zwei Pfade: rot–blau und blau–rot. 2 · <span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 8 rote und 8 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(verschiedene Farben)?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Zwei Pfade: rot–blau und blau–rot. 2 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 5 rote und 8 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>39</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>39</span></span>"
+     ],
+     "a": 3,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>5</span><span class='fd'>13</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>39</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 7 rote und 7 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(verschiedene Farben)?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>"
+     ],
+     "a": 3,
+     "e": "Zwei Pfade: rot–blau und blau–rot. 2 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 7 rote und 6 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>42</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>169</span></span>"
+     ],
+     "a": 1,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 4 rote und 2 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 6 rote und 5 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(verschiedene Farben)?",
+     "c": [
+      "<span class='fr'><span class='fn'>60</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>11</span></span>"
+     ],
+     "a": 2,
+     "e": "Zwei Pfade: rot–blau und blau–rot. 2 · <span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>6</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 4 rote und 3 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>49</span></span>"
+     ],
+     "a": 0,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 6 rote und 4 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(verschiedene Farben)?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>15</span></span>"
+     ],
+     "a": 0,
+     "e": "Zwei Pfade: rot–blau und blau–rot. 2 · <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 3 rote und 5 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>"
+     ],
+     "a": 3,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 2 rote und 4 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>"
+     ],
+     "a": 1,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 3 rote und 7 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>47</span><span class='fd'>90</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>"
+     ],
+     "a": 1,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 8 rote und 6 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(verschiedene Farben)?",
+     "c": [
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>48</span><span class='fd'>91</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>91</span></span>",
+      "<span class='fr'><span class='fn'>67</span><span class='fd'>91</span></span>"
+     ],
+     "a": 1,
+     "e": "Zwei Pfade: rot–blau und blau–rot. 2 · <span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span> · <span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span> = <b><span class='fr'><span class='fn'>48</span><span class='fd'>91</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 2 rote und 4 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(verschiedene Farben)?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>"
+     ],
+     "a": 0,
+     "e": "Zwei Pfade: rot–blau und blau–rot. 2 · <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "Eine Urne enthält 6 rote und 8 blaue Kugeln. Du ziehst zwei Kugeln ohne Zurücklegen. Wie gross ist P(beide rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>74</span><span class='fd'>91</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>91</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>98</span></span>"
+     ],
+     "a": 2,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> · <span class='fr'><span class='fn'>5</span><span class='fd'>13</span></span> = <b><span class='fr'><span class='fn'>15</span><span class='fd'>91</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Bedingte Wahrscheinlichkeit",
+   "items": [
+    {
+     "q": "Es gilt P(A) = 0.2 und P(A ∩ B) = 0.04. Berechne P(B | A).",
+     "c": [
+      "0.2",
+      "0.16",
+      "0.008",
+      "0.04"
+     ],
+     "a": 0,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.04 : 0.2 = <b>0.2</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.25 und P(A ∩ B) = 0.05. Berechne P(B | A).",
+     "c": [
+      "0.3",
+      "0.0125",
+      "0.2",
+      "0.05"
+     ],
+     "a": 2,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.05 : 0.25 = <b>0.2</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.8 und P(A ∩ B) = 0.48. Berechne P(B | A).",
+     "c": [
+      "0.48",
+      "0.6",
+      "0.384",
+      "0.32"
+     ],
+     "a": 1,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.48 : 0.8 = <b>0.6</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.6 und P(A ∩ B) = 0.3. Berechne P(B | A).",
+     "c": [
+      "0.5",
+      "0.3",
+      "0.18",
+      "0.6"
+     ],
+     "a": 0,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.3 : 0.6 = <b>0.5</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.8 und P(A ∩ B) = 0.4. Berechne P(B | A).",
+     "c": [
+      "0.6",
+      "0.4",
+      "0.32",
+      "0.5"
+     ],
+     "a": 3,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.4 : 0.8 = <b>0.5</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.4 und P(A ∩ B) = 0.2. Berechne P(B | A).",
+     "c": [
+      "0.08",
+      "0.5",
+      "0.2",
+      "0.6"
+     ],
+     "a": 1,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.2 : 0.4 = <b>0.5</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.3 und P(A ∩ B) = 0.03. Berechne P(B | A).",
+     "c": [
+      "0.009",
+      "0.1",
+      "0.27",
+      "0.03"
+     ],
+     "a": 1,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.03 : 0.3 = <b>0.1</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.25 und P(A ∩ B) = 0.15. Berechne P(B | A).",
+     "c": [
+      "0.0375",
+      "0.15",
+      "0.1",
+      "0.6"
+     ],
+     "a": 3,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.15 : 0.25 = <b>0.6</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.5 und P(A ∩ B) = 0.3. Berechne P(B | A).",
+     "c": [
+      "0.2",
+      "0.3",
+      "0.15",
+      "0.6"
+     ],
+     "a": 3,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.3 : 0.5 = <b>0.6</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.2 und P(A ∩ B) = 0.08. Berechne P(B | A).",
+     "c": [
+      "0.016",
+      "0.12",
+      "0.4",
+      "0.08"
+     ],
+     "a": 2,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.08 : 0.2 = <b>0.4</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.75 und P(A ∩ B) = 0.075. Berechne P(B | A).",
+     "c": [
+      "0.675",
+      "0.1",
+      "0.075",
+      "0.05625"
+     ],
+     "a": 1,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.075 : 0.75 = <b>0.1</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.6 und P(A ∩ B) = 0.36. Berechne P(B | A).",
+     "c": [
+      "0.6",
+      "0.216",
+      "0.24",
+      "0.36"
+     ],
+     "a": 0,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.36 : 0.6 = <b>0.6</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.75 und P(A ∩ B) = 0.5625. Berechne P(B | A).",
+     "c": [
+      "0.5625",
+      "0.1875",
+      "0.75",
+      "0.421875"
+     ],
+     "a": 2,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.5625 : 0.75 = <b>0.75</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.25 und P(A ∩ B) = 0.0625. Berechne P(B | A).",
+     "c": [
+      "0.1875",
+      "0.015625",
+      "0.0625",
+      "0.25"
+     ],
+     "a": 3,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.0625 : 0.25 = <b>0.25</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.4 und P(A ∩ B) = 0.16. Berechne P(B | A).",
+     "c": [
+      "0.4",
+      "0.16",
+      "0.24",
+      "0.064"
+     ],
+     "a": 0,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.16 : 0.4 = <b>0.4</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.75 und P(A ∩ B) = 0.1875. Berechne P(B | A).",
+     "c": [
+      "0.5625",
+      "0.25",
+      "0.140625",
+      "0.1875"
+     ],
+     "a": 1,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.1875 : 0.75 = <b>0.25</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.5 und P(A ∩ B) = 0.2. Berechne P(B | A).",
+     "c": [
+      "0.4",
+      "0.2",
+      "0.1",
+      "0.3"
+     ],
+     "a": 0,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.2 : 0.5 = <b>0.4</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.4 und P(A ∩ B) = 0.04. Berechne P(B | A).",
+     "c": [
+      "0.04",
+      "0.016",
+      "0.36",
+      "0.1"
+     ],
+     "a": 3,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.04 : 0.4 = <b>0.1</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.75 und P(A ∩ B) = 0.6. Berechne P(B | A).",
+     "c": [
+      "0.6",
+      "0.15",
+      "0.8",
+      "0.45"
+     ],
+     "a": 2,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.6 : 0.75 = <b>0.8</b>."
+    },
+    {
+     "q": "Es gilt P(A) = 0.8 und P(A ∩ B) = 0.2. Berechne P(B | A).",
+     "c": [
+      "0.6",
+      "0.16",
+      "0.25",
+      "0.2"
+     ],
+     "a": 2,
+     "e": "P(B | A) = P(A ∩ B) : P(A) = 0.2 : 0.8 = <b>0.25</b>."
+    }
+   ]
+  },
+  {
+   "title": "Totale Wahrscheinlichkeit",
+   "items": [
+    {
+     "q": "Eine Krankheit tritt bei 1 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 99 % positiv, bei Gesunden mit 10 %. Mit welcher Wahrscheinlichkeit ist ein Test positiv?",
+     "c": [
+      "1.0 %",
+      "54.5 %",
+      "10.9 %",
+      "9.9 %"
+     ],
+     "a": 2,
+     "e": "Totale Wahrscheinlichkeit: 0.01 · 0.99 + 0.99 · 0.1 = <b>10.9 %</b>."
+    },
+    {
+     "q": "An 10 % der Schultage regnet es. Bei Regen ist der Bus mit einer Wahrscheinlichkeit von 40 % verspätet, sonst mit 5 %. Mit welcher Wahrscheinlichkeit hat der Bus Verspätung?",
+     "c": [
+      "4.0 %",
+      "45.0 %",
+      "8.5 %",
+      "22.5 %"
+     ],
+     "a": 2,
+     "e": "Totale Wahrscheinlichkeit: 0.1 · 0.4 + 0.9 · 0.05 = <b>8.5 %</b>."
+    },
+    {
+     "q": "An 40 % der Schultage regnet es. Bei Regen ist der Bus mit einer Wahrscheinlichkeit von 70 % verspätet, sonst mit 15 %. Mit welcher Wahrscheinlichkeit hat der Bus Verspätung?",
+     "c": [
+      "37.0 %",
+      "42.5 %",
+      "85.0 %",
+      "28.0 %"
+     ],
+     "a": 0,
+     "e": "Totale Wahrscheinlichkeit: 0.4 · 0.7 + 0.6 · 0.15 = <b>37.0 %</b>."
+    },
+    {
+     "q": "40 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 4 % defekt, von den übrigen 5 %. Mit welcher Wahrscheinlichkeit ist ein Bauteil defekt?",
+     "c": [
+      "1.6 %",
+      "4.5 %",
+      "9.0 %",
+      "4.6 %"
+     ],
+     "a": 3,
+     "e": "Totale Wahrscheinlichkeit: 0.4 · 0.04 + 0.6 · 0.05 = <b>4.6 %</b>."
+    },
+    {
+     "q": "60 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 2 % defekt, von den übrigen 3 %. Mit welcher Wahrscheinlichkeit ist ein Bauteil defekt?",
+     "c": [
+      "5.0 %",
+      "1.2 %",
+      "2.5 %",
+      "2.4 %"
+     ],
+     "a": 3,
+     "e": "Totale Wahrscheinlichkeit: 0.6 · 0.02 + 0.4 · 0.03 = <b>2.4 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 5 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 90 % positiv, bei Gesunden mit 2 %. Mit welcher Wahrscheinlichkeit ist ein Test positiv?",
+     "c": [
+      "46.0 %",
+      "6.4 %",
+      "92.0 %",
+      "4.5 %"
+     ],
+     "a": 1,
+     "e": "Totale Wahrscheinlichkeit: 0.05 · 0.9 + 0.95 · 0.02 = <b>6.4 %</b>."
+    },
+    {
+     "q": "An 25 % der Schultage regnet es. Bei Regen ist der Bus mit einer Wahrscheinlichkeit von 40 % verspätet, sonst mit 15 %. Mit welcher Wahrscheinlichkeit hat der Bus Verspätung?",
+     "c": [
+      "21.3 %",
+      "10.0 %",
+      "55.0 %",
+      "27.5 %"
+     ],
+     "a": 0,
+     "e": "Totale Wahrscheinlichkeit: 0.25 · 0.4 + 0.75 · 0.15 = <b>21.3 %</b>."
+    },
+    {
+     "q": "40 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 2 % defekt, von den übrigen 5 %. Mit welcher Wahrscheinlichkeit ist ein Bauteil defekt?",
+     "c": [
+      "7.0 %",
+      "3.5 %",
+      "0.8 %",
+      "3.8 %"
+     ],
+     "a": 3,
+     "e": "Totale Wahrscheinlichkeit: 0.4 · 0.02 + 0.6 · 0.05 = <b>3.8 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 1 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 99 % positiv, bei Gesunden mit 20 %. Mit welcher Wahrscheinlichkeit ist ein Test positiv?",
+     "c": [
+      "1.0 %",
+      "20.8 %",
+      "19.8 %",
+      "59.5 %"
+     ],
+     "a": 1,
+     "e": "Totale Wahrscheinlichkeit: 0.01 · 0.99 + 0.99 · 0.2 = <b>20.8 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 1 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 98 % positiv, bei Gesunden mit 2 %. Mit welcher Wahrscheinlichkeit ist ein Test positiv?",
+     "c": [
+      "3.0 %",
+      "2.0 %",
+      "50.0 %",
+      "1.0 %"
+     ],
+     "a": 0,
+     "e": "Totale Wahrscheinlichkeit: 0.01 · 0.98 + 0.99 · 0.02 = <b>3.0 %</b>."
+    },
+    {
+     "q": "20 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 5 % defekt, von den übrigen 2 %. Mit welcher Wahrscheinlichkeit ist ein Bauteil defekt?",
+     "c": [
+      "3.5 %",
+      "1.0 %",
+      "2.6 %",
+      "7.0 %"
+     ],
+     "a": 2,
+     "e": "Totale Wahrscheinlichkeit: 0.2 · 0.05 + 0.8 · 0.02 = <b>2.6 %</b>."
+    },
+    {
+     "q": "40 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 10 % defekt, von den übrigen 1 %. Mit welcher Wahrscheinlichkeit ist ein Bauteil defekt?",
+     "c": [
+      "11.0 %",
+      "4.0 %",
+      "5.5 %",
+      "4.6 %"
+     ],
+     "a": 3,
+     "e": "Totale Wahrscheinlichkeit: 0.4 · 0.1 + 0.6 · 0.01 = <b>4.6 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 10 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 90 % positiv, bei Gesunden mit 10 %. Mit welcher Wahrscheinlichkeit ist ein Test positiv?",
+     "c": [
+      "18.0 %",
+      "50.0 %",
+      "9.0 %",
+      "18.1 %"
+     ],
+     "a": 0,
+     "e": "Totale Wahrscheinlichkeit: 0.1 · 0.9 + 0.9 · 0.1 = <b>18.0 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 5 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 80 % positiv, bei Gesunden mit 20 %. Mit welcher Wahrscheinlichkeit ist ein Test positiv?",
+     "c": [
+      "16.0 %",
+      "23.0 %",
+      "50.0 %",
+      "4.0 %"
+     ],
+     "a": 1,
+     "e": "Totale Wahrscheinlichkeit: 0.05 · 0.8 + 0.95 · 0.2 = <b>23.0 %</b>."
+    },
+    {
+     "q": "40 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 10 % defekt, von den übrigen 3 %. Mit welcher Wahrscheinlichkeit ist ein Bauteil defekt?",
+     "c": [
+      "13.0 %",
+      "6.5 %",
+      "4.0 %",
+      "5.8 %"
+     ],
+     "a": 3,
+     "e": "Totale Wahrscheinlichkeit: 0.4 · 0.1 + 0.6 · 0.03 = <b>5.8 %</b>."
+    },
+    {
+     "q": "20 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 10 % defekt, von den übrigen 5 %. Mit welcher Wahrscheinlichkeit ist ein Bauteil defekt?",
+     "c": [
+      "15.0 %",
+      "6.0 %",
+      "7.5 %",
+      "2.0 %"
+     ],
+     "a": 1,
+     "e": "Totale Wahrscheinlichkeit: 0.2 · 0.1 + 0.8 · 0.05 = <b>6.0 %</b>."
+    },
+    {
+     "q": "50 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 4 % defekt, von den übrigen 4 %. Mit welcher Wahrscheinlichkeit ist ein Bauteil defekt?",
+     "c": [
+      "4.0 %",
+      "2.0 %",
+      "4.1 %",
+      "8.0 %"
+     ],
+     "a": 0,
+     "e": "Totale Wahrscheinlichkeit: 0.5 · 0.04 + 0.5 · 0.04 = <b>4.0 %</b>."
+    },
+    {
+     "q": "An 25 % der Schultage regnet es. Bei Regen ist der Bus mit einer Wahrscheinlichkeit von 70 % verspätet, sonst mit 15 %. Mit welcher Wahrscheinlichkeit hat der Bus Verspätung?",
+     "c": [
+      "17.5 %",
+      "42.5 %",
+      "28.8 %",
+      "85.0 %"
+     ],
+     "a": 2,
+     "e": "Totale Wahrscheinlichkeit: 0.25 · 0.7 + 0.75 · 0.15 = <b>28.8 %</b>."
+    },
+    {
+     "q": "An 30 % der Schultage regnet es. Bei Regen ist der Bus mit einer Wahrscheinlichkeit von 50 % verspätet, sonst mit 20 %. Mit welcher Wahrscheinlichkeit hat der Bus Verspätung?",
+     "c": [
+      "35.0 %",
+      "70.0 %",
+      "29.0 %",
+      "15.0 %"
+     ],
+     "a": 2,
+     "e": "Totale Wahrscheinlichkeit: 0.3 · 0.5 + 0.7 · 0.2 = <b>29.0 %</b>."
+    },
+    {
+     "q": "40 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 10 % defekt, von den übrigen 2 %. Mit welcher Wahrscheinlichkeit ist ein Bauteil defekt?",
+     "c": [
+      "12.0 %",
+      "5.2 %",
+      "4.0 %",
+      "6.0 %"
+     ],
+     "a": 1,
+     "e": "Totale Wahrscheinlichkeit: 0.4 · 0.1 + 0.6 · 0.02 = <b>5.2 %</b>."
+    }
+   ]
+  },
+  {
+   "title": "Satz von Bayes",
+   "items": [
+    {
+     "q": "An 20 % der Schultage regnet es. Bei Regen ist der Bus mit einer Wahrscheinlichkeit von 70 % verspätet, sonst mit 5 %. Der Bus hat Verspätung. Mit welcher Wahrscheinlichkeit regnet es?",
+     "c": [
+      "≈ 77.8 %",
+      "≈ 14.0 %",
+      "≈ 18.0 %",
+      "≈ 70.0 %"
+     ],
+     "a": 0,
+     "e": "Bayes: P = 0.2 · 0.7 : 0.18 = 0.14 : 0.18 ≈ <b>77.8 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 20 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 95 % positiv, bei Gesunden mit 20 %. Ein Test ist positiv. Mit welcher Wahrscheinlichkeit ist die Person krank?",
+     "c": [
+      "≈ 19.0 %",
+      "≈ 54.3 %",
+      "≈ 95.0 %",
+      "≈ 35.0 %"
+     ],
+     "a": 1,
+     "e": "Bayes: P = 0.2 · 0.95 : 0.35 = 0.19 : 0.35 ≈ <b>54.3 %</b>."
+    },
+    {
+     "q": "40 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 3 % defekt, von den übrigen 3 %. Ein Bauteil ist defekt. Mit welcher Wahrscheinlichkeit stammt es von Maschine A?",
+     "c": [
+      "≈ 3.0 %",
+      "≈ 40.1 %",
+      "≈ 1.2 %",
+      "≈ 40.0 %"
+     ],
+     "a": 3,
+     "e": "Bayes: P = 0.4 · 0.03 : 0.03 = 0.012 : 0.03 ≈ <b>40.0 %</b>."
+    },
+    {
+     "q": "An 40 % der Schultage regnet es. Bei Regen ist der Bus mit einer Wahrscheinlichkeit von 40 % verspätet, sonst mit 20 %. Der Bus hat Verspätung. Mit welcher Wahrscheinlichkeit regnet es?",
+     "c": [
+      "≈ 40.0 %",
+      "≈ 57.1 %",
+      "≈ 16.0 %",
+      "≈ 28.0 %"
+     ],
+     "a": 1,
+     "e": "Bayes: P = 0.4 · 0.4 : 0.28 = 0.16 : 0.28 ≈ <b>57.1 %</b>."
+    },
+    {
+     "q": "50 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 4 % defekt, von den übrigen 5 %. Ein Bauteil ist defekt. Mit welcher Wahrscheinlichkeit stammt es von Maschine A?",
+     "c": [
+      "≈ 44.4 %",
+      "≈ 2.0 %",
+      "≈ 4.5 %",
+      "≈ 4.0 %"
+     ],
+     "a": 0,
+     "e": "Bayes: P = 0.5 · 0.04 : 0.045 = 0.02 : 0.045 ≈ <b>44.4 %</b>."
+    },
+    {
+     "q": "An 10 % der Schultage regnet es. Bei Regen ist der Bus mit einer Wahrscheinlichkeit von 60 % verspätet, sonst mit 15 %. Der Bus hat Verspätung. Mit welcher Wahrscheinlichkeit regnet es?",
+     "c": [
+      "≈ 60.0 %",
+      "≈ 6.0 %",
+      "≈ 19.5 %",
+      "≈ 30.8 %"
+     ],
+     "a": 3,
+     "e": "Bayes: P = 0.1 · 0.6 : 0.195 = 0.06 : 0.195 ≈ <b>30.8 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 1 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 80 % positiv, bei Gesunden mit 10 %. Ein Test ist positiv. Mit welcher Wahrscheinlichkeit ist die Person krank?",
+     "c": [
+      "≈ 80.0 %",
+      "≈ 7.5 %",
+      "≈ 10.7 %",
+      "≈ 0.8 %"
+     ],
+     "a": 1,
+     "e": "Bayes: P = 0.01 · 0.8 : 0.107 = 0.008 : 0.107 ≈ <b>7.5 %</b>."
+    },
+    {
+     "q": "50 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 3 % defekt, von den übrigen 5 %. Ein Bauteil ist defekt. Mit welcher Wahrscheinlichkeit stammt es von Maschine A?",
+     "c": [
+      "≈ 1.5 %",
+      "≈ 3.0 %",
+      "≈ 4.0 %",
+      "≈ 37.5 %"
+     ],
+     "a": 3,
+     "e": "Bayes: P = 0.5 · 0.03 : 0.04 = 0.015 : 0.04 ≈ <b>37.5 %</b>."
+    },
+    {
+     "q": "An 10 % der Schultage regnet es. Bei Regen ist der Bus mit einer Wahrscheinlichkeit von 60 % verspätet, sonst mit 20 %. Der Bus hat Verspätung. Mit welcher Wahrscheinlichkeit regnet es?",
+     "c": [
+      "≈ 60.0 %",
+      "≈ 6.0 %",
+      "≈ 25.0 %",
+      "≈ 24.0 %"
+     ],
+     "a": 2,
+     "e": "Bayes: P = 0.1 · 0.6 : 0.24 = 0.06 : 0.24 ≈ <b>25.0 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 20 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 99 % positiv, bei Gesunden mit 2 %. Ein Test ist positiv. Mit welcher Wahrscheinlichkeit ist die Person krank?",
+     "c": [
+      "≈ 21.4 %",
+      "≈ 99.0 %",
+      "≈ 92.5 %",
+      "≈ 19.8 %"
+     ],
+     "a": 2,
+     "e": "Bayes: P = 0.2 · 0.99 : 0.214 = 0.198 : 0.214 ≈ <b>92.5 %</b>."
+    },
+    {
+     "q": "40 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 8 % defekt, von den übrigen 4 %. Ein Bauteil ist defekt. Mit welcher Wahrscheinlichkeit stammt es von Maschine A?",
+     "c": [
+      "≈ 3.2 %",
+      "≈ 8.0 %",
+      "≈ 57.1 %",
+      "≈ 5.6 %"
+     ],
+     "a": 2,
+     "e": "Bayes: P = 0.4 · 0.08 : 0.056 = 0.032 : 0.056 ≈ <b>57.1 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 20 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 90 % positiv, bei Gesunden mit 2 %. Ein Test ist positiv. Mit welcher Wahrscheinlichkeit ist die Person krank?",
+     "c": [
+      "≈ 91.8 %",
+      "≈ 90.0 %",
+      "≈ 19.6 %",
+      "≈ 18.0 %"
+     ],
+     "a": 0,
+     "e": "Bayes: P = 0.2 · 0.9 : 0.196 = 0.18 : 0.196 ≈ <b>91.8 %</b>."
+    },
+    {
+     "q": "An 20 % der Schultage regnet es. Bei Regen ist der Bus mit einer Wahrscheinlichkeit von 30 % verspätet, sonst mit 20 %. Der Bus hat Verspätung. Mit welcher Wahrscheinlichkeit regnet es?",
+     "c": [
+      "≈ 6.0 %",
+      "≈ 27.3 %",
+      "≈ 30.0 %",
+      "≈ 22.0 %"
+     ],
+     "a": 1,
+     "e": "Bayes: P = 0.2 · 0.3 : 0.22 = 0.06 : 0.22 ≈ <b>27.3 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 2 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 95 % positiv, bei Gesunden mit 5 %. Ein Test ist positiv. Mit welcher Wahrscheinlichkeit ist die Person krank?",
+     "c": [
+      "≈ 6.8 %",
+      "≈ 95.0 %",
+      "≈ 27.9 %",
+      "≈ 1.9 %"
+     ],
+     "a": 2,
+     "e": "Bayes: P = 0.02 · 0.95 : 0.068 = 0.019 : 0.068 ≈ <b>27.9 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 10 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 80 % positiv, bei Gesunden mit 20 %. Ein Test ist positiv. Mit welcher Wahrscheinlichkeit ist die Person krank?",
+     "c": [
+      "≈ 80.0 %",
+      "≈ 26.0 %",
+      "≈ 8.0 %",
+      "≈ 30.8 %"
+     ],
+     "a": 3,
+     "e": "Bayes: P = 0.1 · 0.8 : 0.26 = 0.08 : 0.26 ≈ <b>30.8 %</b>."
+    },
+    {
+     "q": "30 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 3 % defekt, von den übrigen 3 %. Ein Bauteil ist defekt. Mit welcher Wahrscheinlichkeit stammt es von Maschine A?",
+     "c": [
+      "≈ 30.0 %",
+      "≈ 0.9 %",
+      "≈ 3.0 %",
+      "≈ 30.1 %"
+     ],
+     "a": 0,
+     "e": "Bayes: P = 0.3 · 0.03 : 0.03 = 0.009 : 0.03 ≈ <b>30.0 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 20 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 80 % positiv, bei Gesunden mit 10 %. Ein Test ist positiv. Mit welcher Wahrscheinlichkeit ist die Person krank?",
+     "c": [
+      "≈ 24.0 %",
+      "≈ 80.0 %",
+      "≈ 66.7 %",
+      "≈ 16.0 %"
+     ],
+     "a": 2,
+     "e": "Bayes: P = 0.2 · 0.8 : 0.24 = 0.16 : 0.24 ≈ <b>66.7 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 2 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 98 % positiv, bei Gesunden mit 20 %. Ein Test ist positiv. Mit welcher Wahrscheinlichkeit ist die Person krank?",
+     "c": [
+      "≈ 21.6 %",
+      "≈ 9.1 %",
+      "≈ 2.0 %",
+      "≈ 98.0 %"
+     ],
+     "a": 1,
+     "e": "Bayes: P = 0.02 · 0.98 : 0.2156 = 0.0196 : 0.2156 ≈ <b>9.1 %</b>."
+    },
+    {
+     "q": "50 % der Bauteile stammen von Maschine A. Von den Bauteilen aus A sind 10 % defekt, von den übrigen 3 %. Ein Bauteil ist defekt. Mit welcher Wahrscheinlichkeit stammt es von Maschine A?",
+     "c": [
+      "≈ 6.5 %",
+      "≈ 10.0 %",
+      "≈ 5.0 %",
+      "≈ 76.9 %"
+     ],
+     "a": 3,
+     "e": "Bayes: P = 0.5 · 0.1 : 0.065 = 0.05 : 0.065 ≈ <b>76.9 %</b>."
+    },
+    {
+     "q": "Eine Krankheit tritt bei 20 % der Bevölkerung auf. Ein Test ist bei Kranken mit einer Wahrscheinlichkeit von 90 % positiv, bei Gesunden mit 20 %. Ein Test ist positiv. Mit welcher Wahrscheinlichkeit ist die Person krank?",
+     "c": [
+      "≈ 52.9 %",
+      "≈ 34.0 %",
+      "≈ 18.0 %",
+      "≈ 90.0 %"
+     ],
+     "a": 0,
+     "e": "Bayes: P = 0.2 · 0.9 : 0.34 = 0.18 : 0.34 ≈ <b>52.9 %</b>."
+    }
+   ]
+  },
+  {
+   "title": "Unabhängige Ereignisse",
+   "items": [
+    {
+     "q": "Es gilt P(A) = 0.4, P(B) = 0.2 und P(A ∩ B) = 0.1. Sind A und B unabhängig?",
+     "c": [
+      "Nein, denn P(A) · P(B) = 0.08 ≠ P(A ∩ B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Nein, denn P(A) ≠ P(B)."
+     ],
+     "a": 0,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.08. Nein, denn P(A) · P(B) = 0.08 ≠ P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.6, P(B) = 0.2 und P(A ∩ B) = 0.11. Sind A und B unabhängig?",
+     "c": [
+      "Nein, denn P(A) · P(B) = 0.12 ≠ P(A ∩ B).",
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Ja, denn P(A) · P(B) = P(A ∩ B)."
+     ],
+     "a": 0,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.12. Nein, denn P(A) · P(B) = 0.12 ≠ P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.4, P(B) = 0.7 und P(A ∩ B) = 0.29. Sind A und B unabhängig?",
+     "c": [
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Nein, denn P(A) · P(B) = 0.28 ≠ P(A ∩ B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B)."
+     ],
+     "a": 2,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.28. Nein, denn P(A) · P(B) = 0.28 ≠ P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.5, P(B) = 0.7 und P(A ∩ B) = 0.35. Sind A und B unabhängig?",
+     "c": [
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Nein, denn P(A) · P(B) = 0.36 ≠ P(A ∩ B)."
+     ],
+     "a": 2,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.35. Ja, denn P(A) · P(B) = P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.2, P(B) = 0.4 und P(A ∩ B) = 0.08. Sind A und B unabhängig?",
+     "c": [
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Nein, denn P(A) · P(B) = 0.09 ≠ P(A ∩ B)."
+     ],
+     "a": 0,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.08. Ja, denn P(A) · P(B) = P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.2, P(B) = 0.2 und P(A ∩ B) = 0.06. Sind A und B unabhängig?",
+     "c": [
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Nein, denn P(A) · P(B) = 0.04 ≠ P(A ∩ B).",
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) + P(B) ≤ 1."
+     ],
+     "a": 1,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.04. Nein, denn P(A) · P(B) = 0.04 ≠ P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.5, P(B) = 0.2 und P(A ∩ B) = 0.1. Sind A und B unabhängig?",
+     "c": [
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Nein, denn P(A) · P(B) = 0.11 ≠ P(A ∩ B).",
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B)."
+     ],
+     "a": 3,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.1. Ja, denn P(A) · P(B) = P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.3, P(B) = 0.2 und P(A ∩ B) = 0.07. Sind A und B unabhängig?",
+     "c": [
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Nein, denn P(A) · P(B) = 0.06 ≠ P(A ∩ B).",
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) + P(B) ≤ 1."
+     ],
+     "a": 1,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.06. Nein, denn P(A) · P(B) = 0.06 ≠ P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.6, P(B) = 0.5 und P(A ∩ B) = 0.31. Sind A und B unabhängig?",
+     "c": [
+      "Nein, denn P(A) ≠ P(B).",
+      "Nein, denn P(A) · P(B) = 0.3 ≠ P(A ∩ B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Ja, denn P(A) + P(B) ≤ 1."
+     ],
+     "a": 1,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.3. Nein, denn P(A) · P(B) = 0.3 ≠ P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.3, P(B) = 0.2 und P(A ∩ B) = 0.06. Sind A und B unabhängig?",
+     "c": [
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Nein, denn P(A) · P(B) = 0.07 ≠ P(A ∩ B).",
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B)."
+     ],
+     "a": 3,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.06. Ja, denn P(A) · P(B) = P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.6, P(B) = 0.5 und P(A ∩ B) = 0.32. Sind A und B unabhängig?",
+     "c": [
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Nein, denn P(A) ≠ P(B).",
+      "Nein, denn P(A) · P(B) = 0.3 ≠ P(A ∩ B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B)."
+     ],
+     "a": 2,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.3. Nein, denn P(A) · P(B) = 0.3 ≠ P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.3, P(B) = 0.5 und P(A ∩ B) = 0.14. Sind A und B unabhängig?",
+     "c": [
+      "Nein, denn P(A) ≠ P(B).",
+      "Nein, denn P(A) · P(B) = 0.15 ≠ P(A ∩ B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Ja, denn P(A) + P(B) ≤ 1."
+     ],
+     "a": 1,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.15. Nein, denn P(A) · P(B) = 0.15 ≠ P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.6, P(B) = 0.4 und P(A ∩ B) = 0.26. Sind A und B unabhängig?",
+     "c": [
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Nein, denn P(A) ≠ P(B).",
+      "Nein, denn P(A) · P(B) = 0.24 ≠ P(A ∩ B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B)."
+     ],
+     "a": 2,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.24. Nein, denn P(A) · P(B) = 0.24 ≠ P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.3, P(B) = 0.3 und P(A ∩ B) = 0.11. Sind A und B unabhängig?",
+     "c": [
+      "Nein, denn P(A) · P(B) = 0.09 ≠ P(A ∩ B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Nein, denn P(A) ≠ P(B)."
+     ],
+     "a": 0,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.09. Nein, denn P(A) · P(B) = 0.09 ≠ P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.4, P(B) = 0.7 und P(A ∩ B) = 0.28. Sind A und B unabhängig?",
+     "c": [
+      "Nein, denn P(A) · P(B) = 0.29 ≠ P(A ∩ B).",
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Ja, denn P(A) · P(B) = P(A ∩ B)."
+     ],
+     "a": 3,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.28. Ja, denn P(A) · P(B) = P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.4, P(B) = 0.4 und P(A ∩ B) = 0.16. Sind A und B unabhängig?",
+     "c": [
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Nein, denn P(A) ≠ P(B).",
+      "Nein, denn P(A) · P(B) = 0.17 ≠ P(A ∩ B).",
+      "Ja, denn P(A) + P(B) ≤ 1."
+     ],
+     "a": 0,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.16. Ja, denn P(A) · P(B) = P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.6, P(B) = 0.3 und P(A ∩ B) = 0.18. Sind A und B unabhängig?",
+     "c": [
+      "Nein, denn P(A) · P(B) = 0.19 ≠ P(A ∩ B).",
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Ja, denn P(A) + P(B) ≤ 1."
+     ],
+     "a": 2,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.18. Ja, denn P(A) · P(B) = P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.3, P(B) = 0.5 und P(A ∩ B) = 0.17. Sind A und B unabhängig?",
+     "c": [
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Nein, denn P(A) · P(B) = 0.15 ≠ P(A ∩ B)."
+     ],
+     "a": 3,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.15. Nein, denn P(A) · P(B) = 0.15 ≠ P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.3, P(B) = 0.3 und P(A ∩ B) = 0.09. Sind A und B unabhängig?",
+     "c": [
+      "Nein, denn P(A) · P(B) = 0.1 ≠ P(A ∩ B).",
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Nein, denn P(A) ≠ P(B)."
+     ],
+     "a": 1,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.09. Ja, denn P(A) · P(B) = P(A ∩ B)."
+    },
+    {
+     "q": "Es gilt P(A) = 0.2, P(B) = 0.7 und P(A ∩ B) = 0.16. Sind A und B unabhängig?",
+     "c": [
+      "Nein, denn P(A) ≠ P(B).",
+      "Ja, denn P(A) + P(B) ≤ 1.",
+      "Ja, denn P(A) · P(B) = P(A ∩ B).",
+      "Nein, denn P(A) · P(B) = 0.14 ≠ P(A ∩ B)."
+     ],
+     "a": 3,
+     "e": "Unabhängig heisst P(A ∩ B) = P(A) · P(B). Hier ist P(A) · P(B) = 0.14. Nein, denn P(A) · P(B) = 0.14 ≠ P(A ∩ B)."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 5,
+ "updated": "2026-11-25",
+ "country": "ch",
+ "subject": "mathematik",
+ "grade": "gymnasium-3"
+}

@@ -12,7 +12,8 @@ if __name__ == "__main__":
     k = int(sys.argv[1])
     want = sys.argv[2:]
     m = importlib.import_module("ch_k%d" % k)
-    grade = "kindergarten" if k == 0 else "klasse-%d" % k
+    grade = "kindergarten" if k == 0 else ("gymnasium-%d" % (k - 9) if k >= 10 else "klasse-%d" % k)
+    C.KEEP_DOT = k >= 10
     for i, (slug, sort, codes, dom, src) in enumerate(m.UNITS, 1):
         if want and str(i) not in want:
             continue

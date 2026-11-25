@@ -1,0 +1,1165 @@
+{
+ "slug": "binomialverteilung",
+ "title": "Bernoulli-Ketten und Binomialverteilung",
+ "seo_title": "Binomialverteilung – Mathematik Gymnasium: Arbeitsblätter mit Lösungen",
+ "short_title": "Binomialverteilung",
+ "domain": "Stochastik",
+ "standard_code": "RLP Mathematik 4.2 Wahrscheinlichkeit",
+ "standard_url": "https://edudoc.ch/record/236136/files/A_PLE-2024-2_d_03_rlp-maturitaetsschulen.pdf",
+ "standard_text": "Die Schülerinnen und Schüler erklären Begriffe der Wahrscheinlichkeitsrechnung und analysieren mit ihren Regeln Zufallsexperimente (Rahmenlehrplan Gymnasiale Maturitätsschulen, EDK 2024, Mathematik 4.2).",
+ "meta_desc": "Binomialverteilung am Gymnasium: Parameter n und p, P(X = k) mit der Formel von Bernoulli, mindestens einmal, Erwartungswert und Varianz. 100 Aufgaben mit Lösungen.",
+ "key_big": "P(X = k) = (n über k) · p^k · (1 − p)^(n − k)",
+ "key_sub": "Erwartungswert E(X) = n · p, Varianz V(X) = n · p · (1 − p)",
+ "body_html": "<h2>So geht's</h2><p>Eine <b>Bernoulli-Kette</b>: Ein Versuch mit Treffer oder Niete wird n-mal unabhängig wiederholt, die Trefferwahrscheinlichkeit p bleibt gleich.</p><p>X = Anzahl Treffer ist <b>binomialverteilt</b>: P(X = k) = „n über k“ · p<sup>k</sup> · (1 − p)<sup>n − k</sup>.</p><p>„n über k“ zählt, an welchen Stellen die k Treffer liegen können.</p><p>Mindestens ein Treffer: P(X ≥ 1) = 1 − (1 − p)<sup>n</sup>.</p><p>E(X) = n · p und V(X) = n · p · (1 − p).</p><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>Münze 4-mal, genau 2-mal Kopf</p><p class='sn-ex-s'>„4 über 2“ = 6</p><p class='sn-ex-s'>6 · (½)² · (½)²</p><p class='sn-ex-a'>Lösung: 6/16 = 3/8</p></div><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>Würfel 3-mal, mindestens eine Sechs</p><p class='sn-ex-s'>1 − (5/6)³</p><p class='sn-ex-a'>Lösung: 91/216</p></div><h2>Typische Fehler</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Typischer Fehler</th><th>So ist es richtig</th></tr></thead><tbody><tr><td>P(X = 2) = p² · (1 − p)ⁿ⁻² ohne „n über k“</td><td>Mit der Anzahl Anordnungen multiplizieren</td></tr><tr><td>Mindestens einmal = n · p</td><td>Über das Gegenereignis rechnen: 1 − (1 − p)ⁿ</td></tr><tr><td>Ziehen ohne Zurücklegen als Binomialverteilung</td><td>Dann ändert sich p von Zug zu Zug: keine Bernoulli-Kette</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Wann ist X binomialverteilt?",
+   "a": "Wenn ein Versuch mit zwei Ausgängen n-mal unabhängig wiederholt wird, p immer gleich bleibt und X die Treffer zählt."
+  },
+  {
+   "q": "Was bedeutet der Erwartungswert n · p?",
+   "a": "So viele Treffer erwartet man im Durchschnitt, wenn man das Experiment sehr oft durchführt."
+  },
+  {
+   "q": "Wie berechne ich P(mindestens einmal)?",
+   "a": "Mit dem Gegenereignis: 1 − P(nie) = 1 − (1 − p) hoch n."
+  },
+  {
+   "q": "Was ist die Standardabweichung?",
+   "a": "Die Wurzel aus der Varianz: σ = √(n · p · (1 − p))."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Parameter n und p",
+   "items": [
+    {
+     "q": "Ein Würfel wird 13-mal geworfen. X zählt die Sechsen. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 26, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "n = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>, p = 13",
+      "n = 13, p = <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "n = 13, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 13, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird 22-mal geworfen. X zählt, wie oft Zahl fällt. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 0.5, p = 22",
+      "n = 23, p = 0.5",
+      "n = 22, p = 0.5",
+      "n = 22, p = 0.6"
+     ],
+     "a": 2,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 22, p = 0.5</b>."
+    },
+    {
+     "q": "Eine Münze wird 26-mal geworfen. X zählt, wie oft Zahl fällt. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 27, p = 0.5",
+      "n = 26, p = 0.6",
+      "n = 26, p = 0.5",
+      "n = 0.5, p = 26"
+     ],
+     "a": 2,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 26, p = 0.5</b>."
+    },
+    {
+     "q": "Eine Münze wird 30-mal geworfen. X zählt, wie oft Zahl fällt. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 30, p = 0.6",
+      "n = 0.5, p = 30",
+      "n = 31, p = 0.5",
+      "n = 30, p = 0.5"
+     ],
+     "a": 3,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 30, p = 0.5</b>."
+    },
+    {
+     "q": "15 % der Jugendlichen fahren mit dem Velo zur Schule. Man befragt 80 zufällig ausgewählte Jugendliche. X zählt die Velofahrer. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 0.15, p = 80",
+      "n = 80, p = 0.85",
+      "n = 160, p = 0.15",
+      "n = 80, p = 0.15"
+     ],
+     "a": 3,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 80, p = 0.15</b>."
+    },
+    {
+     "q": "Eine Münze wird 29-mal geworfen. X zählt, wie oft Zahl fällt. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 30, p = 0.5",
+      "n = 29, p = 0.6",
+      "n = 29, p = 0.5",
+      "n = 0.5, p = 29"
+     ],
+     "a": 2,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 29, p = 0.5</b>."
+    },
+    {
+     "q": "Bei einer Lotterie gewinnt jedes Los mit 20 %. Du kaufst 10 Lose. X zählt die Gewinne. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 20, p = 0.2",
+      "n = 10, p = 0.2",
+      "n = 0.2, p = 10",
+      "n = 10, p = 0.8"
+     ],
+     "a": 1,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 10, p = 0.2</b>."
+    },
+    {
+     "q": "Ein Würfel wird 9-mal geworfen. X zählt die Sechsen. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 9, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "n = 9, p = <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "n = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>, p = 9",
+      "n = 18, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 0,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 9, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "15 % der Jugendlichen fahren mit dem Velo zur Schule. Man befragt 40 zufällig ausgewählte Jugendliche. X zählt die Velofahrer. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 0.15, p = 40",
+      "n = 80, p = 0.15",
+      "n = 40, p = 0.85",
+      "n = 40, p = 0.15"
+     ],
+     "a": 3,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 40, p = 0.15</b>."
+    },
+    {
+     "q": "Eine Münze wird 13-mal geworfen. X zählt, wie oft Zahl fällt. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 0.5, p = 13",
+      "n = 13, p = 0.5",
+      "n = 13, p = 0.6",
+      "n = 14, p = 0.5"
+     ],
+     "a": 1,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 13, p = 0.5</b>."
+    },
+    {
+     "q": "Ein Würfel wird 24-mal geworfen. X zählt die Sechsen. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 24, p = <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "n = 48, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "n = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>, p = 24",
+      "n = 24, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 24, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Ein Würfel wird 16-mal geworfen. X zählt die Sechsen. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 16, p = <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "n = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>, p = 16",
+      "n = 16, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "n = 32, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 16, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Ein Würfel wird 17-mal geworfen. X zählt die Sechsen. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 17, p = <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "n = 17, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "n = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>, p = 17",
+      "n = 34, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 17, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "30 % der Jugendlichen fahren mit dem Velo zur Schule. Man befragt 30 zufällig ausgewählte Jugendliche. X zählt die Velofahrer. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 30, p = 0.3",
+      "n = 0.3, p = 30",
+      "n = 60, p = 0.3",
+      "n = 30, p = 0.7"
+     ],
+     "a": 0,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 30, p = 0.3</b>."
+    },
+    {
+     "q": "Bei einer Lotterie gewinnt jedes Los mit 5 %. Du kaufst 10 Lose. X zählt die Gewinne. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 10, p = 0.95",
+      "n = 10, p = 0.05",
+      "n = 0.05, p = 10",
+      "n = 20, p = 0.05"
+     ],
+     "a": 1,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 10, p = 0.05</b>."
+    },
+    {
+     "q": "Bei einer Lotterie gewinnt jedes Los mit 25 %. Du kaufst 15 Lose. X zählt die Gewinne. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 15, p = 0.25",
+      "n = 15, p = 0.75",
+      "n = 30, p = 0.25",
+      "n = 0.25, p = 15"
+     ],
+     "a": 0,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 15, p = 0.25</b>."
+    },
+    {
+     "q": "30 % der Jugendlichen fahren mit dem Velo zur Schule. Man befragt 40 zufällig ausgewählte Jugendliche. X zählt die Velofahrer. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 80, p = 0.3",
+      "n = 40, p = 0.7",
+      "n = 40, p = 0.3",
+      "n = 0.3, p = 40"
+     ],
+     "a": 2,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 40, p = 0.3</b>."
+    },
+    {
+     "q": "Bei einer Lotterie gewinnt jedes Los mit 10 %. Du kaufst 15 Lose. X zählt die Gewinne. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 0.1, p = 15",
+      "n = 15, p = 0.1",
+      "n = 15, p = 0.9",
+      "n = 30, p = 0.1"
+     ],
+     "a": 1,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 15, p = 0.1</b>."
+    },
+    {
+     "q": "Ein Würfel wird 15-mal geworfen. X zählt die Sechsen. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 15, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "n = 30, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "n = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>, p = 15",
+      "n = 15, p = <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>"
+     ],
+     "a": 0,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 15, p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird 23-mal geworfen. X zählt, wie oft Zahl fällt. Welche Parameter hat die Binomialverteilung von X?",
+     "c": [
+      "n = 23, p = 0.5",
+      "n = 0.5, p = 23",
+      "n = 24, p = 0.5",
+      "n = 23, p = 0.6"
+     ],
+     "a": 0,
+     "e": "n = Anzahl Wiederholungen, p = Trefferwahrscheinlichkeit: <b>n = 23, p = 0.5</b>."
+    }
+   ]
+  },
+  {
+   "title": "Genau k Treffer",
+   "items": [
+    {
+     "q": "Ein Glücksrad mit fünf gleich grossen Feldern wird 6-mal gedreht. Wie gross ist die Wahrscheinlichkeit für genau 5-mal Blau?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3’125</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>3’125</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15’625</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>15’625</span></span>"
+     ],
+     "a": 3,
+     "e": "P(X = 5) = „6 über 5“ · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span><sup>5</sup> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span><sup>1</sup> = <b><span class='fr'><span class='fn'>24</span><span class='fd'>15’625</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit zehn gleich grossen Feldern wird 3-mal gedreht. Wie gross ist die Wahrscheinlichkeit für genau 1-mal die Zahl 7?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>1’000</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>1’000</span></span>"
+     ],
+     "a": 3,
+     "e": "P(X = 1) = „3 über 1“ · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span><sup>1</sup> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span><sup>2</sup> = <b><span class='fr'><span class='fn'>243</span><span class='fd'>1’000</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit fünf gleich grossen Feldern wird 6-mal gedreht. Wie gross ist die Wahrscheinlichkeit für genau 1-mal Blau?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1’024</span><span class='fd'>15’625</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>6’144</span><span class='fd'>15’625</span></span>"
+     ],
+     "a": 3,
+     "e": "P(X = 1) = „6 über 1“ · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span><sup>1</sup> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span><sup>5</sup> = <b><span class='fr'><span class='fn'>6’144</span><span class='fd'>15’625</span></span></b>."
+    },
+    {
+     "q": "Ein Würfel wird 5-mal geworfen. Wie gross ist die Wahrscheinlichkeit für genau 1-mal eine Sechs?",
+     "c": [
+      "<span class='fr'><span class='fn'>625</span><span class='fd'>7’776</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>3’125</span><span class='fd'>7’776</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "P(X = 1) = „5 über 1“ · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span><sup>1</sup> · <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>4</sup> = <b><span class='fr'><span class='fn'>3’125</span><span class='fd'>7’776</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird 5-mal geworfen. Wie gross ist die Wahrscheinlichkeit für genau 2-mal Kopf?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>"
+     ],
+     "a": 0,
+     "e": "P(X = 2) = „5 über 2“ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>2</sup> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>3</sup> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird 5-mal geworfen. Wie gross ist die Wahrscheinlichkeit für genau 4-mal Kopf?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>16</span></span>"
+     ],
+     "a": 1,
+     "e": "P(X = 4) = „5 über 4“ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>4</sup> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>1</sup> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit zehn gleich grossen Feldern wird 5-mal gedreht. Wie gross ist die Wahrscheinlichkeit für genau 4-mal die Zahl 7?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100’000</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2’000</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20’000</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10’000</span></span>"
+     ],
+     "a": 2,
+     "e": "P(X = 4) = „5 über 4“ · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span><sup>4</sup> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span><sup>1</sup> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>20’000</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit vier gleich grossen Feldern wird 4-mal gedreht. Wie gross ist die Wahrscheinlichkeit für genau 3-mal Gelb?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>"
+     ],
+     "a": 0,
+     "e": "P(X = 3) = „4 über 3“ · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span><sup>3</sup> · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>1</sup> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird 8-mal geworfen. Wie gross ist die Wahrscheinlichkeit für genau 5-mal Kopf?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>32</span></span>"
+     ],
+     "a": 3,
+     "e": "P(X = 5) = „8 über 5“ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>5</sup> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>3</sup> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>32</span></span></b>."
+    },
+    {
+     "q": "Ein Würfel wird 6-mal geworfen. Wie gross ist die Wahrscheinlichkeit für genau 4-mal eine Sechs?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>432</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>15’552</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>46’656</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>1’296</span></span>"
+     ],
+     "a": 1,
+     "e": "P(X = 4) = „6 über 4“ · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span><sup>4</sup> · <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>2</sup> = <b><span class='fr'><span class='fn'>125</span><span class='fd'>15’552</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird 7-mal geworfen. Wie gross ist die Wahrscheinlichkeit für genau 1-mal Kopf?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>128</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>128</span></span>"
+     ],
+     "a": 1,
+     "e": "P(X = 1) = „7 über 1“ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>1</sup> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>6</sup> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>128</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird 4-mal geworfen. Wie gross ist die Wahrscheinlichkeit für genau 2-mal Kopf?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "P(X = 2) = „4 über 2“ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>2</sup> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>2</sup> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit vier gleich grossen Feldern wird 3-mal gedreht. Wie gross ist die Wahrscheinlichkeit für genau 1-mal Gelb?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span>"
+     ],
+     "a": 3,
+     "e": "P(X = 1) = „3 über 1“ · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span><sup>1</sup> · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>2</sup> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit fünf gleich grossen Feldern wird 4-mal gedreht. Wie gross ist die Wahrscheinlichkeit für genau 2-mal Blau?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>96</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "P(X = 2) = „4 über 2“ · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span><sup>2</sup> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span><sup>2</sup> = <b><span class='fr'><span class='fn'>96</span><span class='fd'>625</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird 3-mal geworfen. Wie gross ist die Wahrscheinlichkeit für genau 2-mal Kopf?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "P(X = 2) = „3 über 2“ · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>2</sup> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span><sup>1</sup> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit vier gleich grossen Feldern wird 5-mal gedreht. Wie gross ist die Wahrscheinlichkeit für genau 4-mal Gelb?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>1’024</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>1’024</span></span>"
+     ],
+     "a": 1,
+     "e": "P(X = 4) = „5 über 4“ · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span><sup>4</sup> · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>1</sup> = <b><span class='fr'><span class='fn'>15</span><span class='fd'>1’024</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit zehn gleich grossen Feldern wird 3-mal gedreht. Wie gross ist die Wahrscheinlichkeit für genau 2-mal die Zahl 7?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>1’000</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>1’000</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>100</span></span>"
+     ],
+     "a": 2,
+     "e": "P(X = 2) = „3 über 2“ · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span><sup>2</sup> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span><sup>1</sup> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>1’000</span></span></b>."
+    },
+    {
+     "q": "Ein Würfel wird 6-mal geworfen. Wie gross ist die Wahrscheinlichkeit für genau 1-mal eine Sechs?",
+     "c": [
+      "<span class='fr'><span class='fn'>3’125</span><span class='fd'>7’776</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>3’125</span><span class='fd'>46’656</span></span>"
+     ],
+     "a": 0,
+     "e": "P(X = 1) = „6 über 1“ · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span><sup>1</sup> · <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>5</sup> = <b><span class='fr'><span class='fn'>3’125</span><span class='fd'>7’776</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit fünf gleich grossen Feldern wird 5-mal gedreht. Wie gross ist die Wahrscheinlichkeit für genau 4-mal Blau?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3’125</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>625</span></span>"
+     ],
+     "a": 0,
+     "e": "P(X = 4) = „5 über 4“ · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span><sup>4</sup> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span><sup>1</sup> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>625</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit vier gleich grossen Feldern wird 5-mal gedreht. Wie gross ist die Wahrscheinlichkeit für genau 1-mal Gelb?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>1’024</span></span>",
+      "<span class='fr'><span class='fn'>405</span><span class='fd'>1’024</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "P(X = 1) = „5 über 1“ · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span><sup>1</sup> · <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>4</sup> = <b><span class='fr'><span class='fn'>405</span><span class='fd'>1’024</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Mit dem Taschenrechner",
+   "items": [
+    {
+     "q": "X ist binomialverteilt mit n = 4 und p = 0.9. Berechne P(X = 3) auf vier Stellen.",
+     "c": [
+      "0.0036",
+      "0.2916",
+      "0.0729",
+      "0.9999"
+     ],
+     "a": 1,
+     "e": "„4 über 3“ · 0.9<sup>3</sup> · 0.1<sup>1</sup> ≈ <b>0.2916</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 6 und p = 0.4. Berechne P(X = 3) auf vier Stellen.",
+     "c": [
+      "0.2766",
+      "0.2765",
+      "0.0138",
+      "0.9999"
+     ],
+     "a": 1,
+     "e": "„6 über 3“ · 0.4<sup>3</sup> · 0.6<sup>3</sup> ≈ <b>0.2765</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 4 und p = 0.6. Berechne P(X = 0) auf vier Stellen.",
+     "c": [
+      "0.9999",
+      "0.0257",
+      "0.0256",
+      "0.1296"
+     ],
+     "a": 2,
+     "e": "„4 über 0“ · 0.6<sup>0</sup> · 0.4<sup>4</sup> ≈ <b>0.0256</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 7 und p = 0.7. Berechne P(X = 4) auf vier Stellen.",
+     "c": [
+      "0.2269",
+      "0.0065",
+      "0.9999",
+      "0.0972"
+     ],
+     "a": 0,
+     "e": "„7 über 4“ · 0.7<sup>4</sup> · 0.3<sup>3</sup> ≈ <b>0.2269</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 7 und p = 0.3. Berechne P(X = 3) auf vier Stellen.",
+     "c": [
+      "0.0065",
+      "0.9450",
+      "0.0972",
+      "0.2269"
+     ],
+     "a": 3,
+     "e": "„7 über 3“ · 0.3<sup>3</sup> · 0.7<sup>4</sup> ≈ <b>0.2269</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 5 und p = 0.3. Berechne P(X = 1) auf vier Stellen.",
+     "c": [
+      "0.0720",
+      "0.9999",
+      "0.0284",
+      "0.3602"
+     ],
+     "a": 3,
+     "e": "„5 über 1“ · 0.3<sup>1</sup> · 0.7<sup>4</sup> ≈ <b>0.3602</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 10 und p = 0.8. Berechne P(X = 8) auf vier Stellen.",
+     "c": [
+      "0.0067",
+      "0.3020",
+      "0.0001",
+      "0.9999"
+     ],
+     "a": 1,
+     "e": "„10 über 8“ · 0.8<sup>8</sup> · 0.2<sup>2</sup> ≈ <b>0.3020</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 10 und p = 0.2. Berechne P(X = 5) auf vier Stellen.",
+     "c": [
+      "0.0806",
+      "0.0265",
+      "0.0264",
+      "0.0001"
+     ],
+     "a": 2,
+     "e": "„10 über 5“ · 0.2<sup>5</sup> · 0.8<sup>5</sup> ≈ <b>0.0264</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 6 und p = 0.6. Berechne P(X = 2) auf vier Stellen.",
+     "c": [
+      "0.0092",
+      "0.9999",
+      "0.1382",
+      "0.3110"
+     ],
+     "a": 2,
+     "e": "„6 über 2“ · 0.6<sup>2</sup> · 0.4<sup>4</sup> ≈ <b>0.1382</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 8 und p = 0.7. Berechne P(X = 2) auf vier Stellen.",
+     "c": [
+      "0.2965",
+      "0.0004",
+      "0.9999",
+      "0.0100"
+     ],
+     "a": 3,
+     "e": "„8 über 2“ · 0.7<sup>2</sup> · 0.3<sup>6</sup> ≈ <b>0.0100</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 8 und p = 0.8. Berechne P(X = 5) auf vier Stellen.",
+     "c": [
+      "0.0092",
+      "0.1468",
+      "0.0026",
+      "0.9999"
+     ],
+     "a": 1,
+     "e": "„8 über 5“ · 0.8<sup>5</sup> · 0.2<sup>3</sup> ≈ <b>0.1468</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 6 und p = 0.8. Berechne P(X = 1) auf vier Stellen.",
+     "c": [
+      "0.9999",
+      "0.3932",
+      "0.0003",
+      "0.0015"
+     ],
+     "a": 3,
+     "e": "„6 über 1“ · 0.8<sup>1</sup> · 0.2<sup>5</sup> ≈ <b>0.0015</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 4 und p = 0.8. Berechne P(X = 3) auf vier Stellen.",
+     "c": [
+      "0.9999",
+      "0.0256",
+      "0.1024",
+      "0.4096"
+     ],
+     "a": 3,
+     "e": "„4 über 3“ · 0.8<sup>3</sup> · 0.2<sup>1</sup> ≈ <b>0.4096</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 6 und p = 0.1. Berechne P(X = 2) auf vier Stellen.",
+     "c": [
+      "0.1500",
+      "0.0066",
+      "0.0984",
+      "0.0012"
+     ],
+     "a": 2,
+     "e": "„6 über 2“ · 0.1<sup>2</sup> · 0.9<sup>4</sup> ≈ <b>0.0984</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 7 und p = 0.9. Berechne P(X = 4) auf vier Stellen.",
+     "c": [
+      "0.0230",
+      "0.0026",
+      "0.0007",
+      "0.9999"
+     ],
+     "a": 0,
+     "e": "„7 über 4“ · 0.9<sup>4</sup> · 0.1<sup>3</sup> ≈ <b>0.0230</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 8 und p = 0.3. Berechne P(X = 1) auf vier Stellen.",
+     "c": [
+      "0.1977",
+      "0.9999",
+      "0.0012",
+      "0.0247"
+     ],
+     "a": 0,
+     "e": "„8 über 1“ · 0.3<sup>1</sup> · 0.7<sup>7</sup> ≈ <b>0.1977</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 4 und p = 0.3. Berechne P(X = 4) auf vier Stellen.",
+     "c": [
+      "0.2401",
+      "0.0081",
+      "0.0082",
+      "0.0080"
+     ],
+     "a": 1,
+     "e": "„4 über 4“ · 0.3<sup>4</sup> · 0.7<sup>0</sup> ≈ <b>0.0081</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 5 und p = 0.2. Berechne P(X = 0) auf vier Stellen.",
+     "c": [
+      "0.3277",
+      "0.3278",
+      "0.9999",
+      "0.0003"
+     ],
+     "a": 0,
+     "e": "„5 über 0“ · 0.2<sup>0</sup> · 0.8<sup>5</sup> ≈ <b>0.3277</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 7 und p = 0.4. Berechne P(X = 2) auf vier Stellen.",
+     "c": [
+      "0.2613",
+      "0.0124",
+      "0.0774",
+      "0.9999"
+     ],
+     "a": 0,
+     "e": "„7 über 2“ · 0.4<sup>2</sup> · 0.6<sup>5</sup> ≈ <b>0.2613</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 4 und p = 0.8. Berechne P(X = 2) auf vier Stellen.",
+     "c": [
+      "0.1537",
+      "0.0256",
+      "0.1536",
+      "0.9999"
+     ],
+     "a": 2,
+     "e": "„4 über 2“ · 0.8<sup>2</sup> · 0.2<sup>2</sup> ≈ <b>0.1536</b>."
+    }
+   ]
+  },
+  {
+   "title": "Mindestens ein Treffer",
+   "items": [
+    {
+     "q": "Ein Glücksrad mit zehn gleich grossen Feldern wird 3-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal die Zahl 7?",
+     "c": [
+      "<span class='fr'><span class='fn'>271</span><span class='fd'>1’000</span></span>",
+      "<span class='fr'><span class='fn'>999</span><span class='fd'>1’000</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>729</span><span class='fd'>1’000</span></span>"
+     ],
+     "a": 0,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span><sup>3</sup> = <b><span class='fr'><span class='fn'>271</span><span class='fd'>1’000</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit drei gleich grossen Feldern wird 3-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Rot?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>27</span></span>"
+     ],
+     "a": 3,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span><sup>3</sup> = <b><span class='fr'><span class='fn'>19</span><span class='fd'>27</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit fünf gleich grossen Feldern wird 3-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Blau?",
+     "c": [
+      "<span class='fr'><span class='fn'>124</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>61</span><span class='fd'>125</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span><sup>3</sup> = <b><span class='fr'><span class='fn'>61</span><span class='fd'>125</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit drei gleich grossen Feldern wird 2-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Rot?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span><sup>2</sup> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit drei gleich grossen Feldern wird 4-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Rot?",
+     "c": [
+      "<span class='fr'><span class='fn'>65</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>80</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>"
+     ],
+     "a": 0,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span><sup>4</sup> = <b><span class='fr'><span class='fn'>65</span><span class='fd'>81</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit vier gleich grossen Feldern wird 4-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Gelb?",
+     "c": [
+      "<span class='fr'><span class='fn'>255</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>175</span><span class='fd'>256</span></span>",
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>256</span></span>"
+     ],
+     "a": 1,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>4</sup> = <b><span class='fr'><span class='fn'>175</span><span class='fd'>256</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit zehn gleich grossen Feldern wird 2-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal die Zahl 7?",
+     "c": [
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>19</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>81</span><span class='fd'>100</span></span>"
+     ],
+     "a": 1,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span><sup>2</sup> = <b><span class='fr'><span class='fn'>19</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit vier gleich grossen Feldern wird 7-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Gelb?",
+     "c": [
+      "<span class='fr'><span class='fn'>2’187</span><span class='fd'>16’384</span></span>",
+      "<span class='fr'><span class='fn'>14’197</span><span class='fd'>16’384</span></span>",
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>16’383</span><span class='fd'>16’384</span></span>"
+     ],
+     "a": 1,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>7</sup> = <b><span class='fr'><span class='fn'>14’197</span><span class='fd'>16’384</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit drei gleich grossen Feldern wird 7-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Rot?",
+     "c": [
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>2’186</span><span class='fd'>2’187</span></span>",
+      "<span class='fr'><span class='fn'>128</span><span class='fd'>2’187</span></span>",
+      "<span class='fr'><span class='fn'>2’059</span><span class='fd'>2’187</span></span>"
+     ],
+     "a": 3,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span><sup>7</sup> = <b><span class='fr'><span class='fn'>2’059</span><span class='fd'>2’187</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit drei gleich grossen Feldern wird 5-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Rot?",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>242</span><span class='fd'>243</span></span>",
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>211</span><span class='fd'>243</span></span>"
+     ],
+     "a": 3,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span><sup>5</sup> = <b><span class='fr'><span class='fn'>211</span><span class='fd'>243</span></span></b>."
+    },
+    {
+     "q": "Ein Würfel wird 2-mal geworfen. Wie gross ist die Wahrscheinlichkeit für mindestens einmal eine Sechs?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span>"
+     ],
+     "a": 2,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>2</sup> = <b><span class='fr'><span class='fn'>11</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit vier gleich grossen Feldern wird 5-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Gelb?",
+     "c": [
+      "<span class='fr'><span class='fn'>243</span><span class='fd'>1’024</span></span>",
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>781</span><span class='fd'>1’024</span></span>",
+      "<span class='fr'><span class='fn'>1’023</span><span class='fd'>1’024</span></span>"
+     ],
+     "a": 2,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>5</sup> = <b><span class='fr'><span class='fn'>781</span><span class='fd'>1’024</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit vier gleich grossen Feldern wird 6-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Gelb?",
+     "c": [
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>3’367</span><span class='fd'>4’096</span></span>",
+      "<span class='fr'><span class='fn'>729</span><span class='fd'>4’096</span></span>",
+      "<span class='fr'><span class='fn'>4’095</span><span class='fd'>4’096</span></span>"
+     ],
+     "a": 1,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>6</sup> = <b><span class='fr'><span class='fn'>3’367</span><span class='fd'>4’096</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit fünf gleich grossen Feldern wird 2-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Blau?",
+     "c": [
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span><sup>2</sup> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit drei gleich grossen Feldern wird 6-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Rot?",
+     "c": [
+      "<span class='fr'><span class='fn'>64</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>665</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>728</span><span class='fd'>729</span></span>",
+      "<span class='fr'><span class='fn'>99</span><span class='fd'>100</span></span>"
+     ],
+     "a": 1,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span><sup>6</sup> = <b><span class='fr'><span class='fn'>665</span><span class='fd'>729</span></span></b>."
+    },
+    {
+     "q": "Ein Würfel wird 3-mal geworfen. Wie gross ist die Wahrscheinlichkeit für mindestens einmal eine Sechs?",
+     "c": [
+      "<span class='fr'><span class='fn'>91</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>216</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>215</span><span class='fd'>216</span></span>"
+     ],
+     "a": 0,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>3</sup> = <b><span class='fr'><span class='fn'>91</span><span class='fd'>216</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit zehn gleich grossen Feldern wird 4-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal die Zahl 7?",
+     "c": [
+      "<span class='fr'><span class='fn'>3’439</span><span class='fd'>10’000</span></span>",
+      "<span class='fr'><span class='fn'>6’561</span><span class='fd'>10’000</span></span>",
+      "<span class='fr'><span class='fn'>9’999</span><span class='fd'>10’000</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span><sup>4</sup> = <b><span class='fr'><span class='fn'>3’439</span><span class='fd'>10’000</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit vier gleich grossen Feldern wird 3-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Gelb?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>63</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>37</span><span class='fd'>64</span></span>"
+     ],
+     "a": 3,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span><sup>3</sup> = <b><span class='fr'><span class='fn'>37</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "Ein Würfel wird 4-mal geworfen. Wie gross ist die Wahrscheinlichkeit für mindestens einmal eine Sechs?",
+     "c": [
+      "<span class='fr'><span class='fn'>671</span><span class='fd'>1’296</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1’295</span><span class='fd'>1’296</span></span>",
+      "<span class='fr'><span class='fn'>625</span><span class='fd'>1’296</span></span>"
+     ],
+     "a": 0,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span><sup>4</sup> = <b><span class='fr'><span class='fn'>671</span><span class='fd'>1’296</span></span></b>."
+    },
+    {
+     "q": "Ein Glücksrad mit fünf gleich grossen Feldern wird 4-mal gedreht. Wie gross ist die Wahrscheinlichkeit für mindestens einmal Blau?",
+     "c": [
+      "<span class='fr'><span class='fn'>624</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>256</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>369</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Gegenereignis „nie“: P(X ≥ 1) = 1 − <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span><sup>4</sup> = <b><span class='fr'><span class='fn'>369</span><span class='fd'>625</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Erwartungswert und Varianz",
+   "items": [
+    {
+     "q": "X ist binomialverteilt mit n = 25 und p = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "7",
+      "4",
+      "6",
+      "10"
+     ],
+     "a": 2,
+     "e": "V(X) = n · p · (1 − p) = 25 · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b>6</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 200 und p = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "19",
+      "2",
+      "20",
+      "18"
+     ],
+     "a": 3,
+     "e": "V(X) = n · p · (1 − p) = 200 · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> = <b>18</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 500 und p = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "200",
+      "80",
+      "120",
+      "121"
+     ],
+     "a": 2,
+     "e": "V(X) = n · p · (1 − p) = 500 · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b>120</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 25 und p = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>. Wie gross ist der Erwartungswert E(X)?",
+     "c": [
+      "2.25",
+      "2.5",
+      "22.5",
+      "25.1"
+     ],
+     "a": 1,
+     "e": "E(X) = n · p = 25 · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> = <b>2.5</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 150 und p = <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>. Wie gross ist der Erwartungswert E(X)?",
+     "c": [
+      "24",
+      "30",
+      "150.8",
+      "120"
+     ],
+     "a": 3,
+     "e": "E(X) = n · p = 150 · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b>120</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 10 und p = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "6",
+      "3.6",
+      "2.4",
+      "3.4"
+     ],
+     "a": 2,
+     "e": "V(X) = n · p · (1 − p) = 10 · <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b>2.4</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 100 und p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Wie gross ist der Erwartungswert E(X)?",
+     "c": [
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>601</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>250</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "E(X) = n · p = 100 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>50</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 50 und p = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. Wie gross ist der Erwartungswert E(X)?",
+     "c": [
+      "10",
+      "50.2",
+      "40",
+      "8"
+     ],
+     "a": 0,
+     "e": "E(X) = n · p = 50 · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b>10</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 120 und p = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "29",
+      "30",
+      "31",
+      "60"
+     ],
+     "a": 1,
+     "e": "V(X) = n · p · (1 − p) = 120 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b>30</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 30 und p = <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "8.2",
+      "10.8",
+      "18",
+      "7.2"
+     ],
+     "a": 3,
+     "e": "V(X) = n · p · (1 − p) = 30 · <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b>7.2</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 40 und p = <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>. Wie gross ist der Erwartungswert E(X)?",
+     "c": [
+      "28",
+      "8.4",
+      "40.7",
+      "12"
+     ],
+     "a": 0,
+     "e": "E(X) = n · p = 40 · <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> = <b>28</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 40 und p = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. Wie gross ist der Erwartungswert E(X)?",
+     "c": [
+      "16",
+      "9.6",
+      "40.4",
+      "24"
+     ],
+     "a": 0,
+     "e": "E(X) = n · p = 40 · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b>16</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 100 und p = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Wie gross ist der Erwartungswert E(X)?",
+     "c": [
+      "25",
+      "75",
+      "18.75",
+      "100.25"
+     ],
+     "a": 0,
+     "e": "E(X) = n · p = 100 · <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b>25</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 500 und p = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "250",
+      "125",
+      "126",
+      "124"
+     ],
+     "a": 1,
+     "e": "V(X) = n · p · (1 − p) = 500 · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b>125</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 200 und p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>100</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>250</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>259</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "V(X) = n · p · (1 − p) = 200 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> · <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>250</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 100 und p = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>134</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>125</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "V(X) = n · p · (1 − p) = 100 · <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> · <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>125</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 60 und p = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. Wie gross ist der Erwartungswert E(X)?",
+     "c": [
+      "14.4",
+      "60.4",
+      "36",
+      "24"
+     ],
+     "a": 3,
+     "e": "E(X) = n · p = 60 · <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b>24</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 80 und p = <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "7.2",
+      "72",
+      "64.8",
+      "8.2"
+     ],
+     "a": 0,
+     "e": "V(X) = n · p · (1 − p) = 80 · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> = <b>7.2</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 50 und p = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "5",
+      "5.5",
+      "4.5",
+      "0.5"
+     ],
+     "a": 2,
+     "e": "V(X) = n · p · (1 − p) = 50 · <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> · <span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span> = <b>4.5</b>."
+    },
+    {
+     "q": "X ist binomialverteilt mit n = 120 und p = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. Wie gross ist die Varianz V(X)?",
+     "c": [
+      "20.2",
+      "19.2",
+      "24",
+      "4.8"
+     ],
+     "a": 1,
+     "e": "V(X) = n · p · (1 − p) = 120 · <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> · <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b>19.2</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 7,
+ "updated": "2026-11-25",
+ "country": "ch",
+ "subject": "mathematik",
+ "grade": "gymnasium-3"
+}

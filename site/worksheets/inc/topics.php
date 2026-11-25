@@ -282,6 +282,22 @@ function topic_defs_ch() {
     foreach ($kg as $k => $re) {
         $d[$k]['in'] = preg_replace('#/$#', '|' . $re . '/', $d[$k]['in']);
     }
+    // Gymnasium slugs
+    $gym = array('exponential-potenz-und-winkelfunktionen' => 'gebrochenrational', 'muster-und-strukturen' => 'folgen|reihen-und',
+                 'daten-und-zufall' => 'binomial|statistische');
+    foreach ($gym as $k => $re) {
+        $d[$k]['in'] = preg_replace('#/$#', '|' . $re . '/', $d[$k]['in']);
+    }
+    $gout = 'gebrochenrational|stammfunktion|integral|ableitung|kurvendiskussion|extremwert|vektor|skalarprodukt|geraden-und-ebenen';
+    foreach (array('zahlen-und-stellenwerte', 'lineare-funktionen-und-gleichungssysteme', 'geometrie') as $k) {
+        $d[$k]['out'] = $d[$k]['out'] === '/^$/' ? '/' . $gout . '/' : preg_replace('#/$#', '|' . $gout . '/', $d[$k]['out']);
+    }
+    $d['differenzial-und-integralrechnung'] = array('name' => 'Differenzial- und Integralrechnung',
+        'in' => '/ableitung|kurvendiskussion|extremwert|stammfunktion|integral/', 'out' => '/^$/',
+        'blurb' => 'Ableitungen und Tangenten, Ableitungsregeln, Kurvendiskussion, Extremwertaufgaben, Stammfunktionen, bestimmte Integrale und Flächen.');
+    $d['vektorgeometrie'] = array('name' => 'Vektorgeometrie',
+        'in' => '/vektor|skalarprodukt|geraden-und-ebenen/', 'out' => '/^$/',
+        'blurb' => 'Vektoren in der Ebene und im Raum, Betrag, Skalar- und Vektorprodukt, Winkel, Geraden und Ebenen, Schnittpunkte und Abstände.');
     return $d;
 }
 

@@ -1,0 +1,1165 @@
+{
+ "slug": "reihen-und-grenzwerte",
+ "title": "Reihen und Grenzwerte von Folgen",
+ "seo_title": "Reihen und Grenzwerte – Mathematik Gymnasium: Arbeitsblätter mit Lösungen",
+ "short_title": "Reihen und Grenzwerte",
+ "domain": "Analysis",
+ "standard_code": "RLP Mathematik 2.1 Funktionen",
+ "standard_url": "https://edudoc.ch/record/236136/files/A_PLE-2024-2_d_03_rlp-maturitaetsschulen.pdf",
+ "standard_text": "Die Schülerinnen und Schüler definieren Funktionen, nutzen verschiedene Darstellungsformen und untersuchen das asymptotische Verhalten (Rahmenlehrplan Gymnasiale Maturitätsschulen, EDK 2024, Mathematik 2.1).",
+ "meta_desc": "Reihen am Gymnasium: arithmetische und geometrische Summen, Summenzeichen, unendliche geometrische Reihen, Grenzwerte von Folgen und Sachaufgaben. 100 Aufgaben mit Lösungen.",
+ "key_big": "Arithmetisch: s = n · (a1 + an) : 2",
+ "key_sub": "Unendliche geometrische Reihe: s = a1 : (1 − q) für |q| kleiner als 1",
+ "body_html": "<h2>So geht's</h2><p>Eine <b>Reihe</b> ist die Summe der Glieder einer Folge.</p><p>Arithmetische Reihe: s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 (erstes plus letztes Glied, mal Anzahl, durch 2).</p><p>Geometrische Reihe: s<sub>n</sub> = a<sub>1</sub> · (q<sup>n</sup> − 1) : (q − 1).</p><p>Für |q| &lt; 1 hat die <b>unendliche</b> geometrische Reihe den Wert a<sub>1</sub> : (1 − q).</p><p>Grenzwert eines Bruchs für n → ∞: Zähler und Nenner durch die höchste Potenz von n teilen.</p><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>1 + 2 + 3 + … + 100</p><p class='sn-ex-s'>100 Glieder</p><p class='sn-ex-s'>(1 + 100) · 100 : 2</p><p class='sn-ex-a'>Lösung: 5’050</p></div><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>8 + 4 + 2 + 1 + …</p><p class='sn-ex-s'>q = ½</p><p class='sn-ex-s'>8 : (1 − ½) = 8 : ½</p><p class='sn-ex-a'>Lösung: 16</p></div><h2>Typische Fehler</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Typischer Fehler</th><th>So ist es richtig</th></tr></thead><tbody><tr><td>s = n · aₙ</td><td>Mittelwert von erstem und letztem Glied nehmen: n · (a₁ + aₙ) : 2</td></tr><tr><td>Auch für q = 2 eine unendliche Summe angeben</td><td>Nur für |q| kleiner als 1 gibt es einen Wert</td></tr><tr><td>(2n + 1) : (n + 3) → 1 : 3</td><td>Durch n teilen: Der Grenzwert ist 2 : 1 = 2</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Was ist der Unterschied zwischen Folge und Reihe?",
+   "a": "Eine Folge ist eine Liste von Zahlen. Eine Reihe ist die Summe dieser Zahlen."
+  },
+  {
+   "q": "Wann hat eine unendliche geometrische Reihe einen Wert?",
+   "a": "Genau dann, wenn |q| < 1 ist. Dann ist s = a1 : (1 − q)."
+  },
+  {
+   "q": "Wie berechne ich 1 + 2 + … + n schnell?",
+   "a": "Mit der Formel von Gauss: n · (n + 1) : 2."
+  },
+  {
+   "q": "Wie finde ich den Grenzwert von (2n + 1) : (n + 3)?",
+   "a": "Zähler und Nenner durch n teilen. Die Glieder 1/n und 3/n gehen gegen 0, es bleibt 2 : 1 = 2."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Arithmetische Reihen",
+   "items": [
+    {
+     "q": "Berechne 3 + 6 + 9 + … + 240.",
+     "c": [
+      "9’600",
+      "9’720",
+      "3’240",
+      "19’440"
+     ],
+     "a": 1,
+     "e": "Paare bilden: erstes + letztes Glied, 80 Glieder. Summe = <b>9’720</b>."
+    },
+    {
+     "q": "Berechne 3 + 6 + 9 + … + 180.",
+     "c": [
+      "5’400",
+      "1’830",
+      "10’980",
+      "5’490"
+     ],
+     "a": 3,
+     "e": "Paare bilden: erstes + letztes Glied, 60 Glieder. Summe = <b>5’490</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 14 Glieder der arithmetischen Folge 12, 14, 16, …",
+     "c": [
+      "350",
+      "700",
+      "325",
+      "532"
+     ],
+     "a": 0,
+     "e": "a<sub>14</sub> = 38, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 14 · 50 : 2 = <b>350</b>."
+    },
+    {
+     "q": "Berechne 1 + 2 + 3 + … + 200.",
+     "c": [
+      "40’200",
+      "19’900",
+      "20’100",
+      "40’000"
+     ],
+     "a": 2,
+     "e": "Paare bilden: erstes + letztes Glied, 200 Glieder. Summe = <b>20’100</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 16 Glieder der arithmetischen Folge 10, 11, 12, …",
+     "c": [
+      "262",
+      "280",
+      "400",
+      "560"
+     ],
+     "a": 1,
+     "e": "a<sub>16</sub> = 25, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 16 · 35 : 2 = <b>280</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 28 Glieder der arithmetischen Folge 14, 23, 32, …",
+     "c": [
+      "7’196",
+      "3’658",
+      "7’588",
+      "3’794"
+     ],
+     "a": 3,
+     "e": "a<sub>28</sub> = 257, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 28 · 271 : 2 = <b>3’794</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 14 Glieder der arithmetischen Folge 19, 22, 25, …",
+     "c": [
+      "1’078",
+      "500",
+      "539",
+      "812"
+     ],
+     "a": 2,
+     "e": "a<sub>14</sub> = 58, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 14 · 77 : 2 = <b>539</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 13 Glieder der arithmetischen Folge 1, 8, 15, …",
+     "c": [
+      "559",
+      "516",
+      "1’105",
+      "1’118"
+     ],
+     "a": 0,
+     "e": "a<sub>13</sub> = 85, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 13 · 86 : 2 = <b>559</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 47 Glieder der arithmetischen Folge 1, 5, 9, …",
+     "c": [
+      "4’371",
+      "8’742",
+      "8’695",
+      "4’278"
+     ],
+     "a": 0,
+     "e": "a<sub>47</sub> = 185, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 47 · 186 : 2 = <b>4’371</b>."
+    },
+    {
+     "q": "Berechne 2 + 4 + 6 + … + 120.",
+     "c": [
+      "1’830",
+      "7’320",
+      "3’600",
+      "3’660"
+     ],
+     "a": 3,
+     "e": "Paare bilden: erstes + letztes Glied, 60 Glieder. Summe = <b>3’660</b>."
+    },
+    {
+     "q": "Berechne 2 + 4 + 6 + … + 40.",
+     "c": [
+      "400",
+      "420",
+      "840",
+      "210"
+     ],
+     "a": 1,
+     "e": "Paare bilden: erstes + letztes Glied, 20 Glieder. Summe = <b>420</b>."
+    },
+    {
+     "q": "Berechne 1 + 2 + 3 + … + 100.",
+     "c": [
+      "10’000",
+      "10’100",
+      "4’950",
+      "5’050"
+     ],
+     "a": 3,
+     "e": "Paare bilden: erstes + letztes Glied, 100 Glieder. Summe = <b>5’050</b>."
+    },
+    {
+     "q": "Berechne 3 + 6 + 9 + … + 120.",
+     "c": [
+      "820",
+      "2’400",
+      "2’460",
+      "4’920"
+     ],
+     "a": 2,
+     "e": "Paare bilden: erstes + letztes Glied, 40 Glieder. Summe = <b>2’460</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 13 Glieder der arithmetischen Folge 17, 20, 23, …",
+     "c": [
+      "689",
+      "420",
+      "910",
+      "455"
+     ],
+     "a": 3,
+     "e": "a<sub>13</sub> = 53, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 13 · 70 : 2 = <b>455</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 14 Glieder der arithmetischen Folge 9, 15, 21, …",
+     "c": [
+      "1’218",
+      "672",
+      "624",
+      "1’344"
+     ],
+     "a": 1,
+     "e": "a<sub>14</sub> = 87, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 14 · 96 : 2 = <b>672</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 25 Glieder der arithmetischen Folge 6, 8, 10, …",
+     "c": [
+      "1’500",
+      "1’350",
+      "750",
+      "720"
+     ],
+     "a": 2,
+     "e": "a<sub>25</sub> = 54, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 25 · 60 : 2 = <b>750</b>."
+    },
+    {
+     "q": "Berechne 2 + 4 + 6 + … + 240.",
+     "c": [
+      "14’520",
+      "7’260",
+      "14’400",
+      "29’040"
+     ],
+     "a": 0,
+     "e": "Paare bilden: erstes + letztes Glied, 120 Glieder. Summe = <b>14’520</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 38 Glieder der arithmetischen Folge 11, 13, 15, …",
+     "c": [
+      "1’824",
+      "3’648",
+      "3’230",
+      "1’776"
+     ],
+     "a": 0,
+     "e": "a<sub>38</sub> = 85, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 38 · 96 : 2 = <b>1’824</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 21 Glieder der arithmetischen Folge 8, 13, 18, …",
+     "c": [
+      "2’436",
+      "2’268",
+      "1’218",
+      "1’160"
+     ],
+     "a": 2,
+     "e": "a<sub>21</sub> = 108, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 21 · 116 : 2 = <b>1’218</b>."
+    },
+    {
+     "q": "Berechne die Summe der ersten 15 Glieder der arithmetischen Folge 6, 14, 22, …",
+     "c": [
+      "1’860",
+      "930",
+      "1’770",
+      "868"
+     ],
+     "a": 1,
+     "e": "a<sub>15</sub> = 118, s<sub>n</sub> = n · (a<sub>1</sub> + a<sub>n</sub>) : 2 = 15 · 124 : 2 = <b>930</b>."
+    }
+   ]
+  },
+  {
+   "title": "Summenzeichen und geometrische Reihen",
+   "items": [
+    {
+     "q": "Berechne 3 + 9 + 27 + … (5 Glieder, geometrisch).",
+     "c": [
+      "726",
+      "243",
+      "363",
+      "729"
+     ],
+     "a": 2,
+     "e": "s<sub>n</sub> = a<sub>1</sub> · (q<sup>n</sup> − 1) : (q − 1) = 3 · (243 − 1) : 2 = <b>363</b>."
+    },
+    {
+     "q": "Berechne ∑<sub>k = 1</sub><sup>7</sup> (k + 3).",
+     "c": [
+      "52",
+      "49",
+      "70",
+      "39"
+     ],
+     "a": 1,
+     "e": "Die Glieder sind 4, 5, …, 10. Ihre Summe ist <b>49</b>."
+    },
+    {
+     "q": "Berechne 3 + 9 + 27 + … (6 Glieder, geometrisch).",
+     "c": [
+      "2’187",
+      "729",
+      "2’184",
+      "1’092"
+     ],
+     "a": 3,
+     "e": "s<sub>n</sub> = a<sub>1</sub> · (q<sup>n</sup> − 1) : (q − 1) = 3 · (729 − 1) : 2 = <b>1’092</b>."
+    },
+    {
+     "q": "Berechne 3 + 6 + 12 + … (7 Glieder, geometrisch).",
+     "c": [
+      "381",
+      "192",
+      "382",
+      "384"
+     ],
+     "a": 0,
+     "e": "s<sub>n</sub> = a<sub>1</sub> · (q<sup>n</sup> − 1) : (q − 1) = 3 · (128 − 1) : 1 = <b>381</b>."
+    },
+    {
+     "q": "Berechne 3 + 6 + 12 + … (4 Glieder, geometrisch).",
+     "c": [
+      "48",
+      "24",
+      "45",
+      "46"
+     ],
+     "a": 2,
+     "e": "s<sub>n</sub> = a<sub>1</sub> · (q<sup>n</sup> − 1) : (q − 1) = 3 · (16 − 1) : 1 = <b>45</b>."
+    },
+    {
+     "q": "Berechne ∑<sub>k = 1</sub><sup>5</sup> (5k − 3).",
+     "c": [
+      "60",
+      "110",
+      "57",
+      "38"
+     ],
+     "a": 0,
+     "e": "Die Glieder sind 2, 7, …, 22. Ihre Summe ist <b>60</b>."
+    },
+    {
+     "q": "Berechne 3 + 12 + 48 + … (8 Glieder, geometrisch).",
+     "c": [
+      "49’152",
+      "196’605",
+      "196’608",
+      "65’535"
+     ],
+     "a": 3,
+     "e": "s<sub>n</sub> = a<sub>1</sub> · (q<sup>n</sup> − 1) : (q − 1) = 3 · (65’536 − 1) : 3 = <b>65’535</b>."
+    },
+    {
+     "q": "Berechne ∑<sub>k = 1</sub><sup>7</sup> (5k).",
+     "c": [
+      "105",
+      "141",
+      "245",
+      "140"
+     ],
+     "a": 3,
+     "e": "Die Glieder sind 5, 10, …, 35. Ihre Summe ist <b>140</b>."
+    },
+    {
+     "q": "Berechne ∑<sub>k = 1</sub><sup>11</sup> (5k + 3).",
+     "c": [
+      "366",
+      "363",
+      "305",
+      "638"
+     ],
+     "a": 1,
+     "e": "Die Glieder sind 8, 13, …, 58. Ihre Summe ist <b>363</b>."
+    },
+    {
+     "q": "Berechne 2 + 4 + 8 + … (4 Glieder, geometrisch).",
+     "c": [
+      "16",
+      "32",
+      "31",
+      "30"
+     ],
+     "a": 3,
+     "e": "s<sub>n</sub> = a<sub>1</sub> · (q<sup>n</sup> − 1) : (q − 1) = 2 · (16 − 1) : 1 = <b>30</b>."
+    },
+    {
+     "q": "Berechne 3 + 12 + 48 + … (4 Glieder, geometrisch).",
+     "c": [
+      "768",
+      "255",
+      "765",
+      "192"
+     ],
+     "a": 1,
+     "e": "s<sub>n</sub> = a<sub>1</sub> · (q<sup>n</sup> − 1) : (q − 1) = 3 · (256 − 1) : 3 = <b>255</b>."
+    },
+    {
+     "q": "Berechne ∑<sub>k = 1</sub><sup>9</sup> (2k − 1).",
+     "c": [
+      "81",
+      "80",
+      "153",
+      "64"
+     ],
+     "a": 0,
+     "e": "Die Glieder sind 1, 3, …, 17. Ihre Summe ist <b>81</b>."
+    },
+    {
+     "q": "Berechne ∑<sub>k = 1</sub><sup>11</sup> (2k − 2).",
+     "c": [
+      "110",
+      "90",
+      "108",
+      "220"
+     ],
+     "a": 0,
+     "e": "Die Glieder sind 0, 2, …, 20. Ihre Summe ist <b>110</b>."
+    },
+    {
+     "q": "Berechne ∑<sub>k = 1</sub><sup>8</sup> (k + 4).",
+     "c": [
+      "72",
+      "96",
+      "68",
+      "56"
+     ],
+     "a": 2,
+     "e": "Die Glieder sind 5, 6, …, 12. Ihre Summe ist <b>68</b>."
+    },
+    {
+     "q": "Berechne 3 + 12 + 48 + … (6 Glieder, geometrisch).",
+     "c": [
+      "4’095",
+      "12’285",
+      "12’288",
+      "3’072"
+     ],
+     "a": 0,
+     "e": "s<sub>n</sub> = a<sub>1</sub> · (q<sup>n</sup> − 1) : (q − 1) = 3 · (4’096 − 1) : 3 = <b>4’095</b>."
+    },
+    {
+     "q": "Berechne 1 + 2 + 4 + … (8 Glieder, geometrisch).",
+     "c": [
+      "128",
+      "255",
+      "256",
+      "254"
+     ],
+     "a": 1,
+     "e": "s<sub>n</sub> = a<sub>1</sub> · (q<sup>n</sup> − 1) : (q − 1) = 1 · (256 − 1) : 1 = <b>255</b>."
+    },
+    {
+     "q": "Berechne 1 + 2 + 4 + … (4 Glieder, geometrisch).",
+     "c": [
+      "16",
+      "15",
+      "8",
+      "14"
+     ],
+     "a": 1,
+     "e": "s<sub>n</sub> = a<sub>1</sub> · (q<sup>n</sup> − 1) : (q − 1) = 1 · (16 − 1) : 1 = <b>15</b>."
+    },
+    {
+     "q": "Berechne ∑<sub>k = 1</sub><sup>4</sup> (k + 6).",
+     "c": [
+      "35",
+      "24",
+      "34",
+      "40"
+     ],
+     "a": 2,
+     "e": "Die Glieder sind 7, 8, …, 10. Ihre Summe ist <b>34</b>."
+    },
+    {
+     "q": "Berechne ∑<sub>k = 1</sub><sup>4</sup> (2k − 1).",
+     "c": [
+      "15",
+      "28",
+      "16",
+      "9"
+     ],
+     "a": 2,
+     "e": "Die Glieder sind 1, 3, …, 7. Ihre Summe ist <b>16</b>."
+    },
+    {
+     "q": "Berechne ∑<sub>k = 1</sub><sup>6</sup> (2k).",
+     "c": [
+      "43",
+      "30",
+      "72",
+      "42"
+     ],
+     "a": 3,
+     "e": "Die Glieder sind 2, 4, …, 12. Ihre Summe ist <b>42</b>."
+    }
+   ]
+  },
+  {
+   "title": "Unendliche geometrische Reihen",
+   "items": [
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 10 + <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> + …",
+     "c": [
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "Die Reihe hat keinen Wert.",
+      "8"
+     ],
+     "a": 0,
+     "e": "q = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 10 : <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Hat die unendliche Reihe 4 + 5 + <span class='fr'><span class='fn'>25</span><span class='fd'>4</span></span> + … einen endlichen Wert?",
+     "c": [
+      "Ja, denn |q| &lt; 1.",
+      "Ja, jede Reihe hat einen Wert.",
+      "Nein, denn |q| ≥ 1.",
+      "Nein, unendlich viele Zahlen haben nie eine endliche Summe."
+     ],
+     "a": 2,
+     "e": "Der Quotient ist q = <span class='fr'><span class='fn'>5</span><span class='fd'>4</span></span>. Eine geometrische Reihe hat nur für |q| &lt; 1 einen Wert. Nein, denn |q| ≥ 1."
+    },
+    {
+     "q": "Hat die unendliche Reihe 3 + <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> + … einen endlichen Wert?",
+     "c": [
+      "Ja, jede Reihe hat einen Wert.",
+      "Ja, denn |q| &lt; 1.",
+      "Nein, denn |q| ≥ 1.",
+      "Nein, unendlich viele Zahlen haben nie eine endliche Summe."
+     ],
+     "a": 1,
+     "e": "Der Quotient ist q = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Eine geometrische Reihe hat nur für |q| &lt; 1 einen Wert. Ja, denn |q| &lt; 1."
+    },
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 12 + 6 + 3 + …",
+     "c": [
+      "8",
+      "Die Reihe hat keinen Wert.",
+      "24",
+      "12"
+     ],
+     "a": 2,
+     "e": "q = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 12 : <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b>24</b>."
+    },
+    {
+     "q": "Hat die unendliche Reihe 4 + 2 + 1 + … einen endlichen Wert?",
+     "c": [
+      "Nein, unendlich viele Zahlen haben nie eine endliche Summe.",
+      "Nein, denn |q| ≥ 1.",
+      "Ja, jede Reihe hat einen Wert.",
+      "Ja, denn |q| &lt; 1."
+     ],
+     "a": 3,
+     "e": "Der Quotient ist q = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Eine geometrische Reihe hat nur für |q| &lt; 1 einen Wert. Ja, denn |q| &lt; 1."
+    },
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 9 + 3 + 1 + …",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "Die Reihe hat keinen Wert.",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "q = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 9 : <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>27</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 12 + 9 + <span class='fr'><span class='fn'>27</span><span class='fd'>4</span></span> + …",
+     "c": [
+      "36",
+      "<span class='fr'><span class='fn'>48</span><span class='fd'>7</span></span>",
+      "48",
+      "Die Reihe hat keinen Wert."
+     ],
+     "a": 2,
+     "e": "q = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 12 : <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b>48</b>."
+    },
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 8 + <span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span> + …",
+     "c": [
+      "12",
+      "Die Reihe hat keinen Wert.",
+      "4",
+      "6"
+     ],
+     "a": 0,
+     "e": "q = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 8 : <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b>12</b>."
+    },
+    {
+     "q": "Hat die unendliche Reihe 8 + 4 + 2 + … einen endlichen Wert?",
+     "c": [
+      "Nein, unendlich viele Zahlen haben nie eine endliche Summe.",
+      "Ja, denn |q| &lt; 1.",
+      "Ja, jede Reihe hat einen Wert.",
+      "Nein, denn |q| ≥ 1."
+     ],
+     "a": 1,
+     "e": "Der Quotient ist q = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Eine geometrische Reihe hat nur für |q| &lt; 1 einen Wert. Ja, denn |q| &lt; 1."
+    },
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 24 + 16 + <span class='fr'><span class='fn'>32</span><span class='fd'>3</span></span> + …",
+     "c": [
+      "Die Reihe hat keinen Wert.",
+      "<span class='fr'><span class='fn'>72</span><span class='fd'>5</span></span>",
+      "48",
+      "72"
+     ],
+     "a": 3,
+     "e": "q = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 24 : <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b>72</b>."
+    },
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 4 − 2 + 1 + …",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "Die Reihe hat keinen Wert.",
+      "8",
+      "−<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "q = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 4 : <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 18 + <span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>9</span><span class='fd'>8</span></span> + …",
+     "c": [
+      "24",
+      "Die Reihe hat keinen Wert.",
+      "6",
+      "<span class='fr'><span class='fn'>72</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "q = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 18 : <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b>24</b>."
+    },
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 5 + <span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>20</span><span class='fd'>9</span></span> + …",
+     "c": [
+      "3",
+      "10",
+      "15",
+      "Die Reihe hat keinen Wert."
+     ],
+     "a": 2,
+     "e": "q = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 5 : <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b>15</b>."
+    },
+    {
+     "q": "Hat die unendliche Reihe 5 + 10 + 20 + … einen endlichen Wert?",
+     "c": [
+      "Nein, unendlich viele Zahlen haben nie eine endliche Summe.",
+      "Ja, jede Reihe hat einen Wert.",
+      "Ja, denn |q| &lt; 1.",
+      "Nein, denn |q| ≥ 1."
+     ],
+     "a": 3,
+     "e": "Der Quotient ist q = 2. Eine geometrische Reihe hat nur für |q| &lt; 1 einen Wert. Nein, denn |q| ≥ 1."
+    },
+    {
+     "q": "Hat die unendliche Reihe 5 + <span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> + … einen endlichen Wert?",
+     "c": [
+      "Nein, denn |q| ≥ 1.",
+      "Ja, denn |q| &lt; 1.",
+      "Ja, jede Reihe hat einen Wert.",
+      "Nein, unendlich viele Zahlen haben nie eine endliche Summe."
+     ],
+     "a": 1,
+     "e": "Der Quotient ist q = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Eine geometrische Reihe hat nur für |q| &lt; 1 einen Wert. Ja, denn |q| &lt; 1."
+    },
+    {
+     "q": "Hat die unendliche Reihe 10 + 15 + <span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span> + … einen endlichen Wert?",
+     "c": [
+      "Ja, denn |q| &lt; 1.",
+      "Nein, unendlich viele Zahlen haben nie eine endliche Summe.",
+      "Nein, denn |q| ≥ 1.",
+      "Ja, jede Reihe hat einen Wert."
+     ],
+     "a": 2,
+     "e": "Der Quotient ist q = <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>. Eine geometrische Reihe hat nur für |q| &lt; 1 einen Wert. Nein, denn |q| ≥ 1."
+    },
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + …",
+     "c": [
+      "Die Reihe hat keinen Wert.",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "2"
+     ],
+     "a": 1,
+     "e": "q = −<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 1 : <span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 10 + 4 + <span class='fr'><span class='fn'>8</span><span class='fd'>5</span></span> + …",
+     "c": [
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>",
+      "Die Reihe hat keinen Wert.",
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "q = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 10 : <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>50</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Hat die unendliche Reihe 6 + 2 + <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> + … einen endlichen Wert?",
+     "c": [
+      "Ja, jede Reihe hat einen Wert.",
+      "Ja, denn |q| &lt; 1.",
+      "Nein, unendlich viele Zahlen haben nie eine endliche Summe.",
+      "Nein, denn |q| ≥ 1."
+     ],
+     "a": 1,
+     "e": "Der Quotient ist q = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. Eine geometrische Reihe hat nur für |q| &lt; 1 einen Wert. Ja, denn |q| &lt; 1."
+    },
+    {
+     "q": "Berechne den Wert der unendlichen geometrischen Reihe 2 + 1 + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> + …",
+     "c": [
+      "4",
+      "2",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>3</span></span>",
+      "Die Reihe hat keinen Wert."
+     ],
+     "a": 0,
+     "e": "q = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, |q| &lt; 1. s = a<sub>1</sub> : (1 − q) = 2 : <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b>4</b>."
+    }
+   ]
+  },
+  {
+   "title": "Grenzwerte von Folgen",
+   "items": [
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (9n² − 1) : (9n − 3) für n → ∞?",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "1",
+      "Die Folge wächst über alle Grenzen."
+     ],
+     "a": 3,
+     "e": "Der Zähler wächst schneller (n² gegen n). <b>Kein Grenzwert</b>: Die Folge wächst über alle Grenzen."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (5n − 9) : (n² − 3) für n → ∞?",
+     "c": [
+      "0",
+      "5",
+      "3",
+      "Der Grenzwert existiert nicht."
+     ],
+     "a": 0,
+     "e": "Der Nenner wächst schneller (n² gegen n). Der Bruch geht gegen <b>0</b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (n − 3) : (9n² − 8) für n → ∞?",
+     "c": [
+      "Der Grenzwert existiert nicht.",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "0",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "Der Nenner wächst schneller (n² gegen n). Der Bruch geht gegen <b>0</b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (2n − 6) : (9n² + 7) für n → ∞?",
+     "c": [
+      "0",
+      "−<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "Der Grenzwert existiert nicht."
+     ],
+     "a": 0,
+     "e": "Der Nenner wächst schneller (n² gegen n). Der Bruch geht gegen <b>0</b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (4n + 1) : (4n² − 8) für n → ∞?",
+     "c": [
+      "Der Grenzwert existiert nicht.",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "1",
+      "0"
+     ],
+     "a": 3,
+     "e": "Der Nenner wächst schneller (n² gegen n). Der Bruch geht gegen <b>0</b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (2n + 9) : (4n − 8) für n → ∞?",
+     "c": [
+      "Der Grenzwert existiert nicht.",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>11</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "Durch n teilen: (2 + 9/n) : (4 − 8/n) → 2 : 4 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (8n − 3) : (7n² + 3) für n → ∞?",
+     "c": [
+      "0",
+      "−1",
+      "Der Grenzwert existiert nicht.",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>7</span></span>"
+     ],
+     "a": 0,
+     "e": "Der Nenner wächst schneller (n² gegen n). Der Bruch geht gegen <b>0</b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (8n − 1) : (8n − 7) für n → ∞?",
+     "c": [
+      "Der Grenzwert existiert nicht.",
+      "1",
+      "7",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>"
+     ],
+     "a": 1,
+     "e": "Durch n teilen: (8 − 1/n) : (8 − 7/n) → 8 : 8 = <b>1</b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (6n + 6) : (6n² + 4) für n → ∞?",
+     "c": [
+      "Der Grenzwert existiert nicht.",
+      "1",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "0"
+     ],
+     "a": 3,
+     "e": "Der Nenner wächst schneller (n² gegen n). Der Bruch geht gegen <b>0</b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (4n − 5) : (5n + 7) für n → ∞?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "−<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "Der Grenzwert existiert nicht.",
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>"
+     ],
+     "a": 0,
+     "e": "Durch n teilen: (4 − 5/n) : (5 + 7/n) → 4 : 5 = <b><span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (2n + 2) : (7n − 7) für n → ∞?",
+     "c": [
+      "Der Grenzwert existiert nicht.",
+      "1",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>"
+     ],
+     "a": 2,
+     "e": "Durch n teilen: (2 + 2/n) : (7 − 7/n) → 2 : 7 = <b><span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (9n − 8) : (3n − 4) für n → ∞?",
+     "c": [
+      "−1",
+      "Der Grenzwert existiert nicht.",
+      "2",
+      "3"
+     ],
+     "a": 3,
+     "e": "Durch n teilen: (9 − 8/n) : (3 − 4/n) → 9 : 3 = <b>3</b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (8n − 5) : (3n + 8) für n → ∞?",
+     "c": [
+      "−<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span>",
+      "Der Grenzwert existiert nicht.",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span>"
+     ],
+     "a": 1,
+     "e": "Durch n teilen: (8 − 5/n) : (3 + 8/n) → 8 : 3 = <b><span class='fr'><span class='fn'>8</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (n + 9) : (7n² − 9) für n → ∞?",
+     "c": [
+      "Der Grenzwert existiert nicht.",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "−1",
+      "0"
+     ],
+     "a": 3,
+     "e": "Der Nenner wächst schneller (n² gegen n). Der Bruch geht gegen <b>0</b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (3n² + 6) : (7n − 8) für n → ∞?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "Die Folge wächst über alle Grenzen.",
+      "0",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "Der Zähler wächst schneller (n² gegen n). <b>Kein Grenzwert</b>: Die Folge wächst über alle Grenzen."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (2n² + 2) : (8n − 3) für n → ∞?",
+     "c": [
+      "0",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "Die Folge wächst über alle Grenzen.",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "Der Zähler wächst schneller (n² gegen n). <b>Kein Grenzwert</b>: Die Folge wächst über alle Grenzen."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (9n + 5) : (2n² + 6) für n → ∞?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "0",
+      "Der Grenzwert existiert nicht."
+     ],
+     "a": 2,
+     "e": "Der Nenner wächst schneller (n² gegen n). Der Bruch geht gegen <b>0</b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (3n² − 2) : (5n − 5) für n → ∞?",
+     "c": [
+      "0",
+      "Die Folge wächst über alle Grenzen.",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "Der Zähler wächst schneller (n² gegen n). <b>Kein Grenzwert</b>: Die Folge wächst über alle Grenzen."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (9n + 1) : (8n² + 9) für n → ∞?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "0",
+      "Der Grenzwert existiert nicht.",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "Der Nenner wächst schneller (n² gegen n). Der Bruch geht gegen <b>0</b>."
+    },
+    {
+     "q": "Gegen welchen Wert strebt a<sub>n</sub> = (2n + 9) : (3n² − 7) für n → ∞?",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "Der Grenzwert existiert nicht.",
+      "−<span class='fr'><span class='fn'>9</span><span class='fd'>7</span></span>"
+     ],
+     "a": 0,
+     "e": "Der Nenner wächst schneller (n² gegen n). Der Bruch geht gegen <b>0</b>."
+    }
+   ]
+  },
+  {
+   "title": "Sachaufgaben",
+   "items": [
+    {
+     "q": "In einem Saal hat die erste Reihe 23 Sitze, jede weitere Reihe 2 Sitze mehr. Es gibt 12 Reihen. Wie viele Sitze sind es insgesamt?",
+     "c": [
+      "45",
+      "408",
+      "431",
+      "276"
+     ],
+     "a": 1,
+     "e": "Letzte Reihe: 45 Sitze. Summe = 12 · (23 + 45) : 2 = <b>408</b>."
+    },
+    {
+     "q": "Eine Bakterienkultur hat 200 Bakterien und verdoppelt sich jede Stunde. Wie viele sind es nach 5 Stunden?",
+     "c": [
+      "3’200",
+      "2’000",
+      "232",
+      "6’400"
+     ],
+     "a": 3,
+     "e": "Geometrische Folge mit q = 2: 200 · 2<sup>5</sup> = <b>6’400</b>."
+    },
+    {
+     "q": "In einem Saal hat die erste Reihe 27 Sitze, jede weitere Reihe 3 Sitze mehr. Es gibt 19 Reihen. Wie viele Sitze sind es insgesamt?",
+     "c": [
+      "1’026",
+      "81",
+      "1’053",
+      "513"
+     ],
+     "a": 0,
+     "e": "Letzte Reihe: 81 Sitze. Summe = 19 · (27 + 81) : 2 = <b>1’026</b>."
+    },
+    {
+     "q": "Lea läuft am ersten Tag 3 km und danach jeden Tag 1 km mehr. Wie viele Kilometer sind es in 5 Tagen zusammen?",
+     "c": [
+      "25 km",
+      "35 km",
+      "22 km",
+      "7 km"
+     ],
+     "a": 0,
+     "e": "Arithmetische Reihe: a<sub>1</sub> = 3, a<sub>5</sub> = 7. s = 5 · (3 + 7) : 2 = <b>25 km</b>."
+    },
+    {
+     "q": "Ein Ball fällt aus 4 m Höhe und springt jedes Mal auf <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> der vorherigen Höhe zurück. Welchen Weg legt er insgesamt zurück (beliebig viele Sprünge)?",
+     "c": [
+      "16 m",
+      "4 m",
+      "12 m",
+      "8 m"
+     ],
+     "a": 2,
+     "e": "Fallen 4 m, dann je zweimal (hinauf und hinunter) 2, 1, … Weg = 4 + 2 · 2 : (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b>12 m</b>."
+    },
+    {
+     "q": "Jan läuft am ersten Tag 2 km und danach jeden Tag 1 km mehr. Wie viele Kilometer sind es in 14 Tagen zusammen?",
+     "c": [
+      "15 km",
+      "117 km",
+      "210 km",
+      "119 km"
+     ],
+     "a": 3,
+     "e": "Arithmetische Reihe: a<sub>1</sub> = 2, a<sub>14</sub> = 15. s = 14 · (2 + 15) : 2 = <b>119 km</b>."
+    },
+    {
+     "q": "In einem Saal hat die erste Reihe 15 Sitze, jede weitere Reihe 2 Sitze mehr. Es gibt 24 Reihen. Wie viele Sitze sind es insgesamt?",
+     "c": [
+      "360",
+      "61",
+      "912",
+      "927"
+     ],
+     "a": 2,
+     "e": "Letzte Reihe: 61 Sitze. Summe = 24 · (15 + 61) : 2 = <b>912</b>."
+    },
+    {
+     "q": "Ein Ball fällt aus 10 m Höhe und springt jedes Mal auf <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> der vorherigen Höhe zurück. Welchen Weg legt er insgesamt zurück (beliebig viele Sprünge)?",
+     "c": [
+      "10 m",
+      "30 m",
+      "20 m",
+      "40 m"
+     ],
+     "a": 1,
+     "e": "Fallen 10 m, dann je zweimal (hinauf und hinunter) 5, <span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>, … Weg = 10 + 2 · 5 : (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>) = <b>30 m</b>."
+    },
+    {
+     "q": "Eine Bakterienkultur hat 20 Bakterien und verdoppelt sich jede Stunde. Wie viele sind es nach 9 Stunden?",
+     "c": [
+      "5’120",
+      "532",
+      "360",
+      "10’240"
+     ],
+     "a": 3,
+     "e": "Geometrische Folge mit q = 2: 20 · 2<sup>9</sup> = <b>10’240</b>."
+    },
+    {
+     "q": "Ronja läuft am ersten Tag 4 km und danach jeden Tag 1 km mehr. Wie viele Kilometer sind es in 8 Tagen zusammen?",
+     "c": [
+      "56 km",
+      "88 km",
+      "11 km",
+      "60 km"
+     ],
+     "a": 3,
+     "e": "Arithmetische Reihe: a<sub>1</sub> = 4, a<sub>8</sub> = 11. s = 8 · (4 + 11) : 2 = <b>60 km</b>."
+    },
+    {
+     "q": "Ein Ball fällt aus 9 m Höhe und springt jedes Mal auf <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> der vorherigen Höhe zurück. Welchen Weg legt er insgesamt zurück (beliebig viele Sprünge)?",
+     "c": [
+      "54 m",
+      "45 m",
+      "27 m",
+      "18 m"
+     ],
+     "a": 1,
+     "e": "Fallen 9 m, dann je zweimal (hinauf und hinunter) 6, 4, … Weg = 9 + 2 · 6 : (1 − <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>) = <b>45 m</b>."
+    },
+    {
+     "q": "Julian läuft am ersten Tag 2 km und danach jeden Tag 1 km mehr. Wie viele Kilometer sind es in 14 Tagen zusammen?",
+     "c": [
+      "117 km",
+      "210 km",
+      "119 km",
+      "15 km"
+     ],
+     "a": 2,
+     "e": "Arithmetische Reihe: a<sub>1</sub> = 2, a<sub>14</sub> = 15. s = 14 · (2 + 15) : 2 = <b>119 km</b>."
+    },
+    {
+     "q": "Julian läuft am ersten Tag 2 km und danach jeden Tag 1 km mehr. Wie viele Kilometer sind es in 12 Tagen zusammen?",
+     "c": [
+      "13 km",
+      "88 km",
+      "90 km",
+      "156 km"
+     ],
+     "a": 2,
+     "e": "Arithmetische Reihe: a<sub>1</sub> = 2, a<sub>12</sub> = 13. s = 12 · (2 + 13) : 2 = <b>90 km</b>."
+    },
+    {
+     "q": "Gian läuft am ersten Tag 3 km und danach jeden Tag 1 km mehr. Wie viele Kilometer sind es in 10 Tagen zusammen?",
+     "c": [
+      "72 km",
+      "120 km",
+      "12 km",
+      "75 km"
+     ],
+     "a": 3,
+     "e": "Arithmetische Reihe: a<sub>1</sub> = 3, a<sub>10</sub> = 12. s = 10 · (3 + 12) : 2 = <b>75 km</b>."
+    },
+    {
+     "q": "Matteo läuft am ersten Tag 4 km und danach jeden Tag 1 km mehr. Wie viele Kilometer sind es in 14 Tagen zusammen?",
+     "c": [
+      "147 km",
+      "238 km",
+      "143 km",
+      "17 km"
+     ],
+     "a": 0,
+     "e": "Arithmetische Reihe: a<sub>1</sub> = 4, a<sub>14</sub> = 17. s = 14 · (4 + 17) : 2 = <b>147 km</b>."
+    },
+    {
+     "q": "Eine Bakterienkultur hat 10 Bakterien und verdoppelt sich jede Stunde. Wie viele sind es nach 7 Stunden?",
+     "c": [
+      "138",
+      "1’280",
+      "140",
+      "640"
+     ],
+     "a": 1,
+     "e": "Geometrische Folge mit q = 2: 10 · 2<sup>7</sup> = <b>1’280</b>."
+    },
+    {
+     "q": "Levin läuft am ersten Tag 3 km und danach jeden Tag 1 km mehr. Wie viele Kilometer sind es in 9 Tagen zusammen?",
+     "c": [
+      "63 km",
+      "99 km",
+      "60 km",
+      "11 km"
+     ],
+     "a": 0,
+     "e": "Arithmetische Reihe: a<sub>1</sub> = 3, a<sub>9</sub> = 11. s = 9 · (3 + 11) : 2 = <b>63 km</b>."
+    },
+    {
+     "q": "Eine Bakterienkultur hat 200 Bakterien und verdoppelt sich jede Stunde. Wie viele sind es nach 6 Stunden?",
+     "c": [
+      "2’400",
+      "12’800",
+      "264",
+      "6’400"
+     ],
+     "a": 1,
+     "e": "Geometrische Folge mit q = 2: 200 · 2<sup>6</sup> = <b>12’800</b>."
+    },
+    {
+     "q": "Ein Ball fällt aus 6 m Höhe und springt jedes Mal auf <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> der vorherigen Höhe zurück. Welchen Weg legt er insgesamt zurück (beliebig viele Sprünge)?",
+     "c": [
+      "9 m",
+      "18 m",
+      "12 m",
+      "3 m"
+     ],
+     "a": 2,
+     "e": "Fallen 6 m, dann je zweimal (hinauf und hinunter) 2, <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>, … Weg = 6 + 2 · 2 : (1 − <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>) = <b>12 m</b>."
+    },
+    {
+     "q": "In einem Saal hat die erste Reihe 24 Sitze, jede weitere Reihe 3 Sitze mehr. Es gibt 19 Reihen. Wie viele Sitze sind es insgesamt?",
+     "c": [
+      "969",
+      "78",
+      "993",
+      "456"
+     ],
+     "a": 0,
+     "e": "Letzte Reihe: 78 Sitze. Summe = 19 · (24 + 78) : 2 = <b>969</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 6,
+ "updated": "2026-11-25",
+ "country": "ch",
+ "subject": "mathematik",
+ "grade": "gymnasium-2"
+}
