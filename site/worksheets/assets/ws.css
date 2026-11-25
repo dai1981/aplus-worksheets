@@ -143,9 +143,10 @@ table.sn-table td:first-child{font-weight:700;color:#0b4a2c;}
 
 /* ---------- quiz ---------- */
 .sn-quiz{border:3px solid #006633;border-radius:14px;background:#fff;margin:14px 0 26px;overflow:hidden;position:relative;}
-.sn-quiz-h{background:#006633;color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;}
-.sn-quiz-h .t{font-size:16px;font-weight:800;}
-.sn-quiz-h .n{font-size:14px;font-weight:700;white-space:nowrap;}
+.sn-quiz-h{background:#006633;color:#fff;padding:12px 16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 10px;}
+.sn-quiz-h .t{font-size:16px;font-weight:800;flex:0 1 auto;min-width:0;}
+@media (max-width:600px){.sn-quiz-h .t{flex-basis:100%;}}
+.sn-quiz-h .n{font-size:14px;font-weight:700;white-space:nowrap;margin-left:auto;}
 .sn-quiz-h .sn-done{display:inline-flex;align-items:center;gap:3px;margin-right:auto;flex:none;background:#fff;color:#006633;border-radius:999px;padding:2px 9px 2px 6px;font-size:13px;font-weight:800;white-space:nowrap;}
 .sn-quiz-h .sn-done[hidden]{display:none;}
 .sn-quiz-h .sn-done svg{width:14px;height:14px;}
