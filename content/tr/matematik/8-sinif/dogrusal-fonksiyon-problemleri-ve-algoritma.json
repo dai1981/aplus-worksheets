@@ -1,0 +1,1161 @@
+{
+ "slug": "dogrusal-fonksiyon-problemleri-ve-algoritma",
+ "title": "Doğrusal Fonksiyon Problemleri ve Algoritma",
+ "seo_title": "Doğrusal Fonksiyon Problemleri 8. Sınıf Matematik: Çalışma Kâğıdı ve Cevaplı Test",
+ "short_title": "Doğrusal Fonksiyon Problemleri",
+ "domain": "Cebirsel Düşünme ve Değişimler",
+ "standard_code": "MAT.8.2.2, MAT.8.2.4",
+ "standard_url": "https://mufredat.meb.gov.tr/Dosyalar/202681491243620-Matematik%20(5-8)%20D%C3%96P.pdf",
+ "standard_text": "Doğrusal fonksiyon içeren gerçek yaşam problemlerini modeller ve çözer; çözüm adımlarını ve aralarındaki ilişkileri algoritma ifade yöntemleriyle yapılandırır. (Türkiye Yüzyılı Maarif Modeli, Ortaokul Matematik Dersi Öğretim Programı)",
+ "meta_desc": "8. sınıf doğrusal fonksiyon problemleri çalışma kâğıdı: taksi ve abonelik ücretleri, iki tarifenin eşit olduğu an, boşalan depo, problem durumundan fonksiyon yazma, algoritma ile fonksiyon. 100 soru ve cevap anahtarı.",
+ "key_big": "Sabit kısım + değişen kısım",
+ "key_sub": "Ücret = açılış + birim ücret · miktar → y = mx + n",
+ "body_html": "<h2>Nasıl düşünürüz?</h2><p>Gerçek yaşamdaki birçok durum y = mx + n ile modellenir: n başlangıçtaki (sabit) değer, m her birim için değişimdir.</p><p>İki tarifenin aynı ücreti verdiği anı bulmak için iki fonksiyonu eşitleriz; bu, grafiklerin kesişim noktasıdır.</p><p>Azalan durumlarda (boşalan depo, yanan mum) eğim negatiftir: y = başlangıç − hız · zaman.</p><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>Açılış 40 TL, km başına 25 TL, 12 km</p><p class='sn-ex-s'>40 + 25 · 12</p><p class='sn-ex-a'>Cevap: 340 TL</p></div><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>A: 20 + 6x, B: 60 + 4x</p><p class='sn-ex-s'>20 + 6x = 60 + 4x</p><p class='sn-ex-s'>2x = 40</p><p class='sn-ex-a'>Cevap: 20 dakika</p></div><h2>Sık yapılan hatalar</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Hata</th><th>Doğrusu</th></tr></thead><tbody><tr><td>Sabit ücreti her birimle çarpmak</td><td>Açılış ücreti bir kez eklenir</td></tr><tr><td>Azalan durumda eğimi pozitif almak</td><td>Boşalma: −r · t</td></tr><tr><td>Kesişimden sonra hangi tarifenin ucuz olduğunu karıştırmak</td><td>Birim ücreti düşük olan uzun vadede ucuzdur</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Hangi tarife daha uygun, nasıl anlarım?",
+   "a": "Kesişim noktasından önce ve sonra birer değer deneyip ücretleri karşılaştır."
+  },
+  {
+   "q": "Modelin her zaman doğru olduğunu söyleyebilir miyiz?",
+   "a": "Hayır; depo boşalınca su eksiye düşmez. Model yalnızca anlamlı aralıkta geçerlidir."
+  },
+  {
+   "q": "Algoritma burada ne işe yarar?",
+   "a": "Aynı hesaplamayı her x için adım adım ve hatasız yapmayı sağlar."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Taksi ve ücret",
+   "items": [
+    {
+     "q": "Bir taksinin açılış ücreti 40 TL, kilometre başına ücreti 37 TL’dir. 5 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "185 TL",
+      "385 TL",
+      "225 TL",
+      "237 TL"
+     ],
+     "a": 2,
+     "e": "Ücret = 40 + 37 · x; x = 5 için 40 + 185 = <b>225 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 30 TL, kilometre başına ücreti 16 TL’dir. 13 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "598 TL",
+      "406 TL",
+      "208 TL",
+      "238 TL"
+     ],
+     "a": 3,
+     "e": "Ücret = 30 + 16 · x; x = 13 için 30 + 208 = <b>238 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 60 TL, kilometre başına ücreti 25 TL’dir. 5 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "185 TL",
+      "425 TL",
+      "325 TL",
+      "125 TL"
+     ],
+     "a": 0,
+     "e": "Ücret = 60 + 25 · x; x = 5 için 60 + 125 = <b>185 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 70 TL, kilometre başına ücreti 28 TL’dir. 15 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "490 TL",
+      "420 TL",
+      "1.078 TL",
+      "1.470 TL"
+     ],
+     "a": 0,
+     "e": "Ücret = 70 + 28 · x; x = 15 için 70 + 420 = <b>490 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 60 TL, kilometre başına ücreti 24 TL’dir. 24 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "576 TL",
+      "636 TL",
+      "1.464 TL",
+      "2.016 TL"
+     ],
+     "a": 1,
+     "e": "Ücret = 60 + 24 · x; x = 24 için 60 + 576 = <b>636 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 60 TL, kilometre başına ücreti 19 TL’dir. 10 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "619 TL",
+      "190 TL",
+      "250 TL",
+      "790 TL"
+     ],
+     "a": 2,
+     "e": "Ücret = 60 + 19 · x; x = 10 için 60 + 190 = <b>250 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 50 TL, kilometre başına ücreti 29 TL’dir. 13 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "377 TL",
+      "679 TL",
+      "1.027 TL",
+      "427 TL"
+     ],
+     "a": 3,
+     "e": "Ücret = 50 + 29 · x; x = 13 için 50 + 377 = <b>427 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 70 TL, kilometre başına ücreti 20 TL’dir. 14 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "1.260 TL",
+      "1.000 TL",
+      "350 TL",
+      "280 TL"
+     ],
+     "a": 2,
+     "e": "Ücret = 70 + 20 · x; x = 14 için 70 + 280 = <b>350 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 30 TL, kilometre başına ücreti 18 TL’dir. 3 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "84 TL",
+      "54 TL",
+      "144 TL",
+      "108 TL"
+     ],
+     "a": 0,
+     "e": "Ücret = 30 + 18 · x; x = 3 için 30 + 54 = <b>84 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 40 TL, kilometre başına ücreti 26 TL’dir. 24 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "664 TL",
+      "624 TL",
+      "986 TL",
+      "1.584 TL"
+     ],
+     "a": 0,
+     "e": "Ücret = 40 + 26 · x; x = 24 için 40 + 624 = <b>664 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 30 TL, kilometre başına ücreti 17 TL’dir. 22 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "374 TL",
+      "677 TL",
+      "1.034 TL",
+      "404 TL"
+     ],
+     "a": 3,
+     "e": "Ücret = 30 + 17 · x; x = 22 için 30 + 374 = <b>404 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 80 TL, kilometre başına ücreti 32 TL’dir. 14 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "1.152 TL",
+      "1.568 TL",
+      "528 TL",
+      "448 TL"
+     ],
+     "a": 2,
+     "e": "Ücret = 80 + 32 · x; x = 14 için 80 + 448 = <b>528 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 80 TL, kilometre başına ücreti 15 TL’dir. 8 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "200 TL",
+      "760 TL",
+      "655 TL",
+      "120 TL"
+     ],
+     "a": 0,
+     "e": "Ücret = 80 + 15 · x; x = 8 için 80 + 120 = <b>200 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 50 TL, kilometre başına ücreti 17 TL’dir. 13 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "667 TL",
+      "271 TL",
+      "871 TL",
+      "221 TL"
+     ],
+     "a": 1,
+     "e": "Ücret = 50 + 17 · x; x = 13 için 50 + 221 = <b>271 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 40 TL, kilometre başına ücreti 24 TL’dir. 24 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "984 TL",
+      "576 TL",
+      "1.536 TL",
+      "616 TL"
+     ],
+     "a": 3,
+     "e": "Ücret = 40 + 24 · x; x = 24 için 40 + 576 = <b>616 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 40 TL, kilometre başına ücreti 29 TL’dir. 6 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "269 TL",
+      "214 TL",
+      "174 TL",
+      "414 TL"
+     ],
+     "a": 1,
+     "e": "Ücret = 40 + 29 · x; x = 6 için 40 + 174 = <b>214 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 80 TL, kilometre başına ücreti 26 TL’dir. 21 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "1.706 TL",
+      "626 TL",
+      "546 TL",
+      "2.226 TL"
+     ],
+     "a": 1,
+     "e": "Ücret = 80 + 26 · x; x = 21 için 80 + 546 = <b>626 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 60 TL, kilometre başına ücreti 28 TL’dir. 11 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "968 TL",
+      "688 TL",
+      "368 TL",
+      "308 TL"
+     ],
+     "a": 2,
+     "e": "Ücret = 60 + 28 · x; x = 11 için 60 + 308 = <b>368 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 60 TL, kilometre başına ücreti 40 TL’dir. 18 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "720 TL",
+      "1.120 TL",
+      "1.800 TL",
+      "780 TL"
+     ],
+     "a": 3,
+     "e": "Ücret = 60 + 40 · x; x = 18 için 60 + 720 = <b>780 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 70 TL, kilometre başına ücreti 34 TL’dir. 25 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "1.784 TL",
+      "920 TL",
+      "2.600 TL",
+      "850 TL"
+     ],
+     "a": 1,
+     "e": "Ücret = 70 + 34 · x; x = 25 için 70 + 850 = <b>920 TL</b>."
+    }
+   ]
+  },
+  {
+   "title": "Tarifeleri karşılaştırma",
+   "items": [
+    {
+     "q": "A tarifesi: 60 TL sabit + dakikası 5 TL. B tarifesi: 180 TL sabit + dakikası 4 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "240",
+      "24",
+      "120",
+      "125"
+     ],
+     "a": 2,
+     "e": "60 + 5x = 180 + 4x → 1x = 120 → x = <b>120</b>."
+    },
+    {
+     "q": "A tarifesi: 60 TL sabit + dakikası 8 TL. B tarifesi: 120 TL sabit + dakikası 7 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "60",
+      "65",
+      "7",
+      "120"
+     ],
+     "a": 0,
+     "e": "60 + 8x = 120 + 7x → 1x = 60 → x = <b>60</b>."
+    },
+    {
+     "q": "A tarifesi: 60 TL sabit + dakikası 8 TL. B tarifesi: 220 TL sabit + dakikası 7 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "160",
+      "20",
+      "165",
+      "320"
+     ],
+     "a": 0,
+     "e": "60 + 8x = 220 + 7x → 1x = 160 → x = <b>160</b>."
+    },
+    {
+     "q": "A tarifesi: 80 TL sabit + dakikası 8 TL. B tarifesi: 220 TL sabit + dakikası 6 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "140",
+      "75",
+      "70",
+      "17"
+     ],
+     "a": 2,
+     "e": "80 + 8x = 220 + 6x → 2x = 140 → x = <b>70</b>."
+    },
+    {
+     "q": "A tarifesi: 100 TL sabit + dakikası 5 TL. B tarifesi: 160 TL sabit + dakikası 4 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "60",
+      "65",
+      "120",
+      "12"
+     ],
+     "a": 0,
+     "e": "100 + 5x = 160 + 4x → 1x = 60 → x = <b>60</b>."
+    },
+    {
+     "q": "A tarifesi: 80 TL sabit + dakikası 7 TL. B tarifesi: 140 TL sabit + dakikası 4 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "25",
+      "20",
+      "40",
+      "8"
+     ],
+     "a": 1,
+     "e": "80 + 7x = 140 + 4x → 3x = 60 → x = <b>20</b>."
+    },
+    {
+     "q": "A tarifesi: 0 TL sabit + dakikası 6 TL. B tarifesi: 140 TL sabit + dakikası 5 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "280",
+      "140",
+      "23",
+      "145"
+     ],
+     "a": 1,
+     "e": "0 + 6x = 140 + 5x → 1x = 140 → x = <b>140</b>."
+    },
+    {
+     "q": "A tarifesi: 40 TL sabit + dakikası 7 TL. B tarifesi: 140 TL sabit + dakikası 5 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "100",
+      "55",
+      "50",
+      "14"
+     ],
+     "a": 2,
+     "e": "40 + 7x = 140 + 5x → 2x = 100 → x = <b>50</b>."
+    },
+    {
+     "q": "A tarifesi: 40 TL sabit + dakikası 3 TL. B tarifesi: 180 TL sabit + dakikası 2 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "145",
+      "46",
+      "280",
+      "140"
+     ],
+     "a": 3,
+     "e": "40 + 3x = 180 + 2x → 1x = 140 → x = <b>140</b>."
+    },
+    {
+     "q": "A tarifesi: 80 TL sabit + dakikası 5 TL. B tarifesi: 200 TL sabit + dakikası 3 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "120",
+      "60",
+      "24",
+      "65"
+     ],
+     "a": 1,
+     "e": "80 + 5x = 200 + 3x → 2x = 120 → x = <b>60</b>."
+    },
+    {
+     "q": "A tarifesi: 20 TL sabit + dakikası 6 TL. B tarifesi: 180 TL sabit + dakikası 5 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "165",
+      "320",
+      "26",
+      "160"
+     ],
+     "a": 3,
+     "e": "20 + 6x = 180 + 5x → 1x = 160 → x = <b>160</b>."
+    },
+    {
+     "q": "A tarifesi: 0 TL sabit + dakikası 7 TL. B tarifesi: 100 TL sabit + dakikası 6 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "105",
+      "100",
+      "200",
+      "14"
+     ],
+     "a": 1,
+     "e": "0 + 7x = 100 + 6x → 1x = 100 → x = <b>100</b>."
+    },
+    {
+     "q": "A tarifesi: 0 TL sabit + dakikası 7 TL. B tarifesi: 40 TL sabit + dakikası 5 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "20",
+      "40",
+      "25",
+      "5"
+     ],
+     "a": 0,
+     "e": "0 + 7x = 40 + 5x → 2x = 40 → x = <b>20</b>."
+    },
+    {
+     "q": "A tarifesi: 60 TL sabit + dakikası 8 TL. B tarifesi: 180 TL sabit + dakikası 7 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "125",
+      "120",
+      "240",
+      "15"
+     ],
+     "a": 1,
+     "e": "60 + 8x = 180 + 7x → 1x = 120 → x = <b>120</b>."
+    },
+    {
+     "q": "A tarifesi: 0 TL sabit + dakikası 5 TL. B tarifesi: 60 TL sabit + dakikası 2 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "40",
+      "12",
+      "20",
+      "25"
+     ],
+     "a": 2,
+     "e": "0 + 5x = 60 + 2x → 3x = 60 → x = <b>20</b>."
+    },
+    {
+     "q": "A tarifesi: 80 TL sabit + dakikası 6 TL. B tarifesi: 160 TL sabit + dakikası 5 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "13",
+      "160",
+      "85",
+      "80"
+     ],
+     "a": 3,
+     "e": "80 + 6x = 160 + 5x → 1x = 80 → x = <b>80</b>."
+    },
+    {
+     "q": "A tarifesi: 100 TL sabit + dakikası 7 TL. B tarifesi: 160 TL sabit + dakikası 6 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "60",
+      "65",
+      "8",
+      "120"
+     ],
+     "a": 0,
+     "e": "100 + 7x = 160 + 6x → 1x = 60 → x = <b>60</b>."
+    },
+    {
+     "q": "A tarifesi: 60 TL sabit + dakikası 3 TL. B tarifesi: 180 TL sabit + dakikası 2 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "240",
+      "40",
+      "125",
+      "120"
+     ],
+     "a": 3,
+     "e": "60 + 3x = 180 + 2x → 1x = 120 → x = <b>120</b>."
+    },
+    {
+     "q": "A tarifesi: 80 TL sabit + dakikası 7 TL. B tarifesi: 180 TL sabit + dakikası 6 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "200",
+      "105",
+      "14",
+      "100"
+     ],
+     "a": 3,
+     "e": "80 + 7x = 180 + 6x → 1x = 100 → x = <b>100</b>."
+    },
+    {
+     "q": "A tarifesi: 100 TL sabit + dakikası 4 TL. B tarifesi: 260 TL sabit + dakikası 3 TL. Kaç dakikalık konuşmada iki tarife aynı ücreti verir?",
+     "c": [
+      "165",
+      "40",
+      "160",
+      "320"
+     ],
+     "a": 2,
+     "e": "100 + 4x = 260 + 3x → 1x = 160 → x = <b>160</b>."
+    }
+   ]
+  },
+  {
+   "title": "Azalan nicelikler",
+   "items": [
+    {
+     "q": "İçinde 440 L su olan bir depodan dakikada 19 L su boşaltılıyor. 11 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "231 L",
+      "410 L",
+      "209 L",
+      "649 L"
+     ],
+     "a": 0,
+     "e": "Su = 440 − 19 · t; t = 11 için <b>231 L</b>."
+    },
+    {
+     "q": "İçinde 690 L su olan bir depodan dakikada 18 L su boşaltılıyor. 6 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "666 L",
+      "582 L",
+      "108 L",
+      "798 L"
+     ],
+     "a": 1,
+     "e": "Su = 690 − 18 · t; t = 6 için <b>582 L</b>."
+    },
+    {
+     "q": "İçinde 580 L su olan bir depodan dakikada 12 L su boşaltılıyor. 12 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "144 L",
+      "556 L",
+      "724 L",
+      "436 L"
+     ],
+     "a": 3,
+     "e": "Su = 580 − 12 · t; t = 12 için <b>436 L</b>."
+    },
+    {
+     "q": "İçinde 310 L su olan bir depodan dakikada 5 L su boşaltılıyor. 32 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "150 L",
+      "273 L",
+      "160 L",
+      "470 L"
+     ],
+     "a": 0,
+     "e": "Su = 310 − 5 · t; t = 32 için <b>150 L</b>."
+    },
+    {
+     "q": "İçinde 500 L su olan bir depodan dakikada 14 L su boşaltılıyor. 17 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "262 L",
+      "238 L",
+      "469 L",
+      "738 L"
+     ],
+     "a": 0,
+     "e": "Su = 500 − 14 · t; t = 17 için <b>262 L</b>."
+    },
+    {
+     "q": "İçinde 670 L su olan bir depodan dakikada 18 L su boşaltılıyor. 19 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "1.012 L",
+      "342 L",
+      "328 L",
+      "633 L"
+     ],
+     "a": 2,
+     "e": "Su = 670 − 18 · t; t = 19 için <b>328 L</b>."
+    },
+    {
+     "q": "İçinde 240 L su olan bir depodan dakikada 13 L su boşaltılıyor. 12 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "84 L",
+      "156 L",
+      "396 L",
+      "215 L"
+     ],
+     "a": 0,
+     "e": "Su = 240 − 13 · t; t = 12 için <b>84 L</b>."
+    },
+    {
+     "q": "İçinde 290 L su olan bir depodan dakikada 7 L su boşaltılıyor. 4 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "279 L",
+      "318 L",
+      "262 L",
+      "28 L"
+     ],
+     "a": 2,
+     "e": "Su = 290 − 7 · t; t = 4 için <b>262 L</b>."
+    },
+    {
+     "q": "İçinde 720 L su olan bir depodan dakikada 19 L su boşaltılıyor. 7 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "133 L",
+      "587 L",
+      "694 L",
+      "853 L"
+     ],
+     "a": 1,
+     "e": "Su = 720 − 19 · t; t = 7 için <b>587 L</b>."
+    },
+    {
+     "q": "İçinde 280 L su olan bir depodan dakikada 18 L su boşaltılıyor. 12 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "250 L",
+      "64 L",
+      "496 L",
+      "216 L"
+     ],
+     "a": 1,
+     "e": "Su = 280 − 18 · t; t = 12 için <b>64 L</b>."
+    },
+    {
+     "q": "İçinde 550 L su olan bir depodan dakikada 14 L su boşaltılıyor. 14 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "746 L",
+      "522 L",
+      "196 L",
+      "354 L"
+     ],
+     "a": 3,
+     "e": "Su = 550 − 14 · t; t = 14 için <b>354 L</b>."
+    },
+    {
+     "q": "İçinde 750 L su olan bir depodan dakikada 7 L su boşaltılıyor. 55 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "385 L",
+      "1.135 L",
+      "688 L",
+      "365 L"
+     ],
+     "a": 3,
+     "e": "Su = 750 − 7 · t; t = 55 için <b>365 L</b>."
+    },
+    {
+     "q": "İçinde 530 L su olan bir depodan dakikada 19 L su boşaltılıyor. 11 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "500 L",
+      "739 L",
+      "321 L",
+      "209 L"
+     ],
+     "a": 2,
+     "e": "Su = 530 − 19 · t; t = 11 için <b>321 L</b>."
+    },
+    {
+     "q": "İçinde 580 L su olan bir depodan dakikada 5 L su boşaltılıyor. 104 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "60 L",
+      "520 L",
+      "1.100 L",
+      "471 L"
+     ],
+     "a": 0,
+     "e": "Su = 580 − 5 · t; t = 104 için <b>60 L</b>."
+    },
+    {
+     "q": "İçinde 680 L su olan bir depodan dakikada 14 L su boşaltılıyor. 3 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "722 L",
+      "638 L",
+      "663 L",
+      "42 L"
+     ],
+     "a": 1,
+     "e": "Su = 680 − 14 · t; t = 3 için <b>638 L</b>."
+    },
+    {
+     "q": "İçinde 730 L su olan bir depodan dakikada 15 L su boşaltılıyor. 21 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "694 L",
+      "315 L",
+      "1.045 L",
+      "415 L"
+     ],
+     "a": 3,
+     "e": "Su = 730 − 15 · t; t = 21 için <b>415 L</b>."
+    },
+    {
+     "q": "İçinde 670 L su olan bir depodan dakikada 20 L su boşaltılıyor. 24 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "1.150 L",
+      "626 L",
+      "190 L",
+      "480 L"
+     ],
+     "a": 2,
+     "e": "Su = 670 − 20 · t; t = 24 için <b>190 L</b>."
+    },
+    {
+     "q": "İçinde 230 L su olan bir depodan dakikada 8 L su boşaltılıyor. 2 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "16 L",
+      "220 L",
+      "246 L",
+      "214 L"
+     ],
+     "a": 3,
+     "e": "Su = 230 − 8 · t; t = 2 için <b>214 L</b>."
+    },
+    {
+     "q": "İçinde 270 L su olan bir depodan dakikada 20 L su boşaltılıyor. 4 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "350 L",
+      "190 L",
+      "246 L",
+      "80 L"
+     ],
+     "a": 1,
+     "e": "Su = 270 − 20 · t; t = 4 için <b>190 L</b>."
+    },
+    {
+     "q": "İçinde 270 L su olan bir depodan dakikada 15 L su boşaltılıyor. 4 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "60 L",
+      "251 L",
+      "210 L",
+      "330 L"
+     ],
+     "a": 2,
+     "e": "Su = 270 − 15 · t; t = 4 için <b>210 L</b>."
+    }
+   ]
+  },
+  {
+   "title": "Fonksiyonu yazma",
+   "items": [
+    {
+     "q": "Bir yüzme havuzu 40 TL üyelik ücreti ve her giriş için 23 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 40x + 23",
+      "y = 23x + 40",
+      "y = 23x − 40",
+      "y = 63x"
+     ],
+     "a": 1,
+     "e": "Sabit ücret n = 40, giriş başına artış m = 23: <b>y = 23x + 40</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = 2)<br>3. x’i 5 ile çarp<br>4. Sonuca 1 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = 5x − 1; y = 9",
+      "y = 5x + 1; y = 16",
+      "y = x + 5; y = 7",
+      "y = 5x + 1; y = 11"
+     ],
+     "a": 3,
+     "e": "Adımlar y = 5x + 1 fonksiyonunu verir; x = 2 için <b>y = 11</b>."
+    },
+    {
+     "q": "Bir spor salonu 70 TL üyelik ücreti ve her giriş için 10 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 10x + 70",
+      "y = 70x + 10",
+      "y = 10x − 70",
+      "y = 80x"
+     ],
+     "a": 0,
+     "e": "Sabit ücret n = 70, giriş başına artış m = 10: <b>y = 10x + 70</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = 4)<br>3. x’i −3 ile çarp<br>4. Sonuca 0 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = −3x; y = −12",
+      "y = x − 3; y = 1",
+      "y = −3x + 1; y = −11",
+      "y = −3x; y = −15"
+     ],
+     "a": 0,
+     "e": "Adımlar y = −3x fonksiyonunu verir; x = 4 için <b>y = −12</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = −3)<br>3. x’i 4 ile çarp<br>4. Sonuca 6 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = 4x + 6; y = −6",
+      "y = 4x − 6; y = −18",
+      "y = 4x + 6; y = −2",
+      "y = 6x + 4; y = −14"
+     ],
+     "a": 0,
+     "e": "Adımlar y = 4x + 6 fonksiyonunu verir; x = −3 için <b>y = −6</b>."
+    },
+    {
+     "q": "Bir spor salonu 80 TL üyelik ücreti ve her giriş için 10 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 80x + 10",
+      "y = 90x",
+      "y = 10x + 80",
+      "y = 10x − 80"
+     ],
+     "a": 2,
+     "e": "Sabit ücret n = 80, giriş başına artış m = 10: <b>y = 10x + 80</b>."
+    },
+    {
+     "q": "Bir yüzme havuzu 60 TL üyelik ücreti ve her giriş için 11 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 71x",
+      "y = 11x + 60",
+      "y = 60x + 11",
+      "y = 11x − 60"
+     ],
+     "a": 1,
+     "e": "Sabit ücret n = 60, giriş başına artış m = 11: <b>y = 11x + 60</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = −4)<br>3. x’i −5 ile çarp<br>4. Sonuca 3 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = −5x − 3; y = 17",
+      "y = −5x + 3; y = 23",
+      "y = −5x + 3; y = 18",
+      "y = 3x − 5; y = −17"
+     ],
+     "a": 1,
+     "e": "Adımlar y = −5x + 3 fonksiyonunu verir; x = −4 için <b>y = 23</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = 1)<br>3. x’i −2 ile çarp<br>4. Sonuca 1 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = −2x + 1; y = −1",
+      "y = −2x + 1; y = −3",
+      "y = −2x − 1; y = −3",
+      "y = x − 2; y = −1"
+     ],
+     "a": 0,
+     "e": "Adımlar y = −2x + 1 fonksiyonunu verir; x = 1 için <b>y = −1</b>."
+    },
+    {
+     "q": "Bir yüzme havuzu 40 TL üyelik ücreti ve her giriş için 9 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 9x − 40",
+      "y = 40x + 9",
+      "y = 49x",
+      "y = 9x + 40"
+     ],
+     "a": 3,
+     "e": "Sabit ücret n = 40, giriş başına artış m = 9: <b>y = 9x + 40</b>."
+    },
+    {
+     "q": "Bir kütüphane 70 TL üyelik ücreti ve her giriş için 9 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 70x + 9",
+      "y = 79x",
+      "y = 9x − 70",
+      "y = 9x + 70"
+     ],
+     "a": 3,
+     "e": "Sabit ücret n = 70, giriş başına artış m = 9: <b>y = 9x + 70</b>."
+    },
+    {
+     "q": "Bir kütüphane 20 TL üyelik ücreti ve her giriş için 26 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 46x",
+      "y = 20x + 26",
+      "y = 26x + 20",
+      "y = 26x − 20"
+     ],
+     "a": 2,
+     "e": "Sabit ücret n = 20, giriş başına artış m = 26: <b>y = 26x + 20</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = 1)<br>3. x’i −2 ile çarp<br>4. Sonuca 7 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = 7x − 2; y = 5",
+      "y = −2x + 7; y = 5",
+      "y = −2x + 7; y = 3",
+      "y = −2x − 7; y = −9"
+     ],
+     "a": 1,
+     "e": "Adımlar y = −2x + 7 fonksiyonunu verir; x = 1 için <b>y = 5</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = 3)<br>3. x’i −3 ile çarp<br>4. Sonuca (−6) ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = −6x − 3; y = −21",
+      "y = −3x + 6; y = −3",
+      "y = −3x − 6; y = −18",
+      "y = −3x − 6; y = −15"
+     ],
+     "a": 3,
+     "e": "Adımlar y = −3x − 6 fonksiyonunu verir; x = 3 için <b>y = −15</b>."
+    },
+    {
+     "q": "Bir spor salonu 80 TL üyelik ücreti ve her giriş için 18 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 18x + 80",
+      "y = 18x − 80",
+      "y = 80x + 18",
+      "y = 98x"
+     ],
+     "a": 0,
+     "e": "Sabit ücret n = 80, giriş başına artış m = 18: <b>y = 18x + 80</b>."
+    },
+    {
+     "q": "Bir yüzme havuzu 20 TL üyelik ücreti ve her giriş için 9 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 9x − 20",
+      "y = 29x",
+      "y = 9x + 20",
+      "y = 20x + 9"
+     ],
+     "a": 2,
+     "e": "Sabit ücret n = 20, giriş başına artış m = 9: <b>y = 9x + 20</b>."
+    },
+    {
+     "q": "Bir yüzme havuzu 60 TL üyelik ücreti ve her giriş için 28 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 60x + 28",
+      "y = 28x + 60",
+      "y = 28x − 60",
+      "y = 88x"
+     ],
+     "a": 1,
+     "e": "Sabit ücret n = 60, giriş başına artış m = 28: <b>y = 28x + 60</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = −6)<br>3. x’i −4 ile çarp<br>4. Sonuca 0 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = x − 4; y = −10",
+      "y = −4x + 1; y = 25",
+      "y = −4x; y = 24",
+      "y = −4x; y = 20"
+     ],
+     "a": 2,
+     "e": "Adımlar y = −4x fonksiyonunu verir; x = −6 için <b>y = 24</b>."
+    },
+    {
+     "q": "Bir spor salonu 20 TL üyelik ücreti ve her giriş için 15 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 15x − 20",
+      "y = 20x + 15",
+      "y = 15x + 20",
+      "y = 35x"
+     ],
+     "a": 2,
+     "e": "Sabit ücret n = 20, giriş başına artış m = 15: <b>y = 15x + 20</b>."
+    },
+    {
+     "q": "Bir spor salonu 20 TL üyelik ücreti ve her giriş için 24 TL alıyor. x giriş sayısı, y toplam ücret ise doğrusal fonksiyon hangisidir?",
+     "c": [
+      "y = 44x",
+      "y = 24x − 20",
+      "y = 20x + 24",
+      "y = 24x + 20"
+     ],
+     "a": 3,
+     "e": "Sabit ücret n = 20, giriş başına artış m = 24: <b>y = 24x + 20</b>."
+    }
+   ]
+  },
+  {
+   "title": "Karışık",
+   "items": [
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = 2)<br>3. x’i −2 ile çarp<br>4. Sonuca 5 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = −2x + 5; y = −1",
+      "y = −2x − 5; y = −9",
+      "y = −2x + 5; y = 1",
+      "y = 5x − 2; y = 8"
+     ],
+     "a": 2,
+     "e": "Adımlar y = −2x + 5 fonksiyonunu verir; x = 2 için <b>y = 1</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = −2)<br>3. x’i 6 ile çarp<br>4. Sonuca (−5) ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = −5x + 6; y = 16",
+      "y = 6x + 5; y = −7",
+      "y = 6x − 5; y = −11",
+      "y = 6x − 5; y = −17"
+     ],
+     "a": 3,
+     "e": "Adımlar y = 6x − 5 fonksiyonunu verir; x = −2 için <b>y = −17</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = 1)<br>3. x’i −4 ile çarp<br>4. Sonuca 2 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = −4x − 2; y = −6",
+      "y = −4x + 2; y = −2",
+      "y = 2x − 4; y = −2",
+      "y = −4x + 2; y = −6"
+     ],
+     "a": 1,
+     "e": "Adımlar y = −4x + 2 fonksiyonunu verir; x = 1 için <b>y = −2</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 30 TL, kilometre başına ücreti 40 TL’dir. 16 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "670 TL",
+      "640 TL",
+      "520 TL",
+      "1.120 TL"
+     ],
+     "a": 0,
+     "e": "Ücret = 30 + 40 · x; x = 16 için 30 + 640 = <b>670 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 80 TL, kilometre başına ücreti 15 TL’dir. 21 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "395 TL",
+      "1.995 TL",
+      "315 TL",
+      "1.695 TL"
+     ],
+     "a": 0,
+     "e": "Ücret = 80 + 15 · x; x = 21 için 80 + 315 = <b>395 TL</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = −2)<br>3. x’i −4 ile çarp<br>4. Sonuca 0 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = −4x; y = 4",
+      "y = −4x + 1; y = 9",
+      "y = −4x; y = 8",
+      "y = x − 4; y = −6"
+     ],
+     "a": 2,
+     "e": "Adımlar y = −4x fonksiyonunu verir; x = −2 için <b>y = 8</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 50 TL, kilometre başına ücreti 24 TL’dir. 22 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "1.628 TL",
+      "578 TL",
+      "1.124 TL",
+      "528 TL"
+     ],
+     "a": 1,
+     "e": "Ücret = 50 + 24 · x; x = 22 için 50 + 528 = <b>578 TL</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 40 TL, kilometre başına ücreti 37 TL’dir. 15 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "595 TL",
+      "555 TL",
+      "1.155 TL",
+      "637 TL"
+     ],
+     "a": 0,
+     "e": "Ücret = 40 + 37 · x; x = 15 için 40 + 555 = <b>595 TL</b>."
+    },
+    {
+     "q": "İçinde 610 L su olan bir depodan dakikada 19 L su boşaltılıyor. 22 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "569 L",
+      "1.028 L",
+      "418 L",
+      "192 L"
+     ],
+     "a": 3,
+     "e": "Su = 610 − 19 · t; t = 22 için <b>192 L</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = 2)<br>3. x’i −1 ile çarp<br>4. Sonuca 7 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = 7x − 1; y = 13",
+      "y = −x + 7; y = 4",
+      "y = −x − 7; y = −9",
+      "y = −x + 7; y = 5"
+     ],
+     "a": 3,
+     "e": "Adımlar y = −x + 7 fonksiyonunu verir; x = 2 için <b>y = 5</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = −1)<br>3. x’i −4 ile çarp<br>4. Sonuca (−8) ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = −4x − 8; y = −8",
+      "y = −4x + 8; y = 12",
+      "y = −8x − 4; y = 4",
+      "y = −4x − 8; y = −4"
+     ],
+     "a": 3,
+     "e": "Adımlar y = −4x − 8 fonksiyonunu verir; x = −1 için <b>y = −4</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = −5)<br>3. x’i −2 ile çarp<br>4. Sonuca 7 ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = 7x − 2; y = −37",
+      "y = −2x − 7; y = 3",
+      "y = −2x + 7; y = 15",
+      "y = −2x + 7; y = 17"
+     ],
+     "a": 3,
+     "e": "Adımlar y = −2x + 7 fonksiyonunu verir; x = −5 için <b>y = 17</b>."
+    },
+    {
+     "q": "İçinde 650 L su olan bir depodan dakikada 10 L su boşaltılıyor. 13 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "520 L",
+      "627 L",
+      "780 L",
+      "130 L"
+     ],
+     "a": 0,
+     "e": "Su = 650 − 10 · t; t = 13 için <b>520 L</b>."
+    },
+    {
+     "q": "Algoritma hangi doğrusal fonksiyonu hesaplar ve çıktısı nedir?<div class='qfig'><span class='code'>1. Başla<br>2. x değerini al (x = 6)<br>3. x’i −1 ile çarp<br>4. Sonuca (−9) ekle<br>5. Sonucu y olarak yaz<br>6. Bitir</span></div>",
+     "c": [
+      "y = −x − 9; y = −16",
+      "y = −x + 9; y = 3",
+      "y = −x − 9; y = −15",
+      "y = −9x − 1; y = −55"
+     ],
+     "a": 2,
+     "e": "Adımlar y = −x − 9 fonksiyonunu verir; x = 6 için <b>y = −15</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 60 TL, kilometre başına ücreti 29 TL’dir. 21 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "1.869 TL",
+      "669 TL",
+      "1.289 TL",
+      "609 TL"
+     ],
+     "a": 1,
+     "e": "Ücret = 60 + 29 · x; x = 21 için 60 + 609 = <b>669 TL</b>."
+    },
+    {
+     "q": "İçinde 690 L su olan bir depodan dakikada 7 L su boşaltılıyor. 85 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "1.285 L",
+      "598 L",
+      "95 L",
+      "595 L"
+     ],
+     "a": 2,
+     "e": "Su = 690 − 7 · t; t = 85 için <b>95 L</b>."
+    },
+    {
+     "q": "İçinde 310 L su olan bir depodan dakikada 11 L su boşaltılıyor. 14 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "464 L",
+      "156 L",
+      "154 L",
+      "285 L"
+     ],
+     "a": 1,
+     "e": "Su = 310 − 11 · t; t = 14 için <b>156 L</b>."
+    },
+    {
+     "q": "Bir taksinin açılış ücreti 50 TL, kilometre başına ücreti 19 TL’dir. 15 km yol giden bir yolcu kaç TL öder?",
+     "c": [
+      "335 TL",
+      "285 TL",
+      "1.035 TL",
+      "769 TL"
+     ],
+     "a": 0,
+     "e": "Ücret = 50 + 19 · x; x = 15 için 50 + 285 = <b>335 TL</b>."
+    },
+    {
+     "q": "İçinde 490 L su olan bir depodan dakikada 14 L su boşaltılıyor. 5 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "471 L",
+      "560 L",
+      "420 L",
+      "70 L"
+     ],
+     "a": 2,
+     "e": "Su = 490 − 14 · t; t = 5 için <b>420 L</b>."
+    },
+    {
+     "q": "İçinde 800 L su olan bir depodan dakikada 11 L su boşaltılıyor. 58 dakika sonra depoda kaç litre su kalır?",
+     "c": [
+      "638 L",
+      "162 L",
+      "731 L",
+      "1.438 L"
+     ],
+     "a": 1,
+     "e": "Su = 800 − 11 · t; t = 58 için <b>162 L</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 12,
+ "updated": "2026-11-25",
+ "country": "tr",
+ "subject": "matematik",
+ "grade": "8-sinif"
+}

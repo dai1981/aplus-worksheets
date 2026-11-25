@@ -1832,7 +1832,13 @@ TR / Matematik / 7. Sınıf（2026 DÖP。負の数は「−」、tr_g7.py に s
 19. es-kuplerle-yapilar-ve-gorunumleri ✓ 20. dikdortgenler-prizmasinin-yuzey-alani ✓ 21. dikdortgenler-prizmasinin-hacmi ✓ 22. hacim-olcme-birimleri ✓ 23. dairenin-ve-daire-diliminin-alani ✓ 24. eskenar-dortgen-ve-yamugun-alani ✓
 25. veri-analizi-ve-ortalama-mutlak-sapma ✓ 26. teorik-olasilik-ve-tumleyen-olay ✓ 27. ayrik-ve-ayrik-olmayan-olaylar ✓
 トピックに rasyonel-sayilar（Tam Sayılar ve Rasyonel Sayılar）・oran-ve-oranti・denklemler-ve-esitsizlikler を足した。hacim・hacmi→olcme（geometri の out）、olcme の out は (^|-)aci（hacim の「aci」に当たらないように）、kup・yansima→geometri、olaylar→olasilik
-TR の次: 8. sınıf、1.〜2. sınıf、lise、okul öncesi
+TR / Matematik / 8. Sınıf（2026 DÖP。単元は tr_s8a（1〜12：S・C8）・tr_s8b（13〜23：GS・GN・D・IA・VO）。図は id_smp.kosy・figure（右角は (頂点, A, B)）。「en uzundur・en kısadır」「kaç ayrıta／köşeye／yüze」に注意）
+1. uslu-ifadeler ✓ 2. uslu-ifadelerle-islemler ✓ 3. bilimsel-gosterim ✓ 4. karekoklu-ifadeler ✓ 5. rasyonel-ve-irrasyonel-sayilar ✓ 6. gercek-sayilar-ve-sayi-araliklari ✓
+7. dik-koordinat-sistemi ✓ 8. dogrusal-iliskiler-ve-fonksiyonlar ✓ 9. dogrusal-fonksiyonlarin-grafikleri ✓ 10. egim ✓ 11. iki-dogrusal-fonksiyonun-durumu ✓ 12. dogrusal-fonksiyon-problemleri-ve-algoritma ✓
+13. ucgende-aci-kenar-iliskisi ✓ 14. ucgen-esitsizligi ✓ 15. eslik ✓ 16. benzerlik ✓ 17. pisagor-bagintisi ✓ 18. cisimlerin-yuzey-acinimlari ✓ 19. silindirin-yuzey-alani-ve-hacmi ✓
+20. oteleme-donusumu ✓ 21. koordinat-duzleminde-oteleme-ve-yansima ✓ 22. veri-analizi-ve-yorumlama ✓ 23. olasilik-yaklasimlari ✓
+トピックに uslu-ve-karekoklu-ifadeler・dogrusal-fonksiyonlar を足した（oruntuler・veri の out に dogrusal、denklemler の out に ucgen-esitsizligi）。eslik・benzerlik・pisagor・oteleme→geometri
+TR の次: 1.〜2. sınıf、lise、okul öncesi
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
