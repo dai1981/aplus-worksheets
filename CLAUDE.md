@@ -1777,7 +1777,16 @@ Kelas 1: 1. bilangan-sampai-10 ✓ 2. penjumlahan-sampai-10 ✓ 3. pengurangan-s
 8. bangun-datar ✓ 9. bangun-ruang ✓ 10. membandingkan-panjang-dan-berat ✓ 11. pola-gambar-dan-bilangan ✓ 12. posisi-benda ✓ 13. turus-dan-piktogram ✓
 Kelas 2: 1. bilangan-sampai-100 ✓ 2. puluhan-dan-satuan ✓ 3. membandingkan-dan-mengurutkan-bilangan ✓ 4. lompat-hitung-dan-bilangan-genap-ganjil ✓ 5. penjumlahan-dan-pengurangan-sampai-20 ✓ 6. kesamaan-dan-tanda-sama-dengan ✓ 7. soal-cerita ✓
 8. setengah-dan-seperempat ✓ 9. mengukur-dengan-satuan-tidak-baku ✓ 10. bangun-datar-dan-bangun-ruang ✓ 11. menyusun-dan-mengurai-bangun-datar ✓ 12. pola ✓ 13. turus-dan-piktogram ✓
-ID / Matematika は Kelas 1〜6（SD）まで完了。次は SMP（Fase D、Kelas 7–9）
+ID / Matematika / Kelas 7–9（SMP、Fase D）— 生成スクリプトは `tools/id_smp.py 7|8|9 [番号…]`（seed は 40000 + 100 × 学年 + 番号）、単元は `tools/id_smp7.py`・`id_smp8.py`・`id_smp9.py` の UNITS（問題関数はすべて自前のインドネシア語）。
+共通部品は id_smp（M＝負の数も残す 4 択、誤答が 3 つそろわないと None。MN・MD は数・小数の答え（unit="rupiah" で Rp、"°" は空白なし）、sn・fq・dz・par・expr・lin・sup・pw、図：numline・kosy（de_k8）・kurve（de_k10）・figure（fr_c4）・poly_ang（多角形と内角）・sejajar（平行線と横断線の 8 つの角）・pie）。float を sn・fq に渡すと ValueError（Fraction を使う）。
+id_common.make_unit の seo_title は Kelas 7–9 で「SMP」。トピックに bilangan-bulat-dan-rasional・pangkat-dan-akar・persamaan-dan-fungsi を足した（aritmetika-sosial→pecahan-desimal-dan-persen、statistika→data-dan-peluang）
+Kelas 7: 1. bilangan-bulat ✓ 2. operasi-bilangan-bulat ✓ 3. bilangan-rasional ✓ 4. operasi-bilangan-rasional ✓ 5. rasio-dan-proporsi ✓ 6. bentuk-aljabar ✓ 7. persamaan-linear-satu-variabel ✓
+8. pertidaksamaan-linear-satu-variabel ✓ 9. aritmetika-sosial ✓ 10. garis-dan-sudut ✓ 11. segitiga-dan-segi-empat ✓ 12. luas-permukaan-dan-volume-kubus-dan-balok ✓ 13. penyajian-data ✓ 14. peluang ✓
+Kelas 8: 1. bilangan-berpangkat ✓ 2. notasi-ilmiah ✓ 3. teorema-pythagoras ✓ 4. relasi-dan-fungsi ✓ 5. persamaan-garis-lurus ✓ 6. sistem-persamaan-linear-dua-variabel ✓ 7. faktorisasi-bentuk-aljabar ✓
+8. lingkaran ✓ 9. prisma-dan-limas ✓ 10. transformasi-geometri ✓ 11. statistika ✓ 12. peluang-empirik-dan-teoretik ✓
+Kelas 9: 1. bentuk-akar ✓ 2. persamaan-kuadrat ✓ 3. fungsi-kuadrat ✓ 4. kesebangunan ✓ 5. kekongruenan ✓ 6. sudut-pusat-dan-sudut-keliling ✓ 7. tabung-kerucut-dan-bola ✓
+8. dilatasi ✓ 9. ukuran-penyebaran-data ✓ 10. peluang-kejadian-majemuk ✓ 11. pola-bilangan-dan-barisan ✓
+ID / Matematika は Kelas 1〜9（SD・SMP）まで完了。次は SMA（Fase E・F）か、GDP 順で次の国
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
