@@ -169,7 +169,7 @@ function topic_defs_tw() {
 /* China (cn): simplified Chinese topic names and cn unit slugs */
 function topic_defs_cn() {
     return array(
-        'numbers' => array('name' => '数的认识', 'in' => '/^numbers|large-numbers|composing-numbers|negative-numbers|factors-and-multiples/', 'out' => '/^$/',
+        'numbers' => array('name' => '数的认识', 'in' => '/^numbers|large-numbers|composing-numbers|negative-numbers|factors-and-multiples|^counting-to|counting-in-groups|comparing-quantities|ordinal-numbers|splitting-and-combining/', 'out' => '/^$/',
             'blurb' => '从 10 以内的数、100 以内的数到亿以上的数，认识数位和计数单位、数的组成、比大小，因数与倍数，以及负数。'),
         'addition-and-subtraction' => array('name' => '加法和减法', 'in' => '/add|subtract|carrying|borrowing|number-sentences/', 'out' => '/fraction|decimal|rational/',
             'blurb' => '从 10 以内的加减法、20 以内的进位加法和退位减法，到 100 以内和万以内的笔算加减。'),
@@ -197,11 +197,11 @@ function topic_defs_cn() {
             'blurb' => '简易方程、一元一次方程、二元一次方程组、不等式与不等式组、分式方程和一元二次方程。'),
         'functions' => array('name' => '函数', 'in' => '/coordinate-plane|functions$|exponents-and-logarithms/', 'out' => '/trigonometric/',
             'blurb' => '平面直角坐标系，一次函数、二次函数和反比例函数，函数的概念与性质，指数、对数和指数函数、对数函数。'),
-        'measurement' => array('name' => '常见的量', 'in' => '/centimeters|(^|-)grams|measurement-units|hectares|^rmb$|telling-time|hours|years-months/', 'out' => '/^$/',
+        'measurement' => array('name' => '常见的量', 'in' => '/centimeters|comparing-length|(^|-)grams|measurement-units|hectares|^rmb$|telling-time|hours|years-months/', 'out' => '/^$/',
             'blurb' => '认识人民币，厘米和米、克和千克、吨和千米，时、分、秒和年、月、日，以及公顷和平方千米。'),
         'area-and-perimeter' => array('name' => '周长和面积', 'in' => '/^area|rectangles-and-squares|^circles$/', 'out' => '/^$/',
             'blurb' => '长方形和正方形的周长，面积单位，长方形、平行四边形、三角形、梯形的面积，以及圆的周长和面积。'),
-        'shapes' => array('name' => '平面图形', 'in' => '/2d-shapes|^angles$|measuring-angles|parallel-perpendicular|^triangles$|rectangles-and-squares|^circles$/', 'out' => '/^$/',
+        'shapes' => array('name' => '平面图形', 'in' => '/2d-shapes|recognizing-shapes|^angles$|measuring-angles|parallel-perpendicular|^triangles$|rectangles-and-squares|^circles$/', 'out' => '/^$/',
             'blurb' => '认识图形、角的初步认识和角的度量，平行与垂直，三角形、四边形和圆的特征。'),
         'geometry' => array('name' => '三角形、四边形与圆', 'in' => '/geometric-figures|intersecting|triangles-and-polygons|congruent|parallelograms$|pythagorean|similarity|^trigonometric-functions$|circle-geometry/', 'out' => '/^$/',
             'blurb' => '直线、射线、线段和角，相交线与平行线，三角形和多边形，全等和相似，勾股定理，平行四边形，锐角三角函数，以及圆。'),

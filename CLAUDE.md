@@ -1739,7 +1739,10 @@ CN / Math / 必修第二册: plane-vectors, solving-triangles, complex-numbers, 
 CN / Math / 选择性必修第一册: space-vectors, lines, equations-of-circles, ellipses, hyperbolas, parabolas ✓
 CN / Math / 选择性必修第二册: sequences, derivatives, applications-of-derivatives ✓
 CN / Math / 选择性必修第三册: counting-principles, binomial-theorem, random-variables, conditional-probability-and-normal-distribution, paired-data ✓
-CN / Math は小学一年级〜高中（必修・选择性必修）まで完了。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に cn があるか確認する
+CN / Math / 幼儿园大班（5～6岁、《3-6岁儿童学习与发展指南》科学领域・数学认知（教育部 2012）。grade `kindergarten`（name「幼儿园大班」、sort 0）。10 以内（数えるのは 20 まで）、とても短い文、ほぼ全問に絵）— 生成スクリプトは `tools/cn_k.py`（seed は 901NN）。cn_low の問題と自前の問題（按群数数・比多少・序数・分与合・実物の加減・長短/高矮/粗細/厚薄/軽重・量的相对性・图形・分类・统计图・规律）。
+cn_common.unit は g == 0 で standard_code「数学认知 · 感知和理解数、量及数量关系」（DOMAIN_K：U 目标1・N 目标2・G 目标3）、standard_url は《指南》全文（STD_URL_K、unicef.cn の PDF）。core.php の grade_standard()、unit.php に cn の kindergarten（educationalLevel 幼儿园大班）。一年级と同じ slug は使わない
+CN / Math / 幼儿园大班: counting-to-10, numbers-to-20, counting-in-groups, comparing-quantities, ordinal-numbers, splitting-and-combining-numbers, adding-and-taking-away, comparing-length-height-thickness-and-weight, recognizing-shapes, position-and-direction, repeating-patterns, sorting-and-recording ✓
+CN / Math は幼儿园大班・小学一年级〜高中（必修・选择性必修）まで完了。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に cn があるか確認する
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

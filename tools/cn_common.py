@@ -25,6 +25,8 @@ STAGE = {1: "第一学段", 2: "第一学段", 3: "第二学段", 4: "第二学�
 DOMAIN = {"N": "数与运算", "Q": "数量关系", "G": "图形的认识与测量", "T": "图形的位置与运动", "D": "统计与概率"}
 DOMAIN_JH = {"N": "数与代数", "A": "数与代数", "G": "图形与几何", "T": "图形与几何", "D": "统计与概率"}  # 第四学段
 # 高中（普通高中数学课程标准（2017年版2020年修订））：grade は科目（必修第一册 など）
+STD_URL_K = "https://www.unicef.cn/sites/unicef.org.china/files/2019-05/%E3%80%8A3%E2%80%946%E5%B2%81%E5%84%BF%E7%AB%A5%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%8F%91%E5%B1%95%E6%8C%87%E5%8D%97%E3%80%8B_0.pdf"
+DOMAIN_K = {"U": "初步感知生活中数学的有用和有趣", "N": "感知和理解数、量及数量关系", "G": "感知形状与空间关系"}   # 《指南》数学认知の目标1〜3
 STD_URL_HS = "http://www.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html"
 HS_NAMES = {"required-1": "必修第一册", "required-2": "必修第二册", "elective-1": "选择性必修第一册",
             "elective-2": "选择性必修第二册", "elective-3": "选择性必修第三册"}
@@ -280,7 +282,11 @@ def unit(g, slug, sort, dom, std, title, short, meta, key_big, key_sub, body, fa
             assert not re.search(r"[們個這們為來說時對還會與無並後從應於將從學數點麼裡邊們樣條鐘幾讀寫錢買賣張隻開關]", re.sub(r"<[^>]+>", "", it["q"] + "".join(it["c"]) + it["e"])), ("traditional", slug, it["q"][:80])
     balance(sets, rnd)
     title, short, meta, key_big, key_sub = map(plain, (title, short, meta, key_big, key_sub))
-    if isinstance(g, str):                  # 高中
+    if g == 0:                              # 幼儿园大班（《3-6岁儿童学习与发展指南》科学领域・数学认知）
+        dname = DOMAIN_K[dom]
+        gslug, seo = "kindergarten", "%s｜幼儿园大班数学练习题（附答案）" % title
+        code, url = "数学认知 · %s" % dname, STD_URL_K
+    elif isinstance(g, str):                  # 高中
         dname = DOMAIN_HS[dom]
         gslug, seo = g, "%s｜高中数学%s练习题（附答案）" % (title, HS_NAMES[g])
         code, url = "%s · %s" % (HS_STAGE[g], dname), STD_URL_HS
@@ -292,7 +298,7 @@ def unit(g, slug, sort, dom, std, title, short, meta, key_big, key_sub, body, fa
         "slug": slug, "title": title,
         "seo_title": seo,
         "short_title": short, "domain": dname, "standard_code": code,
-        "standard_url": url, "standard_text": std + "（课标内容要求摘要）", "meta_desc": meta,
+        "standard_url": url, "standard_text": std + ("（《指南》5～6岁典型表现摘要）" if g == 0 else "（课标内容要求摘要）"), "meta_desc": meta,
         "key_big": key_big, "key_sub": key_sub, "body_html": body,
         "faq": [{"q": q, "a": a} for q, a in faq], "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     })

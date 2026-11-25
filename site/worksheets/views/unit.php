@@ -188,6 +188,9 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 } elseif ($grade['slug'] === 'kindergarten' && $country['code'] === 'kr') {
     $lr['typicalAgeRange'] = '5-6';   // Korea: 유치원 만 5세반 (2019 개정 누리과정)
     $lr['educationalLevel'] = array('유치원', '만 5세', '누리과정');
+} elseif ($grade['slug'] === 'kindergarten' && $country['code'] === 'cn') {
+    $lr['typicalAgeRange'] = '5-6';   // China: 幼儿园大班 (《3-6岁儿童学习与发展指南》)
+    $lr['educationalLevel'] = array('幼儿园大班', '学前教育');
 } elseif ($grade['slug'] === 'kindergarten') {
     $lr['typicalAgeRange'] = '5-6';
 } elseif ($grade['slug'] === 'algebra-1') {
