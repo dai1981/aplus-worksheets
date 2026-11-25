@@ -1881,7 +1881,10 @@ CH / Mathematik / 4. Klasse（Zahlenraum bis 1 Million。ch_k4.py、rechnen-mit-
 8. sachaufgaben ✓ 9. laengen-in-dezimalschreibweise ✓ 10. gewichte-und-tonnen ✓ 11. rauminhalte ✓ 12. rechnen-mit-geld ✓ 13. zeit-und-kalender ✓ 14. massstab ✓
 15. umfang-und-flaecheninhalt ✓ 16. parallel-senkrecht-und-vierecke ✓ 17. wuerfel-und-quader ✓ 18. daten-und-diagramme ✓ 19. kombinatorik-und-wahrscheinlichkeit ✓
 ch_common: from_de の pre(mod) で main の前にモジュールのデータを差し替えられる。Deutschland の文字どおりの名前（Paul, Ben …）は DE_NAMES でスイスの名前に（Kids の名前とは別の名前）
-CH の次: 2. Klasse、1. Klasse、5.–6. Klasse、Kindergarten、Sekundarstufe I（7.–9. Klasse）。フランス語圏（PER）・イタリア語圏（Ticino）はその後
+CH / Mathematik / 2. Klasse（Zahlenraum bis 100、Einmaleins。ch_k2.py、geld は FIX で本文・FAQ をスイスの硬貨・紙幣に。5 Fr. は硬貨（Fünffrankenstück）、Noten は 10〜1000 Fr.）
+1. zahlen-bis-100 ✓ 2. zahlen-vergleichen-und-ordnen ✓ 3. plus-und-minus-bis-20 ✓ 4. plus-bis-100 ✓ 5. minus-bis-100 ✓ 6. ergaenzen-bis-100 ✓ 7. multiplizieren-verstehen ✓ 8. einmaleins-mit-2-5-und-10 ✓ 9. kleines-einmaleins ✓
+10. geteilt-aufteilen-und-verteilen ✓ 11. sachaufgaben ✓ 12. geld ✓ 13. laengen ✓ 14. uhrzeit ✓ 15. flaechen-und-koerper ✓ 16. spiegeln-und-symmetrie ✓ 17. zahlenmauern-und-muster ✓ 18. strichlisten-und-diagramme ✓
+CH の次: 1. Klasse、1. Klasse、5.–6. Klasse、Kindergarten、Sekundarstufe I（7.–9. Klasse）。フランス語圏（PER）・イタリア語圏（Ticino）はその後
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

@@ -62,7 +62,8 @@ WORDS = [
     (r"\bKlasse (\d+)(?![a-z\d])", r"\1. Klasse"), (r"\bMathe-Arbeitsbl", "Mathematik-Arbeitsbl"), (r"\bMathe\b", "Mathematik"),
     (r"\bKMK-Bildungsstandards?\b", "Lehrplan 21"), (r"\bBildungsstandards\b", "Lehrplan 21"),
     (r"\bCroissants?\b", "Gipfeli"), (r"\bKommaschreibweise", "Dezimalschreibweise"), (r"\bKommazahl", "Dezimalzahl"),
-    (r"\bBücherei", "Bibliothek"), (r"\bLieblings-AG\b", "Lieblingskurs"),
+    (r"Bücherei", "Bibliothek"), (r"bücherei", "bibliothek"), (r"Franken-Scheine\b", "Franken-Noten"), (r"\bLieblings-AG\b", "Lieblingskurs"),
+    (r"\bWechselgeld", "Rückgeld"),
     (r"\bKomma unter Komma", "Punkt unter Punkt"), (r"\b(hinter|vor|nach|mit) dem Komma", r"\1 dem Punkt"),
     (r"\bdas Komma\b", "der Punkt"), (r"\bDas Komma\b", "Der Punkt"), (r"\bdes Kommas\b", "des Punktes"), (r"\b(mit|ohne) Komma\b", r"\1 Punkt"),
     (r"\bKommastelle", "Dezimalstelle"), (r"\bKommabeträge", "Geldbeträge"), (r"\bKomma\b", "Punkt"),
@@ -78,6 +79,9 @@ LEAKS = ["€", " ct", "ct ", "Euro", "Cent", "ß", "Bundesland", "Grundschul", 
 
 
 def _money(s):
+    s = re.sub(r"(\d+)-€-Scheine\b", r"\1-Franken-Noten", s)
+    s = re.sub(r"(\d+)-€-", r"\1-Franken-", s)
+    s = re.sub(r"(\d+)-ct-", r"\1-Rappen-", s)
     s = re.sub(r"(\d+),(\d\d)[  ]?€", r"\1.\2 Fr.", s)
     s = re.sub(r"(\d[\d ]*)[  ]?€", lambda m: m.group(1) + NB + "Fr.", s)
     s = re.sub(r"(\d+)[  ]?ct\b", lambda m: m.group(1) + NB + "Rp.", s)
@@ -116,6 +120,13 @@ def _textnode(s, full):
     for a, b in WORDS:
         s = re.sub(a, b, s)
     s = _DE_NAME_RE.sub(lambda m: DE_NAMES[m.group(1)] + m.group(2), s)
+    s = re.sub(r"(Franken|Hunderter|Zehner)-Scheine\b", r"\1-Noten", s)
+    s = re.sub(r"\bScheine(n?)\b", "Noten", s)
+    s = re.sub(r"\beinem (\S+-Franken-)Schein\b", r"einer \1Note", s)
+    s = re.sub(r"\bein(en)? (\S+-Franken-)Schein\b", r"eine \2Note", s)
+    s = re.sub(r"(-Franken-)Schein\b", r"\1Note", s)
+    s = re.sub(r"\bFünf-Franken-Noten\b", "Fünffrankenstücke", s)
+    s = re.sub(r"\b5-Franken-Note(n?)\b", r"5-Franken-Münze\1", s)    # 5 Fr. ist in der Schweiz eine Münze
     return s
 
 
