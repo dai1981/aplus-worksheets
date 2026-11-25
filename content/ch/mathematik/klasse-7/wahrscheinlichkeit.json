@@ -1,0 +1,1165 @@
+{
+ "slug": "wahrscheinlichkeit",
+ "title": "Wahrscheinlichkeit und Baumdiagramme",
+ "seo_title": "Wahrscheinlichkeit – Mathematik 7. Klasse: Arbeitsblätter mit Lösungen",
+ "short_title": "Wahrscheinlichkeit",
+ "domain": "Grössen, Funktionen, Daten und Zufall",
+ "standard_code": "MA.3.B.2, MA.3.C.1",
+ "standard_url": "https://sg.lehrplan.ch/container/SG_DE_Fachbereich_MA.pdf",
+ "standard_text": "Die Schülerinnen und Schüler können Sachsituationen zur Statistik, Kombinatorik und Wahrscheinlichkeit erforschen, Vermutungen formulieren und überprüfen; sie können Daten zu Statistik, Kombinatorik und Wahrscheinlichkeit erheben, ordnen, darstellen, auswerten und interpretieren (Lehrplan 21, MA.3.B.2, MA.3.C.1).",
+ "meta_desc": "Wahrscheinlichkeit für 7. Klasse: Laplace, Gegenereignis, zwei Würfel, Baumdiagramm, Pfad- und Summenregel, mit und ohne Zurücklegen. 100 Aufgaben mit Lösungen, kostenlos.",
+ "key_big": "Entlang eines Pfades multiplizieren, Pfade addieren.",
+ "key_sub": "Pfadregel und Summenregel im Baumdiagramm; P(Ē) = 1 − P(E).",
+ "body_html": "<h2>So geht's</h2><p><b>Laplace</b>: alle Ergebnisse gleich wahrscheinlich → P(E) = Anzahl günstige : Anzahl mögliche.</p><p><b>Gegenereignis</b> Ē: P(Ē) = 1 − P(E).</p><p>Zweistufige Experimente zeichnet man als <b>Baumdiagramm</b>. <b>Pfadregel</b>: entlang eines Pfades multiplizieren. <b>Summenregel</b>: mehrere Pfade addieren.</p><p><b>Ohne Zurücklegen</b> ändern sich beim zweiten Zug Zähler und Nenner.</p><p>Bei vielen Wiederholungen nähert sich die relative Häufigkeit der Wahrscheinlichkeit. Erwartete Anzahl = n × P.</p><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>2 rote, 3 blaue Kugeln, zweimal mit Zurücklegen: P(r, r)</p><p class='sn-ex-s'><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></p><p class='sn-ex-a'>Lösung: <span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span></p></div><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>dasselbe ohne Zurücklegen</p><p class='sn-ex-s'><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></p><p class='sn-ex-a'>Lösung: <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></p></div><div class='sn-ex'><span class='sn-ex-t'>Beispiel</span><p class='sn-ex-q'>zwei Würfel, Augensumme 7</p><p class='sn-ex-s'>(1|6), (2|5), (3|4), (4|3), (5|2), (6|1)</p><p class='sn-ex-s'>6 von 36</p><p class='sn-ex-a'>Lösung: <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></p></div><h2>Typische Fehler</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Typischer Fehler</th><th>So ist es richtig</th></tr></thead><tbody><tr><td>Entlang eines Pfades addieren</td><td>Entlang eines Pfades multiplizieren</td></tr><tr><td>Ohne Zurücklegen wie mit Zurücklegen rechnen</td><td>Beim zweiten Zug ist eine Kugel weniger da</td></tr><tr><td>Augensumme 7 hat P = 1/11 (11 Summen)</td><td>Die 11 Summen sind nicht gleich wahrscheinlich: 36 Paare zählen</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Was ist die Pfadregel?",
+   "a": "Die Wahrscheinlichkeit eines Pfades im Baumdiagramm ist das Produkt der Wahrscheinlichkeiten entlang des Pfades."
+  },
+  {
+   "q": "Was ist die Summenregel?",
+   "a": "Gehören mehrere Pfade zu einem Ereignis, addiert man ihre Wahrscheinlichkeiten."
+  },
+  {
+   "q": "Was ändert sich ohne Zurücklegen?",
+   "a": "Beim zweiten Zug ist eine Kugel weniger in der Urne. Nenner und eventuell Zähler werden um 1 kleiner."
+  },
+  {
+   "q": "Wie berechnet man das Gegenereignis?",
+   "a": "P(Ē) = 1 − P(E). Das hilft oft bei „mindestens einmal“."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Laplace und Gegenereignis",
+   "items": [
+    {
+     "q": "Die Wahrscheinlichkeit für eine Verspätung des Busses beträgt 12 %. Wie gross ist die Wahrscheinlichkeit für das Gegenereignis?",
+     "c": [
+      "88 %",
+      "76 %",
+      "12 %",
+      "98 %"
+     ],
+     "a": 0,
+     "e": "P(Gegenereignis) = 100 % − 12 % = <b>88 %</b>."
+    },
+    {
+     "q": "Ein fairer Würfel wird geworfen. P(eine Quadratzahl (1 oder 4)) = ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "2 günstige von 6 Ergebnissen: <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "P(E) = <span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>. Berechne P(Ē), die Wahrscheinlichkeit des Gegenereignisses.",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span>"
+     ],
+     "a": 3,
+     "e": "P(Ē) = 1 − <span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "Die Wahrscheinlichkeit für einen Gewinn am Losstand beträgt 30 %. Wie gross ist die Wahrscheinlichkeit für das Gegenereignis?",
+     "c": [
+      "80 %",
+      "40 %",
+      "70 %",
+      "30 %"
+     ],
+     "a": 2,
+     "e": "P(Gegenereignis) = 100 % − 30 % = <b>70 %</b>."
+    },
+    {
+     "q": "Ein fairer Würfel wird geworfen. P(eine Zahl kleiner als 3) = ?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "2 günstige von 6 Ergebnissen: <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Ein fairer Würfel wird geworfen. P(eine Zahl grösser als 2) = ?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "4 günstige von 6 Ergebnissen: <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Die Wahrscheinlichkeit für einen Gewinn am Losstand beträgt 62 %. Wie gross ist die Wahrscheinlichkeit für das Gegenereignis?",
+     "c": [
+      "62 %",
+      "38 %",
+      "48 %",
+      "24 %"
+     ],
+     "a": 1,
+     "e": "P(Gegenereignis) = 100 % − 62 % = <b>38 %</b>."
+    },
+    {
+     "q": "Auf 30 Karten stehen die Zahlen 1 bis 30. Eine Karte wird blind gezogen. Wie gross ist die Wahrscheinlichkeit für eine Zahl grösser als 27?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>27</span></span>"
+     ],
+     "a": 1,
+     "e": "3 günstige von 30 Karten: <span class='fr'><span class='fn'>3</span><span class='fd'>30</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "P(E) = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>. Berechne P(Ē), die Wahrscheinlichkeit des Gegenereignisses.",
+     "c": [
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "P(Ē) = 1 − <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "P(E) = <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>. Berechne P(Ē), die Wahrscheinlichkeit des Gegenereignisses.",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>17</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>"
+     ],
+     "a": 3,
+     "e": "P(Ē) = 1 − <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Auf 10 Karten stehen die Zahlen 1 bis 10. Eine Karte wird blind gezogen. Wie gross ist die Wahrscheinlichkeit für eine durch 5 teilbare Zahl?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "2 günstige von 10 Karten: <span class='fr'><span class='fn'>2</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Die Wahrscheinlichkeit für einen Treffer beim Elfmeter beträgt 40 %. Wie gross ist die Wahrscheinlichkeit für das Gegenereignis?",
+     "c": [
+      "60 %",
+      "20 %",
+      "40 %",
+      "70 %"
+     ],
+     "a": 0,
+     "e": "P(Gegenereignis) = 100 % − 40 % = <b>60 %</b>."
+    },
+    {
+     "q": "Auf 30 Karten stehen die Zahlen 1 bis 30. Eine Karte wird blind gezogen. Wie gross ist die Wahrscheinlichkeit für eine durch 5 teilbare Zahl?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>24</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "6 günstige von 30 Karten: <span class='fr'><span class='fn'>6</span><span class='fd'>30</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "Die Wahrscheinlichkeit für Regen morgen beträgt 85 %. Wie gross ist die Wahrscheinlichkeit für das Gegenereignis?",
+     "c": [
+      "15 %",
+      "70 %",
+      "25 %",
+      "85 %"
+     ],
+     "a": 0,
+     "e": "P(Gegenereignis) = 100 % − 85 % = <b>15 %</b>."
+    },
+    {
+     "q": "Auf 10 Karten stehen die Zahlen 1 bis 10. Eine Karte wird blind gezogen. Wie gross ist die Wahrscheinlichkeit für eine Zahl grösser als 7?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "3 günstige von 10 Karten: <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Die Wahrscheinlichkeit für einen Gewinn am Losstand beträgt 15 %. Wie gross ist die Wahrscheinlichkeit für das Gegenereignis?",
+     "c": [
+      "85 %",
+      "15 %",
+      "95 %",
+      "70 %"
+     ],
+     "a": 0,
+     "e": "P(Gegenereignis) = 100 % − 15 % = <b>85 %</b>."
+    },
+    {
+     "q": "Auf 30 Karten stehen die Zahlen 1 bis 30. Eine Karte wird blind gezogen. Wie gross ist die Wahrscheinlichkeit für eine durch 10 teilbare Zahl?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "3 günstige von 30 Karten: <span class='fr'><span class='fn'>3</span><span class='fd'>30</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "P(E) = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>. Berechne P(Ē), die Wahrscheinlichkeit des Gegenereignisses.",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>1</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "P(Ē) = 1 − <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Auf 50 Karten stehen die Zahlen 1 bis 50. Eine Karte wird blind gezogen. Wie gross ist die Wahrscheinlichkeit für eine durch 10 teilbare Zahl?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>45</span></span>"
+     ],
+     "a": 2,
+     "e": "5 günstige von 50 Karten: <span class='fr'><span class='fn'>5</span><span class='fd'>50</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "P(E) = <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>. Berechne P(Ē), die Wahrscheinlichkeit des Gegenereignisses.",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "P(Ē) = 1 − <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Zwei Würfel und Münzen",
+   "items": [
+    {
+     "q": "Eine Münze wird dreimal geworfen. P(genau zweimal Zahl) = ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "2 × 2 × 2 = 8 gleich wahrscheinliche Ergebnisse, günstig sind 3: <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Zwei faire Würfel werden geworfen. Wie gross ist die Wahrscheinlichkeit für die Augensumme 10?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 0,
+     "e": "36 gleich wahrscheinliche Paare. Günstig: (4|6), (5|5), (6|4) – also 3. <span class='fr'><span class='fn'>3</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird zweimal geworfen. P(keinmal Kopf) = ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Ergebnisse: KK, KZ, ZK, ZZ. Günstig: 1 von 4 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Man wirft zwei Würfel. Wie viele mögliche Ergebnisse gibt es?",
+     "c": [
+      "18",
+      "12",
+      "6",
+      "36"
+     ],
+     "a": 3,
+     "e": "Zählprinzip: 6 × 6 = <b>36</b>."
+    },
+    {
+     "q": "Eine Münze wird zweimal geworfen. P(mindestens einmal Kopf) = ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Ergebnisse: KK, KZ, ZK, ZZ. Günstig: 3 von 4 = <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird dreimal geworfen. P(genau einmal Kopf) = ?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 2,
+     "e": "2 × 2 × 2 = 8 gleich wahrscheinliche Ergebnisse, günstig sind 3: <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Man wirft einen Würfel und einen Tetraeder-Würfel (1 bis 4). Wie viele mögliche Ergebnisse gibt es?",
+     "c": [
+      "12",
+      "10",
+      "24",
+      "6"
+     ],
+     "a": 2,
+     "e": "Zählprinzip: 6 × 4 = <b>24</b>."
+    },
+    {
+     "q": "Eine Münze wird dreimal geworfen. P(mindestens einmal Zahl) = ?",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "2 × 2 × 2 = 8 gleich wahrscheinliche Ergebnisse, günstig sind 7: <b><span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "Zwei faire Würfel werden geworfen. Wie gross ist die Wahrscheinlichkeit für einen Pasch (zwei gleiche Zahlen)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 1,
+     "e": "6 Paare (1|1) bis (6|6) von 36: <span class='fr'><span class='fn'>6</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Zwei faire Würfel werden geworfen. Wie gross ist die Wahrscheinlichkeit für die Augensumme 7?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "36 gleich wahrscheinliche Paare. Günstig: (1|6), (2|5), (3|4), (4|3), (5|2), (6|1) – also 6. <span class='fr'><span class='fn'>6</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Zwei faire Würfel werden geworfen. Wie gross ist die Wahrscheinlichkeit für die Augensumme 9?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>"
+     ],
+     "a": 1,
+     "e": "36 gleich wahrscheinliche Paare. Günstig: (3|6), (4|5), (5|4), (6|3) – also 4. <span class='fr'><span class='fn'>4</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Man wirft eine Münze und einen Tetraeder-Würfel (1 bis 4). Wie viele mögliche Ergebnisse gibt es?",
+     "c": [
+      "4",
+      "6",
+      "8",
+      "9"
+     ],
+     "a": 2,
+     "e": "Zählprinzip: 2 × 4 = <b>8</b>."
+    },
+    {
+     "q": "Zwei faire Würfel werden geworfen. Wie gross ist die Wahrscheinlichkeit für die Augensumme 6?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "36 gleich wahrscheinliche Paare. Günstig: (1|5), (2|4), (3|3), (4|2), (5|1) – also 5. <span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird zweimal geworfen. P(einmal Kopf und einmal Zahl) = ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "Ergebnisse: KK, KZ, ZK, ZZ. Günstig: 2 von 4 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Zwei faire Würfel werden geworfen. Wie gross ist die Wahrscheinlichkeit für die Augensumme 12?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>"
+     ],
+     "a": 1,
+     "e": "36 gleich wahrscheinliche Paare. Günstig: (6|6) – also 1. <span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Zwei faire Würfel werden geworfen. Wie gross ist die Wahrscheinlichkeit für die Augensumme 3?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>"
+     ],
+     "a": 3,
+     "e": "36 gleich wahrscheinliche Paare. Günstig: (1|2), (2|1) – also 2. <span class='fr'><span class='fn'>2</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span></b>."
+    },
+    {
+     "q": "Zwei faire Würfel werden geworfen. Wie gross ist die Wahrscheinlichkeit für die Augensumme 5?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>"
+     ],
+     "a": 2,
+     "e": "36 gleich wahrscheinliche Paare. Günstig: (1|4), (2|3), (3|2), (4|1) – also 4. <span class='fr'><span class='fn'>4</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "Eine Münze wird zweimal geworfen. P(zweimal Kopf) = ?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "Ergebnisse: KK, KZ, ZK, ZZ. Günstig: 1 von 4 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "Zwei faire Würfel werden geworfen. Wie gross ist die Wahrscheinlichkeit für die Augensumme 2?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span>"
+     ],
+     "a": 3,
+     "e": "36 gleich wahrscheinliche Paare. Günstig: (1|1) – also 1. <span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "Man wirft zwei Münzen. Wie viele mögliche Ergebnisse gibt es?",
+     "c": [
+      "3",
+      "4",
+      "5",
+      "2"
+     ],
+     "a": 1,
+     "e": "Zählprinzip: 2 × 2 = <b>4</b>."
+    }
+   ]
+  },
+  {
+   "title": "Pfadregel mit Zurücklegen",
+   "items": [
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/7</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/7</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/7</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/7</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/7</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/7</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 3 rote (r) und 4 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>"
+     ],
+     "a": 1,
+     "e": "Pfadregel: Wahrscheinlichkeiten entlang des Pfades multiplizieren: <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>49</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 6 rote (r) und 4 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist die Wahrscheinlichkeit, mindestens eine rote Kugel zu ziehen?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "Gegenereignis „keine rote“ = (b, b): <span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>. 1 − <span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span> = <b><span class='fr'><span class='fn'>21</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 3 rote (r) und 1 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "Pfadregel: Wahrscheinlichkeiten entlang des Pfades multiplizieren: <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 2 rote (r) und 3 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist die Wahrscheinlichkeit, genau eine rote Kugel zu ziehen?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "Zwei Pfade: (r, b) und (b, r). Summenregel: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 3 rote (r) und 2 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(blau, blau)?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/7</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/7</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>6/7</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>6/7</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/7</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>6/7</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 1 rote (r) und 6 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>14</span></span>"
+     ],
+     "a": 1,
+     "e": "Pfadregel: Wahrscheinlichkeiten entlang des Pfades multiplizieren: <span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>49</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 5 rote (r) und 5 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(blau, blau)?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>5</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 1 rote (r) und 3 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(blau, blau)?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>"
+     ],
+     "a": 1,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 1 rote (r) und 2 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 0,
+     "e": "Pfadregel: Wahrscheinlichkeiten entlang des Pfades multiplizieren: <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/9</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/9</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/9</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/9</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/9</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/9</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 5 rote (r) und 4 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(blau, blau)?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>81</span></span>"
+     ],
+     "a": 2,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 6 rote (r) und 3 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(blau, blau)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "Pfadregel: <span class='fr'><span class='fn'>3</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 6 rote (r) und 6 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>24</span></span>"
+     ],
+     "a": 0,
+     "e": "Pfadregel: Wahrscheinlichkeiten entlang des Pfades multiplizieren: <span class='fr'><span class='fn'>6</span><span class='fd'>12</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 6 rote (r) und 2 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>32</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>"
+     ],
+     "a": 3,
+     "e": "Pfadregel: Wahrscheinlichkeiten entlang des Pfades multiplizieren: <span class='fr'><span class='fn'>6</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 1 rote (r) und 3 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist die Wahrscheinlichkeit, genau eine rote Kugel zu ziehen?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "1"
+     ],
+     "a": 0,
+     "e": "Zwei Pfade: (r, b) und (b, r). Summenregel: <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/6</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/6</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/6</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/6</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/6</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/6</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 5 rote (r) und 1 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>"
+     ],
+     "a": 2,
+     "e": "Pfadregel: Wahrscheinlichkeiten entlang des Pfades multiplizieren: <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>36</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/9</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/9</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/9</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/9</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/9</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/9</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 4 rote (r) und 5 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist die Wahrscheinlichkeit, genau eine rote Kugel zu ziehen?",
+     "c": [
+      "1",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 1,
+     "e": "Zwei Pfade: (r, b) und (b, r). Summenregel: <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>40</span><span class='fd'>81</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 3 rote (r) und 2 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Pfadregel: Wahrscheinlichkeiten entlang des Pfades multiplizieren: <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 6 rote (r) und 3 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "Pfadregel: Wahrscheinlichkeiten entlang des Pfades multiplizieren: <span class='fr'><span class='fn'>6</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/7</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/7</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/7</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/7</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/7</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/7</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 4 rote (r) und 3 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist die Wahrscheinlichkeit, mindestens eine rote Kugel zu ziehen?",
+     "c": [
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>24</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>49</span></span>"
+     ],
+     "a": 2,
+     "e": "Gegenereignis „keine rote“ = (b, b): <span class='fr'><span class='fn'>9</span><span class='fd'>49</span></span>. 1 − <span class='fr'><span class='fn'>9</span><span class='fd'>49</span></span> = <b><span class='fr'><span class='fn'>40</span><span class='fd'>49</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einer Urne liegen 3 rote (r) und 3 blaue (b) Kugeln. Es wird zweimal <b>mit Zurücklegen</b> gezogen. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "1",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "Pfadregel: Wahrscheinlichkeiten entlang des Pfades multiplizieren: <span class='fr'><span class='fn'>3</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>6</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Ohne Zurücklegen",
+   "items": [
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 3 rote (r) und 3 blaue (b) Bonbons. Malea nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Das erste Bonbon war rot. Wie gross ist die Wahrscheinlichkeit, dass auch das zweite rot ist?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "Übrig sind 2 rote von 5 Bonbons: <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/9</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/9</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/9</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/9</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/9</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>4/9</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 5 rote (r) und 4 blaue (b) Bonbons. Ayla nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(blau, blau)?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>27</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 6 rote (r) und 6 blaue (b) Bonbons. Jan nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(blau, blau)?",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>24</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>6</span><span class='fd'>12</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 3 rote (r) und 3 blaue (b) Bonbons. Levin nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(blau, blau)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/8</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/8</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/8</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/8</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/8</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/8</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 3 rote (r) und 5 blaue (b) Bonbons. Gian nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Das erste Bonbon war rot. Wie gross ist die Wahrscheinlichkeit, dass auch das zweite rot ist?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>"
+     ],
+     "a": 3,
+     "e": "Übrig sind 2 rote von 7 Bonbons: <b><span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 2 rote (r) und 3 blaue (b) Bonbons. Samuel nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span>"
+     ],
+     "a": 2,
+     "e": "Beim zweiten Zug ist ein rotes weniger und eines weniger insgesamt: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/11</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/11</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>6/11</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>6/11</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/11</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>6/11</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 5 rote (r) und 6 blaue (b) Bonbons. Seraina nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>47</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>"
+     ],
+     "a": 3,
+     "e": "Beim zweiten Zug ist ein rotes weniger und eines weniger insgesamt: <span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 2 rote (r) und 4 blaue (b) Bonbons. Arian nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>"
+     ],
+     "a": 1,
+     "e": "Beim zweiten Zug ist ein rotes weniger und eines weniger insgesamt: <span class='fr'><span class='fn'>2</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 3 rote (r) und 3 blaue (b) Bonbons. Sara nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(blau, blau)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 3 rote (r) und 2 blaue (b) Bonbons. Matteo nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "Beim zweiten Zug ist ein rotes weniger und eines weniger insgesamt: <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 6 rote (r) und 2 blaue (b) Bonbons. Lea nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Das erste Bonbon war rot. Wie gross ist die Wahrscheinlichkeit, dass auch das zweite rot ist?",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 1,
+     "e": "Übrig sind 5 rote von 7 Bonbons: <b><span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/2</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 4 rote (r) und 4 blaue (b) Bonbons. Laura nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(blau, blau)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 6 rote (r) und 3 blaue (b) Bonbons. Nina nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist die Wahrscheinlichkeit für zwei verschiedene Farben?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>"
+     ],
+     "a": 2,
+     "e": "(r, b) + (b, r) = <span class='fr'><span class='fn'>6</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 6 rote (r) und 4 blaue (b) Bonbons. Chiara nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist die Wahrscheinlichkeit für zwei verschiedene Farben?",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "(r, b) + (b, r) = <span class='fr'><span class='fn'>6</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/3</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/3</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 2 rote (r) und 4 blaue (b) Bonbons. Leonie nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist die Wahrscheinlichkeit für zwei verschiedene Farben?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "(r, b) + (b, r) = <span class='fr'><span class='fn'>2</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/7</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/7</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/7</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/7</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/7</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>5/7</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 2 rote (r) und 5 blaue (b) Bonbons. Lara nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Das erste Bonbon war rot. Wie gross ist die Wahrscheinlichkeit, dass auch das zweite rot ist?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>"
+     ],
+     "a": 1,
+     "e": "Übrig sind 1 rote von 6 Bonbons: <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 6 rote (r) und 2 blaue (b) Bonbons. Noah nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(blau, blau)?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>32</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>2</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>1/4</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/4</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 2 rote (r) und 6 blaue (b) Bonbons. Julian nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Das erste Bonbon war rot. Wie gross ist die Wahrscheinlichkeit, dass auch das zweite rot ist?",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>"
+     ],
+     "a": 2,
+     "e": "Übrig sind 1 rote von 7 Bonbons: <b><span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 2 rote (r) und 3 blaue (b) Bonbons. Tim nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(rot, rot)?",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span>"
+     ],
+     "a": 1,
+     "e": "Beim zweiten Zug ist ein rotes weniger und eines weniger insgesamt: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "<div class='qfig'><svg data-pf='lg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 140' width='290' height='140' role='img' aria-label='Baumdiagramm'><g font-family='Arial, Helvetica, sans-serif'><line x1='8.0' y1='70.0' x2='118.0' y2='35.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='46.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='130.0' y='40.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='17.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='20.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='22.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='35.0' x2='262.0' y2='52.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='59.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='57.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='8.0' y1='70.0' x2='118.0' y2='105.0' stroke='#2b2b2b' stroke-width='1.6'/><text x='55.0' y='105.5' font-size='15' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='130.0' y='110.0' font-size='17' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text><line x1='144.0' y1='105.0' x2='262.0' y2='87.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='90.2' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>3/5</text><text x='276.0' y='92.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>r</text><line x1='144.0' y1='105.0' x2='262.0' y2='122.5' stroke='#2b2b2b' stroke-width='1.4'/><text x='203.0' y='129.8' font-size='14' font-weight='600' fill='#2b2b2b' text-anchor='middle'>2/5</text><text x='276.0' y='127.5' font-size='16' font-weight='700' fill='#2b2b2b' text-anchor='middle'>b</text></g></svg></div>In einem Beutel sind 6 rote (r) und 4 blaue (b) Bonbons. Dominik nimmt nacheinander zwei Bonbons <b>ohne Zurücklegen</b>. Wie gross ist P(blau, blau)?",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Sachaufgaben",
+   "items": [
+    {
+     "q": "Ein fairer Würfel wird 120-mal geworfen. Wie oft erwartet man etwa eine Zahl grösser als 4?",
+     "c": [
+      "etwa 80-mal",
+      "etwa 40-mal",
+      "genau 40-mal",
+      "etwa 20-mal"
+     ],
+     "a": 1,
+     "e": "Erwartete Anzahl = n × P = 120 × <span class='fr'><span class='fn'>2</span><span class='fd'>6</span></span> = <b>40</b>. „Genau“ kann man es nicht sagen."
+    },
+    {
+     "q": "Lara trifft beim Elfmeter mit einer Wahrscheinlichkeit von 75 %. Sie schiesst zweimal. Wie gross ist die Wahrscheinlichkeit, beide Male zu treffen?",
+     "c": [
+      "18.75 %",
+      "75 %",
+      "56.25 %",
+      "43.75 %"
+     ],
+     "a": 2,
+     "e": "0.75 × 0.75 = <b>56.25 %</b>."
+    },
+    {
+     "q": "Ein fairer Würfel wird 180-mal geworfen. Wie oft erwartet man etwa eine Zahl grösser als 4?",
+     "c": [
+      "etwa 60-mal",
+      "genau 60-mal",
+      "etwa 30-mal",
+      "etwa 120-mal"
+     ],
+     "a": 0,
+     "e": "Erwartete Anzahl = n × P = 180 × <span class='fr'><span class='fn'>2</span><span class='fd'>6</span></span> = <b>60</b>. „Genau“ kann man es nicht sagen."
+    },
+    {
+     "q": "Nico wirft eine Reisszwecke 50-mal. Sie landet 11-mal auf dem Kopf. Schätze die Wahrscheinlichkeit für „Kopf“.",
+     "c": [
+      "11 %",
+      "50 %",
+      "22 %",
+      "78 %"
+     ],
+     "a": 2,
+     "e": "Relative Häufigkeit 11 : 50 = 0.22 = <b>22 %</b>. Bei vielen Würfen ist das ein guter Schätzwert."
+    },
+    {
+     "q": "Noah wirft eine Reisszwecke 400-mal. Sie landet 132-mal auf dem Kopf. Schätze die Wahrscheinlichkeit für „Kopf“.",
+     "c": [
+      "50 %",
+      "33 %",
+      "67 %",
+      "132 %"
+     ],
+     "a": 1,
+     "e": "Relative Häufigkeit 132 : 400 = 0.33 = <b>33 %</b>. Bei vielen Würfen ist das ein guter Schätzwert."
+    },
+    {
+     "q": "Liam trifft beim Elfmeter mit einer Wahrscheinlichkeit von 75 %. Er schiesst zweimal. Wie gross ist die Wahrscheinlichkeit, beide Male zu treffen?",
+     "c": [
+      "18.75 %",
+      "56.25 %",
+      "75 %",
+      "43.75 %"
+     ],
+     "a": 1,
+     "e": "0.75 × 0.75 = <b>56.25 %</b>."
+    },
+    {
+     "q": "Erfahrungsgemäss sind 5 % der Lose Gewinne. Wie viele erwartet man unter 1’000 Stück?",
+     "c": [
+      "50",
+      "5",
+      "950",
+      "100"
+     ],
+     "a": 0,
+     "e": "5 % von 1’000 = 0.05 × 1’000 = <b>50</b>."
+    },
+    {
+     "q": "Bei einem Spiel gewinnt man, wenn man mit zwei Würfeln eine Augensumme von mindestens 10 wirft. Wie gross ist die Gewinnwahrscheinlichkeit?",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>36</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>12</span></span>"
+     ],
+     "a": 2,
+     "e": "Summe 10: 3 Paare, 11: 2 Paare, 12: 1 Paar. 6 von 36 = <b><span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Gabriel wirft eine Reisszwecke 250-mal. Sie landet 28-mal auf dem Kopf. Schätze die Wahrscheinlichkeit für „Kopf“.",
+     "c": [
+      "28 %",
+      "50 %",
+      "88.8 %",
+      "11.2 %"
+     ],
+     "a": 3,
+     "e": "Relative Häufigkeit 28 : 250 = 0.112 = <b>11.2 %</b>. Bei vielen Würfen ist das ein guter Schätzwert."
+    },
+    {
+     "q": "Erfahrungsgemäss sind 40 % der Glühbirnen defekt. Wie viele erwartet man unter 500 Stück?",
+     "c": [
+      "250",
+      "300",
+      "200",
+      "40"
+     ],
+     "a": 2,
+     "e": "40 % von 500 = 0.4 × 500 = <b>200</b>."
+    },
+    {
+     "q": "Malea trifft beim Elfmeter mit einer Wahrscheinlichkeit von 60 %. Sie schiesst zweimal. Wie gross ist die Wahrscheinlichkeit, beide Male zu treffen?",
+     "c": [
+      "36 %",
+      "24 %",
+      "60 %",
+      "64 %"
+     ],
+     "a": 0,
+     "e": "0.6 × 0.6 = <b>36 %</b>."
+    },
+    {
+     "q": "Ronja trifft beim Elfmeter mit einer Wahrscheinlichkeit von 90 %. Sie schiesst zweimal. Wie gross ist die Wahrscheinlichkeit, keinmal zu treffen?",
+     "c": [
+      "20 %",
+      "1 %",
+      "10 %",
+      "19 %"
+     ],
+     "a": 1,
+     "e": "Fehlschuss: 0.1. 0.1 × 0.1 = <b>1 %</b>."
+    },
+    {
+     "q": "Fabio trifft beim Elfmeter mit einer Wahrscheinlichkeit von 70 %. Er schiesst zweimal. Wie gross ist die Wahrscheinlichkeit, beide Male zu treffen?",
+     "c": [
+      "70 %",
+      "49 %",
+      "21 %",
+      "51 %"
+     ],
+     "a": 1,
+     "e": "0.7 × 0.7 = <b>49 %</b>."
+    },
+    {
+     "q": "Ein fairer Würfel wird 120-mal geworfen. Wie oft erwartet man etwa eine 6?",
+     "c": [
+      "etwa 20-mal",
+      "etwa 60-mal",
+      "etwa 100-mal",
+      "genau 20-mal"
+     ],
+     "a": 0,
+     "e": "Erwartete Anzahl = n × P = 120 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b>20</b>. „Genau“ kann man es nicht sagen."
+    },
+    {
+     "q": "Erfahrungsgemäss sind 25 % der Glühbirnen defekt. Wie viele erwartet man unter 200 Stück?",
+     "c": [
+      "150",
+      "25",
+      "100",
+      "50"
+     ],
+     "a": 3,
+     "e": "25 % von 200 = 0.25 × 200 = <b>50</b>."
+    },
+    {
+     "q": "Ein fairer Würfel wird 180-mal geworfen. Wie oft erwartet man etwa eine 6?",
+     "c": [
+      "etwa 150-mal",
+      "etwa 90-mal",
+      "etwa 30-mal",
+      "genau 30-mal"
+     ],
+     "a": 2,
+     "e": "Erwartete Anzahl = n × P = 180 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b>30</b>. „Genau“ kann man es nicht sagen."
+    },
+    {
+     "q": "Elena trifft beim Elfmeter mit einer Wahrscheinlichkeit von 75 %. Sie schiesst zweimal. Wie gross ist die Wahrscheinlichkeit, keinmal zu treffen?",
+     "c": [
+      "6.25 %",
+      "25 %",
+      "50 %",
+      "43.75 %"
+     ],
+     "a": 0,
+     "e": "Fehlschuss: 0.25. 0.25 × 0.25 = <b>6.25 %</b>."
+    },
+    {
+     "q": "Ayla trifft beim Elfmeter mit einer Wahrscheinlichkeit von 75 %. Sie schiesst zweimal. Wie gross ist die Wahrscheinlichkeit, keinmal zu treffen?",
+     "c": [
+      "43.75 %",
+      "25 %",
+      "50 %",
+      "6.25 %"
+     ],
+     "a": 3,
+     "e": "Fehlschuss: 0.25. 0.25 × 0.25 = <b>6.25 %</b>."
+    },
+    {
+     "q": "Svenja trifft beim Elfmeter mit einer Wahrscheinlichkeit von 60 %. Sie schiesst zweimal. Wie gross ist die Wahrscheinlichkeit, keinmal zu treffen?",
+     "c": [
+      "80 %",
+      "40 %",
+      "64 %",
+      "16 %"
+     ],
+     "a": 3,
+     "e": "Fehlschuss: 0.4. 0.4 × 0.4 = <b>16 %</b>."
+    },
+    {
+     "q": "Ein fairer Würfel wird 300-mal geworfen. Wie oft erwartet man etwa eine 6?",
+     "c": [
+      "etwa 250-mal",
+      "etwa 150-mal",
+      "genau 50-mal",
+      "etwa 50-mal"
+     ],
+     "a": 3,
+     "e": "Erwartete Anzahl = n × P = 300 × <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> = <b>50</b>. „Genau“ kann man es nicht sagen."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 18,
+ "updated": "2026-11-25",
+ "country": "ch",
+ "subject": "mathematik",
+ "grade": "klasse-7"
+}

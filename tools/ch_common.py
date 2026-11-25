@@ -30,6 +30,7 @@ KOMP = {
     "MA.2.A.2": "können Figuren und Körper abbilden, zerlegen und zusammensetzen",
     "MA.2.A.3": "können Längen, Flächen und Volumen bestimmen und berechnen",
     "MA.2.B.1": "können geometrische Beziehungen erforschen, Vermutungen formulieren und Erkenntnisse austauschen",
+    "MA.2.B.2": "können Aussagen und Formeln zu geometrischen Beziehungen überprüfen, mit Beispielen belegen und begründen",
     "MA.2.C.1": "können Körper und räumliche Beziehungen darstellen",
     "MA.2.C.2": "können Figuren falten, skizzieren, zeichnen und konstruieren",
     "MA.2.C.3": "können sich Figuren und Körper in verschiedenen Lagen vorstellen und Veränderungen beschreiben",
@@ -76,7 +77,7 @@ DE_NAMES = {"Emma": "Chiara", "Mia": "Sara", "Hannah": "Elin", "Sophia": "Zoe", 
             "Emil": "Andrin", "Max": "Flurin", "Anton": "Yanick", "Theo": "Severin", "Moritz": "Reto", "Yusuf": "Beat", "Luca": "Dominik"}
 _DE_NAME_RE = re.compile(r"\b(%s)(s?)\b" % "|".join(sorted(DE_NAMES, key=len, reverse=True)))
 LEAKS = ["€", " ct", "ct ", "Euro", "Cent", "ß", "Bundesland", "Grundschul", "Brötchen", "Fahrrad", "KMK", "Pfennig", "Kita", "Sonnabend",
-         "Kommaschreibweise", "Komma", "Düsseldorf", "Dortmund", "Duisburg", "Bonn", "Mainz", "Kiel", "Rostock", "Potsdam", "Erfurt", "Magdeburg", "Bayern", "Sachsen"]
+         "Kommaschreibweise", "Komma", "19 % Mehrwert", "7 % Mehrwert", "MwSt", "1.19 ", "Düsseldorf", "Dortmund", "Duisburg", "Bonn", "Mainz", "Kiel", "Rostock", "Potsdam", "Erfurt", "Magdeburg", "Bayern", "Sachsen"]
 
 
 def _money(s):
@@ -84,7 +85,7 @@ def _money(s):
     s = re.sub(r"(\d+)-€-", r"\1-Franken-", s)
     s = re.sub(r"(\d+)-ct-", r"\1-Rappen-", s)
     s = re.sub(r"(\d+),(\d\d)[  ]?€", r"\1.\2 Fr.", s)
-    s = re.sub(r"(\d[\d ]*)[  ]?€", lambda m: m.group(1) + NB + "Fr.", s)
+    s = re.sub(r"(\d[\d ]*)[  ]?€", lambda m: m.group(1).rstrip("\u00a0 ") + NB + "Fr.", s)
     s = re.sub(r"(\d+)[  ]?ct\b", lambda m: m.group(1) + NB + "Rp.", s)
     s = re.sub(r"(?<=[\s?=(])€", "Fr.", s)
     s = re.sub(r"(?<=[\s?=(])ct\b", "Rp.", s)

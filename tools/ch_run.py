@@ -12,6 +12,7 @@ if __name__ == "__main__":
     k = int(sys.argv[1])
     want = sys.argv[2:]
     m = importlib.import_module("ch_k%d" % k)
+    C.EXTRA[:] = getattr(m, "EXTRA", [])
     for i, (slug, sort, codes, dom, src) in enumerate(m.UNITS, 1):
         if want and str(i) not in want:
             continue
