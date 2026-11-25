@@ -1858,7 +1858,11 @@ TR / Matematik / 11. Sınıf（単元は tr_s11a（1〜7：veri・dörtgen・ço
 1. iki-nicel-degiskenli-veri ✓ 2. dortgenlerin-ozellikleri ✓ 3. ozel-dortgenler ✓ 4. cokgenler ✓ 5. cokgen-problemleri ✓ 6. trigonometrik-fonksiyonlar ✓ 7. trigonometrik-fonksiyonlarin-grafikleri ✓
 8. trigonometrik-denklemler ✓ 9. ustel-fonksiyon ✓ 10. logaritma ✓ 11. logaritmik-fonksiyon ✓ 12. ustel-ve-logaritmik-denklemler ✓ 13. bileske-fonksiyon ✓ 14. fonksiyonlarda-dort-islem ✓
 トピックに ustel-ve-logaritmik-fonksiyonlar を足した（sayilar の out に logaritm（ritmik に当たる）、veri・denklemler・fonksiyonlar の out に trigonometri など）
-TR の次: 12. sınıf、okul öncesi
+TR / Matematik / 12. Sınıf（単元は tr_s12a（1〜9：diziler・polinomlar（pmul・pdiv・fct）・çember）・tr_s12b（10〜19：cisimler・limit・türev（deriv）・hazır veriler））
+1. aritmetik-diziler ✓ 2. geometrik-diziler ✓ 3. diziler-ve-fonksiyonlar ✓ 4. polinomlar ✓ 5. polinom-bolme-ve-kalan ✓ 6. polinom-ve-rasyonel-denklemler ✓ 7. cemberin-elemanlari ✓ 8. cemberde-acilar ✓ 9. cember-ve-daire-problemleri ✓
+10. prizma-ve-silindir ✓ 11. piramit-koni-ve-kure ✓ 12. cisim-problemleri ✓ 13. limit ✓ 14. belirsizlik-ve-sureklilik ✓ 15. turevin-tanimi ✓ 16. turev-kurallari ✓ 17. turevin-geometrik-yorumu ✓ 18. turevin-uygulamalari ✓ 19. hazir-veriler-uzerinde-calisma ✓
+トピックに diziler-ve-polinomlar・limit-ve-turev を足した（geometri に cemberin・cemberde・cember-ve-daire・prizma-ve-silindir・piramit-koni）
+TR の次: okul öncesi
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 

@@ -1,0 +1,1161 @@
+{
+ "slug": "polinom-bolme-ve-kalan",
+ "title": "Polinomlarda Bölme, Kalan Teoremi ve Kökler",
+ "seo_title": "Polinomlarda Bölme 12. Sınıf Matematik: Çalışma Kâğıdı ve Cevaplı Test",
+ "short_title": "Polinomlarda Bölme",
+ "domain": "Nicelikler ve Değişimler",
+ "standard_code": "MAT.12.1.4",
+ "standard_url": "https://mufredat.meb.gov.tr/Dosyalar/2026518151640408-matedöp.pdf",
+ "standard_text": "Polinomların nitel özelliklerini inceler; polinom bölmesi, kalan teoremi ve çarpanlara ayırmayla kökleri bulur. (Türkiye Yüzyılı Maarif Modeli, Ortaöğretim Matematik Dersi Öğretim Programı)",
+ "meta_desc": "12. sınıf polinomlarda bölme çalışma kâğıdı: kalan teoremi, bölüm bulma, çarpan olma şartı ve bilinmeyen katsayı, kökler ve kökler toplamı, ax + b ile bölme. 100 soru ve cevap anahtarı.",
+ "key_big": "P(x) ÷ (x − a) kalanı P(a)",
+ "key_sub": "P(a) = 0 ise (x − a) bir çarpandır.",
+ "body_html": "<h2>Nasıl düşünürüz?</h2><p>P(x) = (x − a) · Q(x) + K biçiminde yazılır; kalan teoremi: K = P(a).</p><p>P(a) = 0 ise x − a, P(x)’in bir çarpanıdır ve a bir köktür.</p><p>Tam sayı kökler sabit terimin bölenleri arasındadır; ax³ + bx² + cx + d için kökler toplamı −b ÷ a’dır.</p><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>P(x) = x³ − 2x + 5, (x − 2)</p><p class='sn-ex-s'>P(2) = 8 − 4 + 5</p><p class='sn-ex-a'>Cevap: 9</p></div><div class='sn-ex'><span class='sn-ex-t'>Örnek</span><p class='sn-ex-q'>x³ − 6x² + 11x − 6</p><p class='sn-ex-s'>x = 1, 2, 3 denenir</p><p class='sn-ex-a'>Cevap: 1, 2, 3</p></div><h2>Sık yapılan hatalar</h2><div class='sn-tw'><table class='sn-table'><thead><tr><th>Hata</th><th>Doğrusu</th></tr></thead><tbody><tr><td>x − a için P(−a) almak</td><td>x − a = 0 → x = a</td></tr><tr><td>Kalanı bölümle karıştırmak</td><td>Kalanın derecesi bölenden küçüktür</td></tr><tr><td>Köklerin işaretini ters almak</td><td>(x − 2) → kök 2</td></tr></tbody></table></div>",
+ "faq": [
+  {
+   "q": "Horner yöntemi nedir?",
+   "a": "Katsayılarla hızlı bölme yöntemidir."
+  },
+  {
+   "q": "Kalanın derecesi?",
+   "a": "Bölenin derecesinden küçüktür."
+  },
+  {
+   "q": "Kök ile çarpan ilişkisi?",
+   "a": "a kök ise (x − a) çarpandır ve tersi de doğrudur."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Kalan teoremi",
+   "items": [
+    {
+     "q": "P(x) = 3x³ − 4x² − 2x − 2 polinomunun x + 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−112",
+      "−2",
+      "−113",
+      "37"
+     ],
+     "a": 2,
+     "e": "Kalan teoremi: kalan P(−3) = <b>−113</b>."
+    },
+    {
+     "q": "P(x) = 3x² + 4x + 6 polinomunun x − 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "46",
+      "6",
+      "45",
+      "21"
+     ],
+     "a": 2,
+     "e": "Kalan teoremi: kalan P(3) = <b>45</b>."
+    },
+    {
+     "q": "P(x) = 2x⁴ − 3x³ + 4x² + 5x − 4 polinomunun x − 1 ile bölümünden kalan kaçtır?",
+     "c": [
+      "4",
+      "−4",
+      "5",
+      "0"
+     ],
+     "a": 0,
+     "e": "Kalan teoremi: kalan P(1) = <b>4</b>."
+    },
+    {
+     "q": "P(x) = −2x³ + 6x² + 2x − 1 polinomunun x + 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−1",
+      "36",
+      "35",
+      "11"
+     ],
+     "a": 2,
+     "e": "Kalan teoremi: kalan P(−2) = <b>35</b>."
+    },
+    {
+     "q": "P(x) = 3x⁴ + 6x³ − 4x + 1 polinomunun x + 1 ile bölümünden kalan kaçtır?",
+     "c": [
+      "2",
+      "6",
+      "3",
+      "1"
+     ],
+     "a": 0,
+     "e": "Kalan teoremi: kalan P(−1) = <b>2</b>."
+    },
+    {
+     "q": "P(x) = −x⁴ + 5x³ + 4x² − 4x + 6 polinomunun x − 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−162",
+      "84",
+      "85",
+      "6"
+     ],
+     "a": 1,
+     "e": "Kalan teoremi: kalan P(3) = <b>84</b>."
+    },
+    {
+     "q": "P(x) = −3x⁴ + 3x³ + 4x² − 5x − 5 polinomunun x + 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−5",
+      "−278",
+      "−146",
+      "−277"
+     ],
+     "a": 1,
+     "e": "Kalan teoremi: kalan P(−3) = <b>−278</b>."
+    },
+    {
+     "q": "P(x) = 2x² − 4x − 3 polinomunun x − 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "4",
+      "27",
+      "−3",
+      "3"
+     ],
+     "a": 3,
+     "e": "Kalan teoremi: kalan P(3) = <b>3</b>."
+    },
+    {
+     "q": "P(x) = −3x² + 4x − 3 polinomunun x − 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−7",
+      "−3",
+      "−23",
+      "−6"
+     ],
+     "a": 0,
+     "e": "Kalan teoremi: kalan P(2) = <b>−7</b>."
+    },
+    {
+     "q": "P(x) = −2x³ − 6x² + 3x − 5 polinomunun x + 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−14",
+      "−104",
+      "−13",
+      "−5"
+     ],
+     "a": 0,
+     "e": "Kalan teoremi: kalan P(−3) = <b>−14</b>."
+    },
+    {
+     "q": "P(x) = 3x⁴ − 5x³ + 5x² + 6x − 4 polinomunun x + 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "92",
+      "93",
+      "−4",
+      "36"
+     ],
+     "a": 0,
+     "e": "Kalan teoremi: kalan P(−2) = <b>92</b>."
+    },
+    {
+     "q": "P(x) = 2x³ − 4x² − x + 5 polinomunun x + 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−24",
+      "3",
+      "−25",
+      "5"
+     ],
+     "a": 2,
+     "e": "Kalan teoremi: kalan P(−2) = <b>−25</b>."
+    },
+    {
+     "q": "P(x) = x³ − 5x² + x + 4 polinomunun x + 1 ile bölümünden kalan kaçtır?",
+     "c": [
+      "1",
+      "−3",
+      "4",
+      "−2"
+     ],
+     "a": 1,
+     "e": "Kalan teoremi: kalan P(−1) = <b>−3</b>."
+    },
+    {
+     "q": "P(x) = 2x⁴ − 3x³ − x − 1 polinomunun x − 1 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−2",
+      "5",
+      "−1",
+      "−3"
+     ],
+     "a": 3,
+     "e": "Kalan teoremi: kalan P(1) = <b>−3</b>."
+    },
+    {
+     "q": "P(x) = −3x² − 5x + 4 polinomunun x + 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "4",
+      "−38",
+      "−7",
+      "−8"
+     ],
+     "a": 3,
+     "e": "Kalan teoremi: kalan P(−3) = <b>−8</b>."
+    },
+    {
+     "q": "P(x) = −3x² + x + 4 polinomunun x + 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "4",
+      "−10",
+      "−6",
+      "−9"
+     ],
+     "a": 1,
+     "e": "Kalan teoremi: kalan P(−2) = <b>−10</b>."
+    },
+    {
+     "q": "P(x) = x³ − 5x² − 2x + 1 polinomunun x − 1 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−4",
+      "−5",
+      "1",
+      "−3"
+     ],
+     "a": 1,
+     "e": "Kalan teoremi: kalan P(1) = <b>−5</b>."
+    },
+    {
+     "q": "P(x) = 2x² + 4x + 3 polinomunun x + 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "19",
+      "9",
+      "3",
+      "4"
+     ],
+     "a": 2,
+     "e": "Kalan teoremi: kalan P(−2) = <b>3</b>."
+    },
+    {
+     "q": "P(x) = 2x⁴ − 3x³ + x² − 5x + 6 polinomunun x + 1 ile bölümünden kalan kaçtır?",
+     "c": [
+      "18",
+      "1",
+      "6",
+      "17"
+     ],
+     "a": 3,
+     "e": "Kalan teoremi: kalan P(−1) = <b>17</b>."
+    },
+    {
+     "q": "P(x) = x² + x + 4 polinomunun x − 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "4",
+      "6",
+      "11",
+      "10"
+     ],
+     "a": 3,
+     "e": "Kalan teoremi: kalan P(2) = <b>10</b>."
+    }
+   ]
+  },
+  {
+   "title": "Bölüm",
+   "items": [
+    {
+     "q": "P(x) = −3x² − 12x − 4 polinomunun x + 2 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−3x + 6",
+      "3x − 6",
+      "−3x − 5",
+      "−3x − 6"
+     ],
+     "a": 3,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−3x − 6</b>, kalan 8 bulunur."
+    },
+    {
+     "q": "P(x) = −x² + 3x + 5 polinomunun x + 2 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "x + 5",
+      "−x + 6",
+      "−x − 5",
+      "−x + 5"
+     ],
+     "a": 3,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−x + 5</b>, kalan −5 bulunur."
+    },
+    {
+     "q": "P(x) = −2x² + 8x − 7 polinomunun x − 1 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−2x + 6",
+      "−2x + 7",
+      "2x + 6",
+      "−2x − 6"
+     ],
+     "a": 0,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−2x + 6</b>, kalan −1 bulunur."
+    },
+    {
+     "q": "P(x) = −3x² − 6x polinomunun x + 2 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−3x − 1",
+      "3x",
+      "−3x",
+      "−3x + 1"
+     ],
+     "a": 2,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−3x</b>, kalan 0 bulunur."
+    },
+    {
+     "q": "P(x) = 2x² − 4x − 7 polinomunun x − 2 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "2x + 1",
+      "2x",
+      "−2x",
+      "2x² − 7"
+     ],
+     "a": 1,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>2x</b>, kalan −7 bulunur."
+    },
+    {
+     "q": "P(x) = −3x² + 7x + 3 polinomunun x − 3 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−3x + 2",
+      "3x − 2",
+      "−3x − 2",
+      "−3x − 1"
+     ],
+     "a": 2,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−3x − 2</b>, kalan −3 bulunur."
+    },
+    {
+     "q": "P(x) = −x² − 4 polinomunun x + 1 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−x − 1",
+      "x + 1",
+      "−x + 2",
+      "−x + 1"
+     ],
+     "a": 3,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−x + 1</b>, kalan −5 bulunur."
+    },
+    {
+     "q": "P(x) = −3x² − x + 13 polinomunun x + 2 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−3x − 5",
+      "−3x + 5",
+      "3x + 5",
+      "−3x + 6"
+     ],
+     "a": 1,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−3x + 5</b>, kalan 3 bulunur."
+    },
+    {
+     "q": "P(x) = x² + 2x − 6 polinomunun x − 2 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "x + 4",
+      "−x + 4",
+      "x + 5",
+      "x − 4"
+     ],
+     "a": 0,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>x + 4</b>, kalan 2 bulunur."
+    },
+    {
+     "q": "P(x) = −3x² + 12x − 13 polinomunun x − 3 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−3x − 3",
+      "−3x + 3",
+      "−3x + 4",
+      "3x + 3"
+     ],
+     "a": 1,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−3x + 3</b>, kalan −4 bulunur."
+    },
+    {
+     "q": "P(x) = 3x² − 11x + 12 polinomunun x − 2 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "3x + 5",
+      "3x − 4",
+      "3x − 5",
+      "−3x − 5"
+     ],
+     "a": 2,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>3x − 5</b>, kalan 2 bulunur."
+    },
+    {
+     "q": "P(x) = −3x² + 5x + 3 polinomunun x − 3 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "3x − 4",
+      "−3x − 3",
+      "−3x − 4",
+      "−3x + 4"
+     ],
+     "a": 2,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−3x − 4</b>, kalan −9 bulunur."
+    },
+    {
+     "q": "P(x) = −2x² − 5x + 2 polinomunun x + 1 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−2x − 3",
+      "−2x − 2",
+      "2x − 3",
+      "−2x + 3"
+     ],
+     "a": 0,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−2x − 3</b>, kalan 5 bulunur."
+    },
+    {
+     "q": "P(x) = −2x² + x + 4 polinomunun x − 1 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−2x − 1",
+      "2x − 1",
+      "−2x + 1",
+      "−2x"
+     ],
+     "a": 0,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−2x − 1</b>, kalan 3 bulunur."
+    },
+    {
+     "q": "P(x) = −3x² + 7x + 20 polinomunun x − 4 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−3x − 5",
+      "3x − 5",
+      "−3x − 4",
+      "−3x + 5"
+     ],
+     "a": 0,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−3x − 5</b>, kalan 0 bulunur."
+    },
+    {
+     "q": "P(x) = −x² − 4x − 5 polinomunun x + 2 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−x − 1",
+      "−x + 2",
+      "−x − 2",
+      "x − 2"
+     ],
+     "a": 2,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−x − 2</b>, kalan −1 bulunur."
+    },
+    {
+     "q": "P(x) = −2x² + 7x polinomunun x − 4 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−2x + 1",
+      "−2x − 1",
+      "−2x",
+      "2x − 1"
+     ],
+     "a": 1,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−2x − 1</b>, kalan −4 bulunur."
+    },
+    {
+     "q": "P(x) = −3x² + 12x − 13 polinomunun x − 2 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "−3x + 7",
+      "−3x + 6",
+      "−3x − 6",
+      "3x + 6"
+     ],
+     "a": 1,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>−3x + 6</b>, kalan −1 bulunur."
+    },
+    {
+     "q": "P(x) = x² + 9x + 15 polinomunun x + 4 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "x − 5",
+      "x + 6",
+      "−x + 5",
+      "x + 5"
+     ],
+     "a": 3,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>x + 5</b>, kalan −5 bulunur."
+    },
+    {
+     "q": "P(x) = x² − 3x − 27 polinomunun x + 3 ile bölümünden elde edilen bölüm hangisidir?",
+     "c": [
+      "x − 5",
+      "x + 6",
+      "−x − 6",
+      "x − 6"
+     ],
+     "a": 3,
+     "e": "Bölme ya da Horner yöntemiyle bölüm <b>x − 6</b>, kalan −9 bulunur."
+    }
+   ]
+  },
+  {
+   "title": "Çarpan ve bilinmeyen katsayı",
+   "items": [
+    {
+     "q": "P(x) = x³ − 2x² − 5x + k polinomu x − 1 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "6",
+      "2",
+      "−6",
+      "7"
+     ],
+     "a": 0,
+     "e": "P(1) = 0 olmalı: −6 + k = 0 → k = <b>6</b>."
+    },
+    {
+     "q": "P(x) = x³ − 3x² + k polinomu x − 2 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "6",
+      "−20",
+      "−4",
+      "4"
+     ],
+     "a": 3,
+     "e": "P(2) = 0 olmalı: −4 + k = 0 → k = <b>4</b>."
+    },
+    {
+     "q": "P(x) = x³ − 6x² − 4x + k polinomu x + 2 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "48",
+      "−24",
+      "24",
+      "22"
+     ],
+     "a": 2,
+     "e": "P(−2) = 0 olmalı: −24 + k = 0 → k = <b>24</b>."
+    },
+    {
+     "q": "P(x) = x³ + 4x² − 11x + k polinomu x + 2 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "2",
+      "30",
+      "−30",
+      "−32"
+     ],
+     "a": 2,
+     "e": "P(−2) = 0 olmalı: 30 + k = 0 → k = <b>−30</b>."
+    },
+    {
+     "q": "P(x) = x³ − x² − 32x + k polinomu x − 2 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "60",
+      "52",
+      "62",
+      "−60"
+     ],
+     "a": 0,
+     "e": "P(2) = 0 olmalı: −60 + k = 0 → k = <b>60</b>."
+    },
+    {
+     "q": "P(x) = x³ + 3x² − 22x + k polinomu x + 1 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "24",
+      "−25",
+      "−24",
+      "−18"
+     ],
+     "a": 2,
+     "e": "P(−1) = 0 olmalı: 24 + k = 0 → k = <b>−24</b>."
+    },
+    {
+     "q": "P(x) = x³ + 3x² − 18x + k polinomu x + 2 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "40",
+      "−40",
+      "−42",
+      "−16"
+     ],
+     "a": 1,
+     "e": "P(−2) = 0 olmalı: 40 + k = 0 → k = <b>−40</b>."
+    },
+    {
+     "q": "P(x) = x³ + 2x² − 16x + k polinomu x + 2 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "−32",
+      "−16",
+      "−34",
+      "32"
+     ],
+     "a": 0,
+     "e": "P(−2) = 0 olmalı: 32 + k = 0 → k = <b>−32</b>."
+    },
+    {
+     "q": "P(x) = x³ − x² − 9x + k polinomu x − 3 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "18",
+      "−9",
+      "12",
+      "9"
+     ],
+     "a": 3,
+     "e": "P(3) = 0 olmalı: −9 + k = 0 → k = <b>9</b>."
+    },
+    {
+     "q": "P(x) = x³ − 7x + k polinomu x + 3 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "12",
+      "3",
+      "−6",
+      "6"
+     ],
+     "a": 3,
+     "e": "P(−3) = 0 olmalı: −6 + k = 0 → k = <b>6</b>."
+    },
+    {
+     "q": "P(x) = x³ − 9x² + 14x + k polinomu x + 1 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "−24",
+      "24",
+      "6",
+      "23"
+     ],
+     "a": 1,
+     "e": "P(−1) = 0 olmalı: −24 + k = 0 → k = <b>24</b>."
+    },
+    {
+     "q": "P(x) = x³ − 6x² − x + k polinomu x − 3 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "−30",
+      "30",
+      "33",
+      "−78"
+     ],
+     "a": 1,
+     "e": "P(3) = 0 olmalı: −30 + k = 0 → k = <b>30</b>."
+    },
+    {
+     "q": "P(x) = x³ − 2x² − 5x + k polinomu x − 3 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "−30",
+      "6",
+      "−6",
+      "9"
+     ],
+     "a": 1,
+     "e": "P(3) = 0 olmalı: −6 + k = 0 → k = <b>6</b>."
+    },
+    {
+     "q": "P(x) = x³ + 3x² − 28x + k polinomu x + 2 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "−62",
+      "60",
+      "−36",
+      "−60"
+     ],
+     "a": 3,
+     "e": "P(−2) = 0 olmalı: 60 + k = 0 → k = <b>−60</b>."
+    },
+    {
+     "q": "P(x) = x³ + x² + k polinomu x + 1 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "2",
+      "0",
+      "1",
+      "−1"
+     ],
+     "a": 1,
+     "e": "P(−1) = 0 olmalı: 0 + k = 0 → k = <b>0</b>."
+    },
+    {
+     "q": "P(x) = x³ − 8x² + 13x + k polinomu x − 1 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "−22",
+      "6",
+      "−6",
+      "−5"
+     ],
+     "a": 2,
+     "e": "P(1) = 0 olmalı: 6 + k = 0 → k = <b>−6</b>."
+    },
+    {
+     "q": "P(x) = x³ + 3x² − 10x + k polinomu x + 2 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "−24",
+      "0",
+      "24",
+      "−26"
+     ],
+     "a": 0,
+     "e": "P(−2) = 0 olmalı: 24 + k = 0 → k = <b>−24</b>."
+    },
+    {
+     "q": "P(x) = x³ + 5x² − 2x + k polinomu x − 2 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "−22",
+      "16",
+      "−24",
+      "24"
+     ],
+     "a": 2,
+     "e": "P(2) = 0 olmalı: 24 + k = 0 → k = <b>−24</b>."
+    },
+    {
+     "q": "P(x) = x³ − x² − 24x + k polinomu x + 3 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "−36",
+      "−39",
+      "36",
+      "−54"
+     ],
+     "a": 0,
+     "e": "P(−3) = 0 olmalı: 36 + k = 0 → k = <b>−36</b>."
+    },
+    {
+     "q": "P(x) = x³ − x² − 8x + k polinomu x − 2 ile tam bölünebiliyorsa k kaçtır?",
+     "c": [
+      "14",
+      "−12",
+      "4",
+      "12"
+     ],
+     "a": 3,
+     "e": "P(2) = 0 olmalı: −12 + k = 0 → k = <b>12</b>."
+    }
+   ]
+  },
+  {
+   "title": "Kökler",
+   "items": [
+    {
+     "q": "P(x) = x³ + x² − 20x polinomunun kökleri nelerdir?",
+     "c": [
+      "−5, 0 ve 5",
+      "−5, 0 ve 4",
+      "−4, 0 ve 5",
+      "−6, 0 ve 4"
+     ],
+     "a": 1,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 5)x(x − 4): <b>−5, 0 ve 4</b>."
+    },
+    {
+     "q": "P(x) = x³ − 3x² − 13x + 15 polinomunun kökleri nelerdir?",
+     "c": [
+      "−5, −1 ve 3",
+      "−4, 1 ve 5",
+      "−3, 1 ve 5",
+      "−3, 1 ve 6"
+     ],
+     "a": 2,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 3)(x − 1)(x − 5): <b>−3, 1 ve 5</b>."
+    },
+    {
+     "q": "P(x) = x³ + 10x² + 31x + 30 polinomunun köklerinin toplamı kaçtır?",
+     "c": [
+      "10",
+      "31",
+      "−30",
+      "−10"
+     ],
+     "a": 3,
+     "e": "Kökler toplamı −b ÷ a = <b>−10</b> (kökler −5, −3, −2)."
+    },
+    {
+     "q": "P(x) = x³ + 3x² − 25x − 75 polinomunun kökleri nelerdir?",
+     "c": [
+      "−5, −3 ve 5",
+      "−5, 3 ve 5",
+      "−5, −3 ve 6",
+      "−6, −3 ve 5"
+     ],
+     "a": 0,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 5)(x + 3)(x − 5): <b>−5, −3 ve 5</b>."
+    },
+    {
+     "q": "P(x) = x³ − 5x² − 16x + 80 polinomunun köklerinin toplamı kaçtır?",
+     "c": [
+      "−5",
+      "5",
+      "−16",
+      "−80"
+     ],
+     "a": 1,
+     "e": "Kökler toplamı −b ÷ a = <b>5</b> (kökler −4, 4, 5)."
+    },
+    {
+     "q": "P(x) = x³ + x² − 25x − 25 polinomunun köklerinin toplamı kaçtır?",
+     "c": [
+      "1",
+      "−25",
+      "25",
+      "−1"
+     ],
+     "a": 3,
+     "e": "Kökler toplamı −b ÷ a = <b>−1</b> (kökler −5, −1, 5)."
+    },
+    {
+     "q": "P(x) = x³ − 3x² − 10x polinomunun kökleri nelerdir?",
+     "c": [
+      "−2, 0 ve 5",
+      "−5, 0 ve 2",
+      "−3, 0 ve 5",
+      "−2, 0 ve 6"
+     ],
+     "a": 0,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 2)x(x − 5): <b>−2, 0 ve 5</b>."
+    },
+    {
+     "q": "P(x) = x³ + 5x² + 2x − 8 polinomunun kökleri nelerdir?",
+     "c": [
+      "−5, −2 ve 1",
+      "−1, 2 ve 4",
+      "−4, −2 ve 2",
+      "−4, −2 ve 1"
+     ],
+     "a": 3,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 4)(x + 2)(x − 1): <b>−4, −2 ve 1</b>."
+    },
+    {
+     "q": "P(x) = x³ + 3x² − 16x − 48 polinomunun kökleri nelerdir?",
+     "c": [
+      "−4, −3 ve 5",
+      "−4, −3 ve 4",
+      "−5, −3 ve 4",
+      "−4, 3 ve 4"
+     ],
+     "a": 1,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 4)(x + 3)(x − 4): <b>−4, −3 ve 4</b>."
+    },
+    {
+     "q": "P(x) = x³ − x² − 12x polinomunun kökleri nelerdir?",
+     "c": [
+      "−4, 0 ve 4",
+      "−3, 0 ve 5",
+      "−3, 0 ve 4",
+      "−4, 0 ve 3"
+     ],
+     "a": 2,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 3)x(x − 4): <b>−3, 0 ve 4</b>."
+    },
+    {
+     "q": "P(x) = x³ + 6x² + 5x − 12 polinomunun kökleri nelerdir?",
+     "c": [
+      "−4, −3 ve 2",
+      "−1, 3 ve 4",
+      "−5, −3 ve 1",
+      "−4, −3 ve 1"
+     ],
+     "a": 3,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 4)(x + 3)(x − 1): <b>−4, −3 ve 1</b>."
+    },
+    {
+     "q": "P(x) = x³ − 5x² + 6x polinomunun kökleri nelerdir?",
+     "c": [
+      "−1, 2 ve 3",
+      "0, 2 ve 3",
+      "−3, −2 ve 0",
+      "0, 2 ve 4"
+     ],
+     "a": 1,
+     "e": "Sabit terimin bölenleri denenir; P(x) = x(x − 2)(x − 3): <b>0, 2 ve 3</b>."
+    },
+    {
+     "q": "P(x) = x³ − x² − 9x + 9 polinomunun kökleri nelerdir?",
+     "c": [
+      "−4, 1 ve 3",
+      "−3, 1 ve 4",
+      "−3, −1 ve 3",
+      "−3, 1 ve 3"
+     ],
+     "a": 3,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 3)(x − 1)(x − 3): <b>−3, 1 ve 3</b>."
+    },
+    {
+     "q": "P(x) = x³ + 9x² + 20x polinomunun kökleri nelerdir?",
+     "c": [
+      "−5, −4 ve 0",
+      "0, 4 ve 5",
+      "−5, −4 ve 1",
+      "−6, −4 ve 0"
+     ],
+     "a": 0,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 5)(x + 4)x: <b>−5, −4 ve 0</b>."
+    },
+    {
+     "q": "P(x) = x³ + 7x² + 12x polinomunun kökleri nelerdir?",
+     "c": [
+      "−4, −3 ve 0",
+      "−4, −3 ve 1",
+      "0, 3 ve 4",
+      "−5, −3 ve 0"
+     ],
+     "a": 0,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 4)(x + 3)x: <b>−4, −3 ve 0</b>."
+    },
+    {
+     "q": "P(x) = x³ + 3x² − 4x polinomunun kökleri nelerdir?",
+     "c": [
+      "−1, 0 ve 4",
+      "−4, 0 ve 1",
+      "−4, 0 ve 2",
+      "−5, 0 ve 1"
+     ],
+     "a": 1,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 4)x(x − 1): <b>−4, 0 ve 1</b>."
+    },
+    {
+     "q": "P(x) = x³ + 12x² + 47x + 60 polinomunun kökleri nelerdir?",
+     "c": [
+      "3, 4 ve 5",
+      "−6, −4 ve −3",
+      "−5, −4 ve −3",
+      "−5, −4 ve −2"
+     ],
+     "a": 2,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 5)(x + 4)(x + 3): <b>−5, −4 ve −3</b>."
+    },
+    {
+     "q": "P(x) = x³ − x² − 6x polinomunun köklerinin toplamı kaçtır?",
+     "c": [
+      "−1",
+      "−6",
+      "1",
+      "0"
+     ],
+     "a": 2,
+     "e": "Kökler toplamı −b ÷ a = <b>1</b> (kökler −2, 0, 3)."
+    },
+    {
+     "q": "P(x) = x³ + 2x² − 8x polinomunun köklerinin toplamı kaçtır?",
+     "c": [
+      "−2",
+      "−8",
+      "2",
+      "0"
+     ],
+     "a": 0,
+     "e": "Kökler toplamı −b ÷ a = <b>−2</b> (kökler −4, 0, 2)."
+    },
+    {
+     "q": "P(x) = x³ + 2x² − x − 2 polinomunun kökleri nelerdir?",
+     "c": [
+      "−3, −1 ve 1",
+      "−1, 1 ve 2",
+      "−2, −1 ve 1",
+      "−2, −1 ve 2"
+     ],
+     "a": 2,
+     "e": "Sabit terimin bölenleri denenir; P(x) = (x + 2)(x + 1)(x − 1): <b>−2, −1 ve 1</b>."
+    }
+   ]
+  },
+  {
+   "title": "Karışık",
+   "items": [
+    {
+     "q": "P(x) = 2x³ − x² − 5x − 2 polinomunun −x + 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "29",
+      "−2",
+      "−50",
+      "28"
+     ],
+     "a": 3,
+     "e": "−x + 3 = 0 → x = 3; kalan P(3) = <b>28</b>."
+    },
+    {
+     "q": "P(x) = −3x³ − 5x² + x − 1 polinomunun x − 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−124",
+      "−123",
+      "32",
+      "−1"
+     ],
+     "a": 0,
+     "e": "Kalan teoremi: kalan P(3) = <b>−124</b>."
+    },
+    {
+     "q": "P(x) = −2x³ − x² − 2x − 6 polinomunun x + 1 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−3",
+      "−2",
+      "−6",
+      "−11"
+     ],
+     "a": 0,
+     "e": "x + 1 = 0 → x = −1; kalan P(−1) = <b>−3</b>."
+    },
+    {
+     "q": "P(x) = 3x² + 6x + 2 polinomunun −x + 4 ile bölümünden kalan kaçtır?",
+     "c": [
+      "75",
+      "2",
+      "26",
+      "74"
+     ],
+     "a": 3,
+     "e": "−x + 4 = 0 → x = 4; kalan P(4) = <b>74</b>."
+    },
+    {
+     "q": "P(x) = −x² − 2x − 4 polinomunun x − 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−7",
+      "−12",
+      "−11",
+      "−4"
+     ],
+     "a": 1,
+     "e": "Kalan teoremi: kalan P(2) = <b>−12</b>."
+    },
+    {
+     "q": "P(x) = −2x² − 4x + 2 polinomunun x + 5 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−27",
+      "−68",
+      "2",
+      "−28"
+     ],
+     "a": 3,
+     "e": "x + 5 = 0 → x = −5; kalan P(−5) = <b>−28</b>."
+    },
+    {
+     "q": "P(x) = 3x⁴ − 2x² − 4x − 6 polinomunun x − 1 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−6",
+      "−8",
+      "−9",
+      "−1"
+     ],
+     "a": 2,
+     "e": "Kalan teoremi: kalan P(1) = <b>−9</b>."
+    },
+    {
+     "q": "P(x) = 3x² − x + 4 polinomunun −x + 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "34",
+      "28",
+      "29",
+      "4"
+     ],
+     "a": 1,
+     "e": "−x + 3 = 0 → x = 3; kalan P(3) = <b>28</b>."
+    },
+    {
+     "q": "P(x) = −x³ + 4x² + x − 4 polinomunun −2x + 4 ile bölümünden kalan kaçtır?",
+     "c": [
+      "7",
+      "6",
+      "18",
+      "0"
+     ],
+     "a": 1,
+     "e": "−2x + 4 = 0 → x = 2; kalan P(2) = <b>6</b>."
+    },
+    {
+     "q": "P(x) = −3x³ + 4x + 5 polinomunun x + 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−11",
+      "21",
+      "5",
+      "22"
+     ],
+     "a": 1,
+     "e": "Kalan teoremi: kalan P(−2) = <b>21</b>."
+    },
+    {
+     "q": "P(x) = 2x² − x − 3 polinomunun x + 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "18",
+      "19",
+      "−3",
+      "12"
+     ],
+     "a": 0,
+     "e": "x + 3 = 0 → x = −3; kalan P(−3) = <b>18</b>."
+    },
+    {
+     "q": "P(x) = −3x⁴ + 3x³ − x² − 5x + 5 polinomunun x + 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−61",
+      "−60",
+      "5",
+      "−33"
+     ],
+     "a": 0,
+     "e": "Kalan teoremi: kalan P(−2) = <b>−61</b>."
+    },
+    {
+     "q": "P(x) = x⁴ − 2x² − 3x + 3 polinomunun x + 1 ile bölümünden kalan kaçtır?",
+     "c": [
+      "6",
+      "−1",
+      "3",
+      "5"
+     ],
+     "a": 3,
+     "e": "Kalan teoremi: kalan P(−1) = <b>5</b>."
+    },
+    {
+     "q": "P(x) = 2x² + 4x + 6 polinomunun x − 1 ile bölümünden kalan kaçtır?",
+     "c": [
+      "4",
+      "6",
+      "12",
+      "13"
+     ],
+     "a": 2,
+     "e": "Kalan teoremi: kalan P(1) = <b>12</b>."
+    },
+    {
+     "q": "P(x) = −2x³ + x² + 5x + 6 polinomunun x + 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "17",
+      "4",
+      "6",
+      "16"
+     ],
+     "a": 3,
+     "e": "Kalan teoremi: kalan P(−2) = <b>16</b>."
+    },
+    {
+     "q": "P(x) = 3x² + x − 3 polinomunun −3x + 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "1",
+      "−1",
+      "27",
+      "2"
+     ],
+     "a": 0,
+     "e": "−3x + 3 = 0 → x = 1; kalan P(1) = <b>1</b>."
+    },
+    {
+     "q": "P(x) = 3x² − 3x + 6 polinomunun x − 2 ile bölümünden kalan kaçtır?",
+     "c": [
+      "6",
+      "24",
+      "12",
+      "13"
+     ],
+     "a": 2,
+     "e": "Kalan teoremi: kalan P(2) = <b>12</b>."
+    },
+    {
+     "q": "P(x) = x⁴ + 6x³ + x − 2 polinomunun x + 1 ile bölümünden kalan kaçtır?",
+     "c": [
+      "−7",
+      "6",
+      "−8",
+      "−2"
+     ],
+     "a": 2,
+     "e": "Kalan teoremi: kalan P(−1) = <b>−8</b>."
+    },
+    {
+     "q": "P(x) = −2x³ + 2x² − 2x + 3 polinomunun −4x + 4 ile bölümünden kalan kaçtır?",
+     "c": [
+      "9",
+      "1",
+      "2",
+      "−101"
+     ],
+     "a": 1,
+     "e": "−4x + 4 = 0 → x = 1; kalan P(1) = <b>1</b>."
+    },
+    {
+     "q": "P(x) = −2x³ + 5x² + 4x + 4 polinomunun 3x + 3 ile bölümünden kalan kaçtır?",
+     "c": [
+      "4",
+      "8",
+      "7",
+      "11"
+     ],
+     "a": 2,
+     "e": "3x + 3 = 0 → x = −1; kalan P(−1) = <b>7</b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 5,
+ "updated": "2026-11-25",
+ "country": "tr",
+ "subject": "matematik",
+ "grade": "12-sinif"
+}
