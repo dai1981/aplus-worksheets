@@ -664,13 +664,13 @@ function topic_defs_science($country = null) {
             'blurb' => 'Forms of energy and how it moves: light, sound, heat and electricity, energy in food, and energy from the sun.'),
         'waves-and-light' => array('name' => 'Waves, Light and Information', 'in' => '/wave|light|information|signal/', 'out' => '/^$/',
             'blurb' => 'Amplitude and wavelength, how light reflects into our eyes so we can see, and how patterns and codes send information.'),
-        'living-things-and-ecosystems' => array('name' => 'Living Things and Ecosystems', 'in' => '/plant|animal|food-web|food-chain|ecosystem|decomposer|life-cycle|habitat|trait|inherit|cell|organism|body|senses|structure|past-environment|variation|survival|environmental-change|animal-group|photosynth|respiration|population|biodiversity|energy-flow/', 'out' => '/^$/',
+        'living-things-and-ecosystems' => array('name' => 'Living Things and Ecosystems', 'in' => '/plant|animal|food-web|food-chain|ecosystem|decomposer|life-cycle|habitat|trait|inherit|cell|organism|body|senses|structure|past-environment|variation|survival|environmental-change|animal-group|photosynth|respiration|population|biodiversity|energy-flow|reproduction|gene|mutation|selection|embryo|fossil-record/', 'out' => '/^$/',
             'blurb' => 'How plants and animals get what they need to grow, food chains and food webs, decomposers, and how matter and energy move through an ecosystem.'),
         'earth-and-space' => array('name' => 'Earth and Space', 'in' => '/sun|star|moon|shadow|day-and-night|sky|planet|solar-system|constellation|season/', 'out' => '/food|energy/',
             'blurb' => 'The sun, moon and stars, shadows, day and night, seasonal patterns in the sky, and how distance changes how bright a star looks.'),
-        'earths-systems' => array('name' => 'Earth’s Systems and Resources', 'in' => '/earth|water|weather|climate|rock|erosion|landform|hazard|resource|ocean|plate|tecton|human-impact/', 'out' => '/earth-and-space|population/',
+        'earths-systems' => array('name' => 'Earth’s Systems and Resources', 'in' => '/earth|water|weather|climate|rock|erosion|landform|hazard|resource|ocean|plate|tecton|human-impact|geologic/', 'out' => '/earth-and-space|population|earth-moon/',
             'blurb' => 'The geosphere, hydrosphere, atmosphere and biosphere, where Earth’s water is, weather and climate, and how people protect Earth’s resources.'),
-        'engineering-design' => array('name' => 'Engineering Design', 'in' => '/engineering|design/', 'out' => '/^$/',
+        'engineering-design' => array('name' => 'Engineering Design', 'in' => '/engineering|design/', 'out' => '/genetic-engineering/',
             'blurb' => 'Define a problem with criteria and constraints, compare possible solutions, and plan fair tests to improve a design.'),
     );
 }
