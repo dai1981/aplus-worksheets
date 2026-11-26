@@ -308,6 +308,16 @@ UK / Maths / Year 9
 10. arcs-and-sectors ✓ 11. bearings-and-loci ✓ 12. scatter-graphs-and-correlation ✓ 13. plans-and-elevations ✓ 14. real-life-graphs ✓
 15. rounding-and-error-intervals ✓ 16. ratio-problems-and-best-buys ✓
 
+UK / Maths / Year 10–11（KS4、GCSE Mathematics。DfE の GCSE subject content を一般的な配分で 2 学年に分ける）— Year 4 と同じルール。standard_code は「KS4: Algebra」形式、standard_url は GCSE mathematics subject content。
+生成スクリプトは `gen_uk_maths_y10_*`・`gen_uk_maths_y11_*`（seed は 910NN・911NN）、共通部品は `tools/uk_gcse.py`：
+port(他国の生成スクリプト名, seed, year, slug, sort, strand, std_text, title, short, meta=, rep=[(古い, 新しい)], swap={"one_x": 自前の関数}, set_titles=, body=, faq=, kb=, ks=) で SG Secondary・US 高校の build() を新しい seed と UK の名前・£・数の書き方で動かし、文をイギリス式に直して（ukify：Secondary N→Year N、O-Level→GCSE、$→£、空白区切り→カンマ）書く。
+LEAKS（Singapore・GST・$・feet・miles・ringgit・Common Core など）が残ると止まるので、rep で直すか swap で問題関数を替える。US の内容が GCSE と違うとき（関数の四則、漸化式、parent function）は swap と body/faq で UK 版にする。make_gcse() は自前の単元用。seo_title は「Year 10 Maths: Surds Worksheets (GCSE)」
+Year 10: 1. indices ✓ 2. standard-form ✓ 3. surds ✓ 4. algebraic-fractions ✓ 5. solving-quadratic-equations ✓ 6. quadratic-equations-in-context ✓ 7. equations-with-algebraic-fractions ✓ 8. inequalities ✓ 9. coordinate-geometry ✓
+10. quadratic-graphs-and-turning-points ✓ 11. cubic-reciprocal-and-exponential-graphs ✓ 12. direct-and-inverse-proportion ✓ 13. congruent-and-similar-triangles ✓ 14. area-and-volume-of-similar-shapes ✓ 15. sine-and-cosine-rules ✓ 16. bearings-and-angles-of-elevation ✓ 17. probability-tree-diagrams ✓
+Year 11: 1. sequences ✓ 2. composite-and-inverse-functions ✓ 3. transformations-of-graphs ✓ 4. exponential-growth-and-decay ✓ 6. circle-theorems ✓ 7. chords-and-tangents ✓ 8. vectors ✓ 9. vector-proof ✓ 10. trigonometry-in-3d ✓ 11. venn-diagrams-and-set-notation ✓ 12. cumulative-frequency-and-box-plots ✓
+（まだ: histograms、iteration、algebraic proof、velocity–time graphs、equation of a circle（中心が原点のものだけ）。A-level（Year 12–13）はこれから）
+トピック：chords-and-tangents→circles、^venn-diagrams→probability
+
 AU / Maths（Australian Curriculum v9.0）— country `au`、subject `maths`、grade `year-N`、A4。
 オーストラリア英語（colour, metre, maths, analog, mixed numeral, column graph, students）。お金は $ と c（1c・2c 硬貨なし）。
 数は 4 桁はそのまま（4536）、5 桁以上は空白区切り（10 000、ノーブレークスペース）。standard_code は v9 のコード（例: AC9M3N01）

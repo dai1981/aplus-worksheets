@@ -772,7 +772,7 @@ function topic_defs($country = null, $subject = null) {
             'out' => '/^parallel-and-perpendicular-lines$|circle-graph|number-shape|composite-area|similar-shapes|area-of|trigonometric|special-angles/',
             'blurb' => 'Naming and sorting 2D shapes and 3D objects, sides and vertices, triangles and quadrilaterals, circles, nets and solids.'),
         'circles' => array('name' => 'Circles',
-            'in' => '/circle|circum|arc-length|arcs-and|sector/', 'out' => '/circle-graph|bisector/',
+            'in' => '/circle|circum|arc-length|arcs-and|sector|chords-and-tangents/', 'out' => '/circle-graph|bisector/',
             'blurb' => 'Parts of a circle, circumference and area, arc length and sectors, central and inscribed angles, tangents and equations of circles.',
             'blurb_gb' => 'Parts of a circle, circumference and area, arcs and sectors, angles in circles and tangents.'),
         'congruence-and-similarity' => array('name' => 'Congruence and Similarity',
@@ -799,7 +799,7 @@ function topic_defs($country = null, $subject = null) {
             'in' => '/limits-and-first|differentiation|equations-of-tangents|cubic-functions|optimisation/', 'out' => '/^$/',
             'blurb' => 'Limits and first principles, the rules of differentiation, equations of tangents, cubic graphs with stationary points, and optimisation and rates of change.'),
         'probability' => array('name' => 'Probability',  'name_au' => 'Chance and Probability',
-            'in' => '/probab|chance|sample-spaces|likelihood|permutations-and-combinations|expected-value/', 'out' => '/^$/',
+            'in' => '/probab|chance|sample-spaces|likelihood|permutations-and-combinations|expected-value|^venn-diagrams/', 'out' => '/^$/',
             'blurb' => 'Likelihood words, spinners and number cubes, probability as a fraction, experiments and tree diagrams.'),
     );
     if ($country === 'ng') {
