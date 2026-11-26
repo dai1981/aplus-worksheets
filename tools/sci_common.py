@@ -52,8 +52,10 @@ def item(q, a, wrong, e):
 
 
 def bank(rows):
-    """[(q, a, [w, w, w], e)] -> list of makers (each gives its item once)."""
-    return [lambda r=r: item(*r) for r in rows]
+    """[(q, a, [w, w, w], e)] -> list of makers (each gives its item once). Checked now, so a bad row stops the script."""
+    import copy
+    its = [item(*r) for r in rows]
+    return [lambda it=it: copy.deepcopy(it) for it in its]
 
 
 class Unit:
@@ -75,17 +77,26 @@ class Unit:
         mk = [m if isinstance(m, tuple) else (m, cap) for m in makers]
         self.R.shuffle(mk)
         used = [0] * len(mk)
+        extra = 0          # raised when every maker has reached its cap (soft cap)
         i = 0
         t = 0
+        last = 0
         while len(out) < n:
             t += 1
             assert t < tries, "not enough questions: %d of %d" % (len(out), n)
             j = i % len(mk)
             i += 1
+            if j == 0:
+                if i > 1 and len(out) == last:
+                    extra += 1
+                last = len(out)
             m, c = mk[j]
-            if used[j] >= c:
+            if used[j] >= c + extra:
                 continue
-            it = m()
+            try:
+                it = m()
+            except (AssertionError, ValueError, IndexError):   # a generator drew numbers that do not work
+                it = None
             if not it:
                 continue
             k = self.key(it)
