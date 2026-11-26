@@ -67,7 +67,7 @@ def g_poro():
     if pore != int(pore) or not once(("po", tot, pct)):
         return None
     g = "%d%%" % pct
-    return item("%s fills a %d mL beaker with dry sediment. She pours in %s mL of water until it reaches the top of the sediment. What is the porosity?" % (who, tot, num(pore)), g,
+    return item("%s fills a %d mL beaker with dry sediment, then adds %s mL of water until it reaches the top of the sediment. What is the porosity?" % (who, tot, num(pore)), g,
                 uniq(g, ["%d%%" % (100 - pct), "%s%%" % num(pore), "%s%%" % num(tot / pore, 1), "%d%%" % (pct * 2)]), "%s ÷ %d × 100 = %d%%." % (num(pore), tot, pct))
 
 
