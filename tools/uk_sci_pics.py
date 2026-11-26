@@ -255,3 +255,43 @@ def magnets(a, b, label="two bar magnets"):
     _bar(10, 20, a[0], a[1], s)
     _bar(170, 20, b[0], b[1], s)
     return svg_wrap(290, 74, "".join(s), label)
+
+
+# ------------------------------------------------------------ Year 1: the human body
+BODY_PT = {"head": (154, 34), "neck": (136, 72), "shoulder": (158, 86), "arm": (172, 112), "elbow": (178, 132), "hand": (192, 178),
+           "tummy": (146, 126), "hip": (152, 158), "leg": (144, 192), "knee": (142, 224), "foot": (166, 290)}
+
+
+def body(labels, label="a child's body with labelled parts"):
+    """labels: dict part -> letter (parts from BODY_PT). Leader lines go from the right side of the body to circles on the right."""
+    skin, shirt, trous = "#f2c9a0", "#7fb3e0", "#4a6fa5"
+    s = []
+    s.append(circle(130, 40, 26, skin, INK, 1.8))
+    s.append(rect(124, 64, 12, 14, skin, INK, 1.4))
+    s.append("<path d='M100 82 L160 82 L164 160 L96 160 Z' fill='%s' stroke='%s' stroke-width='1.8'/>" % (shirt, INK))
+    s.append("<path d='M100 84 L82 132 L74 172' fill='none' stroke='%s' stroke-width='12' stroke-linecap='round'/>" % skin)
+    s.append("<path d='M160 84 L178 132 L186 172' fill='none' stroke='%s' stroke-width='12' stroke-linecap='round'/>" % skin)
+    s.append(circle(74, 178, 8, skin, INK, 1.4))
+    s.append(circle(186, 178, 8, skin, INK, 1.4))
+    s.append("<path d='M114 160 L118 224 L114 280' fill='none' stroke='%s' stroke-width='16' stroke-linecap='round'/>" % trous)
+    s.append("<path d='M146 160 L142 224 L146 280' fill='none' stroke='%s' stroke-width='16' stroke-linecap='round'/>" % trous)
+    s.append("<ellipse cx='108' cy='290' rx='16' ry='7' fill='#555' stroke='%s' stroke-width='1.4'/>" % INK)
+    s.append("<ellipse cx='152' cy='290' rx='16' ry='7' fill='#555' stroke='%s' stroke-width='1.4'/>" % INK)
+    s.append(circle(121, 36, 2.5, INK, INK, 1))
+    s.append(circle(139, 36, 2.5, INK, INK, 1))
+    s.append("<path d='M120 50 Q130 57 140 50' fill='none' stroke='%s' stroke-width='1.8'/>" % INK)
+    items = sorted(labels.items(), key=lambda kv: BODY_PT[kv[0]][1])
+    ys = []
+    for part, _ in items:
+        y = max(BODY_PT[part][1], (ys[-1] + 30) if ys else 16)
+        ys.append(y)
+    if ys and ys[-1] > 290:
+        shift = ys[-1] - 290
+        ys = [max(16 + 30 * i, y - shift) for i, y in enumerate(ys)]
+    for (part, letter), y in zip(items, ys):
+        x0, y0 = BODY_PT[part]
+        s.append(circle(x0, y0, 2.5, INK, INK, 1))
+        s.append(line(x0, y0, 252, y, INK, 1.3))
+        s.append(circle(266, y, 13, "#ffffff", INK, 1.6))
+        s.append(text(266, y + 5, letter, 15))
+    return svg_wrap(290, 304, "".join(s), label)
