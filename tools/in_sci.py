@@ -79,7 +79,11 @@ def build(mod, level, slug):
             it["q"], it["e"], it["c"] = fixm(it["q"]), fixm(it["e"]), [fixm(c) for c in it["c"]]
             assert len(set(it["c"])) == 4, it["c"]
     body = lesson(u["think"], u["ex"], u["mist"])
-    seo = "%s Class %d Science Worksheet with Answers (NCERT Chapter %d)" % (u["title"].split(":")[0], level, u["chapter"])
+    book = getattr(mod, "BOOK", None)        # Class 3-8: the NCERT book name (Our Wondrous World, Curiosity)
+    nb = "NCERT %s" % book if book else "NCERT"
+    seo = "%s Class %d Science Worksheet with Answers (%s Chapter %d)" % (u["title"].split(":")[0], level, nb, u["chapter"])
+    if len(seo) > 95:
+        seo = "%s Class %d Science Worksheet (%s Ch %d)" % (u["title"].split(":")[0], level, nb, u["chapter"])
     if len(seo) > 95:
         seo = "%s Class %d Science Worksheet (NCERT Ch %d)" % (u["title"].split(":")[0], level, u["chapter"])
     blob = json.dumps([u["title"], seo, u["short"], u["meta"], u["kb"], u["ks"], body, u["faq"], sets, u["std"]], ensure_ascii=False)
@@ -89,5 +93,5 @@ def build(mod, level, slug):
     bad = [w for w in LEAKS if (re.search(r"(?<![A-Za-z])%s(?![a-z])" % re.escape(w), txt) if w[0].isalpha() else w in txt)]
     assert not bad, "Leaks: %s" % bad
     assert "\\" not in blob
-    sci_common.make("class-%d" % level, slug, u["sort"], "Class %d, Chapter %d: %s" % (level, u["chapter"], u["title"].split(":")[0]), u["std"], u["title"], seo,
-                    u["short"], u["meta"], u["kb"], u["ks"], body, [(q, a) for q, a in u["faq"]], sets, domain=u["unit_name"], country="in", url=STD_URL)
+    sci_common.make("class-%d" % level, slug, u["sort"], ("Class %d, %s Chapter %d: %s" % (level, book, u["chapter"], u["title"].split(":")[0]) if book else "Class %d, Chapter %d: %s" % (level, u["chapter"], u["title"].split(":")[0])), u["std"], u["title"], seo,
+                    u["short"], u["meta"], u["kb"], u["ks"], body, [(q, a) for q, a in u["faq"]], sets, domain=u["unit_name"], country="in", url=getattr(mod, "STD_URL", STD_URL))

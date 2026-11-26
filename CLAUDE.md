@@ -2166,7 +2166,13 @@ IN / Science / Class 9（CBSE の Unit：Matter – Its Nature and Behaviour／O
 in_sci9 は TRIM = True：build が 3 有効数字の末尾の 0 を消し（60.0 → 60、0.500 → 0.5）、4 けた以上の整数にカンマを付ける（「in 1665」のような年は除く）。in_sci9b.odd_one(groups, q, qn) は「Which of these is a pulse?」「… is not …?」の問題。g は 9.8（PE・power は問題文に「Take g = 10 m/s²」）、π は 22/7
 1. matter-in-our-surroundings ✓ 2. is-matter-around-us-pure ✓ 3. atoms-and-molecules ✓ 4. structure-of-the-atom ✓ 5. the-fundamental-unit-of-life ✓ 6. tissues ✓ 7. motion ✓ 8. force-and-laws-of-motion ✓ 9. gravitation ✓ 10. work-and-energy ✓ 11. sound ✓ 12. improvement-in-food-resources ✓
 トピック：^gravitation$→forces-and-motion、unit-of-life・^tissues$・food-resources→living-things（earths-systems の out に food-resources、living-things の out に structure-of-the-atom）
-次は Class 6–8（Curiosity）、Class 11–12（Physics・Chemistry・Biology）
+IN / Science / Class 6–8（NCERT Curiosity。1 単元 = 1 章。CBSE の Unit はないので domain は The Nature of Science／The World of the Living／Materials／Physical Phenomena／Earth and Space）— 単元の定義は `tools/in_sciN.py`（BOOK = "Curiosity"、STD_URL は NCERT の教科書ページ（Class 6 は textbook.php?fecu1=0-12）、TRIM = True）＝ in_sciNa ＋ in_sciNb。
+in_sci.build は mod.BOOK があると standard_code を「Class 6, Curiosity Chapter 4: Exploring Magnets」、seo_title を「(NCERT Curiosity Chapter 4)」にし、standard_url に mod.STD_URL を使う。
+in_sci6a に Class 6–8 用の odd_one（説明は「X: ラベル.」の形で動詞の数の一致を避ける。non-・in…able・opaque などの否定のラベルでは「not」の問題を作らない）と nq（単位の前に空白、100 万以上・0.001 未満・負の誤答を落とす）
+IN / Science / Class 6: 1. the-wonderful-world-of-science ✓ 2. diversity-in-the-living-world ✓ 3. mindful-eating-a-path-to-healthy-body ✓ 4. exploring-magnets ✓ 5. measurement-of-length-and-motion ✓ 6. materials-around-us ✓
+7. temperature-and-its-measurement ✓ 8. a-journey-through-states-of-water ✓ 9. methods-of-separation-in-everyday-life ✓ 10. living-creatures-exploring-their-characteristics ✓ 11. natures-treasures ✓ 12. beyond-earth ✓
+トピック：separation→matter、^temperature-and→energy、living-world・living-creatures→living-things、beyond-earth→earth-and-space（earths-systems の out）、natures-treasures→earths-systems、world-of-science→working-scientifically
+次は Class 7・8（Curiosity）、Class 3–5（EVS: Our Wondrous World）、Class 11–12（Physics・Chemistry・Biology）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
