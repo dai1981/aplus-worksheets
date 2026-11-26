@@ -132,10 +132,21 @@ def lesson(think, examples, mistakes, extra=""):
     return h
 
 
+KIDS = ("kindergarten", "grade-1", "grade-2")
+
+
+def kid_lesson(pic, lead, points, examples, mistakes):
+    """K-2 lesson: one picture and one short sentence first, then short points; examples and mistakes below."""
+    think = "<div class='qfig'>%s</div><p><b>%s</b></p><ul>%s</ul>" % (pic, lead, "".join("<li>%s</li>" % p for p in points))
+    return lesson(think, examples, mistakes)
+
+
 def make(grade, slug, sort, code, std_text, title, seo_title, short, meta, key_big, key_sub, body, faq, sets, domain=None):
     for k in (title, seo_title, short, meta, key_big, key_sub):
         assert "<" not in k, k
     assert len(seo_title) <= 95, seo_title
+    if grade in KIDS:     # K-2: keep the top of the page light (title and key box are short)
+        assert len(title) <= 40 and len(key_big) <= 40 and len(key_sub) <= 90, (title, key_big, key_sub)
     codes = [c.strip() for c in code.split(",")]
     unit = {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short,
