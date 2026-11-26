@@ -42,7 +42,7 @@ def g_echo():
         return None
     d = v[1] * t / 2
     g = "{:,} m".format(int(d)) if d == int(d) else "{:,} m".format(d)
-    return item("%s hears an echo %s s after making a sound %s. Sound travels at {:,} m/s %s. How far away is the reflecting surface?".format(v[1]) % (who, "{:g}".format(t), "" if v[0] == "in air" else "with a ship's sonar", v[0]), g,
+    return item("%s hears an echo %s s after making a sound%s. Sound travels at {:,} m/s %s. How far away is the reflecting surface?".format(v[1]) % (who, "{:g}".format(t), "" if v[0] == "in air" else " with a ship's sonar", v[0]), g,
                 uniq(g, ["{:,} m".format(v[1] * t if v[1] * t != int(v[1] * t) else int(v[1] * t)), "{:,} m".format(int(v[1] / t)) if v[1] / t == int(v[1] / t) else "{:,} m".format(v[1]), "{:,} m".format(v[1]), "{:,} m".format(int(d) + 100)]),
                 "The sound goes there and back: distance = speed × time ÷ 2 = {:,} × {:g} ÷ 2.".format(v[1], t))
 
