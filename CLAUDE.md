@@ -2026,7 +2026,13 @@ US / Science / Grade 4（NGSS。seed は 401xx）
 トピック waves-and-light（Waves, Light and Information）を足した。classifier() は分類が 3 つ以下だと what 側の誤答が足りないので、自前の maker を書く。
 Unit の重複判定は問題文（図・表を除く文）なので、文に場面・名前・数を入れて変化させる
 
-US / Science の次: Grade 3 → Grade 6–8（NGSS は MS をまとめて示すので、一般的な配分で学年に分ける）→ K–2。そのあと英国・オーストラリアなどの理科
+US / Science / Grade 3（NGSS。seed は 301xx）
+1. balanced-and-unbalanced-forces (3-PS2-1) ✓ 2. patterns-of-motion (3-PS2-2) ✓ 3. magnets-and-static-electricity (3-PS2-3) ✓ 4. designing-with-magnets (3-PS2-4) ✓
+5. life-cycles (3-LS1-1) ✓ 6. animal-groups (3-LS2-1) ✓ 7. inherited-traits (3-LS3-1) ✓ 8. traits-and-the-environment (3-LS3-2) ✓ 9. fossils-and-past-environments (3-LS4-1) ✓
+10. variation-and-survival (3-LS4-2) ✓ 11. habitats-and-survival (3-LS4-3) ✓ 12. environmental-change (3-LS4-4) ✓ 13. weather-data (3-ESS2-1) ✓ 14. climates-of-the-world (3-ESS2-2) ✓
+15. weather-hazards (3-ESS3-1) ✓
+
+US / Science の次: Grade 6–8（NGSS は MS をまとめて示すので、一般的な配分で学年に分ける）→ K–2。そのあと英国・オーストラリアなどの理科
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
