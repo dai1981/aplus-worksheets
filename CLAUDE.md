@@ -2172,7 +2172,10 @@ in_sci6a に Class 6–8 用の odd_one（説明は「X: ラベル.」の形で�
 IN / Science / Class 6: 1. the-wonderful-world-of-science ✓ 2. diversity-in-the-living-world ✓ 3. mindful-eating-a-path-to-healthy-body ✓ 4. exploring-magnets ✓ 5. measurement-of-length-and-motion ✓ 6. materials-around-us ✓
 7. temperature-and-its-measurement ✓ 8. a-journey-through-states-of-water ✓ 9. methods-of-separation-in-everyday-life ✓ 10. living-creatures-exploring-their-characteristics ✓ 11. natures-treasures ✓ 12. beyond-earth ✓
 トピック：separation→matter、^temperature-and→energy、living-world・living-creatures→living-things、beyond-earth→earth-and-space（earths-systems の out）、natures-treasures→earths-systems、world-of-science→working-scientifically
-次は Class 7・8（Curiosity）、Class 3–5（EVS: Our Wondrous World）、Class 11–12（Physics・Chemistry・Biology）
+IN / Science / Class 7（STD_URL は textbook.php?gecu1=0-12）: 1. the-ever-evolving-world-of-science ✓ 2. exploring-substances-acidic-basic-and-neutral ✓ 3. electricity-circuits-and-their-components ✓ 4. the-world-of-metals-and-non-metals ✓
+5. changes-around-us-physical-and-chemical ✓ 6. adolescence-a-stage-of-growth-and-change ✓ 7. heat-transfer-in-nature ✓ 8. measurement-of-time-and-motion ✓ 9. life-processes-in-animals ✓ 10. life-processes-in-plants ✓ 11. light-shadows-and-reflections ✓ 12. earth-moon-and-the-sun ✓
+LEAKS の " nan" は空白つきの部分一致なので nanosecond も止まる。トピック：acidic-basic・physical-and-chemical→matter、adolescence→living-things
+次は Class 8（Curiosity）、Class 3–5（EVS: Our Wondrous World）、Class 11–12（Physics・Chemistry・Biology）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 

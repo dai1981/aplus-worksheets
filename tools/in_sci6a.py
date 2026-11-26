@@ -9,7 +9,7 @@ from in_sci import pairs, _R, U, K
 def nq(q, val, wrongs, unit, e, sf=3):
     """number item for Class 6–8: a space before the unit, no wrong values of a million or more (they would print in standard form)"""
     wrongs = [w for w in wrongs if w is not None and abs(w) < 1e6 and (val <= 0 or w > 0) and (abs(w) >= 0.001 or w == 0)]
-    return uk_alsci.nq(q, val, wrongs, (" " + unit) if unit and unit[0] != " " else unit, e, sf)
+    return uk_alsci.nq(q, val, wrongs, (" " + unit) if unit and unit[0] != " " and unit != "°" else unit, e, sf)
 
 
 def _cap(x):
@@ -22,7 +22,7 @@ def odd_one(groups, q, qn=None, e=None):
         R = _R[0]
         lab = R.choice(sorted(groups))
         others = sorted({x for k, v in groups.items() if k != lab for x in v})
-        neg = re.match(r"(an? )?(non|not|in[a-z]+able|insoluble|opaque)", lab)
+        neg = re.match(r"(an? )?(non|not|un(healthy|desirable|safe)|in[a-z]+able|insoluble|opaque)", lab)
         if qn and not neg and R.random() < 0.5 and len(groups[lab]) >= 3:
             a = R.choice(others)
             sa = "“%s”" % a if a[-1] in ".?!" else _cap(a)
