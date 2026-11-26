@@ -2076,6 +2076,15 @@ Earth and Space Science（gen_us_science_ess_*、seed 904NN。HS-ESS1〜3。sci_
 トピック：big-bang・kepler・orbit・universe→earth-and-space、matter の out に nuclear-fusion・earth-materials、living-things の out に climate-and-energy
 US / Science は Kindergarten〜Grade 8・高校 4 科目（Biology・Chemistry・Physics・Earth and Space Science）まで完了。次は他の国の理科か、GDP 順で次の国の算数
 
+UK / Science（National Curriculum in England, science programmes of study）— country `uk`、subject `science`、grade `year-N`、A4。生成スクリプトは `gen_uk_science_yN_*`（seed は 6NNcc：Year 6 は 616cc）、共通部品は `tools/uk_sci.py`（sci_common の上に make_uk(year, slug, sort, topic, std_text, …)：standard_code「Year 6: Light」、domain は programme of study の見出し（Light、Electricity、Animals, including humans、Living things and their habitats、Evolution and inheritance、Working scientifically）、standard_url は GOV.UK の science programmes of study。UK の名前（uk_ks3.People）。LEAKS で color・meter・liter・behavior・gray・aluminum・flashlight・Mom・inch など米国の語を落とす（newton meter は除く））と図 `tools/uk_sci_pics.py`（circuit・parallel・symbol：英国の回路記号（cell・battery・lamp・switch_open/closed・buzzer・motor・gap・wire）、layers（地層と化石）、seeing（光源→物→目の光線図）、shadow_setup）。
+イギリス英語（colour, metre, litre, centre, torch, Mum, aluminium, fibre, mould, favourite, pupils）。sci_common.make に country・url を足した（Year 1・2 は K–2 と同じくページ上部を軽く）。Unit.take は TypeError・KeyError なども None 扱い。
+**Unit の重複判定は問題文（タグを除く）＋正解なので、図だけ違う問題は同じ文にしない**（文に数・名前・選択肢を入れる）
+UK / Science / Year 6
+1. classifying-living-things ✓ 2. classification-keys ✓ 3. micro-organisms ✓ 4. the-circulatory-system ✓ 5. diet-exercise-and-lifestyle ✓ 6. transporting-nutrients-and-water ✓ 7. fossils ✓ 8. inheritance-and-variation ✓
+9. adaptation-and-evolution ✓ 10. how-light-travels ✓ 11. how-we-see ✓ 12. shadows-and-reflection ✓ 13. circuit-symbols ✓ 14. brightness-and-voltage ✓ 15. circuits-and-switches ✓ 16. working-scientifically ✓
+トピック：classif・circulatory・diet-・nutrient・^fossils$・micro-organism→living-things、voltage→energy、how-we-see・reflection→waves-and-light（earth-and-space の out に reflection）、working-scientifically（新トピック、3 単元以上で公開）
+次は Year 5 → 4 → 3 → 2 → 1 → KS3（Year 7–9）
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
