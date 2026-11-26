@@ -15,7 +15,7 @@ R = U.R
 P = People(R)
 
 SRC = ["the Sun", "a candle flame", "a torch that is switched on", "a lit bulb", "a firefly", "a flash of lightning", "a glowing computer screen", "a campfire", "a star"]
-NOT = ["the Moon", "a mirror", "a bicycle reflector", "a cat's eyes", "a sheet of white paper", "a shiny spoon", "the planet Venus", "a high-visibility jacket"]
+NOT = ["the Moon", "a mirror", "a bicycle reflector", "a cat's eye reflector on a road", "a sheet of white paper", "a shiny spoon", "the planet Venus", "a high-visibility jacket"]
 
 
 def g_src():
