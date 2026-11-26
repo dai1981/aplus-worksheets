@@ -151,3 +151,61 @@ def layers(rows, label="rock layers with fossils"):
         if fos:
             s.append(text(232, y + 25, fos, 14, "start"))
     return svg_wrap(W, H, "".join(s), label)
+
+
+# ------------------------------------------------------------ light
+def _eye(x, y, s):
+    s.append("<path d='M%.1f %.1f Q%.1f %.1f %.1f %.1f Q%.1f %.1f %.1f %.1f Z' fill='#ffffff' stroke='%s' stroke-width='2'/>"
+             % (x - 22, y, x, y - 18, x + 22, y, x, y + 18, x - 22, y, INK))
+    s.append(circle(x, y, 8, "#5b8fd6", INK, 1.5))
+    s.append(circle(x, y, 3.5, INK, INK, 1))
+
+
+def _lamp_src(x, y, s, label):
+    s.append(circle(x, y, 16, "#ffe680", "#c98f00", 2))
+    for k in range(8):
+        import math
+        a = k * math.pi / 4
+        s.append(line(x + 20 * math.cos(a), y + 20 * math.sin(a), x + 27 * math.cos(a), y + 27 * math.sin(a), "#c98f00", 2))
+    s.append(text(x, y + 46, label, 13))
+
+
+def _obj(x, y, s, label):
+    s.append(rect(x - 22, y - 18, 44, 36, "#cfe3c4", INK, 2, 4))
+    s.append(text(x, y + 38, label, 13))
+
+
+def _ray(a, b, s, col="#d9822b"):
+    from sci_common import arrow
+    import math
+    (x1, y1), (x2, y2) = a, b
+    d = math.hypot(x2 - x1, y2 - y1)
+    ux, uy = (x2 - x1) / d, (y2 - y1) / d
+    s.append(arrow(x1 + ux * 30, y1 + uy * 30, x2 - ux * 30, y2 - uy * 30, col, 2.5))
+
+
+def seeing(src, obj, rays, label="diagram of light rays"):
+    """src/obj: labels; rays: list of ('S','O'), ('O','E'), ('E','O'), ('S','E'), ('E','S') pairs."""
+    P = {"S": (60, 50), "O": (250, 50), "E": (150, 150)}
+    s = []
+    _lamp_src(60, 50, s, src)
+    _obj(250, 50, s, obj)
+    _eye(150, 150, s)
+    s.append(text(150, 186, "eye", 13))
+    for a, b in rays:
+        _ray(P[a], P[b], s)
+    return svg_wrap(320, 196, "".join(s), label)
+
+
+def shadow_setup(d_label="", label="torch, object and screen"):
+    s = []
+    _lamp_src(40, 60, s, "torch")
+    s.append(rect(150, 40, 14, 40, "#8a5a2b", INK, 1.5))
+    s.append(text(157, 110, "object", 13))
+    s.append(rect(300, 10, 10, 100, "#e8e8e8", INK, 1.5))
+    s.append(text(305, 128, "screen", 13))
+    s.append("<polygon points='300,22 300,98 164,80 164,40' fill='#555555' opacity='0.25'/>")
+    if d_label:
+        s.append(line(40, 140, 157, 140, INK, 1.5))
+        s.append(text(98, 155, d_label, 13))
+    return svg_wrap(330, 162, "".join(s), label)
