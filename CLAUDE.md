@@ -2156,6 +2156,14 @@ Year 13: Biology 1. photosynthesis-respiration-and-energy-transfer ✓ 2. respon
 トピック：biological-molecules・exchange-and-transport→living-things、kinetics・acids-bases・transition-metals→matter、mechanics・gravitational→forces-and-motion、thermal・capacitor→energy、genetic-information は energy・waves の out
 UK / Science は Year 1〜13（KS1〜KS4 Combined Science、A level Biology・Chemistry・Physics）まで完了。次は他の国の理科
 
+IN / Science（CBSE 2025-26 Science syllabus / NCERT 教科書。1 単元 = 1 章）— country `in`、subject `science`、grade `class-N`、A4。standard_code は「Class 10, Chapter 11: Electricity」、domain は CBSE の Unit（Chemical Substances – Nature and Behaviour／World of Living／Natural Phenomena／Effects of Current／Natural Resources）、standard_url は cbseacademic の Science_Sec_2025-26.pdf（in_sci.STD_URL）。core.php の subject_standard() に 'in/science'。
+共通部品は `tools/in_sci.py`（U(sort, slug, chapter, unit_name, std, title, short, meta, kb, ks, think, ex, mist, faq, sets)、pairs(rows, fwd, back)（表から両方向の問題）、K(f, *kinds)、build(mod, level, slug)：seed は 720000 + 100 × level + sort、インドの名前、「-5」→「−5」、LEAK（米国式の語と $・£・pupils・GCSE・miles など）で止める）。数は uk_alsci の nf・nq・tq・once_maker。
+単元の定義は `tools/in_sci10.py`（UNITS(level)）＝ in_sci10a（化学 Ch 1–4）＋ in_sci10b（生物 Ch 5–8・13）＋ in_sci10c（物理 Ch 9–12：New Cartesian sign convention、鏡 1/v + 1/u = 1/f、レンズ 1/v − 1/u = 1/f、P = 1/f、V = IR、₹ の kWh、Fleming の左手の法則、220 V・50 Hz）。gen_in_science_c10_* は build を呼ぶだけ。
+IN / Science / Class 10: 1. chemical-reactions-and-equations ✓ 2. acids-bases-and-salts ✓ 3. metals-and-non-metals ✓ 4. carbon-and-its-compounds ✓ 5. life-processes ✓ 6. control-and-coordination ✓ 7. how-do-organisms-reproduce ✓ 8. heredity ✓
+9. light-reflection-and-refraction ✓ 10. the-human-eye-and-the-colourful-world ✓ 11. electricity ✓ 12. magnetic-effects-of-electric-current ✓ 13. our-environment ✓
+トピック：carbon-and-its→matter、life-processes・control-and-coordination・our-environment→living-things、human-eye→waves-and-light、light-reflection は energy の out
+次は Class 9、Class 6–8（Curiosity）、Class 11–12（Physics・Chemistry・Biology）
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
