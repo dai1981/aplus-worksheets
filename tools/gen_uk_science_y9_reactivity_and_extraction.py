@@ -56,10 +56,10 @@ def g_red():
     if k == "prod":
         return item("Complete the word equation: %s + carbon → ? + carbon dioxide" % ox, m, [ox, "carbon monoxide", m + " carbonate"], "Carbon takes the oxygen.")
     if k == "reduced":
-        return item("%s. Which substance is reduced?" % eq[0].upper() + eq[1:], ox, ["carbon", "carbon dioxide", m], "Reduction is the loss of oxygen.")
+        return item("%s. Which substance is reduced?" % (eq[0].upper() + eq[1:]), ox, ["carbon", "carbon dioxide", m], "Reduction is the loss of oxygen.")
     if k == "oxidised":
-        return item("%s. Which substance is oxidised?" % eq[0].upper() + eq[1:], "carbon", [ox, m, "carbon dioxide"], "Oxidation is the gain of oxygen.")
-    return item("%s. Why can carbon be used?" % eq[0].upper() + eq[1:], "Carbon is more reactive than %s." % m, ["Carbon is less reactive than %s." % m, "Carbon is a metal.", "%s is above carbon in the series." % m.capitalize()], "Displacement of the metal from its oxide.")
+        return item("%s. Which substance is oxidised?" % (eq[0].upper() + eq[1:]), "carbon", [ox, m, "carbon dioxide"], "Oxidation is the gain of oxygen.")
+    return item("%s. Why can carbon be used?" % (eq[0].upper() + eq[1:]), "Carbon is more reactive than %s." % m, ["Carbon is less reactive than %s." % m, "Carbon is a metal.", "%s is above carbon in the series." % m.capitalize()], "Displacement of the metal from its oxide.")
 
 
 ORE = [("haematite", "iron oxide", "iron"), ("bauxite", "aluminium oxide", "aluminium"), ("malachite", "copper carbonate", "copper"), ("galena", "lead sulfide", "lead"), ("cassiterite", "tin oxide", "tin")]
