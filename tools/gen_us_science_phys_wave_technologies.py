@@ -60,6 +60,8 @@ def g_echo():
 
 
 def t3(x):
+    if 1000 <= x < 1e6:
+        return num(float("%.3g" % x))
     v = "%.3g" % x
     return sci(x) if "e" in v else num(float(v), 6)
 
@@ -79,7 +81,7 @@ def g_time():
         w = ["%s s" % t3(x) for x in w]
         return item("A radio signal travels from %s to Earth, a distance of %s km. How long does it take? (c = 3.0 × 10<sup>8</sup> m/s)" % (case[0], num(case[1])), g, uniq(g, w),
                     "t = d ÷ c = %s m ÷ 3.0 × 10<sup>8</sup> m/s = %s s." % (sci(d), t3(t)))
-    if t < 0.01:
+    if t < 0.01 or case[0] == "the Sun":
         return None
     g = "about %s s" % t3(2 * t)
     return item("A radar or laser pulse is sent to %s (%s km away) and reflects back. About how long until the echo returns?" % (case[0], num(case[1])), g,
