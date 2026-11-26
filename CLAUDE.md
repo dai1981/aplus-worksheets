@@ -2162,7 +2162,11 @@ IN / Science（CBSE 2025-26 Science syllabus / NCERT 教科書。1 単元 = 1 �
 IN / Science / Class 10: 1. chemical-reactions-and-equations ✓ 2. acids-bases-and-salts ✓ 3. metals-and-non-metals ✓ 4. carbon-and-its-compounds ✓ 5. life-processes ✓ 6. control-and-coordination ✓ 7. how-do-organisms-reproduce ✓ 8. heredity ✓
 9. light-reflection-and-refraction ✓ 10. the-human-eye-and-the-colourful-world ✓ 11. electricity ✓ 12. magnetic-effects-of-electric-current ✓ 13. our-environment ✓
 トピック：carbon-and-its→matter、life-processes・control-and-coordination・our-environment→living-things、human-eye→waves-and-light、light-reflection は energy の out
-次は Class 9、Class 6–8（Curiosity）、Class 11–12（Physics・Chemistry・Biology）
+IN / Science / Class 9（CBSE の Unit：Matter – Its Nature and Behaviour／Organization in the Living World／Motion, Force and Work／Food; Food Production。standard_text は CBSE 2025-26 の原文。separating the components of a mixture と commercial unit of energy（kWh）は CBSE が除外）— 単元の定義は `tools/in_sci9.py`（UNITS(9) ＝ in_sci9a 化学 Ch 1–4 ＋ in_sci9b 生物 Ch 5・6・12 ＋ in_sci9c 物理 Ch 7–11）。gen_in_science_c9_* は build を呼ぶだけ。
+in_sci9 は TRIM = True：build が 3 有効数字の末尾の 0 を消し（60.0 → 60、0.500 → 0.5）、4 けた以上の整数にカンマを付ける（「in 1665」のような年は除く）。in_sci9b.odd_one(groups, q, qn) は「Which of these is a pulse?」「… is not …?」の問題。g は 9.8（PE・power は問題文に「Take g = 10 m/s²」）、π は 22/7
+1. matter-in-our-surroundings ✓ 2. is-matter-around-us-pure ✓ 3. atoms-and-molecules ✓ 4. structure-of-the-atom ✓ 5. the-fundamental-unit-of-life ✓ 6. tissues ✓ 7. motion ✓ 8. force-and-laws-of-motion ✓ 9. gravitation ✓ 10. work-and-energy ✓ 11. sound ✓ 12. improvement-in-food-resources ✓
+トピック：^gravitation$→forces-and-motion、unit-of-life・^tissues$・food-resources→living-things（earths-systems の out に food-resources、living-things の out に structure-of-the-atom）
+次は Class 6–8（Curiosity）、Class 11–12（Physics・Chemistry・Biology）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 

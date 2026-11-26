@@ -68,9 +68,16 @@ def build(mod, level, slug):
     spec = u["sets"]() if callable(u["sets"]) else u["sets"]
     sets = unit.sets(spec)
     fixm = lambda t: re.sub(r"(?<=[\s(=])-(?=\d)", "−", t)
+    if getattr(mod, "TRIM", False):
+        # 3 s.f. trailing zeros: 60.0 -> 60, 0.500 -> 0.5 (not inside tags)
+        trim = lambda t: re.sub(r"(?<![\d.])(\d[\d,]*)\.(\d*?)0+(?![\d.])", lambda m: m.group(1) + ("." + m.group(2) if m.group(2) else ""), t)
+        fixm0 = fixm
+        com = lambda t: re.sub(r"(?<![\d.,])(?<!in )(\d{4,})(?![\d.,])", lambda m: "{:,}".format(int(m.group())), t)
+        fixm = lambda t: fixm0(re.sub(r"(^|>)([^<]*)", lambda m: m.group(1) + com(trim(m.group(2))), t))
     for st in sets:
         for it in st["items"]:
             it["q"], it["e"], it["c"] = fixm(it["q"]), fixm(it["e"]), [fixm(c) for c in it["c"]]
+            assert len(set(it["c"])) == 4, it["c"]
     body = lesson(u["think"], u["ex"], u["mist"])
     seo = "%s Class %d Science Worksheet with Answers (NCERT Chapter %d)" % (u["title"].split(":")[0], level, u["chapter"])
     if len(seo) > 95:
