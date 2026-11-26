@@ -64,7 +64,7 @@ def g_calc():
         return None
     F = G * m1 * m2 / r ** 2
     g = "%s N" % sci(F)
-    return item("%s calculates the gravitational force between %s kg object and a %s kg object %s m apart. What is it? (G = 6.67 × 10<sup>−11</sup> N·m²/kg²)" % (who, ("an " if str(m1)[0] == "8" else "a ") + num(m1), num(m2), num(r)), g,
+    return item("%s calculates the gravitational force between %s kg object and %s kg object %s m apart. What is it? (G = 6.67 × 10<sup>−11</sup> N·m²/kg²)" % (who, ("an " if str(m1)[0] == "8" else "a ") + num(m1), ("an " if str(m2)[0] == "8" else "a ") + num(m2), num(r)), g,
                 uniq(g, ["%s N" % sci(G * m1 * m2 / r), "%s N" % sci(G * m1 * m2 * r ** 2), "%s N" % sci(F * 10), "%s N" % sci(G * (m1 + m2) / r ** 2)]),
                 "F = Gm₁m₂ ÷ r² = 6.67 × 10<sup>−11</sup> × %s × %s ÷ %s² = %s N." % (num(m1), num(m2), num(r), sci(F)))
 
