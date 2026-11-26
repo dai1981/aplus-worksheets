@@ -2066,8 +2066,12 @@ Chemistry（gen_us_science_chem_*、seed 902NN。HS-PS1・PS2-6・PS3-4。共通
 1. atomic-structure-and-isotopes ✓ 2. periodic-table-and-trends ✓ 3. chemical-bonding ✓ 4. intermolecular-forces-and-properties ✓ 5. types-of-chemical-reactions ✓ 6. balancing-chemical-equations ✓ 7. the-mole-and-molar-mass ✓
 8. stoichiometry ✓ 9. energy-in-chemical-reactions ✓ 10. reaction-rates ✓ 11. chemical-equilibrium ✓ 12. nuclear-chemistry ✓ 13. thermal-energy-and-specific-heat ✓ 14. molecular-structure-and-materials ✓
 化学の質量・量は現実に合わせる（Fe:S = 7:4 など、反応しきる量の比）。4 けた以上の数はカンマ（num、または生成後に commas()）
-次: Physics（HS-PS2・PS3・PS4）、Earth and Space Science（HS-ESS1〜3）。catalog.json に科目を足す（sort 11・12）
-US / Science は Kindergarten〜Grade 8・Biology・Chemistry まで完了
+Physics（gen_us_science_phys_*、seed 903NN。HS-PS2・PS3・PS4。共通部品は `tools/sci_phys.py`：num（カンマ、負は −）・sci（× 10 の累乗）・uniq（答えと違う誤答 3 つ。足りないと None）・safe（maker を包み、誤答がそろわない問題を飛ばす）。g = 9.8 m/s²）:
+1. motion-and-kinematics ✓ 2. newtons-laws-and-net-force ✓ 3. momentum-and-collisions ✓ 4. impulse-and-collision-safety ✓ 5. gravitational-force ✓ 6. electric-force-and-coulombs-law ✓ 7. electromagnetism-and-induction ✓ 8. kinetic-and-potential-energy ✓
+9. conservation-of-energy ✓ 10. energy-conversion-and-efficiency ✓ 11. electric-and-magnetic-fields ✓ 12. wave-properties ✓ 13. digital-and-analog-signals ✓ 14. wave-particle-duality ✓ 15. electromagnetic-radiation-and-matter ✓ 16. wave-technologies ✓
+物理の数値は現実に合わせる（衝突後の運動エネルギーが前より増えない、ランプの強さなど）。人の名前を使う問題は who で代名詞を避ける
+次: Earth and Space Science（HS-ESS1〜3）。catalog.json に科目を足す（sort 12）
+US / Science は Kindergarten〜Grade 8・Biology・Chemistry・Physics まで完了
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
