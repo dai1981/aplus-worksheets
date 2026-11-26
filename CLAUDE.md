@@ -2070,8 +2070,11 @@ Physics（gen_us_science_phys_*、seed 903NN。HS-PS2・PS3・PS4。共通部品
 1. motion-and-kinematics ✓ 2. newtons-laws-and-net-force ✓ 3. momentum-and-collisions ✓ 4. impulse-and-collision-safety ✓ 5. gravitational-force ✓ 6. electric-force-and-coulombs-law ✓ 7. electromagnetism-and-induction ✓ 8. kinetic-and-potential-energy ✓
 9. conservation-of-energy ✓ 10. energy-conversion-and-efficiency ✓ 11. electric-and-magnetic-fields ✓ 12. wave-properties ✓ 13. digital-and-analog-signals ✓ 14. wave-particle-duality ✓ 15. electromagnetic-radiation-and-matter ✓ 16. wave-technologies ✓
 物理の数値は現実に合わせる（衝突後の運動エネルギーが前より増えない、ランプの強さなど）。人の名前を使う問題は who で代名詞を避ける
-次: Earth and Space Science（HS-ESS1〜3）。catalog.json に科目を足す（sort 12）
-US / Science は Kindergarten〜Grade 8・Biology・Chemistry・Physics まで完了
+Earth and Space Science（gen_us_science_ess_*、seed 904NN。HS-ESS1〜3。sci_phys の num・uniq・safe を使う）: 1. the-sun-and-nuclear-fusion ✓ 2. the-big-bang ✓ 3. stars-and-the-origin-of-elements ✓ 4. keplers-laws-and-orbits ✓ 5. plate-tectonics-and-crust-age ✓ 6. earths-early-history ✓
+7. landforms-and-earth-processes ✓ 8. earths-interior-and-mantle-convection ✓ 9. feedbacks-in-earth-systems ✓ 10. climate-and-energy-flow ✓ 11. water-and-earth-materials ✓ 12. carbon-cycle-and-earth-systems ✓ 13. coevolution-of-life-and-earth ✓
+14. natural-resources-and-hazards ✓ 15. sustainability-and-human-impact ✓ 16. climate-change-data-and-models ✓
+トピック：big-bang・kepler・orbit・universe→earth-and-space、matter の out に nuclear-fusion・earth-materials、living-things の out に climate-and-energy
+US / Science は Kindergarten〜Grade 8・高校 4 科目（Biology・Chemistry・Physics・Earth and Space Science）まで完了。次は他の国の理科か、GDP 順で次の国の算数
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
