@@ -23,7 +23,7 @@ def f(x):
     return "{:,}".format(int(x)) if x == int(x) else "{:,}".format(x)
 
 
-OBJ = ["a box", "a crate", "a block of wood", "an elephant's foot", "a person standing on one foot", "a car tyre", "a wardrobe", "a statue"]
+OBJ = ["a box", "a crate", "a block of wood", "a parcel", "a concrete block", "a stool", "a toy model", "a metal weight"]
 
 
 def g_calc():
