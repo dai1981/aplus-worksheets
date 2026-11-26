@@ -2118,7 +2118,13 @@ Year 8: 1. food-and-digestion ✓ 2. breathing-and-gas-exchange ✓ 3. respirati
 Year 9: 1. inheritance-and-dna ✓ 2. variation-and-evolution ✓ 3. health-and-drugs ✓ 4. exothermic-and-endothermic-reactions ✓ 5. reactivity-and-extraction ✓ 6. materials ✓ 7. speed-and-motion ✓ 8. pressure ✓ 9. work-and-moments ✓ 10. waves ✓ 11. thermal-energy ✓ 12. gravity-and-space ✓
 KS3 の範囲を超える US の問題（ΔH・kJ/mol・g/mol・逆反応の活性化エネルギー）は包んで落とす。KS3 の用語：resultant force・polythene・ethene・fibreglass
 トピック：digestion・gas-exchange・health-and-drugs→living-things、metals-and・extraction→matter、^pressure$・moments→forces-and-motion、gravity-and-space→earth-and-space も
-UK / Science は Year 1〜9 まで完了。次は KS4（GCSE Combined Science）か、他の国の理科
+UK / Science / KS4 Year 10–11（GCSE Combined Science。AQA などの一般的な配分で 2 学年に分ける）— seed は 620cc・621cc。make_ks4(year, slug, sort, subject, topic, …)：standard_code「KS4 Biology: Bioenergetics」、domain は Biology／Chemistry／Physics。
+共通部品は `tools/uk_ks4.py`：U4(seed) → (U, R, P, us)。us("chem_reaction_rates", "g_rate", drop=(…), rep=((古い, 新しい), …)) で US 高校の問題関数をイギリス式（ukm）にして使う（rep で文字を置き換え、drop で語を含む問題を落とす）。us.uk(モジュール, 関数) で UK の生成スクリプトの問題関数を同じ U・R・P で使う。build(U, year, slug, sort, subject, topic, std, title, short, meta, kb, ks, think, ex, mist, faq, sets)。
+生成スクリプトは `if __name__ == "__main__":` の後で build を呼ぶ（sci_pool.py で import しても JSON を書かない）。体積は cm³、血糖は mmol/L、g = 9.8 N/kg、photon・ATP・meiosis I は使わない（rep・drop で消す）。UKSP に trolley・lorry・ionise・fertilise などを足した
+Year 10: 1. cell-structure-and-transport ✓ 2. cell-division ✓ 3. organisation-and-enzymes ✓ 4. infection-and-response ✓ 5. atomic-structure-and-the-periodic-table ✓ 6. bonding-and-structure ✓ 7. quantitative-chemistry ✓ 8. chemical-changes ✓ 9. energy-changes ✓ 10. energy ✓ 11. electricity ✓ 12. particle-model-and-density ✓ 13. atomic-structure-and-radioactivity ✓
+Year 11: 1. photosynthesis-and-respiration ✓ 2. homeostasis-and-hormones ✓ 3. genetics-and-evolution ✓ 4. ecology ✓ 5. rates-and-equilibrium ✓ 6. organic-chemistry ✓ 7. chemical-analysis ✓ 8. chemistry-of-the-atmosphere ✓ 9. using-resources ✓ 10. forces-and-motion ✓ 11. waves-and-the-electromagnetic-spectrum ✓ 12. magnetism-and-electromagnetism ✓
+トピック：infection・enzyme・^ecology$→living-things（out に bonding-and-structure）、quantitative・chemical-analysis・organic→matter、atmosphere→earths-systems、forces-and-motion の out に electromagnetic-spectrum
+UK / Science は Year 1〜11（KS1〜KS4 Combined Science）まで完了。次は他の国の理科
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
