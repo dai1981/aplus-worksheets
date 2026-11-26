@@ -24,7 +24,7 @@ LEAKS = ["color", "colors", "colored", "colorful", "center", "centers", "meter",
          "fibers", "grade", "grades", "sulfur", "gasoline", "faucet", "sidewalk", "candy", "cookie", "cookies",
          "vacation", "soccer", "neighbor", "neighbors", "neighborhood", "mold", "molds", "odor", "vapor", "harbor",
          "tire", "tires", "diaper", "diapers", "fries", "zucchini", "eggplant", "cilantro", "flashcard", "recess",
-         "fahrenheit", "inch", "inches", "pound", "pounds", "ounce", "ounces", "gallon", "gallons", "mile", "miles"]
+         "fahrenheit", "ladybug", "ladybugs", "inch", "inches", "pound", "pounds", "ounce", "ounces", "gallon", "gallons", "mile", "miles"]
 LEAK_RE = re.compile(r"(?<![\w-])(%s)(?![\w-])" % "|".join(re.escape(w) for w in LEAKS), re.I)
 
 
