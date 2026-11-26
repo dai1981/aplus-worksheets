@@ -51,3 +51,9 @@ USED = {}
 def once(key, n=1):
     USED[key] = USED.get(key, 0) + 1
     return USED[key] <= n
+
+
+def make_ks3(year, slug, sort, subject, topic, std_text, title, seo_title, short, meta, key_big, key_sub, body, faq, sets, allow=()):
+    """KS3 (Year 7-9): subject = Biology / Chemistry / Physics; standard_code 'KS3 Biology: Cells and organisation'."""
+    make_uk(year, slug, sort, topic, std_text, title, seo_title, short, meta, key_big, key_sub, body, faq, sets,
+            code="KS3 %s: %s" % (subject, topic), domain=subject, allow=allow)

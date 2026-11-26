@@ -295,3 +295,41 @@ def body(labels, label="a child's body with labelled parts"):
         s.append(circle(266, y, 13, "#ffffff", INK, 1.6))
         s.append(text(266, y + 5, letter, 15))
     return svg_wrap(290, 304, "".join(s), label)
+
+
+# ------------------------------------------------------------ KS3: cells
+CELL_PT = {"plant": {"cell wall": (226, 30), "cell membrane": (216, 140), "nucleus": (176, 70), "vacuole": (172, 112), "chloroplast": (206, 44), "cytoplasm": (196, 84)},
+           "animal": {"cell membrane": (220, 112), "nucleus": (152, 100), "cytoplasm": (196, 70), "mitochondria": (186, 132)}}
+
+
+def cell(kind, labels, label=None):
+    """kind: 'plant' or 'animal'; labels: dict part -> letter. Leader lines go to circles on the right."""
+    s = []
+    if kind == "plant":
+        s.append(rect(14, 14, 212, 162, "#d9efc9", "#3c8d40", 6, 8))
+        s.append(rect(24, 24, 192, 142, "#eef7e6", "#6a8f4e", 1.5, 6))
+        s.append("<ellipse cx='110' cy='112' rx='62' ry='34' fill='#cfe6f7' stroke='#5b8fd6' stroke-width='1.5'/>")
+        s.append(circle(160, 70, 16, "#c9a0dc", INK, 1.5))
+        for x, y in ((50, 42), (82, 38), (196, 112), (60, 150), (170, 150), (200, 44)):
+            s.append("<ellipse cx='%d' cy='%d' rx='10' ry='6' fill='#4caf50' stroke='#2e7d32' stroke-width='1'/>" % (x, y))
+    else:
+        s.append("<ellipse cx='120' cy='95' rx='104' ry='76' fill='#fde7d6' stroke='#c27c4e' stroke-width='2'/>")
+        s.append(circle(130, 100, 22, "#c9a0dc", INK, 1.5))
+        for x, y, r in ((80, 66, 0), (176, 130, 30), (70, 130, -20)):
+            s.append("<ellipse cx='%d' cy='%d' rx='12' ry='6' fill='#f4a261' stroke='#b5651d' stroke-width='1' transform='rotate(%d %d %d)'/>" % (x, y, r, x, y))
+    pts = CELL_PT[kind]
+    items = sorted(labels.items(), key=lambda kv: pts[kv[0]][1])
+    ys = []
+    for part, _ in items:
+        y = max(pts[part][1], (ys[-1] + 30) if ys else 16)
+        ys.append(y)
+    if ys and ys[-1] > 176:
+        shift = ys[-1] - 176
+        ys = [max(16 + 30 * i, y - shift) for i, y in enumerate(ys)]
+    for (part, letter), y in zip(items, ys):
+        x0, y0 = pts[part]
+        s.append(circle(x0, y0, 2.5, INK, INK, 1))
+        s.append(line(x0, y0, 256, y, INK, 1.3))
+        s.append(circle(270, y, 13, "#ffffff", INK, 1.6))
+        s.append(text(270, y + 5, letter, 15))
+    return svg_wrap(290, 190, "".join(s), label or "a labelled %s cell" % kind)
