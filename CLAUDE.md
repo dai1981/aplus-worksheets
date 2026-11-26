@@ -2181,7 +2181,11 @@ IN / Science / Class 8（STD_URL は textbook.php?hecu1=0-13）: 1. exploring-th
 in_sci.build の TRIM のカンマは年に付けない（「(1986)」「the year 2026」「of 1987」「since 1973」の形と「2023 was」。単位が続く数にはカンマ）。年を文頭に書かない（「The year 2024 is…」と書く）
 set を回して選択肢を作らない（文字列の set は実行ごとに順番が変わる。sorted() する）。生成スクリプトを 2 回動かして md5 が同じか確かめる
 トピック：^health-the・nature-works→living-things、time-with-the-skies→earth-and-space（out に our-home-earth）、cyclone→earths-systems
-次は Class 3–5（EVS: Our Wondrous World。Class 1–2 は NCERT に理科・EVS の教科がない）、Class 11–12（Physics・Chemistry・Biology）
+IN / Science / Class 3–5（NCERT Our Wondrous World（EVS: The World Around Us、2025 年の新しい教科書）。subject は science のまま、seo_title は「Class 3 EVS Worksheet」（in_sciN.SUBJ = "EVS"）、BOOK = "Our Wondrous World"、STD_URL は NCERT の教科書ページ）— 単元は `tools/in_sciN.py` ＝ in_sciNa ＋ in_sciNb。domain は教科書のテーマ（Our Families and Communities／Life Around Us／Water／Food and Health／Things Around Us など）。とても短い文、₹ のお金の問題は in_sci3a.c_money
+Class 1–2 は NCERT に理科・EVS の教科がない（Joyful Mathematics・英語・ヒンディー語などだけ）ので作らない
+IN / Science / Class 3: 1. family-and-friends ✓ 2. going-to-the-mela ✓ 3. celebrating-festivals ✓ 4. getting-to-know-plants ✓ 5. plants-and-animals-live-together ✓ 6. living-in-harmony ✓ 7. water-a-precious-gift ✓ 8. food-we-eat ✓ 9. staying-healthy-and-happy ✓ 10. this-world-of-things ✓ 11. making-things ✓ 12. taking-charge-of-waste ✓
+トピック：world-of-things・making-things→matter、food-we-eat・living-in-harmony→living-things、charge-of-waste→earths-systems（family・mela・festivals はトピックなし）
+次は Class 4–5、Class 11–12（Physics・Chemistry・Biology）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 

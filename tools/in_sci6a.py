@@ -22,7 +22,7 @@ def odd_one(groups, q, qn=None, e=None):
         R = _R[0]
         lab = R.choice(sorted(groups))
         others = sorted({x for k, v in groups.items() if k != lab for x in v})
-        neg = re.match(r"(an? )?(non|not|un(healthy|desirable|safe)|in[a-z]+able|insoluble|opaque)", lab)
+        neg = re.match(r"(an? )?(non|not|un(healthy|desirable|safe|helpful|kind)|in[a-z]+able|insoluble|opaque)", lab)
         if qn and not neg and R.random() < 0.5 and len(groups[lab]) >= 3:
             a = R.choice(others)
             sa = "“%s”" % a if a[-1] in ".?!" else _cap(a)

@@ -89,11 +89,12 @@ def build(mod, level, slug):
     body = lesson(u["think"], u["ex"], u["mist"])
     book = getattr(mod, "BOOK", None)        # Class 3-8: the NCERT book name (Our Wondrous World, Curiosity)
     nb = "NCERT %s" % book if book else "NCERT"
-    seo = "%s Class %d Science Worksheet with Answers (%s Chapter %d)" % (u["title"].split(":")[0], level, nb, u["chapter"])
+    sw = getattr(mod, "SUBJ", "Science")       # Class 3-5: EVS (The World Around Us)
+    seo = "%s Class %d %s Worksheet with Answers (%s Chapter %d)" % (u["title"].split(":")[0], level, sw, nb, u["chapter"])
     if len(seo) > 95:
-        seo = "%s Class %d Science Worksheet (%s Ch %d)" % (u["title"].split(":")[0], level, nb, u["chapter"])
+        seo = "%s Class %d %s Worksheet (%s Ch %d)" % (u["title"].split(":")[0], level, sw, nb, u["chapter"])
     if len(seo) > 95:
-        seo = "%s Class %d Science Worksheet (NCERT Ch %d)" % (u["title"].split(":")[0], level, u["chapter"])
+        seo = "%s Class %d %s Worksheet (NCERT Ch %d)" % (u["title"].split(":")[0], level, sw, u["chapter"])
     blob = json.dumps([u["title"], seo, u["short"], u["meta"], u["kb"], u["ks"], body, u["faq"], sets, u["std"]], ensure_ascii=False)
     bad = sorted({m.group(1).lower() for m in uk_sci.LEAK_RE.finditer(uk_sci._text_of(blob))})
     assert not bad, "American words: %s" % bad
