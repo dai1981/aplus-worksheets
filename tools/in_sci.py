@@ -72,7 +72,15 @@ def build(mod, level, slug):
         # 3 s.f. trailing zeros: 60.0 -> 60, 0.500 -> 0.5 (not inside tags)
         trim = lambda t: re.sub(r"(?<![\d.])(\d[\d,]*)\.(\d*?)0+(?![\d.])", lambda m: m.group(1) + ("." + m.group(2) if m.group(2) else ""), t)
         fixm0 = fixm
-        com = lambda t: re.sub(r"(?<![\d.,])(?<!in )(\d{4,})(?![\d.,])", lambda m: "{:,}".format(int(m.group())), t)
+        unit = re.compile(r"\s?(°|%|g\b|kg\b|mg\b|t\b|m\b|cm|mm|km|m²|m³|Pa\b|kPa|N\b|J\b|kJ|W\b|kW|V\b|A\b|s\b|K\b|min\b|h\b|days|years|people|ml\b|mL|L\b|m/s|km/h|breaths|times)")
+
+        def com1(m):
+            n, rest, prev = int(m.group()), m.string[m.end():m.end() + 10], m.string[max(0, m.start() - 7):m.start()]
+            year = re.search(r"(\byear |\bsince |\buntil |\bby |\bfrom |\bof |\()$", prev, re.I) or re.match(r"(\)| was\b)", rest)
+            if 1000 <= n <= 2500 and year and not unit.match(rest):      # a year such as (1986) or the year 2026
+                return m.group()
+            return "{:,}".format(n)
+        com = lambda t: re.sub(r"(?<![\d.,])(?<!in )(\d{4,})(?![\d.,])", com1, t)
         fixm = lambda t: fixm0(re.sub(r"(^|>)([^<]*)", lambda m: m.group(1) + com(trim(m.group(2))), t))
     for st in sets:
         for it in st["items"]:

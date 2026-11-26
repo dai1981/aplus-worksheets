@@ -2175,7 +2175,13 @@ IN / Science / Class 6: 1. the-wonderful-world-of-science ✓ 2. diversity-in-th
 IN / Science / Class 7（STD_URL は textbook.php?gecu1=0-12）: 1. the-ever-evolving-world-of-science ✓ 2. exploring-substances-acidic-basic-and-neutral ✓ 3. electricity-circuits-and-their-components ✓ 4. the-world-of-metals-and-non-metals ✓
 5. changes-around-us-physical-and-chemical ✓ 6. adolescence-a-stage-of-growth-and-change ✓ 7. heat-transfer-in-nature ✓ 8. measurement-of-time-and-motion ✓ 9. life-processes-in-animals ✓ 10. life-processes-in-plants ✓ 11. light-shadows-and-reflections ✓ 12. earth-moon-and-the-sun ✓
 LEAKS の " nan" は空白つきの部分一致なので nanosecond も止まる。トピック：acidic-basic・physical-and-chemical→matter、adolescence→living-things
-次は Class 8（Curiosity）、Class 3–5（EVS: Our Wondrous World）、Class 11–12（Physics・Chemistry・Biology）
+IN / Science / Class 8（STD_URL は textbook.php?hecu1=0-13）: 1. exploring-the-investigative-world-of-science ✓ 2. the-invisible-living-world-beyond-our-naked-eye ✓ 3. health-the-ultimate-treasure ✓ 4. electricity-magnetic-and-heating-effects ✓
+5. exploring-forces ✓ 6. pressure-winds-storms-and-cyclones ✓ 7. particulate-nature-of-matter ✓ 8. nature-of-matter-elements-compounds-and-mixtures ✓ 9. the-amazing-world-of-solutes-solvents-and-solutions ✓ 10. light-mirrors-and-lenses ✓
+11. keeping-time-with-the-skies ✓ 12. how-nature-works-in-harmony ✓ 13. our-home-earth-a-unique-life-sustaining-planet ✓
+in_sci.build の TRIM のカンマは年に付けない（「(1986)」「the year 2026」「of 1987」「since 1973」の形と「2023 was」。単位が続く数にはカンマ）。年を文頭に書かない（「The year 2024 is…」と書く）
+set を回して選択肢を作らない（文字列の set は実行ごとに順番が変わる。sorted() する）。生成スクリプトを 2 回動かして md5 が同じか確かめる
+トピック：^health-the・nature-works→living-things、time-with-the-skies→earth-and-space（out に our-home-earth）、cyclone→earths-systems
+次は Class 3–5（EVS: Our Wondrous World。Class 1–2 は NCERT に理科・EVS の教科がない）、Class 11–12（Physics・Chemistry・Biology）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 

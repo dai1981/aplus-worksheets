@@ -210,7 +210,7 @@ def c_formula(k=None):
     flip = formula((c[0], c[1], a[2]), (a[0], a[1], c[2]))
     plain = c[1] + a[1]
     nob = right.replace("(", "").replace(")", "")
-    ws = [sub(x) for x in {flip, plain, nob, formula((c[0], c[1], 1), (a[0], a[1], 1)) if c[2] != a[2] else plain + "2"} if x != right]
+    ws = [sub(x) for x in sorted({flip, plain, nob, formula((c[0], c[1], 1), (a[0], a[1], 1)) if c[2] != a[2] else plain + "2"}) if x != right]
     nm_ = "%s %s" % (c[0], a[0])
     if c[1] == "H":
         nm_ = "hydrogen %s" % a[0]
