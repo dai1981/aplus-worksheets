@@ -2018,7 +2018,15 @@ US / Science / Grade 5（NGSS）
 11. sun-and-stars (5-ESS1-1) ✓ 12. shadows-day-and-night (5-ESS1-2) ✓ 13. patterns-in-the-night-sky ✓ 14. earths-systems (5-ESS2-1) ✓ 15. water-on-earth (5-ESS2-2) ✓
 16. protecting-earths-resources (5-ESS3-1) ✓ 17. engineering-design (3-5-ETS1) ✓
 
-US / Science の次: Grade 4 → Grade 3 → Grade 6–8（NGSS は MS をまとめて示すので、一般的な配分で学年に分ける）→ K–2。そのあと英国・オーストラリアなどの理科
+US / Science / Grade 4（NGSS。seed は 401xx）
+1. energy-and-speed (4-PS3-1) ✓ 2. energy-transfer (4-PS3-2) ✓ 3. electric-circuits (4-PS3-2) ✓ 4. energy-conversions (4-PS3-4) ✓ 5. collisions (4-PS3-3) ✓
+6. waves (4-PS4-1) ✓ 7. light-and-how-we-see (4-PS4-2) ✓ 8. sending-information-with-patterns (4-PS4-3) ✓ 9. plant-structures (4-LS1-1) ✓ 10. animal-structures (4-LS1-1) ✓
+11. senses-and-the-brain (4-LS1-2) ✓ 12. rock-layers-and-fossils (4-ESS1-1) ✓ 13. weathering-and-erosion (4-ESS2-1) ✓ 14. earths-features-and-maps (4-ESS2-2) ✓
+15. energy-resources (4-ESS3-1) ✓ 16. natural-hazards (4-ESS3-2) ✓
+トピック waves-and-light（Waves, Light and Information）を足した。classifier() は分類が 3 つ以下だと what 側の誤答が足りないので、自前の maker を書く。
+Unit の重複判定は問題文（図・表を除く文）なので、文に場面・名前・数を入れて変化させる
+
+US / Science の次: Grade 3 → Grade 6–8（NGSS は MS をまとめて示すので、一般的な配分で学年に分ける）→ K–2。そのあと英国・オーストラリアなどの理科
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 

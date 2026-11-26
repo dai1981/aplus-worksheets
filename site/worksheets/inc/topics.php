@@ -662,6 +662,8 @@ function topic_defs_science($country = null) {
             'blurb' => 'Pushes and pulls, balanced and unbalanced forces, gravity, magnets and how forces change the way objects move.'),
         'energy' => array('name' => 'Energy', 'in' => '/energy|light|sound|heat|electric|wave|circuit|collision|information|signal/', 'out' => '/^$/',
             'blurb' => 'Forms of energy and how it moves: light, sound, heat and electricity, energy in food, and energy from the sun.'),
+        'waves-and-light' => array('name' => 'Waves, Light and Information', 'in' => '/wave|light|information|signal/', 'out' => '/^$/',
+            'blurb' => 'Amplitude and wavelength, how light reflects into our eyes so we can see, and how patterns and codes send information.'),
         'living-things-and-ecosystems' => array('name' => 'Living Things and Ecosystems', 'in' => '/plant|animal|food-web|food-chain|ecosystem|decomposer|life-cycle|habitat|trait|inherit|cell|organism|body|senses|structure/', 'out' => '/^$/',
             'blurb' => 'How plants and animals get what they need to grow, food chains and food webs, decomposers, and how matter and energy move through an ecosystem.'),
         'earth-and-space' => array('name' => 'Earth and Space', 'in' => '/sun|star|moon|shadow|day-and-night|sky|planet|solar-system|constellation|season/', 'out' => '/food|energy/',
