@@ -2185,7 +2185,10 @@ IN / Science / Class 3–5（NCERT Our Wondrous World（EVS: The World Around Us
 Class 1–2 は NCERT に理科・EVS の教科がない（Joyful Mathematics・英語・ヒンディー語などだけ）ので作らない
 IN / Science / Class 3: 1. family-and-friends ✓ 2. going-to-the-mela ✓ 3. celebrating-festivals ✓ 4. getting-to-know-plants ✓ 5. plants-and-animals-live-together ✓ 6. living-in-harmony ✓ 7. water-a-precious-gift ✓ 8. food-we-eat ✓ 9. staying-healthy-and-happy ✓ 10. this-world-of-things ✓ 11. making-things ✓ 12. taking-charge-of-waste ✓
 トピック：world-of-things・making-things→matter、food-we-eat・living-in-harmony→living-things、charge-of-waste→earths-systems（family・mela・festivals はトピックなし）
-次は Class 4–5、Class 11–12（Physics・Chemistry・Biology）
+IN / Science / Class 4: 1. living-together ✓ 2. exploring-our-neighbourhood ✓ 3. nature-trail ✓ 4. growing-up-with-nature ✓ 5. food-for-health ✓ 6. happy-and-healthy-living ✓ 7. how-things-work ✓ 8. how-things-are-made ✓ 9. different-lands-different-lives ✓ 10. our-sky ✓
+in_sci4.NOCOMMA = {"1098"}：TRIM のカンマを付けない数（電話番号）。鳥の「feet」も LEAK で止まるので toes・claws と書く
+トピック：nature-trail・food-for-health・healthy-living→living-things、things-are-made→matter、how-things-work→forces-and-motion、different-lands→earths-systems
+次は Class 5、Class 11–12（Physics・Chemistry・Biology）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 

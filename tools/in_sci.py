@@ -79,6 +79,8 @@ def build(mod, level, slug):
             year = re.search(r"(\byear |\bsince |\buntil |\bby |\bfrom |\bof |\()$", prev, re.I) or re.match(r"(\)| was\b)", rest)
             if 1000 <= n <= 2500 and year and not unit.match(rest):      # a year such as (1986) or the year 2026
                 return m.group()
+            if m.group() in getattr(mod, "NOCOMMA", ()):                  # phone numbers such as 1098 (Childline)
+                return m.group()
             return "{:,}".format(n)
         com = lambda t: re.sub(r"(?<![\d.,])(?<!in )(\d{4,})(?![\d.,])", com1, t)
         fixm = lambda t: fixm0(re.sub(r"(^|>)([^<]*)", lambda m: m.group(1) + com(trim(m.group(2))), t))
