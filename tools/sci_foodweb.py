@@ -102,10 +102,10 @@ LAYOUT = {
     "pond": {"algae": (.25, 0), "pondweed": (.75, 0), "snail": (.2, 1), "mosquito larva": (.65, 1), "turtle": (.08, 2), "small fish": (.5, 2),
              "dragonfly": (.88, 2), "frog": (.42, 3), "heron": (.7, 4)},
     "ocean": {"phytoplankton": (.2, 0), "seaweed": (.8, 0), "krill": (.2, 1), "sea urchin": (.8, 1), "herring": (.38, 2), "sea otter": (.8, 2),
-              "humpback whale": (.13, 3), "seal": (.5, 3), "orca": (.72, 4)},
-    "forest": {"oak tree": (.25, 0), "berry bush": (.75, 0), "caterpillar": (.1, 1), "squirrel": (.33, 1), "deer": (.75, 1), "robin": (.18, 2),
+              "humpback whale": (.17, 3), "seal": (.5, 3), "orca": (.72, 4)},
+    "forest": {"oak tree": (.25, 0), "berry bush": (.75, 0), "caterpillar": (.12, 1), "squirrel": (.41, 1), "deer": (.75, 1), "robin": (.18, 2),
                "wolf": (.62, 2), "bear": (.9, 2), "owl": (.32, 3)},
-    "desert": {"cactus": (.2, 0), "desert grass": (.7, 0), "jackrabbit": (.38, 1), "kangaroo rat": (.64, 1), "beetle": (.9, 1), "coyote": (.13, 2),
+    "desert": {"cactus": (.2, 0), "desert grass": (.7, 0), "jackrabbit": (.31, 1), "kangaroo rat": (.63, 1), "beetle": (.9, 1), "coyote": (.13, 2),
                "lizard": (.88, 2), "rattlesnake": (.62, 3), "hawk": (.4, 4)},
 }
 
@@ -122,10 +122,10 @@ def picture(w, hide=(), label=None):
     orgs = [x for x in organisms(w) if x not in hide]
     lay = LAYOUT[w]
     nl = max(r for _, r in lay.values()) + 1
-    W, rh = 480, 64
+    W, rh = 440, 58
     H = nl * rh + 6
     pos = {x: (16 + (W - 32) * lay[x][0], H - 22 - lay[x][1] * rh) for x in orgs}
-    half = {x: (3.6 * len(x) + 8, 12) for x in orgs}
+    half = {x: (4.3 * len(x) + 7, 13) for x in orgs}
     s = []
     for x in orgs:
         for f in diet(w, x):
@@ -138,8 +138,8 @@ def picture(w, hide=(), label=None):
         hw, hh = half[x]
         col = "#e3f1df" if x in PLANTS else "#fdf0dc"
         s.append(rect(px - hw, py - hh, 2 * hw, 2 * hh, col, INK, 1.5, 6))
-        s.append(text(px, py + 5, x, 13))
-    return svg_wrap(W, H, "".join(s), label or ("food web of a " + WEBS[w]["name"])).replace("<svg ", "<svg data-pf='lg' ", 1)
+        s.append(text(px, py + 5, x, 15))
+    return svg_wrap(W, H, "".join(s), label or ("food web of a " + WEBS[w]["name"])).replace("<svg ", "<svg data-pf='xl' ", 1)
 
 
 def chain_picture(ch, label="food chain"):

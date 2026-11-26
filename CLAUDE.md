@@ -1999,6 +1999,27 @@ NG / Mathematics は Kindergarten〜SSS 3 まで完了。mq-geo.js と mq.php �
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
+## 理科（Science）
+
+教科を増やすときは catalog.json の subjects に（国, slug）を足す。理科は subject `science`（name「Science」）。
+基準の名前は国の standard（算数用）と別なので、core.php の `subject_standard()` の表に「国/教科 → 基準名」を足す（grade_standard・国ページ・教科ページ・トピックページ・プレビューがこれを使う）。
+トピックは教科ごと：topics.php の `topic_defs($country, $subject)` が science なら `topic_defs_science()`（matter・forces-and-motion・energy・living-things-and-ecosystems・earth-and-space・earths-systems・engineering-design）。
+生成スクリプトは `gen_{国}_science_{学年}_*`、共通部品は `tools/sci_common.py`：
+- `Unit(seed)` の `sets([(セット名, [maker, (maker, 上限), ...]) × 5])`。maker は item を返す関数（None で作り直し）。同じ問題文＋答えは単元の中で1回だけ。1つの maker は1セットに6問まで（(maker, n) で変える。足りないときは自動で少しずつ増やす）
+- `bank([(問題, 答え, [誤答3], 解説)])` は手書きの問題（作るときに検査する）
+- `item()`・`lesson(考え方HTML, [(例題, [手順], 答え)], [よくある間違い])`・`make(grade, slug, sort, NGSSコード, 原文, title, seo_title, short, meta, key_big, key_sub, body, faq, sets)`（standard_url は NGSS の PE ページ、domain は PS/LS/ESS/ETS から自動）
+- 図：`bar_chart`・`pie`・`arrow`・`sun`。食物網は `tools/sci_foodweb.py`（meadow・pond・ocean・forest・desert、手で配置した図、矢印は「食べられるもの → 食べるもの」、plural()）
+- 印刷で大きく出す図（食物網・公転・物質の循環・地球と重力）は `<svg data-pf='xl'>`（print.php が全幅にし、入らないときは次の小さい問題を入れる）
+問題文に答えを決める数・名前・場面を入れる（同じ文は重複扱い）。誤答は「よくある間違い」から。理科の事実は正確に（食物網の食べるもの、星の距離、水の割合など）
+
+US / Science / Grade 5（NGSS）
+1. matter-is-made-of-particles (5-PS1-1) ✓ 2. properties-of-materials (5-PS1-3) ✓ 3. mixtures-and-solutions ✓ 4. physical-and-chemical-changes (5-PS1-4) ✓ 5. conservation-of-mass (5-PS1-2) ✓
+6. gravity (5-PS2-1) ✓ 7. energy-in-food (5-PS3-1) ✓ 8. what-plants-need-to-grow (5-LS1-1) ✓ 9. food-webs (5-LS2-1) ✓ 10. decomposers-and-the-cycle-of-matter ✓
+11. sun-and-stars (5-ESS1-1) ✓ 12. shadows-day-and-night (5-ESS1-2) ✓ 13. patterns-in-the-night-sky ✓ 14. earths-systems (5-ESS2-1) ✓ 15. water-on-earth (5-ESS2-2) ✓
+16. protecting-earths-resources (5-ESS3-1) ✓ 17. engineering-design (3-5-ETS1) ✓
+
+US / Science の次: Grade 4 → Grade 3 → Grade 6–8（NGSS は MS をまとめて示すので、一般的な配分で学年に分ける）→ K–2。そのあと英国・オーストラリアなどの理科
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ

@@ -49,7 +49,7 @@ def orbit(order=None, label="Earth's orbit with four constellations"):
             s.append(text(cx, cy + (r + 52) * uy + 5, con, 14, "middle", col=BLUE))
         else:
             s.append(text(cx + (r + 40) * ux, cy + 5, con, 14, "start" if ux > 0 else "end", col=BLUE))
-    return svg_wrap(W, H, "".join(s), label).replace("<svg ", "<svg data-pf='lg' ", 1)
+    return svg_wrap(W, H, "".join(s), label).replace("<svg ", "<svg data-pf='xl' ", 1)
 
 
 def cap(s):

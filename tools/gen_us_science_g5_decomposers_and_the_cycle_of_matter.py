@@ -37,7 +37,7 @@ def cycle(label="cycle of matter with numbered arrows"):
         mx, my = (x1 + x2) / 2, (y1 + y2) / 2
         s.append("<circle cx='%.1f' cy='%.1f' r='11' fill='#ffffff' stroke='%s' stroke-width='1.5'/>" % (mx, my, INK))
         s.append(text(mx, my + 5, str(n), 13))
-    return svg_wrap(W, H, "".join(s), label).replace("<svg ", "<svg data-pf='lg' ", 1)
+    return svg_wrap(W, H, "".join(s), label).replace("<svg ", "<svg data-pf='xl' ", 1)
 
 
 ARROWS = {1: "Plants take in carbon dioxide from the air.", 2: "Plants take in water and nutrients from the soil.", 3: "Animals eat plants.",

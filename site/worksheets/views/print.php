@@ -20,6 +20,7 @@ $kind = gs($grade['name'], $subject['name']);
    adding questions in order until the sheet is full.
    ------------------------------------------------------------------ */
 function q_half($it) {
+    if (strpos($it['q'], "data-pf='xl'") !== false) return false;   // big diagrams (food webs, orbits) take the full width
     $text = strip_tags(strip_figs($it['q']));
     $mx = 0;
     foreach ($it['c'] as $c) $mx = max($mx, mb_strlen(strip_tags($c)));
@@ -34,6 +35,10 @@ function fig_mm($html) {                       // height of the picture as print
     if (!preg_match("/<svg[^>]*viewBox='-?[\d.]+ -?[\d.]+ ([\d.]+) ([\d.]+)'/", $html, $m)) return 0;
     $w = (float)$m[1]; $h = (float)$m[2];
     if ($w <= 0) return 0;
+    if (strpos($html, "data-pf='xl'") !== false) {   // big diagrams with many labels: full width
+        $fw = min($w * 0.2646, 110);
+        return min($fw * $h / $w, 54) + 2;
+    }
     if (strpos($html, "data-pf='lg'") !== false) {   // graphs, rulers, A-D pictures: print larger so labels stay readable
         $fw = min($w * 0.2646, 75);
         return min($fw * $h / $w, 38) + 2;
@@ -86,7 +91,10 @@ function fill_sheet($sets, $sources, $cap, $max_each) {
         foreach ($sets[$si]['items'] as $it) {
             if ($n >= $max_each) break;
             $try = array_merge($out, array($it));
-            if ($n >= 2 && layout_mm($try) > $limit) break;       // at least 2 from every set
+            if ($n >= 2 && layout_mm($try) > $limit) {            // at least 2 from every set
+                if (strpos($it['q'], "data-pf='xl'") !== false) continue;   // a big diagram does not fit: try the next, smaller question
+                break;
+            }
             $out = $try; $n++;
         }
     }

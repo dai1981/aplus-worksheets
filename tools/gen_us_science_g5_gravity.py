@@ -52,7 +52,7 @@ def globe(theta, label="globe with a person and four arrows", arrows=True, order
             col = [RED, BLUE, "#7d3c98", "#c27c0e"][k]
             s.append(arrow(ox + st * dx, oy + st * dy, ox + L * dx, oy + L * dy, col, 2.5, 8))
             s.append(text(ox + (L + 11) * dx, oy + (L + 11) * dy + 5, "ABCD"[k], 14, col=col))
-    return svg_wrap(W, H, "".join(s), label).replace("<svg ", "<svg data-sq='1' ", 1)
+    return svg_wrap(W, H, "".join(s), label).replace("<svg ", "<svg data-pf='xl' ", 1)
 
 
 def cap(s):
