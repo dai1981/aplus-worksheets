@@ -21,7 +21,7 @@ STD_URL_KS4 = "https://www.gov.uk/government/publications/national-curriculum-in
 LEAKS = ["color", "colors", "colored", "colorful", "center", "centers", "meter", "meters", "centimeter", "centimeters",
          "millimeter", "millimeters", "kilometer", "kilometers", "liter", "liters", "milliliter", "milliliters",
          "behavior", "behaviors", "gray", "aluminum", "favorite", "flashlight", "flashlights", "mom", "math", "fiber",
-         "fibers", "grade", "grades", "sulfur", "gasoline", "faucet", "sidewalk", "candy", "cookie", "cookies",
+         "fibers", "grade", "grades", "gasoline", "faucet", "sidewalk", "candy", "cookie", "cookies",
          "vacation", "soccer", "neighbor", "neighbors", "neighborhood", "mold", "molds", "odor", "vapor", "harbor",
          "tire", "tires", "diaper", "diapers", "fries", "zucchini", "eggplant", "cilantro", "flashcard", "recess",
          "fahrenheit", "ladybug", "ladybugs", "inch", "inches", "pound", "pounds", "ounce", "ounces", "gallon", "gallons", "mile", "miles"]
