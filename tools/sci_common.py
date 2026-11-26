@@ -141,21 +141,22 @@ def kid_lesson(pic, lead, points, examples, mistakes):
     return lesson(think, examples, mistakes)
 
 
-def make(grade, slug, sort, code, std_text, title, seo_title, short, meta, key_big, key_sub, body, faq, sets, domain=None):
+def make(grade, slug, sort, code, std_text, title, seo_title, short, meta, key_big, key_sub, body, faq, sets, domain=None,
+         country="us", url=None):
     for k in (title, seo_title, short, meta, key_big, key_sub):
         assert "<" not in k, k
     assert len(seo_title) <= 95, seo_title
-    if grade in KIDS:     # K-2: keep the top of the page light (title and key box are short)
+    if grade in KIDS or (country == "uk" and grade in ("year-1", "year-2")):     # K-2: keep the top of the page light (title and key box are short)
         assert len(title) <= 40 and len(key_big) <= 40 and len(key_sub) <= 90, (title, key_big, key_sub)
     codes = [c.strip() for c in code.split(",")]
     unit = {
         "slug": slug, "title": title, "seo_title": seo_title, "short_title": short,
         "domain": domain or domain_of(codes[0]),
-        "standard_code": code, "standard_url": std_url(codes[0]), "standard_text": std_text,
+        "standard_code": code, "standard_url": url or std_url(codes[0]), "standard_text": std_text,
         "meta_desc": meta, "key_big": key_big, "key_sub": key_sub, "body_html": body,
         "faq": [{"q": q, "a": a} for q, a in faq], "sets": sets, "pdf_url": "", "sort": sort, "updated": UPDATED,
     }
-    write_unit("us", "science", grade, unit)
+    write_unit(country, "science", grade, unit)
 
 
 # ------------------------------------------------------------ pictures
