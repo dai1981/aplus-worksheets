@@ -67,18 +67,24 @@ class Unit:
         import re
         return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", it["q"])).strip().lower() + "|" + it["c"][0].lower()
 
-    def take(self, makers, n, tries=4000):
-        """n unique items from makers (lists of callables, used in turn, random order)."""
+    def take(self, makers, n, tries=6000, cap=6):
+        """n unique items from makers (callables, used in turn, random order).
+        A maker gives at most `cap` items per set (a (maker, cap) pair sets its own limit),
+        so one kind of question does not fill a whole set."""
         out = []
-        mk = list(makers)
+        mk = [m if isinstance(m, tuple) else (m, cap) for m in makers]
         self.R.shuffle(mk)
+        used = [0] * len(mk)
         i = 0
         t = 0
         while len(out) < n:
             t += 1
             assert t < tries, "not enough questions: %d of %d" % (len(out), n)
-            m = mk[i % len(mk)]
+            j = i % len(mk)
             i += 1
+            m, c = mk[j]
+            if used[j] >= c:
+                continue
             it = m()
             if not it:
                 continue
@@ -86,7 +92,9 @@ class Unit:
             if k in self.seen:
                 continue
             self.seen.add(k)
+            used[j] += 1
             out.append(it)
+        self.R.shuffle(out)
         return out
 
     def sets(self, spec):

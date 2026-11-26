@@ -656,7 +656,7 @@ function topic_defs_se() {
 /* Science (US NGSS first). Slugs are English; the same topics can serve other English-speaking countries later */
 function topic_defs_science($country = null) {
     return array(
-        'matter' => array('name' => 'Matter and Its Properties', 'in' => '/matter|particle|mixture|solution|chemical-change|physical-change|conservation-of-mass|states-of/', 'out' => '/cycl|food/',
+        'matter' => array('name' => 'Matter and Its Properties', 'in' => '/matter|particle|material|mixture|solution|chemical-change|physical-change|conservation-of-mass|states-of/', 'out' => '/cycl|food/',
             'blurb' => 'What matter is made of, how to identify materials by their properties, mixtures and solutions, physical and chemical changes, and why mass is conserved.'),
         'forces-and-motion' => array('name' => 'Forces and Motion', 'in' => '/force|motion|gravity|magnet|push|pull/', 'out' => '/^$/',
             'blurb' => 'Pushes and pulls, balanced and unbalanced forces, gravity, magnets and how forces change the way objects move.'),

@@ -1214,7 +1214,7 @@ function get_subject($c, $s) { return q1('SELECT * FROM ws_subject WHERE country
 /* The curriculum a grade follows: usually the country's, but Korean kindergarten follows the 누리과정 */
 /* the standard a subject follows when it is not the country's math standard (catalog: ws_country.standard) */
 function subject_standard($country, $subject) {
-    $map = array('us/science' => 'Next Generation Science Standards (NGSS)');
+    $map = array('us/science' => 'Next Generation Science Standards');
     $k = $country['code'] . '/' . (is_array($subject) ? $subject['slug'] : $subject);
     return isset($map[$k]) ? $map[$k] : $country['standard'];
 }

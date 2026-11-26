@@ -320,6 +320,15 @@ def g_inv_syringe():
 
 
 B5 = bank([
+    ("Grace fills a plastic bottle with hot air, caps it and puts it in the freezer. The next day the bottle is dented in. Which model explains this?", "The cooled air particles slowed down and pushed less on the inside of the bottle.", ["Air particles were destroyed by the cold.", "The bottle grew bigger.", "Water got into the bottle."],
+     "Cold air particles move more slowly. They push less on the walls, so the air outside dents the bottle."),
+    ("A class weighs a sealed bag with ice, then weighs it again when the ice has melted. Why must the bag be sealed?", "so no water can leak out or evaporate", ["so the ice melts faster", "so the bag stays cold", "so the scale reads zero"],
+     "If water escaped, the mass would go down and the test would be unfair."),
+    ("Which model shows what happens when salt dissolves in water?", "Salt particles spread out between the water particles.", ["Salt particles turn into water particles.", "Salt particles disappear.", "Water particles turn into salt."],
+     "The salt particles break apart and mix in among the water particles. Both kinds are still there."),
+    ("Eli blows up two balloons the same size. He puts one in a warm room and one outside on a cold night. What happens to the outside balloon?", "It gets a little smaller.", ["It gets much bigger.", "It pops right away.", "It stays exactly the same."],
+     "Cooling makes the air particles move more slowly and take up less space."),
+
     ("Leo says that when sugar dissolves, it is destroyed. Which evidence best shows he is wrong?", "The mass of the water plus sugar stays the same before and after stirring.", ["The water looks clear.", "The spoon gets wet.", "The sugar is white."],
      "If the sugar were destroyed, the mass would go down. It stays the same, so the sugar is still there as tiny particles."),
     ("Ava wants to show that air has mass. Which investigation is best?", "Weigh a flat ball, pump it up, then weigh it again.", ["Look at air with a hand lens.", "Blow on her hand and feel it.", "Measure the temperature of the air."],
@@ -377,7 +386,7 @@ def main():
          "Develop a model to describe that matter is made of particles too small to be seen.",
          "Matter Is Made of Particles",
          "Grade 5 Matter and Particles Worksheets: Solids, Liquids, Gases and Particle Models",
-         "Matter and particles",
+         "Matter and Particles",
          "Free Grade 5 science worksheets on matter and particles (NGSS 5-PS1-1): what matter is, particle models of solids, liquids and gases, and evidence such as air in a syringe and dissolved sugar. 100 practice questions with answers.",
          "All matter is made of particles too small to see.",
          "Matter has mass and takes up space. In solids the particles are packed in place, in liquids they slide past each other, and in gases they are far apart.",

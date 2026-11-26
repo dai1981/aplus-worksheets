@@ -4,11 +4,13 @@ if (!$country) not_found();
 T(array($country['lang']));
 $subjects = qa('SELECT * FROM ws_subject WHERE country=? ORDER BY sort, name', array($country['code']));
 $base = $country['code'] . '/';
+$stds = array();
+foreach ($subjects as $s) $stds[subject_standard($country, $s['slug'])] = 1;   // math and science can follow different standards
 $crumbs = array(array(T('worksheets'), ''), array($country['name'], $base));
 
 page_head(array(
     'lang' => $country['lang'], 'hreflang' => $country['hreflang'],
-    'title' => sprintf(T('country_title'), $country['name'], $country['standard']) . ' | ' . SITE_NAME,
+    'title' => sprintf(T('country_title'), $country['name'], implode(', ', array_keys($stds))) . ' | ' . SITE_NAME,
     'desc' => $country['intro'],
     'canonical' => $base,
 ));
