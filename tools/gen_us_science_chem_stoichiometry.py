@@ -137,7 +137,7 @@ def g_yield():
         return None
     prod = R.choice(["aspirin", "copper", "magnesium oxide", "sodium chloride", "calcium carbonate", "iron"])
     if k == "pct":
-        return item("%s's calculation says %s g of %s should form, but she collects %s g. What is the percent yield?" % (who, num(th), prod, num(ac)), "%d%%" % p,
+        return item("%s's calculation says %s g of %s should form, but only %s g is collected. What is the percent yield?" % (who, num(th), prod, num(ac)), "%d%%" % p,
                     ["%s%%" % num(round(100 * th / ac, 1)), "%d%%" % (100 - p), "%s%%" % num(ac)], "actual ÷ theoretical × 100 = %s ÷ %s × 100 = %d%%." % (num(ac), num(th), p))
     return item("The theoretical yield of %s is %s g. %s gets a yield of %d%%. What mass does %s collect?" % (prod, num(th), who, p, who), num(ac) + " g",
                 [num(th) + " g", num(th - ac) + " g", num(th + ac) + " g"], "%d%% of %s g = %s g." % (p, num(th), num(ac)))

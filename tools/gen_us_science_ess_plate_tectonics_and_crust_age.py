@@ -66,7 +66,7 @@ def g_ages():
     if k == "pat":
         return item(tab + "What pattern do %s's data show?" % who, "Seafloor gets older farther from the ridge.", ["Seafloor gets younger farther from the ridge.", "All the seafloor is the same age.", "Age changes at random."],
                     "Evidence for seafloor spreading.")
-    return item(tab + "%s measured on one side of the ridge. What would she likely find on the other side?" % who, "the same pattern of ages, mirrored", ["much older rocks right at the ridge", "no rocks at all", "ages that get younger away from the ridge"],
+    return item(tab + "%s measured on one side of the ridge. What would %s likely find on the other side?" % (who, who), "the same pattern of ages, mirrored", ["much older rocks right at the ridge", "no rocks at all", "ages that get younger away from the ridge"],
                 "Spreading is symmetrical.")
 
 
