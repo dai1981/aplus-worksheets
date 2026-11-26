@@ -72,7 +72,7 @@ UKSP = [("colors", "colours"), ("colored", "coloured"), ("colorful", "colourful"
         ("analyze", "analyse"), ("analyzing", "analysing"), ("organize", "organise"), ("organized", "organised"), ("recognize", "recognise"),
         ("sulfur", "sulfur"), ("specialized", "specialised"), ("modeling", "modelling"), ("labeled", "labelled"), ("labeling", "labelling"),
         ("defense", "defence"), ("hemoglobin", "haemoglobin"), ("esophagus", "oesophagus"), ("fetus", "fetus"), ("anemia", "anaemia"),
-        ("fiberglass", "fibreglass"), ("Fiberglass", "Fibreglass"), ("net force", "resultant force"), ("Net force", "Resultant force"), ("polyethylene", "polythene"), ("ethylene", "ethene"), ("polypropylene", "polypropene"), ("propylene", "propene"), ("sleds", "sledges"), ("sled", "sledge"), ("power plants", "power stations"), ("power plant", "power station"), ("fertilizers", "fertilisers"), ("fertilizer", "fertiliser"), ("trash", "rubbish"), ("parking lots", "car parks"), ("parking lot", "car park"), ("biking", "cycling"), ("single replacement reaction", "displacement reaction"), ("single replacement", "displacement"), ("cesium", "caesium"), ("Cesium", "Caesium"), ("nonmetals", "non-metals"), ("nonmetal", "non-metal"), ("Nonmetals", "Non-metals"), ("Nonmetal", "Non-metal"), ("activity series", "reactivity series"), ("Activity series", "Reactivity series"), ("Cellular respiration", "Respiration"), ("cellular respiration", "respiration"), ("use the bathroom", "go to the toilet"), ("bathroom", "toilet"), ("Grade 8", "Year 9"), ("Grade 7", "Year 8"), ("Grade 6", "Year 7"), ("students", "pupils"), ("Students", "Pupils")]
+        ("mol/L", "mol/dm³"), ("Tylenol", "paracetamol"), ("fiberglass", "fibreglass"), ("Fiberglass", "Fibreglass"), ("net force", "resultant force"), ("Net force", "Resultant force"), ("polyethylene", "polythene"), ("ethylene", "ethene"), ("polypropylene", "polypropene"), ("propylene", "propene"), ("sleds", "sledges"), ("sled", "sledge"), ("power plants", "power stations"), ("power plant", "power station"), ("fertilizers", "fertilisers"), ("fertilizer", "fertiliser"), ("trash", "rubbish"), ("parking lots", "car parks"), ("parking lot", "car park"), ("biking", "cycling"), ("single replacement reaction", "displacement reaction"), ("single replacement", "displacement"), ("cesium", "caesium"), ("Cesium", "Caesium"), ("nonmetals", "non-metals"), ("nonmetal", "non-metal"), ("Nonmetals", "Non-metals"), ("Nonmetal", "Non-metal"), ("activity series", "reactivity series"), ("Activity series", "Reactivity series"), ("Cellular respiration", "Respiration"), ("cellular respiration", "respiration"), ("use the bathroom", "go to the toilet"), ("bathroom", "toilet"), ("Grade 8", "Year 9"), ("Grade 7", "Year 8"), ("Grade 6", "Year 7"), ("students", "pupils"), ("Students", "Pupils")]
 _UKSP = [(re.compile(r"(?<!\w)%s(?!\w)" % re.escape(a)), b) for a, b in UKSP]
 
 
@@ -122,3 +122,9 @@ def adopt_us(modname, U):
     m.R = U.R
     m.P = People(U.R)
     return m
+
+
+def make_ks4(year, slug, sort, subject, topic, std_text, title, seo_title, short, meta, key_big, key_sub, body, faq, sets, allow=()):
+    """KS4 (Year 10-11, GCSE Combined Science): standard_code 'KS4 Chemistry: Atomic structure and the Periodic Table'."""
+    make_uk(year, slug, sort, topic, std_text, title, seo_title, short, meta, key_big, key_sub, body, faq, sets,
+            code="KS4 %s: %s" % (subject, topic), domain=subject, allow=allow)

@@ -45,7 +45,7 @@ def g_where():
     if not once(("wh", o)):
         return None
     a = WA[WHERE[o]]
-    return item("Where is %s found: in animal cells, plant cells or both?" % o, a, [x for x in ["both plant and animal cells", "plant cells only", "animal cells only", "neither"] if x != a][:3],
+    return item("Where %s %s found: in animal cells, plant cells or both?" % ("are" if o.split()[-1] in ("chloroplasts", "mitochondria", "ribosomes", "vacuoles") else "is", o), a, [x for x in ["both plant and animal cells", "plant cells only", "animal cells only", "neither"] if x != a][:3],
                 "Plant cells have everything animal cells have, plus a cell wall, chloroplasts and a large vacuole.")
 
 
