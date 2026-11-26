@@ -2036,7 +2036,7 @@ US / Science / Grade 6–8（NGSS MS は 3 学年まとめての基準なので�
 Grade 6（✓ 12 単元すべて）: cells-and-cell-theory (MS-LS1-1)、parts-of-a-cell (MS-LS1-2)、body-systems (MS-LS1-3)、senses-and-the-nervous-system (MS-LS1-8)、particles-and-states-of-matter (MS-PS1-4)、
 thermal-energy-and-temperature (MS-PS3-4)、designing-to-control-heat-transfer (MS-PS3-3)、the-water-cycle (MS-ESS2-4)、air-masses-and-weather (MS-ESS2-5)、ocean-and-atmosphere-circulation (MS-ESS2-6)、
 global-temperature-and-climate-change (MS-ESS3-5)、engineering-design-process (MS-ETS1-1〜4)
-Grade 7: atoms-and-molecules (MS-PS1-1)、properties-and-chemical-reactions (MS-PS1-2)、synthetic-materials (MS-PS1-3)、conservation-of-atoms (MS-PS1-5)、energy-in-chemical-reactions (MS-PS1-6)、
+Grade 7（✓ 17 単元すべて）: atoms-and-molecules (MS-PS1-1)、properties-and-chemical-reactions (MS-PS1-2)、synthetic-materials (MS-PS1-3)、conservation-of-atoms (MS-PS1-5)、energy-in-chemical-reactions (MS-PS1-6)、
 photosynthesis (MS-LS1-6)、cellular-respiration (MS-LS1-7)、resources-and-populations (MS-LS2-1)、interactions-in-ecosystems (MS-LS2-2)、cycling-of-matter-and-energy-flow (MS-LS2-3)、
 ecosystem-changes (MS-LS2-4)、protecting-biodiversity (MS-LS2-5)、the-rock-cycle (MS-ESS2-1)、shaping-earths-surface (MS-ESS2-2)、plate-tectonics (MS-ESS2-3)、natural-resources (MS-ESS3-1)、human-impact-on-the-environment (MS-ESS3-3, MS-ESS3-4)
 Grade 8: newtons-third-law (MS-PS2-1)、forces-and-motion (MS-PS2-2)、electric-and-magnetic-forces (MS-PS2-3, MS-PS2-5)、gravity-and-mass (MS-PS2-4)、kinetic-energy (MS-PS3-1)、potential-energy (MS-PS3-2)、
