@@ -14,7 +14,7 @@ from sci_common import Unit, item, bank, lesson, make, fig, table, bar_chart, Pe
 U = Unit(50108)
 R = U.R
 P = People(R)
-PLANTS = ["bean plant", "sunflower", "tomato plant", "pea plant", "radish", "corn plant", "basil plant", "lettuce plant"]
+PLANTS = ["bean plant", "sunflower", "tomato plant", "pea plant", "radish plant", "corn plant", "basil plant", "lettuce plant"]
 
 
 def kg(v):
