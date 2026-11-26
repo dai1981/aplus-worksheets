@@ -2083,7 +2083,11 @@ UK / Science / Year 6
 1. classifying-living-things ✓ 2. classification-keys ✓ 3. micro-organisms ✓ 4. the-circulatory-system ✓ 5. diet-exercise-and-lifestyle ✓ 6. transporting-nutrients-and-water ✓ 7. fossils ✓ 8. inheritance-and-variation ✓
 9. adaptation-and-evolution ✓ 10. how-light-travels ✓ 11. how-we-see ✓ 12. shadows-and-reflection ✓ 13. circuit-symbols ✓ 14. brightness-and-voltage ✓ 15. circuits-and-switches ✓ 16. working-scientifically ✓
 トピック：classif・circulatory・diet-・nutrient・^fossils$・micro-organism→living-things、voltage→energy、how-we-see・reflection→waves-and-light（earth-and-space の out に reflection）、working-scientifically（新トピック、3 単元以上で公開）
-次は Year 5 → 4 → 3 → 2 → 1 → KS3（Year 7–9）
+UK / Science / Year 5（seed 615cc）
+1. life-cycles ✓ 2. reproduction-in-plants-and-animals ✓ 3. growing-up-and-old-age ✓ 4. properties-of-materials ✓ 5. dissolving-and-solutions ✓ 6. separating-mixtures ✓ 7. reversible-and-irreversible-changes ✓
+8. the-solar-system ✓ 9. day-night-and-the-moon ✓ 10. gravity ✓ 11. air-and-water-resistance ✓ 12. friction ✓ 13. levers-pulleys-and-gears ✓ 14. working-scientifically ✓（Year 6 の問題関数を import し、EXP・CONC・seed を入れ替えて再利用）
+トピック：resistance・friction・lever→forces-and-motion、growing-up→living-things、reversible→matter
+次は Year 4 → 3 → 2 → 1 → KS3（Year 7–9）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
