@@ -653,7 +653,28 @@ function topic_defs_se() {
     );
 }
 
-function topic_defs($country = null) {
+/* Science (US NGSS first). Slugs are English; the same topics can serve other English-speaking countries later */
+function topic_defs_science($country = null) {
+    return array(
+        'matter' => array('name' => 'Matter and Its Properties', 'in' => '/matter|particle|mixture|solution|chemical-change|physical-change|conservation-of-mass|states-of/', 'out' => '/cycl|food/',
+            'blurb' => 'What matter is made of, how to identify materials by their properties, mixtures and solutions, physical and chemical changes, and why mass is conserved.'),
+        'forces-and-motion' => array('name' => 'Forces and Motion', 'in' => '/force|motion|gravity|magnet|push|pull/', 'out' => '/^$/',
+            'blurb' => 'Pushes and pulls, balanced and unbalanced forces, gravity, magnets and how forces change the way objects move.'),
+        'energy' => array('name' => 'Energy', 'in' => '/energy|light|sound|heat|electric|wave|circuit/', 'out' => '/^$/',
+            'blurb' => 'Forms of energy and how it moves: light, sound, heat and electricity, energy in food, and energy from the sun.'),
+        'living-things-and-ecosystems' => array('name' => 'Living Things and Ecosystems', 'in' => '/plant|animal|food-web|food-chain|ecosystem|decomposer|life-cycle|habitat|trait|inherit|cell|organism|body/', 'out' => '/^$/',
+            'blurb' => 'How plants and animals get what they need to grow, food chains and food webs, decomposers, and how matter and energy move through an ecosystem.'),
+        'earth-and-space' => array('name' => 'Earth and Space', 'in' => '/sun|star|moon|shadow|day-and-night|sky|planet|solar-system|constellation|season/', 'out' => '/food|energy/',
+            'blurb' => 'The sun, moon and stars, shadows, day and night, seasonal patterns in the sky, and how distance changes how bright a star looks.'),
+        'earths-systems' => array('name' => 'Earth’s Systems and Resources', 'in' => '/earth|water|weather|climate|rock|erosion|landform|hazard|resource|ocean/', 'out' => '/earth-and-space/',
+            'blurb' => 'The geosphere, hydrosphere, atmosphere and biosphere, where Earth’s water is, weather and climate, and how people protect Earth’s resources.'),
+        'engineering-design' => array('name' => 'Engineering Design', 'in' => '/engineering|design/', 'out' => '/^$/',
+            'blurb' => 'Define a problem with criteria and constraints, compare possible solutions, and plan fair tests to improve a design.'),
+    );
+}
+
+function topic_defs($country = null, $subject = null) {
+    if ($subject === 'science') return topic_defs_science($country);
     if ($country === 'br') return topic_defs_br();
     if ($country === 'es' || $country === 'mx') return topic_defs_es();
     if ($country === 'tw') return topic_defs_tw();
@@ -885,9 +906,9 @@ function topic_blurb($t, $country) {
 }
 
 /* slugs of the topics a unit belongs to (most specific first: definition order) */
-function unit_topic_slugs($unit_slug, $country = null) {
+function unit_topic_slugs($unit_slug, $country = null, $subject = null) {
     $out = array();
-    foreach (topic_defs($country) as $k => $t) {
+    foreach (topic_defs($country, $subject) as $k => $t) {
         if (preg_match($t['in'], $unit_slug) && !preg_match($t['out'], $unit_slug)) $out[] = $k;
     }
     return $out;
@@ -911,7 +932,7 @@ define('TOPIC_MIN_UNITS', 3);   // a topic with fewer skills gets no page (too t
 function topics_for($c, $s) {
     $all = subject_units($c, $s);
     $res = array();
-    foreach (topic_defs($c) as $k => $t) {
+    foreach (topic_defs($c, $s) as $k => $t) {
         $list = array();
         foreach ($all as $u) {
             if (preg_match($t['in'], $u['slug']) && !preg_match($t['out'], $u['slug'])) $list[] = $u;

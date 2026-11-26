@@ -1212,7 +1212,14 @@ function not_found() {
 function get_country($c) { return q1('SELECT * FROM ws_country WHERE code=?', array($c)); }
 function get_subject($c, $s) { return q1('SELECT * FROM ws_subject WHERE country=? AND slug=?', array($c, $s)); }
 /* The curriculum a grade follows: usually the country's, but Korean kindergarten follows the 누리과정 */
+/* the standard a subject follows when it is not the country's math standard (catalog: ws_country.standard) */
+function subject_standard($country, $subject) {
+    $map = array('us/science' => 'Next Generation Science Standards (NGSS)');
+    $k = $country['code'] . '/' . (is_array($subject) ? $subject['slug'] : $subject);
+    return isset($map[$k]) ? $map[$k] : $country['standard'];
+}
 function grade_standard($country, $grade) {
+    if ($grade && isset($grade['subject']) && $grade['subject'] !== 'math' && $grade['subject'] !== 'maths') return subject_standard($country, $grade['subject']);
     if ($country['code'] === 'kr' && $grade && $grade['slug'] === 'kindergarten') return '2019 개정 누리과정';
     if ($country['code'] === 'cn' && $grade && $grade['slug'] === 'kindergarten') return '3-6岁儿童学习与发展指南';
     if ($country['code'] === 'tr' && $grade && $grade['slug'] === 'okul-oncesi') return 'Türkiye Yüzyılı Maarif Modeli Okul Öncesi Eğitim Programı';

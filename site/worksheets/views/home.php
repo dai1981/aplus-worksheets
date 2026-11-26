@@ -17,7 +17,7 @@ site_header(array());
 <p class="ws-lead"><?= h($c['intro']) ?></p>
 <ul class="sx-grades">
 <?php foreach ($subjects as $s): if ($s['country'] !== $c['code']) continue; ?>
-  <li><a href="<?= url($c['code'] . '/' . $s['slug'] . '/') ?>"><?= h($s['name']) ?><span class="n"><?= h($c['standard']) ?></span></a></li>
+  <li><a href="<?= url($c['code'] . '/' . $s['slug'] . '/') ?>"><?= h($s['name']) ?><span class="n"><?= h(subject_standard($c, $s['slug'])) ?></span></a></li>
 <?php endforeach; ?>
 </ul>
 <?php endforeach; ?>

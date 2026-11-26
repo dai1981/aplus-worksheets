@@ -20,7 +20,7 @@ site_header($crumbs);
 <h2><?= h(T('pick_subject')) ?></h2>
 <ul class="sx-grades">
 <?php foreach ($subjects as $s): ?>
-  <li><a href="<?= url($base . $s['slug'] . '/') ?>"><?= h($s['name']) ?><span class="n"><?= h($country['standard']) ?></span></a></li>
+  <li><a href="<?= url($base . $s['slug'] . '/') ?>"><?= h($s['name']) ?><span class="n"><?= h(subject_standard($country, $s['slug'])) ?></span></a></li>
 <?php endforeach; ?>
 </ul>
 </main>

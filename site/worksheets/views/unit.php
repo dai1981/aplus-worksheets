@@ -27,8 +27,8 @@ $crumbs = array(array(T('worksheets'), ''), array($country['name'], $seg[0] . '/
 require_once __DIR__ . '/../inc/topics.php';
 $utopics = array();                              // topic hubs this skill belongs to
 $tall = topics_for($seg[0], $seg[1]);
-$tdefs = topic_defs($seg[0]);
-foreach (unit_topic_slugs($u['slug'], $seg[0]) as $tk) {
+$tdefs = topic_defs($seg[0], $seg[1]);
+foreach (unit_topic_slugs($u['slug'], $seg[0], $seg[1]) as $tk) {
     if (isset($tall[$tk])) $utopics[$tk] = sprintf(T('topic_ws'), topic_name($tdefs[$tk], $seg[0]), topic_range($tall[$tk]));
 }
 $JF = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG;

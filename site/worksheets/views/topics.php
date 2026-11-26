@@ -5,7 +5,8 @@ $country = get_country($seg[0]);
 $subject = $country ? get_subject($seg[0], $seg[1]) : null;
 if (!$subject) not_found();
 T(array($country['lang']));
-$defs = topic_defs($seg[0]);
+$country['standard'] = subject_standard($country, $seg[1]);
+$defs = topic_defs($seg[0], $seg[1]);
 $all = topics_for($seg[0], $seg[1]);
 if (!$all) not_found();
 $zh = strpos($country['lang'], 'zh') === 0;   // zh-TW and zh-CN (zt() converts the text for zh-CN)

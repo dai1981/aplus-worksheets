@@ -321,6 +321,7 @@ function preview_route($seg, $kind = 'preview') {
     $subject = $country ? get_subject($seg[0], $seg[1]) : null;
     if (!$subject) { http_response_code(404); exit; }
     T(array($country['lang']));
+    $country['standard'] = subject_standard($country, $seg[1]);
     $GLOBALS['PV_TR'] = $country['lang'] === 'tr';
     $GLOBALS['PV_CJK'] = $country['lang'] === 'zh-CN' ? 'sc' : (strpos($country['lang'], 'zh') === 0 ? 'tc' : ($country['lang'] === 'ko' ? 'kr' : ''));
     $paper = strtoupper($country['paper']);
@@ -329,7 +330,7 @@ function preview_route($seg, $kind = 'preview') {
     if (count($seg) === 4 && $seg[2] === 'topics') {                  // topic
         require_once __DIR__ . '/topics.php';
         $all = topics_for($seg[0], $seg[1]);
-        $defs = topic_defs($seg[0]);
+        $defs = topic_defs($seg[0], $seg[1]);
         if (!isset($all[$seg[3]])) { http_response_code(404); exit; }
         $units = $all[$seg[3]];
         preview_cache_check(json_encode(array_map(function ($u) { return $u['slug'] . $u['updated']; }, $units)));
