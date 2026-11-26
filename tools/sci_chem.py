@@ -155,3 +155,29 @@ def eq_html(left, right):
     def term(c, f):
         return ("%d" % c if c > 1 else "") + sub(f)
     return " + ".join(term(*x) for x in left) + " → " + " + ".join(term(*x) for x in right)
+
+
+# rounded classroom atomic masses (g/mol)
+AM = {"H": 1, "C": 12, "N": 14, "O": 16, "Na": 23, "Mg": 24, "Al": 27, "S": 32, "Cl": 35.5, "K": 39, "Ca": 40, "Fe": 56, "Cu": 63.5}
+
+
+def molar(f):
+    return sum(AM[k] * v for k, v in atoms(f).items())
+
+
+def num(x):
+    """2.0 -> '2', 2.50 -> '2.5', 1368 -> '1,368'"""
+    s = ("%.2f" % x).rstrip("0").rstrip(".")
+    if "." in s:
+        a, b = s.split(".")
+        return "{:,}".format(int(a)) + "." + b
+    return "{:,}".format(int(s))
+
+
+STOICH = [("2H2 + O2 -> 2H2O", "hydrogen burns in oxygen"), ("N2 + 3H2 -> 2NH3", "ammonia is made from nitrogen and hydrogen"),
+          ("CH4 + 2O2 -> CO2 + 2H2O", "methane burns"), ("C3H8 + 5O2 -> 3CO2 + 4H2O", "propane burns in a grill"), ("2Mg + O2 -> 2MgO", "magnesium burns"),
+          ("4Al + 3O2 -> 2Al2O3", "aluminum reacts with oxygen"), ("4Fe + 3O2 -> 2Fe2O3", "iron rusts"), ("2Na + Cl2 -> 2NaCl", "sodium reacts with chlorine"),
+          ("CaCO3 -> CaO + CO2", "limestone is heated"), ("2H2O2 -> 2H2O + O2", "hydrogen peroxide decomposes"), ("Mg + 2HCl -> MgCl2 + H2", "magnesium reacts with acid"),
+          ("2Al + 6HCl -> 2AlCl3 + 3H2", "aluminum reacts with acid"), ("C6H12O6 + 6O2 -> 6CO2 + 6H2O", "glucose is used in cellular respiration"),
+          ("2C2H6 + 7O2 -> 4CO2 + 6H2O", "ethane burns"), ("H2SO4 + 2NaOH -> Na2SO4 + 2H2O", "an acid is neutralized"), ("Fe2O3 + 3CO -> 2Fe + 3CO2", "iron is made in a blast furnace"),
+          ("2KClO3 -> 2KCl + 3O2", "potassium chlorate decomposes"), ("N2 + O2 -> 2NO", "nitrogen oxide forms in an engine"), ("2SO2 + O2 -> 2SO3", "sulfur dioxide is oxidized")]
