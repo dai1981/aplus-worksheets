@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 UK KS4 science (Year 10-11, GCSE Combined Science) helpers.
-  U4(seed) -> (U, R, P, us) where us("chem_bonding", "g_name", drop=("mol",)) adopts the US high-school maker in British
-  English (uk_sci.ukm) and can drop items whose text contains any of `drop`.
+  U4(seed) -> (U, R, P, us) where us("chem_bonding", "g_name", drop=("mol",), rep=(("old", "new"),)) adopts the US
+  high-school maker in British English (uk_sci.ukm), replaces text (rep) and drops items whose text contains any of `drop`.
   build(year, slug, sort, subject, topic, std, title, short, meta, kb, ks, think, ex, mist, faq, sets) writes the unit.
 """
 import uk_sci
@@ -17,18 +17,21 @@ def U4(seed):
     P = People(R)
     uk_sci.USED.clear()
 
-    def us(mod, name, drop=()):
+    def us(mod, name, drop=(), rep=()):
         full = "gen_us_science_" + mod
         if full not in _MODS:
             _MODS[full] = adopt_us(full, U)
         f = ukm(getattr(_MODS[full], name))
-        if not drop:
+        if not drop and not rep:
             return f
 
         def g():
             it = f()
             if it is None:
                 return None
+            for a, b in rep:
+                it["q"], it["e"] = it["q"].replace(a, b), it["e"].replace(a, b)
+                it["c"] = [c.replace(a, b) for c in it["c"]]
             t = it["q"] + it["e"] + "".join(it["c"])
             return None if any(d in t for d in drop) else it
         return g
