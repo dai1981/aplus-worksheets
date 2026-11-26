@@ -48,7 +48,8 @@ def g_act():
 
 
 WORD = [("loud", "hearing"), ("quiet", "hearing"), ("squeaky", "hearing"), ("bright", "sight"), ("colourful", "sight"), ("sour", "taste"), ("sweet", "taste"),
-        ("salty", "taste"), ("smooth", "touch"), ("rough", "touch"), ("soft", "touch"), ("prickly", "touch"), ("smelly", "smell"), ("perfumed", "smell"), ("stinky", "smell")]
+        ("salty", "taste"), ("smooth", "touch"), ("rough", "touch"), ("soft", "touch"), ("prickly", "touch"), ("smelly", "smell"), ("perfumed", "smell"), ("stinky", "smell"),
+        ("bitter", "taste"), ("noisy", "hearing"), ("fluffy", "touch"), ("shiny", "sight"), ("fresh-smelling", "smell")]
 
 
 def g_word():
@@ -60,7 +61,9 @@ def g_word():
 
 SAFE = [("You smell smoke in the kitchen.", "smell", "It warns you there may be a fire."), ("You hear a fire alarm.", "hearing", "It tells you to leave the building."),
         ("You see the red man at a crossing.", "sight", "It tells you to wait and not cross."), ("Milk tastes sour.", "taste", "It tells you the milk has gone off."),
-        ("You feel that a radiator is very hot.", "touch", "It warns you to move your hand away."), ("You hear a car coming.", "hearing", "It tells you to stay on the pavement.")]
+        ("You feel that a radiator is very hot.", "touch", "It warns you to move your hand away."), ("You hear a car coming.", "hearing", "It tells you to stay on the pavement."),
+        ("You see that the ice on a pond is cracked.", "sight", "It warns you not to walk on it."), ("Some bread smells mouldy.", "smell", "It tells you not to eat it."),
+        ("You feel a sharp thorn on a rose stem.", "touch", "It warns you to hold the stem carefully.")]
 
 
 def g_safe():
