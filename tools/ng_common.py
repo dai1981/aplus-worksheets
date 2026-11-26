@@ -28,8 +28,9 @@ PLACES = ["Lagos", "Abuja", "Kano", "Ibadan", "Enugu", "Port Harcourt", "Kaduna"
 PH_PLACES = ["Quezon City", "Cebu City", "Davao City", "Iloilo City", "Cagayan de Oro", "Zamboanga City", "Manila", "Baguio", "Bacolod", "Tacloban"]
 STD_URL = "https://nerdc.gov.ng/"
 GRADE = "primary-4"
+LABEL = "Primary 4"     # "Primary 5", "JSS 1": used in seo_title
 
-LEAKS = r"(\$|¢|£|₱|°F|\b(Texas|TEKS|STAAR|Common Core|PSLE|MOE|MATATAG|DepEd|Ontario|Toronto|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Singapore|Philippines?|Filipino|pesos?|centavos?|jeepney|sari-sari|pandesal|barangay|Manila|Cebu|Davao|Quezon|Rizal|Luzon|Grade [1-9]|Year [1-9]|AUD|CAD|SGD|Tim Hortons|pucks?|ski|skis|skiing|Skiing|skating|Skating|sledding|snowboarding|Snowboarding|igloo|blizzard|frostbite|Mexico|Vancouver|Calgary|London|Manchester|Birmingham|Glasgow|Edinburgh|Houston|Dallas|Chicago|Boston|Orchard Road|Sentosa|poutine|maple syrup|hockey|kangaroo|koala|footy|ute|wombats?|dollars?|cents?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4|rand|kickball|Canberra|Perth|Batangas|Calapan|Victoria|Elizabeth|Waterloo|Europe|Adelaide|Brisbane|Darwin|Hobart|Toronto)\b)"
+LEAKS = r"(\$|¢|£|₱|°F|\b(Texas|TEKS|STAAR|Common Core|PSLE|MOE|MATATAG|DepEd|Ontario|Toronto|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Singapore|Philippines?|Filipino|pesos?|centavos?|jeepney|sari-sari|pandesal|barangay|Manila|Cebu|Davao|Quezon|Rizal|Luzon|Grade [1-9]|Year [1-9]|AUD|CAD|SGD|Tim Hortons|pucks?|ski|skis|skiing|Skiing|skating|Skating|sledding|snowboarding|Snowboarding|igloo|blizzard|frostbite|Mexico|Vancouver|Calgary|London|Manchester|Birmingham|Glasgow|Edinburgh|Houston|Dallas|Chicago|Boston|Orchard Road|Sentosa|poutine|maple syrup|hockey|kangaroo|koala|footy|ute|wombats?|dollars?|cents?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4|rand|kickball|Canberra|Perth|Batangas|Calapan|Victoria|Elizabeth|Waterloo|Europe|Adelaide|Brisbane|Darwin|Hobart|Toronto|GST|HST|O-Level|MRT|LRT|hawker|chicken rice|HDB|void deck|kaya|laksa|nasi lemak|Changi|Jurong|Tampines|Bukit|Woodlands|Pasir|Toa Payoh|roti prata|ang pow|Hari Raya|Mother Tongue|winter|summer|autumn|Winter|Summer|Autumn|snowman|sledge|Deepavali|Chinese New Year|Thanksgiving|baseball|softball|bagels?|pretzels?|S\$|Secondary [1-4]|Sec [1-4])\b)"
 
 
 IMPERIAL = "inch|inches|in\\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|mph"
@@ -84,13 +85,14 @@ def ng_ok(it):
     if not it.get("q", "").strip() or "_abcd" in it:
         return False
     plain = re.sub(r"<svg.*?</svg>", " ", it["q"] + " " + it["e"] + " " + " ".join(it["c"]), flags=re.S)
-    t = re.sub(r"<[^>]+>", " ", ng_text(plain))
+    t = re.sub(r"[²³]", " ", re.sub(r"<[^>]+>", " ", ng_text(plain)))
     return not re.search(_leaks(), t) and not re.search(r"\d+[cp]\b", t) and (ALLOW_IMPERIAL or not re.search(INCH, t))
 
 
 def _commas_plain(t):
     t = re.sub("(\\d{1,3})\u00a0(\\d{3})(?!\\d)", "\\1,\\2", t)
-    return re.sub(r"(?<![\d.,:/#])(\d{4,6})(?![\d.,:]\d|\d)", lambda m: "{:,}".format(int(m.group(1))), t)
+    t = re.sub(r"(?<![\d.,:/#])(\d{4,6})(?=\.\d)", lambda m: "{:,}".format(int(m.group(1))), t)
+    return re.sub(r"(?<![\d.,:/#])(\d{4,6})(?![\d.,:]\d|\d|[₀-₉])", lambda m: "{:,}".format(int(m.group(1))), t)
 
 
 def add_commas(s):
@@ -118,20 +120,27 @@ GB = [(r"\b([Cc])olor(s|ed|ful|ing)?\b", r"\1olour\2"), (r"\b([Ff])avorite(s?)\b
       (r"\bcookies\b", "biscuits"), (r"\bcookie\b", "biscuit"), (r"\b([Cc])ounterclockwise\b", lambda m: ("A" if m.group(1) == "C" else "a") + "nticlockwise"),
       (r"\btrapezoids\b", "trapeziums"), (r"\bTrapezoids\b", "Trapeziums"), (r"\btrapezoid\b", "trapezium"), (r"\bTrapezoid\b", "Trapezium"),
       (r"\bmath\b", "maths"), (r"\bMath\b", "Maths"), (r"\blearners\b", "pupils"), (r"\bLearners\b", "Pupils"), (r"\blearner\b", "pupil"), (r"\bLearner\b", "Pupil"),
-      (r"\bstudents\b", "pupils"), (r"\bStudents\b", "Pupils"), (r"\bGrade ([1-6])\b", r"Primary \1"), (r"\bYear ([1-6])\b", r"Primary \1"), (r"\bP([1-6]) ", r"Primary \1 "),
+      (r"\bstudents\b", "pupils"), (r"\bStudents\b", "Pupils"), (r"\bGrade ([1-6])\b", r"Primary \1"), (r"\bYear ([1-6])\b", r"Primary \1"), (r"\b(Year|Grade|Secondary) ([7-9])\b", lambda m: "JSS %d" % (int(m.group(2)) - 6)), (r"\bP([1-6]) ", r"Primary \1 "),
       (r"\bladybugs?\b", lambda m: "ladybird" + ("s" if m.group(0).endswith("s") else "")), (r"\bvacation\b", "holiday"), (r"\bcell phone\b", "mobile phone"),
       (r"\bpiggy bank\b", "money box"), (r"\bkickball\b", "football"), (r"\bsquare (centi|kilo|milli)?meters\b", r"square \1metres"),
       (r"\bjeepneys?\b", lambda m: "bus" + ("es" if m.group(0).endswith("s") else "")), (r"\bsari-sari store\b", "provision shop"), (r"\bpandesal\b", "bread rolls"),
       (r"\bCarabao mangoes\b", "mangoes"), (r"\bcanteen\b", "tuck shop"), (r"\bregrouping\b", "regrouping"), (r"\bfavor\b", "favour"),
       (r"\bpractice (it|them|this|these)\b", r"practise \1"),
-      (r"\bmeters\b", "metres"), (r"\bApartment\b", "Flat"), (r"\bapartment\b", "flat"), (r"\btyphoon\b", "storm"), (r"\bin standard form\b", "in figures"),
+      (r"\bmeters\b", "metres"), (r"\bsoccer\b", "football"), (r"\bSoccer\b", "Football"), (r"\bcurry puffs?\b", lambda m: "meat pie" + ("s" if m.group(0).endswith("s") else "")), (r"\bcurry\b", "egusi soup"), (r"\bCurry\b", "Egusi soup"),
+      (r"\bpasta\b", "spaghetti"), (r"\bPasta\b", "Spaghetti"), (r"\bschool dinners\b", "school lunch"), (r"\bathletics carnival\b", "inter-house sports"), (r"\bsports day\b", "inter-house sports"),
+      (r"\b(Mrs?|Ms|Miss|Mdm|Mister) (Ng|Tan|Lim|Lee|Wong|Chua|Goh|Smith|Jones|Brown|Taylor|Wilson|Kumar|Santos|Reyes|Cruz|Garcia)\b", lambda m: m.group(1).replace("Mdm", "Mrs").replace("Mister", "Mr") + " " + {"Ng": "Okafor", "Tan": "Bello", "Lim": "Musa", "Lee": "Adeyemi", "Wong": "Eze", "Chua": "Okon", "Goh": "Ibrahim", "Smith": "Adebayo", "Jones": "Nwosu", "Brown": "Abubakar", "Taylor": "Ogunleye", "Wilson": "Danjuma", "Kumar": "Etim", "Santos": "Lawal", "Reyes": "Okeke", "Cruz": "Yakubu", "Garcia": "Oladipo"}[m.group(2)]), (r"\b([Aa]) (<b>)?(octagon|icosagon|hendecagon|enneagon|eleven|eight|11|8|18|80)\b", r"\1n \2\3"), (r"(?<=[\w)>]) \+ −(?=\d|<i>)", " − "), (r"(?<=: )(\d{1,3}) (\d{3})\b", r"\1,\2"), (r"\btens and ones\b", "tens and units"), (r"\bTens and ones\b", "Tens and units"), (r"\b(\d+) ones\b", r"\1 units"), (r"\b(\d+) one\b(?![- ])", r"\1 unit"), (r"\bones (digit|place|column|cubes?|blocks?)\b", r"units \1"), (r"\bOnes\b", "Units"), (r"\bthe ones\b", "the units"), (r"\bcu (cm|m|mm)\b", r"\1³"), (r"\b([Rr])ectangular prisms?\b", lambda m: ("C" if m.group(1) == "R" else "c") + "uboid" + ("s" if m.group(0).endswith("s") else "")), (r"(\d) ?ℓ", r"\1 litres"), (r"\bℓ\b", "litres"), (r"\bApartment\b", "Flat"), (r"\bapartment\b", "flat"), (r"\btyphoon\b", "storm"), (r"\bin standard form\b", "in figures"),
       (r"\bhundred (?=(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)\b)", "hundred and ")]
 
 
 def ng_text(s):
     """US/Filipino text -> Nigerian (British spelling, naira and kobo, Primary N)."""
+    m = re.fullmatch(r"(−?\d{1,3}(?: \d{3})+)((?: [^\d].*)?)", s)
+    if m:
+        s = m.group(1).replace(" ", ",") + m.group(2)
     s = s.replace("₱", "₦").replace("pesos", "naira").replace("Pesos", "Naira").replace("peso", "naira").replace("centavos", "kobo").replace("centavo", "kobo")
     for a, b in GB:
+        if a == r"\bin standard form\b" and GRADE.startswith("jss"):
+            continue
         s = re.sub(a, b, s)
     s = re.sub(r"\b([ap])\.m\.\.(?!\.)", r"\1.m.", s)
     s = re.sub(r"(?<![\d.,])\b1 tens\b", "1 ten", s)
@@ -176,7 +185,8 @@ def adopt(mod):
         if hasattr(mod, name):
             setattr(mod, name, list(GIRLS if name == "GIRLS" else BOYS))
     for name in ("PLACES", "CITIES", "TOWNS"):
-        if hasattr(mod, name):
+        v = getattr(mod, name, None)
+        if isinstance(v, list) and v and all(isinstance(x, str) for x in v):
             setattr(mod, name, list(PLACES))
     if hasattr(mod, "comma"):
         mod.comma = comma
@@ -376,7 +386,7 @@ def make(slug, sort, domain, code, std_text, title, short_title, meta, key_big, 
     unit = {
         "slug": slug, "sort": sort, "updated": "2026-11-26", "pdf_url": "",
         "title": title,
-        "seo_title": seo_title or "%s – Primary %s Mathematics Worksheets with Answers (NERDC)" % (short_title, GRADE.split("-")[1]),
+        "seo_title": seo_title or "%s – %s Mathematics Worksheets with Answers (NERDC)" % (short_title, LABEL),
         "short_title": short_title,
         "domain": domain,
         "standard_code": code,

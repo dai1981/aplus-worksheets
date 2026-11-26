@@ -783,6 +783,19 @@ function topic_defs($country = null) {
         $d['factors-and-multiples']['in'] = substr($d['factors-and-multiples']['in'], 0, -1) . '|lowest-common-multiple/';
         $d['multiplication']['out'] = substr($d['multiplication']['out'], 0, -1) . '|lowest-common-multiple/';
         $d['fractions']['out'] = substr($d['fractions']['out'], 0, -1) . '|^decimal-fractions$/';
+        // Primary 1 to JSS 3: directed numbers, commercial arithmetic, variation, number bases
+        $d['integers']['in'] = substr($d['integers']['in'], 0, -1) . '|directed-numbers/';
+        $d['factors-and-multiples']['in'] = substr($d['factors-and-multiples']['in'], 0, -1) . '|lcm-and-hcf/';
+        $d['place-value']['in'] = substr($d['place-value']['in'], 0, -1) . '|tens-and-units/';
+        $d['money']['in'] = substr($d['money']['in'], 0, -1) . '|commercial-arithmetic|compound-interest/';
+        $d['rounding-and-estimation']['in'] = substr($d['rounding-and-estimation']['in'], 0, -1) . '|approximation/';
+        $d['ratios-and-rates']['in'] = substr($d['ratios-and-rates']['in'], 0, -1) . '|^variation$/';
+        $d['algebra']['in'] = substr($d['algebra']['in'], 0, -1) . '|quantitative-reasoning/';
+        $d['shapes']['out'] = substr($d['shapes']['out'], 0, -1) . '|counting-objects/';
+        $d['measurement']['out'] = substr($d['measurement']['out'], 0, -1) . '|central-tendency|area-and-volume-of-solids/';
+        $d['area-and-perimeter']['out'] = substr($d['area-and-perimeter']['out'], 0, -1) . '|area-and-volume-of-solids/';
+        $d['number-bases'] = array('name' => 'Number Bases', 'in' => '/number-bases|binary-numbers/', 'out' => '/^$/',
+            'blurb' => 'Binary numbers and other bases: place values, changing to and from base ten, and adding, subtracting and multiplying in other bases.');
     }
     if ($country === 'in') {
         // India (NCERT chapter names): Real Numbers is HCF, LCM and irrational numbers; Arithmetic Progressions are sequences

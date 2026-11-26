@@ -243,6 +243,9 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 } elseif (preg_match('/^primary-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'ng') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Nigeria: Primary 1 at 6, Primary 4 = age 9-10
     $lr['educationalLevel'] = array($grade['name'], 'Primary school (9-Year Basic Education)');
+} elseif (preg_match('/^jss-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'ng') {
+    $lr['typicalAgeRange'] = ((int)$gm[1] + 11) . '-' . ((int)$gm[1] + 12);   // Nigeria: JSS 1 = age 12-13
+    $lr['educationalLevel'] = array($grade['name'], 'Junior Secondary School (Upper Basic Education)');
 } elseif (preg_match('/^primary-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'sg') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Singapore: Primary 4 = age 9-10
 } elseif (preg_match('/^secondary-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'sg') {

@@ -650,13 +650,19 @@ def len_addsub(r):
 
 
 def len_est(r):
-    P = [("the length of a classroom", "8 m", ["8 cm", "8 km", "80 m"]), ("the distance from Lagos to Ibadan", "about 130 km", ["about 130 m", "about 13 m", "about 1,300 cm"]),
+    P = [("the length of a classroom", "about 8 m", ["about 8 cm", "about 8 km", "about 80 m"]), ("the distance from Lagos to Ibadan", "about 130 km", ["about 130 m", "about 13 m", "about 1,300 cm"]),
          ("the length of a pencil", "about 18 cm", ["about 18 m", "about 18 km", "about 180 m"]), ("the height of a door", "about 2 m", ["about 2 cm", "about 2 km", "about 20 m"]),
          ("the length of a football field", "about 100 m", ["about 100 cm", "about 100 km", "about 10 cm"]), ("the distance a car travels in one hour on a highway", "about 80 km", ["about 80 m", "about 80 cm", "about 8 m"]),
-         ("the length of your exercise book", "about 25 cm", ["about 25 m", "about 25 km", "about 2 m"]), ("the height of a two-storey building", "about 7 m", ["about 7 cm", "about 7 km", "about 70 m"])]
+         ("the length of your exercise book", "about 25 cm", ["about 25 m", "about 25 km", "about 2 m"]), ("the height of a two-storey building", "about 7 m", ["about 7 cm", "about 7 km", "about 70 m"]),
+         ("the length of a grain of rice", "about 6 mm", ["about 6 cm", "about 6 m", "about 60 cm"]), ("the width of your thumbnail", "about 1 cm", ["about 1 m", "about 1 km", "about 10 m"]),
+         ("the height of a Primary 4 pupil", "about 130 cm", ["about 130 m", "about 13 cm", "about 130 mm"]), ("the length of a danfo bus", "about 5 m", ["about 5 cm", "about 50 m", "about 5 km"]),
+         ("the length of a teacher's table", "about 120 cm", ["about 120 m", "about 12 cm", "about 12 km"]), ("the distance from Abuja to Kano", "about 400 km", ["about 400 m", "about 40 m", "about 4,000 cm"]),
+         ("the length of a new piece of chalk", "about 8 cm", ["about 8 m", "about 80 cm", "about 8 mm"]), ("the height of a coconut tree", "about 20 m", ["about 20 cm", "about 2 km", "about 200 m"]),
+         ("the thickness of a coin", "about 2 mm", ["about 2 cm", "about 2 m", "about 20 cm"]), ("the length of a school compound wall", "about 150 m", ["about 150 cm", "about 150 km", "about 15 cm"]),
+         ("the length of a matchstick", "about 4 cm", ["about 4 m", "about 40 cm", "about 4 km"]), ("the width of a road with two lanes", "about 7 m", ["about 7 cm", "about 70 m", "about 7 km"]),
+         ("a walk of about 15 minutes", "about 1 km", ["about 1 m", "about 1 cm", "about 100 km"]), ("the length of a mobile phone", "about 15 cm", ["about 15 m", "about 15 mm", "about 1 m"])]
     q, good, w = ch(r, P)
-    n = r.randint(1, 9)
-    return mcq("Which is the best estimate for %s? (Question %d)" % (q, n), good, w, "<b>%s</b> is the sensible size." % good)
+    return mcq("Which is the best estimate for %s?" % q, good, w, "<b>%s</b> is the sensible size." % good)
 
 
 def len_word(r):
@@ -709,13 +715,19 @@ def wt_muldiv(r):
 
 
 def wt_est(r):
-    P = [("a bag of cement", "50 kg", ["50 g", "5 g", "500 kg"]), ("an egg", "about 60 g", ["about 60 kg", "about 6 kg", "about 600 kg"]),
+    P = [("a bag of cement", "about 50 kg", ["about 50 g", "about 5 g", "about 500 kg"]), ("an egg", "about 60 g", ["about 60 kg", "about 6 kg", "about 600 kg"]),
          ("a Primary 4 pupil", "about 30 kg", ["about 30 g", "about 300 kg", "about 3 g"]), ("a mango", "about 300 g", ["about 300 kg", "about 30 kg", "about 3 g"]),
          ("a tuber of yam", "about 2 kg", ["about 2 g", "about 200 kg", "about 20 g"]), ("a pencil", "about 5 g", ["about 5 kg", "about 50 kg", "about 500 kg"]),
-         ("a cow", "about 400 kg", ["about 400 g", "about 4 kg", "about 40 g"]), ("a sachet of pure water", "about 500 g", ["about 500 kg", "about 5 kg", "about 5 g"])]
+         ("a cow", "about 400 kg", ["about 400 g", "about 4 kg", "about 40 g"]), ("a sachet of pure water", "about 500 g", ["about 500 kg", "about 5 kg", "about 5 g"]),
+         ("a big bag of rice", "about 50 kg", ["about 50 g", "about 5 g", "about 5,000 kg"]), ("a loaf of bread", "about 500 g", ["about 500 kg", "about 5 kg", "about 5 g"]),
+         ("a goat", "about 25 kg", ["about 25 g", "about 250 kg", "about 2 g"]), ("a car", "about 1,200 kg", ["about 1,200 g", "about 12 kg", "about 120 g"]),
+         ("a tomato", "about 80 g", ["about 80 kg", "about 8 kg", "about 800 kg"]), ("an exercise book", "about 100 g", ["about 100 kg", "about 10 kg", "about 1 g"]),
+         ("a watermelon", "about 4 kg", ["about 4 g", "about 400 kg", "about 40 g"]), ("a chicken", "about 2 kg", ["about 2 g", "about 200 kg", "about 20 g"]),
+         ("a new baby", "about 3 kg", ["about 3 g", "about 300 kg", "about 30 g"]), ("a sheet of paper", "about 5 g", ["about 5 kg", "about 500 g", "about 50 kg"]),
+         ("a schoolbag full of books", "about 5 kg", ["about 5 g", "about 500 kg", "about 50 g"]), ("an orange", "about 150 g", ["about 150 kg", "about 15 kg", "about 1 g"]),
+         ("a crate of 30 eggs", "about 2 kg", ["about 2 g", "about 200 kg", "about 20 g"]), ("a plastic chair", "about 3 kg", ["about 3 g", "about 300 kg", "about 30 g"])]
     q, good, w = ch(r, P)
-    n = r.randint(1, 9)
-    return mcq("Which is the best estimate for the weight of %s? (Question %d)" % (q, n), good, w, "<b>%s</b> is the sensible weight." % good)
+    return mcq("Which is the best estimate for the weight of %s?" % q, good, w, "<b>%s</b> is the sensible weight." % good)
 
 
 def cap_conv(r):
@@ -767,10 +779,16 @@ def cap_est(r):
     P = [("a bucket", "about 10 litres", ["about 10 cl", "about 100 litres", "about 1 cl"]), ("a teaspoon", "about 1 cl", ["about 1 litre", "about 10 litres", "about 100 cl"]),
          ("a cup of tea", "about 25 cl", ["about 25 litres", "about 250 litres", "about 2 cl"]), ("a car's fuel tank", "about 50 litres", ["about 50 cl", "about 5 cl", "about 500 litres"]),
          ("a bottle of soft drink", "about 50 cl", ["about 50 litres", "about 5 litres", "about 500 litres"]), ("a drum of water", "about 200 litres", ["about 200 cl", "about 2 cl", "about 20 cl"]),
-         ("a sachet of pure water", "about 50 cl", ["about 50 litres", "about 5 litres", "about 5 cl"]), ("a bathtub", "about 150 litres", ["about 150 cl", "about 15 cl", "about 1,500 litres"])]
+         ("a sachet of pure water", "about 50 cl", ["about 50 litres", "about 5 litres", "about 5 cl"]), ("a bathtub", "about 150 litres", ["about 150 cl", "about 15 cl", "about 1,500 litres"]),
+         ("a jerrycan", "about 25 litres", ["about 25 cl", "about 250 litres", "about 2 cl"]), ("a glass of water", "about 20 cl", ["about 20 litres", "about 2 litres", "about 200 litres"]),
+         ("a big pot of jollof rice", "about 10 litres", ["about 10 cl", "about 1 cl", "about 1,000 litres"]), ("an overhead water tank", "about 1,000 litres", ["about 1,000 cl", "about 10 litres", "about 10 cl"]),
+         ("a kettle", "about 2 litres", ["about 2 cl", "about 200 litres", "about 20 litres"]), ("a tablespoon", "about 1.5 cl", ["about 15 litres", "about 1.5 litres", "about 150 cl"]),
+         ("a family-size bottle of groundnut oil", "about 3 litres", ["about 3 cl", "about 300 litres", "about 30 litres"]), ("a small tin of milk", "about 17 cl", ["about 17 litres", "about 170 litres", "about 1 cl"]),
+         ("a watering can", "about 8 litres", ["about 8 cl", "about 800 litres", "about 80 litres"]), ("a medicine spoon", "about 0.5 cl", ["about 5 litres", "about 0.5 litres", "about 50 cl"]),
+         ("a basin for washing clothes", "about 20 litres", ["about 20 cl", "about 2 cl", "about 2,000 litres"]), ("a water bottle for school", "about 75 cl", ["about 75 litres", "about 7 litres", "about 750 litres"]),
+         ("a large cooler for drinks", "about 40 litres", ["about 40 cl", "about 4 cl", "about 4,000 litres"]), ("a fish pond", "about 5,000 litres", ["about 5,000 cl", "about 50 litres", "about 5 cl"])]
     q, good, w = ch(r, P)
-    n = r.randint(1, 9)
-    return mcq("Which is the best estimate for how much %s holds? (Question %d)" % (q, n), good, w, "<b>%s</b> is sensible." % good)
+    return mcq("Which is the best estimate for how much %s holds?" % q, good, w, "<b>%s</b> is sensible." % good)
 
 
 # ============================================================ time: calendar
@@ -826,7 +844,7 @@ def compass_svg():
 
 def cp_turn(r):
     d = r.randrange(8)
-    t = ch(r, [(2, "a quarter turn clockwise"), (-2, "a quarter turn anticlockwise"), (4, "a half turn"), (6, "three quarter turns clockwise"), (1, "an eighth of a turn clockwise")])
+    t = ch(r, [(2, "a quarter turn clockwise"), (-2, "a quarter turn anticlockwise"), (4, "a half turn"), (6, "a three-quarter turn clockwise"), (1, "an eighth of a turn clockwise")])
     good = DIRS[(d + t[0]) % 8]
     k = K(r)
     return mcq("%s is facing %s. %s makes %s. Which direction is %s facing now?" % (k["n"], DIRS[d], k["He"], t[1], k["he"]) + fig(compass_svg()), good,
@@ -837,8 +855,7 @@ def cp_turn(r):
 def cp_opposite(r):
     d = r.randrange(8)
     good = DIRS[(d + 4) % 8]
-    n = r.randint(1, 9)
-    return mcq("Which direction is opposite to %s? (Question %d)" % (DIRS[d], n) + fig(compass_svg()), good, [DIRS[(d + 2) % 8], DIRS[(d + 6) % 8], DIRS[(d + 3) % 8]],
+    return mcq("Which direction is opposite to %s?" % DIRS[d] + fig(compass_svg()), good, [DIRS[(d + 2) % 8], DIRS[(d + 6) % 8], DIRS[(d + 3) % 8]],
                "Opposite directions are a half turn apart: <b>%s</b>." % good)
 
 
