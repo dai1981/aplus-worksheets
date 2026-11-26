@@ -1995,7 +1995,7 @@ SSS 1: 1. number-bases ✓ 2. modular-arithmetic ✓ 3. indices-and-standard-for
 SSS 2: 1. approximation-and-percentage-error ✓ 2. sequences-and-series ✓ 3. completing-the-square-and-quadratic-formula ✓ 4. simultaneous-linear-and-quadratic-equations ✓ 5. linear-inequalities ✓ 6. algebraic-fractions ✓ 7. graphs-of-quadratic-functions ✓ 8. circle-theorems ✓ 9. chords-and-tangents ✓ 10. sine-and-cosine-rules ✓ 11. trigonometric-graphs-and-angles ✓ 12. bearings-and-distances ✓ 13. cumulative-frequency ✓ 14. measures-of-dispersion ✓ 15. probability-of-combined-events ✓
 SSS 3: 1. surds ✓ 2. matrices-and-determinants ✓ 3. coordinate-geometry ✓ 4. differentiation ✓ 5. applications-of-differentiation ✓ 6. integration ✓ 7. longitude-and-latitude ✓ 8. vectors ✓ 9. transformations ✓ 10. commercial-arithmetic ✓ 11. permutations-and-combinations ✓
 トピック（topics.php の ng）：cumulative-frequency・measures-of-dispersion→data-and-graphs、chords-and-tangents→circles、integration→calculus、longitude-and-latitude→measurement
-NG / Mathematics は Kindergarten〜SSS 3 まで完了。mq-geo.js と mq.php の MQ_GEO（このリポジトリの外）に ng を足す
+NG / Mathematics は Kindergarten〜SSS 3 まで完了。mq-geo.js と mq.php の MQ_GEO に ng を足した（2026-11-26）
 
 その後: …（新しい学年・国は `catalog.json` に追加）
 
@@ -2004,10 +2004,11 @@ NG / Mathematics は Kindergarten〜SSS 3 まで完了。mq-geo.js と mq.php �
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
 - 集計テーブルは mq.php と同じ DB の qz_area・qz_done・qz_stat・qz_unit（mq.php が自動で作る。qz_stat・qz_unit は足すだけ）
 - クラス：先生の端末に名前なしのクラス番号（16けた）を残し（localStorage の mq:cls、クラス名は端末の中だけ）、結果を qz_cres（クラス番号×単元×日、足すだけ）に記録。クラスの継続比較・上位 ◯% の表示はまだ（データだけためている）
-- 文言は ja・en・zh（繁體）・zhs（简体、html lang zh-CN）・ko・id・tr・de・fr・it・es・pt（mq.js の W、mq-rank.js の T）。apu2 のランキングは ?lang=de・?lang=ko・?lang=zh-CN などで言語を切り替え（views/ranking.php の $RK）・id（Bahasa Indonesia）・tr（Türkçe）。$RK にも id・tr
-- mq-geo.js の n・lv は [ja, en, zh, de, fr, it, es, pt, ko, zhs, id, tr] の 12 個。地域名は「その国のことば|English」、その国のことばで出す言語の番号は nl（kr は [8]、cn は [9, 2, 0]、id は [10]、tr は [11]、ch は [3, 4, 5]、ないときは [0]）。国は 21（id 38 州・tr 81 県・ch 26 州を 2026-11-25 に追加）。生成は geo.py（eigo-duke 側の作業フォルダ）
+- 文言は ja・en・zh（繁體）・zhs（简体、html lang zh-CN）・ko・id・tr・sv・de・fr・it・es・pt（mq.js の W、mq-rank.js の T。soloTop・soloFew・soloOne も全言語）。apu2 のランキングは ?lang=de・?lang=ko・?lang=zh-CN・?lang=sv などで言語を切り替え（views/ranking.php の $RK）
+- mq-geo.js の n・lv は [ja, en, zh, de, fr, it, es, pt, ko, zhs, id, tr, sv] の 13 個。地域名は「その国のことば|English」、その国のことばで出す言語の番号は nl（kr は [8]、cn は [9, 2, 0]、id は [10]、tr は [11]、ch は [3, 4, 5]、se は [12]、ないときは [0]）。国は 23（id 38 州・tr 81 県・ch 26 州を 2026-11-25、se 21 län・ng 37 州を 2026-11-26 に追加）。生成は geo.py（eigo-duke 側の作業フォルダ）
 - 共通ファイルを直すときは、ユーザーの手元の写しが古いことがある。前回納品した版（MQ_VER・VER の日付が新しいもの）をもとにする。MQ_VER（mq.php）と VER（mq.js）はそろえて上げる
 - 国・地域のコードは mq-geo.js と mq.php の MQ_GEO をそろえる（新しい国を足したら両方に）
+- 管理画面 /mq/admin.html（eigo-duke.com）は 2026-11-26 からパスワードなし（mq.php の adm_ は認証しない。読むだけ）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 

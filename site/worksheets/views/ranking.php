@@ -1,6 +1,6 @@
 <?php
 /* Quiz together rankings: class accuracy by country and by state / province (/worksheets/ranking/)
-   ?lang=de|fr|it|es|es-MX|pt-BR|zh-TW|zh-CN|ko|id|tr shows the page in that language (the quiz links here in the page language).
+   ?lang=de|fr|it|es|es-MX|pt-BR|zh-TW|zh-CN|ko|id|tr|sv shows the page in that language (the quiz links here in the page language).
    The page is drawn by one shared file on eigo-duke.com: /common/js/mq-rank.js (data: api/mq.php?a=rank) */
 $RK = array(
     'en' => array('Quiz Together Rankings: Class Accuracy by Country and State',
@@ -36,6 +36,9 @@ $RK = array(
     'tr' => array('Birlikte Quiz Sıralaması: Ülkelere ve İllere Göre Sınıf Başarı Oranı',
         'İlindeki ve ülkendeki sınıfların Birlikte Quiz’de ne kadar başarılı olduğunu gör. Sınıfınla birlikte çöz ve bölgeni sıralamada yukarı taşı.',
         'Birlikte Quiz ile bütün sınıf aynı testi telefondan çözer. Bir testin küçük QR koduna dokun, bekleme ekranında ülkeni ve ilini seç. Sınıfının doğru cevap oranı bölgenin sıralamasına eklenir. Her oyuncunun yalnızca ilk oyunu sayılır ve isimler asla kaydedilmez. Bir bölgenin oranı, yeterince oyuncu katıldıktan sonra görünür.'),
+    'sv' => array('Quiz tillsammans – ranking: klassernas andel rätt per land och län',
+        'Se hur klasserna i ditt län och ditt land klarar sig i Quiz tillsammans. Spela ett quiz tillsammans med klassen och hjälp ert område att klättra i rankingen.',
+        'Med Quiz tillsammans svarar hela klassen på samma quiz i mobilen. Tryck på den lilla QR-koden på ett quiz och välj land och län på väntskärmen, så räknas klassens andel rätt med i ert områdes ranking. Bara varje spelares första omgång räknas, och namn sparas aldrig. Ett områdes andel rätt visas när tillräckligt många spelare har varit med.'),
 );
 $lang = isset($_GET['lang']) && is_string($_GET['lang']) ? $_GET['lang'] : 'en';
 if ($lang === 'es-MX') $tx = $RK['es'];
@@ -56,8 +59,8 @@ site_header(array());
 </main>
 <style>.rk-wrap{padding:24px 14px}.mqr-intro{max-width:860px;margin:18px auto 0;font-size:14px;line-height:1.9;color:#5b5249}</style>
 <script>window.MQR_CONF = { api: "<?= url('api/mq.php') ?>", lang: "<?= h($lang) ?>", quiz: "<?= url('') ?>" };</script>
-<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261125c"></script>
-<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261125c"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261126a"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261126a"></script>
 <?php site_footer($lang === 'es-MX' ? 'es' : $lang, false); ?>
 </body>
 </html>
