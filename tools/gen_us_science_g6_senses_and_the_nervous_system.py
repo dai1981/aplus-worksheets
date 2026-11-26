@@ -15,13 +15,14 @@ U = Unit(60104)
 R = U.R
 P = People(R)
 
-REC = [("light", "eyes", "light receptors in the retina"), ("sound", "ears", "hair cells in the inner ear"), ("chemicals in the air", "nose", "smell receptors"),
-       ("chemicals in food", "tongue", "taste buds"), ("pressure and touch", "skin", "touch receptors"), ("heat and cold", "skin", "temperature receptors"),
-       ("pain", "skin", "pain receptors"), ("balance and head motion", "inner ear", "balance receptors")]
+REC = [("light", "eyes", "receptors in the eyes"), ("sound", "ears", "receptors in the ears"), ("chemicals in the air", "nose", "receptors in the nose"),
+       ("chemicals in food", "tongue", "taste buds on the tongue"), ("pressure and touch", "skin", "receptors in the skin"), ("heat and cold", "skin", "receptors in the skin"),
+       ("pain from a scrape", "skin", "receptors in the skin"), ("balance and head motion", "inner ear", "receptors in the inner ear"), ("colors", "eyes", "receptors in the eyes"),
+       ("the pitch of a song", "ears", "receptors in the ears"), ("sweet and salty tastes", "tongue", "taste buds on the tongue"), ("the smell of perfume", "nose", "receptors in the nose")]
 STIM = [("the smell of smoke", "nose", "leaves the building"), ("a flash of lightning", "eyes", "goes indoors"), ("a car horn", "ears", "steps back onto the curb"),
-        ("sour milk", "tongue", "spits it out"), ("a sharp thorn", "skin", "pulls away quickly"), ("a friend calling", "ears", "turns around"),
+        ("sour milk", "tongue", "spits it out"), ("a fire alarm", "ears", "walks outside"), ("a friend calling", "ears", "turns around"),
         ("a red stop sign", "eyes", "stops the bike"), ("a cold wind", "skin", "zips up a coat"), ("the smell of bread baking", "nose", "walks to the kitchen"),
-        ("a ball flying toward the face", "eyes", "ducks"), ("a buzzing bee", "ears", "moves away"), ("a hot stove", "skin", "jerks back")]
+        ("a ball flying toward the face", "eyes", "ducks"), ("a buzzing bee", "ears", "moves away"), ("a wet, slippery floor", "eyes", "walks slowly")]
 
 
 def cap(s):
@@ -31,7 +32,7 @@ def cap(s):
 def g_rec():
     st, org, rec = R.choice(REC)
     p = P.next()
-    w = [r for s_, o, r in REC if o != org]
+    w = sorted({r for s_, o, r in REC if o != org})
     return item("%s is learning about receptors. Which receptors respond to %s?" % (p[0], st), rec, R.sample(w, 3),
                 "%s respond to %s and send messages to the brain." % (cap(rec), st))
 
