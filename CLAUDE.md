@@ -2105,7 +2105,12 @@ UK / Science / Year 2（KS1。seed 612cc。ページの上は軽く（title ≤ 
 **set の配分は pool を数えてから書く。`if False`・`(g, 0)`・`[...][:n]` のような仮の書き方を set に残さない**（`grep -n "if False\|, 0)" ファイル` で確かめる）
 誤答に正解と同じ意味の選択肢を入れない（「too cold」が 2 つ、「melt」が 2 つなど）。答えの種類（good・cold・hot など）で誤答を選ぶ
 トピック：living-dead・seeds-and-bulbs・staying-healthy→living-things
-次は Year 1 → KS3（Year 7–9）
+UK / Science / Year 1（KS1。seed 611cc。Year 2 と同じルール。人の体の図は uk_sci_pics.body(labels)（体の右側から線を引き、ラベルの縦位置は 30 px 以上あける））
+1. garden-and-wild-plants ✓ 2. deciduous-and-evergreen-trees ✓ 3. parts-of-a-plant ✓ 4. animal-groups ✓ 5. carnivores-herbivores-and-omnivores ✓ 6. animal-bodies ✓
+7. parts-of-the-body ✓ 8. the-five-senses ✓ 9. objects-and-materials ✓ 10. properties-of-materials ✓ 11. four-seasons ✓ 12. weather-and-day-length ✓
+性質の問題の誤答は物ごとに手で書く（紙やすりに「dull」も当てはまるため）。天気の誤答は近い天気（stormy と windy、foggy と cloudy、frosty と snowy）を外す
+トピック：carnivore・evergreen→living-things、day-length→earth-and-space、four-seasons→earths-systems
+次は KS3（Year 7–9。National Curriculum の KS3 science は 3 学年まとめての内容なので、一般的な配分で学年に分ける）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 

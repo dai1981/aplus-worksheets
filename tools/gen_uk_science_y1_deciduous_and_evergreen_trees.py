@@ -121,7 +121,17 @@ B5 = bank([
 
 
 def body():
-    pic = K.row(["tree", "tree"], words=["deciduous (oak)", "evergreen (holly)"], size=90, label="a deciduous tree and an evergreen tree")
+    from sci_common import svg_wrap, text, line
+    sh = []
+    sh.append("<rect x='0' y='120' width='320' height='18' fill='#eef3f7'/>")
+    sh.append("<rect x='72' y='60' width='12' height='62' fill='#8a5a2b'/>")
+    for x1, y1, x2, y2 in ((78, 70, 50, 40), (78, 70, 106, 36), (78, 84, 44, 66), (78, 84, 112, 62), (64, 52, 58, 30), (96, 46, 102, 26)):
+        sh.append(line(x1, y1, x2, y2, "#8a5a2b", 4))
+    sh.append("<rect x='232' y='96' width='12' height='26' fill='#8a5a2b'/>")
+    sh.append("<polygon points='238,14 200,98 276,98' fill='#2f7d3a' stroke='#1f5a28' stroke-width='2'/>")
+    sh.append(text(78, 156, "deciduous (oak) in winter", 13))
+    sh.append(text(238, 156, "evergreen (pine) in winter", 13))
+    pic = svg_wrap(320, 166, "".join(sh), "in winter a deciduous oak tree has bare branches and an evergreen pine tree is still green")
     ex = [("An oak in winter?", ["It loses its leaves in autumn"], "bare: deciduous"),
           ("A pine in winter?", ["It keeps its needles"], "green: evergreen")]
     mist = ["Thinking evergreen trees never lose a single leaf.", "Thinking a bare tree in winter is dead.", "Thinking conkers come from oak trees."]
