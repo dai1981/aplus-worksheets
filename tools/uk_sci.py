@@ -72,7 +72,7 @@ UKSP = [("colors", "colours"), ("colored", "coloured"), ("colorful", "colourful"
         ("analyze", "analyse"), ("analyzing", "analysing"), ("organize", "organise"), ("organized", "organised"), ("recognize", "recognise"),
         ("sulfur", "sulfur"), ("specialized", "specialised"), ("modeling", "modelling"), ("labeled", "labelled"), ("labeling", "labelling"),
         ("defense", "defence"), ("hemoglobin", "haemoglobin"), ("esophagus", "oesophagus"), ("fetus", "fetus"), ("anemia", "anaemia"),
-        ("Cellular respiration", "Respiration"), ("cellular respiration", "respiration"), ("use the bathroom", "go to the toilet"), ("bathroom", "toilet"), ("Grade 8", "Year 9"), ("Grade 7", "Year 8"), ("Grade 6", "Year 7"), ("students", "pupils"), ("Students", "Pupils")]
+        ("cesium", "caesium"), ("Cesium", "Caesium"), ("nonmetals", "non-metals"), ("nonmetal", "non-metal"), ("Nonmetals", "Non-metals"), ("Nonmetal", "Non-metal"), ("activity series", "reactivity series"), ("Activity series", "Reactivity series"), ("Cellular respiration", "Respiration"), ("cellular respiration", "respiration"), ("use the bathroom", "go to the toilet"), ("bathroom", "toilet"), ("Grade 8", "Year 9"), ("Grade 7", "Year 8"), ("Grade 6", "Year 7"), ("students", "pupils"), ("Students", "Pupils")]
 _UKSP = [(re.compile(r"(?<![\w-])%s(?![\w-])" % re.escape(a)), b) for a, b in UKSP]
 
 
