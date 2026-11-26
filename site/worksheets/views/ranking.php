@@ -75,8 +75,8 @@ $rk_js = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_H
 <style>.rk-wrap{padding:24px 14px}.mqr-intro{max-width:860px;margin:18px auto 0;font-size:14px;line-height:1.9;color:#5b5249}</style>
 <script>window.MQR_CONF = { api: "<?= url('api/mq.php') ?>", lang: "<?= h($lang) ?>", quiz: "<?= url('') ?>",
   subjects: <?= json_encode($rk_subs, $rk_js) ?>, grades: <?= json_encode($RK_GR, $rk_js) ?> };</script>
-<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261126h"></script>
-<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261126h"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261126i"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261126i"></script>
 <?php site_footer($lang === 'es-MX' ? 'es' : $lang, false); ?>
 </body>
 </html>
