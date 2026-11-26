@@ -2092,7 +2092,14 @@ UK / Science / Year 4（seed 614cc。Year 6 の生成スクリプトを import �
 8. changes-of-state ✓ 9. the-water-cycle ✓ 10. how-sounds-are-made ✓ 11. pitch-and-volume ✓ 12. electrical-appliances-and-circuits ✓ 13. conductors-and-insulators ✓ 14. working-scientifically ✓
 uk_sci の LEAKS は「sound meter・newton meter」など計器の meter を除く（英国でも計器は meter）
 **セットの配分を書く前に、各問題関数が作れる問題の数を数える**（ちょうど同じ数だと soft cap で足りなくなる。余裕をもたせる）
-次は Year 3 → 2 → 1 → KS3（Year 7–9）
+UK / Science / Year 3（seed 613cc。図は uk_sci_pics の plant(labels)（花・葉・茎・根に A〜D）と magnets(a, b)・_bar（棒磁石、N は赤・S は青））
+1. parts-of-a-flowering-plant ✓ 2. what-plants-need-to-grow ✓ 3. how-water-moves-in-plants ✓ 4. flowers-pollination-and-seeds ✓ 5. food-and-nutrition ✓ 6. skeletons-and-muscles ✓ 7. comparing-and-grouping-rocks ✓
+8. how-fossils-are-formed ✓ 9. soils ✓ 10. light-and-dark ✓ 11. shadows ✓ 12. pushes-pulls-and-surfaces ✓ 13. magnets-attract-and-repel ✓ 14. magnetic-materials ✓ 15. working-scientifically ✓
+Year 5・6 の問題関数を再利用（reproduction・diet・fossils・light・shadows・friction・working scientifically）。2 つのモジュールを使うときは両方の U・R・P を同じ Unit にする（shadows）。
+光の実験は暗い所の植物の高さを測らない（暗所の植物は伸びる）。葉の数にする。鋼の釘で引っかけるのは granite・basalt・obsidian 以外（marble・slate も傷が付く）。英国の 1p・2p 硬貨は鋼なので磁石の問題に硬貨を使わない
+pool を数える: `python3 scratchpad/pool.py モジュール名 g_x g_y`（maker を 5000 回呼んで問題文＋答えの種類を数える）。図だけ違う問題は数に入らない
+トピック：nutrition・skeleton・fossils-are→living-things、fossils-are・^soils$→earths-systems（out に water-moves）、^shadows$→waves-and-light
+次は Year 2 → 1 → KS3（Year 7–9）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
