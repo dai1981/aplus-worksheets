@@ -209,3 +209,49 @@ def shadow_setup(d_label="", label="torch, object and screen"):
         s.append(line(40, 140, 157, 140, INK, 1.5))
         s.append(text(98, 155, d_label, 13))
     return svg_wrap(330, 162, "".join(s), label)
+
+
+# ------------------------------------------------------------ Year 3: plants and magnets
+PLANT_PART_Y = {"flower": 38, "leaf": 92, "stem": 122, "roots": 178}
+
+
+def plant(labels, label="a flowering plant with labelled parts"):
+    """labels: dict part -> letter, parts from flower, leaf, stem, roots. A plant with leader lines to the right."""
+    s = []
+    s.append(rect(0, 150, 300, 70, "#e7d3b0", "none", 0))
+    s.append(line(0, 150, 300, 150, BROWN, 2))
+    for dx, dy in ((-34, 40), (-16, 56), (0, 62), (18, 52), (36, 36)):
+        s.append(line(110, 152, 110 + dx, 152 + dy, BROWN, 2.5))
+    s.append(line(110, 150, 110, 52, GREEN, 5))
+    s.append("<ellipse cx='84' cy='98' rx='26' ry='11' fill='#7bc47f' stroke='%s' stroke-width='1.6' transform='rotate(-25 84 98)'/>" % INK)
+    s.append("<ellipse cx='136' cy='86' rx='26' ry='11' fill='#7bc47f' stroke='%s' stroke-width='1.6' transform='rotate(25 136 86)'/>" % INK)
+    for ang in range(0, 360, 60):
+        import math
+        x = 110 + 17 * math.cos(math.radians(ang))
+        y = 38 + 17 * math.sin(math.radians(ang))
+        s.append(circle(x, y, 11, "#f28cb1", INK, 1.4))
+    s.append(circle(110, 38, 9, "#f2c94c", INK, 1.4))
+    tip = {"flower": (130, 38), "leaf": (158, 82), "stem": (113, 122), "roots": (140, 180)}
+    for part, letter in labels.items():
+        x0, y0 = tip[part]
+        y = PLANT_PART_Y[part]
+        s.append(line(x0, y0, 232, y, INK, 1.4))
+        s.append(circle(246, y, 13, "#ffffff", INK, 1.6))
+        s.append(text(246, y + 5, letter, 15))
+    return svg_wrap(300, 220, "".join(s), label)
+
+
+def _bar(x, y, left, right, s, w=110, h=34):
+    cols = {"N": "#e05b4f", "S": "#5b8fd6"}
+    s.append(rect(x, y, w / 2, h, cols[left], INK, 1.6))
+    s.append(rect(x + w / 2, y, w / 2, h, cols[right], INK, 1.6))
+    s.append(text(x + w / 4, y + h / 2 + 6, left, 17, col="#ffffff"))
+    s.append(text(x + 3 * w / 4, y + h / 2 + 6, right, 17, col="#ffffff"))
+
+
+def magnets(a, b, label="two bar magnets"):
+    """a, b: (left pole, right pole) of the left and right bar magnet, e.g. ('N', 'S'), ('N', 'S')."""
+    s = []
+    _bar(10, 20, a[0], a[1], s)
+    _bar(170, 20, b[0], b[1], s)
+    return svg_wrap(290, 74, "".join(s), label)
