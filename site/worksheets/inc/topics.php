@@ -794,6 +794,13 @@ function topic_defs($country = null) {
         $d['shapes']['out'] = substr($d['shapes']['out'], 0, -1) . '|counting-objects/';
         $d['measurement']['out'] = substr($d['measurement']['out'], 0, -1) . '|central-tendency|area-and-volume-of-solids/';
         $d['area-and-perimeter']['out'] = substr($d['area-and-perimeter']['out'], 0, -1) . '|area-and-volume-of-solids/';
+        // SSS 1 to 3
+        $d['data-and-graphs']['in'] = substr($d['data-and-graphs']['in'], 0, -1) . '|cumulative-frequency|measures-of-dispersion/';
+        $d['data-and-graphs']['out'] = substr($d['data-and-graphs']['out'], 0, -1) . '|graphs-of-quadratic|trigonometric-graphs/';
+        $d['measurement']['in'] = substr($d['measurement']['in'], 0, -1) . '|longitude-and-latitude/';
+        $d['measurement']['out'] = substr($d['measurement']['out'], 0, -1) . '|measures-of-dispersion/';
+        $d['circles']['in'] = substr($d['circles']['in'], 0, -1) . '|chords-and-tangents/';
+        $d['calculus']['in'] = substr($d['calculus']['in'], 0, -1) . '|^integration$/';
         $d['number-bases'] = array('name' => 'Number Bases', 'in' => '/number-bases|binary-numbers/', 'out' => '/^$/',
             'blurb' => 'Binary numbers and other bases: place values, changing to and from base ten, and adding, subtracting and multiplying in other bases.');
     }

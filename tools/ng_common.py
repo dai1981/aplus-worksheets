@@ -21,16 +21,17 @@ PH_GIRLS = ["Maria", "Ana", "Bea", "Andrea", "Liza", "Kristine", "Angel", "Trish
             "Carmela", "Isabel", "Jenny", "Patricia", "Bianca", "Ella", "Kyla", "Janelle", "Hazel", "Diane", "Rose", "Carla", "Sheila", "Lorna"]
 PH_BOYS = ["Juan", "Jose", "Miguel", "Paolo", "Carlo", "Mark", "Rafael", "Gabriel", "Angelo", "Christian", "Joshua", "Renz", "Enzo", "Nico",
            "Jericho", "Kevin", "Bryan", "Emmanuel", "Dennis", "Ramon", "Arnel", "Francis", "Vincent", "Kenneth", "Lance", "Ivan", "Jomar", "Rodel"]
-FOREIGN_GIRLS = ['Aaliyah', 'Amelia', 'Amira', 'Ava', 'Camila', 'Charlotte', 'Chloe', 'Devi', 'Emma', 'Evie', 'Farah', 'Freya', 'Grace', 'Hana', 'Harper', 'Hui Min', 'Isabella', 'Isla', 'Ivy', 'Jasleen', 'Jia Hui', 'Kavya', 'Leah', 'Lily', 'Lucia', 'Matilda', 'Maya', 'Mei Ling', 'Mei', 'Mia', 'Nadia', 'Nevaeh', 'Nora', 'Nurul', 'Olivia', 'Poppy', 'Priya', 'Rachel', 'Ruby', 'Sarah', 'Sienna', 'Simran', 'Siti', 'Sofia', 'Valeria', 'Wei Ling', 'Ximena', 'Xin Yi', 'Zara', 'Zoe'] + PH_GIRLS
-FOREIGN_BOYS = ['Aarav', 'Aiden', 'Alfie', 'Andre', 'Arjun', 'Ben', 'Benjamin', 'Caleb', 'Carlos', 'Charlie', 'Cooper', 'Daniel', 'Diego', 'Eli', 'Elijah', 'Ethan', 'George', 'Hafiz', 'Hamish', 'Harjot', 'Harry', 'Imran', 'Isaac', 'Jack', 'Jayden', 'Ji-woo', 'Josiah', 'Jun Jie', 'Kai', 'Kumar', 'Lachlan', 'Leo', 'Liam', 'Lucas', 'Luis', 'Marcus', 'Mateo', 'Max', 'Nathan', 'Noah', 'Oliver', 'Owen', 'Raju', 'Ravi', 'Ryan', 'Sam', 'Theo', 'Tom', 'Wei Jie', 'Wei Ming', 'Wei', 'William', 'Zhi Hao'] + PH_BOYS
+FOREIGN_GIRLS = ['Aaliyah', 'Amelia', 'Amira', 'Ava', 'Camila', 'Charlotte', 'Chloe', 'Devi', 'Emma', 'Evie', 'Farah', 'Freya', 'Grace', 'Hana', 'Harper', 'Hui Min', 'Isabella', 'Isla', 'Ivy', 'Jasleen', 'Jia Hui', 'Kavya', 'Leah', 'Lily', 'Lucia', 'Matilda', 'Maya', 'Mei Ling', 'Mei', 'Mia', 'Nadia', 'Nevaeh', 'Nora', 'Nurul', 'Olivia', 'Poppy', 'Priya', 'Rachel', 'Ruby', 'Sarah', 'Sienna', 'Simran', 'Siti', 'Sofia', 'Valeria', 'Wei Ling', 'Ximena', 'Xin Yi', 'Zara', 'Zoe'] + PH_GIRLS + ['Ananya', 'Diya', 'Meera', 'Sneha', 'Isha', 'Riya', 'Aditi', 'Pooja', 'Nisha', 'Shreya', 'Aisha', 'Wei Ling']
+FOREIGN_BOYS = ['Aarav', 'Aiden', 'Alfie', 'Andre', 'Arjun', 'Ben', 'Benjamin', 'Caleb', 'Carlos', 'Charlie', 'Cooper', 'Daniel', 'Diego', 'Eli', 'Elijah', 'Ethan', 'George', 'Hafiz', 'Hamish', 'Harjot', 'Harry', 'Imran', 'Isaac', 'Jack', 'Jayden', 'Ji-woo', 'Josiah', 'Jun Jie', 'Kai', 'Kumar', 'Lachlan', 'Leo', 'Liam', 'Lucas', 'Luis', 'Marcus', 'Mateo', 'Max', 'Nathan', 'Noah', 'Oliver', 'Owen', 'Raju', 'Ravi', 'Ryan', 'Sam', 'Theo', 'Tom', 'Wei Jie', 'Wei Ming', 'Wei', 'William', 'Zhi Hao'] + PH_BOYS + ['Rohan', 'Kabir', 'Vivaan', 'Ishaan', 'Rahul', 'Aditya', 'Karan', 'Siddharth', 'Nikhil', 'Ahmad', 'Mateo']
 _FOREIGN = sorted([(n, GIRLS) for n in FOREIGN_GIRLS] + [(n, BOYS) for n in FOREIGN_BOYS], key=lambda p: -len(p[0]))
 PLACES = ["Lagos", "Abuja", "Kano", "Ibadan", "Enugu", "Port Harcourt", "Kaduna", "Benin City", "Jos", "Abeokuta", "Owerri", "Calabar"]
-PH_PLACES = ["Quezon City", "Cebu City", "Davao City", "Iloilo City", "Cagayan de Oro", "Zamboanga City", "Manila", "Baguio", "Bacolod", "Tacloban"]
+PH_PLACES = ["Quezon City", "Cebu City", "Davao City", "Iloilo City", "Cagayan de Oro", "Zamboanga City", "Manila", "Baguio", "Bacolod", "Tacloban",
+             "Delhi", "Mumbai", "Jaipur", "Chennai", "Kolkata", "Pune", "Lucknow", "Bhopal", "Kochi", "Indore", "Patna", "Nagpur", "Bishan", "Punggol", "Clementi", "Phoenix", "Denver", "Atlanta", "Seattle", "Miami"]
 STD_URL = "https://nerdc.gov.ng/"
 GRADE = "primary-4"
 LABEL = "Primary 4"     # "Primary 5", "JSS 1": used in seo_title
 
-LEAKS = r"(\$|¢|£|₱|°F|\b(Texas|TEKS|STAAR|Common Core|PSLE|MOE|MATATAG|DepEd|Ontario|Toronto|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Singapore|Philippines?|Filipino|pesos?|centavos?|jeepney|sari-sari|pandesal|barangay|Manila|Cebu|Davao|Quezon|Rizal|Luzon|Grade [1-9]|Year [1-9]|AUD|CAD|SGD|Tim Hortons|pucks?|ski|skis|skiing|Skiing|skating|Skating|sledding|snowboarding|Snowboarding|igloo|blizzard|frostbite|Mexico|Vancouver|Calgary|London|Manchester|Birmingham|Glasgow|Edinburgh|Houston|Dallas|Chicago|Boston|Orchard Road|Sentosa|poutine|maple syrup|hockey|kangaroo|koala|footy|ute|wombats?|dollars?|cents?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4|rand|kickball|Canberra|Perth|Batangas|Calapan|Victoria|Elizabeth|Waterloo|Europe|Adelaide|Brisbane|Darwin|Hobart|Toronto|GST|HST|O-Level|MRT|LRT|hawker|chicken rice|HDB|void deck|kaya|laksa|nasi lemak|Changi|Jurong|Tampines|Bukit|Woodlands|Pasir|Toa Payoh|roti prata|ang pow|Hari Raya|Mother Tongue|winter|summer|autumn|Winter|Summer|Autumn|snowman|sledge|Deepavali|Chinese New Year|Thanksgiving|baseball|softball|bagels?|pretzels?|S\$|Secondary [1-4]|Sec [1-4])\b)"
+LEAKS = r"(\$|¢|£|₱|₹|°F|\b(Texas|TEKS|STAAR|Common Core|PSLE|MOE|MATATAG|DepEd|Ontario|Toronto|Canada|Canadian|loonie|toonie|EQAO|NAPLAN|Australia|Sydney|Melbourne|Singapore|Philippines?|Filipino|pesos?|centavos?|jeepney|sari-sari|pandesal|barangay|Manila|Cebu|Davao|Quezon|Rizal|Luzon|Grade [1-9]|Year [1-9]|AUD|CAD|SGD|Tim Hortons|pucks?|ski|skis|skiing|Skiing|skating|Skating|sledding|snowboarding|Snowboarding|igloo|blizzard|frostbite|Mexico|Vancouver|Calgary|London|Manchester|Birmingham|Glasgow|Edinburgh|Houston|Dallas|Chicago|Boston|Orchard Road|Sentosa|poutine|maple syrup|hockey|kangaroo|koala|footy|ute|wombats?|dollars?|cents?|penny|pennies|nickels?|dimes?|inch|inches|in\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|Fahrenheit|Thanksgiving|Halloween|snow|sled|mph|July 4|rand|kickball|Canberra|Perth|Batangas|Calapan|Victoria|Elizabeth|Waterloo|Europe|Adelaide|Brisbane|Darwin|Hobart|Toronto|GST|HST|O-Level|MRT|LRT|hawker|chicken rice|HDB|void deck|kaya|laksa|nasi lemak|Changi|Jurong|Tampines|Bukit|Woodlands|Pasir|Toa Payoh|roti prata|ang pow|Hari Raya|Mother Tongue|winter|summer|autumn|Winter|Summer|Autumn|snowman|sledge|Deepavali|Chinese New Year|Thanksgiving|baseball|softball|bagels?|pretzels?|S\$|Secondary [1-4]|Sec [1-4]|₹|Rs|rupees?|Rupees?|lakhs?|crores?|India|Indian|NCERT|CBSE|Diwali|Holi|Grade 1[0-2]|Class 1[0-2]|Year 1[0-3]|SAT|GCSE|A-level|matric|NSC)\b)"
 
 
 IMPERIAL = "inch|inches|in\\.|feet|foot|ft|yards?|yd|miles?|mi|pounds?|lb|ounces?|oz|gallons?|gal|quarts?|qt|pints?|pt|mph"
@@ -84,8 +85,11 @@ def ng_ok(it):
     """True when an item fits Nigeria (no dollars, pesos, inches, STAAR, ...)."""
     if not it.get("q", "").strip() or "_abcd" in it:
         return False
+    if "c" in it and len({ng_text(c) for c in it["c"]}) != len(it["c"]):
+        return False
     plain = re.sub(r"<svg.*?</svg>", " ", it["q"] + " " + it["e"] + " " + " ".join(it["c"]), flags=re.S)
     t = re.sub(r"[²³]", " ", re.sub(r"<[^>]+>", " ", ng_text(plain)))
+    t = re.sub(r"\b(foot|feet) of (the|a|an|its|this)\b", " ", t)
     return not re.search(_leaks(), t) and not re.search(r"\d+[cp]\b", t) and (ALLOW_IMPERIAL or not re.search(INCH, t))
 
 
@@ -120,7 +124,7 @@ GB = [(r"\b([Cc])olor(s|ed|ful|ing)?\b", r"\1olour\2"), (r"\b([Ff])avorite(s?)\b
       (r"\bcookies\b", "biscuits"), (r"\bcookie\b", "biscuit"), (r"\b([Cc])ounterclockwise\b", lambda m: ("A" if m.group(1) == "C" else "a") + "nticlockwise"),
       (r"\btrapezoids\b", "trapeziums"), (r"\bTrapezoids\b", "Trapeziums"), (r"\btrapezoid\b", "trapezium"), (r"\bTrapezoid\b", "Trapezium"),
       (r"\bmath\b", "maths"), (r"\bMath\b", "Maths"), (r"\blearners\b", "pupils"), (r"\bLearners\b", "Pupils"), (r"\blearner\b", "pupil"), (r"\bLearner\b", "Pupil"),
-      (r"\bstudents\b", "pupils"), (r"\bStudents\b", "Pupils"), (r"\bGrade ([1-6])\b", r"Primary \1"), (r"\bYear ([1-6])\b", r"Primary \1"), (r"\b(Year|Grade|Secondary) ([7-9])\b", lambda m: "JSS %d" % (int(m.group(2)) - 6)), (r"\bP([1-6]) ", r"Primary \1 "),
+      (r"\bstudents\b", "pupils"), (r"\bStudents\b", "Pupils"), (r"\bGrade ([1-6])\b", r"Primary \1"), (r"\bYear ([1-6])\b", r"Primary \1"), (r"\b(Year|Grade|Secondary) ([7-9])\b", lambda m: "JSS %d" % (int(m.group(2)) - 6)), (r"\b(Grade|Class) (1[0-2])\b", lambda m: "SSS %d" % (int(m.group(2)) - 9)), (r"\bP([1-6]) ", r"Primary \1 "),
       (r"\bladybugs?\b", lambda m: "ladybird" + ("s" if m.group(0).endswith("s") else "")), (r"\bvacation\b", "holiday"), (r"\bcell phone\b", "mobile phone"),
       (r"\bpiggy bank\b", "money box"), (r"\bkickball\b", "football"), (r"\bsquare (centi|kilo|milli)?meters\b", r"square \1metres"),
       (r"\bjeepneys?\b", lambda m: "bus" + ("es" if m.group(0).endswith("s") else "")), (r"\bsari-sari store\b", "provision shop"), (r"\bpandesal\b", "bread rolls"),
@@ -139,9 +143,15 @@ def ng_text(s):
         s = m.group(1).replace(" ", ",") + m.group(2)
     s = s.replace("₱", "₦").replace("pesos", "naira").replace("Pesos", "Naira").replace("peso", "naira").replace("centavos", "kobo").replace("centavo", "kobo")
     for a, b in GB:
-        if a == r"\bin standard form\b" and GRADE.startswith("jss"):
+        if a == r"\bin standard form\b" and GRADE.startswith(("jss", "sss")):
             continue
         s = re.sub(a, b, s)
+    if GRADE.startswith("sss"):
+        s = re.sub(r"(?<=[\w)>]) \+ −(?=<span)", " − ", s)
+        s = s.replace("m∠", "∠")
+        s = re.sub(r"\bto the nearest tenth\b", "correct to 1 decimal place", s)
+        s = re.sub(r"\bto the nearest hundredth\b", "correct to 2 decimal places", s)
+        s = re.sub(r"\bslope\b", "gradient", s)
     s = re.sub(r"\b([ap])\.m\.\.(?!\.)", r"\1.m.", s)
     s = re.sub(r"(?<![\d.,])\b1 tens\b", "1 ten", s)
     s = re.sub(r"(?<![\d.,])\b1 ones\b", "1 one", s)
@@ -358,9 +368,9 @@ def finish(sets, rnd, max_num=None):
             it["c"] = [us_text(c) for c in it["c"]]
             assert len(set(it["c"])) == 4, it["c"]
             plain = re.sub(r"<svg.*?</svg>", "", it["q"], flags=re.S)
-            m = re.search(_leaks(), re.sub(r"<[^>]+>", " ", plain + " " + it["e"] + " " + " ".join(it["c"])))
+            m = re.search(_leaks(), re.sub(r"\b(foot|feet) of (the|a|an|its|this)\b", " ", re.sub(r"<[^>]+>", " ", plain + " " + it["e"] + " " + " ".join(it["c"]))))
             assert not m, (m.group(0), it["q"][:200])
-            m = None if ALLOW_IMPERIAL else re.search(INCH, re.sub(r"<[^>]+>", " ", plain + " " + it["e"] + " " + " ".join(it["c"])))
+            m = None if ALLOW_IMPERIAL else re.search(INCH, re.sub(r"\b(foot|feet) of (the|a|an|its|this)\b", " ", re.sub(r"<[^>]+>", " ", plain + " " + it["e"] + " " + " ".join(it["c"]))))
             assert not m, (m.group(0), it["q"][:200])
             key = it["q"] + "|" + "|".join(sorted(it["c"]))
             assert key not in seen, it["q"][:200]

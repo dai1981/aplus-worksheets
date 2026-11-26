@@ -18,7 +18,7 @@ from ng_common import finish, make, lesson, adopt, build_sets, example
 
 TH_P = {"N": "Number and Numeration", "O": "Basic Operations", "A": "Algebraic Processes", "M": "Measurement", "G": "Geometry", "S": "Everyday Statistics"}
 TH_J = {"N": "Number and Numeration", "O": "Basic Operations", "A": "Algebraic Processes", "G": "Mensuration and Geometry", "M": "Mensuration and Geometry", "S": "Everyday Statistics"}
-MONEY = re.compile(r"₦|\bnaira\b|\bkobo\b|£|\$|\bpence\b")
+MONEY = re.compile(r"₦|₹|\brupees?\b|\bnaira\b|\bkobo\b|£|\$|\bpence\b")
 
 
 def mod(name, seed):
