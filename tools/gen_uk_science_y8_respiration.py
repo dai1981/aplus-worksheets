@@ -87,7 +87,7 @@ def g_sprint():
     if k == "rise":
         d = peak - rest
         return item(intro + "By how much did the heart rate rise?", "%d beats per minute" % d, uniq("%d beats per minute" % d, ["%d beats per minute" % peak, "%d beats per minute" % rest, "%d beats per minute" % (peak + rest)]), "%d − %d = %d." % (peak, rest, d))
-    return item(intro + "How long did the heart rate take to return to normal?", "%d minutes" % back, uniq("%d minutes" % back, ["%d minutes" % x for x in (1, 2, 3, 4, 5, 6, 8, 10)]), "Read the last row.")
+    return item(intro + "How long did the heart rate take to return to normal?", "%d minutes" % back, uniq("%d minutes" % back, ["%d minutes" % x for x in (2, 3, 4, 5, 6, 7, 8, 10)]), "Read the last row.")
 
 
 def g_peas():
