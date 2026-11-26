@@ -104,3 +104,54 @@ IE = {"H": 1312, "He": 2372, "Li": 520, "Be": 899, "B": 801, "C": 1086, "N": 140
 RAD = {"Li": 152, "Be": 112, "B": 85, "C": 77, "N": 75, "O": 73, "F": 72, "Na": 186, "Mg": 160, "Al": 143, "Si": 118, "P": 110, "S": 103,
        "Cl": 99, "K": 227, "Ca": 197, "Ga": 135, "Ge": 122, "As": 120, "Se": 119, "Br": 114, "Rb": 248, "Sr": 215, "Sn": 140, "I": 133,
        "Cs": 265, "Ba": 222}
+
+
+def atoms(formula):
+    """'Al2(SO4)3' -> {'Al': 2, 'S': 3, 'O': 12}"""
+    import re
+    def parse(s, i):
+        out = {}
+        while i < len(s):
+            ch = s[i]
+            if ch == "(":
+                inner, i = parse(s, i + 1)
+                m = re.match(r"\d+", s[i:])
+                n = int(m.group()) if m else 1
+                i += len(m.group()) if m else 0
+                for k, v in inner.items():
+                    out[k] = out.get(k, 0) + v * n
+            elif ch == ")":
+                return out, i + 1
+            else:
+                m = re.match(r"([A-Z][a-z]?)(\d*)", s[i:])
+                out[m.group(1)] = out.get(m.group(1), 0) + (int(m.group(2)) if m.group(2) else 1)
+                i += len(m.group())
+        return out, i
+    return parse(formula, 0)[0]
+
+
+def split_eq(s):
+    """'2H2 + O2 -> 2H2O' -> ([(2, 'H2'), (1, 'O2')], [(2, 'H2O')])"""
+    import re
+    def side(t):
+        out = []
+        for p in t.split(" + "):
+            m = re.match(r"(\d*)(.+)", p.strip())
+            out.append((int(m.group(1)) if m.group(1) else 1, m.group(2)))
+        return out
+    a, b = s.split(" -> ")
+    return side(a), side(b)
+
+
+def tally(side):
+    out = {}
+    for c, f in side:
+        for k, v in atoms(f).items():
+            out[k] = out.get(k, 0) + c * v
+    return out
+
+
+def eq_html(left, right):
+    def term(c, f):
+        return ("%d" % c if c > 1 else "") + sub(f)
+    return " + ".join(term(*x) for x in left) + " → " + " + ".join(term(*x) for x in right)
