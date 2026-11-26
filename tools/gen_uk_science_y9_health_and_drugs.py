@@ -71,7 +71,7 @@ def g_dr():
     others = [x for x in DR if x[0] != d and x[1].split(":")[0] != cat]
     if k:
         return item("Which best describes %s?" % d, a[0].upper() + a[1:] + ".", [x[1][0].upper() + x[1][1:] + "." for x in R.sample(others, 3)], "A drug is a substance that changes how the body works.")
-    return item("Which drug is described here: “%s”?" % (a[0].upper() + a[1:]), d, R.sample([x[0] for x in DR if x[0] != d], 3), "Depressants slow the nervous system; stimulants speed it up.")
+    return item("Which drug is described here: “%s”?" % (a[0].upper() + a[1:]), d, R.sample([x[0] for x in others], 3), "Depressants slow the nervous system; stimulants speed it up.")
 
 
 def g_data():
