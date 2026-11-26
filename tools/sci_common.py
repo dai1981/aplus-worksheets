@@ -223,5 +223,5 @@ def pie(parts, label="circle graph", r=70):
     for i, (name, v, col) in enumerate(parts):
         y = 18 + i * 22
         s.append(rect(2 * r + 30, y - 11, 14, 14, col, col, 1))
-        s.append(text(2 * r + 50, y + 1, name, 12, "start", weight=400))
-    return svg_wrap(2 * r + 210, max(2 * r + 20, 22 * len(parts) + 10), "".join(s), label).replace("<svg ", "<svg data-pf='lg' ", 1)
+        s.append(text(2 * r + 50, y + 1, name, 14, "start", weight=400))
+    return svg_wrap(2 * r + 230, max(2 * r + 20, 22 * len(parts) + 10), "".join(s), label).replace("<svg ", "<svg data-pf='lg' ", 1)
