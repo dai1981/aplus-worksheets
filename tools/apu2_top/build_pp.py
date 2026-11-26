@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""privacypolicy.html に de fr it es pt tr を 足す → out/privacypolicy.html"""
+"""privacypolicy.html に de fr it es pt tr sv を 足す → out/privacypolicy.html"""
 import os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 src = open(os.path.join(HERE, "en_privacy.html"), encoding="utf-8").read()
@@ -96,6 +96,21 @@ P = {
      ("6. Çocuklar", ["13 yaşından küçüksen siteyi annen, baban ya da velinle birlikte kullan."]),
      ("7. Değişiklikler", ["Bu politikayı güncelleyebiliriz. Yeni sürüm bu sayfada yayımlandığı andan itibaren geçerlidir."]),
      ("8. İletişim", ["Lütfen bize {line}LINE{/a} üzerinden yaz."])]),
+ "sv": dict(name="Svenska", title="Integritetspolicy", back="Tillbaka", hl="sv", upd="Skapad: 26 november 2026",
+  lead="aplus (apu2.com) är en gratis webbplats för lärande som drivs av Aplus Inc. (えいぷら Aplus). Här förklarar vi vilken information vi använder och varför.",
+  s=[("1. Information vi använder", ["Din studiehistorik och dina inställningar (svar, framsteg, poäng). De sparas i din webbläsare och på vår server med ett slumpmässigt ID. Vi frågar inte efter namn, e-postadress eller adress för att du ska kunna använda webbplatsen.",
+       "Åtkomstdata, till exempel besökta sidor, enhet, webbläsare och ungefärlig plats, som Google Analytics samlar in med cookies.",
+       "Cookies som Google AdSense använder för att visa annonser.", "Meddelanden som du skickar till oss på LINE."]),
+     ("2. Varför vi använder den", ["För att spara dina framsteg och visa rätt frågor.", "För att förstå hur webbplatsen används och göra den bättre.",
+       "För att visa annonser som gör att webbplatsen kan vara gratis.", "För att svara på dina frågor."]),
+     ("3. Tjänster vi använder", ["Google Analytics (Google LLC): {ga}Hur Google använder data{/a}.",
+       "Google AdSense (Google LLC): Google och dess partner kan använda cookies för att visa annonser utifrån dina besök på den här och andra webbplatser. Du kan stänga av anpassade annonser i {ads}Googles annonsinställningar{/a}.",
+       "LINE (LY Corporation): för vår gemenskapsgrupp och för kontakt."]),
+     ("4. Delning", ["Vi säljer inte din information. Vi lämnar inte ut den till andra, utom till tjänsterna ovan eller när lagen kräver det."]),
+     ("5. Radera dina data", ["Använd återställningsknappen på varje sida eller radera webbläsarens data. Om du vill att data på vår server ska raderas, skriv till oss på LINE."]),
+     ("6. Barn", ["Om du är yngre än 13 år, använd webbplatsen tillsammans med en förälder eller vårdnadshavare."]),
+     ("7. Ändringar", ["Vi kan uppdatera den här policyn. Den nya versionen gäller från det att den publiceras på den här sidan."]),
+     ("8. Kontakt", ["Skriv till oss på {line}LINE{/a}."])]),
 }
 
 
@@ -125,9 +140,9 @@ s = s.replace("</nav>\n<article id=\"pp-en\"", tabs + "</nav>\n<article id=\"pp-
 s = s.replace("</article>\n</main>", "</article>\n" + arts + "</main>", 1)
 a = "var ORDER=['en', 'ja', 'vi', 'id', 'zh', 'tw', 'ko'];"
 assert a in s
-s = s.replace(a, "var ORDER=['en', 'ja', 'vi', 'id', 'zh', 'tw', 'ko', 'de', 'fr', 'it', 'es', 'pt', 'tr'];")
+s = s.replace(a, "var ORDER=['en', 'ja', 'vi', 'id', 'zh', 'tw', 'ko', 'de', 'fr', 'it', 'es', 'pt', 'tr', 'sv'];")
 s = s.replace("(location.search.match(/[?&]lang=([a-z]+)/)||[])[1]", "(location.search.match(/[?&]lang=([a-z]+)/)||[])[1]")
-assert s.count("<article") == 13
+assert s.count("<article") == 14
 os.makedirs(os.path.join(HERE, "out"), exist_ok=True)
 open(os.path.join(HERE, "out", "privacypolicy.html"), "w", encoding="utf-8").write(s)
 print("ok")

@@ -70,7 +70,7 @@ CC = {L: dict(zip([m[0] for m in MATH], v.split("|"))) for L, v in CC.items()}
 T = {}
 T["en"] = dict(
  title="aplus | Free learning made for you: Japanese, English and maths",
- desc="Free lessons and practice for what you need: Japanese (JLPT N5–N1) and English (IELTS, TOEFL) with dictionaries in 13 languages, and maths worksheets for 22 school curricula in 20 countries and regions. No sign-up.",
+ desc="Free lessons and practice for what you need: Japanese (JLPT N5–N1) and English (IELTS, TOEFL) with dictionaries in 13 languages, and maths worksheets for {nk} school curricula in {nc} countries and regions. No sign-up.",
  h1="Free learning,<br><em>made for you.</em>",
  hp="Pick what you need. Explained in your language, matched to your exam or your school year.",
  about="About", lang="Language",
@@ -89,7 +89,7 @@ T["en"] = dict(
         ("Smart review", "Missed questions come back"), ("10 minutes a day", "Free, no sign-up")],
  faq_h="FAQ",
  faq=[("Is aplus free?", "Yes. All lessons, quizzes, audio and printable worksheets are free. No sign-up is needed."),
-      ("What can I learn?", "Japanese for JLPT N5–N1 and English for IELTS and TOEFL, explained in your language. Our Japanese dictionary has {jw} words in 13 languages, and our English dictionary has {ew} words in 12 languages. We also have maths worksheets for 22 school curricula in 20 countries and regions, each in the language of that country."),
+      ("What can I learn?", "Japanese for JLPT N5–N1 and English for IELTS and TOEFL, explained in your language. Our Japanese dictionary has {jw} words in 13 languages, and our English dictionary has {ew} words in 12 languages. We also have maths worksheets for {nk} school curricula in {nc} countries and regions, each in the language of that country."),
       ("Do the maths worksheets match my school's curriculum?", "Yes. Each topic follows one official curriculum, such as Common Core in the US, the National Curriculum in England, the Ontario and British Columbia curricula, the Australian Curriculum, the MOE syllabus in Singapore and CBSE in India. Each topic has a short lesson, 100 practice questions and a printable worksheet with answers."),
       ("How long should I study each day?", "About 10 minutes. Questions you miss come back so you remember them."),
       ("Who runs aplus?", "Aplus Inc. in Japan, the team behind 英語漬け.com, used by over 3 million learners a year.")],
@@ -101,7 +101,7 @@ T["en"] = dict(
 )
 T["de"] = dict(
  title="aplus | Kostenlos lernen: Mathe, Japanisch und Englisch",
- desc="Kostenlose Mathe-Arbeitsblätter nach dem Lehrplan deines Landes (KMK-Bildungsstandards, Lehrplan 21 und 20 weitere), dazu Japanisch (JLPT N5–N1) und Englisch (IELTS, TOEFL) mit Wörterbüchern auf Deutsch. Ohne Anmeldung.",
+ desc="Kostenlose Mathe-Arbeitsblätter nach dem Lehrplan deines Landes (KMK-Bildungsstandards, Lehrplan 21 und {nk2} weitere), dazu Japanisch (JLPT N5–N1) und Englisch (IELTS, TOEFL) mit Wörterbüchern auf Deutsch. Ohne Anmeldung.",
  h1="Kostenlos lernen,<br><em>passend für dich.</em>",
  hp="Wähle, was du brauchst: in deiner Sprache erklärt, passend zu deiner Prüfung oder deinem Schuljahr.",
  about="Über uns", lang="Sprache",
@@ -132,7 +132,7 @@ T["de"] = dict(
 )
 T["fr"] = dict(
  title="aplus | Apprendre gratuitement : maths, japonais et anglais",
- desc="Fiches de maths gratuites qui suivent les programmes de ton pays (programmes de l’Éducation nationale et 21 autres), plus le japonais (JLPT N5–N1) et l’anglais (IELTS, TOEFL) avec des dictionnaires en français. Sans inscription.",
+ desc="Fiches de maths gratuites qui suivent les programmes de ton pays (programmes de l’Éducation nationale et {nk1} autres), plus le japonais (JLPT N5–N1) et l’anglais (IELTS, TOEFL) avec des dictionnaires en français. Sans inscription.",
  h1="Apprendre gratuitement,<br><em>à ta mesure.</em>",
  hp="Choisis ce dont tu as besoin : expliqué dans ta langue, adapté à ton examen ou à ta classe.",
  about="À propos", lang="Langue",
@@ -163,7 +163,7 @@ T["fr"] = dict(
 )
 T["it"] = dict(
  title="aplus | Imparare gratis: matematica, giapponese e inglese",
- desc="Schede di matematica gratuite che seguono le Indicazioni nazionali e i programmi di altri 21 sistemi scolastici, più giapponese (JLPT N5–N1) e inglese (IELTS, TOEFL). Senza registrazione.",
+ desc="Schede di matematica gratuite che seguono le Indicazioni nazionali e i programmi di altri {nk1} sistemi scolastici, più giapponese (JLPT N5–N1) e inglese (IELTS, TOEFL). Senza registrazione.",
  h1="Imparare gratis,<br><em>su misura per te.</em>",
  hp="Scegli quello che ti serve: spiegato nella tua lingua, adatto al tuo esame o alla tua classe.",
  about="Chi siamo", lang="Lingua",
@@ -191,7 +191,7 @@ T["it"] = dict(
 )
 T["es"] = dict(
  title="aplus | Aprende gratis: matemáticas, japonés e inglés",
- desc="Fichas de matemáticas gratis según el currículo de tu país (LOMLOE, NEM y 20 más), y japonés (JLPT N5–N1) e inglés (IELTS, TOEFL) con diccionarios en español. Sin registro.",
+ desc="Fichas de matemáticas gratis según el currículo de tu país (LOMLOE, NEM y {nk2} más), y japonés (JLPT N5–N1) e inglés (IELTS, TOEFL) con diccionarios en español. Sin registro.",
  h1="Aprende gratis,<br><em>a tu medida.</em>",
  hp="Elige lo que necesitas: explicado en tu idioma y adaptado a tu examen o a tu curso.",
  about="Quiénes somos", lang="Idioma",
@@ -222,7 +222,7 @@ T["es"] = dict(
 )
 T["pt"] = dict(
  title="aplus | Aprenda de graça: matemática, japonês e inglês",
- desc="Atividades de matemática grátis de acordo com a BNCC e os currículos de outros 21 sistemas escolares, além de japonês (JLPT N5–N1) e inglês (IELTS, TOEFL) com dicionários em português. Sem cadastro.",
+ desc="Atividades de matemática grátis de acordo com a BNCC e os currículos de outros {nk1} sistemas escolares, além de japonês (JLPT N5–N1) e inglês (IELTS, TOEFL) com dicionários em português. Sem cadastro.",
  h1="Aprenda de graça,<br><em>do seu jeito.</em>",
  hp="Escolha o que você precisa: explicado no seu idioma e de acordo com a sua prova ou o seu ano escolar.",
  about="Sobre", lang="Idioma",
@@ -253,7 +253,7 @@ T["pt"] = dict(
 )
 T["tr"] = dict(
  title="aplus | Ücretsiz öğren: matematik, Japonca ve İngilizce",
- desc="Türkiye Yüzyılı Maarif Modeli’ne ve 21 başka öğretim programına uygun ücretsiz matematik çalışma kâğıtları, ayrıca Japonca (JLPT N5–N1) ve İngilizce (IELTS, TOEFL). Üyelik gerekmez.",
+ desc="Türkiye Yüzyılı Maarif Modeli’ne ve {nk1} başka öğretim programına uygun ücretsiz matematik çalışma kâğıtları, ayrıca Japonca (JLPT N5–N1) ve İngilizce (IELTS, TOEFL). Üyelik gerekmez.",
  h1="Ücretsiz öğren,<br><em>sana göre.</em>",
  hp="İhtiyacın olanı seç: kendi dilinde anlatılır, sınavına ya da sınıfına uygundur.",
  about="Hakkımızda", lang="Dil",
@@ -284,7 +284,7 @@ T["tr"] = dict(
 A = {}
 A["en"] = dict(
  title="About aplus | Free learning made for each learner",
- desc="aplus is a free learning site from Japan: Japanese and English dictionaries in 13 languages, JLPT, IELTS and TOEFL courses, maths worksheets for 22 school curricula in 20 countries and regions, and games. The international edition of 英語漬け.com.",
+ desc="aplus is a free learning site from Japan: Japanese and English dictionaries in 13 languages, JLPT, IELTS and TOEFL courses, maths worksheets for {nk} school curricula in {nc} countries and regions, and games. The international edition of 英語漬け.com.",
  h1="Free learning, made for each learner",
  lead="aplus is a free learning site from Japan. You choose what you need: Japanese, English or school maths. You learn it in your language, at your level, for your exam or your school year. No sign-up, no fees.",
  stats=[("3M+", "learners a year on 英語漬け.com"), ("100M+", "questions answered"), ("2024", "Japan e-Learning Award, English Education Special Prize")],
@@ -292,7 +292,7 @@ A["en"] = dict(
  jd=("Japanese dictionary", "{jw} words, explained in 13 languages. Every JLPT N5–N1 word, plus words people often look up: anime and manga words, slang, onomatopoeia, proverbs, business Japanese, place names and Japanese names. Each word has its reading, romaji, audio, example sentences with furigana and a short quiz."),
  ed=("English dictionary", "{ew} words with meanings in 12 languages, pronunciation, example sentences and synonyms."),
  co=("Courses", "JLPT N5 to N1 vocabulary and reading in Vietnamese, Indonesian, Chinese and Korean. IELTS and TOEFL vocabulary, synonyms by score level and academic reading in Vietnamese, Chinese and Korean."),
- mw=("Maths worksheets", "for 22 school curricula in 20 countries and regions, from kindergarten to the last year of school, each in the language of the country:", "Each topic has a short lesson, 100 practice questions and a printable worksheet with answers."),
+ mw=("Maths worksheets", "for {nk} school curricula in {nc} countries and regions, from kindergarten to the last year of school, each in the language of the country:", "Each topic has a short lesson, 100 practice questions and a printable worksheet with answers."),
  gm=("Games", "Tangoda, a typing game for hiragana, katakana and basic Japanese words, with audio and meanings in 9 languages."),
  h_you="Made for you",
  you=[("Your language.", "Explanations are written in the language you read best."),
@@ -312,7 +312,7 @@ A["en"] = dict(
 )
 A["de"] = dict(
  title="Über aplus | Kostenlos lernen, passend für jeden",
- desc="aplus ist eine kostenlose Lernseite aus Japan: Mathe-Arbeitsblätter für 22 Lehrpläne in 20 Ländern und Regionen, Japanisch- und Englisch-Wörterbücher in vielen Sprachen, Kurse für JLPT, IELTS und TOEFL und Spiele. Die internationale Ausgabe von 英語漬け.com.",
+ desc="aplus ist eine kostenlose Lernseite aus Japan: Mathe-Arbeitsblätter für {nk} Lehrpläne in {nc} Ländern und Regionen, Japanisch- und Englisch-Wörterbücher in vielen Sprachen, Kurse für JLPT, IELTS und TOEFL und Spiele. Die internationale Ausgabe von 英語漬け.com.",
  h1="Kostenlos lernen, passend für jeden",
  lead="aplus ist eine kostenlose Lernseite aus Japan. Du wählst, was du brauchst: Mathe für die Schule, Japanisch oder Englisch. Du lernst in deiner Sprache, auf deinem Niveau, für deine Prüfung oder dein Schuljahr. Ohne Anmeldung, ohne Kosten.",
  stats=[("3 Mio.+", "Lernende pro Jahr auf 英語漬け.com"), ("100 Mio.+", "beantwortete Fragen"), ("2024", "Japan e-Learning Award, Sonderpreis Englischunterricht")],
@@ -320,7 +320,7 @@ A["de"] = dict(
  jd=("Japanisch-Wörterbuch", "{jw} Wörter, erklärt in 13 Sprachen, auch auf Deutsch. Alle Wörter für JLPT N5–N1 und Wörter, die oft gesucht werden: aus Anime und Manga, Umgangssprache, Lautmalerei, Sprichwörter, Geschäftsjapanisch, Ortsnamen und japanische Namen. Zu jedem Wort gibt es Lesung, Romaji, Aussprache, Beispielsätze mit Furigana und ein kurzes Quiz."),
  ed=("Englisch-Wörterbuch", "{ew} Wörter mit Bedeutungen in 12 Sprachen, auch auf Deutsch, dazu Aussprache, Beispielsätze und Synonyme."),
  co=("Kurse", "Wortschatz und Lesen für JLPT N5 bis N1 auf Vietnamesisch, Indonesisch, Chinesisch und Koreanisch. Wortschatz, Synonyme und Lesetexte für IELTS und TOEFL auf Vietnamesisch, Chinesisch und Koreanisch."),
- mw=("Mathe-Arbeitsblätter", "für 22 Lehrpläne in 20 Ländern und Regionen, vom Kindergarten bis zum letzten Schuljahr, jeweils in der Sprache des Landes:", "Zu jedem Thema gibt es eine kurze Erklärung, 100 Übungsaufgaben und ein Arbeitsblatt mit Lösungen."),
+ mw=("Mathe-Arbeitsblätter", "für {nk} Lehrpläne in {nc} Ländern und Regionen, vom Kindergarten bis zum letzten Schuljahr, jeweils in der Sprache des Landes:", "Zu jedem Thema gibt es eine kurze Erklärung, 100 Übungsaufgaben und ein Arbeitsblatt mit Lösungen."),
  gm=("Spiele", "Tangoda, ein Tippspiel für Hiragana, Katakana und einfache japanische Wörter, mit Aussprache und Bedeutungen in 9 Sprachen."),
  h_you="Passend für dich",
  you=[("Deine Sprache.", "Die Erklärungen sind in der Sprache geschrieben, die du am besten liest."),
@@ -340,7 +340,7 @@ A["de"] = dict(
 )
 A["fr"] = dict(
  title="À propos d’aplus | Apprendre gratuitement, à la mesure de chacun",
- desc="aplus est un site d’apprentissage gratuit venu du Japon : des fiches de maths pour 22 programmes scolaires dans 20 pays et régions, des dictionnaires de japonais et d’anglais en plusieurs langues, des cours pour le JLPT, l’IELTS et le TOEFL, et des jeux. L’édition internationale de 英語漬け.com.",
+ desc="aplus est un site d’apprentissage gratuit venu du Japon : des fiches de maths pour {nk} programmes scolaires dans {nc} pays et régions, des dictionnaires de japonais et d’anglais en plusieurs langues, des cours pour le JLPT, l’IELTS et le TOEFL, et des jeux. L’édition internationale de 英語漬け.com.",
  h1="Apprendre gratuitement, à la mesure de chacun",
  lead="aplus est un site d’apprentissage gratuit venu du Japon. Tu choisis ce dont tu as besoin : les maths de l’école, le japonais ou l’anglais. Tu apprends dans ta langue, à ton niveau, pour ton examen ou ta classe. Sans inscription et sans frais.",
  stats=[("3 M+", "apprenants par an sur 英語漬け.com"), ("100 M+", "réponses données"), ("2024", "Japan e-Learning Award, prix spécial de l’enseignement de l’anglais")],
@@ -348,7 +348,7 @@ A["fr"] = dict(
  jd=("Dictionnaire japonais", "{jw} mots, expliqués en 13 langues, dont le français. Tous les mots du JLPT N5–N1, et les mots souvent recherchés : vocabulaire des animes et des mangas, argot, onomatopées, proverbes, japonais des affaires, noms de lieux et prénoms japonais. Chaque mot a sa lecture, son rōmaji, l’audio, des phrases d’exemple avec furigana et un petit quiz."),
  ed=("Dictionnaire anglais", "{ew} mots avec leur sens en 12 langues, dont le français, la prononciation, des phrases d’exemple et des synonymes."),
  co=("Cours", "vocabulaire et lecture du JLPT N5 à N1 en vietnamien, indonésien, chinois et coréen. Vocabulaire, synonymes et lecture pour l’IELTS et le TOEFL en vietnamien, chinois et coréen."),
- mw=("Fiches de maths", "pour 22 programmes scolaires dans 20 pays et régions, de la maternelle à la dernière année, chacune dans la langue du pays :", "Chaque thème a une courte leçon, 100 exercices et une fiche corrigée à imprimer."),
+ mw=("Fiches de maths", "pour {nk} programmes scolaires dans {nc} pays et régions, de la maternelle à la dernière année, chacune dans la langue du pays :", "Chaque thème a une courte leçon, 100 exercices et une fiche corrigée à imprimer."),
  gm=("Jeux", "Tangoda, un jeu de frappe pour les hiragana, les katakana et les mots japonais de base, avec l’audio et le sens en 9 langues."),
  h_you="Fait pour toi",
  you=[("Ta langue.", "Les explications sont écrites dans la langue que tu lis le mieux."),
@@ -368,7 +368,7 @@ A["fr"] = dict(
 )
 A["it"] = dict(
  title="Chi siamo | aplus, imparare gratis su misura",
- desc="aplus è un sito gratuito per imparare, creato in Giappone: schede di matematica per 22 programmi scolastici in 20 paesi e regioni, dizionari di giapponese e inglese, corsi per JLPT, IELTS e TOEFL e giochi. L’edizione internazionale di 英語漬け.com.",
+ desc="aplus è un sito gratuito per imparare, creato in Giappone: schede di matematica per {nk} programmi scolastici in {nc} paesi e regioni, dizionari di giapponese e inglese, corsi per JLPT, IELTS e TOEFL e giochi. L’edizione internazionale di 英語漬け.com.",
  h1="Imparare gratis, su misura per ognuno",
  lead="aplus è un sito gratuito per imparare, creato in Giappone. Scegli quello che ti serve: la matematica della scuola, il giapponese o l’inglese. Impari nella tua lingua, al tuo livello, per il tuo esame o la tua classe. Senza registrazione e senza costi.",
  stats=[("3 mln+", "studenti all’anno su 英語漬け.com"), ("100 mln+", "risposte date"), ("2024", "Japan e-Learning Award, premio speciale per l’insegnamento dell’inglese")],
@@ -376,7 +376,7 @@ A["it"] = dict(
  jd=("Dizionario di giapponese", "{jw} parole spiegate in 13 lingue. Tutte le parole del JLPT N5–N1 e le parole più cercate: anime e manga, slang, onomatopee, proverbi, giapponese per il lavoro, nomi di luoghi e nomi giapponesi. Ogni parola ha lettura, romaji, audio, frasi di esempio con furigana e un breve quiz."),
  ed=("Dizionario di inglese", "{ew} parole con significati in 12 lingue, pronuncia, frasi di esempio e sinonimi."),
  co=("Corsi", "vocabolario e lettura per il JLPT dal N5 all’N1 in vietnamita, indonesiano, cinese e coreano. Vocabolario, sinonimi e lettura per IELTS e TOEFL in vietnamita, cinese e coreano."),
- mw=("Schede di matematica", "per 22 programmi scolastici in 20 paesi e regioni, dalla scuola dell’infanzia all’ultimo anno, ognuna nella lingua del paese:", "Ogni argomento ha una breve lezione, 100 esercizi e una scheda da stampare con le soluzioni."),
+ mw=("Schede di matematica", "per {nk} programmi scolastici in {nc} paesi e regioni, dalla scuola dell’infanzia all’ultimo anno, ognuna nella lingua del paese:", "Ogni argomento ha una breve lezione, 100 esercizi e una scheda da stampare con le soluzioni."),
  gm=("Giochi", "Tangoda, un gioco di digitazione per hiragana, katakana e parole giapponesi di base, con audio e significati in 9 lingue."),
  h_you="Su misura per te",
  you=[("La tua lingua.", "Le spiegazioni sono scritte nella lingua che leggi meglio."),
@@ -396,7 +396,7 @@ A["it"] = dict(
 )
 A["es"] = dict(
  title="Quiénes somos | aplus, aprender gratis a tu medida",
- desc="aplus es un sitio gratuito para aprender, creado en Japón: fichas de matemáticas para 22 currículos escolares en 20 países y regiones, diccionarios de japonés e inglés en varios idiomas, cursos para el JLPT, IELTS y TOEFL, y juegos. La edición internacional de 英語漬け.com.",
+ desc="aplus es un sitio gratuito para aprender, creado en Japón: fichas de matemáticas para {nk} currículos escolares en {nc} países y regiones, diccionarios de japonés e inglés en varios idiomas, cursos para el JLPT, IELTS y TOEFL, y juegos. La edición internacional de 英語漬け.com.",
  h1="Aprender gratis, a la medida de cada uno",
  lead="aplus es un sitio gratuito para aprender, creado en Japón. Tú eliges lo que necesitas: las matemáticas del colegio, japonés o inglés. Aprendes en tu idioma, a tu nivel, para tu examen o tu curso. Sin registro y sin pagar nada.",
  stats=[("3 M+", "estudiantes al año en 英語漬け.com"), ("100 M+", "preguntas respondidas"), ("2024", "Japan e-Learning Award, premio especial de enseñanza del inglés")],
@@ -404,7 +404,7 @@ A["es"] = dict(
  jd=("Diccionario de japonés", "{jw} palabras explicadas en 13 idiomas, entre ellos el español. Todas las palabras del JLPT N5–N1 y las palabras que más se buscan: de anime y manga, jerga, onomatopeyas, refranes, japonés de negocios, nombres de lugares y nombres japoneses. Cada palabra tiene lectura, romaji, audio, ejemplos con furigana y un pequeño quiz."),
  ed=("Diccionario de inglés", "{ew} palabras con significados en 12 idiomas, entre ellos el español, pronunciación, ejemplos y sinónimos."),
  co=("Cursos", "vocabulario y lectura del JLPT N5 a N1 en vietnamita, indonesio, chino y coreano. Vocabulario, sinónimos y lectura para IELTS y TOEFL en vietnamita, chino y coreano."),
- mw=("Fichas de matemáticas", "para 22 currículos escolares de 20 países y regiones, desde infantil hasta el último curso, cada una en el idioma del país:", "Cada tema tiene una lección breve, 100 ejercicios y una ficha para imprimir con soluciones."),
+ mw=("Fichas de matemáticas", "para {nk} currículos escolares de {nc} países y regiones, desde infantil hasta el último curso, cada una en el idioma del país:", "Cada tema tiene una lección breve, 100 ejercicios y una ficha para imprimir con soluciones."),
  gm=("Juegos", "Tangoda, un juego de mecanografía para hiragana, katakana y palabras japonesas básicas, con audio y significados en 9 idiomas."),
  h_you="Hecho para ti",
  you=[("Tu idioma.", "Las explicaciones están escritas en el idioma que mejor lees."),
@@ -424,7 +424,7 @@ A["es"] = dict(
 )
 A["pt"] = dict(
  title="Sobre o aplus | Aprender de graça, do jeito de cada um",
- desc="O aplus é um site gratuito para aprender, criado no Japão: atividades de matemática para 22 currículos escolares em 20 países e regiões, dicionários de japonês e inglês em vários idiomas, cursos para JLPT, IELTS e TOEFL, e jogos. A edição internacional do 英語漬け.com.",
+ desc="O aplus é um site gratuito para aprender, criado no Japão: atividades de matemática para {nk} currículos escolares em {nc} países e regiões, dicionários de japonês e inglês em vários idiomas, cursos para JLPT, IELTS e TOEFL, e jogos. A edição internacional do 英語漬け.com.",
  h1="Aprender de graça, do jeito de cada um",
  lead="O aplus é um site gratuito para aprender, criado no Japão. Você escolhe o que precisa: a matemática da escola, japonês ou inglês. Você aprende no seu idioma, no seu nível, para a sua prova ou o seu ano escolar. Sem cadastro e sem pagar nada.",
  stats=[("3 mi+", "estudantes por ano no 英語漬け.com"), ("100 mi+", "questões respondidas"), ("2024", "Japan e-Learning Award, prêmio especial de ensino de inglês")],
@@ -432,7 +432,7 @@ A["pt"] = dict(
  jd=("Dicionário de japonês", "{jw} palavras explicadas em 13 idiomas, incluindo o português. Todas as palavras do JLPT N5–N1 e as palavras mais procuradas: de anime e mangá, gírias, onomatopeias, provérbios, japonês para negócios, nomes de lugares e nomes japoneses. Cada palavra tem leitura, romaji, áudio, frases de exemplo com furigana e um quiz rápido."),
  ed=("Dicionário de inglês", "{ew} palavras com significados em 12 idiomas, incluindo o português, pronúncia, frases de exemplo e sinônimos."),
  co=("Cursos", "vocabulário e leitura do JLPT N5 ao N1 em vietnamita, indonésio, chinês e coreano. Vocabulário, sinônimos e leitura para IELTS e TOEFL em vietnamita, chinês e coreano."),
- mw=("Atividades de matemática", "para 22 currículos escolares de 20 países e regiões, da educação infantil ao último ano, cada uma no idioma do país:", "Cada tema tem uma explicação curta, 100 exercícios e uma atividade para imprimir com gabarito."),
+ mw=("Atividades de matemática", "para {nk} currículos escolares de {nc} países e regiões, da educação infantil ao último ano, cada uma no idioma do país:", "Cada tema tem uma explicação curta, 100 exercícios e uma atividade para imprimir com gabarito."),
  gm=("Jogos", "Tangoda, um jogo de digitação de hiragana, katakana e palavras básicas em japonês, com áudio e significados em 9 idiomas."),
  h_you="Feito para você",
  you=[("Seu idioma.", "As explicações são escritas no idioma que você lê melhor."),
@@ -452,7 +452,7 @@ A["pt"] = dict(
 )
 A["tr"] = dict(
  title="aplus hakkında | Herkese göre ücretsiz öğrenme",
- desc="aplus, Japonya’dan ücretsiz bir öğrenme sitesi: 20 ülke ve bölgede 22 öğretim programına uygun matematik çalışma kâğıtları, Japonca ve İngilizce sözlükler, JLPT, IELTS ve TOEFL kursları ve oyunlar. 英語漬け.com’un uluslararası sürümü.",
+ desc="aplus, Japonya’dan ücretsiz bir öğrenme sitesi: {nc} ülke ve bölgede {nk} öğretim programına uygun matematik çalışma kâğıtları, Japonca ve İngilizce sözlükler, JLPT, IELTS ve TOEFL kursları ve oyunlar. 英語漬け.com’un uluslararası sürümü.",
  h1="Herkese göre ücretsiz öğrenme",
  lead="aplus, Japonya’dan ücretsiz bir öğrenme sitesi. İhtiyacın olanı sen seçersin: okul matematiği, Japonca ya da İngilizce. Kendi dilinde, kendi seviyende, sınavına ya da sınıfına göre öğrenirsin. Üyelik yok, ücret yok.",
  stats=[("3 milyon+", "yılda 英語漬け.com kullanıcısı"), ("100 milyon+", "cevaplanan soru"), ("2024", "Japan e-Learning Award, İngilizce Eğitimi Özel Ödülü")],
@@ -460,7 +460,7 @@ A["tr"] = dict(
  jd=("Japonca sözlük", "13 dilde açıklanan {jw} kelime. JLPT N5–N1’in bütün kelimeleri ve sık aranan kelimeler: anime ve manga kelimeleri, argo, yansıma sözcükler, atasözleri, iş Japoncası, yer adları ve Japon isimleri. Her kelimenin okunuşu, romajisi, sesi, furiganalı örnek cümleleri ve kısa bir testi var."),
  ed=("İngilizce sözlük", "12 dilde anlamları, telaffuzu, örnek cümleleri ve eş anlamlılarıyla {ew} kelime."),
  co=("Kurslar", "Vietnamca, Endonezce, Çince ve Korece JLPT N5–N1 kelime ve okuma kursları. Vietnamca, Çince ve Korece IELTS ve TOEFL kelime, eş anlamlı kelime ve okuma kursları."),
- mw=("Matematik çalışma kâğıtları", "20 ülke ve bölgede 22 öğretim programı için, okul öncesinden son sınıfa kadar, her biri o ülkenin dilinde:", "Her konuda kısa bir anlatım, 100 alıştırma ve cevap anahtarlı, yazdırılabilir bir çalışma kâğıdı var."),
+ mw=("Matematik çalışma kâğıtları", "{nc} ülke ve bölgede {nk} öğretim programı için, okul öncesinden son sınıfa kadar, her biri o ülkenin dilinde:", "Her konuda kısa bir anlatım, 100 alıştırma ve cevap anahtarlı, yazdırılabilir bir çalışma kâğıdı var."),
  gm=("Oyunlar", "Tangoda: hiragana, katakana ve temel Japonca kelimeler için bir klavye oyunu; sesli ve 9 dilde anlamlı."),
  h_you="Sana göre",
  you=[("Senin dilin.", "Açıklamalar en iyi okuduğun dilde yazılır."),
@@ -503,7 +503,7 @@ _MF = '<a href="/mailform/?lang=%s">%s</a>'
 _LN = '<a href="{line}" target="_blank" rel="noopener">%s</a>'
 A["ja"] = dict(
  title="aplus について | 一人ひとりに合った無料の学び",
- desc="aplus は日本発の無料学習サイトです。13言語の日本語辞書と英語辞書、JLPT・IELTS・TOEFL の講座、20の国と地域・22の教育課程に合わせた算数・数学プリント、ゲームがあります。英語漬け.com の海外版です。",
+ desc="aplus は日本発の無料学習サイトです。13言語の日本語辞書と英語辞書、JLPT・IELTS・TOEFL の講座、{nc}の国と地域・{nk}の教育課程に合わせた算数・数学プリント、ゲームがあります。英語漬け.com の海外版です。",
  h1="一人ひとりに合った、無料の学び",
  lead="aplus は日本発の無料学習サイトです。日本語、英語、学校の算数・数学から、必要なものを選べます。自分の言葉で、自分のレベルで、受ける試験や学年に合わせて学べます。会員登録も料金もいりません。",
  stats=[("300万人超", "英語漬け.com の年間利用者"), ("1億問以上", "これまでに解かれた問題"), ("2024", "日本e-Learning大賞 英語教育特別部門賞")],
@@ -511,7 +511,7 @@ A["ja"] = dict(
  jd=("日本語辞書", "{jw}語を13言語で説明。JLPT N5〜N1 のすべての単語に加え、アニメ・マンガの言葉、スラング、オノマトペ、ことわざ、ビジネス日本語、地名、日本人の名前など、よく調べられる言葉を収録しています。読み方、ローマ字、音声、ふりがな付きの例文、小テストがあります。"),
  ed=("英語辞書", "{ew}語。12言語の意味、発音、例文、類義語があります。"),
  co=("講座", "JLPT N5〜N1 の単語と読解（ベトナム語・インドネシア語・中国語・韓国語）。IELTS・TOEFL の単語、点数別の類義語、学術的な読解（ベトナム語・中国語・韓国語）。"),
- mw=("算数・数学プリント", "20の国と地域・22の教育課程に合わせ、幼稚園から高校の最終学年まで、それぞれの国の言葉で作っています", "各単元に短いレッスン、100問の練習問題、解答付きの印刷用プリントがあります。"),
+ mw=("算数・数学プリント", "{nc}の国と地域・{nk}の教育課程に合わせ、幼稚園から高校の最終学年まで、それぞれの国の言葉で作っています", "各単元に短いレッスン、100問の練習問題、解答付きの印刷用プリントがあります。"),
  gm=("ゲーム", "単語打。ひらがな・カタカナ・基本の単語をタイピングで覚えるゲームです。音声と9言語の意味付き。"),
  h_you="あなたに合わせて",
  you=[("あなたの言葉で。", "説明は、いちばん読みやすい言葉で書いています。"),
@@ -531,7 +531,7 @@ A["ja"] = dict(
 )
 A["vi"] = dict(
  title="Giới thiệu aplus | Học miễn phí, phù hợp với từng người",
- desc="aplus là trang học miễn phí từ Nhật Bản: từ điển tiếng Nhật và tiếng Anh nhiều ngôn ngữ, khóa học JLPT, IELTS, TOEFL, bài tập toán theo 22 chương trình của 20 quốc gia và vùng lãnh thổ, và trò chơi. Phiên bản quốc tế của 英語漬け.com.",
+ desc="aplus là trang học miễn phí từ Nhật Bản: từ điển tiếng Nhật và tiếng Anh nhiều ngôn ngữ, khóa học JLPT, IELTS, TOEFL, bài tập toán theo {nk} chương trình của {nc} quốc gia và vùng lãnh thổ, và trò chơi. Phiên bản quốc tế của 英語漬け.com.",
  h1="Học miễn phí, phù hợp với từng người",
  lead="aplus là trang học miễn phí từ Nhật Bản. Bạn chọn điều mình cần: tiếng Nhật, tiếng Anh hoặc toán ở trường. Bạn học bằng tiếng mẹ đẻ, đúng trình độ, đúng kỳ thi hoặc lớp học của mình. Không cần đăng ký, không mất phí.",
  stats=[("3 triệu+", "người học mỗi năm trên 英語漬け.com"), ("100 triệu+", "câu hỏi đã được trả lời"), ("2024", "Giải thưởng e-Learning Nhật Bản, giải đặc biệt về giáo dục tiếng Anh")],
@@ -539,7 +539,7 @@ A["vi"] = dict(
  jd=("Từ điển tiếng Nhật", "{jw} từ, giải thích bằng 13 ngôn ngữ, có tiếng Việt. Tất cả từ JLPT N5–N1 và những từ hay được tra: từ trong anime và manga, tiếng lóng, từ tượng thanh, tục ngữ, tiếng Nhật thương mại, địa danh và tên người Nhật. Mỗi từ có cách đọc, romaji, phát âm, câu ví dụ có furigana và bài kiểm tra ngắn."),
  ed=("Từ điển tiếng Anh", "{ew} từ, có nghĩa bằng 12 ngôn ngữ (có tiếng Việt), phát âm, câu ví dụ và từ đồng nghĩa."),
  co=("Khóa học", "từ vựng và đọc hiểu JLPT N5 đến N1 bằng tiếng Việt, tiếng Indonesia, tiếng Trung và tiếng Hàn. Từ vựng IELTS, TOEFL, từ đồng nghĩa theo mức điểm và đọc hiểu học thuật bằng tiếng Việt, tiếng Trung và tiếng Hàn."),
- mw=("Bài tập toán", "theo 22 chương trình của 20 quốc gia và vùng lãnh thổ, từ mẫu giáo đến năm cuối phổ thông, mỗi bộ bằng ngôn ngữ của nước đó:", "Mỗi chủ đề có bài học ngắn, 100 câu luyện tập và phiếu bài tập in được, có đáp án."),
+ mw=("Bài tập toán", "theo {nk} chương trình của {nc} quốc gia và vùng lãnh thổ, từ mẫu giáo đến năm cuối phổ thông, mỗi bộ bằng ngôn ngữ của nước đó:", "Mỗi chủ đề có bài học ngắn, 100 câu luyện tập và phiếu bài tập in được, có đáp án."),
  gm=("Trò chơi", "Tangoda, trò chơi gõ phím để nhớ hiragana, katakana và từ tiếng Nhật cơ bản, có phát âm và nghĩa bằng 9 ngôn ngữ."),
  h_you="Dành riêng cho bạn",
  you=[("Ngôn ngữ của bạn.", "Lời giải thích được viết bằng ngôn ngữ bạn đọc tốt nhất."),
@@ -559,7 +559,7 @@ A["vi"] = dict(
 )
 A["id"] = dict(
  title="Tentang aplus | Belajar gratis, sesuai untuk setiap orang",
- desc="aplus adalah situs belajar gratis dari Jepang: kamus bahasa Jepang dan Inggris dalam banyak bahasa, kursus JLPT, IELTS, dan TOEFL, lembar kerja matematika untuk 22 kurikulum di 20 negara dan wilayah, serta permainan. Edisi internasional 英語漬け.com.",
+ desc="aplus adalah situs belajar gratis dari Jepang: kamus bahasa Jepang dan Inggris dalam banyak bahasa, kursus JLPT, IELTS, dan TOEFL, lembar kerja matematika untuk {nk} kurikulum di {nc} negara dan wilayah, serta permainan. Edisi internasional 英語漬け.com.",
  h1="Belajar gratis, sesuai untuk setiap orang",
  lead="aplus adalah situs belajar gratis dari Jepang. Kamu memilih yang kamu butuhkan: bahasa Jepang, bahasa Inggris, atau matematika sekolah. Kamu belajar dalam bahasamu, sesuai level, ujian, atau kelasmu. Tanpa daftar, tanpa biaya.",
  stats=[("3 juta+", "pelajar per tahun di 英語漬け.com"), ("100 juta+", "soal telah dijawab"), ("2024", "Japan e-Learning Award, Penghargaan Khusus Pendidikan Bahasa Inggris")],
@@ -567,7 +567,7 @@ A["id"] = dict(
  jd=("Kamus bahasa Jepang", "{jw} kata, dijelaskan dalam 13 bahasa, termasuk bahasa Indonesia. Semua kata JLPT N5–N1 dan kata yang sering dicari: kata dari anime dan manga, slang, onomatope, peribahasa, bahasa Jepang bisnis, nama tempat, dan nama orang Jepang. Setiap kata punya cara baca, romaji, audio, contoh kalimat dengan furigana, dan kuis singkat."),
  ed=("Kamus bahasa Inggris", "{ew} kata dengan arti dalam 12 bahasa (termasuk bahasa Indonesia), pengucapan, contoh kalimat, dan sinonim."),
  co=("Kursus", "kosakata dan membaca JLPT N5 sampai N1 dalam bahasa Vietnam, Indonesia, Mandarin, dan Korea. Kosakata IELTS dan TOEFL, sinonim per level skor, dan membaca akademik dalam bahasa Vietnam, Mandarin, dan Korea."),
- mw=("Lembar kerja matematika", "untuk 22 kurikulum di 20 negara dan wilayah, dari TK sampai kelas terakhir, masing-masing dalam bahasa negaranya:", "Setiap topik punya pelajaran singkat, 100 soal latihan, dan lembar kerja yang bisa dicetak beserta kunci jawaban."),
+ mw=("Lembar kerja matematika", "untuk {nk} kurikulum di {nc} negara dan wilayah, dari TK sampai kelas terakhir, masing-masing dalam bahasa negaranya:", "Setiap topik punya pelajaran singkat, 100 soal latihan, dan lembar kerja yang bisa dicetak beserta kunci jawaban."),
  gm=("Permainan", "Tangoda, permainan mengetik untuk menghafal hiragana, katakana, dan kata dasar bahasa Jepang, dengan audio dan arti dalam 9 bahasa."),
  h_you="Dibuat untukmu",
  you=[("Bahasamu.", "Penjelasan ditulis dalam bahasa yang paling mudah kamu baca."),
@@ -587,7 +587,7 @@ A["id"] = dict(
 )
 A["zh"] = dict(
  title="关于 aplus | 为每个人量身打造的免费学习",
- desc="aplus 是来自日本的免费学习网站：多语种的日语词典和英语词典，JLPT、IELTS、TOEFL 课程，符合20个国家和地区22套课程标准的数学练习，以及游戏。它是英語漬け.com 的海外版。",
+ desc="aplus 是来自日本的免费学习网站：多语种的日语词典和英语词典，JLPT、IELTS、TOEFL 课程，符合{nc}个国家和地区{nk}套课程标准的数学练习，以及游戏。它是英語漬け.com 的海外版。",
  h1="为每个人量身打造的免费学习",
  lead="aplus 是来自日本的免费学习网站。你可以选择自己需要的：日语、英语或学校的数学。用你的母语、按你的水平、配合你的考试或年级来学习。无需注册，完全免费。",
  stats=[("300万+", "英語漬け.com 年度学习者"), ("1亿+", "累计作答题数"), ("2024", "日本 e-Learning 大奖 英语教育特别奖")],
@@ -595,7 +595,7 @@ A["zh"] = dict(
  jd=("日语词典", "{jw} 个词，用13种语言解释，包括中文。收录 JLPT N5–N1 的全部词汇，以及常被查询的词：动漫词汇、流行语、拟声拟态词、谚语、商务日语、地名和日本人名。每个词都有读音、罗马字、发音、带假名注音的例句和小测验。"),
  ed=("英语词典", "{ew} 个词，有12种语言的释义（包括中文）、发音、例句和同义词。"),
  co=("课程", "JLPT N5 到 N1 的词汇和阅读，附越南语、印尼语、中文和韩语释义。IELTS、TOEFL 词汇、按分数段的同义词和学术阅读，附越南语、中文和韩语释义。"),
- mw=("数学练习", "符合20个国家和地区的22套课程标准，从幼儿园到高中最后一年，都用该国的语言编写", "每个单元都有简短讲解、100道练习题和带答案的打印练习纸。"),
+ mw=("数学练习", "符合{nc}个国家和地区的{nk}套课程标准，从幼儿园到高中最后一年，都用该国的语言编写", "每个单元都有简短讲解、100道练习题和带答案的打印练习纸。"),
  gm=("游戏", "单词打：用打字记住平假名、片假名和基础日语单词的游戏，附发音和9种语言的释义。"),
  h_you="为你量身打造",
  you=[("你的语言。", "讲解用你最容易读懂的语言来写。"),
@@ -615,7 +615,7 @@ A["zh"] = dict(
 )
 A["tw"] = dict(
  title="關於 aplus | 為每個人量身打造的免費學習",
- desc="aplus 是來自日本的免費學習網站：多語種的日語辭典和英語辭典，JLPT、IELTS、TOEFL 課程，符合20個國家和地區22套課綱的數學練習，以及遊戲。它是英語漬け.com 的海外版。",
+ desc="aplus 是來自日本的免費學習網站：多語種的日語辭典和英語辭典，JLPT、IELTS、TOEFL 課程，符合{nc}個國家和地區{nk}套課綱的數學練習，以及遊戲。它是英語漬け.com 的海外版。",
  h1="為每個人量身打造的免費學習",
  lead="aplus 是來自日本的免費學習網站。你可以選擇自己需要的：日語、英語或學校的數學。用你的母語、依你的程度、配合你的考試或年級來學習。無需註冊，完全免費。",
  stats=[("300萬+", "英語漬け.com 年度學習者"), ("1億+", "累計作答題數"), ("2024", "日本 e-Learning 大獎 英語教育特別獎")],
@@ -623,7 +623,7 @@ A["tw"] = dict(
  jd=("日語辭典", "{jw} 個詞，用13種語言解釋，包括中文。收錄 JLPT N5–N1 的全部詞彙，以及常被查詢的詞：動漫詞彙、流行語、擬聲擬態詞、諺語、商務日語、地名和日本人名。每個詞都有讀音、羅馬字、發音、附假名標音的例句和小測驗。"),
  ed=("英語辭典", "{ew} 個詞，有12種語言的釋義（包括中文）、發音、例句和同義詞。"),
  co=("課程", "JLPT N5 到 N1 的詞彙和閱讀，附越南語、印尼語、中文和韓語釋義。IELTS、TOEFL 詞彙、按分數段的同義詞和學術閱讀，附越南語、中文和韓語釋義。"),
- mw=("數學練習", "符合20個國家和地區的22套課綱，從幼兒園到高中最後一年，都用該國的語言編寫", "每個單元都有簡短講解、100道練習題和附答案的列印練習單。"),
+ mw=("數學練習", "符合{nc}個國家和地區的{nk}套課綱，從幼兒園到高中最後一年，都用該國的語言編寫", "每個單元都有簡短講解、100道練習題和附答案的列印練習單。"),
  gm=("遊戲", "單語打：用打字記住平假名、片假名和基礎日語單字的遊戲，附發音和9種語言的釋義。"),
  h_you="為你量身打造",
  you=[("你的語言。", "講解用你最容易讀懂的語言來寫。"),
@@ -643,7 +643,7 @@ A["tw"] = dict(
 )
 A["ko"] = dict(
  title="aplus 소개 | 한 사람 한 사람에게 맞춘 무료 학습",
- desc="aplus는 일본에서 만든 무료 학습 사이트입니다. 여러 언어로 된 일본어 사전과 영어 사전, JLPT·IELTS·TOEFL 강좌, 20개 나라와 지역의 22개 교육과정에 맞춘 수학 학습지, 게임이 있습니다. 英語漬け.com의 해외판입니다.",
+ desc="aplus는 일본에서 만든 무료 학습 사이트입니다. 여러 언어로 된 일본어 사전과 영어 사전, JLPT·IELTS·TOEFL 강좌, {nc}개 나라와 지역의 {nk}개 교육과정에 맞춘 수학 학습지, 게임이 있습니다. 英語漬け.com의 해외판입니다.",
  h1="한 사람 한 사람에게 맞춘 무료 학습",
  lead="aplus는 일본에서 만든 무료 학습 사이트입니다. 일본어, 영어, 학교 수학 중에서 필요한 것을 고르세요. 내 언어로, 내 수준에 맞게, 내 시험이나 학년에 맞춰 배울 수 있습니다. 회원가입도 비용도 필요 없습니다.",
  stats=[("300만+", "英語漬け.com 연간 학습자"), ("1억+", "지금까지 푼 문제 수"), ("2024", "일본 e-Learning 대상 영어교육 특별부문상")],
@@ -651,7 +651,7 @@ A["ko"] = dict(
  jd=("일본어 사전", "13개 언어로 설명한 {jw}단어(한국어 포함). JLPT N5~N1의 모든 단어와 애니메이션·만화 단어, 속어, 의성어·의태어, 속담, 비즈니스 일본어, 지명, 일본인 이름 등 자주 찾는 단어를 담았습니다. 단어마다 읽는 법, 로마자, 발음, 후리가나가 달린 예문, 짧은 퀴즈가 있습니다."),
  ed=("영어 사전", "12개 언어의 뜻(한국어 포함), 발음, 예문, 동의어가 있는 {ew}단어."),
  co=("강좌", "JLPT N5~N1 단어와 독해(베트남어·인도네시아어·중국어·한국어). IELTS·TOEFL 단어, 점수대별 동의어, 학술 독해(베트남어·중국어·한국어)."),
- mw=("수학 학습지", "20개 나라와 지역의 22개 교육과정에 맞춰 유치원부터 고등학교 마지막 학년까지, 각 나라의 언어로 만들었습니다:", "단원마다 짧은 설명, 연습 문제 100개, 정답이 있는 인쇄용 학습지가 있습니다."),
+ mw=("수학 학습지", "{nc}개 나라와 지역의 {nk}개 교육과정에 맞춰 유치원부터 고등학교 마지막 학년까지, 각 나라의 언어로 만들었습니다:", "단원마다 짧은 설명, 연습 문제 100개, 정답이 있는 인쇄용 학습지가 있습니다."),
  gm=("게임", "단어타: 타자로 히라가나·가타카나·기초 일본어 단어를 익히는 게임입니다. 발음과 9개 언어의 뜻이 있습니다."),
  h_you="나에게 맞춰",
  you=[("내 언어로.", "설명은 가장 읽기 쉬운 언어로 씁니다."),
@@ -668,4 +668,256 @@ A["ko"] = dict(
      ("문의", _MF % ("ko", "문의 양식") + " (어떤 언어로든 가능). 보통 며칠 안에 답장합니다."),
      ("커뮤니티", _LN % "일본어 LINE 그룹")],
  pp="개인정보 처리방침", corp="회사 사이트",
+)
+
+
+# ------------------------------------------------------------------ 2026-11-26: スウェーデン語（sv）と、スウェーデン・ナイジェリアの算数
+LANGS.append("sv")
+NEW.append("sv")
+HREFLANG["sv"] = "sv"
+SEL.insert([k for k, _ in SEL].index("tr") + 1, ("sv", "Svenska"))
+LOCALE["sv"] = "sv_SE"
+MATH.insert([m[0] for m in MATH].index("ph") + 1, ("ng", "/worksheets/ng/maths/", "en", "Kindergarten – SSS 3 · NERDC curriculum"))
+MATH.insert([m[0] for m in MATH].index("tr") + 1, ("se", "/worksheets/se/matematik/", "sv", "Förskoleklass – gymnasiet · Lgr22 och Gy25"))
+SHORT["ng"] = "Kindergarten – SSS 3"
+OWN["en"].append("ng")
+OWN["sv"] = ["se"]
+CC["sv"] = dict(zip([m[0] for m in MATH if m[0] not in ("ng", "se")],
+                    "USA|Texas (USA)|Storbritannien|Kanada · Ontario|Kanada · British Columbia|Australien|Singapore|Indien|Sydafrika|Filippinerna|Tyskland|Schweiz|Frankrike|Italien|Spanien|Mexiko|Brasilien|Sydkorea|Kina|Taiwan|Indonesien|Turkiet".split("|")))
+for _L, (_se, _ng) in {"en": ("Sweden", "Nigeria"), "de": ("Schweden", "Nigeria"), "fr": ("Suède", "Nigeria"), "it": ("Svezia", "Nigeria"),
+                       "es": ("Suecia", "Nigeria"), "pt": ("Suécia", "Nigéria"), "tr": ("İsveç", "Nijerya"), "ja": ("スウェーデン", "ナイジェリア"),
+                       "vi": ("Thụy Điển", "Nigeria"), "id": ("Swedia", "Nigeria"), "zh": ("瑞典", "尼日利亚"), "tw": ("瑞典", "奈及利亞"),
+                       "ko": ("스웨덴", "나이지리아"), "sv": ("Sverige", "Nigeria")}.items():
+    CC[_L]["se"], CC[_L]["ng"] = _se, _ng
+assert all(set(CC[L]) == {m[0] for m in MATH} for L in LANGS)
+
+# 教育課程の数と 国・地域の数（文言の {nk} {nc} {nk1} {nk2}）
+NK = len(MATH)
+NC = len({m[0].split("-")[0] for m in MATH})
+
+T["sv"] = dict(
+ title="aplus | Lär dig gratis: matematik, japanska och engelska",
+ desc="Gratis arbetsblad i matematik enligt Lgr22 och Gy25 och {nk1} andra läroplaner, plus japanska (JLPT N5–N1) och engelska (IELTS, TOEFL). Ingen registrering.",
+ h1="Lär dig gratis,<br><em>på ditt sätt.</em>",
+ hp="Välj det du behöver: förklarat på ditt språk, anpassat till ditt prov eller din årskurs.",
+ about="Om oss", lang="Språk",
+ p_learn="Lär dig", p_prac="Öva", p_j="Japanska", p_e="Engelska", p_m="Matematik", p_my="Din årskurs",
+ j_h="Lär dig japanska", j_lead="Ordförråd för JLPT N5–N1 och en ordbok med {jw} ord: uttal, ljud och exempelmeningar, förklarade på engelska.",
+ j_dict="Japansk ordbok", j_dict_s="{jw} ord · på engelska", j_all="Alla 13 språk", j_all_s="Kurser och ordböcker",
+ e_h="Lär dig engelska", e_lead="Ordförråd för IELTS och TOEFL och en ordbok med {ew} ord och betydelser på 12 språk.",
+ e_dict="", e_dict_s="", e_all="Alla 12 språk", e_all_s="Kurser och ordböcker",
+ m_h="Arbetsblad i matematik", m_sub="För ditt land och din årskurs",
+ m_lead="Varje område följer läroplanen i ditt land: en kort genomgång, 100 övningsuppgifter och ett arbetsblad att skriva ut. Gratis hemma och i klassrummet.",
+ m_own="På svenska", m_oth="Andra länder", mine="För dig",
+ feats=[("Ditt språk", "Allt förklaras på ditt språk"), ("Ditt mål", "Ditt prov eller din årskurs"),
+        ("Smart repetition", "Fel svar kommer tillbaka"), ("10 minuter om dagen", "Gratis, ingen registrering")],
+ faq_h="Vanliga frågor",
+ faq=[("Är aplus gratis?", "Ja. Alla genomgångar, övningar, ljud och arbetsblad är gratis. Du behöver inte registrera dig."),
+      ("Vad kan jag lära mig?", "Matematik enligt läroplanen i ditt land, japanska för JLPT N5–N1 och engelska för IELTS och TOEFL. Den japanska ordboken har {jw} ord på 13 språk och den engelska ordboken {ew} ord på 12 språk."),
+      ("Följer arbetsbladen min skolas läroplan?", "Ja. Varje område följer en officiell läroplan: i Sverige Lgr22 för förskoleklass och årskurs 1–9 och Gy25 för gymnasiet (Matematik nivå 1c–5). Varje område har en kort genomgång, 100 övningsuppgifter och ett arbetsblad med facit."),
+      ("Hur länge ska jag öva varje dag?", "Ungefär 10 minuter. Uppgifter du svarar fel på kommer tillbaka tills du kan dem."),
+      ("Vem driver aplus?", "Aplus Inc. i Japan, teamet bakom 英語漬け.com, som över 3 miljoner elever använder varje år.")],
+ dc_k="Gratis gemenskap", dc_h="Fråga om japanska på Discord", dc_p="Har du fastnat på ett ord, en grammatikregel eller en replik i en anime? Fråga elever från hela världen. Du kan skriva på vilket språk som helst.", dc_b="Gå med på Discord",
+ ln_k="Bara på aplus", ln_h="Prata japanska med japaner", ln_p="Vår LINE-grupp är på japanska. Skriv på japanska, så svarar japaner dig. Korta meningar räcker.", ln_b="Gå med på LINE",
+ more="Nya ord och arbetsblad läggs till varje månad.",
+ f_j="Japanska", f_e="Engelska", f_g="Spel", f_m="Arbetsblad i matematik", f_a="Om oss", f_p="Integritet", f_c="Kontakt",
+ ld_list="Det här kan du lära dig på aplus", ld_j="Japansk ordbok på 13 språk", ld_e="Engelsk ordbok på 12 språk", ld_m="Arbetsblad i matematik",
+)
+A["sv"] = dict(
+ title="Om aplus | Gratis lärande anpassat för varje elev",
+ desc="aplus är en gratis webbplats för lärande från Japan: arbetsblad i matematik för {nk} läroplaner i {nc} länder och regioner, japanska och engelska ordböcker, kurser för JLPT, IELTS och TOEFL samt spel. Den internationella versionen av 英語漬け.com.",
+ h1="Gratis lärande, anpassat för varje elev",
+ lead="aplus är en gratis webbplats för lärande från Japan. Du väljer det du behöver: skolmatematik, japanska eller engelska. Du lär dig på ditt språk, på din nivå, för ditt prov eller din årskurs. Ingen registrering, inga avgifter.",
+ stats=[("3 milj.+", "elever per år på 英語漬け.com"), ("100 milj.+", "besvarade frågor"), ("2024", "Japan e-Learning Award, specialpris för engelskundervisning")],
+ h_what="Det här kan du lära dig",
+ jd=("Japansk ordbok", "{jw} ord förklarade på 13 språk. Alla ord för JLPT N5–N1 och ord som många slår upp: ord från anime och manga, slang, ljudhärmande ord, ordspråk, affärsjapanska, ortnamn och japanska namn. Varje ord har uttal, romaji, ljud, exempelmeningar med furigana och ett litet test."),
+ ed=("Engelsk ordbok", "{ew} ord med betydelser på 12 språk, uttal, exempelmeningar och synonymer."),
+ co=("Kurser", "Ordförråd och läsning för JLPT N5–N1 på vietnamesiska, indonesiska, kinesiska och koreanska. Ordförråd, synonymer och akademisk läsning för IELTS och TOEFL på vietnamesiska, kinesiska och koreanska."),
+ mw=("Arbetsblad i matematik", "för {nk} läroplaner i {nc} länder och regioner, från förskolan till skolans sista år, på respektive lands språk:", "Varje område har en kort genomgång, 100 övningsuppgifter och ett arbetsblad med facit att skriva ut."),
+ gm=("Spel", "Tangoda, ett skrivspel för hiragana, katakana och grundläggande japanska ord, med ljud och betydelser på 9 språk."),
+ h_you="Gjort för dig",
+ you=[("Ditt språk.", "Förklaringarna är skrivna på det språk du läser bäst."),
+      ("Ditt mål.", "Varje sida motsvarar en riktig provnivå eller en riktig årskurs, så du övar bara det du behöver."),
+      ("Ditt tempo.", "Ungefär 10 minuter om dagen i mobilen. Frågor du svarar fel på kommer tillbaka tills du kan dem."),
+      ("Gratis.", "Ingen registrering, inga avgifter. Dina framsteg sparas i din webbläsare.")],
+ h_exp="Byggt på erfarenheten från 英語漬け.com",
+ exp="英語漬け.com har hjälpt elever i Japan i många år med ordförrådstester, grammatik, läsning, skriv- och talövningar med AI och verktyg för skolor. Metoden bygger på över 100 miljoner besvarade frågor. aplus ger dig samma metod.",
+ h_mis="Vårt uppdrag",
+ mis="Bra lärande ska inte bero på var du bor eller vad du har råd med. Vi gör gratis, tydliga lektioner för varje land och varje språk, så att alla kan börja i dag.",
+ h_start="Börja lära dig", start="Börja ›",
+ h_op="Utgivare",
+ op=[("Namn", "Aplus Inc. (えいぷら Aplus)"), ("Land", "Japan"), ("Huvudtjänst", "英語漬け.com (eigo-duke.com)"), ("Webbplats", "https://www.apu2.com/"),
+     ("Kontakt", "<a href=\"/mailform/\">Kontaktformulär</a> (på vilket språk som helst). Vi svarar oftast inom några dagar."),
+     ("Gemenskap", "<a href=\"{line}\" target=\"_blank\" rel=\"noopener\">Japansk LINE-grupp</a>")],
+ pp="Integritetspolicy", corp="Företagets webbplats",
+)
+
+# ------------------------------------------------------------------ トップの 文言（ja vi id zh tw ko。以前は手作りの別ファイル）
+# j_c・e_c はその言語の講座（/japanese/vi/ など）、e_more は英語のセクションの前に足すリンク
+T["ja"].update(
+ title="aplus | 無料で学べる：英語・算数・数学・日本語",
+ desc="英語（英語漬け.com・IELTS・TOEFL）と、{nc}の国と地域・{nk}の教育課程に合わせた算数・数学プリント、13言語の日本語辞書。すべて無料、会員登録なし。",
+ h1="無料で学ぶ、<br><em>あなたに合わせて。</em>",
+ hp="必要なものを選んでください。あなたの言葉で、試験や学年に合わせて学べます。",
+ p_learn="学ぶ", p_prac="練習", p_j="日本語", p_e="英語", p_m="算数・数学", p_my="世界の教育課程",
+ j_h="日本語を学ぶ人へ", j_lead="日本語を学ぶ海外の人のための {jw} 語の辞書と JLPT N5〜N1 の講座。説明は13言語です。外国の友だちや生徒に紹介してください。",
+ j_dict="日本語辞書", j_dict_s="{jw}語 · 13言語", j_all="13言語のすべて", j_all_s="講座と辞書",
+ e_h="英語を学ぶ", e_lead="日本の学習者向けの 英語漬け.com（英検・TOEIC・文法・長文）と、{ew}語の英語辞書・IELTS・TOEFL の講座。",
+ e_more=[("https://www.eigo-duke.com/", "英語漬け.com", "英検・TOEIC・文法・長文読解")],
+ e_dict="", e_dict_s="", e_all="12言語のすべて", e_all_s="講座と辞書",
+ m_h="算数・数学プリント", m_sub="世界の国と学年に合わせて",
+ m_lead="どの単元も、その国の教育課程に合わせた短いレッスン、100問の練習問題、印刷用プリントがあります。帰国子女・インターナショナルスクールの子どもや、海外の算数に興味がある人に。無料です。",
+ m_own="", m_oth="国を選ぶ", mine="あなたへ",
+ feats=[("あなたの言葉で", "わかりやすい説明"), ("あなたの目標に", "試験や学年に合わせて"),
+        ("かしこい復習", "間違えた問題がまた出る"), ("1日10分", "無料・登録なし")],
+ faq_h="よくある質問",
+ faq=[("aplus は無料ですか？", "はい。レッスン、クイズ、音声、印刷用プリントはすべて無料です。会員登録もいりません。"),
+      ("何が学べますか？", "英語（日本の学習者は 英語漬け.com、ほかの国の人は IELTS・TOEFL）、海外の人のための日本語（JLPT N5〜N1）、世界の算数・数学です。日本語辞書は13言語で{jw}語、英語辞書は12言語で{ew}語です。"),
+      ("算数・数学プリントは日本の学校の内容ですか？", "いいえ。アメリカの Common Core、イギリスの National Curriculum など、{nc}の国と地域・{nk}の教育課程に合わせています。それぞれの国の言葉で書かれているので、英語で算数を学びたい子どもや、インターナショナルスクールの子どもにも使えます。"),
+      ("1日にどれくらい学べばいいですか？", "10分ほどです。間違えた問題は、覚えるまでくり返し出ます。"),
+      ("aplus はだれが作っていますか？", "日本の Aplus Inc. です。年間300万人以上が使う 英語漬け.com を作っているチームです。")],
+ dc_k="無料コミュニティ", dc_h="Discord で日本語の質問に答える", dc_p="世界の日本語学習者が、単語や文法、アニメのせりふについて質問しています。どの言語でも書きこめます。", dc_b="Discord に参加",
+ ln_k="aplus だけ", ln_h="日本語を学ぶ人と話そう", ln_p="LINE グループでは、世界の日本語学習者が日本語で書きこみます。日本人のあなたが返事をすると、とても喜ばれます。", ln_b="LINE に参加",
+ more="毎月、新しい単語とプリントを追加しています。",
+ ld_list="aplus で学べること", ld_j="13言語の日本語辞書", ld_e="英語漬け.com と英語辞書", ld_m="算数・数学プリント",
+ order="emj",
+)
+T["vi"].update(
+ title="aplus | Học miễn phí: tiếng Nhật, tiếng Anh và toán",
+ desc="Học tiếng Nhật (JLPT N5–N1) và tiếng Anh (IELTS, TOEFL) bằng tiếng Việt, với từ điển và khóa học miễn phí, cùng bài tập toán theo {nk} chương trình của {nc} quốc gia và vùng lãnh thổ. Không cần đăng ký.",
+ h1="Học miễn phí,<br><em>dành riêng cho bạn.</em>",
+ hp="Chọn điều bạn cần: giải thích bằng tiếng Việt, đúng với kỳ thi hoặc lớp học của bạn.",
+ p_learn="Học", p_prac="Luyện tập", p_j="Tiếng Nhật", p_e="Tiếng Anh", p_m="Toán", p_my="Theo chương trình",
+ j_h="Học tiếng Nhật", j_lead="Từ vựng và đọc hiểu JLPT N5–N1 bằng tiếng Việt, cùng từ điển {jw} từ có cách đọc, âm thanh và câu ví dụ.",
+ j_c="Khóa học JLPT", j_c_s="N5–N1 · bằng tiếng Việt",
+ j_dict="Từ điển tiếng Nhật", j_dict_s="{jw} từ · tiếng Việt", j_all="Cả 13 ngôn ngữ", j_all_s="Khóa học và từ điển",
+ e_h="Học tiếng Anh", e_lead="Từ vựng, từ đồng nghĩa và đọc hiểu IELTS, TOEFL bằng tiếng Việt, cùng từ điển {ew} từ.",
+ e_c="Khóa học IELTS · TOEFL", e_c_s="Từ vựng và đọc hiểu",
+ e_dict="Từ điển tiếng Anh", e_dict_s="{ew} từ · tiếng Việt", e_all="Cả 12 ngôn ngữ", e_all_s="Khóa học và từ điển",
+ m_h="Bài tập toán", m_sub="Theo quốc gia và lớp học",
+ m_lead="Mỗi bài theo chương trình chính thức của một quốc gia: bài học ngắn, 100 câu luyện tập và phiếu bài tập để in. Phù hợp cho học sinh trường quốc tế. Miễn phí.",
+ m_own="", m_oth="Chọn quốc gia", mine="Dành cho bạn",
+ feats=[("Ngôn ngữ của bạn", "Giải thích bằng tiếng Việt"), ("Mục tiêu của bạn", "Kỳ thi hoặc lớp học"),
+        ("Ôn tập thông minh", "Câu sai sẽ được hỏi lại"), ("10 phút mỗi ngày", "Miễn phí, không cần đăng ký")],
+ faq_h="Câu hỏi thường gặp",
+ faq=[("aplus có miễn phí không?", "Có. Tất cả bài học, bài kiểm tra, âm thanh và phiếu bài tập đều miễn phí. Không cần đăng ký."),
+      ("Tôi có thể học gì?", "Tiếng Nhật cho JLPT N5–N1 và tiếng Anh cho IELTS, TOEFL, giải thích bằng tiếng Việt. Từ điển tiếng Nhật có {jw} từ và từ điển tiếng Anh có {ew} từ. Ngoài ra còn có bài tập toán theo chương trình của {nc} quốc gia và vùng lãnh thổ."),
+      ("Có chương trình toán của Việt Nam không?", "Hiện chưa có. Bài tập toán theo các chương trình như Common Core (Hoa Kỳ), Singapore và Anh, phù hợp cho học sinh trường quốc tế hoặc muốn học toán bằng tiếng Anh."),
+      ("Mỗi ngày nên học bao lâu?", "Khoảng 10 phút. Những câu bạn làm sai sẽ được hỏi lại cho đến khi bạn nhớ."),
+      ("Ai làm aplus?", "Aplus Inc. ở Nhật Bản, đội ngũ làm ra 英語漬け.com, được hơn 3 triệu người dùng mỗi năm.")],
+ dc_k="Cộng đồng miễn phí", dc_h="Hỏi về tiếng Nhật trên Discord", dc_p="Bạn gặp khó với một từ, một điểm ngữ pháp hay một câu trong anime? Hãy hỏi người học khắp thế giới. Bạn có thể viết bằng bất kỳ ngôn ngữ nào.", dc_b="Tham gia Discord",
+ ln_k="Chỉ có ở aplus", ln_h="Nói tiếng Nhật với người Nhật", ln_p="Nhóm LINE của chúng tôi dùng tiếng Nhật. Bạn viết bằng tiếng Nhật, người Nhật sẽ trả lời. Câu ngắn cũng được.", ln_b="Tham gia LINE",
+ more="Mỗi tháng đều có thêm từ mới và phiếu bài tập.",
+ ld_list="Những gì bạn có thể học trên aplus", ld_j="Từ điển tiếng Nhật và khóa học JLPT bằng tiếng Việt", ld_e="Từ điển tiếng Anh và khóa học IELTS, TOEFL bằng tiếng Việt", ld_m="Bài tập toán",
+ order="jem",
+)
+T["id"].update(
+ title="aplus | Belajar gratis: matematika, bahasa Jepang dan bahasa Inggris",
+ desc="Latihan soal matematika sesuai Kurikulum Merdeka dan {nk1} kurikulum lain, serta bahasa Jepang (JLPT N5–N1) dan bahasa Inggris dengan kamus dalam bahasa Indonesia. Gratis, tanpa daftar.",
+ h1="Belajar gratis,<br><em>sesuai kebutuhanmu.</em>",
+ hp="Pilih yang kamu butuhkan: dijelaskan dalam bahasa Indonesia, sesuai ujian atau kelasmu.",
+ p_learn="Belajar", p_prac="Latihan", p_j="Bahasa Jepang", p_e="Bahasa Inggris", p_m="Matematika", p_my="Kelasmu",
+ j_h="Belajar bahasa Jepang", j_lead="Kosakata dan membaca JLPT N5–N1 dalam bahasa Indonesia, serta kamus {jw} kata dengan cara baca, suara dan contoh kalimat.",
+ j_c="Kursus JLPT", j_c_s="N5–N1 · bahasa Indonesia",
+ j_dict="Kamus bahasa Jepang", j_dict_s="{jw} kata · bahasa Indonesia", j_all="Semua 13 bahasa", j_all_s="Kursus dan kamus",
+ e_h="Belajar bahasa Inggris", e_lead="Kamus {ew} kata dengan arti dalam bahasa Indonesia, pengucapan dan contoh kalimat, untuk IELTS dan TOEFL.",
+ e_dict="Kamus bahasa Inggris", e_dict_s="{ew} kata · bahasa Indonesia", e_all="Semua 12 bahasa", e_all_s="Kursus dan kamus",
+ m_h="Lembar kerja matematika", m_sub="Untuk negaramu dan kelasmu",
+ m_lead="Setiap materi mengikuti kurikulum negaramu: penjelasan singkat, 100 soal latihan dan lembar kerja untuk dicetak. Gratis untuk di rumah dan di kelas.",
+ m_own="Dalam bahasa Indonesia", m_oth="Negara lain", mine="Untukmu",
+ feats=[("Bahasamu", "Semua dijelaskan dalam bahasamu"), ("Tujuanmu", "Ujian atau kelasmu"),
+        ("Ulangan pintar", "Soal yang salah muncul lagi"), ("10 menit sehari", "Gratis, tanpa daftar")],
+ faq_h="Pertanyaan umum",
+ faq=[("Apakah aplus gratis?", "Ya. Semua penjelasan, latihan, suara dan lembar kerja gratis. Tidak perlu mendaftar."),
+      ("Apa yang bisa saya pelajari?", "Matematika sesuai kurikulum negaramu, bahasa Jepang untuk JLPT N5–N1 dan bahasa Inggris untuk IELTS dan TOEFL. Kamus bahasa Jepang berisi {jw} kata dalam 13 bahasa, dan kamus bahasa Inggris {ew} kata dalam 12 bahasa."),
+      ("Apakah lembar kerjanya sesuai kurikulum sekolah saya?", "Ya. Untuk Indonesia, setiap materi mengikuti Capaian Pembelajaran Kurikulum Merdeka, dari TK sampai Kelas 12. Setiap materi punya penjelasan singkat, 100 soal latihan dan lembar kerja dengan kunci jawaban."),
+      ("Berapa lama saya harus belajar setiap hari?", "Sekitar 10 menit. Soal yang kamu jawab salah akan muncul lagi sampai kamu ingat."),
+      ("Siapa yang membuat aplus?", "Aplus Inc. di Jepang, tim di balik 英語漬け.com yang dipakai lebih dari 3 juta orang setiap tahun.")],
+ dc_k="Komunitas gratis", dc_h="Tanya bahasa Jepang di Discord", dc_p="Bingung dengan kata, tata bahasa atau kalimat dari anime? Tanyakan ke pelajar dari seluruh dunia. Kamu boleh menulis dalam bahasa apa pun.", dc_b="Gabung di Discord",
+ ln_k="Hanya di aplus", ln_h="Bicara bahasa Jepang dengan orang Jepang", ln_p="Grup LINE kami memakai bahasa Jepang. Tulis dalam bahasa Jepang, orang Jepang akan membalas. Kalimat pendek juga boleh.", ln_b="Gabung di LINE",
+ more="Setiap bulan ada kata dan lembar kerja baru.",
+ ld_list="Yang bisa kamu pelajari di aplus", ld_j="Kamus bahasa Jepang dan kursus JLPT", ld_e="Kamus bahasa Inggris", ld_m="Lembar kerja matematika",
+)
+T["zh"].update(
+ title="aplus | 免费学习：数学、日语和英语",
+ desc="符合《义务教育数学课程标准》等{nk}套课程的免费数学练习，以及用中文学习日语（JLPT N5–N1）和英语（IELTS、TOEFL）的词典与课程。无需注册。",
+ h1="免费学习，<br><em>为你量身定做。</em>",
+ hp="选择你需要的内容：用中文讲解，符合你的考试或年级。",
+ p_learn="学习", p_prac="练习", p_j="日语", p_e="英语", p_m="数学", p_my="你的年级",
+ j_h="学日语", j_lead="用中文学习 JLPT N5–N1 的词汇和阅读，还有 {jw} 词的词典，附读音、音频和例句。",
+ j_c="JLPT 课程", j_c_s="N5–N1 · 中文讲解",
+ j_dict="日语词典", j_dict_s="{jw}词 · 中文", j_all="全部 13 种语言", j_all_s="课程和词典",
+ e_h="学英语", e_lead="用中文学习 IELTS、TOEFL 的词汇、同义词和阅读，还有 {ew} 词的英语词典。",
+ e_c="IELTS · TOEFL 课程", e_c_s="词汇和阅读",
+ e_dict="英语词典", e_dict_s="{ew}词 · 中文", e_all="全部 12 种语言", e_all_s="课程和词典",
+ m_h="数学练习", m_sub="按国家和年级",
+ m_lead="每个单元都符合该国的课程标准：简短讲解、100 道练习题和可打印的练习纸。在家和课堂都可以免费使用。",
+ m_own="中文", m_oth="其他国家", mine="为你推荐",
+ feats=[("你的语言", "用中文讲解"), ("你的目标", "你的考试或年级"),
+        ("聪明复习", "做错的题会再出现"), ("每天 10 分钟", "免费，无需注册")],
+ faq_h="常见问题",
+ faq=[("aplus 是免费的吗？", "是的。所有讲解、练习、音频和练习纸都免费，不需要注册。"),
+      ("可以学什么？", "符合课程标准的数学，以及用中文学习的日语（JLPT N5–N1）和英语（IELTS、TOEFL）。日语词典有 13 种语言、{jw}词，英语词典有 12 种语言、{ew}词。"),
+      ("数学练习符合我们学校的课程吗？", "是的。中国的单元符合《义务教育数学课程标准（2022年版）》和普通高中数学课程标准，从幼儿园大班到高中。每个单元都有简短讲解、100 道练习题和附答案的练习纸。"),
+      ("每天学多久比较好？", "大约 10 分钟。做错的题会一再出现，直到你记住为止。"),
+      ("aplus 是谁做的？", "日本的 Aplus Inc.，也就是每年有 300 多万人使用的 英語漬け.com 的团队。")],
+ dc_k="免费社区", dc_h="在 Discord 上问日语问题", dc_p="单词、语法或动漫台词看不懂？向世界各地的学习者提问。用任何语言都可以。", dc_b="加入 Discord",
+ ln_k="aplus 独有", ln_h="和日本人用日语聊天", ln_p="我们的 LINE 群用日语交流。你用日语写，日本人会回复你。短句也可以。", ln_b="加入 LINE",
+ more="每个月都会增加新的词汇和练习。",
+ ld_list="在 aplus 可以学什么", ld_j="日语词典和 JLPT 课程（中文）", ld_e="英语词典和 IELTS、TOEFL 课程（中文）", ld_m="数学练习",
+)
+T["tw"].update(
+ title="aplus | 免費學習：數學、日語和英語",
+ desc="符合 108課綱等{nk}套課程的免費數學練習，以及用中文學習英語（IELTS、TOEFL）的課程和日語詞典。不需要註冊。",
+ h1="免費學習，<br><em>為你量身打造。</em>",
+ hp="選擇你需要的內容：用中文講解，符合你的考試或年級。",
+ p_learn="學習", p_prac="練習", p_j="日語", p_e="英語", p_m="數學", p_my="你的年級",
+ j_h="學日語", j_lead="JLPT N5–N1 的單字，以及 {jw} 個詞的日語詞典，附讀音、音訊和例句，用中文說明。",
+ j_dict="日語詞典", j_dict_s="{jw}個詞 · 中文", j_all="全部 13 種語言", j_all_s="課程和詞典",
+ e_h="學英語", e_lead="用中文學習 IELTS、TOEFL 的單字、同義詞和閱讀，還有 {ew} 個詞的英語詞典。",
+ e_c="IELTS · TOEFL 課程", e_c_s="單字和閱讀",
+ e_dict="英語詞典", e_dict_s="{ew}個詞 · 中文", e_all="全部 12 種語言", e_all_s="課程和詞典",
+ m_h="數學練習", m_sub="依國家和年級",
+ m_lead="每個單元都符合該國的課綱：簡短講解、100 題練習和可列印的學習單。在家和課堂都能免費使用。",
+ m_own="中文", m_oth="其他國家", mine="為你推薦",
+ feats=[("你的語言", "用中文講解"), ("你的目標", "你的考試或年級"),
+        ("聰明複習", "答錯的題會再出現"), ("每天 10 分鐘", "免費，不需註冊")],
+ faq_h="常見問題",
+ faq=[("aplus 是免費的嗎？", "是的。所有講解、練習、音訊和學習單都免費，不需要註冊。"),
+      ("可以學什麼？", "符合課綱的數學，以及用中文學習的英語（IELTS、TOEFL）和日語。日語詞典有 13 種語言、{jw} 個詞，英語詞典有 12 種語言、{ew} 個詞。"),
+      ("數學練習符合學校的課綱嗎？", "是的。台灣的單元符合十二年國教課綱（108課綱），從國小一年級到國中九年級。每個單元都有簡短講解、100 題練習和附解答的學習單。"),
+      ("每天學多久比較好？", "大約 10 分鐘。答錯的題會一再出現，直到你記住為止。"),
+      ("aplus 是誰做的？", "日本的 Aplus Inc.，也就是每年有 300 多萬人使用的 英語漬け.com 的團隊。")],
+ dc_k="免費社群", dc_h="在 Discord 上問日語問題", dc_p="單字、文法或動漫台詞看不懂？向世界各地的學習者發問。用任何語言都可以。", dc_b="加入 Discord",
+ ln_k="aplus 獨有", ln_h="和日本人用日語聊天", ln_p="我們的 LINE 群組用日語交流。你用日語寫，日本人會回覆你。短句也可以。", ln_b="加入 LINE",
+ more="每個月都會增加新的單字和練習。",
+ ld_list="在 aplus 可以學什麼", ld_j="日語詞典", ld_e="英語詞典和 IELTS、TOEFL 課程（中文）", ld_m="數學練習",
+)
+T["ko"].update(
+ title="aplus | 무료로 배우기: 수학, 일본어, 영어",
+ desc="2022 개정 교육과정 등 {nk}개 교육과정에 맞춘 무료 수학 학습지, 그리고 한국어로 배우는 일본어(JLPT N5–N1)와 영어(IELTS, TOEFL) 사전과 강좌. 회원 가입이 필요 없습니다.",
+ h1="무료로 배우기,<br><em>나에게 맞게.</em>",
+ hp="필요한 것을 고르세요. 한국어로 설명하고, 시험이나 학년에 맞춰 배울 수 있습니다.",
+ p_learn="배우기", p_prac="연습", p_j="일본어", p_e="영어", p_m="수학", p_my="나의 학년",
+ j_h="일본어 배우기", j_lead="한국어로 배우는 JLPT N5–N1 단어와 독해, 그리고 읽는 법·음성·예문이 있는 {jw}개 단어의 사전.",
+ j_c="JLPT 강좌", j_c_s="N5–N1 · 한국어",
+ j_dict="일본어 사전", j_dict_s="{jw}개 단어 · 한국어", j_all="13개 언어 전체", j_all_s="강좌와 사전",
+ e_h="영어 배우기", e_lead="한국어로 배우는 IELTS, TOEFL 단어, 유의어, 독해, 그리고 {ew}개 단어의 영어 사전.",
+ e_c="IELTS · TOEFL 강좌", e_c_s="단어와 독해",
+ e_dict="영어 사전", e_dict_s="{ew}개 단어 · 한국어", e_all="12개 언어 전체", e_all_s="강좌와 사전",
+ m_h="수학 학습지", m_sub="나라와 학년에 맞춰",
+ m_lead="모든 단원이 그 나라의 교육과정을 따릅니다. 짧은 설명, 100문제의 연습, 인쇄용 학습지가 있습니다. 집과 교실에서 무료로 쓸 수 있습니다.",
+ m_own="한국어", m_oth="다른 나라", mine="추천",
+ feats=[("나의 언어", "한국어로 설명"), ("나의 목표", "시험이나 학년에 맞춰"),
+        ("똑똑한 복습", "틀린 문제가 다시 나옴"), ("하루 10분", "무료, 가입 없음")],
+ faq_h="자주 묻는 질문",
+ faq=[("aplus는 무료인가요?", "네. 모든 설명, 퀴즈, 음성, 학습지가 무료입니다. 회원 가입도 필요 없습니다."),
+      ("무엇을 배울 수 있나요?", "교육과정에 맞춘 수학, 한국어로 배우는 일본어(JLPT N5–N1)와 영어(IELTS, TOEFL)입니다. 일본어 사전은 13개 언어로 {jw}개, 영어 사전은 12개 언어로 {ew}개 단어가 있습니다."),
+      ("수학 학습지는 우리 학교 교육과정에 맞나요?", "네. 한국 단원은 2022 개정 교육과정에 맞추었고, 유치원부터 고등학교까지 있습니다. 단원마다 짧은 설명, 100문제의 연습, 정답이 있는 학습지가 있습니다."),
+      ("하루에 얼마나 공부하면 되나요?", "10분 정도면 됩니다. 틀린 문제는 외울 때까지 다시 나옵니다."),
+      ("aplus는 누가 만드나요?", "일본의 Aplus Inc.입니다. 해마다 300만 명 넘게 쓰는 英語漬け.com을 만드는 팀입니다.")],
+ dc_k="무료 커뮤니티", dc_h="Discord에서 일본어 질문하기", dc_p="단어, 문법, 애니메이션 대사가 어렵나요? 세계의 학습자에게 물어보세요. 어떤 언어로 써도 됩니다.", dc_b="Discord 참여",
+ ln_k="aplus에서만", ln_h="일본 사람과 일본어로 이야기하기", ln_p="LINE 그룹은 일본어로 이야기합니다. 일본어로 쓰면 일본 사람이 답해 줍니다. 짧은 문장도 괜찮습니다.", ln_b="LINE 참여",
+ more="매달 새 단어와 학습지가 추가됩니다.",
+ ld_list="aplus에서 배울 수 있는 것", ld_j="일본어 사전과 JLPT 강좌(한국어)", ld_e="영어 사전과 IELTS, TOEFL 강좌(한국어)", ld_m="수학 학습지",
 )

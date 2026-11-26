@@ -36,6 +36,7 @@ def tx(L, d):
     for k, v in d.items():
         if isinstance(v, str):
             v = v.replace("{jw}", n(JW, L)).replace("{ew}", n(EW, L)).replace("{line}", LINE)
+            v = v.replace("{nk}", str(NK)).replace("{nc}", str(NC)).replace("{nk1}", str(NK - 1)).replace("{nk2}", str(NK - 2))
             out[k] = fr_fix(v) if L == "fr" else v
         else:
             out[k] = json.loads(json.dumps(v)) if not isinstance(v, (list, tuple)) else tx_list(L, v)
@@ -94,7 +95,7 @@ def footer(L, t, games):
     nav += ('<a href="/worksheets/">%s</a><a href="%sabout.html">%s</a><a href="/privacypolicy.html%s">%s</a><a href="/mailform/">%s</a>'
             % (t["f_m"], pre(L), t["f_a"], "" if L == "en" else "?lang=" + L, t["f_p"], t["f_c"]))
     langs = "".join('<a href="%s%s" lang="%s">%s</a>' % (pre(k), "" if games is False else "about.html", HREFLANG[k], lab)
-                    for k, lab in SEL[:13] if k != L)
+                    for k, lab in SEL if k in LANGS and k != L)
     return ('<footer>\n  <div class="wrap">\n    <div>&copy; Aplus Inc.</div>\n    <nav>%s</nav>\n    <div class="langs">%s</div>\n  </div>\n</footer>\n'
             % (nav, langs))
 
@@ -131,7 +132,7 @@ def others(L):
 FOR_YOU = """<script>
 /* その人の 国の 算数を 先に（ブラウザの ことばの 地域 en-US・de-CH など で えらぶ） */
 (function(){try{
-  var R={us:'us',gb:'uk',uk:'uk',au:'au',ca:'ca-on',sg:'sg','in':'in',za:'za',ph:'ph',de:'de',at:'de',ch:'ch',fr:'fr',be:'fr',it:'it',es:'es',mx:'mx',br:'br',kr:'kr',cn:'cn',tw:'tw',id:'id',tr:'tr'};
+  var R={us:'us',gb:'uk',uk:'uk',au:'au',ca:'ca-on',sg:'sg','in':'in',za:'za',ph:'ph',de:'de',at:'de',ch:'ch',fr:'fr',be:'fr',it:'it',es:'es',mx:'mx',br:'br',kr:'kr',cn:'cn',tw:'tw',id:'id',tr:'tr',se:'se',ng:'ng'};
   var L=(navigator.languages||[navigator.language||'']).map(function(x){return String(x).toLowerCase()});
   var c=null;for(var i=0;i<L.length&&!c;i++){var m=/^[a-z]{2,3}-([a-z]{2})(?:-|$)/.exec(L[i]);if(m&&R[m[1]])c=R[m[1]];}
   if(!c)return;
@@ -148,7 +149,7 @@ FOR_YOU_EN = """
 REDIRECT = """<script>
 /* 初めて来た人は、ブラウザの言語のトップへ。英語を選んだ人・サイト内から来た人はそのまま */
 (function(){try{
-  var P={ja:'/ja/',vi:'/vi/',id:'/id/',zh:'/zh/',tw:'/tw/',ko:'/ko/',de:'/de/',fr:'/fr/',it:'/it/',es:'/es/',pt:'/pt/',tr:'/tr/',us:'/us/',uk:'/uk/',au:'/au/',ca:'/ca/',sg:'/sg/'},k=null,saved=null;
+  var P={sv:'/sv/',ja:'/ja/',vi:'/vi/',id:'/id/',zh:'/zh/',tw:'/tw/',ko:'/ko/',de:'/de/',fr:'/fr/',it:'/it/',es:'/es/',pt:'/pt/',tr:'/tr/',us:'/us/',uk:'/uk/',au:'/au/',ca:'/ca/',sg:'/sg/'},k=null,saved=null;
   try{saved=localStorage.getItem('aplus_lang')}catch(e){}
   if(saved){if(P[saved])k=saved}
   else if(!document.referrer||document.referrer.indexOf(location.host)<0){
@@ -170,7 +171,7 @@ def org():
 def jdict(L):
     if L in ("vi", "zh", "tw", "ko", "id"):
         return "/japanese/%s/word/" % L
-    return "/japanese/%s/word/" % L if L in DICT_J else ("/japanese/en/word/" if L in ("it", "tr") else "/japanese/")
+    return "/japanese/%s/word/" % L if L in DICT_J else ("/japanese/en/word/" if L in ("it", "tr", "sv") else "/japanese/")
 
 
 def edict(L):
@@ -209,25 +210,34 @@ def build_index(L):
     pj = '<a href="#japanese" data-k="ja"><small>%s</small><b>%s</b><span>JLPT N5–N1</span></a>' % (t["p_learn"], t["p_j"])
     pe = '<a href="#english" data-k="en"><small>%s</small><b>%s</b><span>IELTS · TOEFL</span></a>' % (t["p_learn"], t["p_e"])
     pm = '<a href="#maths" data-k="ma"><small>%s</small><b>%s</b><span>%s</span></a>' % (t["p_prac"], t["p_m"], t["p_my"])
-    h += '  <div class="pick" id="pick">%s</div>\n</div></div>\n<main class="wrap">\n' % ((pj + pe + pm) if L == "en" else (pm + pj + pe))
+    order = t.get("order", "jem" if L == "en" else "mje")
+    h += '  <div class="pick" id="pick">%s</div>\n</div></div>\n<main class="wrap">\n' % "".join({"j": pj, "e": pe, "m": pm}[k] for k in order)
     # ---- sections
     sj = '<section class="lang" id="japanese"><div class="card">\n  <div class="head"><div class="ico" aria-hidden="true">%s</div><h2>%s</h2></div>\n  <p class="lead">%s</p><div class="choices">' % (ICO["japanese"], t["j_h"], t["j_lead"])
     if L == "en":
         sj += (choice("/japanese/vi/", "Tiếng Việt", "Học tiếng Nhật", "vi") + choice("/japanese/id/", "Bahasa Indonesia", "Belajar bahasa Jepang", "id")
                + choice("/japanese/zh/", "简体中文", "学日语", "zh-Hans") + choice("/japanese/ko/", "한국어", "일본어 공부", "ko"))
+    if t.get("j_c"):
+        sj += choice("/japanese/%s/" % L, t["j_c"], t["j_c_s"])
     sj += choice(jdict(L) if L != "en" else "/japanese/en/word/", t["j_dict"], t["j_dict_s"]) + choice("/japanese/", t["j_all"], t["j_all_s"]) + "</div>\n</div></section>\n"
     se = '<section class="lang" id="english"><div class="card">\n  <div class="head"><div class="ico" aria-hidden="true">%s</div><h2>%s</h2></div>\n  <p class="lead">%s</p><div class="choices">' % (ICO["english"], t["e_h"], t["e_lead"])
     if L == "en":
         se += (choice("https://www.eigo-duke.com/", "日本語", "英語漬け.com で英語を学ぶ", "ja") + choice("/english/vi/", "Tiếng Việt", "Học tiếng Anh · IELTS, TOEFL", "vi")
                + choice("/english/zh/", "简体中文", "学英语 · IELTS、TOEFL", "zh-Hans") + choice("/english/tw/", "繁體中文", "學英語 · IELTS、TOEFL", "zh-Hant")
                + choice("/english/ko/", "한국어", "영어 공부 · IELTS, TOEFL", "ko"))
+    for href, b, sub in t.get("e_more", []):
+        se += choice(href, b, sub)
+    if t.get("e_c"):
+        se += choice("/english/%s/" % L, t["e_c"], t["e_c_s"])
     if t["e_dict"]:
         se += choice(edict(L), t["e_dict"], t["e_dict_s"])
     se += choice("/english/", t["e_all"], t["e_all_s"]) + "</div>\n</div></section>\n"
     sm = ('<section class="lang" id="maths"><div class="card">\n  <div class="head"><div class="ico" aria-hidden="true">%s</div><h2>%s<small>%s</small></h2></div>\n  <p class="lead">%s</p>'
-          '<h3 class="mh">%s</h3><div class="choices">%s</div><h3 class="mh">%s</h3><div class="choices">%s</div>\n</div></section>\n'
-          % (ICO["maths"], t["m_h"], t["m_sub"], t["m_lead"], t["m_own"], math_cards(L, OWN[L]), t["m_oth"], math_cards(L, others(L))))
-    h += (sj + se + sm) if L == "en" else (sm + sj + se)
+          '%s<h3 class="mh">%s</h3><div class="choices">%s</div>\n</div></section>\n'
+          % (ICO["maths"], t["m_h"], t["m_sub"], t["m_lead"],
+             '<h3 class="mh">%s</h3><div class="choices">%s</div>' % (t["m_own"], math_cards(L, OWN[L])) if OWN[L] and t["m_own"] else "",
+             t["m_oth"], math_cards(L, others(L))))
+    h += "".join({"j": sj, "e": se, "m": sm}[k] for k in order)
     # ---- feats, faq, community
     h += '\n  <div class="feats">' + "".join('<div class="feat">%s<b>%s</b><span>%s</span></div>' % (FEAT_SVG[i], b, s) for i, (b, s) in enumerate(t["feats"])) + "</div>\n"
     h += '  <section class="faq"><h2>%s</h2>%s</section>\n' % (t["faq_h"], "".join("<details><summary>%s</summary><p>%s</p></details>" % qa for qa in t["faq"]))
@@ -282,7 +292,7 @@ if __name__ == "__main__":
     for L in LANGS:
         d = OUT if L == "en" else os.path.join(OUT, L)
         os.makedirs(d, exist_ok=True)
-        if L == "en" or L in NEW:
+        if True:
             open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(build_index(L))
         open(os.path.join(d, "about.html"), "w", encoding="utf-8").write(build_about(L))
     print("ok")
