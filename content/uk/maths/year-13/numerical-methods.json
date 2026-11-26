@@ -1,0 +1,1157 @@
+{
+ "slug": "numerical-methods",
+ "title": "Numerical Methods",
+ "seo_title": "Year 13 A Level Maths: Numerical Methods Worksheets",
+ "short_title": "numerical methods",
+ "domain": "Pure Mathematics",
+ "standard_code": "A level Mathematics: Pure mathematics",
+ "standard_url": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
+ "standard_text": "Locate roots of f(x) = 0 by considering changes of sign; solve equations approximately using iterative methods and the Newton–Raphson method; understand and use numerical integration of functions, including the trapezium rule.",
+ "meta_desc": "Free Year 13 A level maths worksheets on numerical methods: change of sign, iteration, the Newton–Raphson method and the trapezium rule. 100 questions with answers.",
+ "key_big": "A change of sign shows a root (if f is continuous).",
+ "key_sub": "Newton–Raphson: xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ).",
+ "body_html": "<h2>How it works</h2><p>If f is continuous and f(<i>a</i>), f(<i>b</i>) have different signs, there is a root between <i>a</i> and <i>b</i>. Iteration: <i>x</i><sub>n+1</sub> = g(<i>x</i><sub>n</sub>). Newton–Raphson: <i>x</i><sub>n+1</sub> = <i>x</i><sub>n</sub> − f(<i>x</i><sub>n</sub>)/f′(<i>x</i><sub>n</sub>).</p><p>Trapezium rule: ∫ <i>y</i> d<i>x</i> ≈ ½<i>h</i>[<i>y</i><sub>0</sub> + <i>y</i><sub>n</sub> + 2(<i>y</i><sub>1</sub> + … + <i>y</i><sub>n−1</sub>)].</p><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>Trapezium rule, <i>h</i> = 1, <i>y</i> = 1, 4, 9</p><p class='sn-ex-s'>½ × 1 × (1 + 9 + 2 × 4)</p><p class='sn-ex-a'>Answer: 9</p></div><h2>Common mistakes</h2><ul><li>Forgetting to double the middle y-values.</li><li>Using the wrong sign in Newton–Raphson.</li><li>Rounding too early in an iteration.</li></ul>",
+ "faq": [
+  {
+   "q": "What does the Newton–Raphson method do?",
+   "a": "It uses the tangent at xₙ to find a better estimate of the root: xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ)."
+  },
+  {
+   "q": "Is the trapezium rule an overestimate?",
+   "a": "For a curve that bends upwards (convex) it overestimates; for one that bends downwards it underestimates."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Change of sign and Newton–Raphson",
+   "items": [
+    {
+     "q": "f(<i>x</i>) = <i>x</i>² − 8. f(2) and f(3) have different signs. What does this show?",
+     "c": [
+      "There is a root between 0 and 2 only.",
+      "There is a root between 2 and 3.",
+      "There is no root between 2 and 3.",
+      "The root is exactly 2."
+     ],
+     "a": 1,
+     "e": "f is continuous, so a change of sign means a root in the interval."
+    },
+    {
+     "q": "f(<i>x</i>) = <i>x</i>² − 19. f(4) and f(5) have different signs. What does this show?",
+     "c": [
+      "There is a root between 4 and 5.",
+      "The root is exactly 4.",
+      "There is no root between 4 and 5.",
+      "There is a root between 0 and 4 only."
+     ],
+     "a": 0,
+     "e": "f is continuous, so a change of sign means a root in the interval."
+    },
+    {
+     "q": "f(<i>x</i>) = <i>x</i>² − 3. f(1) and f(2) have different signs. What does this show?",
+     "c": [
+      "There is no root between 1 and 2.",
+      "There is a root between 0 and 1 only.",
+      "The root is exactly 1.",
+      "There is a root between 1 and 2."
+     ],
+     "a": 3,
+     "e": "f is continuous, so a change of sign means a root in the interval."
+    },
+    {
+     "q": "Use one step of the Newton–Raphson method on f(<i>x</i>) = <i>x</i>² − 6 with <i>x</i><sub>0</sub> = 1. What is <i>x</i><sub>1</sub>?",
+     "c": [
+      "3.5",
+      "−2.5",
+      "1.4",
+      "−1.5"
+     ],
+     "a": 0,
+     "e": "<i>x</i><sub>1</sub> = <i>x</i><sub>0</sub> − f(<i>x</i><sub>0</sub>) ÷ f′(<i>x</i><sub>0</sub>) = 1 − (-5) ÷ 2."
+    },
+    {
+     "q": "f(<i>x</i>) = <i>x</i>² − 15. f(3) and f(4) have different signs. What does this show?",
+     "c": [
+      "There is no root between 3 and 4.",
+      "There is a root between 3 and 4.",
+      "The root is exactly 3.",
+      "There is a root between 0 and 3 only."
+     ],
+     "a": 1,
+     "e": "f is continuous, so a change of sign means a root in the interval."
+    },
+    {
+     "q": "Use one step of the Newton–Raphson method on f(<i>x</i>) = <i>x</i>² − 6 with <i>x</i><sub>0</sub> = 4. What is <i>x</i><sub>1</sub>?",
+     "c": [
+      "3.2",
+      "1.25",
+      "2.75",
+      "5.25"
+     ],
+     "a": 2,
+     "e": "<i>x</i><sub>1</sub> = <i>x</i><sub>0</sub> − f(<i>x</i><sub>0</sub>) ÷ f′(<i>x</i><sub>0</sub>) = 4 − (10) ÷ 8."
+    },
+    {
+     "q": "f(<i>x</i>) = <i>x</i>² − 10. f(3) and f(4) have different signs. What does this show?",
+     "c": [
+      "There is a root between 3 and 4.",
+      "There is a root between 0 and 3 only.",
+      "There is no root between 3 and 4.",
+      "The root is exactly 3."
+     ],
+     "a": 0,
+     "e": "f is continuous, so a change of sign means a root in the interval."
+    },
+    {
+     "q": "f(<i>x</i>) = <i>x</i>² − 2. f(1) and f(2) have different signs. What does this show?",
+     "c": [
+      "There is a root between 0 and 1 only.",
+      "The root is exactly 1.",
+      "There is no root between 1 and 2.",
+      "There is a root between 1 and 2."
+     ],
+     "a": 3,
+     "e": "f is continuous, so a change of sign means a root in the interval."
+    },
+    {
+     "q": "f(<i>x</i>) = <i>x</i>² − 14. f(3) and f(4) have different signs. What does this show?",
+     "c": [
+      "There is no root between 3 and 4.",
+      "The root is exactly 3.",
+      "There is a root between 3 and 4.",
+      "There is a root between 0 and 3 only."
+     ],
+     "a": 2,
+     "e": "f is continuous, so a change of sign means a root in the interval."
+    },
+    {
+     "q": "Use one step of the Newton–Raphson method on f(<i>x</i>) = <i>x</i>² − 19 with <i>x</i><sub>0</sub> = 3. What is <i>x</i><sub>1</sub>?",
+     "c": [
+      "3.6",
+      "1.3333",
+      "−1.6667",
+      "4.6667"
+     ],
+     "a": 3,
+     "e": "<i>x</i><sub>1</sub> = <i>x</i><sub>0</sub> − f(<i>x</i><sub>0</sub>) ÷ f′(<i>x</i><sub>0</sub>) = 3 − (-10) ÷ 6."
+    },
+    {
+     "q": "Use one step of the Newton–Raphson method on f(<i>x</i>) = <i>x</i>² − 14 with <i>x</i><sub>0</sub> = 1. What is <i>x</i><sub>1</sub>?",
+     "c": [
+      "1.1538",
+      "−6.5",
+      "7.5",
+      "−5.5"
+     ],
+     "a": 2,
+     "e": "<i>x</i><sub>1</sub> = <i>x</i><sub>0</sub> − f(<i>x</i><sub>0</sub>) ÷ f′(<i>x</i><sub>0</sub>) = 1 − (-13) ÷ 2."
+    },
+    {
+     "q": "f(<i>x</i>) = <i>x</i>² − 17. f(4) and f(5) have different signs. What does this show?",
+     "c": [
+      "The root is exactly 4.",
+      "There is no root between 4 and 5.",
+      "There is a root between 0 and 4 only.",
+      "There is a root between 4 and 5."
+     ],
+     "a": 3,
+     "e": "f is continuous, so a change of sign means a root in the interval."
+    },
+    {
+     "q": "f(<i>x</i>) = <i>x</i>² − 20. f(4) and f(5) have different signs. What does this show?",
+     "c": [
+      "There is no root between 4 and 5.",
+      "The root is exactly 4.",
+      "There is a root between 4 and 5.",
+      "There is a root between 0 and 4 only."
+     ],
+     "a": 2,
+     "e": "f is continuous, so a change of sign means a root in the interval."
+    },
+    {
+     "q": "Use one step of the Newton–Raphson method on f(<i>x</i>) = <i>x</i>² − 20 with <i>x</i><sub>0</sub> = 1. What is <i>x</i><sub>1</sub>?",
+     "c": [
+      "1.1053",
+      "−8.5",
+      "−9.5",
+      "10.5"
+     ],
+     "a": 3,
+     "e": "<i>x</i><sub>1</sub> = <i>x</i><sub>0</sub> − f(<i>x</i><sub>0</sub>) ÷ f′(<i>x</i><sub>0</sub>) = 1 − (-19) ÷ 2."
+    },
+    {
+     "q": "Use one step of the Newton–Raphson method on f(<i>x</i>) = <i>x</i>² − 11 with <i>x</i><sub>0</sub> = 1. What is <i>x</i><sub>1</sub>?",
+     "c": [
+      "−5",
+      "6",
+      "1.2",
+      "−4"
+     ],
+     "a": 1,
+     "e": "<i>x</i><sub>1</sub> = <i>x</i><sub>0</sub> − f(<i>x</i><sub>0</sub>) ÷ f′(<i>x</i><sub>0</sub>) = 1 − (-10) ÷ 2."
+    },
+    {
+     "q": "f(<i>x</i>) = <i>x</i>² − 18. f(4) and f(5) have different signs. What does this show?",
+     "c": [
+      "There is a root between 0 and 4 only.",
+      "There is no root between 4 and 5.",
+      "There is a root between 4 and 5.",
+      "The root is exactly 4."
+     ],
+     "a": 2,
+     "e": "f is continuous, so a change of sign means a root in the interval."
+    },
+    {
+     "q": "Use one step of the Newton–Raphson method on f(<i>x</i>) = <i>x</i>² − 19 with <i>x</i><sub>0</sub> = 2. What is <i>x</i><sub>1</sub>?",
+     "c": [
+      "5.75",
+      "−1.75",
+      "2.2667",
+      "−3.75"
+     ],
+     "a": 0,
+     "e": "<i>x</i><sub>1</sub> = <i>x</i><sub>0</sub> − f(<i>x</i><sub>0</sub>) ÷ f′(<i>x</i><sub>0</sub>) = 2 − (-15) ÷ 4."
+    },
+    {
+     "q": "f(<i>x</i>) = <i>x</i>² − 7. f(2) and f(3) have different signs. What does this show?",
+     "c": [
+      "There is no root between 2 and 3.",
+      "There is a root between 2 and 3.",
+      "There is a root between 0 and 2 only.",
+      "The root is exactly 2."
+     ],
+     "a": 1,
+     "e": "f is continuous, so a change of sign means a root in the interval."
+    },
+    {
+     "q": "Use one step of the Newton–Raphson method on f(<i>x</i>) = <i>x</i>² − 12 with <i>x</i><sub>0</sub> = 3. What is <i>x</i><sub>1</sub>?",
+     "c": [
+      "5",
+      "3.5",
+      "2.5",
+      "−0.5"
+     ],
+     "a": 1,
+     "e": "<i>x</i><sub>1</sub> = <i>x</i><sub>0</sub> − f(<i>x</i><sub>0</sub>) ÷ f′(<i>x</i><sub>0</sub>) = 3 − (-3) ÷ 6."
+    },
+    {
+     "q": "Use one step of the Newton–Raphson method on f(<i>x</i>) = <i>x</i>² − 10 with <i>x</i><sub>0</sub> = 3. What is <i>x</i><sub>1</sub>?",
+     "c": [
+      "3.1667",
+      "9",
+      "2.8333",
+      "−0.1667"
+     ],
+     "a": 0,
+     "e": "<i>x</i><sub>1</sub> = <i>x</i><sub>0</sub> − f(<i>x</i><sub>0</sub>) ÷ f′(<i>x</i><sub>0</sub>) = 3 − (-1) ÷ 6."
+    }
+   ]
+  },
+  {
+   "title": "Iteration",
+   "items": [
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(5<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 2. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "3.3166",
+      "2.2240",
+      "2.2970",
+      "3.6667"
+     ],
+     "a": 1,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(3<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 2.5. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "2.9155",
+      "1.9240",
+      "2.8333",
+      "2.0408"
+     ],
+     "a": 1,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(5<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 1. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "2.0000",
+      "1.8171",
+      "2.4495",
+      "2.1606"
+     ],
+     "a": 3,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(6<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 2. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "2.3513",
+      "2.4721",
+      "3.6056",
+      "4.3333"
+     ],
+     "a": 0,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(4<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 1.5. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "2.0000",
+      "2.1544",
+      "2.8284",
+      "2.6667"
+     ],
+     "a": 0,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(6<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 2.5. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "2.5198",
+      "5.3333",
+      "2.5261",
+      "4.0000"
+     ],
+     "a": 0,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(2<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 2.5. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "2.6458",
+      "1.7994",
+      "2.3333",
+      "1.9129"
+     ],
+     "a": 3,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(2<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 2.5. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "1.9129",
+      "2.6667",
+      "2.8284",
+      "2.0000"
+     ],
+     "a": 3,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(6<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 1.5. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "3.3166",
+      "2.2240",
+      "2.4849",
+      "3.6667"
+     ],
+     "a": 2,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(4<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 2.5. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "2.2240",
+      "3.3166",
+      "2.1469",
+      "3.6667"
+     ],
+     "a": 2,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(4<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 3. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "3.6056",
+      "2.1832",
+      "4.3333",
+      "2.3513"
+     ],
+     "a": 1,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(4<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 1. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "1.7100",
+      "1.9866",
+      "1.6667",
+      "2.2361"
+     ],
+     "a": 0,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(2<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 1. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "2.2361",
+      "1.7100",
+      "1.6667",
+      "1.8586"
+     ],
+     "a": 1,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(4<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 3. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "2.2663",
+      "2.4101",
+      "3.7417",
+      "4.6667"
+     ],
+     "a": 0,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(5<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 2.5. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "5.1667",
+      "2.4915",
+      "2.4933",
+      "3.9370"
+     ],
+     "a": 2,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(7<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 2. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "5.6667",
+      "2.7589",
+      "4.1231",
+      "2.5713"
+     ],
+     "a": 3,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(2<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 1. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "1.0000",
+      "1.5720",
+      "1.4422",
+      "1.7321"
+     ],
+     "a": 2,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(4<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 3. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "3.8730",
+      "5.0000",
+      "2.4662",
+      "2.3432"
+     ],
+     "a": 2,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(4<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 2. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "3.3166",
+      "2.2240",
+      "3.6667",
+      "2.2828"
+     ],
+     "a": 3,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(3<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 1. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "1.7100",
+      "1.9247",
+      "1.6667",
+      "2.2361"
+     ],
+     "a": 1,
+     "e": "Substitute each value back into the formula."
+    }
+   ]
+  },
+  {
+   "title": "The trapezium rule",
+   "items": [
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>2</sub><sup>3</sup> 1/(1 + <i>x</i>) d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "0.289",
+      "0.217",
+      "0.577",
+      "0.310"
+     ],
+     "a": 0,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>2</sub><sup>4</sup> 1/(1 + <i>x</i>) d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "0.546",
+      "0.512",
+      "0.323",
+      "1.025"
+     ],
+     "a": 1,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>1</sub><sup>3</sup> 1/<i>x</i> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "2.233",
+      "0.725",
+      "1.283",
+      "1.117"
+     ],
+     "a": 3,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>3</sub><sup>5</sup> <i>x</i>² d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "32.750",
+      "65.500",
+      "20.625",
+      "28.750"
+     ],
+     "a": 0,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>3</sub><sup>5</sup> 2<sup><i>x</i></sup> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "28.000",
+      "36.000",
+      "72.000",
+      "24.000"
+     ],
+     "a": 1,
+     "e": "Strip width 1. Area ≈ ½ × 1 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>1</sub><sup>1.5</sup> 1/<i>x</i> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "0.308",
+      "0.450",
+      "0.817",
+      "0.408"
+     ],
+     "a": 3,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>1</sub><sup>2</sup> 1/(1 + <i>x</i>) d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "0.308",
+      "0.408",
+      "0.450",
+      "0.817"
+     ],
+     "a": 1,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>1</sub><sup>3</sup> √(<i>x</i> + 1) d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "6.878",
+      "2.573",
+      "3.439",
+      "3.146"
+     ],
+     "a": 2,
+     "e": "Strip width 1. Area ≈ ½ × 1 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>3</sub><sup>5</sup> 1/<i>x</i> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "0.323",
+      "0.512",
+      "1.025",
+      "0.546"
+     ],
+     "a": 1,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>1</sub><sup>1.5</sup> 2<sup><i>x</i></sup> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "2.396",
+      "1.095",
+      "1.198",
+      "0.901"
+     ],
+     "a": 2,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>1</sub><sup>2</sup> √(<i>x</i> + 1) d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "1.577",
+      "3.154",
+      "1.498",
+      "1.182"
+     ],
+     "a": 0,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>3</sub><sup>5</sup> √<i>x</i> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "7.976",
+      "2.490",
+      "3.862",
+      "3.988"
+     ],
+     "a": 3,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>3</sub><sup>4</sup> 1/<i>x</i> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "0.288",
+      "0.180",
+      "0.298",
+      "0.576"
+     ],
+     "a": 0,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>2</sub><sup>4</sup> <i>x</i>² d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "19.000",
+      "38.000",
+      "14.500",
+      "13.000"
+     ],
+     "a": 0,
+     "e": "Strip width 1. Area ≈ ½ × 1 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>1</sub><sup>2</sup> 2<sup><i>x</i></sup> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "2.414",
+      "5.828",
+      "2.207",
+      "2.914"
+     ],
+     "a": 3,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>1</sub><sup>3</sup> 2<sup><i>x</i></sup> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "6.000",
+      "9.000",
+      "7.000",
+      "18.000"
+     ],
+     "a": 1,
+     "e": "Strip width 1. Area ≈ ½ × 1 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>2</sub><sup>6</sup> √(<i>x</i> + 1) d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "8.418",
+      "17.749",
+      "8.874",
+      "5.532"
+     ],
+     "a": 2,
+     "e": "Strip width 1. Area ≈ ½ × 1 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>2</sub><sup>2.5</sup> 1/<i>x</i> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "0.447",
+      "0.236",
+      "0.168",
+      "0.224"
+     ],
+     "a": 3,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>3</sub><sup>4</sup> √<i>x</i> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "1.168",
+      "3.738",
+      "1.869",
+      "1.836"
+     ],
+     "a": 2,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>3</sub><sup>7</sup> 2<sup><i>x</i></sup> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "360.000",
+      "124.000",
+      "180.000",
+      "120.000"
+     ],
+     "a": 2,
+     "e": "Strip width 1. Area ≈ ½ × 1 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    }
+   ]
+  },
+  {
+   "title": "More iteration",
+   "items": [
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(3<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 2.5. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "3.1667",
+      "3.0822",
+      "2.0291",
+      "2.1179"
+     ],
+     "a": 2,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(3<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 2. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "1.9129",
+      "2.6458",
+      "2.3333",
+      "1.8888"
+     ],
+     "a": 0,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(6<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 3. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "2.6346",
+      "2.7144",
+      "6.6667",
+      "4.4721"
+     ],
+     "a": 0,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(2<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 2. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "1.9129",
+      "2.6458",
+      "1.8969",
+      "2.3333"
+     ],
+     "a": 0,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(4<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 1.5. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "2.1544",
+      "2.0000",
+      "2.8284",
+      "2.6667"
+     ],
+     "a": 0,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(5<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 2. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "3.4641",
+      "4.0000",
+      "2.3780",
+      "2.2894"
+     ],
+     "a": 2,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(3<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 1. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "2.0000",
+      "2.4495",
+      "2.0369",
+      "1.8171"
+     ],
+     "a": 3,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(5<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 3. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "4.0000",
+      "2.3869",
+      "5.3333",
+      "2.5198"
+     ],
+     "a": 1,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(4<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 2.5. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "3.6056",
+      "4.3333",
+      "2.3513",
+      "2.3149"
+     ],
+     "a": 2,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(6<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 1.5. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "2.5579",
+      "3.4641",
+      "4.0000",
+      "2.2894"
+     ],
+     "a": 0,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(2<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 1. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "2.2361",
+      "1.7100",
+      "1.6667",
+      "1.8586"
+     ],
+     "a": 3,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(7<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 2.5. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "4.3012",
+      "2.6922",
+      "6.1667",
+      "2.6448"
+     ],
+     "a": 3,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(3<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 3. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "3.1623",
+      "1.9542",
+      "2.1544",
+      "3.3333"
+     ],
+     "a": 1,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(5<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 3. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "5.6667",
+      "2.4583",
+      "2.5713",
+      "4.1231"
+     ],
+     "a": 2,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(6<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 2. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "4.6667",
+      "2.5438",
+      "2.4101",
+      "3.7417"
+     ],
+     "a": 1,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(3<i>x</i><sub>n</sub> + 3) with <i>x</i><sub>0</sub> = 1. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "1.8171",
+      "2.0369",
+      "2.4495",
+      "2.0000"
+     ],
+     "a": 1,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(2<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 1.5. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "2.2361",
+      "1.7100",
+      "1.6667",
+      "1.7566"
+     ],
+     "a": 1,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(7<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 2. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "5.0000",
+      "2.4662",
+      "3.8730",
+      "2.6335"
+     ],
+     "a": 3,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(3<i>x</i><sub>n</sub> + 2) with <i>x</i><sub>0</sub> = 1. Find <i>x</i><sub>1</sub>, to 4 decimal places.",
+     "c": [
+      "1.6667",
+      "2.2361",
+      "1.7100",
+      "1.9247"
+     ],
+     "a": 2,
+     "e": "Substitute each value back into the formula."
+    },
+    {
+     "q": "Use the iteration <i>x</i><sub>n+1</sub> = ∛(6<i>x</i><sub>n</sub> + 1) with <i>x</i><sub>0</sub> = 3. Find <i>x</i><sub>2</sub>, to 4 decimal places.",
+     "c": [
+      "6.3333",
+      "4.3589",
+      "2.6684",
+      "2.5718"
+     ],
+     "a": 3,
+     "e": "Substitute each value back into the formula."
+    }
+   ]
+  },
+  {
+   "title": "More trapezium rule",
+   "items": [
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>1</sub><sup>3</sup> <i>x</i>² + 1 d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "10.750",
+      "8.750",
+      "21.500",
+      "6.875"
+     ],
+     "a": 0,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>2</sub><sup>3</sup> <i>x</i>² d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "4.812",
+      "12.750",
+      "5.125",
+      "6.375"
+     ],
+     "a": 3,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>1</sub><sup>2</sup> 1/<i>x</i> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "1.394",
+      "0.442",
+      "0.760",
+      "0.697"
+     ],
+     "a": 3,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>1</sub><sup>5</sup> 1/(1 + <i>x</i>) d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "1.117",
+      "0.725",
+      "1.283",
+      "2.233"
+     ],
+     "a": 0,
+     "e": "Strip width 1. Area ≈ ½ × 1 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>3</sub><sup>4</sup> 2<sup><i>x</i></sup> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "7.285",
+      "10.570",
+      "11.570",
+      "23.141"
+     ],
+     "a": 2,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>2</sub><sup>2.5</sup> 2<sup><i>x</i></sup> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "2.396",
+      "4.793",
+      "2.189",
+      "1.802"
+     ],
+     "a": 0,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>2</sub><sup>3</sup> <i>x</i>² d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "6.344",
+      "3.984",
+      "5.719",
+      "12.688"
+     ],
+     "a": 0,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>2</sub><sup>6</sup> <i>x</i>² d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "45.000",
+      "70.000",
+      "140.000",
+      "54.000"
+     ],
+     "a": 1,
+     "e": "Strip width 1. Area ≈ ½ × 1 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>2</sub><sup>2.5</sup> <i>x</i>³ d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "4.377",
+      "11.602",
+      "4.848",
+      "5.801"
+     ],
+     "a": 3,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>1</sub><sup>2</sup> <i>x</i>³ d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "7.594",
+      "3.797",
+      "2.922",
+      "2.461"
+     ],
+     "a": 1,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>3</sub><sup>4</sup> <i>x</i>³ d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "39.234",
+      "43.859",
+      "87.719",
+      "27.617"
+     ],
+     "a": 1,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>2</sub><sup>3</sup> <i>x</i>² + 1 d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "5.562",
+      "6.125",
+      "7.375",
+      "14.750"
+     ],
+     "a": 2,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>1</sub><sup>2</sup> √<i>x</i> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "1.218",
+      "0.760",
+      "2.436",
+      "1.166"
+     ],
+     "a": 0,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>1</sub><sup>3</sup> √<i>x</i> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "2.414",
+      "5.560",
+      "2.073",
+      "2.780"
+     ],
+     "a": 3,
+     "e": "Strip width 1. Area ≈ ½ × 1 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>2</sub><sup>2.5</sup> <i>x</i>² + 1 d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "6.094",
+      "2.289",
+      "3.047",
+      "2.766"
+     ],
+     "a": 2,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>2</sub><sup>3</sup> √(<i>x</i> + 1) d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "3.737",
+      "1.801",
+      "1.868",
+      "1.401"
+     ],
+     "a": 2,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>3</sub><sup>3.5</sup> √(<i>x</i> + 1) d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "0.773",
+      "1.031",
+      "2.061",
+      "1.015"
+     ],
+     "a": 1,
+     "e": "Strip width 0.2. Area ≈ ½ × 0.2 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 2 strips to estimate ∫<sub>2</sub><sup>4</sup> 1/<i>x</i> d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "0.833",
+      "1.417",
+      "0.542",
+      "0.708"
+     ],
+     "a": 3,
+     "e": "Strip width 1. Area ≈ ½ × 1 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>2</sub><sup>6</sup> <i>x</i>³ d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "656.000",
+      "328.000",
+      "224.000",
+      "220.000"
+     ],
+     "a": 1,
+     "e": "Strip width 1. Area ≈ ½ × 1 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    },
+    {
+     "q": "Use the trapezium rule with 4 strips to estimate ∫<sub>3</sub><sup>5</sup> <i>x</i>³ d<i>x</i>, to 3 decimal places.",
+     "c": [
+      "274.000",
+      "112.500",
+      "137.000",
+      "87.500"
+     ],
+     "a": 2,
+     "e": "Strip width 0.5. Area ≈ ½ × 0.5 × [y₀ + y<sub>n</sub> + 2(the middle y-values)]."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 9,
+ "updated": "2026-11-26",
+ "country": "uk",
+ "subject": "maths",
+ "grade": "year-13"
+}

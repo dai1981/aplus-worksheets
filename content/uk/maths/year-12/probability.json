@@ -1,0 +1,1157 @@
+{
+ "slug": "probability",
+ "title": "Probability: Venn Diagrams and Tree Diagrams",
+ "seo_title": "Year 12 A Level Maths: Probability Worksheets",
+ "short_title": "probability",
+ "domain": "Statistics",
+ "standard_code": "A level Mathematics: Statistics",
+ "standard_url": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
+ "standard_text": "Understand and use mutually exclusive and independent events when calculating probabilities; link to discrete and continuous distributions; use Venn diagrams and tree diagrams.",
+ "meta_desc": "Free Year 12 A level maths worksheets on probability: P(A ∪ B), mutually exclusive and independent events, and tree diagrams with and without replacement. 100 questions with answers.",
+ "key_big": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B).",
+ "key_sub": "Independent: P(A ∩ B) = P(A) × P(B).",
+ "body_html": "<h2>How it works</h2><p>Mutually exclusive events cannot happen together: P(A ∩ B) = 0. Independent events: P(A ∩ B) = P(A)P(B). On a tree diagram, multiply along the branches and add the outcomes you want.</p><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>P(A) = 0.5, P(B) = 0.4, independent. P(A ∩ B)?</p><p class='sn-ex-s'>0.5 × 0.4</p><p class='sn-ex-a'>Answer: 0.2</p></div><h2>Common mistakes</h2><ul><li>Adding probabilities that are not mutually exclusive.</li><li>Forgetting to change the second probability without replacement.</li><li>Multiplying for 'or'.</li></ul>",
+ "faq": [
+  {
+   "q": "What is the addition rule?",
+   "a": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B). Subtract the overlap so it is not counted twice."
+  },
+  {
+   "q": "How do you test for independence?",
+   "a": "Check whether P(A ∩ B) = P(A) × P(B)."
+  }
+ ],
+ "sets": [
+  {
+   "title": "The addition rule",
+   "items": [
+    {
+     "q": "P(A) = 0.2, P(B) = 0.5 and P(A ∪ B) = 0.6. Find P(A ∩ B).",
+     "c": [
+      "0.1",
+      "0.3",
+      "0.2",
+      "0.4"
+     ],
+     "a": 0,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0.1</b>."
+    },
+    {
+     "q": "P(A) = 0.5, P(B) = 0.2 and P(A ∩ B) = 0.1. Find P(not A and not B).",
+     "c": [
+      "0.6",
+      "0.4",
+      "0.9",
+      "0.3"
+     ],
+     "a": 1,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.6 = <b>0.4</b>."
+    },
+    {
+     "q": "P(A) = 0.2, P(B) = 0.7 and P(A ∪ B) = 0.8. Find P(A ∩ B).",
+     "c": [
+      "0.1",
+      "0.14",
+      "0.6",
+      "0.7"
+     ],
+     "a": 0,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0.1</b>."
+    },
+    {
+     "q": "P(A) = 0.3, P(B) = 0.3 and P(A ∩ B) = 0.3. Find P(not A and not B).",
+     "c": [
+      "0.3",
+      "0.7",
+      "0.4",
+      "0.49"
+     ],
+     "a": 1,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.3 = <b>0.7</b>."
+    },
+    {
+     "q": "P(A) = 0.2 and P(A ∩ B) = 0.2. Find P(A but not B).",
+     "c": [
+      "0.2",
+      "0.8",
+      "0",
+      "0.4"
+     ],
+     "a": 2,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0</b>."
+    },
+    {
+     "q": "P(A) = 0.2 and P(A ∩ B) = 0.1. Find P(A but not B).",
+     "c": [
+      "0.2",
+      "0.9",
+      "0.1",
+      "0.3"
+     ],
+     "a": 2,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0.1</b>."
+    },
+    {
+     "q": "P(A) = 0.7, P(B) = 0.3 and P(A ∩ B) = 0.3. Find P(not A and not B).",
+     "c": [
+      "0.21",
+      "0.7",
+      "0",
+      "0.3"
+     ],
+     "a": 3,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.7 = <b>0.3</b>."
+    },
+    {
+     "q": "P(A) = 0.7, P(B) = 0.4 and P(A ∪ B) = 0.7. Find P(A ∩ B).",
+     "c": [
+      "0.28",
+      "0",
+      "0.8",
+      "0.4"
+     ],
+     "a": 3,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0.4</b>."
+    },
+    {
+     "q": "P(A) = 0.7, P(B) = 0.7 and P(A ∩ B) = 0.6. Find P(A ∪ B).",
+     "c": [
+      "0.8",
+      "0.9",
+      "0.2",
+      "0.49"
+     ],
+     "a": 0,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.7 + 0.7 − 0.6 = <b>0.8</b>."
+    },
+    {
+     "q": "P(A) = 0.5, P(B) = 0.5 and P(A ∩ B) = 0.2. Find P(A ∪ B).",
+     "c": [
+      "1",
+      "0.25",
+      "0.8",
+      "0.6"
+     ],
+     "a": 2,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.5 + 0.5 − 0.2 = <b>0.8</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.5 and P(A ∩ B) = 0.5. Find P(not A and not B).",
+     "c": [
+      "0.2",
+      "0.4",
+      "0.5",
+      "0.6"
+     ],
+     "a": 1,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.6 = <b>0.4</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.6 and P(A ∩ B) = 0.3. Find P(not A and not B).",
+     "c": [
+      "0.2",
+      "0.16",
+      "0.9",
+      "0.1"
+     ],
+     "a": 3,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.9 = <b>0.1</b>."
+    },
+    {
+     "q": "P(A) = 0.7, P(B) = 0.2 and P(A ∩ B) = 0.1. Find P(A ∪ B).",
+     "c": [
+      "0.8",
+      "0.7",
+      "0.9",
+      "0.14"
+     ],
+     "a": 0,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.7 + 0.2 − 0.1 = <b>0.8</b>."
+    },
+    {
+     "q": "P(A) = 0.7 and P(A ∩ B) = 0.1. Find P(A but not B).",
+     "c": [
+      "0.6",
+      "0.8",
+      "0.9",
+      "0.7"
+     ],
+     "a": 0,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0.6</b>."
+    },
+    {
+     "q": "P(A) = 0.3, P(B) = 0.5 and P(A ∩ B) = 0.1. Find P(A ∪ B).",
+     "c": [
+      "0.15",
+      "0.6",
+      "0.8",
+      "0.7"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.3 + 0.5 − 0.1 = <b>0.7</b>."
+    },
+    {
+     "q": "P(A) = 0.2, P(B) = 0.5 and P(A ∪ B) = 0.5. Find P(A ∩ B).",
+     "c": [
+      "0.4",
+      "0.2",
+      "0.1",
+      "0.3"
+     ],
+     "a": 1,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0.2</b>."
+    },
+    {
+     "q": "P(A) = 0.7, P(B) = 0.5 and P(A ∩ B) = 0.5. Find P(not A and not B).",
+     "c": [
+      "0.7",
+      "0.15",
+      "0.3",
+      "0.4"
+     ],
+     "a": 2,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.7 = <b>0.3</b>."
+    },
+    {
+     "q": "P(A) = 0.3 and P(A ∩ B) = 0.1. Find P(A but not B).",
+     "c": [
+      "0.4",
+      "0.2",
+      "0.3",
+      "0.9"
+     ],
+     "a": 1,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0.2</b>."
+    },
+    {
+     "q": "P(A) = 0.2, P(B) = 0.7 and P(A ∩ B) = 0.1. Find P(not A and not B).",
+     "c": [
+      "0.1",
+      "0.8",
+      "0.24",
+      "0.2"
+     ],
+     "a": 3,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.8 = <b>0.2</b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.6 and P(A ∪ B) = 0.8. Find P(A ∩ B).",
+     "c": [
+      "0.2",
+      "1",
+      "0.4",
+      "0.36"
+     ],
+     "a": 2,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0.4</b>."
+    }
+   ]
+  },
+  {
+   "title": "With replacement",
+   "items": [
+    {
+     "q": "A bag has 3 red and 7 blue balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that at least one ball is red.",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>51</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>100</span></span>"
+     ],
+     "a": 2,
+     "e": "P(at least one red) = 1 − P(no red) = 1 − <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>51</span><span class='fd'>100</span></span></b>."
+    },
+    {
+     "q": "A bag has 6 red and 2 blue balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that both are red.",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span>"
+     ],
+     "a": 3,
+     "e": "Multiply along the branches: <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "A bag has 5 red and 4 blue balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/9</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/9</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/9</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/9</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/9</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/9</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that both are blue.",
+     "c": [
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>"
+     ],
+     "a": 1,
+     "e": "Multiply along the branches: <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>16</span><span class='fd'>81</span></span></b>."
+    },
+    {
+     "q": "A bag has 7 orange and 2 purple balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/9</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/9</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/9</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/9</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/9</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/9</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text></g></svg></div> Find the probability that at least one ball is orange.",
+     "c": [
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>77</span><span class='fd'>81</span></span>"
+     ],
+     "a": 3,
+     "e": "P(at least one orange) = 1 − P(no orange) = 1 − <span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>77</span><span class='fd'>81</span></span></b>."
+    },
+    {
+     "q": "A bag has 3 red and 5 blue balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/8</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/8</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/8</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/8</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/8</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/8</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that both are red.",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "Multiply along the branches: <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "A bag has 6 orange and 5 purple balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/11</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/11</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/11</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/11</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/11</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/11</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text></g></svg></div> Find the probability that both are purple.",
+     "c": [
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span>"
+     ],
+     "a": 0,
+     "e": "Multiply along the branches: <span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span> = <b><span class='fr'><span class='fn'>25</span><span class='fd'>121</span></span></b>."
+    },
+    {
+     "q": "A bag has 7 orange and 7 purple balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text></g></svg></div> Find the probability that both are purple.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 0,
+     "e": "Multiply along the branches: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "A bag has 6 green and 2 yellow balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text></g></svg></div> Find the probability that the two balls are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>"
+     ],
+     "a": 1,
+     "e": "Two paths: green then yellow, or yellow then green. <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "A bag has 6 red and 6 blue balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that both are blue.",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "Multiply along the branches: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "A bag has 5 orange and 7 purple balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/12</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/12</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/12</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/12</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/12</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/12</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text></g></svg></div> Find the probability that the two balls are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>109</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>72</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "Two paths: orange then purple, or purple then orange. <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>35</span><span class='fd'>72</span></span></b>."
+    },
+    {
+     "q": "A bag has 3 red and 7 blue balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that the two balls are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>79</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>25</span></span>"
+     ],
+     "a": 1,
+     "e": "Two paths: red then blue, or blue then red. <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "A bag has 5 green and 7 yellow balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/12</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/12</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/12</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/12</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/12</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/12</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text></g></svg></div> Find the probability that both are yellow.",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>72</span></span>"
+     ],
+     "a": 0,
+     "e": "Multiply along the branches: <span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>49</span><span class='fd'>144</span></span></b>."
+    },
+    {
+     "q": "A bag has 7 green and 6 yellow balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/13</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/13</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/13</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/13</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/13</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/13</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text></g></svg></div> Find the probability that both are yellow.",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>72</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>36</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>26</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiply along the branches: <span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span> = <b><span class='fr'><span class='fn'>36</span><span class='fd'>169</span></span></b>."
+    },
+    {
+     "q": "A bag has 6 black and 2 white balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text></g></svg></div> Find the probability that the two balls are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>"
+     ],
+     "a": 3,
+     "e": "Two paths: black then white, or white then black. <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span></b>."
+    },
+    {
+     "q": "A bag has 7 red and 4 blue balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/11</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/11</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/11</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/11</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/11</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/11</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that both are blue.",
+     "c": [
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>32</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>121</span></span>"
+     ],
+     "a": 3,
+     "e": "Multiply along the branches: <span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span> = <b><span class='fr'><span class='fn'>16</span><span class='fd'>121</span></span></b>."
+    },
+    {
+     "q": "A bag has 7 black and 5 white balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/12</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/12</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/12</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/12</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/12</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/12</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text></g></svg></div> Find the probability that the two balls are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>109</span><span class='fd'>144</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>72</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>144</span></span>"
+     ],
+     "a": 2,
+     "e": "Two paths: black then white, or white then black. <span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>35</span><span class='fd'>72</span></span></b>."
+    },
+    {
+     "q": "A bag has 2 black and 7 white balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/9</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/9</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/9</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/9</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/9</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/9</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text></g></svg></div> Find the probability that both are white.",
+     "c": [
+      "<span class='fr'><span class='fn'>50</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>"
+     ],
+     "a": 2,
+     "e": "Multiply along the branches: <span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>49</span><span class='fd'>81</span></span></b>."
+    },
+    {
+     "q": "A bag has 5 green and 5 yellow balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text></g></svg></div> Find the probability that both are yellow.",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>"
+     ],
+     "a": 1,
+     "e": "Multiply along the branches: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "A bag has 4 red and 7 blue balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/11</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/11</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/11</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/11</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/11</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/11</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that at least one ball is red.",
+     "c": [
+      "<span class='fr'><span class='fn'>72</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>56</span><span class='fd'>121</span></span>"
+     ],
+     "a": 0,
+     "e": "P(at least one red) = 1 − P(no red) = 1 − <span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span> = <b><span class='fr'><span class='fn'>72</span><span class='fd'>121</span></span></b>."
+    },
+    {
+     "q": "A bag has 3 green and 7 yellow balls. A ball is taken at random, its colour noted, and then it is replaced. A second ball is taken.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks with replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text></g></svg></div> Find the probability that the two balls are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>79</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "Two paths: green then yellow, or yellow then green. <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Without replacement",
+   "items": [
+    {
+     "q": "A box has 4 orange and 6 purple pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/5</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/3</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/3</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/5</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/9</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/9</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text></g></svg></div> Find the probability that both pens are the same colour.",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>90</span></span>"
+     ],
+     "a": 0,
+     "e": "Both orange or both purple: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "A box has 7 orange and 6 purple pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/13</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/13</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/12</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/12</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text></g></svg></div> Find the probability that both are orange.",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>169</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>156</span></span>"
+     ],
+     "a": 2,
+     "e": "After one orange pen is taken there are 6 orange pens out of 12. <span class='fr'><span class='fn'>7</span><span class='fd'>13</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span></b>."
+    },
+    {
+     "q": "A box has 7 red and 3 blue pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/3</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/3</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/9</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/9</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that both are red.",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>90</span></span>"
+     ],
+     "a": 1,
+     "e": "After one red pen is taken there are 6 red pens out of 9. <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "A box has 7 green and 7 yellow pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/13</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/13</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/13</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/13</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text></g></svg></div> Find the probability that both are green.",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>26</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 2,
+     "e": "After one green pen is taken there are 6 green pens out of 13. <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>13</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>13</span></span></b>."
+    },
+    {
+     "q": "A box has 2 orange and 3 purple pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/5</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/5</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text></g></svg></div> Find the probability that both are orange.",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 3,
+     "e": "After one orange pen is taken there are 1 orange pens out of 4. <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "A box has 2 green and 6 yellow pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/7</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/7</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/7</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/7</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text></g></svg></div> Find the probability that both pens are the same colour.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>"
+     ],
+     "a": 1,
+     "e": "Both green or both yellow: <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "A box has 7 black and 4 white pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/11</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/5</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/5</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/11</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text></g></svg></div> Find the probability that the pens are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>28</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>56</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>34</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>55</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>4</span><span class='fd'>11</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>28</span><span class='fd'>55</span></span></b>."
+    },
+    {
+     "q": "A box has 7 red and 3 blue pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/3</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/3</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/9</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/9</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that the pens are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>30</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "A box has 3 red and 4 blue pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/7</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/3</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/3</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/7</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that both are red.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>49</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span>"
+     ],
+     "a": 3,
+     "e": "After one red pen is taken there are 2 red pens out of 6. <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "A box has 5 red and 6 blue pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/11</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/5</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/5</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/11</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that both are red.",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "After one red pen is taken there are 4 red pens out of 10. <span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>11</span></span></b>."
+    },
+    {
+     "q": "A box has 3 black and 5 white pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/8</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/7</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/7</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/8</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/7</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/7</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text></g></svg></div> Find the probability that both are black.",
+     "c": [
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>56</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>"
+     ],
+     "a": 3,
+     "e": "After one black pen is taken there are 2 black pens out of 7. <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "A box has 7 green and 5 yellow pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/12</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/11</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/11</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/12</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/11</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/11</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text></g></svg></div> Find the probability that the pens are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>66</span></span>",
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>22</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>132</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>72</span></span>"
+     ],
+     "a": 0,
+     "e": "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>11</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span> = <b><span class='fr'><span class='fn'>35</span><span class='fd'>66</span></span></b>."
+    },
+    {
+     "q": "A box has 3 orange and 5 purple pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/8</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/7</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/7</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/8</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/7</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/7</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text></g></svg></div> Find the probability that both are orange.",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>56</span></span>"
+     ],
+     "a": 1,
+     "e": "After one orange pen is taken there are 2 orange pens out of 7. <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>28</span></span></b>."
+    },
+    {
+     "q": "A box has 2 black and 6 white pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/4</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/7</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>6/7</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/4</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/7</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/7</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>W</text></g></svg></div> Find the probability that the pens are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>28</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>6</span><span class='fd'>7</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "A box has 2 red and 4 blue pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/3</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/5</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/5</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/3</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/5</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/5</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that both are red.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>"
+     ],
+     "a": 3,
+     "e": "After one red pen is taken there are 1 red pens out of 5. <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "A box has 4 red and 4 blue pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/7</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/7</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/7</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/7</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that both pens are the same colour.",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>14</span></span>",
+      "<span class='fr'><span class='fn'>33</span><span class='fd'>56</span></span>"
+     ],
+     "a": 0,
+     "e": "Both red or both blue: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>7</span></span></b>."
+    },
+    {
+     "q": "A box has 4 orange and 2 purple pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/3</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/5</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/5</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/3</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/5</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/5</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text></g></svg></div> Find the probability that the pens are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>"
+     ],
+     "a": 1,
+     "e": "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "A box has 3 green and 7 yellow pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/9</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/9</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/3</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>G</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/3</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>Y</text></g></svg></div> Find the probability that the pens are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>14</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>50</span></span>"
+     ],
+     "a": 2,
+     "e": "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>9</span></span> + <span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "A box has 7 orange and 4 purple pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/11</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/5</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>2/5</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/11</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>7/10</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>O</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/10</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>P</text></g></svg></div> Find the probability that both are orange.",
+     "c": [
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>121</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>55</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>49</span><span class='fd'>110</span></span>"
+     ],
+     "a": 1,
+     "e": "After one orange pen is taken there are 6 orange pens out of 10. <span class='fr'><span class='fn'>7</span><span class='fd'>11</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>21</span><span class='fd'>55</span></span></b>."
+    },
+    {
+     "q": "A box has 4 red and 5 blue pens. Two pens are taken at random, one after the other, without replacement.<div class='qfig'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' role='img' aria-label='tree diagram for two picks without replacement'><g font-family='Arial, Helvetica, sans-serif'><line x1='20.0' y1='115.0' x2='130.0' y2='65.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='80.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>4/9</text><text x='148.0' y='70.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='30.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='39.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>3/8</text><text x='290.0' y='35.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='65.0' x2='260.0' y2='100.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='98.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/8</text><text x='290.0' y='105.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='20.0' y1='115.0' x2='130.0' y2='165.0' stroke='#2b2b2b' stroke-width='2'/><text x='69.0' y='158.0' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>5/9</text><text x='148.0' y='170.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text><line x1='170.0' y1='165.0' x2='260.0' y2='130.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='139.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='135.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>R</text><line x1='170.0' y1='165.0' x2='260.0' y2='200.0' stroke='#2b2b2b' stroke-width='2'/><text x='211.0' y='198.5' font-size='13' font-weight='700' fill='#1f6fd1' text-anchor='middle'>1/2</text><text x='290.0' y='205.0' font-size='13' font-weight='700' fill='#2b2b2b' text-anchor='middle'>B</text></g></svg></div> Find the probability that the pens are different colours.",
+     "c": [
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>81</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span>"
+     ],
+     "a": 3,
+     "e": "<span class='fr'><span class='fn'>4</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>5</span><span class='fd'>9</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Independent events",
+   "items": [
+    {
+     "q": "P(Harry wins his game) = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> and P(Isla wins her game) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span>"
+     ],
+     "a": 0,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "P(it rains on Monday) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> and P(the bus is late on Tuesday) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "P(it rains on Monday) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> and P(the bus is late on Tuesday) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "P(Harry wins his game) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> and P(Isla wins her game) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>12</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "A box holds 20 items. P(a gold coin) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> and P(a silver coin) = <span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>. One item is picked at random. Find P(a gold coin or a silver coin).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>100</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>"
+     ],
+     "a": 3,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "A box holds 20 items. P(a fiction book) = <span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span> and P(a comic) = <span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>. One item is picked at random. Find P(a fiction book or a comic).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>21</span><span class='fd'>400</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span>",
+      "1"
+     ],
+     "a": 0,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>7</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "P(Harry wins his game) = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> and P(Isla wins her game) = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>18</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>18</span></span>"
+     ],
+     "a": 2,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>9</span></span></b>."
+    },
+    {
+     "q": "A box holds 15 items. P(a fiction book) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> and P(a comic) = <span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>. One item is picked at random. Find P(a fiction book or a comic).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>75</span></span>"
+     ],
+     "a": 2,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span> = <b><span class='fr'><span class='fn'>4</span><span class='fd'>15</span></span></b>."
+    },
+    {
+     "q": "P(a light is red at the first junction) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> and P(a light is red at the second junction) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>18</span><span class='fd'>25</span></span>"
+     ],
+     "a": 0,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>50</span></span></b>."
+    },
+    {
+     "q": "Two archers each shoot once. The probabilities of hitting the target are <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span> and <span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>, independently. Find the probability that neither hits.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>35</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>64</span></span>",
+      "<span class='fr'><span class='fn'>61</span><span class='fd'>64</span></span>"
+     ],
+     "a": 1,
+     "e": "P(miss) = <span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span> and <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span>. Multiply: <span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span> × <span class='fr'><span class='fn'>5</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>35</span><span class='fd'>64</span></span></b>."
+    },
+    {
+     "q": "P(a light is red at the first junction) = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> and P(a light is red at the second junction) = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>29</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>"
+     ],
+     "a": 0,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "P(it rains on Monday) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> and P(the bus is late on Tuesday) = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "A box holds 10 items. P(a fiction book) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> and P(a comic) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. One item is picked at random. Find P(a fiction book or a comic).",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 2,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "A box holds 12 items. P(a gold coin) = <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> and P(a silver coin) = <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>. One item is picked at random. Find P(a gold coin or a silver coin).",
+     "c": [
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>72</span></span>"
+     ],
+     "a": 2,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span> + <span class='fr'><span class='fn'>5</span><span class='fd'>12</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span></b>."
+    },
+    {
+     "q": "A box holds 10 items. P(a red sweet) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> and P(a green sweet) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. One item is picked at random. Find P(a red sweet or a green sweet).",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "A box holds 20 items. P(a gold coin) = <span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span> and P(a silver coin) = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>. One item is picked at random. Find P(a gold coin or a silver coin).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>",
+      "<span class='fr'><span class='fn'>27</span><span class='fd'>200</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "P(a light is red at the first junction) = <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> and P(a light is red at the second junction) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Two archers each shoot once. The probabilities of hitting the target are <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> and <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>, independently. Find the probability that neither hits.",
+     "c": [
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(miss) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> and <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>. Multiply: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "P(it rains on Monday) = <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> and P(the bus is late on Tuesday) = <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>30</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>15</span></span>"
+     ],
+     "a": 1,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>1</span><span class='fd'>10</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>30</span></span></b>."
+    },
+    {
+     "q": "A box holds 25 items. P(a gold coin) = <span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span> and P(a silver coin) = <span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>. One item is picked at random. Find P(a gold coin or a silver coin).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>6</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>4</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Mixed practice",
+   "items": [
+    {
+     "q": "Two archers each shoot once. The probabilities of hitting the target are <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> and <span class='fr'><span class='fn'>1</span><span class='fd'>8</span></span>, independently. Find the probability that neither hits.",
+     "c": [
+      "<span class='fr'><span class='fn'>15</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>8</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>16</span></span>"
+     ],
+     "a": 2,
+     "e": "P(miss) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> and <span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span>. Multiply: <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>7</span><span class='fd'>8</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>16</span></span></b>."
+    },
+    {
+     "q": "P(Harry wins his game) = <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> and P(Isla wins her game) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>20</span></span>"
+     ],
+     "a": 1,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>20</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0.6, P(B) = 0.3 and P(A ∩ B) = 0.2. Find P(not A and not B).",
+     "c": [
+      "0.3",
+      "0.1",
+      "0.28",
+      "0.7"
+     ],
+     "a": 0,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.7 = <b>0.3</b>."
+    },
+    {
+     "q": "P(A) = 0.5, P(B) = 0.3 and P(A ∩ B) = 0.1. Find P(not A and not B).",
+     "c": [
+      "0.3",
+      "0.2",
+      "0.7",
+      "0.35"
+     ],
+     "a": 0,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 0.7 = <b>0.3</b>."
+    },
+    {
+     "q": "P(A) = 0.2, P(B) = 0.7 and P(A ∩ B) = 0.1. Find P(A ∪ B).",
+     "c": [
+      "0.7",
+      "0.14",
+      "0.8",
+      "0.9"
+     ],
+     "a": 2,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.2 + 0.7 − 0.1 = <b>0.8</b>."
+    },
+    {
+     "q": "Two archers each shoot once. The probabilities of hitting the target are <span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span> and <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>, independently. Find the probability that neither hits.",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>6</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span>"
+     ],
+     "a": 2,
+     "e": "P(miss) = <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> and <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>. Multiply: <span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span> × <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "A box holds 10 items. P(a red sweet) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> and P(a green sweet) = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>. One item is picked at random. Find P(a red sweet or a green sweet).",
+     "c": [
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>25</span></span>"
+     ],
+     "a": 1,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> + <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>7</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "Two archers each shoot once. The probabilities of hitting the target are <span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span> and <span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>, independently. Find the probability that neither hits.",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>20</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>"
+     ],
+     "a": 1,
+     "e": "P(miss) = <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> and <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. Multiply: <span class='fr'><span class='fn'>3</span><span class='fd'>4</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span></b>."
+    },
+    {
+     "q": "P(it rains on Monday) = <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> and P(the bus is late on Tuesday) = <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>12</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>60</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span>"
+     ],
+     "a": 3,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>5</span><span class='fd'>6</span></span> × <span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>4</span></span></b>."
+    },
+    {
+     "q": "P(it rains on Monday) = <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> and P(the bus is late on Tuesday) = <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>. The events are independent. Find the probability that both happen.",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>9</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>10</span></span>",
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>"
+     ],
+     "a": 3,
+     "e": "Independent events: multiply. <span class='fr'><span class='fn'>1</span><span class='fd'>2</span></span> × <span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0.4, P(B) = 0.6 and P(A ∩ B) = 0.3. Find P(A ∪ B).",
+     "c": [
+      "0.24",
+      "0.7",
+      "1",
+      "0.4"
+     ],
+     "a": 1,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.4 + 0.6 − 0.3 = <b>0.7</b>."
+    },
+    {
+     "q": "P(A) = 0.7, P(B) = 0.5 and P(A ∩ B) = 0.2. Find P(not A and not B).",
+     "c": [
+      "0.15",
+      "0",
+      "1",
+      "0.1"
+     ],
+     "a": 1,
+     "e": "P(A′ ∩ B′) = 1 − P(A ∪ B) = 1 − 1 = <b>0</b>."
+    },
+    {
+     "q": "A box holds 15 items. P(a fiction book) = <span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span> and P(a comic) = <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span>. One item is picked at random. Find P(a fiction book or a comic).",
+     "c": [
+      "<span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>75</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span>"
+     ],
+     "a": 0,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>2</span><span class='fd'>15</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>5</span></span> = <b><span class='fr'><span class='fn'>1</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "P(A) = 0.7, P(B) = 0.2 and P(A ∩ B) = 0.2. Find P(A ∪ B).",
+     "c": [
+      "0.14",
+      "0.9",
+      "0.7",
+      "0.5"
+     ],
+     "a": 2,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.7 + 0.2 − 0.2 = <b>0.7</b>."
+    },
+    {
+     "q": "P(A) = 0.5, P(B) = 0.4 and P(A ∩ B) = 0.3. Find P(A ∪ B).",
+     "c": [
+      "0.2",
+      "0.9",
+      "0.3",
+      "0.6"
+     ],
+     "a": 3,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.5 + 0.4 − 0.3 = <b>0.6</b>."
+    },
+    {
+     "q": "P(A) = 0.5, P(B) = 0.4 and P(A ∩ B) = 0.4. Find P(A ∪ B).",
+     "c": [
+      "0.5",
+      "0.1",
+      "0.2",
+      "0.9"
+     ],
+     "a": 0,
+     "e": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.5 + 0.4 − 0.4 = <b>0.5</b>."
+    },
+    {
+     "q": "P(A) = 0.4, P(B) = 0.3 and P(A ∪ B) = 0.6. Find P(A ∩ B).",
+     "c": [
+      "0.3",
+      "0.12",
+      "0.1",
+      "0.2"
+     ],
+     "a": 2,
+     "e": "P(A ∩ B) = P(A) + P(B) − P(A ∪ B) = <b>0.1</b>."
+    },
+    {
+     "q": "P(A) = 0.5 and P(A ∩ B) = 0.4. Find P(A but not B).",
+     "c": [
+      "0.5",
+      "0.9",
+      "0.6",
+      "0.1"
+     ],
+     "a": 3,
+     "e": "P(A ∩ B′) = P(A) − P(A ∩ B) = <b>0.1</b>."
+    },
+    {
+     "q": "A box holds 25 items. P(a red sweet) = <span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span> and P(a green sweet) = <span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span>. One item is picked at random. Find P(a red sweet or a green sweet).",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span>"
+     ],
+     "a": 3,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>7</span><span class='fd'>25</span></span> + <span class='fr'><span class='fn'>1</span><span class='fd'>25</span></span> = <b><span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span></b>."
+    },
+    {
+     "q": "A box holds 25 items. P(a gold coin) = <span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span> and P(a silver coin) = <span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span>. One item is picked at random. Find P(a gold coin or a silver coin).",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span>",
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span>",
+      "<span class='fr'><span class='fn'>16</span><span class='fd'>625</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>5</span></span>"
+     ],
+     "a": 0,
+     "e": "The events are mutually exclusive (one item cannot be both), so add: <span class='fr'><span class='fn'>2</span><span class='fd'>25</span></span> + <span class='fr'><span class='fn'>8</span><span class='fd'>25</span></span> = <b><span class='fr'><span class='fn'>2</span><span class='fd'>5</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 14,
+ "updated": "2026-11-26",
+ "country": "uk",
+ "subject": "maths",
+ "grade": "year-12"
+}

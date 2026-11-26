@@ -829,6 +829,18 @@ function topic_defs($country = null, $subject = null) {
         $d['number-bases'] = array('name' => 'Number Bases', 'in' => '/number-bases|binary-numbers/', 'out' => '/^$/',
             'blurb' => 'Binary numbers and other bases: place values, changing to and from base ten, and adding, subtracting and multiplying in other bases.');
     }
+    if ($country === 'uk') {
+        // A level (Year 12 and 13): calculus, the binomial and normal distributions, partial fractions, mechanics
+        $d['calculus']['name'] = 'Calculus';
+        $d['calculus']['blurb'] = 'Differentiation, tangents and stationary points, the chain rule, integration techniques, areas under curves, numerical methods and differential equations.';
+        $d['calculus']['in'] = substr($d['calculus']['in'], 0, -1) . '|^integration|numerical-methods|differential-equations/';
+        $d['probability']['in'] = substr($d['probability']['in'], 0, -1) . '|binomial-distribution|normal-distribution/';
+        $d['data-and-graphs']['out'] = substr($d['data-and-graphs']['out'], 0, -1) . '|binomial-distribution|normal-distribution/';
+        $d['fractions']['out'] = substr($d['fractions']['out'], 0, -1) . '|partial-fractions/';
+        $d['algebra']['in'] = substr($d['algebra']['in'], 0, -1) . '|partial-fractions/';
+        $d['mechanics'] = array('name' => 'Mechanics', 'in' => '/kinematics|newtons-laws|moments-and-friction|projectiles/', 'out' => '/^$/',
+            'blurb' => 'Constant acceleration and velocity–time graphs, forces and Newton\'s laws, connected particles, moments, friction and inclined planes, and projectiles.');
+    }
     if ($country === 'in') {
         // India (NCERT chapter names): Real Numbers is HCF, LCM and irrational numbers; Arithmetic Progressions are sequences
         $d['factors-and-multiples']['in'] = substr($d['factors-and-multiples']['in'], 0, -1) . '|^real-numbers$/';

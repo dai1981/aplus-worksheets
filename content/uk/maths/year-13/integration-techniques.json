@@ -1,0 +1,1157 @@
+{
+ "slug": "integration-techniques",
+ "title": "Integration: Substitution, Parts and Partial Fractions",
+ "seo_title": "Year 13 A Level Maths: Integration Techniques Worksheets",
+ "short_title": "integration techniques",
+ "domain": "Pure Mathematics",
+ "standard_code": "A level Mathematics: Pure mathematics",
+ "standard_url": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
+ "standard_text": "Integrate xⁿ (including n = −1), eᵏˣ, sin kx, cos kx and related sums; integration by substitution and by parts; integrate using partial fractions; evaluate the area between two curves.",
+ "meta_desc": "Free Year 13 A level maths worksheets on integration techniques: standard integrals, ln and eˣ, substitution, integration by parts, partial fractions and definite integrals. 100 questions with answers.",
+ "key_big": "∫ 1/x dx = ln|x| + c; ∫ eᵏˣ dx = (1/k)eᵏˣ + c.",
+ "key_sub": "Parts: ∫ u (dv/dx) dx = uv − ∫ v (du/dx) dx.",
+ "body_html": "<h2>How it works</h2><p>Standard integrals: ∫ 1/<i>x</i> d<i>x</i> = ln|<i>x</i>| + <i>c</i>, ∫ e<sup><i>kx</i></sup> d<i>x</i> = (1/<i>k</i>)e<sup><i>kx</i></sup> + <i>c</i>, ∫ cos <i>kx</i> d<i>x</i> = (1/<i>k</i>) sin <i>kx</i> + <i>c</i>.</p><p>Substitution: replace an inner function by <i>u</i> and d<i>x</i> by d<i>u</i>/(d<i>u</i>/d<i>x</i>). By parts: choose <i>u</i> to become simpler when differentiated. Split rational functions into partial fractions before integrating.</p><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>∫ <i>x</i>e<sup><i>x</i></sup> d<i>x</i></p><p class='sn-ex-s'><i>u</i> = <i>x</i>, d<i>v</i>/d<i>x</i> = e<sup><i>x</i></sup></p><p class='sn-ex-s'><i>x</i>e<sup><i>x</i></sup> − ∫ e<sup><i>x</i></sup> d<i>x</i></p><p class='sn-ex-a'>Answer: e<sup><i>x</i></sup>(<i>x</i> − 1) + <i>c</i></p></div><h2>Common mistakes</h2><ul><li>Forgetting to divide by k.</li><li>Choosing u = eˣ in integration by parts.</li><li>Forgetting the modulus in ln|x|.</li></ul>",
+ "faq": [
+  {
+   "q": "When do you use integration by parts?",
+   "a": "When the integrand is a product, such as x eˣ or x sin x. Choose u to be the part that gets simpler when differentiated."
+  },
+  {
+   "q": "How do you integrate 1/(ax + b)?",
+   "a": "∫ 1/(ax + b) dx = (1/a) ln|ax + b| + c."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Standard integrals",
+   "items": [
+    {
+     "q": "Evaluate ∫ 1/(3<i>x</i> − 1) d<i>x</i>.",
+     "c": [
+      "ln|3<i>x</i> − 1| + C",
+      "3 ln|3<i>x</i> − 1| + C",
+      "(1/3) ln|3<i>x</i> − 1| + C",
+      "−1/(3<i>x</i> − 1)² + C"
+     ],
+     "a": 2,
+     "e": "∫ 1/(a<i>x</i> + b) d<i>x</i> = (1/a) ln|a<i>x</i> + b| + C: <b>(1/3) ln|3<i>x</i> − 1| + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ cos 6<i>x</i> d<i>x</i>.",
+     "c": [
+      "sin 6<i>x</i> + C",
+      "(1/6) sin 6<i>x</i> + C",
+      "6 sin 6<i>x</i> + C",
+      "−(1/6) sin 6<i>x</i> + C"
+     ],
+     "a": 1,
+     "e": "d/d<i>x</i>(sin 6<i>x</i>) = 6 cos 6<i>x</i>, so divide by 6: <b>(1/6) sin 6<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ sin 4<i>x</i> d<i>x</i>.",
+     "c": [
+      "−cos 4<i>x</i> + C",
+      "−4 cos 4<i>x</i> + C",
+      "(1/4) cos 4<i>x</i> + C",
+      "−(1/4) cos 4<i>x</i> + C"
+     ],
+     "a": 3,
+     "e": "d/d<i>x</i>(cos 4<i>x</i>) = −4 sin 4<i>x</i>, so the integral is <b>−(1/4) cos 4<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ sec² 2<i>x</i> d<i>x</i>.",
+     "c": [
+      "tan 2<i>x</i> + C",
+      "(1/2) sec 2<i>x</i> + C",
+      "(1/2) tan 2<i>x</i> + C",
+      "2 tan 2<i>x</i> + C"
+     ],
+     "a": 2,
+     "e": "d/d<i>x</i>(tan 2<i>x</i>) = 2 sec² 2<i>x</i>, so <b>(1/2) tan 2<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ (4<i>x</i> + 5)<sup>2</sup> d<i>x</i>.",
+     "c": [
+      "(4<i>x</i> + 5)<sup>3</sup>/4 + C",
+      "8(4<i>x</i> + 5) + C",
+      "(4<i>x</i> + 5)<sup>3</sup>/3 + C",
+      "(4<i>x</i> + 5)<sup>3</sup>/12 + C"
+     ],
+     "a": 3,
+     "e": "(4<i>x</i> + 5)<sup>3</sup> ÷ (3 × 4) + C = <b>(4<i>x</i> + 5)<sup>3</sup>/12 + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ cos 3<i>x</i> d<i>x</i>.",
+     "c": [
+      "−(1/3) sin 3<i>x</i> + C",
+      "(1/3) sin 3<i>x</i> + C",
+      "3 sin 3<i>x</i> + C",
+      "sin 3<i>x</i> + C"
+     ],
+     "a": 1,
+     "e": "d/d<i>x</i>(sin 3<i>x</i>) = 3 cos 3<i>x</i>, so divide by 3: <b>(1/3) sin 3<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 1/(6<i>x</i> + 6) d<i>x</i>.",
+     "c": [
+      "−1/(6<i>x</i> + 6)² + C",
+      "(1/6) ln|6<i>x</i> + 6| + C",
+      "ln|6<i>x</i> + 6| + C",
+      "6 ln|6<i>x</i> + 6| + C"
+     ],
+     "a": 1,
+     "e": "∫ 1/(a<i>x</i> + b) d<i>x</i> = (1/a) ln|a<i>x</i> + b| + C: <b>(1/6) ln|6<i>x</i> + 6| + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ e<sup>3<i>x</i></sup> d<i>x</i>.",
+     "c": [
+      "(1/3) e<sup>3<i>x</i></sup> + C",
+      "e<sup>3<i>x</i></sup> + C",
+      "3 e<sup>3<i>x</i></sup> + C",
+      "e<sup>3<i>x</i></sup>/(3 + 1) + C"
+     ],
+     "a": 0,
+     "e": "Divide by the coefficient 3: <b>(1/3) e<sup>3<i>x</i></sup> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ sin 3<i>x</i> d<i>x</i>.",
+     "c": [
+      "−cos 3<i>x</i> + C",
+      "−3 cos 3<i>x</i> + C",
+      "−(1/3) cos 3<i>x</i> + C",
+      "(1/3) cos 3<i>x</i> + C"
+     ],
+     "a": 2,
+     "e": "d/d<i>x</i>(cos 3<i>x</i>) = −3 sin 3<i>x</i>, so the integral is <b>−(1/3) cos 3<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 1/(6<i>x</i> + 2) d<i>x</i>.",
+     "c": [
+      "(1/6) ln|6<i>x</i> + 2| + C",
+      "ln|6<i>x</i> + 2| + C",
+      "6 ln|6<i>x</i> + 2| + C",
+      "−1/(6<i>x</i> + 2)² + C"
+     ],
+     "a": 0,
+     "e": "∫ 1/(a<i>x</i> + b) d<i>x</i> = (1/a) ln|a<i>x</i> + b| + C: <b>(1/6) ln|6<i>x</i> + 2| + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ cos 2<i>x</i> d<i>x</i>.",
+     "c": [
+      "(1/2) sin 2<i>x</i> + C",
+      "sin 2<i>x</i> + C",
+      "−(1/2) sin 2<i>x</i> + C",
+      "2 sin 2<i>x</i> + C"
+     ],
+     "a": 0,
+     "e": "d/d<i>x</i>(sin 2<i>x</i>) = 2 cos 2<i>x</i>, so divide by 2: <b>(1/2) sin 2<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ sec² 6<i>x</i> d<i>x</i>.",
+     "c": [
+      "(1/6) sec 6<i>x</i> + C",
+      "tan 6<i>x</i> + C",
+      "6 tan 6<i>x</i> + C",
+      "(1/6) tan 6<i>x</i> + C"
+     ],
+     "a": 3,
+     "e": "d/d<i>x</i>(tan 6<i>x</i>) = 6 sec² 6<i>x</i>, so <b>(1/6) tan 6<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ cos 4<i>x</i> d<i>x</i>.",
+     "c": [
+      "(1/4) sin 4<i>x</i> + C",
+      "−(1/4) sin 4<i>x</i> + C",
+      "4 sin 4<i>x</i> + C",
+      "sin 4<i>x</i> + C"
+     ],
+     "a": 0,
+     "e": "d/d<i>x</i>(sin 4<i>x</i>) = 4 cos 4<i>x</i>, so divide by 4: <b>(1/4) sin 4<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ cos 5<i>x</i> d<i>x</i>.",
+     "c": [
+      "−(1/5) sin 5<i>x</i> + C",
+      "sin 5<i>x</i> + C",
+      "5 sin 5<i>x</i> + C",
+      "(1/5) sin 5<i>x</i> + C"
+     ],
+     "a": 3,
+     "e": "d/d<i>x</i>(sin 5<i>x</i>) = 5 cos 5<i>x</i>, so divide by 5: <b>(1/5) sin 5<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ (5<i>x</i> − 3)<sup>6</sup> d<i>x</i>.",
+     "c": [
+      "(5<i>x</i> − 3)<sup>7</sup>/35 + C",
+      "(5<i>x</i> − 3)<sup>7</sup>/7 + C",
+      "30(5<i>x</i> − 3)<sup>5</sup> + C",
+      "(5<i>x</i> − 3)<sup>7</sup>/5 + C"
+     ],
+     "a": 0,
+     "e": "(5<i>x</i> − 3)<sup>7</sup> ÷ (7 × 5) + C = <b>(5<i>x</i> − 3)<sup>7</sup>/35 + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ sin 2<i>x</i> d<i>x</i>.",
+     "c": [
+      "−2 cos 2<i>x</i> + C",
+      "−cos 2<i>x</i> + C",
+      "(1/2) cos 2<i>x</i> + C",
+      "−(1/2) cos 2<i>x</i> + C"
+     ],
+     "a": 3,
+     "e": "d/d<i>x</i>(cos 2<i>x</i>) = −2 sin 2<i>x</i>, so the integral is <b>−(1/2) cos 2<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ e<sup>2<i>x</i></sup> d<i>x</i>.",
+     "c": [
+      "e<sup>2<i>x</i></sup> + C",
+      "(1/2) e<sup>2<i>x</i></sup> + C",
+      "2 e<sup>2<i>x</i></sup> + C",
+      "e<sup>2<i>x</i></sup>/(2 + 1) + C"
+     ],
+     "a": 1,
+     "e": "Divide by the coefficient 2: <b>(1/2) e<sup>2<i>x</i></sup> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ sin 5<i>x</i> d<i>x</i>.",
+     "c": [
+      "−5 cos 5<i>x</i> + C",
+      "(1/5) cos 5<i>x</i> + C",
+      "−(1/5) cos 5<i>x</i> + C",
+      "−cos 5<i>x</i> + C"
+     ],
+     "a": 2,
+     "e": "d/d<i>x</i>(cos 5<i>x</i>) = −5 sin 5<i>x</i>, so the integral is <b>−(1/5) cos 5<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ sin 6<i>x</i> d<i>x</i>.",
+     "c": [
+      "−6 cos 6<i>x</i> + C",
+      "−(1/6) cos 6<i>x</i> + C",
+      "(1/6) cos 6<i>x</i> + C",
+      "−cos 6<i>x</i> + C"
+     ],
+     "a": 1,
+     "e": "d/d<i>x</i>(cos 6<i>x</i>) = −6 sin 6<i>x</i>, so the integral is <b>−(1/6) cos 6<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 1/(4<i>x</i> + 5) d<i>x</i>.",
+     "c": [
+      "−1/(4<i>x</i> + 5)² + C",
+      "ln|4<i>x</i> + 5| + C",
+      "(1/4) ln|4<i>x</i> + 5| + C",
+      "4 ln|4<i>x</i> + 5| + C"
+     ],
+     "a": 2,
+     "e": "∫ 1/(a<i>x</i> + b) d<i>x</i> = (1/a) ln|a<i>x</i> + b| + C: <b>(1/4) ln|4<i>x</i> + 5| + C</b>."
+    }
+   ]
+  },
+  {
+   "title": "Integration by substitution",
+   "items": [
+    {
+     "q": "Evaluate ∫ <i>x</i>/√(<i>x</i>² + 8) d<i>x</i>.",
+     "c": [
+      "(1/2)√(<i>x</i>² + 8) + C",
+      "√(<i>x</i>² + 8) + C",
+      "ln(<i>x</i>² + 8) + C",
+      "2√(<i>x</i>² + 8) + C"
+     ],
+     "a": 1,
+     "e": "Put t = <i>x</i>² + 8, dt = 2<i>x</i> d<i>x</i>: (1/2)∫ t<sup>−1/2</sup> dt = <b>√(<i>x</i>² + 8) + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ e<sup>6<i>x</i></sup> d<i>x</i>.",
+     "c": [
+      "e<sup>6<i>x</i></sup> + C",
+      "(1/6) e<sup>6<i>x</i></sup> + C",
+      "6 e<sup>6<i>x</i></sup> + C",
+      "e<sup>6<i>x</i></sup>/(6 + 1) + C"
+     ],
+     "a": 1,
+     "e": "Divide by the coefficient 6: <b>(1/6) e<sup>6<i>x</i></sup> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 2<i>x</i>/(<i>x</i>² + 8) d<i>x</i>.",
+     "c": [
+      "<i>x</i>²/(<i>x</i>² + 8) + C",
+      "2 ln(<i>x</i>² + 8) + C",
+      "(1/8) tan<sup>−1</sup>(<i>x</i>/8) + C",
+      "ln(<i>x</i>² + 8) + C"
+     ],
+     "a": 3,
+     "e": "The numerator 2<i>x</i> is the derivative of the denominator, so the integral is <b>ln(<i>x</i>² + 8) + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ <i>x</i> e<sup><i>x</i>²</sup> d<i>x</i>.",
+     "c": [
+      "2 e<sup><i>x</i>²</sup> + C",
+      "e<sup><i>x</i>²</sup> + C",
+      "<i>x</i>² e<sup><i>x</i>²</sup> + C",
+      "e<sup><i>x</i>²</sup>/(<i>x</i>²) + C"
+     ],
+     "a": 1,
+     "e": "Put t = <i>x</i>², dt = 2<i>x</i> d<i>x</i>: <b>e<sup><i>x</i>²</sup> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ <i>x</i>/√(<i>x</i>² + 2) d<i>x</i>.",
+     "c": [
+      "√(<i>x</i>² + 2) + C",
+      "ln(<i>x</i>² + 2) + C",
+      "2√(<i>x</i>² + 2) + C",
+      "(1/2)√(<i>x</i>² + 2) + C"
+     ],
+     "a": 0,
+     "e": "Put t = <i>x</i>² + 2, dt = 2<i>x</i> d<i>x</i>: (1/2)∫ t<sup>−1/2</sup> dt = <b>√(<i>x</i>² + 2) + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 4<i>x</i> cos(<i>x</i>²) d<i>x</i>.",
+     "c": [
+      "4 sin(<i>x</i>²) + C",
+      "2 cos(<i>x</i>²) + C",
+      "2<i>x</i>² sin(<i>x</i>²) + C",
+      "2 sin(<i>x</i>²) + C"
+     ],
+     "a": 3,
+     "e": "Put t = <i>x</i>², dt = 2<i>x</i> d<i>x</i>: the integral is 2∫ cos t dt = <b>2 sin(<i>x</i>²) + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 3<i>x</i> cos(<i>x</i>²) d<i>x</i>.",
+     "c": [
+      "(3/2)<i>x</i>² sin(<i>x</i>²) + C",
+      "3 sin(<i>x</i>²) + C",
+      "(3/2) cos(<i>x</i>²) + C",
+      "(3/2) sin(<i>x</i>²) + C"
+     ],
+     "a": 3,
+     "e": "Put t = <i>x</i>², dt = 2<i>x</i> d<i>x</i>: the integral is (3/2)∫ cos t dt = <b>(3/2) sin(<i>x</i>²) + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 1/(5<i>x</i> − 5) d<i>x</i>.",
+     "c": [
+      "(1/5) ln|5<i>x</i> − 5| + C",
+      "−1/(5<i>x</i> − 5)² + C",
+      "5 ln|5<i>x</i> − 5| + C",
+      "ln|5<i>x</i> − 5| + C"
+     ],
+     "a": 0,
+     "e": "∫ 1/(a<i>x</i> + b) d<i>x</i> = (1/a) ln|a<i>x</i> + b| + C: <b>(1/5) ln|5<i>x</i> − 5| + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 5<i>x</i> cos(<i>x</i>²) d<i>x</i>.",
+     "c": [
+      "(5/2)<i>x</i>² sin(<i>x</i>²) + C",
+      "(5/2) cos(<i>x</i>²) + C",
+      "(5/2) sin(<i>x</i>²) + C",
+      "5 sin(<i>x</i>²) + C"
+     ],
+     "a": 2,
+     "e": "Put t = <i>x</i>², dt = 2<i>x</i> d<i>x</i>: the integral is (5/2)∫ cos t dt = <b>(5/2) sin(<i>x</i>²) + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 1/(4<i>x</i> − 4) d<i>x</i>.",
+     "c": [
+      "−1/(4<i>x</i> − 4)² + C",
+      "4 ln|4<i>x</i> − 4| + C",
+      "(1/4) ln|4<i>x</i> − 4| + C",
+      "ln|4<i>x</i> − 4| + C"
+     ],
+     "a": 2,
+     "e": "∫ 1/(a<i>x</i> + b) d<i>x</i> = (1/a) ln|a<i>x</i> + b| + C: <b>(1/4) ln|4<i>x</i> − 4| + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ sin<sup>5</sup><i>x</i> cos <i>x</i> d<i>x</i>.",
+     "c": [
+      "sin<sup>6</sup><i>x</i>/6 + C",
+      "sin<sup>6</sup><i>x</i>/5 + C",
+      "−sin<sup>6</sup><i>x</i>/6 + C",
+      "cos<sup>6</sup><i>x</i>/6 + C"
+     ],
+     "a": 0,
+     "e": "Put t = sin <i>x</i>, dt = cos <i>x</i> d<i>x</i>: ∫ t<sup>5</sup> dt = <b>sin<sup>6</sup><i>x</i>/6 + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ sin<sup>2</sup><i>x</i> cos <i>x</i> d<i>x</i>.",
+     "c": [
+      "−sin<sup>3</sup><i>x</i>/3 + C",
+      "cos<sup>3</sup><i>x</i>/3 + C",
+      "sin<sup>3</sup><i>x</i>/2 + C",
+      "sin<sup>3</sup><i>x</i>/3 + C"
+     ],
+     "a": 3,
+     "e": "Put t = sin <i>x</i>, dt = cos <i>x</i> d<i>x</i>: ∫ t<sup>2</sup> dt = <b>sin<sup>3</sup><i>x</i>/3 + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ e<sup>4<i>x</i></sup> d<i>x</i>.",
+     "c": [
+      "4 e<sup>4<i>x</i></sup> + C",
+      "e<sup>4<i>x</i></sup>/(4 + 1) + C",
+      "(1/4) e<sup>4<i>x</i></sup> + C",
+      "e<sup>4<i>x</i></sup> + C"
+     ],
+     "a": 2,
+     "e": "Divide by the coefficient 4: <b>(1/4) e<sup>4<i>x</i></sup> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ <i>x</i>/√(<i>x</i>² + 5) d<i>x</i>.",
+     "c": [
+      "ln(<i>x</i>² + 5) + C",
+      "(1/2)√(<i>x</i>² + 5) + C",
+      "√(<i>x</i>² + 5) + C",
+      "2√(<i>x</i>² + 5) + C"
+     ],
+     "a": 2,
+     "e": "Put t = <i>x</i>² + 5, dt = 2<i>x</i> d<i>x</i>: (1/2)∫ t<sup>−1/2</sup> dt = <b>√(<i>x</i>² + 5) + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ (3<i>x</i> + 5)<sup>3</sup> d<i>x</i>.",
+     "c": [
+      "(3<i>x</i> + 5)<sup>4</sup>/4 + C",
+      "9(3<i>x</i> + 5)<sup>2</sup> + C",
+      "(3<i>x</i> + 5)<sup>4</sup>/12 + C",
+      "(3<i>x</i> + 5)<sup>4</sup>/3 + C"
+     ],
+     "a": 2,
+     "e": "(3<i>x</i> + 5)<sup>4</sup> ÷ (4 × 3) + C = <b>(3<i>x</i> + 5)<sup>4</sup>/12 + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ sin<sup>3</sup><i>x</i> cos <i>x</i> d<i>x</i>.",
+     "c": [
+      "sin<sup>4</sup><i>x</i>/4 + C",
+      "−sin<sup>4</sup><i>x</i>/4 + C",
+      "sin<sup>4</sup><i>x</i>/3 + C",
+      "cos<sup>4</sup><i>x</i>/4 + C"
+     ],
+     "a": 0,
+     "e": "Put t = sin <i>x</i>, dt = cos <i>x</i> d<i>x</i>: ∫ t<sup>3</sup> dt = <b>sin<sup>4</sup><i>x</i>/4 + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 3<i>x</i> e<sup><i>x</i>²</sup> d<i>x</i>.",
+     "c": [
+      "3 e<sup><i>x</i>²</sup> + C",
+      "(3/2) e<sup><i>x</i>²</sup> + C",
+      "(3/2)<i>x</i>² e<sup><i>x</i>²</sup> + C",
+      "e<sup><i>x</i>²</sup>/(<i>x</i>²) + C"
+     ],
+     "a": 1,
+     "e": "Put t = <i>x</i>², dt = 2<i>x</i> d<i>x</i>: <b>(3/2) e<sup><i>x</i>²</sup> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 2<i>x</i>/(<i>x</i>² + 4) d<i>x</i>.",
+     "c": [
+      "(1/4) tan<sup>−1</sup>(<i>x</i>/4) + C",
+      "<i>x</i>²/(<i>x</i>² + 4) + C",
+      "2 ln(<i>x</i>² + 4) + C",
+      "ln(<i>x</i>² + 4) + C"
+     ],
+     "a": 3,
+     "e": "The numerator 2<i>x</i> is the derivative of the denominator, so the integral is <b>ln(<i>x</i>² + 4) + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ sec² 3<i>x</i> d<i>x</i>.",
+     "c": [
+      "(1/3) sec 3<i>x</i> + C",
+      "(1/3) tan 3<i>x</i> + C",
+      "tan 3<i>x</i> + C",
+      "3 tan 3<i>x</i> + C"
+     ],
+     "a": 1,
+     "e": "d/d<i>x</i>(tan 3<i>x</i>) = 3 sec² 3<i>x</i>, so <b>(1/3) tan 3<i>x</i> + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 2<i>x</i>/(<i>x</i>² + 9) d<i>x</i>.",
+     "c": [
+      "ln(<i>x</i>² + 9) + C",
+      "<i>x</i>²/(<i>x</i>² + 9) + C",
+      "(1/9) tan<sup>−1</sup>(<i>x</i>/9) + C",
+      "2 ln(<i>x</i>² + 9) + C"
+     ],
+     "a": 0,
+     "e": "The numerator 2<i>x</i> is the derivative of the denominator, so the integral is <b>ln(<i>x</i>² + 9) + C</b>."
+    }
+   ]
+  },
+  {
+   "title": "Partial fractions and logarithms",
+   "items": [
+    {
+     "q": "Express (−5<i>x</i> − 16)/((<i>x</i> + 2)(<i>x</i> + 5)) in partial fractions.",
+     "c": [
+      "−1/(<i>x</i> + 2) − 4/(<i>x</i> + 5)",
+      "−2/(<i>x</i> + 2) − 3/(<i>x</i> + 5)",
+      "−3/(<i>x</i> + 2) − 2/(<i>x</i> + 5)",
+      "2/(<i>x</i> + 2) + 3/(<i>x</i> + 5)"
+     ],
+     "a": 1,
+     "e": "Write A/(<i>x</i> + 2) + B/(<i>x</i> + 5). Put <i>x</i> = −2 and <i>x</i> = −5 to find A = −2 and B = −3."
+    },
+    {
+     "q": "Express (−<i>x</i> + 1)/((<i>x</i> − 3)(<i>x</i> − 4)) in partial fractions.",
+     "c": [
+      "−2/(<i>x</i> − 3) + 3/(<i>x</i> − 4)",
+      "3/(<i>x</i> − 3) − 4/(<i>x</i> − 4)",
+      "−3/(<i>x</i> − 3) + 2/(<i>x</i> − 4)",
+      "2/(<i>x</i> − 3) − 3/(<i>x</i> − 4)"
+     ],
+     "a": 3,
+     "e": "Write A/(<i>x</i> − 3) + B/(<i>x</i> − 4). Put <i>x</i> = 3 and <i>x</i> = 4 to find A = 2 and B = −3."
+    },
+    {
+     "q": "Evaluate ∫ 1/(<i>x</i>² + 9) d<i>x</i>.",
+     "c": [
+      "(1/3) sin<sup>−1</sup>(<i>x</i>/3) + C",
+      "tan<sup>−1</sup>(<i>x</i>/3) + C",
+      "(1/3) tan<sup>−1</sup>(<i>x</i>/3) + C",
+      "(1/3) ln|<i>x</i>² + 9| + C"
+     ],
+     "a": 2,
+     "e": "∫ d<i>x</i>/(<i>x</i>² + a²) = (1/a) tan<sup>−1</sup>(<i>x</i>/a) + C with a = 3: <b>(1/3) tan<sup>−1</sup>(<i>x</i>/3) + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 1/((<i>x</i> + 2)(<i>x</i> − 4)) d<i>x</i>.",
+     "c": [
+      "(1/6) ln|(<i>x</i> + 2)/(<i>x</i> − 4)| + C",
+      "(1/6) ln|(<i>x</i> − 4)/(<i>x</i> + 2)| + C",
+      "6 ln|(<i>x</i> − 4)/(<i>x</i> + 2)| + C",
+      "ln|(<i>x</i> + 2)(<i>x</i> − 4)| + C"
+     ],
+     "a": 1,
+     "e": "Partial fractions: 1/((<i>x</i> + 2)(<i>x</i> − 4)) = (1/6)[1/(<i>x</i> − 4) − 1/(<i>x</i> + 2)], so the integral is <b>(1/6) ln|(<i>x</i> − 4)/(<i>x</i> + 2)| + C</b>."
+    },
+    {
+     "q": "Express (−<i>x</i> + 16)/((<i>x</i> − 4)(<i>x</i> + 2)) in partial fractions.",
+     "c": [
+      "3/(<i>x</i> − 4) − 4/(<i>x</i> + 2)",
+      "−2/(<i>x</i> − 4) + 3/(<i>x</i> + 2)",
+      "−3/(<i>x</i> − 4) + 2/(<i>x</i> + 2)",
+      "2/(<i>x</i> − 4) − 3/(<i>x</i> + 2)"
+     ],
+     "a": 3,
+     "e": "Write A/(<i>x</i> − 4) + B/(<i>x</i> + 2). Put <i>x</i> = 4 and <i>x</i> = −2 to find A = 2 and B = −3."
+    },
+    {
+     "q": "Express (−5<i>x</i> + 1)/((<i>x</i> − 3)(<i>x</i> + 4)) in partial fractions.",
+     "c": [
+      "2/(<i>x</i> − 3) + 3/(<i>x</i> + 4)",
+      "−3/(<i>x</i> − 3) − 2/(<i>x</i> + 4)",
+      "−2/(<i>x</i> − 3) − 3/(<i>x</i> + 4)",
+      "−1/(<i>x</i> − 3) − 4/(<i>x</i> + 4)"
+     ],
+     "a": 2,
+     "e": "Write A/(<i>x</i> − 3) + B/(<i>x</i> + 4). Put <i>x</i> = 3 and <i>x</i> = −4 to find A = −2 and B = −3."
+    },
+    {
+     "q": "Evaluate ∫ 1/(<i>x</i>² + 4) d<i>x</i>.",
+     "c": [
+      "tan<sup>−1</sup>(<i>x</i>/2) + C",
+      "(1/2) ln|<i>x</i>² + 4| + C",
+      "(1/2) tan<sup>−1</sup>(<i>x</i>/2) + C",
+      "(1/2) sin<sup>−1</sup>(<i>x</i>/2) + C"
+     ],
+     "a": 2,
+     "e": "∫ d<i>x</i>/(<i>x</i>² + a²) = (1/a) tan<sup>−1</sup>(<i>x</i>/a) + C with a = 2: <b>(1/2) tan<sup>−1</sup>(<i>x</i>/2) + C</b>."
+    },
+    {
+     "q": "Express (5<i>x</i> + 13)/((<i>x</i> − 1)(<i>x</i> + 5)) in partial fractions.",
+     "c": [
+      "−3/(<i>x</i> − 1) − 2/(<i>x</i> + 5)",
+      "2/(<i>x</i> − 1) + 3/(<i>x</i> + 5)",
+      "4/(<i>x</i> − 1) + 1/(<i>x</i> + 5)",
+      "3/(<i>x</i> − 1) + 2/(<i>x</i> + 5)"
+     ],
+     "a": 3,
+     "e": "Write A/(<i>x</i> − 1) + B/(<i>x</i> + 5). Put <i>x</i> = 1 and <i>x</i> = −5 to find A = 3 and B = 2."
+    },
+    {
+     "q": "Evaluate ∫ 1/((<i>x</i>)(<i>x</i> − 4)) d<i>x</i>.",
+     "c": [
+      "4 ln|(<i>x</i> − 4)/(<i>x</i>)| + C",
+      "(1/4) ln|(<i>x</i> − 4)/(<i>x</i>)| + C",
+      "ln|(<i>x</i>)(<i>x</i> − 4)| + C",
+      "(1/4) ln|(<i>x</i>)/(<i>x</i> − 4)| + C"
+     ],
+     "a": 1,
+     "e": "Partial fractions: 1/((<i>x</i>)(<i>x</i> − 4)) = (1/4)[1/(<i>x</i> − 4) − 1/(<i>x</i>)], so the integral is <b>(1/4) ln|(<i>x</i> − 4)/(<i>x</i>)| + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 1/(<i>x</i>² + 25) d<i>x</i>.",
+     "c": [
+      "(1/5) sin<sup>−1</sup>(<i>x</i>/5) + C",
+      "tan<sup>−1</sup>(<i>x</i>/5) + C",
+      "(1/5) ln|<i>x</i>² + 25| + C",
+      "(1/5) tan<sup>−1</sup>(<i>x</i>/5) + C"
+     ],
+     "a": 3,
+     "e": "∫ d<i>x</i>/(<i>x</i>² + a²) = (1/a) tan<sup>−1</sup>(<i>x</i>/a) + C with a = 5: <b>(1/5) tan<sup>−1</sup>(<i>x</i>/5) + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 1/(<i>x</i>² + 36) d<i>x</i>.",
+     "c": [
+      "tan<sup>−1</sup>(<i>x</i>/6) + C",
+      "(1/6) ln|<i>x</i>² + 36| + C",
+      "(1/6) tan<sup>−1</sup>(<i>x</i>/6) + C",
+      "(1/6) sin<sup>−1</sup>(<i>x</i>/6) + C"
+     ],
+     "a": 2,
+     "e": "∫ d<i>x</i>/(<i>x</i>² + a²) = (1/a) tan<sup>−1</sup>(<i>x</i>/a) + C with a = 6: <b>(1/6) tan<sup>−1</sup>(<i>x</i>/6) + C</b>."
+    },
+    {
+     "q": "Express (6<i>x</i> − 6)/((<i>x</i> − 3)(<i>x</i> + 3)) in partial fractions.",
+     "c": [
+      "3/(<i>x</i> − 3) + 3/(<i>x</i> + 3)",
+      "−2/(<i>x</i> − 3) − 4/(<i>x</i> + 3)",
+      "4/(<i>x</i> − 3) + 2/(<i>x</i> + 3)",
+      "2/(<i>x</i> − 3) + 4/(<i>x</i> + 3)"
+     ],
+     "a": 3,
+     "e": "Write A/(<i>x</i> − 3) + B/(<i>x</i> + 3). Put <i>x</i> = 3 and <i>x</i> = −3 to find A = 2 and B = 4."
+    },
+    {
+     "q": "Evaluate ∫ 1/(<i>x</i>² − 9) d<i>x</i>.",
+     "c": [
+      "(1/3) ln|(<i>x</i> − 3)/(<i>x</i> + 3)| + C",
+      "(1/6) ln|(<i>x</i> − 3)/(<i>x</i> + 3)| + C",
+      "(1/6) ln|(<i>x</i> + 3)/(<i>x</i> − 3)| + C",
+      "(1/3) tan<sup>−1</sup>(<i>x</i>/3) + C"
+     ],
+     "a": 1,
+     "e": "∫ d<i>x</i>/(<i>x</i>² − a²) = (1/2a) ln|(<i>x</i> − a)/(<i>x</i> + a)| + C: <b>(1/6) ln|(<i>x</i> − 3)/(<i>x</i> + 3)| + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 1/((<i>x</i> − 1)(<i>x</i> − 5)) d<i>x</i>.",
+     "c": [
+      "(1/4) ln|(<i>x</i> − 1)/(<i>x</i> − 5)| + C",
+      "4 ln|(<i>x</i> − 5)/(<i>x</i> − 1)| + C",
+      "(1/4) ln|(<i>x</i> − 5)/(<i>x</i> − 1)| + C",
+      "ln|(<i>x</i> − 1)(<i>x</i> − 5)| + C"
+     ],
+     "a": 2,
+     "e": "Partial fractions: 1/((<i>x</i> − 1)(<i>x</i> − 5)) = (1/4)[1/(<i>x</i> − 5) − 1/(<i>x</i> − 1)], so the integral is <b>(1/4) ln|(<i>x</i> − 5)/(<i>x</i> − 1)| + C</b>."
+    },
+    {
+     "q": "Evaluate ∫ 1/((<i>x</i> + 3)(<i>x</i> + 1)) d<i>x</i>.",
+     "c": [
+      "(1/2) ln|(<i>x</i> + 1)/(<i>x</i> + 3)| + C",
+      "2 ln|(<i>x</i> + 1)/(<i>x</i> + 3)| + C",
+      "ln|(<i>x</i> + 3)(<i>x</i> + 1)| + C",
+      "(1/2) ln|(<i>x</i> + 3)/(<i>x</i> + 1)| + C"
+     ],
+     "a": 0,
+     "e": "Partial fractions: 1/((<i>x</i> + 3)(<i>x</i> + 1)) = (1/2)[1/(<i>x</i> + 1) − 1/(<i>x</i> + 3)], so the integral is <b>(1/2) ln|(<i>x</i> + 1)/(<i>x</i> + 3)| + C</b>."
+    },
+    {
+     "q": "Express (5<i>x</i> − 13)/((<i>x</i> − 3)(<i>x</i> − 1)) in partial fractions.",
+     "c": [
+      "−1/(<i>x</i> − 3) − 4/(<i>x</i> − 1)",
+      "1/(<i>x</i> − 3) + 4/(<i>x</i> − 1)",
+      "4/(<i>x</i> − 3) + 1/(<i>x</i> − 1)",
+      "2/(<i>x</i> − 3) + 3/(<i>x</i> − 1)"
+     ],
+     "a": 1,
+     "e": "Write A/(<i>x</i> − 3) + B/(<i>x</i> − 1). Put <i>x</i> = 3 and <i>x</i> = 1 to find A = 1 and B = 4."
+    },
+    {
+     "q": "Express (−<i>x</i> − 3)/((<i>x</i> + 5)(<i>x</i> + 4)) in partial fractions.",
+     "c": [
+      "−2/(<i>x</i> + 5) + 1/(<i>x</i> + 4)",
+      "2/(<i>x</i> + 5) − 1/(<i>x</i> + 4)",
+      "1/(<i>x</i> + 5) − 2/(<i>x</i> + 4)",
+      "−3/(<i>x</i> + 5) + 2/(<i>x</i> + 4)"
+     ],
+     "a": 0,
+     "e": "Write A/(<i>x</i> + 5) + B/(<i>x</i> + 4). Put <i>x</i> = −5 and <i>x</i> = −4 to find A = −2 and B = 1."
+    },
+    {
+     "q": "Evaluate ∫ 1/((<i>x</i> − 1)(<i>x</i> − 4)) d<i>x</i>.",
+     "c": [
+      "(1/3) ln|(<i>x</i> − 4)/(<i>x</i> − 1)| + C",
+      "(1/3) ln|(<i>x</i> − 1)/(<i>x</i> − 4)| + C",
+      "3 ln|(<i>x</i> − 4)/(<i>x</i> − 1)| + C",
+      "ln|(<i>x</i> − 1)(<i>x</i> − 4)| + C"
+     ],
+     "a": 0,
+     "e": "Partial fractions: 1/((<i>x</i> − 1)(<i>x</i> − 4)) = (1/3)[1/(<i>x</i> − 4) − 1/(<i>x</i> − 1)], so the integral is <b>(1/3) ln|(<i>x</i> − 4)/(<i>x</i> − 1)| + C</b>."
+    },
+    {
+     "q": "Express (<i>x</i> − 11)/((<i>x</i> + 1)(<i>x</i> − 5)) in partial fractions.",
+     "c": [
+      "2/(<i>x</i> + 1) − 1/(<i>x</i> − 5)",
+      "−1/(<i>x</i> + 1) + 2/(<i>x</i> − 5)",
+      "3/(<i>x</i> + 1) − 2/(<i>x</i> − 5)",
+      "−2/(<i>x</i> + 1) + 1/(<i>x</i> − 5)"
+     ],
+     "a": 0,
+     "e": "Write A/(<i>x</i> + 1) + B/(<i>x</i> − 5). Put <i>x</i> = −1 and <i>x</i> = 5 to find A = 2 and B = −1."
+    },
+    {
+     "q": "Express (5<i>x</i> + 7)/((<i>x</i> − 1)(<i>x</i> + 3)) in partial fractions.",
+     "c": [
+      "3/(<i>x</i> − 1) + 2/(<i>x</i> + 3)",
+      "−3/(<i>x</i> − 1) − 2/(<i>x</i> + 3)",
+      "4/(<i>x</i> − 1) + 1/(<i>x</i> + 3)",
+      "2/(<i>x</i> − 1) + 3/(<i>x</i> + 3)"
+     ],
+     "a": 0,
+     "e": "Write A/(<i>x</i> − 1) + B/(<i>x</i> + 3). Put <i>x</i> = 1 and <i>x</i> = −3 to find A = 3 and B = 2."
+    }
+   ]
+  },
+  {
+   "title": "Integration by parts and definite integrals",
+   "items": [
+    {
+     "q": "Evaluate ∫<sub>0</sub><sup>π/2</sup> sin <i>x</i> d<i>x</i>.",
+     "c": [
+      "π/2",
+      "0",
+      "1",
+      "−1"
+     ],
+     "a": 2,
+     "e": "[−cos <i>x</i>] from 0 to π/2 = 0 − (−1) = 1: <b>1</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−5</sub><sup>5</sup> (<i>x</i>³ − 4<i>x</i>) d<i>x</i>.",
+     "c": [
+      "10",
+      "It cannot be found without the antiderivative",
+      "25",
+      "0"
+     ],
+     "a": 3,
+     "e": "<i>x</i>³ − 4<i>x</i> is an odd function (f(−<i>x</i>) = −f(<i>x</i>)), so its integral over [−a, a] is <b>0</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>0</sub><sup>1</sup> e<sup><i>x</i></sup> d<i>x</i>.",
+     "c": [
+      "e − 1",
+      "1",
+      "e + 1",
+      "e"
+     ],
+     "a": 0,
+     "e": "[e<sup><i>x</i></sup>] from 0 to 1 = e − 1: <b>e − 1</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>0</sub><sup>π/2</sup> cos <i>x</i> d<i>x</i>.",
+     "c": [
+      "0",
+      "−1",
+      "1",
+      "π/2"
+     ],
+     "a": 2,
+     "e": "[sin <i>x</i>] from 0 to π/2 = 1: <b>1</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−1</sub><sup>1</sup> sin <i>x</i> d<i>x</i>.",
+     "c": [
+      "1",
+      "2",
+      "It cannot be found without the antiderivative",
+      "0"
+     ],
+     "a": 3,
+     "e": "sin <i>x</i> is an odd function (f(−<i>x</i>) = −f(<i>x</i>)), so its integral over [−a, a] is <b>0</b>."
+    },
+    {
+     "q": "Evaluate ∫ <i>x</i> sin <i>x</i> d<i>x</i>.",
+     "c": [
+      "−<i>x</i> cos <i>x</i> + sin <i>x</i> + C",
+      "(<i>x</i>²/2)(−cos <i>x</i>) + C",
+      "<i>x</i> cos <i>x</i> − sin <i>x</i> + C",
+      "−<i>x</i> cos <i>x</i> − sin <i>x</i> + C"
+     ],
+     "a": 0,
+     "e": "Integrate by parts, ∫ u v d<i>x</i> = u ∫v d<i>x</i> − ∫(u′ ∫v d<i>x</i>) d<i>x</i>: <b>−<i>x</i> cos <i>x</i> + sin <i>x</i> + C</b>. (Differentiate the answer to check.)"
+    },
+    {
+     "q": "Evaluate ∫<sub>−2</sub><sup>1</sup> (2<i>x</i>² + 4<i>x</i> + 1) d<i>x</i>.",
+     "c": [
+      "<span class='fr'><span class='fn'>11</span><span class='fd'>3</span></span>",
+      "−3",
+      "6",
+      "3"
+     ],
+     "a": 3,
+     "e": "Find an antiderivative F and work out F(1) − F(−2): <b>3</b>."
+    },
+    {
+     "q": "Evaluate ∫ <i>x</i>² e<sup><i>x</i></sup> d<i>x</i>.",
+     "c": [
+      "(<i>x</i>³/3) e<sup><i>x</i></sup> + C",
+      "e<sup><i>x</i></sup>(<i>x</i>² − 2<i>x</i> + 2) + C",
+      "e<sup><i>x</i></sup>(<i>x</i>² + 2<i>x</i> + 2) + C",
+      "<i>x</i>² e<sup><i>x</i></sup> + C"
+     ],
+     "a": 1,
+     "e": "Integrate by parts, ∫ u v d<i>x</i> = u ∫v d<i>x</i> − ∫(u′ ∫v d<i>x</i>) d<i>x</i>: <b>e<sup><i>x</i></sup>(<i>x</i>² − 2<i>x</i> + 2) + C</b>. (Differentiate the answer to check.)"
+    },
+    {
+     "q": "Evaluate ∫ e<sup><i>x</i></sup>(sin <i>x</i> + cos <i>x</i>) d<i>x</i>.",
+     "c": [
+      "e<sup><i>x</i></sup>(sin <i>x</i> − cos <i>x</i>) + C",
+      "−e<sup><i>x</i></sup> sin <i>x</i> + C",
+      "e<sup><i>x</i></sup> cos <i>x</i> + C",
+      "e<sup><i>x</i></sup> sin <i>x</i> + C"
+     ],
+     "a": 3,
+     "e": "Integrate by parts, ∫ u v d<i>x</i> = u ∫v d<i>x</i> − ∫(u′ ∫v d<i>x</i>) d<i>x</i>: <b>e<sup><i>x</i></sup> sin <i>x</i> + C</b>. (Differentiate the answer to check.)"
+    },
+    {
+     "q": "Evaluate ∫ ln <i>x</i> d<i>x</i>.",
+     "c": [
+      "<i>x</i> ln <i>x</i> + <i>x</i> + C",
+      "(ln <i>x</i>)²/2 + C",
+      "<i>x</i> ln <i>x</i> − <i>x</i> + C",
+      "1/<i>x</i> + C"
+     ],
+     "a": 2,
+     "e": "Integrate by parts, ∫ u v d<i>x</i> = u ∫v d<i>x</i> − ∫(u′ ∫v d<i>x</i>) d<i>x</i>: <b><i>x</i> ln <i>x</i> − <i>x</i> + C</b>. (Differentiate the answer to check.)"
+    },
+    {
+     "q": "Evaluate ∫<sub>−3</sub><sup>3</sup> sin <i>x</i> d<i>x</i>.",
+     "c": [
+      "6",
+      "It cannot be found without the antiderivative",
+      "0",
+      "9"
+     ],
+     "a": 2,
+     "e": "sin <i>x</i> is an odd function (f(−<i>x</i>) = −f(<i>x</i>)), so its integral over [−a, a] is <b>0</b>."
+    },
+    {
+     "q": "Evaluate ∫ <i>x</i> ln <i>x</i> d<i>x</i>.",
+     "c": [
+      "<i>x</i> ln <i>x</i> − <i>x</i> + C",
+      "(<i>x</i>²/2) ln <i>x</i> − <i>x</i>²/4 + C",
+      "(<i>x</i>²/2) ln <i>x</i> + C",
+      "(<i>x</i>²/2) ln <i>x</i> + <i>x</i>²/4 + C"
+     ],
+     "a": 1,
+     "e": "Integrate by parts, ∫ u v d<i>x</i> = u ∫v d<i>x</i> − ∫(u′ ∫v d<i>x</i>) d<i>x</i>: <b>(<i>x</i>²/2) ln <i>x</i> − <i>x</i>²/4 + C</b>. (Differentiate the answer to check.)"
+    },
+    {
+     "q": "Evaluate ∫<sub>−1</sub><sup>3</sup> (−3<i>x</i>² + <i>x</i> − 6) d<i>x</i>.",
+     "c": [
+      "48",
+      "−20",
+      "−<span class='fr'><span class='fn'>81</span><span class='fd'>2</span></span>",
+      "−48"
+     ],
+     "a": 3,
+     "e": "Find an antiderivative F and work out F(3) − F(−1): <b>−48</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−1</sub><sup>1</sup> <i>x</i>|<i>x</i>| d<i>x</i>.",
+     "c": [
+      "It cannot be found without the antiderivative",
+      "0",
+      "1",
+      "2"
+     ],
+     "a": 1,
+     "e": "<i>x</i>|<i>x</i>| is an odd function (f(−<i>x</i>) = −f(<i>x</i>)), so its integral over [−a, a] is <b>0</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−3</sub><sup>3</sup> (<i>x</i>⁵ + <i>x</i>) d<i>x</i>.",
+     "c": [
+      "6",
+      "9",
+      "0",
+      "It cannot be found without the antiderivative"
+     ],
+     "a": 2,
+     "e": "<i>x</i>⁵ + <i>x</i> is an odd function (f(−<i>x</i>) = −f(<i>x</i>)), so its integral over [−a, a] is <b>0</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>2</sub><sup>3</sup> (1/<i>x</i>) d<i>x</i>.",
+     "c": [
+      "ln(3/2)",
+      "1/6",
+      "ln 3 · ln 2",
+      "ln 6"
+     ],
+     "a": 0,
+     "e": "[ln <i>x</i>] from 2 to 3 = ln 3 − ln 2: <b>ln(3/2)</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−2</sub><sup>0</sup> (−3<i>x</i>² + <i>x</i> + 4) d<i>x</i>.",
+     "c": [
+      "2",
+      "−2",
+      "0",
+      "14"
+     ],
+     "a": 1,
+     "e": "Find an antiderivative F and work out F(0) − F(−2): <b>−2</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>0</sub><sup>π/4</sup> sec² <i>x</i> d<i>x</i>.",
+     "c": [
+      "1",
+      "0",
+      "π/4",
+      "√2"
+     ],
+     "a": 0,
+     "e": "[tan <i>x</i>] from 0 to π/4 = 1: <b>1</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−4</sub><sup>4</sup> (<i>x</i>⁵ + <i>x</i>) d<i>x</i>.",
+     "c": [
+      "It cannot be found without the antiderivative",
+      "0",
+      "8",
+      "16"
+     ],
+     "a": 1,
+     "e": "<i>x</i>⁵ + <i>x</i> is an odd function (f(−<i>x</i>) = −f(<i>x</i>)), so its integral over [−a, a] is <b>0</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>1</sub><sup>2</sup> (−2<i>x</i>² + 4<i>x</i> + 3) d<i>x</i>.",
+     "c": [
+      "<span class='fr'><span class='fn'>13</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>26</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>13</span><span class='fd'>3</span></span>",
+      "−2"
+     ],
+     "a": 0,
+     "e": "Find an antiderivative F and work out F(2) − F(1): <b><span class='fr'><span class='fn'>13</span><span class='fd'>3</span></span></b>."
+    }
+   ]
+  },
+  {
+   "title": "Definite integrals",
+   "items": [
+    {
+     "q": "Evaluate ∫<sub>−1</sub><sup>2</sup> (−2<i>x</i>² − 3<i>x</i> − 6) d<i>x</i>.",
+     "c": [
+      "<span class='fr'><span class='fn'>57</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>70</span><span class='fd'>3</span></span>",
+      "−15",
+      "−<span class='fr'><span class='fn'>57</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "Find an antiderivative F and work out F(2) − F(−1): <b>−<span class='fr'><span class='fn'>57</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>1</sub><sup>3</sup> (−<i>x</i>² − 2<i>x</i> − 3) d<i>x</i>.",
+     "c": [
+      "<span class='fr'><span class='fn'>68</span><span class='fd'>3</span></span>",
+      "−12",
+      "−27",
+      "−<span class='fr'><span class='fn'>68</span><span class='fd'>3</span></span>"
+     ],
+     "a": 3,
+     "e": "Find an antiderivative F and work out F(3) − F(1): <b>−<span class='fr'><span class='fn'>68</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−2</sub><sup>−1</sup> (−3<i>x</i>² − 4<i>x</i> + 4) d<i>x</i>.",
+     "c": [
+      "3",
+      "5",
+      "−5",
+      "−3"
+     ],
+     "a": 0,
+     "e": "Find an antiderivative F and work out F(−1) − F(−2): <b>3</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>0</sub><sup>2</sup> (−<i>x</i>² + 3<i>x</i> + 5) d<i>x</i>.",
+     "c": [
+      "<span class='fr'><span class='fn'>43</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span>",
+      "2",
+      "−<span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Find an antiderivative F and work out F(2) − F(0): <b><span class='fr'><span class='fn'>40</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>0</sub><sup>3</sup> (−<i>x</i>² + 2<i>x</i> + 2) d<i>x</i>.",
+     "c": [
+      "7",
+      "−3",
+      "−6",
+      "6"
+     ],
+     "a": 3,
+     "e": "Find an antiderivative F and work out F(3) − F(0): <b>6</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>0</sub><sup>1</sup> (2<i>x</i>² − 2<i>x</i> + 6) d<i>x</i>.",
+     "c": [
+      "0",
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>20</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>17</span><span class='fd'>3</span></span>"
+     ],
+     "a": 1,
+     "e": "Find an antiderivative F and work out F(1) − F(0): <b><span class='fr'><span class='fn'>17</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−5</sub><sup>5</sup> <i>x</i> cos <i>x</i> d<i>x</i>.",
+     "c": [
+      "10",
+      "It cannot be found without the antiderivative",
+      "0",
+      "25"
+     ],
+     "a": 2,
+     "e": "<i>x</i> cos <i>x</i> is an odd function (f(−<i>x</i>) = −f(<i>x</i>)), so its integral over [−a, a] is <b>0</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−2</sub><sup>−1</sup> (−<i>x</i> − 3) d<i>x</i>.",
+     "c": [
+      "−1",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>"
+     ],
+     "a": 2,
+     "e": "Find an antiderivative F and work out F(−1) − F(−2): <b>−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>0</sub><sup>1</sup> 1/(1 + <i>x</i>²) d<i>x</i>.",
+     "c": [
+      "π/2",
+      "π/4",
+      "ln 2",
+      "1"
+     ],
+     "a": 1,
+     "e": "[tan<sup>−1</sup> <i>x</i>] from 0 to 1 = π/4: <b>π/4</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>0</sub><sup>3</sup> (4<i>x</i>² + 2<i>x</i> − 5) d<i>x</i>.",
+     "c": [
+      "30",
+      "42",
+      "−30",
+      "31"
+     ],
+     "a": 0,
+     "e": "Find an antiderivative F and work out F(3) − F(0): <b>30</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>0</sub><sup>2</sup> (−2<i>x</i>² + <i>x</i> + 2) d<i>x</i>.",
+     "c": [
+      "<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>",
+      "−6",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span>"
+     ],
+     "a": 0,
+     "e": "Find an antiderivative F and work out F(2) − F(0): <b><span class='fr'><span class='fn'>2</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−1</sub><sup>0</sup> (<i>x</i>² − 5<i>x</i> + 6) d<i>x</i>.",
+     "c": [
+      "<span class='fr'><span class='fn'>53</span><span class='fd'>6</span></span>",
+      "0",
+      "−<span class='fr'><span class='fn'>53</span><span class='fd'>6</span></span>",
+      "−6"
+     ],
+     "a": 0,
+     "e": "Find an antiderivative F and work out F(0) − F(−1): <b><span class='fr'><span class='fn'>53</span><span class='fd'>6</span></span></b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−1</sub><sup>3</sup> (4<i>x</i>² − 3<i>x</i>) d<i>x</i>.",
+     "c": [
+      "<span class='fr'><span class='fn'>76</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>45</span><span class='fd'>2</span></span>",
+      "−<span class='fr'><span class='fn'>76</span><span class='fd'>3</span></span>",
+      "20"
+     ],
+     "a": 0,
+     "e": "Find an antiderivative F and work out F(3) − F(−1): <b><span class='fr'><span class='fn'>76</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−2</sub><sup>1</sup> (4<i>x</i>² + 4<i>x</i>) d<i>x</i>.",
+     "c": [
+      "−6",
+      "0",
+      "<span class='fr'><span class='fn'>10</span><span class='fd'>3</span></span>",
+      "6"
+     ],
+     "a": 3,
+     "e": "Find an antiderivative F and work out F(1) − F(−2): <b>6</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−1</sub><sup>1</sup> (−<i>x</i>² + 4<i>x</i> + 4) d<i>x</i>.",
+     "c": [
+      "<span class='fr'><span class='fn'>17</span><span class='fd'>3</span></span>",
+      "−<span class='fr'><span class='fn'>22</span><span class='fd'>3</span></span>",
+      "<span class='fr'><span class='fn'>22</span><span class='fd'>3</span></span>",
+      "8"
+     ],
+     "a": 2,
+     "e": "Find an antiderivative F and work out F(1) − F(−1): <b><span class='fr'><span class='fn'>22</span><span class='fd'>3</span></span></b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−4</sub><sup>4</sup> sin <i>x</i> d<i>x</i>.",
+     "c": [
+      "8",
+      "It cannot be found without the antiderivative",
+      "0",
+      "16"
+     ],
+     "a": 2,
+     "e": "sin <i>x</i> is an odd function (f(−<i>x</i>) = −f(<i>x</i>)), so its integral over [−a, a] is <b>0</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−3</sub><sup>3</sup> <i>x</i> cos <i>x</i> d<i>x</i>.",
+     "c": [
+      "6",
+      "0",
+      "9",
+      "It cannot be found without the antiderivative"
+     ],
+     "a": 1,
+     "e": "<i>x</i> cos <i>x</i> is an odd function (f(−<i>x</i>) = −f(<i>x</i>)), so its integral over [−a, a] is <b>0</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>0</sub><sup>3</sup> (−3<i>x</i>² + 5<i>x</i> + 2) d<i>x</i>.",
+     "c": [
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>5</span><span class='fd'>2</span></span>",
+      "−12"
+     ],
+     "a": 1,
+     "e": "Find an antiderivative F and work out F(3) − F(0): <b><span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span></b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−1</sub><sup>1</sup> (<i>x</i>⁵ + <i>x</i>) d<i>x</i>.",
+     "c": [
+      "2",
+      "It cannot be found without the antiderivative",
+      "0",
+      "1"
+     ],
+     "a": 2,
+     "e": "<i>x</i>⁵ + <i>x</i> is an odd function (f(−<i>x</i>) = −f(<i>x</i>)), so its integral over [−a, a] is <b>0</b>."
+    },
+    {
+     "q": "Evaluate ∫<sub>−2</sub><sup>3</sup> (3<i>x</i>² − 5<i>x</i> − 2) d<i>x</i>.",
+     "c": [
+      "−<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>",
+      "−10",
+      "−<span class='fr'><span class='fn'>3</span><span class='fd'>2</span></span>",
+      "<span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span>"
+     ],
+     "a": 3,
+     "e": "Find an antiderivative F and work out F(3) − F(−2): <b><span class='fr'><span class='fn'>25</span><span class='fd'>2</span></span></b>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 7,
+ "updated": "2026-11-26",
+ "country": "uk",
+ "subject": "maths",
+ "grade": "year-13"
+}

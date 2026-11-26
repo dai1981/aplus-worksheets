@@ -318,6 +318,17 @@ Year 11: 1. sequences ✓ 2. composite-and-inverse-functions ✓ 3. transformati
 （まだ: histograms、iteration、algebraic proof、velocity–time graphs、equation of a circle（中心が原点のものだけ）。A-level（Year 12–13）はこれから）
 トピック：chords-and-tangents→circles、^venn-diagrams→probability
 
+UK / Maths / Year 12–13（A level Mathematics。DfE の GCE AS and A level subject content。Year 12 は AS の内容、Year 13 は残り）— standard_code は「A level Mathematics: Pure mathematics」（Statistics・Mechanics）、domain は Pure Mathematics／Statistics／Mechanics、standard_url は GCE AS and A level mathematics、seo_title は「Year 12 A Level Maths: Quadratics Worksheets」。
+単元の定義は `tools/uk_alevel_units.py`（units() が Year 12、units13() が Year 13。gen_uk_maths_y12_*・y13_* は build(slug, year) を呼ぶだけ。seed は 91000 + 100 × 学年 + sort）。
+共通部品は `tools/uk_alevel.py`：mk(他国の生成スクリプト, 関数名, rep=, drop=, ln=True, keep=) で IN Class 11–12・US Algebra 2／Precalculus・SG Sec の問題関数を UK の名前とイギリス式の語（gradient・factorise・cosec・the second quadrant・square units・brackets、ln=True で log→ln）にして使う（IN の生成スクリプトは import すると JSON を書くので、mk は書き込みを止めて import する）。₹・synthetic division・Quadrant などが残る問題は落とす。unit() は単元全体で同じ問題を出さない。
+自前の問題は `tools/uk_alevel_own.py`（二次不等式、一次と二次の連立、絶対値、部分分数、媒介変数、微分・接線・停留点、積分、反復法・Newton–Raphson・台形公式、抽出法、二項分布、仮説検定、suvat、v–t グラフ、F = ma、エレベーター、滑車、力の分解、摩擦と斜面、モーメント、放物運動、変化する加速度。g = 9.8）。正弦定理・余弦定理の逆三角関数は arcsin・arccos・arctan だけ（sec⁻¹ などは drop）
+Year 12: 1. indices-and-surds ✓ 2. quadratics ✓ 3. equations-and-inequalities ✓ 4. polynomials-and-the-factor-theorem ✓ 5. graphs-and-transformations ✓ 6. straight-lines-and-circles ✓ 7. binomial-expansion ✓ 8. trigonometry ✓ 9. exponentials-and-logarithms ✓
+10. differentiation ✓ 11. integration ✓ 12. vectors ✓ 13. statistical-sampling-and-data ✓ 14. probability ✓ 15. binomial-distribution-and-hypothesis-testing ✓ 16. kinematics ✓ 17. forces-and-newtons-laws ✓
+Year 13: 1. functions-and-modulus ✓ 2. partial-fractions ✓ 3. sequences-and-series ✓ 4. radians-arcs-and-sectors ✓ 5. trigonometric-functions-and-formulae ✓ 6. differentiation-techniques ✓ 7. integration-techniques ✓ 8. parametric-and-differential-equations ✓
+9. numerical-methods ✓ 10. vectors-in-3d ✓ 11. normal-distribution ✓ 12. conditional-probability ✓ 13. moments-and-friction ✓ 14. projectiles-and-variable-acceleration ✓
+（まだ: proof、product rule と quotient rule の単元、hypothesis testing の正規分布・相関）
+トピック（topics.php の uk）：calculus の名前を Calculus に（integration・numerical-methods・differential-equations）、binomial-distribution・normal-distribution→probability、partial-fractions→algebra、新トピック mechanics（kinematics・newtons-laws・moments-and-friction・projectiles）
+
 AU / Maths（Australian Curriculum v9.0）— country `au`、subject `maths`、grade `year-N`、A4。
 オーストラリア英語（colour, metre, maths, analog, mixed numeral, column graph, students）。お金は $ と c（1c・2c 硬貨なし）。
 数は 4 桁はそのまま（4536）、5 桁以上は空白区切り（10 000、ノーブレークスペース）。standard_code は v9 のコード（例: AC9M3N01）
