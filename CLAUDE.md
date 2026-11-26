@@ -2087,7 +2087,12 @@ UK / Science / Year 5（seed 615cc）
 1. life-cycles ✓ 2. reproduction-in-plants-and-animals ✓ 3. growing-up-and-old-age ✓ 4. properties-of-materials ✓ 5. dissolving-and-solutions ✓ 6. separating-mixtures ✓ 7. reversible-and-irreversible-changes ✓
 8. the-solar-system ✓ 9. day-night-and-the-moon ✓ 10. gravity ✓ 11. air-and-water-resistance ✓ 12. friction ✓ 13. levers-pulleys-and-gears ✓ 14. working-scientifically ✓（Year 6 の問題関数を import し、EXP・CONC・seed を入れ替えて再利用）
 トピック：resistance・friction・lever→forces-and-motion、growing-up→living-things、reversible→matter
-次は Year 4 → 3 → 2 → 1 → KS3（Year 7–9）
+UK / Science / Year 4（seed 614cc。Year 6 の生成スクリプトを import して U・R・P を新しい seed に入れ替え、uk_sci.USED.clear() してから問題関数を再利用できる）
+1. grouping-living-things ✓ 2. using-classification-keys ✓ 3. changing-environments ✓ 4. the-digestive-system ✓ 5. teeth ✓ 6. food-chains ✓ 7. solids-liquids-and-gases ✓
+8. changes-of-state ✓ 9. the-water-cycle ✓ 10. how-sounds-are-made ✓ 11. pitch-and-volume ✓ 12. electrical-appliances-and-circuits ✓ 13. conductors-and-insulators ✓ 14. working-scientifically ✓
+uk_sci の LEAKS は「sound meter・newton meter」など計器の meter を除く（英国でも計器は meter）
+**セットの配分を書く前に、各問題関数が作れる問題の数を数える**（ちょうど同じ数だと soft cap で足りなくなる。余裕をもたせる）
+次は Year 3 → 2 → 1 → KS3（Year 7–9）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
