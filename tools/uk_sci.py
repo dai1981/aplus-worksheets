@@ -102,7 +102,8 @@ def ukm(f):
         if len({c.strip().lower() for c in it["c"]}) < 4:
             return None
         names = "|".join(GIRLS + BOYS + list(getattr(sci_common, "GIRLS", [])) + list(getattr(sci_common, "BOYS", [])))
-        norm = re.sub(r"\b(%s)\b('s)?" % names, "N", re.sub(r"<[^>]+>", " ", it["q"]))
+        norm = re.sub(r"<(table|svg|figure)\b.*?</\1>", " ", it["q"], flags=re.S)
+        norm = re.sub(r"\d+(\.\d+)?", "#", re.sub(r"\b(%s)\b('s)?" % names, "N", re.sub(r"<[^>]+>", " ", norm)))
         if not once(("ukq", norm, it["c"][0])):
             return None
         return it
