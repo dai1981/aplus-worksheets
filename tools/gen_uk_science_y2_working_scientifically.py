@@ -104,7 +104,7 @@ B5 = bank([
 
 
 def body():
-    pic = K.row(["mirror", "rock", "leaf"], words=["observe", "test", "record"], size=90, label="observe, test and record")
+    pic = K.row(["mirror", "ball", "paper"], words=["observe", "test", "record"], size=90, label="observe, test and record")
     ex = [("Look at a beetle closely with?", ["Makes things look bigger"], "a magnifying glass"),
           ("Dog, cat, rabbit, rock: odd one out?", ["Not living"], "the rock")]
     mist = ["Changing two things at once in a test.", "Guessing instead of looking carefully.", "Forgetting to write the results down."]

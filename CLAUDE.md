@@ -2099,7 +2099,13 @@ Year 5・6 の問題関数を再利用（reproduction・diet・fossils・light�
 光の実験は暗い所の植物の高さを測らない（暗所の植物は伸びる）。葉の数にする。鋼の釘で引っかけるのは granite・basalt・obsidian 以外（marble・slate も傷が付く）。英国の 1p・2p 硬貨は鋼なので磁石の問題に硬貨を使わない
 pool を数える: `cd tools; python3 sci_pool.py モジュール名 g_x g_y`（maker を 5000 回呼んで問題文＋答えの種類を数える）。図だけ違う問題は数に入らない
 トピック：nutrition・skeleton・fossils-are→living-things、fossils-are・^soils$→earths-systems（out に water-moves）、^shadows$→waves-and-light
-次は Year 2 → 1 → KS3（Year 7–9）
+UK / Science / Year 2（KS1。seed 612cc。ページの上は軽く（title ≤ 40・key_big ≤ 40・key_sub ≤ 90）、body は kid_lesson（K.row の絵＋太字の一文）。共通部品は `tools/uk_ks1.py`（sci_kids の絵に英国の名前：bug → ladybird、flashlight → torch。card・row・which_of）。LEAKS に ladybug
+1. living-dead-and-never-alive ✓ 2. habitats ✓ 3. microhabitats ✓ 4. simple-food-chains ✓ 5. seeds-and-bulbs ✓ 6. what-plants-need-to-stay-healthy ✓
+7. animals-and-their-young ✓ 8. what-animals-need-to-survive ✓ 9. staying-healthy ✓ 10. uses-of-everyday-materials ✓ 11. changing-the-shape-of-materials ✓ 12. working-scientifically ✓
+**set の配分は pool を数えてから書く。`if False`・`(g, 0)`・`[...][:n]` のような仮の書き方を set に残さない**（`grep -n "if False\|, 0)" ファイル` で確かめる）
+誤答に正解と同じ意味の選択肢を入れない（「too cold」が 2 つ、「melt」が 2 つなど）。答えの種類（good・cold・hot など）で誤答を選ぶ
+トピック：living-dead・seeds-and-bulbs・staying-healthy→living-things
+次は Year 1 → KS3（Year 7–9）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 

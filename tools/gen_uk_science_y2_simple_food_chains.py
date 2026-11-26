@@ -125,7 +125,7 @@ B5 = bank([
 
 
 def body():
-    pic = K.row(["leaf", "rabbit", "dog"], words=["grass", "rabbit", "fox"], size=90, label="food chain: grass is eaten by a rabbit, which is eaten by a fox")
+    pic = K.row(["leaf", "worm", "bird"], words=["dead leaves", "worm", "blackbird"], size=90, label="food chain: dead leaves are eaten by a worm, which is eaten by a blackbird")
     ex = [("Grass → rabbit → fox. What does the fox eat?", ["Follow the arrow"], "the rabbit"),
           ("Where does an egg come from?", ["An animal"], "a hen")]
     mist = ["Thinking the arrow points to the thing that gets eaten.", "Thinking food chains start with an animal.", "Thinking milk comes from a factory."]

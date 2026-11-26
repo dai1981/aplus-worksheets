@@ -84,7 +84,7 @@ B5 = bank([
 
 
 def body():
-    pic = K.row(["drop", "sun", "plant"], words=["water", "light", "warmth"], size=90, label="a plant needs water, light and warmth")
+    pic = K.row(["drop", "sun", "hot"], words=["water", "light", "warmth"], size=90, label="a plant needs water, light and warmth")
     ex = [("Cress in a dark cupboard?", ["No light"], "pale and weak"),
           ("Tomato plant on a frosty night?", ["Too cold"], "its leaves may be damaged")]
     mist = ["Thinking plants grow best in the dark.", "Thinking more water is always better.", "Thinking plants do not mind frost."]
