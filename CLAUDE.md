@@ -2032,7 +2032,19 @@ US / Science / Grade 3（NGSS。seed は 301xx）
 10. variation-and-survival (3-LS4-2) ✓ 11. habitats-and-survival (3-LS4-3) ✓ 12. environmental-change (3-LS4-4) ✓ 13. weather-data (3-ESS2-1) ✓ 14. climates-of-the-world (3-ESS2-2) ✓
 15. weather-hazards (3-ESS3-1) ✓
 
-US / Science の次: Grade 6–8（NGSS は MS をまとめて示すので、一般的な配分で学年に分ける）→ K–2。そのあと英国・オーストラリアなどの理科
+US / Science / Grade 6–8（NGSS MS は 3 学年まとめての基準なので、California の Preferred Integrated Model の配分で学年に分ける。seed は 601xx・701xx・801xx）
+Grade 6: cells-and-cell-theory (MS-LS1-1)、parts-of-a-cell (MS-LS1-2)、body-systems (MS-LS1-3)、senses-and-the-nervous-system (MS-LS1-8)、particles-and-states-of-matter (MS-PS1-4)、
+thermal-energy-and-temperature (MS-PS3-4)、designing-to-control-heat-transfer (MS-PS3-3)、the-water-cycle (MS-ESS2-4)、air-masses-and-weather (MS-ESS2-5)、ocean-and-atmosphere-circulation (MS-ESS2-6)、
+global-temperature-and-climate-change (MS-ESS3-5)、engineering-design-process (MS-ETS1-1〜4)
+Grade 7: atoms-and-molecules (MS-PS1-1)、properties-and-chemical-reactions (MS-PS1-2)、synthetic-materials (MS-PS1-3)、conservation-of-atoms (MS-PS1-5)、energy-in-chemical-reactions (MS-PS1-6)、
+photosynthesis (MS-LS1-6)、cellular-respiration (MS-LS1-7)、resources-and-populations (MS-LS2-1)、interactions-in-ecosystems (MS-LS2-2)、cycling-of-matter-and-energy-flow (MS-LS2-3)、
+ecosystem-changes (MS-LS2-4)、protecting-biodiversity (MS-LS2-5)、the-rock-cycle (MS-ESS2-1)、shaping-earths-surface (MS-ESS2-2)、plate-tectonics (MS-ESS2-3)、natural-resources (MS-ESS3-1)、human-impact-on-the-environment (MS-ESS3-3, MS-ESS3-4)
+Grade 8: newtons-third-law (MS-PS2-1)、forces-and-motion (MS-PS2-2)、electric-and-magnetic-forces (MS-PS2-3, MS-PS2-5)、gravity-and-mass (MS-PS2-4)、kinetic-energy (MS-PS3-1)、potential-energy (MS-PS3-2)、
+energy-transfer-and-motion (MS-PS3-5)、wave-properties (MS-PS4-1)、light-and-sound-waves (MS-PS4-2)、digital-signals (MS-PS4-3)、plant-and-animal-reproduction (MS-LS1-4, MS-LS1-5)、
+genes-and-mutations (MS-LS3-1)、asexual-and-sexual-reproduction (MS-LS3-2)、fossil-record (MS-LS4-1, MS-LS4-2)、embryo-similarities (MS-LS4-3)、natural-selection (MS-LS4-4, MS-LS4-6)、
+artificial-selection-and-genetic-engineering (MS-LS4-5)、earth-moon-sun-system (MS-ESS1-1)、gravity-in-the-solar-system (MS-ESS1-2)、scale-of-the-solar-system (MS-ESS1-3)、geologic-time-scale (MS-ESS1-4)、forecasting-natural-hazards (MS-ESS3-2)
+
+US / Science の次: K–2。そのあと英国・オーストラリアなどの理科
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
