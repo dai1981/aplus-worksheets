@@ -838,7 +838,14 @@ function topic_defs($country = null, $subject = null) {
         $d['data-and-graphs']['out'] = substr($d['data-and-graphs']['out'], 0, -1) . '|binomial-distribution|normal-distribution/';
         $d['fractions']['out'] = substr($d['fractions']['out'], 0, -1) . '|partial-fractions/';
         $d['algebra']['in'] = substr($d['algebra']['in'], 0, -1) . '|partial-fractions/';
-        $d['mechanics'] = array('name' => 'Mechanics', 'in' => '/kinematics|newtons-laws|moments-and-friction|projectiles/', 'out' => '/^$/',
+        // GCSE histograms, iteration and algebraic proof; A level proof, the product and quotient rules and hypothesis tests
+        $d['data-and-graphs']['in'] = substr($d['data-and-graphs']['in'], 0, -1) . '|^histograms$/';
+        $d['data-and-graphs']['out'] = substr($d['data-and-graphs']['out'], 0, -1) . '|velocity-time/';
+        $d['time']['out'] = substr($d['time']['out'], 0, -1) . '|velocity-time/';
+        $d['algebra']['in'] = substr($d['algebra']['in'], 0, -1) . '|^iteration$|^proof$/';
+        $d['calculus']['in'] = substr($d['calculus']['in'], 0, -1) . '|product-and-quotient-rules/';
+        $d['probability']['in'] = substr($d['probability']['in'], 0, -1) . '|hypothesis-testing/';
+        $d['mechanics'] = array('name' => 'Mechanics', 'in' => '/kinematics|newtons-laws|moments-and-friction|projectiles|velocity-time-graphs/', 'out' => '/^$/',
             'blurb' => 'Constant acceleration and velocity–time graphs, forces and Newton\'s laws, connected particles, moments, friction and inclined planes, and projectiles.');
     }
     if ($country === 'in') {

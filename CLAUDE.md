@@ -314,9 +314,10 @@ port(他国の生成スクリプト名, seed, year, slug, sort, strand, std_text
 LEAKS（Singapore・GST・$・feet・miles・ringgit・Common Core など）が残ると止まるので、rep で直すか swap で問題関数を替える。US の内容が GCSE と違うとき（関数の四則、漸化式、parent function）は swap と body/faq で UK 版にする。make_gcse() は自前の単元用。seo_title は「Year 10 Maths: Surds Worksheets (GCSE)」
 Year 10: 1. indices ✓ 2. standard-form ✓ 3. surds ✓ 4. algebraic-fractions ✓ 5. solving-quadratic-equations ✓ 6. quadratic-equations-in-context ✓ 7. equations-with-algebraic-fractions ✓ 8. inequalities ✓ 9. coordinate-geometry ✓
 10. quadratic-graphs-and-turning-points ✓ 11. cubic-reciprocal-and-exponential-graphs ✓ 12. direct-and-inverse-proportion ✓ 13. congruent-and-similar-triangles ✓ 14. area-and-volume-of-similar-shapes ✓ 15. sine-and-cosine-rules ✓ 16. bearings-and-angles-of-elevation ✓ 17. probability-tree-diagrams ✓
-Year 11: 1. sequences ✓ 2. composite-and-inverse-functions ✓ 3. transformations-of-graphs ✓ 4. exponential-growth-and-decay ✓ 6. circle-theorems ✓ 7. chords-and-tangents ✓ 8. vectors ✓ 9. vector-proof ✓ 10. trigonometry-in-3d ✓ 11. venn-diagrams-and-set-notation ✓ 12. cumulative-frequency-and-box-plots ✓
-（まだ: histograms、iteration、algebraic proof、velocity–time graphs、equation of a circle（中心が原点のものだけ）。A-level（Year 12–13）はこれから）
-トピック：chords-and-tangents→circles、^venn-diagrams→probability
+Year 11: 1. sequences ✓ 2. composite-and-inverse-functions ✓ 3. transformations-of-graphs ✓ 4. exponential-growth-and-decay ✓ 5. equation-of-a-circle ✓ 6. circle-theorems ✓ 7. chords-and-tangents ✓ 8. vectors ✓ 9. vector-proof ✓ 10. trigonometry-in-3d ✓ 11. venn-diagrams-and-set-notation ✓ 12. cumulative-frequency-and-box-plots ✓
+13. histograms ✓ 14. iteration ✓ 15. algebraic-proof ✓ 16. velocity-time-graphs ✓
+（5・13〜16 と A level の proof・product-and-quotient-rules・hypothesis-testing-normal-and-correlation は `tools/uk_gap_units.py`（build(slug, year)）と自前の問題 `tools/uk_gap_own.py`。GCSE は seed 91100 + sort で make_gcse、A level は uk_alevel.unit。histogram は文脈ごとに階級幅（HCTX）、v–t グラフの区切りは目盛りの上、乗り物は速さで選ぶ（veh_for））
+トピック：chords-and-tangents→circles、^venn-diagrams→probability、^histograms$→data-and-graphs、^iteration$・^proof$→algebra、velocity-time-graphs→mechanics
 
 UK / Maths / Year 12–13（A level Mathematics。DfE の GCE AS and A level subject content。Year 12 は AS の内容、Year 13 は残り）— standard_code は「A level Mathematics: Pure mathematics」（Statistics・Mechanics）、domain は Pure Mathematics／Statistics／Mechanics、standard_url は GCE AS and A level mathematics、seo_title は「Year 12 A Level Maths: Quadratics Worksheets」。
 単元の定義は `tools/uk_alevel_units.py`（units() が Year 12、units13() が Year 13。gen_uk_maths_y12_*・y13_* は build(slug, year) を呼ぶだけ。seed は 91000 + 100 × 学年 + sort）。
@@ -325,9 +326,10 @@ UK / Maths / Year 12–13（A level Mathematics。DfE の GCE AS and A level sub
 Year 12: 1. indices-and-surds ✓ 2. quadratics ✓ 3. equations-and-inequalities ✓ 4. polynomials-and-the-factor-theorem ✓ 5. graphs-and-transformations ✓ 6. straight-lines-and-circles ✓ 7. binomial-expansion ✓ 8. trigonometry ✓ 9. exponentials-and-logarithms ✓
 10. differentiation ✓ 11. integration ✓ 12. vectors ✓ 13. statistical-sampling-and-data ✓ 14. probability ✓ 15. binomial-distribution-and-hypothesis-testing ✓ 16. kinematics ✓ 17. forces-and-newtons-laws ✓
 Year 13: 1. functions-and-modulus ✓ 2. partial-fractions ✓ 3. sequences-and-series ✓ 4. radians-arcs-and-sectors ✓ 5. trigonometric-functions-and-formulae ✓ 6. differentiation-techniques ✓ 7. integration-techniques ✓ 8. parametric-and-differential-equations ✓
-9. numerical-methods ✓ 10. vectors-in-3d ✓ 11. normal-distribution ✓ 12. conditional-probability ✓ 13. moments-and-friction ✓ 14. projectiles-and-variable-acceleration ✓
-（まだ: proof、product rule と quotient rule の単元、hypothesis testing の正規分布・相関）
-トピック（topics.php の uk）：calculus の名前を Calculus に（integration・numerical-methods・differential-equations）、binomial-distribution・normal-distribution→probability、partial-fractions→algebra、新トピック mechanics（kinematics・newtons-laws・moments-and-friction・projectiles）
+9. numerical-methods ✓ 10. vectors-in-3d ✓ 11. normal-distribution ✓ 12. conditional-probability ✓ 13. moments-and-friction ✓ 14. projectiles-and-variable-acceleration ✓ 15. product-and-quotient-rules ✓ 16. hypothesis-testing-normal-and-correlation ✓
+Year 12 に 18. proof ✓（相関の検定の臨界値は問題文に書く。両側 5%・片側 5%・片側 1% の PMCC 表）
+UK / Maths は Year 1〜13 まで完了
+トピック（topics.php の uk）：calculus の名前を Calculus に（integration・numerical-methods・differential-equations）、binomial-distribution・normal-distribution→probability、partial-fractions→algebra、product-and-quotient-rules→calculus、hypothesis-testing→probability、新トピック mechanics（kinematics・newtons-laws・moments-and-friction・projectiles・velocity-time-graphs）
 
 AU / Maths（Australian Curriculum v9.0）— country `au`、subject `maths`、grade `year-N`、A4。
 オーストラリア英語（colour, metre, maths, analog, mixed numeral, column graph, students）。お金は $ と c（1c・2c 硬貨なし）。

@@ -1,0 +1,1157 @@
+{
+ "slug": "hypothesis-testing-normal-and-correlation",
+ "title": "Hypothesis Tests: the Normal Mean and Correlation",
+ "seo_title": "Year 13 A Level Maths: Hypothesis Tests For the Mean and Correlation Worksheets",
+ "short_title": "hypothesis tests for the mean and correlation",
+ "domain": "Statistics",
+ "standard_code": "A level Mathematics: Statistics",
+ "standard_url": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
+ "standard_text": "Conduct a statistical hypothesis test for the mean of a normal distribution with known, given or assumed variance and interpret the results in context; use a statistical hypothesis test for correlation coefficients (the product moment correlation coefficient).",
+ "meta_desc": "Free Year 13 A level maths worksheets on hypothesis testing: hypotheses for a normal mean, the distribution of the sample mean, z test statistics, critical regions, conclusions in context and tests for correlation. 100 questions with answers.",
+ "key_big": "Sample mean: X̄ ~ N(μ, σ²/n).",
+ "key_sub": "Compare z (or r) with the critical value and conclude in context.",
+ "body_html": "<h2>How it works</h2><p>If <i>X</i> ~ N(μ, σ²), the mean of a sample of size <i>n</i> has <span style='text-decoration:overline'><i>X</i></span> ~ N(μ, σ²/<i>n</i>). The test statistic is <i>z</i> = (<span style='text-decoration:overline'><i>x</i></span> − μ)/(σ/√<i>n</i>). Reject H<sub>0</sub> if <i>z</i> is in the critical region (for example <i>z</i> &gt; 1.6449 for a one-tailed 5% test, |<i>z</i>| &gt; 1.96 for a two-tailed 5% test).</p><p>For correlation, H<sub>0</sub>: ρ = 0. Compare the sample value <i>r</i> with the critical value from the table for the sample size.</p><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>μ = 50, σ = 6, <i>n</i> = 36, <span style='text-decoration:overline'><i>x</i></span> = 52. Find <i>z</i>.</p><p class='sn-ex-s'>σ/√<i>n</i> = 1</p><p class='sn-ex-s'>(52 − 50) ÷ 1</p><p class='sn-ex-a'>Answer: 2</p></div><div class='sn-ex'><span class='sn-ex-t'>Example</span><p class='sn-ex-q'>H<sub>1</sub>: μ &gt; 50 at 5%. Is <i>z</i> = 2 significant?</p><p class='sn-ex-s'>2 &gt; 1.6449</p><p class='sn-ex-a'>Answer: Yes: reject H<sub>0</sub>, there is evidence that the mean has increased</p></div><h2>Common mistakes</h2><ul><li>Dividing by σ instead of σ/√n.</li><li>Using the one-tailed critical value in a two-tailed test.</li><li>Saying the test proves H₁, or writing hypotheses with x̄ or r instead of μ or ρ.</li></ul>",
+ "faq": [
+  {
+   "q": "What is the distribution of the sample mean?",
+   "a": "If X ~ N(μ, σ²), then the sample mean X̄ ~ N(μ, σ²/n), so its standard deviation is σ/√n."
+  },
+  {
+   "q": "How do you test for correlation?",
+   "a": "Use H₀: ρ = 0 and H₁: ρ > 0, ρ < 0 or ρ ≠ 0. If |r| is bigger than the critical value for the sample size and significance level, reject H₀."
+  }
+ ],
+ "sets": [
+  {
+   "title": "Writing hypotheses",
+   "items": [
+    {
+     "q": "The length of a bolt is normally distributed with mean 60 mm. Ruby thinks that the mean has increased. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: μ = 60, H<sub>1</sub>: μ &lt; 60",
+      "H<sub>0</sub>: μ = 60, H<sub>1</sub>: μ &gt; 60",
+      "H<sub>0</sub>: μ = 60, H<sub>1</sub>: μ ≠ 60",
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 60, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> &gt; 60"
+     ],
+     "a": 1,
+     "e": "Hypotheses are about the population mean μ. “The mean has increased” gives a one-tailed test."
+    },
+    {
+     "q": "The volume of a bottle of water is normally distributed with mean 750 ml. Harry thinks that the mean has changed. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 750, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> ≠ 750",
+      "H<sub>0</sub>: μ = 750, H<sub>1</sub>: μ &gt; 750",
+      "H<sub>0</sub>: μ = 750, H<sub>1</sub>: μ ≠ 750",
+      "H<sub>0</sub>: μ = 750, H<sub>1</sub>: μ &lt; 750"
+     ],
+     "a": 2,
+     "e": "Hypotheses are about the population mean μ. “The mean has changed” gives a two-tailed test."
+    },
+    {
+     "q": "A scientist wants to test whether there is negative correlation between the age of a car and its value. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &lt; 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &gt; 0",
+      "H<sub>0</sub>: <i>r</i> = 0, H<sub>1</sub>: <i>r</i> &lt; 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ ≠ 0"
+     ],
+     "a": 0,
+     "e": "Use ρ, the population correlation coefficient. H<sub>0</sub> says there is no correlation."
+    },
+    {
+     "q": "The time to assemble a chair is normally distributed with mean 40 minutes. Noah thinks that the mean has changed. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: μ = 40, H<sub>1</sub>: μ ≠ 40",
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 40, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> ≠ 40",
+      "H<sub>0</sub>: μ = 40, H<sub>1</sub>: μ &lt; 40",
+      "H<sub>0</sub>: μ = 40, H<sub>1</sub>: μ &gt; 40"
+     ],
+     "a": 0,
+     "e": "Hypotheses are about the population mean μ. “The mean has changed” gives a two-tailed test."
+    },
+    {
+     "q": "A scientist wants to test whether there is any correlation between arm span and height. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ ≠ 0",
+      "H<sub>0</sub>: <i>r</i> = 0, H<sub>1</sub>: <i>r</i> ≠ 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &lt; 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &gt; 0"
+     ],
+     "a": 0,
+     "e": "Use ρ, the population correlation coefficient. H<sub>0</sub> says there is no correlation."
+    },
+    {
+     "q": "A scientist wants to test whether there is any correlation between the temperature and the amount of gas used for heating. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &lt; 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &gt; 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ ≠ 0",
+      "H<sub>0</sub>: <i>r</i> = 0, H<sub>1</sub>: <i>r</i> ≠ 0"
+     ],
+     "a": 2,
+     "e": "Use ρ, the population correlation coefficient. H<sub>0</sub> says there is no correlation."
+    },
+    {
+     "q": "The length of a bolt is normally distributed with mean 60 mm. Mohammed thinks that the mean has decreased. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 60, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> &lt; 60",
+      "H<sub>0</sub>: μ = 60, H<sub>1</sub>: μ ≠ 60",
+      "H<sub>0</sub>: μ = 60, H<sub>1</sub>: μ &gt; 60",
+      "H<sub>0</sub>: μ = 60, H<sub>1</sub>: μ &lt; 60"
+     ],
+     "a": 3,
+     "e": "Hypotheses are about the population mean μ. “The mean has decreased” gives a one-tailed test."
+    },
+    {
+     "q": "The length of a cucumber is normally distributed with mean 30 cm. Mohammed thinks that the mean has changed. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: μ = 30, H<sub>1</sub>: μ &lt; 30",
+      "H<sub>0</sub>: μ = 30, H<sub>1</sub>: μ ≠ 30",
+      "H<sub>0</sub>: μ = 30, H<sub>1</sub>: μ &gt; 30",
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 30, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> ≠ 30"
+     ],
+     "a": 1,
+     "e": "Hypotheses are about the population mean μ. “The mean has changed” gives a two-tailed test."
+    },
+    {
+     "q": "A scientist wants to test whether there is any correlation between the hours of sunshine and the number of ice creams sold. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &gt; 0",
+      "H<sub>0</sub>: <i>r</i> = 0, H<sub>1</sub>: <i>r</i> ≠ 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ ≠ 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &lt; 0"
+     ],
+     "a": 2,
+     "e": "Use ρ, the population correlation coefficient. H<sub>0</sub> says there is no correlation."
+    },
+    {
+     "q": "The journey time to work is normally distributed with mean 35 minutes. George thinks that the mean has decreased. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: μ = 35, H<sub>1</sub>: μ &lt; 35",
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 35, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> &lt; 35",
+      "H<sub>0</sub>: μ = 35, H<sub>1</sub>: μ ≠ 35",
+      "H<sub>0</sub>: μ = 35, H<sub>1</sub>: μ &gt; 35"
+     ],
+     "a": 0,
+     "e": "Hypotheses are about the population mean μ. “The mean has decreased” gives a one-tailed test."
+    },
+    {
+     "q": "The reaction time of a pupil is normally distributed with mean 250 ms. Aisha thinks that the mean has changed. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: μ = 250, H<sub>1</sub>: μ &lt; 250",
+      "H<sub>0</sub>: μ = 250, H<sub>1</sub>: μ &gt; 250",
+      "H<sub>0</sub>: μ = 250, H<sub>1</sub>: μ ≠ 250",
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 250, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> ≠ 250"
+     ],
+     "a": 2,
+     "e": "Hypotheses are about the population mean μ. “The mean has changed” gives a two-tailed test."
+    },
+    {
+     "q": "A scientist wants to test whether there is positive correlation between the rainfall in a month and the umbrellas sold. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ ≠ 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &gt; 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &lt; 0",
+      "H<sub>0</sub>: <i>r</i> = 0, H<sub>1</sub>: <i>r</i> &gt; 0"
+     ],
+     "a": 1,
+     "e": "Use ρ, the population correlation coefficient. H<sub>0</sub> says there is no correlation."
+    },
+    {
+     "q": "The mass of a loaf of bread is normally distributed with mean 800 g. Poppy thinks that the mean has decreased. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: μ = 800, H<sub>1</sub>: μ &gt; 800",
+      "H<sub>0</sub>: μ = 800, H<sub>1</sub>: μ &lt; 800",
+      "H<sub>0</sub>: μ = 800, H<sub>1</sub>: μ ≠ 800",
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 800, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> &lt; 800"
+     ],
+     "a": 1,
+     "e": "Hypotheses are about the population mean μ. “The mean has decreased” gives a one-tailed test."
+    },
+    {
+     "q": "A scientist wants to test whether there is any correlation between the age of a car and its value. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &lt; 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &gt; 0",
+      "H<sub>0</sub>: <i>r</i> = 0, H<sub>1</sub>: <i>r</i> ≠ 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ ≠ 0"
+     ],
+     "a": 3,
+     "e": "Use ρ, the population correlation coefficient. H<sub>0</sub> says there is no correlation."
+    },
+    {
+     "q": "The mass of a loaf of bread is normally distributed with mean 800 g. Evie thinks that the mean has changed. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: μ = 800, H<sub>1</sub>: μ &gt; 800",
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 800, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> ≠ 800",
+      "H<sub>0</sub>: μ = 800, H<sub>1</sub>: μ ≠ 800",
+      "H<sub>0</sub>: μ = 800, H<sub>1</sub>: μ &lt; 800"
+     ],
+     "a": 2,
+     "e": "Hypotheses are about the population mean μ. “The mean has changed” gives a two-tailed test."
+    },
+    {
+     "q": "The length of a bolt is normally distributed with mean 60 mm. Grace thinks that the mean has increased. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: μ = 60, H<sub>1</sub>: μ ≠ 60",
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 60, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> &gt; 60",
+      "H<sub>0</sub>: μ = 60, H<sub>1</sub>: μ &lt; 60",
+      "H<sub>0</sub>: μ = 60, H<sub>1</sub>: μ &gt; 60"
+     ],
+     "a": 3,
+     "e": "Hypotheses are about the population mean μ. “The mean has increased” gives a one-tailed test."
+    },
+    {
+     "q": "A scientist wants to test whether there is any correlation between revision time and test score. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: <i>r</i> = 0, H<sub>1</sub>: <i>r</i> ≠ 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &gt; 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &lt; 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ ≠ 0"
+     ],
+     "a": 3,
+     "e": "Use ρ, the population correlation coefficient. H<sub>0</sub> says there is no correlation."
+    },
+    {
+     "q": "The lifetime of a battery is normally distributed with mean 120 hours. Oliver thinks that the mean has increased. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: μ = 120, H<sub>1</sub>: μ &gt; 120",
+      "H<sub>0</sub>: μ = 120, H<sub>1</sub>: μ &lt; 120",
+      "H<sub>0</sub>: μ = 120, H<sub>1</sub>: μ ≠ 120",
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 120, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> &gt; 120"
+     ],
+     "a": 0,
+     "e": "Hypotheses are about the population mean μ. “The mean has increased” gives a one-tailed test."
+    },
+    {
+     "q": "The time to assemble a chair is normally distributed with mean 40 minutes. Theo thinks that the mean has decreased. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: μ = 40, H<sub>1</sub>: μ &gt; 40",
+      "H<sub>0</sub>: μ = 40, H<sub>1</sub>: μ ≠ 40",
+      "H<sub>0</sub>: <span style='text-decoration:overline'><i>x</i></span> = 40, H<sub>1</sub>: <span style='text-decoration:overline'><i>x</i></span> &lt; 40",
+      "H<sub>0</sub>: μ = 40, H<sub>1</sub>: μ &lt; 40"
+     ],
+     "a": 3,
+     "e": "Hypotheses are about the population mean μ. “The mean has decreased” gives a one-tailed test."
+    },
+    {
+     "q": "A scientist wants to test whether there is any correlation between the price of a ticket and the number sold. Which hypotheses should be used?",
+     "c": [
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &gt; 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ ≠ 0",
+      "H<sub>0</sub>: ρ = 0, H<sub>1</sub>: ρ &lt; 0",
+      "H<sub>0</sub>: <i>r</i> = 0, H<sub>1</sub>: <i>r</i> ≠ 0"
+     ],
+     "a": 1,
+     "e": "Use ρ, the population correlation coefficient. H<sub>0</sub> says there is no correlation."
+    }
+   ]
+  },
+  {
+   "title": "The distribution of the sample mean",
+   "items": [
+    {
+     "q": "The time to assemble a chair is normally distributed with mean 40 minutes and standard deviation 4 minutes. A random sample of 50 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "0.32",
+      "16",
+      "2.26",
+      "0.08"
+     ],
+     "a": 0,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 16/50 = <b>0.32</b>."
+    },
+    {
+     "q": "The length of a bolt is normally distributed with mean 60 mm and standard deviation 3 mm. A random sample of 5 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "0.6",
+      "4.02",
+      "9",
+      "1.8"
+     ],
+     "a": 3,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 9/5 = <b>1.8</b>."
+    },
+    {
+     "q": "The mass of a loaf of bread is normally distributed with mean 800 g and standard deviation 12 g. A random sample of 20 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "0.6",
+      "7.2",
+      "144",
+      "32.2"
+     ],
+     "a": 1,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 144/20 = <b>7.2</b>."
+    },
+    {
+     "q": "The length of a cucumber is normally distributed with mean 30 cm and standard deviation 4 cm. A random sample of 10 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "0.4",
+      "16",
+      "1.6",
+      "5.06"
+     ],
+     "a": 2,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 16/10 = <b>1.6</b>."
+    },
+    {
+     "q": "The lifetime of a battery is normally distributed with mean 120 hours and standard deviation 8 hours. A random sample of 100 is taken. Find the standard deviation of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "8 hours",
+      "0.64 hours",
+      "0.8 hours",
+      "0.08 hours"
+     ],
+     "a": 2,
+     "e": "Standard deviation = σ/√<i>n</i> = 8/√100 = <b>0.8 hours</b>."
+    },
+    {
+     "q": "The mass of a bag of flour is normally distributed with mean 500 g and standard deviation 5 g. A random sample of 4 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "1.25",
+      "6.25",
+      "12.5",
+      "25"
+     ],
+     "a": 1,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 25/4 = <b>6.25</b>."
+    },
+    {
+     "q": "The time to assemble a chair is normally distributed with mean 40 minutes and standard deviation 6 minutes. A random sample of 16 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "9",
+      "0.375",
+      "2.25",
+      "36"
+     ],
+     "a": 2,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 36/16 = <b>2.25</b>."
+    },
+    {
+     "q": "The height of a sunflower is normally distributed with mean 180 cm and standard deviation 10 cm. A random sample of 64 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "0.1562",
+      "12.5",
+      "100",
+      "1.5625"
+     ],
+     "a": 3,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 100/64 = <b>1.5625</b>."
+    },
+    {
+     "q": "The mass of a bag of flour is normally distributed with mean 500 g and standard deviation 12 g. A random sample of 100 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "14.4",
+      "1.44",
+      "144",
+      "0.12"
+     ],
+     "a": 1,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 144/100 = <b>1.44</b>."
+    },
+    {
+     "q": "The volume of a bottle of water is normally distributed with mean 750 ml and standard deviation 6 ml. A random sample of 50 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "0.72",
+      "36",
+      "0.12",
+      "5.09"
+     ],
+     "a": 0,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 36/50 = <b>0.72</b>."
+    },
+    {
+     "q": "The volume of a bottle of water is normally distributed with mean 750 ml and standard deviation 12 ml. A random sample of 4 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "144",
+      "3",
+      "36",
+      "72"
+     ],
+     "a": 2,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 144/4 = <b>36</b>."
+    },
+    {
+     "q": "The reaction time of a pupil is normally distributed with mean 250 ms and standard deviation 25 ms. A random sample of 8 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "78.125",
+      "3.125",
+      "625",
+      "220.97"
+     ],
+     "a": 0,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 625/8 = <b>78.125</b>."
+    },
+    {
+     "q": "The height of a sunflower is normally distributed with mean 180 cm and standard deviation 15 cm. A random sample of 16 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "14.0625",
+      "56.25",
+      "225",
+      "0.9375"
+     ],
+     "a": 0,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 225/16 = <b>14.0625</b>."
+    },
+    {
+     "q": "The length of a bolt is normally distributed with mean 60 mm and standard deviation 4 mm. A random sample of 25 is taken. Find the standard deviation of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "0.16 mm",
+      "4 mm",
+      "0.64 mm",
+      "0.8 mm"
+     ],
+     "a": 3,
+     "e": "Standard deviation = σ/√<i>n</i> = 4/√25 = <b>0.8 mm</b>."
+    },
+    {
+     "q": "The reaction time of a pupil is normally distributed with mean 250 ms and standard deviation 40 ms. A random sample of 20 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "357.77",
+      "80",
+      "1,600",
+      "2"
+     ],
+     "a": 1,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 1600/20 = <b>80</b>."
+    },
+    {
+     "q": "The reaction time of a pupil is normally distributed with mean 250 ms and standard deviation 20 ms. A random sample of 20 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "400",
+      "89.44",
+      "1",
+      "20"
+     ],
+     "a": 3,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 400/20 = <b>20</b>."
+    },
+    {
+     "q": "The mass of a bag of flour is normally distributed with mean 500 g and standard deviation 10 g. A random sample of 5 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "100",
+      "44.72",
+      "20",
+      "2"
+     ],
+     "a": 2,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 100/5 = <b>20</b>."
+    },
+    {
+     "q": "The length of a bolt is normally distributed with mean 60 mm and standard deviation 5 mm. A random sample of 5 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "5",
+      "1",
+      "11.18",
+      "25"
+     ],
+     "a": 0,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 25/5 = <b>5</b>."
+    },
+    {
+     "q": "The length of a cucumber is normally distributed with mean 30 cm and standard deviation 4 cm. A random sample of 5 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "7.16",
+      "0.8",
+      "16",
+      "3.2"
+     ],
+     "a": 3,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 16/5 = <b>3.2</b>."
+    },
+    {
+     "q": "The lifetime of a battery is normally distributed with mean 120 hours and standard deviation 10 hours. A random sample of 25 is taken. Find the variance of the sample mean <span style='text-decoration:overline'><i>X</i></span>.",
+     "c": [
+      "0.4",
+      "4",
+      "20",
+      "100"
+     ],
+     "a": 1,
+     "e": "Var(<span style='text-decoration:overline'><i>X</i></span>) = σ²/<i>n</i> = 100/25 = <b>4</b>."
+    }
+   ]
+  },
+  {
+   "title": "Test statistics and critical values",
+   "items": [
+    {
+     "q": "A test at the 5% significance level checks whether the mean mass of a bag of flour has increased. Which critical value of <i>z</i> should be used?",
+     "c": [
+      "±1.96",
+      "−1.6449",
+      "1.6449",
+      "2.3263"
+     ],
+     "a": 2,
+     "e": "One-tailed test, so all 5% is in one tail: 1.6449."
+    },
+    {
+     "q": "A test at the 5% significance level checks whether the mean reaction time of a pupil has changed. Which critical value of <i>z</i> should be used?",
+     "c": [
+      "±2.5758",
+      "±1.96",
+      "1.6449",
+      "1.96"
+     ],
+     "a": 1,
+     "e": "Two-tailed test, so split 5% between the two tails: ±1.96."
+    },
+    {
+     "q": "The height of a sunflower has mean 180 cm and standard deviation 10 cm. A sample of 4 has mean 190 cm. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "1.00",
+      "−2.00",
+      "4.00",
+      "2.00"
+     ],
+     "a": 3,
+     "e": "<i>z</i> = (190 − 180) ÷ (10/√4) = 10 ÷ 5 = <b>2.00</b>."
+    },
+    {
+     "q": "A test at the 10% significance level checks whether the mean mass of a bag of flour has decreased. Which critical value of <i>z</i> should be used?",
+     "c": [
+      "−1.2816",
+      "1.2816",
+      "1.6449",
+      "±1.6449"
+     ],
+     "a": 0,
+     "e": "One-tailed test, so all 10% is in one tail: −1.2816."
+    },
+    {
+     "q": "A test at the 5% significance level checks whether the mean height of a sunflower is different from 180 cm. Which critical value of <i>z</i> should be used?",
+     "c": [
+      "1.96",
+      "±2.5758",
+      "±1.96",
+      "1.6449"
+     ],
+     "a": 2,
+     "e": "Two-tailed test, so split 5% between the two tails: ±1.96."
+    },
+    {
+     "q": "The length of a cucumber has mean 30 cm and standard deviation 2 cm. A sample of 100 has mean 30.12 cm. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "0.06",
+      "6.00",
+      "0.60",
+      "−0.60"
+     ],
+     "a": 2,
+     "e": "<i>z</i> = (30.12 − 30) ÷ (2/√100) = 0.12 ÷ 0.2 = <b>0.60</b>."
+    },
+    {
+     "q": "The length of a bolt has mean 60 mm and standard deviation 2 mm. A sample of 100 has mean 59.96 mm. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "0.20",
+      "−0.20",
+      "−0.02",
+      "−2.00"
+     ],
+     "a": 1,
+     "e": "<i>z</i> = (59.96 − 60) ÷ (2/√100) = −0.04 ÷ 0.2 = <b>−0.20</b>."
+    },
+    {
+     "q": "A test at the 1% significance level checks whether the mean reaction time of a pupil has decreased. Which critical value of <i>z</i> should be used?",
+     "c": [
+      "−2.3263",
+      "2.3263",
+      "1.6449",
+      "±2.5758"
+     ],
+     "a": 0,
+     "e": "One-tailed test, so all 1% is in one tail: −2.3263."
+    },
+    {
+     "q": "The reaction time of a pupil has mean 250 ms and standard deviation 30 ms. A sample of 81 has mean 254 ms. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "1.20",
+      "0.13",
+      "−1.20",
+      "10.80"
+     ],
+     "a": 0,
+     "e": "<i>z</i> = (254 − 250) ÷ (30/√81) = 4 ÷ 3.3333 = <b>1.20</b>."
+    },
+    {
+     "q": "A test at the 1% significance level checks whether the mean time to assemble a chair has decreased. Which critical value of <i>z</i> should be used?",
+     "c": [
+      "−2.3263",
+      "2.3263",
+      "1.6449",
+      "±2.5758"
+     ],
+     "a": 0,
+     "e": "One-tailed test, so all 1% is in one tail: −2.3263."
+    },
+    {
+     "q": "A test at the 10% significance level checks whether the mean journey time to work has changed. Which critical value of <i>z</i> should be used?",
+     "c": [
+      "1.6449",
+      "1.2816",
+      "±1.6449",
+      "±1.96"
+     ],
+     "a": 2,
+     "e": "Two-tailed test, so split 10% between the two tails: ±1.6449."
+    },
+    {
+     "q": "The volume of a bottle of water has mean 750 ml and standard deviation 8 ml. A sample of 25 has mean 751.2 ml. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "0.15",
+      "0.75",
+      "−0.75",
+      "3.75"
+     ],
+     "a": 1,
+     "e": "<i>z</i> = (751.2 − 750) ÷ (8/√25) = 1.2 ÷ 1.6 = <b>0.75</b>."
+    },
+    {
+     "q": "The mass of a loaf of bread has mean 800 g and standard deviation 20 g. A sample of 64 has mean 805 g. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "−2.00",
+      "0.25",
+      "16.00",
+      "2.00"
+     ],
+     "a": 3,
+     "e": "<i>z</i> = (805 − 800) ÷ (20/√64) = 5 ÷ 2.5 = <b>2.00</b>."
+    },
+    {
+     "q": "The volume of a bottle of water has mean 750 ml and standard deviation 12 ml. A sample of 100 has mean 751.8 ml. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "0.15",
+      "−1.50",
+      "15.00",
+      "1.50"
+     ],
+     "a": 3,
+     "e": "<i>z</i> = (751.8 − 750) ÷ (12/√100) = 1.8 ÷ 1.2 = <b>1.50</b>."
+    },
+    {
+     "q": "The volume of a bottle of water has mean 750 ml and standard deviation 8 ml. A sample of 36 has mean 751 ml. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "4.50",
+      "0.75",
+      "0.12",
+      "−0.75"
+     ],
+     "a": 1,
+     "e": "<i>z</i> = (751 − 750) ÷ (8/√36) = 1 ÷ 1.3333 = <b>0.75</b>."
+    },
+    {
+     "q": "The height of a sunflower has mean 180 cm and standard deviation 10 cm. A sample of 64 has mean 178.75 cm. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "−8.00",
+      "−0.12",
+      "1.00",
+      "−1.00"
+     ],
+     "a": 3,
+     "e": "<i>z</i> = (178.75 − 180) ÷ (10/√64) = −1.25 ÷ 1.25 = <b>−1.00</b>."
+    },
+    {
+     "q": "A test at the 5% significance level checks whether the mean journey time to work has changed. Which critical value of <i>z</i> should be used?",
+     "c": [
+      "±1.96",
+      "±2.5758",
+      "1.6449",
+      "1.96"
+     ],
+     "a": 0,
+     "e": "Two-tailed test, so split 5% between the two tails: ±1.96."
+    },
+    {
+     "q": "The mass of a loaf of bread has mean 800 g and standard deviation 20 g. A sample of 4 has mean 796 g. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "−0.20",
+      "0.40",
+      "−0.80",
+      "−0.40"
+     ],
+     "a": 3,
+     "e": "<i>z</i> = (796 − 800) ÷ (20/√4) = −4 ÷ 10 = <b>−0.40</b>."
+    },
+    {
+     "q": "The length of a bolt has mean 60 mm and standard deviation 3 mm. A sample of 4 has mean 57 mm. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "−4.00",
+      "−2.00",
+      "2.00",
+      "−1.00"
+     ],
+     "a": 1,
+     "e": "<i>z</i> = (57 − 60) ÷ (3/√4) = −3 ÷ 1.5 = <b>−2.00</b>."
+    },
+    {
+     "q": "The length of a cucumber has mean 30 cm and standard deviation 4 cm. A sample of 100 has mean 29.6 cm. Find the test statistic <i>z</i>, to 2 decimal places.",
+     "c": [
+      "1.00",
+      "−0.10",
+      "−1.00",
+      "−10.00"
+     ],
+     "a": 2,
+     "e": "<i>z</i> = (29.6 − 30) ÷ (4/√100) = −0.4 ÷ 0.4 = <b>−1.00</b>."
+    }
+   ]
+  },
+  {
+   "title": "Conclusions and critical regions",
+   "items": [
+    {
+     "q": "The reaction time of a pupil is normally distributed with standard deviation 20 ms. A test of H<sub>0</sub>: μ = 250 against H<sub>1</sub>: μ &gt; 250 uses a sample of 100 at the 10% level (critical <i>z</i> value 1.2816). Find the critical region for <span style='text-decoration:overline'><i>X</i></span>, to 2 decimal places.",
+     "c": [
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 252.56",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 252.56",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 250.26",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 275.63"
+     ],
+     "a": 1,
+     "e": "Boundary = 250 + 1.2816 × 20/√100 = 252.56."
+    },
+    {
+     "q": "The time to assemble a chair is normally distributed with standard deviation 8 minutes. A test of H<sub>0</sub>: μ = 40 against H<sub>1</sub>: μ &gt; 40 uses a sample of 64 at the 5% level (critical <i>z</i> value 1.6449). Find the critical region for <span style='text-decoration:overline'><i>X</i></span>, to 2 decimal places.",
+     "c": [
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 41.64",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 53.16",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 41.64",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 40.21"
+     ],
+     "a": 2,
+     "e": "Boundary = 40 + 1.6449 × 8/√64 = 41.64."
+    },
+    {
+     "q": "Leo tests whether the mean lifetime of a battery has decreased, at the 5% significance level. The test statistic is <i>z</i> = −0.60. The critical value is −1.6449. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: there is evidence that the mean lifetime of a battery has decreased",
+      "Reject H<sub>1</sub>: the mean lifetime of a battery is exactly 120 hours",
+      "Accept H<sub>1</sub>: this proves that the mean lifetime of a battery has decreased",
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean lifetime of a battery has decreased"
+     ],
+     "a": 3,
+     "e": "|<i>z</i>| = 0.60 is less than 1.6449, so <i>z</i> is not in the critical region."
+    },
+    {
+     "q": "The lifetime of a battery is normally distributed with standard deviation 10 hours. A test of H<sub>0</sub>: μ = 120 against H<sub>1</sub>: μ &gt; 120 uses a sample of 9 at the 5% level (critical <i>z</i> value 1.6449). Find the critical region for <span style='text-decoration:overline'><i>X</i></span>, to 2 decimal places.",
+     "c": [
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 136.45",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 121.83",
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 125.48",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 125.48"
+     ],
+     "a": 3,
+     "e": "Boundary = 120 + 1.6449 × 10/√9 = 125.48."
+    },
+    {
+     "q": "Isla tests whether the mean mass of a bag of flour has changed, at the 5% significance level. The test statistic is <i>z</i> = 2.65. The critical value is ±1.96. What is the conclusion?",
+     "c": [
+      "Reject H<sub>1</sub>: the mean mass of a bag of flour is exactly 500 g",
+      "Reject H<sub>0</sub>: there is evidence that the mean mass of a bag of flour has changed",
+      "Accept H<sub>1</sub>: this proves that the mean mass of a bag of flour has changed",
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean mass of a bag of flour has changed"
+     ],
+     "a": 1,
+     "e": "|<i>z</i>| = 2.65 is greater than 1.96, so <i>z</i> is in the critical region."
+    },
+    {
+     "q": "George tests whether the mean time to assemble a chair has decreased, at the 5% significance level. The test statistic is <i>z</i> = −1.40. The critical value is −1.6449. What is the conclusion?",
+     "c": [
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean time to assemble a chair has decreased",
+      "Reject H<sub>1</sub>: the mean time to assemble a chair is exactly 40 minutes",
+      "Accept H<sub>1</sub>: this proves that the mean time to assemble a chair has decreased",
+      "Reject H<sub>0</sub>: there is evidence that the mean time to assemble a chair has decreased"
+     ],
+     "a": 0,
+     "e": "|<i>z</i>| = 1.40 is less than 1.6449, so <i>z</i> is not in the critical region."
+    },
+    {
+     "q": "The volume of a bottle of water is normally distributed with standard deviation 10 ml. A test of H<sub>0</sub>: μ = 750 against H<sub>1</sub>: μ &lt; 750 uses a sample of 64 at the 1% level (critical <i>z</i> value −2.3263). Find the critical region for <span style='text-decoration:overline'><i>X</i></span>, to 2 decimal places.",
+     "c": [
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 749.64",
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 726.74",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 747.09",
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 747.09"
+     ],
+     "a": 3,
+     "e": "Boundary = 750 − 2.3263 × 10/√64 = 747.09."
+    },
+    {
+     "q": "Ruby tests whether the mean lifetime of a battery has decreased, at the 10% significance level. The test statistic is <i>z</i> = −2.38. The critical value is −1.2816. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: there is evidence that the mean lifetime of a battery has decreased",
+      "Accept H<sub>1</sub>: this proves that the mean lifetime of a battery has decreased",
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean lifetime of a battery has decreased",
+      "Reject H<sub>1</sub>: the mean lifetime of a battery is exactly 120 hours"
+     ],
+     "a": 0,
+     "e": "|<i>z</i>| = 2.38 is greater than 1.2816, so <i>z</i> is in the critical region."
+    },
+    {
+     "q": "Alfie tests whether the mean height of a sunflower has changed, at the 5% significance level. The test statistic is <i>z</i> = −2.86. The critical value is ±1.96. What is the conclusion?",
+     "c": [
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean height of a sunflower has changed",
+      "Accept H<sub>1</sub>: this proves that the mean height of a sunflower has changed",
+      "Reject H<sub>1</sub>: the mean height of a sunflower is exactly 180 cm",
+      "Reject H<sub>0</sub>: there is evidence that the mean height of a sunflower has changed"
+     ],
+     "a": 3,
+     "e": "|<i>z</i>| = 2.86 is greater than 1.96, so <i>z</i> is in the critical region."
+    },
+    {
+     "q": "Maya tests whether the mean journey time to work has increased, at the 10% significance level. The test statistic is <i>z</i> = 1.16. The critical value is 1.2816. What is the conclusion?",
+     "c": [
+      "Accept H<sub>1</sub>: this proves that the mean journey time to work has increased",
+      "Reject H<sub>1</sub>: the mean journey time to work is exactly 35 minutes",
+      "Reject H<sub>0</sub>: there is evidence that the mean journey time to work has increased",
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean journey time to work has increased"
+     ],
+     "a": 3,
+     "e": "|<i>z</i>| = 1.16 is less than 1.2816, so <i>z</i> is not in the critical region."
+    },
+    {
+     "q": "The mass of a loaf of bread is normally distributed with standard deviation 20 g. A test of H<sub>0</sub>: μ = 800 against H<sub>1</sub>: μ &gt; 800 uses a sample of 100 at the 5% level (critical <i>z</i> value 1.6449). Find the critical region for <span style='text-decoration:overline'><i>X</i></span>, to 2 decimal places.",
+     "c": [
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 803.29",
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 803.29",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 832.90",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 800.33"
+     ],
+     "a": 0,
+     "e": "Boundary = 800 + 1.6449 × 20/√100 = 803.29."
+    },
+    {
+     "q": "Theo tests whether the mean time to assemble a chair has decreased, at the 5% significance level. The test statistic is <i>z</i> = −2.00. The critical value is −1.6449. What is the conclusion?",
+     "c": [
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean time to assemble a chair has decreased",
+      "Accept H<sub>1</sub>: this proves that the mean time to assemble a chair has decreased",
+      "Reject H<sub>0</sub>: there is evidence that the mean time to assemble a chair has decreased",
+      "Reject H<sub>1</sub>: the mean time to assemble a chair is exactly 40 minutes"
+     ],
+     "a": 2,
+     "e": "|<i>z</i>| = 2.00 is greater than 1.6449, so <i>z</i> is in the critical region."
+    },
+    {
+     "q": "Leo tests whether the mean journey time to work has increased, at the 5% significance level. The test statistic is <i>z</i> = 2.23. The critical value is 1.6449. What is the conclusion?",
+     "c": [
+      "Reject H<sub>1</sub>: the mean journey time to work is exactly 35 minutes",
+      "Reject H<sub>0</sub>: there is evidence that the mean journey time to work has increased",
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean journey time to work has increased",
+      "Accept H<sub>1</sub>: this proves that the mean journey time to work has increased"
+     ],
+     "a": 1,
+     "e": "|<i>z</i>| = 2.23 is greater than 1.6449, so <i>z</i> is in the critical region."
+    },
+    {
+     "q": "The time to assemble a chair is normally distributed with standard deviation 4 minutes. A test of H<sub>0</sub>: μ = 40 against H<sub>1</sub>: μ &gt; 40 uses a sample of 64 at the 1% level (critical <i>z</i> value 2.3263). Find the critical region for <span style='text-decoration:overline'><i>X</i></span>, to 2 decimal places.",
+     "c": [
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 49.31",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 40.15",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 41.16",
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 41.16"
+     ],
+     "a": 2,
+     "e": "Boundary = 40 + 2.3263 × 4/√64 = 41.16."
+    },
+    {
+     "q": "Kai tests whether the mean mass of a loaf of bread has increased, at the 5% significance level. The test statistic is <i>z</i> = 0.74. The critical value is 1.6449. What is the conclusion?",
+     "c": [
+      "Reject H<sub>1</sub>: the mean mass of a loaf of bread is exactly 800 g",
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean mass of a loaf of bread has increased",
+      "Accept H<sub>1</sub>: this proves that the mean mass of a loaf of bread has increased",
+      "Reject H<sub>0</sub>: there is evidence that the mean mass of a loaf of bread has increased"
+     ],
+     "a": 1,
+     "e": "|<i>z</i>| = 0.74 is less than 1.6449, so <i>z</i> is not in the critical region."
+    },
+    {
+     "q": "The journey time to work is normally distributed with standard deviation 6 minutes. A test of H<sub>0</sub>: μ = 35 against H<sub>1</sub>: μ &gt; 35 uses a sample of 9 at the 1% level (critical <i>z</i> value 2.3263). Find the critical region for <span style='text-decoration:overline'><i>X</i></span>, to 2 decimal places.",
+     "c": [
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 39.65",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 36.55",
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 39.65",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 48.96"
+     ],
+     "a": 0,
+     "e": "Boundary = 35 + 2.3263 × 6/√9 = 39.65."
+    },
+    {
+     "q": "Alfie tests whether the mean length of a cucumber has decreased, at the 5% significance level. The test statistic is <i>z</i> = −0.82. The critical value is −1.6449. What is the conclusion?",
+     "c": [
+      "Accept H<sub>1</sub>: this proves that the mean length of a cucumber has decreased",
+      "Reject H<sub>1</sub>: the mean length of a cucumber is exactly 30 cm",
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean length of a cucumber has decreased",
+      "Reject H<sub>0</sub>: there is evidence that the mean length of a cucumber has decreased"
+     ],
+     "a": 2,
+     "e": "|<i>z</i>| = 0.82 is less than 1.6449, so <i>z</i> is not in the critical region."
+    },
+    {
+     "q": "The height of a sunflower is normally distributed with standard deviation 15 cm. A test of H<sub>0</sub>: μ = 180 against H<sub>1</sub>: μ &lt; 180 uses a sample of 81 at the 5% level (critical <i>z</i> value −1.6449). Find the critical region for <span style='text-decoration:overline'><i>X</i></span>, to 2 decimal places.",
+     "c": [
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 179.70",
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 155.33",
+      "<span style='text-decoration:overline'><i>X</i></span> &lt; 177.26",
+      "<span style='text-decoration:overline'><i>X</i></span> &gt; 177.26"
+     ],
+     "a": 2,
+     "e": "Boundary = 180 − 1.6449 × 15/√81 = 177.26."
+    },
+    {
+     "q": "Theo tests whether the mean journey time to work has changed, at the 5% significance level. The test statistic is <i>z</i> = 2.88. The critical value is ±1.96. What is the conclusion?",
+     "c": [
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean journey time to work has changed",
+      "Reject H<sub>0</sub>: there is evidence that the mean journey time to work has changed",
+      "Reject H<sub>1</sub>: the mean journey time to work is exactly 35 minutes",
+      "Accept H<sub>1</sub>: this proves that the mean journey time to work has changed"
+     ],
+     "a": 1,
+     "e": "|<i>z</i>| = 2.88 is greater than 1.96, so <i>z</i> is in the critical region."
+    },
+    {
+     "q": "Amelia tests whether the mean lifetime of a battery has changed, at the 1% significance level. The test statistic is <i>z</i> = 2.28. The critical value is ±2.5758. What is the conclusion?",
+     "c": [
+      "Do not reject H<sub>0</sub>: there is not enough evidence that the mean lifetime of a battery has changed",
+      "Reject H<sub>1</sub>: the mean lifetime of a battery is exactly 120 hours",
+      "Accept H<sub>1</sub>: this proves that the mean lifetime of a battery has changed",
+      "Reject H<sub>0</sub>: there is evidence that the mean lifetime of a battery has changed"
+     ],
+     "a": 0,
+     "e": "|<i>z</i>| = 2.28 is less than 2.5758, so <i>z</i> is not in the critical region."
+    }
+   ]
+  },
+  {
+   "title": "Testing for correlation",
+   "items": [
+    {
+     "q": "A sample of 7 pairs gives a product moment correlation coefficient of <i>r</i> = 0.693 between revision time and test score. Test for positive correlation at the 5% level. The critical value is 0.6694. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Reject H<sub>0</sub>: there is evidence of positive correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of positive correlation"
+     ],
+     "a": 1,
+     "e": "|<i>r</i>| = 0.693 is greater than 0.6694, so reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 7 pairs gives a product moment correlation coefficient of <i>r</i> = −0.745 between the hours of daylight and the electricity used for lighting. Test for negative correlation at the 1% level. The critical value is −0.8329. What is the conclusion?",
+     "c": [
+      "Do not reject H<sub>0</sub>: there is not enough evidence of negative correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Reject H<sub>0</sub>: there is evidence of negative correlation"
+     ],
+     "a": 0,
+     "e": "|<i>r</i>| = 0.745 is less than 0.8329, so do not reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 25 pairs gives a product moment correlation coefficient of <i>r</i> = −0.333 between revision time and test score. Test for correlation at the 5% level. The critical value is ±0.3961. What is the conclusion?",
+     "c": [
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Reject H<sub>0</sub>: there is evidence of correlation"
+     ],
+     "a": 1,
+     "e": "|<i>r</i>| = 0.333 is less than 0.3961, so do not reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 20 pairs gives a product moment correlation coefficient of <i>r</i> = −0.339 between the age of a car and its value. Test for correlation at the 5% level. The critical value is ±0.4438. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Reject H<sub>0</sub>: there is evidence of correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of correlation"
+     ],
+     "a": 3,
+     "e": "|<i>r</i>| = 0.339 is less than 0.4438, so do not reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 30 pairs gives a product moment correlation coefficient of <i>r</i> = −0.296 between the age of a car and its value. Test for negative correlation at the 5% level. The critical value is −0.3061. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Reject H<sub>0</sub>: there is evidence of negative correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of negative correlation"
+     ],
+     "a": 3,
+     "e": "|<i>r</i>| = 0.296 is less than 0.3061, so do not reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 12 pairs gives a product moment correlation coefficient of <i>r</i> = −0.412 between a pupil's height and their shoe size. Test for correlation at the 5% level. The critical value is ±0.5760. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of correlation",
+      "Reject H<sub>0</sub>: there is evidence of correlation"
+     ],
+     "a": 2,
+     "e": "|<i>r</i>| = 0.412 is less than 0.5760, so do not reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 30 pairs gives a product moment correlation coefficient of <i>r</i> = −0.461 between the hours of daylight and the electricity used for lighting. Test for negative correlation at the 1% level. The critical value is −0.4226. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: there is evidence of negative correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of negative correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Accept H<sub>0</sub>: this proves there is no correlation"
+     ],
+     "a": 0,
+     "e": "|<i>r</i>| = 0.461 is greater than 0.4226, so reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 8 pairs gives a product moment correlation coefficient of <i>r</i> = −0.675 between the price of a ticket and the number sold. Test for negative correlation at the 1% level. The critical value is −0.7887. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: there is evidence of negative correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of negative correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change"
+     ],
+     "a": 2,
+     "e": "|<i>r</i>| = 0.675 is less than 0.7887, so do not reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 8 pairs gives a product moment correlation coefficient of <i>r</i> = 0.860 between arm span and height. Test for positive correlation at the 5% level. The critical value is 0.6215. What is the conclusion?",
+     "c": [
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of positive correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Reject H<sub>0</sub>: there is evidence of positive correlation"
+     ],
+     "a": 3,
+     "e": "|<i>r</i>| = 0.860 is greater than 0.6215, so reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 25 pairs gives a product moment correlation coefficient of <i>r</i> = 0.361 between a pupil's height and their shoe size. Test for positive correlation at the 5% level. The critical value is 0.3365. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Reject H<sub>0</sub>: there is evidence of positive correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of positive correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation"
+     ],
+     "a": 1,
+     "e": "|<i>r</i>| = 0.361 is greater than 0.3365, so reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 6 pairs gives a product moment correlation coefficient of <i>r</i> = −0.858 between the age of a car and its value. Test for negative correlation at the 1% level. The critical value is −0.8822. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of negative correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Reject H<sub>0</sub>: there is evidence of negative correlation"
+     ],
+     "a": 1,
+     "e": "|<i>r</i>| = 0.858 is less than 0.8822, so do not reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 30 pairs gives a product moment correlation coefficient of <i>r</i> = −0.489 between the price of a ticket and the number sold. Test for negative correlation at the 5% level. The critical value is −0.3061. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: there is evidence of negative correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of negative correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change"
+     ],
+     "a": 0,
+     "e": "|<i>r</i>| = 0.489 is greater than 0.3061, so reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 25 pairs gives a product moment correlation coefficient of <i>r</i> = 0.527 between revision time and test score. Test for positive correlation at the 1% level. The critical value is 0.4622. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of positive correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Reject H<sub>0</sub>: there is evidence of positive correlation"
+     ],
+     "a": 3,
+     "e": "|<i>r</i>| = 0.527 is greater than 0.4622, so reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 12 pairs gives a product moment correlation coefficient of <i>r</i> = −0.747 between the temperature and the amount of gas used for heating. Test for negative correlation at the 1% level. The critical value is −0.6581. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: there is evidence of negative correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of negative correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change"
+     ],
+     "a": 0,
+     "e": "|<i>r</i>| = 0.747 is greater than 0.6581, so reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 6 pairs gives a product moment correlation coefficient of <i>r</i> = −0.740 between the hours of daylight and the electricity used for lighting. Test for negative correlation at the 1% level. The critical value is −0.8822. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: there is evidence of negative correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of negative correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change"
+     ],
+     "a": 2,
+     "e": "|<i>r</i>| = 0.740 is less than 0.8822, so do not reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 6 pairs gives a product moment correlation coefficient of <i>r</i> = −0.550 between the temperature and the amount of gas used for heating. Test for negative correlation at the 5% level. The critical value is −0.7293. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: there is evidence of negative correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of negative correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation"
+     ],
+     "a": 2,
+     "e": "|<i>r</i>| = 0.550 is less than 0.7293, so do not reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 10 pairs gives a product moment correlation coefficient of <i>r</i> = −0.372 between the temperature and the amount of gas used for heating. Test for negative correlation at the 5% level. The critical value is −0.5494. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: there is evidence of negative correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of negative correlation"
+     ],
+     "a": 3,
+     "e": "|<i>r</i>| = 0.372 is less than 0.5494, so do not reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 20 pairs gives a product moment correlation coefficient of <i>r</i> = 0.625 between the age of a car and its value. Test for correlation at the 5% level. The critical value is ±0.4438. What is the conclusion?",
+     "c": [
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Reject H<sub>0</sub>: there is evidence of correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change"
+     ],
+     "a": 1,
+     "e": "|<i>r</i>| = 0.625 is greater than 0.4438, so reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 6 pairs gives a product moment correlation coefficient of <i>r</i> = −0.696 between the altitude of a town and its mean temperature. Test for negative correlation at the 1% level. The critical value is −0.8822. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: there is evidence of negative correlation",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of negative correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change"
+     ],
+     "a": 2,
+     "e": "|<i>r</i>| = 0.696 is less than 0.8822, so do not reject H<sub>0</sub>."
+    },
+    {
+     "q": "A sample of 8 pairs gives a product moment correlation coefficient of <i>r</i> = −0.791 between the hours of sunshine and the number of ice creams sold. Test for correlation at the 5% level. The critical value is ±0.7067. What is the conclusion?",
+     "c": [
+      "Reject H<sub>0</sub>: there is evidence of correlation",
+      "Reject H<sub>0</sub>: one variable causes the other to change",
+      "Accept H<sub>0</sub>: this proves there is no correlation",
+      "Do not reject H<sub>0</sub>: there is not enough evidence of correlation"
+     ],
+     "a": 0,
+     "e": "|<i>r</i>| = 0.791 is greater than 0.7067, so reject H<sub>0</sub>."
+    }
+   ]
+  }
+ ],
+ "pdf_url": "",
+ "sort": 16,
+ "updated": "2026-11-26",
+ "country": "uk",
+ "subject": "maths",
+ "grade": "year-13"
+}
