@@ -30,7 +30,7 @@ LEAK_RE = re.compile(r"(?<![\w-])(%s)(?![\w-])" % "|".join(re.escape(w) for w in
 
 def _text_of(unit_json):
     t = re.sub(r"<[^>]+>", " ", unit_json)
-    return t
+    return re.sub(r"newton meters?|forcemeters?", " ", t, flags=re.I)    # the UK school name for a spring balance
 
 
 def make_uk(year, slug, sort, topic, std_text, title, seo_title, short, meta, key_big, key_sub, body, faq, sets,
