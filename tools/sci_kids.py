@@ -216,12 +216,13 @@ def row(kinds, letters=True, words=None, size=100, label=None):
     s = ""
     lab = words or (["ABCDEFGH"[i] for i in range(len(kinds))] if letters else None)
     h = size + (30 if lab else 0)
+    cw = max(size, max(len(w) for w in words) * 7.4 + 12) if words else size
     for i, k in enumerate(kinds):
-        x = size / 2 + i * size
+        x = cw / 2 + i * cw
         s += icon(k, x, size / 2, size / 115.0)
         if lab:
             s += text(x, size + 20, lab[i], 16 if letters and not words else 13)
-    return svg_wrap(size * len(kinds), h, s, label or "pictures: " + ", ".join(name(k) for k in kinds))
+    return svg_wrap(cw * len(kinds), h, s, label or "pictures: " + ", ".join(name(k) for k in kinds))
 
 
 def scene(items, w=360, h=180, sky=True, ground=True, label="a picture"):
