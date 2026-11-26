@@ -2188,7 +2188,10 @@ IN / Science / Class 3: 1. family-and-friends ✓ 2. going-to-the-mela ✓ 3. ce
 IN / Science / Class 4: 1. living-together ✓ 2. exploring-our-neighbourhood ✓ 3. nature-trail ✓ 4. growing-up-with-nature ✓ 5. food-for-health ✓ 6. happy-and-healthy-living ✓ 7. how-things-work ✓ 8. how-things-are-made ✓ 9. different-lands-different-lives ✓ 10. our-sky ✓
 in_sci4.NOCOMMA = {"1098"}：TRIM のカンマを付けない数（電話番号）。鳥の「feet」も LEAK で止まるので toes・claws と書く
 トピック：nature-trail・food-for-health・healthy-living→living-things、things-are-made→matter、how-things-work→forces-and-motion、different-lands→earths-systems
-次は Class 5、Class 11–12（Physics・Chemistry・Biology）
+IN / Science / Class 5: 1. water-the-essence-of-life ✓ 2. journey-of-a-river ✓ 3. the-mystery-of-food ✓ 4. our-school-a-happy-place ✓ 5. our-vibrant-country ✓ 6. some-unique-places ✓ 7. energy-how-things-work ✓ 8. clothes-how-things-are-made ✓ 9. rhythms-of-nature ✓ 10. earth-our-shared-home ✓
+domain は教科書のテーマ（Life Around Us／Health and Well-being／Incredible India／Things Around Us／Our Amazing Planet）。日の出・日の入りの問題は現実の時刻に合わせる（6 月の Delhi は 5 時台〜7 時台）
+トピック：mystery-of-food・our-shared-home→living-things、journey-of-a-river→earths-systems、rhythms-of-nature→earth-and-space、^how-things-work$→forces-and-motion（Class 5 の energy-how-things-work は energy だけ）
+IN / Science は Class 3〜10 まで完了。次は Class 11–12（Physics・Chemistry・Biology）
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
