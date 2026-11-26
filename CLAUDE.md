@@ -2026,7 +2026,7 @@ NG / Mathematics は Kindergarten〜SSS 3 まで完了。mq-geo.js と mq.php �
 ## apu2.com のトップ・About・プライバシーポリシー（このリポジトリの外。zip で渡してユーザーが上げる）
 
 - 英語（/）と de・fr・it・es・pt・tr（/de/ など）の index.html・about.html は `tools/apu2_top/build_top.py`、privacypolicy.html（13言語のタブ）は `build_pp.py` で作る（出力は tools/apu2_top/out/）。文言と算数の国の一覧は `top_data.py`（MATH・CC・T・A）。en_*.html は元にした英語ページ
-- トップ・About は 14 言語（en ja vi id zh tw ko de fr it es pt tr sv）すべて build_top.py で作る（2026-11-26 から ja〜ko のトップも。T[L] の order で節の順、j_c・e_c でその言語の講座、e_more で追加のリンク）。us・uk・au・ca・sg のトップと About だけは手で作った別のファイル（言語メニューに de〜sv がない）
+- トップ・About は 14 言語（en ja vi id zh tw ko de fr it es pt tr sv）すべて build_top.py で作る（2026-11-26 から ja〜ko のトップも。T[L] の order で節の順、j_c・e_c でその言語の講座、e_more で追加のリンク）。us・uk・au・ca・sg のトップと About だけは手で作った別のファイル。言語を足したら `python3 patch_en.py 元のファイル…` で言語メニュー・hreflang・フッターをそろえる（元のファイルはユーザーにもらう）
 - 新しい国の算数を足したら MATH（並びの位置に insert）・CC（全言語の国名）・OWN・SHORT に足して作り直す。「{nk} の教育課程・{nc} の国と地域」は MATH から自動で数える（{nk1}・{nk2} は「ほか N」）
 - 新しい言語は LANGS・NEW・HREFLANG・SEL・LOCALE・CC・T・A と build_pp.py の P・ORDER に足す（top_data.py の末尾の sv を参照）
 
