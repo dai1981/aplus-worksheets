@@ -59,26 +59,31 @@ def g_echo():
                 "d = v × t ÷ 2 = %s × %s ÷ 2 = %s %s (the wave goes there and back)." % (num(case[2]), num(t, 5), num(val, 2), unit))
 
 
+def t3(x):
+    v = "%.3g" % x
+    return sci(x) if "e" in v else num(float(v), 6)
+
+
 @safe
 def g_time():
     c = 3e8
-    case = R.choice([("a GPS satellite", 20200), ("the Moon", 384000), ("a satellite in low orbit", 400), ("a geostationary satellite", 35800), ("a cell tower", 5), ("Mars (at its closest)", 56000000)])
+    case = R.choice([("a GPS satellite", 20200), ("the Moon", 384000), ("a weather satellite", 850), ("a geostationary satellite", 35800), ("the Sun", 150000000), ("Mars at its closest", 56000000)])
     k = R.choice(["t", "x"])
     if not once(("tm", case[0], k)):
         return None
     d = case[1] * 1000
     t = d / c
     if k == "t":
-        g = "%s s" % (num(t, 4) if t >= 0.0001 else sci(t))
+        g = "%s s" % t3(t)
         w = [d / 343, d * c, t * 2, t / 1000]
-        w = ["%s s" % (num(x, 4) if 0.0001 <= x < 1e6 else sci(x)) for x in w]
+        w = ["%s s" % t3(x) for x in w]
         return item("A radio signal travels from %s to Earth, a distance of %s km. How long does it take? (c = 3.0 × 10<sup>8</sup> m/s)" % (case[0], num(case[1])), g, uniq(g, w),
-                    "t = d ÷ c = %s m ÷ 3.0 × 10<sup>8</sup> m/s = %s s." % (sci(d), g[:-2]))
+                    "t = d ÷ c = %s m ÷ 3.0 × 10<sup>8</sup> m/s = %s s." % (sci(d), t3(t)))
     if t < 0.01:
         return None
-    g = "about %s s" % num(2 * t, 2)
+    g = "about %s s" % t3(2 * t)
     return item("A radar or laser pulse is sent to %s (%s km away) and reflects back. About how long until the echo returns?" % (case[0], num(case[1])), g,
-                uniq(g, ["about %s s" % num(t, 2), "about %s s" % num(4 * t, 2), "about %s s" % num(2 * d / 343, 0), "instantly"]), "There and back: 2d ÷ c = %s s." % num(2 * t, 2))
+                uniq(g, ["about %s s" % t3(t), "about %s s" % t3(4 * t), "about %s s" % t3(2 * d / 343), "instantly"]), "There and back: 2d ÷ c = %s s." % t3(2 * t))
 
 
 @safe
