@@ -2110,7 +2110,13 @@ UK / Science / Year 1（KS1。seed 611cc。Year 2 と同じルール。人の体
 7. parts-of-the-body ✓ 8. the-five-senses ✓ 9. objects-and-materials ✓ 10. properties-of-materials ✓ 11. four-seasons ✓ 12. weather-and-day-length ✓
 性質の問題の誤答は物ごとに手で書く（紙やすりに「dull」も当てはまるため）。天気の誤答は近い天気（stormy と windy、foggy と cloudy、frosty と snowy）を外す
 トピック：carnivore・evergreen→living-things、day-length→earth-and-space、four-seasons→earths-systems
-次は KS3（Year 7–9。National Curriculum の KS3 science は 3 学年まとめての内容なので、一般的な配分で学年に分ける）
+UK / Science / KS3 Year 7–9（National Curriculum の KS3 science は 3 学年まとめての内容なので、一般的な配分で学年に分ける）— seed は 617cc・618cc・619cc。make_ks3(year, slug, sort, subject, topic, …)：standard_code「KS3 Biology: Cells and organisation」、domain は Biology／Chemistry／Physics。
+US の NGSS 生成スクリプトの問題関数は `uk_sci.adopt_us(モジュール名, U)`（U・R・UK の People を入れる）と `ukm(maker)`（UKSP でイギリス式に直す：colour・metre・aluminium・caesium・non-metal・reactivity series・displacement・fertiliser・rubbish・power station・sledge・toilet など。米国の語・単位が残ると落とす。名前・数字・表を除いた文で重複を判定するので、データだけ違う同じ問題は 1 回）で再利用する。
+US の生成スクリプトの数は ukm を通すと少なくなる。sci_pool.py で ukm した名前（us_x = ukm(M.g_x)）を数えてから配分を書く。US の族の番号（17・18）は使わない（UK は group 7・0）。不溶の金属酸化物（鉄・銅）を「アルカリ性」にしない。お金は 100p 以上を £1.04 の形に
+Year 7: 1. cells ✓ 2. specialised-cells-and-organisation ✓ 3. skeleton-and-muscles ✓ 4. human-reproduction ✓ 5. plant-reproduction ✓ 6. particles-and-states-of-matter ✓ 7. elements-atoms-and-compounds ✓ 8. acids-and-alkalis ✓ 9. mixtures-and-separation ✓ 10. forces ✓ 11. sound ✓ 12. light ✓ 13. space ✓
+Year 8: 1. food-and-digestion ✓ 2. breathing-and-gas-exchange ✓ 3. respiration ✓ 4. photosynthesis ✓ 5. ecosystems-and-food-webs ✓ 6. periodic-table ✓ 7. metals-and-non-metals ✓ 8. chemical-reactions ✓ 9. rocks-and-the-rock-cycle ✓ 10. the-atmosphere-and-climate ✓ 11. electricity ✓ 12. magnetism-and-electromagnets ✓ 13. energy-and-power ✓
+Year 9: 1. inheritance-and-dna 2. variation-and-evolution 3. health-and-drugs 4. exothermic-and-endothermic-reactions 5. reactivity-and-extraction 6. materials 7. speed-and-motion 8. pressure 9. work-and-moments 10. waves 11. thermal-energy 12. gravity-and-space
+トピック：digestion・gas-exchange→living-things、metals-and→matter
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
