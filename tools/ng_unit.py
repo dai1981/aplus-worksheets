@@ -71,7 +71,7 @@ def cx(fn, n, keep=None, money=False):
 
 
 ARG = {"P": ("People", "People2"), "Pp": ("People", "Pp", "People2"), "pk": ("Picker", "Pk"), "pos": ("Pos", "Spots", "Place"),
-       "people": ("People",), "P2": ("People2", "People"), "spots": ("Spots",), "PK": ("Picker",), "P_": ("People",), "PP": ("People", "Pos")}
+       "people": ("People",), "P2": ("People2", "People"), "spots": ("Spots",), "PK": ("Picker",), "P_": ("People",), "PP": ("People", "Pos"), "K": ("Kids",), "nm": ("Names",)}
 
 
 def rs(m, name, n, keep=None, money=False, **over):

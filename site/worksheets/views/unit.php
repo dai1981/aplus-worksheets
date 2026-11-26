@@ -222,6 +222,9 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
 } elseif ($grade['slug'] === 'kindergarten' && $country['code'] === 'ch') {
     $lr['typicalAgeRange'] = '4-6';   // Switzerland: 2 years of Kindergarten, Zyklus 1 of Lehrplan 21
     $lr['educationalLevel'] = array('Kindergarten', 'Zyklus 1');
+} elseif ($grade['slug'] === 'kindergarten' && $country['code'] === 'ng') {
+    $lr['typicalAgeRange'] = '5-6';   // Nigeria: Kindergarten / Nursery 2, the year before Primary 1 (ECCDE)
+    $lr['educationalLevel'] = array('Kindergarten', 'Nursery 2', 'Early Childhood Care and Development Education');
 } elseif ($grade['slug'] === 'kindergarten') {
     $lr['typicalAgeRange'] = '5-6';
 } elseif ($grade['slug'] === 'algebra-1') {
