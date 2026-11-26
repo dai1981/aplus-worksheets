@@ -20,12 +20,14 @@ uk_sci.USED.clear()
 EC = adopt_us("gen_us_science_chem_energy_in_chemical_reactions", U)
 E7 = adopt_us("gen_us_science_g7_energy_in_chemical_reactions", U)
 RR = adopt_us("gen_us_science_chem_reaction_rates", U)
-us_exo, _diag = ukm(EC.g_exo), ukm(EC.g_diag)
+def noh(f):
+    def g():
+        it = f()
+        return None if it is None or "ΔH" in it["q"] + it["e"] + "".join(it["c"]) or "reverse" in it["q"] or "kJ/mol" in it["q"] else it
+    return g
 
 
-def us_diag():
-    it = _diag()
-    return None if it is None or "ΔH" in it["q"] or "reverse" in it["q"] else it
+us_exo, us_diag = noh(ukm(EC.g_exo)), noh(ukm(EC.g_diag))
 us_kind, us_data, us_design = ukm(E7.g_kind), ukm(E7.g_data), ukm(E7.g_design)
 us_factor, us_cat = ukm(RR.g_factor), ukm(RR.g_cat)
 
@@ -82,10 +84,10 @@ def body():
 
 def main():
     sets = U.sets([
-        ("Exothermic or endothermic?", B1[:2] + [(us_exo, 10), (us_kind, 8)]),
-        ("Measuring temperature changes", [(g_temp, 13), (us_data, 7)]),
-        ("Energy level diagrams", B1[2:] + [(us_diag, 8), (us_exo, 7), (us_data, 2)]),
-        ("Using energy changes", [(us_design, 6), (us_data, 6), (g_temp, 2), (us_kind, 4), (us_exo, 2)]),
+        ("Exothermic or endothermic?", B1[:2] + [(us_exo, 8), (us_kind, 6), (us_design, 2), (g_temp, 2)]),
+        ("Measuring temperature changes", [(g_temp, 12), (us_data, 8)]),
+        ("Energy level diagrams", B1[2:] + [(us_diag, 8), (us_exo, 4), (us_data, 3), (us_factor, 2)]),
+        ("Using energy changes", [(us_design, 5), (us_data, 6), (us_kind, 5), (us_factor, 4)]),
         ("Rates of reaction", B5 + [(us_factor, 12), (us_cat, 3)]),
     ])
     make_ks3(9, "exothermic-and-endothermic-reactions", 4, "Chemistry", "Energetics",
