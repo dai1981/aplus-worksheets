@@ -2115,8 +2115,10 @@ US の NGSS 生成スクリプトの問題関数は `uk_sci.adopt_us(モジュ�
 US の生成スクリプトの数は ukm を通すと少なくなる。sci_pool.py で ukm した名前（us_x = ukm(M.g_x)）を数えてから配分を書く。US の族の番号（17・18）は使わない（UK は group 7・0）。不溶の金属酸化物（鉄・銅）を「アルカリ性」にしない。お金は 100p 以上を £1.04 の形に
 Year 7: 1. cells ✓ 2. specialised-cells-and-organisation ✓ 3. skeleton-and-muscles ✓ 4. human-reproduction ✓ 5. plant-reproduction ✓ 6. particles-and-states-of-matter ✓ 7. elements-atoms-and-compounds ✓ 8. acids-and-alkalis ✓ 9. mixtures-and-separation ✓ 10. forces ✓ 11. sound ✓ 12. light ✓ 13. space ✓
 Year 8: 1. food-and-digestion ✓ 2. breathing-and-gas-exchange ✓ 3. respiration ✓ 4. photosynthesis ✓ 5. ecosystems-and-food-webs ✓ 6. periodic-table ✓ 7. metals-and-non-metals ✓ 8. chemical-reactions ✓ 9. rocks-and-the-rock-cycle ✓ 10. the-atmosphere-and-climate ✓ 11. electricity ✓ 12. magnetism-and-electromagnets ✓ 13. energy-and-power ✓
-Year 9: 1. inheritance-and-dna 2. variation-and-evolution 3. health-and-drugs 4. exothermic-and-endothermic-reactions 5. reactivity-and-extraction 6. materials 7. speed-and-motion 8. pressure 9. work-and-moments 10. waves 11. thermal-energy 12. gravity-and-space
-トピック：digestion・gas-exchange→living-things、metals-and→matter
+Year 9: 1. inheritance-and-dna ✓ 2. variation-and-evolution ✓ 3. health-and-drugs ✓ 4. exothermic-and-endothermic-reactions ✓ 5. reactivity-and-extraction ✓ 6. materials ✓ 7. speed-and-motion ✓ 8. pressure ✓ 9. work-and-moments ✓ 10. waves ✓ 11. thermal-energy ✓ 12. gravity-and-space ✓
+KS3 の範囲を超える US の問題（ΔH・kJ/mol・g/mol・逆反応の活性化エネルギー）は包んで落とす。KS3 の用語：resultant force・polythene・ethene・fibreglass
+トピック：digestion・gas-exchange・health-and-drugs→living-things、metals-and・extraction→matter、^pressure$・moments→forces-and-motion、gravity-and-space→earth-and-space も
+UK / Science は Year 1〜9 まで完了。次は KS4（GCSE Combined Science）か、他の国の理科
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
