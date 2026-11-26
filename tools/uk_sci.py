@@ -84,7 +84,10 @@ def uk_text(s):
             for rx, b in _UKSP:
                 p = rx.sub(b, p)
         out.append(p)
-    return "".join(out)
+    t = "".join(out)
+    t = re.sub(r"(?<![\d,.])1 units\b", "1 unit", t)
+    t = re.sub(r"\b(T|t)he ([a-z]+[^s\W]s) population\b", lambda m: m.group(1) + "he number of " + m.group(2), t)
+    return t
 
 
 def ukm(f):
