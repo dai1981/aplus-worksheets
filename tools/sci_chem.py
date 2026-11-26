@@ -92,3 +92,15 @@ def sub(formula):
     for ch in formula:
         out += "<sub>%s</sub>" % ch if ch.isdigit() else ch
     return out.replace("</sub><sub>", "")
+
+
+# trend data for main-group elements: electronegativity (Pauling), first ionization energy (kJ/mol), atomic radius (pm)
+EN = {"H": 2.20, "Li": 0.98, "Be": 1.57, "B": 2.04, "C": 2.55, "N": 3.04, "O": 3.44, "F": 3.98, "Na": 0.93, "Mg": 1.31, "Al": 1.61, "Si": 1.90,
+      "P": 2.19, "S": 2.58, "Cl": 3.16, "K": 0.82, "Ca": 1.00, "Ga": 1.81, "Ge": 2.01, "As": 2.18, "Se": 2.55, "Br": 2.96, "Rb": 0.82,
+      "Sr": 0.95, "Sn": 1.96, "I": 2.66, "Cs": 0.79, "Ba": 0.89}
+IE = {"H": 1312, "He": 2372, "Li": 520, "Be": 899, "B": 801, "C": 1086, "N": 1402, "O": 1314, "F": 1681, "Ne": 2081, "Na": 496, "Mg": 738,
+      "Al": 578, "Si": 787, "P": 1012, "S": 1000, "Cl": 1251, "Ar": 1521, "K": 419, "Ca": 590, "Ga": 579, "Ge": 762, "As": 947, "Se": 941,
+      "Br": 1140, "Kr": 1351, "Rb": 403, "Sr": 549, "Sn": 709, "I": 1008, "Xe": 1170, "Cs": 376, "Ba": 503}
+RAD = {"Li": 152, "Be": 112, "B": 85, "C": 77, "N": 75, "O": 73, "F": 72, "Na": 186, "Mg": 160, "Al": 143, "Si": 118, "P": 110, "S": 103,
+       "Cl": 99, "K": 227, "Ca": 197, "Ga": 135, "Ge": 122, "As": 120, "Se": 119, "Br": 114, "Rb": 248, "Sr": 215, "Sn": 140, "I": 133,
+       "Cs": 265, "Ba": 222}
