@@ -193,6 +193,8 @@ def bar_chart(labels, values, unit="", label="bar graph", ymax=None, step=None, 
     gap = 18
     x0, y0, hgt = 52, 26 if title else 14, 150
     W = w or int(x0 + n * (bw + gap) + 12)
+    if w:
+        gap = max(18, (W - x0 - 12) / float(n) - bw)
     ymax = ymax or max(values)
     step = step or max(1, ymax // 5)
     Y = lambda v: y0 + hgt - hgt * float(v) / ymax
