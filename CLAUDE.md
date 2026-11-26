@@ -2058,7 +2058,16 @@ Grade 2: 1. properties-of-materials (2-PS1-1) ✓ 2. choosing-materials (2-PS1-2
 10. maps-of-land-and-water (2-ESS2-2) ✓ 11. solid-and-liquid-water (2-ESS2-3) ✓ 12. solving-problems-like-an-engineer (K-2-ETS1) ✓
 トピック（topic_defs_science）：small-pieces・heating-and-cooling→matter、pollinat・offspring・living-things→living-things、engineer→engineering-design、sound-and-vibration→waves-and-light、shade→energy、sunlight-warms→energy だけ
 
-US / Science は Kindergarten〜Grade 8 まで完了。次は英国・オーストラリアなどの理科
+US / Science / 高校（NGSS HS は科目に分かれていないので、一般的な 4 科目に分ける）— grade は科目：`biology`（sort 9）・`chemistry`（10）・`physics`（11）・`earth-and-space-science`（12）。unit.php に年齢と educationalLevel、core.php の gs() は科目名だけ
+Biology（gen_us_science_bio_*、seed 901NN。HS-LS1〜LS4）: 1. dna-and-protein-synthesis ✓ 2. levels-of-organization ✓ 3. homeostasis-and-feedback ✓ 4. cell-division-and-differentiation ✓ 5. photosynthesis ✓ 6. carbon-and-macromolecules ✓ 7. cellular-respiration ✓
+8. populations-and-carrying-capacity ✓ 9. energy-flow-and-matter-cycling ✓ 10. carbon-cycle ✓ 11. ecosystem-stability-and-biodiversity ✓ 12. group-behavior ✓ 13. meiosis-and-genetic-variation ✓ 14. punnett-squares-and-heredity ✓
+15. evidence-for-evolution ✓ 16. natural-selection-and-adaptation ✓ 17. changes-in-trait-frequency ✓ 18. speciation-extinction-and-biodiversity ✓
+Chemistry（gen_us_science_chem_*、seed 902NN。HS-PS1・PS2-6・PS3-4。共通データは `tools/sci_chem.py`：EL（元素）・EN/IE/RAD（傾向は実データで確かめた組だけを問う）・valence・ion_charge・atoms（式の原子数、かっこ対応）・split_eq・tally・eq_html・AM（教室用の原子量）・molar・num（カンマ付き）・STOICH（つり合った式））:
+1. atomic-structure-and-isotopes ✓ 2. periodic-table-and-trends ✓ 3. chemical-bonding ✓ 4. intermolecular-forces-and-properties ✓ 5. types-of-chemical-reactions ✓ 6. balancing-chemical-equations ✓ 7. the-mole-and-molar-mass ✓
+8. stoichiometry ✓ 9. energy-in-chemical-reactions ✓ 10. reaction-rates ✓ 11. chemical-equilibrium ✓ 12. nuclear-chemistry ✓ 13. thermal-energy-and-specific-heat ✓ 14. molecular-structure-and-materials ✓
+化学の質量・量は現実に合わせる（Fe:S = 7:4 など、反応しきる量の比）。4 けた以上の数はカンマ（num、または生成後に commas()）
+次: Physics（HS-PS2・PS3・PS4）、Earth and Space Science（HS-ESS1〜3）。catalog.json に科目を足す（sort 11・12）
+US / Science は Kindergarten〜Grade 8・Biology・Chemistry まで完了
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
