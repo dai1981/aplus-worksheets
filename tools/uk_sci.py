@@ -57,3 +57,64 @@ def make_ks3(year, slug, sort, subject, topic, std_text, title, seo_title, short
     """KS3 (Year 7-9): subject = Biology / Chemistry / Physics; standard_code 'KS3 Biology: Cells and organisation'."""
     make_uk(year, slug, sort, topic, std_text, title, seo_title, short, meta, key_big, key_sub, body, faq, sets,
             code="KS3 %s: %s" % (subject, topic), domain=subject, allow=allow)
+
+
+# ---- reuse US (NGSS) makers in British English ----
+UKSP = [("colors", "colours"), ("colored", "coloured"), ("colorful", "colourful"), ("color", "colour"), ("centers", "centres"), ("center", "centre"),
+        ("kilometers", "kilometres"), ("kilometer", "kilometre"), ("centimeters", "centimetres"), ("centimeter", "centimetre"),
+        ("millimeters", "millimetres"), ("millimeter", "millimetre"), ("meters", "metres"), ("meter", "metre"),
+        ("milliliters", "millilitres"), ("milliliter", "millilitre"), ("liters", "litres"), ("liter", "litre"),
+        ("behaviors", "behaviours"), ("behavior", "behaviour"), ("gray", "grey"), ("aluminum", "aluminium"), ("favorite", "favourite"),
+        ("flashlights", "torches"), ("flashlight", "torch"), ("fibers", "fibres"), ("fiber", "fibre"), ("molds", "moulds"), ("mold", "mould"),
+        ("odor", "odour"), ("vapor", "vapour"), ("gasoline", "petrol"), ("soccer", "football"), ("neighborhood", "neighbourhood"),
+        ("neighbors", "neighbours"), ("neighbor", "neighbour"), ("tires", "tyres"), ("tire", "tyre"), ("cookies", "biscuits"), ("cookie", "biscuit"),
+        ("candy", "sweets"), ("ladybugs", "ladybirds"), ("ladybug", "ladybird"), ("Mom", "Mum"), ("mom", "mum"),
+        ("analyze", "analyse"), ("analyzing", "analysing"), ("organize", "organise"), ("organized", "organised"), ("recognize", "recognise"),
+        ("sulfur", "sulfur"), ("specialized", "specialised"), ("modeling", "modelling"), ("labeled", "labelled"), ("labeling", "labelling"),
+        ("defense", "defence"), ("hemoglobin", "haemoglobin"), ("esophagus", "oesophagus"), ("fetus", "fetus"), ("anemia", "anaemia"),
+        ("Cellular respiration", "Respiration"), ("cellular respiration", "respiration"), ("use the bathroom", "go to the toilet"), ("bathroom", "toilet"), ("Grade 8", "Year 9"), ("Grade 7", "Year 8"), ("Grade 6", "Year 7"), ("students", "pupils"), ("Students", "Pupils")]
+_UKSP = [(re.compile(r"(?<![\w-])%s(?![\w-])" % re.escape(a)), b) for a, b in UKSP]
+
+
+def uk_text(s):
+    parts = re.split(r"(<[^>]+>)", s)
+    out = []
+    for p in parts:
+        if not p.startswith("<"):
+            for rx, b in _UKSP:
+                p = rx.sub(b, p)
+        out.append(p)
+    return "".join(out)
+
+
+def ukm(f):
+    """wrap a (US) maker: British spellings; drop the item if an American word or unit is still there"""
+    def g():
+        it = f()
+        if it is None:
+            return None
+        it = dict(it)
+        it["q"] = uk_text(it["q"])
+        it["e"] = uk_text(it["e"])
+        it["c"] = [uk_text(c) for c in it["c"]]
+        if LEAK_RE.search(_text_of(json.dumps(it, ensure_ascii=False))) or re.search(r"°F|\bft\b|\blb\b|\boz\b", it["q"] + " ".join(it["c"])):
+            return None
+        if len({c.strip().lower() for c in it["c"]}) < 4:
+            return None
+        names = "|".join(GIRLS + BOYS + list(getattr(sci_common, "GIRLS", [])) + list(getattr(sci_common, "BOYS", [])))
+        norm = re.sub(r"\b(%s)\b('s)?" % names, "N", re.sub(r"<[^>]+>", " ", it["q"]))
+        if not once(("ukq", norm, it["c"][0])):
+            return None
+        return it
+    g.__name__ = getattr(f, "__name__", "g")
+    return g
+
+
+def adopt_us(modname, U):
+    """import a US science generator and point it at this unit (UK names)"""
+    import importlib
+    m = importlib.import_module(modname)
+    m.U = U
+    m.R = U.R
+    m.P = People(U.R)
+    return m
