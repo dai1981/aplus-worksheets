@@ -16,7 +16,7 @@ U, R, P, us = U4(62110)
 MK, NL, MC = "phys_motion_and_kinematics", "phys_newtons_laws_and_net_force", "phys_momentum_and_collisions"
 us_speed, us_acc, us_data = us(MK, "g_speed"), us(MK, "g_acc"), us(MK, "g_data")
 us_fma, us_net, us_law, us_weight = us(NL, "g_fma"), us(NL, "g_net"), us(NL, "g_law"), us(NL, "g_weight", rep=(("m/s²)", "N/kg)"),))
-us_p, us_stick = us(MC, "g_p", rep=(("How fast is it moving?", "What is its speed?"), ("football ball", "football")))), us(MC, "g_stick")
+us_p, us_stick = us(MC, "g_p", rep=(("How fast is it moving?", "What is its speed?"), ("football ball", "football"))), us(MC, "g_stick")
 
 VEC = [("speed", "scalar"), ("velocity", "vector"), ("distance", "scalar"), ("displacement", "vector"), ("mass", "scalar"), ("weight", "vector"),
        ("force", "vector"), ("acceleration", "vector"), ("momentum", "vector"), ("energy", "scalar"), ("time", "scalar"), ("temperature", "scalar")]
