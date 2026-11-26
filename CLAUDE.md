@@ -2045,7 +2045,20 @@ genes-and-mutations (MS-LS3-1)、asexual-and-sexual-reproduction (MS-LS3-2)、fo
 artificial-selection-and-genetic-engineering (MS-LS4-5)、earth-moon-sun-system (MS-ESS1-1)、gravity-in-the-solar-system (MS-ESS1-2)、scale-of-the-solar-system (MS-ESS1-3)、geologic-time-scale (MS-ESS1-4)、forecasting-natural-hazards (MS-ESS3-2)
 1 つの問題関数が同じ数・同じ文を何度も作らないよう、生成スクリプトの中で once(key, n) を使って回数を決める（名前だけ違う問題を減らす）
 
-US / Science の次: K–2。そのあと英国・オーストラリアなどの理科
+US / Science / K–2（NGSS。grade `kindergarten`（sort 0）・`grade-1`・`grade-2`。生成スクリプトは `gen_us_science_gk_*`（seed 91xx）・`g1_*`（101xx）・`g2_*`（201xx））
+K–2 は**ページの上を軽く**：make() が title ≤ 40・key_big ≤ 40・key_sub ≤ 90 字を assert。body は `kid_lesson(絵, 太字の一文, [短い要点 3 つ], 例題, よくある間違い)`（絵と一文を先に、例題と間違いは後ろ）。太字の一文は key_big と同じにしない。
+絵は `tools/sci_kids.py`（icon・card・row（words が長いとセル幅を自動で広げる）・scene、k_pics の絵も使える）。K はとても短い文でほぼ全問に絵、G1 は短い文で絵を多く。
+同じ once のキーを別の問題関数で使わない（("eat", k) のように接頭辞を付ける）。似た答え（「plants and animals」と「plants and small animals」、嵐と竜巻など）を誤答に入れない
+Kindergarten: 1. pushes-and-pulls (K-PS2-1) ✓ 2. changing-speed-and-direction (K-PS2-2) ✓ 3. sunlight-warms-earth (K-PS3-1) ✓ 4. shade-structures (K-PS3-2) ✓ 5. what-plants-and-animals-need (K-LS1-1) ✓
+6. weather (K-ESS2-1) ✓ 7. how-living-things-change-their-environment (K-ESS2-2) ✓ 8. where-plants-and-animals-live (K-ESS3-1) ✓ 9. severe-weather (K-ESS3-2) ✓ 10. caring-for-earth (K-ESS3-3) ✓
+Grade 1: 1. sound-and-vibrations (1-PS4-1) ✓ 2. light-and-seeing (1-PS4-2) ✓ 3. light-and-materials (1-PS4-3) ✓ 4. sending-signals-with-light-and-sound (1-PS4-4) ✓ 5. plant-and-animal-parts (1-LS1-1) ✓
+6. parents-and-offspring (1-LS1-2) ✓ 7. young-plants-and-animals (1-LS3-1) ✓ 8. sun-moon-and-stars (1-ESS1-1) ✓ 9. daylight-and-seasons (1-ESS1-2) ✓
+Grade 2: 1. properties-of-materials (2-PS1-1) ✓ 2. choosing-materials (2-PS1-2) ✓ 3. building-with-small-pieces (2-PS1-3) ✓ 4. heating-and-cooling (2-PS1-4) ✓ 5. what-plants-need (2-LS2-1) ✓
+6. pollination-and-seed-dispersal (2-LS2-2) ✓ 7. habitats-and-biodiversity (2-LS4-1) ✓ 8. fast-and-slow-earth-changes (2-ESS1-1) ✓ 9. stopping-wind-and-water-erosion (2-ESS2-1) ✓
+10. maps-of-land-and-water (2-ESS2-2) ✓ 11. solid-and-liquid-water (2-ESS2-3) ✓ 12. solving-problems-like-an-engineer (K-2-ETS1) ✓
+トピック（topic_defs_science）：small-pieces・heating-and-cooling→matter、pollinat・offspring・living-things→living-things、engineer→engineering-design、sound-and-vibration→waves-and-light、shade→energy、sunlight-warms→energy だけ
+
+US / Science は Kindergarten〜Grade 8 まで完了。次は英国・オーストラリアなどの理科
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
