@@ -658,7 +658,7 @@ function topic_defs_science($country = null) {
     return array(
         'matter' => array('name' => 'Matter and Its Properties', 'in' => '/matter|particle|material|mixture|solution|chemical-change|physical-change|conservation-of-mass|states-of|atom|molecule|reaction/', 'out' => '/cycl|food/',
             'blurb' => 'What matter is made of, how to identify materials by their properties, mixtures and solutions, physical and chemical changes, and why mass is conserved.'),
-        'forces-and-motion' => array('name' => 'Forces and Motion', 'in' => '/force|motion|gravity|magnet|push|pull/', 'out' => '/^$/',
+        'forces-and-motion' => array('name' => 'Forces and Motion', 'in' => '/force|motion|gravity|magnet|push|pull|newton/', 'out' => '/^$/',
             'blurb' => 'Pushes and pulls, balanced and unbalanced forces, gravity, magnets and how forces change the way objects move.'),
         'energy' => array('name' => 'Energy', 'in' => '/energy|light|sound|heat|electric|wave|circuit|collision|information|signal/', 'out' => '/^$/',
             'blurb' => 'Forms of energy and how it moves: light, sound, heat and electricity, energy in food, and energy from the sun.'),
