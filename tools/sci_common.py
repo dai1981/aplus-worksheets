@@ -95,7 +95,7 @@ class Unit:
                 continue
             try:
                 it = m()
-            except (AssertionError, ValueError, IndexError, TypeError, ZeroDivisionError):   # a generator drew numbers that do not work
+            except (AssertionError, ValueError, IndexError, TypeError, ZeroDivisionError, KeyError):   # a generator drew numbers that do not work
                 it = None
             if not it:
                 continue
