@@ -24,7 +24,7 @@ def g_sense():
     if not once(("se", s, k)):
         return None
     if k is None:
-        return item("Your %s help you with which of these?" % ("skin and fingers" if b == "skin" else b if b != "nose" and b != "tongue" else "nose" if b == "nose" else "tongue"),
+        return item("Your %s %s you with which of these?" % ("skin and fingers" if b == "skin" else b, "helps" if b in ("nose", "tongue") else "help"),
                     {"sight": "seeing colours and shapes", "hearing": "hearing sounds", "smell": "smelling flowers", "taste": "tasting food", "touch": "feeling if something is soft or hard"}[s],
                     [{"sight": "seeing colours and shapes", "hearing": "hearing sounds", "smell": "smelling flowers", "taste": "tasting food", "touch": "feeling if something is soft or hard"}[x[0]] for x in SENSE if x[0] != s][:3],
                     "Eyes see, ears hear, nose smells, tongue tastes, skin feels.")
