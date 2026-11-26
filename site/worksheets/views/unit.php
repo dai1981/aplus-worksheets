@@ -227,6 +227,9 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
     $lr['educationalLevel'] = array('Kindergarten', 'Nursery 2', 'Early Childhood Care and Development Education');
 } elseif ($grade['slug'] === 'kindergarten') {
     $lr['typicalAgeRange'] = '5-6';
+} elseif ($subject['slug'] === 'science' && in_array($grade['slug'], array('biology', 'chemistry', 'physics', 'earth-and-space-science'), true)) {
+    $lr['typicalAgeRange'] = array('biology' => '14-15', 'chemistry' => '15-16', 'physics' => '16-17', 'earth-and-space-science' => '14-18')[$grade['slug']];   // US high school science courses (NGSS HS)
+    $lr['educationalLevel'] = array($grade['name'], 'High school');
 } elseif ($grade['slug'] === 'algebra-1') {
     $lr['typicalAgeRange'] = '14-15';   // usually taken in Grade 9
 } elseif ($grade['slug'] === 'geometry') {

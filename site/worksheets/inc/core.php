@@ -645,6 +645,8 @@ function zt($s) {
 
 /* "Grade 3 Math" / "Mathe Klasse 3": grade and subject in the order of the page language */
 function gs($grade, $subject) {
+    // a high school science course is already a subject name ("Biology", not "Biology Science")
+    if ($subject === 'Science' && in_array($grade, array('Biology', 'Chemistry', 'Physics', 'Earth and Space Science'), true)) return $grade;
     $f = T('gs');
     return sprintf($f === 'gs' ? '%1$s %2$s' : $f, $grade, $subject);
 }
