@@ -225,3 +225,32 @@ def pie(parts, label="circle graph", r=70):
         s.append(rect(2 * r + 30, y - 11, 14, 14, col, col, 1))
         s.append(text(2 * r + 50, y + 1, name, 14, "start", weight=400))
     return svg_wrap(2 * r + 230, max(2 * r + 20, 22 * len(parts) + 10), "".join(s), label).replace("<svg ", "<svg data-pf='lg' ", 1)
+
+
+# ------------------------------------------------------------ classifying questions
+def classifier(R, pools, which, what, why=None, label=None):
+    """pools: {category: [examples]}. Returns two makers:
+    which(k): "Which of these is <k>?"  (answer from pools[k], wrong ones from the other pools)
+    what(x):  "<x> ... which category?" (answer k, wrong = other categories)
+    `which` / `what` are format strings with {k} / {x}; why[k] is one sentence for the explanation."""
+    why = why or {}
+    label = label or (lambda k: k)
+    cats = sorted(pools)
+
+    def m_which():
+        k = R.choice(cats)
+        a = R.choice(pools[k])
+        others = [x for c in cats if c != k for x in pools[c]]
+        if len(others) < 3:
+            return None
+        w = R.sample(others, 3)
+        return item(which.format(k=label(k)), a, w, cap(a) + " is " + label(k) + ". " + why.get(k, ""))
+
+    def m_what():
+        k = R.choice(cats)
+        x = R.choice(pools[k])
+        w = [label(c) for c in cats if c != k]
+        if len(w) < 3:
+            return None
+        return item(what.format(x=x, X=cap(x)), label(k), R.sample(w, 3), cap(x) + " is " + label(k) + ". " + why.get(k, ""))
+    return m_which, m_what
