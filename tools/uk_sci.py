@@ -86,6 +86,8 @@ def uk_text(s):
         out.append(p)
     t = "".join(out)
     t = re.sub(r"(?<![\d,.])1 units\b", "1 unit", t)
+    t = re.sub(r"\b(What mass of [^?]{1,40}?) are needed", r"\1 is needed", t)
+    t = re.sub(r"\b([Aa]) (8|11|18|80|800|8,000)(?=[\s.,])", lambda m: m.group(1) + "n " + m.group(2), t)
     t = re.sub(r"\b(T|t)he ([a-z]+[^s\W]s) population\b", lambda m: m.group(1) + "he number of " + m.group(2), t)
     return t
 
