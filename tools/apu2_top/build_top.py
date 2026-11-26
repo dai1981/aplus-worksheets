@@ -179,6 +179,24 @@ def edict(L):
         return "/english/%s/word/" % L
     return "/english/%s/word/" % L if L in DICT_E else "/english/"
 
+# 古いトップにあった JLPT の級・英語コース・ゲームへのリンク（vi id zh tw ko）
+LV_J = {"vi": ("vi", ["Từ cơ bản và câu ngắn", "Tiếng Nhật hằng ngày", "Trung cấp", "Trung cao cấp", "Cao cấp"]),
+        "id": ("id", ["Kata dasar dan kalimat pendek", "Bahasa Jepang sehari-hari", "Menengah", "Menengah atas", "Mahir"]),
+        "zh": ("zh", ["基础词汇和短句", "日常日语", "中级", "中高级", "高级"]),
+        "tw": ("zh", ["基礎詞彙和短句", "日常日語", "中級", "中高階", "高階"]),
+        "ko": ("ko", ["기초 단어와 짧은 문장", "일상 일본어", "중급", "중상급", "고급"])}
+LV_E = {"vi": ["Từ vựng IELTS", "Từ vựng TOEFL", "Từ đồng nghĩa theo mức điểm", "Đọc hiểu học thuật"],
+        "zh": ["IELTS 词汇", "TOEFL 词汇", "按分数段的同义词", "学术阅读"],
+        "tw": ["IELTS 詞彙", "TOEFL 詞彙", "按分數段的同義詞", "學術閱讀"],
+        "ko": ["IELTS 단어", "TOEFL 단어", "점수대별 동의어", "학술 독해"]}
+GAME = {"vi": ("vi", "Trò chơi", "Tangoda: gõ phím nhớ hiragana"), "id": ("id", "Permainan", "Tangoda: mengetik hiragana"),
+        "zh": ("zh-Hans", "游戏", "单词打：平假名打字"), "tw": ("zh-Hant", "遊戲", "單語打：平假名打字"), "ko": ("ko", "게임", "단어타: 히라가나 타자")}
+CSS_LV = "<style>.lvls{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:12px}.lvl{display:flex;flex-direction:column;gap:2px;padding:14px 12px;border:1px solid var(--line);border-radius:14px;background:#fff}.lvl:hover{border-color:var(--green);box-shadow:0 6px 16px rgba(0,102,51,.12)}.lvl b{font-size:22px;color:var(--green);line-height:1.2}.lvl span{font-size:12.5px;color:var(--sub)}@media (max-width:760px){.lvls{grid-template-columns:repeat(3,1fr)}}@media (max-width:420px){.lvls{grid-template-columns:repeat(2,1fr)}}</style>"
+
+
+def lvls(items):
+    return '<div class="lvls">%s</div>' % "".join('<a class="lvl" href="%s"><b>%s</b><span>%s</span></a>' % x for x in items)
+
 
 def build_index(L):
     t = tx(L, T[L])
@@ -195,7 +213,7 @@ def build_index(L):
               {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in t["faq"]]}]
     ld = {"@context": "https://schema.org", "@graph": graph}
     extra = '<meta name="p:domain_verify" content="e37548685e3ef4a809ffe9ee5c966e11"/>\n' + REDIRECT if L == "en" else ""
-    h = head(L, t["title"], t["desc"], "", ld, CSS_I + "\n" + CSS_X, extra)
+    h = head(L, t["title"], t["desc"], "", ld, CSS_I + "\n" + CSS_X + ("\n" + CSS_LV if L in LV_J else ""), extra)
     h += header(L, "index.html", t)
     # ---- hero
     h += '\n<div class="hero"><div class="wrap">\n  <h1>%s</h1>\n  <p>%s</p>\n' % (t["h1"], t["hp"])
@@ -213,14 +231,19 @@ def build_index(L):
     order = t.get("order", "jem" if L == "en" else "mje")
     h += '  <div class="pick" id="pick">%s</div>\n</div></div>\n<main class="wrap">\n' % "".join({"j": pj, "e": pe, "m": pm}[k] for k in order)
     # ---- sections
-    sj = '<section class="lang" id="japanese"><div class="card">\n  <div class="head"><div class="ico" aria-hidden="true">%s</div><h2>%s</h2></div>\n  <p class="lead">%s</p><div class="choices">' % (ICO["japanese"], t["j_h"], t["j_lead"])
+    sj = '<section class="lang" id="japanese"><div class="card">\n  <div class="head"><div class="ico" aria-hidden="true">%s</div><h2>%s</h2></div>\n  <p class="lead">%s</p>%s<div class="choices">' % (ICO["japanese"], t["j_h"], t["j_lead"],
+        lvls([("/japanese/%s/jlpt/n%dindex.html" % (LV_J[L][0], 5 - i), "N%d" % (5 - i), LV_J[L][1][i]) for i in range(5)]) if L in LV_J else "")
     if L == "en":
         sj += (choice("/japanese/vi/", "Tiếng Việt", "Học tiếng Nhật", "vi") + choice("/japanese/id/", "Bahasa Indonesia", "Belajar bahasa Jepang", "id")
                + choice("/japanese/zh/", "简体中文", "学日语", "zh-Hans") + choice("/japanese/ko/", "한국어", "일본어 공부", "ko"))
     if t.get("j_c"):
         sj += choice("/japanese/%s/" % L, t["j_c"], t["j_c_s"])
-    sj += choice(jdict(L) if L != "en" else "/japanese/en/word/", t["j_dict"], t["j_dict_s"]) + choice("/japanese/", t["j_all"], t["j_all_s"]) + "</div>\n</div></section>\n"
-    se = '<section class="lang" id="english"><div class="card">\n  <div class="head"><div class="ico" aria-hidden="true">%s</div><h2>%s</h2></div>\n  <p class="lead">%s</p><div class="choices">' % (ICO["english"], t["e_h"], t["e_lead"])
+    sj += choice(jdict(L) if L != "en" else "/japanese/en/word/", t["j_dict"], t["j_dict_s"])
+    if L in GAME:
+        sj += choice("/game/?lang=%s" % GAME[L][0], GAME[L][1], GAME[L][2])
+    sj += choice("/japanese/", t["j_all"], t["j_all_s"]) + "</div>\n</div></section>\n"
+    se = '<section class="lang" id="english"><div class="card">\n  <div class="head"><div class="ico" aria-hidden="true">%s</div><h2>%s</h2></div>\n  <p class="lead">%s</p>%s<div class="choices">' % (ICO["english"], t["e_h"], t["e_lead"],
+        lvls([("/english/%s/%s" % (L, p), b, LV_E[L][i]) for i, (p, b) in enumerate([("ielts/", "IELTS"), ("toefl/", "TOEFL"), ("syn/syn1.html", "SYN"), ("reading/", "READ")])]) if L in LV_E else "")
     if L == "en":
         se += (choice("https://www.eigo-duke.com/", "日本語", "英語漬け.com で英語を学ぶ", "ja") + choice("/english/vi/", "Tiếng Việt", "Học tiếng Anh · IELTS, TOEFL", "vi")
                + choice("/english/zh/", "简体中文", "学英语 · IELTS、TOEFL", "zh-Hans") + choice("/english/tw/", "繁體中文", "學英語 · IELTS、TOEFL", "zh-Hant")
