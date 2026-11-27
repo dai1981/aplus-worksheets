@@ -28,8 +28,8 @@ def g_org():
     if not once(("or", o, k)):
         return None
     if k:
-        return item("What is the job of %s?" % o, "It " + j + "." if not o.endswith(("mitochondria", "chloroplasts")) else "They " + j[4:] + ".",
-                    [("It " + x[1] + "." if not x[0].endswith(("mitochondria", "chloroplasts")) else "They " + x[1][4:] + ".") for x in R.sample([x for x in ORG if x[0] != o], 3)],
+        return item("What is the job of %s?" % o, "It " + j + "." if not o.endswith(("mitochondria", "chloroplasts")) else "They " + j + ".",
+                    [("It " + x[1] + "." if not x[0].endswith(("mitochondria", "chloroplasts")) else "They " + x[1] + ".") for x in R.sample([x for x in ORG if x[0] != o], 3)],
                     "Each part of a cell has a job.")
     d = j if not o.endswith(("mitochondria", "chloroplasts")) else j
     return item("Which part of a cell %s?" % d.replace("are where", "is where").replace("are ", "is "), o, R.sample([x[0] for x in ORG if x[0] != o], 3), "Each part of a cell has a job.")

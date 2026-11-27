@@ -2216,7 +2216,15 @@ P3〜P5 の生成スクリプトは UK の問題関数を `use(U, "gen_uk_scienc
 P6: 1. photosynthesis ✓ 2. energy-forms-and-conversion ✓ 3. forces-and-their-effects ✓ 4. frictional-force ✓ 5. gravitational-and-elastic-spring-force ✓ 6. food-chains-and-food-webs ✓ 7. habitats-populations-and-communities ✓ 8. adaptations ✓ 9. mans-impact-on-the-environment ✓
 P6 の食物網は `tools/sg_webs.py`（mangrove swamp・school garden・pond・coral reef。add() で実行時だけ sci_foodweb に足す。sci_foodweb.WEBS を US の単元が使うので sci_foodweb.py は書き換えない）。ばねばかりの図は gen_sg_science_p6_forces_and_their_effects の balance_svg と g_read（目盛り 10 N／50 N に合わせて物を選ぶ）。
 upto(f, n) は重複で捨てられた問題も数えるので、他国の問題関数を upto で使うときはセットの数に余裕をもたせる。トピック：^adaptations$→living-things、mans-impact→living-things と earths-systems
-SG / Science は Primary 3〜6 まで完了。次は Secondary（Lower Secondary Science）か、他の国の理科
+SG / Science / Lower Secondary Science（MOE 2021 G2/G3 Lower Secondary Science Syllabus。Sec 1–2 の 2 年分を学校の一般的な配分で分ける）— grade `secondary-1`（sort 7）・`secondary-2`（sort 8）。生成スクリプトは `gen_sg_science_s1_*`・`s2_*`（seed は 64000 + 100 × 学年 + sort）、共通部品は `tools/sg_lss.py`
+（make_lss(level, slug, sort, theme, topic, …)：standard_code「Secondary 2: Electrical Systems」、domain は The Scientific Endeavour／Diversity／Models／Interactions／Systems、standard_url は MOE の LSS シラバス PDF。luse(U, モジュール) は sg_sci.use に SEC_REP（pupils→students、oesophagus→gullet (oesophagus)）と SEC_DROP（W = mg の g、V = IR、moments、ions、音速など LSS にない内容）を足したもの。
+sgnum() が数を SG 式に直す（4 桁はそのまま、5 桁以上はノーブレークスペース）。seo(level, 名前) で seo_title。PSLE・pupil は使わない（make_lss が止める））。
+LSS にない内容：W = mg の計算、V = IR、モーメントの式、イオン、音（Topic 9 は力とエネルギーだけ）。UK KS3・SG P5/P6 の問題関数を再利用（P5・P6 のモジュールは import して U・R・P を入れ替える。P5 の語は sec() で xylem・phloem・stomata に）。
+sg_sci.sgm の a/an の修正は「0.5 A and」を「An」にしないように直した。gen_uk_science_y7_cells の「They where」を直した
+Sec 1: 1. the-scientific-endeavour ✓ 2. physical-properties-of-matter ✓ 3. elements-compounds-and-mixtures ✓ 4. separation-techniques ✓ 5. ray-model-of-light ✓ 6. cells ✓ 7. particulate-nature-of-matter ✓ 8. atoms-and-molecules ✓
+Sec 2: 1. forces-and-pressure ✓ 2. energy-and-work-done ✓ 3. heat-transfer-and-its-effects ✓ 4. chemical-changes ✓ 5. acids-and-alkalis ✓ 6. interactions-within-ecosystems ✓ 7. electrical-systems ✓ 8. human-digestive-system ✓ 9. transport-systems-in-living-things ✓ 10. human-sexual-reproductive-system ✓
+core.php：grade_standard() で sg の science は secondary なら「MOE Lower Secondary Science Syllabus (2021)」。トピック：scientific-endeavour→working-scientifically、reproductive-system→living-things
+SG / Science は Primary 3〜Secondary 2 まで完了。次は Upper Secondary（O-Level の Physics・Chemistry・Biology）か、他の国の理科
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 

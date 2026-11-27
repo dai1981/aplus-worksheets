@@ -1229,11 +1229,12 @@ function get_subject($c, $s) { return q1('SELECT * FROM ws_subject WHERE country
 /* The curriculum a grade follows: usually the country's, but Korean kindergarten follows the 누리과정 */
 /* the standard a subject follows when it is not the country's math standard (catalog: ws_country.standard) */
 function subject_standard($country, $subject) {
-    $map = array('us/science' => 'Next Generation Science Standards', 'in/science' => 'CBSE Science syllabus (NCERT)', 'sg/science' => 'MOE Primary Science Syllabus (2023)');
+    $map = array('us/science' => 'Next Generation Science Standards', 'in/science' => 'CBSE Science syllabus (NCERT)', 'sg/science' => 'MOE Primary Science Syllabus (2023) and Lower Secondary Science Syllabus (2021)');
     $k = $country['code'] . '/' . (is_array($subject) ? $subject['slug'] : $subject);
     return isset($map[$k]) ? $map[$k] : $country['standard'];
 }
 function grade_standard($country, $grade) {
+    if ($grade && $country['code'] === 'sg' && isset($grade['subject']) && $grade['subject'] === 'science') return strpos($grade['slug'], 'secondary-') === 0 ? 'MOE Lower Secondary Science Syllabus (2021)' : 'MOE Primary Science Syllabus (2023)';
     if ($grade && isset($grade['subject']) && $grade['subject'] !== 'math' && $grade['subject'] !== 'maths') return subject_standard($country, $grade['subject']);
     if ($country['code'] === 'kr' && $grade && $grade['slug'] === 'kindergarten') return '2019 개정 누리과정';
     if ($country['code'] === 'cn' && $grade && $grade['slug'] === 'kindergarten') return '3-6岁儿童学习与发展指南';

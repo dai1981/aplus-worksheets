@@ -84,7 +84,7 @@ def sgm(f, rep=()):
             for a, b in list(SG_REP) + list(rep):
                 s = re.sub(a, b, s)
             s = re.sub(r"\b([Aa])n (?=[bcdfgjklmnpqrstvwxyz])", lambda m: m.group(1) + " ", s)
-            s = re.sub(r"\b([Aa]) (?=(?!one\b|once\b)(?:[aeio][a-z]|hour\b))", lambda m: m.group(1) + "n ", s)
+            s = re.sub(r"(?<!\d )\b([Aa]) (?=(?!one\b|once\b)(?:[aeio][a-z]|hour\b))", lambda m: m.group(1) + "n ", s)
             return s
         it["q"], it["e"] = fix(it["q"]), fix(it["e"])
         it["c"] = [fix(c) for c in it["c"]]
