@@ -98,7 +98,7 @@ CA_REP = [
     (r"\bmol/dm³", "mol/L"), (r"\bmol dm⁻³", "mol/L"), (r"\bdm³", "L"), (r"\btrainers\b", "running shoes"), (r"\bpost box\b", "mailbox"), (r"\bletterbox\b", "mailbox"),
     (r"\bcooker\b", "stove"), (r"\bplaytime\b", "recess"), (r"\bfavour", "favour"), (r"\bautumn\b", "fall"), (r"\bAutumn\b", "Fall"),
     (r"\b(sound level|light|parking|water|gas|electricity|data|level|speed|power|pH|moisture|rain) metres?\b", r"\1 meter"),
-    (r"\b([Aa]) pupil (drew|wrote|says|said|thinks|measured|made|was|is|has|wants|tested|noticed)\b", r"\1 student \2"), (r"\bcaused by man\b", "caused by people"), (r"\bman-made\b", "human-made"), (r"(\d) ?ml\b", r"\1 mL"), (r"\bsg(pond|garden|reef)\b", r"\1"),
+    (r"\b([Aa]) pupil (drew|wrote|says|said|thinks|measured|made|was|is|has|wants|tested|noticed)\b", r"\1 student \2"), (r"\bdrawing pins\b", "thumbtacks"), (r"\bdrawing pin\b", "thumbtack"), (r"\bcaused by man\b", "caused by people"), (r"\bman-made\b", "human-made"), (r"(\d) ?ml\b", r"\1 mL"), (r"\bsg(pond|garden|reef)\b", r"\1"),
     (r"\bin the UK\b", "in Ontario"), (r"\bthe UK\b", "Ontario"), (r"\bin the U\.S\.(?=[\s,?])", "in Canada"), (r"\bin the United States\b", "in Canada"),
     (r"\bthe gullet\b", "the esophagus"), (r"\bgullet\b", "esophagus"), (r"\bGullet\b", "Esophagus"), (r"\bice candy\b", "popsicles"),
     (r"\blean mince\b", "lean ground beef"), (r"\bmince\b", "ground beef"), (r"\bcourgettes?\b", "zucchini"), (r"\baubergines?\b", "eggplant"),
