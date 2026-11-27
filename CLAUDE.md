@@ -2215,6 +2215,7 @@ IN / Science は Class 3〜12 まで完了（Class 1–2 は NCERT に EVS が�
 - 共通ファイルを直すときは、ユーザーの手元の写しが古いことがある。前回納品した版（MQ_VER・VER の日付が新しいもの）をもとにする。MQ_VER（mq.php）と VER（mq.js）はそろえて上げる
 - 国・地域のコードは mq-geo.js と mq.php の MQ_GEO をそろえる（新しい国を足したら両方に）
 - 管理画面 /mq/admin.html（eigo-duke.com）は 2026-11-26 からパスワードなし（mq.php の adm_ は認証しない。読むだけ）
+- apu2 のひとりで解いた結果：送信と「国で上位 ◯%／◯位」（2〜9 人は順位、速すぎて数えないときは soloFast）は ws.js（mq.php の a=solo が返す c・w を使う）。見出しの Ranking ボタン（.sn-rk、スマホではタイトルの右）は ranking/?cc=…&k=ページ&src=b。mq.js の watchSolo・見出しの .sn-rkb・a=pos の「あなたの位置」は eigo-duke だけ（if (!APU)）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
 
