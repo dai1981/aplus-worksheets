@@ -98,6 +98,7 @@ CA_REP = [
     (r"\bmol/dm³", "mol/L"), (r"\bmol dm⁻³", "mol/L"), (r"\bdm³", "L"), (r"\btrainers\b", "running shoes"), (r"\bpost box\b", "mailbox"), (r"\bletterbox\b", "mailbox"),
     (r"\bcooker\b", "stove"), (r"\bplaytime\b", "recess"), (r"\bfavour", "favour"), (r"\bautumn\b", "fall"), (r"\bAutumn\b", "Fall"),
     (r"\b(sound level|light|parking|water|gas|electricity|data|level|speed|power|pH|moisture|rain) metres?\b", r"\1 meter"),
+    (r"\bin the UK\b", "in Ontario"), (r"\bthe UK\b", "Ontario"), (r"\bin the U\.S\.(?=[\s,?])", "in Canada"), (r"\bin the United States\b", "in Canada"),
     (r"\bthe gullet\b", "the esophagus"), (r"\bgullet\b", "esophagus"), (r"\bGullet\b", "Esophagus"), (r"\bice candy\b", "popsicles"),
     (r"\blean mince\b", "lean ground beef"), (r"\bmince\b", "ground beef"), (r"\bcourgettes?\b", "zucchini"), (r"\baubergines?\b", "eggplant"),
     (r"\bminibeasts\b", "small creatures"), (r"\bMinibeasts\b", "Small creatures"), (r"\bminibeast\b", "small creature"),
@@ -124,7 +125,7 @@ LEAKS = [
     "lorikeets", "goanna", "goannas", "magpie", "magpies", "quokka", "numbat", "bilby", "cassowary", "billabong", "outback", "wattle",
     "eucalyptus", "great barrier reef", "uluru", "australia", "australian", "sydney", "melbourne", "brisbane", "perth", "adelaide",
     "queensland", "tasmania", "canberra", "britain", "england", "english channel", "scotland", "wales", "london",
-    "manchester", "birmingham", "thames", "singapore", "hawker", "mrt", "durian", "pandan", "rain tree", "sugar glider", "eatwell", "eatwell guide", "sunbird", "coral trout", "mangrove", "mangroves", "monitor lizard", "india", "delhi", "mumbai",
+    "manchester", "birmingham", "thames", "singapore", "hawker", "mrt", "durian", "pandan", "rain tree", "uk", "united kingdom", "u.s.", "sugar glider", "eatwell", "eatwell guide", "sunbird", "coral trout", "mangrove", "mangroves", "monitor lizard", "india", "delhi", "mumbai",
     "rupee", "rupees", "neem", "texas", "florida", "arizona", "california", "ngss", "cbse", "ncert", "wet season", "dry season",
     # units Ontario does not use
     "inch", "inches", "pound", "pounds", "ounce", "ounces", "gallon", "gallons", "mile", "miles", "fahrenheit", 
