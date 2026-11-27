@@ -679,7 +679,7 @@
     this.eFb.hidden = true;
     this.eFb.innerHTML = "";
     this.eStage.innerHTML = '<div class="sn-result"><p class="sn-score">' + t("score", { o: this.ok, n: n }) + "</p>"
-      + '<p class="sn-pos" hidden></p>'
+      + '<div class="sn-pos" hidden></div>'
       + (prev ? '<p class="sn-best">' + t("best", { o: prev.o, t: prev.t }) + "</p>" : "")
       + '<p class="sn-msg">' + t(rate === 100 ? "m100" : rate >= 80 ? "m80" : "mlow") + "</p>"
       + (this.miss.length ? '<button type="button" class="sn-again" data-m="1">' + t("redoMiss", { n: this.miss.length }) + "</button>" : "")
@@ -707,15 +707,50 @@
     d.innerHTML = String(html).replace(/<rt>.*?<\/rt>/g, "");
     return (d.textContent || "").replace(/\s+/g, " ").trim();
   }
+  // Country of the page, as the server counts it (Texas with the US, Ontario / BC with Canada, England as gb)
+  function pageCC() {
+    var m = /^\/worksheets\/([a-z-]+)\//.exec(location.pathname), c = m ? m[1] : "";
+    return { "us-tx": "us", "ca-on": "ca", "ca-bc": "ca", uk: "gb" }[c] || c;
+  }
+  function pageRg() {
+    var m = /^\/worksheets\/([a-z-]+)\//.exec(location.pathname);
+    return m ? ({ "us-tx": "TX", "ca-on": "ON", "ca-bc": "BC" }[m[1]] || "") : "";
+  }
+  // the area chosen on this device (shared with Quiz together's waiting screen)
+  function myRg(cc) { var a = rd("mq:area", null); return a && a.cc === cc && a.rg ? a.rg : ""; }
+  // names of countries and areas: one shared list on eigo-duke.com (loaded only when a set is finished)
+  var GEO_SRC = "https://www.eigo-duke.com/common/js/mq-geo.js?v=20261127b", geoWait = null;
+  function geo(cb) {
+    if (window.MQ_GEO) return cb(window.MQ_GEO);
+    if (geoWait) return geoWait.push(cb);
+    geoWait = [cb];
+    var sc = document.createElement("script");
+    sc.src = GEO_SRC; sc.async = true;
+    sc.onload = sc.onerror = function () { var l = geoWait; geoWait = null; l.forEach(function (f) { f(window.MQ_GEO || null); }); };
+    document.head.appendChild(sc);
+  }
+  function geoLi() {
+    var l = (document.documentElement.lang || "en").toLowerCase();
+    return /^zh-(cn|hans)/.test(l) ? 9 : /^zh/.test(l) ? 2 : /^ko/.test(l) ? 8 : /^id/.test(l) ? 10 : /^tr/.test(l) ? 11 : /^sv/.test(l) ? 12
+         : /^de/.test(l) ? 3 : /^fr/.test(l) ? 4 : /^it/.test(l) ? 5 : /^es/.test(l) ? 6 : /^pt/.test(l) ? 7 : /^ja/.test(l) ? 0 : 1;
+  }
+  function esc(x) { return String(x).replace(/[&<>"']/g, function (m) { return "&#" + m.charCodeAt(0) + ";"; }); }
+  function rgName(c, nm) {
+    var p = String(nm).split("|"), li = geoLi();
+    return p.length < 2 ? p[0] : ((c.nl || [0]).indexOf(li) >= 0 ? p[0] : p[1]);
+  }
   Quiz.prototype.stand = function (n) {
     var self = this, sent = rd("ws:sent", {}), rec = !sent[this.key] && this.ans.length === n;
     if (!window.fetch || !window.JSON) return;
+    var cc = pageCC(), rg = myRg(cc) || pageRg();
     var body = { a: "solo", page: location.pathname, set: this.root.getAttribute("data-quiz"), title: this.title,
-                 n: n, ok: this.ok, ms: this.ms, ans: this.ans.join(""), rec: rec ? 1 : 0 };
+                 n: n, ok: this.ok, ms: this.ms, ans: this.ans.join(""), rec: rec ? 1 : 0, rg: rg };
     if (rec) body.qs = this.all.slice(0, 100).map(function (it) {
       return [plain(it.q).slice(0, 400), (it.c || []).slice(0, 8).map(function (c) { return plain(c).slice(0, 120); }),
               it.a, /<(svg|img)\b/i.test(it.q) ? 1 : 0];
     });
+    // too fast (under 0.8 s a question on average): the server did not count this try
+    var fast = rec && self.ms < SOLO_FAST_MS * n, ok = this.ok;
     fetch(SOLO_API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
       .then(function (r) { return r.json(); })
       .then(function (j) {
@@ -723,24 +758,50 @@
         if (rec) { sent = rd("ws:sent", {}); sent[self.key] = 1; wr("ws:sent", sent); }
         var el = self.eStage.querySelector(".sn-pos");
         if (!el) return;
-        // too fast (under 0.8 s a question on average): the server did not count this try, so add it here
-        var fast = rec && self.ms < SOLO_FAST_MS * n, cc = window.WS_CC || "", lines = [];
-        function line(x, kp, kr, lab) {
-          var all = (x && x[0]) || 0, up = (x && x[1]) || 0;
-          if (fast) all += 1;
-          if (all < 2) return 0;
-          lines.push(all >= SOLO_MIN ? t(kp, { c: lab, p: Math.max(1, Math.ceil(100 * (up + 1) / all)), n: fmt(all) })
-                                     : t(kr, { c: lab, r: up + 1, n: fmt(all) }));
-          return all;
+        geo(function (G) { draw(j.p, j.rg || "", G); });
+        function draw(p, rgNow, G) {
+          var c = G && j.cc && G.c[j.cc], lines = [];
+          // one line: x = [players, top %, 1 if this is an estimate (few players yet)]
+          function line(x, lab, kp, ke) {
+            if (!x || !(x[1] > 0)) return;
+            lines.push(x[2] ? t(ke, { c: lab, p: x[1] }) : t(kp, { c: lab, p: x[1], n: fmt(x[0]) }));
+          }
+          if (p) {
+            if (c && rgNow) c.r.forEach(function (r) { if (r[0] === rgNow) line(p.r, rgName(c, r[1]), "soloC", "soloE"); });
+            line(p.c, window.WS_CC || (c ? c.n[geoLi()] : ""), "soloC", "soloE");
+            var k = lines.length; line(p.w, "", "soloW", "soloWE");
+            if (lines.length > k && k) lines[k] = "<small>" + lines[k] + "</small>";
+          }
+          else {                                     // older server (no "p"): counts of this set only
+            [[j.c, window.WS_CC || "", "soloC", "soloR"], [j.w, "", "soloW", "soloWR"]].forEach(function (L, i) {
+              var all = (L[0] && L[0][0]) || 0, up = (L[0] && L[0][1]) || 0;
+              if (all < 2 || (i === 0 && !L[1])) return;
+              var x = all >= SOLO_MIN ? t(L[2], { c: L[1], p: Math.max(1, Math.ceil(100 * (up + 1) / all)), n: fmt(all) })
+                                      : t(L[3], { c: L[1], r: up + 1, n: fmt(all) });
+              lines.push(i && lines.length ? "<small>" + x + "</small>" : x);
+            });
+          }
+          if (!lines.length && !fast) lines.push(t("soloOne"));
+          if (fast) lines.push("<small>" + t("soloFast") + "</small>");
+          var h = lines.join("<br>");
+          if (c && c.r && c.r.length > 1) {          // choose your area (once on this device)
+            h += '<span class="sn-rg"><label>' + esc(c.lv[geoLi()]) + ' <select><option value="">' + esc(t("soloPick")) + "</option>"
+              + c.r.map(function (r) { return '<option value="' + esc(r[0]) + '"' + (r[0] === rgNow ? " selected" : "") + ">" + esc(rgName(c, r[1])) + "</option>"; }).join("")
+              + "</select></label>" + (rgNow ? "" : "<small>" + esc(t("soloRgN")) + "</small>") + "</span>";
+          }
+          el.innerHTML = h;
+          el.hidden = false;
+          var sel = el.querySelector(".sn-rg select");
+          if (sel) sel.addEventListener("change", function () {
+            var v = sel.value;
+            wr("mq:area", { cc: j.cc, rg: v });
+            fetch(SOLO_API + "?a=pos&k=" + encodeURIComponent("https://www.apu2.com" + location.pathname) + "&ok=" + ok + "&qs=" + n
+                  + "&cc=" + encodeURIComponent(j.cc) + "&rg=" + encodeURIComponent(v))
+              .then(function (r) { return r.json(); })
+              .then(function (q) { if (q && q.w) draw(q, v, G); })
+              .catch(function () {});
+          });
         }
-        var nc = cc && j.cc ? line(j.c, "soloC", "soloR", cc) : 0;
-        var nw = (j.w[0] || 0) + (fast ? 1 : 0);
-        if (nw > nc) { var k = lines.length; if (line(j.w, "soloW", "soloWR", "") && k) lines[k] = "<small>" + lines[k] + "</small>"; }
-        if (!lines.length && !fast) lines.push(t("soloOne"));
-        if (fast) lines.push("<small>" + t("soloFast") + "</small>");
-        if (!lines.length) return;
-        el.innerHTML = lines.join("<br>");
-        el.hidden = false;
       })
       .catch(function () {});
   };
