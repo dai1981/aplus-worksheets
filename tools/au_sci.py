@@ -54,7 +54,7 @@ AU_REP = [(r"\bstyrofoam\b", "polystyrene"), (r"\bStyrofoam\b", "Polystyrene"), 
           (r"\bmol dm⁻³", "mol/L"), (r"\bmol/dm³", "mol/L"), (r"\bdm³", "L"),
           (r"\bcoloring\b", "colouring"), (r"\bColoring\b", "Colouring"),
           (r"\bteh tarik\b", "Milo"), (r"\bchicken rice\b", "meat pie"), (r"\bloft insulation\b", "ceiling insulation"),
-          (r"\bdraught excluders\b", "draught stoppers"), (r"\bbar graphs\b", "column graphs"), (r"\bbar graph\b", "column graph"), (r"\bbaking soda\b", "bicarb soda"), (r"\bBaking soda\b", "Bicarb soda")]
+          (r"\bdraught excluders\b", "draught stoppers"), (r"\bbar graphs\b", "column graphs"), (r"\bbar graph\b", "column graph"), (r"\bbaking soda\b", "bicarb soda"), (r"\bBaking soda\b", "Bicarb soda"), (r"\bneurones\b", "neurons"), (r"\bneurone\b", "neuron"), (r"\bin fall\b", "in autumn"), (r"\bIn fall\b", "In autumn"), (r"\b(billion|million|thousand) tons\b", r"\1 tonnes"), (r"(\d) tons\b", r"\1 tonnes"), (r"\ba LED\b", "an LED"), (r"\bA LED\b", "An LED"), (r"\ban older furnace\b", "an older gas heater"), (r"\bfurnaces?\b", "gas heater")]
 
 # names from other countries' generators -> Australian names (same gender)
 import ws_common as _ws  # noqa: E402
