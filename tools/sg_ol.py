@@ -120,7 +120,7 @@ def seed_of(level, subj, sort):
 _AN = re.compile(r"\b([Aa]) (?=8|(?:11|18)(?![\d.]))")
 
 
-_AN2 = re.compile(r"\b([Aa]) (?=a|i|o(?!ne\b|ne-|nce\b)|e(?!u)|u(?!ni|se|su|ra|ro|ti|tub|-))")
+_AN2 = re.compile(r"\b([Aa]) (?=a(?!nd\b|re\b|s\b|t\b)|i(?!s\b|n\b|f\b)|o(?!ne\b|ne-|nce\b|r\b|f\b)|e(?!u)|u(?!ni|se|su|ra|ro|ti|tub|-))")
 _BIG = re.compile(r"(?<![\d.,\u00a0])(\d{5,})(?![\d.,]\d)")
 
 
