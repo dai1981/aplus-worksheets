@@ -113,17 +113,18 @@ def g_strength():
     if not once(("st", k), 1 if k in ("var", "fair") else 3):
         return None
     tb = table(["Strip of material", "Mass held before it tore (kg)"], [[m, str(l)] for m, l in zip(mats, loads)])
-    q0 = "%s hung masses on strips of four materials of the same size until each strip tore.<br>%s" % (P.next()[0], tb)
+    nm, he, his = P.next()
+    q0 = "%s hung masses on strips of four materials of the same size until each strip tore.<br>%s" % (nm, tb)
     s = sorted(zip(loads, mats))
     if k == "strong":
         return item(q0 + "Which material is the strongest?", s[-1][1], [m for _, m in s[:-1]], "It held the greatest mass before tearing.")
     if k == "weak":
         return item(q0 + "Which material is the weakest?", s[0][1], [m for _, m in s[1:]], "It held the smallest mass before tearing.")
     if k == "var":
-        return item(q0 + "What did she change in this test?", "the type of material", ["the size of the strips", "the place she did the test", "the way she hung the masses"],
+        return item(q0 + "What did %s change in this test?" % he, "the type of material", ["the size of the strips", "the place of the test", "the way the masses were hung"],
                     "Only the material was changed.")
     if k == "fair":
-        return item(q0 + "Why were the strips the same size?", "so that the test was fair", ["so that they tore faster", "so that they were easier to colour", "so that she needed fewer masses"],
+        return item(q0 + "Why were the strips the same size?", "so that the test was fair", ["so that they tore faster", "so that they were easier to colour", "so that fewer masses were needed"],
                     "A wider strip would hold more mass, so the size must be kept the same.")
     return item(q0 + "Which shows the materials from weakest to strongest?", ", ".join(m for _, m in s),
                 [", ".join(m for _, m in s[::-1]), ", ".join(mats), ", ".join([s[1][1], s[0][1], s[3][1], s[2][1]])], "Order the masses from smallest to largest.")

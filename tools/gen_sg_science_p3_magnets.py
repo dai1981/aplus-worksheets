@@ -28,7 +28,8 @@ def g_coil():
     if not once(("cl", k), 2 if k in ("most", "read") else 1):
         return None
     tb = table(["Number of coils of wire", "Number of paper clips picked up"], [[str(t), str(c)] for t, c in zip(turns, clips)])
-    q0 = "%s wound wire around an iron nail and connected it to a battery. She changed the number of coils.<br>%s" % (P.next()[0], tb)
+    nm, he, his = P.next()
+    q0 = "%s wound wire around an iron nail and connected it to a battery. %s changed the number of coils.<br>%s" % (nm, he.capitalize(), tb)
     if k == "trend":
         return item(q0 + "What does the table show?", "The more coils of wire, the stronger the magnet.",
                     ["The fewer coils, the stronger the magnet.", "The number of coils makes no difference.", "The nail is not a magnet."],

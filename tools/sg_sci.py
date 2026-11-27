@@ -58,6 +58,9 @@ def make_sg(level, slug, sort, theme, topic, std_text, title, seo_title, short, 
 _NAME_RE = re.compile(r"\b(%s)\b" % "|".join(re.escape(n) for n in sorted(UK_NAMES, key=len, reverse=True)))
 
 
+_NR = __import__("random").Random(2023)
+
+
 def sgm(f, rep=()):
     """wrap a UK (or US) maker: British spelling, Singapore names; drop the item if a word does not fit"""
     g0 = uk_sci.ukm(f)
@@ -72,7 +75,8 @@ def sgm(f, rep=()):
         def nm(m):
             k = m.group(1)
             if k not in sub:
-                sub[k] = (GIRLS if k in uk_sci.GIRLS else BOYS)[len(sub) % 12]
+                pool = [n for n in (GIRLS if k in uk_sci.GIRLS else BOYS) if n not in sub.values()]
+                sub[k] = _NR.choice(pool)
             return sub[k]
 
         def fix(s):
