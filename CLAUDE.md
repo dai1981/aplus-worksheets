@@ -2239,6 +2239,27 @@ Sec 4 — Physics: 1. static-electricity ✓ 2. current-of-electricity ✓ 3. dc
 トピック：^kinematics$・^dynamics$・turning-effect→forces-and-motion、electromagnetic-spectrum→waves-and-light、physical-quantities→working-scientifically、^radioactivity$・chemical-calculations・qualitative-analysis など→matter、air-quality→earths-systems、movement-of-substances・transport-in-humans・excretion-in-humans・infectious-diseases→living-things
 SG / Science は Primary 3〜Secondary 4（O-Level Physics・Chemistry・Biology）まで完了。次は他の国の理科
 
+AU / Science（Australian Curriculum v9.0 Science。Foundation〜Year 10）— country `au`、subject `science`、grade `foundation`・`year-N`、A4。生成スクリプトは `gen_au_science_f_*`・`gen_au_science_yN_*`（seed は seed_of(学年, sort) = 66000 + 100 × 学年 + sort）。
+standard_code は v9 のコード（AC9S5U01、inquiry は「AC9S8I01, …」）、domain は strand（Biological sciences／Chemical sciences／Earth and space sciences／Physical sciences／Science inquiry）、standard_url は v9 の Science ページ。core.php の subject_standard() に 'au/science'。
+共通部品は `tools/au_sci.py`：AU(seed) → (U, R, P, src)。src(他国の生成スクリプト, "g_x", rep=, drop=) で UK・US・SG の問題関数を AU の名前・オーストラリア英語にして使う（aum：ukm → AU の名前 → AU_REP（esky・footpath・icy pole・slater・column graph・jumper・gum tree・lift・windscreen・gumboot・bicarb soda・neuron・tonnes・jewellery・stabilise・autumn・cupboard など）→ a/an。名前と数字を除いた文＋正解で単元の中の重複を落とす）。
+src.B(モジュール, "B1") はバンク全体を 1 つの maker にする（U.sets の中にリストを書くと黙って無視されるため）。src.mod(名前) は他の生成スクリプト（AU の Year 6〜9 の working scientifically など）を R・U・P をそろえて import する。limit(f, n) は単元全体の上限、keep(f, pred) で絞る。
+make_au(year, slug, sort, code, strand, std_text, title, short, meta, key_big, key_sub, think, ex, mist, faq, sets, allow=, pic=)：LEAKS（米国・英国・シンガポールの語、北半球の季節 SEASON_RE、£・$ 以外の通貨など）が残ると止まる（意図した語は allow=）。Foundation〜Year 2 は pic=（K.row の絵）で kid_lesson、think は (一文, [要点3つ])、title ≤ 40・key_big ≤ 40・key_sub ≤ 90。
+大きな数は "{:,}".format(n) で書く（sgnum が 5 桁以上をノーブレークスペース区切りにする。先に空白で区切ると壊れる）。食物網は `tools/au_webs.py`（bush・billabong・reef・outback。au_webs.add() のあと SG Primary 6 の食物網の問題関数で WEBS = au_webs.NAMES）。
+他国の問題関数のプールは scratchpad の inv.py で数えてから配分を書く（足りないと U.sets が「not enough questions」で止まる。どのセットかは dbg.py）。AU_REP の動物の置き換え（badger→wombat、hedgehog→echidna、squirrel→possum）で食べ物や絵が合わなくなる問題は drop で落とす。季節は南半球（12〜2 月が夏）、北部は wet/dry season。g = 9.8 N/kg（UK の 10 N/kg の問題は Year 8 の PE だけ）
+Foundation: 1. features-of-plants-and-animals ✓ 2. grouping-living-things ✓ 3. how-objects-move ✓ 4. materials-and-their-properties ✓
+Year 1: 1. needs-of-living-things ✓ 2. habitats ✓ 3. daily-and-seasonal-changes ✓ 4. pushes-and-pulls ✓
+Year 2: 1. earth-and-the-sky ✓ 2. sound ✓ 3. changing-the-shape-of-materials ✓ 4. breaking-and-building-with-materials ✓
+Year 3: 1. living-and-non-living-things ✓ 2. life-cycles ✓ 3. soils-rocks-and-minerals ✓ 4. heat-sources-and-heat-transfer ✓ 5. solids-liquids-and-changes-of-state ✓ 6. working-scientifically ✓
+Year 4: 1. producers-consumers-and-decomposers ✓ 2. food-chains-and-food-webs ✓ 3. the-water-cycle ✓ 4. friction-and-contact-forces ✓ 5. gravity-and-magnetism ✓ 6. natural-and-made-materials ✓ 7. working-scientifically ✓
+Year 5: 1. structural-adaptations ✓ 2. behavioural-adaptations ✓ 3. weathering-erosion-and-deposition ✓ 4. slow-and-rapid-changes-to-earths-surface ✓ 5. light-sources-and-how-light-travels ✓ 6. shadows-reflection-and-refraction ✓ 7. solids-liquids-and-gases ✓ 8. working-scientifically ✓
+Year 6: 1. physical-conditions-of-habitats ✓ 2. the-solar-system ✓ 3. day-night-and-seasons ✓ 4. electric-circuits ✓ 5. conductors-insulators-and-energy ✓ 6. reversible-and-irreversible-changes ✓ 7. working-scientifically ✓
+Year 7: 1. classification-and-dichotomous-keys ✓ 2. food-webs-and-ecosystems ✓ 3. earth-sun-and-moon ✓ 4. balanced-and-unbalanced-forces ✓ 5. particle-theory ✓ 6. mixtures-and-separation ✓ 7. working-scientifically ✓
+Year 8: 1. cells ✓ 2. body-systems ✓ 3. plate-tectonics ✓ 4. rock-cycle ✓ 5. energy-transfers-and-transformations ✓ 6. elements-compounds-and-mixtures ✓ 7. physical-and-chemical-change ✓ 8. working-scientifically ✓
+Year 9: 1. nervous-and-endocrine-systems ✓ 2. reproduction ✓ 3. the-carbon-cycle ✓ 4. waves-sound-and-light ✓ 5. conservation-of-energy-and-efficiency ✓ 6. atomic-structure-and-radioactivity ✓ 7. chemical-reactions-and-equations ✓ 8. working-scientifically ✓
+Year 10: 1. genetics-and-inheritance ✓ 2. evolution-and-natural-selection ✓ 3. the-big-bang-and-the-universe ✓ 4. global-systems-and-climate-change ✓ 5. newtons-laws-of-motion ✓ 6. the-periodic-table ✓ 7. reaction-types-and-rates ✓ 8. working-scientifically ✓
+トピック：nervous-and-endocrine・adaptation→living-things、^the-carbon-cycle$・seasonal-changes→earths-systems（out に earth-sun・earth-and-the-sky）、objects-move→forces-and-motion、energy の out に waves-sound-and-light
+AU / Science は Foundation〜Year 10 まで完了（Senior Secondary の Biology・Chemistry・Physics・Earth and Environmental Science は州ごとの科目なので未着手）。次は他の国の理科
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
