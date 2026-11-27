@@ -35,7 +35,7 @@ STRANDS = ("Biological sciences", "Chemical sciences", "Earth and space sciences
 # words that must not appear on an Australian page
 LEAKS = [w for w in uk_sci.LEAKS if w not in ("recess",)] + [
     "pupil", "pupils", "lorry", "lorries", "pence", "penny", "badger", "badgers", "hedgehog", "hedgehogs", "conker", "conkers", "squirrel",
-    "squirrels", "nhs", "gcse", "ks1", "ks2", "ks3", "ks4", "o-level", "psle", "singapore", "mrt", "hawker", "handphone", "rupee", "rupees",
+    "squirrels", "nhs", "gcse", "ks1", "ks2", "ks3", "ks4", "o-level", "psle", "singapore", "mrt", "hawker", "handphone", "rupee", "rupees", "durian", "pandan", "newater",
     "india", "britain", "england", "london", "scotland", "uk", "usa", "america", "american", "texas", "ngss", "cbse", "ncert",
     "bonfire", "slow worm", "slow worms", "newt", "newts", "jaywalking", "snowman", "sledge", "sledges", "rain tree", "mangrove swamp in singapore",
     "fahrenheit", "grade 1", "grade 2", "grade 3", "grade 4", "grade 5", "grade 6", "grade 7", "grade 8"]
