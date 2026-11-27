@@ -188,8 +188,7 @@ def force_kind(R):
     return f
 
 
-def s_forces(X):
-    pool = X.pool([
+FORCE_ROWS = [
         ("What is a structure?", "something built to hold or support a load", ["a kind of energy", "a living thing", "a type of rock"], "Buildings, bridges, chairs and nests are structures."),
         ("What is a load?", "a force acting on a structure, such as weight, wind or people", ["the colour of a structure", "the age of a structure", "a type of nail"], "Structures must carry loads."),
         ("What is a static (dead) load?", "a load that does not change, like the weight of the structure itself", ["wind gusts", "people walking", "cars driving over a bridge"], "Static loads stay the same."),
@@ -226,7 +225,11 @@ def s_forces(X):
         ("Which natural structure is a shell?", "a turtle's shell", ["a spider web", "a tree's branches", "a bone skeleton"], "Turtle shells are curved and strong."),
         ("Why do snowshoes help you walk on snow?", "They spread your weight over a larger area.", ["They make you lighter.", "They melt the snow.", "They add tension."], "Spreading a load reduces pressure."),
         ("What should engineers think about when building a structure?", "safety, strength, cost, the environment and how it will be used", ["only colour", "only cost", "only how tall it is"], "Good design balances many criteria."),
-    ])
+]
+
+
+def s_forces(X):
+    pool = X.pool(FORCE_ROWS)
     fk = X.f(force_kind)
     return [
         ("Structures and loads", [(pool, 10), (X.gen(US3F, "g_change"), 5), (X.gen(US3F, "g_still"), 5)]),
