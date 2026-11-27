@@ -2213,7 +2213,10 @@ P3: 1. living-and-non-living-things ✓ 2. classifying-living-things ✓ 3. dive
 P4: 1. plant-parts-and-functions ✓ 2. digestive-system ✓ 3. matter ✓ 4. light-and-shadows ✓ 5. heat-and-temperature ✓ 6. heat-conductors-and-insulators ✓
 P5: 1. reproduction-in-plants ✓ 2. reproduction-in-humans ✓ 3. water-and-changes-of-state ✓ 4. the-water-cycle ✓ 5. cells ✓ 6. plant-transport-system ✓ 7. respiratory-and-circulatory-systems ✓ 8. electrical-circuits ✓ 9. conductors-and-circuit-diagrams ✓
 P3〜P5 の生成スクリプトは UK の問題関数を `use(U, "gen_uk_science_…", rep=[(古い, 新しい)], drop=[語])` で使う（S.g_x は SG の名前・イギリス式、S.B1 は手書きの問題（bank）のリスト。drop で SG のシラバスにない語（vacuole・mitochondria・particle・voltage など）を含む問題を落とす）。sgm は SG_REP で英国の物（jumper・oak tree・woodland・robin など）を直し、a/an を直す。数の問題を作る関数が多いときは `upto(f, n)` で単元全体の数を制限する。回路図は uk_sci_pics.circuit・parallel、温度計の図は gen_sg_science_p4_heat_and_temperature.thermo。トピック：light-and-shadows は earth-and-space の out
-P6: 1. photosynthesis ✓ 2. energy-forms-and-conversion 3. forces-and-their-effects 4. frictional-force 5. gravitational-and-elastic-spring-force 6. food-chains-and-food-webs 7. habitats-populations-and-communities 8. adaptations 9. mans-impact-on-the-environment
+P6: 1. photosynthesis ✓ 2. energy-forms-and-conversion ✓ 3. forces-and-their-effects ✓ 4. frictional-force ✓ 5. gravitational-and-elastic-spring-force ✓ 6. food-chains-and-food-webs ✓ 7. habitats-populations-and-communities ✓ 8. adaptations ✓ 9. mans-impact-on-the-environment ✓
+P6 の食物網は `tools/sg_webs.py`（mangrove swamp・school garden・pond・coral reef。add() で実行時だけ sci_foodweb に足す。sci_foodweb.WEBS を US の単元が使うので sci_foodweb.py は書き換えない）。ばねばかりの図は gen_sg_science_p6_forces_and_their_effects の balance_svg と g_read（目盛り 10 N／50 N に合わせて物を選ぶ）。
+upto(f, n) は重複で捨てられた問題も数えるので、他国の問題関数を upto で使うときはセットの数に余裕をもたせる。トピック：^adaptations$→living-things、mans-impact→living-things と earths-systems
+SG / Science は Primary 3〜6 まで完了。次は Secondary（Lower Secondary Science）か、他の国の理科
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
