@@ -40,6 +40,9 @@ jobs:
       - name: 問題データをチェック（エラーがあればここで止まる）
         run: python3 tools/check.py
 
+      - name: みんなでクイズの分野ごとの単元一覧を作る（inc/mq-fields.json）
+        run: php tools/build_mq_fields.php
+
       # アップロード（上書き）のみ。--delete を付けないので、サーバー上のファイルは1つも削除しない。
       # 送るのは site/worksheets/ の中身だけ。/aplus/worksheets/ の外や inc/secret.php は触らない。
       - name: ロリポップへ FTP アップロード（/aplus/worksheets/ へ上書きのみ・削除なし）

@@ -280,7 +280,12 @@ if ($faq) {
 $__cc = array('us-tx' => 'us', 'ca-on' => 'ca', 'ca-bc' => 'ca');
 $__cn = isset($__cc[$country['code']]) ? ($__cc[$country['code']] === 'ca' ? 'Canada' : get_country('us')['name']) : $country['name'];
 $__rcc = isset($__cc[$country['code']]) ? $__cc[$country['code']] : ($country['code'] === 'uk' ? 'gb' : $country['code']);
-$__rk = url('ranking/') . '?cc=' . rawurlencode($__rcc) . ($country['lang'] === 'en' || $country['lang'] === 'en-CA' ? '' : '&lang=' . rawurlencode($country['lang']));
+// ranking button: countries compared in this unit's field (fractions, ratios, …; inc/fields.php), or this unit when it is in no field
+require_once __DIR__ . '/../inc/fields.php';
+$__fd = unit_fields($country['code'], $subject['slug'], $seg[3]);
+$__rk = url('ranking/') . '?cc=' . rawurlencode($__rcc)
+      . ($__fd ? '&scope=cc&sub=' . ($subject['slug'] === 'science' ? 'science' : 'math') . '&fd=' . $__fd[0] : '')
+      . ($country['lang'] === 'en' || $country['lang'] === 'en-CA' ? '' : '&lang=' . rawurlencode($country['lang']));
 echo '<script>window.WS_CC=' . json_encode($__cn, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) . ';window.WS_RK=' . json_encode($__rk, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG) . ";</script>\n";
 site_footer($country['lang']);
 ?>

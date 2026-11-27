@@ -2,7 +2,7 @@
 /* Quiz together rankings: class accuracy by country and by state / province (/worksheets/ranking/)
    ?lang=de|fr|it|es|es-MX|pt-BR|zh-TW|zh-CN|ko|id|tr|sv shows the page in that language (the quiz links here in the page language).
    The page is drawn by one shared file on eigo-duke.com: /common/js/mq-rank.js (data: api/mq.php?a=rank)
-   Subjects (?sub=math|science) and grades (?g=uk/science/year-10) come from the catalog in the DB (ws_subject / ws_grade).
+   Subjects (?sub=math|science), fields (?fd=fractions, inc/fields.php) and grades (?g=uk/science/year-10) come from the catalog in the DB (ws_subject / ws_grade).
    Areas with few players show an "estimate" (inc/mq-est.json, read by api/mq.php) until real numbers are in. */
 $RK = array(
     'en' => array('Quiz Together Rankings: Class Accuracy by Country and State',
@@ -66,6 +66,8 @@ foreach (qa('SELECT g.country, g.subject, g.slug, g.name, c.name AS cname FROM w
 }
 $rk_subs = array();
 foreach ($RK_SUB as $k => $v) if ($v) $rk_subs[] = array('k' => $k, 's' => array_keys($v));
+require_once __DIR__ . '/../inc/fields.php';          // fields (fractions, ratios, …) to compare countries
+$rk_fu = field_ui($lang);
 $rk_js = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP;
 ?>
 <main class="rk-wrap">
@@ -74,9 +76,11 @@ $rk_js = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_H
 </main>
 <style>.rk-wrap{padding:24px 14px}.mqr-intro{max-width:860px;margin:18px auto 0;font-size:14px;line-height:1.9;color:#5b5249}</style>
 <script>window.MQR_CONF = { api: "<?= url('api/mq.php') ?>", lang: "<?= h($lang) ?>", quiz: "<?= url('') ?>",
-  subjects: <?= json_encode($rk_subs, $rk_js) ?>, grades: <?= json_encode($RK_GR, $rk_js) ?> };</script>
-<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261126i"></script>
-<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261126i"></script>
+  subjects: <?= json_encode($rk_subs, $rk_js) ?>, grades: <?= json_encode($RK_GR, $rk_js) ?>,
+  fields: <?= json_encode(field_menu($lang), $rk_js) ?>, fieldL: <?= json_encode($rk_fu[0], $rk_js) ?>,
+  allFields: <?= json_encode($rk_fu[1], $rk_js) ?>, fieldN: <?= json_encode($rk_fu[2], $rk_js) ?> };</script>
+<script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261127a"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261127a"></script>
 <?php site_footer($lang === 'es-MX' ? 'es' : $lang, false); ?>
 </body>
 </html>
