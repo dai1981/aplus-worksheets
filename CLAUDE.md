@@ -2298,6 +2298,28 @@ Grade 12: SBI4U 1. biochemistry ✓ 2. metabolic-processes ✓ 3. molecular-gene
 トピック：新しい slug を ^…$ で足した（elements-and-compounds・gases-and-atmospheric-chemistry→matter、tissues-organs-and-systems・biochemistry・metabolic-processes→living-things、refraction-and-lenses・revolutions-in-modern-physics→waves-and-light、light の 2 単元は energy の out）
 CA-ON / Science は Grade 1〜12 まで完了。次は BC の理科（K〜Grade 10）か、他の国の理科。Grade 11–12 の college・workplace コース（SBI3C・SCH4C など）・SES4U・SNC2P は必要なら後で
 
+CA-BC / Science（BC's Curriculum: Science K–10 と Grade 11–12 の科目）— country `ca-bc`、subject `science`、grade `kindergarten`・`grade-N`、Letter。K–10 は Big Idea ごとに 1〜2 単元、domain は Biology／Chemistry／Physics／Earth and Space Science。Grade 11 のページに Chemistry 11・Life Sciences 11・Physics 11・Earth Sciences 11、Grade 12 のページに Anatomy and Physiology 12・Chemistry 12・Physics 12・Geology 12（domain が科目名）。
+standard_code は「Grade 4: Biology」（科目は科目名）、standard_url は curriculum.gov.bc.ca/curriculum/science/{K|N}/core と /11/chemistry など。seo_title は「Grade 4 Science: Biomes Worksheets (BC Curriculum)」「Physics 12: Special Relativity Worksheets (BC Curriculum)」。core.php の subject_standard()・grade_standard() に ca-bc。
+単元は `tools/cabc_s0.py`（K–2）・`cabc_s3.py`（3–5）・`cabc_s6.py`（6–8）・`cabc_s9.py`（9–10）・`cabc_s11.py`（11–12）の UNITS(grade)、gen_cabc_science_{k|gN}_* は cabc_sci.build を呼ぶだけ。seed は 69000 + 100 × 学年 + sort（K = 0）。
+共通部品は `tools/cabc_sci.py`：BU(area, sort, slug, std, title, short, meta, kb, ks, think, ex, mist, faq, sets, pic=, allow=)、sets は lambda X: S(X, [(セット名, "モジュール:slug:セット番号") または (セット名, [(部品, 数)])])。
+"caon_sci1〜8・caon_hs9〜12・au_sr11*・au_sr12*:slug:N" はその単元のセットを BC の X で作り直して使う（X.o）、"al_*・in_s*:slug:N" は X.ch。GM(X, "us_science_g8_x", "g_a", "B1", n=20) は他国の生成スクリプトの問題関数を分けて使う。
+オンタリオの地名・制度（Toronto・Great Lakes・EQAO・HST・SNC1W・13 % など、BC_DROP）を含む問題は落とす。Ontario の生成スクリプトの UK の語が「Ontario」に置き換わることがあるので GM も _clean で落とす
+Kindergarten: features-of-plants-and-animals ✓ familiar-materials ✓ pushes-pulls-and-motion ✓ weather-and-seasons ✓
+Grade 1: living-things-and-their-features ✓ materials-and-their-properties ✓ light-and-sound ✓ patterns-in-the-sky-and-land ✓
+Grade 2: life-cycles ✓ changing-materials ✓ forces-and-magnets ✓ water-and-the-water-cycle ✓
+Grade 3: biodiversity-and-ecosystems ✓ food-chains-and-food-webs ✓ matter-and-particles ✓ thermal-energy ✓ landforms-and-erosion ✓
+Grade 4: sensing-and-responding ✓ biomes ✓ phases-of-matter ✓ energy-and-energy-transformations ✓ earth-moon-and-sun ✓
+Grade 5: body-systems ✓ solutions-and-solubility ✓ simple-machines-and-power ✓ the-rock-cycle-and-earth-resources ✓
+Grade 6: nervous-and-endocrine-systems ✓ excretory-and-reproductive-systems ✓ mixtures-and-separation ✓ newtons-laws-and-gravity ✓ the-solar-system-and-galaxy ✓ space-exploration-and-extreme-environments ✓
+Grade 7: evolution-and-natural-selection ✓ elements-and-compounds ✓ electromagnetism-and-electricity ✓ fossils-and-geologic-time ✓ climate-change ✓
+Grade 8: cells-and-cell-theory ✓ micro-organisms-and-immunity ✓ kinetic-molecular-and-atomic-theory ✓ light-and-electromagnetic-radiation ✓ plate-tectonics ✓
+Grade 9: asexual-and-sexual-reproduction ✓ atoms-and-the-periodic-table ✓ ionic-and-covalent-compounds ✓ electric-circuits-and-ohms-law ✓ matter-cycles-and-earths-spheres ✓ sustainability-and-human-impact ✓
+Grade 10: dna-and-inheritance ✓ mutations-and-selection ✓ chemical-reactions ✓ acids-and-bases ✓ nuclear-energy-and-radiation ✓ energy-transformations ✓ the-big-bang-and-the-universe ✓
+Grade 11: Chemistry 11（atomic-theory-and-electron-configuration・chemical-bonding-and-molecular-shape・the-mole-and-stoichiometry・solutions-and-concentration・reactions-and-energy-changes・organic-chemistry）✓／Life Sciences 11（classification-of-living-things・cells-and-viruses・evolution・energy-transformations-in-living-things・reproduction-and-life-cycles）✓／Physics 11（kinematics・projectile-motion・forces-and-newtons-laws・energy-work-and-power・dc-circuits・waves-and-sound）✓／Earth Sciences 11（earth-materials-and-the-rock-cycle・plate-tectonics・the-atmosphere-and-weather・energy-budget-and-climate-change・water-and-the-oceans・the-solar-system-and-stars）✓
+Grade 12: Anatomy and Physiology 12（biological-molecules-and-enzymes・dna-and-protein-synthesis・genomics-and-biotechnology・homeostasis-and-the-nervous-and-endocrine-systems・digestive-respiratory-and-circulatory-systems・health-disease-and-immunity）✓／Chemistry 12（reaction-kinetics・chemical-equilibrium・solubility-equilibrium・acids-bases-and-ph・oxidation-and-reduction・electrochemical-cells）✓／Physics 12（special-relativity・static-equilibrium-and-torque・circular-motion・gravitation-and-orbits・electric-forces-and-fields・magnetic-forces-and-induction・momentum-and-impulse）✓／Geology 12（minerals-and-rocks・geologic-time-and-dating・earthquakes-and-seismic-waves・plate-tectonics-and-volcanoes・surface-processes）✓
+トピック：新しい slug を ^…$ で足した（biomes・sensing-and-responding・health-disease-and-immunity→living-things、simple-machines-and-power・static-equilibrium-and-torque→forces-and-motion、surface-processes→earths-systems、ionic-and-covalent-compounds→matter、space-exploration-and-extreme-environments→earth-and-space。earthquakes-and-seismic-waves は energy・waves の out）
+CA-BC / Science は Kindergarten〜Grade 12 まで完了
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
