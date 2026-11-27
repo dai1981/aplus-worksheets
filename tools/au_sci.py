@@ -44,7 +44,7 @@ LEAK_RE = re.compile(r"(?<![\w-])(%s)(?![\w-])" % "|".join(re.escape(w) for w in
 SEASON_RE = re.compile(r"\b(December|January|February|Christmas)\b[^.?!]{0,60}\b(winter|snow\w*|freezing)\b|\b(winter|snow\w*)\b[^.?!]{0,60}\b(December|January|February|Christmas)\b"
                        r"|\b(June|July|August)\b[^.?!]{0,60}\b(summer|hottest|heatwave)\b|\b(summer|hottest)\b[^.?!]{0,60}\b(June|July|August)\b", re.I)
 
-AU_REP = [(r"\bpracticing\b", "practising"), (r"\bPracticing\b", "Practising"), (r"\bpupils\b", "students"), (r"\bPupils\b", "Students"), (r"\bpupil's\b", "student's"), (r"\bpupil\b", "student"), (r"\bPupil\b", "Student"),
+AU_REP = [(r"\bbar charts\b", "column graphs"), (r"\bbar chart\b", "column graph"), (r"\bBar charts\b", "Column graphs"), (r"\bBar chart\b", "Column graph"), (r"\bpracticing\b", "practising"), (r"\bPracticing\b", "Practising"), (r"\bpupils\b", "students"), (r"\bPupils\b", "Students"), (r"\bpupil's\b", "student's"), (r"\bpupil\b", "student"), (r"\bPupil\b", "Student"),
           (r"\blorries\b", "trucks"), (r"\blorry\b", "truck"), (r"\bsweets\b", "lollies"), (r"\bsweet wrappers\b", "lolly wrappers"),
           (r"\bwellies\b", "gumboots"), (r"\bwellington boots\b", "gumboots"), (r"\bin woodland\b", "in bushland"), (r"\bwoodlands?\b", "bushland"),
           (r"\ban oak tree\b", "a gum tree"), (r"\boak trees\b", "gum trees"), (r"\boak tree\b", "gum tree"), (r"\ban oak\b", "a gum tree"), (r"\boaks\b", "gum trees"),
@@ -65,9 +65,14 @@ _NAME_RE = re.compile(r"\b(%s)\b" % "|".join(re.escape(n) for n in FOREIGN))
 _NR = _random.Random(2024)
 
 
+_EYE = re.compile(r"\b(eyes?|iris|retina|cornea|lens|optic)\b", re.I)
+
+
 def _bad(text):
     t = uk_sci._text_of(text)
     bad = {m.group(1).lower() for m in LEAK_RE.finditer(t)}
+    if _EYE.search(t):
+        bad -= {"pupil", "pupils"}
     if "£" in t or "₹" in t:
         bad.add("£/₹")
     if SEASON_RE.search(t):
@@ -100,9 +105,13 @@ def aum(f, rep=()):
                 sub[k] = _NR.choice(pool)
             return sub[k]
 
+        eye = bool(_EYE.search(uk_sci._text_of(json.dumps(it, ensure_ascii=False))))
+
         def fx(s):
             s = _NAME_RE.sub(nm, s)
             for a, b in list(AU_REP) + list(rep):
+                if eye and "upil" in a:
+                    continue
                 s = re.sub(a, b, s)
             return _fix_an(s)
         it["q"], it["e"] = fx(it["q"]), fx(it["e"])
@@ -308,5 +317,20 @@ def keep(f, pred):
     def g():
         it = f()
         return it if it and pred(it) else None
+    g.__name__ = getattr(f, "__name__", "g")
+    return g
+
+
+def limit(f, n):
+    """use maker f at most n times in the whole unit (for makers whose questions differ only by a number or object)"""
+    box = [0]
+
+    def g():
+        if box[0] >= n:
+            return None
+        it = f()
+        if it:
+            box[0] += 1
+        return it
     g.__name__ = getattr(f, "__name__", "g")
     return g
