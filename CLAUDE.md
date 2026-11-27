@@ -2205,6 +2205,15 @@ OD のグループ名は答えが二通りに読めないようにする（「a 
 トピック：haloalkanes・alcohols-phenols・aldehydes-ketones・^amines$・coordination・d-and-f-block・electrochemistry・^nuclei$・semiconductor→matter、alternating-current・electrostatic-potential→energy、electric-charges→forces-and-motion、ray-optics→waves-and-light、biotechnology・human-health・microbes-in-human・reproductive-health→living-things
 IN / Science は Class 3〜12 まで完了（Class 1–2 は NCERT に EVS がない）。次は他の国の理科
 
+SG / Science（MOE Primary Science Syllabus 2023。Primary 3〜6）— country `sg`、subject `science`、grade `primary-N`、A4。生成スクリプトは `gen_sg_science_pN_*`（seed は 63000 + 100 × N + sort）、共通部品は `tools/sg_sci.py`
+（sci_common・uk_sci の上に SG の名前（sg_sec）、make_sg(level, slug, sort, theme, topic, …)：standard_code「Primary 6: Energy forms and uses (Photosynthesis)」、domain はテーマ（Diversity／Cycles／Systems／Interactions／Energy）、standard_url は MOE の syllabus ページ。
+LEAKS（米国式の綴り、Year N・GCSE・£・badger など英国だけの語）と英国の名前が残ると止まる。UK の問題関数は adopt_uk(モジュール, U) と sgm(maker) で SG の名前にして使える）。
+イギリス式の綴り。場面はシンガポール（Hydrilla、balsam、pandan、hibiscus、rain tree、hawker、MRT）。名前だけ違う問題を作らない（once のキーに名前・植物名を入れない）。PSLE 形式の実験（表・変数・公平な実験）を最後のセットに
+P3: 1. living-and-non-living-things 2. classifying-living-things 3. diversity-of-materials 4. life-cycles-of-animals 5. life-cycles-of-plants 6. magnets
+P4: 1. plant-parts-and-functions 2. digestive-system 3. matter 4. light-and-shadows 5. heat-and-temperature 6. heat-conductors-and-insulators
+P5: 1. reproduction-in-plants 2. reproduction-in-humans 3. water-and-changes-of-state 4. the-water-cycle 5. cells 6. plant-transport-system 7. respiratory-and-circulatory-systems 8. electrical-circuits 9. conductors-and-circuit-diagrams
+P6: 1. photosynthesis ✓ 2. energy-forms-and-conversion 3. forces-and-their-effects 4. frictional-force 5. gravitational-and-elastic-spring-force 6. food-chains-and-food-webs 7. habitats-populations-and-communities 8. adaptations 9. mans-impact-on-the-environment
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
