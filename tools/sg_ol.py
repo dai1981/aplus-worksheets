@@ -164,7 +164,9 @@ def make_ol(level, subj, slug, sort, topic, std_text, title, short, meta, key_bi
     t = re.sub(r"<[^>]+>", " ", blob)
     m = re.compile(r"\b(%s)\b" % "|".join(re.escape(n) for n in UK_NAMES)).search(t)
     assert not m, "UK name left: %s" % m.group(1)
-    for w in ("pupil", "Year 1", "Year 9", "PSLE", "GCSE"):
+    m = re.search(r".{25}\bpupils?\b.{25}", re.sub(r"\b(?:the|The|and|bigger|larger|smaller) pupils?\b|\bpupils? (?:widen|dilate|reflex|become|becomes|get)", "", t))
+    assert not m, "pupil (a student?): %s" % (m.group(0) if m else "")
+    for w in ("Year 1", "Year 9", "PSLE", "GCSE"):
         assert w not in t, w
     assert subj != "Physics" or not re.search(r"(?<![\d.])9\.81?(?!\d)", t), "g = 9.8 left"
     sci_common.make("secondary-%d" % level, slug, sort, "O-Level %s (%s): %s" % (subj, code, topic), std_text, title, seo, short, meta,
