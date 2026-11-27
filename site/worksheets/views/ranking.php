@@ -80,7 +80,7 @@ $rk_js = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_H
   fields: <?= json_encode(field_menu($lang), $rk_js) ?>, fieldL: <?= json_encode($rk_fu[0], $rk_js) ?>,
   allFields: <?= json_encode($rk_fu[1], $rk_js) ?>, fieldN: <?= json_encode($rk_fu[2], $rk_js) ?> };</script>
 <script src="https://www.eigo-duke.com/common/js/mq-geo.js?v=20261127a"></script>
-<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261127j"></script>
+<script src="https://www.eigo-duke.com/common/js/mq-rank.js?v=20261127k"></script>
 <?php site_footer($lang === 'es-MX' ? 'es' : $lang, false); ?>
 </body>
 </html>
