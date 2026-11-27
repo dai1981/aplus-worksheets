@@ -22,8 +22,13 @@ THEMES = ("Diversity", "Cycles", "Systems", "Interactions", "Energy")
 
 # words that must not appear on a Singapore page (US spellings from uk_sci, plus UK-only things)
 LEAKS = uk_sci.LEAKS + ["year 3", "year 4", "year 5", "year 6", "ks2", "ks3", "gcse", "pence", "badger", "badgers", "hedgehog",
-                        "hedgehogs", "conker", "conkers", "bonfire", "snowman", "sledge", "sledges", "nhs"]
+                        "hedgehogs", "slow worm", "slow worms", "newt", "newts", "conker", "conkers", "bonfire", "snowman", "sledge", "sledges", "nhs"]
 LEAK_RE = re.compile(r"(?<![\w-])(%s)(?![\w-])" % "|".join(re.escape(w) for w in LEAKS), re.I)
+# UK things that have a Singapore version
+SG_REP = [(r"\ban oak tree", "a rain tree"), (r"woolly jumpers?", "woollen sweater"), (r"\bjumpers?\b", "sweater"), (r"\boak trees?\b", "rain tree"), (r"\ban oak\b", "a rain tree"),
+          (r"\bin woodland\b", "in a forest"), (r"\bwoodland\b", "forest"), (r"\bwellies\b", "rain boots"), (r"\bwellington boots\b", "rain boots"),
+          (r"\bpond skaters?\b", "water strider"), (r"\brobins\b", "sparrows"), (r"\brobin\b", "sparrow"),
+          (r"\bplaytime\b", "recess"), (r"\bbiscuit tin\b", "biscuit tin")]
 UK_NAMES = [n for n in uk_sci.GIRLS + uk_sci.BOYS if n not in GIRLS + BOYS]
 
 
@@ -72,8 +77,10 @@ def sgm(f, rep=()):
 
         def fix(s):
             s = _NAME_RE.sub(nm, s)
-            for a, b in rep:
+            for a, b in list(SG_REP) + list(rep):
                 s = re.sub(a, b, s)
+            s = re.sub(r"\b([Aa])n (?=[bcdfgjklmnpqrstvwxyz])", lambda m: m.group(1) + " ", s)
+            s = re.sub(r"\b([Aa]) (?=(?!one\b|once\b)(?:[aeio][a-z]|hour\b))", lambda m: m.group(1) + "n ", s)
             return s
         it["q"], it["e"] = fix(it["q"]), fix(it["e"])
         it["c"] = [fix(c) for c in it["c"]]
@@ -93,3 +100,33 @@ def adopt_uk(modname, U):
     if hasattr(m, "P"):
         m.P = uk_sci.People(U.R)
     return m
+
+
+class use:
+    """S = use(U, "gen_uk_science_y3_magnets_attract_and_repel", rep=[...], drop=[...]):
+    S.g_pic -> the UK maker with Singapore names (sgm); S.B1 -> list of its bank makers, wrapped the same way.
+    drop: words (regex) that make an item leave out (topics outside the Singapore syllabus)."""
+
+    def __init__(self, U, modname, rep=(), drop=()):
+        self.m = adopt_uk(modname, U)
+        self.rep = rep
+        self.drop = re.compile("|".join(drop), re.I) if drop else None
+
+    def _w(self, f):
+        g = sgm(f, self.rep)
+        if not self.drop:
+            return g
+
+        def h():
+            it = g()
+            if it and self.drop.search(re.sub(r"<[^>]+>", " ", json.dumps(it, ensure_ascii=False))):
+                return None
+            return it
+        h.__name__ = g.__name__
+        return h
+
+    def __getattr__(self, name):
+        obj = getattr(self.m, name)
+        if isinstance(obj, list):
+            return [self._w(f) for f in obj]
+        return self._w(obj)
