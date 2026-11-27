@@ -2217,7 +2217,7 @@ IN / Science は Class 3〜12 まで完了（Class 1–2 は NCERT に EVS が�
 - 管理画面 /mq/admin.html（eigo-duke.com）は 2026-11-26 からパスワードなし（mq.php の adm_ は認証しない。読むだけ）
 - 分野で国をくらべる（?sub=math&fd=fractions）：分野は `site/worksheets/inc/fields.php`（mq_fields に 12 言語の名前、MQ_TOPIC_FIELD で各国のトピック → 分野、MQ_SCI_FIELD、トピックに入らない単元は slug で補う）。`php tools/build_mq_fields.php` が inc/mq-fields.json（分野 → 単元）を作る（Actions も FTP の前に実行）。api/mq.php の $MQ_FIELD_FILE で mq.php に渡し、k_filter が fd の単元だけに絞る。新しい国・トピックを足したら MQ_TOPIC_FIELD に入れる（build_mq_fields.php が分野なしの単元を数える）。単元ページの Ranking ボタンはその単元の分野の国別比較を開く
 - ひとりで解いた結果の地域：結果の下に地域を選ぶ欄（mq-geo.js をそのとき読む）。選んだ地域は localStorage の mq:area（みんなでクイズと共通）。a=solo に rg を送り、mq.php が qz_sstat の地域の行と qz_srhist（ひとりで × 地域の点数分布）に記録。地域・国・世界の「上位 ◯%」は pos_calc（a=pos と共通、人数が MQ_RANK_MIN 未満は目安）の p。Texas・Ontario・BC のページは地域を選ばなくてもその州
-- 英語漬け.com（2026-11-27）：ひとりで解いた結果の下に都道府県を選ぶ欄（mq.js の soloRk、mq:area に保存、次から a=solo に rg）。ランキングページ /mq/ranking.html は MQR_CONF.subjects に { k, n（表示名）, s（フォルダ：shakai・exam/koten など） } と scope: "rg"。mq.php の k_filter は eigo-duke では sub をフォルダの LIKE '/x/%' にする
+- 英語漬け.com（2026-11-27）：ひとりで解いた結果の下に都道府県を選ぶ欄（mq.js の soloRk、mq:area に保存、次から a=solo に rg）。ランキングページ /mq/ranking.html は MQR_CONF.subjects に { k, n（表示名）, s（フォルダ：shakai・exam/koten など）, only（国でくらべない教科は "jp"：比較タブと国の選択を出さない） } と scope: "rg"。mq.js の jpOnly()：/sansu/・/sugaku/・/rika/ 以外は「せかい」の行を出さない。mq.php の k_filter は eigo-duke では sub をフォルダの LIKE '/x/%' にする
 - apu2 のひとりで解いた結果：送信と「国で上位 ◯%／◯位」（2〜9 人は順位、速すぎて数えないときは soloFast）は ws.js（mq.php の a=solo が返す c・w を使う）。見出しの Ranking ボタン（.sn-rk、スマホではタイトルの右）は ranking/?cc=…&k=ページ&src=b。mq.js の watchSolo・見出しの .sn-rkb・a=pos の「あなたの位置」は eigo-duke だけ（if (!APU)）
 
 ## 日本語辞書（/japanese/{言語}/word/{単語}.html）— PHP + DB
