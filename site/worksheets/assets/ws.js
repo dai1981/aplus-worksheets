@@ -689,7 +689,7 @@
   // ------------------------------------------------------------ where do I stand
   //  A finished full set is sent once per device (no name, no account): score, time and the answer to each question.
   //  The server answers how many students did this set and how many scored higher.
-  var SOLO_API = "/worksheets/api/mq.php", SOLO_MIN = 10;
+  var SOLO_API = "/worksheets/api/mq.php", SOLO_MIN = 10, SOLO_FAST_MS = 800;   // SOLO_FAST_MS = MQ_FAST_MS in mq.php
   function plain(html) {
     var d = document.createElement("div");
     d.innerHTML = String(html).replace(/<rt>.*?<\/rt>/g, "");
@@ -709,10 +709,25 @@
       .then(function (j) {
         if (!j || !j.w) return;
         if (rec) { sent = rd("ws:sent", {}); sent[self.key] = 1; wr("ws:sent", sent); }
-        var el = self.eStage.querySelector(".sn-pos"), all = j.w[0], up = j.w[1];
-        if (!el || !all) return;
-        var p = Math.max(1, Math.ceil(100 * (up + 1) / all));
-        el.innerHTML = all >= SOLO_MIN ? t("soloTop", { p: p, n: fmt(all) }) : all > 1 ? t("soloFew", { n: fmt(all) }) : t("soloOne");
+        var el = self.eStage.querySelector(".sn-pos");
+        if (!el) return;
+        // too fast (under 0.8 s a question on average): the server did not count this try, so add it here
+        var fast = rec && self.ms < SOLO_FAST_MS * n, cc = window.WS_CC || "", lines = [];
+        function line(x, kp, kr, lab) {
+          var all = (x && x[0]) || 0, up = (x && x[1]) || 0;
+          if (fast) all += 1;
+          if (all < 2) return 0;
+          lines.push(all >= SOLO_MIN ? t(kp, { c: lab, p: Math.max(1, Math.ceil(100 * (up + 1) / all)), n: fmt(all) })
+                                     : t(kr, { c: lab, r: up + 1, n: fmt(all) }));
+          return all;
+        }
+        var nc = cc && j.cc ? line(j.c, "soloC", "soloR", cc) : 0;
+        var nw = (j.w[0] || 0) + (fast ? 1 : 0);
+        if (nw > nc) { var k = lines.length; if (line(j.w, "soloW", "soloWR", "") && k) lines[k] = "<small>" + lines[k] + "</small>"; }
+        if (!lines.length && !fast) lines.push(t("soloOne"));
+        if (fast) lines.push("<small>" + t("soloFast") + "</small>");
+        if (!lines.length) return;
+        el.innerHTML = lines.join("<br>");
         el.hidden = false;
       })
       .catch(function () {});

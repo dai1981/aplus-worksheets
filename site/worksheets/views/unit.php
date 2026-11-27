@@ -276,6 +276,10 @@ if ($faq) {
     }
     echo jsonld(array('@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => $qs));
 }
+// country name for "where do I stand" (the server counts Texas with the US and Ontario / BC with Canada)
+$__cc = array('us-tx' => 'us', 'ca-on' => 'ca', 'ca-bc' => 'ca');
+$__cn = isset($__cc[$country['code']]) ? ($__cc[$country['code']] === 'ca' ? 'Canada' : get_country('us')['name']) : $country['name'];
+echo '<script>window.WS_CC=' . json_encode($__cn, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) . ";</script>\n";
 site_footer($country['lang']);
 ?>
 </body>
