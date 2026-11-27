@@ -1235,6 +1235,7 @@ function subject_standard($country, $subject) {
 }
 function grade_standard($country, $grade) {
     if ($grade && $country['code'] === 'sg' && isset($grade['subject']) && $grade['subject'] === 'science') return in_array($grade['slug'], array('secondary-3', 'secondary-4'), true) ? 'Singapore-Cambridge O-Level Physics (6091), Chemistry (6092) and Biology (6093) syllabuses (2023)' : (strpos($grade['slug'], 'secondary-') === 0 ? 'MOE Lower Secondary Science Syllabus (2021)' : 'MOE Primary Science Syllabus (2023)');
+    if ($grade && $country['code'] === 'ca-on' && isset($grade['subject']) && $grade['subject'] === 'science' && in_array($grade['slug'], array('grade-9', 'grade-10', 'grade-11', 'grade-12'), true)) return $grade['slug'] === 'grade-9' ? 'The Ontario Curriculum, Science, Grade 9: SNC1W (2022)' : ($grade['slug'] === 'grade-10' ? 'The Ontario Curriculum, Grades 9 and 10: Science (2008), SNC2D' : 'The Ontario Curriculum, Grades 11 and 12: Science (2008)');
     if ($grade && $country['code'] === 'au' && isset($grade['subject']) && $grade['subject'] === 'science' && in_array($grade['slug'], array('year-11', 'year-12'), true)) return 'Australian Curriculum: Senior Secondary Biology, Chemistry, Physics and Earth and Environmental Science';
     if ($grade && isset($grade['subject']) && $grade['subject'] !== 'math' && $grade['subject'] !== 'maths') return subject_standard($country, $grade['subject']);
     if ($country['code'] === 'kr' && $grade && $grade['slug'] === 'kindergarten') return '2019 개정 누리과정';
