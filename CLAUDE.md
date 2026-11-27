@@ -2272,6 +2272,24 @@ Year 12: Biology 1. dna-genes-and-protein-synthesis ✓ 2. cell-division-and-inh
 core.php の grade_standard() で Year 11–12 の基準名を「Australian Curriculum: Senior Secondary …」に、unit.php で educationalLevel に Senior secondary。トピックは新しい slug を ^…$ で足した（他の国の割り当ては変えていない）
 AU / Science は Foundation〜Year 12 まで完了。次は他の国の理科
 
+CA-ON / Science（The Ontario Curriculum, Grades 1–8: Science and Technology, 2022）— country `ca-on`、subject `science`、grade `grade-N`、Letter。各学年 4 strand（B Life Systems／C Matter and Energy／D Structures and Mechanisms／E Earth and Space Systems。A STEM Skills は単元の中で）。
+standard_code は「Grade 4: B2.4, B2.5」、domain は strand 名、standard_text の末尾に「(summary of the Ontario Science and Technology curriculum, 2022, Strand B: Life Systems – Habitats and Communities)」、standard_url は dcp.edu.gov.on.ca の grade-N/strands。seo_title は「Grade 4 Science: Light Worksheets (Ontario Curriculum)」。
+単元の定義は `tools/caon_sci1.py`〜`caon_sci8.py` の UNITS()（CU(strand, sort, slug, code, std, title, short, meta, kb, ks, think, ex, mist, faq, sets, pic=)、sets は lambda X）、gen_caon_science_gN_* は caon_sci.build を呼ぶだけ。seed は 67000 + 100 × 学年 + sort。
+共通部品は `tools/caon_sci.py`：X.gen(他国の生成スクリプト, "g_x", rep=, drop=, n=)・X.B(バンク)・X.pool(行)・X.rows(表, fwd, back, extra=)・X.f(factory)（自前の数値問題。raw なので数だけ違う問題も別に数える）。
+すべて cam() を通る：uk_sci.ukm でイギリス式にしてから CA_REP でカナダ英語（colour・centre・metre・litre・grey・fibre はそのまま、-ize、aluminum、tire、truck、gasoline、flashlight、Mom、candy、cookie、garbage、sidewalk、ladybug、sow bug、spring scale、bar graph、esophagus、soccer ball、thumbtack、mL、a.m.）とカナダの名前に。LEAKS（米国式の綴り、英国・豪州の語と動物、Year N、£・pence、inch・mile・°F、UK・U.S.）と南半球の季節（SEASON_RE）が残る問題は落とす。sound level meter などの計器は meter でよい。名前と数字を除いた問題文＋正解で単元の中の重複を落とす。
+Grade 1–2 はページの上を軽く（pic に sci_kids.row か自前の SVG、think は (一文, [要点3つ])、title ≤ 40・key_big ≤ 40・key_sub ≤ 90）。Grade 5 の FORCE_ROWS（構造と力）は Grade 7 form-and-function でも使う。
+プールの数は scratchpad の probe.py（モジュール:関数）と cainv.py（単元ごと）で数え、足りないセットは dbg.py で見つける
+CA-ON / Science / Grade 1: 1. living-and-non-living-things ✓ 2. needs-of-living-things ✓ 3. the-body-and-senses ✓ 4. energy-in-our-lives ✓ 5. objects-and-materials ✓ 6. everyday-structures ✓ 7. day-night-and-weather ✓ 8. the-four-seasons ✓
+CA-ON / Science / Grade 2: 1. animal-life-cycles ✓ 2. animal-features-and-groups ✓ 3. animals-and-people ✓ 4. solids-and-liquids ✓ 5. heating-and-cooling ✓ 6. simple-machines ✓ 7. pushes-pulls-and-movement ✓ 8. air-and-water-in-the-environment ✓ 9. caring-for-air-and-water ✓
+CA-ON / Science / Grade 3: 1. plant-parts-and-needs ✓ 2. plant-life-cycles-and-seeds ✓ 3. plants-and-people ✓ 4. forces-and-motion ✓ 5. magnets-and-static-electricity ✓ 6. strong-and-stable-structures ✓ 7. soils ✓ 8. soils-and-the-environment ✓
+CA-ON / Science / Grade 4: 1. habitats-and-communities ✓ 2. food-chains-and-food-webs ✓ 3. adaptations-and-human-impact ✓ 4. light ✓ 5. sound ✓ 6. pulleys-and-gears ✓ 7. rocks-and-minerals ✓ 8. weathering-and-erosion ✓
+CA-ON / Science / Grade 5: 1. respiratory-and-circulatory-systems ✓ 2. digestive-and-other-organ-systems ✓ 3. healthy-body-systems ✓ 4. properties-of-matter ✓ 5. physical-and-chemical-changes ✓ 6. forces-acting-on-structures ✓ 7. energy-and-resources ✓
+CA-ON / Science / Grade 6: 1. classifying-living-things ✓ 2. protecting-biodiversity ✓ 3. static-electricity ✓ 4. electric-circuits ✓ 5. forces-of-flight ✓ 6. flight-in-nature-and-technology ✓ 7. the-solar-system ✓ 8. earth-moon-and-sun ✓ 9. space-exploration ✓
+CA-ON / Science / Grade 7: 1. interactions-in-ecosystems ✓ 2. human-impact-and-sustainability ✓ 3. pure-substances-and-mixtures ✓ 4. solutions-and-separating-mixtures ✓ 5. form-and-function ✓ 6. heat-and-temperature ✓ 7. heat-in-the-environment ✓
+CA-ON / Science / Grade 8: 1. cells-and-cell-theory ✓ 2. cell-processes-and-organization ✓ 3. fluids-density-and-buoyancy ✓ 4. fluid-pressure-and-technology ✓ 5. systems-and-mechanical-advantage ✓ 6. water-on-earth-and-the-water-cycle ✓ 7. water-quality-and-conservation ✓
+トピック：structures の単元（everyday・strong-and-stable・forces-acting-on・form-and-function）→engineering-design（living の out）、flight は energy・waves-and-light の out で forces-and-motion、fluids→matter、simple-machines・systems-and-mechanical-advantage→forces-and-motion、space-exploration→earth-and-space、soils-and-the-environment→earths-systems
+CA-ON / Science は Grade 1〜8 まで完了。次は BC の理科（K〜Grade 10）か、他の国の理科
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ

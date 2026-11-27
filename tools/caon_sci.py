@@ -82,7 +82,8 @@ CA_REP = [
     (r"\bslaters\b", "sow bugs"), (r"\bslater\b", "sow bug"), (r"\bWoodlice\b", "Sow bugs"), (r"\bSlaters\b", "Sow bugs"),
     (r"\bdraughts\b", "drafts"), (r"\bdraught\b", "draft"), (r"\bdraughty\b", "drafty"), (r"\baeroplanes\b", "airplanes"), (r"\baeroplane\b", "airplane"),
     (r"\bAeroplanes\b", "Airplanes"), (r"\bAeroplane\b", "Airplane"), (r"\b(a|the) lift\b", r"\1 elevator"),
-    (r"\bfootball\b", "soccer"), (r"\bFootball\b", "Soccer"), (r"\bfooty\b", "soccer"),
+    (r"\bfootballers\b", "soccer players"), (r"\bfootballer\b", "soccer player"), (r"\bfootball ball\b", "soccer ball"), (r"\b([Aa]|[Tt]he|[Hh]is|[Hh]er) football\b(?! (game|match|team|field|pitch|player|club))", r"\1 soccer ball"),
+    (r"\bfootballs\b", "soccer balls"), (r"\bfootball\b", "soccer"), (r"\bFootball\b", "Soccer"), (r"\bfooty\b", "soccer"),
     (r"\ba spring balance \(force meter\)", "a spring scale"), (r"\bspring balances\b", "spring scales"), (r"\bspring balance\b", "spring scale"),
     (r"\bnewton meters?\b", "spring scale"), (r"\bnewton metres?\b", "spring scale"), (r"\bforce meters?\b", "spring scale"), (r"\bforcemeters?\b", "spring scale"),
     (r"\bcolumn graphs\b", "bar graphs"), (r"\bcolumn graph\b", "bar graph"), (r"\bColumn graphs\b", "Bar graphs"), (r"\bColumn graph\b", "Bar graph"),
@@ -309,7 +310,7 @@ def build(mod, grade, slug):
     for st in sets:
         for it in st["items"]:
             it["q"], it["e"], it["c"] = _quotes(ca_text(it["q"])), _quotes(ca_text(it["e"])), [_quotes(ca_text(c)) for c in it["c"]]
-            it["q"], it["e"] = re.sub(r"(?<=[\s(=])-(?=\d)", "−", it["q"]), re.sub(r"(?<=[\s(=])-(?=\d)", "−", it["e"])
+            it["q"], it["e"] = re.sub(r"(?<=[\s(=])-(?=\d)", "−", it["q"]).replace("sgpond", "pond"), re.sub(r"(?<=[\s(=])-(?=\d)", "−", it["e"])
             assert len({c.strip().lower() for c in it["c"]}) == 4, it["c"]
     sets = _fixnums(sets)
     if u["pic"] is not None:
