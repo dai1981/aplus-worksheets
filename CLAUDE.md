@@ -2224,7 +2224,20 @@ sg_sci.sgm の a/an の修正は「0.5 A and」を「An」にしないように�
 Sec 1: 1. the-scientific-endeavour ✓ 2. physical-properties-of-matter ✓ 3. elements-compounds-and-mixtures ✓ 4. separation-techniques ✓ 5. ray-model-of-light ✓ 6. cells ✓ 7. particulate-nature-of-matter ✓ 8. atoms-and-molecules ✓
 Sec 2: 1. forces-and-pressure ✓ 2. energy-and-work-done ✓ 3. heat-transfer-and-its-effects ✓ 4. chemical-changes ✓ 5. acids-and-alkalis ✓ 6. interactions-within-ecosystems ✓ 7. electrical-systems ✓ 8. human-digestive-system ✓ 9. transport-systems-in-living-things ✓ 10. human-sexual-reproductive-system ✓
 core.php：grade_standard() で sg の science は secondary なら「MOE Lower Secondary Science Syllabus (2021)」。トピック：scientific-endeavour→working-scientifically、reproductive-system→living-things
-SG / Science は Primary 3〜Secondary 2 まで完了。次は Upper Secondary（O-Level の Physics・Chemistry・Biology）か、他の国の理科
+SG / Science / Upper Secondary（Singapore-Cambridge O-Level Physics 6091・Chemistry 6092・Biology 6093、Sec 3–4。1 つの学年ページに 3 科目が並ぶ（domain が Physics／Chemistry／Biology））— grade `secondary-3`（sort 9）・`secondary-4`（sort 10）。生成スクリプトは `gen_sg_science_s3_*`・`s4_*`、seed は seed_of(学年, 科目, sort) = 65000 + 100 × 学年 + 20 × 科目の番号 + sort。
+共通部品は `tools/sg_ol.py`：OL(seed) → (U, R, P, src)。src(モジュール, 関数名, rep=, drop=) で UK・US・SG の問題関数を SG の名前・イギリス式にして使う（読み込んだ gen_・al_ モジュールの U・R・P をこの単元に向ける。OL_DROP で UK・US・Year・A level・£・feet・miles を落とす）。
+make_ol(学年, 科目, slug, sort, topic, 原文の要約, title, short, meta, kb, ks, think, ex, mist, faq, sets)：standard_code「O-Level Physics (6091): Kinematics」、seo「Secondary 3 Physics: Kinematics Worksheets (O-Level 6091 with Answers)」。数は sgnum（5 桁以上はノーブレークスペース）、a/an は _AN2（1 文字のラベル A・B の前は直さない）。英国の名前・PSLE・GCSE・Year N・学生の意味の pupil（目の pupil はよい）・Physics の 9.8 が残ると止まる。
+部品：nq（3 有効数字、末尾の 0 を消す）・ex（問題のデータは丸めずに書く）・rows(R, 表, 順, 逆)・pool(R, 手書きの行)・graph（折れ線、data-pf='lg'）・keep。O-Level の g は 10 N/kg。答えは 3 有効数字（角度は小数第 1 位）
+sg_sci.sgm の a/an の直しは and・is・in・or・of・at・as・are・if の前の A を An にしない（A and B など）。遺伝子型の選択肢は大文字小文字だけ違うと重複扱い（item が小文字で比べる）なので「Tt (heterozygous)」の形にする
+Sec 3 — Physics: 1. physical-quantities-units-and-measurement ✓ 2. kinematics ✓ 3. dynamics ✓ 4. turning-effect-of-forces ✓ 5. pressure ✓ 6. energy ✓ 7. kinetic-particle-model-of-matter ✓ 8. thermal-processes ✓ 9. thermal-properties-of-matter ✓ 10. general-wave-properties ✓ 11. electromagnetic-spectrum ✓ 12. light ✓
+／Chemistry: 13. experimental-chemistry ✓ 14. particulate-nature-of-matter ✓ 15. chemical-bonding-and-structure ✓ 16. chemical-calculations ✓ 17. acid-base-chemistry ✓ 18. qualitative-analysis ✓
+／Biology: 19. cell-structure-and-organisation ✓ 20. movement-of-substances ✓ 21. biological-molecules ✓ 22. nutrition-in-humans ✓ 23. nutrition-and-transport-in-flowering-plants ✓ 24. transport-in-humans ✓ 25. respiration-in-humans ✓
+Sec 4 — Physics: 1. static-electricity ✓ 2. current-of-electricity ✓ 3. dc-circuits ✓ 4. practical-electricity ✓ 5. magnetism ✓ 6. electromagnetism ✓ 7. electromagnetic-induction ✓ 8. radioactivity ✓
+／Chemistry: 9. redox-chemistry ✓ 10. patterns-in-the-periodic-table ✓ 11. chemical-energetics ✓ 12. rate-of-reactions ✓ 13. organic-chemistry ✓ 14. maintaining-air-quality ✓
+／Biology: 15. excretion-in-humans ✓ 16. homeostasis-coordination-and-response ✓ 17. infectious-diseases ✓ 18. molecular-genetics ✓ 19. reproduction ✓ 20. inheritance ✓ 21. organisms-and-their-environment ✓
+新しい 6091 にない内容（ノギス・マイクロメーターの読み、気体の法則、凹レンズ、CRO、温度の単元）は出さない。Sound は General Wave Properties に入れ、Radioactivity を足した
+トピック：^kinematics$・^dynamics$・turning-effect→forces-and-motion、electromagnetic-spectrum→waves-and-light、physical-quantities→working-scientifically、^radioactivity$・chemical-calculations・qualitative-analysis など→matter、air-quality→earths-systems、movement-of-substances・transport-in-humans・excretion-in-humans・infectious-diseases→living-things
+SG / Science は Primary 3〜Secondary 4（O-Level Physics・Chemistry・Biology）まで完了。次は他の国の理科
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
