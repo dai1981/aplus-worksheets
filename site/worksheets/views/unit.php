@@ -279,7 +279,9 @@ if ($faq) {
 // country name for "where do I stand" (the server counts Texas with the US and Ontario / BC with Canada)
 $__cc = array('us-tx' => 'us', 'ca-on' => 'ca', 'ca-bc' => 'ca');
 $__cn = isset($__cc[$country['code']]) ? ($__cc[$country['code']] === 'ca' ? 'Canada' : get_country('us')['name']) : $country['name'];
-echo '<script>window.WS_CC=' . json_encode($__cn, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) . ";</script>\n";
+$__rcc = isset($__cc[$country['code']]) ? $__cc[$country['code']] : ($country['code'] === 'uk' ? 'gb' : $country['code']);
+$__rk = url('ranking/') . '?cc=' . rawurlencode($__rcc) . ($country['lang'] === 'en' || $country['lang'] === 'en-CA' ? '' : '&lang=' . rawurlencode($country['lang']));
+echo '<script>window.WS_CC=' . json_encode($__cn, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) . ';window.WS_RK=' . json_encode($__rk, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG) . ";</script>\n";
 site_footer($country['lang']);
 ?>
 </body>

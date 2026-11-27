@@ -506,6 +506,16 @@
       + '<div class="sn-quiz-b"><div class="sn-bar"><i></i></div><div class="sn-stage">'
       + '<div class="sn-q"></div><div class="sn-choices"></div></div><div class="sn-fb" hidden></div></div>';
     this.root.querySelector(".sn-quiz-h .t").textContent = this.title;
+    // ranking button (class rankings by country and state; the country of this page, this unit)
+    if (window.WS_RK) {
+      var rk = document.createElement("a");
+      rk.className = "sn-rk";
+      rk.href = window.WS_RK + "&k=" + encodeURIComponent(location.pathname);
+      rk.target = "_blank"; rk.rel = "noopener";
+      rk.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v3h3v2a5 5 0 0 1-4.6 5A5 5 0 0 1 13 15.9V18h3v3H8v-3h3v-2.1A5 5 0 0 1 8.6 13 5 5 0 0 1 4 8V6h3Zm-1 5a3 3 0 0 0 1 2.2V8Zm12 0h-1v2.2A3 3 0 0 0 18 8Z" fill="#d4a017"/></svg><span></span>';
+      rk.querySelector("span").textContent = t("rankBtn");
+      this.root.querySelector(".sn-quiz-h").appendChild(rk);
+    }
     this.eN = this.root.querySelector(".sn-quiz-h .n");
     this.eDone = this.root.querySelector(".sn-done");
     this.mark();
