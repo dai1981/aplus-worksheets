@@ -52,7 +52,9 @@ AU_REP = [(r"\bstyrofoam\b", "polystyrene"), (r"\bStyrofoam\b", "Polystyrene"), 
           (r"\bbadgers\b", "wombats"), (r"\bbadger\b", "wombat"), (r"\brobins\b", "magpies"), (r"\brobin\b", "magpie"), (r"\bsweaters?\b", "jumper"),
           (r"\bhandphones?\b", "mobile phone"), (r"\bplaytime\b", "recess"), (r"\bSecondary (\d)\b", "Year \\1"), (r"\bmol L⁻¹", "mol/L"),
           (r"\bmol dm⁻³", "mol/L"), (r"\bmol/dm³", "mol/L"), (r"\bdm³", "L"),
-          (r"\bcoloring\b", "colouring"), (r"\bColoring\b", "Colouring")]
+          (r"\bcoloring\b", "colouring"), (r"\bColoring\b", "Colouring"),
+          (r"\bteh tarik\b", "Milo"), (r"\bchicken rice\b", "meat pie"), (r"\bloft insulation\b", "ceiling insulation"),
+          (r"\bdraught excluders\b", "draught stoppers"), (r"\bbar graphs\b", "column graphs"), (r"\bbar graph\b", "column graph"), (r"\bbaking soda\b", "bicarb soda"), (r"\bBaking soda\b", "Bicarb soda")]
 
 # names from other countries' generators -> Australian names (same gender)
 import ws_common as _ws  # noqa: E402

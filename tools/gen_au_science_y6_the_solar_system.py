@@ -53,13 +53,13 @@ def g_cmp():
     other = b if ans == a else a
     return tq("Which planet is %s: %s or %s?" % (k, a, b), ans, [other, "They are exactly the same.", "the Moon"],
               "%s: about %s km wide, %s million km from the Sun. %s: about %s km wide, %s million km from the Sun." %
-              (a, DATA[a][0], DATA[a][1], b, DATA[b][0], DATA[b][1]))
+              (a, "{:,}".format(DATA[a][0]), "{:,}".format(DATA[a][1]), b, "{:,}".format(DATA[b][0]), "{:,}".format(DATA[b][1])))
 
 
 def g_tab():
     ps = R.sample(PL, 4)
     tab = "<table class='sn-table'><tr><th>Planet</th><th>Width (km)</th><th>Distance from the Sun (million km)</th></tr>%s</table>" % "".join(
-        "<tr><td>%s</td><td>%d</td><td>%d</td></tr>" % (p, DATA[p][0], DATA[p][1]) for p in ps)
+        "<tr><td>%s</td><td>%s</td><td>%s</td></tr>" % (p, "{:,}".format(DATA[p][0]), "{:,}".format(DATA[p][1])) for p in ps)
     k = R.choice(["widest", "narrowest", "closest", "furthest"])
     i = 0 if k in ("widest", "narrowest") else 1
     f = max if k in ("widest", "furthest") else min
