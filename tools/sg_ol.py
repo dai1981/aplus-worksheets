@@ -31,7 +31,7 @@ OL_REP = [(r"\bpupils\b", "students"), (r"\bPupils\b", "Students"), (r"\bpupil\b
           (r"\bGCSE\b", "O-Level"), (r"\bin a UK plug\b", "in a Singapore plug"), (r"\bUK mains\b", "Singapore mains"),
           (r"\bmobile phone", "handphone"), (r"\bsnooker\b", "billiard"), (r"\bmarathon runner", "runner"),
           (r"\bmol L⁻¹", "mol/dm³"), (r"\bdm⁻³", "/dm³")]
-OL_DROP = [r"\bUK\b", r"\bBritain\b", r"\bAmerica\b", r"\bUS\b", r"\bKS[1-4]\b", r"\bYear \d", r"\bA level\b", r"9\.81?\b", r"Ofsted", r"National Grid", r"\bNHS\b", "£", r"\bGrade \d", r"\bNGSS\b",
+OL_DROP = [r"\bUK\b", r"\bBritain\b", r"\bAmerica\b", r"\bUS\b", r"\bKS[1-4]\b", r"\bYear \d", r"\bA level\b", r"(?<![\d.])9\.81?(?!\d)", r"Ofsted", r"National Grid", r"\bNHS\b", "£", r"\bGrade \d", r"\bNGSS\b",
            r"\bfeet\b", r"\bmiles?\b", r"°F", r"\bCommon Core\b", r"\bmph\b"]
 
 _mods = {}
@@ -120,7 +120,7 @@ def seed_of(level, subj, sort):
 _AN = re.compile(r"\b([Aa]) (?=8|(?:11|18)(?![\d.]))")
 
 
-_AN2 = re.compile(r"\b([Aa]) (?=[aeiouAEIOU](?!n[ei]\b|ni[ftv]|ns?e|se|su|ra|ro|tub|-))")
+_AN2 = re.compile(r"\b([Aa]) (?=a|i|o(?!ne\b|ne-|nce\b)|e(?!u)|u(?!ni|se|su|ra|ro|ti|tub|-))")
 _BIG = re.compile(r"(?<![\d.,\u00a0])(\d{5,})(?![\d.,]\d)")
 
 
@@ -164,8 +164,9 @@ def make_ol(level, subj, slug, sort, topic, std_text, title, short, meta, key_bi
     t = re.sub(r"<[^>]+>", " ", blob)
     m = re.compile(r"\b(%s)\b" % "|".join(re.escape(n) for n in UK_NAMES)).search(t)
     assert not m, "UK name left: %s" % m.group(1)
-    for w in ("pupil", "Year 1", "Year 9", "PSLE", "GCSE", "9.8 ", "9.81"):
+    for w in ("pupil", "Year 1", "Year 9", "PSLE", "GCSE"):
         assert w not in t, w
+    assert subj != "Physics" or not re.search(r"(?<![\d.])9\.81?(?!\d)", t), "g = 9.8 left"
     sci_common.make("secondary-%d" % level, slug, sort, "O-Level %s (%s): %s" % (subj, code, topic), std_text, title, seo, short, meta,
                     key_big, key_sub, body, faq, sets, domain=subj, country="sg", url=url)
 
