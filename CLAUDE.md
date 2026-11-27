@@ -2209,9 +2209,10 @@ SG / Science（MOE Primary Science Syllabus 2023。Primary 3〜6）— country `
 （sci_common・uk_sci の上に SG の名前（sg_sec）、make_sg(level, slug, sort, theme, topic, …)：standard_code「Primary 6: Energy forms and uses (Photosynthesis)」、domain はテーマ（Diversity／Cycles／Systems／Interactions／Energy）、standard_url は MOE の syllabus ページ。
 LEAKS（米国式の綴り、Year N・GCSE・£・badger など英国だけの語）と英国の名前が残ると止まる。UK の問題関数は adopt_uk(モジュール, U) と sgm(maker) で SG の名前にして使える）。
 イギリス式の綴り。場面はシンガポール（Hydrilla、balsam、pandan、hibiscus、rain tree、hawker、MRT）。名前だけ違う問題を作らない（once のキーに名前・植物名を入れない）。PSLE 形式の実験（表・変数・公平な実験）を最後のセットに
-P3: 1. living-and-non-living-things 2. classifying-living-things 3. diversity-of-materials 4. life-cycles-of-animals 5. life-cycles-of-plants 6. magnets
-P4: 1. plant-parts-and-functions 2. digestive-system 3. matter 4. light-and-shadows 5. heat-and-temperature 6. heat-conductors-and-insulators
-P5: 1. reproduction-in-plants 2. reproduction-in-humans 3. water-and-changes-of-state 4. the-water-cycle 5. cells 6. plant-transport-system 7. respiratory-and-circulatory-systems 8. electrical-circuits 9. conductors-and-circuit-diagrams
+P3: 1. living-and-non-living-things ✓ 2. classifying-living-things ✓ 3. diversity-of-materials ✓ 4. life-cycles-of-animals ✓ 5. life-cycles-of-plants ✓ 6. magnets ✓
+P4: 1. plant-parts-and-functions ✓ 2. digestive-system ✓ 3. matter ✓ 4. light-and-shadows ✓ 5. heat-and-temperature ✓ 6. heat-conductors-and-insulators ✓
+P5: 1. reproduction-in-plants ✓ 2. reproduction-in-humans ✓ 3. water-and-changes-of-state ✓ 4. the-water-cycle ✓ 5. cells ✓ 6. plant-transport-system ✓ 7. respiratory-and-circulatory-systems ✓ 8. electrical-circuits ✓ 9. conductors-and-circuit-diagrams ✓
+P3〜P5 の生成スクリプトは UK の問題関数を `use(U, "gen_uk_science_…", rep=[(古い, 新しい)], drop=[語])` で使う（S.g_x は SG の名前・イギリス式、S.B1 は手書きの問題（bank）のリスト。drop で SG のシラバスにない語（vacuole・mitochondria・particle・voltage など）を含む問題を落とす）。sgm は SG_REP で英国の物（jumper・oak tree・woodland・robin など）を直し、a/an を直す。数の問題を作る関数が多いときは `upto(f, n)` で単元全体の数を制限する。回路図は uk_sci_pics.circuit・parallel、温度計の図は gen_sg_science_p4_heat_and_temperature.thermo。トピック：light-and-shadows は earth-and-space の out
 P6: 1. photosynthesis ✓ 2. energy-forms-and-conversion 3. forces-and-their-effects 4. frictional-force 5. gravitational-and-elastic-spring-force 6. food-chains-and-food-webs 7. habitats-populations-and-communities 8. adaptations 9. mans-impact-on-the-environment
 
 ## みんなでクイズ ランキング（/worksheets/ranking/）

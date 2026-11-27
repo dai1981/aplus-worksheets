@@ -134,3 +134,18 @@ class use:
         if isinstance(obj, list):
             return [self._w(f) for f in obj]
         return self._w(obj)
+
+
+def upto(f, n):
+    """let maker f give at most n items in the whole unit (so a numeric maker does not fill the sets)"""
+    box = [0]
+
+    def g():
+        if box[0] >= n:
+            return None
+        it = f()
+        if it:
+            box[0] += 1
+        return it
+    g.__name__ = getattr(f, "__name__", "g")
+    return g
