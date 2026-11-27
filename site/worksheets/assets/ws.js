@@ -784,6 +784,14 @@
           if (!lines.length && !fast) lines.push(t("soloOne"));
           if (fast) lines.push("<small>" + t("soloFast") + "</small>");
           var h = lines.join("<br>");
+          var rr = p && p.rr;                        // the area's rank in its country (estimates until enough players)
+          if (c && rgNow && rr && rr[0]) {
+            var an = "", bn = "";
+            c.r.forEach(function (r) { if (r[0] === rgNow) an = esc(rgName(c, r[1])); if (r[0] === rr[4]) bn = esc(rgName(c, r[1])); });
+            if (an) h += '<span class="sn-rr">' + t("soloRR", { a: an, n: rr[1], k: rr[0] }) + "<small>"
+              + (rr[0] === 1 ? t("soloRRTop", { a: an })
+                 : t("soloRRUp", { a: an, b: bn, k2: rr[0] - 1, d: Math.max(0.1, Math.round(rr[5] - rr[3]) / 10).toFixed(1) })) + "</small></span>";
+          }
           if (c && c.r && c.r.length > 1) {          // choose your area (once on this device)
             h += '<span class="sn-rg"><label>' + esc(c.lv[geoLi()]) + ' <select><option value="">' + esc(t("soloPick")) + "</option>"
               + c.r.map(function (r) { return '<option value="' + esc(r[0]) + '"' + (r[0] === rgNow ? " selected" : "") + ">" + esc(rgName(c, r[1])) + "</option>"; }).join("")
