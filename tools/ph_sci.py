@@ -30,6 +30,11 @@ from cabc_sci import S, GM  # noqa: F401
 URL = "https://www.deped.gov.ph/matatagcurriculumk147/"
 D_LOW = ("Materials", "Living Things", "Force, Motion, and Energy", "Earth and Space")
 D_HIGH = ("Science of Materials", "Life Science", "Force, Motion, and Energy", "Earth and Space Science")
+D_SHS = ("Physical Science", "Life Science", "Earth and Space Science", "Biology", "Chemistry", "Physics")
+URL_SHS = "https://www.deped.gov.ph/strengthened-shs-program/"
+URL_COURSE = {"Biology 1": "https://www.deped.gov.ph/wp-content/uploads/Biology-1.pdf", "Biology 2": "https://www.deped.gov.ph/wp-content/uploads/Biology-2.pdf",
+              "Chemistry 1": "https://www.deped.gov.ph/wp-content/uploads/Chemistry-1.pdf", "Physics 1": "https://www.deped.gov.ph/wp-content/uploads/Physics-1.pdf",
+              "Physics 2": "https://www.deped.gov.ph/wp-content/uploads/Physics-2-1.pdf", "Earth and Space Science 1": "https://www.deped.gov.ph/wp-content/uploads/Earth-and-Space-Science-1.pdf"}
 QUARTER = {3: D_LOW, 4: D_LOW, 5: D_LOW, 6: D_LOW,
            7: ("Science of Materials", "Life Science", "Force, Motion, and Energy", "Earth and Space Science"),
            8: ("Life Science", "Science of Materials", "Earth and Space Science", "Force, Motion, and Energy"),
@@ -177,15 +182,15 @@ def _units(mod, year):
     return {u["slug"]: u for u in us}
 
 
-def PU(area, sort, slug, topic, std, title, short, what, kb, ks, a, b, ex, mist, faq, sets, allow=()):
-    assert area in D_LOW or area in D_HIGH, area
+def PU(area, sort, slug, topic, std, title, short, what, kb, ks, a, b, ex, mist, faq, sets, allow=(), course=None, q=None):
+    assert area in D_LOW or area in D_HIGH or area in D_SHS, area
     return dict(area=area, sort=sort, slug=slug, topic=topic, std=std, title=title, short=short, what=what, kb=kb, ks=ks,
-                think="<p>%s</p><p>%s</p>" % (a, b), ex=ex, mist=mist, faq=faq, sets=sets, allow=tuple(allow))
+                think="<p>%s</p><p>%s</p>" % (a, b), ex=ex, mist=mist, faq=faq, sets=sets, allow=tuple(allow), course=course, q=q)
 
 
 def CP(area, sort, slug, src, std, topic=None, **ov):
     """a unit with the text and sets of another unit (mod:slug[:year]); any field can be overridden"""
-    assert area in D_LOW or area in D_HIGH, area
+    assert area in D_LOW or area in D_HIGH or area in D_SHS, area
     bits = src.split(":")
     mod, sslug, year = bits[0], bits[1], (int(bits[2]) if len(bits) > 2 else None)
     u = _units(mod, year)[sslug]
@@ -328,15 +333,28 @@ def build(mod, grade, slug):
     faq = [(us(loc(q)), us(loc(a))) for q, a in u["faq"]]
     for k in ("std", "kb", "ks", "short", "topic", "title"):
         u[k] = us(loc(re.sub(r"<sub>([^<]*)</sub>", r"\1", u[k])))
-    q = QUARTER[grade].index(area) + 1
     if not u.get("what"):
         u["what"] = ", ".join(t[0].lower() + t[1:] for t, _ in spec[:4]) + " and " + spec[4][0][0].lower() + spec[4][0][1:]
-    meta = us("Free Grade %d Science worksheets (MATATAG, Quarter %d: %s): %s. 100 questions with answers." % (grade, q, area, loc(u["what"])))
-    seo = "Grade %d Science: %s Worksheets (MATATAG)" % (grade, u["title"])
-    if len(seo) > 95:
-        seo = "Grade %d Science: %s Worksheets" % (grade, u["title"])
-    code = "Grade %d, Quarter %d: %s" % (grade, q, area)
-    std = "%s (summary of the MATATAG Science curriculum, Grade %d, Quarter %d: %s)" % (u["std"], grade, q, area)
+    url = URL
+    if grade <= 10:
+        q = QUARTER[grade].index(area) + 1
+        meta = us("Free Grade %d Science worksheets (MATATAG, Quarter %d: %s): %s. 100 questions with answers." % (grade, q, area, loc(u["what"])))
+        seo = "Grade %d Science: %s Worksheets (MATATAG)" % (grade, u["title"])
+        if len(seo) > 95:
+            seo = "Grade %d Science: %s Worksheets" % (grade, u["title"])
+        code = "Grade %d, Quarter %d: %s" % (grade, q, area)
+        std = "%s (summary of the MATATAG Science curriculum, Grade %d, Quarter %d: %s)" % (u["std"], grade, q, area)
+    else:
+        course, q = u["course"], u["q"]
+        per = "Term" if course == "General Science" else "Quarter"
+        name = "Grade 11 General Science" if course == "General Science" else course
+        meta = us("Free %s worksheets (Strengthened SHS curriculum, %s %d): %s. 100 questions with answers." % (name, per, q, loc(u["what"])))
+        seo = "%s: %s Worksheets (Strengthened SHS)" % (name, u["title"])
+        if len(seo) > 95:
+            seo = "%s: %s Worksheets" % (name, u["title"])
+        code = "%s, %s %d: %s" % (name, per, q, u["topic"])
+        std = "%s (summary of the Strengthened Senior High School curriculum, %s, %s %d)" % (u["std"], course, per, q)
+        url = URL_COURSE.get(course, URL_SHS)
     blob = json.dumps([u["title"], seo, u["short"], meta, u["kb"], u["ks"], body, faq, sets, std], ensure_ascii=False)
     bad = sorted(_bad_final(blob) - set(u["allow"]))
     if bad:
@@ -351,7 +369,7 @@ def build(mod, grade, slug):
     m = re.search(r"\b(colour|centre|metres?|litres?|behaviour|favour|aluminium|organis(e|ed|es|ing|ation)|recognis(e|ed|es|ing)|realis(e|ed|es|ing))\b", blob, re.I)
     assert not m, (m.group(0), blob[max(0, m.start() - 120):m.end() + 40])
     sci_common.make("grade-%d" % grade, slug, sort, code, std, u["title"], seo, u["short"], meta, u["kb"], u["ks"], body,
-                    faq, sets, domain=area, country="ph", url=URL)
+                    faq, sets, domain=area, country="ph", url=url)
 
 
 def _loc_text(s):
