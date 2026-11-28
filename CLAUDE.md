@@ -2521,6 +2521,27 @@ ES / Ciencias / 1.º de Bachillerato: ecologia-y-sostenibilidad historia-de-la-t
 ES / Ciencias / 2.º de Bachillerato: las-biomoleculas la-celula-eucariota el-metabolismo-celular genetica-molecular microbiologia-y-biotecnologia inmunologia modelo-cuantico-y-propiedades-periodicas enlace-quimico-y-geometria-molecular cinetica-quimica equilibrio-quimico acidos-y-bases reacciones-redox-y-electroquimica campo-gravitatorio campo-electrico campo-magnetico-e-induccion ondas-y-optica fisica-moderna riesgos-geologicos recursos-naturales-y-sostenibilidad ✓
 ES / Ciencias は 1.º de Primaria〜2.º de Bachillerato まで完了
 
+IT / Scienze（Indicazioni nazionali per il curricolo 2012 のスキエンツェ（primaria・secondaria di primo grado）、liceo scientifico は DM 211/2010 の Fisica と Scienze naturali（Biologia・Chimica・Scienze della Terra）。liceo は 1 つの学年ページに科目が並ぶ（domain が Fisica／Biologia／Chimica／Scienze della Terra））— country `it`、subject `science`（name「Scienze」）、grade は数学と同じ（classe-prima〜classe-quinta、prima-media〜terza-media、prima-liceo〜quinta-liceo）、A4。
+生成は `python3 tools/it_sci.py 学年 [slug|番号…]`（seed は 79000 + 100 × n + 番号、n は classe-prima 1〜quinta-liceo 13）、単元は `tools/it_sc1.py`（classe prima・seconda）・`it_sc3.py`（terza・quarta）・`it_sc5.py`（quinta）・`it_sc6.py`〜`it_sc8.py`（media）・`it_sc9.py`〜`it_sc13.py`（liceo）の UNITS(grade)。問題はすべて自前のイタリア語。
+it_sci.H は es_sci.H と同じ形（表 3 つ・混合（calc 15 + T[1] 5、なければ T0 7 + T1 7 + T2 6）・Vero o falso?）。G のグループ名は「gli erbivori」の形（Quale appartiene a {g}? → agli erbivori）。esc() が前置詞＋冠詞を縮約し（a gli → agli、su le → sulle、di l’ → dell’。冠詞が大文字の「di Le Châtelier」は直さない）、文字に挟まれた ' を ’ にする。表の逆向きで値が句のときは D =「A che cosa corrisponde questa descrizione: {v}?」。
+数はイタリア式（num：3 有効数字、小数はコンマ、5 けた以上はノーブレークスペース、6,02 × 10²³）、g = 9,8。title ≤ 60・kb ≤ 60・ks ≤ 150（classe prima・seconda は 40・40・100）。グループの項目と表の値は互いに排他的に（極性分子と水素結合、溶解した固体の分離など）。
+standard_code は「Indicazioni nazionali · Scienze, scuola primaria · Oggetti, materiali e trasformazioni」「Indicazioni nazionali per i licei · Scienze naturali (Chimica)」、standard_url は it_common.STD_URL・STD_URL_LICEI、seo_title は「La cellula – Scienze classe quinta: schede ed esercizi con soluzioni」（liceo は科目名）。core.php の subject_standard()・grade_standard() に it/science。
+トピックは topics.php の topic_defs_science_it()（イタリア語の name、単元 slug を ^(…)$ で列挙）
+IT / Scienze / classe prima: esseri-viventi-e-non-viventi i-cinque-sensi gli-animali le-piante i-materiali ✓
+IT / Scienze / classe seconda: il-ciclo-vitale-delle-piante animali-e-ambienti l-acqua-e-i-suoi-stati solidi-liquidi-e-gas le-stagioni-e-il-tempo ✓
+IT / Scienze / classe terza: il-metodo-scientifico la-materia l-acqua l-aria il-suolo ecosistemi ✓
+IT / Scienze / classe quarta: classificazione-dei-viventi le-piante-e-la-fotosintesi invertebrati vertebrati il-calore catene-alimentari ✓
+IT / Scienze / classe quinta: la-cellula-e-il-corpo-umano apparato-digerente-e-respiratorio circolazione-ed-escrezione sistema-nervoso-e-sensi l-energia luce-e-suono il-sistema-solare ✓
+IT / Scienze / prima media: metodo-scientifico-e-misure stati-della-materia calore-e-temperatura idrosfera-atmosfera-e-suolo la-cellula classificazione-dei-viventi le-piante gli-animali ecosistemi ✓
+IT / Scienze / seconda media: trasformazioni-chimiche acidi-e-basi il-moto le-forze leve-ed-equilibrio pressione-e-galleggiamento apparato-locomotore alimentazione-e-digestione respirazione-e-circolazione ✓
+IT / Scienze / terza media: sistema-nervoso-e-ormoni riproduzione-e-genetica evoluzione elettricita magnetismo energia-e-fonti onde-luce-e-suono vulcani-e-terremoti rocce-e-minerali universo-e-sistema-solare ✓
+IT / Scienze / prima liceo: grandezze-e-misure vettori-e-forze equilibrio-dei-solidi equilibrio-dei-fluidi materia-miscugli-e-sostanze leggi-ponderali-e-teoria-atomica caratteristiche-dei-viventi la-terra-nel-sistema-solare idrosfera-e-atmosfera ✓
+IT / Scienze / seconda liceo: cinematica dinamica ottica-geometrica temperatura-e-calore la-mole la-cellula-e-le-membrane mitosi-e-meiosi biodiversita-ed-evoluzione ✓
+IT / Scienze / terza liceo: lavoro-ed-energia quantita-di-moto-e-urti gravitazione-universale gas-perfetti-e-teoria-cinetica struttura-dell-atomo tavola-periodica legami-chimici genetica-mendeliana dna-e-sintesi-proteica minerali-e-rocce ✓
+IT / Scienze / quarta liceo: termodinamica onde-e-suono ottica-ondulatoria campo-elettrico corrente-elettrica stechiometria-e-soluzioni equilibrio-chimico acidi-basi-e-ph ossidoriduzioni-ed-elettrochimica anatomia-e-fisiologia-umana ✓
+IT / Scienze / quinta liceo: campo-magnetico induzione-elettromagnetica onde-elettromagnetiche relativita-ristretta fisica-quantistica-e-nucleare chimica-organica biochimica-e-metabolismo biotecnologie tettonica-delle-placche atmosfera-e-cambiamenti-climatici ✓
+IT / Scienze は classe prima〜quinta liceo（liceo scientifico）まで完了
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ

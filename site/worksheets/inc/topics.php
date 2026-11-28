@@ -821,10 +821,32 @@ function topic_defs_science_es() {
     );
 }
 
+function topic_defs_science_it() {
+    return array(
+        'matter' => array('name' => 'La materia e le sue trasformazioni', 'in' => '/^(acidi-basi-e-ph|acidi-e-basi|chimica-organica|equilibrio-chimico|i-materiali|l-acqua-e-i-suoi-stati|la-materia|la-mole|legami-chimici|leggi-ponderali-e-teoria-atomica|materia-miscugli-e-sostanze|ossidoriduzioni-ed-elettrochimica|solidi-liquidi-e-gas|stati-della-materia|stechiometria-e-soluzioni|struttura-dell-atomo|tavola-periodica|trasformazioni-chimiche)$/', 'out' => '/^$/',
+            'blurb' => 'I materiali, L’acqua e i suoi stati, Solidi, liquidi e gas, La materia, Stati della materia, Trasformazioni chimiche, Acidi e basi, Miscugli e sostanze, Leggi ponderali, La mole, Struttura dell’atomo, Tavola periodica, Legami chimici, Stechiometria e soluzioni.'),
+        'forces-and-motion' => array('name' => 'Forze e movimento', 'in' => '/^(cinematica|dinamica|equilibrio-dei-fluidi|equilibrio-dei-solidi|il-moto|le-forze|leve-ed-equilibrio|pressione-e-galleggiamento|quantita-di-moto-e-urti|relativita-ristretta|vettori-e-forze)$/', 'out' => '/^$/',
+            'blurb' => 'Il moto, Le forze, Leve ed equilibrio, Pressione e galleggiamento, Vettori e forze, Equilibrio dei solidi, Equilibrio dei fluidi, Cinematica, Dinamica, Quantità di moto, Relatività ristretta.'),
+        'energy' => array('name' => 'Energia, calore ed elettricità', 'in' => '/^(calore-e-temperatura|campo-elettrico|campo-magnetico|corrente-elettrica|elettricita|energia-e-fonti|fisica-quantistica-e-nucleare|gas-perfetti-e-teoria-cinetica|il-calore|induzione-elettromagnetica|l-energia|lavoro-ed-energia|magnetismo|temperatura-e-calore|termodinamica)$/', 'out' => '/^$/',
+            'blurb' => 'Il calore, L’energia, Calore e temperatura, Elettricità, Magnetismo, Energia e fonti, Temperatura e calore, Lavoro ed energia, Gas e teoria cinetica, Termodinamica, Campo elettrico, Corrente elettrica, Campo magnetico, Induzione.'),
+        'waves-and-light' => array('name' => 'Luce, suono e onde', 'in' => '/^(luce-e-suono|onde-e-suono|onde-elettromagnetiche|onde-luce-e-suono|ottica-geometrica|ottica-ondulatoria)$/', 'out' => '/^$/',
+            'blurb' => 'Luce e suono, Onde, suono e luce, Ottica geometrica, Onde e suono, Ottica ondulatoria, Onde elettromagnetiche.'),
+        'living-things-and-ecosystems' => array('name' => 'I viventi, il corpo umano e gli ecosistemi', 'in' => '/^(alimentazione-e-digestione|anatomia-e-fisiologia-umana|animali-e-ambienti|apparato-digerente-e-respiratorio|apparato-locomotore|biochimica-e-metabolismo|biodiversita-ed-evoluzione|biotecnologie|caratteristiche-dei-viventi|catene-alimentari|circolazione-ed-escrezione|classificazione-dei-viventi|dna-e-sintesi-proteica|ecosistemi|esseri-viventi-e-non-viventi|evoluzione|genetica-mendeliana|gli-animali|i-cinque-sensi|il-ciclo-vitale-delle-piante|invertebrati|la-cellula|la-cellula-e-il-corpo-umano|la-cellula-e-le-membrane|le-piante|le-piante-e-la-fotosintesi|mitosi-e-meiosi|respirazione-e-circolazione|riproduzione-e-genetica|sistema-nervoso-e-ormoni|sistema-nervoso-e-sensi|vertebrati)$/', 'out' => '/^$/',
+            'blurb' => 'Viventi e non viventi, I cinque sensi, Gli animali, Le piante, Dal seme alla pianta, Animali e ambienti, Ecosistemi, Classificare i viventi, La fotosintesi, Invertebrati, Vertebrati, Catene alimentari, La cellula e il corpo, Digestione e respirazione.'),
+        'earth-and-space' => array('name' => 'La Terra e l’Universo', 'in' => '/^(gravitazione-universale|il-sistema-solare|la-terra-nel-sistema-solare|universo-e-sistema-solare)$/', 'out' => '/^$/',
+            'blurb' => 'Il Sistema solare, Universo e Sistema solare, La Terra e i suoi moti, Gravitazione.'),
+        'earths-systems' => array('name' => 'Acqua, aria, suolo e geologia', 'in' => '/^(atmosfera-e-cambiamenti-climatici|idrosfera-atmosfera-e-suolo|idrosfera-e-atmosfera|il-suolo|l-acqua|l-aria|le-stagioni-e-il-tempo|minerali-e-rocce|rocce-e-minerali|tettonica-delle-placche|vulcani-e-terremoti)$/', 'out' => '/^$/',
+            'blurb' => 'Stagioni e tempo, L’acqua, L’aria, Il suolo, Acqua, aria e suolo, Vulcani e terremoti, Rocce e minerali, Idrosfera e atmosfera, Minerali e rocce, Tettonica delle placche, Atmosfera e clima.'),
+        'working-scientifically' => array('name' => 'Il metodo scientifico e le misure', 'in' => '/^(grandezze-e-misure|il-metodo-scientifico|metodo-scientifico-e-misure)$/', 'out' => '/^$/',
+            'blurb' => 'Il metodo scientifico, Metodo e misure, Grandezze e misure.'),
+    );
+}
+
 function topic_defs($country = null, $subject = null) {
     if ($subject === 'science' && $country === 'de') return topic_defs_science_de();
     if ($subject === 'science' && $country === 'fr') return topic_defs_science_fr();
     if ($subject === 'science' && $country === 'es') return topic_defs_science_es();
+    if ($subject === 'science' && $country === 'it') return topic_defs_science_it();
     if ($subject === 'science' && $country === 'id') return topic_defs_science_id();
     if ($subject === 'science' && $country === 'kr') return topic_defs_science_kr();
     if ($subject === 'science' && $country === 'cn') return topic_defs_science_cn();
