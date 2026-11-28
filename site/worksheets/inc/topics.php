@@ -673,6 +673,22 @@ function topic_defs_science_cn() {
     );
 }
 
+/* 台灣の自然科學：単元の slug は中国の理科と同じなので、cn の正規表現に台灣の名前と説明を付ける */
+function topic_defs_science_tw() {
+    $d = topic_defs_science_cn();
+    $t = array(
+        'matter' => array('物質的性質與變化', '水的三態、空氣、常見的材料、溶解和物質的變化，以及國中和高中化學：物質的組成、化學反應、溶液、酸鹼鹽、週期表和有機化學。'),
+        'forces-and-motion' => array('運動和力', '物體的運動和快慢、力和壓力、浮力和簡單機械，以及高中的運動學、牛頓運動定律、圓周運動、萬有引力、動量和電磁力。'),
+        'energy' => array('聲、光、熱、電和能量', '聲、光、熱和電，功和力學能，電路和電功率，電磁感應、振動和波、熱力學、原子和原子核。'),
+        'living-things-and-ecosystems' => array('生命世界', '植物和動物、人體與健康、細胞、遺傳與演化、恆定性與調節、族群和生態系，以及生物技術。'),
+        'earth-and-space' => array('地球與太空', '太陽、地球和月球，地球的自轉和公轉，晝夜、四季、時差、太陽系和宇宙。'),
+        'earths-systems' => array('地球系統與環境', '天氣和氣候、颱風和鋒面、岩石和地形、板塊、水和海洋、天然災害，以及保護環境。'),
+        'engineering-design' => array('科技與工程', '計時工具、船的設計、簡單機械，以及發現問題、設計、製作、測試和改良的工程設計。'),
+    );
+    foreach ($t as $k => $v) { $d[$k]['name'] = $v[0]; $d[$k]['blurb'] = $v[1]; }
+    return $d;
+}
+
 /* Science (US NGSS first). Slugs are English; the same topics can serve other English-speaking countries later */
 function topic_defs_science($country = null) {
     return array(
@@ -699,6 +715,7 @@ function topic_defs_science($country = null) {
 
 function topic_defs($country = null, $subject = null) {
     if ($subject === 'science' && $country === 'cn') return topic_defs_science_cn();
+    if ($subject === 'science' && $country === 'tw') return topic_defs_science_tw();
     if ($subject === 'science') return topic_defs_science($country);
     if ($country === 'br') return topic_defs_br();
     if ($country === 'es' || $country === 'mx') return topic_defs_es();

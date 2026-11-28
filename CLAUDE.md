@@ -2402,6 +2402,13 @@ CN / 理科 高三（选择性必修第三册・选择性必修3）: 物理 mole
 トピック（topic_defs_science_cn）：化学→matter、力学→forces-and-motion、熱・電気・光・波・原子→energy、生物→living-things-and-ecosystems、地球仪・地球の運動→earth-and-space、ほかの地理（人文地理を含む）→earths-systems
 CN / 科学・理科は小学一年级〜高三まで完了。次は他の国の理科（地理の選択性必修2 の残り、地理 選択性必修3 の残りは必要なら後で）
 
+TW / 自然科學（十二年國教課綱 自然科學領域、108課綱）— country `tw`、subject `science`（name「自然科學」）、grade `grade-3`〜`grade-12`（國小三年級〜高中三年級。國小一、二年級は生活課程なのでなし）、A4。
+`python3 tools/tw_sci.py 学年 [slug …]`（`--check` で中国の話が残る欄を表示。seed は 96000 + 100 × 学年 + 番号）。中国の理科の単元（cn_s*）を import して、cn_sci.it を tw_it に差し替え、問題を OpenCC s2tw（s2twp は 支持→支援・程序→程式 になるので使わない）と TERMS（位能・力學能・莫耳數・重量百分濃度・酵素・粒線體・族群・天擇・等加速度・正向力／壓力（CN の 压强→壓力、压力→正向力）・冷次定律・勞侖茲力・陰電性・游離能・混成・官能基・地函・滯留鋒…）で台灣の言葉にする。
+中国だけの話（我國・長江・人民幣・天宮…、LEAKS）を含む表の行・問題は落とし（TK の P・G・TF・B）、ADD・ADD_G・ADD_TF・ADD_B で台灣の行（臺灣黑熊・櫻花鉤吻鮭・墾丁國家公園・臺北盆地…）を足す。単元の説明・FAQ は FIX で台灣の話に直す。問題が少し足りないときは同じ単元の他のセットの部品で埋める
+単元の並び（GRADES）は台灣の教科書の一般的な配分：國小三〜六＝cn 小学（三年級に植物・動物・磁鐵を足す）、國中七＝生物、八＝理化（光・聲・熱と化学すべて）、九＝理化（力・電）と地球科學、高一＝部定必修 物理・化學・生物・地球科學、高二・高三＝加深加廣選修。domain は國小が 物質與能量／生命世界／地球與太空／科技與工程、國中が 生物／理化／地球科學、高中が 物理／化學／生物／地球科學。standard_code は「第四學習階段（國中） · 理化」「第五學習階段（高中） · 部定必修物理」、standard_url は國家教育研究院の自然科學領域課綱 PDF
+トピックは topics.php の topic_defs_science_tw()（cn の正規表現に台灣の名前と説明）。core.php の subject_standard()・grade_standard() に tw/science
+TW / 自然科學 は國小三年級〜高中三年級（153 単元）まで完了
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
