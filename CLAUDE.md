@@ -2388,7 +2388,12 @@ PH / Science は Grade 3〜12 まで完了。Chemistry 2・Earth and Space Scien
 - jd_word は追加・上書きだけ（INSERT … ON DUPLICATE KEY UPDATE）。DELETE・DROP・ALTER は書かない
 - 移行中: サーバーに単語の .html が残っている間はそちらが優先。削除し終えたら `.htaccess` の `RewriteCond %{REQUEST_FILENAME} !-f` を消す
 
-## apu2.com のトップ・About・プライバシーポリシー（このリポジトリの外。zip で渡してユーザーが上げる）
+## apu2.com のトップ・About・プライバシーポリシー・会社紹介（site/top/。push で /aplus/ へ）
+
+- `site/top/` は apu2.com のルート（/aplus/）と同じ並び（site/top/index.html → /aplus/index.html、site/top/de/about.html → /aplus/de/about.html、site/top/ja/company/index.html → /aplus/ja/company/index.html）
+- push すると Actions が site/top/ の変わった .html だけを put（上書きのみ・削除なし。mirror は使わない）。全部送り直すときは workflow_dispatch の top_all
+- 2026-11-28 にユーザーのサーバーの版（/, ja, de, fr, it, es, id, au, ca の index・about、ja・id の company）を入れた。ほかの国・言語はユーザーが送ってきたら同じ場所に足す
+- 直すときは site/top/ のファイルを直す（下の build_top.py で作り直したら out/ から site/top/ へ写す）
 
 - 英語（/）と de・fr・it・es・pt・tr（/de/ など）の index.html・about.html は `tools/apu2_top/build_top.py`、privacypolicy.html（13言語のタブ）は `build_pp.py` で作る（出力は tools/apu2_top/out/）。文言と算数の国の一覧は `top_data.py`（MATH・CC・T・A）。en_*.html は元にした英語ページ
 - トップ・About は 14 言語（en ja vi id zh tw ko de fr it es pt tr sv）すべて build_top.py で作る（2026-11-26 から ja〜ko のトップも。T[L] の order で節の順、j_c・e_c でその言語の講座、e_more で追加のリンク）。us・uk・au・ca・sg のトップと About だけは手で作った別のファイル。言語を足したら `python3 patch_en.py 元のファイル…` で言語メニュー・hreflang・フッターをそろえる（元のファイルはユーザーにもらう）

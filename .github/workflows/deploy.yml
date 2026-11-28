@@ -11,6 +11,10 @@ on:
         description: "Japanese dictionary: send every word and every /japanese/ file"
         type: boolean
         default: false
+      top_all:
+        description: "Top pages: send every file in site/top/"
+        type: boolean
+        default: false
   push:
     branches: [ main ]
     paths:
@@ -103,6 +107,37 @@ jobs:
           echo "files: $(wc -l < /tmp/jd_files.txt)"
           lftp -f /tmp/jd.lftp
           rm -f /tmp/jd.lftp
+
+      # トップ・About・会社紹介（site/top/ → /aplus/ の 同じ場所）。変わったファイルだけを put（上書きのみ・削除なし）。
+      # /aplus/ には ほかの フォルダ・ファイルが あるので mirror は使わない。送るのは .html だけ。
+      - name: トップページなどを FTP アップロード（変わったものだけ・削除なし）
+        env:
+          FTP_SERVER:   ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.top_all }}" = "true" ]; then
+            git ls-files site/top > /tmp/top_files.txt
+          elif [ "${{ github.event_name }}" = "push" ] && [ -n "${{ github.event.before }}" ] && ! echo "${{ github.event.before }}" | grep -q '^0*$'; then
+            git diff --name-only --diff-filter=AM "${{ github.event.before }}" HEAD -- site/top > /tmp/top_files.txt
+          else
+            git diff --name-only --diff-filter=AM HEAD~1 HEAD -- site/top > /tmp/top_files.txt
+          fi
+          grep -E '^site/top/([a-z0-9-]+/)*[a-z0-9_-]+\.html$' /tmp/top_files.txt > /tmp/top_ok.txt || true
+          if [ ! -s /tmp/top_ok.txt ]; then echo "no top files changed"; exit 0; fi
+          python3 - <<'PY' > /tmp/top.lftp
+          import json, os
+          print("set ftp:ssl-allow true; set ssl:verify-certificate no; set net:max-retries 2; set net:timeout 30;")
+          print("open -u %s,%s %s" % (json.dumps(os.environ["FTP_USERNAME"]), json.dumps(os.environ["FTP_PASSWORD"]), json.dumps(os.environ["FTP_SERVER"])))
+          for f in open("/tmp/top_ok.txt").read().split():
+              rel = f[len("site/top/"):]
+              d = "/aplus/" + os.path.dirname(rel) if os.path.dirname(rel) else "/aplus"
+              print("mkdir -p -f %s" % json.dumps(d))
+              print("put %s -o %s" % (json.dumps(f), json.dumps(d + "/" + os.path.basename(rel))))
+          PY
+          cat /tmp/top_ok.txt
+          lftp -f /tmp/top.lftp
+          rm -f /tmp/top.lftp
 
       - name: 日本語辞書の DB を更新（jd_word テーブルのみ・変わった語だけ）
         env:
