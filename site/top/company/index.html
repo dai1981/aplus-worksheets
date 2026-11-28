@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+/* apu2.com/company に来た人を、ブラウザの言語の会社紹介ページへ。英語を選んだ人・サイト内から来た人はそのまま */
+(function(){try{
+  var P={ja:'/ja/company/',vi:'/vi/company/',id:'/id/company/',zh:'/zh/company/',tw:'/tw/company/',ko:'/ko/company/'},k=null,saved=null;
+  try{saved=localStorage.getItem('aplus_lang')}catch(e){}
+  if(saved){if(P[saved])k=saved}
+  else if(!document.referrer||document.referrer.indexOf(location.host)<0){
+    var n=(navigator.languages||[navigator.language||'']).map(function(x){return String(x).toLowerCase()});
+    for(var i=0;i<n.length;i++){var a=n[i];if(/^zh-(tw|hk|mo|hant)/.test(a)){k='tw';break}var c=a.slice(0,2);if(c==='in')c='id';if(c==='en')break;if(P[c]){k=c;break}}
+  }
+  if(k)location.replace(P[k]+location.search+location.hash);
+}catch(e){}})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Aplus | Growing global talent through digital learning</title>
+<meta name="description" content="Aplus runs 英語漬け.com and aplus, providing learning content, AI writing feedback, AI speaking practice and learning management for schools.">
+<link rel="canonical" href="https://www.apu2.com/company/">
+<link rel="alternate" hreflang="en" href="https://www.apu2.com/company/">
+<link rel="alternate" hreflang="ja" href="https://www.apu2.com/ja/company/">
+<link rel="alternate" hreflang="vi" href="https://www.apu2.com/vi/company/">
+<link rel="alternate" hreflang="id" href="https://www.apu2.com/id/company/">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.apu2.com/zh/company/">
+<link rel="alternate" hreflang="zh-Hant" href="https://www.apu2.com/tw/company/">
+<link rel="alternate" hreflang="ko" href="https://www.apu2.com/ko/company/">
+<link rel="alternate" hreflang="x-default" href="https://www.apu2.com/company/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.apu2.com/company/">
+<meta property="og:title" content="About Aplus | Growing global talent through digital learning">
+<meta property="og:description" content="Aplus runs 英語漬け.com and aplus, providing learning content, AI writing feedback, AI speaking practice and learning management for schools.">
+<meta property="og:site_name" content="aplus">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.apu2.com/logo.svg">
+<link rel="icon" type="image/svg+xml" href="/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JXYPVC45WC"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JXYPVC45WC');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "AboutPage", "name": "About Aplus | Growing global talent through digital learning", "url": "https://www.apu2.com/company/", "inLanguage": "en", "description": "Aplus runs 英語漬け.com and aplus, providing learning content, AI writing feedback, AI speaking practice and learning management for schools.", "about": {"@id": "https://www.apu2.com/#org"}}, {"@type": "Organization", "@id": "https://www.apu2.com/#org", "name": "Aplus Inc.", "alternateName": ["えいぷら Aplus", "aplus"], "url": "https://www.apu2.com/", "logo": "https://www.apu2.com/logo.svg", "sameAs": ["https://www.eigo-duke.com/"], "award": "Japan e-Learning Award 2024, English Education Special Prize"}]}</script>
+<style>
+:root{--green:#006633;--green-d:#063d28;--green-l:#eaf6ef;--gold:#ffd842;--text:#1b2a22;--sub:#5d6b64;--line:#dbe9e1;--bg:#f6faf7;--shadow:0 10px 28px rgba(0,60,30,.10)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);line-height:1.7;font-family:"Be Vietnam Pro","Noto Sans JP","Noto Sans SC","Noto Sans TC","Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(100% - 32px,1080px);margin:0 auto}
+.top{background:var(--green-d);color:#fff;position:sticky;top:0;z-index:100}
+.top .wrap{height:60px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:inline-flex;align-items:center;gap:9px;font-size:26px;font-weight:800;letter-spacing:-.02em}
+.brand .logo{width:24px;height:24px;flex:none}
+.brand .bt span{color:var(--gold)}
+.tr{display:flex;align-items:center;gap:10px}
+.tr nav{display:flex;gap:18px;margin-right:6px;font-size:14px;font-weight:600;opacity:.9}
+.tr nav a:hover{color:var(--gold)}
+#langSel{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:5px 10px;font:inherit;font-size:13px;max-width:150px}
+#langSel option{color:#111}
+.cta-s{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:#3b2e00;font-size:13.5px;font-weight:800;border-radius:999px;padding:7px 14px;white-space:nowrap}
+.cta-s svg{width:16px;height:16px}
+.hero{background:linear-gradient(180deg,var(--green-d) 0%,var(--green) 100%);color:#fff;padding:44px 0 72px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{margin:0;font-size:clamp(30px,5vw,48px);line-height:1.18;letter-spacing:-.02em;font-weight:800}
+.hero h1 span{display:block}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{margin:20px 0 0;font-size:clamp(15px,2vw,17.5px);line-height:1.85;opacity:.95}
+.hero .lead strong{color:var(--gold);font-weight:800}
+.award{margin:0 0 22px;display:inline-flex;align-items:center;gap:14px;background:#fff;color:var(--green-d);border-radius:16px;padding:12px 18px 12px 14px;box-shadow:0 8px 24px rgba(0,0,0,.18);max-width:100%}
+.award .laurel{width:46px;height:46px;color:#c99522;flex:none}
+.award b{display:block;font-size:16px;line-height:1.3;font-weight:800}
+.award small{display:block;font-size:13px;color:var(--sub);font-weight:600;line-height:1.4}
+.award-img{margin:0 0 22px;display:inline-block;background:#fff;border-radius:16px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,.18);max-width:340px}
+.award-img img{border-radius:12px}
+.photo{border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.28);border:4px solid rgba(255,255,255,.15)}
+.photo{min-height:240px;background:rgba(255,255,255,.08)}
+.photo img{width:100%;height:auto}
+.sec{padding:64px 0}
+.sec.first{padding-top:0;margin-top:-32px}
+.kick{display:inline-block;background:var(--green-l);color:var(--green);font-size:12px;font-weight:800;letter-spacing:.12em;border-radius:999px;padding:4px 12px;margin-bottom:12px}
+.center{text-align:center}
+h2.t{margin:0;font-size:clamp(24px,3.6vw,36px);line-height:1.35;color:var(--green-d);letter-spacing:-.02em;font-weight:800}
+.sl{max-width:760px;margin:14px auto 0;color:var(--sub);font-size:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+.intro{padding:34px 28px}
+.svc{display:grid;gap:22px;margin-top:30px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;padding:28px}
+.feat.rev .fv{order:2}
+.fv{border-radius:16px;overflow:hidden;background:var(--green-l);border:1px solid var(--line)}
+.fv img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.fc h3{margin:0;font-size:clamp(22px,2.8vw,28px);line-height:1.35;color:var(--green);font-weight:800}
+.fc .en{margin-top:4px;font-size:12.5px;color:var(--sub);font-weight:600;letter-spacing:.04em}
+.fc p{margin:14px 0 0;color:#33443b;font-size:15.5px;line-height:1.9}
+.fc p strong{color:var(--green);background:linear-gradient(transparent 62%,rgba(255,216,66,.55) 62%)}
+.fc ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.fc li{display:flex;gap:10px;align-items:flex-start;font-size:15px;font-weight:600}
+.fc li i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--green-l);color:var(--green);display:grid;place-items:center;margin-top:1px}
+.fc li i svg{width:14px;height:14px}
+.btn{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:11px 20px;font-weight:800;font-size:15px;white-space:nowrap;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+.btn-g{background:var(--green);color:#fff;margin-top:22px}
+.btn-y{background:var(--gold);color:#3b2e00}
+.btn-o{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.st{padding:22px 16px;text-align:center}
+.st .lb{display:inline-block;background:var(--green-l);color:var(--green);font-size:12px;font-weight:800;border-radius:999px;padding:3px 10px}
+.st .n{margin-top:8px;font-size:40px;line-height:1.1;font-weight:800;color:var(--green-d);letter-spacing:-.03em}
+.st .n small{font-size:16px;letter-spacing:0;margin-left:2px}
+.st .tx{margin-top:8px;font-size:13.5px;color:var(--sub);line-height:1.55}
+.cust{margin-top:22px;padding:30px 24px}
+.cust h3{margin:0;font-size:clamp(20px,2.6vw,26px);color:var(--green-d);font-weight:800}
+.cust p{max-width:720px;margin:10px auto 0;color:var(--sub);font-size:15px}
+.cust .lg{margin:22px auto 0;max-width:760px;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:14px}
+.cust .lg img{border-radius:10px;width:100%}
+.ct{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:34px;border-radius:24px;color:#fff;background:linear-gradient(135deg,var(--green-d),var(--green));box-shadow:0 20px 44px rgba(0,60,30,.22)}
+.ct .kick{background:rgba(255,255,255,.14);color:#e9fff2}
+.ct h2{margin:0;font-size:clamp(22px,3vw,32px);line-height:1.35;font-weight:800}
+.ct p{margin:10px 0 0;font-size:15px;opacity:.92}
+.ct .acts{display:flex;flex-direction:column;gap:10px}
+footer{background:var(--green-d);color:rgba(255,255,255,.85);font-size:13px;padding:24px 0 32px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 16px}
+footer a:hover{color:#fff;text-decoration:underline}
+footer .langs{display:flex;flex-wrap:wrap;gap:6px 14px;width:100%;opacity:.85}
+@media (max-width:900px){
+ .hero-grid,.feat,.ct{grid-template-columns:1fr}
+ .feat.rev .fv{order:0}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .tr nav{display:none}
+ .ct .acts{flex-direction:row;flex-wrap:wrap}
+}
+@media (max-width:520px){
+ .brand{font-size:22px}
+ .cta-s{display:none}
+ .hero{padding:30px 0 64px}
+ .feat,.intro,.ct{padding:20px}
+ .stats{grid-template-columns:1fr 1fr;gap:10px}
+ .st{padding:16px 10px}
+ .st .n{font-size:32px}
+ .award b{font-size:14.5px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="aplus home"><svg class="logo" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 2.5 20.2 7.2v9.6L12 21.5 3.8 16.8V7.2Z M3.8 7.2 12 11.9 20.2 7.2 M12 11.9v9.6" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="bt">a<span>plus</span></span></a>
+    <span class="tr">
+      <nav aria-label="Menu"><a href="#service">Service</a><a href="#results">Results</a><a href="#contact">Contact</a></nav>
+      <select id="langSel" aria-label="Language" onchange="try{localStorage.setItem('aplus_lang',this.options[this.selectedIndex].getAttribute('data-l'))}catch(e){}location.href=this.value"><option value="/company/" data-l="en" selected>English</option><option value="/ja/company/" data-l="ja">日本語</option><option value="/vi/company/" data-l="vi">Tiếng Việt</option><option value="/id/company/" data-l="id">Bahasa Indonesia</option><option value="/zh/company/" data-l="zh">简体中文</option><option value="/tw/company/" data-l="tw">繁體中文</option><option value="/ko/company/" data-l="ko">한국어</option></select>
+      <a class="cta-s" href="/mailform/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>Contact</a>
+    </span>
+  </div>
+</header>
+
+<div class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="award"><svg class="laurel" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 54C10 46 6 32 12 16"/><path d="M42 54c12-8 16-22 10-38"/></g><g fill="currentColor"><ellipse cx="9" cy="24" rx="3" ry="6" transform="rotate(-20 9 24)"/><ellipse cx="9" cy="35" rx="3" ry="6" transform="rotate(-45 9 35)"/><ellipse cx="14" cy="45" rx="3" ry="6" transform="rotate(-65 14 45)"/><ellipse cx="55" cy="24" rx="3" ry="6" transform="rotate(20 55 24)"/><ellipse cx="55" cy="35" rx="3" ry="6" transform="rotate(45 55 35)"/><ellipse cx="50" cy="45" rx="3" ry="6" transform="rotate(65 50 45)"/></g><path d="M32 18l3.5 7.2 7.9 1.1-5.7 5.6 1.4 7.9L32 36.1l-7.1 3.7 1.4-7.9-5.7-5.6 7.9-1.1z" fill="currentColor"/></svg><div><b>Japan e-Learning Awards 2024</b><small>English Education Special Prize</small></div></div>
+    <h1><span><em>3 million+ learners a year.</em></span><span>Growing global talent</span><span>through digital learning.</span></h1>
+    <p class="lead">We help learners build <strong>the grit to finish what they start</strong>, think logically, speak in their own words and <strong>truly enjoy life</strong>, so they can <strong>thrive anywhere in the world</strong>.</p>
+  </div>
+  <div class="photo"><img src="https://eigo-duke.com/aplus/img/student.jpg" alt="A student smiling while studying"></div>
+</div></div>
+
+<main class="wrap">
+<section class="sec first" id="service">
+  <div class="card intro center">
+    <span class="kick">SERVICE</span>
+    <h2 class="t">AI and personalised learning are a given.<br>We stay with learners until they get results.</h2>
+    <p class="sl">Aplus provides English learning content, AI writing feedback, AI speaking practice and learning management, supporting learners until their effort turns into results.</p>
+  </div>
+  <div class="svc">
+<article class="card feat">
+  <div class="fv"><img src="/company/img/learn.jpg" alt="aplus learning site" loading="lazy" width="1200" height="900"></div>
+  <div class="fc"><h3>Learning content, built in-house</h3><div class="en">Development and Delivery of Learning Content</div><p>From vocabulary and grammar to reading, writing and speaking, we build content that helps learners improve step by step. Learners can <strong>start for free and use it right away</strong>.</p><ul><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>All learning content developed in-house</span></li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Designed for real results, such as passing exams</span></li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Management tools that are easy to bring into schools, cram schools and homes</span></li></ul><a class="btn btn-g" href="/">Visit aplus<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></div>
+</article>
+<article class="card feat rev">
+  <div class="fv"><img src="/company/img/ai.jpg" alt="AI writing feedback and AI speaking practice" loading="lazy" width="1200" height="900"></div>
+  <div class="fc"><h3>AI writing and AI speaking</h3><div class="en">AI Writing and Speaking Support</div><p>In writing, learners need to know not just their score but exactly what to fix. In speaking, they need a place to practise anytime, as often as they like. Aplus uses AI so learners can see their weak points and improve them.</p><ul><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Scores, corrections and improved examples for essays</span></li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>AI speaking practice for interviews and conversation</span></li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Clear, easy-to-understand feedback</span></li></ul></div>
+</article>
+<article class="card feat">
+  <div class="fv"><img src="/company/img/manage.jpg" alt="Learning dashboard for teachers" loading="lazy" width="1200" height="900"></div>
+  <div class="fc"><h3>Learning management for schools</h3><div class="en">Learning Management for Schools and Cram Schools</div><p>Teachers can see each student's study time, progress and weak points at a glance. The dashboard helps busy teachers know who to encourage and how to guide them.</p><ul><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Check each student's progress</span></li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Organise by class or goal</span></li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Spot students who have stopped studying</span></li></ul></div>
+</article>
+  </div>
+</section>
+
+<section class="sec" id="results" style="padding-top:8px">
+  <div class="center">
+    <span class="kick">RESULTS</span>
+    <h2 class="t">Aplus in numbers</h2>
+    <p class="sl">We support learners' effort with data, and our service is used widely in schools, cram schools and home study.</p>
+  </div>
+  <div class="stats"><div class="card st"><span class="lb">Learners per year</span><div class="n">3<small>million+</small></div><div class="tx">learners use us<br>in their daily study</div></div><div class="card st"><span class="lb">Learning data</span><div class="n">100<small>million+ answers</small></div><div class="tx">study history used to<br>keep learners going</div></div><div class="card st"><span class="lb">Learning results</span><div class="n">2<small>x or more</small></div><div class="tx">data-driven design<br>aimed at higher pass rates</div></div><div class="card st"><span class="lb">Award</span><div class="n">2024</div><div class="tx">Japan e-Learning Awards<br>English Education Special Prize</div></div></div>
+  <div class="card cust center">
+    <span class="kick">CUSTOMERS</span>
+    <h3>Used in schools and cram schools</h3>
+    <p>From vocabulary and grammar to writing, speaking and learning management, Aplus content works in schools, cram schools and at home.</p>
+    <div class="lg"><img src="https://eigo-duke.com/aplus/img/logos.jpg" alt="Logos of schools and cram schools using Aplus" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="sec" id="contact" style="padding-top:8px">
+  <div class="ct">
+    <div>
+      <span class="kick">CONTACT</span>
+      <h2>Interested, but not sure where to start?</h2>
+      <p>Whether you want to introduce Aplus at your school, bring AI speaking or writing into class, or track student progress, we will guide you based on your goals. A short "I'm interested" is all it takes.</p>
+    </div>
+    <div class="acts">
+      <a class="btn btn-y" href="/mailform/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>Contact us</a>
+      <a class="btn btn-o" href="/">Visit aplus<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2020-2026 Aplus Inc.</div>
+    <nav><a href="/japanese/">Japanese</a><a href="/english/">English</a><a href="/worksheets/">Maths worksheets</a><a href="/about.html">About</a><a href="/privacypolicy.html">Privacy</a><a href="/mailform/">Contact</a></nav>
+    <div class="langs"><a href="/ja/company/" lang="ja">日本語</a><a href="/vi/company/" lang="vi">Tiếng Việt</a><a href="/id/company/" lang="id">Bahasa Indonesia</a><a href="/zh/company/" lang="zh-Hans">简体中文</a><a href="/tw/company/" lang="zh-Hant">繁體中文</a><a href="/ko/company/" lang="ko">한국어</a></div>
+  </div>
+</footer>
+</body>
+</html>
