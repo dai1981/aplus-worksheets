@@ -842,11 +842,31 @@ function topic_defs_science_it() {
     );
 }
 
+function topic_defs_science_br() {
+    return array(
+        'matter' => array('name' => 'Matéria e transformações', 'in' => '/^(cinetica-quimica|eletroquimica|equilibrio-quimico|estados-fisicos-e-modelo-de-particulas|estequiometria|estrutura-atomica|funcoes-inorganicas|ligacoes-quimicas|materiais-dos-objetos|materiais-e-prevencao-de-acidentes|misturas|misturas-homogeneas-e-heterogeneas|modelos-atomicos-e-tabela-periodica|propriedades-dos-materiais|quimica-organica|radioatividade|reacoes-organicas-e-polimeros|reacoes-quimicas-e-conservacao-da-massa|separacao-de-misturas|solucoes|transformacoes-quimicas|transformacoes-reversiveis-e-irreversiveis)$/', 'out' => '/^$/',
+            'blurb' => 'Materiais dos objetos, Materiais e acidentes, Misturas, Transformações, Propriedades dos materiais, Transformações químicas, Separação de misturas, Estados físicos, Reações químicas, Estrutura atômica, Tabela periódica, Ligações químicas, Funções inorgânicas, Estequiometria.'),
+        'forces-and-motion' => array('name' => 'Forças e movimento', 'in' => '/^(cinematica|hidrostatica|leis-de-newton|maquinas-simples)$/', 'out' => '/^$/',
+            'blurb' => 'Máquinas simples, Cinemática, Leis de Newton, Hidrostática.'),
+        'energy' => array('name' => 'Energia, calor e eletricidade', 'in' => '/^(calor-e-temperatura|circuitos-eletricos|combustiveis-e-maquinas-termicas|consumo-de-energia-eletrica|eletrodinamica|eletrostatica|energia-mecanica-e-trabalho|fontes-e-tipos-de-energia|magnetismo-e-inducao|termologia|termoquimica|usinas-de-energia)$/', 'out' => '/^$/',
+            'blurb' => 'Calor e temperatura, Combustíveis, Fontes de energia, Circuitos elétricos, Consumo de energia, Usinas de energia, Energia mecânica, Termologia, Termoquímica, Eletrostática, Eletrodinâmica, Eletromagnetismo.'),
+        'waves-and-light' => array('name' => 'Som, luz e ondas', 'in' => '/^(fisica-moderna|luz-e-visao|ondas-luz-e-cores|ondulatoria|optica-geometrica|radiacoes-e-tecnologia|som)$/', 'out' => '/^$/',
+            'blurb' => 'O som, Luz e visão, Ondas, luz e cores, Radiações, Óptica geométrica, Ondulatória, Física moderna.'),
+        'living-things-and-ecosystems' => array('name' => 'Seres vivos, corpo humano e ecossistemas', 'in' => '/^(a-celula|alimentacao-saudavel|as-plantas|biodiversidade-e-unidades-de-conservacao|bioquimica-celular|biotecnologia|botanica|cadeias-alimentares|ciclo-de-vida-dos-animais|circulacao-e-excrecao|citologia|digestao-e-respiracao|ecologia|ecossistemas-brasileiros|evolucao|evolucao-biologica|fisiologia-humana|genetica|grupos-de-animais|hereditariedade|higiene-e-saude|impactos-ambientais|microrganismos|niveis-de-organizacao|o-corpo-humano|os-animais|puberdade-e-sistema-genital|reproducao-dos-seres-vivos|saude-e-vacinas|sistema-locomotor|sistema-nervoso-e-visao|zoologia)$/', 'out' => '/^$/',
+            'blurb' => 'O corpo humano, Higiene e saúde, Os animais, As plantas, Ciclo de vida, Grupos de animais, Cadeias alimentares, Microrganismos, Digestão e respiração, Circulação e excreção, Alimentação saudável, A célula, Níveis de organização, Sistema nervoso e visão.'),
+        'earth-and-space' => array('name' => 'Terra, Lua, Sol e Universo', 'in' => '/^(constelacoes-e-movimentos-da-terra|dia-e-noite|estacoes-do-ano|fases-da-lua-e-eclipses|fases-da-lua-e-instrumentos-opticos|forma-e-movimentos-da-terra|gravitacao|o-sol-a-sombra-e-o-calor|pontos-cardeais-e-calendarios|sistema-solar-e-universo)$/', 'out' => '/^$/',
+            'blurb' => 'Dia e noite, Sol, sombra e calor, Pontos cardeais, Constelações, Lua e instrumentos, Forma e movimentos, Fases e eclipses, Estações do ano, Sistema Solar e Universo, Gravitação.'),
+        'earths-systems' => array('name' => 'Água, ar, solo e planeta Terra', 'in' => '/^(a-terra-e-o-solo|camada-de-ozonio|ciclo-da-agua|clima-e-tempo|composicao-do-ar-e-efeito-estufa|consumo-consciente-e-reciclagem|estrutura-da-terra|placas-tectonicas-terremotos-e-vulcoes|rochas-e-fosseis)$/', 'out' => '/^$/',
+            'blurb' => 'A Terra e o solo, Ciclo da água, Consumo e reciclagem, Estrutura da Terra, Rochas e fósseis, Ar e efeito estufa, Camada de ozônio, Placas tectônicas, Clima e tempo.'),
+    );
+}
+
 function topic_defs($country = null, $subject = null) {
     if ($subject === 'science' && $country === 'de') return topic_defs_science_de();
     if ($subject === 'science' && $country === 'fr') return topic_defs_science_fr();
     if ($subject === 'science' && ($country === 'es' || $country === 'mx')) return topic_defs_science_es();
     if ($subject === 'science' && $country === 'it') return topic_defs_science_it();
+    if ($subject === 'science' && $country === 'br') return topic_defs_science_br();
     if ($subject === 'science' && $country === 'id') return topic_defs_science_id();
     if ($subject === 'science' && $country === 'kr') return topic_defs_science_kr();
     if ($subject === 'science' && $country === 'cn') return topic_defs_science_cn();
@@ -1146,7 +1166,7 @@ function topic_range($units) {
     if ($units[0]['country'] === 'tw' || $units[0]['country'] === 'cn') return $first . '到' . $last;
     if ($units[0]['country'] === 'kr') return $first . '~' . $last;
     if ($units[0]['country'] === 'fr') return 'du ' . $first . ' au ' . $last;
-    if ($units[0]['country'] === 'br') return 'do ' . $first . ' ao ' . $last;
+    if ($units[0]['country'] === 'br') return (strpos($first, 'série') !== false ? 'da ' : 'do ') . $first . (strpos($last, 'série') !== false ? ' à ' : ' ao ') . $last;
     if ($units[0]['country'] === 'es' || $units[0]['country'] === 'mx') return 'de ' . $first . ' a ' . $last;
     if ($units[0]['country'] === 'id') return $first . ' sampai ' . $last;
     if ($units[0]['country'] === 'tr') return $first . ' – ' . $last;

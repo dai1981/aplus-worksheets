@@ -2548,6 +2548,27 @@ mx_sci の変換：es_sci.esc → PATCH（España・Doñana・lince ibérico・g
 standard_code は「Fase 4, 3.er grado · Saberes y Pensamiento Científico」「Fase 6, 2.º grado · Saberes y Pensamiento Científico (Física)」「MCCEMS · Ciencias Naturales, Experimentales y Tecnología · …」、standard_url は mx_common.STD_URL と Progresiones del MCCEMS 2024。core.php の subject_standard()・grade_standard()、gs()（bachillerato の UAC 名はそのまま）に mx/science
 MX / Ciencias は preescolar〜bachillerato（107 単元）まで完了
 
+BR / Ciências（BNCC。1º〜9º ano は Ciências（EF01CI01〜EF09CI17、unidades temáticas Matéria e energia／Vida e evolução／Terra e Universo）、Ensino Médio 1ª〜3ª série は Ciências da Natureza e suas Tecnologias（EM13CNT）を Física・Química・Biologia の単元に分ける（BNCC の EM は学年に分かれていないので、教科書の一般的な配分）。1 つのシリーズの学年ページに 3 科目が並ぶ（domain が科目名））— country `br`、subject `science`（name「Ciências」）、grade は数学と同じ（N-ano・N-serie）、A4。
+生成は `python3 tools/br_sci.py 学年 [slug|番号…]`（seed は 75000 + 100 × n + 番号、n は 1-ano 1〜3-serie 12）、単元は `tools/br_sc1.py`（1º・2º）・`br_sc3.py`（3º・4º）・`br_sc5.py`〜`br_sc9.py`・`br_em1.py`〜`br_em3.py` の UNITS(grade)。問題はすべて自前のポルトガル語。
+br_sci.H(dom, slug, codes, title, short, std, what, kb, ks, think, ex, mist, faq, T, TFt, TFf, topic, tp, calc=, bank=, s4=) は it_sci.H と同じ形に BNCC コードのリスト（codes）を足したもの。表の 7 番目の要素で説明の書式（fe、「O genótipo {k} é {v}」）を変えられる（dot() が先頭を大文字にするので、aa のような小文字のキーに使う）。
+esc() が a/de/em/por ＋ o/a/os/as を縮約する（ao・à・do・na・pelo…）。G のグループ名は「os herbívoros」の形（pertence a {g} → aos herbívoros）。fwd の問題文は {k} で始めない（小文字で始まる）。逆向きで値が句のときは D =「A que corresponde esta descrição: {v}?」。
+数はブラジル式（num：3 有効数字、4 けたから 1.000、小数はコンマ、6,02 × 10²³）。計算の文の大きな数も num() で書く（%d で 1000 と書かない）。g = 10 m/s²（問題文に書く）。title ≤ 60・kb ≤ 60・ks ≤ 150（1º・2º は 40・40・100）、kb・ks・title・what に < > を書かない。BAD に è・ñ は入れない（ampère・El Niño）。
+standard_code は「BNCC Ciências · EF05CI02, EF05CI03」「BNCC Ensino Médio · Ciências da Natureza · EM13CNT204」、standard_url は BNCC の EF の PDF と EM の PDF（br_sci.STD_URL_EM）、seo_title は「Ciclo da água – Ciências 5º ano: atividades com gabarito」「Cinemática – Física 1ª série do Ensino Médio: atividades com gabarito」。core.php の subject_standard()・grade_standard() に br/science。
+トピックは topics.php の topic_defs_science_br()（単元 slug を ^(…)$ で列挙、ポルトガル語の name）。topic_range() は série のとき「da … à …」
+BR / Ciências / 1º ano: materiais-dos-objetos o-corpo-humano higiene-e-saude dia-e-noite ✓
+BR / Ciências / 2º ano: materiais-e-prevencao-de-acidentes os-animais as-plantas o-sol-a-sombra-e-o-calor ✓
+BR / Ciências / 3º ano: som luz-e-visao ciclo-de-vida-dos-animais grupos-de-animais a-terra-e-o-solo ✓
+BR / Ciências / 4º ano: misturas transformacoes-reversiveis-e-irreversiveis cadeias-alimentares microrganismos pontos-cardeais-e-calendarios ✓
+BR / Ciências / 5º ano: propriedades-dos-materiais ciclo-da-agua consumo-consciente-e-reciclagem digestao-e-respiracao circulacao-e-excrecao alimentacao-saudavel constelacoes-e-movimentos-da-terra fases-da-lua-e-instrumentos-opticos ✓
+BR / Ciências / 6º ano: misturas-homogeneas-e-heterogeneas transformacoes-quimicas separacao-de-misturas a-celula niveis-de-organizacao sistema-nervoso-e-visao sistema-locomotor estrutura-da-terra rochas-e-fosseis forma-e-movimentos-da-terra ✓
+BR / Ciências / 7º ano: maquinas-simples calor-e-temperatura combustiveis-e-maquinas-termicas ecossistemas-brasileiros impactos-ambientais saude-e-vacinas composicao-do-ar-e-efeito-estufa camada-de-ozonio placas-tectonicas-terremotos-e-vulcoes ✓
+BR / Ciências / 8º ano: fontes-e-tipos-de-energia circuitos-eletricos consumo-de-energia-eletrica usinas-de-energia reproducao-dos-seres-vivos puberdade-e-sistema-genital fases-da-lua-e-eclipses estacoes-do-ano clima-e-tempo ✓
+BR / Ciências / 9º ano: estados-fisicos-e-modelo-de-particulas reacoes-quimicas-e-conservacao-da-massa estrutura-atomica ondas-luz-e-cores radiacoes-e-tecnologia hereditariedade evolucao biodiversidade-e-unidades-de-conservacao sistema-solar-e-universo ✓
+BR / Ciências / 1ª série（Física・Química・Biologia）: cinematica leis-de-newton energia-mecanica-e-trabalho gravitacao modelos-atomicos-e-tabela-periodica ligacoes-quimicas funcoes-inorganicas estequiometria bioquimica-celular citologia ecologia ✓
+BR / Ciências / 2ª série（Física・Química・Biologia）: termologia optica-geometrica ondulatoria hidrostatica solucoes termoquimica cinetica-quimica equilibrio-quimico fisiologia-humana botanica zoologia ✓
+BR / Ciências / 3ª série（Física・Química・Biologia）: eletrostatica eletrodinamica magnetismo-e-inducao fisica-moderna eletroquimica quimica-organica reacoes-organicas-e-polimeros radioatividade genetica biotecnologia evolucao-biologica ✓
+BR / Ciências は 1º ano〜3ª série まで完了
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ

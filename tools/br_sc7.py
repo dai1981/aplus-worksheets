@@ -1,0 +1,315 @@
+# -*- coding: utf-8 -*-
+"""Brasil / Ciências: 7º ano (BNCC EF07CI01–EF07CI16)"""
+from br_sci import H, it, nq, num
+
+D = "A que corresponde esta descrição: {v}?"
+
+
+def f_alav(R):
+    k = R.choice(["forca", "braco", "carga", "vant"])
+    p, bp, bf = R.choice([(600, 1, 3), (400, 1, 2), (900, 1, 3), (800, 1, 4), (500, 2, 5), (1200, 1, 4), (300, 1, 3), (1000, 2, 5)])
+    f = p * bp / bf
+    if k == "forca":
+        return nq("Numa alavanca, uma pedra de %s N está a %s m do apoio. Com que força se equilibra a pedra empurrando a %s m do apoio?" % (num(p), num(bp), num(bf)), f,
+                  [p, p * bf / bp, p - bf, f * 2], "N", "F × %s = %s × %s, então F = %s N." % (num(bf), num(p), num(bp), num(f)))
+    if k == "braco":
+        return nq("Uma carga de %s N está a %s m do apoio de uma alavanca. Uma força de %s N a que distância do apoio equilibra a carga?" % (num(p), num(bp), num(f)), bf,
+                  [bp, bf * 2, p / f + 1, bp / 2], "m", "%s × %s = %s × d, então d = %s m." % (num(p), num(bp), num(f), num(bf)))
+    if k == "carga":
+        return nq("Uma criança empurra com %s N a %s m do apoio. Que peso ela equilibra a %s m do apoio?" % (num(f), num(bf), num(bp)), p,
+                  [f, f * bp / bf, p / 2, p + f], "N", "%s × %s = P × %s, então P = %s N." % (num(f), num(bf), num(bp), num(p)))
+    return nq("Numa alavanca, o braço da força mede %s m e o braço da resistência mede %s m. Quantas vezes a força aplicada é menor que a carga?" % (num(bf), num(bp)), bf / bp,
+              [bp / bf, bf + bp, bf * bp, bf * 2], "vezes", "Vantagem mecânica = %s ÷ %s = %s." % (num(bf), num(bp), num(bf / bp)))
+
+
+def f_temp(R):
+    k = R.choice(["k", "c", "dt", "eq"])
+    if k == "k":
+        c = R.choice([0, 20, 25, 37, 100, 50, 15, 80])
+        return nq("Quanto vale %d °C na escala Kelvin?" % c, c + 273, [c - 273 if c > 273 else c + 100, c, c + 173, c * 273], "K", "T(K) = T(°C) + 273 = %d + 273 = %d K." % (c, c + 273))
+    if k == "c":
+        kk = R.choice([273, 300, 310, 373, 290, 323])
+        return nq("Quanto vale %d K na escala Celsius?" % kk, kk - 273, [kk + 273, kk, kk - 173, kk - 237], "°C", "T(°C) = T(K) − 273 = %d − 273 = %d °C." % (kk, kk - 273))
+    if k == "dt":
+        a, b = R.choice([(18, 31), (12, 35), (20, 28), (15, 34), (22, 38), (10, 27)])
+        return nq("De manhã fazia %d °C e à tarde %d °C. Qual foi a variação de temperatura?" % (a, b), b - a, [a + b, b, (a + b) / 2, b - a + 10], "°C",
+                  "%d − %d = %d °C." % (b, a, b - a))
+    m1, t1, m2, t2 = R.choice([(1, 80, 1, 20), (2, 60, 2, 20), (1, 90, 1, 10), (3, 70, 3, 30), (1, 40, 1, 20), (2, 100, 2, 40)])
+    tf = (m1 * t1 + m2 * t2) / (m1 + m2)
+    return nq("Misturamos %d L de água a %d °C com %d L de água a %d °C. Sem perdas de calor, qual é a temperatura final (equilíbrio térmico)?" % (m1, t1, m2, t2), tf,
+              [t1 + t2, t1 - t2, t1, t2], "°C", "Massas iguais: a temperatura final é a média, (%d + %d) ÷ 2 = %s °C." % (t1, t2, num(tf)))
+
+
+def f_comb(R):
+    k = R.choice(["km", "litros", "custo", "eff"])
+    if k == "km":
+        c, l = R.choice([(12, 40), (10, 35), (14, 30), (8, 50), (11, 45), (15, 20)])
+        return nq("Um carro faz %d km por litro. Quantos quilômetros ele percorre com %d litros?" % (c, l), c * l, [c + l, c * l // 2, l, c * l + c], "km",
+                  "%d km/L × %d L = %d km." % (c, l, c * l))
+    if k == "litros":
+        c, d = R.choice([(12, 360), (10, 250), (8, 200), (14, 420), (11, 330), (15, 600)])
+        return nq("Um carro faz %d km por litro. Quantos litros ele usa para viajar %d km?" % (c, d), d / c, [d * c, d - c, d / c + 10, c], "L", "%d ÷ %d = %s litros." % (d, c, num(d / c)))
+    if k == "custo":
+        l, p = R.choice([(40, 6), (35, 5), (30, 6), (50, 4), (20, 5), (45, 6)])
+        return nq("Um tanque recebe %d litros de combustível a R$ %d,00 o litro. Qual é o custo total, em reais?" % (l, p), l * p, [l + p, l * p // 2, l * p * 10, l], "reais",
+                  "%d × %d = %d reais." % (l, p, l * p))
+    e, u = R.choice([(100, 30), (200, 50), (100, 25), (500, 150), (1000, 350), (400, 100)])
+    return nq("Uma máquina térmica recebe %s J de energia do combustível e transforma %s J em movimento. Qual é o rendimento?" % (num(e), num(u)), u * 100 / e, [e / u, u, (e - u) * 100 / e, u * 10 / e], "%",
+              "Rendimento = %s ÷ %s = %s%%. O resto vira calor perdido." % (num(u), num(e), num(u * 100 / e)))
+
+
+def UNITS(grade):
+    return [
+        H("M", "maquinas-simples", ["EF07CI01"], "Máquinas simples", "Máquinas simples",
+          "Discutir a aplicação, ao longo da história, das máquinas simples e propor soluções e invenções para a realização de tarefas mecânicas cotidianas.",
+          "alavancas (interfixa, inter-resistente e interpotente), roldanas, plano inclinado, roda e eixo, cunha e parafuso",
+          "Máquinas simples facilitam o trabalho", "Alavanca: força × braço de um lado = carga × braço do outro.",
+          ["Máquinas simples mudam a força ou a direção do esforço: alavanca, roldana, plano inclinado, roda e eixo, cunha e parafuso.",
+           "Na alavanca há o apoio (fulcro), a força potente e a resistência. Interfixa: apoio no meio (gangorra, tesoura). Inter-resistente: carga no meio (carrinho de mão, quebra-nozes). Interpotente: força no meio (pinça, vara de pescar).",
+           "Equilíbrio da alavanca: força × braço da força = resistência × braço da resistência. Quanto maior o braço da força, menor a força necessária."],
+          [("A tesoura é que tipo de alavanca?", ["O parafuso que une as lâminas é o apoio.", "O apoio fica entre a mão e o papel."], "Interfixa.")],
+          [("A máquina simples diminui o trabalho.", "Ela diminui a força, mas aumenta a distância: o trabalho é o mesmo."), ("Toda alavanca tem o apoio no meio.", "Só a interfixa.")],
+          [("Quem estudou as alavancas na Antiguidade?", "Arquimedes, que disse: dê-me um ponto de apoio e moverei o mundo."), ("A rampa é uma máquina simples?", "Sim, é um plano inclinado.")],
+          [("Tipo de alavanca", [("a gangorra", "interfixa"), ("a tesoura", "interfixa"), ("o alicate", "interfixa"), ("o pé de cabra", "interfixa"), ("o carrinho de mão", "inter-resistente"),
+                                 ("o quebra-nozes", "inter-resistente"), ("o abridor de garrafas", "inter-resistente"), ("a pinça", "interpotente"), ("a vara de pescar", "interpotente"),
+                                 ("o antebraço levantando um peso", "interpotente"), ("o grampeador apertado na ponta", "inter-resistente")],
+            "Que tipo de alavanca é {k}?", None, ("plano inclinado",)),
+           ("Máquinas", [("a rampa de acesso", "plano inclinado"), ("o machado", "cunha"), ("o saca-rolhas", "parafuso"), ("o poço com manivela", "roda e eixo"),
+                         ("o elevador de obra com corda", "roldana"), ("a faca", "cunha"), ("a maçaneta da porta", "roda e eixo"), ("a estrada em zigue-zague na serra", "plano inclinado"),
+                         ("o mastro da bandeira com corda", "roldana"), ("a tampa de rosca", "parafuso")],
+            "Que máquina simples há em {k}?", None, ("alavanca",)),
+           ("Partes", {"as partes de uma alavanca": ["o ponto de apoio", "a força potente", "a força resistente", "o braço da força", "o braço da resistência"],
+                       "as máquinas simples": ["a roldana", "a cunha", "o parafuso", "o plano inclinado", "a roda e eixo"],
+                       "as máquinas compostas": ["a bicicleta", "o guindaste", "o relógio de corda", "a máquina de costura", "o moedor de carne"]})],
+          ["A gangorra é uma alavanca interfixa.", "O carrinho de mão é inter-resistente.", "A pinça é interpotente.", "A rampa é um plano inclinado.", "O machado funciona como cunha.",
+           "Um braço de força maior exige menos força.", "A roldana muda a direção da força."],
+          [("A máquina simples diminui o trabalho.", "Diminui a força, não o trabalho."), ("O carrinho de mão é interfixo.", "É inter-resistente."), ("A pinça é interfixa.", "É interpotente."),
+           ("Quanto menor o braço da força, menor a força.", "É o contrário."), ("A faca é um parafuso.", "A faca é uma cunha.")],
+          "as máquinas simples", "forces-and-motion", calc=f_alav),
+
+        H("M", "calor-e-temperatura", ["EF07CI02", "EF07CI03", "EF07CI04"], "Calor, temperatura e equilíbrio térmico", "Calor e temperatura",
+          "Diferenciar temperatura, calor e sensação térmica nas diferentes situações de equilíbrio termodinâmico cotidianas; utilizar o conhecimento das formas de propagação do calor para justificar a utilização de determinados materiais (condutores e isolantes) na vida cotidiana; avaliar o papel do equilíbrio termodinâmico para a manutenção da vida na Terra.",
+          "temperatura, calor, sensação térmica, escalas Celsius e Kelvin, condução, convecção, irradiação e equilíbrio térmico",
+          "Calor é energia em trânsito", "O calor vai do corpo mais quente para o mais frio até o equilíbrio térmico.",
+          ["Temperatura mede o grau de agitação das partículas. Calor é a energia que passa de um corpo mais quente para outro mais frio.",
+           "Quando os dois ficam com a mesma temperatura, atingem o equilíbrio térmico. Na escala Kelvin, T(K) = T(°C) + 273.",
+           "O calor se propaga por condução (nos sólidos, de partícula em partícula), por convecção (correntes em líquidos e gases) e por irradiação (ondas, até no vácuo, como a luz do Sol)."],
+          [("Por que o piso frio parece mais frio que o tapete, se estão à mesma temperatura?", ["O piso conduz calor melhor.", "Ele tira calor do pé mais depressa."], "Porque o piso é melhor condutor; é uma diferença de sensação térmica.")],
+          [("O casaco produz calor.", "O casaco é isolante: dificulta a perda do calor do corpo."), ("Frio é uma energia que entra.", "O que existe é o calor saindo do corpo mais quente.")],
+          [("Por que o ar-condicionado fica no alto?", "O ar frio é mais denso e desce, criando correntes de convecção."), ("Como o calor do Sol chega à Terra?", "Por irradiação, que atravessa o vácuo.")],
+          [("Propagação", [("a colher que esquenta dentro da panela", "condução"), ("a água fervendo que circula na panela", "convecção"), ("o calor do Sol na pele", "irradiação"),
+                           ("a brisa marítima", "convecção"), ("o cabo de metal da frigideira esquentando", "condução"), ("o calor da fogueira no rosto à distância", "irradiação"),
+                           ("o ar quente que sobe do aquecedor", "convecção"), ("a mão encostada na caneca quente", "condução"), ("a estufa de plantas aquecida pela luz", "irradiação")],
+            "Como o calor se propaga em {k}?", None, ("evaporação",)),
+           ("Conceitos", [("a temperatura", "mede o grau de agitação das partículas"), ("o calor", "energia transferida do corpo mais quente para o mais frio"),
+                          ("o equilíbrio térmico", "estado em que os corpos ficam com a mesma temperatura"), ("a sensação térmica", "o quanto sentimos frio ou calor"),
+                          ("o condutor térmico", "material que deixa o calor passar facilmente"), ("o isolante térmico", "material que dificulta a passagem do calor"),
+                          ("o termômetro", "instrumento que mede a temperatura"), ("o zero absoluto", "0 K, a menor temperatura possível")],
+            "O que é {k}?", D),
+           ("Materiais", {"os condutores térmicos": ["o cobre", "o alumínio", "o ferro", "a prata", "o aço"], "os isolantes térmicos": ["o isopor", "a lã", "a cortiça", "o ar parado", "a madeira"],
+                          "os usos de isolantes": ["a garrafa térmica", "o cabo de plástico da panela", "a caixa de isopor", "o cobertor", "a luva de cozinha"]})],
+          ["Calor é energia em trânsito.", "O calor vai do corpo quente para o frio.", "No equilíbrio térmico as temperaturas são iguais.", "0 °C equivale a 273 K.",
+           "A convecção ocorre em líquidos e gases.", "A irradiação atravessa o vácuo.", "O isopor é isolante térmico."],
+          [("O cobertor produz calor.", "Ele só dificulta a perda de calor."), ("Calor e temperatura são a mesma coisa.", "Temperatura mede a agitação; calor é energia transferida."),
+           ("A condução ocorre no vácuo.", "No vácuo o calor chega por irradiação."), ("0 °C equivale a 0 K.", "Equivale a 273 K."), ("O frio passa do gelo para a mão.", "O calor passa da mão para o gelo.")],
+          "o calor e a temperatura", "energy", calc=f_temp),
+
+        H("M", "combustiveis-e-maquinas-termicas", ["EF07CI05", "EF07CI06"], "Combustíveis e máquinas térmicas", "Combustíveis",
+          "Discutir o uso de diferentes tipos de combustível e máquinas térmicas ao longo do tempo, para avaliar avanços, questões econômicas e problemas socioambientais causados pela produção e uso desses materiais e máquinas; discutir e avaliar mudanças econômicas, culturais e sociais, tanto na vida cotidiana quanto no mundo do trabalho, decorrentes do desenvolvimento de novos materiais e tecnologias (como automação e informatização).",
+          "combustíveis fósseis e renováveis, etanol, biodiesel, motor a vapor, motor a combustão, rendimento e Revolução Industrial",
+          "O combustível guarda energia química", "Fósseis (petróleo, carvão, gás) não se renovam; etanol e biodiesel são renováveis.",
+          ["Combustível é um material que libera energia ao queimar. A energia química vira calor e, numa máquina térmica, movimento.",
+           "Combustíveis fósseis (petróleo, carvão mineral, gás natural) se formaram há milhões de anos e liberam muito gás carbônico. O etanol da cana e o biodiesel são renováveis.",
+           "A máquina a vapor impulsionou a Revolução Industrial. Nenhuma máquina térmica transforma todo o calor em movimento: parte se perde (rendimento menor que 100%)."],
+          [("O etanol brasileiro vem de que planta?", ["O Brasil produz etanol há décadas.", "A matéria-prima principal é a cana-de-açúcar."], "Da cana-de-açúcar.")],
+          [("O etanol é um combustível fóssil.", "Ele vem da cana-de-açúcar e é renovável."), ("O motor transforma todo o combustível em movimento.", "Grande parte vira calor perdido.")],
+          [("O que é carro flex?", "Um carro que funciona com gasolina, etanol ou qualquer mistura dos dois."), ("O que foi o Proálcool?", "Programa brasileiro da década de 1970 que incentivou o uso do etanol.")],
+          [("Origem", [("a gasolina", "fóssil"), ("o diesel", "fóssil"), ("o carvão mineral", "fóssil"), ("o gás natural", "fóssil"), ("o querosene de aviação", "fóssil"),
+                       ("o etanol de cana", "renovável"), ("o biodiesel de soja", "renovável"), ("o biogás de restos orgânicos", "renovável"), ("a lenha de reflorestamento", "renovável"),
+                       ("o carvão vegetal de eucalipto plantado", "renovável")],
+            "Como se classifica {k}: combustível fóssil ou renovável?", None, ("nuclear", "não é combustível")),
+           ("Máquinas", [("a máquina a vapor", "queima carvão para ferver água e mover pistões"), ("o motor de combustão interna", "queima o combustível dentro dos cilindros"),
+                         ("a turbina de avião", "expulsa gases quentes para gerar impulso"), ("a usina termelétrica", "queima combustível para girar turbinas e gerar eletricidade"),
+                         ("o motor elétrico", "transforma energia elétrica em movimento sem queimar nada"), ("a locomotiva a vapor", "trem movido por caldeira"),
+                         ("o rendimento", "fração da energia que vira trabalho útil"), ("a Revolução Industrial", "período de mecanização das fábricas com máquinas a vapor")],
+            "O que é ou como funciona {k}?", D),
+           ("Impactos", {"os problemas do uso de combustíveis fósseis": ["aumento do efeito estufa", "chuva ácida", "poluição do ar nas cidades", "vazamentos de petróleo no mar", "esgotamento das reservas"],
+                         "as vantagens dos biocombustíveis": ["fonte renovável", "menos emissão de gás carbônico", "produção no próprio país", "uso de resíduos agrícolas", "geração de empregos no campo"],
+                         "os avanços da automação": ["robôs nas fábricas", "caixas eletrônicos", "colheitadeiras com GPS", "linhas de montagem", "pedágios automáticos"]})],
+          ["O etanol vem da cana-de-açúcar.", "A gasolina é um combustível fóssil.", "O biodiesel é renovável.", "A máquina a vapor marcou a Revolução Industrial.",
+           "Nenhuma máquina térmica tem rendimento de 100%.", "Queimar combustíveis fósseis libera gás carbônico.", "O carro flex aceita gasolina e etanol."],
+          [("O etanol é fóssil.", "É renovável."), ("O motor transforma 100% da energia em movimento.", "Parte vira calor perdido."), ("O carvão mineral é renovável.", "É fóssil."),
+           ("Combustíveis fósseis não poluem.", "Liberam gás carbônico e poluentes."), ("A máquina a vapor usava energia nuclear.", "Usava carvão ou lenha.")],
+          "os combustíveis e as máquinas térmicas", "energy", calc=f_comb),
+
+        H("V", "ecossistemas-brasileiros", ["EF07CI07"], "Ecossistemas brasileiros", "Ecossistemas brasileiros",
+          "Caracterizar os principais ecossistemas brasileiros quanto à paisagem, à quantidade de água, ao tipo de solo, à disponibilidade de luz solar, à temperatura etc., correlacionando essas características à flora e à fauna específicas.",
+          "Amazônia, Mata Atlântica, Cerrado, Caatinga, Pantanal, Pampa, manguezal e suas espécies",
+          "Seis biomas e muitos ecossistemas", "Clima, solo e água definem a flora e a fauna de cada bioma.",
+          ["O Brasil tem seis biomas terrestres: Amazônia, Mata Atlântica, Cerrado, Caatinga, Pantanal e Pampa, além de ecossistemas costeiros como o manguezal.",
+           "Cada bioma tem seu clima e solo. A Amazônia é quente e úmida; a Caatinga é semiárida; o Pantanal alaga nas cheias; o Pampa tem campos e clima mais frio.",
+           "As espécies são adaptadas: cactos como o mandacaru guardam água na Caatinga; árvores do Cerrado têm casca grossa contra o fogo; o mangue tem raízes que respiram fora da lama."],
+          [("Em que bioma vive o tuiuiú?", ["O tuiuiú é a ave símbolo de um bioma alagável.", "Esse bioma é o Pantanal."], "No Pantanal.")],
+          [("A Caatinga não tem vida.", "Tem muitas espécies adaptadas à seca."), ("O Cerrado é um deserto.", "É uma savana com grande biodiversidade e nascentes de rios.")],
+          [("Qual é o bioma mais ameaçado?", "A Mata Atlântica: restam cerca de 12% da área original."), ("Por que o Cerrado é a caixa-d’água do Brasil?", "Nele nascem rios de grandes bacias, como a do São Francisco.")],
+          [("Espécies", [("o mandacaru", "Caatinga"), ("o tuiuiú", "Pantanal"), ("o lobo-guará", "Cerrado"), ("o mico-leão-dourado", "Mata Atlântica"), ("o boto-cor-de-rosa", "Amazônia"),
+                         ("o ipê-do-cerrado de casca grossa", "Cerrado"), ("a vitória-régia", "Amazônia"), ("o pau-brasil", "Mata Atlântica"), ("o xique-xique", "Caatinga"),
+                         ("o jacaré-do-pantanal", "Pantanal"), ("o quero-quero e o capim dos campos do Sul", "Pampa"), ("a ararinha-azul", "Caatinga")],
+            "A qual bioma brasileiro está mais ligado {k}?", None),
+           ("Características", [("a Amazônia", "floresta quente e úmida com a maior bacia hidrográfica do mundo"), ("a Mata Atlântica", "floresta costeira muito desmatada e cheia de espécies endêmicas"),
+                                ("o Cerrado", "savana com árvores tortas e casca grossa"), ("a Caatinga", "vegetação do semiárido que perde as folhas na seca"),
+                                ("o Pantanal", "planície que alaga na época das cheias"), ("o Pampa", "campos do Sul com clima mais frio"),
+                                ("o manguezal", "ecossistema costeiro de água salobra com raízes aéreas"), ("a restinga", "vegetação sobre areia perto do mar")],
+            "Como é {k}?", "Qual bioma ou ecossistema é {v}?"),
+           ("Adaptações", {"as adaptações à seca": ["caule que armazena água", "folhas transformadas em espinhos", "perda das folhas na estação seca", "folhas com cera que evita perda de água", "fechamento dos estômatos durante o dia"],
+                           "as adaptações à água em excesso": ["raízes aéreas do mangue", "folhas grandes e flutuantes", "sementes que boiam", "caules com espaços de ar", "patas com membranas"],
+                           "as adaptações ao fogo do Cerrado": ["casca grossa nas árvores", "gemas protegidas no subsolo", "rebrota após a queimada", "frutos que abrem com o calor", "caules subterrâneos"]})],
+          ["O mandacaru é típico da Caatinga.", "O Pantanal alaga nas cheias.", "O lobo-guará vive no Cerrado.", "A Mata Atlântica é muito desmatada.", "O boto-cor-de-rosa vive na Amazônia.",
+           "O Pampa fica no Sul do Brasil.", "O mangue tem raízes aéreas."],
+          [("A Caatinga é sempre úmida.", "É semiárida."), ("O Pantanal fica no litoral do Nordeste.", "Fica no Centro-Oeste."), ("O lobo-guará vive na Amazônia.", "Vive no Cerrado."),
+           ("A Mata Atlântica está intacta.", "Restam cerca de 12% da área original."), ("O Pampa é uma floresta tropical.", "O Pampa é formado por campos.")],
+          "os ecossistemas brasileiros", "living-things-and-ecosystems"),
+
+        H("V", "impactos-ambientais", ["EF07CI08"], "Impactos ambientais nos ecossistemas", "Impactos ambientais",
+          "Avaliar como os impactos provocados por catástrofes naturais ou mudanças nos componentes físicos, biológicos ou sociais de um ecossistema afetam suas populações, podendo ameaçar ou provocar a extinção de espécies, alteração de hábitos, migração etc.",
+          "desmatamento, queimadas, poluição, espécies invasoras, extinção, migração e unidades de conservação",
+          "Mudanças no ambiente afetam as populações", "Desmatamento e queimadas destroem habitats e ameaçam espécies.",
+          ["Um ecossistema pode mudar por catástrofes naturais (secas, enchentes, erupções) ou por ações humanas (desmatamento, queimadas, poluição).",
+           "Quando o habitat muda, as populações podem diminuir, mudar de hábitos, migrar ou até ser extintas.",
+           "Espécies invasoras, como o mexilhão-dourado e o javali, competem com as nativas. Unidades de conservação ajudam a proteger a biodiversidade."],
+          [("Por que o desmatamento ameaça a onça-pintada?", ["A onça precisa de grandes áreas de floresta.", "Sem floresta, faltam abrigo e presas."], "Porque destrói o habitat e reduz as presas.")],
+          [("Espécie invasora é qualquer animal perigoso.", "É uma espécie de fora que se espalha e prejudica as nativas."), ("A extinção é sempre natural.", "Hoje a ação humana acelera muito as extinções.")],
+          [("O que foi o desastre de Mariana?", "O rompimento de uma barragem de rejeitos de mineração em 2015, que poluiu o Rio Doce."), ("Por que proteger as abelhas?", "Elas polinizam plantas nativas e muitos cultivos.")],
+          [("Impacto", [("o desmatamento", "destruição de habitats"), ("as queimadas", "morte de animais e liberação de fumaça"), ("o esgoto nos rios", "falta de oxigênio na água e morte de peixes"),
+                        ("o lixo plástico no mar", "animais que engolem ou ficam presos no plástico"), ("os agrotóxicos em excesso", "morte de abelhas e contaminação do solo"),
+                        ("a caça ilegal", "redução das populações de animais"), ("a construção de barragens", "alagamento de áreas e barreira à migração de peixes"),
+                        ("a poluição luminosa na praia", "filhotes de tartaruga que se perdem")],
+            "Que efeito provoca {k}?", "Que ação humana causa {v}?"),
+           ("Conceitos", [("a espécie invasora", "espécie trazida de fora que se espalha e prejudica as nativas"), ("a espécie endêmica", "espécie que só existe em uma região"),
+                          ("a extinção", "desaparecimento de todos os indivíduos de uma espécie"), ("a migração", "deslocamento de populações em busca de condições melhores"),
+                          ("a fragmentação de habitat", "divisão da mata em pedaços isolados"), ("o corredor ecológico", "faixa de vegetação que liga fragmentos de mata"),
+                          ("a unidade de conservação", "área protegida por lei para preservar a natureza"), ("a lista vermelha", "relação das espécies ameaçadas de extinção")],
+            "O que é {k}?", D),
+           ("Causas", {"as catástrofes naturais": ["a erupção vulcânica", "o terremoto", "a seca prolongada", "o furacão", "o tsunami"],
+                       "as ações humanas que causam impactos": ["o desmatamento", "a poluição dos rios", "a caça ilegal", "a introdução de espécies exóticas", "as queimadas criminosas"],
+                       "as espécies invasoras no Brasil": ["o javali", "o mexilhão-dourado", "o caramujo-africano", "o coral-sol", "o peixe-leão"]})],
+          ["O desmatamento destrói habitats.", "Espécies invasoras prejudicam as nativas.", "O esgoto reduz o oxigênio da água.", "O javali é uma espécie invasora no Brasil.",
+           "Corredores ecológicos ligam fragmentos de mata.", "A extinção é o desaparecimento de uma espécie.", "Agrotóxicos em excesso prejudicam as abelhas."],
+          [("Espécie endêmica é espécie invasora.", "Endêmica só existe em uma região."), ("As queimadas não afetam os animais.", "Matam animais e destroem abrigos."),
+           ("O esgoto aumenta o oxigênio da água.", "Ele reduz o oxigênio."), ("A extinção pode ser desfeita.", "Uma espécie extinta não volta."),
+           ("O javali é nativo do Brasil.", "É uma espécie invasora.")],
+          "os impactos ambientais", "living-things-and-ecosystems"),
+
+        H("V", "saude-e-vacinas", ["EF07CI09", "EF07CI10", "EF07CI11"], "Saúde pública, vacinas e tecnologia", "Saúde e vacinas",
+          "Interpretar as condições de saúde da comunidade, cidade ou estado, com base na análise e comparação de indicadores de saúde (como taxa de mortalidade infantil, cobertura de saneamento básico e incidência de doenças de veiculação hídrica, atmosférica entre outras) e dos resultados de políticas públicas destinadas à saúde; argumentar sobre a importância da vacinação para a saúde pública; analisar historicamente o uso da tecnologia e seus impactos.",
+          "saneamento básico, indicadores de saúde, doenças transmitidas pela água e pelo ar, vacinas, SUS e tecnologia",
+          "Saneamento e vacina salvam vidas", "Muitas doenças se transmitem pela água e pelo ar; a vacina prepara o corpo.",
+          ["Indicadores de saúde, como a mortalidade infantil e a cobertura de saneamento, mostram as condições de vida de uma população.",
+           "Saneamento básico (água tratada, coleta de esgoto e de lixo) previne doenças de veiculação hídrica, como cólera, hepatite A e diarreias.",
+           "A vacina estimula o sistema imunológico a produzir defesas antes do contato com a doença. Com muita gente vacinada, a doença circula menos (imunidade coletiva). O SUS oferece o Programa Nacional de Imunizações."],
+          [("Como a vacina protege quem não pode se vacinar?", ["Quando muitos estão vacinados, o vírus circula menos.", "Assim, menos pessoas transmitem a doença."], "Pela imunidade coletiva.")],
+          [("A vacina cura a doença já instalada.", "Ela previne: prepara o corpo antes da infecção."), ("Antibiótico serve para viroses.", "Antibiótico age contra bactérias.")],
+          [("Quem criou a primeira vacina?", "Edward Jenner, em 1796, contra a varíola."), ("O que foi a Revolta da Vacina?", "Uma revolta no Rio de Janeiro, em 1904, contra a vacinação obrigatória contra a varíola.")],
+          [("Transmissão", [("a cólera", "água contaminada"), ("a hepatite A", "água e alimentos contaminados"), ("a gripe", "gotículas no ar"), ("a tuberculose", "gotículas no ar"),
+                            ("a dengue", "picada do mosquito Aedes aegypti"), ("a leptospirose", "água de enchente com urina de rato"), ("o sarampo", "gotículas no ar"),
+                            ("a esquistossomose", "água com larvas do verme"), ("a febre amarela", "picada de mosquito"), ("a giardíase", "água e alimentos contaminados")],
+            "Como se transmite {k}?", None),
+           ("Conceitos", [("a vacina", "estimula o corpo a produzir defesas antes da doença"), ("o soro", "fornece anticorpos prontos para tratamento imediato"),
+                          ("a imunidade coletiva", "proteção que surge quando a maioria está vacinada"), ("o saneamento básico", "água tratada, esgoto coletado e lixo recolhido"),
+                          ("a mortalidade infantil", "mortes de bebês antes de um ano de idade a cada mil nascidos"), ("a epidemia", "aumento grande de casos em uma região"),
+                          ("a pandemia", "epidemia espalhada por vários continentes"), ("o anticorpo", "proteína de defesa produzida pelo sistema imunológico")],
+            "O que é {k}?", D),
+           ("Prevenção", {"as formas de prevenir doenças transmitidas pela água": ["ferver ou filtrar a água", "tratar o esgoto", "lavar bem os alimentos", "evitar água de enchente", "lavar a caixa-d’água"],
+                          "as formas de prevenir doenças transmitidas pelo ar": ["usar máscara quando doente", "cobrir a boca ao tossir", "manter ambientes ventilados", "usar lenço descartável ao espirrar", "evitar aglomerações em surtos"],
+                          "as formas de combater o Aedes aegypti": ["eliminar água parada", "tampar a caixa-d’água", "colocar areia nos pratos de vasos", "virar garrafas de boca para baixo", "limpar as calhas"]})],
+          ["A vacina previne doenças.", "Saneamento básico reduz doenças transmitidas pela água.", "A dengue é transmitida pelo Aedes aegypti.", "O soro tem anticorpos prontos.",
+           "A gripe se transmite por gotículas no ar.", "A imunidade coletiva protege quem não pode se vacinar.", "Jenner criou a vacina contra a varíola."],
+          [("A vacina cura a doença já instalada.", "A vacina previne."), ("A cólera se transmite pelo ar.", "Transmite-se pela água contaminada."), ("Antibiótico cura gripe.", "A gripe é causada por vírus."),
+           ("Saneamento não influencia a saúde.", "Evita muitas doenças."), ("O soro estimula o corpo a fazer anticorpos.", "O soro já traz anticorpos prontos.")],
+          "a saúde pública e as vacinas", "living-things-and-ecosystems"),
+
+        H("T", "composicao-do-ar-e-efeito-estufa", ["EF07CI12", "EF07CI13"], "Composição do ar e efeito estufa", "Ar e efeito estufa",
+          "Demonstrar que o ar é uma mistura de gases, identificando sua composição, e discutir fenômenos naturais ou antrópicos que podem alterar essa composição; descrever o mecanismo natural do efeito estufa, seu papel fundamental para o desenvolvimento da vida na Terra, discutir as ações humanas responsáveis pelo seu aumento artificial e selecionar e implementar propostas para a reversão ou controle desse quadro.",
+          "nitrogênio, oxigênio, gás carbônico, poluentes, efeito estufa natural e intensificado, aquecimento global",
+          "O ar é uma mistura de gases", "O efeito estufa natural mantém a Terra aquecida; o excesso de gases a aquece demais.",
+          ["O ar seco tem cerca de 78% de nitrogênio, 21% de oxigênio e 1% de outros gases, como argônio e gás carbônico. Também há vapor de água.",
+           "O efeito estufa é natural: gases como gás carbônico, metano e vapor de água seguram parte do calor da Terra. Sem ele, a temperatura média seria de cerca de −18 °C.",
+           "Queimar combustíveis fósseis, desmatar e criar gado em excesso aumentam esses gases e intensificam o efeito estufa, causando o aquecimento global."],
+          [("Qual é o gás mais abundante do ar?", ["O ar tem cerca de 78% de um gás.", "Esse gás é o nitrogênio."], "O nitrogênio.")],
+          [("O efeito estufa é sempre ruim.", "O efeito natural é essencial à vida; o problema é o excesso."), ("O ar é feito só de oxigênio.", "O oxigênio é cerca de 21% do ar.")],
+          [("De onde vem o metano?", "Da digestão do gado, de aterros de lixo e de áreas alagadas."), ("Como reduzir o aquecimento global?", "Usando energias renováveis, reflorestando e diminuindo o desmatamento.")],
+          [("Gases", [("o nitrogênio", "cerca de 78% do ar"), ("o oxigênio", "cerca de 21% do ar e usado na respiração"), ("o gás carbônico", "usado na fotossíntese e liberado na queima"),
+                      ("o argônio", "gás nobre presente em cerca de 1% do ar"), ("o metano", "gás de efeito estufa produzido pelo gado e pelo lixo"), ("o vapor de água", "forma as nuvens"),
+                      ("o monóxido de carbono", "gás tóxico liberado na queima incompleta"), ("o ozônio", "forma uma camada que filtra a radiação ultravioleta")],
+            "O que se sabe sobre {k}?", D),
+           ("Efeito estufa", [("o efeito estufa natural", "mantém a Terra aquecida e permite a vida"), ("o efeito estufa intensificado", "aumento dos gases que aquece demais o planeta"),
+                              ("o aquecimento global", "aumento da temperatura média da Terra"), ("os combustíveis fósseis", "principal fonte de gás carbônico das atividades humanas"),
+                              ("o desmatamento", "libera carbono e reduz quem absorve o gás carbônico"), ("o reflorestamento", "retira gás carbônico do ar"),
+                              ("o Acordo de Paris", "compromisso entre países para limitar o aquecimento"), ("o derretimento das geleiras", "uma consequência do aquecimento global")],
+            "O que é ou o que faz {k}?", D),
+           ("Ações", {"as ações que aumentam o efeito estufa": ["queimar gasolina e diesel", "desmatar florestas", "queimar lixo", "criar gado em excesso", "usar termelétricas a carvão"],
+                      "as ações que reduzem o efeito estufa": ["usar energia solar e eólica", "reflorestar", "usar transporte coletivo", "andar de bicicleta", "reciclar materiais"],
+                      "as consequências do aquecimento global": ["elevação do nível do mar", "derretimento das geleiras", "secas mais intensas", "ondas de calor", "branqueamento dos corais"]})],
+          ["O ar é uma mistura de gases.", "O nitrogênio é cerca de 78% do ar.", "O efeito estufa natural permite a vida.", "O metano é um gás de efeito estufa.", "Desmatar intensifica o efeito estufa.",
+           "Reflorestar retira gás carbônico do ar.", "O aquecimento global eleva o nível do mar."],
+          [("O ar é só oxigênio.", "É uma mistura de gases."), ("O efeito estufa natural é prejudicial.", "Ele mantém a Terra habitável."), ("O oxigênio é o gás mais abundante do ar.", "É o nitrogênio."),
+           ("Reflorestar aumenta o gás carbônico do ar.", "As plantas retiram gás carbônico."), ("Sem efeito estufa a Terra seria mais quente.", "Seria muito mais fria.")],
+          "o ar e o efeito estufa", "earths-systems"),
+
+        H("T", "camada-de-ozonio", ["EF07CI14"], "A camada de ozônio", "Camada de ozônio",
+          "Justificar a importância da camada de ozônio para a vida na Terra, identificando os fatores que aumentam ou diminuem sua presença na atmosfera, e discutir propostas individuais e coletivas para sua preservação.",
+          "ozônio, radiação ultravioleta, CFC, buraco na camada, Protocolo de Montreal e proteção solar",
+          "O ozônio filtra a radiação ultravioleta", "Os CFCs destruíram parte da camada; o Protocolo de Montreal os proibiu.",
+          ["O ozônio (O₃) forma uma camada na estratosfera, entre 15 e 50 km de altura, que absorve grande parte da radiação ultravioleta do Sol.",
+           "Os CFCs, gases usados em geladeiras e aerossóis, liberam cloro que destrói o ozônio. Assim se formou o buraco na camada sobre a Antártida.",
+           "O Protocolo de Montreal (1987) proibiu os CFCs, e a camada está se recuperando lentamente. A radiação ultravioleta em excesso causa queimaduras, câncer de pele e problemas nos olhos."],
+          [("Onde fica a camada de ozônio?", ["Ela não está perto do chão.", "Fica na segunda camada da atmosfera."], "Na estratosfera.")],
+          [("O buraco na camada de ozônio causa o aquecimento global.", "São problemas diferentes: um é a radiação UV, o outro o excesso de gases do efeito estufa."), ("O ozônio no chão é bom.", "Perto do solo o ozônio é poluente e irrita os pulmões.")],
+          [("O que é o índice UV?", "Uma escala que indica a intensidade da radiação ultravioleta; acima de 6 exige proteção."), ("Como se proteger do UV?", "Protetor solar, chapéu, óculos escuros e evitar o sol entre 10 h e 16 h.")],
+          [("Conceitos", [("o ozônio", "gás formado por três átomos de oxigênio"), ("a radiação ultravioleta", "radiação do Sol que queima a pele"), ("o CFC", "gás que destrói o ozônio"),
+                          ("o buraco na camada de ozônio", "região com ozônio muito reduzido sobre a Antártida"), ("o Protocolo de Montreal", "acordo de 1987 que proibiu os CFCs"),
+                          ("a estratosfera", "camada da atmosfera onde fica a maior parte do ozônio"), ("o índice UV", "escala da intensidade da radiação ultravioleta"),
+                          ("o protetor solar", "creme que bloqueia parte da radiação ultravioleta")],
+            "O que é {k}?", D),
+           ("Efeitos", [("a pele exposta sem proteção", "queimaduras e câncer de pele"), ("os olhos sem óculos de sol", "catarata"), ("o plâncton dos oceanos", "redução da fotossíntese"),
+                        ("as plantações", "menor crescimento das plantas"), ("os plásticos ao ar livre", "ressecamento e quebra"), ("o sistema imunológico", "enfraquecimento das defesas"),
+                        ("a vitamina D na pele", "produção estimulada por pouco sol")],
+            "Que efeito a radiação ultravioleta tem sobre {k}?", D),
+           ("Ações", {"as ações que protegem a camada de ozônio": ["descartar geladeiras antigas em local adequado", "usar aerossóis sem CFC", "cumprir o Protocolo de Montreal", "recolher gases de ar-condicionado velho", "fiscalizar a venda de gases proibidos", "trocar gases de refrigeração por outros que não destroem o ozônio", "apoiar acordos internacionais pelo ozônio"],
+                      "os cuidados com a radiação ultravioleta": ["usar protetor solar", "usar chapéu", "usar óculos escuros com filtro UV", "evitar o sol do meio-dia", "consultar o índice UV", "usar roupas de manga longa na praia", "ficar na sombra nas horas mais quentes"]})],
+          ["O ozônio filtra a radiação ultravioleta.", "A camada de ozônio fica na estratosfera.", "Os CFCs destroem o ozônio.", "O Protocolo de Montreal proibiu os CFCs.",
+           "A radiação UV em excesso pode causar câncer de pele.", "O buraco na camada se forma sobre a Antártida.", "O ozônio tem três átomos de oxigênio."],
+          [("O ozônio aumenta a radiação UV que chega ao solo.", "Ele absorve a radiação UV."), ("Os CFCs protegem o ozônio.", "Eles destroem o ozônio."),
+           ("A camada de ozônio fica na troposfera.", "Fica na estratosfera."), ("O buraco na camada causa o efeito estufa.", "São fenômenos diferentes."),
+           ("O ozônio tem dois átomos de oxigênio.", "Tem três.")],
+          "a camada de ozônio", "earths-systems"),
+
+        H("T", "placas-tectonicas-terremotos-e-vulcoes", ["EF07CI15", "EF07CI16"], "Placas tectônicas, terremotos e vulcões", "Placas tectônicas",
+          "Interpretar fenômenos naturais (como vulcões, terremotos e tsunamis) e justificar a rara ocorrência desses fenômenos no Brasil, com base no modelo das placas tectônicas; justificar o formato das costas brasileira e africana com base na teoria da deriva dos continentes.",
+          "deriva continental, Pangeia, placas tectônicas, limites de placas, terremotos, vulcões e tsunamis",
+          "A crosta é dividida em placas", "Terremotos e vulcões acontecem nas bordas das placas; o Brasil fica no meio de uma.",
+          ["A litosfera é dividida em placas tectônicas que se movem poucos centímetros por ano sobre o manto.",
+           "Há cerca de 200 milhões de anos os continentes formavam um só, a Pangeia. As costas do Brasil e da África se encaixam, e há fósseis iguais nos dois lados (Wegener, deriva continental).",
+           "Terremotos, vulcões e tsunamis acontecem principalmente nas bordas das placas. O Brasil fica no centro da Placa Sul-Americana; por isso esses fenômenos são raros e fracos aqui."],
+          [("Por que o Chile tem mais terremotos que o Brasil?", ["O Chile fica onde duas placas se encontram.", "O Brasil fica no meio da placa."], "Porque o Chile está na borda entre as placas de Nazca e Sul-Americana.")],
+          [("O Brasil não tem nenhum tremor.", "Há tremores, mas raros e fracos."), ("Os continentes sempre estiveram no mesmo lugar.", "Eles se movem desde a Pangeia.")],
+          [("Quem propôs a deriva continental?", "Alfred Wegener, em 1912."), ("O que causa um tsunami?", "Um terremoto ou erupção no fundo do mar que desloca muita água.")],
+          [("Conceitos", [("a Pangeia", "o supercontinente que existia há cerca de 200 milhões de anos"), ("a deriva continental", "ideia de que os continentes se movem"),
+                          ("a placa tectônica", "grande bloco rígido da litosfera"), ("o epicentro", "ponto da superfície acima da origem do terremoto"), ("o hipocentro", "ponto no interior onde o terremoto começa"),
+                          ("o sismógrafo", "aparelho que registra as ondas dos terremotos"), ("o tsunami", "onda gigante causada por tremor no fundo do mar"),
+                          ("a escala Richter", "mede a magnitude de um terremoto")],
+            "O que é {k}?", D),
+           ("Evidências", [("o encaixe das costas do Brasil e da África", "os continentes já estiveram unidos"), ("os fósseis do réptil Mesossauro nos dois continentes", "o mesmo animal vivia em terras unidas"),
+                           ("as rochas iguais na Bahia e no Gabão", "as rochas se formaram juntas"), ("a cordilheira dos Andes", "formada pelo choque de placas"),
+                           ("a dorsal mesoatlântica", "lugar onde o fundo do Atlântico se abre"), ("o Himalaia", "formado pelo choque da Índia com a Ásia"),
+                           ("o Círculo de Fogo do Pacífico", "faixa com muitos vulcões e terremotos nas bordas das placas")],
+            "O que mostra ou o que é {k}?", D),
+           ("Onde", {"os lugares com muitos terremotos e vulcões": ["o Japão", "o Chile", "a Indonésia", "a Islândia", "o Peru"], "os lugares no interior de placas, com poucos tremores": ["o Brasil", "a Austrália", "a região central da África", "o Canadá central", "a Sibéria"],
+                     "os fenômenos causados pelo movimento das placas": ["os terremotos", "os vulcões", "os tsunamis", "as cordilheiras", "as fossas oceânicas"]})],
+          ["A litosfera é dividida em placas.", "A Pangeia reunia todos os continentes.", "O Brasil fica no centro da Placa Sul-Americana.", "Os Andes se formaram pelo choque de placas.",
+           "Wegener propôs a deriva continental.", "Tsunamis podem ser causados por terremotos no mar.", "As costas do Brasil e da África se encaixam."],
+          [("O Brasil fica na borda de duas placas.", "Fica no centro da Placa Sul-Americana."), ("Os continentes nunca se moveram.", "Eles se movem há milhões de anos."),
+           ("Terremotos acontecem mais no centro das placas.", "Acontecem mais nas bordas."), ("O epicentro fica no interior da Terra.", "Fica na superfície, acima do hipocentro."),
+           ("O Brasil tem muitos vulcões ativos.", "Não há vulcões ativos no Brasil.")],
+          "as placas tectônicas", "earths-systems"),
+    ]
