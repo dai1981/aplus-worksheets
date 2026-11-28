@@ -2496,6 +2496,31 @@ FR / Sciences / première: composition-d-un-systeme-chimique suivi-d-une-transfo
 FR / Sciences / terminale: acides-bases-ph-et-pka cinetique-chimique evolution-spontanee-et-piles synthese-organique-et-rendement lois-de-newton-et-mouvements orbites-et-lois-de-kepler thermodynamique-et-transferts-thermiques diffraction-interferences-et-doppler condensateur-et-circuit-rc radioactivite-et-decroissance brassages-genetiques-et-meiose evolution-et-histoire-des-especes datation-et-histoire-de-la-terre la-plante-et-la-domestication climats-passes-et-futurs cerveau-comportements-et-stress ✓
 FR / Sciences は CP〜terminale まで完了
 
+ES / Ciencias（LOMLOE。1.º〜6.º de Primaria は Conocimiento del Medio Natural, Social y Cultural（RD 157/2022）の理科の部分（domain は La vida en nuestro planeta／Materia, fuerzas y energía／Iniciación en la actividad científica／Tecnología y digitalización）、
+1.º〜4.º de ESO は Biología y Geología・Física y Química（RD 217/2022。1.º ESO は BG、2.º ESO は FQ、3.º・4.º は両方）、1.º de Bachillerato は Biología, Geología y Ciencias Ambientales と Física y Química、
+2.º de Bachillerato は Biología・Química・Física・Geología y Ciencias Ambientales（RD 243/2022。1 つの学年ページに科目が並ぶ（domain が科目名））。学年への配分は一般的な教科書の順）— country `es`、subject `science`（name「Ciencias」）、grade は数学と同じ（N-primaria・N-eso・N-bachillerato）、A4。
+生成は `python3 tools/es_sci.py 学年 [slug|番号…]`（seed は 78000 + 100 × n + 番号、n は 1-primaria 1〜2-bachillerato 12）、単元は `tools/es_sc1.py`（1.º・2.º）・`es_sc3.py`（3.º・4.º）・`es_sc5.py`（5.º・6.º）・`es_sc7.py`〜`es_sc12.py` の UNITS(grade)。問題はすべて自前のスペイン語。
+es_sci.H は fr_sci.H と同じ形（表 3 つ・混合（calc 15 + T[1] 5、なければ T0 7 + T1 7 + T2 6）・¿Verdadero o falso?）。G のグループ名は「los herbívoros」「el tronco」の形（¿Cuál pertenece a {g}?、esc() が a el → al、de el → del に）。
+**表の逆向きの問題（back）で値が句のときは D =「¿Qué corresponde a esta descripción: {v}?」**（「¿Qué órgano {v}?」は値の動詞・名詞で文法が崩れる）。冠詞の付いたテンプレート（「¿Qué es el {k}?」）は表のキーの性・数がそろっているときだけ。
+グループの項目と表の値は互いに排他的に（成体の植物も水が要る、雷は低くて大きい、などの重なりを作らない）。ok_text は ¿?・¡! の数、「a el」「de el」、ß などの他言語の文字（ü・â は可）を止める。割り算の「 : 」は可。
+数はスペイン式（num：3 有効数字、小数はコンマ、5 けた以上はノーブレークスペース、4 けたはそのまま、6,02 · 10²³）。g = 9,8 m/s²、ESO・Bachillerato の掛け算は「·」。% は「25 %」（空白あり）。title ≤ 60・kb ≤ 60・ks ≤ 150（1.º・2.º は 40・40・100）、kb・ks・title・what に < > を書かない。
+standard_code は「LOMLOE Primaria (segundo ciclo) · Materia, fuerzas y energía」「LOMLOE ESO · Física y Química」「LOMLOE Bachillerato · Química」、standard_url は es_common.STD_URL・STD_URL_ESO・STD_URL_BACH、seo_title は「El mol – Física y Química 3.º de ESO: fichas con soluciones」。core.php の subject_standard()・grade_standard() に es/science。
+トピックは topics.php の topic_defs_science_es()（スペイン語の name、単元 slug を ^(…)$ で列挙。es の単元を足したら tp ごとに slug を足す）
+ローカルの tools/schema.sql は standard_code が VARCHAR(40) のまま（本番は 175 文字のコードが入っているので広げてある）。ローカルで表示を試すときだけ ALTER する
+ES / Ciencias / 1.º de Primaria: los-seres-vivos los-animales las-plantas el-cuerpo-y-los-sentidos los-materiales empujar-y-tirar ✓
+ES / Ciencias / 2.º de Primaria: vertebrados-e-invertebrados la-vida-de-las-plantas los-habitats la-alimentacion-sana el-agua-y-sus-estados la-luz-y-el-sonido ✓
+ES / Ciencias / 3.º de Primaria: los-animales-vertebrados los-animales-invertebrados la-nutricion-de-las-plantas el-aparato-locomotor la-materia-y-sus-propiedades las-fuerzas el-metodo-cientifico ✓
+ES / Ciencias / 4.º de Primaria: los-reinos-de-los-seres-vivos los-sentidos-y-el-sistema-nervioso la-digestion-y-la-respiracion los-ecosistemas-y-las-cadenas-alimentarias las-mezclas la-energia-y-sus-fuentes las-maquinas ✓
+ES / Ciencias / 5.º de Primaria: la-celula-y-los-tejidos la-circulacion-y-la-excrecion masa-volumen-y-densidad cambios-fisicos-y-quimicos el-calor-y-la-temperatura la-luz la-programacion-y-los-robots ✓
+ES / Ciencias / 6.º de Primaria: los-microorganismos la-reproduccion-humana la-salud-y-los-habitos-saludables la-electricidad-y-el-magnetismo fuerzas-y-movimiento el-sonido la-energia-y-el-desarrollo-sostenible ✓
+ES / Ciencias / 1.º de ESO: metodo-cientifico-y-laboratorio el-universo-y-el-sistema-solar la-tierra-y-la-luna minerales-y-rocas la-atmosfera la-hidrosfera la-celula-y-la-organizacion-de-los-seres-vivos la-clasificacion-de-los-seres-vivos las-plantas los-animales-invertebrados los-animales-vertebrados los-ecosistemas ✓
+ES / Ciencias / 2.º de ESO: magnitudes-y-unidades la-materia-y-sus-propiedades estados-de-agregacion-y-teoria-cinetica sustancias-puras-y-mezclas los-cambios-quimicos el-movimiento las-fuerzas la-energia calor-y-temperatura la-luz-y-el-sonido ✓
+ES / Ciencias / 3.º de ESO: la-organizacion-del-cuerpo-humano alimentacion-y-nutricion aparatos-digestivo-y-respiratorio aparatos-circulatorio-y-excretor sistema-nervioso-y-endocrino la-reproduccion-humana salud-y-enfermedad el-relieve-y-los-agentes-geologicos el-atomo-y-la-tabla-periodica enlace-quimico-y-formulacion el-mol-y-las-reacciones-quimicas la-electricidad ✓
+ES / Ciencias / 4.º de ESO: la-celula-y-el-ciclo-celular genetica-mendeliana adn-y-biotecnologia la-evolucion la-tectonica-de-placas la-historia-de-la-tierra ecologia-y-medio-ambiente cinematica las-leyes-de-newton presion-y-fluidos trabajo-energia-y-potencia reacciones-quimicas-y-estequiometria quimica-del-carbono ✓
+ES / Ciencias / 1.º de Bachillerato: ecologia-y-sostenibilidad historia-de-la-tierra-y-de-la-vida dinamica-y-composicion-terrestre fisiologia-e-histologia-animal fisiologia-e-histologia-vegetal los-microorganismos-y-formas-acelulares estructura-atomica-y-enlace-quimico gases-y-disoluciones estequiometria-y-termoquimica quimica-organica cinematica-del-punto-material dinamica energia-mecanica-y-trabajo ✓
+ES / Ciencias / 2.º de Bachillerato: las-biomoleculas la-celula-eucariota el-metabolismo-celular genetica-molecular microbiologia-y-biotecnologia inmunologia modelo-cuantico-y-propiedades-periodicas enlace-quimico-y-geometria-molecular cinetica-quimica equilibrio-quimico acidos-y-bases reacciones-redox-y-electroquimica campo-gravitatorio campo-electrico campo-magnetico-e-induccion ondas-y-optica fisica-moderna riesgos-geologicos recursos-naturales-y-sostenibilidad ✓
+ES / Ciencias は 1.º de Primaria〜2.º de Bachillerato まで完了
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ

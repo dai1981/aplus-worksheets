@@ -798,9 +798,33 @@ function topic_defs_science_fr() {
     );
 }
 
+function topic_defs_science_es() {
+    return array(
+        'matter' => array('name' => 'La materia y sus cambios', 'in' => '/^(acidos-y-bases|cambios-fisicos-y-quimicos|cinetica-quimica|el-agua-y-sus-estados|el-atomo-y-la-tabla-periodica|el-mol-y-las-reacciones-quimicas|enlace-quimico-y-formulacion|enlace-quimico-y-geometria-molecular|equilibrio-quimico|estados-de-agregacion-y-teoria-cinetica|estequiometria-y-termoquimica|estructura-atomica-y-enlace-quimico|gases-y-disoluciones|la-materia-y-sus-propiedades|las-mezclas|los-cambios-quimicos|los-materiales|masa-volumen-y-densidad|modelo-cuantico-y-propiedades-periodicas|quimica-del-carbono|quimica-organica|reacciones-quimicas-y-estequiometria|reacciones-redox-y-electroquimica|sustancias-puras-y-mezclas)$/', 'out' => '/^$/',
+            'blurb' => 'Los materiales, El agua, La materia, Las mezclas, Densidad, Cambios de la materia, Propiedades de la materia, Estados de agregación, Mezclas y disoluciones, Reacciones químicas, El átomo, Enlace y formulación, El mol, Estequiometría.'),
+        'forces-and-motion' => array('name' => 'Fuerzas y movimiento', 'in' => '/^(campo-electrico|campo-gravitatorio|cinematica|cinematica-del-punto-material|dinamica|el-movimiento|empujar-y-tirar|fuerzas-y-movimiento|las-fuerzas|las-leyes-de-newton|presion-y-fluidos)$/', 'out' => '/^$/',
+            'blurb' => 'Empujar y tirar, Las fuerzas, Fuerzas y movimiento, El movimiento, Cinemática, Leyes de Newton, Presión y fluidos, Dinámica, Campo gravitatorio, Campo eléctrico.'),
+        'energy' => array('name' => 'Energía, calor y electricidad', 'in' => '/^(calor-y-temperatura|campo-magnetico-e-induccion|el-calor-y-la-temperatura|energia-mecanica-y-trabajo|fisica-moderna|la-electricidad|la-electricidad-y-el-magnetismo|la-energia|la-energia-y-el-desarrollo-sostenible|la-energia-y-sus-fuentes|trabajo-energia-y-potencia)$/', 'out' => '/^$/',
+            'blurb' => 'La energía, Calor y temperatura, Electricidad, Energía sostenible, La electricidad, Trabajo y energía, Magnetismo e inducción, Física moderna.'),
+        'waves-and-light' => array('name' => 'Luz, sonido y ondas', 'in' => '/^(el-sonido|la-luz|la-luz-y-el-sonido|ondas-y-optica)$/', 'out' => '/^$/',
+            'blurb' => 'Luz y sonido, La luz, El sonido, Ondas y óptica.'),
+        'living-things-and-ecosystems' => array('name' => 'Los seres vivos, el cuerpo humano y los ecosistemas', 'in' => '/^(adn-y-biotecnologia|alimentacion-y-nutricion|aparatos-circulatorio-y-excretor|aparatos-digestivo-y-respiratorio|ecologia-y-medio-ambiente|ecologia-y-sostenibilidad|el-aparato-locomotor|el-cuerpo-y-los-sentidos|el-metabolismo-celular|fisiologia-e-histologia-animal|fisiologia-e-histologia-vegetal|genetica-mendeliana|genetica-molecular|inmunologia|la-alimentacion-sana|la-celula-eucariota|la-celula-y-el-ciclo-celular|la-celula-y-la-organizacion-de-los-seres-vivos|la-celula-y-los-tejidos|la-circulacion-y-la-excrecion|la-clasificacion-de-los-seres-vivos|la-digestion-y-la-respiracion|la-evolucion|la-nutricion-de-las-plantas|la-organizacion-del-cuerpo-humano|la-reproduccion-humana|la-salud-y-los-habitos-saludables|la-vida-de-las-plantas|las-biomoleculas|las-plantas|los-animales|los-animales-invertebrados|los-animales-vertebrados|los-ecosistemas|los-ecosistemas-y-las-cadenas-alimentarias|los-habitats|los-microorganismos|los-microorganismos-y-formas-acelulares|los-reinos-de-los-seres-vivos|los-sentidos-y-el-sistema-nervioso|los-seres-vivos|microbiologia-y-biotecnologia|salud-y-enfermedad|sistema-nervioso-y-endocrino|vertebrados-e-invertebrados)$/', 'out' => '/^$/',
+            'blurb' => 'Seres vivos, Los animales, Las plantas, Los sentidos, Vertebrados, Vida de las plantas, Los hábitats, Alimentación sana, Invertebrados, Fotosíntesis, Aparato locomotor, Los cinco reinos, Función de relación, Digestión y respiración.'),
+        'earth-and-space' => array('name' => 'La Tierra y el universo', 'in' => '/^(el-universo-y-el-sistema-solar|la-tierra-y-la-luna)$/', 'out' => '/^$/',
+            'blurb' => 'Sistema solar, Tierra y Luna.'),
+        'earths-systems' => array('name' => 'Geología, atmósfera e hidrosfera', 'in' => '/^(dinamica-y-composicion-terrestre|el-relieve-y-los-agentes-geologicos|historia-de-la-tierra-y-de-la-vida|la-atmosfera|la-hidrosfera|la-historia-de-la-tierra|la-tectonica-de-placas|minerales-y-rocas|recursos-naturales-y-sostenibilidad|riesgos-geologicos)$/', 'out' => '/^$/',
+            'blurb' => 'Minerales y rocas, La atmósfera, La hidrosfera, Agentes geológicos, Tectónica de placas, Historia de la Tierra, Dinámica terrestre, Riesgos geológicos, Recursos naturales.'),
+        'working-scientifically' => array('name' => 'El trabajo científico', 'in' => '/^(el-metodo-cientifico|magnitudes-y-unidades|metodo-cientifico-y-laboratorio)$/', 'out' => '/^$/',
+            'blurb' => 'Método científico, Magnitudes y unidades.'),
+        'engineering-design' => array('name' => 'Tecnología, máquinas y programación', 'in' => '/^(la-programacion-y-los-robots|las-maquinas)$/', 'out' => '/^$/',
+            'blurb' => 'Las máquinas, Programación.'),
+    );
+}
+
 function topic_defs($country = null, $subject = null) {
     if ($subject === 'science' && $country === 'de') return topic_defs_science_de();
     if ($subject === 'science' && $country === 'fr') return topic_defs_science_fr();
+    if ($subject === 'science' && $country === 'es') return topic_defs_science_es();
     if ($subject === 'science' && $country === 'id') return topic_defs_science_id();
     if ($subject === 'science' && $country === 'kr') return topic_defs_science_kr();
     if ($subject === 'science' && $country === 'cn') return topic_defs_science_cn();
