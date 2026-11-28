@@ -845,7 +845,7 @@ function topic_defs_science_it() {
 function topic_defs($country = null, $subject = null) {
     if ($subject === 'science' && $country === 'de') return topic_defs_science_de();
     if ($subject === 'science' && $country === 'fr') return topic_defs_science_fr();
-    if ($subject === 'science' && $country === 'es') return topic_defs_science_es();
+    if ($subject === 'science' && ($country === 'es' || $country === 'mx')) return topic_defs_science_es();
     if ($subject === 'science' && $country === 'it') return topic_defs_science_it();
     if ($subject === 'science' && $country === 'id') return topic_defs_science_id();
     if ($subject === 'science' && $country === 'kr') return topic_defs_science_kr();

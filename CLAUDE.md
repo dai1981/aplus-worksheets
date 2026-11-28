@@ -2542,6 +2542,12 @@ IT / Scienze / quarta liceo: termodinamica onde-e-suono ottica-ondulatoria campo
 IT / Scienze / quinta liceo: campo-magnetico induzione-elettromagnetica onde-elettromagnetiche relativita-ristretta fisica-quantistica-e-nucleare chimica-organica biochimica-e-metabolismo biotecnologie tettonica-delle-placche atmosfera-e-cambiamenti-climatici ✓
 IT / Scienze は classe prima〜quinta liceo（liceo scientifico）まで完了
 
+MX / Ciencias（preescolar・primaria は NEM の Saberes y Pensamiento Científico（Programas sintéticos 2024、Fase 2〜5）、secundaria は Fase 6 の Biología（1.º）・Física（2.º）・Química（3.º）、bachillerato は MCCEMS の Ciencias Naturales, Experimentales y Tecnología の 6 UAC（1 学期 1 つ。grade は la-materia-y-sus-interacciones・conservacion-de-la-energia・ecosistemas・reacciones-quimicas・la-energia-en-la-vida-diaria・organismos-herencia-y-evolucion、sort 10〜15、unit.php に年齢））— country `mx`、subject `science`（name「Ciencias」）、tamaño carta。
+生成は `python3 tools/mx_sci.py 学年 [slug|番号…]`（seed は 58000 + 100 × n + 番号）。単元はすべて ES の理科（es_sc*）の単元を mx_sci.GRADES の表で学年に割り当てて使う（slug も ES と同じなので topics.php は topic_defs_science_es() を共用）。
+mx_sci の変換：es_sci.esc → PATCH（España・Doñana・lince ibérico・grifo・ordenador などをメキシコの例に）→ mx_common.mx_text（小数点、1 000、語彙）→ div（「 : 」→「 ÷ 」）。他国の語は SCI_LEAKS を語の境界で調べ（「cromo」が cromosoma に当たらないように M.LEAKS は使わない）、問題は落とし、本文・FAQ などに残ると止まる（PATCH に足す）。
+standard_code は「Fase 4, 3.er grado · Saberes y Pensamiento Científico」「Fase 6, 2.º grado · Saberes y Pensamiento Científico (Física)」「MCCEMS · Ciencias Naturales, Experimentales y Tecnología · …」、standard_url は mx_common.STD_URL と Progresiones del MCCEMS 2024。core.php の subject_standard()・grade_standard()、gs()（bachillerato の UAC 名はそのまま）に mx/science
+MX / Ciencias は preescolar〜bachillerato（107 単元）まで完了
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
