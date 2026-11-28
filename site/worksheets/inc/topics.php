@@ -735,7 +735,30 @@ function topic_defs_science_kr() {
     );
 }
 
+/* Indonesia science (Kurikulum Merdeka IPAS, IPA, Fisika, Kimia, Biologi): topics list the unit slugs of id/science (tools/id_s*.py の tp) */
+function topic_defs_science_id() {
+    return array(
+        'matter' => array('name' => 'Zat dan Perubahannya', 'in' => '/^(asam-basa-dan-garam|asam-basa-dan-ph|hidrokarbon-dan-minyak-bumi|hukum-dasar-kimia|ikatan-kimia-dan-bentuk-molekul|laju-reaksi|laju-reaksi-dan-kesetimbangan|larutan-penyangga-dan-hidrolisis|massa-jenis|pemisahan-campuran|perubahan-fisika-dan-kimia|perubahan-wujud-zat|polimer-dan-biomolekul|reaksi-kimia|redoks-dan-elektrokimia|senyawa-karbon-dan-gugus-fungsi|sifat-koligatif-larutan|sistem-periodik-unsur|stoikiometri|struktur-atom|termokimia|wujud-zat-dan-model-partikel)$/', 'out' => '/^$/',
+            'blurb' => 'Wujud zat, campuran dan pemisahan, perubahan fisika dan kimia, atom dan sistem periodik, ikatan kimia, stoikiometri, asam basa, laju reaksi, redoks, senyawa karbon, dan polimer.'),
+        'forces-and-motion' => array('name' => 'Gaya dan Gerak', 'in' => '/^(dinamika-gerak-hukum-newton|fluida-dinamis|fluida-statis|gaya-dan-gaya-gesek|gaya-dan-hukum-newton|gaya-magnet|gerak-lurus|gerak-melingkar|momentum-dan-impuls|pesawat-sederhana|tekanan-gas-dan-penerapannya|tekanan-zat-padat-dan-cair|vektor-dan-gerak-parabola)$/', 'out' => '/^$/',
+            'blurb' => 'Gaya gesek dan gaya magnet, gerak lurus, hukum Newton, pesawat sederhana, tekanan, fluida, gerak melingkar, serta momentum dan impuls.'),
+        'energy' => array('name' => 'Energi dan Listrik', 'in' => '/^(energi-di-sekitar-kita|energi-tak-terbarukan|energi-terbarukan|fisika-inti-dan-radioaktivitas|kalor-dan-perpindahannya|kemagnetan-dan-induksi|listrik-dinamis|listrik-statis|listrik-statis-dan-kapasitor|medan-magnet-dan-induksi-elektromagnetik|pemuaian|perubahan-bentuk-energi|rangkaian-arus-searah|suhu-dan-termometer|termodinamika|usaha-dan-energi)$/', 'out' => '/^$/',
+            'blurb' => 'Bentuk dan perubahan energi, kalor, listrik statis dan dinamis, kemagnetan dan induksi, termodinamika, energi terbarukan, dan fisika inti.'),
+        'waves-and-light' => array('name' => 'Gelombang, Bunyi, dan Cahaya', 'in' => '/^(bayangan-dan-warna|bunyi-dan-perambatannya|cahaya-dan-alat-optik|cahaya-dan-sifatnya|fisika-kuantum|gelombang-elektromagnetik|gelombang-mekanik-dan-bunyi|getaran-dan-gelombang|pemantulan-dan-peredaman-bunyi)$/', 'out' => '/^$/',
+            'blurb' => 'Getaran dan gelombang, bunyi, sifat cahaya, bayangan dan warna, alat optik, gelombang elektromagnetik, dan fisika kuantum.'),
+        'living-things-and-ecosystems' => array('name' => 'Makhluk Hidup dan Ekosistem', 'in' => '/^(bakteri-dan-fungi|bioteknologi|dna-dan-sintesis-protein|ekologi-dan-interaksi|ekosistem|enzim-dan-metabolisme|evolusi|fotosintesis|homeostasis|hubungan-antarmakhluk-hidup|jaringan-hewan|jaringan-tumbuhan|keanekaragaman-hayati|keanekaragaman-hayati-dan-klasifikasi|kesehatan-sistem-gerak|klasifikasi-makhluk-hidup|komponen-biotik-dan-abiotik|kromosom-dna-dan-gen|makanan-dan-nutrisi|masa-pubertas|mengenal-hewan-di-sekitar-kita|metamorfosis|mutasi|pembelahan-sel|pertumbuhan-dan-perkembangan|pewarisan-sifat|pola-pewarisan-sifat|rantai-dan-jaring-makanan|respirasi-seluler-dan-fotosintesis|sel-dan-organel|siklus-hidup-makhluk-hidup|sistem-ekskresi|sistem-gerak-manusia|sistem-imun|sistem-koordinasi|sistem-pencernaan|sistem-peredaran-darah|sistem-pernapasan|sistem-reproduksi-manusia|sistem-saraf|transpor-membran|virus-dan-peranannya)$/', 'out' => '/^$/',
+            'blurb' => 'Hewan dan tumbuhan, siklus hidup, ekosistem dan rantai makanan, sistem organ manusia, sel, klasifikasi, pewarisan sifat, bioteknologi, metabolisme, dan evolusi.'),
+        'earth-and-space' => array('name' => 'Bumi dan Antariksa', 'in' => '/^(bumi-matahari-dan-bulan|pengaruh-gerak-bumi-dan-bulan|rotasi-dan-revolusi-bumi|sistem-tata-surya)$/', 'out' => '/^$/',
+            'blurb' => 'Bumi, Matahari, dan Bulan, rotasi dan revolusi, sistem tata surya, serta pengaruh gerak Bumi dan Bulan.'),
+        'earths-systems' => array('name' => 'Sistem Bumi dan Lingkungan', 'in' => '/^(bentang-alam-indonesia|bumi-kita-terancam-bahaya|efek-rumah-kaca-dan-gas-karbon|isu-isu-lingkungan|kimia-hijau|menjadi-pahlawan-lingkungan|musim-dan-iklim-indonesia|perubahan-iklim|siklus-air|tanah-dan-kehidupan)$/', 'out' => '/^$/',
+            'blurb' => 'Bentang alam Indonesia, musim dan iklim, efek rumah kaca, tanah, perubahan iklim, kimia hijau, dan isu-isu lingkungan.'),
+        'working-scientifically' => array('name' => 'Kerja Ilmiah', 'in' => '/^(angka-penting-dan-ketidakpastian|besaran-satuan-dan-dimensi|hakikat-sains-dan-metode-ilmiah|laboratorium-dan-pengukuran)$/', 'out' => '/^$/',
+            'blurb' => 'Metode ilmiah, laboratorium dan pengukuran, besaran dan satuan, angka penting, dan ketidakpastian pengukuran.'),
+    );
+}
+
 function topic_defs($country = null, $subject = null) {
+    if ($subject === 'science' && $country === 'id') return topic_defs_science_id();
     if ($subject === 'science' && $country === 'kr') return topic_defs_science_kr();
     if ($subject === 'science' && $country === 'cn') return topic_defs_science_cn();
     if ($subject === 'science' && $country === 'tw') return topic_defs_science_tw();
