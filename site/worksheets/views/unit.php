@@ -61,6 +61,7 @@ site_header($crumbs);
     <p class="sub"><?= h($u['key_sub']) ?></p></div>
   </div>
   <p class="ws-share"><?= pin_link($path, sprintf(T('pin_unit'), $grade['name'], lc($subject['name']), lc($u['short_title']))) ?></p>
+  <?= share_tools($seg[0], $path, $u['title']) ?>
 
 
   <?= $u['body_html'] /* trusted: written by us in content/*.json */ ?>

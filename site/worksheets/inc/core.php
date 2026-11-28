@@ -622,7 +622,7 @@ function T($key = null) {
     ));
     if (!isset($T['en-CA'])) $T['en-CA'] = array_merge($T['en'], array('hook_go' => 'Start practising'));   // Canada: grades like the US, British -ise verbs
     static $lang = 'en';
-    if (is_array($key)) { $lang = isset($T[$key[0]]) ? $key[0] : 'en'; $GLOBALS['ZH_CN'] = ($lang === 'zh-CN'); return null; } // set language
+    if (is_array($key)) { $lang = isset($T[$key[0]]) ? $key[0] : 'en'; $GLOBALS['ZH_CN'] = ($lang === 'zh-CN'); $GLOBALS['UI_LANG'] = $lang; return null; } // set language
     if ($key === null) return $T[$lang];
     return isset($T[$lang][$key]) ? $T[$lang][$key] : $key;
 }
@@ -1272,6 +1272,52 @@ function pin_link($page_path, $desc, $class = 'ws-pin') {
           . '&description=' . rawurlencode($desc);
     return '<a class="' . $class . '" href="' . h($href) . '" target="_blank" rel="noopener nofollow">'
          . '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a6.5 6.5 0 0 0-6.5 6.5c0 4.6 6.5 13.5 6.5 13.5s6.5-8.9 6.5-13.5A6.5 6.5 0 0 0 12 2zm0 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>' . h(T('pin_save')) . '</a>';
+}
+
+/* "Share with your class": the tools teachers use in that country (none that are not used there) */
+function share_tools($cc, $page_path, $title) {
+    $L = isset($GLOBALS['UI_LANG']) ? $GLOBALS['UI_LANG'] : 'en';
+    $W = array(
+        'en' => array('Share with your class', 'Copy link', 'Link copied'),
+        'zh-TW' => array('分享給班上', '複製連結', '已複製'),
+        'zh-CN' => array('分享给班级', '复制链接', '已复制'),
+        'de' => array('Mit der Klasse teilen', 'Link kopieren', 'Link kopiert'),
+        'tr' => array('Sınıfınla paylaş', 'Bağlantıyı kopyala', 'Kopyalandı'),
+        'sv' => array('Dela med klassen', 'Kopiera länk', 'Länken är kopierad'),
+        'id' => array('Bagikan ke kelas', 'Salin tautan', 'Tautan disalin'),
+        'fr' => array('Partager avec la classe', 'Copier le lien', 'Lien copié'),
+        'pt-BR' => array('Compartilhar com a turma', 'Copiar link', 'Link copiado'),
+        'it' => array('Condividi con la classe', 'Copia il link', 'Link copiato'),
+        'es' => array('Compartir con la clase', 'Copiar enlace', 'Enlace copiado'),
+        'ko' => array('우리 반과 공유하기', '링크 복사', '복사했어요'),
+    );
+    $w = isset($W[$L]) ? $W[$L] : (isset($W[substr($L, 0, 2)]) ? $W[substr($L, 0, 2)] : $W['en']);
+    $u = abs_url($page_path); $eu = rawurlencode($u); $et = rawurlencode($title);
+    $wa = array('uk', 'in', 'za', 'ng', 'sg', 'de', 'ch', 'fr', 'it', 'es', 'mx', 'br', 'id', 'tr');
+    $I = array(   // small line icons (no brand logos)
+        'board' => '<path d="M3 5h18v11H3zM8 20h8M12 16v4"/>',
+        'team'  => '<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.9.2 5 2.5 5 5.8"/>',
+        'chat'  => '<path d="M4 5h16v11H9l-5 4z"/>',
+        'bell'  => '<path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/>',
+        'link'  => '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
+    );
+    $t = array();
+    if ($cc !== 'cn') {
+        $t[] = array('board', 'Google Classroom', 'https://classroom.google.com/share?url=' . $eu . '&title=' . $et);
+        $t[] = array('team', 'Microsoft Teams', 'https://teams.microsoft.com/share?href=' . $eu . '&msgText=' . $et . '&preview=true');
+    }
+    if ($cc === 'us' || $cc === 'us-tx') $t[] = array('bell', 'Remind', 'https://www.remind.com/v1/share?url=' . $eu . '&referrer=' . rawurlencode(SITE_HOME));
+    if (in_array($cc, $wa, true)) $t[] = array('chat', 'WhatsApp', 'https://wa.me/?text=' . rawurlencode($title . ' ' . $u));
+    if ($cc === 'tw') $t[] = array('chat', 'LINE', 'https://social-plugins.line.me/lineit/share?url=' . $eu);
+    if ($cc === 'kr') $t[] = array('chat', 'BAND', 'https://band.us/plugin/share?body=' . rawurlencode($title . "\n" . $u) . '&route=' . rawurlencode(SITE_HOME));
+    if ($cc === 'ph') $t[] = array('chat', 'Facebook', 'https://www.facebook.com/sharer/sharer.php?u=' . $eu);
+    $svg = function ($k) use ($I) { return '<svg viewBox="0 0 24 24" aria-hidden="true">' . $I[$k] . '</svg>'; };
+    $r = '<div class="ws-tools"><span class="ws-tools-h">' . h($w[0]) . '</span>';
+    foreach ($t as $x)
+        $r .= '<a href="' . h($x[2]) . '" target="_blank" rel="noopener nofollow">' . $svg($x[0]) . h($x[1]) . '</a>';
+    $r .= '<button type="button" data-u="' . h($u) . '" data-ok="' . h($w[2]) . '" onclick="var b=this;if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.u).then(function(){b.lastChild.textContent=b.dataset.ok;});}">'
+        . $svg('link') . '<span>' . h($w[1]) . '</span></button></div>';
+    return $r;
 }
 
 /* path of the preview picture for a page path ('' when this server cannot draw it) */
