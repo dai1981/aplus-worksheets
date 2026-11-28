@@ -1,0 +1,255 @@
+# -*- coding: utf-8 -*-
+"""Nigeria, science (built with ng_sci). UNITS(grade): primary-1..6 (Basic Science / Basic Science and Technology),
+jss-1..3 (Intermediate Science), sss-1..3 (Biology, Chemistry and Physics)."""
+from ng_sci import NC
+
+EN, LN, YE, SD = "Learning About Our Environment", "Living and Non-Living Things", "You and Energy", "Science and Development"
+BI, CH, PH = "Biology", "Chemistry", "Physics"
+
+
+def UNITS(grade):
+    return T[grade]
+
+
+def _p(rows):
+    return [NC(a, i + 1, slug, src, **O.get(slug, {})) for i, (a, slug, src) in enumerate(rows)]
+
+
+NIMET = "NiMet (the Nigerian Meteorological Agency)"
+O = {
+    "living-and-non-living-things": dict(fill={"Living or not living?": ["caon_sci1:living-and-non-living-things:1", "za_s4:living-and-non-living-things:1:4", "cabc_s0:living-things-and-their-features:2:1", "za_s4:living-and-non-living-things:3:4"]}),
+    "vertebrates-and-invertebrates": dict(fill={"Classification keys": ["caon_hs11:diversity-of-living-things:1", "cabc_s3:biodiversity-and-ecosystems:2:3"]}),
+    "food-chains": dict(fill={"Changes in a food web": ["za_s4:ecosystems-and-food-webs:3:6", "za_s4:ecosystems-and-food-webs:4:6", "cabc_s3:food-chains-and-food-webs:2:3"]}),
+    "the-non-living-environment": dict(fill={"Water in our lives": "cabc_s0:water-and-the-water-cycle:1:2", "Air all around us": "caon_hs10:climate-change:1"}),
+    "life-cycles-of-living-things": dict(fill={"Life cycles in nature": "cabc_s0:life-cycles:1:2"}),
+    "constellations": dict(fill={"Stars, galaxies and light years": "caon_hs9:the-universe-and-space-exploration:3"},
+                           sub=[("Long ago, Filipinos watched certain stars, such as the Pleiades, to know when to plant rice.",
+                                 "Long ago, farmers in many parts of Africa watched certain stars, such as the Pleiades, to know when the planting season was near."),
+                                ("Filipino farmers and sailors used stars to mark planting time and find directions.", "Farmers and travellers have long used stars to mark planting time and find directions.")]),
+    "patterns-in-weather": dict(fill={"Kinds of weather": ["caon_sci1:day-night-and-weather:2", "cabc_s0:weather-and-seasons:1:0"]}, sub=[
+        ("in the Philippines, the dry season has many sunny days and the rainy season has many rainy afternoons",
+         "in Nigeria, the rainy season has many rainy days, and in the dry season the dusty harmattan wind blows from the Sahara"),
+        ("What does PAGASA do?", "What does NiMet do?")]),
+    "plants-animals-and-habitats": dict(sub=[("A tarsier is active at night and has very big eyes.", "A bush baby is active at night and has very big eyes.")]),
+    "gathering-scientific-information": dict(sub=[
+        ("Filipino inventors have made things such as the fluorescent lamp and the incubator for babies.",
+         "Nigerian scientists also do research, for example on better crops at the International Institute of Tropical Agriculture (IITA) in Ibadan.")]),
+    "characteristics-of-weather": dict(sub=[("PAGASA gives forecasts", NIMET + " gives forecasts"), ("PAGASA uses weather data", "NiMet uses weather data")]),
+    "landforms-rocks-and-minerals": dict(sub=[
+        ("Why is mining important in the Philippines?", "Why is mining important in Nigeria?"),
+        ("The Philippines mines nickel, gold and copper, but mines must be managed and cleaned up to protect forests, rivers and people.",
+         "Nigeria mines limestone for cement, coal, tin and gold, but mines must be managed and cleaned up to protect farms, rivers and people.")]),
+    "the-solar-system": dict(sub=[("; PAGASA runs an astronomical observatory and planetariums show the night sky.", ", and planetariums show the night sky.")]),
+    "weathering-and-erosion": dict(sub=[
+        ("How did the Chocolate Hills of Bohol form?", "Why does Zuma Rock stand high above the land around it?"),
+        ("They are limestone hills shaped over a very long time by weathering and erosion by rain and running water.",
+         "It is made of hard igneous rock; over a very long time the softer rock around it was weathered and eroded away.")]),
+    "mixtures-and-water-resources": dict(sub=[
+        ("Clean water is a scarce resource in South Africa and must be saved.", "Clean water is scarce in many places and must be saved."),
+        ("South Africa is a dry country with limited fresh water.", "Many communities in Nigeria, especially in the north, have limited clean water.")]),
+    "stored-energy-and-electricity": dict(sub=[
+        ("Most of South Africa's electricity comes from coal-fired power stations, so saving electricity also saves coal.",
+         "Most of Nigeria's electricity comes from natural gas power stations and hydroelectric dams such as Kainji, so saving electricity also saves fuel.")]),
+    "the-surface-of-the-earth-and-fossils": dict(sub=[
+        ("; South Africa has important fossil sites", "; Africa has many important fossil sites"),
+        ("The Karoo has many fossils of ancient reptiles, and the Cradle of Humankind has fossils of early humans.",
+         "Rocks in many places, including parts of Nigeria, hold fossils of ancient sea animals, and caves in Africa have fossils of early humans.")]),
+    "the-suns-influence-on-earth": dict(sub=[("Why are solar panels useful in the Philippines?", "Why are solar panels useful in Nigeria?"),
+                                             ("The country gets strong sunlight all year.", "The country gets strong sunshine all year, even where there is no grid supply.")]),
+    "renewable-energy": dict(sub=[
+        ("the Philippines uses geothermal, hydro and solar power", "Nigeria uses hydroelectric and solar power"),
+        ("The Philippines is a leading user of geothermal energy.", "Nigeria gets most of its renewable electricity from hydroelectric dams."),
+        ("The Philippines generates electricity from geothermal plants (such as in Leyte and Batangas), hydroelectric dams, wind farms (such as in Ilocos Norte) and solar farms.",
+         "Nigeria generates electricity from hydroelectric dams on the River Niger and River Kaduna (Kainji, Jebba and Shiroro), and more and more homes, schools and clinics use solar panels."),
+        ("Why does the Philippines have geothermal power?", "Why does Nigeria have hydroelectric power?"),
+        ("It has many volcanic areas where underground heat makes steam.", "Dams on large rivers such as the Niger turn the energy of flowing water into electricity.")]),
+    "electric-circuits": dict(sub=[("Electricity in the Philippines comes from coal, natural gas, geothermal, hydro, solar and wind plants;",
+                                    "Electricity in Nigeria comes mostly from natural gas and hydroelectric power stations, with more and more solar power;")]),
+    "the-solar-system-and-space-technologies": dict(sub=[
+        ("the Philippines has launched its own microsatellites, such as Diwata-1 and Diwata-2, to observe the Earth.",
+         "Nigeria has launched its own satellites, such as NigeriaSat-1 and NigeriaSat-2, to observe the Earth."),
+        ("How do satellites help the Philippines?", "How do satellites help Nigeria?"),
+        ("They track typhoons, map land and seas, and support communication and navigation.", "They watch floods and farmland, map the land, and support communication and navigation.")]),
+    "climate-change-and-sustainability": dict(sub=[
+        ("In the Philippines, impacts include stronger typhoons, sea-level rise, coral bleaching, longer droughts during El Niño and floods during La Niña.",
+         "In Nigeria, impacts include desertification in the north, the shrinking of Lake Chad, heavier floods, and sea-level rise along the coast near Lagos.")]),
+    "biodiversity-and-classification": dict(sub=[
+        ("; South Africa as a mega-diverse country", "; biodiversity in Nigeria"),
+        ("South Africa is one of the most biodiverse countries in the world.", "Nigeria has rainforests, savannas and mangrove swamps with many species, such as the rare Cross River gorilla.")]),
+    "biosphere-to-ecosystems": dict(sub=[
+        ("; South African biomes", "; Nigerian biomes"),
+        ("South Africa's biomes include the fynbos, savanna, grassland, Karoo, forest and desert.",
+         "Nigeria's biomes include mangrove swamps and rainforest in the south, and Guinea, Sudan and Sahel savanna in the north."),
+        ("Why is the fynbos biome special?", "Why is the Sahel savanna at risk?"),
+        ("It is the Cape Floral Kingdom, with thousands of plant species found nowhere else on Earth.",
+         "Low rainfall, overgrazing and cutting down trees turn the land into desert (desertification).")]),
+    "human-impact-on-the-environment": dict(sub=[
+        ("poaching (for example rhino horn)", "hunting for bushmeat"), ("Why are alien plants such as Port Jackson willow removed?", "Why are alien plants such as water hyacinth removed?"), ("such as wattle and water hyacinth", "such as water hyacinth in rivers and lagoons"),
+        ("What is the Working for Water programme?", "What is the Great Green Wall?"),
+        ("A South African programme that clears alien invasive plants to save water and create jobs.",
+         "A plan to plant trees and restore land across the Sahel, including northern Nigeria, to stop the desert from spreading.")]),
+    "the-lithosphere-and-mining": dict(sub=[
+        ("the history and processes of gold mining in South Africa (Witwatersrand), extraction of gold with cyanide",
+         "the extraction of gold with cyanide"),
+        ("The lithosphere contains the minerals that South Africa's economy depends on: gold, platinum, coal, iron ore and phosphates.",
+         "The lithosphere contains the resources Nigeria's economy depends on: crude oil and natural gas, limestone, coal, tin, iron ore and gold."),
+        ("Gold was discovered on the Witwatersrand in 1886; it is found in conglomerate reefs that run several kilometres underground.",
+         "Gold is found in rocks and river gravels in states such as Zamfara and Osun; deep gold mines elsewhere in Africa reach several kilometres underground."),
+        ("Gold mining in South Africa", "Gold mining")]),
+    "electric-circuits-ohms-law-and-power": dict(sub=[
+        ("A 2 kW heater runs for 3 h at R3 per kWh.", "A 2 kW electric iron is used for 3 h at ₦225 per kWh."), ("6 kWh × R3 = R18", "6 kWh × ₦225 = ₦1,350"),
+        ("Why is load shedding linked to power?", "Why are some areas switched off when demand is high?")]),
+    "electrodynamics": dict(sub=[("Eskom supplies AC at 230 V (rms) and 50 Hz.", "The national grid in Nigeria supplies AC at 230 V (rms) and 50 Hz.")]),
+}
+
+
+T = {
+    "primary-1": _p([
+        (SD, "science-in-daily-life", "ph_s3:science-in-daily-life:3"),
+        (LN, "living-and-non-living-things", "ph_s3:living-and-non-living-things:3"),
+        (LN, "basic-needs-of-living-things", "ph_s3:basic-needs-of-living-things:3"),
+        (LN, "materials-and-their-uses", "ph_s3:materials-and-their-uses:3"),
+        (YE, "moving-objects", "ph_s3:moving-objects:3"),
+        (YE, "light-and-sound", "ph_s3:light-and-sound:3"),
+        (EN, "the-non-living-environment", "ph_s3:the-non-living-environment:3"),
+        (EN, "patterns-in-weather", "ph_s3:patterns-in-weather:3"),
+        (EN, "the-sun-moon-and-stars", "ph_s3:the-sun-moon-and-stars:3"),
+    ]),
+    "primary-2": _p([
+        (LN, "plants-animals-and-habitats", "ph_s3:plants-animals-and-habitats:4"),
+        (LN, "animal-life-cycles", "ph_s3:animal-life-cycles:4"),
+        (LN, "food-chains", "ph_s3:food-chains:4"),
+        (YE, "forces-and-movement", "ph_s3:forces-and-movement:4"),
+        (YE, "magnets", "ph_s3:magnets:4"),
+        (YE, "sound-light-and-heat-energy", "ph_s3:sound-light-and-heat-energy:4"),
+        (EN, "soils", "ph_s3:soils:4"),
+        (EN, "characteristics-of-the-sun", "ph_s3:characteristics-of-the-sun:4"),
+    ]),
+    "primary-3": _p([
+        (SD, "gathering-scientific-information", "ph_s3:gathering-scientific-information:4"),
+        (LN, "body-systems-of-plants-and-animals", "ph_s3:body-systems-of-plants-and-animals:4"),
+        (LN, "matter-and-its-three-states", "ph_s3:matter-and-its-three-states:5"),
+        (LN, "life-cycles-of-living-things", "ph_s3:life-cycles-of-living-things:5"),
+        (YE, "contact-and-non-contact-forces", "ph_s3:contact-and-non-contact-forces:5"),
+        (EN, "characteristics-of-weather", "ph_s3:characteristics-of-weather:4"),
+        (EN, "landforms-rocks-and-minerals", "ph_s3:landforms-rocks-and-minerals:5"),
+        (EN, "the-solar-system", "ph_s3:the-solar-system:5"),
+    ]),
+    "primary-4": _p([
+        (SD, "scientific-investigation", "ph_s3:scientific-investigation:5"),
+        (LN, "body-systems-in-animals", "ph_s3:body-systems-in-animals:5"),
+        (LN, "microorganisms", "ph_s3:microorganisms:5"),
+        (LN, "specialized-plant-structures", "ph_s3:specialized-plant-structures:5"),
+        (YE, "friction-and-gravity", "ph_s3:friction-and-gravity:5"),
+        (YE, "static-electricity", "ph_s3:static-electricity:5"),
+        (YE, "conductors-insulators-and-simple-circuits", "ph_s3:conductors-insulators-and-simple-circuits:5"),
+        (EN, "weathering-and-erosion", "ph_s3:weathering-and-erosion:5"),
+    ]),
+    "primary-5": _p([
+        (LN, "changes-of-state", "ph_s3:changes-of-state:6"),
+        (LN, "physical-and-chemical-changes", "ph_s3:physical-and-chemical-changes:6"),
+        (LN, "mixtures-and-separation-techniques", "ph_s3:mixtures-and-separation-techniques:6"),
+        (LN, "the-circulatory-system", "ph_s3:the-circulatory-system:6"),
+        (LN, "plant-reproduction", "ph_s3:plant-reproduction:6"),
+        (LN, "vertebrates-and-invertebrates", "ph_s3:vertebrates-and-invertebrates:6"),
+        (YE, "simple-machines", "ph_s3:simple-machines:6"),
+        (YE, "sound-waves", "ph_s3:sound-waves:6"),
+    ]),
+    "primary-6": _p([
+        (LN, "photosynthesis-and-nutrition", "za_s4:photosynthesis-and-nutrition:6"),
+        (LN, "food-webs-and-interactions", "ph_s3:food-webs-and-interactions:6"),
+        (LN, "metals-and-non-metals", "za_s4:metals-and-non-metals:5"),
+        (EN, "mixtures-and-water-resources", "za_s4:mixtures-and-water-resources:6"),
+        (YE, "stored-energy-and-electricity", "za_s4:stored-energy-and-electricity:5"),
+        (YE, "electric-circuits", "za_s4:electric-circuits:6"),
+        (EN, "the-surface-of-the-earth-and-fossils", "za_s4:the-surface-of-the-earth-and-fossils:5"),
+        (EN, "constellations", "ph_s3:constellations:6"),
+    ]),
+    "jss-1": _p([
+        (SD, "planning-and-recording-investigations", "ph_s7:planning-and-recording-investigations:7"),
+        (LN, "the-particle-model-of-matter", "ph_s7:the-particle-model-of-matter:7"),
+        (LN, "solutions-solubility-and-concentration", "ph_s7:solutions-solubility-and-concentration:7"),
+        (LN, "the-microscope-and-cells", "ph_s7:the-microscope-and-cells:7"),
+        (LN, "levels-of-biological-organization", "ph_s7:levels-of-biological-organization:7"),
+        (EN, "energy-transfer-in-ecosystems", "ph_s7:energy-transfer-in-ecosystems:7"),
+        (YE, "balanced-and-unbalanced-forces", "ph_s7:balanced-and-unbalanced-forces:7"),
+        (YE, "distance-displacement-and-velocity", "ph_s7:distance-displacement-and-velocity:7"),
+        (YE, "heat-transfer", "ph_s7:heat-transfer:7"),
+        (EN, "the-suns-influence-on-earth", "ph_s7:the-suns-influence-on-earth:7"),
+    ]),
+    "jss-2": _p([
+        (LN, "cellular-reproduction", "ph_s7:cellular-reproduction:7"),
+        (LN, "organ-systems-working-together", "ph_s7:organ-systems-working-together:8"),
+        (LN, "taxonomic-classification", "ph_s7:taxonomic-classification:8"),
+        (LN, "photosynthesis-respiration-and-cycles", "ph_s7:photosynthesis-respiration-and-cycles:8"),
+        (LN, "the-atom-and-subatomic-particles", "ph_s7:the-atom-and-subatomic-particles:8"),
+        (LN, "elements-and-compounds", "ph_s7:elements-and-compounds:8"),
+        (YE, "acceleration-and-motion-graphs", "ph_s7:acceleration-and-motion-graphs:8"),
+        (YE, "work-and-energy", "ph_s7:work-and-energy:8"),
+        (YE, "properties-of-light", "ph_s7:properties-of-light:8"),
+        (SD, "renewable-energy", "ph_s7:renewable-energy:8"),
+    ]),
+    "jss-3": _p([
+        (LN, "heredity", "ph_s7:heredity:8"),
+        (LN, "human-reproduction", "za_s7:human-reproduction:9"),
+        (LN, "the-periodic-table", "ph_s7:the-periodic-table:8"),
+        (LN, "chemical-bonding", "ph_s7:chemical-bonding:9"),
+        (YE, "newtons-laws-of-motion", "ph_s7:newtons-laws-of-motion:9"),
+        (YE, "electric-circuits", "ph_s7:electric-circuits:9"),
+        (YE, "electromagnetic-waves", "ph_s7:electromagnetic-waves:9"),
+        (EN, "structure-of-the-earth-and-geologic-time", "ph_s7:structure-of-the-earth-and-geologic-time:9"),
+        (EN, "the-solar-system-and-space-technologies", "ph_s7:the-solar-system-and-space-technologies:9"),
+        (SD, "climate-change-and-sustainability", "ph_s7:climate-change-and-sustainability:10"),
+    ]),
+    "sss-1": _p([
+        (BI, "biodiversity-and-classification", "za_s10:biodiversity-and-classification:10"),
+        (BI, "cells-the-basic-units-of-life", "za_s10:cells-the-basic-units-of-life:10"),
+        (BI, "biosphere-to-ecosystems", "za_s10:biosphere-to-ecosystems:10"),
+        (BI, "photosynthesis", "za_s11:photosynthesis:11"),
+        (BI, "animal-nutrition", "za_s11:animal-nutrition:11"),
+        (CH, "classification-of-matter", "za_s10:classification-of-matter:10"),
+        (CH, "states-of-matter-and-the-kinetic-molecular-theory", "za_s10:states-of-matter-and-the-kinetic-molecular-theory:10"),
+        (CH, "the-atom", "za_s10:the-atom:10"),
+        (CH, "the-periodic-table", "za_s10:the-periodic-table:10"),
+        (CH, "chemical-bonding", "za_s10:chemical-bonding:10"),
+        (PH, "scientific-measurement", "ph_s11:scientific-measurement:12"),
+        (PH, "vectors-scalars-and-motion-in-one-dimension", "za_s10:vectors-scalars-and-motion-in-one-dimension:10"),
+        (PH, "forces-and-newtons-laws", "cabc_s11:forces-and-newtons-laws:11"),
+        (PH, "energy-work-and-power", "cabc_s11:energy-work-and-power:11"),
+        (PH, "heat-and-thermodynamics", "ph_s11:heat-and-thermodynamics:12"),
+    ]),
+    "sss-2": _p([
+        (BI, "transport-systems-in-mammals", "za_s10:transport-systems-in-mammals:10"),
+        (BI, "gaseous-exchange", "za_s11:gaseous-exchange:11"),
+        (BI, "cellular-respiration", "za_s11:cellular-respiration:11"),
+        (BI, "excretion-in-humans", "za_s11:excretion-in-humans:11"),
+        (BI, "population-ecology", "za_s11:population-ecology:11"),
+        (CH, "quantitative-aspects-of-chemical-change", "za_s10:quantitative-aspects-of-chemical-change:10"),
+        (CH, "ideal-gases-and-thermal-properties", "za_s11:ideal-gases-and-thermal-properties:11"),
+        (CH, "acids-and-bases", "za_s11:acids-and-bases:11"),
+        (CH, "redox-reactions", "za_s11:redox-reactions:11"),
+        (CH, "energy-and-chemical-change", "za_s11:energy-and-chemical-change:11"),
+        (PH, "transverse-pulses-and-waves", "za_s10:transverse-pulses-and-waves:10"),
+        (PH, "sound", "za_s10:sound:10"),
+        (PH, "geometrical-optics", "za_s11:geometrical-optics:11"),
+        (PH, "projectile-motion", "cabc_s11:projectile-motion:11"),
+        (PH, "momentum-and-impulse", "za_s12:momentum-and-impulse:12"),
+    ]),
+    "sss-3": _p([
+        (BI, "nervous-system-and-senses", "za_s12:nervous-system-and-senses:12"),
+        (BI, "endocrine-system-and-homeostasis", "za_s12:endocrine-system-and-homeostasis:12"),
+        (BI, "genetics-and-inheritance", "za_s12:genetics-and-inheritance:12"),
+        (BI, "evolution", "za_s12:evolution:12"),
+        (BI, "human-impact-on-the-environment", "za_s11:human-impact-on-the-environment:11"),
+        (CH, "organic-molecules", "za_s12:organic-molecules:12"),
+        (CH, "rate-and-extent-of-reaction", "za_s12:rate-and-extent-of-reaction:12"),
+        (CH, "chemical-equilibrium", "za_s12:chemical-equilibrium:12"),
+        (CH, "electrochemical-reactions", "za_s12:electrochemical-reactions:12"),
+        (CH, "the-lithosphere-and-mining", "za_s11:the-lithosphere-and-mining:11"),
+        (PH, "electrostatics-coulombs-law-and-electric-fields", "za_s11:electrostatics-coulombs-law-and-electric-fields:11"),
+        (PH, "electric-circuits-ohms-law-and-power", "za_s11:electric-circuits-ohms-law-and-power:11"),
+        (PH, "electromagnetism", "za_s11:electromagnetism:11"),
+        (PH, "electrodynamics", "za_s12:electrodynamics:12"),
+        (PH, "optical-phenomena-and-properties-of-materials", "za_s12:optical-phenomena-and-properties-of-materials:12"),
+    ]),
+}
