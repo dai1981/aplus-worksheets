@@ -2416,6 +2416,8 @@ NG / Science は Primary 1〜SSS 3 まで完了（slug は他国と共通なの�
 - 英語（/）と de・fr・it・es・pt・tr（/de/ など）の index.html・about.html は `tools/apu2_top/build_top.py`、privacypolicy.html（13言語のタブ）は `build_pp.py` で作る（出力は tools/apu2_top/out/）。文言と算数の国の一覧は `top_data.py`（MATH・CC・T・A）。en_*.html は元にした英語ページ
 - トップ・About は 14 言語（en ja vi id zh tw ko de fr it es pt tr sv）すべて build_top.py で作る（2026-11-26 から ja〜ko のトップも。T[L] の order で節の順、j_c・e_c でその言語の講座、e_more で追加のリンク）。us・uk・au・ca・sg のトップと About だけは手で作った別のファイル。言語を足したら `python3 patch_en.py 元のファイル…` で言語メニュー・hreflang・フッターをそろえる（元のファイルはユーザーにもらう）
 - 新しい国の算数を足したら MATH（並びの位置に insert）・CC（全言語の国名）・OWN・SHORT に足して作り直す。「{nk} の教育課程・{nc} の国と地域」は MATH から自動で数える（{nk1}・{nk2} は「ほか N」）
+- 各言語フォルダ（/de/ /vi/ など）のトップ・About は、その言語の内容だけ（ほかの国の算数・「13言語すべて」のリンクは出さない）。算数はその国の学年の一覧（cards.py が content/ から学年と単元数を数える）。ja は 英語漬け.com の教科の一覧（top_data.JA_SUBJ）
+- 英語圏の国別トップ・About（/us/ /uk/ /au/ /ca/ /sg/）は `build_cc.py`（もとのページ cc_src/ の head・header・footer を使い、その国の算数・理科の全学年を一覧にする。ほかの国へのリンクは出さない）。学年・単元を足したら build_top.py と build_cc.py を実行して out/ から site/top/ へ写す
 - 新しい言語は LANGS・NEW・HREFLANG・SEL・LOCALE・CC・T・A と build_pp.py の P・ORDER に足す（top_data.py の末尾の sv を参照）
 
 ## 触ってはいけないもの
