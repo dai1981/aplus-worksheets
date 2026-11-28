@@ -2409,6 +2409,30 @@ TW / 自然科學（十二年國教課綱 自然科學領域、108課綱）— c
 トピックは topics.php の topic_defs_science_tw()（cn の正規表現に台灣の名前と説明）。core.php の subject_standard()・grade_standard() に tw/science
 TW / 自然科學 は國小三年級〜高中三年級（153 単元）まで完了
 
+KR / 과학（2022 개정 과학과 교육과정。초등 3~4학년군・5~6학년군は各 16 영역、중학교 1~3학년군は 23 영역、고등학교は 공통 과목 통합과학1·2 と 일반 선택 물리학·화학·생명과학·지구과학）— country `kr`、subject `science`（과학）、A4。
+grade は grade-3〜grade-6（초등）、grade-7〜grade-9（중학교 1〜3학년）、`integrated-science-1`・`integrated-science-2`・`physics`・`chemistry`・`life-science`・`earth-science`（name「통합과학1」…、sort 10〜15、unit.php で 15〜17 歳と educationalLevel 고등학교、core.php の gs() は科目名だけ）。
+초등은 영역 (1)~(8) を 3·5학년、(9)~(16) を 4·6학년、중학교は 중1 = 7 영역（2025 年の教科書）、중2・중3 = 8 영역ずつ。
+生成は `python3 tools/kr_sci.py 学年 [slug|番号…]`（seed は 85000 + 100 × 学年の番号（고등학교は 10〜15）+ 番号）、単元は `tools/kr_s3.py`（3·4학년）・`kr_s5.py`（5·6학년）・`kr_s7.py`〜`kr_s9.py`（중학교）・`kr_s10.py`（통합과학1·2）・`kr_s11.py`（물리학·화학）・`kr_s12.py`（생명과학·지구과학）の UNITS(grade)。問題はすべて自前の韓国語。
+kr_sci.H(dom, slug, title, short, std, what, kb, ks, think, ex, mist, faq, T=[3 つの表], TFt, TFf, topic, tp, calc=, bank=)：表は (セット名, rows, fwd, back[, extra]) か (セット名, {グループ: [物]})、セットは表 3 つ・(calc 15 + 表 5) か混合・正誤。tp は topics.php のトピック。
+助詞：‘{k}’・‘{v}’ の直後の助詞（은/는・이/가・을/를・과/와・으로/로）は kr_sci.fix_josa が中身の最後の文字（単位は kr_common.unit_josa）に合わせて直す。文のような値（…한다）を ‘{v}’ 물건은? の形にしない（「다음 설명에 알맞은 것은? ‘{v}’」にする）。
+正誤の文は kr_sci.polite が「…다.」を「…ㅂ니다./…습니다.」にそろえる（正しい文とまちがいの文の文体で答えが分からないように）。「25 %」は pct で「25%」に。数は 1,000 からカンマ（kr_sci.num）、nq の単位は 초・분・시간・배・개・가지などは空白なし。
+standard_code は「초등학교 3~4학년군 · 물질」「중학교 1~3학년군 · 운동과 에너지」「물리학 · 힘과 에너지」形式（domain は 초·중が 운동과 에너지／물질／생명／지구와 우주／과학과 사회、고등학교は 영역名）、standard_url は NCIC。core.php の subject_standard() に kr/science。
+トピックは topics.php の topic_defs_science_kr()（単元 slug を ^(…)$ で列挙。science-and-society（과학과 사회）を足した。mq の分野には入らない）。プールの数は scratchpad の kr/cap.py で確かめる
+KR / 과학 / 초등 3학년: 1. forces-in-our-lives 2. animal-life 3. plant-life 4. life-cycles 5. objects-and-materials 6. earth-and-the-sea 7. properties-of-sound 8. infectious-diseases-and-healthy-living ✓
+KR / 과학 / 초등 4학년: 1. using-magnets 2. changes-of-state-of-water 3. changes-of-the-land 4. diverse-living-things 5. observing-the-night-sky 6. living-things-and-the-environment 7. various-gases 8. climate-change-and-our-lives ✓
+KR / 과학 / 초등 5학년: 1. rock-layers-and-fossils 2. properties-of-light 3. dissolving-and-solutions 4. human-body-structure-and-function 5. separating-mixtures 6. weather-and-our-lives 7. heat-and-our-lives 8. resources-and-energy ✓
+KR / 과학 / 초등 6학년: 1. acids-and-bases 2. motion-of-objects 3. plant-structure-and-function 4. earths-motions 5. seasonal-changes 6. combustion 7. using-electricity 8. science-and-my-career ✓
+KR / 과학 / 중학교 1학년: 1. science-and-sustainable-life 2. organization-and-diversity-of-life 3. heat 4. changes-of-state-of-matter 5. action-of-forces 6. properties-of-gases 7. the-solar-system ✓
+KR / 과학 / 중학교 2학년: 1. composition-of-matter 2. electricity-and-magnetism 3. plants-and-energy 4. animals-and-energy 5. changes-of-the-geosphere 6. light-and-waves 7. characteristic-properties-of-matter 8. hydrosphere-and-ocean-circulation ✓
+KR / 과학 / 중학교 3학년: 1. laws-of-chemical-reactions-and-energy 2. atmosphere-and-weather 3. motion-and-energy 4. stimulus-and-response 5. reproduction-and-heredity 6. stars-and-the-universe 7. science-technology-and-civilization 8. disasters-and-safety ✓
+KR / 과학 / 통합과학1: 1. basic-quantities-and-measurement 2. origin-of-elements 3. periodic-table-and-elements 4. chemical-bonding-and-properties 5. electrical-properties-of-materials 6. earth-system 7. mechanical-systems 8. life-systems-and-information-flow ✓
+KR / 과학 / 통합과학2: 1. oxidation-and-reduction 2. acids-bases-and-neutralization 3. geologic-time-and-biodiversity 4. ecosystems-and-environment 5. global-environmental-change 6. energy-conversion-and-power-generation 7. renewable-energy 8. science-and-future-society ✓
+KR / 과학 / 물리학: 1. motion-and-newtons-laws 2. momentum-and-equilibrium 3. energy-and-heat 4. electric-fields-and-circuits 5. magnetic-fields-and-induction 6. light-and-matter ✓
+KR / 과학 / 화학: 1. mole-and-chemical-equations 2. atomic-structure-and-periodicity 3. chemical-bonds-and-molecular-shape 4. chemical-equilibrium 5. acids-bases-and-ph 6. neutralization-and-redox ✓
+KR / 과학 / 생명과학: 1. characteristics-of-life 2. human-metabolism 3. neurons-and-the-nervous-system 4. homeostasis 5. immunity-and-disease 6. chromosomes-and-cell-division 7. human-genetics ✓
+KR / 과학 / 지구과학: 1. plate-tectonics 2. rocks-and-geologic-history 3. weather-systems 4. ocean-and-atmosphere-interaction 5. planets-and-the-solar-system 6. stars-and-the-universe ✓
+KR / 과학 は초등 3학년〜고등학교（통합과학1·2、물리학·화학·생명과학·지구과학）まで完了。진로 선택（역학과 에너지 など）は必要なら後で
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ

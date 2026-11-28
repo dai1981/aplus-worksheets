@@ -158,6 +158,10 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
     $ages = array('required-1' => '15-16', 'required-2' => '15-16', 'elective-1' => '16-17', 'elective-2' => '16-17', 'elective-3' => '16-18');
     $lr['typicalAgeRange'] = $ages[$grade['slug']];   // China, 普通高中: 必修 = 高一, 选择性必修 = 高二〜高三
     $lr['educationalLevel'] = array($grade['name'], '普通高中');
+} elseif ($country['code'] === 'kr' && isset(array('integrated-science-1' => 1, 'integrated-science-2' => 1, 'physics' => 1, 'chemistry' => 1, 'life-science' => 1, 'earth-science' => 1)[$grade['slug']])) {
+    $ages = array('integrated-science-1' => '15-16', 'integrated-science-2' => '15-16', 'physics' => '16-17', 'chemistry' => '16-17', 'life-science' => '16-17', 'earth-science' => '16-17');
+    $lr['typicalAgeRange'] = $ages[$grade['slug']];   // Korea, 고등학교: 통합과학1·2 = 1학년, 물리학·화학·생명과학·지구과학 = 2학년
+    $lr['educationalLevel'] = array($grade['name'], '고등학교');
 } elseif ($country['code'] === 'kr' && isset(array('common-math-1' => 1, 'common-math-2' => 1, 'algebra' => 1, 'calculus-1' => 1, 'probability-and-statistics' => 1)[$grade['slug']])) {
     $ages = array('common-math-1' => '15-16', 'common-math-2' => '15-16', 'algebra' => '16-17', 'calculus-1' => '16-17', 'probability-and-statistics' => '17-18');
     $lr['typicalAgeRange'] = $ages[$grade['slug']];   // Korea, 고등학교: 공통수학1·2 = 1학년, 대수·미적분Ⅰ = 2학년, 확률과 통계 = 2~3학년

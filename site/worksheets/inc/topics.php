@@ -713,7 +713,30 @@ function topic_defs_science($country = null) {
     );
 }
 
+/* Korea science (2022 개정 과학과 교육과정): topics list the unit slugs of kr/science (tools/kr_s*.py の tp) */
+function topic_defs_science_kr() {
+    return array(
+        'matter' => array('name' => '물질', 'in' => '/^(objects-and-materials|changes-of-state-of-water|various-gases|dissolving-and-solutions|separating-mixtures|acids-and-bases|combustion|changes-of-state-of-matter|properties-of-gases|composition-of-matter|characteristic-properties-of-matter|laws-of-chemical-reactions-and-energy|periodic-table-and-elements|chemical-bonding-and-properties|electrical-properties-of-materials|oxidation-and-reduction|acids-bases-and-neutralization|mole-and-chemical-equations|atomic-structure-and-periodicity|chemical-bonds-and-molecular-shape|chemical-equilibrium|acids-bases-and-ph|neutralization-and-redox)$/', 'out' => '/^$/',
+            'blurb' => '물체와 물질, 물의 상태 변화, 기체, 용해와 혼합물, 산과 염기, 연소, 그리고 중학교·고등학교의 원소와 원자, 화학 결합, 화학 반응, 몰, 화학 평형과 산화 환원.'),
+        'forces-and-motion' => array('name' => '힘과 운동', 'in' => '/^(forces-in-our-lives|using-magnets|motion-of-objects|action-of-forces|motion-and-energy|mechanical-systems|motion-and-newtons-laws|momentum-and-equilibrium)$/', 'out' => '/^$/',
+            'blurb' => '힘과 우리 생활, 자석, 물체의 운동과 속력, 중력·마찰력·탄성력, 운동과 에너지, 그리고 고등학교의 역학 시스템, 뉴턴 운동 법칙, 운동량과 힘의 평형.'),
+        'energy' => array('name' => '에너지와 전기', 'in' => '/^(heat-and-our-lives|using-electricity|heat|electricity-and-magnetism|energy-conversion-and-power-generation|renewable-energy|energy-and-heat|electric-fields-and-circuits|magnetic-fields-and-induction)$/', 'out' => '/^$/',
+            'blurb' => '열의 이동, 전기 회로와 전자석, 비열과 열팽창, 옴의 법칙, 에너지 전환과 발전, 신재생 에너지, 그리고 역학적 에너지와 열역학, 전기장과 자기장.'),
+        'waves-and-light' => array('name' => '빛과 파동', 'in' => '/^(properties-of-sound|properties-of-light|light-and-waves|light-and-matter)$/', 'out' => '/^$/',
+            'blurb' => '소리의 성질, 빛의 직진·반사·굴절과 렌즈, 빛의 합성과 파동의 성질, 그리고 빛과 물질의 이중성과 에너지 준위.'),
+        'living-things-and-ecosystems' => array('name' => '생명', 'in' => '/^(animal-life|plant-life|life-cycles|diverse-living-things|living-things-and-the-environment|human-body-structure-and-function|plant-structure-and-function|organization-and-diversity-of-life|plants-and-energy|animals-and-energy|stimulus-and-response|reproduction-and-heredity|life-systems-and-information-flow|geologic-time-and-biodiversity|ecosystems-and-environment|characteristics-of-life|human-metabolism|neurons-and-the-nervous-system|homeostasis|immunity-and-disease|chromosomes-and-cell-division|human-genetics)$/', 'out' => '/^$/',
+            'blurb' => '동물과 식물의 생활, 생물의 한살이, 우리 몸, 생물과 환경, 세포와 생물다양성, 광합성과 소화·순환·호흡·배설, 자극과 반응, 생식과 유전, 그리고 항상성, 면역, 유전과 진화.'),
+        'earth-and-space' => array('name' => '지구와 우주', 'in' => '/^(observing-the-night-sky|earths-motions|seasonal-changes|the-solar-system|stars-and-the-universe|origin-of-elements|planets-and-the-solar-system)$/', 'out' => '/^$/',
+            'blurb' => '밤하늘과 달, 지구의 자전과 공전, 계절의 변화, 태양계와 별, 우주의 시작과 원소의 생성, 케플러 법칙, 별의 진화와 우주 팽창.'),
+        'earths-systems' => array('name' => '지구시스템과 환경', 'in' => '/^(earth-and-the-sea|changes-of-the-land|rock-layers-and-fossils|weather-and-our-lives|changes-of-the-geosphere|hydrosphere-and-ocean-circulation|atmosphere-and-weather|earth-system|global-environmental-change|plate-tectonics|rocks-and-geologic-history|weather-systems|ocean-and-atmosphere-interaction)$/', 'out' => '/^$/',
+            'blurb' => '지구와 바다, 땅의 변화, 지층과 화석, 날씨, 지권의 변화, 수권과 해수의 순환, 기권과 날씨, 판 구조론, 기단과 태풍, 엘니뇨와 기후 변화.'),
+        'science-and-society' => array('name' => '과학과 사회', 'in' => '/^(infectious-diseases-and-healthy-living|climate-change-and-our-lives|resources-and-energy|science-and-my-career|science-and-sustainable-life|science-technology-and-civilization|disasters-and-safety|basic-quantities-and-measurement|science-and-future-society)$/', 'out' => '/^$/',
+            'blurb' => '감염병과 건강한 생활, 기후변화, 자원과 에너지, 과학과 진로, 과학적 탐구, 과학기술과 인류 문명, 재해·재난과 안전, 과학과 미래 사회.'),
+    );
+}
+
 function topic_defs($country = null, $subject = null) {
+    if ($subject === 'science' && $country === 'kr') return topic_defs_science_kr();
     if ($subject === 'science' && $country === 'cn') return topic_defs_science_cn();
     if ($subject === 'science' && $country === 'tw') return topic_defs_science_tw();
     if ($subject === 'science') return topic_defs_science($country);
