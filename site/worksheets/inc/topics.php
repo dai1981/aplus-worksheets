@@ -653,6 +653,26 @@ function topic_defs_se() {
     );
 }
 
+/* 中国 / 科学：单元 slug をそのまま列挙（他の国の理科のトピックとは別） */
+function topic_defs_science_cn() {
+    return array(
+        'matter' => array('name' => '物质的性质与变化', 'in' => '/^(water|air|objects-around-us|materials|comparing-and-measuring|changes-of-matter)$/', 'out' => '/^$/',
+            'blurb' => '水的三态、空气的性质、常见的材料、溶解，以及物理变化和化学变化。'),
+        'forces-and-motion' => array('name' => '运动和力', 'in' => '/^(motion-of-objects|motion-and-force|magnets)$/', 'out' => '/^$/',
+            'blurb' => '物体的运动方式和快慢、弹力、摩擦力、重力和反冲力，以及磁铁的性质。'),
+        'energy' => array('name' => '声、光、热、电和能量', 'in' => '/^(sound|light|heat|electric-circuits|energy)$/', 'out' => '/^$/',
+            'blurb' => '声音的产生和传播、光的传播、热的传递、简单电路和能量的转换。'),
+        'living-things-and-ecosystems' => array('name' => '生命世界', 'in' => '/^(plants|animals|ourselves|life-cycle-of-animals|breathing-and-digestion|growth-of-plants|healthy-living|living-things-and-environment|the-tiny-world|biodiversity)$/', 'out' => '/^$/',
+            'blurb' => '植物和动物、人体与健康、生物的生长与繁殖、食物链、细胞与微生物以及生物的多样性。'),
+        'earth-and-space' => array('name' => '地球与宇宙', 'in' => '/^(sun-earth-and-moon|motion-of-the-earth|the-universe)$/', 'out' => '/^$/',
+            'blurb' => '太阳、地球和月球，昼夜和四季，太阳系、星座和探索宇宙。'),
+        'earths-systems' => array('name' => '地球系统与环境', 'in' => '/^(our-earth-home|weather|rocks-and-soil|changes-of-earths-surface|environment-and-us)$/', 'out' => '/^$/',
+            'blurb' => '天气、岩石和土壤、地表的变化，以及保护水、空气和土地。'),
+        'engineering-design' => array('name' => '技术与工程', 'in' => '/^(measuring-time|ship-research|tools-and-technology|little-engineers)$/', 'out' => '/^$/',
+            'blurb' => '计时工具、船的设计、简单机械，以及明确问题、设计、制作、测试和改进的工程过程。'),
+    );
+}
+
 /* Science (US NGSS first). Slugs are English; the same topics can serve other English-speaking countries later */
 function topic_defs_science($country = null) {
     return array(
@@ -678,6 +698,7 @@ function topic_defs_science($country = null) {
 }
 
 function topic_defs($country = null, $subject = null) {
+    if ($subject === 'science' && $country === 'cn') return topic_defs_science_cn();
     if ($subject === 'science') return topic_defs_science($country);
     if ($country === 'br') return topic_defs_br();
     if ($country === 'es' || $country === 'mx') return topic_defs_es();

@@ -2376,6 +2376,20 @@ SSS 2: Biology（transport-systems-in-mammals・gaseous-exchange・cellular-resp
 SSS 3: Biology（nervous-system-and-senses・endocrine-system-and-homeostasis・genetics-and-inheritance・evolution・human-impact-on-the-environment）✓／Chemistry（organic-molecules・rate-and-extent-of-reaction・chemical-equilibrium・electrochemical-reactions・the-lithosphere-and-mining）✓／Physics（electrostatics-coulombs-law-and-electric-fields・electric-circuits-ohms-law-and-power・electromagnetism・electrodynamics・optical-phenomena-and-properties-of-materials）✓
 NG / Science は Primary 1〜SSS 3 まで完了（slug は他国と共通なので topics.php の変更なし）。NERDC が改訂版の詳しい単元表を出したら並びを見直す
 
+CN / 科学（义务教育科学课程标准（2022年版）。単元は教科版の順）— country `cn`、subject `science`（科学）、grade `grade-N`（一年级…六年级）、A4。简体字で直接書く（OpenCC は使わない）。
+生成は `python3 tools/cn_sci.py 学年 [slug|番号…]`（seed は 95000 + 100 × 学年 + 番号）、単元は `tools/cn_s1.py`（一・二年级）・`cn_s3.py`（三・四）・`cn_s5.py`（五・六）の UNITS(g)。
+cn_sci.U(dom, slug, title, short, std, what, kb, ks, think, ex, mist, faq, sets)、sets は lambda K: [(セット名, [(部品, 数)])] × 5。部品は K.P(rows, fwd, back)（対の表。正しい／まちがった「配对」の問題も作る）・K.G(groups, pos, neg)（pos・neg に必ず {g} を入れる）・K.TF(正しい文, [(まちがい, 正しくは)], topic)・K.B(手書きの行)・K.F(fn)。
+domain は 物质科学／生命科学／地球与宇宙科学／技术与工程（dom は M・L・E・T）、standard_code は「第二学段（3～4年级） · 物质科学」、standard_url は教育部の課標ページ（cn_common.STD_URL）。繁体字とラテン文字（cm・kg・mL・N などを除く）が残ると止まる。
+バンクは使う数より 2〜4 行多く書く（ちょうどだと足りなくなる）。表が 3 行以下の P は問題が作れない。容量は scratchpad の cn/cap.py で確かめる
+トピックは topics.php の `topic_defs_science_cn()`（中国語の名前、単元 slug を ^(…)$ で列挙。他の国の理科のトピックは変えない）
+一年级: plants ✓ comparing-and-measuring ✓ objects-around-us ✓ animals ✓
+二年级: our-earth-home ✓ materials ✓ magnets ✓ ourselves ✓
+三年级: water ✓ air ✓ weather ✓ motion-of-objects ✓ life-cycle-of-animals ✓ sun-earth-and-moon ✓
+四年级: sound ✓ breathing-and-digestion ✓ motion-and-force ✓ growth-of-plants ✓ electric-circuits ✓ rocks-and-soil ✓
+五年级: light ✓ changes-of-earths-surface ✓ measuring-time ✓ healthy-living ✓ living-things-and-environment ✓ ship-research ✓ heat ✓ environment-and-us ✓
+六年级: the-tiny-world ✓ motion-of-the-earth ✓ energy ✓ tools-and-technology ✓ little-engineers ✓ biodiversity ✓ changes-of-matter ✓ the-universe ✓
+CN / 科学 は小学一〜六年级まで完了。次は初中（七〜九年级：物理・化学・生物・地理）か、他の国の理科
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ
