@@ -2452,6 +2452,25 @@ ID / IPA / Kelas 12: Fisika（listrik-statis-dan-kapasitor・rangkaian-arus-sear
 
 ID / IPA は kelas 3〜12（SD IPAS・SMP IPA・SMA IPA／Fisika・Kimia・Biologi）まで完了。SD kelas 1–2 は IPAS がない（Fase A は IPAS なし）。kelas 11–12 の Biologi の残り（sistem organ の詳しい章）は必要なら後で
 
+DE / Naturwissenschaften（Klasse 1–4 は Sachunterricht（GDSU Perspektivrahmen Sachunterricht 2013、domain は Lebende Natur／Nicht lebende Natur／Technik／Wetter, Erde und Himmel）、Klasse 5–6 は Naturwissenschaften（Biologie／Physik）、Klasse 7–10 は Biologie・Chemie・Physik（KMK-Bildungsstandards MSA 2004 i. d. F. vom 13.06.2024。1 つの学年ページに 3 科目が並ぶ（domain が科目名））。州ごとの Lehrplan に共通する一般的な配分で学年に分ける）— country `de`、subject `science`（name「Naturwissenschaften」）、grade `klasse-N`、A4。
+生成は `python3 tools/de_sci.py klasse-N [slug|番号…]`（seed は 87000 + 100 × 学年 + 番号）、単元は `tools/de_s1.py`（Kl 1・2）・`de_s3.py`（3・4）・`de_s5.py`（5・6）・`de_s7.py`〜`de_s10.py` の UNITS(grade)。問題はすべて自前のドイツ語。
+de_sci.H は id_sci.H と同じ形（表 3 つ・混合（calc 15 + T[1] 5、なければ T0 7 + T1 7 + T2 6）・正誤）。表の 6 番目の要素 match=False で「Welches Paar passt …」を作らない（値が重なる表）。行の 3 番目に tag を書くと誤答は同じ tag の行からだけ。
+item は選択肢を小文字で比べるので、AA と aa のように大文字小文字だけ違う選択肢・キーを作らない（言葉を足す）。表の値は互いに排他的に（複数の食べ物を食べる動物、重なる栄養素などを避ける）。G の文は「Was gehört (nicht) zu {g}?」で g は与格（den Insekten）。正誤の文は「.」で終える。
+数はドイツ式（小数はコンマ、5 桁以上はノーブレークスペース、6,02 · 10²³、単位の前にノーブレークスペース）、引用符は „…“。g ≈ 10 N/kg と問題文に書く。Kl 1–2 は title・kb ≤ 40、ks ≤ 100。
+standard_code は「Perspektivrahmen Sachunterricht · Naturwissenschaftliche Perspektive」「Bildungsstandards Chemie (MSA)」、standard_url は Klinkhardt の Perspektivrahmen PDF と IQB の Bildungsstandards PDF（de_sci.STD_URL）、seo_title は「Kräfte – Physik Klasse 7: Arbeitsblätter mit Lösungen」。core.php の subject_standard()・grade_standard() に de/science。
+トピックは topics.php の topic_defs_science_de()（ドイツ語の name、単元 slug を ^(…)$ で列挙。de の単元を足したら tp ごとに slug を足す）
+DE / Naturwissenschaften / Klasse 1: unser-koerper-und-die-sinne tiere-um-uns-herum pflanzen-und-ihre-teile jahreszeiten-und-wetter stoffe-und-ihre-eigenschaften ✓
+DE / Naturwissenschaften / Klasse 2: haustiere-und-ihre-pflege vom-samen-zur-pflanze wasser-eis-und-dampf magnete gesunde-ernaehrung-und-zaehne ✓
+DE / Naturwissenschaften / Klasse 3: tiere-im-wald baeume-und-fruehblueher luft-und-wind licht-und-schatten schwimmen-und-sinken stabile-bauwerke-und-bruecken wetter-beobachten-und-messen ✓
+DE / Naturwissenschaften / Klasse 4: der-menschliche-koerper lebensraum-wiese-und-teich strom-und-stromkreis schall-und-hoeren feuer-und-brandschutz hebel-und-einfache-maschinen sonne-erde-und-mond wasserkreislauf-und-wasser-sparen ✓
+DE / Naturwissenschaften / Klasse 5: kennzeichen-des-lebendigen wirbeltierklassen saeugetiere-und-gebisse bluetenpflanzen tiere-im-winter temperatur-und-thermometer waerme-und-ihre-ausbreitung magnetismus ✓
+DE / Naturwissenschaften / Klasse 6: zellen-und-mikroskop ernaehrung-und-verdauung atmung-und-blutkreislauf skelett-und-muskeln pubertaet-und-entwicklung licht-und-sehen schall elektrischer-stromkreis ✓
+DE / Naturwissenschaften / Klasse 7: oekosystem-wald fotosynthese-und-zellatmung oekosystem-see wirbellose-tiere stoffe-und-ihre-eigenschaften teilchenmodell-und-aggregatzustaende gemische-und-trennverfahren chemische-reaktionen verbrennung-und-sauerstoff reflexion-und-brechung linsen-und-optische-geraete geschwindigkeit-und-bewegung kraefte ✓
+DE / Naturwissenschaften / Klasse 8: vom-einzeller-zum-vielzeller sinnesorgane nervensystem-und-gehirn infektionen-und-immunsystem atombau-und-periodensystem metalle-und-redoxreaktionen salze-und-ionenbindung dichte-und-masse druck-und-auftrieb arbeit-energie-und-leistung einfache-maschinen-und-hebelgesetz ✓
+DE / Naturwissenschaften / Klasse 9: hormone-und-regelung genetik-dna-und-zellteilung vererbung-und-mendel oekologie-und-stoffkreislaeufe saeuren-und-laugen neutralisation-und-stoffmenge molekuele-und-elektronenpaarbindung elektrischer-widerstand-und-ohmsches-gesetz elektrische-energie-und-leistung elektromagnetismus ✓
+DE / Naturwissenschaften / Klasse 10: evolution gentechnik-und-biotechnologie stoffwechsel-und-enzyme kohlenwasserstoffe alkohole-und-carbonsaeuren kunststoffe radioaktivitaet kernenergie-und-energieversorgung beschleunigte-bewegung newtonsche-gesetze induktion-und-generator ✓
+DE / Naturwissenschaften は Klasse 1〜10 まで完了。Oberstufe（Klasse 11–13、Biologie・Chemie・Physik の Bildungsstandards für die Allgemeine Hochschulreife）は必要なら後で
+
 ## みんなでクイズ ランキング（/worksheets/ranking/）
 
 - 本体は eigo-duke.com の共通ファイル（`/common/php/mq.php`・`/common/js/mq.js`・`mq-geo.js`・`mq-rank.js`）。このリポジトリには `views/ranking.php`（ページの型枠）と `api/mq.php`（共通ファイルを読むだけ）だけ

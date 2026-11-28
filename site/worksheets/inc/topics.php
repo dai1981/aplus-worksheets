@@ -757,7 +757,28 @@ function topic_defs_science_id() {
     );
 }
 
+function topic_defs_science_de() {
+    return array(
+        'matter' => array('name' => 'Stoffe und ihre Eigenschaften', 'in' => '/^(alkohole-und-carbonsaeuren|atombau-und-periodensystem|chemische-reaktionen|dichte-und-masse|feuer-und-brandschutz|gemische-und-trennverfahren|kohlenwasserstoffe|kunststoffe|metalle-und-redoxreaktionen|molekuele-und-elektronenpaarbindung|neutralisation-und-stoffmenge|saeuren-und-laugen|salze-und-ionenbindung|stoffe-und-ihre-eigenschaften|teilchenmodell-und-aggregatzustaende|verbrennung-und-sauerstoff|wasser-eis-und-dampf)$/', 'out' => '/^$/',
+            'blurb' => 'Stoffe und ihre Eigenschaften, Wasser und Eis, Feuer, Teilchenmodell, Gemische und Trennverfahren, chemische Reaktionen, Atombau, Salze, Säuren und Laugen, Kohlenwasserstoffe und Kunststoffe.'),
+        'forces-and-motion' => array('name' => 'Kräfte und Bewegung', 'in' => '/^(beschleunigte-bewegung|druck-und-auftrieb|einfache-maschinen-und-hebelgesetz|geschwindigkeit-und-bewegung|hebel-und-einfache-maschinen|kraefte|magnete|magnetismus|newtonsche-gesetze|schwimmen-und-sinken)$/', 'out' => '/^$/',
+            'blurb' => 'Magnete, Schwimmen und Sinken, Hebel und einfache Maschinen, Geschwindigkeit, Kräfte, Druck und Auftrieb, Beschleunigung und die newtonschen Gesetze.'),
+        'energy' => array('name' => 'Energie und Elektrizität', 'in' => '/^(arbeit-energie-und-leistung|elektrische-energie-und-leistung|elektrischer-stromkreis|elektrischer-widerstand-und-ohmsches-gesetz|elektromagnetismus|induktion-und-generator|kernenergie-und-energieversorgung|radioaktivitaet|strom-und-stromkreis|temperatur-und-thermometer|waerme-und-ihre-ausbreitung)$/', 'out' => '/^$/',
+            'blurb' => 'Stromkreise, Temperatur und Wärme, Arbeit und Energie, Widerstand und ohmsches Gesetz, elektrische Leistung, Elektromagnetismus, Induktion, Radioaktivität und Energieversorgung.'),
+        'waves-and-light' => array('name' => 'Licht und Schall', 'in' => '/^(licht-und-schatten|licht-und-sehen|linsen-und-optische-geraete|reflexion-und-brechung|schall|schall-und-hoeren)$/', 'out' => '/^$/',
+            'blurb' => 'Licht und Schatten, Schall und Hören, Licht und Sehen, Reflexion und Brechung, Linsen und optische Geräte.'),
+        'living-things-and-ecosystems' => array('name' => 'Lebewesen und Ökosysteme', 'in' => '/^(atmung-und-blutkreislauf|baeume-und-fruehblueher|bluetenpflanzen|der-menschliche-koerper|ernaehrung-und-verdauung|evolution|fotosynthese-und-zellatmung|genetik-dna-und-zellteilung|gentechnik-und-biotechnologie|gesunde-ernaehrung-und-zaehne|haustiere-und-ihre-pflege|hormone-und-regelung|infektionen-und-immunsystem|kennzeichen-des-lebendigen|lebensraum-wiese-und-teich|nervensystem-und-gehirn|oekologie-und-stoffkreislaeufe|oekosystem-see|oekosystem-wald|pflanzen-und-ihre-teile|pubertaet-und-entwicklung|saeugetiere-und-gebisse|sinnesorgane|skelett-und-muskeln|stoffwechsel-und-enzyme|tiere-im-wald|tiere-im-winter|tiere-um-uns-herum|unser-koerper-und-die-sinne|vererbung-und-mendel|vom-einzeller-zum-vielzeller|vom-samen-zur-pflanze|wirbellose-tiere|wirbeltierklassen|zellen-und-mikroskop)$/', 'out' => '/^$/',
+            'blurb' => 'Körper und Sinne, Tiere und Pflanzen, Ernährung, Wald, Wiese und See, Zellen, Organsysteme, Fotosynthese, Immunsystem, Hormone, Genetik, Vererbung und Evolution.'),
+        'earth-and-space' => array('name' => 'Erde und Weltall', 'in' => '/^(sonne-erde-und-mond)$/', 'out' => '/^$/',
+            'blurb' => 'Sonne, Erde und Mond: Tag und Nacht, Jahreszeiten und Mondphasen.'),
+        'earths-systems' => array('name' => 'Wetter, Wasser und Umwelt', 'in' => '/^(jahreszeiten-und-wetter|luft-und-wind|wasserkreislauf-und-wasser-sparen|wetter-beobachten-und-messen)$/', 'out' => '/^$/',
+            'blurb' => 'Jahreszeiten und Wetter, Luft und Wind, Wetter beobachten und messen, Wasserkreislauf und Wasser sparen.'),
+    );
+}
+
+
 function topic_defs($country = null, $subject = null) {
+    if ($subject === 'science' && $country === 'de') return topic_defs_science_de();
     if ($subject === 'science' && $country === 'id') return topic_defs_science_id();
     if ($subject === 'science' && $country === 'kr') return topic_defs_science_kr();
     if ($subject === 'science' && $country === 'cn') return topic_defs_science_cn();
