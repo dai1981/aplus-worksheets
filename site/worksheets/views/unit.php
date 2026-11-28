@@ -173,6 +173,7 @@ if (preg_match('/^grade-(\d+)$/', $grade['slug'], $gm) && ($country['code'] === 
     $lr['educationalLevel'] = array($grade['name'], (int)$gm[1] <= 6 ? 'Primarstufe' : 'Sekundarstufe I');
 } elseif (preg_match('/^klasse-(\d+)$/', $grade['slug'], $gm) && $country['code'] === 'de') {
     $lr['typicalAgeRange'] = ((int)$gm[1] + 5) . '-' . ((int)$gm[1] + 6);   // Germany: Klasse 3 = age 8-9
+    if ((int)$gm[1] >= 11) $lr['educationalLevel'] = array($grade['name'], 'Gymnasiale Oberstufe');
 } elseif ($country['code'] === 'fr' && isset(array('cp' => 1, 'ce1' => 1, 'ce2' => 1, 'cm1' => 1, 'cm2' => 1, '6e' => 1, '5e' => 1, '4e' => 1, '3e' => 1, 'seconde' => 1, 'premiere' => 1)[$grade['slug']])) {
     $fy = array('cp' => 6, 'ce1' => 7, 'ce2' => 8, 'cm1' => 9, 'cm2' => 10, '6e' => 11, '5e' => 12, '4e' => 13, '3e' => 14, 'seconde' => 15, 'premiere' => 16);   // France: CE2 = age 8-9
     $lr['typicalAgeRange'] = $fy[$grade['slug']] . '-' . ($fy[$grade['slug']] + 1);

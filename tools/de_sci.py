@@ -22,9 +22,12 @@ STD_URL_SU = "https://www.klinkhardt.de/newsite/media/20130314_9783781519923Inh.
 STD_URL = {"B": "https://www.iqb.hu-berlin.de/bista/subject/2024_06_13WeBiS_.pdf",
            "C": "https://www.iqb.hu-berlin.de/bista/subject/2024_06_13WeBiS__1.pdf",
            "P": "https://www.iqb.hu-berlin.de/bista/subject/2024_06_13WeBiS__2.pdf"}
-GRADES = {"klasse-%d" % n: n for n in range(1, 11)}
+GRADES = {"klasse-%d" % n: n for n in range(1, 14)}
+STD_URL_AHR = "https://www.kmk.org/aktuelles-1/artikelansicht/kultusministerkonferenz-beschliesst-bildungsstandards-fuer-die-allgemeine-hochschulreife-in-den-naturwissenschaften.html"
+PHASE = {11: "Einführungsphase", 12: "Qualifikationsphase 1", 13: "Qualifikationsphase 2"}
 MODULE = {"klasse-1": "de_s1", "klasse-2": "de_s1", "klasse-3": "de_s3", "klasse-4": "de_s3", "klasse-5": "de_s5", "klasse-6": "de_s5",
-          "klasse-7": "de_s7", "klasse-8": "de_s8", "klasse-9": "de_s9", "klasse-10": "de_s10"}
+          "klasse-7": "de_s7", "klasse-8": "de_s8", "klasse-9": "de_s9", "klasse-10": "de_s10",
+          "klasse-11": "de_s11", "klasse-12": "de_s12", "klasse-13": "de_s13"}
 DOM = {"L": "Lebende Natur", "N": "Nicht lebende Natur", "T": "Technik", "W": "Wetter, Erde und Himmel",
        "B": "Biologie", "C": "Chemie", "P": "Physik"}
 PERSP = {"L": "Naturwissenschaftliche Perspektive", "N": "Naturwissenschaftliche Perspektive", "T": "Technische Perspektive", "W": "Geographische Perspektive"}
@@ -292,11 +295,15 @@ def build(grade, u, sort):
         code = "Perspektivrahmen Sachunterricht · " + PERSP[d]
         tail = " (Zusammenfassung nach dem Perspektivrahmen Sachunterricht der GDSU, 2013; die Lehrpläne der Länder setzen ähnliche Schwerpunkte)"
         url = STD_URL_SU
+    elif n >= 11:
+        code = "Bildungsstandards %s (Allgemeine Hochschulreife)" % dom
+        tail = " (Zusammenfassung; Bildungsstandards im Fach %s für die Allgemeine Hochschulreife, KMK 18.06.2020; Oberstufe, %s)" % (dom, PHASE[n])
+        url = STD_URL_AHR
     else:
         code = "Bildungsstandards %s (MSA)" % dom
         tail = " (Zusammenfassung; Bildungsstandards im Fach %s für den Mittleren Schulabschluss, KMK 2004 i. d. F. vom 13.06.2024)" % dom
         url = STD_URL[d]
-    seo = "%s – %s Klasse %d: Arbeitsblätter mit Lösungen" % (u["short"], sj, n)
+    seo = "%s – %s Klasse %d%s: Arbeitsblätter mit Lösungen" % (u["short"], sj, n, " (Oberstufe)" if n >= 11 else "")
     write_unit("de", "science", grade, {
         "slug": u["slug"], "title": u["title"], "seo_title": seo,
         "short_title": u["short"], "domain": dom, "standard_code": code,
