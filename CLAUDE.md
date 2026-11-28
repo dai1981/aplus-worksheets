@@ -2392,7 +2392,7 @@ PH / Science は Grade 3〜12 まで完了。Chemistry 2・Earth and Space Scien
 
 - `site/top/` は apu2.com のルート（/aplus/）と同じ並び（site/top/index.html → /aplus/index.html、site/top/de/about.html → /aplus/de/about.html、site/top/ja/company/index.html → /aplus/ja/company/index.html）
 - push すると Actions が site/top/ の変わった .html だけを put（上書きのみ・削除なし。mirror は使わない）。全部送り直すときは workflow_dispatch の top_all
-- 2026-11-28 にユーザーのサーバーの版（/, ja, de, fr, it, es, id, pt, tr, ko, tw, vi, au, ca, sg, uk, us の index・about、ja・id・ko・tw・vi の company）を入れた。ほかの国・言語はユーザーが送ってきたら同じ場所に足す
+- 2026-11-28 にユーザーのサーバーの版（/, ja, de, fr, it, es, id, pt, tr, ko, tw, vi, au, ca, sg, uk, us の index・about、ja・id・ko・tw・vi・zh の company。zh の index・about も）を入れた。ほかの国・言語はユーザーが送ってきたら同じ場所に足す
 - 直すときは site/top/ のファイルを直す（下の build_top.py で作り直したら out/ から site/top/ へ写す）
 
 - 英語（/）と de・fr・it・es・pt・tr（/de/ など）の index.html・about.html は `tools/apu2_top/build_top.py`、privacypolicy.html（13言語のタブ）は `build_pp.py` で作る（出力は tools/apu2_top/out/）。文言と算数の国の一覧は `top_data.py`（MATH・CC・T・A）。en_*.html は元にした英語ページ
